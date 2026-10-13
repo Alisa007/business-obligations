@@ -44,6 +44,8 @@ export function nextDueDate(due: Due, ctx: DueContext): string | undefined {
       }
       return firstOccurrence(ctx.asOf, due.month, due.day, ok);
     }
+    case "date":
+      return due.date >= ctx.asOf ? due.date : undefined;
     case "multi": {
       const all = due.dates
         .map((d) => firstOccurrence(ctx.asOf, d.month, d.day, () => true))
@@ -104,6 +106,9 @@ export function occurrencesBetween(
         if (ok(y)) push(iso(y, due.month, Math.min(due.day, lastDay(y, due.month))));
       break;
     }
+    case "date":
+      push(due.date);
+      break;
     case "multi":
       for (let y = y0; y <= y1; y++)
         for (const d of due.dates) push(iso(y, d.month, Math.min(d.day, lastDay(y, d.month))));

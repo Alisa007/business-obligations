@@ -14,7 +14,8 @@
     "LICENSE",
     "NOTICE",
     "README.md",
-    "CHANGELOG.md"
+    "CHANGELOG.md",
+    "COVERAGE.md"
   ],
   "scripts": {
     "build": "tsup",
@@ -25,7 +26,8 @@
     "test": "vitest run",
     "test:update": "vitest run -u",
     "check": "npm run typecheck && npm run lint && npm run format:check && npm test",
-    "prepublishOnly": "npm run check && npm run build"
+    "prepublishOnly": "npm run check && npm run build",
+    "coverage": "node scripts/coverage.mjs"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.5",

@@ -26,3 +26,5 @@ export type { CalendarEvent, CalendarOptions, IcsOptions } from "./calendar";
 export { analyzeInputs } from "./analysis";
 export type { InputAnalysis, DefaultedInput, Sensitivity } from "./analysis";
 export { occurrencesBetween } from "./dates";
+export { applyEvent, explainTransition } from "./lifecycle";
+export type { LifecycleEvent, Transition } from "./lifecycle";

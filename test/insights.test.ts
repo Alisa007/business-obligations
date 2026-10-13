@@ -2,6 +2,8 @@ import { describe, expect, it } from "vitest";
 import {
   STATES,
   analyzeInputs,
+  applyEvent,
+  explainTransition,
   buildCalendar,
   estimateCosts,
   evaluate,
@@ -167,5 +169,90 @@ describe("gross-receipts and margin taxes", () => {
   it("marks structured entity tax data as checked", () => {
     const item = evaluate(ohio, { asOf }).items.find((i) => i.id.startsWith("state.entity-tax"));
     expect(item?.provenance?.confidence).toBe("checked");
+  });
+});
+
+describe("lifecycle events", () => {
+  it("first hire adds employer obligations", () => {
+    const t = explainTransition(llc, { type: "hire", count: 2, annualPayroll: 90000 }, { asOf });
+    expect(t.added.some((i) => i.id.startsWith("state.employer"))).toBe(true);
+    expect(t.added.some((i) => i.id.startsWith("fed.payroll-deposits"))).toBe(true);
+    expect(t.removed).toEqual([]);
+  });
+
+  it("does not mutate the input profile", () => {
+    const copy = JSON.stringify(llc);
+    applyEvent(llc, { type: "hire", count: 1 });
+    expect(JSON.stringify(llc)).toBe(copy);
+  });
+
+  it("expanding into another state adds that state's items", () => {
+    const t = explainTransition(llc, { type: "expand", state: "CA", employeeCount: 1 }, { asOf });
+    expect(t.added.some((i) => i.state === "CA")).toBe(true);
+  });
+
+  it("applies a sequence in order", () => {
+    const t = explainTransition(
+      llc,
+      [{ type: "hire", count: 1, annualPayroll: 50000 }, { type: "start_selling_goods" }],
+      { asOf },
+    );
+    expect(t.profile.sellsTaxableGoods).toBe(true);
+    expect(t.profile.employeeCount).toBe(1);
+  });
+
+  it("moving keeps the original formation state", () => {
+    const t = explainTransition(
+      llc,
+      { type: "relocate", zip: "94105", city: "San Francisco", county: "San Francisco" },
+      { asOf },
+    );
+    expect(t.profile.formationState).toBe("TX");
+    expect(t.added.some((i) => i.state === "CA")).toBe(true);
+  });
+});
+
+describe("dissolution", () => {
+  const base: BusinessProfile = { ...llc, entityType: "c_corp" };
+  const r = (p: BusinessProfile) => evaluate({ ...p, dissolutionDate: "2026-11-20" }, { asOf });
+
+  it("adds nothing without a dissolution date", () => {
+    expect(evaluate(base, { asOf }).items.some((i) => i.id.startsWith("dissolution."))).toBe(false);
+  });
+
+  it("computes dated final-return deadlines", () => {
+    const items = r({ ...base, employeeCount: 2 }).items;
+    const get = (s: string) => items.find((i) => i.id.startsWith(s))!;
+    expect(get("dissolution.fed-final-return").nextDue).toBe("2027-03-15"); // C corp: 15th of 4th month after
+    expect(get("dissolution.fed-form-966").nextDue).toBe("2026-12-20");
+    expect(items.find((i) => i.title.includes("final Form 941"))?.nextDue).toBe("2027-01-31");
+    expect(items.find((i) => i.title.includes("final Form 940"))?.nextDue).toBe("2026-12-31");
+  });
+
+  it("covers formation-state filing and foreign withdrawal", () => {
+    const items = r({ ...base, multistate: [{ state: "CA", employeeCount: 1 }] }).items;
+    expect(items.some((i) => i.id.startsWith("dissolution.state-filing") && i.state === "TX")).toBe(true);
+    expect(items.some((i) => i.id.startsWith("dissolution.foreign-withdrawal") && i.state === "CA")).toBe(
+      true,
+    );
+  });
+
+  it("skips entity filings for sole proprietors but still closes accounts", () => {
+    const items = r({ ...llc, entityType: "sole_proprietorship" }).items;
+    expect(items.some((i) => i.id.startsWith("dissolution.state-filing"))).toBe(false);
+    expect(items.some((i) => i.id.startsWith("dissolution.state-tax-closeout"))).toBe(true);
+    expect(items.find((i) => i.id.startsWith("dissolution.fed-final-return"))?.nextDue).toBe("2027-04-15");
+  });
+
+  it("appears in the calendar", () => {
+    const { events } = buildCalendar(
+      { ...base, dissolutionDate: "2026-11-20" },
+      { from: "2026-10-13", to: "2027-06-30" },
+    );
+    expect(events.some((e) => e.itemId.startsWith("dissolution.fed-final-return"))).toBe(true);
+  });
+
+  it("rejects a malformed date", () => {
+    expect(() => evaluate({ ...base, dissolutionDate: "Nov 2026" })).toThrow(/dissolutionDate/);
   });
 });

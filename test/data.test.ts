@@ -70,3 +70,14 @@ describe("profession directory", () => {
     }
   });
 });
+
+describe("coverage report", () => {
+  it("COVERAGE.md is up to date (run `npm run coverage`)", async () => {
+    // @ts-expect-error plain JS module
+    const { buildCoverage } = await import("../scripts/coverage.mjs");
+    // Prettier re-flows tables and long lines; compare content only.
+    const norm = (t: string) => t.replace(/-{2,}/g, "-").replace(/\s+/g, " ").trim();
+    const actual = fs.readFileSync(path.join(__dirname, "..", "COVERAGE.md"), "utf8");
+    expect(norm(actual)).toBe(norm(buildCoverage()));
+  });
+});

@@ -23,9 +23,15 @@ export interface MultiDue {
   dates: ReadonlyArray<{ month: number; day: number }>;
 }
 
-export type Due = FixedDue | AnniversaryDue | MultiDue;
+/** A single absolute date, e.g. a final-return deadline derived from a dissolution date. */
+export interface DateDue {
+  type: "date";
+  /** ISO date (YYYY-MM-DD). */
+  date: string;
+}
 
-/** Machine-readable fee. `amount` is the standard/base figure; `online`/`paper` apply when they differ. */
+export type Due = FixedDue | AnniversaryDue | MultiDue | DateDue;
+
 /** Structured threshold and rate for a gross-receipts, margin or franchise-style entity tax. */
 export interface EntityTaxDetail {
   kind: "gross_receipts" | "margin";
@@ -53,6 +59,7 @@ export interface UnemploymentInfo {
   year: number;
 }
 
+/** Machine-readable fee. `amount` is the standard/base figure; `online`/`paper` apply when they differ. */
 export interface FeeDetail {
   basis: "flat" | "per_partner" | "per_member" | "percent" | "varies" | "none";
   amount?: number;

@@ -11,6 +11,7 @@ import { stateFromZip } from "./zip";
 import { isState } from "./states";
 import { federalRules } from "./rules/federal";
 import { extraStateRules, stateRules } from "./rules/state";
+import { dissolutionRules } from "./rules/dissolution";
 import { localRules } from "./rules/local";
 import { industryRules } from "./rules/industry";
 import { nextDueDate } from "./dates";
@@ -27,7 +28,14 @@ import {
 
 /** Rule packs by country. Add a country by registering its pack here. */
 export const RULE_PACKS: Record<Country, Rule[]> = {
-  US: [...federalRules, ...stateRules, ...extraStateRules, ...industryRules, ...localRules],
+  US: [
+    ...federalRules,
+    ...stateRules,
+    ...extraStateRules,
+    ...industryRules,
+    ...localRules,
+    ...dissolutionRules,
+  ],
 };
 
 /** The built-in US rules. */
@@ -80,6 +88,8 @@ export function resolveProfile(input: BusinessProfile): ResolvedProfile {
     throw new InvalidProfileError(
       '`profession` is required for pllc, pc, llp and the "professional_services" industry (use "other" if unlisted)',
     );
+  if (input.dissolutionDate !== undefined && !ISO_DATE.test(input.dissolutionDate))
+    throw new InvalidProfileError("`dissolutionDate` must be YYYY-MM-DD");
   if (input.formationDate !== undefined && !ISO_DATE.test(input.formationDate))
     throw new InvalidProfileError("`formationDate` must be YYYY-MM-DD");
   const fye = input.fiscalYearEndMonth ?? 12;

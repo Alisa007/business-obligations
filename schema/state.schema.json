@@ -402,6 +402,15 @@
         {
           "type": "object",
           "additionalProperties": false,
+          "required": ["type", "date"],
+          "properties": {
+            "type": { "const": "date" },
+            "date": { "type": "string", "format": "date" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
           "required": ["type", "month", "day"],
           "properties": {
             "type": {

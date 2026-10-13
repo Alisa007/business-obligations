@@ -528,7 +528,7 @@ export const stateRules: Rule[] = [
 ];
 
 /** Presence entries that must register to collect sales tax, with the reason. */
-function salesStates(p: ResolvedProfile): Array<{ x: Presence; reason: string }> {
+export function salesStates(p: ResolvedProfile): Array<{ x: Presence; reason: string }> {
   const out: Array<{ x: Presence; reason: string }> = [];
   for (const x of p.presence) {
     if (x.home) {

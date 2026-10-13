@@ -90,6 +90,11 @@ export interface BusinessProfile {
   formationDate?: string;
   /** Fiscal year-end month, 1–12. Defaults to 12 (calendar year). */
   fiscalYearEndMonth?: number;
+  /**
+   * ISO date (YYYY-MM-DD) the business is dissolved or ceases operations, or the date the resolution to
+   * dissolve is adopted. Adds the wind-down obligations (final returns, dissolution filing, withdrawals).
+   */
+  dissolutionDate?: string;
   /** Defaults to true. Set false for a business that is still being set up. */
   isFormed?: boolean;
   industry?: Industry;
