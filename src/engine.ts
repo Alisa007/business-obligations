@@ -1,5 +1,5 @@
 import type {
-  BusinessProfile, ComplianceItem, ItemDraft, ResolvedProfile, Rule,
+  BusinessProfile, ComplianceItem, ItemDraft, Presence, ResolvedProfile, Rule,
 } from "./types.js";
 import { stateFromZip } from "./zip.js";
 import { isState } from "./states.js";
@@ -29,8 +29,37 @@ export function resolveProfile(input: BusinessProfile): ResolvedProfile {
   }
   const formationState = (input.formationState ?? state).toUpperCase();
   if (!isState(formationState)) throw new InvalidProfileError(`Unknown formation state "${input.formationState}"`);
-  const otherStates = (input.otherStates ?? []).map((s) => s.toUpperCase());
-  for (const s of otherStates) if (!isState(s)) throw new InvalidProfileError(`Unknown state "${s}"`);
+  if (!input.city?.trim()) throw new InvalidProfileError("`city` is required");
+  if (!input.county?.trim()) throw new InvalidProfileError("`county` is required");
+  if (input.industry === "alcohol" && !input.alcoholActivity)
+    throw new InvalidProfileError("`alcoholActivity` is required when industry is \"alcohol\"");
+  if (input.industry === "transportation" && !input.commercialVehicles)
+    throw new InvalidProfileError("`commercialVehicles` is required when industry is \"transportation\"");
+  const nonNeg = (name: string, v: number | undefined) => {
+    if (v !== undefined && !(v >= 0)) throw new InvalidProfileError(`\`${name}\` must be a non-negative number`);
+  };
+  nonNeg("employeeCount", input.employeeCount);
+  nonNeg("annualPayroll", input.annualPayroll);
+  nonNeg("annualRevenue", input.annualRevenue);
+  nonNeg("largestContractorPaymentUsd", input.largestContractorPaymentUsd);
+
+  const employeeCount = input.employeeCount ?? 0;
+  const presence: Presence[] = [
+    { state, home: true, employeeCount, hasProperty: true },
+  ];
+  for (const m of input.multistate ?? []) {
+    const code = m.state.toUpperCase();
+    if (!isState(code)) throw new InvalidProfileError(`Unknown state "${m.state}"`);
+    if (code === state) continue;
+    const existing = presence.find((x) => x.state === code);
+    if (existing) {
+      existing.employeeCount += m.employeeCount ?? 0;
+      existing.hasProperty ||= m.hasProperty ?? false;
+      existing.salesUsd = (existing.salesUsd ?? 0) + (m.salesUsd ?? 0);
+    } else {
+      presence.push({ state: code, home: false, employeeCount: m.employeeCount ?? 0, hasProperty: m.hasProperty ?? false, salesUsd: m.salesUsd ?? 0 });
+    }
+  }
 
   let taxTreatment: ResolvedProfile["taxTreatment"];
   switch (input.entityType) {
@@ -53,11 +82,15 @@ export function resolveProfile(input: BusinessProfile): ResolvedProfile {
     ...input,
     state,
     formationState,
-    otherStates: otherStates.filter((s) => s !== state),
     isFormed: input.isFormed ?? true,
     industry: input.industry ?? "general",
-    hasEmployees: input.hasEmployees ?? false,
-    paysContractors: input.paysContractors ?? false,
+    employeeCount,
+    hasEmployees: employeeCount > 0,
+    annualPayroll: input.annualPayroll ?? 0,
+    largestContractorPaymentUsd: input.largestContractorPaymentUsd ?? 0,
+    annualRevenue: input.annualRevenue ?? 0,
+    annualNetIncome: input.annualNetIncome ?? 0,
+    presence,
     sellsTaxableGoods: input.sellsTaxableGoods ?? false,
     homeBased: input.homeBased ?? false,
     usesTradeName: input.usesTradeName ?? false,

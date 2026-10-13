@@ -33,8 +33,7 @@ export const federalRules: Rule[] = [
         p.entityType !== "sole_proprietorship"
           ? `${p.entityType} entities need an EIN`
           : "Sole proprietors with employees need an EIN",
-      needsVerification: false,
-      url: "https://www.irs.gov/businesses/small-businesses-self-employed/apply-for-an-employer-identification-number-ein-online",
+            url: "https://www.irs.gov/businesses/small-businesses-self-employed/apply-for-an-employer-identification-number-ein-online",
     }),
   },
   {
@@ -51,14 +50,19 @@ export const federalRules: Rule[] = [
         frequency: "annual",
         deadline,
         reason: `Federal tax treatment is ${p.taxTreatment}`,
-        needsVerification: false,
         url: "https://www.irs.gov/businesses",
       };
     },
   },
   {
     id: "fed.estimated-tax",
-    when: (p) => p.isFormed && p.taxTreatment !== "nonprofit",
+    // Approximates the "expect to owe $1,000 (owners) / $500 (C corp)" tests from net income:
+    // owners ~14.1% self-employment tax, corporations 21% federal rate.
+    when: (p) =>
+      p.isFormed &&
+      (p.taxTreatment === "c_corp"
+        ? p.annualNetIncome >= 500 / 0.21
+        : p.taxTreatment !== "nonprofit" && p.annualNetIncome >= 1000 / 0.141),
     items: (p) => ({
       title:
         p.taxTreatment === "c_corp"
@@ -73,25 +77,32 @@ export const federalRules: Rule[] = [
           : "Quarterly estimated payments by owners on business income (Form 1040-ES), including self-employment tax.",
       frequency: "quarterly",
       deadline: "April 15, June 15, September 15, January 15",
-      reason: "Entity income is expected to generate tax due during the year",
-      needsVerification: false,
-      url: "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes",
+      reason: `Expected net income of ${p.annualNetIncome} is expected to generate tax due during the year`,
+            url: "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes",
     }),
   },
   {
     id: "fed.payroll-deposits",
     when: (p) => p.hasEmployees,
-    items: () => [
+    items: (p) => {
+      const lookback = p.priorYearPayrollTaxLiability;
+      const semiweekly = lookback !== undefined && lookback > 50_000;
+      return [
       {
         title: "Deposit federal payroll taxes",
         category: "payment",
         jurisdiction: "federal",
         authority: "IRS",
         description: "Withheld income tax, Social Security and Medicare, plus employer share, via EFTPS.",
-        frequency: "monthly",
-        deadline: "Monthly or semiweekly depending on lookback-period liability",
-        reason: "Business has employees",
-        needsVerification: false,
+        frequency: semiweekly ? "per_event" : "monthly",
+        deadline: lookback !== undefined && lookback > 100_000
+          ? "Next business day once accumulated liability reaches $100,000"
+          : semiweekly
+            ? "Semiweekly: Wednesday or Friday depending on payday"
+            : "15th day of the following month",
+        reason: lookback === undefined
+          ? "New employers deposit monthly"
+          : `Lookback-period liability of ${lookback} makes the business a ${semiweekly ? "semiweekly" : "monthly"} depositor`,
         url: "https://www.irs.gov/businesses/small-businesses-self-employed/depositing-and-reporting-employment-taxes",
       },
       {
@@ -103,7 +114,6 @@ export const federalRules: Rule[] = [
         frequency: "quarterly",
         deadline: "April 30, July 31, October 31, January 31",
         reason: "Business has employees",
-        needsVerification: false,
       },
       {
         title: "File Form 940 (Federal Unemployment Tax)",
@@ -114,7 +124,6 @@ export const federalRules: Rule[] = [
         frequency: "annual",
         deadline: "January 31",
         reason: "Business has employees",
-        needsVerification: false,
       },
       {
         title: "Issue Forms W-2 and file W-3",
@@ -125,7 +134,6 @@ export const federalRules: Rule[] = [
         frequency: "annual",
         deadline: "January 31",
         reason: "Business has employees",
-        needsVerification: false,
       },
       {
         title: "Complete Form I-9 for each new hire",
@@ -135,25 +143,24 @@ export const federalRules: Rule[] = [
         description: "Employment eligibility verification, retained for 3 years after hire or 1 year after termination.",
         frequency: "per_event",
         reason: "Business has employees",
-        needsVerification: false,
         url: "https://www.uscis.gov/i-9",
       },
-    ],
+      ];
+    },
   },
   {
     id: "fed.1099-nec",
-    when: (p) => p.paysContractors,
-    items: () => ({
+    when: (p) => p.largestContractorPaymentUsd >= 2000,
+    items: (p) => ({
       title: "File Form 1099-NEC for independent contractors",
       category: "filing",
       jurisdiction: "federal",
       authority: "IRS",
-      description: "Required for each non-employee paid $600 or more in the year (threshold may change).",
+      description: "Required for each non-employee paid $2,000 or more in the year (payments made after 2025).",
       frequency: "annual",
       deadline: "January 31",
-      reason: "Business pays independent contractors",
-      needsVerification: false,
-    }),
+      reason: `Largest contractor payment is ${p.largestContractorPaymentUsd}, at or above the $2,000 threshold`,
+          }),
   },
   {
     id: "fed.exempt-application",
@@ -166,22 +173,26 @@ export const federalRules: Rule[] = [
       description: "Recognition of 501(c)(3) status; generally due within 27 months of formation for retroactive effect.",
       frequency: "once",
       reason: "Nonprofit without recognized exempt status",
-      needsVerification: false,
-      url: "https://www.irs.gov/charities-non-profits/application-for-recognition-of-exemption",
+            url: "https://www.irs.gov/charities-non-profits/application-for-recognition-of-exemption",
     }),
   },
   {
     id: "fed.ttb-alcohol",
-    when: (p) => p.industry === "alcohol",
-    items: () => ({
-      title: "Obtain federal alcohol permit or registration",
+    when: (p) => p.industry === "alcohol" && p.alcoholActivity !== "retail",
+    items: (p) => ({
+      title:
+        p.alcoholActivity === "manufacture"
+          ? "Obtain TTB permit/registration to produce alcohol (brewer's notice, winery or distilled spirits plant)"
+          : `Obtain TTB basic permit to ${p.alcoholActivity === "import" ? "import" : "wholesale"} alcohol`,
       category: "permit",
       jurisdiction: "federal",
-      authority: "TTB",
-      description: "Producers, importers and wholesalers need a TTB basic permit; retailers register and pay the special occupational tax rules as applicable.",
+      authority: "Alcohol and Tobacco Tax and Trade Bureau (TTB)",
+      description:
+        p.alcoholActivity === "manufacture"
+          ? "Producers must qualify with TTB (and post bond where required) before operating, and file periodic operational reports and excise tax returns."
+          : "Importers and wholesalers need a federal basic permit under the Federal Alcohol Administration Act before engaging in business.",
       frequency: "once",
-      reason: "Industry involves alcohol",
-      needsVerification: true,
+      reason: `Alcohol activity is ${p.alcoholActivity}`,
       url: "https://www.ttb.gov",
     }),
   },

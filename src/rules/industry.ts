@@ -14,11 +14,11 @@ export const industryRules: Rule[] = [
         category: "permit",
         jurisdiction: "county",
         state: p.state,
-        authority: `County or city health department (${stateName(p.state)})`,
+        authority: `${p.county} County health department (${stateName(p.state)})`,
+        url: undefined,
         description: "Plan review, inspection and operating permit for food service.",
         frequency: "annual",
         reason: "Industry is restaurant / food service",
-        needsVerification: true,
       },
       {
         title: "Ensure certified food protection manager on staff",
@@ -29,7 +29,6 @@ export const industryRules: Rule[] = [
         description: "Most jurisdictions require at least one certified food protection manager and food handler cards for staff.",
         frequency: "ongoing",
         reason: "Industry is restaurant / food service",
-        needsVerification: true,
       },
     ],
   },
@@ -47,7 +46,6 @@ export const industryRules: Rule[] = [
       description: "Contractors generally need a license or registration, bonding and proof of insurance; thresholds and classifications vary.",
       frequency: "biennial",
       reason: "Industry is construction",
-      needsVerification: true,
     }),
   },
   {
@@ -62,7 +60,6 @@ export const industryRules: Rule[] = [
       description: "Brokerage entities need a licensed designated broker and entity registration.",
       frequency: "biennial",
       reason: "Industry is real estate",
-      needsVerification: true,
     }),
   },
   {
@@ -78,7 +75,6 @@ export const industryRules: Rule[] = [
         description: "Practitioners and facilities are licensed by state boards; some states restrict entity forms.",
         frequency: "biennial",
         reason: "Industry is healthcare",
-        needsVerification: true,
       },
       {
         title: "Obtain organizational NPI and comply with HIPAA",
@@ -88,7 +84,6 @@ export const industryRules: Rule[] = [
         description: "National Provider Identifier for billing and HIPAA privacy/security program for covered entities.",
         frequency: "once",
         reason: "Industry is healthcare",
-        needsVerification: false,
         url: "https://nppes.cms.hhs.gov",
       },
     ],
@@ -105,7 +100,6 @@ export const industryRules: Rule[] = [
       description: "License class depends on activity (on-premise, off-premise, manufacturing, distribution); local approval is often required too.",
       frequency: "annual",
       reason: "Industry involves alcohol",
-      needsVerification: true,
     }),
   },
   {
@@ -120,21 +114,28 @@ export const industryRules: Rule[] = [
       description: "Facility licensing with background checks, staff ratios and inspections.",
       frequency: "annual",
       reason: "Industry is child care",
-      needsVerification: true,
     }),
   },
   {
     id: "industry.transportation",
-    when: (p) => p.industry === "transportation",
+    when: (p) => {
+      const v = p.commercialVehicles;
+      if (p.industry !== "transportation" || !v || !v.interstate) return false;
+      return (
+        (v.grossWeightLbs ?? 0) >= 10_001 ||
+        (v.passengerCapacity ?? 0) >= 16 ||
+        ((v.passengerCapacity ?? 0) >= 9 && !!v.forHire) ||
+        !!v.carriesHazmat
+      );
+    },
     items: () => ({
-      title: "Register with FMCSA for a USDOT number (if operating commercial vehicles)",
+      title: "Register with FMCSA for a USDOT number",
       category: "registration",
       jurisdiction: "federal",
       authority: "FMCSA",
-      description: "Required for interstate commercial vehicle operators above weight/passenger thresholds; intrastate rules vary by state.",
-      frequency: "once",
-      reason: "Industry is transportation",
-      needsVerification: true,
+      description: "Interstate operators of vehicles over 10,000 lbs, passenger vehicles over the capacity limits, or placardable hazmat carriers must register, file the MCS-150 biennial update, and carry required insurance.",
+      frequency: "biennial",
+      reason: "Interstate commercial vehicle operations meet the USDOT registration thresholds",
       url: "https://www.fmcsa.dot.gov/registration",
     }),
   },
