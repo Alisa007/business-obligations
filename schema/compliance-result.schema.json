@@ -1,0 +1,350 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Alisa007/compliance-rules-engine/schema/compliance-result.schema.json",
+  "title": "Compliance result",
+  "description": "Output of evaluate(): the items, resolved profile and metadata.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "items",
+    "profile",
+    "asOf",
+    "dataVersion",
+    "rulesetVersion",
+    "upcomingChanges",
+    "recentChanges",
+    "disclaimer"
+  ],
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/item"
+      }
+    },
+    "profile": {
+      "type": "object",
+      "description": "Business profile with defaults applied."
+    },
+    "asOf": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "dataVersion": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "rulesetVersion": {
+      "type": "string",
+      "pattern": "^\\d{4}\\.\\d{2}\\.\\d{2}-\\d+$"
+    },
+    "upcomingChanges": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/notice"
+      }
+    },
+    "recentChanges": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/notice"
+      }
+    },
+    "disclaimer": {
+      "type": "string"
+    }
+  },
+  "$defs": {
+    "due": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "month", "day"],
+          "properties": {
+            "type": {
+              "const": "fixed"
+            },
+            "month": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 12
+            },
+            "day": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 31
+            },
+            "parity": {
+              "enum": ["odd", "even"]
+            },
+            "cycleFrom": {
+              "enum": ["formation_year", "year_after_formation"]
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "point"],
+          "properties": {
+            "type": {
+              "const": "anniversary"
+            },
+            "point": {
+              "enum": ["start_of_month", "end_of_month", "date"]
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "dates"],
+          "properties": {
+            "type": {
+              "const": "multi"
+            },
+            "dates": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["month", "day"],
+                "properties": {
+                  "month": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 12
+                  },
+                  "day": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 31
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "date"],
+          "properties": {
+            "type": {
+              "const": "date"
+            },
+            "date": {
+              "type": "string",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+            }
+          }
+        }
+      ]
+    },
+    "cost": {
+      "type": "object",
+      "required": ["basis", "currency"],
+      "additionalProperties": false,
+      "properties": {
+        "basis": {
+          "enum": ["flat", "per_partner", "per_member", "percent", "varies", "none"]
+        },
+        "amount": {
+          "type": "number",
+          "minimum": 0
+        },
+        "online": {
+          "type": "number",
+          "minimum": 0
+        },
+        "paper": {
+          "type": "number",
+          "minimum": 0
+        },
+        "rate": {
+          "type": "number",
+          "minimum": 0
+        },
+        "base": {
+          "type": "number",
+          "minimum": 0
+        },
+        "perUnit": {
+          "type": "number",
+          "minimum": 0
+        },
+        "freeUnits": {
+          "type": "number",
+          "minimum": 0
+        },
+        "min": {
+          "type": "number",
+          "minimum": 0
+        },
+        "max": {
+          "type": "number",
+          "minimum": 0
+        },
+        "waived": {
+          "type": "boolean"
+        },
+        "estimate": {
+          "type": "boolean"
+        },
+        "note": {
+          "type": "string"
+        },
+        "currency": {
+          "const": "USD"
+        }
+      }
+    },
+    "notice": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "effective", "status", "kind", "summary"],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "effective": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "status": {
+          "enum": ["enacted", "proposed"]
+        },
+        "kind": {
+          "type": "string"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        }
+      }
+    },
+    "item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "ruleId",
+        "title",
+        "category",
+        "jurisdiction",
+        "authority",
+        "description",
+        "frequency",
+        "reason"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "ruleId": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "category": {
+          "enum": ["license", "permit", "registration", "filing", "payment", "insurance", "recordkeeping"]
+        },
+        "jurisdiction": {
+          "enum": ["federal", "state", "county", "city"]
+        },
+        "authority": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string",
+          "pattern": "^[A-Z]{2}$"
+        },
+        "description": {
+          "type": "string"
+        },
+        "frequency": {
+          "enum": [
+            "once",
+            "annual",
+            "biennial",
+            "every_five_years",
+            "quarterly",
+            "monthly",
+            "per_event",
+            "ongoing"
+          ]
+        },
+        "deadline": {
+          "type": "string"
+        },
+        "due": {
+          "$ref": "#/$defs/due"
+        },
+        "nextDue": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "cost": {
+          "$ref": "#/$defs/cost"
+        },
+        "penalty": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["amount", "note", "currency"],
+          "properties": {
+            "amount": {
+              "type": "number",
+              "minimum": 0
+            },
+            "percentPerMonth": {
+              "type": "number",
+              "minimum": 0
+            },
+            "note": {
+              "type": "string"
+            },
+            "currency": {
+              "const": "USD"
+            }
+          }
+        },
+        "provenance": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["confidence", "sources"],
+          "properties": {
+            "confidence": {
+              "enum": ["checked", "compiled", "unconfirmed"]
+            },
+            "checkedOn": {
+              "type": "string",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+            },
+            "sources": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "upcomingChanges": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/notice"
+          }
+        },
+        "reason": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

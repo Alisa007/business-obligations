@@ -24,6 +24,11 @@ jobs:
       - run: npm run format:check
       - run: npm test
       - run: npm run build
+      - run: npm run size
+      - name: Smoke test CLI
+        run: |
+          node dist/cli.js --zip 94105 --entity llc | grep -q "FEDERAL"
+          node dist/cli.js rules --json | node -e 'JSON.parse(require("fs").readFileSync(0,"utf8"))'
       - name: Smoke test built package (CJS and ESM)
         run: |
           node -e 'const m=require("./dist/index.cjs"); if(!m.getComplianceItems({entityType:"llc",zip:"94105",city:"San Francisco",county:"San Francisco"}).length) process.exit(1)'

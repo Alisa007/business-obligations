@@ -163,6 +163,8 @@ export type Frequency =
 
 export interface ComplianceItem {
   id: string;
+  /** Id of the rule that produced the item (`id` without the state, key and index suffixes). */
+  ruleId: string;
   title: string;
   category: ItemCategory;
   jurisdiction: Jurisdiction;
@@ -226,7 +228,7 @@ export interface ResolvedProfile extends BusinessProfile {
 }
 
 /** A rule's output before the engine assigns an id and computes due dates. */
-export type ItemDraft = Omit<ComplianceItem, "id" | "nextDue"> & {
+export type ItemDraft = Omit<ComplianceItem, "id" | "ruleId" | "nextDue"> & {
   /** Distinguishes several items from one rule in the same state; becomes part of the id. */
   key?: string;
 };

@@ -28,3 +28,5 @@ export type { InputAnalysis, DefaultedInput, Sensitivity } from "./analysis";
 export { occurrencesBetween } from "./dates";
 export { applyEvent, explainTransition } from "./lifecycle";
 export type { LifecycleEvent, Transition } from "./lifecycle";
+export { localize, catalogTemplate } from "./i18n";
+export type { Catalog, RuleMessages, LocalizedItem, LocalizedResult } from "./i18n";

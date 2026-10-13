@@ -106,7 +106,8 @@ Machine-readable: [`schema/business-profile.schema.json`](schema/business-profil
   Kansas City, St. Louis, Baltimore, New Orleans, Las Vegas, Phoenix. Other cities return the state's typical local
   licensing regime, named for the city and county you pass in.
 
-Intentionally not modelled: FinCEN beneficial ownership reporting (domestic companies were exempted in 2025), local
+Intentionally not modelled: FinCEN beneficial ownership reporting (domestic companies are exempt under FinCEN's final
+rule effective August 14, 2026; only foreign entities registered in a US state report), local
 sales-tax _rates_, professions beyond the five bundled directories (use `profession: "other"`), and non-US countries.
 Each state file records what was checked and what was not in its `verification` block.
 
@@ -165,6 +166,64 @@ analyzeInputs(profile);
 - `buildCalendar` includes only items with a machine-readable due rule; items such as "15th of the following month"
   deposits are not expanded.
 - `analyzeInputs` tells you which questions are worth asking: defaulted inputs that would change the result.
+
+## Winding down
+
+Set `dissolutionDate` (the date the business is dissolved or the resolution to dissolve is adopted) and the result
+gains `dissolution.*` items with computed deadlines: the dissolution filing in the formation state, foreign
+withdrawals, closing each state's tax accounts, the final federal return (Form 1040/1065/1120-S/1120/990), Form 966,
+final Forms 941/940 and W-2s, closing the IRS account and record retention. Recurring items such as annual reports are
+not suppressed, because a final report is often still due.
+
+## What happens if...
+
+```ts
+import { explainTransition } from "compliance-rules-engine";
+
+const t = explainTransition(profile, { type: "hire", count: 2, annualPayroll: 90_000 });
+t.added; // new obligations (unemployment registration, payroll deposits, new-hire reporting, ...)
+t.nextSteps; // the added items ordered by next due date
+```
+
+Events: `hire`, `add_owners`, `revenue`, `start_selling_goods`, `leave_home_office`, `convert`, `expand` (another
+state), `relocate` (keeps the formation state) and `form`. Pass an array to apply several in order. `applyEvent` returns
+just the changed profile.
+
+## Command line
+
+```sh
+npx compliance-rules-engine --zip 78701 --entity llc --employees 2 --payroll 80000
+npx compliance-rules-engine calendar profile.json --from 2026-10-13 --to 2027-12-31 --ics deadlines.ics
+npx compliance-rules-engine costs profile.json --json
+npx compliance-rules-engine analyze profile.json
+npx compliance-rules-engine changes --state CA --upcoming
+```
+
+`profile.json` is a `BusinessProfile`; use `-` to read it from stdin. City and county are filled from the ZIP.
+
+## Translating output
+
+Every item has a stable `id` and a `ruleId`. `localize(result, catalog)` swaps titles, descriptions, reasons,
+authorities, enum labels and the disclaimer using templates keyed by rule id (`state.annual-report`, or
+`state.annual-report:NY` for one state) with placeholders such as `{state}`, `{city}` and `{authority}`. Anything
+without an entry stays in English. `catalogTemplate(result)` lists the English strings to start a catalog from.
+The library ships no translations.
+
+## Output schema
+
+`schema/compliance-result.schema.json` describes the object returned by `evaluate()` for non-TypeScript consumers.
+The tests validate real results against it.
+
+## Disclaimer
+
+This is general information, not legal, tax or accounting advice. The disclaimer text in each result is a plain-language
+summary and has not been reviewed by a lawyer; if you build a product on this library, have counsel review the wording
+shown to your users. The MIT license disclaims all warranties.
+
+## Size
+
+The core bundle is about 57 KB gzipped with all 51 jurisdictions' data. ZIP lookup (about 305 KB gzipped) lives in the
+separate `compliance-rules-engine/zip` entry and is only loaded when you import it. `npm run size` enforces the budgets.
 
 ## Extending
 

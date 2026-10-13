@@ -3,6 +3,7 @@ import path from "node:path";
 import Ajv2020 from "ajv/dist/2020";
 import addFormats from "ajv-formats";
 import { describe, expect, it } from "vitest";
+import { evaluate, type BusinessProfile } from "../src";
 import { STATES } from "../src";
 import { LOCAL_JURISDICTIONS } from "../src/data";
 
@@ -79,5 +80,35 @@ describe("coverage report", () => {
     const norm = (t: string) => t.replace(/-{2,}/g, "-").replace(/\s+/g, " ").trim();
     const actual = fs.readFileSync(path.join(__dirname, "..", "COVERAGE.md"), "utf8");
     expect(norm(actual)).toBe(norm(buildCoverage()));
+  });
+});
+
+describe("compliance result schema", () => {
+  const validate = ajv.compile(read("schema/compliance-result.schema.json"));
+  const profiles: BusinessProfile[] = [
+    {
+      entityType: "llc",
+      zip: "78701",
+      city: "Austin",
+      county: "Travis",
+      employeeCount: 3,
+      annualPayroll: 120000,
+    },
+    { entityType: "c_corp", zip: "10001", city: "New York", county: "New York", sellsTaxableGoods: true },
+    { entityType: "lp", zip: "37201", city: "Nashville", county: "Davidson", ownerCount: 3 },
+    {
+      entityType: "llc",
+      zip: "94105",
+      city: "San Francisco",
+      county: "San Francisco",
+      dissolutionDate: "2026-12-01",
+      multistate: [{ state: "WA", employeeCount: 1 }],
+    },
+  ];
+  it.each(profiles.map((p, i) => [i, p] as const))("validates results for profile %i", (_i, profile) => {
+    const result = JSON.parse(JSON.stringify(evaluate(profile, { asOf: "2026-10-13" })));
+    const ok = validate(result);
+    expect(validate.errors ?? []).toEqual([]);
+    expect(ok).toBe(true);
   });
 });

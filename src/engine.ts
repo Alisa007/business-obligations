@@ -44,7 +44,7 @@ export const defaultRules: Rule[] = RULE_PACKS.US;
 export const DATA_VERSION = "2026-10-13";
 
 export const DISCLAIMER =
-  "General compliance information, not legal or tax advice. Rule data is maintained by hand and may be incomplete or out of date; confirm requirements with the cited authority before relying on them.";
+  "General compliance information, not legal, tax or accounting advice, and no attorney-client relationship is created. Requirements depend on facts this library cannot see and change often; data is compiled from public sources and may be incomplete or out of date (see each item's provenance and the result's dataVersion). Confirm requirements with the cited authority or a qualified professional before relying on them.";
 
 export class InvalidProfileError extends Error {
   constructor(message: string) {
@@ -255,7 +255,7 @@ export function evaluate(input: BusinessProfile, options: EvaluateOptions = {}):
         const n = seen.get(id) ?? 0;
         seen.set(id, n + 1);
         if (n > 0) id = `${id}#${n}`;
-        const item: ComplianceItem = { ...d, id };
+        const item: ComplianceItem = { ...d, id, ruleId: rule.id };
         if (d.due) {
           const next = nextDueDate(d.due, {
             asOf,

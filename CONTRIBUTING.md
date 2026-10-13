@@ -67,3 +67,13 @@ TypeScript strict mode, Prettier (`npm run format`), ESLint (`npm run lint`). Ke
 ## Reporting problems
 
 Use the issue templates. For security issues see [SECURITY.md](SECURITY.md).
+
+## Regenerating the coverage report
+
+`COVERAGE.md` is generated from `data/`. After changing state or local data, run `npm run coverage`; a test fails when
+the file is stale.
+
+## Bundle size
+
+`npm run build && npm run size` fails when a bundle exceeds its gzip budget (`scripts/size.mjs`). Prefer adding data to
+JSON files over code; raise a budget only with a reason in the pull request.

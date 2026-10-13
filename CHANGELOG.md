@@ -16,6 +16,19 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 - Calendar: `buildCalendar(profile, { from, to })` expands due dates into dated events (re-evaluating where an enacted
   change takes effect inside the window) and `toICS(events)` exports an iCalendar file. `occurrencesBetween()`.
 - Provenance: every item has `provenance` (`confidence`: checked / compiled / unconfirmed, `checkedOn`, `sources`).
+- Unemployment insurance: `unemployment` per state (taxable wage base, rate range and new-employer rate from the
+  U.S. DOL's January 2026 table); the contribution item has a structured percent `cost`, and `estimateCosts` accepts
+  `profile` to total it from payroll and headcount.
+- `entityTaxDetail` for Texas (margin), Ohio and Oregon (CAT) and Nevada (Commerce Tax): threshold, rate and a
+  comparison with `annualRevenue` in the item text.
+- `COVERAGE.md`, generated from the data (`npm run coverage`), showing what was checked per state.
+- Lifecycle API: `explainTransition()` / `applyEvent()` for hiring, new owners, revenue, conversion, expansion and
+  relocation.
+- Dissolution: `dissolutionDate` input and `dissolution.*` rules with dated deadlines; new `date` due type.
+- Localization: `ruleId` on every item, `localize()` and `catalogTemplate()`.
+- `schema/compliance-result.schema.json` for `evaluate()` output.
+- Command line (`compliance-rules-engine`), bundle-size budgets (`npm run size`) and a CI smoke test.
+- Clearer disclaimer wording.
 - `analyzeInputs(profile)`: which optional inputs were defaulted and which values would change the returned items.
 
 ### Changed

@@ -3,6 +3,8 @@ import {
   STATES,
   analyzeInputs,
   applyEvent,
+  catalogTemplate,
+  localize,
   explainTransition,
   buildCalendar,
   estimateCosts,
@@ -254,5 +256,45 @@ describe("dissolution", () => {
 
   it("rejects a malformed date", () => {
     expect(() => evaluate({ ...base, dissolutionDate: "Nov 2026" })).toThrow(/dissolutionDate/);
+  });
+});
+
+describe("localization", () => {
+  const catalog = {
+    locale: "es",
+    disclaimer: "Información general; no es asesoramiento legal.",
+    categories: { filing: "Presentación" as const },
+    frequencies: { annual: "Anual" as const },
+    rules: {
+      "fed.ein": { title: "Obtener un EIN del IRS", reason: "Entidad {entityType}" },
+      "state.registered-agent:TX": { title: "Mantener un agente registrado en {state}" },
+    },
+  };
+
+  it("replaces templated fields and keeps untranslated items in English", () => {
+    const result = evaluate(llc, { asOf });
+    const localized = localize(result, catalog);
+    expect(localized.locale).toBe("es");
+    expect(localized.disclaimer).toBe(catalog.disclaimer);
+    const ein = localized.items.find((i) => i.ruleId === "fed.ein");
+    expect(ein?.title).toBe("Obtener un EIN del IRS");
+    expect(ein?.reason).toBe("Entidad llc");
+    const agent = localized.items.find((i) => i.ruleId === "state.registered-agent");
+    expect(agent?.title).toBe("Mantener un agente registrado en Texas");
+    const untouched = localized.items.find((i) => !(i.ruleId in catalog.rules))!;
+    const original = result.items.find((i) => i.id === untouched.id)!;
+    expect(untouched.title).toBe(original.title);
+  });
+
+  it("labels enums and keeps ids stable", () => {
+    const localized = localize(evaluate(llc, { asOf }), catalog);
+    expect(localized.items.every((i, n) => i.id === evaluate(llc, { asOf }).items[n]!.id)).toBe(true);
+    const annual = localized.items.find((i) => i.frequency === "annual");
+    expect(annual?.labels.frequency).toBe("Anual");
+  });
+
+  it("builds a catalog template from a result", () => {
+    const tpl = catalogTemplate(evaluate(llc, { asOf }));
+    expect(tpl["fed.ein"]?.title).toBeTruthy();
   });
 });

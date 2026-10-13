@@ -26,8 +26,9 @@
     "test": "vitest run",
     "test:update": "vitest run -u",
     "check": "npm run typecheck && npm run lint && npm run format:check && npm test",
-    "prepublishOnly": "npm run check && npm run build",
-    "coverage": "node scripts/coverage.mjs"
+    "prepublishOnly": "npm run check && npm run build && npm run size",
+    "coverage": "node scripts/coverage.mjs",
+    "size": "node scripts/size.mjs"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.5",
@@ -89,5 +90,8 @@
     "./package.json": "./package.json"
   },
   "module": "./dist/index.js",
-  "sideEffects": false
+  "sideEffects": false,
+  "bin": {
+    "compliance-rules-engine": "./dist/cli.js"
+  }
 }
