@@ -76,12 +76,21 @@
     "checkedOn": "2026-10-13",
     "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
     "sources": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/frequently-asked-questions"],
-    "unconfirmed": ["lpReport", "llpReport"],
+    "unconfirmed": [],
     "dba": "checked"
   },
   "dbaOffice": "County clerk",
   "lpReport": null,
-  "llpReport": null,
+  "llpReport": {
+    "frequency": "annual",
+    "fee": "$100",
+    "deadline": "Before the first anniversary of registration, then annually",
+    "title": "Renew LLP registration",
+    "due": {
+      "type": "anniversary",
+      "point": "date"
+    }
+  },
   "cannabis": {
     "status": "adult_use",
     "regulator": "Michigan Cannabis Regulatory Agency (Department of Licensing and Regulatory Affairs)"

@@ -30,6 +30,10 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
   Medical Marijuana), RI, SD, TX, VA, VT, WA; corrected for UT (Department of Agriculture and Food) and WV (Department
   of Health).
 - LP/LLP report data confirmed for AK, AR (LP fee is $15, not $0), DE ($400 flat tax, same as LLC), IA, ME, NE, NM.
+- LP/LLP report data confirmed against Secretary of State sources: ND partnership annual report fee is $25 (was $50);
+  Michigan LLPs renew annually for $100; CA, MS, NC, NH, AZ limited partnerships have no periodic report; SD limited
+  partnerships file the same annual report as LLCs; SC LLP renewal is $100; WV LLP deadline is January 1 - July 1; Kansas
+  LP/LLP fees corrected to $90 online ($110 paper).
 - LP/LLP report data accepted at high confidence: ID, IL and MA limited partnerships (MA now has an explicit $500 /
   $450 e-file fee), ME LLPs, NY limited partnerships (no biennial statement), TX LPs and LLPs (franchise tax).
 - Resolved caveats: Illinois and North Dakota workers' comp thresholds, Oregon, New Mexico and Oklahoma report data
