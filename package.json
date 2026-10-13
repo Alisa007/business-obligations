@@ -1,7 +1,7 @@
 {
   "name": "compliance-rules-engine",
   "version": "0.2.0",
-  "description": "Rules engine that returns US legal compliance items (licenses, permits, filings, payments) for a business profile",
+  "description": "What licenses, permits, filings and deadlines does a US business need? A pure TypeScript rules engine: describe the business, get an ordered, sourced list.",
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -28,7 +28,8 @@
     "check": "npm run typecheck && npm run lint && npm run format:check && npm test",
     "prepublishOnly": "npm run check && npm run build && npm run size",
     "coverage": "node scripts/coverage.mjs",
-    "size": "node scripts/size.mjs"
+    "size": "node scripts/size.mjs",
+    "site": "npm run build && node scripts/build-site.mjs"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.5",
@@ -53,12 +54,24 @@
   },
   "homepage": "https://github.com/Alisa007/compliance-rules-engine#readme",
   "keywords": [
-    "compliance",
-    "rules-engine",
+    "annual-report",
     "business",
-    "licenses",
-    "permits",
+    "business-licenses",
+    "calendar",
+    "cli",
+    "compliance",
     "filings",
+    "ics",
+    "legal-tech",
+    "licenses",
+    "llc",
+    "open-data",
+    "payroll",
+    "permits",
+    "regulatory-compliance",
+    "rules-engine",
+    "small-business",
+    "startup",
     "typescript",
     "us"
   ],

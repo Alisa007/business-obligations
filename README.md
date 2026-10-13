@@ -1,20 +1,89 @@
-# compliance-rules-engine
+<h1 align="center">compliance-rules-engine</h1>
 
-[![CI](https://github.com/Alisa007/compliance-rules-engine/actions/workflows/ci.yml/badge.svg)](https://github.com/Alisa007/compliance-rules-engine/actions/workflows/ci.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+<p align="center">
+  <b>What licenses, permits, filings and deadlines does a US business need? Describe the business, get the list, in order.</b>
+</p>
 
-A TypeScript rules engine (no UI, no network, no I/O) that takes a description of a business and returns the legal
-compliance items that apply: licenses, permits, registrations, filings, payments, insurance and recordkeeping, with
-authorities, fees, deadlines and the next due date.
+<p align="center">
+  <a href="https://github.com/Alisa007/compliance-rules-engine/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/Alisa007/compliance-rules-engine/actions/workflows/ci.yml/badge.svg" /></a>
+  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-blue.svg" /></a>
+  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-strict-3178c6.svg" />
+  <img alt="Zero dependencies" src="https://img.shields.io/badge/dependencies-0-brightgreen.svg" />
+  <img alt="Jurisdictions" src="https://img.shields.io/badge/jurisdictions-50%20states%20%2B%20DC-informational.svg" />
+</p>
 
-Currently covers the **United States** (federal, all 50 states and DC, and a growing set of cities). Other countries
-are planned; the engine already selects rule packs by `country`.
+Starting or running a business in the US means a pile of obligations spread over the IRS, 50 state agencies and your
+city: formation, EIN, state tax accounts, licenses, annual reports, payroll filings, insurance. They depend on the
+entity type, the state, headcount, industry and more, and the answers live in dozens of scattered agency pages.
 
-> **Not legal or tax advice.** Rule data is maintained by hand. On 2026-10-13 the entity annual/biennial report fee and
-> deadline, workers' compensation thresholds, DBA filing level and LP/LLP reporting were checked for every state against
-> web search results (official agency pages where available). Anything not confirmed is listed in that state's
-> `verification.unconfirmed`, and everything else is compiled from public knowledge. Fees, deadlines and thresholds
-> change. Confirm with the cited authority.
+This library puts that knowledge in one pure TypeScript function. No network, no I/O, no account, no API key: the
+same profile always gives the same answer, so you can test it, cache it and run it anywhere (Node, browsers, edge).
+
+```ts
+import { evaluate } from "compliance-rules-engine";
+
+const { items } = evaluate({
+  entityType: "llc",
+  zip: "60601",
+  city: "Chicago",
+  county: "Cook",
+  industry: "restaurant",
+  employeeCount: 6,
+});
+// items[0] -> {
+//   id: "fed.ein",
+//   title: "Obtain an Employer Identification Number (EIN)",
+//   authority: "IRS", jurisdiction: "federal", category: "registration",
+//   reason: "...", provenance: { confidence: "compiled", sources: [...] }
+// }
+```
+
+## What you get
+
+| You want                                    | Use                                                         |
+| ------------------------------------------- | ----------------------------------------------------------- |
+| Everything that applies to a business       | `evaluate(profile)`                                         |
+| An ordered plan to **open** a business      | `planLaunch(profile, { startDate, openingDate })`           |
+| A year of dated deadlines, as an `.ics`     | `buildCalendar(profile, { from, to })` + `toICS(events)`    |
+| What it will cost in government fees        | `estimateCosts(items, { profile })`                         |
+| What changes if you hire, expand or convert | `explainTransition(profile, { type: "hire", count: 3 })`    |
+| Which unanswered question matters           | `analyzeInputs(profile)`                                    |
+| What changes in the law next, and when      | `previewChanges(profile, { to })`, `result.upcomingChanges` |
+| How to **close** a business                 | set `dissolutionDate`                                       |
+| Output in another language                  | `localize(result, catalog)`                                 |
+| The command line                            | `npx compliance-rules-engine --zip 78701 --entity llc`      |
+
+Every item says **why** it applies (`reason`), **who** to deal with (`authority`, `url`), **when** (`nextDue`),
+**how much** (`cost`, `penalty`) and **how sure we are** (`provenance`: checked, compiled or unconfirmed, with sources).
+
+## Try it
+
+- **In the browser:** the [playground](https://alisa007.github.io/compliance-rules-engine/) runs the library locally
+  on your machine; nothing is uploaded.
+- **From the terminal:**
+  ```sh
+  npx compliance-rules-engine launch --zip 60601 --entity llc --employees 3 --start 2026-11-02 --opening 2027-02-01
+  ```
+- **In code:** `npm install compliance-rules-engine`, then see [`examples/`](examples).
+
+## Why trust it (and when not to)
+
+- **Honest about its confidence.** Each state records what was checked against official pages and on what date; what
+  could not be confirmed is listed, not hidden. See [COVERAGE.md](COVERAGE.md), generated from the data.
+- **Specific, not generic.** All 50 states and DC have their own filing agency, report fees and deadlines, unemployment
+  insurance parameters, workers' compensation triggers and licensing authorities. Twenty-six cities are seeded
+  with local requirements; the rest get the state's local licensing regime.
+- **Derivable.** If an obligation depends on a fact (headcount, payroll, activity in another state), that fact is an
+  input. There is no hidden "maybe"; a missing required input throws.
+- **Versioned law.** Dated rule changes are bundled, so you can see what changes next quarter and prepare.
+- **Not legal or tax advice.** Rules change and local nuance is endless. Treat the output as a well-sourced checklist
+  to confirm with the cited authority or a professional.
+
+## Contributing
+
+The most valuable contributions are **data**: correct a fee, add a city, add an industry. No code is needed for most of
+them. Start with [CONTRIBUTING.md](CONTRIBUTING.md) and the issues labelled
+[`good first issue`](https://github.com/Alisa007/compliance-rules-engine/labels/good%20first%20issue).
 
 ## Install
 
@@ -22,9 +91,11 @@ are planned; the engine already selects rule packs by `country`.
 npm install compliance-rules-engine
 ```
 
-ESM and CommonJS are both supported. Node 18+.
+ESM and CommonJS are both supported. Node 18+. About 57 KB gzipped, no runtime dependencies.
 
-## Use
+## Core API
+
+### Evaluate
 
 ```ts
 import { evaluate } from "compliance-rules-engine";

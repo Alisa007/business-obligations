@@ -148,6 +148,8 @@ const RANK: Record<string, number> = {
 const baseRule = (item: ComplianceItem) => item.ruleId;
 
 function phaseOf(item: ComplianceItem): LaunchPhaseId {
+  // The sales tax permit comes first; the returns that follow are recurring.
+  if (item.ruleId === "state.sales-tax" && item.category === "payment") return "operate";
   const fixed = PHASE_OF[baseRule(item)];
   if (fixed) return fixed;
   const rule = baseRule(item);

@@ -77,3 +77,32 @@ the file is stale.
 
 `npm run build && npm run size` fails when a bundle exceeds its gzip budget (`scripts/size.mjs`). Prefer adding data to
 JSON files over code; raise a budget only with a reason in the pull request.
+
+## Adding a city
+
+Cities live in `data/local.json`. Each entry has `state`, `city`, optional `counties` and `aliases`, and `items`:
+
+```json
+{
+  "id": "xyz.business-tax",
+  "title": "Pay the XYZ business tax",
+  "category": "payment",
+  "authority": "City of XYZ Finance Department",
+  "description": "One or two sentences, in your own words.",
+  "frequency": "annual",
+  "deadline": "September 30",
+  "due": { "type": "fixed", "month": 9, "day": 30 },
+  "url": "https://www.xyz.gov/business-tax",
+  "appliesTo": ["all"]
+}
+```
+
+`appliesTo` takes `all`, `employees`, `sells_goods`, `corporation`, `unincorporated` or `trade_name`. Use the city's own
+page for `url`, run `npm run coverage` and `npm run check`, and add a line to the Unreleased section of `CHANGELOG.md`.
+
+## Release checklist (maintainers)
+
+1. Move **Unreleased** in `CHANGELOG.md` under the new version and bump `version` in `package.json`.
+2. `npm run check && npm run build && npm run size`.
+3. Tag `vX.Y.Z` and push the tag; the release workflow publishes to npm with provenance.
+4. Enable GitHub Pages (Settings, Pages, Source: GitHub Actions) once so the playground deploys on each push to `main`.

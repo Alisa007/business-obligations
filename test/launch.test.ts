@@ -86,3 +86,17 @@ describe("planLaunch", () => {
     expect(p.steps.some((s) => s.item.ruleId === "state.formation")).toBe(false);
   });
 });
+
+describe("planLaunch phases", () => {
+  it("treats the sales tax permit as a registration and the returns as recurring", () => {
+    const plan = planLaunch(profile, { startDate: "2026-11-02" });
+    const permit = plan.steps.find(
+      (s) => s.item.ruleId === "state.sales-tax" && s.item.category === "permit",
+    );
+    const returns = plan.steps.find(
+      (s) => s.item.ruleId === "state.sales-tax" && s.item.category === "payment",
+    );
+    expect(permit?.phase).toBe("register");
+    expect(returns?.phase).toBe("operate");
+  });
+});
