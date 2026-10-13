@@ -22,6 +22,10 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ### Changed
 
+- Resolved caveats: Illinois and North Dakota workers' comp thresholds, Oregon, New Mexico and Oklahoma report data
+  confirmed; Alabama corporate annual report marked repealed (Oct 2024) per secondary sources; Kansas fees updated to
+  the 2026 form amounts; cannabis regulators confirmed for 34 states with corrections for Louisiana (Agriculture and
+  Forestry plus Board of Pharmacy), Iowa, Michigan, Montana, Mississippi and Arkansas.
 - DBA registration authority corrected for many states (e.g. AL, KS, IN, IA, NH, RI from 2026, VA, WV, DE from 2026).
 - Dead agency URLs replaced (FL, IA, LA, ME, NY, NH, VT, WY, MA) and city URLs repaired.
 - Report data refined: MA/ME/HI corporate fees, NE occupation tax schedule, OK corporations (franchise tax repealed).

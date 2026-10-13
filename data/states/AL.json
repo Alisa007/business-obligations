@@ -21,19 +21,9 @@
     },
     "stateFund": false
   },
-  "llcReport": {
-    "frequency": "annual",
-    "fee": "$100 minimum (Business Privilege Tax)",
-    "deadline": "Same date as the federal return: March 15 (pass-through) or April 15 (C corp)",
-    "title": "File Annual Report and Business Privilege Tax return"
-  },
-  "corpReport": {
-    "frequency": "annual",
-    "fee": "$100 minimum (Business Privilege Tax)",
-    "deadline": "Same date as the federal return: March 15 (pass-through) or April 15 (C corp)",
-    "title": "File Annual Report and Business Privilege Tax return"
-  },
-  "entityTax": "Corporate income tax and Business Privilege Tax",
+  "llcReport": null,
+  "corpReport": null,
+  "entityTax": "Corporate income tax and Business Privilege Tax (no return required when only the $100 minimum is due; the Secretary of State corporate annual report was repealed effective October 1, 2024)",
   "wageWithholding": true,
   "salesTax": {
     "statewide": true,
@@ -63,7 +53,7 @@
     "checkedOn": "2026-10-13",
     "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
     "sources": ["https://www.revenue.alabama.gov/tax-types/business-privilege-tax/"],
-    "unconfirmed": ["corpReport.deadline", "lpReport", "llpReport", "cannabis.regulator"],
+    "unconfirmed": ["lpReport", "llpReport", "corpReport"],
     "dba": "checked"
   },
   "llpReport": {

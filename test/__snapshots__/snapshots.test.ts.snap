@@ -199,7 +199,6 @@ exports[`snapshot AL > c corp formed in the state with no employees 1`] = `
   "fed.ein | Obtain an Employer Identification Number (EIN) |  | ",
   "fed.income-tax-return | File federal income tax return: Form 1120 | April 15 | 2027-04-15",
   "state.registered-agent:AL | Maintain a registered agent in Alabama |  | ",
-  "state.annual-report:AL | File Annual Report and Business Privilege Tax return (Alabama) | Same date as the federal return: March 15 (pass-through) or April 15 (C corp) | ",
   "state.entity-tax:AL | Register for and file Alabama entity-level taxes |  | ",
   "local.business-license:AL | Municipal or county business license — Sampletown, Sample County, Alabama |  | ",
   "local.certificate-of-occupancy:AL | Obtain certificate of occupancy for premises in Sampletown |  | ",
@@ -287,14 +286,6 @@ exports[`snapshot AL > llc with employees, sales and a trade name 1`] = `
     "id": "state.registered-agent:AL",
     "nextDue": undefined,
     "title": "Maintain a registered agent in Alabama",
-  },
-  {
-    "authority": "Alabama Secretary of State",
-    "deadline": "Same date as the federal return: March 15 (pass-through) or April 15 (C corp)",
-    "frequency": "annual",
-    "id": "state.annual-report:AL",
-    "nextDue": undefined,
-    "title": "File Annual Report and Business Privilege Tax return (Alabama)",
   },
   {
     "authority": "Alabama Department of Revenue",
