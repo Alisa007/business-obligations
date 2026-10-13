@@ -217,6 +217,7 @@ export function evaluate(input: BusinessProfile, options: EvaluateOptions = {}):
           asOf,
           formationDate: profile.formationDate,
           biennial: d.frequency === "biennial",
+          intervalYears: d.frequency === "every_five_years" ? 5 : undefined,
         });
         if (next) item.nextDue = next;
       }

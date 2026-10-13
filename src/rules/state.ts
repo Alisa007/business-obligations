@@ -248,7 +248,7 @@ export const stateRules: Rule[] = [
           const r = reportFor(p, code)!;
           const foreign = code !== p.formationState;
           return {
-            title: `${r.title ?? (r.frequency === "annual" ? "File Annual Report" : "File Biennial Report")} (${s.name}${foreign ? ", foreign entity" : ""})`,
+            title: `${r.title ?? (r.frequency === "annual" ? "File Annual Report" : r.frequency === "biennial" ? "File Biennial Report" : "File Periodic Report")} (${s.name}${foreign ? ", foreign entity" : ""})`,
             category: "filing" as const,
             jurisdiction: "state" as const,
             state: code,

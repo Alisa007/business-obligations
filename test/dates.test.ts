@@ -17,6 +17,14 @@ describe("nextDueDate", () => {
     expect(nextDueDate(due, { asOf: "2027-04-02", biennial: true })).toBe("2029-04-01");
   });
 
+  it("five-year cycles fall on the fifth anniversary and every fifth year after", () => {
+    const due = { type: "anniversary", point: "date" } as const;
+    const ctx = { asOf: "2026-10-12", biennial: false, intervalYears: 5, formationDate: "2023-05-01" };
+    expect(nextDueDate(due, ctx)).toBe("2028-05-01");
+    expect(nextDueDate(due, { ...ctx, asOf: "2028-05-02" })).toBe("2033-05-01");
+    expect(nextDueDate(due, { ...ctx, formationDate: undefined })).toBeUndefined();
+  });
+
   it("biennial cycles anchored to formation year need formationDate", () => {
     const due = { type: "fixed", month: 4, day: 15, cycleFrom: "formation_year" } as const;
     expect(nextDueDate(due, { asOf: "2026-10-12", biennial: true })).toBeUndefined();

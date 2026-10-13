@@ -19,6 +19,7 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
   Cincinnati, Pittsburgh, Louisville, Kansas City, St. Louis, Baltimore, New Orleans, Las Vegas, Phoenix); city
   aliases and a `trade_name` tag.
 - `verification` block per state (`checkedOn`, `sources`, `unconfirmed`, `dba`).
+- `every_five_years` report frequency (New York registered LLP statement) with next-due calculation.
 
 ### Changed
 
@@ -36,7 +37,7 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
   LP/LLP fees corrected to $90 online ($110 paper).
 - LLP report data: Virginia LLPs file an annual continuation report ($50, July 1); Missouri renewal is $105 plus $50
   per added partner (max $205); Illinois LLPs have an annual renewal statement (fee not yet confirmed); Iowa and New
-  York LLPs have no annual or biennial report (New York requires a five-year LLP statement, not modelled).
+  York LLPs have no annual or biennial report; New York LLPs file a $20 statement every five years.
 - More LP/LLP report data confirmed: no periodic report for NE, NM and OH limited partnerships; Tennessee LLP annual fee
   is $50 per partner ($250 minimum, $2,500 maximum); ID and SD LLPs file the same annual report as LLCs.
 - LP/LLP report data accepted at high confidence: ID, IL and MA limited partnerships (MA now has an explicit $500 /

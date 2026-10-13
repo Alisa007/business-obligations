@@ -138,7 +138,7 @@ export type { Due } from "./data/types";
 
 export type Jurisdiction = "federal" | "state" | "county" | "city";
 
-export type Frequency = "once" | "annual" | "biennial" | "quarterly" | "monthly" | "per_event" | "ongoing";
+export type Frequency = "once" | "annual" | "biennial" | "every_five_years" | "quarterly" | "monthly" | "per_event" | "ongoing";
 
 export interface ComplianceItem {
   id: string;

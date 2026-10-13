@@ -25,6 +25,8 @@ export interface DueContext {
   /** ISO date of formation, when known. */
   formationDate?: string;
   biennial: boolean;
+  /** Repeat interval in years for cycles longer than two (e.g. five-year statements). */
+  intervalYears?: number;
 }
 
 /** Computes the next due date for a rule, or undefined when it cannot be determined from the inputs. */
@@ -33,6 +35,7 @@ export function nextDueDate(due: Due, ctx: DueContext): string | undefined {
     case "fixed": {
       let ok = (_y: number) => true;
       if (due.parity) ok = (y) => (due.parity === "odd" ? y % 2 === 1 : y % 2 === 0);
+      else if (ctx.intervalYears && ctx.intervalYears > 2) return undefined;
       else if (ctx.biennial) {
         if (!due.cycleFrom || !ctx.formationDate) return undefined;
         const base =
@@ -55,10 +58,12 @@ export function nextDueDate(due: Due, ctx: DueContext): string | undefined {
       const fy = Number(ctx.formationDate.slice(0, 4));
       const day = (y: number) =>
         due.point === "start_of_month" ? 1 : due.point === "end_of_month" ? lastDay(y, fm) : fd;
-      // Annual reports are first due in the year after formation; biennial cycles repeat every two years.
-      const step = ctx.biennial ? 2 : 1;
+      // Annual reports are first due in the year after formation; biennial cycles repeat every two years;
+      // longer cycles (five-year statements) are first due on the Nth anniversary.
+      const long = ctx.intervalYears !== undefined && ctx.intervalYears > 2;
+      const step = long ? ctx.intervalYears! : ctx.biennial ? 2 : 1;
       const startYear = Number(ctx.asOf.slice(0, 4));
-      for (let y = fy + 1; y <= startYear + 3; y += step) {
+      for (let y = fy + (long ? step : 1); y <= startYear + step + 2; y += step) {
         const d = iso(y, fm, Math.min(day(y), lastDay(y, fm)));
         if (d >= ctx.asOf) return d;
       }

@@ -32,7 +32,16 @@
     }
   },
   "lpReport": null,
-  "llpReport": null,
+  "llpReport": {
+    "frequency": "every_five_years",
+    "fee": "$20",
+    "deadline": "Within the 60 days before the fifth anniversary of registration, then every five years",
+    "title": "File LLP statement",
+    "due": {
+      "type": "anniversary",
+      "point": "date"
+    }
+  },
   "corpReport": {
     "frequency": "biennial",
     "fee": "$9",
