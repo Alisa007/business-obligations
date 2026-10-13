@@ -9,8 +9,11 @@
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-blue.svg" /></a>
   <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-strict-3178c6.svg" />
   <img alt="Zero dependencies" src="https://img.shields.io/badge/dependencies-0-brightgreen.svg" />
+  <a href="https://alisa007.github.io/compliance-rules-engine/"><img alt="Live demo" src="https://img.shields.io/badge/demo-try%20it%20in%20your%20browser-1f5f4a.svg" /></a>
   <img alt="Jurisdictions" src="https://img.shields.io/badge/jurisdictions-50%20states%20%2B%20DC-informational.svg" />
 </p>
+
+**[Try it in your browser](https://alisa007.github.io/compliance-rules-engine/)**: no install, nothing is uploaded.
 
 Starting or running a business in the US means a pile of obligations spread over the IRS, 50 state agencies and your
 city: formation, EIN, state tax accounts, licenses, annual reports, payroll filings, insurance. They depend on the
