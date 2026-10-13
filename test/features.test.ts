@@ -218,8 +218,8 @@ describe("LP and LLP report overrides", () => {
     expect(rep("33101", "llp")?.description).toMatch(/\$25/);
     expect(rep("33101", "llc")?.description).toMatch(/138\.75/);
   });
-  it("Illinois LLPs file no annual report; Michigan LPs none", () => {
-    expect(rep("60601", "llp")).toBeUndefined();
+  it("Illinois LLPs renew annually; Michigan LPs file none", () => {
+    expect(rep("60601", "llp")?.description).toMatch(/UPA 1003/);
     expect(rep("48201", "lp")).toBeUndefined();
     expect(rep("60601", "llc")).toBeDefined();
   });

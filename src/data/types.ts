@@ -26,7 +26,7 @@ export interface MultiDue {
 export type Due = FixedDue | AnniversaryDue | MultiDue;
 
 export interface ReportRule {
-  frequency: "annual" | "biennial" | "every_five_years";
+  frequency: "annual" | "biennial" | "every_five_years" | "periodic";
   fee: string;
   deadline: string;
   /** Overrides the default "File annual report" title. */

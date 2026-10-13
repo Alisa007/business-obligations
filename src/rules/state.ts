@@ -254,7 +254,7 @@ export const stateRules: Rule[] = [
             state: code,
             authority: s.filing.name,
             description: `Fee: ${r.fee}. Required to keep the entity in good standing.`,
-            frequency: r.frequency,
+            frequency: r.frequency === "periodic" ? ("ongoing" as const) : r.frequency,
             deadline: r.deadline,
             due: r.due,
             reason: foreign

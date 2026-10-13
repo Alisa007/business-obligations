@@ -415,7 +415,7 @@
       "required": ["frequency", "fee", "deadline"],
       "properties": {
         "frequency": {
-          "enum": ["annual", "biennial", "every_five_years"]
+          "enum": ["annual", "biennial", "every_five_years", "periodic"]
         },
         "fee": {
           "type": "string",
