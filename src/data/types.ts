@@ -46,6 +46,21 @@ export interface EntityTaxDetail {
   checkedOn: string;
 }
 
+export interface StateLinks {
+  /** How to form an entity with the filing office. */
+  formation: string;
+  /** Annual, biennial or periodic report filing or renewal. */
+  annualReport: string;
+  /** Employer registration for unemployment insurance. */
+  uiRegistration: string;
+  /** Employer registration for state income tax withholding. */
+  withholding?: string;
+  /** Sales and use tax permit or license registration. */
+  salesTax?: string;
+  /** Corporate income, franchise or gross-receipts tax. */
+  entityTax: string;
+}
+
 export interface UnemploymentInfo {
   /** Annual wages per employee subject to the tax, USD. */
   wageBase: number;
@@ -192,6 +207,11 @@ export interface StateInfo {
     regulator: string | null;
     note?: string;
   };
+  /**
+   * Specific agency pages (not home pages) for the obligations the rules cite. `withholding` and `salesTax`
+   * are present only where the state has a wage-withholding or statewide sales tax regime.
+   */
+  links: StateLinks;
   /** Threshold and rate of the state's gross-receipts or margin tax, where it has one. */
   entityTaxDetail?: EntityTaxDetail;
   /** State unemployment insurance (SUI) employer tax parameters. */

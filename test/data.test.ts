@@ -112,3 +112,25 @@ describe("compliance result schema", () => {
     expect(ok).toBe(true);
   });
 });
+
+describe("source links", () => {
+  const isBare = (u: string) => {
+    const url = new URL(u);
+    return (url.pathname === "/" || url.pathname === "") && !url.search;
+  };
+
+  it("every state has specific (non-home-page) links for the obligations it cites", () => {
+    for (const [code, s] of Object.entries(STATES)) {
+      const links = s.links;
+      expect(links, code).toBeDefined();
+      for (const key of ["formation", "annualReport", "uiRegistration", "entityTax"] as const)
+        expect(isBare(links[key]), `${code}.links.${key} is a bare domain: ${links[key]}`).toBe(false);
+      if (s.wageWithholding) expect(links.withholding, `${code} withholding`).toBeDefined();
+      if (s.salesTax.statewide) expect(links.salesTax, `${code} salesTax`).toBeDefined();
+      for (const [key, value] of Object.entries(links)) {
+        expect(value, `${code}.links.${key}`).toMatch(/^https:\/\//);
+        expect(isBare(value as string), `${code}.links.${key}`).toBe(false);
+      }
+    }
+  });
+});

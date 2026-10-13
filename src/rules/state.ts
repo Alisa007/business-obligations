@@ -49,7 +49,7 @@ const registeredAgent = (state: string, reason: string): ItemDraft => {
     description: `A person or service with a physical ${s.name} address to receive legal notices and service of process; listed with ${s.filing.name}.`,
     frequency: "ongoing",
     reason,
-    url: s.filing.url,
+    url: s.links.formation,
   };
 };
 
@@ -67,7 +67,7 @@ function employerItems(x: Presence, p: ResolvedProfile): ItemDraft[] {
       description: "Employer account for state unemployment insurance contributions.",
       frequency: "once",
       reason,
-      url: s.labor.url,
+      url: s.links.uiRegistration,
     },
     {
       title: `File wage reports and pay unemployment insurance contributions (${s.name})`,
@@ -94,7 +94,7 @@ function employerItems(x: Presence, p: ResolvedProfile): ItemDraft[] {
           }
         : {}),
       reason,
-      url: s.labor.url,
+      url: s.links.uiRegistration,
     },
     {
       title: `Report new hires to the ${s.name} new hire directory`,
@@ -120,7 +120,7 @@ function employerItems(x: Presence, p: ResolvedProfile): ItemDraft[] {
         "Withhold state income tax from wages and remit on the assigned deposit schedule; file annual reconciliation and W-2s.",
       frequency: "once",
       reason: `${s.name} levies income tax on wages; ${reason}`,
-      url: s.revenue.url,
+      url: s.links.withholding ?? s.revenue.url,
     });
   }
 
@@ -210,7 +210,7 @@ export const stateRules: Rule[] = [
                     : "Articles of Incorporation (Certificate of Incorporation in some states).",
         frequency: "once",
         reason: "Entity has not been formed yet",
-        url: s.filing.url,
+        url: s.links.formation,
       };
     },
   },
@@ -249,7 +249,7 @@ export const stateRules: Rule[] = [
               "Certificate of Authority / Foreign Registration, with a certificate of good standing from the formation state, required to do business here.",
             frequency: "once" as const,
             reason: `Formed in ${p.formationState} with employees or property in ${code}`,
-            url: s.filing.url,
+            url: s.links.formation,
           };
         }),
   },
@@ -296,7 +296,7 @@ export const stateRules: Rule[] = [
             reason: foreign
               ? `Registered as a foreign ${p.entityType} in ${code}`
               : `${p.entityType} formed in ${code}`,
-            url: s.filing.url,
+            url: s.links.annualReport,
           };
         }),
   },
@@ -319,7 +319,7 @@ export const stateRules: Rule[] = [
             : `${s.entityTax}.`,
           frequency: "annual" as const,
           reason: `${p.entityType} with ${x.home ? "its principal place of business" : "employees or property"} in ${x.state}`,
-          url: s.revenue.url,
+          url: s.links.entityTax,
         };
       }),
   },
@@ -431,7 +431,7 @@ export const stateRules: Rule[] = [
               description: s.salesTax.alternative ?? "",
               frequency: "once" as const,
               reason,
-              url: agency.url,
+              url: s.links.salesTax ?? agency.url,
             },
           ];
         }
@@ -460,7 +460,7 @@ export const stateRules: Rule[] = [
             description: "Required before making taxable sales; register with the state tax agency.",
             frequency: "once" as const,
             reason,
-            url: agency.url,
+            url: s.links.salesTax ?? agency.url,
           },
           {
             title: `File sales tax returns and remit tax (${s.name})`,
@@ -476,7 +476,7 @@ export const stateRules: Rule[] = [
             frequency: "monthly" as const,
             deadline: "Monthly, quarterly or annually as assigned by the state",
             reason,
-            url: agency.url,
+            url: s.links.salesTax ?? agency.url,
           },
           ...local,
         ];
@@ -661,7 +661,7 @@ export const extraStateRules: Rule[] = [
         "Benefit corporations deliver an annual report assessing their public benefit performance against a third-party standard to shareholders and, in many states, file it with the state.",
       frequency: "annual",
       reason: "Entity is a benefit corporation",
-      url: info(p.formationState).filing.url,
+      url: info(p.formationState).links.formation,
     }),
   },
 ];

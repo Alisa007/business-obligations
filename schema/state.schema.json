@@ -27,7 +27,8 @@
     "verification",
     "cannabis",
     "localSalesTax",
-    "unemployment"
+    "unemployment",
+    "links"
   ],
   "properties": {
     "code": {
@@ -352,6 +353,19 @@
     },
     "localSalesTax": {
       "enum": ["locally_administered", "state_administered", "none"]
+    },
+    "links": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["formation", "annualReport", "uiRegistration", "entityTax"],
+      "properties": {
+        "formation": { "type": "string", "format": "uri" },
+        "annualReport": { "type": "string", "format": "uri" },
+        "uiRegistration": { "type": "string", "format": "uri" },
+        "withholding": { "type": "string", "format": "uri" },
+        "salesTax": { "type": "string", "format": "uri" },
+        "entityTax": { "type": "string", "format": "uri" }
+      }
     },
     "entityTaxDetail": {
       "type": "object",
