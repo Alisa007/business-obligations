@@ -28,6 +28,8 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 - Localization: `ruleId` on every item, `localize()` and `catalogTemplate()`.
 - `schema/compliance-result.schema.json` for `evaluate()` output.
 - Command line (`compliance-rules-engine`), bundle-size budgets (`npm run size`) and a CI smoke test.
+- `planLaunch()`: ordered plan for opening a new business with phases, dependencies, planned dates, opening-date
+  check and first-year fees; `launch` CLI command.
 - Clearer disclaimer wording.
 - `analyzeInputs(profile)`: which optional inputs were defaulted and which values would change the returned items.
 

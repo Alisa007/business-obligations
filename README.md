@@ -167,6 +167,30 @@ analyzeInputs(profile);
   deposits are not expanded.
 - `analyzeInputs` tells you which questions are worth asking: defaulted inputs that would change the result.
 
+## Opening a new business
+
+`planLaunch` turns a profile into an ordered plan: what to do first, what depends on what, planned dates, and the
+recurring obligations that start afterwards.
+
+```ts
+import { planLaunch } from "compliance-rules-engine";
+
+const plan = planLaunch(profile, { startDate: "2026-11-02", openingDate: "2027-02-01" });
+plan.phases; // prepare -> form -> identify (EIN) -> register -> license -> employ -> operate
+plan.steps[0]; // { order: 1, phase: "prepare", item, dependsOn: [], start, target, legalDeadline? }
+plan.onTrack; // does the plan finish before the opening date?
+plan.costs; // known government fees: one-time and per year
+```
+
+- **Order:** registered agent and professional approvals, then the formation filing, then the EIN, then tax and
+  filing registrations, then licenses and permits, then pre-hire setup. Every step lists the item ids it depends on.
+- **Dates:** phases are scheduled back to back from `startDate` using planning allowances (`allowanceDays`, defaults
+  7/14/3/14/30/7 days). These are scheduling buffers, not agency processing times; override them with what the
+  agencies publish for your case. A step's `legalDeadline` appears only when the rules give a real due date.
+- **After opening:** the `operate` phase lists recurring items in due-date order, with first due dates computed from the
+  planned formation date.
+- From the command line: `npx compliance-rules-engine launch profile.json --start 2026-11-02 --opening 2027-02-01`.
+
 ## Winding down
 
 Set `dissolutionDate` (the date the business is dissolved or the resolution to dissolve is adopted) and the result

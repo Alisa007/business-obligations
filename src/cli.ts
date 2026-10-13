@@ -3,6 +3,7 @@ import { readFileSync, writeFileSync } from "node:fs";
 import {
   analyzeInputs,
   buildCalendar,
+  planLaunch,
   estimateCosts,
   evaluate,
   listChanges,
@@ -25,6 +26,7 @@ Commands:
   costs       Estimate annual and one-time government fees
   analyze     Show defaulted inputs and what would change the result
   changes     List dated rule changes (--state XX, --upcoming)
+  launch      Ordered plan for opening a new business (--start, --opening)
   rules       List rules and the inputs they read
 
 Profile (JSON file, "-" for stdin, or flags):
@@ -44,7 +46,7 @@ interface Args {
 }
 
 function parseArgs(argv: string[]): Args {
-  const commands = ["evaluate", "calendar", "costs", "analyze", "changes", "rules"];
+  const commands = ["evaluate", "calendar", "costs", "analyze", "changes", "launch", "rules"];
   const flags: Args["flags"] = {};
   const positional: string[] = [];
   const boolean = new Set(["json", "help", "h", "upcoming"]);
@@ -141,6 +143,35 @@ function run(argv: string[]): number {
 
   const profile = resolveLocation(loadProfile(args));
   switch (args.command) {
+    case "launch": {
+      const opening = typeof args.flags.opening === "string" ? args.flags.opening : undefined;
+      const start = typeof args.flags.start === "string" ? args.flags.start : asOf;
+      const plan = planLaunch(profile, { startDate: start, openingDate: opening });
+      emit(plan, () => {
+        const lines: string[] = [
+          `Plan from ${plan.startDate}: formation filing ${plan.formationDate}, ready to operate ${plan.readyDate}`,
+        ];
+        if (plan.onTrack !== undefined)
+          lines.push(
+            plan.onTrack
+              ? `Opening ${plan.openingDate}: on track (${plan.slackDays} days of slack)`
+              : `Opening ${plan.openingDate}: ${-plan.slackDays!} days too late at these allowances`,
+          );
+        for (const ph of plan.phases) {
+          lines.push(`\n${ph.title.toUpperCase()}  ${ph.start}${ph.end ? ` -> ${ph.end}` : " onward"}`);
+          for (const s of ph.steps) {
+            const due = s.legalDeadline ? `  [legal due ${s.legalDeadline}]` : "";
+            const when = ph.id === "operate" ? (s.target ? ` (first due ${s.target})` : "") : "";
+            lines.push(`  ${String(s.order).padStart(2)}. ${s.item.title}${when}${due}`);
+          }
+        }
+        lines.push(
+          `\nGovernment fees: ${money(plan.costs.oneTime)} one-time, ${money(plan.costs.annual)} per year (known amounts only)`,
+        );
+        return lines.join("\n");
+      });
+      return 0;
+    }
     case "calendar": {
       const from = typeof args.flags.from === "string" ? args.flags.from : asOf;
       const to = typeof args.flags.to === "string" ? args.flags.to : undefined;
