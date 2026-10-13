@@ -2,7 +2,7 @@ import type { ItemDraft, Presence, ResolvedProfile, Rule } from "../types";
 import { professionBoard, stateInfo as info } from "../data";
 import type { BoardRef } from "../data";
 import type { EntityTaxDetail, ReportRule } from "../data/types";
-import { isLlcLike, isLlcSubtype, isProfessionalEntity, isSeparateEntity } from "../entity";
+import { isCorpLike, isLlcLike, isLlcSubtype, isProfessionalEntity, isSeparateEntity } from "../entity";
 
 /** Employees or property in the state. */
 const physical = (x: Presence) => x.home || x.employeeCount > 0 || x.hasProperty;
@@ -353,7 +353,9 @@ export const stateRules: Rule[] = [
             "15th day of the 4th month of the tax year (estimated); return due 15th day of 3rd/4th month after year end",
           cost: { basis: "flat", amount: 800, currency: "USD" },
           reason: "Entity is doing business in California",
-          url: "https://www.ftb.ca.gov",
+          url: isCorpLike(p)
+            ? "https://www.ftb.ca.gov/file/business/types/corporations/index.html"
+            : "https://www.ftb.ca.gov/file/business/types/limited-liability-company/index.html",
         },
       ];
       if (isLlcSubtype(p) && p.annualRevenue >= 250_000) {
@@ -380,7 +382,7 @@ export const stateRules: Rule[] = [
             currency: "USD",
           },
           reason: `Annual revenue is ${p.annualRevenue}`,
-          url: "https://www.ftb.ca.gov",
+          url: "https://www.ftb.ca.gov/file/business/types/limited-liability-company/index.html",
         });
       }
       return out;
@@ -407,7 +409,7 @@ export const stateRules: Rule[] = [
             frequency: l.renewal,
             ...(l.feeDetail ? { cost: { ...l.feeDetail, currency: "USD" as const } } : {}),
             reason: `${s.name} requires a general state business license`,
-            url: s.revenue.url,
+            url: s.links.businessLicense ?? s.revenue.url,
           };
         }),
   },
@@ -498,7 +500,7 @@ export const stateRules: Rule[] = [
       const s = info(p.state);
       const where = s.dbaFiling;
       // Registered entities (LLCs, corporations, LPs) register their assumed names with the state filing agency.
-      const entityRegisters = isSeparateEntity(p);
+      const entityRegisters = isSeparateEntity(p) && !s.dbaEntitiesFileLocally;
       const state = entityRegisters || where === "state";
       const agency = s.dbaAuthority && !entityRegisters ? s.dbaAuthority : s.filing;
       const authority = state
@@ -521,7 +523,7 @@ export const stateRules: Rule[] = [
           : `${s.name} registers sole proprietors' and partnerships' assumed names at the ${where} level, in each ${where} where business is conducted.`,
         frequency: "once" as const,
         reason: "Business operates under a trade name",
-        url: state ? agency.url : undefined,
+        url: s.links.dba ?? (state ? agency.url : undefined),
       };
     },
   },
@@ -595,7 +597,7 @@ export const extraStateRules: Rule[] = [
             "State minimum wage, unemployment insurance, workers' compensation and anti-discrimination notices must be posted where employees can see them.",
           frequency: "ongoing" as const,
           reason: `${x.employeeCount} employees in ${x.state}`,
-          url: info(x.state).labor.url,
+          url: info(x.state).links.laborPosters,
         })),
   },
   {
@@ -642,7 +644,7 @@ export const extraStateRules: Rule[] = [
           "Professional entities must be owned by licensees and generally need a board-issued certificate of authorization, renewed periodically, in addition to the state filing.",
         frequency: "biennial",
         reason: `Entity type ${p.entityType} is a professional entity`,
-        url: board?.url ?? s.filing.url,
+        url: board?.url ?? s.links.formation,
       };
     },
   },

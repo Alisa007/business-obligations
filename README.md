@@ -73,6 +73,8 @@ Every item says **why** it applies (`reason`), **who** to deal with (`authority`
 - **Specific, not generic.** All 50 states and DC have their own filing agency, report fees and deadlines, unemployment
   insurance parameters, workers' compensation triggers and licensing authorities. Twenty-six cities are seeded
   with local requirements; the rest get the state's local licensing regime.
+- **Cited to the page that matters.** Every item's `url` is the agency page for that obligation (for example the
+  state's employer registration page), not a home page, and a weekly job checks the links.
 - **Derivable.** If an obligation depends on a fact (headcount, payroll, activity in another state), that fact is an
   input. There is no hidden "maybe"; a missing required input throws.
 - **Versioned law.** Dated rule changes are bundled, so you can see what changes next quarter and prepare.

@@ -38,6 +38,12 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 - One date convention, enforced by tests: ISO `YYYY-MM-DD` for machine-readable dates (now rejecting impossible
   dates such as `2026-02-30`), spelled-out months in deadline text. `rulesetVersion` is now `YYYY-MM-DD.n` (was
   `YYYY.MM.DD-n`). Calendar windows are validated.
+- Specific source citations: items cite the agency page for the obligation (formation, annual report, unemployment
+  registration, withholding, sales tax, entity tax, workplace posters, DBA, business license, professional boards,
+  city taxes), never a bare agency domain. New per-state `links` block; `npm run check:links` and a weekly workflow
+  verify the links, and a test fails when an item cites a bare domain.
+- Assumed names (DBA): California, Connecticut, Georgia, Massachusetts, Nevada and North Carolina file entity assumed
+  names at the county or town level, not with the state (`dbaEntitiesFileLocally`).
 - Clearer disclaimer wording.
 - `analyzeInputs(profile)`: which optional inputs were defaulted and which values would change the returned items.
 

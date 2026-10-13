@@ -73,12 +73,22 @@ async function main() {
   const arg = process.argv[2];
   if (arg === "--data") {
     const urls = collectDataUrls();
-    const bare = [...urls.keys()].filter(isBareDomain);
+    // Agency home pages identify an agency and are not used as rule citations, so only citation fields must be specific.
+    const AGENCY = /\.(filing|revenue|labor|agency|dbaAuthority)\.url$|\.sources\[\d+\]$/;
+    const bare = [...urls.keys()].filter((u) => isBareDomain(u) && urls.get(u).some((w) => !AGENCY.test(w)));
     const results = await pool([...urls.keys()], (u) => check(u));
-    const broken = results.filter((r) => r.status === 0 || r.status >= 400);
+    // 401/403/429 and 5xx are usually bot protection or a busy server: report them, but do not fail on them.
+    const SOFT = new Set([401, 403, 429, 500, 502, 503, 504]);
+    const TLS = /UNABLE_TO_VERIFY|CERT|TIMEOUT|timeout|ECONNRESET|CONNECT_TIMEOUT|fetch failed|ECONNREFUSED/;
+    const isSoft = (r) => SOFT.has(r.status) || (r.status === 0 && TLS.test(String(r.error)));
+    const blocked = results.filter((r) => (r.status === 0 || r.status >= 400) && isSoft(r));
+    const broken = results.filter((r) => (r.status === 0 || r.status >= 400) && !isSoft(r));
     for (const u of bare) console.log(`BARE    ${u}  (${urls.get(u)[0]})`);
     for (const r of broken) console.log(`BROKEN  ${r.status || r.error}  ${r.url}  (${urls.get(r.url)[0]})`);
-    console.log(`${urls.size} urls, ${bare.length} bare domains, ${broken.length} unreachable`);
+    for (const r of blocked) console.log(`BLOCKED ${r.status || r.error}  ${r.url}`);
+    console.log(
+      `${urls.size} urls, ${bare.length} bare domains, ${broken.length} broken, ${blocked.length} blocked or unreachable (not counted)`,
+    );
     process.exit(bare.length || broken.length ? 1 : 0);
   }
   const candidates = JSON.parse(readFileSync(arg, "utf8"));

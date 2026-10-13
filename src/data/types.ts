@@ -59,6 +59,12 @@ export interface StateLinks {
   salesTax?: string;
   /** Corporate income, franchise or gross-receipts tax. */
   entityTax: string;
+  /** The state's required workplace posters and notices. */
+  laborPosters: string;
+  /** Trade name / DBA registration, where it is filed with the state (see `dbaFiling`). */
+  dba?: string;
+  /** The state's general business license, where it has one (see `businessLicense`). */
+  businessLicense?: string;
 }
 
 export interface UnemploymentInfo {
@@ -220,6 +226,11 @@ export interface StateInfo {
   localSalesTax: "locally_administered" | "state_administered" | "none";
   /** Where a sole proprietor's trade name / DBA is registered; "none" when no filing is required. */
   dbaFiling: DbaFiling;
+  /**
+   * True when registered entities (LLCs, corporations) also file assumed names at the county or town level
+   * (California, Connecticut, Georgia, Massachusetts, Nevada, North Carolina) instead of with the state.
+   */
+  dbaEntitiesFileLocally?: boolean;
   /** Name of the county/town office when `dbaFiling` is county or town. */
   dbaOffice?: string;
   /** State agency taking trade names when it is not the entity filing agency. */

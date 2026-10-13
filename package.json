@@ -29,7 +29,8 @@
     "prepublishOnly": "npm run check && npm run build && npm run size",
     "coverage": "node scripts/coverage.mjs",
     "size": "node scripts/size.mjs",
-    "site": "npm run build && node scripts/build-site.mjs"
+    "site": "npm run build && node scripts/build-site.mjs",
+    "check:links": "node scripts/check-urls.mjs --data"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.5",

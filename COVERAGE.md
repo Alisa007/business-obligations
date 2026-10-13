@@ -10,59 +10,59 @@ page on the date shown; everything not listed as checked is compiled from public
 - **States with unconfirmed fields:** 1
 - **Seeded cities:** 26 (all other cities get the state's local licensing regime named for the city and county)
 
-| State | Checked on | Entity reports | DBA level | Gross-receipts / margin tax | UI data year | Seeded cities | Unconfirmed fields |
-| ----- | ---------- | -------------- | --------- | --------------------------- | ------------ | ------------- | ------------------ |
-| AK | 2026-10-13 | LLC, CORP | checked | text | 2026 | — | — |
-| AL | 2026-10-13 | none | checked | text | 2026 | — | — |
-| AR | 2026-10-13 | LLC, CORP, LP, LLP | checked | text | 2026 | — | — |
-| AZ | 2026-10-13 | CORP, LLP | checked | text | 2026 | Phoenix | — |
-| CA | 2026-10-13 | LLC, CORP | checked | text | 2026 | San Francisco, Los Angeles, San Diego, San Jose, Oakland | — |
-| CO | 2026-10-13 | LLC, CORP | checked | text | 2026 | Denver | — |
-| CT | 2026-10-13 | LLC, CORP | checked | text | 2026 | — | — |
-| DC | 2026-10-13 | LLC, CORP | checked | text | 2026 | — | — |
-| DE | 2026-10-13 | LLC, CORP, LLP | checked | text | 2026 | — | — |
-| FL | 2026-10-13 | LLC, CORP, LP, LLP | checked | text | 2026 | Miami | — |
-| GA | 2026-10-13 | LLC, CORP | checked | text | 2026 | Atlanta | — |
-| HI | 2026-10-13 | LLC, CORP | checked | text | 2026 | — | — |
-| IA | 2026-10-13 | LLC, CORP, LP | checked | text | 2026 | — | — |
-| ID | 2026-10-13 | LLC, CORP | checked | text | 2026 | — | — |
-| IL | 2026-10-13 | LLC, CORP, LP, LLP | checked | text | 2026 | Chicago | — |
-| IN | 2026-10-13 | LLC, CORP, LP, LLP | checked | text | 2026 | — | — |
-| KS | 2026-10-13 | LLC, CORP, LP, LLP | checked | text | 2026 | — | — |
-| KY | 2026-10-13 | LLC, CORP | checked | text | 2026 | Louisville | — |
-| LA | 2026-10-13 | LLC, CORP, LLP | checked | text | 2026 | New Orleans | — |
-| MA | 2026-10-13 | LLC, CORP, LP, LLP | checked | text | 2026 | Boston | — |
-| MD | 2026-10-13 | LLC, CORP | checked | text | 2026 | Baltimore | — |
-| ME | 2026-10-13 | LLC, CORP | checked | text | 2026 | — | — |
-| MI | 2026-10-13 | LLC, CORP, LLP | checked | text | 2026 | Detroit | — |
-| MN | 2026-10-13 | LLC, CORP, LP, LLP | checked | text | 2026 | — | — |
-| MO | 2026-10-13 | CORP, LLP | checked | text | 2026 | Kansas City, St. Louis | — |
-| MS | 2026-10-13 | LLC, CORP | checked | text | 2026 | — | — |
-| MT | 2026-10-13 | LLC, CORP, LP, LLP | checked | text | 2026 | — | — |
-| NC | 2026-10-13 | LLC, CORP, LLP | checked | text | 2026 | — | — |
-| ND | 2026-10-13 | LLC, CORP, LP, LLP | checked | text | 2026 | — | — |
-| NE | 2026-10-13 | LLC, CORP, LLP | checked | text | 2026 | — | — |
-| NH | 2026-10-13 | LLC, CORP | checked | text | 2026 | — | — |
-| NJ | 2026-10-13 | LLC, CORP | checked | text | 2026 | — | — |
-| NM | 2026-10-13 | CORP, LLP | checked | text | 2026 | — | — |
-| NV | 2026-10-13 | LLC, CORP | checked | structured | 2026 | Las Vegas | — |
-| NY | 2026-10-13 | LLC, CORP, LLP | checked | text | 2026 | New York | — |
-| OH | 2026-10-13 | LLP | checked | structured | 2026 | Columbus, Cleveland, Cincinnati | — |
-| OK | 2026-10-13 | LP | checked | text | 2026 | — | — |
-| OR | 2026-10-13 | LLC, CORP | checked | structured | 2026 | Portland | — |
-| PA | 2026-10-13 | LLC, CORP, LP, LLP | checked | text | 2026 | Philadelphia, Pittsburgh | — |
-| RI | 2026-10-13 | LLC, CORP | checked | text | 2026 | — | — |
-| SC | 2026-10-13 | CORP, LLP | checked | text | 2026 | — | — |
-| SD | 2026-10-13 | LLC, CORP | checked | text | 2026 | — | — |
-| TN | 2026-10-13 | LLC, CORP, LP, LLP | checked | text | 2026 | — | lpReport.fee |
-| TX | 2026-10-13 | LLC, CORP | checked | structured | 2026 | — | — |
-| UT | 2026-10-13 | LLC, CORP | checked | text | 2026 | — | — |
-| VA | 2026-10-13 | LLC, CORP, LP, LLP | checked | text | 2026 | — | — |
-| VT | 2026-10-13 | LLC, CORP, LLP | checked | text | 2026 | — | — |
-| WA | 2026-10-13 | LLC, CORP | checked | text | 2026 | Seattle | — |
-| WI | 2026-10-13 | LLC, CORP | checked | text | 2026 | — | — |
-| WV | 2026-10-13 | LLC, CORP, LLP | checked | text | 2026 | — | — |
-| WY | 2026-10-13 | LLC, CORP | checked | text | 2026 | — | — |
+| State | Checked on | Entity reports     | DBA level | Gross-receipts / margin tax | UI data year | Seeded cities                                            | Unconfirmed fields |
+| ----- | ---------- | ------------------ | --------- | --------------------------- | ------------ | -------------------------------------------------------- | ------------------ |
+| AK    | 2026-10-13 | LLC, CORP          | checked   | text                        | 2026         | —                                                        | —                  |
+| AL    | 2026-10-13 | none               | checked   | text                        | 2026         | —                                                        | —                  |
+| AR    | 2026-10-13 | LLC, CORP, LP, LLP | checked   | text                        | 2026         | —                                                        | —                  |
+| AZ    | 2026-10-13 | CORP, LLP          | checked   | text                        | 2026         | Phoenix                                                  | —                  |
+| CA    | 2026-10-13 | LLC, CORP          | checked   | text                        | 2026         | San Francisco, Los Angeles, San Diego, San Jose, Oakland | —                  |
+| CO    | 2026-10-13 | LLC, CORP          | checked   | text                        | 2026         | Denver                                                   | —                  |
+| CT    | 2026-10-13 | LLC, CORP          | checked   | text                        | 2026         | —                                                        | —                  |
+| DC    | 2026-10-13 | LLC, CORP          | checked   | text                        | 2026         | —                                                        | —                  |
+| DE    | 2026-10-13 | LLC, CORP, LLP     | checked   | text                        | 2026         | —                                                        | —                  |
+| FL    | 2026-10-13 | LLC, CORP, LP, LLP | checked   | text                        | 2026         | Miami                                                    | —                  |
+| GA    | 2026-10-13 | LLC, CORP          | checked   | text                        | 2026         | Atlanta                                                  | —                  |
+| HI    | 2026-10-13 | LLC, CORP          | checked   | text                        | 2026         | —                                                        | —                  |
+| IA    | 2026-10-13 | LLC, CORP, LP      | checked   | text                        | 2026         | —                                                        | —                  |
+| ID    | 2026-10-13 | LLC, CORP          | checked   | text                        | 2026         | —                                                        | —                  |
+| IL    | 2026-10-13 | LLC, CORP, LP, LLP | checked   | text                        | 2026         | Chicago                                                  | —                  |
+| IN    | 2026-10-13 | LLC, CORP, LP, LLP | checked   | text                        | 2026         | —                                                        | —                  |
+| KS    | 2026-10-13 | LLC, CORP, LP, LLP | checked   | text                        | 2026         | —                                                        | —                  |
+| KY    | 2026-10-13 | LLC, CORP          | checked   | text                        | 2026         | Louisville                                               | —                  |
+| LA    | 2026-10-13 | LLC, CORP, LLP     | checked   | text                        | 2026         | New Orleans                                              | —                  |
+| MA    | 2026-10-13 | LLC, CORP, LP, LLP | checked   | text                        | 2026         | Boston                                                   | —                  |
+| MD    | 2026-10-13 | LLC, CORP          | checked   | text                        | 2026         | Baltimore                                                | —                  |
+| ME    | 2026-10-13 | LLC, CORP          | checked   | text                        | 2026         | —                                                        | —                  |
+| MI    | 2026-10-13 | LLC, CORP, LLP     | checked   | text                        | 2026         | Detroit                                                  | —                  |
+| MN    | 2026-10-13 | LLC, CORP, LP, LLP | checked   | text                        | 2026         | —                                                        | —                  |
+| MO    | 2026-10-13 | CORP, LLP          | checked   | text                        | 2026         | Kansas City, St. Louis                                   | —                  |
+| MS    | 2026-10-13 | LLC, CORP          | checked   | text                        | 2026         | —                                                        | —                  |
+| MT    | 2026-10-13 | LLC, CORP, LP, LLP | checked   | text                        | 2026         | —                                                        | —                  |
+| NC    | 2026-10-13 | LLC, CORP, LLP     | checked   | text                        | 2026         | —                                                        | —                  |
+| ND    | 2026-10-13 | LLC, CORP, LP, LLP | checked   | text                        | 2026         | —                                                        | —                  |
+| NE    | 2026-10-13 | LLC, CORP, LLP     | checked   | text                        | 2026         | —                                                        | —                  |
+| NH    | 2026-10-13 | LLC, CORP          | checked   | text                        | 2026         | —                                                        | —                  |
+| NJ    | 2026-10-13 | LLC, CORP          | checked   | text                        | 2026         | —                                                        | —                  |
+| NM    | 2026-10-13 | CORP, LLP          | checked   | text                        | 2026         | —                                                        | —                  |
+| NV    | 2026-10-13 | LLC, CORP          | checked   | structured                  | 2026         | Las Vegas                                                | —                  |
+| NY    | 2026-10-13 | LLC, CORP, LLP     | checked   | text                        | 2026         | New York                                                 | —                  |
+| OH    | 2026-10-13 | LLP                | checked   | structured                  | 2026         | Columbus, Cleveland, Cincinnati                          | —                  |
+| OK    | 2026-10-13 | LP                 | checked   | text                        | 2026         | —                                                        | —                  |
+| OR    | 2026-10-13 | LLC, CORP          | checked   | structured                  | 2026         | Portland                                                 | —                  |
+| PA    | 2026-10-13 | LLC, CORP, LP, LLP | checked   | text                        | 2026         | Philadelphia, Pittsburgh                                 | —                  |
+| RI    | 2026-10-13 | LLC, CORP          | checked   | text                        | 2026         | —                                                        | —                  |
+| SC    | 2026-10-13 | CORP, LLP          | checked   | text                        | 2026         | —                                                        | —                  |
+| SD    | 2026-10-13 | LLC, CORP          | checked   | text                        | 2026         | —                                                        | —                  |
+| TN    | 2026-10-13 | LLC, CORP, LP, LLP | checked   | text                        | 2026         | —                                                        | lpReport.fee       |
+| TX    | 2026-10-13 | LLC, CORP          | checked   | structured                  | 2026         | —                                                        | —                  |
+| UT    | 2026-10-13 | LLC, CORP          | checked   | text                        | 2026         | —                                                        | —                  |
+| VA    | 2026-10-13 | LLC, CORP, LP, LLP | checked   | text                        | 2026         | —                                                        | —                  |
+| VT    | 2026-10-13 | LLC, CORP, LLP     | checked   | text                        | 2026         | —                                                        | —                  |
+| WA    | 2026-10-13 | LLC, CORP          | checked   | text                        | 2026         | Seattle                                                  | —                  |
+| WI    | 2026-10-13 | LLC, CORP          | checked   | text                        | 2026         | —                                                        | —                  |
+| WV    | 2026-10-13 | LLC, CORP, LLP     | checked   | text                        | 2026         | —                                                        | —                  |
+| WY    | 2026-10-13 | LLC, CORP          | checked   | text                        | 2026         | —                                                        | —                  |
 
 ## Columns
 

@@ -24,6 +24,9 @@ npm run test:update  # accept intentional snapshot changes, then review the diff
 Dates: use ISO `YYYY-MM-DD` in every date field (`checkedOn`, `effective`, ...) and spell months out in text
 ("April 15", not "Apr 15", "4/15" or "April 15th"); a test fails otherwise.
 
+Cite the **specific page** for the obligation, never an agency home page: put it in the state's `links` block (or
+the rule's `url`) and run `npm run check:links`. A test fails when an item cites a bare domain.
+
 Do not copy text from commercial compliance-guide sites; summarise the requirement and cite the agency.
 
 ## Recording a rule change

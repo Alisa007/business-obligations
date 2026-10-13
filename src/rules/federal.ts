@@ -291,7 +291,7 @@ export const federalRules: Rule[] = [
           : "Importers and wholesalers need a federal basic permit under the Federal Alcohol Administration Act before engaging in business.",
       frequency: "once",
       reason: `Alcohol activity is ${p.alcoholActivity}`,
-      url: "https://www.ttb.gov",
+      url: "https://www.ttb.gov/regulated-commodities/beverage-alcohol",
     }),
   },
 ];

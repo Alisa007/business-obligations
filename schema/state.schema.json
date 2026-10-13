@@ -250,6 +250,9 @@
       "type": ["integer", "null"],
       "minimum": 0
     },
+    "dbaEntitiesFileLocally": {
+      "type": "boolean"
+    },
     "dbaFiling": {
       "enum": ["state", "county", "town", "none"]
     },
@@ -357,14 +360,17 @@
     "links": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["formation", "annualReport", "uiRegistration", "entityTax"],
+      "required": ["formation", "annualReport", "uiRegistration", "entityTax", "laborPosters"],
       "properties": {
         "formation": { "type": "string", "format": "uri" },
         "annualReport": { "type": "string", "format": "uri" },
         "uiRegistration": { "type": "string", "format": "uri" },
         "withholding": { "type": "string", "format": "uri" },
         "salesTax": { "type": "string", "format": "uri" },
-        "entityTax": { "type": "string", "format": "uri" }
+        "entityTax": { "type": "string", "format": "uri" },
+        "laborPosters": { "type": "string", "format": "uri" },
+        "dba": { "type": "string", "format": "uri" },
+        "businessLicense": { "type": "string", "format": "uri" }
       }
     },
     "entityTaxDetail": {

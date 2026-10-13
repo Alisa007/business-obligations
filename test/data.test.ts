@@ -134,3 +134,55 @@ describe("source links", () => {
     }
   });
 });
+
+describe("citation urls in output", () => {
+  const isBare = (u: string) => {
+    const url = new URL(u);
+    return (url.pathname === "/" || url.pathname === "") && !url.search;
+  };
+  const sample: Array<Partial<BusinessProfile>> = [
+    {
+      entityType: "llc",
+      employeeCount: 3,
+      annualPayroll: 90000,
+      sellsTaxableGoods: true,
+      usesTradeName: true,
+    },
+    { entityType: "c_corp", employeeCount: 2, annualPayroll: 60000, sellsTaxableGoods: true },
+    { entityType: "sole_proprietorship", usesTradeName: true, sellsTaxableGoods: true },
+    { entityType: "pllc", profession: "attorney", industry: "professional_services" },
+    { entityType: "llp", profession: "cpa" },
+    { entityType: "llc", industry: "healthcare", profession: "physician", employeeCount: 1 },
+    { entityType: "llc", profession: "architect", industry: "professional_services" },
+    { entityType: "pc", profession: "engineer", industry: "professional_services" },
+    { entityType: "lp" },
+    { entityType: "llc", industry: "restaurant", employeeCount: 4, annualPayroll: 80000 },
+  ];
+
+  it("never cites a bare domain, for every state", () => {
+    const bare: string[] = [];
+    for (const [code, s] of Object.entries(STATES)) {
+      // Any ZIP works: the state is passed explicitly.
+      for (const p of sample) {
+        const profile = {
+          zip: "00000",
+          city: "Sample",
+          county: "Sample",
+          state: code,
+          ...p,
+        } as BusinessProfile;
+        let result;
+        try {
+          result = evaluate(profile, { asOf: "2026-10-13" });
+        } catch {
+          continue;
+        }
+        for (const item of result.items) {
+          if (item.url && isBare(item.url)) bare.push(`${code} ${item.id}: ${item.url}`);
+        }
+      }
+      void s;
+    }
+    expect([...new Set(bare)]).toEqual([]);
+  });
+});
