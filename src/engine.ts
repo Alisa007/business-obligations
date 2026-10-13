@@ -14,6 +14,15 @@ import { extraStateRules, stateRules } from "./rules/state";
 import { localRules } from "./rules/local";
 import { industryRules } from "./rules/industry";
 import { nextDueDate } from "./dates";
+import {
+  BUNDLED_CHANGES,
+  RULESET_VERSION,
+  changeMatchesItem,
+  toNotice,
+  withContext,
+  type ChangeNotice,
+  type RuleChange,
+} from "./changes";
 
 /** Rule packs by country. Add a country by registering its pack here. */
 export const RULE_PACKS: Record<Country, Rule[]> = {
@@ -179,8 +188,15 @@ export function resolveProfile(input: BusinessProfile): ResolvedProfile {
 export interface EvaluateOptions {
   /** Replace the country's built-in rules (e.g. `[...defaultRules, myRule]`). */
   rules?: Rule[];
-  /** Evaluation date (YYYY-MM-DD) for computing `nextDue`. Defaults to today (UTC). */
+  /**
+   * Evaluation date (YYYY-MM-DD). Rules and data are resolved as of this date: enacted changes that have
+   * taken effect by then are applied, and `nextDue` is computed from it. Defaults to today (UTC).
+   */
   asOf?: string;
+  /** Additional rule changes (for example your own, or ones not yet bundled), appended to the bundled ones. */
+  changes?: RuleChange[];
+  /** How far back `recentChanges` looks, in days. Defaults to 365. */
+  recentDays?: number;
 }
 
 export interface ComplianceResult {
@@ -189,10 +205,22 @@ export interface ComplianceResult {
   asOf: string;
   /** Date the bundled rule data was last reviewed. */
   dataVersion: string;
+  /** Version of the bundled rules and data (`YYYY.MM.DD-n`); changes whenever any rule or data changes. */
+  rulesetVersion: string;
+  /** Relevant changes that take effect after `asOf`, soonest first. Prepare for these. */
+  upcomingChanges: ChangeNotice[];
+  /** Relevant changes that took effect within `recentDays` before `asOf`, most recent first. */
+  recentChanges: ChangeNotice[];
   disclaimer: string;
 }
 
 const today = () => new Date().toISOString().slice(0, 10);
+
+const addDays = (iso: string, days: number) => {
+  const d = new Date(`${iso}T00:00:00Z`);
+  d.setUTCDate(d.getUTCDate() + days);
+  return d.toISOString().slice(0, 10);
+};
 
 /** Evaluates a profile and returns items together with the resolved profile and disclaimer. */
 export function evaluate(input: BusinessProfile, options: EvaluateOptions = {}): ComplianceResult {
@@ -200,31 +228,130 @@ export function evaluate(input: BusinessProfile, options: EvaluateOptions = {}):
   const asOf = options.asOf ?? today();
   if (!ISO_DATE.test(asOf)) throw new InvalidProfileError("`asOf` must be YYYY-MM-DD");
   const rules = options.rules ?? RULE_PACKS[profile.country];
-  const items: ComplianceItem[] = [];
-  const seen = new Map<string, number>();
-  for (const rule of rules) {
-    if (!rule.when(profile)) continue;
-    const built = rule.items(profile);
-    const drafts: ItemDraft[] = Array.isArray(built) ? built : [built];
-    for (const { key, ...d } of drafts) {
-      let id = [rule.id, d.state, key].filter(Boolean).join(":");
-      const n = seen.get(id) ?? 0;
-      seen.set(id, n + 1);
-      if (n > 0) id = `${id}#${n}`;
-      const item: ComplianceItem = { ...d, id };
-      if (d.due) {
-        const next = nextDueDate(d.due, {
-          asOf,
-          formationDate: profile.formationDate,
-          biennial: d.frequency === "biennial",
-          intervalYears: d.frequency === "every_five_years" ? 5 : undefined,
-        });
-        if (next) item.nextDue = next;
+  const changes = [...BUNDLED_CHANGES, ...(options.changes ?? [])];
+  return withContext(asOf, changes, () => {
+    const items: ComplianceItem[] = [];
+    const seen = new Map<string, number>();
+    for (const rule of rules) {
+      if (!rule.when(profile)) continue;
+      const built = rule.items(profile);
+      const drafts: ItemDraft[] = Array.isArray(built) ? built : [built];
+      for (const { key, ...d } of drafts) {
+        let id = [rule.id, d.state, key].filter(Boolean).join(":");
+        const n = seen.get(id) ?? 0;
+        seen.set(id, n + 1);
+        if (n > 0) id = `${id}#${n}`;
+        const item: ComplianceItem = { ...d, id };
+        if (d.due) {
+          const next = nextDueDate(d.due, {
+            asOf,
+            formationDate: profile.formationDate,
+            biennial: d.frequency === "biennial",
+            intervalYears: d.frequency === "every_five_years" ? 5 : undefined,
+          });
+          if (next) item.nextDue = next;
+        }
+        const upcoming = changes
+          .filter((c) => c.effective > asOf && changeMatchesItem(c, item))
+          .sort((a, b) => a.effective.localeCompare(b.effective))
+          .map(toNotice);
+        if (upcoming.length) item.upcomingChanges = upcoming;
+        items.push(item);
       }
-      items.push(item);
     }
+    const states = new Set([profile.formationState, ...profile.presence.map((x) => x.state)]);
+    const relevant = (c: RuleChange) =>
+      c.scope.state
+        ? states.has(c.scope.state)
+        : !c.scope.rules || items.some((it) => changeMatchesItem(c, it));
+    const since = addDays(asOf, -(options.recentDays ?? 365));
+    const upcomingChanges = changes
+      .filter((c) => c.effective > asOf && relevant(c))
+      .sort((a, b) => a.effective.localeCompare(b.effective))
+      .map(toNotice);
+    const recentChanges = changes
+      .filter((c) => c.effective <= asOf && c.effective >= since && relevant(c))
+      .sort((a, b) => b.effective.localeCompare(a.effective))
+      .map(toNotice);
+    return {
+      items,
+      profile,
+      asOf,
+      dataVersion: DATA_VERSION,
+      rulesetVersion: RULESET_VERSION,
+      upcomingChanges,
+      recentChanges,
+      disclaimer: DISCLAIMER,
+    };
+  });
+}
+
+export interface ItemDiff {
+  id: string;
+  title: string;
+  /** Changed fields with their values before and after. */
+  fields: Record<string, { before: unknown; after: unknown }>;
+}
+
+export interface Preview {
+  from: string;
+  to: string;
+  added: ComplianceItem[];
+  removed: ComplianceItem[];
+  changed: ItemDiff[];
+  /** Changes that take effect after `from` and on or before `to`. */
+  changes: ChangeNotice[];
+}
+
+const COMPARED: Array<keyof ComplianceItem> = [
+  "title",
+  "authority",
+  "description",
+  "frequency",
+  "deadline",
+  "due",
+  "category",
+  "jurisdiction",
+];
+
+/** Differences between two evaluations of the same profile, matched by item id. */
+export function diffItems(
+  before: ComplianceItem[],
+  after: ComplianceItem[],
+): Omit<Preview, "from" | "to" | "changes"> {
+  const b = new Map(before.map((i) => [i.id, i]));
+  const a = new Map(after.map((i) => [i.id, i]));
+  const changed: ItemDiff[] = [];
+  for (const [id, x] of a) {
+    const y = b.get(id);
+    if (!y) continue;
+    const fields: ItemDiff["fields"] = {};
+    for (const f of COMPARED) {
+      if (JSON.stringify(y[f]) !== JSON.stringify(x[f])) fields[f] = { before: y[f], after: x[f] };
+    }
+    if (Object.keys(fields).length) changed.push({ id, title: x.title, fields });
   }
-  return { items, profile, asOf, dataVersion: DATA_VERSION, disclaimer: DISCLAIMER };
+  return {
+    added: after.filter((i) => !b.has(i.id)),
+    removed: before.filter((i) => !a.has(i.id)),
+    changed,
+  };
+}
+
+/**
+ * Shows how a business's obligations differ between two dates once enacted rule changes take effect, so
+ * users can prepare. `from` defaults to today.
+ */
+export function previewChanges(
+  input: BusinessProfile,
+  options: { from?: string; to: string; rules?: Rule[]; changes?: RuleChange[] },
+): Preview {
+  const from = options.from ?? today();
+  const base = { rules: options.rules, changes: options.changes };
+  const before = evaluate(input, { ...base, asOf: from });
+  const after = evaluate(input, { ...base, asOf: options.to });
+  const changes = [...before.upcomingChanges].filter((c) => c.effective <= options.to);
+  return { from, to: options.to, ...diffItems(before.items, after.items), changes };
 }
 
 /** Returns the compliance items that apply to the given business profile. */

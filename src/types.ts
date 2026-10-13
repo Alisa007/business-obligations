@@ -133,8 +133,8 @@ export interface BusinessProfile {
 export type ItemCategory =
   "license" | "permit" | "registration" | "filing" | "payment" | "insurance" | "recordkeeping";
 
-import type { Due } from "./data/types";
-export type { Due } from "./data/types";
+import type { ChangeNotice, Due } from "./data/types";
+export type { ChangeNotice, Due } from "./data/types";
 
 export type Jurisdiction = "federal" | "state" | "county" | "city";
 
@@ -158,6 +158,8 @@ export interface ComplianceItem {
   due?: Due;
   /** Next due date (YYYY-MM-DD) on or after the evaluation date, when computable. */
   nextDue?: string;
+  /** Changes to the rules behind this item that take effect after the evaluation date. */
+  upcomingChanges?: ChangeNotice[];
   /** Why the engine returned this item. */
   reason: string;
   url?: string;

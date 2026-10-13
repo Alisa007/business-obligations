@@ -1,0 +1,117 @@
+{
+  "rulesetVersion": "2026.10.13-1",
+  "changes": [
+    {
+      "id": "pa-annual-report-full-enforcement-2027",
+      "effective": "2027-01-01",
+      "status": "enacted",
+      "kind": "enforcement",
+      "summary": "Pennsylvania's new annual report ($7) has had no dissolution penalties for 2025 and 2026 reports; full enforcement, including administrative dissolution, begins with 2027 reports.",
+      "scope": { "state": "PA", "rules": ["state.annual-report"] },
+      "source": "https://www.pa.gov/agencies/dos/programs/business/types-of-filings-and-registrations/annual-reports"
+    },
+    {
+      "id": "fed-hemp-thc-container-limit-2026-11-12",
+      "effective": "2026-11-12",
+      "status": "enacted",
+      "kind": "threshold",
+      "summary": "Federal definition change: finished hemp-derived consumables above 0.4 mg total THC per container are treated as marijuana under federal law, affecting hemp and intoxicating-hemp businesses.",
+      "scope": { "country": "US", "rules": ["industry.cannabis"] }
+    },
+    {
+      "id": "va-adult-use-retail-licensing-2027-07-01",
+      "effective": "2027-07-01",
+      "status": "proposed",
+      "kind": "requirement",
+      "summary": "Virginia adult-use retail sales are reported to be slated to begin July 1, 2027; retail licensing legislation was vetoed in 2025, so this date is not confirmed.",
+      "scope": { "state": "VA", "rules": ["industry.cannabis"] }
+    },
+    {
+      "id": "fed-medical-cannabis-schedule-iii-2026-04-28",
+      "effective": "2026-04-28",
+      "status": "enacted",
+      "kind": "requirement",
+      "summary": "A DOJ/DEA order rescheduled state-licensed medical cannabis to Schedule III; adult-use cannabis remains Schedule I and a broader rescheduling proceeding is pending. IRC §280E relief applies going forward to state-licensed medical operators.",
+      "scope": { "country": "US", "rules": ["industry.cannabis"] }
+    },
+    {
+      "id": "de-llc-lp-gp-annual-tax-400-2026-01-01",
+      "effective": "2026-01-01",
+      "status": "enacted",
+      "kind": "fee",
+      "summary": "Delaware LLC, LP and general partnership annual tax rises from $300 to $400, first reflected in payments due June 1, 2027.",
+      "scope": { "state": "DE", "rules": ["state.annual-report"] },
+      "source": "https://corp.delaware.gov/alt-entitytaxinstructions/"
+    },
+    {
+      "id": "la-fee-schedule-act-921-2026-10-01",
+      "effective": "2026-10-01",
+      "status": "enacted",
+      "kind": "fee",
+      "summary": "Louisiana Secretary of State commercial fees increased under Act 921 (annual reports $35; registered LLP filings and renewals $155).",
+      "scope": { "state": "LA", "rules": ["state.annual-report", "state.formation"] },
+      "source": "https://static.sos.la.gov/shared/fee_changes_2026.pdf"
+    },
+    {
+      "id": "ri-dba-secretary-of-state-2026-01-01",
+      "effective": "2026-01-01",
+      "status": "enacted",
+      "kind": "requirement",
+      "summary": "Rhode Island sole proprietorships and general partnerships register trade names with the Secretary of State instead of city or town clerks, with mandatory annual renewal.",
+      "scope": { "state": "RI", "rules": ["state.trade-name"] }
+    },
+    {
+      "id": "de-dba-division-of-revenue-2026-02-02",
+      "effective": "2026-02-02",
+      "status": "enacted",
+      "kind": "requirement",
+      "summary": "Delaware trade name registration moved from county Prothonotary offices to a statewide registry run by the Division of Revenue.",
+      "scope": { "state": "DE", "rules": ["state.trade-name"] },
+      "source": "https://revenue.delaware.gov/trade-names-faqs"
+    },
+    {
+      "id": "al-corporate-annual-report-repeal-2024-10-01",
+      "effective": "2024-10-01",
+      "status": "enacted",
+      "kind": "repeal",
+      "summary": "Alabama repealed the Secretary of State corporate annual report requirement (Act 2024-213).",
+      "scope": { "state": "AL", "rules": ["state.annual-report"] },
+      "source": "https://www.sos.alabama.gov/business-entities"
+    },
+    {
+      "id": "ok-franchise-tax-repeal-2024",
+      "effective": "2024-01-01",
+      "status": "enacted",
+      "kind": "repeal",
+      "summary": "Oklahoma franchise tax eliminated beginning with tax year 2024.",
+      "scope": { "state": "OK", "rules": ["state.annual-report", "state.entity-tax"] },
+      "source": "https://oklahoma.gov/tax/newsroom/2023/07-26-23.html"
+    },
+    {
+      "id": "fed-1099-nec-threshold-2000-2026-01-01",
+      "effective": "2026-01-01",
+      "status": "enacted",
+      "kind": "threshold",
+      "summary": "Form 1099-NEC reporting threshold rises from $600 to $2,000 for payments made after 2025.",
+      "scope": { "country": "US", "rules": ["fed.1099-nec"] }
+    },
+    {
+      "id": "wa-cannabis-fee-increase-2026-07-01",
+      "effective": "2026-07-01",
+      "status": "enacted",
+      "kind": "fee",
+      "summary": "Washington cannabis producer, processor and retailer license fees increased under House Bill 2681.",
+      "scope": { "state": "WA", "rules": ["industry.cannabis"] },
+      "source": "https://lcb.wa.gov/cannabis-license/cannabis-licensing"
+    },
+    {
+      "id": "ks-information-report-fee-reduction-2026-05-26",
+      "effective": "2026-05-26",
+      "status": "enacted",
+      "kind": "fee",
+      "summary": "Kansas Secretary of State announced reduced fees for biennial information reports; the new amounts are not yet reflected in the bundled data.",
+      "scope": { "state": "KS", "rules": ["state.annual-report"] },
+      "source": "https://sos.ks.gov/media/press-releases/2026/05-26-26-secretary-of-state-reduces-fees-for-kansans.html"
+    }
+  ]
+}

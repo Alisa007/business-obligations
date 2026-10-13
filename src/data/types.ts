@@ -165,3 +165,35 @@ export interface LocalJurisdiction {
     appliesTo: Array<"all" | "employees" | "sells_goods" | "corporation" | "unincorporated" | "trade_name">;
   }>;
 }
+
+/** What a rule change is about. */
+export type ChangeKind =
+  "fee" | "deadline" | "requirement" | "repeal" | "threshold" | "enforcement" | "other";
+
+/**
+ * A dated change to the rules. Past changes are informational (the bundled data already reflects them).
+ * Enacted changes with `patches` and a future `effective` date are applied to the state data when the
+ * evaluation date reaches `effective`.
+ */
+export interface RuleChange {
+  id: string;
+  /** Date the change takes effect (YYYY-MM-DD). */
+  effective: string;
+  announced?: string;
+  /** Only enacted changes are applied; proposed changes are reported as upcoming. */
+  status: "enacted" | "proposed";
+  kind: ChangeKind;
+  summary: string;
+  scope: {
+    country?: "US";
+    state?: string;
+    /** Rule-id prefixes the change affects; matches item ids such as `state.annual-report:PA`. */
+    rules?: string[];
+  };
+  /** Dotted paths into the state's data (`StateInfo`) and the value in force from `effective`. */
+  patches?: Array<{ path: string; value: unknown }>;
+  source?: string;
+}
+
+/** The subset of a change attached to items and results. */
+export type ChangeNotice = Pick<RuleChange, "id" | "effective" | "status" | "kind" | "summary" | "source">;

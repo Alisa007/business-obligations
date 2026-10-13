@@ -5,6 +5,12 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ## [Unreleased]
 
+### Added
+
+- Rule versioning: `RULESET_VERSION`, a dated change registry (`data/changes.json`), effective-dated patches applied
+  by `asOf`, `upcomingChanges` / `recentChanges` on results and `upcomingChanges` on items, `previewChanges()`,
+  `diffItems()` and `listChanges()`.
+
 ### Changed
 
 - Resolved the last LP/LLP unknowns: Alabama and Oklahoma LLPs have no periodic report; Louisiana, Montana LP/LLP

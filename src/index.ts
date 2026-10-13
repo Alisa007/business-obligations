@@ -2,6 +2,8 @@ export * from "./types";
 export {
   getComplianceItems,
   evaluate,
+  previewChanges,
+  diffItems,
   listRules,
   resolveProfile,
   defaultRules,
@@ -10,7 +12,9 @@ export {
   DISCLAIMER,
   InvalidProfileError,
 } from "./engine";
-export type { EvaluateOptions, ComplianceResult } from "./engine";
+export type { EvaluateOptions, ComplianceResult, Preview, ItemDiff } from "./engine";
+export { RULESET_VERSION, BUNDLED_CHANGES, listChanges } from "./changes";
+export type { RuleChange, ChangeNotice, ChangeKind, ChangeFilter } from "./changes";
 export { stateFromZip } from "./zip";
 export { nextDueDate } from "./dates";
 export { STATES, STATE_CODES } from "./data";

@@ -110,6 +110,33 @@ Intentionally not modelled: FinCEN beneficial ownership reporting (domestic comp
 sales-tax _rates_, professions beyond the five bundled directories (use `profession: "other"`), and non-US countries.
 Each state file records what was checked and what was not in its `verification` block.
 
+## Rule versions and upcoming changes
+
+Rules change. The library tracks dated changes so users can prepare:
+
+- **`RULESET_VERSION`** (`YYYY.MM.DD-n`) identifies the bundled rules and data; every result carries it as
+  `rulesetVersion`, next to `dataVersion` (the date of the last data review).
+- **`asOf`** resolves rules _as of a date_. Enacted changes that have taken effect by then are applied to the data, so
+  `evaluate(profile, { asOf: "2027-07-01" })` shows obligations as they will be on that date.
+- **`upcomingChanges`** on the result (and on each affected item) lists changes that take effect after `asOf`,
+  soonest first; **`recentChanges`** lists those that took effect in the last year (`recentDays`).
+- **`previewChanges(profile, { to })`** diffs the obligations between today and a future date: items added, removed
+  and changed, plus the changes in between.
+- **`listChanges({ state, from, to, status })`** browses the registry (`data/changes.json`).
+
+```ts
+import { evaluate, previewChanges } from "compliance-rules-engine";
+
+const now = evaluate(profile);
+now.upcomingChanges; // [{ id, effective, status: "enacted" | "proposed", kind, summary, source }]
+
+const diff = previewChanges(profile, { to: "2027-07-01" });
+diff.changed; // [{ id, title, fields: { description: { before, after } } }]
+```
+
+Changes marked `proposed` are reported but never applied. You can pass your own with `evaluate(profile, { changes })`.
+Past changes are informational: the bundled data already reflects them.
+
 ## Extending
 
 Rules are plain objects (`{ id, description, inputs, when(profile), items(profile) }`):
@@ -124,7 +151,7 @@ State data lives in [`data/states/*.json`](data/states), validated by
 
 ## Versioning
 
-Semver, with a data-aware policy: a correction to a fee, deadline or authority is a **patch**; new states/rules/items
+Semver for the package, plus `RULESET_VERSION` for the rules and data (see above). Policy: a correction to a fee, deadline or authority is a **patch**; new states/rules/items
 or new optional inputs are **minor**; removed or renamed items, ids or required inputs are **major**. `DATA_VERSION`
 reports the date the bundled data was last reviewed.
 

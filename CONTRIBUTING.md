@@ -23,6 +23,18 @@ npm run test:update  # accept intentional snapshot changes, then review the diff
 
 Do not copy text from commercial compliance-guide sites; summarise the requirement and cite the agency.
 
+## Recording a rule change
+
+When a fee, deadline, threshold or requirement changes (or is announced), add an entry to `data/changes.json` and bump
+`rulesetVersion`:
+
+- `effective` is the date it takes effect; `status` is `enacted` or `proposed` (proposed changes are never applied).
+- `scope.state` and `scope.rules` (rule-id prefixes such as `state.annual-report`) decide which items get the notice.
+- For an **enacted change in the future**, add `patches` (dotted paths into `data/states/<XX>.json`, e.g.
+  `llcReport.fee`) so the engine applies it automatically from `effective`. Leave the base data at today's value.
+- For a change that already took effect, update the base data and record the entry **without** `patches` (history).
+- Include a `source` URL. `npm test` validates the registry against `schema/changes.schema.json`.
+
 ## Adding or changing rules
 
 - Rules live in `src/rules/` (`federal`, `state`, `industry`, `local`). Each rule declares `id`, `description`, the
