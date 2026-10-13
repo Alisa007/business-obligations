@@ -1,6 +1,6 @@
 import type { Rule } from "../types";
 import { stateName } from "../states";
-import { industryAuthorities } from "../data";
+import { industryAuthorities, stateInfo } from "../data";
 
 const auth = industryAuthorities;
 
@@ -117,6 +117,54 @@ export const industryRules: Rule[] = [
       frequency: "annual",
       reason: `Alcohol activity is ${p.alcoholActivity}`,
     }),
+  },
+  {
+    id: "industry.cannabis",
+    description: "State cannabis licensing and federal tax/regulatory status",
+    inputs: ["industry", "cannabisActivity", "state"],
+    when: (p) => p.industry === "cannabis",
+    items: (p) => {
+      const c = stateInfo(p.state).cannabis;
+      const name = stateName(p.state);
+      const licensable = c.status === "adult_use" || c.status === "medical_only";
+      const first = licensable
+        ? {
+            title: `Obtain state cannabis ${p.cannabisActivity} license (${name})`,
+            category: "license" as const,
+            jurisdiction: "state" as const,
+            state: p.state,
+            authority: c.regulator ?? `${name} cannabis regulator`,
+            description:
+              c.status === "adult_use"
+                ? "Adult-use and medical cannabis businesses are licensed by the state regulator, usually with local approval and caps or social-equity rules."
+                : `Only the state medical program is licensed; license categories are often capped and competitive. ${c.note ?? ""}`.trim(),
+            frequency: "annual" as const,
+            reason: `Industry is cannabis (${p.cannabisActivity}); ${name} status is ${c.status.replace("_", " ")}`,
+          }
+        : {
+            title: `No state licensing pathway for cannabis ${p.cannabisActivity} in ${name}`,
+            category: "license" as const,
+            jurisdiction: "state" as const,
+            state: p.state,
+            authority: `${name} attorney general / state law enforcement`,
+            description: `${name} has no lawful licensed THC cannabis industry (at most limited CBD or low-THC access); commercial cannabis activity is unlawful under state law. Hemp-derived products are regulated separately by state agriculture and the FDA.`,
+            frequency: "ongoing" as const,
+            reason: `Industry is cannabis; ${name} status is ${c.status.replace("_", " ")}`,
+          };
+      return [
+        first,
+        {
+          title: "Confirm federal controlled-substance status and tax treatment (IRC §280E)",
+          category: "recordkeeping" as const,
+          jurisdiction: "federal" as const,
+          authority: "DEA / IRS",
+          description:
+            "Cannabis businesses remain subject to the federal Controlled Substances Act; while cannabis is a Schedule I or II substance, IRC §280E limits deductions for businesses trafficking in it. Banking and interstate commerce restrictions also apply.",
+          frequency: "ongoing" as const,
+          reason: "Industry is cannabis",
+        },
+      ];
+    },
   },
   {
     id: "industry.childcare",

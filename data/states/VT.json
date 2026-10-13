@@ -3,7 +3,7 @@
   "name": "Vermont",
   "filing": {
     "name": "Vermont Secretary of State",
-    "url": "https://sos.vermont.gov/corporations"
+    "url": "https://sos.vermont.gov/business-services/business-filings"
   },
   "revenue": {
     "name": "Vermont Department of Taxes",
@@ -61,8 +61,25 @@
   },
   "verification": {
     "checkedOn": "2026-10-13",
-    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
     "sources": ["https://sos.vermont.gov/business-services/fees-statutes"],
-    "unconfirmed": []
-  }
+    "unconfirmed": ["workersComp.trigger", "lpReport", "llpReport", "cannabis.regulator"],
+    "dba": "checked"
+  },
+  "lpReport": null,
+  "llpReport": {
+    "frequency": "annual",
+    "fee": "$45",
+    "deadline": "January 1 – April 1",
+    "due": {
+      "type": "fixed",
+      "month": 4,
+      "day": 1
+    }
+  },
+  "cannabis": {
+    "status": "adult_use",
+    "regulator": "Vermont Cannabis Control Board"
+  },
+  "localSalesTax": "state_administered"
 }

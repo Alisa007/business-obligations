@@ -5,6 +5,27 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ## [Unreleased]
 
+### Added
+
+- `profession` input (attorney, CPA, physician, architect, engineer, other) with a bundled directory of all 255 state
+  boards (`data/professions.json`); required for `pllc`, `pc`, `llp` and `professional_services`.
+- Cannabis: `cannabis` industry, `cannabisActivity` input, per-state status and regulator, federal §280E item.
+- Per-state `lpReport` and `llpReport` where LP/LLP reporting differs from the LLC report (FL, IL, IN, MN, PA, ...).
+- `fullTimeEmployeeCount` input; workers' comp triggers for Michigan (hours test) and South Carolina (payroll floor).
+- `localSalesTax` per state and a registration item where cities self-administer sales tax (AL, AK, AZ, CO, LA, MT).
+- DBA filing level and office per state, verified for all 50 states and DC; `dbaFiling: "none"` where no registration
+  is required (AL, HI, KS, MS, NE, NM, SC, WY).
+- 18 more seeded cities (San Diego, San José, Oakland, Boston, Atlanta, Miami, Detroit, Columbus, Cleveland,
+  Cincinnati, Pittsburgh, Louisville, Kansas City, St. Louis, Baltimore, New Orleans, Las Vegas, Phoenix); city
+  aliases and a `trade_name` tag.
+- `verification` block per state (`checkedOn`, `sources`, `unconfirmed`, `dba`).
+
+### Changed
+
+- DBA registration authority corrected for many states (e.g. AL, KS, IN, IA, NH, RI from 2026, VA, WV, DE from 2026).
+- Dead agency URLs replaced (FL, IA, LA, ME, NY, NH, VT, WY, MA) and city URLs repaired.
+- Report data refined: MA/ME/HI corporate fees, NE occupation tax schedule, OK corporations (franchise tax repealed).
+
 ## [0.2.0] - 2026-10-13
 
 ### Added

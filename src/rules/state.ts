@@ -1,5 +1,6 @@
 import type { ItemDraft, Presence, ResolvedProfile, Rule } from "../types";
-import { stateInfo as info } from "../data";
+import { professionBoard, stateInfo as info } from "../data";
+import type { BoardRef } from "../data";
 import type { ReportRule } from "../data/types";
 import { isLlcLike, isLlcSubtype, isProfessionalEntity, isSeparateEntity } from "../entity";
 
@@ -16,6 +17,8 @@ const registeredIn = (p: ResolvedProfile): string[] => [
 
 const reportFor = (p: ResolvedProfile, state: string): ReportRule | null => {
   const s = info(state);
+  if (p.entityType === "lp" && s.lpReport !== undefined) return s.lpReport;
+  if (p.entityType === "llp" && s.llpReport !== undefined) return s.llpReport;
   if (isLlcLike(p)) {
     if (
       s.llcReport === null &&
@@ -105,9 +108,11 @@ function employerItems(x: Presence, p: ResolvedProfile): ItemDraft[] {
     p.industry === "construction" && wc.constructionMinEmployees
       ? wc.constructionMinEmployees
       : wc.minEmployees;
+  const fullTime = x.home ? p.fullTimeEmployeeCount : n;
   const wcRequired =
     (n >= minEmployees && (wc.andAnnualPayrollOver === undefined || payroll > wc.andAnnualPayrollOver)) ||
-    (wc.orAnnualPayroll !== undefined && x.home && payroll >= wc.orAnnualPayroll);
+    (wc.orAnnualPayroll !== undefined && x.home && n >= 1 && payroll >= wc.orAnnualPayroll) ||
+    (wc.orFullTimeEmployees !== undefined && fullTime >= wc.orFullTimeEmployees);
   if (wcRequired) {
     items.push({
       title: wc.elective
@@ -378,6 +383,21 @@ export const stateRules: Rule[] = [
             },
           ];
         }
+        const local: ItemDraft[] =
+          s.localSalesTax === "locally_administered"
+            ? [
+                {
+                  title: `Register for locally administered sales tax (${s.name})`,
+                  category: "registration" as const,
+                  jurisdiction: "city" as const,
+                  state: x.state,
+                  authority: `${s.name} cities and counties that self-administer sales tax`,
+                  description: `Many ${s.name} cities and counties administer and collect their own sales and use taxes separately from the state; sellers register and file with each jurisdiction where required.`,
+                  frequency: "monthly" as const,
+                  reason,
+                },
+              ]
+            : [];
         return [
           {
             title: `${s.salesTax.permit} (${s.name})`,
@@ -396,13 +416,17 @@ export const stateRules: Rule[] = [
             jurisdiction: "state" as const,
             state: x.state,
             authority: agency.name,
-            description:
-              "Collect sales tax from customers and remit on the filing frequency assigned by the state.",
+            description: `Collect sales tax from customers and remit on the filing frequency assigned by the state.${
+              s.localSalesTax === "state_administered"
+                ? " Local sales taxes are collected and remitted on the same state return; the rate depends on the delivery location."
+                : ""
+            }`,
             frequency: "monthly" as const,
             deadline: "Monthly, quarterly or annually as assigned by the state",
             reason,
             url: agency.url,
           },
+          ...local,
         ];
       }),
   },
@@ -415,28 +439,37 @@ export const stateRules: Rule[] = [
   },
   {
     id: "state.trade-name",
-    description: "Assumed name / DBA registration",
-    inputs: ["usesTradeName", "state", "county", "city"],
+    description: "Assumed name / DBA registration at the level the state requires",
+    inputs: ["usesTradeName", "entityType", "state", "county", "city"],
     when: (p) => p.usesTradeName && info(p.state).dbaFiling !== "none",
     items: (p) => {
       const s = info(p.state);
-      const where = info(p.state).dbaFiling;
-      const authority =
-        where === "state"
-          ? s.filing.name
-          : where === "county"
-            ? `${p.county} County clerk (${s.name})`
-            : `${p.city} town/city clerk (${s.name})`;
+      const where = s.dbaFiling;
+      // Registered entities (LLCs, corporations, LPs) register their assumed names with the state filing agency.
+      const entityRegisters = isSeparateEntity(p);
+      const state = entityRegisters || where === "state";
+      const agency = s.dbaAuthority && !entityRegisters ? s.dbaAuthority : s.filing;
+      const authority = state
+        ? agency.name
+        : where === "county"
+          ? `${p.county} County — ${s.dbaOffice ?? "County clerk"} (${s.name})`
+          : `${p.city} — ${s.dbaOffice ?? "Town clerk"} (${s.name})`;
       return {
         title: `Register assumed name / DBA with the ${authority}`,
-        category: "registration",
-        jurisdiction: where === "state" ? "state" : where === "county" ? "county" : "city",
+        category: "registration" as const,
+        jurisdiction: state
+          ? ("state" as const)
+          : where === "county"
+            ? ("county" as const)
+            : ("city" as const),
         state: p.state,
         authority,
-        description: `${s.name} registers assumed names at the ${where} level.`,
-        frequency: "once",
+        description: state
+          ? `${s.name} registers assumed names at the state level.`
+          : `${s.name} registers sole proprietors' and partnerships' assumed names at the ${where} level, in each ${where} where business is conducted.`,
+        frequency: "once" as const,
         reason: "Business operates under a trade name",
-        url: where === "state" ? s.filing.url : undefined,
+        url: state ? agency.url : undefined,
       };
     },
   },
@@ -514,23 +547,50 @@ export const extraStateRules: Rule[] = [
         })),
   },
   {
+    id: "state.professional-license",
+    description: "State licensing board for the practiced profession",
+    inputs: ["profession", "multistate"],
+    when: (p) => !!p.profession && p.profession !== "other",
+    items: (p) =>
+      operating(p)
+        .map((x) => ({ x, board: professionBoard(p.profession!, x.state) }))
+        .filter((e): e is { x: Presence; board: BoardRef } => !!e.board)
+        .map(({ x, board }) => ({
+          title: `Hold and renew ${p.profession} licence with the ${board.name}`,
+          category: "license" as const,
+          jurisdiction: "state" as const,
+          state: x.state,
+          authority: board.name,
+          description: `Individuals practising as a${/^[aeiou]/.test(p.profession!) ? "n" : ""} ${p.profession} in ${info(x.state).name} must hold an active licence from the state board and meet its renewal and continuing-education rules.`,
+          frequency: "ongoing" as const,
+          reason: `Business practises the ${p.profession} profession in ${x.state}`,
+          url: board.url,
+        })),
+  },
+  {
     id: "state.professional-entity",
-    description: "Professional entity licensing and board registration",
+    description: "Professional entity registration with the licensing board",
     inputs: ["entityType", "profession", "formationState"],
     when: (p) => isProfessionalEntity(p) && p.isFormed,
     items: (p) => {
       const s = info(p.formationState);
+      const board =
+        p.profession && p.profession !== "other"
+          ? professionBoard(p.profession, p.formationState)
+          : undefined;
       return {
-        title: `Register the ${p.entityType === "pc" ? "professional corporation" : p.entityType === "llp" ? "LLP" : "PLLC"} with its licensing board${p.profession ? ` (${p.profession})` : ""}`,
+        title: `Register the ${p.entityType === "pc" ? "professional corporation" : p.entityType === "llp" ? "LLP" : "PLLC"} with its licensing board${p.profession && p.profession !== "other" ? ` (${p.profession})` : ""}`,
         category: "license",
         jurisdiction: "state",
         state: p.formationState,
-        authority: `${s.name} licensing board for the profession (certificate of registration or authority) and ${s.filing.name}`,
+        authority: board
+          ? `${board.name}; ${s.filing.name}`
+          : `${s.name} licensing board for the profession; ${s.filing.name}`,
         description:
           "Professional entities must be owned by licensees and generally need a board-issued certificate of authorization, renewed periodically, in addition to the state filing.",
         frequency: "biennial",
         reason: `Entity type ${p.entityType} is a professional entity`,
-        url: s.filing.url,
+        url: board?.url ?? s.filing.url,
       };
     },
   },

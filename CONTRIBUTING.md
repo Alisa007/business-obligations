@@ -32,10 +32,16 @@ Do not copy text from commercial compliance-guide sites; summarise the requireme
 - Item ids must be stable. Use `state` and `key` on the draft to keep ids stable across profiles.
 - Add tests: a focused test in `test/` and, for data changes, the per-state snapshots update automatically.
 
+## Adding or correcting a profession board
+
+Edit `data/professions.json` (one entry per state per profession). Use the board's own site for `url`; the
+data test requires all 51 jurisdictions for every profession.
+
 ## Adding a city
 
 Add an entry to `data/local.json`: `state`, `city`, `counties` (optional) and `items` with an `appliesTo` tag list
-(`all`, `employees`, `sells_goods`, `corporation`, `unincorporated`). Cite the city's own page in `url`.
+(`all`, `employees`, `sells_goods`, `corporation`, `unincorporated`, `trade_name`); add `aliases` for
+neighbourhood or borough names. Cite the city's own page in `url`.
 
 ## Adding a country
 

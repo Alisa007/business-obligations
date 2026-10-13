@@ -15,9 +15,10 @@
   },
   "workersComp": {
     "agency": "Michigan Workers' Disability Compensation Agency",
-    "threshold": "1 employee (3 regularly employed 35+ hours/week at minimum)",
+    "threshold": "3 employees, or 1 employee working 35+ hours per week for 13 weeks",
     "trigger": {
-      "minEmployees": 1
+      "minEmployees": 3,
+      "orFullTimeEmployees": 1
     },
     "stateFund": false
   },
@@ -73,8 +74,17 @@
   },
   "verification": {
     "checkedOn": "2026-10-13",
-    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
     "sources": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/frequently-asked-questions"],
-    "unconfirmed": []
-  }
+    "unconfirmed": ["lpReport", "llpReport", "cannabis.regulator"],
+    "dba": "checked"
+  },
+  "dbaOffice": "County clerk",
+  "lpReport": null,
+  "llpReport": null,
+  "cannabis": {
+    "status": "adult_use",
+    "regulator": "Michigan Cannabis Regulatory Agency"
+  },
+  "localSalesTax": "none"
 }

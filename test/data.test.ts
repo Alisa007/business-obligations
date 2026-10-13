@@ -52,6 +52,21 @@ describe("local seed data", () => {
     for (const it of j.items) {
       expect(it.appliesTo.length).toBeGreaterThan(0);
       expect(it.title).toBeTruthy();
+      if (it.url) expect(it.url).toMatch(/^https:\/\//);
+    }
+  });
+});
+
+describe("profession directory", () => {
+  const prof = read("data/professions.json").professions as Record<
+    string,
+    Record<string, { name: string; url?: string }>
+  >;
+  it.each(Object.keys(prof))("%s has a board for all 51 jurisdictions", (p) => {
+    expect(Object.keys(prof[p]!).sort()).toEqual(Object.keys(STATES).sort());
+    for (const b of Object.values(prof[p]!)) {
+      expect(b.name.length).toBeGreaterThan(5);
+      if (b.url) expect(b.url).toMatch(/^https?:\/\//);
     }
   });
 });

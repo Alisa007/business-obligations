@@ -10,9 +10,11 @@ authorities, fees, deadlines and the next due date.
 Currently covers the **United States** (federal, all 50 states and DC, and a growing set of cities). Other countries
 are planned; the engine already selects rule packs by `country`.
 
-> **Not legal or tax advice.** Rule data is maintained by hand. Annual-report fees and deadlines for every state were
-> checked against official pages on 2026-10-13; everything else is compiled from public knowledge and flagged in each
-> state's `verification` block. Fees, deadlines and thresholds change. Confirm with the cited authority.
+> **Not legal or tax advice.** Rule data is maintained by hand. On 2026-10-13 the entity annual/biennial report fee and
+> deadline, workers' compensation thresholds, DBA filing level and LP/LLP reporting were checked for every state against
+> web search results (official agency pages where available). Anything not confirmed is listed in that state's
+> `verification.unconfirmed`, and everything else is compiled from public knowledge. Fees, deadlines and thresholds
+> change. Confirm with the cited authority.
 
 ## Install
 
@@ -72,36 +74,41 @@ are introspectable with `listRules()`, which returns each rule's id, description
 
 Machine-readable: [`schema/business-profile.schema.json`](schema/business-profile.schema.json).
 
-| Field                                                                                             | Notes                                                                                                                                             |
-| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `entityType`                                                                                      | `sole_proprietorship`, `partnership`, `llc`, `pllc`, `lp`, `llp`, `c_corp`, `s_corp`, `pc`, `benefit_corp`, `nonprofit`                           |
-| `zip`, `city`, `county`                                                                           | required; state is derived from ZIP unless `state` is given                                                                                       |
-| `state`, `formationState`                                                                         | operating state, state of formation                                                                                                               |
-| `multistate`                                                                                      | `[{ state, employeeCount?, hasProperty?, salesUsd? }]`; employees/property trigger registration, sales trigger economic-nexus sales tax           |
-| `llcTaxClassification`, `sCorpElection`                                                           | federal tax treatment of LLC/PLLC, or S election for `pc`/`benefit_corp`                                                                          |
-| `formationDate`, `fiscalYearEndMonth`                                                             | enable anniversary-based due dates; non-calendar fiscal years                                                                                     |
-| `industry`                                                                                        | `general`, `retail`, `restaurant`, `construction`, `healthcare`, `real_estate`, `professional_services`, `transportation`, `alcohol`, `childcare` |
-| `alcoholActivity`                                                                                 | required for `alcohol`: `manufacture`, `import`, `wholesale`, `retail`                                                                            |
-| `commercialVehicles`                                                                              | required for `transportation`: `{ interstate, grossWeightLbs?, passengerCapacity?, carriesHazmat?, forHire? }`                                    |
-| `employeeCount`, `annualPayroll`, `priorYearPayrollTaxLiability`                                  | payroll, workers' comp, paid leave/sick leave, deposit schedule                                                                                   |
-| `largestContractorPaymentUsd`                                                                     | 1099-NEC when ≥ $2,000                                                                                                                            |
-| `annualNetIncome`, `annualRevenue`                                                                | estimated tax; California LLC fee                                                                                                                 |
-| `sellsTaxableGoods`, `homeBased`, `usesTradeName`, `isFormed`, `hasTaxExemptStatus`, `profession` | flags                                                                                                                                             |
+| Field                                                                                             | Notes                                                                                                                                                         |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `entityType`                                                                                      | `sole_proprietorship`, `partnership`, `llc`, `pllc`, `lp`, `llp`, `c_corp`, `s_corp`, `pc`, `benefit_corp`, `nonprofit`                                       |
+| `zip`, `city`, `county`                                                                           | required; state is derived from ZIP unless `state` is given                                                                                                   |
+| `state`, `formationState`                                                                         | operating state, state of formation                                                                                                                           |
+| `multistate`                                                                                      | `[{ state, employeeCount?, hasProperty?, salesUsd? }]`; employees/property trigger registration, sales trigger economic-nexus sales tax                       |
+| `llcTaxClassification`, `sCorpElection`                                                           | federal tax treatment of LLC/PLLC, or S election for `pc`/`benefit_corp`                                                                                      |
+| `formationDate`, `fiscalYearEndMonth`                                                             | enable anniversary-based due dates; non-calendar fiscal years                                                                                                 |
+| `industry`                                                                                        | `general`, `retail`, `restaurant`, `construction`, `healthcare`, `real_estate`, `professional_services`, `transportation`, `alcohol`, `childcare`, `cannabis` |
+| `alcoholActivity`                                                                                 | required for `alcohol`: `manufacture`, `import`, `wholesale`, `retail`                                                                                        |
+| `cannabisActivity`                                                                                | required for `cannabis`: `cultivation`, `manufacturing`, `retail`, `distribution`, `testing`                                                                  |
+| `commercialVehicles`                                                                              | required for `transportation`: `{ interstate, grossWeightLbs?, passengerCapacity?, carriesHazmat?, forHire? }`                                                |
+| `employeeCount`, `annualPayroll`, `priorYearPayrollTaxLiability`                                  | payroll, workers' comp, paid leave/sick leave, deposit schedule                                                                                               |
+| `largestContractorPaymentUsd`                                                                     | 1099-NEC when ≥ $2,000                                                                                                                                        |
+| `annualNetIncome`, `annualRevenue`                                                                | estimated tax; California LLC fee                                                                                                                             |
+| `sellsTaxableGoods`, `homeBased`, `usesTradeName`, `isFormed`, `hasTaxExemptStatus`, `profession` | flags                                                                                                                                                         |
 
 ## What is covered
 
 - **Federal:** EIN, income tax return by tax treatment and fiscal year, estimated tax, payroll deposits and returns
-  (941/940/W-2/I-9), 1099-NEC, nonprofit exemption, labor posters, TTB permits, USDOT.
-- **State, all 50 + DC:** formation, registered agent, foreign qualification, annual/biennial reports (fee, deadline,
-  next due), entity-level taxes, sales tax permit and economic nexus, unemployment insurance, withholding, new-hire
-  reporting, workers' comp thresholds, paid leave and paid sick leave, general state licenses, DBA filing level, LLC
-  publication, workplace notices, and industry licensing authorities.
-- **City (seeded):** New York, San Francisco, Los Angeles, Chicago, Seattle, Portland, Philadelphia, Denver. Other
-  cities return the state's typical local licensing regime, named for the city and county you pass in.
+  (941/940/W-2/I-9), 1099-NEC, nonprofit exemption, labor posters, TTB permits, USDOT, cannabis tax/regulatory status.
+- **State, all 50 + DC:** formation, registered agent, foreign qualification, annual/biennial reports with fee,
+  deadline and next due date (separate rules for LLCs, corporations, LPs and LLPs), entity-level taxes, sales tax
+  permit, economic nexus and local-sales-tax administration, unemployment insurance, withholding, new-hire reporting,
+  workers' comp thresholds (including hours and payroll tests), paid leave and paid sick leave, general state
+  licenses, DBA filing level and office, LLC publication, workplace notices, professional boards (attorney, CPA,
+  physician, architect, engineer) and industry licensing authorities including cannabis regulators.
+- **City (seeded):** New York, San Francisco, Los Angeles, San Diego, San José, Oakland, Chicago, Seattle, Portland,
+  Philadelphia, Denver, Boston, Atlanta, Miami, Detroit, Columbus, Cleveland, Cincinnati, Pittsburgh, Louisville,
+  Kansas City, St. Louis, Baltimore, New Orleans, Las Vegas, Phoenix. Other cities return the state's typical local
+  licensing regime, named for the city and county you pass in.
 
-Intentionally not modelled yet: FinCEN beneficial ownership reporting (domestic companies were exempted in 2025),
-per-profession licensing boards, cannabis, local sales-tax rates, and non-US countries. See the
-[changelog](CHANGELOG.md) and [CONTRIBUTING](CONTRIBUTING.md) for how to extend.
+Intentionally not modelled: FinCEN beneficial ownership reporting (domestic companies were exempted in 2025), local
+sales-tax _rates_, professions beyond the five bundled directories (use `profession: "other"`), and non-US countries.
+Each state file records what was checked and what was not in its `verification` block.
 
 ## Extending
 

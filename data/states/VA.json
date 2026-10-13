@@ -59,7 +59,7 @@
   "businessLicense": null,
   "llcPublication": null,
   "economicNexusUsd": 100000,
-  "dbaFiling": "county",
+  "dbaFiling": "state",
   "industry": {
     "contractor": "Virginia Board for Contractors (DPOR)",
     "realEstate": "Virginia Real Estate Board (DPOR)",
@@ -69,8 +69,26 @@
   },
   "verification": {
     "checkedOn": "2026-10-13",
-    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
     "sources": ["https://www.scc.virginia.gov/businesses/business-faqs/annual-registration-fees/"],
-    "unconfirmed": []
-  }
+    "unconfirmed": ["llpReport", "cannabis.regulator"],
+    "dba": "checked"
+  },
+  "lpReport": {
+    "frequency": "annual",
+    "fee": "$50",
+    "deadline": "October 1",
+    "title": "Pay annual registration fee",
+    "due": {
+      "type": "fixed",
+      "month": 10,
+      "day": 1
+    }
+  },
+  "cannabis": {
+    "status": "medical_only",
+    "regulator": "Virginia Cannabis Control Authority",
+    "note": "Adult-use retail sales are slated to begin July 1, 2027; only the medical program is licensed for sales today."
+  },
+  "localSalesTax": "state_administered"
 }

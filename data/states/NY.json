@@ -3,7 +3,7 @@
   "name": "New York",
   "filing": {
     "name": "New York Department of State, Division of Corporations",
-    "url": "https://dos.ny.gov/division-corporations"
+    "url": "https://dos.ny.gov/division-corporations-state-records-and-uniform-commercial-code"
   },
   "revenue": {
     "name": "New York Department of Taxation and Finance",
@@ -76,10 +76,17 @@
   },
   "verification": {
     "checkedOn": "2026-10-13",
-    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
     "sources": [
       "https://dos.ny.gov/biennial-statements-business-corporations-and-limited-liability-companies"
     ],
-    "unconfirmed": []
-  }
+    "unconfirmed": ["workersComp.trigger", "lpReport", "llpReport", "cannabis.regulator"],
+    "dba": "checked"
+  },
+  "dbaOffice": "County clerk",
+  "cannabis": {
+    "status": "adult_use",
+    "regulator": "New York Office of Cannabis Management"
+  },
+  "localSalesTax": "state_administered"
 }

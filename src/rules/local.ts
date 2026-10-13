@@ -6,16 +6,16 @@ const norm = (s: string) =>
   s
     .trim()
     .toLowerCase()
+    .replace(/\./g, "")
     .replace(/\bcity of\b/, "")
-    .replace(/\bsaint\b/, "st.")
+    .replace(/\bsaint\b/, "st")
+    .replace(/\s+/g, " ")
     .trim();
 
 function jurisdictionFor(p: ResolvedProfile) {
+  const city = norm(p.city);
   return LOCAL_JURISDICTIONS.find(
-    (j) =>
-      j.state === p.state &&
-      (norm(j.city) === norm(p.city) ||
-        (j.counties ?? []).some((c) => norm(c) === norm(p.county) && norm(j.city) === norm(p.city))),
+    (j) => j.state === p.state && [j.city, ...(j.aliases ?? [])].some((name) => norm(name) === city),
   );
 }
 
@@ -75,7 +75,7 @@ export const localRules: Rule[] = [
   {
     id: "local.seeded-city",
     description: "City-specific licences and taxes for seeded cities (see data/local.json)",
-    inputs: ["state", "city", "county", "employeeCount", "sellsTaxableGoods", "entityType"],
+    inputs: ["state", "city", "employeeCount", "sellsTaxableGoods", "entityType", "usesTradeName"],
     when: (p) => jurisdictionFor(p) !== undefined,
     items: (p) => {
       const j = jurisdictionFor(p)!;
@@ -89,7 +89,8 @@ export const localRules: Rule[] = [
                 (p.sellsTaxableGoods || p.industry === "retail" || p.industry === "restaurant")) ||
               (tag === "corporation" &&
                 (isCorpLike(p) || p.taxTreatment === "c_corp" || p.taxTreatment === "s_corp")) ||
-              (tag === "unincorporated" && isUnincorporated(p)),
+              (tag === "unincorporated" && isUnincorporated(p)) ||
+              (tag === "trade_name" && p.usesTradeName),
           ),
         )
         .map((it) => ({

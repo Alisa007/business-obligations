@@ -57,8 +57,19 @@ export function resolveProfile(input: BusinessProfile): ResolvedProfile {
   if (!input.county?.trim()) throw new InvalidProfileError("`county` is required");
   if (input.industry === "alcohol" && !input.alcoholActivity)
     throw new InvalidProfileError('`alcoholActivity` is required when industry is "alcohol"');
+  if (input.industry === "cannabis" && !input.cannabisActivity)
+    throw new InvalidProfileError('`cannabisActivity` is required when industry is "cannabis"');
   if (input.industry === "transportation" && !input.commercialVehicles)
     throw new InvalidProfileError('`commercialVehicles` is required when industry is "transportation"');
+  const needsProfession =
+    input.entityType === "pllc" ||
+    input.entityType === "pc" ||
+    input.entityType === "llp" ||
+    input.industry === "professional_services";
+  if (needsProfession && !input.profession)
+    throw new InvalidProfileError(
+      '`profession` is required for pllc, pc, llp and the "professional_services" industry (use "other" if unlisted)',
+    );
   if (input.formationDate !== undefined && !ISO_DATE.test(input.formationDate))
     throw new InvalidProfileError("`formationDate` must be YYYY-MM-DD");
   const fye = input.fiscalYearEndMonth ?? 12;
@@ -69,6 +80,9 @@ export function resolveProfile(input: BusinessProfile): ResolvedProfile {
       throw new InvalidProfileError(`\`${name}\` must be a non-negative number`);
   };
   nonNeg("employeeCount", input.employeeCount);
+  nonNeg("fullTimeEmployeeCount", input.fullTimeEmployeeCount);
+  if ((input.fullTimeEmployeeCount ?? 0) > (input.employeeCount ?? 0))
+    throw new InvalidProfileError("`fullTimeEmployeeCount` cannot exceed `employeeCount`");
   nonNeg("annualPayroll", input.annualPayroll);
   nonNeg("annualRevenue", input.annualRevenue);
   nonNeg("annualNetIncome", input.annualNetIncome);
@@ -147,6 +161,7 @@ export function resolveProfile(input: BusinessProfile): ResolvedProfile {
     isFormed: input.isFormed ?? true,
     industry: input.industry ?? "general",
     employeeCount,
+    fullTimeEmployeeCount: input.fullTimeEmployeeCount ?? employeeCount,
     hasEmployees: employeeCount > 0,
     annualPayroll: input.annualPayroll ?? 0,
     largestContractorPaymentUsd: input.largestContractorPaymentUsd ?? 0,

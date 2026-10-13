@@ -11,7 +11,7 @@
   },
   "labor": {
     "name": "Florida Department of Revenue (Reemployment Tax)",
-    "url": "https://floridarevenue.com/taxes/taxesfees/Pages/reemployment_tax.aspx"
+    "url": "https://floridarevenue.com/taxes/taxesfees/Pages/reemployment.aspx"
   },
   "workersComp": {
     "agency": "Florida Division of Workers' Compensation",
@@ -72,8 +72,34 @@
   },
   "verification": {
     "checkedOn": "2026-10-13",
-    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
     "sources": ["https://dos.fl.gov/sunbiz/forms/fees/llc-fees/"],
-    "unconfirmed": []
-  }
+    "unconfirmed": ["cannabis.regulator"],
+    "dba": "checked"
+  },
+  "lpReport": {
+    "frequency": "annual",
+    "fee": "$500 ($411.25 plus $88.75 supplemental fee)",
+    "deadline": "January 1 – May 1 (late fee $400)",
+    "due": {
+      "type": "fixed",
+      "month": 5,
+      "day": 1
+    }
+  },
+  "llpReport": {
+    "frequency": "annual",
+    "fee": "$25",
+    "deadline": "January 1 – May 1",
+    "due": {
+      "type": "fixed",
+      "month": 5,
+      "day": 1
+    }
+  },
+  "cannabis": {
+    "status": "medical_only",
+    "regulator": "Florida Office of Medical Marijuana Use (Department of Health)"
+  },
+  "localSalesTax": "state_administered"
 }

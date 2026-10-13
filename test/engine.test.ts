@@ -222,7 +222,7 @@ describe("state", () => {
       getComplianceItems(
         profile({ entityType: "sole_proprietorship", zip, usesTradeName: true, county: "Kings" }),
       ).find((i) => i.title.includes("DBA"));
-    expect(dba("94105")?.authority).toMatch(/Kings County clerk/);
+    expect(dba("94105")?.authority).toMatch(/Kings County — County clerk/);
     expect(dba("33101")?.authority).toMatch(/Florida/);
     expect(dba("29401")).toBeUndefined(); // SC: none
   });

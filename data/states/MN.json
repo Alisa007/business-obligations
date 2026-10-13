@@ -78,8 +78,36 @@
   },
   "verification": {
     "checkedOn": "2026-10-13",
-    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
     "sources": ["https://www.sos.mn.gov/business-liens/renewals/"],
-    "unconfirmed": []
-  }
+    "unconfirmed": ["workersComp.trigger", "cannabis.regulator"],
+    "dba": "checked"
+  },
+  "lpReport": {
+    "frequency": "annual",
+    "fee": "Free",
+    "deadline": "December 31",
+    "title": "File Annual Renewal",
+    "due": {
+      "type": "fixed",
+      "month": 12,
+      "day": 31
+    }
+  },
+  "llpReport": {
+    "frequency": "annual",
+    "fee": "$155 online ($135 by mail)",
+    "deadline": "December 31",
+    "title": "File Annual Renewal",
+    "due": {
+      "type": "fixed",
+      "month": 12,
+      "day": 31
+    }
+  },
+  "cannabis": {
+    "status": "adult_use",
+    "regulator": "Minnesota Office of Cannabis Management"
+  },
+  "localSalesTax": "state_administered"
 }

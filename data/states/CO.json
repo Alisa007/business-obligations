@@ -68,8 +68,14 @@
   },
   "verification": {
     "checkedOn": "2026-10-13",
-    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
     "sources": ["https://www.sos.state.co.us/pubs/business/FAQs/reports.html"],
-    "unconfirmed": []
-  }
+    "unconfirmed": ["cannabis.regulator"],
+    "dba": "checked"
+  },
+  "cannabis": {
+    "status": "adult_use",
+    "regulator": "Colorado Marijuana Enforcement Division (Department of Revenue)"
+  },
+  "localSalesTax": "locally_administered"
 }

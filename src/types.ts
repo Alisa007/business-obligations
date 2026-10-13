@@ -18,6 +18,8 @@ export type EntityType =
 
 export type Country = "US";
 
+export type Profession = "attorney" | "cpa" | "physician" | "architect" | "engineer" | "other";
+
 /** Federal tax classification of an LLC (ignored for other entity types). */
 export type LlcTaxClassification = "disregarded" | "partnership" | "s_corp" | "c_corp";
 
@@ -31,10 +33,14 @@ export type Industry =
   | "professional_services"
   | "transportation"
   | "alcohol"
-  | "childcare";
+  | "childcare"
+  | "cannabis";
 
 /** What the business does with alcohol; required when `industry` is "alcohol". */
 export type AlcoholActivity = "manufacture" | "import" | "wholesale" | "retail";
+
+/** What the business does with cannabis; required when `industry` is "cannabis". */
+export type CannabisActivity = "cultivation" | "manufacturing" | "retail" | "distribution" | "testing";
 
 /** Commercial vehicle operations; required when `industry` is "transportation". */
 export interface CommercialVehicles {
@@ -88,9 +94,15 @@ export interface BusinessProfile {
   isFormed?: boolean;
   industry?: Industry;
   alcoholActivity?: AlcoholActivity;
+  cannabisActivity?: CannabisActivity;
   commercialVehicles?: CommercialVehicles;
   /** W-2 employees at the home location. Defaults to 0. */
   employeeCount?: number;
+  /**
+   * Employees regularly working 35+ hours per week. Defaults to `employeeCount` (all full-time).
+   * Only some states' workers' compensation rules depend on hours (e.g. Michigan).
+   */
+  fullTimeEmployeeCount?: number;
   /** Total annual gross wages paid to employees, USD. Defaults to 0. */
   annualPayroll?: number;
   /**
@@ -105,8 +117,11 @@ export interface BusinessProfile {
   homeBased?: boolean;
   /** Operates under a name different from the legal name. */
   usesTradeName?: boolean;
-  /** Name of a licensed profession practiced through a PLLC or professional corporation, e.g. "attorney". */
-  profession?: string;
+  /**
+   * Licensed profession practiced through the business. Required for `pllc`, `pc`, `llp`
+   * and the `professional_services` industry; use "other" for professions without a bundled board directory.
+   */
+  profession?: Profession;
   /** Federal tax-exempt status (501(c)) already granted. */
   hasTaxExemptStatus?: boolean;
   /** Annual gross receipts, USD. Defaults to 0. */
@@ -164,6 +179,7 @@ export interface ResolvedProfile extends BusinessProfile {
   isFormed: boolean;
   industry: Industry;
   employeeCount: number;
+  fullTimeEmployeeCount: number;
   hasEmployees: boolean;
   annualPayroll: number;
   largestContractorPaymentUsd: number;

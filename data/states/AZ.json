@@ -60,8 +60,24 @@
   },
   "verification": {
     "checkedOn": "2026-10-13",
-    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
     "sources": ["https://azcc.gov/corporations/fee-and-payment-info"],
-    "unconfirmed": []
-  }
+    "unconfirmed": ["lpReport", "cannabis.regulator"],
+    "dba": "checked"
+  },
+  "llpReport": {
+    "frequency": "annual",
+    "fee": "$3 if filed January 1 – April 30; $28 after",
+    "deadline": "April 30",
+    "due": {
+      "type": "fixed",
+      "month": 4,
+      "day": 30
+    }
+  },
+  "cannabis": {
+    "status": "adult_use",
+    "regulator": "Arizona Department of Health Services"
+  },
+  "localSalesTax": "locally_administered"
 }

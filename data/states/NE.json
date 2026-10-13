@@ -35,7 +35,7 @@
   },
   "corpReport": {
     "frequency": "biennial",
-    "fee": "Occupation tax based on paid-in capital (minimum $26)",
+    "fee": "Occupation tax by paid-in capital ($26 up to $10,000; $40 for $10,001–$20,000, +$20 per further $10,000)",
     "deadline": "March 1 of even-numbered years",
     "title": "File Biennial Occupation Tax Report",
     "due": {
@@ -63,7 +63,7 @@
   "businessLicense": null,
   "llcPublication": null,
   "economicNexusUsd": 100000,
-  "dbaFiling": "state",
+  "dbaFiling": "none",
   "industry": {
     "contractor": "Nebraska Department of Labor (contractor registration)",
     "realEstate": "Nebraska Real Estate Commission",
@@ -73,8 +73,24 @@
   },
   "verification": {
     "checkedOn": "2026-10-13",
-    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
     "sources": ["https://sos.nebraska.gov/business-services/annualbiennial-reporting"],
-    "unconfirmed": ["corpReport.fee"]
-  }
+    "unconfirmed": ["workersComp.trigger", "lpReport", "llpReport", "cannabis.regulator"],
+    "dba": "checked"
+  },
+  "llpReport": {
+    "frequency": "annual",
+    "fee": "$25 ($50 if engaged in the practice of law)",
+    "deadline": "April 1",
+    "due": {
+      "type": "fixed",
+      "month": 4,
+      "day": 1
+    }
+  },
+  "cannabis": {
+    "status": "medical_only",
+    "regulator": "Nebraska Medical Cannabis Commission"
+  },
+  "localSalesTax": "state_administered"
 }

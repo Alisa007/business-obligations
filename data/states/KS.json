@@ -15,7 +15,7 @@
   },
   "workersComp": {
     "agency": "Kansas Division of Workers Compensation",
-    "threshold": "$20,000 annual payroll",
+    "threshold": "Annual payroll over $20,000",
     "trigger": {
       "minEmployees": 1,
       "andAnnualPayrollOver": 20000
@@ -62,7 +62,7 @@
   "businessLicense": null,
   "llcPublication": null,
   "economicNexusUsd": 100000,
-  "dbaFiling": "state",
+  "dbaFiling": "none",
   "industry": {
     "contractor": null,
     "realEstate": "Kansas Real Estate Commission",
@@ -72,8 +72,34 @@
   },
   "verification": {
     "checkedOn": "2026-10-13",
-    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
     "sources": ["https://www.sos.ks.gov/Pubs/Businesses/Biennial-Filing.pdf"],
-    "unconfirmed": ["corpReport.fee"]
-  }
+    "unconfirmed": ["corpReport.fee", "lpReport", "llpReport", "llcReport.fee", "cannabis.regulator"],
+    "dba": "checked"
+  },
+  "lpReport": {
+    "frequency": "biennial",
+    "fee": "$100 online ($110 paper)",
+    "deadline": "April 15 of the odd or even year matching the formation year",
+    "due": {
+      "type": "fixed",
+      "month": 4,
+      "day": 15
+    }
+  },
+  "llpReport": {
+    "frequency": "biennial",
+    "fee": "$100 online ($110 paper)",
+    "deadline": "April 15 of the odd or even year matching the formation year",
+    "due": {
+      "type": "fixed",
+      "month": 4,
+      "day": 15
+    }
+  },
+  "cannabis": {
+    "status": "cbd_only",
+    "regulator": null
+  },
+  "localSalesTax": "state_administered"
 }

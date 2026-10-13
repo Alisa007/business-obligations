@@ -39,6 +39,8 @@ export interface WcTrigger {
   minEmployees: number;
   /** Alternative trigger: annual payroll at or above this amount makes coverage mandatory. */
   orAnnualPayroll?: number;
+  /** Alternative trigger: this many full-time (35+ hour) employees makes coverage mandatory (MI). */
+  orFullTimeEmployees?: number;
   /** Payroll that must be exceeded in addition to the employee count (KS). */
   andAnnualPayrollOver?: number;
   /** Lower employee threshold in construction. */
@@ -80,6 +82,10 @@ export interface StateInfo {
   llcReport: ReportRule | null;
   /** Periodic report required of corporations and nonprofits formed in the state; null = none. */
   corpReport: ReportRule | null;
+  /** Report for limited partnerships when it differs from the LLC report; null = none, absent = same as LLC. */
+  lpReport?: ReportRule | null;
+  /** Report for limited liability partnerships when it differs from the LLC report; null = none, absent = same as LLC. */
+  llpReport?: ReportRule | null;
   /** LLCs taxed as corporations must file the corporate report even though plain LLCs do not (SC). */
   llcReportAppliesWhenTaxedAsCorp?: boolean;
   /** Entity-level income / franchise / gross-receipts taxes. */
@@ -111,8 +117,20 @@ export interface StateInfo {
   llcPublication: string | null;
   /** Annual sales into the state at which a remote seller must register; null = no statewide sales tax. */
   economicNexusUsd: number | null;
-  /** Where a trade name / DBA is registered. */
+  /** State cannabis licensing regime. */
+  cannabis: {
+    status: "adult_use" | "medical_only" | "cbd_only";
+    regulator: string | null;
+    note?: string;
+  };
+  /** Who administers local (city/county) sales taxes. */
+  localSalesTax: "locally_administered" | "state_administered" | "none";
+  /** Where a sole proprietor's trade name / DBA is registered; "none" when no filing is required. */
   dbaFiling: DbaFiling;
+  /** Name of the county/town office when `dbaFiling` is county or town. */
+  dbaOffice?: string;
+  /** State agency taking trade names when it is not the entity filing agency. */
+  dbaAuthority?: Required<Agency>;
   industry: IndustryAuthorities;
   verification: {
     checkedOn: string;
@@ -120,6 +138,8 @@ export interface StateInfo {
     sources: string[];
     /** Dotted field paths that could not be confirmed against an official source. */
     unconfirmed: string[];
+    /** Whether the DBA filing level was confirmed. */
+    dba: "checked" | "unconfirmed";
   };
 }
 
@@ -127,8 +147,10 @@ export interface StateInfo {
 export interface LocalJurisdiction {
   state: string;
   city: string;
-  /** Matching counties, so that a borough or neighbourhood name still resolves (optional). */
+  /** Counties the city lies in (informational). */
   counties?: string[];
+  /** Other names that resolve to this jurisdiction (e.g. NYC boroughs). */
+  aliases?: string[];
   items: Array<{
     id: string;
     title: string;
@@ -140,6 +162,6 @@ export interface LocalJurisdiction {
     due?: Due;
     url?: string;
     /** Tags; the item applies if any matches. */
-    appliesTo: Array<"all" | "employees" | "sells_goods" | "corporation" | "unincorporated">;
+    appliesTo: Array<"all" | "employees" | "sells_goods" | "corporation" | "unincorporated" | "trade_name">;
   }>;
 }
