@@ -26,7 +26,8 @@
     "industry",
     "verification",
     "cannabis",
-    "localSalesTax"
+    "localSalesTax",
+    "unemployment"
   ],
   "properties": {
     "code": {
@@ -351,6 +352,33 @@
     },
     "localSalesTax": {
       "enum": ["locally_administered", "state_administered", "none"]
+    },
+    "entityTaxDetail": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "thresholdUsd", "summary", "source", "checkedOn"],
+      "properties": {
+        "kind": { "enum": ["gross_receipts", "margin"] },
+        "thresholdUsd": { "type": "number", "minimum": 0 },
+        "rate": { "type": "number", "minimum": 0 },
+        "baseUsd": { "type": "number", "minimum": 0 },
+        "summary": { "type": "string" },
+        "source": { "type": "string", "format": "uri" },
+        "checkedOn": { "type": "string", "format": "date" }
+      }
+    },
+    "unemployment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["wageBase", "minRate", "maxRate", "newEmployerRate", "year"],
+      "properties": {
+        "wageBase": { "type": "number", "minimum": 0 },
+        "minRate": { "type": "number", "minimum": 0 },
+        "maxRate": { "type": "number", "minimum": 0 },
+        "newEmployerRate": { "type": ["number", "null"], "minimum": 0 },
+        "note": { "type": "string" },
+        "year": { "type": "integer", "minimum": 2024 }
+      }
     }
   },
   "$defs": {
@@ -459,6 +487,14 @@
           "minimum": 0
         },
         "paper": {
+          "type": "number",
+          "minimum": 0
+        },
+        "rate": {
+          "type": "number",
+          "minimum": 0
+        },
+        "base": {
           "type": "number",
           "minimum": 0
         },

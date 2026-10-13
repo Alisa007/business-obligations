@@ -1,7 +1,7 @@
 import type { ItemDraft, Presence, ResolvedProfile, Rule } from "../types";
 import { professionBoard, stateInfo as info } from "../data";
 import type { BoardRef } from "../data";
-import type { ReportRule } from "../data/types";
+import type { EntityTaxDetail, ReportRule } from "../data/types";
 import { isLlcLike, isLlcSubtype, isProfessionalEntity, isSeparateEntity } from "../entity";
 
 /** Employees or property in the state. */
@@ -75,8 +75,24 @@ function employerItems(x: Presence, p: ResolvedProfile): ItemDraft[] {
       jurisdiction: "state",
       state: x.state,
       authority: s.labor.name,
-      description: "Quarterly wage report and contribution payment.",
+      description: `Quarterly wage report and contribution payment. ${s.name} taxes the first $${s.unemployment.wageBase.toLocaleString("en-US")} of each employee's wages (${s.unemployment.year}); ${
+        s.unemployment.newEmployerRate === null
+          ? "new employers pay the industry average rate"
+          : `new employers pay ${s.unemployment.newEmployerRate}%`
+      }, and experience-rated rates range from ${s.unemployment.minRate}% to ${s.unemployment.maxRate}%.${s.unemployment.note ? ` ${s.unemployment.note}` : ""}`,
       frequency: "quarterly",
+      ...(s.unemployment.newEmployerRate !== null
+        ? {
+            cost: {
+              basis: "percent" as const,
+              rate: s.unemployment.newEmployerRate,
+              base: s.unemployment.wageBase,
+              estimate: true,
+              note: "New-employer rate on wages up to the wage base, per employee; experience rating changes it after the first years.",
+              currency: "USD" as const,
+            },
+          }
+        : {}),
       reason,
       url: s.labor.url,
     },
@@ -151,6 +167,18 @@ function employerItems(x: Presence, p: ResolvedProfile): ItemDraft[] {
     });
   }
   return items;
+}
+
+const usd = (n: number) => `$${n.toLocaleString("en-US")}`;
+
+/** Whether the profile's revenue puts it over a state's gross-receipts or margin tax threshold. */
+function entityTaxStatus(p: ResolvedProfile, d: EntityTaxDetail): string {
+  const t = usd(d.thresholdUsd);
+  if (p.annualRevenue > d.thresholdUsd)
+    return `Annual revenue of ${usd(p.annualRevenue)} exceeds the ${t} threshold, so tax is due.`;
+  if (p.annualRevenue > 0)
+    return `Annual revenue of ${usd(p.annualRevenue)} is at or below the ${t} threshold, so no tax is due (a filing may still be required).`;
+  return `Tax is due only when annual revenue exceeds ${t}.`;
 }
 
 export const stateRules: Rule[] = [
@@ -286,7 +314,9 @@ export const stateRules: Rule[] = [
           jurisdiction: "state" as const,
           state: x.state,
           authority: s.revenue.name,
-          description: `${s.entityTax}.`,
+          description: s.entityTaxDetail
+            ? `${s.entityTax}. ${s.entityTaxDetail.summary}. ${entityTaxStatus(p, s.entityTaxDetail)}`
+            : `${s.entityTax}.`,
           frequency: "annual" as const,
           reason: `${p.entityType} with ${x.home ? "its principal place of business" : "employees or property"} in ${x.state}`,
           url: s.revenue.url,

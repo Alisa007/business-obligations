@@ -109,5 +109,19 @@
     "status": "adult_use",
     "regulator": "Nevada Cannabis Compliance Board"
   },
-  "localSalesTax": "state_administered"
+  "localSalesTax": "state_administered",
+  "unemployment": {
+    "wageBase": 43700,
+    "minRate": 0.25,
+    "maxRate": 5.4,
+    "newEmployerRate": 2.95,
+    "year": 2026
+  },
+  "entityTaxDetail": {
+    "kind": "gross_receipts",
+    "thresholdUsd": 4000000,
+    "summary": "Commerce Tax on Nevada gross revenue above $4 million; the rate depends on the industry; the return is due 45 days after the June 30 fiscal year end (August 14)",
+    "source": "https://tax.nv.gov/commerce-tax/",
+    "checkedOn": "2026-10-13"
+  }
 }

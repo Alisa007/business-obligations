@@ -91,5 +91,21 @@
     "status": "adult_use",
     "regulator": "Oregon Liquor and Cannabis Commission"
   },
-  "localSalesTax": "none"
+  "localSalesTax": "none",
+  "unemployment": {
+    "wageBase": 56700,
+    "minRate": 0.9,
+    "maxRate": 5.4,
+    "newEmployerRate": 2.4,
+    "year": 2026
+  },
+  "entityTaxDetail": {
+    "kind": "gross_receipts",
+    "thresholdUsd": 1000000,
+    "rate": 0.57,
+    "baseUsd": 250,
+    "summary": "$250 plus 0.57% of Oregon commercial activity above $1 million; no tax is owed at or below $1 million",
+    "source": "https://www.oregon.gov/dor/programs/businesses/Pages/Corporate-Activity-Tax.aspx",
+    "checkedOn": "2026-10-13"
+  }
 }

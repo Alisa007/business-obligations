@@ -93,5 +93,20 @@
     "regulator": "Texas Department of Public Safety, Compassionate Use Program",
     "note": "Texas's compassionate-use program is limited in scope."
   },
-  "localSalesTax": "state_administered"
+  "localSalesTax": "state_administered",
+  "unemployment": {
+    "wageBase": 9000,
+    "minRate": 0.32,
+    "maxRate": 6.32,
+    "newEmployerRate": 2.7,
+    "year": 2026
+  },
+  "entityTaxDetail": {
+    "kind": "margin",
+    "thresholdUsd": 2650000,
+    "rate": 0.75,
+    "summary": "0.75% of taxable margin (0.375% for retail and wholesale); no tax due at or below $2.65 million of annualized total revenue, though the report is still filed",
+    "source": "https://comptroller.texas.gov/taxes/franchise/",
+    "checkedOn": "2026-10-13"
+  }
 }

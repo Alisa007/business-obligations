@@ -130,3 +130,42 @@ describe("analyzeInputs", () => {
     expect(a.defaultsUsed.find((d) => d.field === "employeeCount")).toBeUndefined();
   });
 });
+
+describe("unemployment insurance data", () => {
+  it("has a wage base and rate range for every state", () => {
+    for (const [code, s] of Object.entries(STATES)) {
+      const u = s.unemployment;
+      expect(u.wageBase, code).toBeGreaterThan(0);
+      expect(u.maxRate, code).toBeGreaterThanOrEqual(u.minRate);
+      if (u.newEmployerRate !== null) expect(u.newEmployerRate, code).toBeGreaterThan(0);
+    }
+  });
+
+  it("estimates unemployment tax from payroll and headcount", () => {
+    const profile = { ...llc, employeeCount: 4, annualPayroll: 200000 }; // TX: $9,000 base at 2.7%
+    const r = evaluate(profile, { asOf });
+    const est = estimateCosts(r.items, { profile: r.profile });
+    const line = est.lines.find((l) => l.title.includes("unemployment insurance"));
+    expect(line?.perYear).toBeCloseTo(4 * 9000 * 0.027, 2);
+    expect(line?.estimate).toBe(true);
+  });
+});
+
+describe("gross-receipts and margin taxes", () => {
+  const ohio = { ...llc, zip: "43215", city: "Columbus", county: "Franklin" };
+  const text = (revenue: number) =>
+    evaluate({ ...ohio, annualRevenue: revenue }, { asOf }).items.find((i) =>
+      i.id.startsWith("state.entity-tax"),
+    )?.description ?? "";
+
+  it("compares revenue with the state threshold", () => {
+    expect(text(7_000_000)).toContain("so tax is due");
+    expect(text(500_000)).toContain("so no tax is due");
+    expect(text(0)).toContain("only when annual revenue exceeds");
+  });
+
+  it("marks structured entity tax data as checked", () => {
+    const item = evaluate(ohio, { asOf }).items.find((i) => i.id.startsWith("state.entity-tax"));
+    expect(item?.provenance?.confidence).toBe("checked");
+  });
+});

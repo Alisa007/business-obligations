@@ -1,10 +1,15 @@
-import type { ComplianceItem } from "./types";
+import type { ComplianceItem, ResolvedProfile } from "./types";
 
 export interface CostOptions {
   /** Which filing channel's amount to use where fees differ. Defaults to "standard". */
   channel?: "standard" | "online" | "paper";
   /** Members/partners for per-member and per-partner fees. Defaults to 1. */
   ownerCount?: number;
+  /**
+   * The resolved profile (`result.profile`). Enables percentage-based fees such as unemployment insurance:
+   * the rate is applied to each employee's average wages up to the wage base, using the state's headcount.
+   */
+  profile?: ResolvedProfile;
 }
 
 export interface CostLine {
@@ -37,6 +42,7 @@ const clamp = (n: number, min?: number, max?: number) =>
 export function itemAmount(
   cost: NonNullable<ComplianceItem["cost"]>,
   options: CostOptions = {},
+  state?: string,
 ): number | undefined {
   const units = options.ownerCount ?? 1;
   if (cost.waived || cost.basis === "none") return 0;
@@ -67,6 +73,16 @@ export function itemAmount(
         cost.max,
       );
     }
+    case "percent": {
+      const p = options.profile;
+      if (cost.rate === undefined || cost.base === undefined || !p || !state) return undefined;
+      const employees = p.presence.find((x) => x.state === state)?.employeeCount ?? 0;
+      if (employees === 0) return 0;
+      // Average wage per employee; payroll is only known for the home location.
+      const avg = p.employeeCount > 0 ? p.annualPayroll / p.employeeCount : 0;
+      if (avg === 0) return undefined;
+      return Math.round(employees * Math.min(avg, cost.base) * cost.rate) / 100;
+    }
     default:
       return undefined;
   }
@@ -89,17 +105,25 @@ export function estimateCosts(items: ComplianceItem[], options: CostOptions = {}
   let oneTime = 0;
   for (const item of items) {
     if (!item.cost) continue;
-    const amount = itemAmount(item.cost, options);
+    const amount = itemAmount(item.cost, options, item.state);
     if (amount === undefined) {
-      unknown.push({ id: item.id, title: item.title, reason: `Fee basis is ${item.cost.basis}` });
+      unknown.push({
+        id: item.id,
+        title: item.title,
+        reason:
+          item.cost.basis === "percent"
+            ? "Percentage-based; pass `profile` with annualPayroll and employeeCount to estimate"
+            : `Fee basis is ${item.cost.basis}`,
+      });
       continue;
     }
-    const perYear = PER_YEAR[item.frequency];
+    // Rate-based amounts are computed for a whole year already.
+    const perYear = item.cost.basis === "percent" ? 1 : PER_YEAR[item.frequency];
     if (perYear === undefined) {
       unknown.push({ id: item.id, title: item.title, reason: `No fixed period (${item.frequency})` });
       continue;
     }
-    if (item.frequency === "once") oneTime += amount;
+    if (item.frequency === "once" && item.cost.basis !== "percent") oneTime += amount;
     else annual += amount * perYear;
     lines.push({
       id: item.id,

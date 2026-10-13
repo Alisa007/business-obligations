@@ -77,5 +77,21 @@
     "status": "adult_use",
     "regulator": "Ohio Division of Cannabis Control (Department of Commerce)"
   },
-  "localSalesTax": "state_administered"
+  "localSalesTax": "state_administered",
+  "unemployment": {
+    "wageBase": 9000,
+    "minRate": 0.4,
+    "maxRate": 10.1,
+    "newEmployerRate": 2.7,
+    "note": "Construction employers' new-employer rate differs from the general rate.",
+    "year": 2026
+  },
+  "entityTaxDetail": {
+    "kind": "gross_receipts",
+    "thresholdUsd": 6000000,
+    "rate": 0.26,
+    "summary": "0.26% of Ohio taxable gross receipts above a $6 million exclusion; there is no annual minimum tax",
+    "source": "https://codes.ohio.gov/ohio-revised-code/section-5751.03",
+    "checkedOn": "2026-10-13"
+  }
 }

@@ -7,8 +7,20 @@ import type { ComplianceItem, Provenance, ResolvedProfile } from "./types";
  * reports, workers' comp thresholds, DBA filing level, cannabis regulators) are `checked`, or
  * `unconfirmed` when the state's verification block lists the field. Everything else is `compiled`.
  */
+const DOL_UI_SOURCE = "https://oui.doleta.gov/unemploy/content/sigpros/2020-2029/January2026.pdf";
+const UI_CHECKED_ON = "2026-10-13";
+
 export function provenanceFor(item: ComplianceItem, p: ResolvedProfile): Provenance {
   const url = item.url ? [item.url] : [];
+  if (item.id.startsWith("state.employer") && item.title.includes("unemployment insurance contributions")) {
+    // Wage base and rates come from the U.S. DOL's January 2026 table of state UI laws.
+    return { confidence: "checked", checkedOn: UI_CHECKED_ON, sources: [DOL_UI_SOURCE, ...url] };
+  }
+  if (item.id.startsWith("state.entity-tax") && item.state) {
+    const detail = stateInfo(item.state).entityTaxDetail;
+    if (detail)
+      return { confidence: "checked", checkedOn: detail.checkedOn, sources: [detail.source, ...url] };
+  }
   if (!item.state || !(item.id.startsWith("state.") || item.id.startsWith("industry.cannabis"))) {
     return { confidence: "compiled", sources: url };
   }

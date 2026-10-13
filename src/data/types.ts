@@ -26,11 +26,42 @@ export interface MultiDue {
 export type Due = FixedDue | AnniversaryDue | MultiDue;
 
 /** Machine-readable fee. `amount` is the standard/base figure; `online`/`paper` apply when they differ. */
+/** Structured threshold and rate for a gross-receipts, margin or franchise-style entity tax. */
+export interface EntityTaxDetail {
+  kind: "gross_receipts" | "margin";
+  /** Revenue (USD) at or below which no tax is due. */
+  thresholdUsd: number;
+  /** Percentage rate applied above the threshold (or to margin). Omitted when it varies by industry. */
+  rate?: number;
+  /** Fixed amount added once the threshold is exceeded, USD. */
+  baseUsd?: number;
+  summary: string;
+  source: string;
+  checkedOn: string;
+}
+
+export interface UnemploymentInfo {
+  /** Annual wages per employee subject to the tax, USD. */
+  wageBase: number;
+  /** Lowest and highest experience-rated contribution rate, percent. */
+  minRate: number;
+  maxRate: number;
+  /** Rate for new employers, percent; null when it depends on the employer's industry average. */
+  newEmployerRate: number | null;
+  note?: string;
+  /** Calendar year the figures apply to. */
+  year: number;
+}
+
 export interface FeeDetail {
   basis: "flat" | "per_partner" | "per_member" | "percent" | "varies" | "none";
   amount?: number;
   online?: number;
   paper?: number;
+  /** Percentage rate (basis percent), e.g. 2.7 for 2.7%. */
+  rate?: number;
+  /** Cap on the amount the rate applies to, per employee or per period (basis percent). */
+  base?: number;
   /** Charge per partner/member (basis per_partner / per_member). */
   perUnit?: number;
   /** Units covered by the base `amount` before `perUnit` applies (per_member). */
@@ -154,6 +185,10 @@ export interface StateInfo {
     regulator: string | null;
     note?: string;
   };
+  /** Threshold and rate of the state's gross-receipts or margin tax, where it has one. */
+  entityTaxDetail?: EntityTaxDetail;
+  /** State unemployment insurance (SUI) employer tax parameters. */
+  unemployment: UnemploymentInfo;
   /** Who administers local (city/county) sales taxes. */
   localSalesTax: "locally_administered" | "state_administered" | "none";
   /** Where a sole proprietor's trade name / DBA is registered; "none" when no filing is required. */
