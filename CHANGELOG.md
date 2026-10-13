@@ -22,7 +22,9 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ### Changed
 
-- Workers' comp 1-employee thresholds confirmed for DC, KY, LA, MA, MD, ME, MN, MT.
+- Workers' comp 1-employee thresholds confirmed for DC, KY, LA, MA, MD, ME, MN, MT, NE, NH, NJ, NV, NY, OH, OR, PA, RI,
+  UT, VT, WA, WV. South Dakota (sources conflict on whether coverage is mandatory) and Wyoming (mandatory only for
+  extra-hazardous industries) remain unconfirmed.
 - Resolved caveats: Illinois and North Dakota workers' comp thresholds, Oregon, New Mexico and Oklahoma report data
   confirmed; Alabama corporate annual report marked repealed (Oct 2024) per secondary sources; Kansas fees updated to
   the 2026 form amounts; cannabis regulators confirmed for 34 states with corrections for Louisiana (Agriculture and
