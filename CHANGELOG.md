@@ -35,6 +35,9 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 - `validateProfile()` and `InvalidProfileError.issues`: runtime validation of every profile field with suggestions
   for typos (`employes` -> `employeeCount`); `evaluate` now rejects unknown fields instead of ignoring them. A
   JavaScript quickstart (`examples/quickstart.cjs`) and README section.
+- One date convention, enforced by tests: ISO `YYYY-MM-DD` for machine-readable dates (now rejecting impossible
+  dates such as `2026-02-30`), spelled-out months in deadline text. `rulesetVersion` is now `YYYY-MM-DD.n` (was
+  `YYYY.MM.DD-n`). Calendar windows are validated.
 - Clearer disclaimer wording.
 - `analyzeInputs(profile)`: which optional inputs were defaulted and which values would change the returned items.
 

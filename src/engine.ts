@@ -12,6 +12,7 @@ import { isState } from "./states";
 import { federalRules } from "./rules/federal";
 import { extraStateRules, stateRules } from "./rules/state";
 import { dissolutionRules } from "./rules/dissolution";
+import { isIsoDate } from "./iso";
 import { validateProfile, type ProfileIssue } from "./validate";
 import { localRules } from "./rules/local";
 import { industryRules } from "./rules/industry";
@@ -56,8 +57,6 @@ export class InvalidProfileError extends Error {
     this.issues = issues;
   }
 }
-
-const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
 
 export function resolveProfile(input: BusinessProfile): ResolvedProfile {
   const issues = validateProfile(input);
@@ -106,9 +105,9 @@ export function resolveProfile(input: BusinessProfile): ResolvedProfile {
     throw new InvalidProfileError(
       '`profession` is required for pllc, pc, llp and the "professional_services" industry (use "other" if unlisted)',
     );
-  if (input.dissolutionDate !== undefined && !ISO_DATE.test(input.dissolutionDate))
+  if (input.dissolutionDate !== undefined && !isIsoDate(input.dissolutionDate))
     throw new InvalidProfileError("`dissolutionDate` must be YYYY-MM-DD");
-  if (input.formationDate !== undefined && !ISO_DATE.test(input.formationDate))
+  if (input.formationDate !== undefined && !isIsoDate(input.formationDate))
     throw new InvalidProfileError("`formationDate` must be YYYY-MM-DD");
   const fye = input.fiscalYearEndMonth ?? 12;
   if (!Number.isInteger(fye) || fye < 1 || fye > 12)
@@ -237,7 +236,7 @@ export interface ComplianceResult {
   asOf: string;
   /** Date the bundled rule data was last reviewed. */
   dataVersion: string;
-  /** Version of the bundled rules and data (`YYYY.MM.DD-n`); changes whenever any rule or data changes. */
+  /** Version of the bundled rules and data (`YYYY-MM-DD.n`); changes whenever any rule or data changes. */
   rulesetVersion: string;
   /** Relevant changes that take effect after `asOf`, soonest first. Prepare for these. */
   upcomingChanges: ChangeNotice[];
@@ -258,7 +257,7 @@ const addDays = (iso: string, days: number) => {
 export function evaluate(input: BusinessProfile, options: EvaluateOptions = {}): ComplianceResult {
   const profile = resolveProfile(input);
   const asOf = options.asOf ?? today();
-  if (!ISO_DATE.test(asOf)) throw new InvalidProfileError("`asOf` must be YYYY-MM-DD");
+  if (!isIsoDate(asOf)) throw new InvalidProfileError("`asOf` must be YYYY-MM-DD");
   const rules = options.rules ?? RULE_PACKS[profile.country];
   const changes = [...BUNDLED_CHANGES, ...(options.changes ?? [])];
   return withContext(asOf, changes, () => {

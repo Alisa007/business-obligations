@@ -7,7 +7,7 @@ const REGISTRY = changeData as unknown as { rulesetVersion: string; changes: Rul
 
 /**
  * Version of the bundled rules and data. Bumped whenever any rule or data file changes; the format is
- * `YYYY.MM.DD-n` (date of the data review, then a revision counter).
+ * `YYYY-MM-DD.n` (date of the data review, then a revision counter).
  */
 export const RULESET_VERSION: string = REGISTRY.rulesetVersion;
 

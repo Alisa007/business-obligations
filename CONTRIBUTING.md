@@ -21,6 +21,9 @@ npm run test:update  # accept intentional snapshot changes, then review the diff
 4. Run `npm run test:update` and check the snapshot diff in `test/__snapshots__` shows only what you intended.
 5. Add a line to the **Unreleased** section of `CHANGELOG.md`.
 
+Dates: use ISO `YYYY-MM-DD` in every date field (`checkedOn`, `effective`, ...) and spell months out in text
+("April 15", not "Apr 15", "4/15" or "April 15th"); a test fails otherwise.
+
 Do not copy text from commercial compliance-guide sites; summarise the requirement and cite the agency.
 
 ## Recording a rule change

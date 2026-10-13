@@ -168,6 +168,13 @@ evaluate(withZip({ entityType: "llc", zip: "60601", employeeCount: 2 }));
 The `zip` subpath is separate so the core stays small. The core's `stateFromZip` uses 3-digit prefixes and can be wrong
 near state borders; `lookupZip` is exact.
 
+### Date format
+
+Every machine-readable date, in input and output, is ISO 8601 `YYYY-MM-DD` and must be a real calendar date
+(`2026-02-30` is rejected): `formationDate`, `dissolutionDate`, `asOf`, `nextDue`, calendar `date`, `checkedOn`,
+change `effective`. Human-readable `deadline` text spells the month out ("April 15", or "April 15, 2027" for one
+specific date). `rulesetVersion` is `YYYY-MM-DD.n`. A test enforces all of this across the data and the output.
+
 ### Output stability
 
 Item `id`s are stable and have the form `rule.id[:STATE][:key][#n]`, so you can key UI state or reminders on them. Rules
@@ -218,7 +225,7 @@ Each state file records what was checked and what was not in its `verification` 
 
 Rules change. The library tracks dated changes so users can prepare:
 
-- **`RULESET_VERSION`** (`YYYY.MM.DD-n`) identifies the bundled rules and data; every result carries it as
+- **`RULESET_VERSION`** (`YYYY-MM-DD.n`) identifies the bundled rules and data; every result carries it as
   `rulesetVersion`, next to `dataVersion` (the date of the last data review).
 - **`asOf`** resolves rules _as of a date_. Enacted changes that have taken effect by then are applied to the data, so
   `evaluate(profile, { asOf: "2027-07-01" })` shows obligations as they will be on that date.

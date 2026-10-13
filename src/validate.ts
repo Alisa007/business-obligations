@@ -1,3 +1,5 @@
+import { isIsoDate } from "./iso";
+
 /** One problem found in a business profile. */
 export interface ProfileIssue {
   /** Dotted path of the field, e.g. `multistate[0].state`. */
@@ -81,7 +83,6 @@ export const PROFILE_FIELDS: readonly string[] = Object.keys(FIELDS);
 /** Allowed values of the enumerated fields. */
 export const PROFILE_ENUMS: Readonly<Record<string, readonly string[]>> = ENUMS;
 
-const DATE = /^\d{4}-\d{2}-\d{2}$/;
 const STATE = /^[A-Za-z]{2}$/;
 
 function distance(a: string, b: string): number {
@@ -141,8 +142,7 @@ function checkValue(field: string, kind: Kind, value: unknown, issues: ProfileIs
       else if (kind === "integer" && !Number.isInteger(value)) add(`\`${field}\` must be a whole number`);
       break;
     case "date":
-      if (typeof value !== "string" || !DATE.test(value) || Number.isNaN(Date.parse(`${value}T00:00:00Z`)))
-        add(`\`${field}\` must be a date in YYYY-MM-DD form`);
+      if (!isIsoDate(value)) add(`\`${field}\` must be a date in YYYY-MM-DD form`);
       break;
     case "enum": {
       const allowed = ENUMS[field.split(".").pop()!]!;

@@ -44,7 +44,7 @@ describe("change registry", () => {
   });
 
   it("exposes a ruleset version and sorted bundled changes", () => {
-    expect(RULESET_VERSION).toMatch(/^\d{4}\.\d{2}\.\d{2}-\d+$/);
+    expect(RULESET_VERSION).toMatch(/^\d{4}-\d{2}-\d{2}\.\d+$/);
     const dates = BUNDLED_CHANGES.map((c) => c.effective);
     expect([...dates].sort()).toEqual(dates);
   });

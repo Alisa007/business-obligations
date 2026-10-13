@@ -1,5 +1,6 @@
 import { BUNDLED_CHANGES } from "./changes";
-import { evaluate, type EvaluateOptions } from "./engine";
+import { isIsoDate } from "./iso";
+import { evaluate, InvalidProfileError, type EvaluateOptions } from "./engine";
 import { occurrencesBetween } from "./dates";
 import type { BusinessProfile, ComplianceItem } from "./types";
 import type { ComplianceResult } from "./engine";
@@ -62,7 +63,10 @@ export function buildCalendar(
   options: CalendarOptions = {},
 ): { events: CalendarEvent[]; result: ComplianceResult } {
   const from = options.from ?? today();
+  if (!isIsoDate(from)) throw new InvalidProfileError("`from` must be YYYY-MM-DD");
   const to = options.to ?? addDays(from, 365);
+  if (!isIsoDate(to)) throw new InvalidProfileError("`to` must be YYYY-MM-DD");
+  if (to < from) throw new InvalidProfileError("`to` must not be before `from`");
   const evalOptions: EvaluateOptions = {
     rules: options.rules,
     changes: options.changes,
