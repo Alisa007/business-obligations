@@ -8,8 +8,8 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 ### Changed
 
 - Resolved the last LP/LLP unknowns: Alabama and Oklahoma LLPs have no periodic report; Louisiana, Montana LP/LLP
-  renewals (new `periodic` report frequency); Illinois LLP annual renewal. Only two fee amounts remain unpublished
-  in the sources reviewed (Illinois LLP renewal, Tennessee LP annual report); both are listed in
+  renewals (new `periodic` report frequency); Illinois LLP annual renewal. Only one fee amount remains unpublished
+  in the sources reviewed (Tennessee LP annual report); it is listed in
   `verification.unconfirmed`.
 
 ### Added
