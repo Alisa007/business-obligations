@@ -356,6 +356,17 @@ This is general information, not legal, tax or accounting advice. The disclaimer
 summary and has not been reviewed by a lawyer; if you build a product on this library, have counsel review the wording
 shown to your users. The MIT license disclaims all warranties.
 
+## Running the playground locally
+
+```sh
+npm install
+npm run dev    # Vite dev server at http://localhost:5173 with hot reload
+```
+
+Dev mode serves `site/` and loads the library straight from `src/`, so changes to the engine, the data files or the
+page appear immediately. `npm run site` builds the static version that is published to GitHub Pages (output in
+`_site/`, serve it with any static server).
+
 ## Size
 
 The core bundle is about 57 KB gzipped with all 51 jurisdictions' data. ZIP lookup (about 305 KB gzipped) lives in the

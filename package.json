@@ -30,7 +30,8 @@
     "coverage": "node scripts/coverage.mjs",
     "size": "node scripts/size.mjs",
     "site": "npm run build && node scripts/build-site.mjs",
-    "check:links": "node scripts/check-urls.mjs --data"
+    "check:links": "node scripts/check-urls.mjs --data",
+    "dev": "vite --config vite.site.config.mjs"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
@@ -43,6 +44,7 @@
     "tsup": "^8.5.1",
     "typescript": "^5.6.0",
     "typescript-eslint": "^8.71.2",
+    "vite": "^8.3.4",
     "vitest": "^5.0.3"
   },
   "author": "Alisa Belousova",

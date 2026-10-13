@@ -74,6 +74,10 @@ TypeScript strict mode, Prettier (`npm run format`), ESLint (`npm run lint`). Ke
 
 Use the issue templates. For security issues see [SECURITY.md](SECURITY.md).
 
+## Playground
+
+`npm run dev` starts a Vite dev server for the playground in `site/` with hot reload (library loaded from `src/`).
+
 ## Regenerating the coverage report
 
 `COVERAGE.md` is generated from `data/`. After changing state or local data, run `npm run coverage`; a test fails when
