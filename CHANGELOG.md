@@ -30,6 +30,8 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 - Command line (`compliance-rules-engine`), bundle-size budgets (`npm run size`) and a CI smoke test.
 - `planLaunch()`: ordered plan for opening a new business with phases, dependencies, planned dates, opening-date
   check and first-year fees; `launch` CLI command.
+- Browser playground (`site/`, deployed by `.github/workflows/pages.yml`), runnable `examples/`, `ROADMAP.md`, an
+  "Add a city" issue template and a reorganised README.
 - Clearer disclaimer wording.
 - `analyzeInputs(profile)`: which optional inputs were defaulted and which values would change the returned items.
 
