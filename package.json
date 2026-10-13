@@ -2,20 +2,52 @@
   "name": "compliance-rules-engine",
   "version": "0.1.0",
   "description": "Rules engine that returns US legal compliance items (licenses, permits, filings, payments) for a business profile",
-  "private": true,
-  "license": "UNLICENSED",
+  "license": "MIT",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run"
+    "test": "vitest run",
+    "prepublishOnly": "npm run build && npm test"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
     "typescript": "^5.6.0",
     "vitest": "^2.1.0"
+  },
+  "author": "Alisa Belousova",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alisa007/compliance-rules-engine.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Alisa007/compliance-rules-engine/issues"
+  },
+  "homepage": "https://github.com/Alisa007/compliance-rules-engine#readme",
+  "keywords": [
+    "compliance",
+    "rules-engine",
+    "business",
+    "licenses",
+    "permits",
+    "filings",
+    "typescript",
+    "us"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
   }
 }
