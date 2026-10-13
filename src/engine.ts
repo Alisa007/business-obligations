@@ -14,6 +14,7 @@ import { extraStateRules, stateRules } from "./rules/state";
 import { localRules } from "./rules/local";
 import { industryRules } from "./rules/industry";
 import { nextDueDate } from "./dates";
+import { provenanceFor } from "./provenance";
 import {
   BUNDLED_CHANGES,
   RULESET_VERSION,
@@ -90,6 +91,8 @@ export function resolveProfile(input: BusinessProfile): ResolvedProfile {
   };
   nonNeg("employeeCount", input.employeeCount);
   nonNeg("fullTimeEmployeeCount", input.fullTimeEmployeeCount);
+  if (input.ownerCount !== undefined && !(Number.isInteger(input.ownerCount) && input.ownerCount >= 1))
+    throw new InvalidProfileError("`ownerCount` must be an integer of at least 1");
   if ((input.fullTimeEmployeeCount ?? 0) > (input.employeeCount ?? 0))
     throw new InvalidProfileError("`fullTimeEmployeeCount` cannot exceed `employeeCount`");
   nonNeg("annualPayroll", input.annualPayroll);
@@ -172,6 +175,7 @@ export function resolveProfile(input: BusinessProfile): ResolvedProfile {
     employeeCount,
     fullTimeEmployeeCount: input.fullTimeEmployeeCount ?? employeeCount,
     hasEmployees: employeeCount > 0,
+    ownerCount: input.ownerCount ?? 1,
     annualPayroll: input.annualPayroll ?? 0,
     largestContractorPaymentUsd: input.largestContractorPaymentUsd ?? 0,
     annualRevenue: input.annualRevenue ?? 0,
@@ -251,6 +255,7 @@ export function evaluate(input: BusinessProfile, options: EvaluateOptions = {}):
           });
           if (next) item.nextDue = next;
         }
+        item.provenance = provenanceFor(item, profile);
         const upcoming = changes
           .filter((c) => c.effective > asOf && changeMatchesItem(c, item))
           .sort((a, b) => a.effective.localeCompare(b.effective))

@@ -29,6 +29,10 @@
       "type": "fixed",
       "month": 1,
       "day": 2
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 100
     }
   },
   "corpReport": {
@@ -39,6 +43,10 @@
       "type": "fixed",
       "month": 1,
       "day": 2
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 100
     }
   },
   "entityTax": "Corporate income tax (no individual income tax)",
@@ -53,7 +61,11 @@
     "title": "Alaska state business license",
     "authority": "Alaska Division of Corporations, Business and Professional Licensing",
     "fee": "$50",
-    "renewal": "biennial"
+    "renewal": "biennial",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 50
+    }
   },
   "local": {
     "title": "Borough/city business license",

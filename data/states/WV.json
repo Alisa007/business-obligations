@@ -29,6 +29,15 @@
       "type": "fixed",
       "month": 6,
       "day": 30
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 25,
+      "note": "$25 ($50 late fee)"
+    },
+    "lateFee": {
+      "amount": 50,
+      "note": "Statutory late fee that the office cannot waive"
     }
   },
   "corpReport": {
@@ -39,6 +48,15 @@
       "type": "fixed",
       "month": 6,
       "day": 30
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 25,
+      "note": "$25 ($50 late fee)"
+    },
+    "lateFee": {
+      "amount": 50,
+      "note": "Statutory late fee that the office cannot waive"
     }
   },
   "entityTax": "Corporation net income tax",
@@ -53,7 +71,11 @@
     "title": "West Virginia business registration certificate",
     "authority": "West Virginia State Tax Department",
     "fee": "$30",
-    "renewal": "once"
+    "renewal": "once",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 30
+    }
   },
   "local": {
     "title": "Municipal business and occupation (B&O) tax",
@@ -88,6 +110,14 @@
       "type": "fixed",
       "month": 7,
       "day": 1
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 500
+    },
+    "lateFee": {
+      "amount": 50,
+      "note": "Statutory late fee that the office cannot waive"
     }
   },
   "cannabis": {

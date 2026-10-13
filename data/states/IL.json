@@ -29,6 +29,14 @@
     "due": {
       "type": "anniversary",
       "point": "start_of_month"
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 75
+    },
+    "lateFee": {
+      "amount": 100,
+      "note": "When filed more than 60 days after the due date"
     }
   },
   "corpReport": {
@@ -39,6 +47,10 @@
     "due": {
       "type": "anniversary",
       "point": "start_of_month"
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 75
     }
   },
   "entityTax": "Corporate income tax; Personal Property Replacement Tax on partnerships and S corporations",
@@ -85,6 +97,16 @@
     "due": {
       "type": "anniversary",
       "point": "date"
+    },
+    "feeDetail": {
+      "basis": "per_partner",
+      "perUnit": 100,
+      "min": 200,
+      "max": 5000
+    },
+    "lateFee": {
+      "amount": 100,
+      "note": "When filed more than 60 days after the due date"
     }
   },
   "lpReport": {
@@ -94,6 +116,14 @@
     "due": {
       "type": "anniversary",
       "point": "start_of_month"
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 100
+    },
+    "lateFee": {
+      "amount": 100,
+      "note": "When filed more than 60 days after the due date"
     }
   },
   "cannabis": {

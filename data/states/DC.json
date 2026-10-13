@@ -31,6 +31,10 @@
       "month": 4,
       "day": 1,
       "cycleFrom": "year_after_formation"
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 300
     }
   },
   "corpReport": {
@@ -43,6 +47,10 @@
       "month": 4,
       "day": 1,
       "cycleFrom": "year_after_formation"
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 300
     }
   },
   "entityTax": "Franchise tax (corporations) and Unincorporated Business Franchise Tax",
@@ -57,7 +65,11 @@
     "title": "DC Basic Business License (BBL)",
     "authority": "DC Department of Licensing and Consumer Protection",
     "fee": "Varies by license category",
-    "renewal": "biennial"
+    "renewal": "biennial",
+    "feeDetail": {
+      "basis": "varies",
+      "note": "Varies by license category"
+    }
   },
   "paidLeave": {
     "title": "DC Paid Family Leave tax",

@@ -25,13 +25,29 @@
     "frequency": "annual",
     "fee": "$25",
     "deadline": "From 2 months before to 2 months after the periodic report month",
-    "title": "File Periodic Report"
+    "title": "File Periodic Report",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 25
+    },
+    "lateFee": {
+      "amount": 50,
+      "note": "Late filing penalty on the periodic report"
+    }
   },
   "corpReport": {
     "frequency": "annual",
     "fee": "$25",
     "deadline": "From 2 months before to 2 months after the periodic report month",
-    "title": "File Periodic Report"
+    "title": "File Periodic Report",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 25
+    },
+    "lateFee": {
+      "amount": 50,
+      "note": "Late filing penalty on the periodic report"
+    }
   },
   "entityTax": "Corporate income tax",
   "wageWithholding": true,

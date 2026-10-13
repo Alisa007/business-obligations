@@ -31,6 +31,12 @@
     "due": {
       "type": "anniversary",
       "point": "end_of_month"
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 20,
+      "online": 20,
+      "paper": 45
     }
   },
   "entityTax": "Corporate income tax",
@@ -75,6 +81,13 @@
     "due": {
       "type": "anniversary",
       "point": "date"
+    },
+    "feeDetail": {
+      "basis": "per_partner",
+      "amount": 105,
+      "perUnit": 50,
+      "max": 205,
+      "note": "per partner added"
     }
   },
   "cannabis": {

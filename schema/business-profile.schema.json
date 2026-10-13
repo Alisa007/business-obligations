@@ -175,6 +175,10 @@
     },
     "cannabisActivity": {
       "enum": ["cultivation", "manufacturing", "retail", "distribution", "testing"]
+    },
+    "ownerCount": {
+      "type": "integer",
+      "minimum": 1
     }
   },
   "allOf": [

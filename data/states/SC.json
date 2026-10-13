@@ -27,7 +27,12 @@
     "frequency": "annual",
     "fee": "License fee: 0.1% of capital stock and paid-in surplus plus $15 (minimum $25)",
     "deadline": "With the corporate income tax return (April 15)",
-    "title": "File Annual Report and Corporate License Fee (with SCDOR)"
+    "title": "File Annual Report and Corporate License Fee (with SCDOR)",
+    "feeDetail": {
+      "basis": "percent",
+      "min": 25,
+      "note": "License fee: 0.1% of capital stock and paid-in surplus plus $15 (minimum $25)"
+    }
   },
   "entityTax": "Corporate income tax and corporate license fee",
   "wageWithholding": true,
@@ -71,6 +76,10 @@
     "due": {
       "type": "anniversary",
       "point": "date"
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 100
     }
   },
   "cannabis": {

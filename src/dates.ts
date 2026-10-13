@@ -71,3 +71,55 @@ export function nextDueDate(due: Due, ctx: DueContext): string | undefined {
     }
   }
 }
+
+/**
+ * All due dates within [from, to] (inclusive) for a rule. Mirrors `nextDueDate`: returns an empty list when
+ * the cycle cannot be determined from the inputs (e.g. biennial filings without a parity or formation date).
+ */
+export function occurrencesBetween(
+  due: Due,
+  ctx: Partial<Omit<DueContext, "asOf">>,
+  from: string,
+  to: string,
+): string[] {
+  const out: string[] = [];
+  const y0 = Number(from.slice(0, 4));
+  const y1 = Number(to.slice(0, 4));
+  const push = (d: string) => {
+    if (d >= from && d <= to) out.push(d);
+  };
+  const long = ctx.intervalYears !== undefined && ctx.intervalYears > 2;
+  switch (due.type) {
+    case "fixed": {
+      let ok = (_y: number) => true;
+      if (due.parity) ok = (y) => (due.parity === "odd" ? y % 2 === 1 : y % 2 === 0);
+      else if (long) return [];
+      else if (ctx.biennial) {
+        if (!due.cycleFrom || !ctx.formationDate) return [];
+        const base =
+          Number(ctx.formationDate.slice(0, 4)) + (due.cycleFrom === "year_after_formation" ? 1 : 0);
+        ok = (y) => y >= base && (y - base) % 2 === 0;
+      }
+      for (let y = y0; y <= y1; y++)
+        if (ok(y)) push(iso(y, due.month, Math.min(due.day, lastDay(y, due.month))));
+      break;
+    }
+    case "multi":
+      for (let y = y0; y <= y1; y++)
+        for (const d of due.dates) push(iso(y, d.month, Math.min(d.day, lastDay(y, d.month))));
+      break;
+    case "anniversary": {
+      if (!ctx.formationDate) return [];
+      const fm = Number(ctx.formationDate.slice(5, 7));
+      const fd = Number(ctx.formationDate.slice(8, 10));
+      const fy = Number(ctx.formationDate.slice(0, 4));
+      const day = (y: number) =>
+        due.point === "start_of_month" ? 1 : due.point === "end_of_month" ? lastDay(y, fm) : fd;
+      const step = long ? ctx.intervalYears! : ctx.biennial ? 2 : 1;
+      for (let y = fy + (long ? step : 1); y <= y1; y += step)
+        push(iso(y, fm, Math.min(day(y), lastDay(y, fm))));
+      break;
+    }
+  }
+  return out.sort();
+}

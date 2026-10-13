@@ -29,6 +29,14 @@
       "type": "fixed",
       "month": 6,
       "day": 1
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 85
+    },
+    "lateFee": {
+      "amount": 50,
+      "note": "Added when the annual report is received after June 1"
     }
   },
   "corpReport": {
@@ -39,6 +47,15 @@
       "type": "fixed",
       "month": 6,
       "day": 1
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 85,
+      "note": "$85 ($35 for nonprofit corporations)"
+    },
+    "lateFee": {
+      "amount": 50,
+      "note": "Added when the annual report is received after June 1"
     }
   },
   "entityTax": "Corporate income tax",

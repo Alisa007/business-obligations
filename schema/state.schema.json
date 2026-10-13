@@ -172,6 +172,9 @@
             },
             "renewal": {
               "enum": ["annual", "biennial", "once"]
+            },
+            "feeDetail": {
+              "$ref": "#/$defs/feeDetail"
             }
           }
         }
@@ -430,6 +433,77 @@
         },
         "due": {
           "$ref": "#/$defs/due"
+        },
+        "feeDetail": {
+          "$ref": "#/$defs/feeDetail"
+        },
+        "lateFee": {
+          "$ref": "#/$defs/lateFee"
+        }
+      }
+    },
+    "feeDetail": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["basis"],
+      "properties": {
+        "basis": {
+          "enum": ["flat", "per_partner", "per_member", "percent", "varies", "none"]
+        },
+        "amount": {
+          "type": "number",
+          "minimum": 0
+        },
+        "online": {
+          "type": "number",
+          "minimum": 0
+        },
+        "paper": {
+          "type": "number",
+          "minimum": 0
+        },
+        "perUnit": {
+          "type": "number",
+          "minimum": 0
+        },
+        "freeUnits": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "min": {
+          "type": "number",
+          "minimum": 0
+        },
+        "max": {
+          "type": "number",
+          "minimum": 0
+        },
+        "waived": {
+          "type": "boolean"
+        },
+        "estimate": {
+          "type": "boolean"
+        },
+        "note": {
+          "type": "string"
+        }
+      }
+    },
+    "lateFee": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["amount", "note"],
+      "properties": {
+        "amount": {
+          "type": "number",
+          "minimum": 0
+        },
+        "percentPerMonth": {
+          "type": "number",
+          "minimum": 0
+        },
+        "note": {
+          "type": "string"
         }
       }
     }

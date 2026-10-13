@@ -30,13 +30,27 @@
       "type": "fixed",
       "month": 4,
       "day": 1
+    },
+    "feeDetail": {
+      "basis": "per_member",
+      "amount": 300,
+      "perUnit": 50,
+      "freeUnits": 6,
+      "min": 300,
+      "max": 3000
     }
   },
   "llpReport": {
     "frequency": "annual",
     "fee": "$50 per partner (minimum $250, maximum $2,500)",
     "deadline": "Date set by the Secretary of State",
-    "title": "Pay LLP annual fee"
+    "title": "Pay LLP annual fee",
+    "feeDetail": {
+      "basis": "per_partner",
+      "perUnit": 50,
+      "min": 250,
+      "max": 2500
+    }
   },
   "corpReport": {
     "frequency": "annual",
@@ -46,6 +60,12 @@
       "type": "fixed",
       "month": 4,
       "day": 1
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 20,
+      "min": 20,
+      "note": "$20 minimum"
     }
   },
   "entityTax": "Franchise and Excise taxes (apply to LLCs, corporations and limited partnerships)",
@@ -95,6 +115,13 @@
       "type": "fixed",
       "month": 4,
       "day": 1
+    },
+    "feeDetail": {
+      "basis": "per_partner",
+      "perUnit": 50,
+      "min": 250,
+      "max": 2500,
+      "estimate": true
     }
   }
 }

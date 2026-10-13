@@ -25,9 +25,39 @@ export interface MultiDue {
 
 export type Due = FixedDue | AnniversaryDue | MultiDue;
 
+/** Machine-readable fee. `amount` is the standard/base figure; `online`/`paper` apply when they differ. */
+export interface FeeDetail {
+  basis: "flat" | "per_partner" | "per_member" | "percent" | "varies" | "none";
+  amount?: number;
+  online?: number;
+  paper?: number;
+  /** Charge per partner/member (basis per_partner / per_member). */
+  perUnit?: number;
+  /** Units covered by the base `amount` before `perUnit` applies (per_member). */
+  freeUnits?: number;
+  min?: number;
+  max?: number;
+  /** The fee is waived when the filing is on time. */
+  waived?: boolean;
+  /** The amount is an estimate that could not be confirmed against the statute or schedule. */
+  estimate?: boolean;
+  note?: string;
+}
+
+/** Penalty for a late filing or payment. */
+export interface LateFee {
+  amount: number;
+  /** Additional interest or penalty as a percentage per month. */
+  percentPerMonth?: number;
+  note: string;
+}
+
 export interface ReportRule {
   frequency: "annual" | "biennial" | "every_five_years" | "periodic";
   fee: string;
+  /** Structured form of `fee`. */
+  feeDetail?: FeeDetail;
+  lateFee?: LateFee;
   deadline: string;
   /** Overrides the default "File annual report" title. */
   title?: string;
@@ -105,6 +135,7 @@ export interface StateInfo {
     title: string;
     authority: string;
     fee: string;
+    feeDetail?: FeeDetail;
     renewal: "annual" | "biennial" | "once";
   } | null;
   /** Mandatory state paid-leave / disability program with employer duties. */

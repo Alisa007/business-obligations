@@ -30,6 +30,11 @@
       "type": "fixed",
       "month": 9,
       "day": 30
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 7,
+      "note": "$7 ($0 for not-for-profit LLCs)"
     }
   },
   "corpReport": {
@@ -41,6 +46,11 @@
       "type": "fixed",
       "month": 6,
       "day": 30
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 7,
+      "note": "$7 ($0 for nonprofit corporations)"
     }
   },
   "entityTax": "Corporate net income tax",
@@ -86,6 +96,11 @@
       "type": "fixed",
       "month": 12,
       "day": 31
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 7,
+      "note": "$7 ($0 for not-for-profit LPs)"
     }
   },
   "llpReport": {
@@ -97,6 +112,11 @@
       "type": "fixed",
       "month": 4,
       "day": 15
+    },
+    "feeDetail": {
+      "basis": "per_partner",
+      "perUnit": 470,
+      "note": "plus $7 annual report"
     }
   },
   "cannabis": {

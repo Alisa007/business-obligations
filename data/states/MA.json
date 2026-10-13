@@ -28,6 +28,10 @@
     "due": {
       "type": "anniversary",
       "point": "date"
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 500
     }
   },
   "corpReport": {
@@ -38,6 +42,11 @@
       "type": "fixed",
       "month": 3,
       "day": 15
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 125,
+      "online": 100
     }
   },
   "entityTax": "Corporate excise tax ($456 minimum)",
@@ -90,6 +99,11 @@
     "due": {
       "type": "anniversary",
       "point": "date"
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 500,
+      "online": 450
     }
   },
   "llpReport": {
@@ -100,6 +114,10 @@
       "type": "fixed",
       "month": 2,
       "day": 28
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 500
     }
   },
   "cannabis": {

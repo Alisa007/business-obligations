@@ -10,6 +10,13 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 - Rule versioning: `RULESET_VERSION`, a dated change registry (`data/changes.json`), effective-dated patches applied
   by `asOf`, `upcomingChanges` / `recentChanges` on results and `upcomingChanges` on items, `previewChanges()`,
   `diffItems()` and `listChanges()`.
+- Structured fees and penalties: every state report rule has a `feeDetail` (flat, per-member, per-partner, with
+  online/paper amounts and min/max) and, where researched, a `lateFee`; items carry `cost` and `penalty`.
+  `estimateCosts(items, { ownerCount, channel })` totals annual and one-time government fees. New `ownerCount` input.
+- Calendar: `buildCalendar(profile, { from, to })` expands due dates into dated events (re-evaluating where an enacted
+  change takes effect inside the window) and `toICS(events)` exports an iCalendar file. `occurrencesBetween()`.
+- Provenance: every item has `provenance` (`confidence`: checked / compiled / unconfirmed, `checkedOn`, `sources`).
+- `analyzeInputs(profile)`: which optional inputs were defaulted and which values would change the returned items.
 
 ### Changed
 

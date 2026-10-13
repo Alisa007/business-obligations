@@ -29,6 +29,14 @@
     "due": {
       "type": "anniversary",
       "point": "end_of_month"
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 50
+    },
+    "lateFee": {
+      "amount": 25,
+      "note": "Penalty when the fee is not received by the due date"
     }
   },
   "corpReport": {
@@ -39,6 +47,11 @@
     "due": {
       "type": "anniversary",
       "point": "end_of_month"
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 100,
+      "note": "$100 (up to 5,000 authorized shares; scales above)"
     }
   },
   "entityTax": "Corporate income tax",
@@ -83,6 +96,14 @@
       "type": "fixed",
       "month": 7,
       "day": 1
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 50
+    },
+    "lateFee": {
+      "amount": 25,
+      "note": "Penalty when the fee is not received by the due date"
     }
   },
   "lpReport": {
@@ -94,6 +115,14 @@
       "type": "fixed",
       "month": 10,
       "day": 1
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 50
+    },
+    "lateFee": {
+      "amount": 25,
+      "note": "Penalty when the fee is not received by the due date"
     }
   },
   "cannabis": {

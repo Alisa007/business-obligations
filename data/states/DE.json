@@ -30,6 +30,16 @@
       "type": "fixed",
       "month": 6,
       "day": 1
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 400,
+      "note": "$400 annual tax"
+    },
+    "lateFee": {
+      "amount": 200,
+      "percentPerMonth": 1.5,
+      "note": "Plus 1.5% per month interest on the tax and penalty"
     }
   },
   "corpReport": {
@@ -41,6 +51,16 @@
       "type": "fixed",
       "month": 3,
       "day": 1
+    },
+    "feeDetail": {
+      "basis": "varies",
+      "min": 175,
+      "note": "Franchise tax (from $175, min) + $50 report fee"
+    },
+    "lateFee": {
+      "amount": 200,
+      "percentPerMonth": 1.5,
+      "note": "Plus 1.5% per month interest on the tax and penalty"
     }
   },
   "entityTax": "Corporate income tax and franchise tax",
@@ -55,7 +75,12 @@
     "title": "Delaware business license and gross receipts tax",
     "authority": "Delaware Division of Revenue",
     "fee": "$75 plus gross receipts tax",
-    "renewal": "annual"
+    "renewal": "annual",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 75,
+      "note": "$75 plus gross receipts tax"
+    }
   },
   "paidLeave": {
     "title": "Delaware Paid Family and Medical Leave contributions",
@@ -101,6 +126,16 @@
       "type": "fixed",
       "month": 6,
       "day": 1
+    },
+    "feeDetail": {
+      "basis": "per_partner",
+      "perUnit": 300,
+      "max": 180000
+    },
+    "lateFee": {
+      "amount": 200,
+      "percentPerMonth": 1.5,
+      "note": "Plus 1.5% per month interest on the tax and penalty"
     }
   },
   "cannabis": {

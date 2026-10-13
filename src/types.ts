@@ -96,6 +96,11 @@ export interface BusinessProfile {
   alcoholActivity?: AlcoholActivity;
   cannabisActivity?: CannabisActivity;
   commercialVehicles?: CommercialVehicles;
+  /**
+   * Number of members (LLC) or partners (LP, LLP, partnership); used for per-member and per-partner fees.
+   * Defaults to 1.
+   */
+  ownerCount?: number;
   /** W-2 employees at the home location. Defaults to 0. */
   employeeCount?: number;
   /**
@@ -133,8 +138,18 @@ export interface BusinessProfile {
 export type ItemCategory =
   "license" | "permit" | "registration" | "filing" | "payment" | "insurance" | "recordkeeping";
 
-import type { ChangeNotice, Due } from "./data/types";
-export type { ChangeNotice, Due } from "./data/types";
+import type { ChangeNotice, Due, FeeDetail, LateFee } from "./data/types";
+export type { ChangeNotice, Due, FeeDetail, LateFee } from "./data/types";
+
+export interface Provenance {
+  /**
+   * `checked`: confirmed against official pages on `checkedOn`; `compiled`: from public knowledge, not
+   * individually checked; `unconfirmed`: reviewed but one or more underlying fields could not be confirmed.
+   */
+  confidence: "checked" | "compiled" | "unconfirmed";
+  checkedOn?: string;
+  sources: string[];
+}
 
 export type Jurisdiction = "federal" | "state" | "county" | "city";
 
@@ -158,6 +173,12 @@ export interface ComplianceItem {
   due?: Due;
   /** Next due date (YYYY-MM-DD) on or after the evaluation date, when computable. */
   nextDue?: string;
+  /** Structured fee, when the item has a government fee or tax with a known basis. */
+  cost?: FeeDetail & { currency: "USD" };
+  /** Late-filing or late-payment penalty, when known. */
+  penalty?: LateFee & { currency: "USD" };
+  /** Where this item's data comes from and how well it was checked. */
+  provenance?: Provenance;
   /** Changes to the rules behind this item that take effect after the evaluation date. */
   upcomingChanges?: ChangeNotice[];
   /** Why the engine returned this item. */
@@ -183,6 +204,7 @@ export interface ResolvedProfile extends BusinessProfile {
   industry: Industry;
   employeeCount: number;
   fullTimeEmployeeCount: number;
+  ownerCount: number;
   hasEmployees: boolean;
   annualPayroll: number;
   largestContractorPaymentUsd: number;

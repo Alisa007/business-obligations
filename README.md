@@ -137,6 +137,35 @@ diff.changed; // [{ id, title, fields: { description: { before, after } } }]
 Changes marked `proposed` are reported but never applied. You can pass your own with `evaluate(profile, { changes })`.
 Past changes are informational: the bundled data already reflects them.
 
+## Costs, calendar, provenance and sensitivity
+
+```ts
+import { evaluate, estimateCosts, buildCalendar, toICS, analyzeInputs } from "compliance-rules-engine";
+
+const result = evaluate(profile);
+result.items[0].cost; // { basis: "flat", amount: 300, online: 300, currency: "USD", ... }
+result.items[0].penalty; // { amount: 50, note: "...", currency: "USD" }
+result.items[0].provenance; // { confidence: "checked", checkedOn: "2026-..", sources: ["https://..."] }
+
+estimateCosts(result.items, { ownerCount: 3, channel: "online" });
+// { annual, oneTime, lines: [...], unknown: [...] }   (percentage-based fees are listed under `unknown`)
+
+const { events } = buildCalendar(profile, { from: "2026-01-01", to: "2027-12-31" });
+const ics = toICS(events); // save as .ics and import into any calendar app
+
+analyzeInputs(profile);
+// { defaultsUsed: [{ field: "employeeCount", value: 0, affectsResult: true, rules: [...] }],
+//   sensitivity: [{ field: "employeeCount", current: 0, changes: [{ value: 1, added: [...], removed: [] }] }] }
+```
+
+- `cost` and `penalty` are structured; `estimateCosts` multiplies by frequency (biennial = 0.5 per year, and so on)
+  and applies per-member / per-partner rules using `ownerCount`.
+- `provenance.confidence` is `checked` when the underlying fields were confirmed against official pages,
+  `unconfirmed` when the state's verification block lists them, and `compiled` otherwise.
+- `buildCalendar` includes only items with a machine-readable due rule; items such as "15th of the following month"
+  deposits are not expanded.
+- `analyzeInputs` tells you which questions are worth asking: defaulted inputs that would change the result.
+
 ## Extending
 
 Rules are plain objects (`{ id, description, inputs, when(profile), items(profile) }`):

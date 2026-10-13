@@ -25,13 +25,30 @@
     "frequency": "annual",
     "fee": "$15",
     "deadline": "Last day of the quarter containing the registration anniversary",
-    "title": "File Annual Return"
+    "title": "File Annual Return",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 15
+    },
+    "lateFee": {
+      "amount": 10,
+      "note": "Per year delinquent"
+    }
   },
   "corpReport": {
     "frequency": "annual",
     "fee": "$15 ($12.50 if filed online)",
     "deadline": "Last day of the quarter containing the registration anniversary",
-    "title": "File Annual Return"
+    "title": "File Annual Return",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 15,
+      "online": 12.5
+    },
+    "lateFee": {
+      "amount": 10,
+      "note": "Per year delinquent"
+    }
   },
   "entityTax": "Corporate income tax and General Excise Tax",
   "wageWithholding": true,

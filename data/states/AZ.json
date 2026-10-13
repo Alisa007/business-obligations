@@ -25,7 +25,11 @@
   "corpReport": {
     "frequency": "annual",
     "fee": "$45",
-    "deadline": "On or before the anniversary of incorporation"
+    "deadline": "On or before the anniversary of incorporation",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 45
+    }
   },
   "entityTax": "Corporate income tax; S corporations and partnerships file informational returns",
   "wageWithholding": true,
@@ -73,6 +77,11 @@
       "type": "fixed",
       "month": 4,
       "day": 30
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 3,
+      "note": "$3 if filed January 1 – April 30; $28 after"
     }
   },
   "cannabis": {

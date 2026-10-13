@@ -24,12 +24,20 @@
   "llcReport": {
     "frequency": "annual",
     "fee": "$45",
-    "deadline": "3 months after fiscal year end"
+    "deadline": "3 months after fiscal year end",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 45
+    }
   },
   "corpReport": {
     "frequency": "annual",
     "fee": "$60",
-    "deadline": "2.5 months after fiscal year end"
+    "deadline": "2.5 months after fiscal year end",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 60
+    }
   },
   "entityTax": "Corporate income tax ($300 minimum)",
   "wageWithholding": true,
@@ -75,6 +83,10 @@
       "type": "fixed",
       "month": 4,
       "day": 1
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 45
     }
   },
   "cannabis": {

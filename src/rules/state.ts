@@ -15,10 +15,13 @@ const registeredIn = (p: ResolvedProfile): string[] => [
   ...new Set([p.formationState, ...operating(p).map((x) => x.state)]),
 ];
 
-const reportFor = (p: ResolvedProfile, state: string): ReportRule | null => {
+export type ReportKey = "llcReport" | "corpReport" | "lpReport" | "llpReport";
+
+/** Which of a state's report definitions applies to the entity. */
+export const reportKey = (p: ResolvedProfile, state: string): ReportKey => {
   const s = info(state);
-  if (p.entityType === "lp" && s.lpReport !== undefined) return s.lpReport;
-  if (p.entityType === "llp" && s.llpReport !== undefined) return s.llpReport;
+  if (p.entityType === "lp" && s.lpReport !== undefined) return "lpReport";
+  if (p.entityType === "llp" && s.llpReport !== undefined) return "llpReport";
   if (isLlcLike(p)) {
     if (
       s.llcReport === null &&
@@ -26,11 +29,14 @@ const reportFor = (p: ResolvedProfile, state: string): ReportRule | null => {
       p.taxTreatment !== "sole_prop" &&
       p.taxTreatment !== "partnership"
     )
-      return s.corpReport;
-    return s.llcReport;
+      return "corpReport";
+    return "llcReport";
   }
-  return s.corpReport;
+  return "corpReport";
 };
+
+const reportFor = (p: ResolvedProfile, state: string): ReportRule | null =>
+  info(state)[reportKey(p, state)] ?? null;
 
 const registeredAgent = (state: string, reason: string): ItemDraft => {
   const s = info(state);
@@ -257,6 +263,8 @@ export const stateRules: Rule[] = [
             frequency: r.frequency === "periodic" ? ("ongoing" as const) : r.frequency,
             deadline: r.deadline,
             due: r.due,
+            ...(r.feeDetail ? { cost: { ...r.feeDetail, currency: "USD" as const } } : {}),
+            ...(r.lateFee ? { penalty: { ...r.lateFee, currency: "USD" as const } } : {}),
             reason: foreign
               ? `Registered as a foreign ${p.entityType} in ${code}`
               : `${p.entityType} formed in ${code}`,
@@ -313,6 +321,7 @@ export const stateRules: Rule[] = [
           frequency: "annual",
           deadline:
             "15th day of the 4th month of the tax year (estimated); return due 15th day of 3rd/4th month after year end",
+          cost: { basis: "flat", amount: 800, currency: "USD" },
           reason: "Entity is doing business in California",
           url: "https://www.ftb.ca.gov",
         },
@@ -328,6 +337,18 @@ export const stateRules: Rule[] = [
             "Tiered annual fee for LLCs with California-source gross receipts of $250,000 or more.",
           frequency: "annual",
           deadline: "15th day of the 6th month of the tax year",
+          cost: {
+            basis: "flat",
+            amount:
+              p.annualRevenue >= 5_000_000
+                ? 11_790
+                : p.annualRevenue >= 1_000_000
+                  ? 6_000
+                  : p.annualRevenue >= 500_000
+                    ? 2_500
+                    : 900,
+            currency: "USD",
+          },
           reason: `Annual revenue is ${p.annualRevenue}`,
           url: "https://www.ftb.ca.gov",
         });
@@ -354,6 +375,7 @@ export const stateRules: Rule[] = [
             authority: l.authority,
             description: `Fee: ${l.fee}. General state license required to operate in ${s.name}.`,
             frequency: l.renewal,
+            ...(l.feeDetail ? { cost: { ...l.feeDetail, currency: "USD" as const } } : {}),
             reason: `${s.name} requires a general state business license`,
             url: s.revenue.url,
           };

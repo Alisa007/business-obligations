@@ -28,6 +28,10 @@
     "due": {
       "type": "anniversary",
       "point": "date"
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 35
     }
   },
   "corpReport": {
@@ -37,6 +41,10 @@
     "due": {
       "type": "anniversary",
       "point": "date"
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 35
     }
   },
   "entityTax": "Corporate income tax; corporate franchise tax (being phased out)",
@@ -82,6 +90,11 @@
     "frequency": "periodic",
     "fee": "$155 (renewal of registration)",
     "deadline": "Renewal before the registration term expires",
-    "title": "Renew LLP registration"
+    "title": "Renew LLP registration",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 155,
+      "note": "$155 (renewal of registration)"
+    }
   }
 }

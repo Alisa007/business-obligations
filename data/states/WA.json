@@ -28,6 +28,14 @@
     "due": {
       "type": "anniversary",
       "point": "end_of_month"
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 70
+    },
+    "lateFee": {
+      "amount": 25,
+      "note": "Delinquency fee after the expiration date (not for nonprofits)"
     }
   },
   "corpReport": {
@@ -37,6 +45,14 @@
     "due": {
       "type": "anniversary",
       "point": "end_of_month"
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 70
+    },
+    "lateFee": {
+      "amount": 25,
+      "note": "Delinquency fee after the expiration date (not for nonprofits)"
     }
   },
   "entityTax": "Business & Occupation (B&O) tax on gross receipts; no corporate or individual income tax",
@@ -51,7 +67,12 @@
     "title": "Washington state business license (Business Licensing Service)",
     "authority": "Washington Department of Revenue, Business Licensing Service",
     "fee": "$90 application (varies by endorsements)",
-    "renewal": "annual"
+    "renewal": "annual",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 90,
+      "note": "$90 application (varies by endorsements)"
+    }
   },
   "paidLeave": {
     "title": "Washington Paid Family and Medical Leave and WA Cares premiums",

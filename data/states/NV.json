@@ -29,6 +29,15 @@
     "due": {
       "type": "anniversary",
       "point": "end_of_month"
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 150,
+      "note": "$150 annual list fee"
+    },
+    "lateFee": {
+      "amount": 175,
+      "note": "$75 list penalty plus $100 business license penalty"
     }
   },
   "corpReport": {
@@ -39,6 +48,15 @@
     "due": {
       "type": "anniversary",
       "point": "end_of_month"
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 150,
+      "note": "$150 annual list fee"
+    },
+    "lateFee": {
+      "amount": 175,
+      "note": "$75 list penalty plus $100 business license penalty"
     }
   },
   "entityTax": "Commerce Tax (gross receipts over $4 million) and Modified Business Tax on payroll; no corporate income tax",
@@ -53,7 +71,12 @@
     "title": "Nevada State Business License",
     "authority": "Nevada Secretary of State",
     "fee": "$200 ($500 for corporations)",
-    "renewal": "annual"
+    "renewal": "annual",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 200,
+      "note": "$200 ($500 for corporations)"
+    }
   },
   "local": {
     "title": "City or county business license",

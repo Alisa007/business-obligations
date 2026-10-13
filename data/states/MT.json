@@ -29,6 +29,16 @@
       "type": "fixed",
       "month": 4,
       "day": 15
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 0,
+      "waived": true,
+      "note": "Waived if filed by April 15; $35 after"
+    },
+    "lateFee": {
+      "amount": 35,
+      "note": "Fee after April 15 (fee is waived before then)"
     }
   },
   "corpReport": {
@@ -39,6 +49,16 @@
       "type": "fixed",
       "month": 4,
       "day": 15
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 0,
+      "waived": true,
+      "note": "Waived if filed by April 15; $35 after"
+    },
+    "lateFee": {
+      "amount": 35,
+      "note": "Fee after April 15 (fee is waived before then)"
     }
   },
   "entityTax": "Corporate license tax",
@@ -83,12 +103,30 @@
     "frequency": "periodic",
     "fee": "$15 (certificate of renewal)",
     "deadline": "Renewal before the certificate term expires",
-    "title": "Renew limited partnership certificate"
+    "title": "Renew limited partnership certificate",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 15,
+      "note": "$15 (certificate of renewal)"
+    },
+    "lateFee": {
+      "amount": 35,
+      "note": "Fee after April 15 (fee is waived before then)"
+    }
   },
   "llpReport": {
     "frequency": "periodic",
     "fee": "$20 (renewal of registration)",
     "deadline": "Renewal before the registration term expires",
-    "title": "Renew LLP registration"
+    "title": "Renew LLP registration",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 20,
+      "note": "$20 (renewal of registration)"
+    },
+    "lateFee": {
+      "amount": 35,
+      "note": "Fee after April 15 (fee is waived before then)"
+    }
   }
 }
