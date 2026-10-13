@@ -1,4 +1,6 @@
 import * as lib from "./lib/index.js";
+import { createAnalytics } from "./analytics.js";
+import { SITE_CONFIG } from "./config.js";
 import {
   ENTITY_TYPES,
   INDUSTRIES,
@@ -13,6 +15,14 @@ import {
 } from "./app.js";
 
 const $ = (id) => document.getElementById(id);
+
+const analytics = createAnalytics({
+  key: SITE_CONFIG.posthogKey,
+  host: SITE_CONFIG.posthogHost,
+  hostname: location.hostname,
+  doNotTrack: navigator.doNotTrack === "1" || window.doNotTrack === "1",
+});
+if (analytics.enabled) $("analytics-note").hidden = false;
 const fill = (id, options) => {
   $(id).innerHTML = options.map(([v, l]) => `<option value="${v}">${l}</option>`).join("");
 };
@@ -161,12 +171,14 @@ function render() {
   out.querySelectorAll("[data-tab]").forEach((b) =>
     b.addEventListener("click", () => {
       tab = b.dataset.tab;
+      analytics.track("tab_viewed", { tab });
       render();
     }),
   );
   const dl = $("dl");
   if (dl)
     dl.addEventListener("click", () => {
+      analytics.track("ics_downloaded", { events: data.events.length });
       const url = URL.createObjectURL(new Blob([data.ics], { type: "text/calendar" }));
       Object.assign(document.createElement("a"), { href: url, download: "deadlines.ics" }).click();
       URL.revokeObjectURL(url);
@@ -184,6 +196,7 @@ $("form").addEventListener("submit", async (e) => {
       openingDate: $("openingDate").value || undefined,
       isNew: f.isNew,
     });
+    analytics.track("plan_generated", { entityType: f.entityType, industry: f.industry, isNew: f.isNew });
     render();
   } catch (err) {
     $("out").innerHTML = `<p class="error">${h(err.message)}</p>`;

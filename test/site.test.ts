@@ -1,6 +1,8 @@
 import { describe, expect, it } from "vitest";
 import * as lib from "../src";
 // @ts-expect-error plain JS module
+import { createAnalytics, sanitize } from "../site/analytics.js";
+// @ts-expect-error plain JS module
 import { analyze, buildProfile, formatDate, hostOf, link, money, safeUrl } from "../site/app.js";
 
 const form = {
@@ -76,5 +78,62 @@ describe("playground formatting", () => {
     );
     expect(link(undefined, "<x>")).toBe("&lt;x&gt;");
     expect(hostOf("https://www.irs.gov/businesses")).toBe("irs.gov");
+  });
+});
+
+describe("playground analytics", () => {
+  const load = (calls: unknown[][]) => () =>
+    Promise.resolve({
+      init: (...a: unknown[]) => calls.push(["init", ...a]),
+      capture: (...a: unknown[]) => calls.push(["capture", ...a]),
+    });
+
+  it("is off without a key, on localhost, or with Do Not Track", async () => {
+    const calls: unknown[][] = [];
+    for (const opts of [
+      { key: "", hostname: "example.org" },
+      { key: "phc_x", hostname: "localhost" },
+      { key: "phc_x", hostname: "example.org", doNotTrack: true },
+    ]) {
+      const a = createAnalytics({ ...opts, host: "https://us.i.posthog.com", load: load(calls) });
+      expect(a.enabled).toBe(false);
+      a.track("tab_viewed", { tab: "plan" });
+    }
+    await new Promise((r) => setTimeout(r, 0));
+    expect(calls).toEqual([]);
+  });
+
+  it("initialises without cookies or autocapture and sends only allowed properties", async () => {
+    const calls: unknown[][] = [];
+    const a = createAnalytics({
+      key: "phc_x",
+      host: "https://us.i.posthog.com",
+      hostname: "example.org",
+      load: load(calls),
+    });
+    expect(a.enabled).toBe(true);
+    a.track("plan_generated", {
+      entityType: "llc",
+      industry: "general",
+      isNew: true,
+      zip: "78701",
+      employees: 5,
+    });
+    a.track("not_allowed", { zip: "78701" });
+    await new Promise((r) => setTimeout(r, 0));
+    const init = calls.find((c) => c[0] === "init")!;
+    expect(init[2]).toMatchObject({
+      autocapture: false,
+      persistence: "memory",
+      disable_session_recording: true,
+    });
+    expect(calls.filter((c) => c[0] === "capture")).toEqual([
+      ["capture", "plan_generated", { entityType: "llc", industry: "general", isNew: true }],
+    ]);
+  });
+
+  it("sanitizes property values", () => {
+    expect(sanitize("tab_viewed", { tab: { nested: 1 } })).toEqual({});
+    expect(sanitize("ics_downloaded", { events: 12, extra: "x" })).toEqual({ events: 12 });
   });
 });

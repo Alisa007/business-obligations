@@ -62,7 +62,7 @@ Every item says **why** it applies (`reason`), **who** to deal with (`authority`
 ## Try it
 
 - **In the browser:** the [playground](https://alisa007.github.io/compliance-rules-engine/) runs the library locally
-  on your machine; nothing is uploaded.
+  on your machine; what you enter is never uploaded.
 - **From the terminal:**
   ```sh
   npx compliance-rules-engine launch --zip 60601 --entity llc --employees 3 --start 2026-11-02 --opening 2027-02-01
@@ -369,6 +369,13 @@ npm run dev    # Vite dev server at http://localhost:5173 with hot reload
 Dev mode serves `site/` and loads the library straight from `src/`, so changes to the engine, the data files or the
 page appear immediately. `npm run site` builds the static version that is published to GitHub Pages (output in
 `_site/`, serve it with any static server).
+
+### Analytics on the playground
+
+The hosted playground can report anonymous usage with [PostHog](https://posthog.com): page views, which tab was
+opened, and that a plan or calendar was generated (with only the entity type and industry). It never sends form values,
+uses no cookies or session recording, and respects Do Not Track. It is off unless `posthogKey` is set in
+[`site/config.js`](site/config.js) and is always off in `npm run dev`. The library itself has no telemetry.
 
 ## Size
 
