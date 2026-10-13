@@ -185,6 +185,15 @@
       }
       a {
         color: var(--accent);
+        text-underline-offset: 2px;
+      }
+      .title a {
+        color: inherit;
+        text-decoration-color: var(--line);
+      }
+      .title a:hover {
+        color: var(--accent);
+        text-decoration-color: currentColor;
       }
       footer {
         color: var(--muted);

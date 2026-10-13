@@ -88,10 +88,55 @@ function addYears(iso, n) {
   return d.toISOString().slice(0, 10);
 }
 
-export const money = (n) => `$${Number(n).toLocaleString("en-US", { maximumFractionDigits: 2 })}`;
+/** Formats a US-dollar amount in the viewer's locale, e.g. "$1,272" or "1 272 $US". */
+export const money = (n, locale) =>
+  new Intl.NumberFormat(locale, {
+    style: "currency",
+    currency: "USD",
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 2,
+  }).format(Number(n));
 
 export const escapeHtml = (s) =>
   String(s).replace(
     /[&<>"']/g,
     (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c],
   );
+
+/**
+ * Formats an ISO date (YYYY-MM-DD) in the viewer's locale, e.g. "Jan 31, 2027" or "31 janv. 2027".
+ * Dates are calendar dates, so they are formatted in UTC to avoid shifting a day with the time zone.
+ */
+export function formatDate(iso, locale) {
+  if (typeof iso !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(iso)) return String(iso ?? "");
+  const d = new Date(`${iso}T00:00:00Z`);
+  if (Number.isNaN(d.getTime())) return iso;
+  return new Intl.DateTimeFormat(locale, { dateStyle: "medium", timeZone: "UTC" }).format(d);
+}
+
+/** Returns the URL when it is a plain http(s) link, otherwise undefined. */
+export function safeUrl(url) {
+  try {
+    const u = new URL(url);
+    return u.protocol === "https:" || u.protocol === "http:" ? u.href : undefined;
+  } catch {
+    return undefined;
+  }
+}
+
+/** An external link (escaped), or just the escaped text when there is no usable URL. */
+export function link(url, text) {
+  const href = safeUrl(url);
+  return href
+    ? `<a href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(text)}</a>`
+    : escapeHtml(text);
+}
+
+/** Short label for a source URL: its host without "www.". */
+export function hostOf(url) {
+  try {
+    return new URL(url).hostname.replace(/^www\./, "");
+  } catch {
+    return url;
+  }
+}

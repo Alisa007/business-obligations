@@ -58,32 +58,42 @@ $("zip").addEventListener("input", async () => {
 });
 $("zip").dispatchEvent(new Event("input"));
 
+const sources = (i) =>
+  (i.provenance?.sources ?? [])
+    .slice(0, 3)
+    .map((u) => link(u, hostOf(u)))
+    .join(", ");
+
 const stepHtml = (s) =>
-  `<li class="step"><div class="title">${s.order ? `${s.order}. ` : ""}${h(s.item.title)}</div>
-   <div class="meta">${h(s.item.authority)}${s.target ? ` · target ${s.target}` : ""}${
-     s.legalDeadline ? ` · <b>legal due ${s.legalDeadline}</b>` : ""
+  `<li class="step"><div class="title">${s.order ? `${s.order}. ` : ""}${link(s.item.url, s.item.title)}</div>
+   <div class="meta">${h(s.item.authority)}${s.target ? ` · target ${fd(s.target)}` : ""}${
+     s.legalDeadline ? ` · <b>legal due ${fd(s.legalDeadline)}</b>` : ""
    }${s.item.cost?.amount !== undefined ? ` · fee ${money(s.item.cost.amount)}` : ""}</div></li>`;
 
 const itemHtml = (i) =>
-  `<li class="step"><div class="title">${h(i.title)}</div>
+  `<li class="step"><div class="title">${link(i.url, i.title)}</div>
    <div class="meta"><span class="chip">${h(i.jurisdiction)}</span><span class="chip">${h(i.category)}</span>${h(i.authority)}${
-     i.nextDue ? ` · next due ${i.nextDue}` : i.deadline ? ` · ${h(i.deadline)}` : ""
-   }</div><div class="meta">${h(i.reason)}${i.provenance ? ` · ${h(i.provenance.confidence)}` : ""}</div></li>`;
+     i.nextDue ? ` · next due ${fd(i.nextDue)}` : i.deadline ? ` · ${h(i.deadline)}` : ""
+   }</div><div class="meta">${h(i.reason)}${
+     i.provenance
+       ? ` · ${h(i.provenance.confidence)}${i.provenance.checkedOn ? ` (checked ${fd(i.provenance.checkedOn)})` : ""}`
+       : ""
+   }${sources(i) ? ` · sources: ${sources(i)}` : ""}</div></li>`;
 
 const VIEWS = {
   plan: (d) => {
     const p = d.plan;
-    const head = `<p>Formation filing around <b>${p.formationDate}</b>, ready to operate around <b>${p.readyDate}</b>.${
+    const head = `<p>Formation filing around <b>${fd(p.formationDate)}</b>, ready to operate around <b>${fd(p.readyDate)}</b>.${
       p.onTrack === undefined
         ? ""
         : p.onTrack
-          ? ` Opening ${p.openingDate} is reachable (${p.slackDays} days of slack).`
-          : ` <span class="error">Opening ${p.openingDate} is ${-p.slackDays} days too soon at these allowances.</span>`
+          ? ` Opening ${fd(p.openingDate)} is reachable (${p.slackDays} days of slack).`
+          : ` <span class="error">Opening ${fd(p.openingDate)} is ${-p.slackDays} days too soon at these allowances.</span>`
     }</p>`;
     const phases = p.phases
       .map(
         (ph) =>
-          `<h2>${h(ph.title)} <span class="meta">${ph.start}${ph.end ? ` → ${ph.end}` : " onward"}</span></h2>
+          `<h2>${h(ph.title)} <span class="meta">${fd(ph.start)}${ph.end ? ` → ${fd(ph.end)}` : " onward"}</span></h2>
            <div class="meta">${h(ph.description)}</div><ol>${ph.steps.map(stepHtml).join("")}</ol>`,
       )
       .join("");
@@ -94,20 +104,27 @@ const VIEWS = {
     `<p><button id="dl">Download .ics</button></p>` +
     (d.events.length
       ? `<table><tr><th>Date</th><th>Deadline</th><th>Authority</th></tr>${d.events
-          .map((e) => `<tr><td>${e.date}</td><td>${h(e.title)}</td><td>${h(e.authority)}</td></tr>`)
+          .map(
+            (e) =>
+              `<tr><td>${fd(e.date)}</td><td>${link(e.url, e.title)}</td><td>${h(e.authority)}</td></tr>`,
+          )
           .join("")}</table>`
       : `<p class="empty">No dated deadlines in the next year. Add a formation date for anniversary-based filings.</p>`),
-  costs: (d) =>
-    `<p>Known government fees: <b>${money(d.costs.annual)}</b> per year, <b>${money(d.costs.oneTime)}</b> one-time.</p>
+  costs: (d) => {
+    const urlOf = new Map(d.result.items.map((i) => [i.id, i.url]));
+    return (
+      `<p>Known government fees: <b>${money(d.costs.annual)}</b> per year, <b>${money(d.costs.oneTime)}</b> one-time.</p>
      <table>${d.costs.lines
        .map(
          (l) =>
-           `<tr><td>${h(l.title)}${l.estimate ? " (estimate)" : ""}</td><td>${money(l.perYear || l.amount)}</td></tr>`,
+           `<tr><td>${link(urlOf.get(l.id), l.title)}${l.estimate ? " (estimate)" : ""}</td><td>${money(l.perYear || l.amount)}</td></tr>`,
        )
        .join("")}</table>` +
-    (d.costs.unknown.length
-      ? `<p class="meta">${d.costs.unknown.length} items have fees that cannot be totalled.</p>`
-      : ""),
+      (d.costs.unknown.length
+        ? `<p class="meta">${d.costs.unknown.length} items have fees that cannot be totalled.</p>`
+        : "")
+    );
+  },
   whatif: (d) =>
     `<p class="meta">Inputs you left at their defaults, and what would change if they differed.</p>` +
     (d.analysis.sensitivity.length
