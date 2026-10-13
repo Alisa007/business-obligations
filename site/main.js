@@ -6,6 +6,9 @@ import {
   analyze,
   buildProfile,
   escapeHtml as h,
+  formatDate as fd,
+  hostOf,
+  link,
   money,
 } from "./app.js";
 
