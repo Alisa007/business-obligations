@@ -79,10 +79,19 @@
     "sources": [
       "https://www.mass.gov/info-details/starting-a-limited-liability-company-llc-in-massachusetts"
     ],
-    "unconfirmed": ["lpReport", "llpReport"],
+    "unconfirmed": ["llpReport"],
     "dba": "checked"
   },
   "dbaOffice": "City or town clerk",
+  "lpReport": {
+    "frequency": "annual",
+    "fee": "$500 ($450 if filed electronically)",
+    "deadline": "On or before the anniversary of the certificate of limited partnership",
+    "due": {
+      "type": "anniversary",
+      "point": "date"
+    }
+  },
   "llpReport": {
     "frequency": "annual",
     "fee": "$500",

@@ -30,6 +30,8 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
   Medical Marijuana), RI, SD, TX, VA, VT, WA; corrected for UT (Department of Agriculture and Food) and WV (Department
   of Health).
 - LP/LLP report data confirmed for AK, AR (LP fee is $15, not $0), DE ($400 flat tax, same as LLC), IA, ME, NE, NM.
+- LP/LLP report data accepted at high confidence: ID, IL and MA limited partnerships (MA now has an explicit $500 /
+  $450 e-file fee), ME LLPs, NY limited partnerships (no biennial statement), TX LPs and LLPs (franchise tax).
 - Resolved caveats: Illinois and North Dakota workers' comp thresholds, Oregon, New Mexico and Oklahoma report data
   confirmed; Alabama corporate annual report marked repealed (Oct 2024) per secondary sources; Kansas fees updated to
   the 2026 form amounts; cannabis regulators confirmed for 34 states with corrections for Louisiana (Agriculture and
