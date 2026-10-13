@@ -23,8 +23,13 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 ### Changed
 
 - Workers' comp 1-employee thresholds confirmed for DC, KY, LA, MA, MD, ME, MN, MT, NE, NH, NJ, NV, NY, OH, OR, PA, RI,
-  UT, VT, WA, WV. South Dakota (sources conflict on whether coverage is mandatory) and Wyoming (mandatory only for
-  extra-hazardous industries) remain unconfirmed.
+  UT, VT, WA, WV.
+- Workers' comp is now marked elective for South Dakota (the Department of Labor and Regulation states coverage is
+  not required by state law); Wyoming's threshold text notes it is mandatory only in extra-hazardous industries.
+- Cannabis `cbd_only` status confirmed for ID, IN, KS, NC, SC, TN, WI, WY; regulators confirmed for PA (now Bureau of
+  Medical Marijuana), RI, SD, TX, VA, VT, WA; corrected for UT (Department of Agriculture and Food) and WV (Department
+  of Health).
+- LP/LLP report data confirmed for AK, AR (LP fee is $15, not $0), DE ($400 flat tax, same as LLC), IA, ME, NE, NM.
 - Resolved caveats: Illinois and North Dakota workers' comp thresholds, Oregon, New Mexico and Oklahoma report data
   confirmed; Alabama corporate annual report marked repealed (Oct 2024) per secondary sources; Kansas fees updated to
   the 2026 form amounts; cannabis regulators confirmed for 34 states with corrections for Louisiana (Agriculture and
