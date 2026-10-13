@@ -1,9 +1,11 @@
-# us-compliance-engine
+# compliance-rules-engine
+
+> Currently covers the United States only; other countries are planned.
 
 A TypeScript rules engine (no UI, no I/O) that takes a description of a US business and returns the legal compliance items that likely apply: licenses, permits, registrations, filings, payments, insurance and recordkeeping.
 
 ```ts
-import { getComplianceItems } from "us-compliance-engine";
+import { getComplianceItems } from "compliance-rules-engine";
 
 const items = getComplianceItems({
   entityType: "llc",
@@ -33,7 +35,7 @@ const items = getComplianceItems({
 Rules are plain objects (`{ id, when(profile), items(profile) }`). Add your own:
 
 ```ts
-import { getComplianceItems, defaultRules } from "us-compliance-engine";
+import { getComplianceItems, defaultRules } from "compliance-rules-engine";
 getComplianceItems(profile, { rules: [...defaultRules, myRule] });
 ```
 
