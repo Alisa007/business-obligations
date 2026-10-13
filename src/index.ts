@@ -32,3 +32,5 @@ export { localize, catalogTemplate } from "./i18n";
 export type { Catalog, RuleMessages, LocalizedItem, LocalizedResult } from "./i18n";
 export { planLaunch } from "./launch";
 export type { LaunchPlan, LaunchPhase, LaunchStep, LaunchOptions, LaunchPhaseId } from "./launch";
+export { validateProfile, PROFILE_FIELDS, PROFILE_ENUMS } from "./validate";
+export type { ProfileIssue } from "./validate";

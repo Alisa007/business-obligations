@@ -32,6 +32,9 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
   check and first-year fees; `launch` CLI command.
 - Browser playground (`site/`, deployed by `.github/workflows/pages.yml`), runnable `examples/`, `ROADMAP.md`, an
   "Add a city" issue template and a reorganised README.
+- `validateProfile()` and `InvalidProfileError.issues`: runtime validation of every profile field with suggestions
+  for typos (`employes` -> `employeeCount`); `evaluate` now rejects unknown fields instead of ignoring them. A
+  JavaScript quickstart (`examples/quickstart.cjs`) and README section.
 - Clearer disclaimer wording.
 - `analyzeInputs(profile)`: which optional inputs were defaulted and which values would change the returned items.
 

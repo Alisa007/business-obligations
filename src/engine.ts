@@ -12,6 +12,7 @@ import { isState } from "./states";
 import { federalRules } from "./rules/federal";
 import { extraStateRules, stateRules } from "./rules/state";
 import { dissolutionRules } from "./rules/dissolution";
+import { validateProfile, type ProfileIssue } from "./validate";
 import { localRules } from "./rules/local";
 import { industryRules } from "./rules/industry";
 import { nextDueDate } from "./dates";
@@ -47,15 +48,32 @@ export const DISCLAIMER =
   "General compliance information, not legal, tax or accounting advice, and no attorney-client relationship is created. Requirements depend on facts this library cannot see and change often; data is compiled from public sources and may be incomplete or out of date (see each item's provenance and the result's dataVersion). Confirm requirements with the cited authority or a qualified professional before relying on them.";
 
 export class InvalidProfileError extends Error {
-  constructor(message: string) {
+  /** Every problem found, when the error comes from shape validation. */
+  readonly issues: ProfileIssue[];
+  constructor(message: string, issues: ProfileIssue[] = []) {
     super(message);
     this.name = "InvalidProfileError";
+    this.issues = issues;
   }
 }
 
 const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
 
 export function resolveProfile(input: BusinessProfile): ResolvedProfile {
+  const issues = validateProfile(input);
+  if (issues.length)
+    throw new InvalidProfileError(
+      issues
+        .map(
+          (i) =>
+            i.message +
+            (i.suggestion && !i.message.includes("did you mean")
+              ? ` (try ${JSON.stringify(i.suggestion)})`
+              : ""),
+        )
+        .join("; "),
+      issues,
+    );
   const country = input.country ?? "US";
   if (!(country in RULE_PACKS)) throw new InvalidProfileError(`Unsupported country "${country}"`);
 

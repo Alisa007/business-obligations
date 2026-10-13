@@ -93,6 +93,38 @@ npm install compliance-rules-engine
 
 ESM and CommonJS are both supported. Node 18+. About 57 KB gzipped, no runtime dependencies.
 
+## Using it from plain JavaScript
+
+TypeScript is optional. The package ships compiled JavaScript (ESM and CommonJS) plus type declarations that editors
+like VS Code use for autocomplete, even in `.js` files.
+
+```js
+// CommonJS
+const { evaluate, validateProfile } = require("compliance-rules-engine");
+// ESM
+import { evaluate, validateProfile } from "compliance-rules-engine";
+
+const profile = { entityType: "llc", zip: "78701", city: "Austin", county: "Travis", employeeCount: 2 };
+
+const problems = validateProfile(profile); // [] when the profile is well formed
+const { items } = evaluate(profile);
+```
+
+Without a compiler, typos would otherwise pass silently, so profiles are checked at runtime. `evaluate` throws an
+`InvalidProfileError` listing every problem at once, with a suggestion where one is close:
+
+```js
+evaluate({ entityType: "LLC", zip: "78701", city: "Austin", county: "Travis", employes: 5 });
+// InvalidProfileError: `entityType` must be one of sole_proprietorship, ..., llc, ...; got "LLC" (try "llc");
+//   Unknown field `employes`; did you mean `employeeCount`?
+// error.issues -> [{ field: "entityType", message, suggestion: "llc" }, { field: "employes", ... }]
+```
+
+`validateProfile(profile)` returns the same issues without throwing, which suits form handlers. For other languages,
+[`schema/business-profile.schema.json`](schema/business-profile.schema.json) and
+[`schema/compliance-result.schema.json`](schema/compliance-result.schema.json) describe the input and output.
+Runnable versions: [`examples/quickstart.cjs`](examples/quickstart.cjs) and the `.mjs` examples.
+
 ## Core API
 
 ### Evaluate
