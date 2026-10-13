@@ -1,0 +1,76 @@
+{
+  "code": "ND",
+  "name": "North Dakota",
+  "filing": {
+    "name": "North Dakota Secretary of State",
+    "url": "https://sos.nd.gov/business"
+  },
+  "revenue": {
+    "name": "North Dakota Office of State Tax Commissioner",
+    "url": "https://www.tax.nd.gov"
+  },
+  "labor": {
+    "name": "Job Service North Dakota",
+    "url": "https://www.jobsnd.com"
+  },
+  "workersComp": {
+    "agency": "North Dakota Workforce Safety & Insurance (WSI)",
+    "threshold": "1 employee",
+    "stateFund": true,
+    "trigger": {
+      "minEmployees": 1
+    }
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "$50",
+    "deadline": "November 15",
+    "due": {
+      "type": "fixed",
+      "month": 11,
+      "day": 15
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$25",
+    "deadline": "August 1",
+    "due": {
+      "type": "fixed",
+      "month": 8,
+      "day": 1
+    }
+  },
+  "entityTax": "Corporate income tax",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "North Dakota sales tax permit",
+    "agency": null,
+    "alternative": null
+  },
+  "local": {
+    "title": "City business license",
+    "authority": "City auditor/clerk",
+    "description": "Some North Dakota cities license specific businesses."
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "state",
+  "industry": {
+    "contractor": "North Dakota Secretary of State (contractor licensing)",
+    "realEstate": "North Dakota Real Estate Commission",
+    "alcohol": "North Dakota Office of Attorney General (with local licensing)",
+    "childCare": "North Dakota Department of Health and Human Services",
+    "health": "North Dakota Department of Health and Human Services"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": ["https://www.sos.nd.gov/business/business-services/business-structures/corporation"],
+    "unconfirmed": []
+  }
+}

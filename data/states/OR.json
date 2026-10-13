@@ -1,0 +1,81 @@
+{
+  "code": "OR",
+  "name": "Oregon",
+  "filing": {
+    "name": "Oregon Secretary of State, Corporation Division",
+    "url": "https://sos.oregon.gov/business"
+  },
+  "revenue": {
+    "name": "Oregon Department of Revenue",
+    "url": "https://www.oregon.gov/dor"
+  },
+  "labor": {
+    "name": "Oregon Employment Department",
+    "url": "https://www.oregon.gov/employ"
+  },
+  "workersComp": {
+    "agency": "Oregon Workers' Compensation Division",
+    "threshold": "1 employee",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "$100",
+    "deadline": "On the anniversary of formation",
+    "due": {
+      "type": "anniversary",
+      "point": "date"
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$100",
+    "deadline": "On the anniversary of formation",
+    "due": {
+      "type": "anniversary",
+      "point": "date"
+    }
+  },
+  "entityTax": "Corporate excise tax and Corporate Activity Tax (CAT, gross receipts over $1 million); minimum excise tax by sales",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": false,
+    "permit": "None",
+    "alternative": "Oregon has no sales tax; see the Corporate Activity Tax under entity taxes.",
+    "agency": null
+  },
+  "paidLeave": {
+    "title": "Paid Leave Oregon contributions",
+    "agency": "Oregon Employment Department",
+    "description": "Employers remit contributions quarterly with payroll tax reports.",
+    "minEmployees": 1
+  },
+  "local": {
+    "title": "City business license and local business income taxes",
+    "authority": "City (e.g., Portland Revenue Division)",
+    "description": "Portland and Multnomah County levy business income taxes; many cities require business licenses."
+  },
+  "paidSickLeave": {
+    "minEmployees": 1
+  },
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": null,
+  "dbaFiling": "state",
+  "industry": {
+    "contractor": "Oregon Construction Contractors Board",
+    "realEstate": "Oregon Real Estate Agency",
+    "alcohol": "Oregon Liquor and Cannabis Commission",
+    "childCare": "Oregon Department of Early Learning and Care",
+    "health": "Oregon Health Authority"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": ["https://sos.oregon.gov/business/Pages/obr-annual-report-renewal.aspx"],
+    "unconfirmed": ["llcReport.fee", "corpReport.fee"]
+  }
+}

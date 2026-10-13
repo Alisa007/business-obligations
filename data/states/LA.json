@@ -1,0 +1,74 @@
+{
+  "code": "LA",
+  "name": "Louisiana",
+  "filing": {
+    "name": "Louisiana Secretary of State",
+    "url": "https://www.sos.la.gov/BusinessServices"
+  },
+  "revenue": {
+    "name": "Louisiana Department of Revenue",
+    "url": "https://revenue.louisiana.gov"
+  },
+  "labor": {
+    "name": "Louisiana Workforce Commission",
+    "url": "https://www.louisianaworks.net"
+  },
+  "workersComp": {
+    "agency": "Louisiana Office of Workers' Compensation Administration",
+    "threshold": "1 employee",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "$35",
+    "deadline": "On the anniversary date of formation",
+    "due": {
+      "type": "anniversary",
+      "point": "date"
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$35",
+    "deadline": "On the anniversary date of formation",
+    "due": {
+      "type": "anniversary",
+      "point": "date"
+    }
+  },
+  "entityTax": "Corporate income tax; corporate franchise tax (being phased out)",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Louisiana sales tax account (LaTAP)",
+    "agency": null,
+    "alternative": null
+  },
+  "local": {
+    "title": "Parish/municipal occupational license",
+    "authority": "Parish or city",
+    "description": "Parishes and cities issue occupational licenses and many collect their own sales tax."
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "county",
+  "industry": {
+    "contractor": "Louisiana State Licensing Board for Contractors",
+    "realEstate": "Louisiana Real Estate Commission",
+    "alcohol": "Louisiana Office of Alcohol and Tobacco Control",
+    "childCare": "Louisiana Department of Education",
+    "health": "Louisiana Department of Health"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": ["https://static.sos.la.gov/shared/fee_changes_2026.pdf"],
+    "unconfirmed": []
+  }
+}

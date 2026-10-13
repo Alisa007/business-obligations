@@ -1,0 +1,83 @@
+{
+  "code": "ME",
+  "name": "Maine",
+  "filing": {
+    "name": "Maine Secretary of State, Bureau of Corporations",
+    "url": "https://www.maine.gov/sos/cec/corp"
+  },
+  "revenue": {
+    "name": "Maine Revenue Services",
+    "url": "https://www.maine.gov/revenue"
+  },
+  "labor": {
+    "name": "Maine Department of Labor",
+    "url": "https://www.maine.gov/labor"
+  },
+  "workersComp": {
+    "agency": "Maine Workers' Compensation Board",
+    "threshold": "1 employee",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "$85",
+    "deadline": "June 1",
+    "due": {
+      "type": "fixed",
+      "month": 6,
+      "day": 1
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$85",
+    "deadline": "June 1",
+    "due": {
+      "type": "fixed",
+      "month": 6,
+      "day": 1
+    }
+  },
+  "entityTax": "Corporate income tax",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Maine sales tax registration (Retailer's Registration)",
+    "agency": null,
+    "alternative": null
+  },
+  "paidLeave": {
+    "title": "Maine Paid Family and Medical Leave contributions",
+    "agency": "Maine Department of Labor, PFML Division",
+    "description": "Employers with 15+ employees remit contributions quarterly; smaller employers deduct from employees.",
+    "minEmployees": 1
+  },
+  "local": {
+    "title": "Municipal licenses",
+    "authority": "Town or city clerk",
+    "description": "Maine has no general business license; municipalities license specific activities."
+  },
+  "paidSickLeave": {
+    "minEmployees": 11
+  },
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "town",
+  "industry": {
+    "contractor": null,
+    "realEstate": "Maine Real Estate Commission",
+    "alcohol": "Maine Bureau of Alcoholic Beverages and Lottery Operations",
+    "childCare": "Maine Department of Health and Human Services",
+    "health": "Maine Department of Health and Human Services"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": ["https://www.maine.gov/sos/cec/corp/llc.html"],
+    "unconfirmed": ["corpReport.fee"]
+  }
+}

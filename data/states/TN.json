@@ -1,0 +1,77 @@
+{
+  "code": "TN",
+  "name": "Tennessee",
+  "filing": {
+    "name": "Tennessee Secretary of State",
+    "url": "https://sos.tn.gov/business-services"
+  },
+  "revenue": {
+    "name": "Tennessee Department of Revenue",
+    "url": "https://www.tn.gov/revenue"
+  },
+  "labor": {
+    "name": "Tennessee Department of Labor and Workforce Development",
+    "url": "https://www.tn.gov/workforce"
+  },
+  "workersComp": {
+    "agency": "Tennessee Bureau of Workers' Compensation",
+    "threshold": "5 employees (1 in construction)",
+    "trigger": {
+      "minEmployees": 5,
+      "constructionMinEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "$300 base, plus $50 per member over 6 (maximum $3,000)",
+    "deadline": "First day of the 4th month after fiscal year end (April 1)",
+    "due": {
+      "type": "fixed",
+      "month": 4,
+      "day": 1
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$20 minimum",
+    "deadline": "First day of the 4th month after fiscal year end (April 1)",
+    "due": {
+      "type": "fixed",
+      "month": 4,
+      "day": 1
+    }
+  },
+  "entityTax": "Franchise and Excise taxes (apply to LLCs, corporations and limited partnerships)",
+  "wageWithholding": false,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Tennessee sales and use tax registration",
+    "agency": null,
+    "alternative": null
+  },
+  "local": {
+    "title": "City/county business license (Business Tax)",
+    "authority": "City or county clerk",
+    "description": "Tennessee businesses obtain a local business license and file state-local Business Tax returns."
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "county",
+  "industry": {
+    "contractor": "Tennessee Board for Licensing Contractors",
+    "realEstate": "Tennessee Real Estate Commission",
+    "alcohol": "Tennessee Alcoholic Beverage Commission",
+    "childCare": "Tennessee Department of Human Services",
+    "health": "Tennessee Department of Health"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": ["https://sos.tn.gov/businesses/faqs"],
+    "unconfirmed": []
+  }
+}

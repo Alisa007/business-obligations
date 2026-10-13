@@ -1,0 +1,85 @@
+{
+  "code": "MN",
+  "name": "Minnesota",
+  "filing": {
+    "name": "Minnesota Secretary of State",
+    "url": "https://www.sos.state.mn.us/business-liens"
+  },
+  "revenue": {
+    "name": "Minnesota Department of Revenue",
+    "url": "https://www.revenue.state.mn.us"
+  },
+  "labor": {
+    "name": "Minnesota DEED Unemployment Insurance",
+    "url": "https://uimn.org"
+  },
+  "workersComp": {
+    "agency": "Minnesota Department of Labor and Industry",
+    "threshold": "1 employee",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "Free",
+    "deadline": "December 31",
+    "title": "File Annual Renewal",
+    "due": {
+      "type": "fixed",
+      "month": 12,
+      "day": 31
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "Free",
+    "deadline": "December 31",
+    "title": "File Annual Renewal",
+    "due": {
+      "type": "fixed",
+      "month": 12,
+      "day": 31
+    }
+  },
+  "entityTax": "Corporate franchise tax; fixed-dollar minimum fee on pass-through entities",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Minnesota sales tax permit (Minnesota Tax ID)",
+    "agency": null,
+    "alternative": null
+  },
+  "paidLeave": {
+    "title": "Minnesota Paid Leave premiums",
+    "agency": "Minnesota DEED Paid Leave",
+    "description": "Employers remit premiums quarterly and may deduct up to half from employee wages.",
+    "minEmployees": 1
+  },
+  "local": {
+    "title": "City business licenses",
+    "authority": "City clerk",
+    "description": "Minnesota cities license specific activities; no general state-wide business license."
+  },
+  "paidSickLeave": {
+    "minEmployees": 1
+  },
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "state",
+  "industry": {
+    "contractor": "Minnesota Department of Labor and Industry (residential building contractor license)",
+    "realEstate": "Minnesota Department of Commerce",
+    "alcohol": "Minnesota Alcohol and Gambling Enforcement Division (with city licensing)",
+    "childCare": "Minnesota Department of Children, Youth, and Families",
+    "health": "Minnesota Department of Health"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": ["https://www.sos.mn.gov/business-liens/renewals/"],
+    "unconfirmed": []
+  }
+}

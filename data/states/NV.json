@@ -1,0 +1,83 @@
+{
+  "code": "NV",
+  "name": "Nevada",
+  "filing": {
+    "name": "Nevada Secretary of State",
+    "url": "https://www.nvsos.gov/sos/businesses"
+  },
+  "revenue": {
+    "name": "Nevada Department of Taxation",
+    "url": "https://tax.nv.gov"
+  },
+  "labor": {
+    "name": "Nevada DETR Employment Security Division",
+    "url": "https://detr.nv.gov"
+  },
+  "workersComp": {
+    "agency": "Nevada Division of Industrial Relations",
+    "threshold": "1 employee",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "$150 annual list fee",
+    "deadline": "Last day of the anniversary month",
+    "title": "File Annual List of Managers/Officers and Business License Renewal",
+    "due": {
+      "type": "anniversary",
+      "point": "end_of_month"
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$150 annual list fee",
+    "deadline": "Last day of the anniversary month",
+    "title": "File Annual List of Managers/Officers and Business License Renewal",
+    "due": {
+      "type": "anniversary",
+      "point": "end_of_month"
+    }
+  },
+  "entityTax": "Commerce Tax (gross receipts over $4 million) and Modified Business Tax on payroll; no corporate income tax",
+  "wageWithholding": false,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Nevada seller's permit",
+    "agency": null,
+    "alternative": null
+  },
+  "businessLicense": {
+    "title": "Nevada State Business License",
+    "authority": "Nevada Secretary of State",
+    "fee": "$200 ($500 for corporations)",
+    "renewal": "annual"
+  },
+  "local": {
+    "title": "City or county business license",
+    "authority": "City or county business license office",
+    "description": "Nevada requires a local business license in addition to the state business license."
+  },
+  "paidLeave": null,
+  "paidSickLeave": {
+    "minEmployees": 50
+  },
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "county",
+  "industry": {
+    "contractor": "Nevada State Contractors Board",
+    "realEstate": "Nevada Real Estate Division",
+    "alcohol": "City or county liquor licensing authority",
+    "childCare": "Nevada Department of Health and Human Services (with local licensing)",
+    "health": "Nevada Division of Public and Behavioral Health"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": ["https://www.nvsos.gov/sos/licensing/state-business-license"],
+    "unconfirmed": []
+  }
+}

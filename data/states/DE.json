@@ -1,0 +1,90 @@
+{
+  "code": "DE",
+  "name": "Delaware",
+  "filing": {
+    "name": "Delaware Division of Corporations",
+    "url": "https://corp.delaware.gov"
+  },
+  "revenue": {
+    "name": "Delaware Division of Revenue",
+    "url": "https://revenue.delaware.gov"
+  },
+  "labor": {
+    "name": "Delaware Department of Labor",
+    "url": "https://labor.delaware.gov"
+  },
+  "workersComp": {
+    "agency": "Delaware Office of Workers' Compensation",
+    "threshold": "1 employee",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "$400 annual tax",
+    "deadline": "June 1",
+    "title": "Pay LLC annual tax",
+    "due": {
+      "type": "fixed",
+      "month": 6,
+      "day": 1
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "Franchise tax (from $175, min) + $50 report fee",
+    "deadline": "March 1",
+    "title": "File annual franchise tax report",
+    "due": {
+      "type": "fixed",
+      "month": 3,
+      "day": 1
+    }
+  },
+  "entityTax": "Corporate income tax and franchise tax",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": false,
+    "permit": "Delaware business license (gross receipts tax)",
+    "alternative": "Delaware has no sales tax; businesses pay a gross receipts tax through the state business license.",
+    "agency": null
+  },
+  "businessLicense": {
+    "title": "Delaware business license and gross receipts tax",
+    "authority": "Delaware Division of Revenue",
+    "fee": "$75 plus gross receipts tax",
+    "renewal": "annual"
+  },
+  "paidLeave": {
+    "title": "Delaware Paid Family and Medical Leave contributions",
+    "agency": "Delaware Division of Paid Leave",
+    "description": "Employers with 10+ employees remit contributions quarterly.",
+    "minEmployees": 10
+  },
+  "local": {
+    "title": "County/city business license",
+    "authority": "County or municipality",
+    "description": "Counties and some municipalities require licenses in addition to the state license."
+  },
+  "paidSickLeave": {
+    "minEmployees": 10
+  },
+  "llcPublication": null,
+  "economicNexusUsd": null,
+  "dbaFiling": "county",
+  "industry": {
+    "contractor": "Delaware Division of Revenue (contractor business license)",
+    "realEstate": "Delaware Real Estate Commission",
+    "alcohol": "Delaware Office of the Alcoholic Beverage Control Commissioner",
+    "childCare": "Delaware Office of Child Care Licensing",
+    "health": "Delaware Division of Health Care Quality"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": ["https://corp.delaware.gov/alt-entitytaxinstructions/"],
+    "unconfirmed": []
+  }
+}

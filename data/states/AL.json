@@ -1,0 +1,68 @@
+{
+  "code": "AL",
+  "name": "Alabama",
+  "filing": {
+    "name": "Alabama Secretary of State",
+    "url": "https://www.sos.alabama.gov/business-entities"
+  },
+  "revenue": {
+    "name": "Alabama Department of Revenue",
+    "url": "https://www.revenue.alabama.gov"
+  },
+  "labor": {
+    "name": "Alabama Department of Workforce",
+    "url": "https://labor.alabama.gov"
+  },
+  "workersComp": {
+    "agency": "Alabama Department of Workforce, Workers' Compensation Division",
+    "threshold": "5 employees",
+    "trigger": {
+      "minEmployees": 5
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "$100 minimum (Business Privilege Tax)",
+    "deadline": "Same date as the federal return: March 15 (pass-through) or April 15 (C corp)",
+    "title": "File Annual Report and Business Privilege Tax return"
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$100 minimum (Business Privilege Tax)",
+    "deadline": "Same date as the federal return: March 15 (pass-through) or April 15 (C corp)",
+    "title": "File Annual Report and Business Privilege Tax return"
+  },
+  "entityTax": "Corporate income tax and Business Privilege Tax",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Sales tax account (My Alabama Taxes)",
+    "agency": null,
+    "alternative": null
+  },
+  "local": {
+    "title": "Municipal or county business license",
+    "authority": "City or county revenue office",
+    "description": "Alabama cities and counties issue general business licenses and collect local sales/use taxes."
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 250000,
+  "dbaFiling": "county",
+  "industry": {
+    "contractor": "Alabama Licensing Board for General Contractors",
+    "realEstate": "Alabama Real Estate Commission",
+    "alcohol": "Alabama Alcoholic Beverage Control Board",
+    "childCare": "Alabama Department of Human Resources",
+    "health": "Alabama Department of Public Health"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": ["https://www.revenue.alabama.gov/tax-types/business-privilege-tax/"],
+    "unconfirmed": ["corpReport.deadline"]
+  }
+}

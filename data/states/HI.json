@@ -1,0 +1,76 @@
+{
+  "code": "HI",
+  "name": "Hawaii",
+  "filing": {
+    "name": "Hawaii Department of Commerce and Consumer Affairs, Business Registration Division",
+    "url": "https://cca.hawaii.gov/breg"
+  },
+  "revenue": {
+    "name": "Hawaii Department of Taxation",
+    "url": "https://tax.hawaii.gov"
+  },
+  "labor": {
+    "name": "Hawaii Department of Labor and Industrial Relations",
+    "url": "https://labor.hawaii.gov/ui"
+  },
+  "workersComp": {
+    "agency": "Hawaii DLIR Disability Compensation Division",
+    "threshold": "1 employee",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "$15",
+    "deadline": "Last day of the quarter containing the registration anniversary",
+    "title": "File Annual Return"
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$15",
+    "deadline": "Last day of the quarter containing the registration anniversary",
+    "title": "File Annual Return"
+  },
+  "entityTax": "Corporate income tax and General Excise Tax",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "General Excise Tax (GET) license",
+    "agency": {
+      "name": "Hawaii Department of Taxation",
+      "url": "https://tax.hawaii.gov"
+    },
+    "alternative": null
+  },
+  "paidLeave": {
+    "title": "Temporary Disability Insurance (TDI) coverage",
+    "agency": "Hawaii DLIR Disability Compensation Division",
+    "description": "Employers must provide TDI coverage for employees; employees may be charged up to half the premium.",
+    "minEmployees": 1
+  },
+  "local": {
+    "title": "County permits",
+    "authority": "County business/permit office",
+    "description": "Hawaii has no general local business license; counties issue zoning, building and industry permits."
+  },
+  "paidSickLeave": null,
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "state",
+  "industry": {
+    "contractor": "Hawaii Contractors License Board",
+    "realEstate": "Hawaii Real Estate Commission",
+    "alcohol": "County liquor commission",
+    "childCare": "Hawaii Department of Human Services",
+    "health": "Hawaii Department of Health"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": ["https://cca.hawaii.gov/breg/registration/dllc/fees/"],
+    "unconfirmed": ["corpReport.fee"]
+  }
+}

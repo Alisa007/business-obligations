@@ -1,0 +1,84 @@
+{
+  "code": "MA",
+  "name": "Massachusetts",
+  "filing": {
+    "name": "Massachusetts Secretary of the Commonwealth, Corporations Division",
+    "url": "https://www.sec.state.ma.us/cor"
+  },
+  "revenue": {
+    "name": "Massachusetts Department of Revenue",
+    "url": "https://www.mass.gov/orgs/massachusetts-department-of-revenue"
+  },
+  "labor": {
+    "name": "Massachusetts Department of Unemployment Assistance",
+    "url": "https://www.mass.gov/orgs/department-of-unemployment-assistance"
+  },
+  "workersComp": {
+    "agency": "Massachusetts Department of Industrial Accidents",
+    "threshold": "1 employee",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "$500",
+    "deadline": "On the anniversary of formation",
+    "due": {
+      "type": "anniversary",
+      "point": "date"
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$125",
+    "deadline": "15th day of the 3rd month after fiscal year end (March 15)",
+    "due": {
+      "type": "fixed",
+      "month": 3,
+      "day": 15
+    }
+  },
+  "entityTax": "Corporate excise tax ($456 minimum)",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Massachusetts sales tax registration (MassTaxConnect)",
+    "agency": null,
+    "alternative": null
+  },
+  "paidLeave": {
+    "title": "Massachusetts Paid Family and Medical Leave contributions",
+    "agency": "Massachusetts Department of Family and Medical Leave",
+    "description": "Employers remit contributions quarterly via MassTaxConnect.",
+    "minEmployees": 1
+  },
+  "local": {
+    "title": "City/town clerk business certificate and local licenses",
+    "authority": "City or town clerk",
+    "description": "DBAs are filed with the town/city clerk; boards of health and licensing boards issue permits."
+  },
+  "paidSickLeave": {
+    "minEmployees": 1
+  },
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "town",
+  "industry": {
+    "contractor": "Massachusetts Office of Public Safety and Inspections (construction supervisor / home improvement contractor)",
+    "realEstate": "Massachusetts Board of Registration of Real Estate Brokers and Salespersons",
+    "alcohol": "Massachusetts Alcoholic Beverages Control Commission (with local licensing board)",
+    "childCare": "Massachusetts Department of Early Education and Care",
+    "health": "Massachusetts Department of Public Health"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": [
+      "https://www.mass.gov/info-details/starting-a-limited-liability-company-llc-in-massachusetts"
+    ],
+    "unconfirmed": ["corpReport.fee"]
+  }
+}

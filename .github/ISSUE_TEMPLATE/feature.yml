@@ -1,0 +1,19 @@
+name: Feature or coverage request
+description: A new rule, city, entity type, input or country
+labels: [enhancement]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What obligation or capability is missing?
+    validations:
+      required: true
+  - type: textarea
+    id: inputs
+    attributes:
+      label: Which facts about the business decide whether it applies?
+      description: These become profile inputs
+  - type: input
+    id: source
+    attributes:
+      label: Official source URL

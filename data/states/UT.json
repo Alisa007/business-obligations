@@ -1,0 +1,76 @@
+{
+  "code": "UT",
+  "name": "Utah",
+  "filing": {
+    "name": "Utah Division of Corporations and Commercial Code",
+    "url": "https://corporations.utah.gov"
+  },
+  "revenue": {
+    "name": "Utah State Tax Commission",
+    "url": "https://tax.utah.gov"
+  },
+  "labor": {
+    "name": "Utah Department of Workforce Services",
+    "url": "https://jobs.utah.gov"
+  },
+  "workersComp": {
+    "agency": "Utah Labor Commission",
+    "threshold": "1 employee",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "$18",
+    "deadline": "Last day of the anniversary month",
+    "title": "File Annual Renewal",
+    "due": {
+      "type": "anniversary",
+      "point": "end_of_month"
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$18",
+    "deadline": "Last day of the anniversary month",
+    "title": "File Annual Renewal",
+    "due": {
+      "type": "anniversary",
+      "point": "end_of_month"
+    }
+  },
+  "entityTax": "Corporate franchise and income tax ($100 minimum)",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Utah sales tax license",
+    "agency": null,
+    "alternative": null
+  },
+  "local": {
+    "title": "City or county business license",
+    "authority": "City or county business licensing office",
+    "description": "Utah cities and counties require business licenses."
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "state",
+  "industry": {
+    "contractor": "Utah Division of Professional Licensing (DOPL)",
+    "realEstate": "Utah Division of Real Estate",
+    "alcohol": "Utah Department of Alcoholic Beverage Services",
+    "childCare": "Utah Department of Health and Human Services, Office of Licensing",
+    "health": "Utah Department of Health and Human Services"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": ["https://commerce.utah.gov/wp-content/uploads/2023/04/currentfees.pdf"],
+    "unconfirmed": []
+  }
+}

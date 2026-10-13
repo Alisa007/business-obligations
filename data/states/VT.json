@@ -1,0 +1,68 @@
+{
+  "code": "VT",
+  "name": "Vermont",
+  "filing": {
+    "name": "Vermont Secretary of State",
+    "url": "https://sos.vermont.gov/corporations"
+  },
+  "revenue": {
+    "name": "Vermont Department of Taxes",
+    "url": "https://tax.vermont.gov"
+  },
+  "labor": {
+    "name": "Vermont Department of Labor",
+    "url": "https://labor.vermont.gov"
+  },
+  "workersComp": {
+    "agency": "Vermont Department of Labor, Workers' Compensation",
+    "threshold": "1 employee",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "$45",
+    "deadline": "3 months after fiscal year end"
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$60",
+    "deadline": "2.5 months after fiscal year end"
+  },
+  "entityTax": "Corporate income tax ($300 minimum)",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Vermont sales tax license",
+    "agency": null,
+    "alternative": null
+  },
+  "local": {
+    "title": "Town licenses and zoning permits",
+    "authority": "Town clerk / zoning administrator",
+    "description": "Vermont has no general business license; town zoning and local permits apply."
+  },
+  "paidLeave": null,
+  "paidSickLeave": {
+    "minEmployees": 1
+  },
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "state",
+  "industry": {
+    "contractor": null,
+    "realEstate": "Vermont Office of Professional Regulation",
+    "alcohol": "Vermont Department of Liquor and Lottery",
+    "childCare": "Vermont DCF, Child Development Division",
+    "health": "Vermont Department of Health"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": ["https://sos.vermont.gov/business-services/fees-statutes"],
+    "unconfirmed": []
+  }
+}

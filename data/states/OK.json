@@ -1,0 +1,67 @@
+{
+  "code": "OK",
+  "name": "Oklahoma",
+  "filing": {
+    "name": "Oklahoma Secretary of State",
+    "url": "https://www.sos.ok.gov"
+  },
+  "revenue": {
+    "name": "Oklahoma Tax Commission",
+    "url": "https://oklahoma.gov/tax"
+  },
+  "labor": {
+    "name": "Oklahoma Employment Security Commission",
+    "url": "https://oklahoma.gov/oesc"
+  },
+  "workersComp": {
+    "agency": "Oklahoma Workers' Compensation Commission",
+    "threshold": "1 employee",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": null,
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$10 minimum (1/10 of 1% of capital)",
+    "deadline": "On the anniversary of incorporation",
+    "title": "File Annual Certificate",
+    "due": {
+      "type": "anniversary",
+      "point": "date"
+    }
+  },
+  "entityTax": "Corporate income tax",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Oklahoma sales tax permit",
+    "agency": null,
+    "alternative": null
+  },
+  "local": {
+    "title": "City business license",
+    "authority": "City clerk",
+    "description": "Some Oklahoma cities require business licenses and local sales tax registration."
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "state",
+  "industry": {
+    "contractor": "Oklahoma Construction Industries Board (trade licenses)",
+    "realEstate": "Oklahoma Real Estate Commission",
+    "alcohol": "Oklahoma Alcoholic Beverage Laws Enforcement Commission",
+    "childCare": "Oklahoma Department of Human Services",
+    "health": "Oklahoma State Department of Health"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": ["https://www.sos.ok.gov/business/fees.aspx"],
+    "unconfirmed": ["llcReport.deadline", "corpReport.deadline"]
+  }
+}

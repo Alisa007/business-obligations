@@ -1,0 +1,81 @@
+{
+  "code": "NJ",
+  "name": "New Jersey",
+  "filing": {
+    "name": "New Jersey Division of Revenue and Enterprise Services",
+    "url": "https://www.nj.gov/treasury/revenue"
+  },
+  "revenue": {
+    "name": "New Jersey Division of Taxation",
+    "url": "https://www.nj.gov/treasury/taxation"
+  },
+  "labor": {
+    "name": "New Jersey Department of Labor and Workforce Development",
+    "url": "https://www.nj.gov/labor"
+  },
+  "workersComp": {
+    "agency": "New Jersey Division of Workers' Compensation",
+    "threshold": "1 employee",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "$75",
+    "deadline": "Last day of the anniversary month",
+    "due": {
+      "type": "anniversary",
+      "point": "end_of_month"
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$75",
+    "deadline": "Last day of the anniversary month",
+    "due": {
+      "type": "anniversary",
+      "point": "end_of_month"
+    }
+  },
+  "entityTax": "Corporation Business Tax (minimum tax $500–$2,000); partnership filing fee per partner",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "New Jersey Certificate of Authority",
+    "agency": null,
+    "alternative": null
+  },
+  "paidLeave": {
+    "title": "NJ Temporary Disability and Family Leave Insurance contributions",
+    "agency": "New Jersey Department of Labor and Workforce Development",
+    "description": "Employers withhold employee contributions and pay employer TDI contributions with quarterly UI reports.",
+    "minEmployees": 1
+  },
+  "local": {
+    "title": "Municipal business registration",
+    "authority": "Municipal clerk",
+    "description": "Municipalities require certificates of occupancy and, in many towns, business registration."
+  },
+  "paidSickLeave": {
+    "minEmployees": 1
+  },
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "county",
+  "industry": {
+    "contractor": "New Jersey Division of Consumer Affairs (home improvement contractor registration)",
+    "realEstate": "New Jersey Real Estate Commission",
+    "alcohol": "New Jersey Division of Alcoholic Beverage Control (with municipal licensing)",
+    "childCare": "New Jersey Department of Children and Families",
+    "health": "New Jersey Department of Health"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": ["https://business.nj.gov/pages/filings-and-accounting"],
+    "unconfirmed": []
+  }
+}

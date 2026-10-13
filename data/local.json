@@ -1,0 +1,230 @@
+[
+  {
+    "state": "NY",
+    "city": "New York",
+    "counties": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+    "items": [
+      {
+        "id": "nyc.business-corporation-tax",
+        "title": "File NYC Business Corporation Tax return",
+        "category": "filing",
+        "authority": "NYC Department of Finance",
+        "description": "C and S corporations doing business in New York City file NYC-2 / NYC-4S (or NYC-3L for general corporations) and pay the tax.",
+        "frequency": "annual",
+        "deadline": "April 15 (calendar-year filers)",
+        "due": { "type": "fixed", "month": 4, "day": 15 },
+        "url": "https://www.nyc.gov/site/finance/taxes/business.page",
+        "appliesTo": ["corporation"]
+      },
+      {
+        "id": "nyc.ubt",
+        "title": "File NYC Unincorporated Business Tax (UBT) return",
+        "category": "filing",
+        "authority": "NYC Department of Finance",
+        "description": "Sole proprietors, partnerships and LLCs taxed as such that carry on a business in New York City file NYC-202 / NYC-204 (4% rate, with credits for some owners).",
+        "frequency": "annual",
+        "deadline": "April 15 (calendar-year filers)",
+        "due": { "type": "fixed", "month": 4, "day": 15 },
+        "url": "https://www.nyc.gov/site/finance/taxes/business-unincorporated-business-tax.page",
+        "appliesTo": ["unincorporated"]
+      },
+      {
+        "id": "nyc.safe-sick-leave",
+        "title": "Provide NYC Earned Safe and Sick Time",
+        "category": "recordkeeping",
+        "authority": "NYC Department of Consumer and Worker Protection",
+        "description": "Employers must provide safe and sick leave, post the required notice and give employees written policy.",
+        "frequency": "ongoing",
+        "url": "https://www.nyc.gov/site/dca/about/paid-sick-leave.page",
+        "appliesTo": ["employees"]
+      }
+    ]
+  },
+  {
+    "state": "CA",
+    "city": "San Francisco",
+    "counties": ["San Francisco"],
+    "items": [
+      {
+        "id": "sf.business-registration",
+        "title": "Renew San Francisco Business Registration Certificate",
+        "category": "license",
+        "authority": "San Francisco Office of the Treasurer & Tax Collector",
+        "description": "Every business operating in San Francisco must register and renew annually; fee depends on gross receipts.",
+        "frequency": "annual",
+        "deadline": "May 31",
+        "due": { "type": "fixed", "month": 5, "day": 31 },
+        "url": "https://sftreasurer.org/business",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "sf.gross-receipts-tax",
+        "title": "File San Francisco gross receipts tax return",
+        "category": "payment",
+        "authority": "San Francisco Office of the Treasurer & Tax Collector",
+        "description": "Businesses over the small-business exemption threshold file the annual gross receipts tax return.",
+        "frequency": "annual",
+        "deadline": "February 28",
+        "due": { "type": "fixed", "month": 2, "day": 28 },
+        "url": "https://sftreasurer.org/business/taxes",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "sf.payroll-expense-tax",
+        "title": "File San Francisco payroll expense tax return",
+        "category": "payment",
+        "authority": "San Francisco Office of the Treasurer & Tax Collector",
+        "description": "Payroll expense tax applies to businesses whose San Francisco payroll exceeds the exclusion amount.",
+        "frequency": "annual",
+        "deadline": "February 28",
+        "due": { "type": "fixed", "month": 2, "day": 28 },
+        "url": "https://sftreasurer.org/business/taxes",
+        "appliesTo": ["employees"]
+      }
+    ]
+  },
+  {
+    "state": "CA",
+    "city": "Los Angeles",
+    "counties": ["Los Angeles"],
+    "items": [
+      {
+        "id": "la.business-tax-registration",
+        "title": "Obtain and renew Los Angeles Business Tax Registration Certificate",
+        "category": "license",
+        "authority": "Los Angeles Office of Finance",
+        "description": "Businesses operating in the City of Los Angeles register for the business tax and renew annually; tax is based on gross receipts and business class.",
+        "frequency": "annual",
+        "url": "https://finance.lacity.gov",
+        "appliesTo": ["all"]
+      }
+    ]
+  },
+  {
+    "state": "IL",
+    "city": "Chicago",
+    "counties": ["Cook"],
+    "items": [
+      {
+        "id": "chicago.business-license",
+        "title": "Obtain Chicago business license",
+        "category": "license",
+        "authority": "Chicago Department of Business Affairs and Consumer Protection (BACP)",
+        "description": "Most Chicago businesses need a license for their activity and location, with zoning and inspection sign-off where applicable.",
+        "frequency": "biennial",
+        "url": "https://www.chicago.gov/city/en/depts/bacp.html",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "chicago.paid-leave",
+        "title": "Provide Chicago Paid Leave and Paid Sick and Safe Leave",
+        "category": "recordkeeping",
+        "authority": "Chicago Department of Business Affairs and Consumer Protection (BACP)",
+        "description": "Employers covered by the Chicago Paid Leave and Paid Sick and Safe Leave Ordinance must provide leave, post notice and keep records.",
+        "frequency": "ongoing",
+        "url": "https://www.chicago.gov/city/en/depts/bacp/supp_info/paid-leave-and-paid-sick-and-safe-leave.html",
+        "appliesTo": ["employees"]
+      }
+    ]
+  },
+  {
+    "state": "WA",
+    "city": "Seattle",
+    "counties": ["King"],
+    "items": [
+      {
+        "id": "seattle.business-license-tax",
+        "title": "Obtain Seattle business license tax certificate and file B&O tax",
+        "category": "license",
+        "authority": "Seattle Department of Finance and Administrative Services",
+        "description": "Seattle requires a business license tax certificate (via the state Business Licensing Service) and a Seattle B&O tax return when taxable revenue exceeds the threshold.",
+        "frequency": "annual",
+        "url": "https://www.seattle.gov/business-regulations/taxes",
+        "appliesTo": ["all"]
+      }
+    ]
+  },
+  {
+    "state": "OR",
+    "city": "Portland",
+    "counties": ["Multnomah"],
+    "items": [
+      {
+        "id": "portland.business-income-taxes",
+        "title": "File Portland and Multnomah County business income taxes",
+        "category": "filing",
+        "authority": "City of Portland Revenue Division",
+        "description": "Businesses with Portland-source income file the City Business License Tax and Multnomah County Business Income Tax through the Revenue Division; Metro supportive housing and Preschool for All taxes apply to higher-income owners.",
+        "frequency": "annual",
+        "url": "https://www.portland.gov/revenue",
+        "appliesTo": ["all"]
+      }
+    ]
+  },
+  {
+    "state": "PA",
+    "city": "Philadelphia",
+    "counties": ["Philadelphia"],
+    "items": [
+      {
+        "id": "philly.commercial-activity-license",
+        "title": "Obtain Philadelphia Commercial Activity License",
+        "category": "license",
+        "authority": "Philadelphia Department of Revenue",
+        "description": "Free license required for any business operating in Philadelphia; required before other city licenses.",
+        "frequency": "annual",
+        "url": "https://www.phila.gov/services/business-self-employed/business-licenses/",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "philly.birt",
+        "title": "File Philadelphia Business Income & Receipts Tax (BIRT)",
+        "category": "payment",
+        "authority": "Philadelphia Department of Revenue",
+        "description": "Annual tax on gross receipts and net income for entities doing business in Philadelphia.",
+        "frequency": "annual",
+        "deadline": "April 15 (calendar-year filers)",
+        "due": { "type": "fixed", "month": 4, "day": 15 },
+        "url": "https://www.phila.gov/services/payments-assistance-taxes/business-taxes/",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "philly.wage-tax",
+        "title": "Withhold and remit Philadelphia Wage Tax",
+        "category": "payment",
+        "authority": "Philadelphia Department of Revenue",
+        "description": "Employers withhold the city wage tax from employees and remit it with the quarterly reconciliation.",
+        "frequency": "quarterly",
+        "url": "https://www.phila.gov/services/payments-assistance-taxes/business-taxes/wage-tax-for-employers/",
+        "appliesTo": ["employees"]
+      }
+    ]
+  },
+  {
+    "state": "CO",
+    "city": "Denver",
+    "counties": ["Denver"],
+    "items": [
+      {
+        "id": "denver.sales-tax-license",
+        "title": "Obtain Denver sales and use tax license",
+        "category": "permit",
+        "authority": "Denver Department of Finance, Treasury Division",
+        "description": "Denver is a home-rule city and administers its own sales and use tax separately from the state.",
+        "frequency": "once",
+        "url": "https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Department-of-Finance/Our-Divisions/Treasury/Business-Taxes",
+        "appliesTo": ["sells_goods"]
+      },
+      {
+        "id": "denver.opt",
+        "title": "Withhold and remit Denver Occupational Privilege Tax (OPT)",
+        "category": "payment",
+        "authority": "Denver Department of Finance, Treasury Division",
+        "description": "Employers and employees pay a monthly occupational privilege tax for work performed in Denver.",
+        "frequency": "monthly",
+        "url": "https://denvergov.org",
+        "appliesTo": ["employees"]
+      }
+    ]
+  }
+]

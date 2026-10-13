@@ -1,0 +1,92 @@
+{
+  "code": "DC",
+  "name": "District of Columbia",
+  "filing": {
+    "name": "DC Department of Licensing and Consumer Protection",
+    "url": "https://dlcp.dc.gov"
+  },
+  "revenue": {
+    "name": "DC Office of Tax and Revenue",
+    "url": "https://otr.cfo.dc.gov"
+  },
+  "labor": {
+    "name": "DC Department of Employment Services",
+    "url": "https://does.dc.gov"
+  },
+  "workersComp": {
+    "agency": "DC DOES Office of Workers' Compensation",
+    "threshold": "1 employee",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "biennial",
+    "fee": "$300",
+    "deadline": "April 1 of every second year",
+    "title": "File Biennial Report",
+    "due": {
+      "type": "fixed",
+      "month": 4,
+      "day": 1,
+      "cycleFrom": "year_after_formation"
+    }
+  },
+  "corpReport": {
+    "frequency": "biennial",
+    "fee": "$300",
+    "deadline": "April 1 of every second year",
+    "title": "File Biennial Report",
+    "due": {
+      "type": "fixed",
+      "month": 4,
+      "day": 1,
+      "cycleFrom": "year_after_formation"
+    }
+  },
+  "entityTax": "Franchise tax (corporations) and Unincorporated Business Franchise Tax",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Sales and use tax registration (FR-500)",
+    "agency": null,
+    "alternative": null
+  },
+  "businessLicense": {
+    "title": "DC Basic Business License (BBL)",
+    "authority": "DC Department of Licensing and Consumer Protection",
+    "fee": "Varies by license category",
+    "renewal": "biennial"
+  },
+  "paidLeave": {
+    "title": "DC Paid Family Leave tax",
+    "agency": "DC Office of Paid Family Leave",
+    "description": "Employers pay a quarterly payroll tax to the Universal Paid Leave Fund.",
+    "minEmployees": 1
+  },
+  "local": {
+    "title": "DC Certificate of Occupancy / Home Occupation permit",
+    "authority": "DC Department of Buildings / DLCP",
+    "description": "The District is both city and state; occupancy and zoning approvals are issued locally."
+  },
+  "paidSickLeave": {
+    "minEmployees": 1
+  },
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "state",
+  "industry": {
+    "contractor": "DC Department of Licensing and Consumer Protection",
+    "realEstate": "DC Real Estate Commission",
+    "alcohol": "DC Alcoholic Beverage and Cannabis Administration",
+    "childCare": "DC Office of the State Superintendent of Education",
+    "health": "DC Health"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": ["https://dlcp.dc.gov/page/corporations-division-fees-limited-liability-company"],
+    "unconfirmed": []
+  }
+}

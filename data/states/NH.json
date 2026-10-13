@@ -1,0 +1,76 @@
+{
+  "code": "NH",
+  "name": "New Hampshire",
+  "filing": {
+    "name": "New Hampshire Secretary of State",
+    "url": "https://www.sos.nh.gov/corporation-ucc-trademark"
+  },
+  "revenue": {
+    "name": "New Hampshire Department of Revenue Administration",
+    "url": "https://www.revenue.nh.gov"
+  },
+  "labor": {
+    "name": "New Hampshire Employment Security",
+    "url": "https://www.nhes.nh.gov"
+  },
+  "workersComp": {
+    "agency": "New Hampshire Department of Labor, Workers' Compensation Division",
+    "threshold": "1 employee",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "$100",
+    "deadline": "April 1",
+    "due": {
+      "type": "fixed",
+      "month": 4,
+      "day": 1
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$100",
+    "deadline": "April 1",
+    "due": {
+      "type": "fixed",
+      "month": 4,
+      "day": 1
+    }
+  },
+  "entityTax": "Business Profits Tax and Business Enterprise Tax",
+  "wageWithholding": false,
+  "salesTax": {
+    "statewide": false,
+    "permit": "Meals and Rentals Tax license",
+    "alternative": "New Hampshire has no general sales tax; restaurants and lodging register for the Meals and Rentals Tax with the DRA.",
+    "agency": null
+  },
+  "local": {
+    "title": "Town/city licenses",
+    "authority": "Town or city clerk",
+    "description": "New Hampshire has no general local business license; local zoning and health permits apply."
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": null,
+  "dbaFiling": "town",
+  "industry": {
+    "contractor": null,
+    "realEstate": "New Hampshire Real Estate Commission",
+    "alcohol": "New Hampshire Liquor Commission",
+    "childCare": "New Hampshire DHHS Child Care Licensing Unit",
+    "health": "New Hampshire Department of Health and Human Services"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": ["https://www.sos.nh.gov/corporations-0/business-faqs"],
+    "unconfirmed": []
+  }
+}

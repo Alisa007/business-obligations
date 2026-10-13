@@ -1,0 +1,85 @@
+{
+  "code": "NY",
+  "name": "New York",
+  "filing": {
+    "name": "New York Department of State, Division of Corporations",
+    "url": "https://dos.ny.gov/division-corporations"
+  },
+  "revenue": {
+    "name": "New York Department of Taxation and Finance",
+    "url": "https://www.tax.ny.gov"
+  },
+  "labor": {
+    "name": "New York State Department of Labor",
+    "url": "https://dol.ny.gov"
+  },
+  "workersComp": {
+    "agency": "New York Workers' Compensation Board",
+    "threshold": "1 employee",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "biennial",
+    "fee": "$9",
+    "deadline": "During the anniversary month every 2 years",
+    "title": "File Biennial Statement",
+    "due": {
+      "type": "anniversary",
+      "point": "end_of_month"
+    }
+  },
+  "corpReport": {
+    "frequency": "biennial",
+    "fee": "$9",
+    "deadline": "During the anniversary month every 2 years",
+    "title": "File Biennial Statement",
+    "due": {
+      "type": "anniversary",
+      "point": "end_of_month"
+    }
+  },
+  "entityTax": "Corporate franchise tax (fixed-dollar minimum, MTA surcharge); LLC filing fee; optional Pass-Through Entity Tax",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "New York Certificate of Authority",
+    "agency": null,
+    "alternative": null
+  },
+  "paidLeave": {
+    "title": "NY Disability Benefits and Paid Family Leave coverage",
+    "agency": "New York Workers' Compensation Board",
+    "description": "Employers must carry DBL and PFL coverage (typically through an insurer).",
+    "minEmployees": 1
+  },
+  "local": {
+    "title": "City licenses (e.g., NYC DCWP)",
+    "authority": "City licensing agency",
+    "description": "New York has no general business license; NYC and other cities license specific industries."
+  },
+  "llcPublication": "New York LLCs must publish notice of formation in two newspapers for six weeks within 120 days and file a Certificate of Publication.",
+  "paidSickLeave": {
+    "minEmployees": 1
+  },
+  "businessLicense": null,
+  "economicNexusUsd": 500000,
+  "dbaFiling": "county",
+  "industry": {
+    "contractor": null,
+    "realEstate": "New York Department of State, Division of Licensing Services",
+    "alcohol": "New York State Liquor Authority",
+    "childCare": "New York Office of Children and Family Services",
+    "health": "New York State Department of Health"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": [
+      "https://dos.ny.gov/biennial-statements-business-corporations-and-limited-liability-companies"
+    ],
+    "unconfirmed": []
+  }
+}

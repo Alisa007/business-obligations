@@ -1,0 +1,79 @@
+{
+  "code": "FL",
+  "name": "Florida",
+  "filing": {
+    "name": "Florida Division of Corporations (Sunbiz)",
+    "url": "https://dos.fl.gov/sunbiz/"
+  },
+  "revenue": {
+    "name": "Florida Department of Revenue",
+    "url": "https://floridarevenue.com"
+  },
+  "labor": {
+    "name": "Florida Department of Revenue (Reemployment Tax)",
+    "url": "https://floridarevenue.com/taxes/taxesfees/Pages/reemployment_tax.aspx"
+  },
+  "workersComp": {
+    "agency": "Florida Division of Workers' Compensation",
+    "threshold": "4 employees (1 in construction)",
+    "trigger": {
+      "minEmployees": 4,
+      "constructionMinEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "$138.75",
+    "deadline": "January 1 – May 1 (late fee $400)",
+    "title": "File Annual Report",
+    "due": {
+      "type": "fixed",
+      "month": 5,
+      "day": 1
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$150 (profit) / $61.25 (nonprofit)",
+    "deadline": "January 1 – May 1 (late fee $400)",
+    "title": "File Annual Report",
+    "due": {
+      "type": "fixed",
+      "month": 5,
+      "day": 1
+    }
+  },
+  "entityTax": "Corporate income tax (C corporations only; no individual income tax)",
+  "wageWithholding": false,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Florida Certificate of Registration (sales and use tax)",
+    "agency": null,
+    "alternative": null
+  },
+  "local": {
+    "title": "County and city Local Business Tax Receipt",
+    "authority": "County tax collector and city",
+    "description": "Florida counties and cities each issue a Local Business Tax Receipt (renewed annually by September 30)."
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "state",
+  "industry": {
+    "contractor": "Florida Construction Industry Licensing Board (DBPR)",
+    "realEstate": "Florida Real Estate Commission",
+    "alcohol": "Florida Division of Alcoholic Beverages and Tobacco",
+    "childCare": "Florida Department of Children and Families",
+    "health": "Florida Agency for Health Care Administration"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": ["https://dos.fl.gov/sunbiz/forms/fees/llc-fees/"],
+    "unconfirmed": []
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "code": "RI",
+  "name": "Rhode Island",
+  "filing": {
+    "name": "Rhode Island Secretary of State",
+    "url": "https://business.sos.ri.gov"
+  },
+  "revenue": {
+    "name": "Rhode Island Division of Taxation",
+    "url": "https://tax.ri.gov"
+  },
+  "labor": {
+    "name": "Rhode Island Department of Labor and Training",
+    "url": "https://dlt.ri.gov"
+  },
+  "workersComp": {
+    "agency": "Rhode Island Department of Labor and Training, Workers' Compensation",
+    "threshold": "1 employee",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "$50",
+    "deadline": "February 1 – May 1 (late fee after May 31)",
+    "due": {
+      "type": "fixed",
+      "month": 5,
+      "day": 1
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$50",
+    "deadline": "February 1 – May 1 (late fee after May 31)",
+    "due": {
+      "type": "fixed",
+      "month": 5,
+      "day": 1
+    }
+  },
+  "entityTax": "Corporate income tax ($400 minimum)",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Rhode Island seller's permit",
+    "agency": null,
+    "alternative": null
+  },
+  "paidLeave": {
+    "title": "Rhode Island TDI/TCI payroll tax",
+    "agency": "Rhode Island Division of Taxation",
+    "description": "Employees fund Temporary Disability/Caregiver Insurance; employers withhold and remit with wage withholding.",
+    "minEmployees": 1
+  },
+  "local": {
+    "title": "City/town licenses",
+    "authority": "City or town clerk",
+    "description": "Local licensing councils issue specific business licenses; no general license."
+  },
+  "paidSickLeave": {
+    "minEmployees": 1
+  },
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "town",
+  "industry": {
+    "contractor": "Rhode Island Contractors' Registration and Licensing Board",
+    "realEstate": "Rhode Island Department of Business Regulation",
+    "alcohol": "Rhode Island DBR Liquor Control Administration (with local boards)",
+    "childCare": "Rhode Island Department of Children, Youth and Families",
+    "health": "Rhode Island Department of Health"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": ["https://www.sos.ri.gov/divisions/business-services/ri-business/file-your-annual-report"],
+    "unconfirmed": []
+  }
+}

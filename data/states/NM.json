@@ -1,0 +1,73 @@
+{
+  "code": "NM",
+  "name": "New Mexico",
+  "filing": {
+    "name": "New Mexico Secretary of State",
+    "url": "https://www.sos.nm.gov/business-services"
+  },
+  "revenue": {
+    "name": "New Mexico Taxation and Revenue Department",
+    "url": "https://www.tax.newmexico.gov"
+  },
+  "labor": {
+    "name": "New Mexico Department of Workforce Solutions",
+    "url": "https://www.dws.state.nm.us"
+  },
+  "workersComp": {
+    "agency": "New Mexico Workers' Compensation Administration",
+    "threshold": "3 employees",
+    "trigger": {
+      "minEmployees": 3
+    },
+    "stateFund": false
+  },
+  "llcReport": null,
+  "corpReport": {
+    "frequency": "biennial",
+    "fee": "$25",
+    "deadline": "April 15, every 2 years (aligned with the federal corporate return)",
+    "title": "File Biennial Report",
+    "due": {
+      "type": "fixed",
+      "month": 4,
+      "day": 15
+    }
+  },
+  "entityTax": "Corporate income tax and gross receipts tax",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "New Mexico CRS (Combined Reporting System) registration",
+    "agency": {
+      "name": "New Mexico Taxation and Revenue Department",
+      "url": "https://www.tax.newmexico.gov"
+    },
+    "alternative": null
+  },
+  "local": {
+    "title": "City/county business registration",
+    "authority": "City or county",
+    "description": "Albuquerque, Santa Fe and others require local business registration."
+  },
+  "paidLeave": null,
+  "paidSickLeave": {
+    "minEmployees": 1
+  },
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "none",
+  "industry": {
+    "contractor": "New Mexico Construction Industries Division",
+    "realEstate": "New Mexico Real Estate Commission",
+    "alcohol": "New Mexico Alcohol and Gaming Division",
+    "childCare": "New Mexico Early Childhood Education and Care Department",
+    "health": "New Mexico Department of Health"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": ["https://www.sos.nm.gov/business-services/"],
+    "unconfirmed": ["llcReport"]
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "code": "IL",
+  "name": "Illinois",
+  "filing": {
+    "name": "Illinois Secretary of State, Business Services",
+    "url": "https://www.ilsos.gov/departments/business_services"
+  },
+  "revenue": {
+    "name": "Illinois Department of Revenue",
+    "url": "https://tax.illinois.gov"
+  },
+  "labor": {
+    "name": "Illinois Department of Employment Security",
+    "url": "https://ides.illinois.gov"
+  },
+  "workersComp": {
+    "agency": "Illinois Workers' Compensation Commission",
+    "threshold": "1 employee",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "$75",
+    "deadline": "Before the first day of the anniversary month",
+    "title": "File Annual Report",
+    "due": {
+      "type": "anniversary",
+      "point": "start_of_month"
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$75",
+    "deadline": "Before the first day of the anniversary month",
+    "title": "File Annual Report",
+    "due": {
+      "type": "anniversary",
+      "point": "start_of_month"
+    }
+  },
+  "entityTax": "Corporate income tax; Personal Property Replacement Tax on partnerships and S corporations",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Illinois Certificate of Registration (Retailers' Occupation Tax)",
+    "agency": null,
+    "alternative": null
+  },
+  "local": {
+    "title": "Municipal business license",
+    "authority": "City/village clerk",
+    "description": "Chicago and many municipalities require business licenses (Chicago: BACP)."
+  },
+  "paidLeave": null,
+  "paidSickLeave": {
+    "minEmployees": 1
+  },
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "county",
+  "industry": {
+    "contractor": null,
+    "realEstate": "Illinois Department of Financial and Professional Regulation",
+    "alcohol": "Illinois Liquor Control Commission",
+    "childCare": "Illinois Department of Children and Family Services",
+    "health": "Illinois Department of Public Health"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": ["https://www.ilsos.gov/departments/business-services/annual-reports/llc-instructions.html"],
+    "unconfirmed": []
+  }
+}

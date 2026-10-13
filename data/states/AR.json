@@ -1,0 +1,78 @@
+{
+  "code": "AR",
+  "name": "Arkansas",
+  "filing": {
+    "name": "Arkansas Secretary of State",
+    "url": "https://www.sos.arkansas.gov/business-commercial-services-bcs"
+  },
+  "revenue": {
+    "name": "Arkansas Department of Finance and Administration",
+    "url": "https://www.dfa.arkansas.gov"
+  },
+  "labor": {
+    "name": "Arkansas Division of Workforce Services",
+    "url": "https://www.dws.arkansas.gov"
+  },
+  "workersComp": {
+    "agency": "Arkansas Workers' Compensation Commission",
+    "threshold": "3 employees",
+    "trigger": {
+      "minEmployees": 3
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "$150",
+    "deadline": "May 1",
+    "title": "File Annual Franchise Tax Report",
+    "due": {
+      "type": "fixed",
+      "month": 5,
+      "day": 1
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$150 minimum franchise tax",
+    "deadline": "May 1",
+    "title": "File Annual Franchise Tax Report",
+    "due": {
+      "type": "fixed",
+      "month": 5,
+      "day": 1
+    }
+  },
+  "entityTax": "Corporate income tax and franchise tax",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Arkansas sales tax permit",
+    "agency": null,
+    "alternative": null
+  },
+  "local": {
+    "title": "City business license",
+    "authority": "City clerk",
+    "description": "Many Arkansas municipalities require a local business license."
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "county",
+  "industry": {
+    "contractor": "Arkansas Contractors Licensing Board",
+    "realEstate": "Arkansas Real Estate Commission",
+    "alcohol": "Arkansas Alcoholic Beverage Control Division",
+    "childCare": "Arkansas DHS Division of Child Care and Early Childhood Education",
+    "health": "Arkansas Department of Health"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": ["https://www.sos.arkansas.gov/uploads/bcs/LLC1_FT_2026.pdf"],
+    "unconfirmed": []
+  }
+}

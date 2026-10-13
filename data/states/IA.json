@@ -1,0 +1,80 @@
+{
+  "code": "IA",
+  "name": "Iowa",
+  "filing": {
+    "name": "Iowa Secretary of State",
+    "url": "https://sos.iowa.gov/business/"
+  },
+  "revenue": {
+    "name": "Iowa Department of Revenue",
+    "url": "https://tax.iowa.gov"
+  },
+  "labor": {
+    "name": "Iowa Workforce Development",
+    "url": "https://workforce.iowa.gov"
+  },
+  "workersComp": {
+    "agency": "Iowa Division of Workers' Compensation",
+    "threshold": "1 employee",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "biennial",
+    "fee": "$30 online ($45 paper)",
+    "deadline": "April 1 of odd-numbered years",
+    "title": "File Biennial Report",
+    "due": {
+      "type": "fixed",
+      "month": 4,
+      "day": 1,
+      "parity": "odd"
+    }
+  },
+  "corpReport": {
+    "frequency": "biennial",
+    "fee": "$60",
+    "deadline": "April 1 of even-numbered years",
+    "title": "File Biennial Report",
+    "due": {
+      "type": "fixed",
+      "month": 4,
+      "day": 1,
+      "parity": "even"
+    }
+  },
+  "entityTax": "Corporate income tax",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Iowa sales tax permit",
+    "agency": null,
+    "alternative": null
+  },
+  "local": {
+    "title": "Local permits",
+    "authority": "City or county",
+    "description": "Iowa has no general local business license; zoning and industry permits apply."
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "state",
+  "industry": {
+    "contractor": "Iowa Division of Labor (contractor registration)",
+    "realEstate": "Iowa Real Estate Commission",
+    "alcohol": "Iowa Alcoholic Beverages Division",
+    "childCare": "Iowa Department of Health and Human Services",
+    "health": "Iowa Department of Inspections, Appeals, and Licensing"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": ["https://sos.iowa.gov/businesses/business-entity-forms-and-fees"],
+    "unconfirmed": []
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "code": "MS",
+  "name": "Mississippi",
+  "filing": {
+    "name": "Mississippi Secretary of State",
+    "url": "https://www.sos.ms.gov/business-services"
+  },
+  "revenue": {
+    "name": "Mississippi Department of Revenue",
+    "url": "https://www.dor.ms.gov"
+  },
+  "labor": {
+    "name": "Mississippi Department of Employment Security",
+    "url": "https://mdes.ms.gov"
+  },
+  "workersComp": {
+    "agency": "Mississippi Workers' Compensation Commission",
+    "threshold": "5 employees",
+    "trigger": {
+      "minEmployees": 5
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "No state fee",
+    "deadline": "April 15 (calendar-year entities)",
+    "due": {
+      "type": "fixed",
+      "month": 4,
+      "day": 15
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$25",
+    "deadline": "April 15 (calendar-year entities)",
+    "due": {
+      "type": "fixed",
+      "month": 4,
+      "day": 15
+    }
+  },
+  "entityTax": "Corporate income tax and franchise tax (franchise tax being phased out)",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Mississippi sales tax permit",
+    "agency": null,
+    "alternative": null
+  },
+  "local": {
+    "title": "Privilege license",
+    "authority": "Municipal clerk / State privilege license (MS DOR)",
+    "description": "Mississippi cities and the state issue privilege licenses for businesses and professions."
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 250000,
+  "dbaFiling": "state",
+  "industry": {
+    "contractor": "Mississippi State Board of Contractors",
+    "realEstate": "Mississippi Real Estate Commission",
+    "alcohol": "Mississippi Department of Revenue, Alcoholic Beverage Control",
+    "childCare": "Mississippi State Department of Health",
+    "health": "Mississippi State Department of Health"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": ["https://www.sos.ms.gov/business-services/annual-reports"],
+    "unconfirmed": []
+  }
+}

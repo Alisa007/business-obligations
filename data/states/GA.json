@@ -1,0 +1,78 @@
+{
+  "code": "GA",
+  "name": "Georgia",
+  "filing": {
+    "name": "Georgia Secretary of State, Corporations Division",
+    "url": "https://sos.ga.gov/corporations-division"
+  },
+  "revenue": {
+    "name": "Georgia Department of Revenue",
+    "url": "https://dor.georgia.gov"
+  },
+  "labor": {
+    "name": "Georgia Department of Labor",
+    "url": "https://dol.georgia.gov"
+  },
+  "workersComp": {
+    "agency": "Georgia State Board of Workers' Compensation",
+    "threshold": "3 employees",
+    "trigger": {
+      "minEmployees": 3
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "$50 ($60 online including service charge)",
+    "deadline": "January 1 – April 1",
+    "title": "File Annual Registration",
+    "due": {
+      "type": "fixed",
+      "month": 4,
+      "day": 1
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$50 ($60 online including service charge)",
+    "deadline": "January 1 – April 1",
+    "title": "File Annual Registration",
+    "due": {
+      "type": "fixed",
+      "month": 4,
+      "day": 1
+    }
+  },
+  "entityTax": "Corporate income tax and net worth tax",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Georgia sales tax number (Georgia Tax Center)",
+    "agency": null,
+    "alternative": null
+  },
+  "local": {
+    "title": "City or county occupation tax certificate",
+    "authority": "City or county business license office",
+    "description": "Georgia local governments issue business/occupation tax certificates."
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "county",
+  "industry": {
+    "contractor": "Georgia State Licensing Board for Residential and General Contractors",
+    "realEstate": "Georgia Real Estate Commission",
+    "alcohol": "Georgia Department of Revenue, Alcohol and Tobacco Division",
+    "childCare": "Georgia Department of Early Care and Learning",
+    "health": "Georgia Department of Community Health"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": ["https://sos.ga.gov/how-to-guide/how-file-annual-registration"],
+    "unconfirmed": []
+  }
+}

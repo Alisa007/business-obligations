@@ -1,0 +1,76 @@
+{
+  "code": "KY",
+  "name": "Kentucky",
+  "filing": {
+    "name": "Kentucky Secretary of State",
+    "url": "https://www.sos.ky.gov/bus/business-filings"
+  },
+  "revenue": {
+    "name": "Kentucky Department of Revenue",
+    "url": "https://revenue.ky.gov"
+  },
+  "labor": {
+    "name": "Kentucky Office of Unemployment Insurance",
+    "url": "https://kcc.ky.gov"
+  },
+  "workersComp": {
+    "agency": "Kentucky Department of Workers' Claims",
+    "threshold": "1 employee",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "$15",
+    "deadline": "June 30",
+    "due": {
+      "type": "fixed",
+      "month": 6,
+      "day": 30
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$15",
+    "deadline": "June 30",
+    "due": {
+      "type": "fixed",
+      "month": 6,
+      "day": 30
+    }
+  },
+  "entityTax": "Corporation income tax and Limited Liability Entity Tax (LLET)",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Kentucky sales and use tax permit",
+    "agency": null,
+    "alternative": null
+  },
+  "local": {
+    "title": "City/county occupational license",
+    "authority": "City or county occupational tax office",
+    "description": "Local governments levy occupational license taxes on net profits and payroll."
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "county",
+  "industry": {
+    "contractor": null,
+    "realEstate": "Kentucky Real Estate Commission",
+    "alcohol": "Kentucky Department of Alcoholic Beverage Control",
+    "childCare": "Kentucky Cabinet for Health and Family Services",
+    "health": "Kentucky Office of Inspector General"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": ["https://www.sos.ky.gov/bus/business-filings/Pages/Annual-Reports.aspx"],
+    "unconfirmed": []
+  }
+}

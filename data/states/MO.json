@@ -1,0 +1,68 @@
+{
+  "code": "MO",
+  "name": "Missouri",
+  "filing": {
+    "name": "Missouri Secretary of State",
+    "url": "https://www.sos.mo.gov/business"
+  },
+  "revenue": {
+    "name": "Missouri Department of Revenue",
+    "url": "https://dor.mo.gov"
+  },
+  "labor": {
+    "name": "Missouri Division of Employment Security",
+    "url": "https://labor.mo.gov/DES"
+  },
+  "workersComp": {
+    "agency": "Missouri Division of Workers' Compensation",
+    "threshold": "5 employees (1 in construction)",
+    "trigger": {
+      "minEmployees": 5,
+      "constructionMinEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": null,
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$20 online ($45 paper)",
+    "deadline": "End of the month of incorporation or qualification",
+    "title": "File Annual Registration Report",
+    "due": {
+      "type": "anniversary",
+      "point": "end_of_month"
+    }
+  },
+  "entityTax": "Corporate income tax",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Missouri sales tax license",
+    "agency": null,
+    "alternative": null
+  },
+  "local": {
+    "title": "City business license",
+    "authority": "City collector / county",
+    "description": "Kansas City, St. Louis and many cities require business licenses and occupational taxes."
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "state",
+  "industry": {
+    "contractor": null,
+    "realEstate": "Missouri Real Estate Commission",
+    "alcohol": "Missouri Division of Alcohol and Tobacco Control",
+    "childCare": "Missouri Department of Health and Senior Services",
+    "health": "Missouri Department of Health and Senior Services"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": ["https://www.sos.mo.gov/business/faqs"],
+    "unconfirmed": []
+  }
+}

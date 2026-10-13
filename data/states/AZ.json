@@ -1,0 +1,67 @@
+{
+  "code": "AZ",
+  "name": "Arizona",
+  "filing": {
+    "name": "Arizona Corporation Commission",
+    "url": "https://azcc.gov/corporations"
+  },
+  "revenue": {
+    "name": "Arizona Department of Revenue",
+    "url": "https://azdor.gov"
+  },
+  "labor": {
+    "name": "Arizona Department of Economic Security",
+    "url": "https://des.az.gov"
+  },
+  "workersComp": {
+    "agency": "Industrial Commission of Arizona",
+    "threshold": "1 employee",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": null,
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$45",
+    "deadline": "On or before the anniversary of incorporation"
+  },
+  "entityTax": "Corporate income tax; S corporations and partnerships file informational returns",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Transaction Privilege Tax (TPT) license",
+    "agency": {
+      "name": "Arizona Department of Revenue",
+      "url": "https://azdor.gov"
+    },
+    "alternative": null
+  },
+  "local": {
+    "title": "City TPT license / business license",
+    "authority": "City or county",
+    "description": "Many Arizona cities require their own TPT licence (or program license) and local business licenses; some cities self-administer TPT."
+  },
+  "llcPublication": "LLCs formed in Maricopa or Pima County must publish a notice of formation in a county newspaper within 60 days.",
+  "paidLeave": null,
+  "paidSickLeave": {
+    "minEmployees": 1
+  },
+  "businessLicense": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "state",
+  "industry": {
+    "contractor": "Arizona Registrar of Contractors",
+    "realEstate": "Arizona Department of Real Estate",
+    "alcohol": "Arizona Department of Liquor Licenses and Control",
+    "childCare": "Arizona Department of Health Services",
+    "health": "Arizona Department of Health Services"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": ["https://azcc.gov/corporations/fee-and-payment-info"],
+    "unconfirmed": []
+  }
+}

@@ -1,6 +1,17 @@
-export * from "./types.js";
-export { getComplianceItems, resolveProfile, defaultRules, InvalidProfileError } from "./engine.js";
-export type { EvaluateOptions } from "./engine.js";
-export { stateFromZip } from "./zip.js";
-export { STATES } from "./data/states.js";
-export type { StateInfo } from "./data/types.js";
+export * from "./types";
+export {
+  getComplianceItems,
+  evaluate,
+  listRules,
+  resolveProfile,
+  defaultRules,
+  RULE_PACKS,
+  DATA_VERSION,
+  DISCLAIMER,
+  InvalidProfileError,
+} from "./engine";
+export type { EvaluateOptions, ComplianceResult } from "./engine";
+export { stateFromZip } from "./zip";
+export { nextDueDate } from "./dates";
+export { STATES, STATE_CODES } from "./data";
+export type { StateInfo, ReportRule, WcTrigger, IndustryAuthorities, LocalJurisdiction } from "./data/types";

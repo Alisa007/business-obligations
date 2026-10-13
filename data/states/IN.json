@@ -1,0 +1,76 @@
+{
+  "code": "IN",
+  "name": "Indiana",
+  "filing": {
+    "name": "Indiana Secretary of State (INBiz)",
+    "url": "https://inbiz.in.gov"
+  },
+  "revenue": {
+    "name": "Indiana Department of Revenue",
+    "url": "https://www.in.gov/dor"
+  },
+  "labor": {
+    "name": "Indiana Department of Workforce Development",
+    "url": "https://www.in.gov/dwd"
+  },
+  "workersComp": {
+    "agency": "Indiana Worker's Compensation Board",
+    "threshold": "1 employee",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "biennial",
+    "fee": "$31 (online)",
+    "deadline": "Last day of the anniversary month, every 2 years",
+    "title": "File Business Entity Report",
+    "due": {
+      "type": "anniversary",
+      "point": "end_of_month"
+    }
+  },
+  "corpReport": {
+    "frequency": "biennial",
+    "fee": "$31 (online)",
+    "deadline": "Last day of the anniversary month, every 2 years",
+    "title": "File Business Entity Report",
+    "due": {
+      "type": "anniversary",
+      "point": "end_of_month"
+    }
+  },
+  "entityTax": "Corporate adjusted gross income tax",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Registered Retail Merchant Certificate",
+    "agency": null,
+    "alternative": null
+  },
+  "local": {
+    "title": "Local permits",
+    "authority": "City or county",
+    "description": "Indiana has no general local business license; local zoning/occupancy and industry permits apply."
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "state",
+  "industry": {
+    "contractor": null,
+    "realEstate": "Indiana Professional Licensing Agency",
+    "alcohol": "Indiana Alcohol and Tobacco Commission",
+    "childCare": "Indiana FSSA Bureau of Child Care",
+    "health": "Indiana Department of Health"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": ["https://www.in.gov/sos/business/business-entity-reports"],
+    "unconfirmed": []
+  }
+}

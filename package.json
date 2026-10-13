@@ -1,25 +1,43 @@
 {
   "name": "compliance-rules-engine",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Rules engine that returns US legal compliance items (licenses, permits, filings, payments) for a business profile",
   "license": "MIT",
   "type": "module",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist",
+    "schema",
+    "data/states",
+    "data/local.json",
     "LICENSE",
-    "README.md"
+    "NOTICE",
+    "README.md",
+    "CHANGELOG.md"
   ],
   "scripts": {
-    "build": "tsc -p tsconfig.build.json",
+    "build": "tsup",
     "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "test": "vitest run",
-    "prepublishOnly": "npm run build && npm test"
+    "test:update": "vitest run -u",
+    "check": "npm run typecheck && npm run lint && npm run format:check && npm test",
+    "prepublishOnly": "npm run check && npm run build"
   },
   "devDependencies": {
+    "@eslint/js": "^9.39.5",
     "@types/node": "^22.0.0",
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
+    "eslint": "^9.39.5",
+    "globals": "^17.13.0",
+    "prettier": "^3.9.10",
+    "tsup": "^8.5.1",
     "typescript": "^5.6.0",
+    "typescript-eslint": "^8.71.2",
     "vitest": "^2.1.0"
   },
   "author": "Alisa Belousova",
@@ -46,8 +64,28 @@
   },
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
-    }
-  }
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./zip": {
+      "import": {
+        "types": "./dist/zip.d.ts",
+        "default": "./dist/zip.js"
+      },
+      "require": {
+        "types": "./dist/zip.d.cts",
+        "default": "./dist/zip.cjs"
+      }
+    },
+    "./schema/*": "./schema/*",
+    "./package.json": "./package.json"
+  },
+  "module": "./dist/index.js",
+  "sideEffects": false
 }

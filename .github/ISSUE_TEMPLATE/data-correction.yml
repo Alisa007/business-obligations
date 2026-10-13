@@ -1,0 +1,31 @@
+name: Data correction
+description: A fee, deadline, authority or threshold is wrong or out of date
+labels: [data]
+body:
+  - type: input
+    id: state
+    attributes:
+      label: State / city
+      placeholder: "e.g. TX or Portland, OR"
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: What the library says
+      description: Item id and the field that is wrong
+    validations:
+      required: true
+  - type: textarea
+    id: correct
+    attributes:
+      label: What is correct
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Official source URL
+      description: The agency page or statute (not a third-party guide)
+    validations:
+      required: true

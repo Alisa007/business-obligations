@@ -1,0 +1,80 @@
+{
+  "code": "PA",
+  "name": "Pennsylvania",
+  "filing": {
+    "name": "Pennsylvania Department of State, Bureau of Corporations",
+    "url": "https://www.dos.pa.gov/BusinessCharities"
+  },
+  "revenue": {
+    "name": "Pennsylvania Department of Revenue",
+    "url": "https://www.revenue.pa.gov"
+  },
+  "labor": {
+    "name": "Pennsylvania Department of Labor & Industry (UC)",
+    "url": "https://www.uc.pa.gov"
+  },
+  "workersComp": {
+    "agency": "Pennsylvania Bureau of Workers' Compensation",
+    "threshold": "1 employee",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "$7 ($0 for not-for-profit LLCs)",
+    "deadline": "September 30",
+    "title": "File Annual Report",
+    "due": {
+      "type": "fixed",
+      "month": 9,
+      "day": 30
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$7 ($0 for nonprofit corporations)",
+    "deadline": "June 30",
+    "title": "File Annual Report",
+    "due": {
+      "type": "fixed",
+      "month": 6,
+      "day": 30
+    }
+  },
+  "entityTax": "Corporate net income tax",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Pennsylvania sales tax license (PA-100)",
+    "agency": null,
+    "alternative": null
+  },
+  "local": {
+    "title": "Local earned income tax and business privilege registration",
+    "authority": "Municipality / tax collector (Philadelphia: Commercial Activity License)",
+    "description": "Employers withhold local Earned Income Tax and Local Services Tax; Philadelphia requires a Commercial Activity License."
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "state",
+  "industry": {
+    "contractor": "Pennsylvania Office of Attorney General (home improvement contractor registration)",
+    "realEstate": "Pennsylvania State Real Estate Commission",
+    "alcohol": "Pennsylvania Liquor Control Board",
+    "childCare": "Pennsylvania DHS, Office of Child Development and Early Learning",
+    "health": "Pennsylvania Department of Health"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": [
+      "https://www.pa.gov/agencies/dos/programs/business/types-of-filings-and-registrations/annual-reports"
+    ],
+    "unconfirmed": []
+  }
+}

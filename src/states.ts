@@ -1,4 +1,4 @@
-import { STATES } from "./data/states.js";
+import { STATES } from "./data/states";
 
 export const STATE_NAMES: Record<string, string> = Object.fromEntries(
   Object.entries(STATES).map(([code, s]) => [code, s.name]),

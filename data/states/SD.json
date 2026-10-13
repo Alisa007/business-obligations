@@ -1,0 +1,74 @@
+{
+  "code": "SD",
+  "name": "South Dakota",
+  "filing": {
+    "name": "South Dakota Secretary of State",
+    "url": "https://sdsos.gov/business-services"
+  },
+  "revenue": {
+    "name": "South Dakota Department of Revenue",
+    "url": "https://dor.sd.gov"
+  },
+  "labor": {
+    "name": "South Dakota Department of Labor & Regulation",
+    "url": "https://dlr.sd.gov"
+  },
+  "workersComp": {
+    "agency": "South Dakota Division of Labor and Management",
+    "threshold": "1 employee",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "$55 online ($70 paper)",
+    "deadline": "First day of the anniversary month",
+    "due": {
+      "type": "anniversary",
+      "point": "start_of_month"
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$55 online ($70 paper)",
+    "deadline": "First day of the anniversary month",
+    "due": {
+      "type": "anniversary",
+      "point": "start_of_month"
+    }
+  },
+  "entityTax": "No corporate or individual income tax (financial institution franchise tax only)",
+  "wageWithholding": false,
+  "salesTax": {
+    "statewide": true,
+    "permit": "South Dakota sales tax license",
+    "agency": null,
+    "alternative": null
+  },
+  "local": {
+    "title": "City business license",
+    "authority": "City finance office",
+    "description": "Some South Dakota cities require licenses for specific businesses."
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "state",
+  "industry": {
+    "contractor": null,
+    "realEstate": "South Dakota Real Estate Commission",
+    "alcohol": "South Dakota Department of Revenue (with local licensing)",
+    "childCare": "South Dakota Department of Social Services",
+    "health": "South Dakota Department of Health"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": ["https://sdsos.gov/general-information/filing-fees.aspx"],
+    "unconfirmed": []
+  }
+}

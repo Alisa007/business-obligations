@@ -1,0 +1,64 @@
+{
+  "code": "SC",
+  "name": "South Carolina",
+  "filing": {
+    "name": "South Carolina Secretary of State",
+    "url": "https://sos.sc.gov/online-filings"
+  },
+  "revenue": {
+    "name": "South Carolina Department of Revenue",
+    "url": "https://dor.sc.gov"
+  },
+  "labor": {
+    "name": "South Carolina Department of Employment and Workforce",
+    "url": "https://dew.sc.gov"
+  },
+  "workersComp": {
+    "agency": "South Carolina Workers' Compensation Commission",
+    "threshold": "4 employees",
+    "trigger": {
+      "minEmployees": 4
+    },
+    "stateFund": false
+  },
+  "llcReport": null,
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "License fee: 0.1% of capital stock and paid-in surplus plus $15 (minimum $25)",
+    "deadline": "With the corporate income tax return (April 15)",
+    "title": "File Annual Report and Corporate License Fee (with SCDOR)"
+  },
+  "entityTax": "Corporate income tax and corporate license fee",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "South Carolina retail license",
+    "agency": null,
+    "alternative": null
+  },
+  "local": {
+    "title": "Municipal or county business license",
+    "authority": "City or county business license office",
+    "description": "Every South Carolina business needs a local business license under the Business License Tax Standardization Act."
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "none",
+  "industry": {
+    "contractor": "South Carolina Contractors' Licensing Board",
+    "realEstate": "South Carolina Real Estate Commission",
+    "alcohol": "South Carolina Department of Revenue, Alcohol Beverage Licensing",
+    "childCare": "South Carolina Department of Social Services",
+    "health": "South Carolina Department of Public Health"
+  },
+  "llcReportAppliesWhenTaxedAsCorp": true,
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": ["https://dor.sc.gov/business-income-taxes/corporate/corporate-faqs"],
+    "unconfirmed": []
+  }
+}

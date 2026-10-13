@@ -1,0 +1,78 @@
+{
+  "code": "CA",
+  "name": "California",
+  "filing": {
+    "name": "California Secretary of State",
+    "url": "https://bizfileonline.sos.ca.gov"
+  },
+  "revenue": {
+    "name": "California Franchise Tax Board",
+    "url": "https://www.ftb.ca.gov"
+  },
+  "labor": {
+    "name": "California Employment Development Department",
+    "url": "https://edd.ca.gov"
+  },
+  "workersComp": {
+    "agency": "California Division of Workers' Compensation",
+    "threshold": "1 employee",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "biennial",
+    "fee": "$20",
+    "deadline": "Within the anniversary month and the 5 months before it, every 2 years",
+    "title": "File Statement of Information"
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$25",
+    "deadline": "Within the anniversary month and the 5 months before it",
+    "title": "File Statement of Information"
+  },
+  "entityTax": "Corporation franchise/income tax; $800 minimum franchise tax for LLCs and corporations",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Seller's permit",
+    "agency": {
+      "name": "California Department of Tax and Fee Administration",
+      "url": "https://www.cdtfa.ca.gov"
+    },
+    "alternative": null
+  },
+  "paidLeave": {
+    "title": "State Disability Insurance and Paid Family Leave (employee-funded)",
+    "agency": "California EDD",
+    "description": "Employers withhold SDI from wages and report it with the quarterly payroll return (DE 9).",
+    "minEmployees": 1
+  },
+  "local": {
+    "title": "City business tax certificate",
+    "authority": "City finance/business tax office",
+    "description": "Every California city levies a business license tax; unincorporated areas use the county. Fictitious names are filed with the county clerk."
+  },
+  "paidSickLeave": {
+    "minEmployees": 1
+  },
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 500000,
+  "dbaFiling": "county",
+  "industry": {
+    "contractor": "California Contractors State License Board",
+    "realEstate": "California Department of Real Estate",
+    "alcohol": "California Department of Alcoholic Beverage Control",
+    "childCare": "California Department of Social Services, Community Care Licensing",
+    "health": "California Department of Public Health"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": ["https://www.sos.ca.gov/business-programs/business-entities/faqs"],
+    "unconfirmed": []
+  }
+}

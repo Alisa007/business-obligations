@@ -1,10 +1,22 @@
 export type EntityType =
   | "sole_proprietorship"
+  /** General partnership (no state registration). */
   | "partnership"
   | "llc"
+  /** Professional LLC. */
+  | "pllc"
+  /** Limited partnership. */
+  | "lp"
+  /** Limited liability partnership. */
+  | "llp"
   | "c_corp"
   | "s_corp"
+  /** Professional corporation. */
+  | "pc"
+  | "benefit_corp"
   | "nonprofit";
+
+export type Country = "US";
 
 /** Federal tax classification of an LLC (ignored for other entity types). */
 export type LlcTaxClassification = "disregarded" | "partnership" | "s_corp" | "c_corp";
@@ -49,6 +61,8 @@ export interface MultiStateActivity {
 }
 
 export interface BusinessProfile {
+  /** Jurisdiction rule pack. Only "US" exists today; defaults to "US". */
+  country?: Country;
   entityType: EntityType;
   /** 5-digit ZIP of the principal place of business. */
   zip: string;
@@ -62,7 +76,14 @@ export interface BusinessProfile {
   formationState?: string;
   /** Activity in other states: employees, property or sales. */
   multistate?: MultiStateActivity[];
+  /** Federal tax classification of an LLC or PLLC. */
   llcTaxClassification?: LlcTaxClassification;
+  /** Professional and benefit corporations: true when an S election is in effect. */
+  sCorpElection?: boolean;
+  /** ISO date (YYYY-MM-DD) the entity was formed; enables anniversary-based due dates. */
+  formationDate?: string;
+  /** Fiscal year-end month, 1–12. Defaults to 12 (calendar year). */
+  fiscalYearEndMonth?: number;
   /** Defaults to true. Set false for a business that is still being set up. */
   isFormed?: boolean;
   industry?: Industry;
@@ -84,6 +105,8 @@ export interface BusinessProfile {
   homeBased?: boolean;
   /** Operates under a name different from the legal name. */
   usesTradeName?: boolean;
+  /** Name of a licensed profession practiced through a PLLC or professional corporation, e.g. "attorney". */
+  profession?: string;
   /** Federal tax-exempt status (501(c)) already granted. */
   hasTaxExemptStatus?: boolean;
   /** Annual gross receipts, USD. Defaults to 0. */
@@ -93,24 +116,14 @@ export interface BusinessProfile {
 }
 
 export type ItemCategory =
-  | "license"
-  | "permit"
-  | "registration"
-  | "filing"
-  | "payment"
-  | "insurance"
-  | "recordkeeping";
+  "license" | "permit" | "registration" | "filing" | "payment" | "insurance" | "recordkeeping";
+
+import type { Due } from "./data/types";
+export type { Due } from "./data/types";
 
 export type Jurisdiction = "federal" | "state" | "county" | "city";
 
-export type Frequency =
-  | "once"
-  | "annual"
-  | "biennial"
-  | "quarterly"
-  | "monthly"
-  | "per_event"
-  | "ongoing";
+export type Frequency = "once" | "annual" | "biennial" | "quarterly" | "monthly" | "per_event" | "ongoing";
 
 export interface ComplianceItem {
   id: string;
@@ -125,6 +138,10 @@ export interface ComplianceItem {
   frequency: Frequency;
   /** Human-readable deadline, e.g. "April 15". */
   deadline?: string;
+  /** Machine-readable deadline rule, when one can be expressed. */
+  due?: Due;
+  /** Next due date (YYYY-MM-DD) on or after the evaluation date, when computable. */
+  nextDue?: string;
   /** Why the engine returned this item. */
   reason: string;
   url?: string;
@@ -140,6 +157,8 @@ export interface Presence {
 }
 
 export interface ResolvedProfile extends BusinessProfile {
+  country: Country;
+  fiscalYearEndMonth: number;
   state: string;
   formationState: string;
   isFormed: boolean;
@@ -160,10 +179,18 @@ export interface ResolvedProfile extends BusinessProfile {
   taxTreatment: "sole_prop" | "partnership" | "s_corp" | "c_corp" | "nonprofit";
 }
 
-export type ItemDraft = Omit<ComplianceItem, "id">;
+/** A rule's output before the engine assigns an id and computes due dates. */
+export type ItemDraft = Omit<ComplianceItem, "id" | "nextDue"> & {
+  /** Distinguishes several items from one rule in the same state; becomes part of the id. */
+  key?: string;
+};
 
 export interface Rule {
   id: string;
+  /** What the rule covers, for documentation and introspection. */
+  description: string;
+  /** Profile fields the rule reads. */
+  inputs: Array<keyof BusinessProfile | "state">;
   when: (p: ResolvedProfile) => boolean;
   items: (p: ResolvedProfile) => ItemDraft | ItemDraft[];
 }

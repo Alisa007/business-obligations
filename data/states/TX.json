@@ -1,0 +1,79 @@
+{
+  "code": "TX",
+  "name": "Texas",
+  "filing": {
+    "name": "Texas Secretary of State",
+    "url": "https://www.sos.state.tx.us/corp/index.shtml"
+  },
+  "revenue": {
+    "name": "Texas Comptroller of Public Accounts",
+    "url": "https://comptroller.texas.gov"
+  },
+  "labor": {
+    "name": "Texas Workforce Commission",
+    "url": "https://www.twc.texas.gov"
+  },
+  "workersComp": {
+    "agency": "Texas Department of Insurance, Division of Workers' Compensation",
+    "threshold": "Optional for most private employers (mandatory for public contractors)",
+    "trigger": {
+      "minEmployees": 1,
+      "elective": true
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "No filing fee; no tax due at or below $2.65 million annualized revenue (2026 report)",
+    "deadline": "May 15",
+    "title": "File Franchise Tax Report and Public Information Report",
+    "due": {
+      "type": "fixed",
+      "month": 5,
+      "day": 15
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "No filing fee; no tax due at or below $2.65 million annualized revenue (2026 report)",
+    "deadline": "May 15",
+    "title": "File Franchise Tax Report and Public Information Report",
+    "due": {
+      "type": "fixed",
+      "month": 5,
+      "day": 15
+    }
+  },
+  "entityTax": "Franchise (margin) tax",
+  "wageWithholding": false,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Texas Sales and Use Tax Permit",
+    "agency": null,
+    "alternative": null
+  },
+  "local": {
+    "title": "Local permits",
+    "authority": "City or county",
+    "description": "Texas has no general state or city business license; occupancy, health, signage and industry permits are local, and DBAs go to the county clerk."
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 500000,
+  "dbaFiling": "county",
+  "industry": {
+    "contractor": null,
+    "realEstate": "Texas Real Estate Commission",
+    "alcohol": "Texas Alcoholic Beverage Commission",
+    "childCare": "Texas HHSC, Child Care Regulation",
+    "health": "Texas Health and Human Services Commission"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": ["https://comptroller.texas.gov/taxes/franchise/"],
+    "unconfirmed": []
+  }
+}

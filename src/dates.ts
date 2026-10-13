@@ -1,0 +1,68 @@
+import type { Due } from "./data/types";
+
+const pad = (n: number) => String(n).padStart(2, "0");
+const iso = (y: number, m: number, d: number) => `${y}-${pad(m)}-${pad(d)}`;
+const lastDay = (y: number, m: number) => new Date(Date.UTC(y, m, 0)).getUTCDate();
+
+/** Returns the earliest date >= `asOf` for a (month, day) occurrence in years accepted by `ok`. */
+function firstOccurrence(
+  asOf: string,
+  month: number,
+  day: number,
+  ok: (year: number) => boolean,
+): string | undefined {
+  const startYear = Number(asOf.slice(0, 4));
+  for (let y = startYear; y <= startYear + 3; y++) {
+    if (!ok(y)) continue;
+    const d = iso(y, month, Math.min(day, lastDay(y, month)));
+    if (d >= asOf) return d;
+  }
+  return undefined;
+}
+
+export interface DueContext {
+  asOf: string;
+  /** ISO date of formation, when known. */
+  formationDate?: string;
+  biennial: boolean;
+}
+
+/** Computes the next due date for a rule, or undefined when it cannot be determined from the inputs. */
+export function nextDueDate(due: Due, ctx: DueContext): string | undefined {
+  switch (due.type) {
+    case "fixed": {
+      let ok = (_y: number) => true;
+      if (due.parity) ok = (y) => (due.parity === "odd" ? y % 2 === 1 : y % 2 === 0);
+      else if (ctx.biennial) {
+        if (!due.cycleFrom || !ctx.formationDate) return undefined;
+        const base =
+          Number(ctx.formationDate.slice(0, 4)) + (due.cycleFrom === "year_after_formation" ? 1 : 0);
+        ok = (y) => y >= base && (y - base) % 2 === 0;
+      }
+      return firstOccurrence(ctx.asOf, due.month, due.day, ok);
+    }
+    case "multi": {
+      const all = due.dates
+        .map((d) => firstOccurrence(ctx.asOf, d.month, d.day, () => true))
+        .filter((d): d is string => !!d)
+        .sort();
+      return all[0];
+    }
+    case "anniversary": {
+      if (!ctx.formationDate) return undefined;
+      const fm = Number(ctx.formationDate.slice(5, 7));
+      const fd = Number(ctx.formationDate.slice(8, 10));
+      const fy = Number(ctx.formationDate.slice(0, 4));
+      const day = (y: number) =>
+        due.point === "start_of_month" ? 1 : due.point === "end_of_month" ? lastDay(y, fm) : fd;
+      // Annual reports are first due in the year after formation; biennial cycles repeat every two years.
+      const step = ctx.biennial ? 2 : 1;
+      const startYear = Number(ctx.asOf.slice(0, 4));
+      for (let y = fy + 1; y <= startYear + 3; y += step) {
+        const d = iso(y, fm, Math.min(day(y), lastDay(y, fm)));
+        if (d >= ctx.asOf) return d;
+      }
+      return undefined;
+    }
+  }
+}

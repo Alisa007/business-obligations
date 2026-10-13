@@ -1,0 +1,67 @@
+{
+  "code": "WI",
+  "name": "Wisconsin",
+  "filing": {
+    "name": "Wisconsin Department of Financial Institutions",
+    "url": "https://www.wdfi.org/corporations"
+  },
+  "revenue": {
+    "name": "Wisconsin Department of Revenue",
+    "url": "https://www.revenue.wi.gov"
+  },
+  "labor": {
+    "name": "Wisconsin Department of Workforce Development (UI)",
+    "url": "https://dwd.wisconsin.gov/uitax"
+  },
+  "workersComp": {
+    "agency": "Wisconsin DWD Worker's Compensation Division",
+    "threshold": "3 employees or $500 in quarterly payroll",
+    "trigger": {
+      "minEmployees": 3,
+      "orAnnualPayroll": 2000
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "$25 (online)",
+    "deadline": "Last day of the calendar quarter containing the anniversary month"
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$25 (online)",
+    "deadline": "Last day of the calendar quarter containing the anniversary month"
+  },
+  "entityTax": "Corporate income/franchise tax; pass-through entity tax (optional election)",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Wisconsin seller's permit",
+    "agency": null,
+    "alternative": null
+  },
+  "local": {
+    "title": "Local permits",
+    "authority": "City, village or county",
+    "description": "Wisconsin has no general business license; local permits and zoning approvals apply."
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "none",
+  "industry": {
+    "contractor": "Wisconsin Department of Safety and Professional Services (dwelling contractor qualifier)",
+    "realEstate": "Wisconsin Department of Safety and Professional Services",
+    "alcohol": "Wisconsin Department of Revenue (with municipal licensing)",
+    "childCare": "Wisconsin Department of Children and Families",
+    "health": "Wisconsin Department of Health Services"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": ["https://www.wdfi.org/corporations/fees/"],
+    "unconfirmed": ["llcReport.deadline", "corpReport.deadline"]
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "code": "WY",
+  "name": "Wyoming",
+  "filing": {
+    "name": "Wyoming Secretary of State",
+    "url": "https://sos.wyo.gov/Business"
+  },
+  "revenue": {
+    "name": "Wyoming Department of Revenue",
+    "url": "https://revenue.wyo.gov"
+  },
+  "labor": {
+    "name": "Wyoming Department of Workforce Services",
+    "url": "https://dws.wyo.gov"
+  },
+  "workersComp": {
+    "agency": "Wyoming Department of Workforce Services, Workers' Compensation Division",
+    "threshold": "1 employee",
+    "stateFund": true,
+    "trigger": {
+      "minEmployees": 1
+    }
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "$60 minimum license tax",
+    "deadline": "First day of the anniversary month",
+    "title": "File Annual Report and pay license tax",
+    "due": {
+      "type": "anniversary",
+      "point": "start_of_month"
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$60 minimum license tax",
+    "deadline": "First day of the anniversary month",
+    "title": "File Annual Report and pay license tax",
+    "due": {
+      "type": "anniversary",
+      "point": "start_of_month"
+    }
+  },
+  "entityTax": "No corporate or individual income tax",
+  "wageWithholding": false,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Wyoming sales tax license",
+    "agency": null,
+    "alternative": null
+  },
+  "local": {
+    "title": "City/town business license",
+    "authority": "City or town clerk",
+    "description": "Wyoming cities and towns issue local business licenses."
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "state",
+  "industry": {
+    "contractor": null,
+    "realEstate": "Wyoming Real Estate Commission",
+    "alcohol": "Wyoming Department of Revenue, Liquor Division (with local licensing)",
+    "childCare": "Wyoming Department of Family Services",
+    "health": "Wyoming Department of Health"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": ["https://sos.wyo.gov/faqs.aspx?root=BUS"],
+    "unconfirmed": []
+  }
+}

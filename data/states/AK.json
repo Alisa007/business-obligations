@@ -1,0 +1,81 @@
+{
+  "code": "AK",
+  "name": "Alaska",
+  "filing": {
+    "name": "Alaska Division of Corporations, Business and Professional Licensing",
+    "url": "https://www.commerce.alaska.gov/web/cbpl/corporations"
+  },
+  "revenue": {
+    "name": "Alaska Department of Revenue",
+    "url": "https://tax.alaska.gov"
+  },
+  "labor": {
+    "name": "Alaska Department of Labor and Workforce Development",
+    "url": "https://labor.alaska.gov"
+  },
+  "workersComp": {
+    "agency": "Alaska Division of Workers' Compensation",
+    "threshold": "1 employee",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "biennial",
+    "fee": "$100",
+    "deadline": "January 2 of every second year after formation",
+    "due": {
+      "type": "fixed",
+      "month": 1,
+      "day": 2
+    }
+  },
+  "corpReport": {
+    "frequency": "biennial",
+    "fee": "$100",
+    "deadline": "January 2 of every second year after formation",
+    "due": {
+      "type": "fixed",
+      "month": 1,
+      "day": 2
+    }
+  },
+  "entityTax": "Corporate income tax (no individual income tax)",
+  "wageWithholding": false,
+  "salesTax": {
+    "statewide": false,
+    "permit": "Local (borough/city) sales tax registration",
+    "alternative": "Alaska has no statewide sales tax; many boroughs and cities levy their own and sellers into Alaska register with the Alaska Remote Seller Sales Tax Commission (ARSSTC).",
+    "agency": null
+  },
+  "businessLicense": {
+    "title": "Alaska state business license",
+    "authority": "Alaska Division of Corporations, Business and Professional Licensing",
+    "fee": "$50",
+    "renewal": "biennial"
+  },
+  "local": {
+    "title": "Borough/city business license",
+    "authority": "City or borough clerk",
+    "description": "Local licenses and sales tax registration where the municipality has them."
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "state",
+  "industry": {
+    "contractor": "Alaska Division of Corporations, Business and Professional Licensing",
+    "realEstate": "Alaska Real Estate Commission",
+    "alcohol": "Alaska Alcoholic Beverage Control Board",
+    "childCare": "Alaska Department of Health, Child Care Program Office",
+    "health": "Alaska Department of Health"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": ["https://www.commerce.alaska.gov/web/cbpl/Corporations/BiennialReports"],
+    "unconfirmed": []
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "code": "MI",
+  "name": "Michigan",
+  "filing": {
+    "name": "Michigan LARA, Corporations Division",
+    "url": "https://www.michigan.gov/lara/bureau-list/cscl"
+  },
+  "revenue": {
+    "name": "Michigan Department of Treasury",
+    "url": "https://www.michigan.gov/treasury"
+  },
+  "labor": {
+    "name": "Michigan Unemployment Insurance Agency",
+    "url": "https://www.michigan.gov/leo/bureaus-agencies/uia"
+  },
+  "workersComp": {
+    "agency": "Michigan Workers' Disability Compensation Agency",
+    "threshold": "1 employee (3 regularly employed 35+ hours/week at minimum)",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "$25",
+    "deadline": "February 15",
+    "title": "File Annual Statement",
+    "due": {
+      "type": "fixed",
+      "month": 2,
+      "day": 15
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$25",
+    "deadline": "May 15",
+    "title": "File Annual Report",
+    "due": {
+      "type": "fixed",
+      "month": 5,
+      "day": 15
+    }
+  },
+  "entityTax": "Corporate Income Tax (CIT)",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Michigan sales tax license",
+    "agency": null,
+    "alternative": null
+  },
+  "local": {
+    "title": "City business license",
+    "authority": "City clerk",
+    "description": "Michigan cities may require local business licenses; several levy city income taxes (e.g., Detroit)."
+  },
+  "paidLeave": null,
+  "paidSickLeave": {
+    "minEmployees": 1
+  },
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "county",
+  "industry": {
+    "contractor": "Michigan LARA (residential builders and maintenance and alteration contractors)",
+    "realEstate": "Michigan LARA",
+    "alcohol": "Michigan Liquor Control Commission",
+    "childCare": "Michigan LARA, Child Care Licensing Bureau",
+    "health": "Michigan LARA"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/frequently-asked-questions"],
+    "unconfirmed": []
+  }
+}

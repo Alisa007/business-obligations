@@ -1,0 +1,201 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Alisa007/compliance-rules-engine/schema/state.schema.json",
+  "title": "State rule data",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "code",
+    "name",
+    "filing",
+    "revenue",
+    "labor",
+    "workersComp",
+    "llcReport",
+    "corpReport",
+    "entityTax",
+    "wageWithholding",
+    "salesTax",
+    "businessLicense",
+    "paidLeave",
+    "paidSickLeave",
+    "local",
+    "llcPublication",
+    "economicNexusUsd",
+    "dbaFiling",
+    "industry",
+    "verification"
+  ],
+  "properties": {
+    "code": { "type": "string", "pattern": "^[A-Z]{2}$" },
+    "name": { "type": "string", "minLength": 2 },
+    "filing": { "$ref": "#/$defs/agency" },
+    "revenue": { "$ref": "#/$defs/agency" },
+    "labor": { "$ref": "#/$defs/agency" },
+    "workersComp": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["agency", "threshold", "stateFund", "trigger"],
+      "properties": {
+        "agency": { "type": "string", "minLength": 3 },
+        "threshold": { "type": "string", "minLength": 3 },
+        "stateFund": { "type": "boolean" },
+        "trigger": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["minEmployees"],
+          "properties": {
+            "minEmployees": { "type": "integer", "minimum": 1 },
+            "orAnnualPayroll": { "type": "number", "minimum": 0 },
+            "andAnnualPayrollOver": { "type": "number", "minimum": 0 },
+            "constructionMinEmployees": { "type": "integer", "minimum": 1 },
+            "elective": { "type": "boolean" }
+          }
+        }
+      }
+    },
+    "llcReport": { "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/report" }] },
+    "corpReport": { "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/report" }] },
+    "llcReportAppliesWhenTaxedAsCorp": { "type": "boolean" },
+    "entityTax": { "type": "string", "minLength": 3 },
+    "wageWithholding": { "type": "boolean" },
+    "salesTax": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["statewide", "permit", "agency", "alternative"],
+      "properties": {
+        "statewide": { "type": "boolean" },
+        "permit": { "type": "string", "minLength": 3 },
+        "agency": { "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/agency" }] },
+        "alternative": { "type": ["string", "null"] }
+      }
+    },
+    "businessLicense": {
+      "oneOf": [
+        { "type": "null" },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["title", "authority", "fee", "renewal"],
+          "properties": {
+            "title": { "type": "string" },
+            "authority": { "type": "string" },
+            "fee": { "type": "string" },
+            "renewal": { "enum": ["annual", "biennial", "once"] }
+          }
+        }
+      ]
+    },
+    "paidLeave": {
+      "oneOf": [
+        { "type": "null" },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["title", "agency", "description", "minEmployees"],
+          "properties": {
+            "title": { "type": "string" },
+            "agency": { "type": "string" },
+            "description": { "type": "string" },
+            "minEmployees": { "type": "integer", "minimum": 1 }
+          }
+        }
+      ]
+    },
+    "paidSickLeave": {
+      "oneOf": [
+        { "type": "null" },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["minEmployees"],
+          "properties": { "minEmployees": { "type": "integer", "minimum": 1 } }
+        }
+      ]
+    },
+    "local": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "authority", "description"],
+      "properties": {
+        "title": { "type": "string" },
+        "authority": { "type": "string" },
+        "description": { "type": "string" }
+      }
+    },
+    "llcPublication": { "type": ["string", "null"] },
+    "economicNexusUsd": { "type": ["integer", "null"], "minimum": 0 },
+    "dbaFiling": { "enum": ["state", "county", "town", "none"] },
+    "industry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["contractor", "realEstate", "alcohol", "childCare", "health"],
+      "properties": {
+        "contractor": { "type": ["string", "null"] },
+        "realEstate": { "type": "string", "minLength": 3 },
+        "alcohol": { "type": "string", "minLength": 3 },
+        "childCare": { "type": "string", "minLength": 3 },
+        "health": { "type": "string", "minLength": 3 }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["checkedOn", "scope", "sources", "unconfirmed"],
+      "properties": {
+        "checkedOn": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+        "scope": { "type": "string" },
+        "sources": { "type": "array", "items": { "type": "string", "pattern": "^https://" } },
+        "unconfirmed": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  },
+  "$defs": {
+    "agency": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "url"],
+      "properties": {
+        "name": { "type": "string", "minLength": 3 },
+        "url": { "type": "string", "pattern": "^https://" }
+      }
+    },
+    "due": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "month", "day"],
+          "properties": {
+            "type": { "const": "fixed" },
+            "month": { "type": "integer", "minimum": 1, "maximum": 12 },
+            "day": { "type": "integer", "minimum": 1, "maximum": 31 },
+            "parity": { "enum": ["odd", "even"] },
+            "cycleFrom": { "enum": ["formation_year", "year_after_formation"] }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "point"],
+          "properties": {
+            "type": { "const": "anniversary" },
+            "point": { "enum": ["start_of_month", "end_of_month", "date"] }
+          }
+        }
+      ]
+    },
+    "report": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["frequency", "fee", "deadline"],
+      "properties": {
+        "frequency": { "enum": ["annual", "biennial"] },
+        "fee": { "type": "string", "minLength": 1 },
+        "deadline": { "type": "string", "minLength": 1 },
+        "title": { "type": "string" },
+        "due": { "$ref": "#/$defs/due" }
+      }
+    }
+  }
+}

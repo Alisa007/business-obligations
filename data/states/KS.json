@@ -1,0 +1,79 @@
+{
+  "code": "KS",
+  "name": "Kansas",
+  "filing": {
+    "name": "Kansas Secretary of State",
+    "url": "https://sos.ks.gov/business/business.html"
+  },
+  "revenue": {
+    "name": "Kansas Department of Revenue",
+    "url": "https://www.ksrevenue.gov"
+  },
+  "labor": {
+    "name": "Kansas Department of Labor",
+    "url": "https://www.dol.ks.gov"
+  },
+  "workersComp": {
+    "agency": "Kansas Division of Workers Compensation",
+    "threshold": "$20,000 annual payroll",
+    "trigger": {
+      "minEmployees": 1,
+      "andAnnualPayrollOver": 20000
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "biennial",
+    "fee": "$53 online ($55 paper)",
+    "deadline": "April 15 of the odd or even year matching the formation year",
+    "due": {
+      "type": "fixed",
+      "month": 4,
+      "day": 15,
+      "cycleFrom": "formation_year"
+    }
+  },
+  "corpReport": {
+    "frequency": "biennial",
+    "fee": "$53 online ($55 paper)",
+    "deadline": "April 15 of the odd or even year matching the formation year",
+    "due": {
+      "type": "fixed",
+      "month": 4,
+      "day": 15,
+      "cycleFrom": "formation_year"
+    }
+  },
+  "entityTax": "Corporate income tax and privilege tax",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Kansas retailers' sales tax registration",
+    "agency": null,
+    "alternative": null
+  },
+  "local": {
+    "title": "City occupation/business license",
+    "authority": "City clerk",
+    "description": "Many Kansas cities require a local occupation or business license."
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "state",
+  "industry": {
+    "contractor": null,
+    "realEstate": "Kansas Real Estate Commission",
+    "alcohol": "Kansas Alcoholic Beverage Control",
+    "childCare": "Kansas Department of Health and Environment",
+    "health": "Kansas Department of Health and Environment"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": ["https://www.sos.ks.gov/Pubs/Businesses/Biennial-Filing.pdf"],
+    "unconfirmed": ["corpReport.fee"]
+  }
+}

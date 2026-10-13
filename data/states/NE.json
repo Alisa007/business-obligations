@@ -1,0 +1,80 @@
+{
+  "code": "NE",
+  "name": "Nebraska",
+  "filing": {
+    "name": "Nebraska Secretary of State",
+    "url": "https://sos.nebraska.gov/business-services"
+  },
+  "revenue": {
+    "name": "Nebraska Department of Revenue",
+    "url": "https://revenue.nebraska.gov"
+  },
+  "labor": {
+    "name": "Nebraska Department of Labor",
+    "url": "https://dol.nebraska.gov"
+  },
+  "workersComp": {
+    "agency": "Nebraska Workers' Compensation Court",
+    "threshold": "1 employee",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "biennial",
+    "fee": "$30",
+    "deadline": "April 1 of odd-numbered years",
+    "title": "File Biennial Report",
+    "due": {
+      "type": "fixed",
+      "month": 4,
+      "day": 1,
+      "parity": "odd"
+    }
+  },
+  "corpReport": {
+    "frequency": "biennial",
+    "fee": "Occupation tax based on paid-in capital (minimum $26)",
+    "deadline": "March 1 of even-numbered years",
+    "title": "File Biennial Occupation Tax Report",
+    "due": {
+      "type": "fixed",
+      "month": 3,
+      "day": 1,
+      "parity": "even"
+    }
+  },
+  "entityTax": "Corporate income tax",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Nebraska sales tax permit",
+    "agency": null,
+    "alternative": null
+  },
+  "local": {
+    "title": "City occupation tax / license",
+    "authority": "City clerk",
+    "description": "Omaha, Lincoln and others require occupation taxes or business licenses."
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "state",
+  "industry": {
+    "contractor": "Nebraska Department of Labor (contractor registration)",
+    "realEstate": "Nebraska Real Estate Commission",
+    "alcohol": "Nebraska Liquor Control Commission",
+    "childCare": "Nebraska Department of Health and Human Services",
+    "health": "Nebraska Department of Health and Human Services"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": ["https://sos.nebraska.gov/business-services/annualbiennial-reporting"],
+    "unconfirmed": ["corpReport.fee"]
+  }
+}

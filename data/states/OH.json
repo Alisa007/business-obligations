@@ -1,0 +1,58 @@
+{
+  "code": "OH",
+  "name": "Ohio",
+  "filing": {
+    "name": "Ohio Secretary of State",
+    "url": "https://www.ohiosos.gov/businesses"
+  },
+  "revenue": {
+    "name": "Ohio Department of Taxation",
+    "url": "https://tax.ohio.gov"
+  },
+  "labor": {
+    "name": "Ohio Department of Job and Family Services",
+    "url": "https://jfs.ohio.gov/ouio"
+  },
+  "workersComp": {
+    "agency": "Ohio Bureau of Workers' Compensation",
+    "threshold": "1 employee",
+    "stateFund": true,
+    "trigger": {
+      "minEmployees": 1
+    }
+  },
+  "llcReport": null,
+  "corpReport": null,
+  "entityTax": "Commercial Activity Tax (CAT) on gross receipts; no corporate income tax",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Ohio vendor's license",
+    "agency": null,
+    "alternative": null
+  },
+  "local": {
+    "title": "Municipal income tax registration",
+    "authority": "City tax administrator / Ohio Business Gateway",
+    "description": "Ohio municipalities levy net profits and payroll income taxes; register via the Ohio Business Gateway or the city."
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "state",
+  "industry": {
+    "contractor": "Ohio Construction Industry Licensing Board (commercial trades)",
+    "realEstate": "Ohio Division of Real Estate and Professional Licensing",
+    "alcohol": "Ohio Division of Liquor Control",
+    "childCare": "Ohio Department of Children and Youth",
+    "health": "Ohio Department of Health"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": ["https://www.ohiosos.gov/business/ohio-business-roadmap/frequently-asked-questions"],
+    "unconfirmed": []
+  }
+}

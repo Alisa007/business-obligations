@@ -1,0 +1,76 @@
+{
+  "code": "MT",
+  "name": "Montana",
+  "filing": {
+    "name": "Montana Secretary of State",
+    "url": "https://sosmt.gov/business"
+  },
+  "revenue": {
+    "name": "Montana Department of Revenue",
+    "url": "https://mtrevenue.gov"
+  },
+  "labor": {
+    "name": "Montana Department of Labor & Industry",
+    "url": "https://dli.mt.gov"
+  },
+  "workersComp": {
+    "agency": "Montana Department of Labor & Industry",
+    "threshold": "1 employee",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "Waived if filed by April 15; $35 after",
+    "deadline": "April 15",
+    "due": {
+      "type": "fixed",
+      "month": 4,
+      "day": 15
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "Waived if filed by April 15; $35 after",
+    "deadline": "April 15",
+    "due": {
+      "type": "fixed",
+      "month": 4,
+      "day": 15
+    }
+  },
+  "entityTax": "Corporate license tax",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": false,
+    "permit": "Local option resort tax registration",
+    "alternative": "Montana has no statewide sales tax; designated resort communities levy a local resort tax and require registration.",
+    "agency": null
+  },
+  "local": {
+    "title": "City/county business license",
+    "authority": "City or county clerk",
+    "description": "Some Montana cities and counties require a local business license."
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": null,
+  "dbaFiling": "state",
+  "industry": {
+    "contractor": "Montana Department of Labor & Industry (contractor registration)",
+    "realEstate": "Montana Board of Realty Regulation",
+    "alcohol": "Montana Department of Revenue, Liquor Control Division",
+    "childCare": "Montana Department of Public Health and Human Services",
+    "health": "Montana Department of Public Health and Human Services"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": ["https://help.sosmt.gov/en-us/article/how-do-i-file-my-annual-report-ywawrv/"],
+    "unconfirmed": []
+  }
+}

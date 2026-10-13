@@ -1,0 +1,88 @@
+{
+  "code": "WA",
+  "name": "Washington",
+  "filing": {
+    "name": "Washington Secretary of State, Corporations and Charities",
+    "url": "https://www.sos.wa.gov/corporations-charities"
+  },
+  "revenue": {
+    "name": "Washington Department of Revenue",
+    "url": "https://dor.wa.gov"
+  },
+  "labor": {
+    "name": "Washington Employment Security Department",
+    "url": "https://esd.wa.gov"
+  },
+  "workersComp": {
+    "agency": "Washington Department of Labor & Industries",
+    "threshold": "1 employee",
+    "stateFund": true,
+    "trigger": {
+      "minEmployees": 1
+    }
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "$70",
+    "deadline": "Last day of the anniversary month",
+    "due": {
+      "type": "anniversary",
+      "point": "end_of_month"
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$70",
+    "deadline": "Last day of the anniversary month",
+    "due": {
+      "type": "anniversary",
+      "point": "end_of_month"
+    }
+  },
+  "entityTax": "Business & Occupation (B&O) tax on gross receipts; no corporate or individual income tax",
+  "wageWithholding": false,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Washington business license with retail sales tax endorsement",
+    "agency": null,
+    "alternative": null
+  },
+  "businessLicense": {
+    "title": "Washington state business license (Business Licensing Service)",
+    "authority": "Washington Department of Revenue, Business Licensing Service",
+    "fee": "$90 application (varies by endorsements)",
+    "renewal": "annual"
+  },
+  "paidLeave": {
+    "title": "Washington Paid Family and Medical Leave and WA Cares premiums",
+    "agency": "Washington Employment Security Department",
+    "description": "Employers report hours and remit premiums quarterly.",
+    "minEmployees": 1
+  },
+  "local": {
+    "title": "City business license endorsement",
+    "authority": "City via Business Licensing Service",
+    "description": "City licenses are added as endorsements to the state business license; Seattle and others levy local B&O taxes."
+  },
+  "paidSickLeave": {
+    "minEmployees": 1
+  },
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "state",
+  "industry": {
+    "contractor": "Washington Department of Labor & Industries (contractor registration)",
+    "realEstate": "Washington Department of Licensing",
+    "alcohol": "Washington State Liquor and Cannabis Board",
+    "childCare": "Washington Department of Children, Youth, and Families",
+    "health": "Washington Department of Health"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": [
+      "https://www.sos.wa.gov/corporations-charities/frequently-asked-questions-faqs/fee-scheduleexpedited-service"
+    ],
+    "unconfirmed": []
+  }
+}

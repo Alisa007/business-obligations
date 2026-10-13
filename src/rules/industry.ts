@@ -1,12 +1,14 @@
-import type { Rule } from "../types.js";
-import { stateName } from "../states.js";
-import { INDUSTRY_AUTHORITIES } from "../data/industry.js";
+import type { Rule } from "../types";
+import { stateName } from "../states";
+import { industryAuthorities } from "../data";
 
-const auth = (state: string) => INDUSTRY_AUTHORITIES[state]!;
+const auth = industryAuthorities;
 
 export const industryRules: Rule[] = [
   {
     id: "industry.food-service",
+    description: "Food service permits",
+    inputs: ["industry", "county", "state"],
     when: (p) => p.industry === "restaurant",
     items: (p) => [
       {
@@ -25,7 +27,8 @@ export const industryRules: Rule[] = [
         jurisdiction: "state",
         state: p.state,
         authority: auth(p.state).health,
-        description: "Most jurisdictions require at least one certified food protection manager and food handler cards for staff.",
+        description:
+          "Most jurisdictions require at least one certified food protection manager and food handler cards for staff.",
         frequency: "ongoing",
         reason: "Industry is restaurant / food service",
       },
@@ -33,6 +36,8 @@ export const industryRules: Rule[] = [
   },
   {
     id: "industry.construction",
+    description: "Contractor licensing",
+    inputs: ["industry", "state", "zip"],
     when: (p) => p.industry === "construction",
     items: (p) => ({
       title: auth(p.state).contractor
@@ -41,14 +46,19 @@ export const industryRules: Rule[] = [
       category: "license",
       jurisdiction: auth(p.state).contractor ? "state" : "city",
       state: p.state,
-      authority: auth(p.state).contractor ?? `City/county building department and state trade boards for ZIP ${p.zip}`,
-      description: "Contractors generally need a license or registration, bonding and proof of insurance; thresholds and classifications vary.",
+      authority:
+        auth(p.state).contractor ??
+        `${p.city} building department and state trade boards (${stateName(p.state)})`,
+      description:
+        "Contractors generally need a license or registration, bonding and proof of insurance; thresholds and classifications vary.",
       frequency: "biennial",
       reason: "Industry is construction",
     }),
   },
   {
     id: "industry.real-estate",
+    description: "Real estate broker licensing",
+    inputs: ["industry", "state"],
     when: (p) => p.industry === "real_estate",
     items: (p) => ({
       title: `Obtain real estate broker license (${stateName(p.state)})`,
@@ -63,6 +73,8 @@ export const industryRules: Rule[] = [
   },
   {
     id: "industry.healthcare",
+    description: "Healthcare facility licensing, NPI and HIPAA",
+    inputs: ["industry", "state"],
     when: (p) => p.industry === "healthcare",
     items: (p) => [
       {
@@ -71,7 +83,8 @@ export const industryRules: Rule[] = [
         jurisdiction: "state",
         state: p.state,
         authority: auth(p.state).health,
-        description: "Practitioners and facilities are licensed by state boards; some states restrict entity forms.",
+        description:
+          "Practitioners and facilities are licensed by state boards; some states restrict entity forms.",
         frequency: "biennial",
         reason: "Industry is healthcare",
       },
@@ -80,7 +93,8 @@ export const industryRules: Rule[] = [
         category: "registration",
         jurisdiction: "federal",
         authority: "CMS / HHS",
-        description: "National Provider Identifier for billing and HIPAA privacy/security program for covered entities.",
+        description:
+          "National Provider Identifier for billing and HIPAA privacy/security program for covered entities.",
         frequency: "once",
         reason: "Industry is healthcare",
         url: "https://nppes.cms.hhs.gov",
@@ -89,20 +103,25 @@ export const industryRules: Rule[] = [
   },
   {
     id: "industry.alcohol",
+    description: "State alcohol licensing",
+    inputs: ["industry", "alcoholActivity", "state"],
     when: (p) => p.industry === "alcohol",
     items: (p) => ({
-      title: `Obtain state alcohol beverage license (${stateName(p.state)})`,
+      title: `Obtain state alcohol ${p.alcoholActivity} license (${stateName(p.state)})`,
       category: "license",
       jurisdiction: "state",
       state: p.state,
       authority: auth(p.state).alcohol,
-      description: "License class depends on activity (on-premise, off-premise, manufacturing, distribution); local approval is often required too.",
+      description:
+        "License class depends on activity (on-premise, off-premise, manufacturing, distribution); local approval is often required too.",
       frequency: "annual",
-      reason: "Industry involves alcohol",
+      reason: `Alcohol activity is ${p.alcoholActivity}`,
     }),
   },
   {
     id: "industry.childcare",
+    description: "Child care facility licensing",
+    inputs: ["industry", "state"],
     when: (p) => p.industry === "childcare",
     items: (p) => ({
       title: `Obtain child care facility license (${stateName(p.state)})`,
@@ -117,6 +136,8 @@ export const industryRules: Rule[] = [
   },
   {
     id: "industry.transportation",
+    description: "USDOT registration for interstate commercial vehicles",
+    inputs: ["industry", "commercialVehicles"],
     when: (p) => {
       const v = p.commercialVehicles;
       if (p.industry !== "transportation" || !v || !v.interstate) return false;
@@ -132,7 +153,8 @@ export const industryRules: Rule[] = [
       category: "registration",
       jurisdiction: "federal",
       authority: "FMCSA",
-      description: "Interstate operators of vehicles over 10,000 lbs, passenger vehicles over the capacity limits, or placardable hazmat carriers must register, file the MCS-150 biennial update, and carry required insurance.",
+      description:
+        "Interstate operators of vehicles over 10,000 lbs, passenger vehicles over the capacity limits, or placardable hazmat carriers must register, file the MCS-150 biennial update, and carry required insurance.",
       frequency: "biennial",
       reason: "Interstate commercial vehicle operations meet the USDOT registration thresholds",
       url: "https://www.fmcsa.dot.gov/registration",

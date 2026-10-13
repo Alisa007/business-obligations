@@ -1,0 +1,76 @@
+{
+  "code": "VA",
+  "name": "Virginia",
+  "filing": {
+    "name": "Virginia State Corporation Commission",
+    "url": "https://www.scc.virginia.gov/pages/Business-Entities"
+  },
+  "revenue": {
+    "name": "Virginia Department of Taxation",
+    "url": "https://www.tax.virginia.gov"
+  },
+  "labor": {
+    "name": "Virginia Employment Commission",
+    "url": "https://www.vec.virginia.gov"
+  },
+  "workersComp": {
+    "agency": "Virginia Workers' Compensation Commission",
+    "threshold": "3 employees (more than 2 regularly employed)",
+    "trigger": {
+      "minEmployees": 3
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "$50",
+    "deadline": "Last day of the anniversary month",
+    "title": "Pay Annual Registration Fee",
+    "due": {
+      "type": "anniversary",
+      "point": "end_of_month"
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$100 (up to 5,000 authorized shares; scales above)",
+    "deadline": "Last day of the anniversary month",
+    "title": "Pay Annual Registration Fee",
+    "due": {
+      "type": "anniversary",
+      "point": "end_of_month"
+    }
+  },
+  "entityTax": "Corporate income tax",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Virginia Certificate of Registration (sales and use tax)",
+    "agency": null,
+    "alternative": null
+  },
+  "local": {
+    "title": "City/county BPOL license",
+    "authority": "Local commissioner of revenue",
+    "description": "Virginia localities require a Business, Professional and Occupational License (BPOL)."
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "county",
+  "industry": {
+    "contractor": "Virginia Board for Contractors (DPOR)",
+    "realEstate": "Virginia Real Estate Board (DPOR)",
+    "alcohol": "Virginia Alcoholic Beverage Control Authority",
+    "childCare": "Virginia Department of Education, Office of Early Childhood",
+    "health": "Virginia Department of Health"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/periodic report fee and deadline checked against official state pages via web search; all other fields compiled from public knowledge and not individually checked.",
+    "sources": ["https://www.scc.virginia.gov/businesses/business-faqs/annual-registration-fees/"],
+    "unconfirmed": []
+  }
+}
