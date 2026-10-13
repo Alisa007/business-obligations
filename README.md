@@ -10,25 +10,36 @@ import { getComplianceItems } from "compliance-rules-engine";
 const items = getComplianceItems({
   entityType: "llc",
   zip: "94105",
-  hasEmployees: true,
+  city: "San Francisco",
+  county: "San Francisco",
+  employeeCount: 4,
+  annualPayroll: 320_000,
   sellsTaxableGoods: true,
   annualRevenue: 400_000,
 });
 
 // [{ id, title, category, jurisdiction, authority, state?, description,
-//    frequency, deadline?, reason, needsVerification, url? }, ...]
+//    frequency, deadline?, reason, url? }, ...]
 ```
+
+Output is a pure function of the input: every item is either returned or not. Where an obligation depends on a fact (headcount, payroll, activity in another state, what the business does with alcohol, vehicle weight), that fact is an input; missing required inputs throw `InvalidProfileError`.
 
 ## Input (`BusinessProfile`)
 
 | Field | Notes |
 | --- | --- |
 | `entityType` | `sole_proprietorship`, `partnership`, `llc`, `c_corp`, `s_corp`, `nonprofit` |
-| `zip` | 5-digit ZIP; state is derived from it unless `state` is given |
-| `state`, `formationState`, `otherStates` | operating state, state of formation, other states with activity |
+| `zip`, `city`, `county` | required; state is derived from ZIP unless `state` is given; city/county name the local authorities |
+| `state`, `formationState` | operating state, state of formation |
+| `multistate` | `[{ state, employeeCount?, hasProperty?, salesUsd? }]` — employees/property trigger registration; sales trigger economic-nexus sales tax registration |
 | `llcTaxClassification` | `disregarded` (default), `partnership`, `s_corp`, `c_corp` |
 | `industry` | `general`, `retail`, `restaurant`, `construction`, `healthcare`, `real_estate`, `professional_services`, `transportation`, `alcohol`, `childcare` |
-| `hasEmployees`, `paysContractors`, `sellsTaxableGoods`, `homeBased`, `usesTradeName`, `isFormed`, `hasTaxExemptStatus`, `annualRevenue` | booleans / number |
+| `alcoholActivity` | required when industry is `alcohol`: `manufacture`, `import`, `wholesale`, `retail` |
+| `commercialVehicles` | required when industry is `transportation`: `{ interstate, grossWeightLbs?, passengerCapacity?, carriesHazmat?, forHire? }` |
+| `employeeCount`, `annualPayroll`, `priorYearPayrollTaxLiability` | drive payroll, workers' comp (state thresholds), paid leave and deposit schedule |
+| `largestContractorPaymentUsd` | 1099-NEC when ≥ $2,000 |
+| `annualNetIncome`, `annualRevenue` | estimated tax; California LLC fee |
+| `sellsTaxableGoods`, `homeBased`, `usesTradeName`, `isFormed`, `hasTaxExemptStatus` | booleans |
 
 ## Extending
 
@@ -47,9 +58,11 @@ All 50 states and DC have dedicated data in `src/data/` (no generic fallbacks): 
 
 ## Caveats
 
-- Not legal advice. State data was compiled by hand and has not been checked against primary sources; fees, deadlines and thresholds change, so confirm against the linked agency before relying on them. Items with `needsVerification: true` are best-effort pointers.
+- Not legal advice. State data was compiled by hand and has not been checked against primary sources; fees, deadlines and thresholds change, so confirm against the linked agency before relying on them.
 - ZIP→state uses 3-digit prefix ranges and can be wrong near borders; pass `state` when known.
-- Local (city/county) items describe how each state typically licenses businesses; there is no city-level database yet.
+- Local items name the city/county and the state's typical local licence, but there is no city-level ordinance database, so local fees and exact permit names are not returned.
+- State income-tax nexus is modelled as physical presence (employees or property); sales-tax nexus also uses each state's economic threshold.
+- Federal estimated-tax applicability is approximated from `annualNetIncome`.
 - Rules are US-only for now; non-US jurisdictions are planned.
 
 ## Development

@@ -15,7 +15,6 @@ export const industryRules: Rule[] = [
         jurisdiction: "county",
         state: p.state,
         authority: `${p.county} County health department (${stateName(p.state)})`,
-        url: undefined,
         description: "Plan review, inspection and operating permit for food service.",
         frequency: "annual",
         reason: "Industry is restaurant / food service",
