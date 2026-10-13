@@ -36,8 +36,8 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
   partnerships file the same annual report as LLCs; SC LLP renewal is $100; WV LLP deadline is January 1 - July 1; Kansas
   LP/LLP fees corrected to $90 online ($110 paper).
 - LLP report data: Virginia LLPs file an annual continuation report ($50, July 1); Missouri renewal is $105 plus $50
-  per added partner (max $205); Illinois LLPs have an annual renewal statement (fee not yet confirmed); Iowa and New
-  York LLPs have no annual or biennial report; New York LLPs file a $20 statement every five years.
+  per added partner (max $205); Illinois LLPs have an annual renewal statement (fee not yet confirmed); Iowa LLPs have no
+  annual or biennial report; New York LLPs file a $20 statement every five years.
 - More LP/LLP report data confirmed: no periodic report for NE, NM and OH limited partnerships; Tennessee LLP annual fee
   is $50 per partner ($250 minimum, $2,500 maximum); ID and SD LLPs file the same annual report as LLCs.
 - LP/LLP report data accepted at high confidence: ID, IL and MA limited partnerships (MA now has an explicit $500 /
