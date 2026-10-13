@@ -41,12 +41,16 @@ getComplianceItems(profile, { rules: [...defaultRules, myRule] });
 
 Rules live in `src/rules/` (`federal`, `state`, `industry`, `local`).
 
+## State coverage
+
+All 50 states and DC have dedicated data in `src/data/` (no generic fallbacks): the entity filing agency, LLC and corporate annual/biennial report (fee and deadline), entity-level taxes, revenue and unemployment agencies, sales tax permit name (or the alternative regime for AK, DE, MT, NH, OR), workers' comp agency and threshold (including monopolistic state funds), wage withholding, mandatory paid-leave programs, general state business licenses, publication requirements (NY, AZ), local licensing, and industry licensing authorities (contractor, real estate, alcohol, child care, health). A test enforces completeness for every state.
+
 ## Caveats
 
-- Not legal advice. Items with `needsVerification: true` are best-effort pointers that must be confirmed with the authority.
+- Not legal advice. State data was compiled by hand and has not been checked against primary sources; fees, deadlines and thresholds change, so confirm against the linked agency before relying on them. Items with `needsVerification: true` are best-effort pointers.
 - ZIP→state uses 3-digit prefix ranges and can be wrong near borders; pass `state` when known.
-- State annual-report specifics are encoded for CA, DE, TX, NY, FL, WA, GA, IL, NV, CO; other states return a "check requirements" item. City/county rules are generic placeholders keyed on ZIP — no local database yet.
-- Thresholds and deadlines change; review rules against current law before relying on them.
+- Local (city/county) items describe how each state typically licenses businesses; there is no city-level database yet.
+- Rules are US-only for now; non-US jurisdictions are planned.
 
 ## Development
 

@@ -1,21 +1,24 @@
 import type { Rule } from "../types.js";
-import { stateName } from "../states.js";
+import { STATES } from "../data/states.js";
 
 export const localRules: Rule[] = [
   {
     id: "local.business-license",
     when: () => true,
-    items: (p) => ({
-      title: "Obtain local general business license / tax registration",
-      category: "license",
-      jurisdiction: "city",
-      state: p.state,
-      authority: `City or county government for ZIP ${p.zip} (${stateName(p.state)})`,
-      description: "Most cities and counties require a general business license or tax certificate to operate within their limits.",
-      frequency: "annual",
-      reason: "Business operates at a physical location",
-      needsVerification: true,
-    }),
+    items: (p) => {
+      const l = STATES[p.state]!.local;
+      return {
+        title: `${l.title} (${STATES[p.state]!.name})`,
+        category: "license",
+        jurisdiction: "city",
+        state: p.state,
+        authority: `${l.authority} for ZIP ${p.zip}`,
+        description: l.description,
+        frequency: "annual",
+        reason: "Business operates at a physical location",
+        needsVerification: true,
+      };
+    },
   },
   {
     id: "local.home-occupation",

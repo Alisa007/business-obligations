@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { getComplianceItems, InvalidProfileError, stateFromZip } from "../src/index.js";
+import { getComplianceItems, InvalidProfileError, stateFromZip, STATES } from "../src/index.js";
+import { INDUSTRY_AUTHORITIES } from "../src/data/industry.js";
 
 const ids = (items: { id: string }[]) => items.map((i) => i.id);
 
@@ -49,8 +50,9 @@ describe("getComplianceItems", () => {
 
   it("handles states without sales tax", () => {
     const items = getComplianceItems({ entityType: "llc", zip: "97201", sellsTaxableGoods: true });
-    expect(ids(items)).not.toContain("state.sales-tax-permit#0");
-    expect(items.find((i) => i.id === "state.sales-tax-permit")?.needsVerification).toBe(true);
+    const item = items.find((i) => i.id === "state.sales-tax");
+    expect(item?.title).toMatch(/Oregon/);
+    expect(item?.description).toMatch(/no sales tax/);
   });
 
   it("adds formation filing and exempt application for a new nonprofit", () => {
@@ -62,7 +64,7 @@ describe("getComplianceItems", () => {
   it("adds industry items", () => {
     const items = getComplianceItems({ entityType: "llc", zip: "98101", industry: "restaurant" });
     expect(ids(items)).toContain("industry.food-service#0");
-    expect(ids(items)).toContain("state.sales-tax-permit#0");
+    expect(ids(items)).toContain("state.sales-tax#0");
   });
 
   it("produces unique ids", () => {
@@ -78,5 +80,41 @@ describe("getComplianceItems", () => {
     expect(items.some((i) => i.state === "NV")).toBe(true);
     expect(() => getComplianceItems({ entityType: "llc", zip: "00000" })).toThrow(InvalidProfileError);
     expect(() => getComplianceItems({ entityType: "llc", zip: "94105", state: "ZZ" })).toThrow(InvalidProfileError);
+  });
+});
+
+describe("state coverage", () => {
+  const codes = Object.keys(STATES);
+
+  it("covers the 50 states and DC", () => expect(codes).toHaveLength(51));
+
+  it.each(codes)("%s has complete data", (code) => {
+    const s = STATES[code]!;
+    for (const a of [s.filing, s.revenue, s.labor]) {
+      expect(a.name.length).toBeGreaterThan(3);
+      expect(a.url).toMatch(/^https:\/\//);
+    }
+    expect(s.workersComp.agency).toBeTruthy();
+    expect(s.workersComp.threshold).toBeTruthy();
+    expect(s.entityTax).toBeTruthy();
+    expect(s.local.authority).toBeTruthy();
+    if (!s.salesTax.statewide) expect(s.salesTax.alternative).toBeTruthy();
+    const ind = INDUSTRY_AUTHORITIES[code]!;
+    expect([ind.realEstate, ind.alcohol, ind.childCare, ind.health].every(Boolean)).toBe(true);
+  });
+
+  it.each(codes)("%s produces state-specific items with no generic fallbacks", (code) => {
+    const items = getComplianceItems({
+      entityType: "llc", zip: "00000", state: code, hasEmployees: true, sellsTaxableGoods: true,
+      industry: "construction",
+    });
+    const s = STATES[code]!;
+    const text = JSON.stringify(items);
+    expect(text).toContain(s.filing.name);
+    expect(text).toContain(s.labor.name);
+    expect(text).toContain(s.workersComp.agency);
+    expect(text).not.toMatch(/Check annual/);
+    expect(items.filter((i) => i.state && i.state !== code)).toHaveLength(0);
+    expect(new Set(items.map((i) => i.id)).size).toBe(items.length);
   });
 });

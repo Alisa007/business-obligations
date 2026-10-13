@@ -1,5 +1,8 @@
 import type { Rule } from "../types.js";
 import { stateName } from "../states.js";
+import { INDUSTRY_AUTHORITIES } from "../data/industry.js";
+
+const auth = (state: string) => INDUSTRY_AUTHORITIES[state]!;
 
 export const industryRules: Rule[] = [
   {
@@ -11,7 +14,7 @@ export const industryRules: Rule[] = [
         category: "permit",
         jurisdiction: "county",
         state: p.state,
-        authority: "County or city health department",
+        authority: `County or city health department (${stateName(p.state)})`,
         description: "Plan review, inspection and operating permit for food service.",
         frequency: "annual",
         reason: "Industry is restaurant / food service",
@@ -22,7 +25,7 @@ export const industryRules: Rule[] = [
         category: "license",
         jurisdiction: "state",
         state: p.state,
-        authority: `${stateName(p.state)} health department`,
+        authority: auth(p.state).health,
         description: "Most jurisdictions require at least one certified food protection manager and food handler cards for staff.",
         frequency: "ongoing",
         reason: "Industry is restaurant / food service",
@@ -34,12 +37,14 @@ export const industryRules: Rule[] = [
     id: "industry.construction",
     when: (p) => p.industry === "construction",
     items: (p) => ({
-      title: `Obtain contractor license (${stateName(p.state)})`,
+      title: auth(p.state).contractor
+        ? `Obtain contractor license or registration (${stateName(p.state)})`
+        : `Obtain local/trade contractor licenses (${stateName(p.state)} has no statewide general contractor license)`,
       category: "license",
-      jurisdiction: "state",
+      jurisdiction: auth(p.state).contractor ? "state" : "city",
       state: p.state,
-      authority: `${stateName(p.state)} contractor licensing board`,
-      description: "Contractors generally need a state (or local) license, bonding and proof of insurance; thresholds and classifications vary.",
+      authority: auth(p.state).contractor ?? `City/county building department and state trade boards for ZIP ${p.zip}`,
+      description: "Contractors generally need a license or registration, bonding and proof of insurance; thresholds and classifications vary.",
       frequency: "biennial",
       reason: "Industry is construction",
       needsVerification: true,
@@ -53,7 +58,7 @@ export const industryRules: Rule[] = [
       category: "license",
       jurisdiction: "state",
       state: p.state,
-      authority: `${stateName(p.state)} real estate commission`,
+      authority: auth(p.state).realEstate,
       description: "Brokerage entities need a licensed designated broker and entity registration.",
       frequency: "biennial",
       reason: "Industry is real estate",
@@ -69,7 +74,7 @@ export const industryRules: Rule[] = [
         category: "license",
         jurisdiction: "state",
         state: p.state,
-        authority: `${stateName(p.state)} health professions or facility licensing board`,
+        authority: auth(p.state).health,
         description: "Practitioners and facilities are licensed by state boards; some states restrict entity forms.",
         frequency: "biennial",
         reason: "Industry is healthcare",
@@ -96,7 +101,7 @@ export const industryRules: Rule[] = [
       category: "license",
       jurisdiction: "state",
       state: p.state,
-      authority: `${stateName(p.state)} alcohol beverage control agency`,
+      authority: auth(p.state).alcohol,
       description: "License class depends on activity (on-premise, off-premise, manufacturing, distribution); local approval is often required too.",
       frequency: "annual",
       reason: "Industry involves alcohol",
@@ -111,7 +116,7 @@ export const industryRules: Rule[] = [
       category: "license",
       jurisdiction: "state",
       state: p.state,
-      authority: `${stateName(p.state)} child care licensing agency`,
+      authority: auth(p.state).childCare,
       description: "Facility licensing with background checks, staff ratios and inspections.",
       frequency: "annual",
       reason: "Industry is child care",
