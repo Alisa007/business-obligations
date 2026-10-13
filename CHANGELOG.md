@@ -37,6 +37,8 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 - LLP report data: Virginia LLPs file an annual continuation report ($50, July 1); Missouri renewal is $105 plus $50
   per added partner (max $205); Illinois LLPs have an annual renewal statement (fee not yet confirmed); Iowa and New
   York LLPs have no annual or biennial report (New York requires a five-year LLP statement, not modelled).
+- More LP/LLP report data confirmed: no periodic report for NE, NM and OH limited partnerships; Tennessee LLP annual fee
+  is $50 per partner ($250 minimum, $2,500 maximum); ID and SD LLPs file the same annual report as LLCs.
 - LP/LLP report data accepted at high confidence: ID, IL and MA limited partnerships (MA now has an explicit $500 /
   $450 e-file fee), ME LLPs, NY limited partnerships (no biennial statement), TX LPs and LLPs (franchise tax).
 - Resolved caveats: Illinois and North Dakota workers' comp thresholds, Oregon, New Mexico and Oklahoma report data
