@@ -223,6 +223,10 @@ Machine-readable: [`schema/business-profile.schema.json`](schema/business-profil
   named for the city and county you pass in. City data is one file per state and looked up by an index, so adding
   thousands more is a data change; to keep the bundle small you can also load city data yourself and add it with
   `seededCityRule(indexCities(seeds))`.
+- **County (seeded):** the 300 largest counties (approximate) in `data/counties/<STATE>.json`, mainly the annual
+  business personal property return in states that levy it (due dates from the state, assessor page per county where
+  confirmed). States without a county-level business filing, or where it is made to the city, town or state, are
+  recorded as `none` or `unverified`. Add your own with `seededCountyRule(indexCounties(seeds))`.
 
 Intentionally not modelled: FinCEN beneficial ownership reporting (domestic companies are exempt under FinCEN's final
 rule effective August 14, 2026; only foreign entities registered in a US state report), local

@@ -42,6 +42,7 @@ function walk(value: unknown, visit: (key: string, v: unknown, where: string) =>
 const dataFiles = [
   ...fs.readdirSync(path.join(root, "data/states")).map((f) => path.join("data/states", f)),
   ...fs.readdirSync(path.join(root, "data/cities")).map((f) => path.join("data/cities", f)),
+  ...fs.readdirSync(path.join(root, "data/counties")).map((f) => path.join("data/counties", f)),
   "data/changes.json",
   "data/professions.json",
 ];

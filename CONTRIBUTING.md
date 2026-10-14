@@ -55,6 +55,13 @@ When a fee, deadline, threshold or requirement changes (or is announced), add an
 Edit `data/professions.json` (one entry per state per profession). Use the board's own site for `url`; the
 data test requires all 51 jurisdictions for every profession.
 
+## Adding a county
+
+Counties live in `data/counties/<STATE>.json`, one file per state and DC. An entry has `state`, `county` (the name as
+the ZIP data spells it, without "County"), optional `aliases`, and `items` in the same shape as city items. Use
+`"status": "none"` (with `sourceUrl`) or `"unverified"` (with `note`) and `"checkedOn"` when the county has no
+filing of its own or you could not confirm one. Cite the county's own page for the filing, not a bare domain.
+
 ## Adding a city
 
 Add an entry to `data/cities/<STATE>.json`: `state`, `city`, `counties` (optional) and `items` with an `appliesTo` tag list

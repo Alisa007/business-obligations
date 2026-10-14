@@ -17,10 +17,18 @@ export { RULESET_VERSION, BUNDLED_CHANGES, listChanges } from "./changes";
 export type { RuleChange, ChangeNotice, ChangeKind, ChangeFilter } from "./changes";
 export { stateFromZip } from "./zip";
 export { nextDueDate } from "./dates";
-export { STATES, STATE_CODES, indexCities, findCity } from "./data";
-export type { CityLookup } from "./data";
-export { seededCityRule } from "./rules/local";
-export type { StateInfo, ReportRule, WcTrigger, IndustryAuthorities, LocalJurisdiction } from "./data/types";
+export { STATES, STATE_CODES, indexCities, findCity, indexCounties, findCounty } from "./data";
+export type { CityLookup, CountyLookup } from "./data";
+export { seededCityRule, seededCountyRule } from "./rules/local";
+export type {
+  StateInfo,
+  ReportRule,
+  WcTrigger,
+  IndustryAuthorities,
+  LocalJurisdiction,
+  CountyJurisdiction,
+  LocalItem,
+} from "./data/types";
 export { estimateCosts, itemAmount } from "./costs";
 export type { CostOptions, CostEstimate, CostLine } from "./costs";
 export { buildCalendar, toICS } from "./calendar";

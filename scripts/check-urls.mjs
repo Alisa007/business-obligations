@@ -62,6 +62,7 @@ function collectDataUrls(root = "data") {
   const files = [
     ...readdirSync(join(root, "states")).map((f) => join(root, "states", f)),
     ...readdirSync(join(root, "cities")).map((f) => join(root, "cities", f)),
+    ...readdirSync(join(root, "counties")).map((f) => join(root, "counties", f)),
     join(root, "professions.json"),
     join(root, "changes.json"),
   ];

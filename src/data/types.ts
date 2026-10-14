@@ -247,6 +247,38 @@ export interface StateInfo {
   };
 }
 
+/** One city- or county-level obligation. */
+export interface LocalItem {
+  id: string;
+  title: string;
+  category: "license" | "permit" | "registration" | "filing" | "payment" | "insurance" | "recordkeeping";
+  authority: string;
+  description: string;
+  frequency: "once" | "annual" | "biennial" | "quarterly" | "monthly" | "per_event" | "ongoing";
+  deadline?: string;
+  due?: Due;
+  url?: string;
+  /** Tags; the item applies if any matches. */
+  appliesTo: Array<"all" | "employees" | "sells_goods" | "corporation" | "unincorporated" | "trade_name">;
+}
+
+/** A county-level rule seed: what a county (or parish, borough) requires of businesses located in it. */
+export interface CountyJurisdiction {
+  state: string;
+  /** County name as the ZIP data spells it, without "County" (for example "Los Angeles", "Miami-Dade"). */
+  county: string;
+  /** Other names that resolve to this county. */
+  aliases?: string[];
+  /** `rules` (default), `none` (checked, nothing county-specific) or `unverified` (no official page confirmed). */
+  status?: "rules" | "none" | "unverified";
+  /** Date (YYYY-MM-DD) the entry was last checked against the county's official pages. */
+  checkedOn?: string;
+  /** Official page backing a `none` status. */
+  sourceUrl?: string;
+  note?: string;
+  items: LocalItem[];
+}
+
 /** A city-level rule seed. */
 export interface LocalJurisdiction {
   state: string;

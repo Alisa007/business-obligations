@@ -7,6 +7,11 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ### Added
 
+- Counties: `data/counties/<STATE>.json` seeds county-level filings for the 300 largest US counties, mainly the
+  annual business personal property return filed with the county assessor, property appraiser or appraisal district
+  (with the state's due date and a county-specific page where one was confirmed). `findCounty`, `indexCounties` and
+  `seededCountyRule` mirror the city API; items carry `jurisdiction: "county"`.
+
 - Cities: the 300 largest US cities are covered (`data/top-cities.json` lists them). City seeds moved from
   `data/local.json` to `data/cities/<STATE>.json` with an indexed lookup (`findCity`), `status` (`rules`, `none`,
   `unverified`), `checkedOn`, `sourceUrl` and `note`, and `seededCityRule(indexCities(seeds))` to bring your own

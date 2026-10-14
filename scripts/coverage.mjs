@@ -32,6 +32,14 @@ export function buildCoverage() {
   const withRules = local.filter((c) => c.items.length > 0).length;
   const none = local.filter((c) => c.status === "none").length;
   const unverified = local.filter((c) => c.status === "unverified").length;
+  const counties = readdirSync(join(root, "data/counties"))
+    .filter((f) => f.endsWith(".json"))
+    .flatMap((f) => read(`data/counties/${f}`));
+  const countyRules = counties.filter((c) => c.items.length > 0).length;
+  const topCounties = read("data/top-counties.json").counties;
+  const topCountiesCovered = topCounties.filter((t) =>
+    counties.some((c) => c.state === t.state && c.county === t.county),
+  ).length;
   const top = read("data/top-cities.json").cities;
   const topCovered = top.filter((t) => local.some((c) => c.state === t.state && c.city === t.city)).length;
 
@@ -46,6 +54,8 @@ page on the date shown; everything not listed as checked is compiled from public
 - **Jurisdictions:** ${total} (50 states and DC)
 - **States with unconfirmed fields:** ${withUnconfirmed}
 - **Seeded cities:** ${seeded}: ${withRules} with city-specific rules, ${none} checked with no general city license or tax, ${unverified} researched but unconfirmed (all other cities get the state's local licensing regime named for the city and county)
+- **Seeded counties:** ${counties.length}: ${countyRules} with county-specific filings (mainly business personal property returns), the rest researched but unconfirmed or with nothing county-level
+- **300 largest counties** (approximate): ${topCountiesCovered} of ${topCounties.length} covered
 - **300 largest cities** (2020 census; ranks beyond 100 are approximate): ${topCovered} of ${top.length} covered
 
 | State | Checked on | Entity reports | DBA level | Gross-receipts / margin tax | UI data year | Seeded cities | Unconfirmed fields |

@@ -9,6 +9,8 @@ page on the date shown; everything not listed as checked is compiled from public
 - **Jurisdictions:** 51 (50 states and DC)
 - **States with unconfirmed fields:** 1
 - **Seeded cities:** 303: 161 with city-specific rules, 25 checked with no general city license or tax, 117 researched but unconfirmed (all other cities get the state's local licensing regime named for the city and county)
+- **Seeded counties:** 309: 145 with county-specific filings (mainly business personal property returns), the rest researched but unconfirmed or with nothing county-level
+- **300 largest counties** (approximate): 297 of 300 covered
 - **300 largest cities** (2020 census; ranks beyond 100 are approximate): 300 of 300 covered
 
 | State | Checked on | Entity reports     | DBA level | Gross-receipts / margin tax | UI data year | Seeded cities                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Unconfirmed fields |

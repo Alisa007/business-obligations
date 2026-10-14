@@ -1,8 +1,9 @@
 import type { IndustryAuthorities, StateInfo } from "./types";
 import { STATES } from "./states";
 import { CITIES } from "./cities";
+import { COUNTIES } from "./counties";
 import professionData from "../../data/professions.json";
-import type { LocalJurisdiction } from "./types";
+import type { CountyJurisdiction, LocalJurisdiction } from "./types";
 import { resolveState } from "../changes";
 
 export { STATES };
@@ -48,6 +49,30 @@ export function indexCities(list: LocalJurisdiction[]): CityLookup {
     return entries.find((j) => j.counties?.some((x) => normalizeCity(x) === c)) ?? entries[0];
   };
 }
+
+export { COUNTIES };
+export const COUNTY_JURISDICTIONS: CountyJurisdiction[] = Object.values(COUNTIES).flat();
+
+/** Lowercased county name without "County", "Parish" or "Borough" ("St. Louis" and "Saint Louis" match). */
+export const normalizeCounty = (s: string) =>
+  normalizeCity(s.replace(/\b(county|parish|borough|city and borough of|municipality|census area)\b/gi, ""));
+
+/** A lookup over county seeds. */
+export type CountyLookup = (state: string, county: string) => CountyJurisdiction | undefined;
+
+/** Builds a lookup over county seeds you load yourself instead of bundling them. */
+export function indexCounties(list: CountyJurisdiction[]): CountyLookup {
+  const index = new Map<string, CountyJurisdiction>();
+  for (const j of list)
+    for (const name of [j.county, ...(j.aliases ?? [])]) {
+      const key = `${j.state}:${normalizeCounty(name)}`;
+      if (!index.has(key)) index.set(key, j);
+    }
+  return (state, county) => index.get(`${state}:${normalizeCounty(county)}`);
+}
+
+/** The bundled seed for a county, if there is one. */
+export const findCounty: CountyLookup = indexCounties(COUNTY_JURISDICTIONS);
 
 /** The bundled seed for a city, if there is one. */
 export const findCity: CityLookup = indexCities(LOCAL_JURISDICTIONS);

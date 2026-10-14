@@ -5,7 +5,7 @@ import addFormats from "ajv-formats";
 import { describe, expect, it } from "vitest";
 import { defaultRules, evaluate, indexCities, seededCityRule, type BusinessProfile } from "../src";
 import { STATES } from "../src";
-import { LOCAL_JURISDICTIONS, findCity } from "../src/data";
+import { COUNTY_JURISDICTIONS, LOCAL_JURISDICTIONS, findCity, findCounty } from "../src/data";
 
 const root = path.resolve(__dirname, "..");
 const read = (p: string) => JSON.parse(fs.readFileSync(path.join(root, p), "utf8"));
@@ -89,6 +89,61 @@ describe("city data files", () => {
     expect(top).toHaveLength(300);
     const missing = top.filter((c) => !findCity(c.state, c.city)).map((c) => `${c.city}, ${c.state}`);
     expect(missing).toEqual([]);
+  });
+});
+
+describe("county data files", () => {
+  const files = fs.readdirSync(path.join(root, "data/counties")).filter((f) => f.endsWith(".json"));
+  it("has one file per state and DC", () => expect(files).toHaveLength(51));
+  it.each(files)("%s only holds counties of its own state, once each", (f) => {
+    const list = read(`data/counties/${f}`) as Array<{ state: string; county: string }>;
+    for (const c of list) expect(c.state + ".json").toBe(f);
+    const names = list.map((c) => c.county);
+    expect(new Set(names).size).toBe(names.length);
+  });
+  it("entries are well-formed", () => {
+    for (const j of COUNTY_JURISDICTIONS) {
+      expect(STATES[j.state], j.county).toBeDefined();
+      const ids = j.items.map((i) => i.id);
+      expect(new Set(ids).size, j.county).toBe(ids.length);
+      for (const it of j.items) {
+        expect(it.appliesTo.length).toBeGreaterThan(0);
+        if (it.url) expect(it.url, j.county).toMatch(/^https:\/\//);
+      }
+      if (j.items.length === 0) {
+        expect(["none", "unverified"], j.county).toContain(j.status);
+        expect(j.checkedOn, j.county).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+        expect(j.note, j.county).toBeTruthy();
+        if (j.status === "none") expect(j.sourceUrl, j.county).toMatch(/^https:\/\//);
+      }
+    }
+  });
+  it("covers the 300 largest counties", () => {
+    const top = read("data/top-counties.json").counties as Array<{ state: string; county: string }>;
+    expect(top).toHaveLength(300);
+    const missing = top.filter((c) => !findCounty(c.state, c.county)).map((c) => `${c.county}, ${c.state}`);
+    expect(missing).toEqual([]);
+  });
+  it("matches names regardless of County/Parish suffixes", () => {
+    expect(findCounty("CA", "Los Angeles County")?.county).toBe("Los Angeles");
+    expect(findCounty("LA", "East Baton Rouge")?.county).toBe("East Baton Rouge Parish");
+  });
+  it("adds county items to results", () => {
+    const r = evaluate(
+      {
+        entityType: "llc",
+        zip: "90012",
+        city: "Los Angeles",
+        county: "Los Angeles",
+        industry: "retail",
+      } as BusinessProfile,
+      { asOf: "2026-10-13" },
+    );
+    const item = r.items.find(
+      (i) => i.jurisdiction === "county" && /business personal property/i.test(i.title),
+    );
+    expect(item?.url).toMatch(/^https:\/\//);
+    expect(item?.nextDue).toBe("2027-04-01");
   });
 });
 
