@@ -7,6 +7,11 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ### Added
 
+- Cities: the 100 largest US cities are covered (`data/top-cities.json` lists them). City seeds moved from
+  `data/local.json` to `data/cities/<STATE>.json` with an indexed lookup (`findCity`), `status` (`rules`, `none`,
+  `unverified`), `checkedOn`, `sourceUrl` and `note`, and `seededCityRule(indexCities(seeds))` to bring your own
+  city data.
+
 - Rule versioning: `RULESET_VERSION`, a dated change registry (`data/changes.json`), effective-dated patches applied
   by `asOf`, `upcomingChanges` / `recentChanges` on results and `upcomingChanges` on items, `previewChanges()`,
   `diffItems()` and `listChanges()`.

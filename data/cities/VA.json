@@ -1,0 +1,81 @@
+[
+  {
+    "state": "VA",
+    "city": "Chesapeake",
+    "status": "unverified",
+    "note": "A March 1 BPOL renewal is described by third-party sources only; the city's own page was not confirmed.",
+    "counties": ["Chesapeake"],
+    "items": [],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "VA",
+    "city": "Norfolk",
+    "items": [
+      {
+        "id": "norfolk.business-license",
+        "title": "Renew Norfolk business license (BPOL)",
+        "category": "license",
+        "authority": "City of Norfolk Commissioner of the Revenue",
+        "description": "Business licenses run January 1 to December 31 and are based on the prior year's gross receipts. Renewal is due March 1; late payment carries a penalty and interest.",
+        "frequency": "annual",
+        "deadline": "March 1",
+        "due": {
+          "type": "fixed",
+          "month": 3,
+          "day": 1
+        },
+        "url": "https://norfolk.gov/4169/Business-License-Renewals",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "VA",
+    "city": "Richmond",
+    "counties": ["Richmond"],
+    "items": [
+      {
+        "id": "richmond-va.business-license",
+        "title": "Renew Richmond business license (BPOL)",
+        "category": "license",
+        "authority": "City of Richmond Department of Finance",
+        "description": "Business licenses expire December 31. Renewal application and payment are due March 1 (the next workday if it falls on a weekend); the late penalty is 10% or $10, whichever is greater, plus interest.",
+        "frequency": "annual",
+        "deadline": "March 1",
+        "due": {
+          "type": "fixed",
+          "month": 3,
+          "day": 1
+        },
+        "url": "https://rva.gov/finance/bpol-tax",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "VA",
+    "city": "Virginia Beach",
+    "items": [
+      {
+        "id": "virginiabeach.business-license",
+        "title": "Renew Virginia Beach business license (BPOL)",
+        "category": "license",
+        "authority": "City of Virginia Beach Commissioner of the Revenue",
+        "description": "Business licenses are based on the prior calendar year's gross receipts; renewal payment is due on or before March 1, after which penalty and interest may apply.",
+        "frequency": "annual",
+        "deadline": "March 1",
+        "due": {
+          "type": "fixed",
+          "month": 3,
+          "day": 1
+        },
+        "url": "https://cor.virginiabeach.gov/businesses",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-13"
+  }
+]

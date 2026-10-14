@@ -216,10 +216,13 @@ Machine-readable: [`schema/business-profile.schema.json`](schema/business-profil
   workers' comp thresholds (including hours and payroll tests), paid leave and paid sick leave, general state
   licenses, DBA filing level and office, LLC publication, workplace notices, professional boards (attorney, CPA,
   physician, architect, engineer) and industry licensing authorities including cannabis regulators.
-- **City (seeded):** New York, San Francisco, Los Angeles, San Diego, San José, Oakland, Chicago, Seattle, Portland,
-  Philadelphia, Denver, Boston, Atlanta, Miami, Detroit, Columbus, Cleveland, Cincinnati, Pittsburgh, Louisville,
-  Kansas City, St. Louis, Baltimore, New Orleans, Las Vegas, Phoenix. Other cities return the state's typical local
-  licensing regime, named for the city and county you pass in.
+- **City (seeded):** the 100 largest US cities (2020 census) are all covered, in `data/cities/<STATE>.json`: some
+  with city-specific taxes and licenses, some checked and found to have no general city license or tax
+  (`status: "none"`), and some researched but not confirmed from an official page (`status: "unverified"`).
+  [`COVERAGE.md`](COVERAGE.md) lists them. Every other city returns the state's typical local licensing regime,
+  named for the city and county you pass in. City data is one file per state and looked up by an index, so adding
+  thousands more is a data change; to keep the bundle small you can also load city data yourself and add it with
+  `seededCityRule(indexCities(seeds))`.
 
 Intentionally not modelled: FinCEN beneficial ownership reporting (domestic companies are exempt under FinCEN's final
 rule effective August 14, 2026; only foreign entities registered in a US state report), local
@@ -392,7 +395,7 @@ evaluate(profile, { rules: [...defaultRules, myRule] });
 ```
 
 State data lives in [`data/states/*.json`](data/states), validated by
-[`schema/state.schema.json`](schema/state.schema.json); city seeds in [`data/local.json`](data/local.json).
+[`schema/state.schema.json`](schema/state.schema.json); city seeds in [`data/cities/`](data/cities).
 
 ## Versioning
 

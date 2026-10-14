@@ -11,7 +11,9 @@ export function buildCoverage() {
     .filter((f) => f.endsWith(".json"))
     .map((f) => read(`data/states/${f}`))
     .sort((a, b) => a.code.localeCompare(b.code));
-  const local = read("data/local.json");
+  const local = readdirSync(join(root, "data/cities"))
+    .filter((f) => f.endsWith(".json"))
+    .flatMap((f) => read(`data/cities/${f}`));
   const cities = (code) => local.filter((c) => c.state === code).map((c) => c.city);
   const reports = (s) =>
     ["llcReport", "corpReport", "lpReport", "llpReport"]
@@ -27,6 +29,11 @@ export function buildCoverage() {
   const total = states.length;
   const withUnconfirmed = states.filter((s) => s.verification.unconfirmed.length).length;
   const seeded = new Set(local.map((c) => `${c.state}:${c.city}`)).size;
+  const withRules = local.filter((c) => c.items.length > 0).length;
+  const none = local.filter((c) => c.status === "none").length;
+  const unverified = local.filter((c) => c.status === "unverified").length;
+  const top = read("data/top-cities.json").cities;
+  const topCovered = top.filter((t) => local.some((c) => c.state === t.state && c.city === t.city)).length;
 
   return `# Coverage
 
@@ -38,7 +45,8 @@ page on the date shown; everything not listed as checked is compiled from public
 
 - **Jurisdictions:** ${total} (50 states and DC)
 - **States with unconfirmed fields:** ${withUnconfirmed}
-- **Seeded cities:** ${seeded} (all other cities get the state's local licensing regime named for the city and county)
+- **Seeded cities:** ${seeded}: ${withRules} with city-specific rules, ${none} checked with no general city license or tax, ${unverified} researched but unconfirmed (all other cities get the state's local licensing regime named for the city and county)
+- **100 largest cities** (2020 census): ${topCovered} covered
 
 | State | Checked on | Entity reports | DBA level | Gross-receipts / margin tax | UI data year | Seeded cities | Unconfirmed fields |
 | ----- | ---------- | -------------- | --------- | --------------------------- | ------------ | ------------- | ------------------ |

@@ -1,22 +1,48 @@
-import type { Rule, ResolvedProfile } from "../types";
-import { LOCAL_JURISDICTIONS, stateInfo } from "../data";
+import type { Rule } from "../types";
+import { findCity, stateInfo, type CityLookup } from "../data";
 import { isCorpLike, isUnincorporated } from "../entity";
 
-const norm = (s: string) =>
-  s
-    .trim()
-    .toLowerCase()
-    .replace(/\./g, "")
-    .replace(/\bcity of\b/, "")
-    .replace(/\bsaint\b/, "st")
-    .replace(/\s+/g, " ")
-    .trim();
-
-function jurisdictionFor(p: ResolvedProfile) {
-  const city = norm(p.city);
-  return LOCAL_JURISDICTIONS.find(
-    (j) => j.state === p.state && [j.city, ...(j.aliases ?? [])].some((name) => norm(name) === city),
-  );
+/**
+ * A rule that emits city-specific items from city seeds. The bundled rule uses the bundled seeds; pass your own
+ * list (`seededCityRule(indexCities(seeds), "my.cities")`) to add cities without bundling them.
+ */
+export function seededCityRule(lookup: CityLookup, id = "local.seeded-city"): Rule {
+  return {
+    id,
+    description: "City-specific licences and taxes for seeded cities (see data/cities/)",
+    inputs: ["state", "city", "employeeCount", "sellsTaxableGoods", "entityType", "usesTradeName"],
+    when: (p) => lookup(p.state, p.city, p.county) !== undefined,
+    items: (p) => {
+      const j = lookup(p.state, p.city, p.county)!;
+      return j.items
+        .filter((it) =>
+          it.appliesTo.some(
+            (tag) =>
+              tag === "all" ||
+              (tag === "employees" && p.hasEmployees) ||
+              (tag === "sells_goods" &&
+                (p.sellsTaxableGoods || p.industry === "retail" || p.industry === "restaurant")) ||
+              (tag === "corporation" &&
+                (isCorpLike(p) || p.taxTreatment === "c_corp" || p.taxTreatment === "s_corp")) ||
+              (tag === "unincorporated" && isUnincorporated(p)) ||
+              (tag === "trade_name" && p.usesTradeName),
+          ),
+        )
+        .map((it) => ({
+          title: it.title,
+          category: it.category,
+          jurisdiction: "city" as const,
+          state: p.state,
+          authority: it.authority,
+          description: it.description,
+          frequency: it.frequency,
+          deadline: it.deadline,
+          due: it.due,
+          url: it.url,
+          reason: `Business is located in ${j.city}, ${j.state}`,
+        }));
+    },
+  };
 }
 
 export const localRules: Rule[] = [
@@ -72,40 +98,5 @@ export const localRules: Rule[] = [
       reason: "Business operates from commercial premises",
     }),
   },
-  {
-    id: "local.seeded-city",
-    description: "City-specific licences and taxes for seeded cities (see data/local.json)",
-    inputs: ["state", "city", "employeeCount", "sellsTaxableGoods", "entityType", "usesTradeName"],
-    when: (p) => jurisdictionFor(p) !== undefined,
-    items: (p) => {
-      const j = jurisdictionFor(p)!;
-      return j.items
-        .filter((it) =>
-          it.appliesTo.some(
-            (tag) =>
-              tag === "all" ||
-              (tag === "employees" && p.hasEmployees) ||
-              (tag === "sells_goods" &&
-                (p.sellsTaxableGoods || p.industry === "retail" || p.industry === "restaurant")) ||
-              (tag === "corporation" &&
-                (isCorpLike(p) || p.taxTreatment === "c_corp" || p.taxTreatment === "s_corp")) ||
-              (tag === "unincorporated" && isUnincorporated(p)) ||
-              (tag === "trade_name" && p.usesTradeName),
-          ),
-        )
-        .map((it) => ({
-          title: it.title,
-          category: it.category,
-          jurisdiction: "city" as const,
-          state: p.state,
-          authority: it.authority,
-          description: it.description,
-          frequency: it.frequency,
-          deadline: it.deadline,
-          due: it.due,
-          url: it.url,
-          reason: `Business is located in ${j.city}, ${j.state}`,
-        }));
-    },
-  },
+  seededCityRule(findCity),
 ];

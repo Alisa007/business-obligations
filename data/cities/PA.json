@@ -1,0 +1,62 @@
+[
+  {
+    "state": "PA",
+    "city": "Philadelphia",
+    "counties": ["Philadelphia"],
+    "items": [
+      {
+        "id": "philly.commercial-activity-license",
+        "title": "Obtain Philadelphia Commercial Activity License",
+        "category": "license",
+        "authority": "Philadelphia Department of Revenue",
+        "description": "Free license required for any business operating in Philadelphia; required before other city licenses.",
+        "frequency": "annual",
+        "url": "https://www.phila.gov/revenue/",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "philly.birt",
+        "title": "File Philadelphia Business Income & Receipts Tax (BIRT)",
+        "category": "payment",
+        "authority": "Philadelphia Department of Revenue",
+        "description": "Annual tax on gross receipts and net income for entities doing business in Philadelphia.",
+        "frequency": "annual",
+        "deadline": "April 15 (calendar-year filers)",
+        "due": {
+          "type": "fixed",
+          "month": 4,
+          "day": 15
+        },
+        "url": "https://www.phila.gov/services/payments-assistance-taxes/business-taxes/",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "philly.wage-tax",
+        "title": "Withhold and remit Philadelphia Wage Tax",
+        "category": "payment",
+        "authority": "Philadelphia Department of Revenue",
+        "description": "Employers withhold the city wage tax from employees and remit it with the quarterly reconciliation.",
+        "frequency": "quarterly",
+        "url": "https://www.phila.gov/services/payments-assistance-taxes/business-taxes/",
+        "appliesTo": ["employees"]
+      }
+    ]
+  },
+  {
+    "state": "PA",
+    "city": "Pittsburgh",
+    "counties": ["Allegheny"],
+    "items": [
+      {
+        "id": "pittsburgh.payroll-expense-tax",
+        "title": "Register for Pittsburgh payroll expense tax and local services tax",
+        "category": "registration",
+        "authority": "City of Pittsburgh Department of Finance",
+        "description": "Employers with employees working in Pittsburgh register for the payroll expense tax and withhold the local services tax per employee.",
+        "frequency": "quarterly",
+        "url": "https://www.pittsburghpa.gov/City-Government/Finance-Budget/Taxes/Tax-Forms",
+        "appliesTo": ["employees"]
+      }
+    ]
+  }
+]

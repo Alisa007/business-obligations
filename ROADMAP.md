@@ -7,7 +7,8 @@ have details.
 
 - **Keep the data fresh:** scheduled source verification that flags dead links and changed pages
   ([#7](https://github.com/Alisa007/compliance-rules-engine/issues/7)).
-- **More cities:** a safe, template-driven way to add local requirements
+- **More cities:** the 100 largest are covered; next are cities 101 and up, then county-level rules. City data is
+  sharded per state and indexed, so adding cities is a data-only change
   ([#8](https://github.com/Alisa007/compliance-rules-engine/issues/8)).
 - **More industries:** contractors, cosmetology, food trucks, money transmission and more
   ([#9](https://github.com/Alisa007/compliance-rules-engine/issues/9)).

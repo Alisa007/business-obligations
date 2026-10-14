@@ -3,9 +3,9 @@ import path from "node:path";
 import Ajv2020 from "ajv/dist/2020";
 import addFormats from "ajv-formats";
 import { describe, expect, it } from "vitest";
-import { evaluate, type BusinessProfile } from "../src";
+import { defaultRules, evaluate, indexCities, seededCityRule, type BusinessProfile } from "../src";
 import { STATES } from "../src";
-import { LOCAL_JURISDICTIONS } from "../src/data";
+import { LOCAL_JURISDICTIONS, findCity } from "../src/data";
 
 const root = path.resolve(__dirname, "..");
 const read = (p: string) => JSON.parse(fs.readFileSync(path.join(root, p), "utf8"));
@@ -55,6 +55,40 @@ describe("local seed data", () => {
       expect(it.title).toBeTruthy();
       if (it.url) expect(it.url).toMatch(/^https:\/\//);
     }
+  });
+});
+
+describe("city data files", () => {
+  const files = fs.readdirSync(path.join(root, "data/cities")).filter((f) => f.endsWith(".json"));
+  it("has one file per state and DC", () => expect(files).toHaveLength(51));
+  it.each(files)("%s only holds cities of its own state", (f) => {
+    const list = read(`data/cities/${f}`) as Array<{ state: string; city: string }>;
+    for (const c of list) expect(c.state + ".json").toBe(f);
+    const names = list.map((c) => c.city);
+    expect(new Set(names).size).toBe(names.length);
+  });
+  it("entries without items say why", () => {
+    for (const j of LOCAL_JURISDICTIONS.filter((x) => x.items.length === 0)) {
+      expect(["none", "unverified"], j.city).toContain(j.status);
+      expect(j.checkedOn, j.city).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+      expect(j.note, j.city).toBeTruthy();
+      if (j.status === "none") expect(j.sourceUrl, j.city).toMatch(/^https:\/\//);
+    }
+  });
+  it("entries with items have no status other than rules", () => {
+    for (const j of LOCAL_JURISDICTIONS.filter((x) => x.items.length > 0))
+      expect(j.status ?? "rules").toBe("rules");
+  });
+  it("looks cities up regardless of punctuation and aliases", () => {
+    expect(findCity("MO", "Saint Louis")?.city).toBe("St. Louis");
+    expect(findCity("NY", "brooklyn")?.city).toBe("New York");
+    expect(findCity("NY", "Nowhere")).toBeUndefined();
+  });
+  it("covers the 100 largest cities", () => {
+    const top = read("data/top-cities.json").cities as Array<{ state: string; city: string }>;
+    expect(top).toHaveLength(100);
+    const missing = top.filter((c) => !findCity(c.state, c.city)).map((c) => `${c.city}, ${c.state}`);
+    expect(missing).toEqual([]);
   });
 });
 
@@ -184,5 +218,40 @@ describe("citation urls in output", () => {
       void s;
     }
     expect([...new Set(bare)]).toEqual([]);
+  });
+});
+
+describe("bring-your-own city data", () => {
+  const profile: BusinessProfile = {
+    entityType: "llc",
+    zip: "78701",
+    city: "Smallville",
+    county: "Travis",
+    state: "TX",
+    industry: "retail",
+  } as BusinessProfile;
+  it("adds items for cities that are not bundled", () => {
+    const seeds = [
+      {
+        state: "TX",
+        city: "Smallville",
+        items: [
+          {
+            id: "smallville.permit",
+            title: "Smallville permit",
+            category: "permit" as const,
+            authority: "City of Smallville",
+            description: "Test.",
+            frequency: "once" as const,
+            appliesTo: ["all" as const],
+          },
+        ],
+      },
+    ];
+    const base = evaluate(profile, { asOf: "2026-10-13" });
+    expect(base.items.some((i) => i.title === "Smallville permit")).toBe(false);
+    const rules = [...defaultRules, seededCityRule(indexCities(seeds), "my.cities")];
+    const result = evaluate(profile, { asOf: "2026-10-13", rules });
+    expect(result.items.some((i) => i.title === "Smallville permit")).toBe(true);
   });
 });

@@ -1,0 +1,84 @@
+[
+  {
+    "state": "MO",
+    "city": "Kansas City",
+    "counties": ["Jackson", "Clay", "Platte"],
+    "items": [
+      {
+        "id": "kansascity.business-license",
+        "title": "Obtain and renew Kansas City business license",
+        "category": "license",
+        "authority": "City of Kansas City, Missouri Finance Department",
+        "description": "New businesses register (Form RD-100) and file the business license (Form RD-105) within 60 days of opening, renewing by March 1 each year; the fee depends on prior-year gross receipts.",
+        "frequency": "annual",
+        "deadline": "March 1",
+        "due": {
+          "type": "fixed",
+          "month": 3,
+          "day": 1
+        },
+        "url": "https://www.kcmo.gov/city-hall/departments/finance",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "kansascity.earnings-profits-tax",
+        "title": "File Kansas City earnings and profits tax return (RD-108)",
+        "category": "filing",
+        "authority": "City of Kansas City, Missouri Finance Department",
+        "description": "Businesses pay the 1% tax on net profits (return due April 15, even in a loss year) while the earnings tax remains in effect.",
+        "frequency": "annual",
+        "deadline": "April 15 (calendar-year filers)",
+        "due": {
+          "type": "fixed",
+          "month": 4,
+          "day": 15
+        },
+        "url": "https://www.kcmo.gov/city-hall/departments/finance",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "kansascity.earnings-tax-withholding",
+        "title": "Withhold and remit Kansas City earnings tax (RD-110)",
+        "category": "payment",
+        "authority": "City of Kansas City, Missouri Finance Department",
+        "description": "Employers withhold the 1% earnings tax for employees who live or work in the city and file the quarterly return.",
+        "frequency": "quarterly",
+        "url": "https://www.kcmo.gov/city-hall/departments/finance",
+        "appliesTo": ["employees"]
+      }
+    ]
+  },
+  {
+    "state": "MO",
+    "city": "St. Louis",
+    "counties": ["St. Louis City"],
+    "items": [
+      {
+        "id": "stlouis.business-earnings-tax",
+        "title": "File St. Louis business earnings tax return",
+        "category": "filing",
+        "authority": "City of St. Louis Collector of Revenue, Earnings Tax Department",
+        "description": "Businesses located in or working in the City of St. Louis pay a 1% tax on business earnings; account application Form E-9; return due April 15 (calendar year).",
+        "frequency": "annual",
+        "deadline": "April 15 (calendar-year filers)",
+        "due": {
+          "type": "fixed",
+          "month": 4,
+          "day": 15
+        },
+        "url": "https://www.stlouis-mo.gov/government/departments/collector/earnings-tax/",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "stlouis.payroll-expense-tax",
+        "title": "File St. Louis payroll expense tax and earnings tax withholding (P-10/W-10)",
+        "category": "payment",
+        "authority": "City of St. Louis Collector of Revenue, Earnings Tax Department",
+        "description": "Employers pay the 0.5% payroll expense tax and withhold earnings tax for employees working in the city, filing quarterly.",
+        "frequency": "quarterly",
+        "url": "https://www.stlouis-mo.gov/government/departments/collector/earnings-tax/",
+        "appliesTo": ["employees"]
+      }
+    ]
+  }
+]

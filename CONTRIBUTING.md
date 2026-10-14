@@ -57,7 +57,7 @@ data test requires all 51 jurisdictions for every profession.
 
 ## Adding a city
 
-Add an entry to `data/local.json`: `state`, `city`, `counties` (optional) and `items` with an `appliesTo` tag list
+Add an entry to `data/cities/<STATE>.json`: `state`, `city`, `counties` (optional) and `items` with an `appliesTo` tag list
 (`all`, `employees`, `sells_goods`, `corporation`, `unincorporated`, `trade_name`); add `aliases` for
 neighbourhood or borough names. Cite the city's own page in `url`.
 
@@ -90,7 +90,7 @@ JSON files over code; raise a budget only with a reason in the pull request.
 
 ## Adding a city
 
-Cities live in `data/local.json`. Each entry has `state`, `city`, optional `counties` and `aliases`, and `items`:
+Cities live in `data/cities/<STATE>.json` (one file per state and DC). Each entry has `state`, `city`, optional `counties` and `aliases`, and `items`:
 
 ```json
 {
@@ -106,6 +106,10 @@ Cities live in `data/local.json`. Each entry has `state`, `city`, optional `coun
   "appliesTo": ["all"]
 }
 ```
+
+A city that has no general business license or tax of its own is still worth recording, so nobody has to check
+again: set `"status": "none"`, `"items": []`, `"checkedOn"` (YYYY-MM-DD), `"sourceUrl"` (the official page) and a
+short `"note"` on what the city requires instead.
 
 `appliesTo` takes `all`, `employees`, `sells_goods`, `corporation`, `unincorporated` or `trade_name`. Use the city's own
 page for `url`, run `npm run coverage` and `npm run check`, and add a line to the Unreleased section of `CHANGELOG.md`.

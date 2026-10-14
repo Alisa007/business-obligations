@@ -1,0 +1,66 @@
+[
+  {
+    "state": "CO",
+    "city": "Aurora",
+    "counties": ["Arapahoe", "Adams", "Douglas"],
+    "items": [
+      {
+        "id": "aurora-co.business-license",
+        "title": "Hold an Aurora business license",
+        "category": "license",
+        "authority": "City of Aurora Tax and Licensing Division",
+        "description": "Any business operating in Aurora or with employees there needs a city business license, one per location. The license covers two years from issuance and establishes sales, use, occupational privilege and lodger's tax filing roles.",
+        "frequency": "biennial",
+        "deadline": "Two years from issuance",
+        "url": "https://www.auroragov.org/bl",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "CO",
+    "city": "Colorado Springs",
+    "counties": ["El Paso"],
+    "items": [
+      {
+        "id": "coloradosprings.sales-tax-license",
+        "title": "Hold Colorado Springs sales tax license",
+        "category": "license",
+        "authority": "City of Colorado Springs Sales Tax Office",
+        "description": "Businesses selling or leasing at retail in the city need a city sales tax license (no fee since September 1, 2023). Licenses expire every odd year on December 31 and are renewed online only.",
+        "frequency": "biennial",
+        "deadline": "Expires December 31 of every odd year",
+        "url": "https://coloradosprings.gov/new-tax-applications",
+        "appliesTo": ["all"]
+      }
+    ]
+  },
+  {
+    "state": "CO",
+    "city": "Denver",
+    "counties": ["Denver"],
+    "items": [
+      {
+        "id": "denver.sales-tax-license",
+        "title": "Obtain Denver sales and use tax license",
+        "category": "permit",
+        "authority": "Denver Department of Finance, Treasury Division",
+        "description": "Denver is a home-rule city and administers its own sales and use tax separately from the state.",
+        "frequency": "once",
+        "url": "https://denvergov.org/Government/Departments/Department-of-Finance",
+        "appliesTo": ["sells_goods"]
+      },
+      {
+        "id": "denver.opt",
+        "title": "Withhold and remit Denver Occupational Privilege Tax (OPT)",
+        "category": "payment",
+        "authority": "Denver Department of Finance, Treasury Division",
+        "description": "Employers and employees pay a monthly occupational privilege tax for work performed in Denver.",
+        "frequency": "monthly",
+        "url": "https://www.denvergov.org/files/assets/public/v/2/finance/documents/treasury/tax-guides/taxguidetopic61_occupationalprivilegetaxes.pdf",
+        "appliesTo": ["employees"]
+      }
+    ]
+  }
+]

@@ -255,6 +255,19 @@ export interface LocalJurisdiction {
   counties?: string[];
   /** Other names that resolve to this jurisdiction (e.g. NYC boroughs). */
   aliases?: string[];
+  /**
+   * `rules` (default): the city levies its own taxes, licenses or permits listed in `items`.
+   * `none`: checked, and the city has no general business license or tax of its own (`items` is empty);
+   * the state's regime and the generic local rules still apply.
+   * `unverified`: researched, but no official city page confirmed either way (`items` is empty).
+   */
+  status?: "rules" | "none" | "unverified";
+  /** Date (YYYY-MM-DD) the entry was last checked against the city's official pages. */
+  checkedOn?: string;
+  /** Official page backing a `none` status. */
+  sourceUrl?: string;
+  /** Short explanation shown to maintainers (for example what the city does require instead). */
+  note?: string;
   items: Array<{
     id: string;
     title: string;

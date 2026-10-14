@@ -1,0 +1,135 @@
+[
+  {
+    "state": "OH",
+    "city": "Akron",
+    "counties": ["Summit"],
+    "items": [
+      {
+        "id": "akron.net-profit-tax",
+        "title": "File Akron business net profit tax return",
+        "category": "filing",
+        "authority": "City of Akron Income Tax Division",
+        "description": "Businesses with income in Akron file the municipal net profit tax return (2.5% rate).",
+        "frequency": "annual",
+        "deadline": "April 15 (calendar-year filers)",
+        "due": {
+          "type": "fixed",
+          "month": 4,
+          "day": 15
+        },
+        "url": "https://www.akronohio.gov/cms/INCOMETAX/index.html",
+        "appliesTo": ["all"]
+      }
+    ]
+  },
+  {
+    "state": "OH",
+    "city": "Cincinnati",
+    "counties": ["Hamilton"],
+    "items": [
+      {
+        "id": "cincinnati.business-income-tax",
+        "title": "File Cincinnati business income tax return",
+        "category": "filing",
+        "authority": "City of Cincinnati Income Tax Division",
+        "description": "Businesses engaged in Cincinnati (rental property, sole proprietorships, partnerships, corporations) file the business net profit return at the city's 1.8% rate.",
+        "frequency": "annual",
+        "url": "https://www.cincinnati-oh.gov/finance/income-taxes/",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "cincinnati.withholding",
+        "title": "Withhold and remit Cincinnati income tax",
+        "category": "payment",
+        "authority": "City of Cincinnati Income Tax Division",
+        "description": "Employers register for and remit withholding for employees working in Cincinnati.",
+        "frequency": "quarterly",
+        "url": "https://www.cincinnati-oh.gov/finance/income-taxes/",
+        "appliesTo": ["employees"]
+      }
+    ]
+  },
+  {
+    "state": "OH",
+    "city": "Cleveland",
+    "counties": ["Cuyahoga"],
+    "items": [
+      {
+        "id": "cleveland.net-profit-tax",
+        "title": "File Cleveland municipal net profit return (CCA)",
+        "category": "filing",
+        "authority": "Central Collection Agency (CCA)",
+        "description": "C and S corporations, partnerships and LLCs doing business in Cleveland file the net profit return with the Central Collection Agency; due 105 days after fiscal year end.",
+        "frequency": "annual",
+        "deadline": "April 15 (calendar-year filers)",
+        "due": {
+          "type": "fixed",
+          "month": 4,
+          "day": 15
+        },
+        "url": "https://www.ccaohio.gov/tax-forms/business",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "cleveland.withholding",
+        "title": "Withhold and remit Cleveland municipal income tax (CCA)",
+        "category": "payment",
+        "authority": "Central Collection Agency (CCA)",
+        "description": "Employers withhold and remit municipal income tax through the Central Collection Agency using the employer EIN.",
+        "frequency": "quarterly",
+        "url": "https://www.ccaohio.gov/tax-forms/business",
+        "appliesTo": ["employees"]
+      }
+    ]
+  },
+  {
+    "state": "OH",
+    "city": "Columbus",
+    "counties": ["Franklin"],
+    "items": [
+      {
+        "id": "columbus.net-profit-tax",
+        "title": "File Columbus municipal net profit tax return",
+        "category": "filing",
+        "authority": "City of Columbus Income Tax Division (City Auditor)",
+        "description": "Businesses (sole proprietorships, partnerships, corporations) with activity in Columbus file the city's annual business net profit return; some businesses may elect to file through the Ohio Department of Taxation.",
+        "frequency": "annual",
+        "url": "https://www.columbus.gov/Government/City-Auditor/Income-Tax-Division",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "columbus.withholding",
+        "title": "Withhold and remit Columbus municipal income tax",
+        "category": "payment",
+        "authority": "City of Columbus Income Tax Division (City Auditor)",
+        "description": "Employers withhold municipal income tax on wages for work performed in Columbus.",
+        "frequency": "quarterly",
+        "url": "https://www.columbus.gov/Government/City-Auditor/Income-Tax-Division",
+        "appliesTo": ["employees"]
+      }
+    ]
+  },
+  {
+    "state": "OH",
+    "city": "Toledo",
+    "counties": ["Lucas"],
+    "items": [
+      {
+        "id": "toledo.net-profit-tax",
+        "title": "File Toledo municipal net profit tax return",
+        "category": "filing",
+        "authority": "City of Toledo Division of Taxation",
+        "description": "Businesses with income in Toledo file the net profit tax return (2.5% rate); partnerships and corporations must have 90% of the tax paid by December 15. A federal extension does not extend the time to pay.",
+        "frequency": "annual",
+        "deadline": "April 15 (calendar-year filers)",
+        "due": {
+          "type": "fixed",
+          "month": 4,
+          "day": 15
+        },
+        "url": "https://toledo.oh.gov/pay-taxes",
+        "appliesTo": ["all"]
+      }
+    ]
+  }
+]
