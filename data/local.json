@@ -276,10 +276,10 @@
     "items": [
       {
         "id": "sanjose.business-tax-certificate",
-        "title": "Register for and renew San Jos\u00e9 Business Tax Certificate",
+        "title": "Register for and renew San José Business Tax Certificate",
         "category": "license",
-        "authority": "City of San Jos\u00e9 Finance Department, Business Tax Registration",
-        "description": "Businesses operating in San Jos\u00e9 register within 90 days of starting and renew the business tax annually, due the 15th of the month the business started.",
+        "authority": "City of San José Finance Department, Business Tax Registration",
+        "description": "Businesses operating in San José register within 90 days of starting and renew the business tax annually, due the 15th of the month the business started.",
         "frequency": "annual",
         "deadline": "15th of the month the business started",
         "url": "https://www.sanjoseca.gov/your-government/departments-offices/finance/business-tax-registration",
@@ -371,7 +371,7 @@
         "title": "Obtain and renew Miami-Dade County Local Business Tax Receipt",
         "category": "license",
         "authority": "Miami-Dade County Tax Collector",
-        "description": "Businesses within a municipality must hold both the city and the county local business tax receipt; the tax year runs October 1 \u2013 September 30.",
+        "description": "Businesses within a municipality must hold both the city and the county local business tax receipt; the tax year runs October 1 – September 30.",
         "frequency": "annual",
         "deadline": "September 30",
         "due": {
@@ -640,7 +640,7 @@
         "title": "Obtain and renew Maryland trader's license from the Baltimore City Clerk of the Circuit Court",
         "category": "license",
         "authority": "Clerk of the Circuit Court for Baltimore City",
-        "description": "Retail and wholesale sellers need a trader's license based on inventory value; the license year runs May 1 \u2013 April 30 with renewals due by May 31.",
+        "description": "Retail and wholesale sellers need a trader's license based on inventory value; the license year runs May 1 – April 30 with renewals due by May 31.",
         "frequency": "annual",
         "deadline": "May 31",
         "due": {
@@ -712,6 +712,135 @@
         "frequency": "once",
         "url": "https://www.phoenix.gov/finance/plt/licensing/privilege-tax-license",
         "appliesTo": ["sells_goods"]
+      }
+    ]
+  },
+  {
+    "state": "FL",
+    "city": "Jacksonville",
+    "counties": ["Duval"],
+    "items": [
+      {
+        "id": "jacksonville.local-business-tax-receipt",
+        "title": "Renew Jacksonville local business tax receipt",
+        "category": "license",
+        "authority": "Duval County Tax Collector",
+        "description": "Businesses operating in Jacksonville (Duval County) need a local business tax receipt; receipts run October 1 to September 30 and unpaid receipts incur a late penalty from October.",
+        "frequency": "annual",
+        "deadline": "September 30",
+        "due": {
+          "type": "fixed",
+          "month": 9,
+          "day": 30
+        },
+        "url": "https://taxcollector.jacksonville.gov/Taxes/Local-Business-Tax",
+        "appliesTo": ["all"]
+      }
+    ]
+  },
+  {
+    "state": "CA",
+    "city": "Long Beach",
+    "counties": ["Los Angeles"],
+    "items": [
+      {
+        "id": "longbeach.business-license",
+        "title": "Renew Long Beach business license",
+        "category": "license",
+        "authority": "City of Long Beach Financial Management, Business License Division",
+        "description": "Every business operating in Long Beach needs a general business license. No renewal application is needed: the city mails an annual bill and payment by the delinquent date printed on it renews the license.",
+        "frequency": "annual",
+        "deadline": "Delinquent date printed on the annual bill",
+        "url": "https://longbeach.gov/finance/business-info/business-licenses/general-business-license/",
+        "appliesTo": ["all"]
+      }
+    ]
+  },
+  {
+    "state": "CA",
+    "city": "Sacramento",
+    "counties": ["Sacramento"],
+    "items": [
+      {
+        "id": "sacramento.business-operations-tax",
+        "title": "Pay Sacramento business operations tax",
+        "category": "license",
+        "authority": "City of Sacramento Department of Finance, Revenue Division",
+        "description": "Businesses operating in the city of Sacramento must hold a business operations tax certificate and renew it annually; apply or renew online.",
+        "frequency": "annual",
+        "url": "https://www.cityofsacramento.gov/finance/revenue/business-operations-tax",
+        "appliesTo": ["all"]
+      }
+    ]
+  },
+  {
+    "state": "TN",
+    "city": "Nashville",
+    "counties": ["Davidson"],
+    "items": [
+      {
+        "id": "nashville.business-license",
+        "title": "Obtain Nashville / Davidson County business license",
+        "category": "license",
+        "authority": "Davidson County Clerk, Business Tax Division",
+        "description": "Businesses in Nashville-Davidson County obtain a business license from the County Clerk and report gross receipts to the Tennessee Department of Revenue with the annual business tax return.",
+        "frequency": "once",
+        "url": "https://www.nashville.gov/departments/county-clerk/business-services/apply-business-license",
+        "appliesTo": ["all"]
+      }
+    ],
+    "aliases": ["Nashville-Davidson", "Metro Nashville"]
+  },
+  {
+    "state": "TN",
+    "city": "Memphis",
+    "counties": ["Shelby"],
+    "items": [
+      {
+        "id": "memphis.business-license",
+        "title": "Obtain Memphis / Shelby County business license",
+        "category": "license",
+        "authority": "Shelby County Clerk, Business Tax Division",
+        "description": "Register with the County Clerk within 20 days after the business starts to receive a business license, and report gross receipts annually to the Tennessee Department of Revenue. A final return is due within 15 days of closing.",
+        "frequency": "once",
+        "deadline": "Within 20 days after commencing business",
+        "url": "https://www.shelbycountytn.gov/498/Business-Tax",
+        "appliesTo": ["all"]
+      }
+    ]
+  },
+  {
+    "state": "AL",
+    "city": "Birmingham",
+    "counties": ["Jefferson", "Shelby"],
+    "items": [
+      {
+        "id": "birmingham.business-license",
+        "title": "Renew Birmingham business license",
+        "category": "license",
+        "authority": "City of Birmingham Finance Department, Tax and License Administration Division",
+        "description": "Businesses in Birmingham need a city business license. The license year runs January 1 to December 31 and licenses expire on December 31.",
+        "frequency": "annual",
+        "deadline": "Licenses expire December 31",
+        "url": "https://birminghamal.gov/2024/08/09/the-city-of-birmingham-encourages-businesses-to-enroll-in-new-business-tax-and-license-system",
+        "appliesTo": ["all"]
+      }
+    ]
+  },
+  {
+    "state": "AZ",
+    "city": "Tucson",
+    "counties": ["Pima"],
+    "items": [
+      {
+        "id": "tucson.business-license",
+        "title": "Renew Tucson business license",
+        "category": "license",
+        "authority": "City of Tucson Business Services Department",
+        "description": "Businesses in Tucson hold a city business license in addition to the state transaction privilege tax license, renewed annually.",
+        "frequency": "annual",
+        "url": "https://www.tucsonaz.gov/Departments/Business-Services-Department/Business-License-and-Tax-Information",
+        "appliesTo": ["all"]
       }
     ]
   }
