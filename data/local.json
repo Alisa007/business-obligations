@@ -843,5 +843,154 @@
         "appliesTo": ["all"]
       }
     ]
+  },
+  {
+    "state": "SC",
+    "city": "Charleston",
+    "counties": ["Charleston", "Berkeley"],
+    "items": [
+      {
+        "id": "charleston-sc.business-license",
+        "title": "Renew City of Charleston business license",
+        "category": "license",
+        "authority": "City of Charleston Revenue Collections Division",
+        "description": "Business licenses expire April 30 each year and are renewed on the previous year's gross income; the city's page gives the fee as payable by May 31 with penalties after June 30.",
+        "frequency": "annual",
+        "deadline": "April 30 (license expiration)",
+        "due": {
+          "type": "fixed",
+          "month": 4,
+          "day": 30
+        },
+        "url": "https://charleston-sc.gov/135",
+        "appliesTo": ["all"]
+      }
+    ]
+  },
+  {
+    "state": "SC",
+    "city": "Columbia",
+    "counties": ["Richland", "Lexington"],
+    "items": [
+      {
+        "id": "columbia-sc.business-license",
+        "title": "Renew City of Columbia business license",
+        "category": "license",
+        "authority": "City of Columbia Business Licenses Division",
+        "description": "Business licenses expire April 30 each year; a 5% penalty accrues per month from May 1.",
+        "frequency": "annual",
+        "deadline": "April 30",
+        "due": {
+          "type": "fixed",
+          "month": 4,
+          "day": 30
+        },
+        "url": "https://columbiasc.gov/city-of-columbia-business-license-division-gives-reminder-to-renew-business-license-7/",
+        "appliesTo": ["all"]
+      }
+    ]
+  },
+  {
+    "state": "OH",
+    "city": "Toledo",
+    "counties": ["Lucas"],
+    "items": [
+      {
+        "id": "toledo.net-profit-tax",
+        "title": "File Toledo municipal net profit tax return",
+        "category": "filing",
+        "authority": "City of Toledo Division of Taxation",
+        "description": "Businesses with income in Toledo file the net profit tax return (2.5% rate); partnerships and corporations must have 90% of the tax paid by December 15. A federal extension does not extend the time to pay.",
+        "frequency": "annual",
+        "deadline": "April 15 (calendar-year filers)",
+        "due": {
+          "type": "fixed",
+          "month": 4,
+          "day": 15
+        },
+        "url": "https://toledo.oh.gov/pay-taxes",
+        "appliesTo": ["all"]
+      }
+    ]
+  },
+  {
+    "state": "OH",
+    "city": "Akron",
+    "counties": ["Summit"],
+    "items": [
+      {
+        "id": "akron.net-profit-tax",
+        "title": "File Akron business net profit tax return",
+        "category": "filing",
+        "authority": "City of Akron Income Tax Division",
+        "description": "Businesses with income in Akron file the municipal net profit tax return (2.5% rate).",
+        "frequency": "annual",
+        "deadline": "April 15 (calendar-year filers)",
+        "due": {
+          "type": "fixed",
+          "month": 4,
+          "day": 15
+        },
+        "url": "https://www.akronohio.gov/cms/INCOMETAX/index.html",
+        "appliesTo": ["all"]
+      }
+    ]
+  },
+  {
+    "state": "CO",
+    "city": "Colorado Springs",
+    "counties": ["El Paso"],
+    "items": [
+      {
+        "id": "coloradosprings.sales-tax-license",
+        "title": "Hold Colorado Springs sales tax license",
+        "category": "license",
+        "authority": "City of Colorado Springs Sales Tax Office",
+        "description": "Businesses selling or leasing at retail in the city need a city sales tax license (no fee since September 1, 2023). Licenses expire every odd year on December 31 and are renewed online only.",
+        "frequency": "biennial",
+        "deadline": "Expires December 31 of every odd year",
+        "url": "https://coloradosprings.gov/new-tax-applications",
+        "appliesTo": ["all"]
+      }
+    ]
+  },
+  {
+    "state": "NJ",
+    "city": "Newark",
+    "counties": ["Essex"],
+    "items": [
+      {
+        "id": "newark.employer-payroll-tax",
+        "title": "File Newark employer payroll tax returns",
+        "category": "payment",
+        "authority": "City of Newark Department of Finance",
+        "description": "Employers with payroll in Newark register with the city and file quarterly returns for the 1% employer payroll tax.",
+        "frequency": "quarterly",
+        "deadline": "April 30, July 31, October 31 and January 31",
+        "due": {
+          "type": "multi",
+          "dates": [
+            {
+              "month": 1,
+              "day": 31
+            },
+            {
+              "month": 4,
+              "day": 30
+            },
+            {
+              "month": 7,
+              "day": 31
+            },
+            {
+              "month": 10,
+              "day": 31
+            }
+          ]
+        },
+        "url": "https://www.newarknj.gov/DocumentCenter/View/1475/Payroll-Tax-Booklet-2022-PDF",
+        "appliesTo": ["employees"]
+      }
+    ]
   }
 ]
