@@ -1,6 +1,141 @@
 [
   {
     "state": "WA",
+    "city": "Bellevue",
+    "counties": ["King"],
+    "items": [
+      {
+        "id": "bellevue-wa.bo-tax-return",
+        "title": "File Bellevue business and occupation tax returns",
+        "category": "filing",
+        "authority": "City of Bellevue Tax Division",
+        "description": "The city business license does not expire, but active licenses file B&O returns on the frequency in the welcome letter: quarterly (due April 30, July 31, October 31 and January 31) or annually (April 30).",
+        "frequency": "quarterly",
+        "deadline": "April 30, July 31, October 31 and January 31 (annual filers April 30)",
+        "due": {
+          "type": "multi",
+          "dates": [
+            {
+              "month": 1,
+              "day": 31
+            },
+            {
+              "month": 4,
+              "day": 30
+            },
+            {
+              "month": 7,
+              "day": 31
+            },
+            {
+              "month": 10,
+              "day": 31
+            }
+          ]
+        },
+        "url": "https://bellevuewa.gov/city-government/departments/finance/business-taxes",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "WA",
+    "city": "Bellingham",
+    "counties": ["Whatcom"],
+    "items": [
+      {
+        "id": "bellingham.business-registration",
+        "title": "Register your business with the City of Bellingham",
+        "category": "registration",
+        "authority": "City of Bellingham Finance Department",
+        "description": "Businesses located or working in Bellingham register through the state's Business Licensing Service with a city fee; the registration happens once and is valid for the life of the business, with a threshold exemption for small outside businesses.",
+        "frequency": "once",
+        "url": "https://cob.org/services/business/business-registration",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "WA",
+    "city": "Everett",
+    "counties": ["Snohomish"],
+    "items": [
+      {
+        "id": "everett.bo-tax-return",
+        "title": "File Everett business and occupation tax returns",
+        "category": "filing",
+        "authority": "City of Everett Business Tax Division",
+        "description": "The city business license assigns a B&O tax number; annual filers are due April 30 and quarterly filers the last day of the month after each quarter.",
+        "frequency": "quarterly",
+        "deadline": "April 30 for annual filers; quarterly after each quarter",
+        "due": {
+          "type": "multi",
+          "dates": [
+            {
+              "month": 1,
+              "day": 31
+            },
+            {
+              "month": 4,
+              "day": 30
+            },
+            {
+              "month": 7,
+              "day": 31
+            },
+            {
+              "month": 10,
+              "day": 31
+            }
+          ]
+        },
+        "url": "https://www.everettwa.gov/166",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "WA",
+    "city": "Pasco",
+    "counties": ["Franklin"],
+    "items": [
+      {
+        "id": "pasco.business-license",
+        "title": "Hold a Pasco business license",
+        "category": "license",
+        "authority": "City of Pasco Business Licensing",
+        "description": "Businesses in Pasco, or doing business there, need a city business license endorsement obtained through the state's Business Licensing Service; some businesses may be exempt.",
+        "frequency": "ongoing",
+        "url": "https://www.pasco-wa.gov/97/Business-Licenses",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "WA",
+    "city": "Renton",
+    "counties": ["King"],
+    "items": [
+      {
+        "id": "renton.business-license-bo-tax",
+        "title": "Renew Renton business license and file B&O tax",
+        "category": "license",
+        "authority": "City of Renton Tax and License Division",
+        "description": "Businesses in Renton hold a city license and file a B&O tax return through FileLocal; annual filers' due date aligns with the license expiration date.",
+        "frequency": "annual",
+        "deadline": "License expiration date",
+        "url": "https://www.rentonwa.gov/City-Services/Tax-and-Licensing",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "WA",
     "city": "Seattle",
     "counties": ["King"],
     "items": [
@@ -29,6 +164,49 @@
         "description": "Doing business in Spokane requires a Washington business license with a Spokane endorsement (under the city code); certain limited activities can request an exemption.",
         "frequency": "annual",
         "url": "https://dor.wa.gov/manage-business/city-endorsements/spokane",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "WA",
+    "city": "Tacoma",
+    "counties": ["Pierce"],
+    "items": [
+      {
+        "id": "tacoma.business-license",
+        "title": "Renew Tacoma general business license",
+        "category": "license",
+        "authority": "City of Tacoma Tax and License Division",
+        "description": "Renewal notices are mailed in December; payment must be paid or postmarked by January 31 to avoid a late penalty. A state business license does not replace the city license.",
+        "frequency": "annual",
+        "deadline": "January 31",
+        "due": {
+          "type": "fixed",
+          "month": 1,
+          "day": 31
+        },
+        "url": "https://cityoftacoma.org/government/city_departments/finance/tax_and_license/business_license/existing_businesses",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "WA",
+    "city": "Vancouver",
+    "counties": ["Clark"],
+    "items": [
+      {
+        "id": "vancouver-wa.business-endorsement",
+        "title": "Hold a Vancouver city business license endorsement",
+        "category": "license",
+        "authority": "City of Vancouver Business Licensing",
+        "description": "A city endorsement is required for businesses physically in Vancouver or working there, one per location. Renewals go through the state's Business Licensing Service and a My DOR account.",
+        "frequency": "annual",
+        "deadline": "Month before the license expires",
+        "url": "https://www.cityofvancouver.us/wp-content/uploads/2024/04/Overview-Quick-Guide-City-Business-License-Info.pdf",
         "appliesTo": ["all"]
       }
     ],

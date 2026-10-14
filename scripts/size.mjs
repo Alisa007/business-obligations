@@ -3,7 +3,11 @@ import { readFileSync } from "node:fs";
 import { gzipSync } from "node:zlib";
 
 const budgets = [
-  { file: "dist/index.js", maxGzipKb: 80, note: "core engine with all 51 jurisdictions' data" },
+  {
+    file: "dist/index.js",
+    maxGzipKb: 100,
+    note: "core engine with all 51 jurisdictions' data and the 300 seeded cities",
+  },
   {
     file: "dist/zip.js",
     maxGzipKb: 450,

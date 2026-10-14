@@ -216,7 +216,7 @@ Machine-readable: [`schema/business-profile.schema.json`](schema/business-profil
   workers' comp thresholds (including hours and payroll tests), paid leave and paid sick leave, general state
   licenses, DBA filing level and office, LLC publication, workplace notices, professional boards (attorney, CPA,
   physician, architect, engineer) and industry licensing authorities including cannabis regulators.
-- **City (seeded):** the 100 largest US cities (2020 census) are all covered, in `data/cities/<STATE>.json`: some
+- **City (seeded):** the 300 largest US cities (2020 census, ranks beyond 100 approximate) are all covered, in `data/cities/<STATE>.json`: some
   with city-specific taxes and licenses, some checked and found to have no general city license or tax
   (`status: "none"`), and some researched but not confirmed from an official page (`status: "unverified"`).
   [`COVERAGE.md`](COVERAGE.md) lists them. Every other city returns the state's typical local licensing regime,

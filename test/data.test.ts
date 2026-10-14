@@ -84,9 +84,9 @@ describe("city data files", () => {
     expect(findCity("NY", "brooklyn")?.city).toBe("New York");
     expect(findCity("NY", "Nowhere")).toBeUndefined();
   });
-  it("covers the 100 largest cities", () => {
+  it("covers the 300 largest cities", () => {
     const top = read("data/top-cities.json").cities as Array<{ state: string; city: string }>;
-    expect(top).toHaveLength(100);
+    expect(top).toHaveLength(300);
     const missing = top.filter((c) => !findCity(c.state, c.city)).map((c) => `${c.city}, ${c.state}`);
     expect(missing).toEqual([]);
   });

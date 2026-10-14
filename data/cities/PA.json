@@ -1,6 +1,35 @@
 [
   {
     "state": "PA",
+    "city": "Allentown",
+    "counties": ["Lehigh"],
+    "items": [
+      {
+        "id": "allentown.business-license",
+        "title": "Hold an Allentown business license",
+        "category": "license",
+        "authority": "City of Allentown Bureau of Revenue and Audit",
+        "description": "Anyone conducting business in Allentown needs a city business license, valid for the calendar year.",
+        "frequency": "annual",
+        "deadline": "Calendar year",
+        "url": "https://www.allentownpa.gov/en-us/Government/Departments/Finance/Revenue-and-Audit/Business-Licenses",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "allentown.business-privilege-tax",
+        "title": "File Allentown business privilege tax",
+        "category": "filing",
+        "authority": "City of Allentown Bureau of Revenue and Audit",
+        "description": "The business privilege tax is an annual tax on gross receipts for the privilege of conducting business in the city, under the city's regulations and Chapter 570.",
+        "frequency": "annual",
+        "url": "https://www.allentownpa.gov/en-us/Government/Departments/Finance/Revenue-and-Audit/Business-Privilege-Tax",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "PA",
     "city": "Philadelphia",
     "counties": ["Philadelphia"],
     "items": [

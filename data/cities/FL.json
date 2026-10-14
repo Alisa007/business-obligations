@@ -1,6 +1,184 @@
 [
   {
     "state": "FL",
+    "city": "Cape Coral",
+    "counties": ["Lee"],
+    "items": [
+      {
+        "id": "capecoral.business-tax-receipt",
+        "title": "Renew Cape Coral business tax receipt",
+        "category": "license",
+        "authority": "City of Cape Coral Business Tax",
+        "description": "Business tax is paid annually through the city's online portal; Florida law makes receipts payable by September 30. A Lee County receipt is also needed.",
+        "frequency": "annual",
+        "deadline": "September 30",
+        "due": {
+          "type": "fixed",
+          "month": 9,
+          "day": 30
+        },
+        "url": "https://www.capecoral.gov/department/clerk/business_tax_receipts.php",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "FL",
+    "city": "Clearwater",
+    "counties": ["Pinellas"],
+    "items": [
+      {
+        "id": "clearwater.business-tax-receipt",
+        "title": "Renew Clearwater business tax receipt",
+        "category": "license",
+        "authority": "City of Clearwater Business Tax",
+        "description": "The business tax year runs October 1 to September 30 and renews annually regardless of when the receipt was obtained; late renewals add delinquent fees.",
+        "frequency": "annual",
+        "deadline": "September 30",
+        "due": {
+          "type": "fixed",
+          "month": 9,
+          "day": 30
+        },
+        "url": "https://www.myclearwater.com/Business-Development/Clearwater-Business-Resources/Business-Tax-Receipts-BTR",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "FL",
+    "city": "Coral Springs",
+    "counties": ["Broward"],
+    "items": [
+      {
+        "id": "coralsprings.business-tax-receipt",
+        "title": "Renew Coral Springs business tax receipt",
+        "category": "license",
+        "authority": "City of Coral Springs Business Tax",
+        "description": "Renewal payments are due September 30 each year, including home-based businesses; unpaid tax after 150 days can lead to civil action and a $250 penalty.",
+        "frequency": "annual",
+        "deadline": "September 30",
+        "due": {
+          "type": "fixed",
+          "month": 9,
+          "day": 30
+        },
+        "url": "https://www.coralsprings.gov/Business/Business-Tax-Office",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "FL",
+    "city": "Davie",
+    "status": "unverified",
+    "note": "The town runs a renewal portal and a fee schedule by classification; no due date was found on its pages.",
+    "counties": ["Broward"],
+    "sourceUrl": "https://www.davie-fl.gov/DocumentCenter/View/172/Business-Tax-Rate-Schedule",
+    "items": [],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "FL",
+    "city": "Fort Lauderdale",
+    "counties": ["Broward"],
+    "items": [
+      {
+        "id": "fortlauderdale.business-tax-receipt",
+        "title": "Renew Fort Lauderdale business tax receipt",
+        "category": "license",
+        "authority": "City of Fort Lauderdale Business Tax",
+        "description": "The renewal period runs July 1 through September 30 and unpaid receipts are delinquent October 1. A separate Broward County receipt is also required.",
+        "frequency": "annual",
+        "deadline": "September 30",
+        "due": {
+          "type": "fixed",
+          "month": 9,
+          "day": 30
+        },
+        "url": "https://www.fortlauderdale.gov/Government/Departments/Community-Services/Business-Tax",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "FL",
+    "city": "Gainesville",
+    "counties": ["Alachua"],
+    "items": [
+      {
+        "id": "gainesville-fl.business-tax-receipt",
+        "title": "Renew Gainesville business tax receipt",
+        "category": "license",
+        "authority": "City of Gainesville Business Tax",
+        "description": "Renewal statements are mailed in late August; payment is due October 1 and penalties accrue after that. State-regulated licenses must be on file.",
+        "frequency": "annual",
+        "deadline": "October 1",
+        "due": {
+          "type": "fixed",
+          "month": 10,
+          "day": 1
+        },
+        "url": "https://www.gainesvillefl.gov/News-articles/Business-Tax-Renewal-Portal-Now-Available",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "FL",
+    "city": "Hialeah",
+    "counties": ["Miami-Dade"],
+    "items": [
+      {
+        "id": "hialeah.business-tax-receipt",
+        "title": "Renew Hialeah business tax receipt",
+        "category": "license",
+        "authority": "City of Hialeah Business Tax",
+        "description": "Business tax receipts cover October 1 through September 30; renewals are handled by the Business Tax Division in person, not by mail.",
+        "frequency": "annual",
+        "deadline": "September 30",
+        "due": {
+          "type": "fixed",
+          "month": 9,
+          "day": 30
+        },
+        "url": "https://www.hialeahfl.gov/153/Finance",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "FL",
+    "city": "Hollywood",
+    "counties": ["Broward"],
+    "items": [
+      {
+        "id": "hollywood-fl.business-tax-receipt",
+        "title": "Renew Hollywood business tax receipt",
+        "category": "license",
+        "authority": "City of Hollywood Business Tax",
+        "description": "Each local business tax receipt expires September 30; renewal happens during September and a receipt not renewed within 30 days after that lapses.",
+        "frequency": "annual",
+        "deadline": "September 30",
+        "due": {
+          "type": "fixed",
+          "month": 9,
+          "day": 30
+        },
+        "url": "https://apps.hollywoodfl.org/LbtrOnline",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "FL",
     "city": "Jacksonville",
     "counties": ["Duval"],
     "items": [
@@ -21,6 +199,30 @@
         "appliesTo": ["all"]
       }
     ]
+  },
+  {
+    "state": "FL",
+    "city": "Lakeland",
+    "counties": ["Polk"],
+    "items": [
+      {
+        "id": "lakeland.business-tax-receipt",
+        "title": "Renew Lakeland business tax receipt",
+        "category": "license",
+        "authority": "City of Lakeland Business Tax",
+        "description": "Every business located or operating inside the city limits pays an annual business tax, based on square footage, workers and category; Florida law makes receipts payable by September 30.",
+        "frequency": "annual",
+        "deadline": "September 30",
+        "due": {
+          "type": "fixed",
+          "month": 9,
+          "day": 30
+        },
+        "url": "https://www.lakelandgov.net/departments/community-economic-development/economic-development/business-tax/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-13"
   },
   {
     "state": "FL",
@@ -63,6 +265,30 @@
   },
   {
     "state": "FL",
+    "city": "Miramar",
+    "counties": ["Broward"],
+    "items": [
+      {
+        "id": "miramar.business-tax-receipt",
+        "title": "Renew Miramar business tax receipt",
+        "category": "license",
+        "authority": "City of Miramar Business Tax",
+        "description": "Business tax receipts should be renewed on or before September 30 to avoid additional fees; bills are sent by email.",
+        "frequency": "annual",
+        "deadline": "September 30",
+        "due": {
+          "type": "fixed",
+          "month": 9,
+          "day": 30
+        },
+        "url": "https://www.miramarfl.gov/Departments/Financial-Services/Business-Tax-Occupational-Licenses",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "FL",
     "city": "Orlando",
     "counties": ["Orange"],
     "items": [
@@ -80,6 +306,78 @@
           "day": 1
         },
         "url": "https://www.orlando.gov/btr",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "FL",
+    "city": "Palm Bay",
+    "counties": ["Brevard"],
+    "items": [
+      {
+        "id": "palmbay.business-tax-receipt",
+        "title": "Renew Palm Bay business tax receipt",
+        "category": "license",
+        "authority": "City of Palm Bay Business Tax",
+        "description": "Renewal opens July 1 and covers the fiscal year October 1 through September 30; renewals are online through the city's portal.",
+        "frequency": "annual",
+        "deadline": "September 30",
+        "due": {
+          "type": "fixed",
+          "month": 9,
+          "day": 30
+        },
+        "url": "https://www.palmbayfl.gov/government/city-departments-a-to-e/community-economic-development/business-tax-receipts-btr/business-tax-receipts",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "FL",
+    "city": "Pembroke Pines",
+    "counties": ["Broward"],
+    "items": [
+      {
+        "id": "pembrokepines.business-tax-receipt",
+        "title": "Renew Pembroke Pines business tax receipt",
+        "category": "license",
+        "authority": "City of Pembroke Pines Business Tax",
+        "description": "The local business tax receipt is issued annually and runs October 1 through September 30; invoices and payment are online.",
+        "frequency": "annual",
+        "deadline": "September 30",
+        "due": {
+          "type": "fixed",
+          "month": 9,
+          "day": 30
+        },
+        "url": "https://fl-pembrokepines2.civicplus.com/144/Local-Business-Tax-Receipt",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "FL",
+    "city": "Pompano Beach",
+    "counties": ["Broward"],
+    "items": [
+      {
+        "id": "pompanobeach.business-tax-receipt",
+        "title": "Renew Pompano Beach business tax receipt",
+        "category": "license",
+        "authority": "City of Pompano Beach Business Tax",
+        "description": "Business tax receipts expire September 30; if the renewal fee is not paid by October 1 the account is delinquent and penalties apply. A Broward County receipt is separate.",
+        "frequency": "annual",
+        "deadline": "September 30",
+        "due": {
+          "type": "fixed",
+          "month": 9,
+          "day": 30
+        },
+        "url": "https://www.pompanobeachfl.gov/government/code-compliance/business-tax-receipt-division",
         "appliesTo": ["all"]
       }
     ],
@@ -106,6 +404,15 @@
   },
   {
     "state": "FL",
+    "city": "Tallahassee",
+    "status": "unverified",
+    "note": "Florida law sets September 30 for business tax receipts, but no city or Leon County page was found to confirm local receipts.",
+    "counties": ["Leon"],
+    "items": [],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "FL",
     "city": "Tampa",
     "counties": ["Hillsborough"],
     "items": [
@@ -123,6 +430,30 @@
           "day": 30
         },
         "url": "https://www.tampa.gov/service/business-tax-records-inquiries",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "FL",
+    "city": "West Palm Beach",
+    "counties": ["Palm Beach"],
+    "items": [
+      {
+        "id": "westpalmbeach.business-tax-receipt",
+        "title": "Renew West Palm Beach business tax receipt",
+        "category": "license",
+        "authority": "City of West Palm Beach Business Tax",
+        "description": "The tax runs on an October 1 to September 30 fiscal year; the renewal period is July 1 through September 30 and unpaid taxes are delinquent October 1 with penalties up to 25%.",
+        "frequency": "annual",
+        "deadline": "September 30",
+        "due": {
+          "type": "fixed",
+          "month": 9,
+          "day": 30
+        },
+        "url": "https://www.wpb.org/Business/Business-Tax-redirect",
         "appliesTo": ["all"]
       }
     ],

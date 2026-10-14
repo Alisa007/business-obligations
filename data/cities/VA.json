@@ -1,11 +1,80 @@
 [
   {
     "state": "VA",
+    "city": "Alexandria",
+    "items": [
+      {
+        "id": "alexandria.business-license",
+        "title": "Renew Alexandria business license (BPOL)",
+        "category": "license",
+        "authority": "City of Alexandria Finance Department",
+        "description": "Business licenses must be renewed annually by March 1 of each license year; existing businesses file the renewal and pay the tax by that date.",
+        "frequency": "annual",
+        "deadline": "March 1",
+        "due": {
+          "type": "fixed",
+          "month": 3,
+          "day": 1
+        },
+        "url": "https://www.alexandriava.gov/sites/default/files/2025-12/2026%20Business%20License%20Application_1.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "VA",
     "city": "Chesapeake",
     "status": "unverified",
     "note": "A March 1 BPOL renewal is described by third-party sources only; the city's own page was not confirmed.",
     "counties": ["Chesapeake"],
     "items": [],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "VA",
+    "city": "Hampton",
+    "items": [
+      {
+        "id": "hampton-va.business-license",
+        "title": "Renew Hampton business license (BPOL)",
+        "category": "license",
+        "authority": "City of Hampton Commissioner of the Revenue",
+        "description": "Licenses expire December 31 each year and must be renewed by March 1 of the following year.",
+        "frequency": "annual",
+        "deadline": "March 1",
+        "due": {
+          "type": "fixed",
+          "month": 3,
+          "day": 1
+        },
+        "url": "https://www.hampton.gov/563/Business-Licenses",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "VA",
+    "city": "Newport News",
+    "items": [
+      {
+        "id": "newportnews.business-license",
+        "title": "Renew Newport News business license (BPOL)",
+        "category": "license",
+        "authority": "City of Newport News Commissioner of the Revenue",
+        "description": "Licenses expire at the end of each calendar year and must be renewed by March 1; auto dealers pay quarterly.",
+        "frequency": "annual",
+        "deadline": "March 1",
+        "due": {
+          "type": "fixed",
+          "month": 3,
+          "day": 1
+        },
+        "url": "https://www.nnva.gov/579",
+        "appliesTo": ["all"]
+      }
+    ],
     "checkedOn": "2026-10-13"
   },
   {
@@ -50,6 +119,29 @@
           "day": 1
         },
         "url": "https://rva.gov/finance/bpol-tax",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "VA",
+    "city": "Roanoke",
+    "items": [
+      {
+        "id": "roanoke-va.business-license",
+        "title": "Renew Roanoke business license (BPOL)",
+        "category": "license",
+        "authority": "City of Roanoke Commissioner of the Revenue and Treasurer",
+        "description": "Renewal applications and payment are due March 1 (the next business day if it falls on a weekend), online at the city's tax portal, by mail or in person.",
+        "frequency": "annual",
+        "deadline": "March 1",
+        "due": {
+          "type": "fixed",
+          "month": 3,
+          "day": 1
+        },
+        "url": "https://www.roanokeva.gov/3170/Business-License-Information",
         "appliesTo": ["all"]
       }
     ],

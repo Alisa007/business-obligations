@@ -1,6 +1,70 @@
 [
   {
     "state": "OR",
+    "city": "Bend",
+    "counties": ["Deschutes"],
+    "items": [
+      {
+        "id": "bend.business-registration",
+        "title": "Hold a Bend business registration",
+        "category": "registration",
+        "authority": "City of Bend Licensing Division",
+        "description": "The city requires a current business registration before specialty licenses are issued; the registration is renewed annually.",
+        "frequency": "ongoing",
+        "url": "https://bendoregon.gov/home/showpublisheddocument/41753/637434745992170000",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "OR",
+    "city": "Eugene",
+    "status": "unverified",
+    "note": "Only code excerpts for specific license types were found; the general renewal date was not confirmed.",
+    "counties": ["Lane"],
+    "items": [],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "OR",
+    "city": "Gresham",
+    "counties": ["Multnomah", "Clackamas"],
+    "items": [
+      {
+        "id": "gresham.business-license",
+        "title": "Hold a Gresham business license",
+        "category": "license",
+        "authority": "City of Gresham Business License Section",
+        "description": "Anyone doing business in or owning a business based in Gresham must hold a business license before the business begins; commercial, home-based, food cart and out-of-city operators use different applications.",
+        "frequency": "ongoing",
+        "url": "https://www.greshamoregon.gov/business-licenses",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "OR",
+    "city": "Hillsboro",
+    "counties": ["Washington"],
+    "items": [
+      {
+        "id": "hillsboro.business-license",
+        "title": "Renew Hillsboro business license",
+        "category": "license",
+        "authority": "City of Hillsboro Finance Department",
+        "description": "A general business license is required for any business operating in Hillsboro; it renews annually on its anniversary with a notice during the month it expires and a 30-day grace period. Renewals are not paid online.",
+        "frequency": "annual",
+        "deadline": "Anniversary date (30-day grace period)",
+        "url": "https://hillsboro-oregon.gov/our-city/departments/finance/business-licenses",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "OR",
     "city": "Portland",
     "counties": ["Multnomah"],
     "items": [
@@ -15,5 +79,24 @@
         "appliesTo": ["all"]
       }
     ]
+  },
+  {
+    "state": "OR",
+    "city": "Salem",
+    "counties": ["Marion", "Polk"],
+    "items": [
+      {
+        "id": "salem-or.business-license",
+        "title": "Renew Salem business license",
+        "category": "license",
+        "authority": "City of Salem Permit Application Center",
+        "description": "Renewal must be completed within 30 days of the license's expiration date; renewal forms and invoices are mailed in November.",
+        "frequency": "annual",
+        "deadline": "Within 30 days of expiration (December 31)",
+        "url": "https://cityofsalem.net/business/business-resources/licenses/apply-for-a-business-license",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-13"
   }
 ]

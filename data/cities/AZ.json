@@ -73,6 +73,24 @@
   },
   {
     "state": "AZ",
+    "city": "Peoria",
+    "counties": ["Maricopa", "Yavapai"],
+    "items": [
+      {
+        "id": "peoria-az.business-license",
+        "title": "Hold a Peoria business license",
+        "category": "license",
+        "authority": "City of Peoria Sales Tax and Business License",
+        "description": "The city requires a business license for anyone conducting business in Peoria, including home-based businesses; reviews can take up to 30 days and the state TPT license is separate.",
+        "frequency": "ongoing",
+        "url": "https://peoriaed.com/home/showpublisheddocument/22424/638121474728870000",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "AZ",
     "city": "Phoenix",
     "counties": ["Maricopa"],
     "items": [
@@ -96,6 +114,48 @@
     "counties": ["Maricopa"],
     "sourceUrl": "https://www.scottsdaleaz.gov/taxes/resources",
     "items": [],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "AZ",
+    "city": "Surprise",
+    "counties": ["Maricopa"],
+    "items": [
+      {
+        "id": "surprise.business-license",
+        "title": "Hold a City of Surprise business license",
+        "category": "license",
+        "authority": "City of Surprise Community Development",
+        "description": "Businesses operating in Surprise need a city business license, reviewed in up to 20 calendar days with payment requested after review; the state TPT license is separate.",
+        "frequency": "ongoing",
+        "url": "https://primeweb.surpriseaz.gov/Apply/GettingStarted/BusinessLicense",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "AZ",
+    "city": "Tempe",
+    "counties": ["Maricopa"],
+    "items": [
+      {
+        "id": "tempe.general-business-license",
+        "title": "Renew Tempe general business license",
+        "category": "license",
+        "authority": "City of Tempe Financial Services, Sales Tax and Licensing",
+        "description": "The general business license (effective August 1, 2025) applies to businesses with a permanent Tempe location, including those with no TPT license; the first renewal is due before January 1, 2027 and annually after that. Regulatory licenses are separate.",
+        "frequency": "annual",
+        "deadline": "Before January 1 each year (first renewal before January 1, 2027)",
+        "due": {
+          "type": "fixed",
+          "month": 12,
+          "day": 31
+        },
+        "url": "https://www.tempe.gov/government/financial-services/sales-tax-licensing/general-business-license",
+        "appliesTo": ["all"]
+      }
+    ],
     "checkedOn": "2026-10-13"
   },
   {

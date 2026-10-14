@@ -46,7 +46,7 @@ page on the date shown; everything not listed as checked is compiled from public
 - **Jurisdictions:** ${total} (50 states and DC)
 - **States with unconfirmed fields:** ${withUnconfirmed}
 - **Seeded cities:** ${seeded}: ${withRules} with city-specific rules, ${none} checked with no general city license or tax, ${unverified} researched but unconfirmed (all other cities get the state's local licensing regime named for the city and county)
-- **100 largest cities** (2020 census): ${topCovered} covered
+- **300 largest cities** (2020 census; ranks beyond 100 are approximate): ${topCovered} of ${top.length} covered
 
 | State | Checked on | Entity reports | DBA level | Gross-receipts / margin tax | UI data year | Seeded cities | Unconfirmed fields |
 | ----- | ---------- | -------------- | --------- | --------------------------- | ------------ | ------------- | ------------------ |

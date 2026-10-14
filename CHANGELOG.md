@@ -7,7 +7,7 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ### Added
 
-- Cities: the 100 largest US cities are covered (`data/top-cities.json` lists them). City seeds moved from
+- Cities: the 300 largest US cities are covered (`data/top-cities.json` lists them). City seeds moved from
   `data/local.json` to `data/cities/<STATE>.json` with an indexed lookup (`findCity`), `status` (`rules`, `none`,
   `unverified`), `checkedOn`, `sourceUrl` and `note`, and `seededCityRule(indexCities(seeds))` to bring your own
   city data.

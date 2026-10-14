@@ -1,6 +1,24 @@
 [
   {
     "state": "NJ",
+    "city": "Edison",
+    "status": "unverified",
+    "note": "No official township page on general registration was found; door-to-door and tobacco rules exist by code.",
+    "counties": ["Middlesex"],
+    "items": [],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "NJ",
+    "city": "Elizabeth",
+    "status": "unverified",
+    "note": "No official city page on general licensing was found.",
+    "counties": ["Union"],
+    "items": [],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "NJ",
     "city": "Jersey City",
     "status": "unverified",
     "note": "A 1% employer payroll tax with quarterly returns is described by third-party sources only; the city's own page was not confirmed.",
@@ -46,5 +64,23 @@
         "appliesTo": ["employees"]
       }
     ]
+  },
+  {
+    "state": "NJ",
+    "city": "Paterson",
+    "counties": ["Passaic"],
+    "items": [
+      {
+        "id": "paterson.mercantile-license",
+        "title": "Hold a Paterson mercantile license",
+        "category": "license",
+        "authority": "City of Paterson Mercantile Licensing",
+        "description": "City ordinance requires businesses operating in Paterson to register and obtain a mercantile license; operating a business, trade or occupation without one is prohibited.",
+        "frequency": "ongoing",
+        "url": "https://patersonnj.gov/department/division.php?fDD=9-140",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-13"
   }
 ]
