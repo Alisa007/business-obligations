@@ -2,8 +2,20 @@ import { describe, expect, it } from "vitest";
 import * as lib from "../src";
 // @ts-expect-error plain JS module
 import { createAnalytics, sanitize } from "../site/analytics.js";
-// @ts-expect-error plain JS module
-import { analyze, buildProfile, formatDate, hostOf, link, money, safeUrl } from "../site/app.js";
+import {
+  analyze,
+  buildProfile,
+  countBy,
+  formatDate,
+  frequencyLabel,
+  groupObligations,
+  hostOf,
+  link,
+  money,
+  relativeDays,
+  safeUrl,
+  // @ts-expect-error plain JS module
+} from "../site/app.js";
 
 const form = {
   zip: "60601",
@@ -135,5 +147,47 @@ describe("playground analytics", () => {
   it("sanitizes property values", () => {
     expect(sanitize("tab_viewed", { tab: { nested: 1 } })).toEqual({});
     expect(sanitize("ics_downloaded", { events: 12, extra: "x" })).toEqual({ events: 12 });
+  });
+});
+
+describe("obligation helpers", () => {
+  const items = [
+    {
+      id: "a",
+      title: "B thing",
+      jurisdiction: "state",
+      category: "tax",
+      nextDue: "2027-02-01",
+      frequency: "annual",
+    },
+    {
+      id: "b",
+      title: "A thing",
+      jurisdiction: "state",
+      category: "license",
+      nextDue: "2027-01-01",
+      frequency: "once",
+    },
+    { id: "c", title: "Fed thing", jurisdiction: "federal", category: "tax", frequency: "annual" },
+  ];
+  it("groups, filters and sorts", () => {
+    const all = groupObligations(items as never);
+    expect(all.map((g: { jurisdiction: string }) => g.jurisdiction)).toEqual(["federal", "state"]);
+    const st = all.find((g: { jurisdiction: string }) => g.jurisdiction === "state");
+    expect(st.items.map((i: { id: string }) => i.id)).toEqual(["b", "a"]);
+    expect(
+      groupObligations(items as never, { category: "tax" }).flatMap((g: { items: unknown[] }) => g.items),
+    ).toHaveLength(2);
+    expect(
+      groupObligations(items as never, { query: "fed" }).flatMap((g: { items: unknown[] }) => g.items),
+    ).toHaveLength(1);
+  });
+  it("counts ignoring its own filter", () => {
+    expect(countBy(items as never, "category", { category: "license" })).toEqual({ tax: 2, license: 1 });
+  });
+  it("labels and relative days", () => {
+    expect(frequencyLabel("annual")).toBe("Annual");
+    expect(frequencyLabel("weird")).toBe("weird");
+    expect(relativeDays("2026-10-20", "2026-10-13", "en-US")).toMatch(/7 days|in 1 week/);
   });
 });

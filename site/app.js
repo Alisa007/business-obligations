@@ -140,3 +140,64 @@ export function hostOf(url) {
     return url;
   }
 }
+
+export const JURISDICTIONS = [
+  ["federal", "Federal"],
+  ["state", "State"],
+  ["county", "County"],
+  ["city", "City"],
+];
+
+const FREQUENCY = {
+  once: "One-time",
+  annual: "Annual",
+  biennial: "Every 2 years",
+  every_five_years: "Every 5 years",
+  quarterly: "Quarterly",
+  monthly: "Monthly",
+  per_event: "Per event",
+  ongoing: "Ongoing",
+};
+
+export const frequencyLabel = (f) => FREQUENCY[f] ?? f;
+
+export const CONFIDENCE = {
+  checked: "Checked against official pages",
+  compiled: "Compiled from public sources",
+  unconfirmed: "Contains an unconfirmed value",
+};
+
+/**
+ * Filters obligations and groups them by jurisdiction. Within a group, items with a known next due date come
+ * first (soonest first), then the rest alphabetically.
+ */
+export function groupObligations(items, { jurisdiction = "all", category = "all", query = "" } = {}) {
+  const q = query.trim().toLowerCase();
+  const match = (i) =>
+    (jurisdiction === "all" || i.jurisdiction === jurisdiction) &&
+    (category === "all" || i.category === category) &&
+    (!q || `${i.title} ${i.authority} ${i.description} ${i.reason}`.toLowerCase().includes(q));
+  const byDue = (a, b) =>
+    (a.nextDue ?? "9999-12-31").localeCompare(b.nextDue ?? "9999-12-31") || a.title.localeCompare(b.title);
+  return JURISDICTIONS.map(([key, label]) => ({
+    jurisdiction: key,
+    label,
+    items: items.filter((i) => i.jurisdiction === key && match(i)).sort(byDue),
+  })).filter((g) => g.items.length > 0);
+}
+
+/** Counts items per value of `key`, ignoring the filter on that same key. */
+export function countBy(items, key, filters = {}) {
+  const other = { ...filters, [key]: "all" };
+  const kept = groupObligations(items, other).flatMap((g) => g.items);
+  const counts = {};
+  for (const i of kept) counts[i[key]] = (counts[i[key]] ?? 0) + 1;
+  return counts;
+}
+
+/** "in 18 days", "tomorrow", "3 days ago" relative to `from`, in the viewer's locale. */
+export function relativeDays(iso, from, locale) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(iso ?? "") || !/^\d{4}-\d{2}-\d{2}$/.test(from ?? "")) return "";
+  const days = Math.round((Date.parse(`${iso}T00:00:00Z`) - Date.parse(`${from}T00:00:00Z`)) / 86_400_000);
+  return new Intl.RelativeTimeFormat(locale, { numeric: "auto" }).format(days, "day");
+}

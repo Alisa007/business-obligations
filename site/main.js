@@ -7,11 +7,17 @@ import {
   PROFESSIONS,
   analyze,
   buildProfile,
+  CONFIDENCE,
+  JURISDICTIONS,
+  countBy,
   escapeHtml as h,
   formatDate as fd,
+  frequencyLabel,
+  groupObligations,
   hostOf,
   link,
   money,
+  relativeDays,
 } from "./app.js";
 
 const $ = (id) => document.getElementById(id);
@@ -77,42 +83,174 @@ const sources = (i) =>
     .map((u) => link(u, hostOf(u)))
     .join(", ");
 
-const stepHtml = (s) =>
-  `<li class="step"><div class="title">${s.order ? `${s.order}. ` : ""}${link(s.item.url, s.item.title)}</div>
-   <div class="meta">${h(s.item.authority)}${s.target ? ` · target ${fd(s.target)}` : ""}${
-     s.legalDeadline ? ` · <b>legal due ${fd(s.legalDeadline)}</b>` : ""
-   }${s.item.cost?.amount !== undefined ? ` · fee ${money(s.item.cost.amount)}` : ""}</div></li>`;
+// Checked-off launch steps are remembered in this browser only.
+const DONE_KEY = "cre-done-steps";
+const doneSteps = (() => {
+  try {
+    return new Set(JSON.parse(localStorage.getItem(DONE_KEY) ?? "[]"));
+  } catch {
+    return new Set();
+  }
+})();
+const saveDone = () => {
+  try {
+    localStorage.setItem(DONE_KEY, JSON.stringify([...doneSteps]));
+  } catch {
+    /* storage unavailable: progress just isn't remembered */
+  }
+};
 
-const itemHtml = (i) =>
-  `<li class="step"><div class="title">${link(i.url, i.title)}</div>
-   <div class="meta"><span class="chip">${h(i.jurisdiction)}</span><span class="chip">${h(i.category)}</span>${h(i.authority)}${
-     i.nextDue ? ` · next due ${fd(i.nextDue)}` : i.deadline ? ` · ${h(i.deadline)}` : ""
-   }</div><div class="meta">${h(i.reason)}${
-     i.provenance
-       ? ` · ${h(i.provenance.confidence)}${i.provenance.checkedOn ? ` (checked ${fd(i.provenance.checkedOn)})` : ""}`
-       : ""
-   }${sources(i) ? ` · sources: ${sources(i)}` : ""}</div></li>`;
+const confidenceBadge = (p) =>
+  p
+    ? `<span class="badge ${h(p.confidence)}" title="${h(CONFIDENCE[p.confidence] ?? "")}${
+        p.checkedOn ? `, checked ${h(fd(p.checkedOn))}` : ""
+      }">${h(p.confidence)}</span>`
+    : "";
+
+const feeChip = (i) =>
+  i.cost?.amount !== undefined ? `<span class="chip">fee ${money(i.cost.amount)}</span>` : "";
+
+const stepHtml = (s, asOf, byId) => {
+  const id = s.item.id;
+  const needs = s.dependsOn
+    .map((d) => byId.get(d))
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((x) => x.title);
+  const due = s.legalDeadline
+    ? `<span class="badge due" title="Legal due date">due ${h(fd(s.legalDeadline))} · ${h(relativeDays(s.legalDeadline, asOf))}</span>`
+    : s.target
+      ? `<span class="chip">by ${h(fd(s.target))}</span>`
+      : "";
+  return `<li class="step${doneSteps.has(id) ? " done" : ""}">
+    <label class="check"><input type="checkbox" data-step="${h(id)}" ${doneSteps.has(id) ? "checked" : ""} />
+      <span class="num">${s.order}</span>
+      <span class="body">
+        <span class="title">${link(s.item.url, s.item.title)}</span>
+        <span class="meta">${h(s.item.authority)}</span>
+        <span class="chips">${due}${feeChip(s.item)}<span class="chip">${h(frequencyLabel(s.item.frequency))}</span>${confidenceBadge(s.item.provenance)}</span>
+        ${needs.length ? `<span class="meta needs">After: ${h(needs.join("; "))}</span>` : ""}
+      </span>
+    </label>
+  </li>`;
+};
+
+const card = (label, value, note = "") =>
+  `<div class="card"><div class="card-label">${h(label)}</div><div class="card-value">${value}</div>${
+    note ? `<div class="card-note">${note}</div>` : ""
+  }</div>`;
+
+// Obligations view state (kept across tab switches and re-renders).
+const obState = { jurisdiction: "all", category: "all", query: "" };
+
+const obligationHtml = (i, asOf) =>
+  `<li><details class="ob">
+    <summary>
+      <span class="title">${link(i.url, i.title)}</span>
+      <span class="chips">${
+        i.nextDue
+          ? `<span class="chip strong">due ${h(fd(i.nextDue))} · ${h(relativeDays(i.nextDue, asOf))}</span>`
+          : i.deadline
+            ? `<span class="chip">${h(i.deadline)}</span>`
+            : ""
+      }<span class="chip">${h(frequencyLabel(i.frequency))}</span><span class="chip">${h(i.category)}</span>${feeChip(i)}${confidenceBadge(i.provenance)}</span>
+    </summary>
+    <div class="ob-body">
+      <p>${h(i.description)}</p>
+      <dl>
+        <dt>Why it applies</dt><dd>${h(i.reason)}</dd>
+        <dt>Authority</dt><dd>${link(i.url, i.authority)}</dd>
+        ${
+          i.penalty
+            ? `<dt>If late</dt><dd>${money(i.penalty.amount)}${
+                i.penalty.percentPerMonth ? ` plus ${h(String(i.penalty.percentPerMonth))}% per month` : ""
+              }. ${h(i.penalty.note)}</dd>`
+            : ""
+        }
+        ${sources(i) ? `<dt>Sources</dt><dd>${sources(i)}${i.provenance?.checkedOn ? ` (checked ${h(fd(i.provenance.checkedOn))})` : ""}</dd>` : ""}
+      </dl>
+    </div>
+  </details></li>`;
+
+function obligationsList(d) {
+  const groups = groupObligations(d.result.items, obState);
+  if (!groups.length) return `<p class="empty">No obligations match these filters.</p>`;
+  return groups
+    .map(
+      (g) =>
+        `<section class="group"><h2>${h(g.label)} <span class="count">${g.items.length}</span></h2><ul class="obs">${g.items
+          .map((i) => obligationHtml(i, d.result.asOf))
+          .join("")}</ul></section>`,
+    )
+    .join("");
+}
+
+function obligationsToolbar(d) {
+  const items = d.result.items;
+  const byJ = countBy(items, "jurisdiction", obState);
+  const byC = countBy(items, "category", obState);
+  const total = Object.values(byJ).reduce((a, b) => a + b, 0);
+  const chip = (key, label, n) =>
+    `<button class="filter${obState.jurisdiction === key ? " on" : ""}" data-j="${key}" ${n === 0 && key !== "all" ? "disabled" : ""}>${h(label)} <span class="count">${n}</span></button>`;
+  const cats = Object.keys(countBy(items, "category", { ...obState, category: "all" })).sort();
+  return `<div class="toolbar">
+    <input type="search" id="ob-q" placeholder="Search obligations" value="${h(obState.query)}" aria-label="Search obligations" />
+    <select id="ob-cat" aria-label="Category">
+      <option value="all">All categories</option>
+      ${cats.map((c) => `<option value="${h(c)}" ${obState.category === c ? "selected" : ""}>${h(c)} (${byC[c] ?? 0})</option>`).join("")}
+    </select>
+    <div class="filters">${chip("all", "All", total)}${JURISDICTIONS.map(([k, l]) => chip(k, l, byJ[k] ?? 0)).join("")}</div>
+  </div>`;
+}
 
 const VIEWS = {
   plan: (d) => {
     const p = d.plan;
-    const head = `<p>Formation filing around <b>${fd(p.formationDate)}</b>, ready to operate around <b>${fd(p.readyDate)}</b>.${
+    const total = p.steps.length;
+    const ids = new Set(p.steps.map((s) => s.item.id));
+    const done = [...doneSteps].filter((x) => ids.has(x)).length;
+    const byId = new Map(p.steps.map((s) => [s.item.id, s.item]));
+    const opening =
       p.onTrack === undefined
-        ? ""
+        ? card("Opening date", "Not set", "Add a target opening date to check the plan fits")
         : p.onTrack
-          ? ` Opening ${fd(p.openingDate)} is reachable (${p.slackDays} days of slack).`
-          : ` <span class="error">Opening ${fd(p.openingDate)} is ${-p.slackDays} days too soon at these allowances.</span>`
-    }</p>`;
+          ? card(
+              "Opening",
+              fd(p.openingDate),
+              `<span class="ok">On track, ${p.slackDays} days of slack</span>`,
+            )
+          : card(
+              "Opening",
+              fd(p.openingDate),
+              `<span class="error">${-p.slackDays} days too soon at these allowances</span>`,
+            );
+    const cards = `<div class="cards">
+      ${card("File formation", fd(p.formationDate), relativeDays(p.formationDate, p.startDate))}
+      ${card("Ready to operate", fd(p.readyDate), relativeDays(p.readyDate, p.startDate))}
+      ${opening}
+      ${card("Progress", `${done} / ${total}`, "Tick steps off as you go; saved in this browser")}
+      ${card("Known fees", `${money(d.costs.oneTime)} <small>one-time</small>`, `${money(d.costs.annual)} per year`)}
+    </div>`;
     const phases = p.phases
-      .map(
-        (ph) =>
-          `<h2>${h(ph.title)} <span class="meta">${fd(ph.start)}${ph.end ? ` → ${fd(ph.end)}` : " onward"}</span></h2>
-           <div class="meta">${h(ph.description)}</div><ol>${ph.steps.map(stepHtml).join("")}</ol>`,
-      )
+      .map((ph, n) => {
+        const left = ph.steps.filter((s) => !doneSteps.has(s.item.id)).length;
+        const range = `${fd(ph.start)}${ph.end ? ` → ${fd(ph.end)}` : " onward"}`;
+        return `<li class="phase">
+          <span class="marker">${n + 1}</span>
+          <details ${left > 0 || ph.id === "operate" ? "open" : ""}>
+            <summary><span class="phase-title">${h(ph.title)}</span>
+              <span class="range">${h(range)}</span>
+              <span class="count">${left === 0 ? "done" : `${left} to do`}</span></summary>
+            <p class="meta">${h(ph.description)}</p>
+            <ul class="steps">${ph.steps.map((s) => stepHtml(s, p.startDate, byId)).join("")}</ul>
+          </details>
+        </li>`;
+      })
       .join("");
-    return head + phases;
+    return `${cards}<ol class="timeline">${phases}</ol>
+      <p class="meta">Dates are planning allowances, not agency processing times. Legal due dates are shown where the rules give one.</p>`;
   },
-  items: (d) => `<ul>${d.result.items.map(itemHtml).join("")}</ul>`,
+  items: (d) => `${obligationsToolbar(d)}<div id="ob-list">${obligationsList(d)}</div>`,
   calendar: (d) =>
     `<p><button id="dl">Download .ics</button></p>` +
     (d.events.length
@@ -175,6 +313,46 @@ function render() {
       render();
     }),
   );
+  out.querySelectorAll("[data-step]").forEach((c) =>
+    c.addEventListener("change", () => {
+      if (c.checked) doneSteps.add(c.dataset.step);
+      else doneSteps.delete(c.dataset.step);
+      saveDone();
+      render();
+    }),
+  );
+  const refreshList = () => {
+    const list = $("ob-list");
+    if (list) list.innerHTML = obligationsList(data);
+  };
+  const rerenderToolbar = () => {
+    const bar = out.querySelector(".toolbar");
+    if (bar) bar.outerHTML = obligationsToolbar(data);
+    wireToolbar();
+  };
+  function wireToolbar() {
+    out.querySelectorAll(".filter[data-j]").forEach((b) =>
+      b.addEventListener("click", () => {
+        obState.jurisdiction = b.dataset.j;
+        refreshList();
+        rerenderToolbar();
+      }),
+    );
+    const q = $("ob-q");
+    if (q)
+      q.addEventListener("input", () => {
+        obState.query = q.value;
+        refreshList();
+      });
+    const cat = $("ob-cat");
+    if (cat)
+      cat.addEventListener("change", () => {
+        obState.category = cat.value;
+        refreshList();
+        rerenderToolbar();
+      });
+  }
+  wireToolbar();
   const dl = $("dl");
   if (dl)
     dl.addEventListener("click", () => {
