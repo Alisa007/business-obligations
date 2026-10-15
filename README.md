@@ -62,7 +62,8 @@ Every item says **why** it applies (`reason`), **who** to deal with (`authority`
 ## Try it
 
 - **In the browser:** the [playground](https://alisa007.github.io/compliance-rules-engine/) runs the library locally
-  on your machine; what you enter is never uploaded.
+  in your browser. If anonymous analytics is enabled on the hosted site, the details you enter are sent when you generate a
+  plan (see [Analytics on the playground](#analytics-on-the-playground)).
 - **From the terminal:**
   ```sh
   npx compliance-rules-engine launch --zip 60601 --entity llc --employees 3 --start 2026-11-02 --opening 2027-02-01
