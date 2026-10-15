@@ -1,21 +1,21 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Anchor, H1, Paragraph, Tabs, Text, XStack, YStack } from "tamagui";
+import { Anchor, H1, Paragraph, ScrollView, Tabs, Text, YStack } from "tamagui";
 import { SITE_CONFIG } from "../lib/config";
 import { NO_FILTERS, analyze, buildProfile, today, type Analysis, type ObligationFilters } from "../lib/plan";
 import { useAnalytics } from "../hooks/useAnalytics";
 import { useDoneSteps } from "../hooks/useDoneSteps";
 import { ProfileForm, lookupZip, type PlanRequest } from "./ProfileForm";
 import { CalendarView, CostsView, ObligationsView, PlanView, WhatIfView } from "./views";
-import { Muted, Panel } from "./ui";
+import { Chip, Muted, Panel } from "./ui";
 
 const TABS = [
   ["plan", "Launch plan"],
   ["items", "Obligations"],
   ["calendar", "Calendar"],
   ["costs", "Fees"],
-  ["whatif", "What would change"],
+  ["whatif", "What if"],
 ] as const;
 type TabId = (typeof TABS)[number][0];
 
@@ -85,27 +85,35 @@ export function Playground() {
 
   return (
     <YStack
-      maxWidth={1100}
+      maxWidth={1180}
       width="100%"
       marginHorizontal="auto"
       paddingHorizontal="4"
-      paddingTop="7"
-      paddingBottom="10"
+      paddingVertical="6"
       gap="5"
     >
-      <YStack gap="1">
-        <H1 fontSize="2xl">Compliance rules engine</H1>
-        <Paragraph color="placeholder-color" maxWidth={640}>
+      <YStack gap="2" alignItems="flex-start">
+        <Chip>Runs in your browser · nothing is sent anywhere</Chip>
+        <H1 fontSize="3xl">Compliance rules engine</H1>
+        <Paragraph fontSize="base" color="placeholder-color" maxWidth={620}>
           Describe a US business; get the licenses, permits, filings and deadlines that apply, in order.
-          Everything runs in your browser; nothing you enter is sent anywhere.
         </Paragraph>
       </YStack>
 
-      <XStack gap="5" flexWrap="wrap" alignItems="flex-start">
-        <YStack flexBasis={300} flexGrow={1} maxWidth={420} minWidth={260}>
+      <YStack
+        gap="5"
+        flexDirection={{ default: "column", md: "row" }}
+        alignItems={{ default: "stretch", md: "flex-start" }}
+      >
+        <YStack
+          width={{ default: "100%", md: 340 }}
+          flexShrink={{ default: 1, md: 0 }}
+          position={{ default: "relative", md: "sticky" }}
+          top={16}
+        >
           <ProfileForm today={now} busy={busy} onSubmit={submit} />
         </YStack>
-        <YStack flexBasis={480} flexGrow={999} minWidth={0} aria-live="polite">
+        <YStack flex={1} minWidth={0} aria-live="polite">
           <Panel gap="3">
             {!data && !error && <Muted>Fill in the form and press the button.</Muted>}
             {error && (
@@ -125,13 +133,40 @@ export function Playground() {
                   flexDirection="column"
                   gap="3"
                 >
-                  <Tabs.List flexWrap="wrap">
-                    {TABS.map(([id, label]) => (
-                      <Tabs.Tab key={id} value={id}>
-                        <Text>{label}</Text>
-                      </Tabs.Tab>
-                    ))}
-                  </Tabs.List>
+                  <ScrollView horizontal showsHorizontalScrollIndicator={false} flexGrow={0}>
+                    <Tabs.List borderBottomWidth={1} borderColor="border-color" borderRadius={0} gap="1">
+                      {TABS.map(([id, label]) => {
+                        const active = id === tab;
+                        const count = { items: data.result.items.length, calendar: data.events.length }[
+                          id as "items" | "calendar"
+                        ];
+                        return (
+                          <Tabs.Tab
+                            key={id}
+                            value={id}
+                            flexShrink={0}
+                            backgroundColor="transparent"
+                            borderWidth={0}
+                            borderRadius={0}
+                            borderBottomWidth={2}
+                            borderBottomColor={active ? "accent-background" : "transparent"}
+                            marginBottom={-1}
+                            paddingHorizontal="3"
+                            gap="1.5"
+                          >
+                            <Text
+                              whiteSpace="nowrap"
+                              fontWeight={active ? "700" : "500"}
+                              color={active ? "color" : "placeholder-color"}
+                            >
+                              {label}
+                            </Text>
+                            {count !== undefined && <Chip>{count}</Chip>}
+                          </Tabs.Tab>
+                        );
+                      })}
+                    </Tabs.List>
+                  </ScrollView>
                   <Tabs.Content value={tab}>{renderView()}</Tabs.Content>
                 </Tabs>
                 <Muted>{data.result.disclaimer}</Muted>
@@ -139,9 +174,9 @@ export function Playground() {
             )}
           </Panel>
         </YStack>
-      </XStack>
+      </YStack>
 
-      <YStack gap="1">
+      <YStack gap="1" borderTopWidth={1} borderColor="border-color" paddingTop="4">
         <Muted>
           General information, not legal or tax advice. Data is compiled from public sources; see each
           item&apos;s provenance and the{" "}

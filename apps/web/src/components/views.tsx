@@ -1,11 +1,23 @@
 "use client";
 
 import { useMemo } from "react";
-import { Button, H2, Paragraph, Text, XStack, YStack } from "tamagui";
+import { Button, Input, Paragraph, Text, XStack, YStack } from "tamagui";
 import type { ComplianceItem } from "compliance-rules-engine";
 import { CONFIDENCE, formatDate, frequencyLabel, hostOf, money, relativeDays } from "../lib/format";
 import { JURISDICTIONS, countBy, groupObligations, type Analysis, type ObligationFilters } from "../lib/plan";
-import { Chip, ExternalLink, Muted, Panel } from "./ui";
+import {
+  CheckField,
+  Chip,
+  DefinitionList,
+  Disclosure,
+  ExternalLink,
+  ListRow,
+  Muted,
+  NativeSelect,
+  Panel,
+  Stat,
+  useControlProps,
+} from "./ui";
 
 type Provenance = NonNullable<ComplianceItem["provenance"]>;
 
@@ -23,30 +35,6 @@ function Confidence({ p }: { p?: Provenance }) {
 
 function Fee({ item }: { item: ComplianceItem }) {
   return item.cost?.amount !== undefined ? <Chip>fee {money(item.cost.amount)}</Chip> : null;
-}
-
-function Stat({ label, value, note }: { label: string; value: React.ReactNode; note?: React.ReactNode }) {
-  return (
-    <YStack
-      flexBasis={170}
-      flexGrow={1}
-      borderWidth={1}
-      borderColor="border-color"
-      borderRadius="md"
-      padding="3"
-      gap="0.5"
-    >
-      <Muted size="xs">{label}</Muted>
-      <Text fontSize="xl" fontWeight="600">
-        {value}
-      </Text>
-      {note ? (
-        <Text fontSize="sm" color="placeholder-color">
-          {note}
-        </Text>
-      ) : null}
-    </YStack>
-  );
 }
 
 // ---- Launch plan ----
@@ -120,18 +108,28 @@ export function PlanView({
           const left = phase.steps.filter((s) => !done.has(s.item.id)).length;
           const range = `${formatDate(phase.start)}${phase.end ? ` → ${formatDate(phase.end)}` : " onward"}`;
           return (
-            <details key={phase.id} open={left > 0 || phase.id === "operate"} className="cre-details">
-              <summary>
-                <XStack gap="2.5" alignItems="baseline" flexWrap="wrap">
-                  <Chip tone="info" outline>
-                    {n + 1}
-                  </Chip>
-                  <Text fontWeight="600">{phase.title}</Text>
+            <Disclosure
+              key={phase.id}
+              card
+              open={left > 0 || phase.id === "operate"}
+              summary={
+                <YStack gap="1">
+                  <XStack gap="2" alignItems="center" flexWrap="wrap">
+                    <Chip tone="info" outline>
+                      {n + 1}
+                    </Chip>
+                    <Text fontWeight="600" fontSize="base">
+                      {phase.title}
+                    </Text>
+                    <Chip tone={left === 0 ? "good" : "neutral"} outline={left === 0}>
+                      {left === 0 ? "done" : `${left} to do`}
+                    </Chip>
+                  </XStack>
                   <Muted>{range}</Muted>
-                  <Muted>{left === 0 ? "done" : `${left} to do`}</Muted>
-                </XStack>
-              </summary>
-              <YStack gap="1" paddingTop="1.5">
+                </YStack>
+              }
+            >
+              <YStack gap="1">
                 <Muted>{phase.description}</Muted>
                 {phase.steps.map((s) => {
                   const needs = s.dependsOn
@@ -141,17 +139,17 @@ export function PlanView({
                     .map((x) => x.title);
                   const checked = done.has(s.item.id);
                   return (
-                    <label key={s.item.id} className="cre-step" style={{ opacity: checked ? 0.6 : 1 }}>
-                      <input
-                        type="checkbox"
-                        checked={checked}
-                        onChange={(e) => onToggle(s.item.id, e.target.checked)}
-                      />
-                      <Text fontSize="sm" color="placeholder-color" minWidth={22} textAlign="right">
-                        {s.order}
-                      </Text>
-                      <YStack flex={1} gap="0.5">
+                    <CheckField
+                      key={s.item.id}
+                      id={`step-${s.item.id}`}
+                      checked={checked}
+                      onChange={(v) => onToggle(s.item.id, v)}
+                    >
+                      <YStack gap="1">
                         <Text fontWeight="600" textDecorationLine={checked ? "line-through" : "none"}>
+                          <Text color="placeholder-color" fontWeight="400">
+                            {s.order}.{" "}
+                          </Text>
                           <ExternalLink url={s.item.url}>{s.item.title}</ExternalLink>
                         </Text>
                         <Muted>{s.item.authority}</Muted>
@@ -170,11 +168,11 @@ export function PlanView({
                         </XStack>
                         {needs.length > 0 && <Muted>After: {needs.join("; ")}</Muted>}
                       </YStack>
-                    </label>
+                    </CheckField>
                   );
                 })}
               </YStack>
-            </details>
+            </Disclosure>
           );
         })}
       </YStack>
@@ -188,6 +186,33 @@ export function PlanView({
 
 // ---- Obligations ----
 
+function obligationDetails(i: ComplianceItem): Array<[string, React.ReactNode]> {
+  const rows: Array<[string, React.ReactNode]> = [
+    ["Why it applies", i.reason],
+    ["Authority", <ExternalLink url={i.url}>{i.authority}</ExternalLink>],
+  ];
+  if (i.penalty) {
+    const late = i.penalty.percentPerMonth ? ` plus ${i.penalty.percentPerMonth}% per month` : "";
+    rows.push(["If late", `${money(i.penalty.amount)}${late}. ${i.penalty.note}`]);
+  }
+  const p = i.provenance;
+  if (p && p.sources.length > 0) {
+    rows.push([
+      "Sources",
+      <>
+        {p.sources.slice(0, 3).map((u, n) => (
+          <span key={u}>
+            {n > 0 && ", "}
+            <ExternalLink url={u}>{hostOf(u)}</ExternalLink>
+          </span>
+        ))}
+        {p.checkedOn ? ` (checked ${formatDate(p.checkedOn)})` : ""}
+      </>,
+    ]);
+  }
+  return rows;
+}
+
 export function ObligationsView({
   data,
   filters,
@@ -197,6 +222,7 @@ export function ObligationsView({
   filters: ObligationFilters;
   onFilters: (f: ObligationFilters) => void;
 }) {
+  const controlProps = useControlProps();
   const items = data.result.items;
   const asOf = data.result.asOf;
   const byJurisdiction = useMemo(() => countBy(items, "jurisdiction", filters), [items, filters]);
@@ -221,28 +247,28 @@ export function ObligationsView({
   );
   return (
     <YStack gap="3">
-      <XStack gap="2" flexWrap="wrap" alignItems="center">
-        <input
-          type="search"
-          className="cre-search"
-          placeholder="Search obligations"
-          aria-label="Search obligations"
-          value={filters.query}
-          onChange={(e) => onFilters({ ...filters, query: e.target.value })}
-        />
-        <select
-          className="cre-search"
-          aria-label="Category"
-          value={filters.category}
-          onChange={(e) => onFilters({ ...filters, category: e.target.value })}
-        >
-          <option value="all">All categories</option>
-          {categories.map((c) => (
-            <option key={c} value={c}>
-              {c} ({byCategory[c] ?? 0})
-            </option>
-          ))}
-        </select>
+      <XStack gap="3" flexWrap="wrap">
+        <YStack flexBasis={220} flexGrow={1}>
+          <Input
+            placeholder="Search obligations"
+            aria-label="Search obligations"
+            value={filters.query}
+            onChangeText={(query) => onFilters({ ...filters, query })}
+            {...controlProps}
+          />
+        </YStack>
+        <YStack flexBasis={220} flexGrow={1}>
+          <NativeSelect
+            id="category"
+            label="Category"
+            value={filters.category}
+            onChange={(category) => onFilters({ ...filters, category })}
+            options={[
+              ["all", "All categories"],
+              ...categories.map((c): [string, string] => [c, `${c} (${byCategory[c] ?? 0})`]),
+            ]}
+          />
+        </YStack>
       </XStack>
       <XStack gap="1.5" flexWrap="wrap">
         {filterButton("all", "All", total)}
@@ -252,67 +278,42 @@ export function ObligationsView({
         <Muted>No obligations match these filters.</Muted>
       ) : (
         groups.map((g) => (
-          <YStack key={g.jurisdiction} gap="0.5">
-            <H2 fontSize="lg" marginTop="3">
-              {g.label} <Muted>{g.items.length}</Muted>
-            </H2>
+          <YStack key={g.jurisdiction}>
+            <XStack gap="2" alignItems="baseline" paddingTop="3" paddingBottom="1">
+              <Text fontSize="lg" fontWeight="600">
+                {g.label}
+              </Text>
+              <Muted>{g.items.length}</Muted>
+            </XStack>
             {g.items.map((i) => (
-              <details key={i.id} className="cre-details cre-ob">
-                <summary>
-                  <XStack gap="2" flexWrap="wrap" alignItems="center">
+              <Disclosure
+                key={i.id}
+                summary={
+                  <YStack gap="1.5">
                     <Text fontWeight="600">
                       <ExternalLink url={i.url}>{i.title}</ExternalLink>
                     </Text>
-                    {i.nextDue ? (
-                      <Chip tone="info" outline>
-                        due {formatDate(i.nextDue)} · {relativeDays(i.nextDue, asOf)}
-                      </Chip>
-                    ) : i.deadline ? (
-                      <Chip>{i.deadline}</Chip>
-                    ) : null}
-                    <Chip>{frequencyLabel(i.frequency)}</Chip>
-                    <Chip>{i.category}</Chip>
-                    <Fee item={i} />
-                    <Confidence p={i.provenance} />
-                  </XStack>
-                </summary>
-                <YStack gap="1.5" paddingTop="2" paddingBottom="1">
+                    <XStack gap="1.5" flexWrap="wrap" alignItems="center">
+                      {i.nextDue ? (
+                        <Chip tone="info" outline>
+                          due {formatDate(i.nextDue)} · {relativeDays(i.nextDue, asOf)}
+                        </Chip>
+                      ) : i.deadline ? (
+                        <Chip>{i.deadline}</Chip>
+                      ) : null}
+                      <Chip>{frequencyLabel(i.frequency)}</Chip>
+                      <Chip>{i.category}</Chip>
+                      <Fee item={i} />
+                      <Confidence p={i.provenance} />
+                    </XStack>
+                  </YStack>
+                }
+              >
+                <YStack gap="2" paddingBottom="2">
                   <Paragraph>{i.description}</Paragraph>
-                  <dl className="cre-dl">
-                    <dt>Why it applies</dt>
-                    <dd>{i.reason}</dd>
-                    <dt>Authority</dt>
-                    <dd>
-                      <ExternalLink url={i.url}>{i.authority}</ExternalLink>
-                    </dd>
-                    {i.penalty && (
-                      <>
-                        <dt>If late</dt>
-                        <dd>
-                          {money(i.penalty.amount)}
-                          {i.penalty.percentPerMonth
-                            ? ` plus ${i.penalty.percentPerMonth}% per month`
-                            : ""}. {i.penalty.note}
-                        </dd>
-                      </>
-                    )}
-                    {(i.provenance?.sources.length ?? 0) > 0 && (
-                      <>
-                        <dt>Sources</dt>
-                        <dd>
-                          {i.provenance!.sources.slice(0, 3).map((u, n) => (
-                            <span key={u}>
-                              {n > 0 && ", "}
-                              <ExternalLink url={u}>{hostOf(u)}</ExternalLink>
-                            </span>
-                          ))}
-                          {i.provenance!.checkedOn ? ` (checked ${formatDate(i.provenance!.checkedOn)})` : ""}
-                        </dd>
-                      </>
-                    )}
-                  </dl>
+                  <DefinitionList items={obligationDetails(i)} />
                 </YStack>
-              </details>
+              </Disclosure>
             ))}
           </YStack>
         ))
@@ -334,26 +335,21 @@ export function CalendarView({ data, onDownload }: { data: Analysis; onDownload:
           No dated deadlines in the next year. Add a formation date for anniversary-based filings.
         </Muted>
       ) : (
-        <table className="cre-table">
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th>Deadline</th>
-              <th>Authority</th>
-            </tr>
-          </thead>
-          <tbody>
-            {data.events.map((e) => (
-              <tr key={`${e.itemId}-${e.date}`}>
-                <td>{formatDate(e.date)}</td>
-                <td>
+        <YStack width="100%">
+          {data.events.map((e) => (
+            <ListRow key={`${e.itemId}-${e.date}`} columnGap="4">
+              <Text fontWeight="600" width={120}>
+                {formatDate(e.date)}
+              </Text>
+              <YStack flex={1} flexBasis={220} minWidth={0}>
+                <Text>
                   <ExternalLink url={e.url}>{e.title}</ExternalLink>
-                </td>
-                <td>{e.authority}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+                </Text>
+                <Muted>{e.authority}</Muted>
+              </YStack>
+            </ListRow>
+          ))}
+        </YStack>
       )}
     </YStack>
   );
@@ -367,19 +363,17 @@ export function CostsView({ data }: { data: Analysis }) {
         Known government fees: <Text fontWeight="700">{money(data.costs.annual)}</Text> per year,{" "}
         <Text fontWeight="700">{money(data.costs.oneTime)}</Text> one-time.
       </Paragraph>
-      <table className="cre-table">
-        <tbody>
-          {data.costs.lines.map((l) => (
-            <tr key={l.id}>
-              <td>
-                <ExternalLink url={urlOf.get(l.id)}>{l.title}</ExternalLink>
-                {l.estimate ? " (estimate)" : ""}
-              </td>
-              <td className="cre-num">{money(l.perYear || l.amount)}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <YStack>
+        {data.costs.lines.map((l) => (
+          <ListRow key={l.id} flexWrap="nowrap" justifyContent="space-between">
+            <Text flex={1} minWidth={0}>
+              <ExternalLink url={urlOf.get(l.id)}>{l.title}</ExternalLink>
+              {l.estimate ? " (estimate)" : ""}
+            </Text>
+            <Text fontWeight="600">{money(l.perYear || l.amount)}</Text>
+          </ListRow>
+        ))}
+      </YStack>
       {data.costs.unknown.length > 0 && (
         <Muted>{data.costs.unknown.length} items have fees that cannot be totalled.</Muted>
       )}
@@ -395,24 +389,22 @@ export function WhatIfView({ data }: { data: Analysis }) {
       {sensitivity.length === 0 ? (
         <Muted>Nothing changes with these inputs.</Muted>
       ) : (
-        <table className="cre-table">
-          <tbody>
-            {sensitivity.map((s) => (
-              <tr key={s.field}>
-                <td>
-                  {s.field} (now {JSON.stringify(s.current)})
-                </td>
-                <td>
-                  {s.changes.slice(0, 4).map((c) => (
-                    <div key={JSON.stringify(c.value)}>
-                      {JSON.stringify(c.value)}: +{c.added.length} / −{c.removed.length}
-                    </div>
-                  ))}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        <YStack>
+          {sensitivity.map((s) => (
+            <ListRow key={s.field} columnGap="4">
+              <Text flex={1} flexBasis={200} minWidth={0}>
+                {s.field} (now {JSON.stringify(s.current)})
+              </Text>
+              <YStack flex={1} flexBasis={200} minWidth={0}>
+                {s.changes.slice(0, 4).map((c) => (
+                  <Text key={JSON.stringify(c.value)}>
+                    {JSON.stringify(c.value)}: +{c.added.length} / −{c.removed.length}
+                  </Text>
+                ))}
+              </YStack>
+            </ListRow>
+          ))}
+        </YStack>
       )}
     </YStack>
   );

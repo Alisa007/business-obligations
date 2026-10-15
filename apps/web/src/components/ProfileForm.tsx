@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Button, Checkbox, Input, Text, XStack, YStack } from "tamagui";
+import { Button, YStack } from "tamagui";
 import {
   ENTITY_TYPES,
   INDUSTRIES,
@@ -10,7 +10,8 @@ import {
   type FormValues,
   type Place,
 } from "../lib/plan";
-import { Field, Muted, NativeSelect, Panel } from "./ui";
+import { CheckField, Field, Muted, NativeSelect, Pair, Panel, SectionLabel, TextField } from "./ui";
+import { DateField } from "./DateField";
 
 export interface PlanRequest {
   form: FormValues;
@@ -42,31 +43,6 @@ const INITIAL: FormValues = {
   formationDate: "",
 };
 
-function CheckField({
-  id,
-  label,
-  checked,
-  onChange,
-}: {
-  id: string;
-  label: string;
-  checked: boolean;
-  onChange: (v: boolean) => void;
-}) {
-  return (
-    <XStack gap="2.5" alignItems="center">
-      <Checkbox id={id} checked={checked} onCheckedChange={(v) => onChange(v === true)} size="sm">
-        <Checkbox.Indicator>
-          <Text fontSize="xs">✓</Text>
-        </Checkbox.Indicator>
-      </Checkbox>
-      <label htmlFor={id} style={{ fontSize: 14, cursor: "pointer" }}>
-        {label}
-      </label>
-    </XStack>
-  );
-}
-
 export function ProfileForm({
   today,
   busy,
@@ -82,6 +58,9 @@ export function ProfileForm({
   const [place, setPlace] = useState("");
   const set = <K extends keyof FormValues>(key: K, value: FormValues[K]) =>
     setForm((f) => ({ ...f, [key]: value }));
+  const check = (key: "sellsGoods" | "homeBased" | "tradeName" | "isNew", label: string) => (
+    <CheckField id={key} label={label} checked={form[key]} onChange={(v) => set(key, v)} />
+  );
 
   useEffect(() => setAsOf(today), [today]);
 
@@ -107,18 +86,17 @@ export function ProfileForm({
         onSubmit({ form, asOf, openingDate });
       }}
     >
-      <Panel gap="3">
-        <Field label="ZIP code" htmlFor="zip">
-          <Input
-            id="zip"
-            value={form.zip}
-            onChangeText={(t) => set("zip", t.replace(/\D/g, "").slice(0, 5))}
-            inputMode="numeric"
-            maxLength={5}
-            autoComplete="off"
-          />
-          <Muted>{place || " "}</Muted>
-        </Field>
+      <Panel gap="2.5" padding="3.5">
+        <SectionLabel>Business</SectionLabel>
+        <TextField
+          id="zip"
+          label="ZIP code"
+          value={form.zip}
+          onChange={(t) => set("zip", t.replace(/\D/g, "").slice(0, 5))}
+          inputMode="numeric"
+          maxLength={5}
+          hint={<Muted>{place || " "}</Muted>}
+        />
         <Field label="Entity type" htmlFor="entityType">
           <NativeSelect
             id="entityType"
@@ -145,107 +123,70 @@ export function ProfileForm({
             />
           </Field>
         )}
-        <XStack gap="2.5">
-          <YStack flex={1}>
-            <Field label="Employees" htmlFor="employees">
-              <Input
-                id="employees"
-                value={form.employees}
-                onChangeText={(t) => set("employees", t)}
-                inputMode="numeric"
-              />
-            </Field>
-          </YStack>
-          <YStack flex={1}>
-            <Field label="Owners / members" htmlFor="owners">
-              <Input
-                id="owners"
-                value={form.owners}
-                onChangeText={(t) => set("owners", t)}
-                inputMode="numeric"
-              />
-            </Field>
-          </YStack>
-        </XStack>
-        <Field label="Annual payroll (USD)" htmlFor="payroll">
-          <Input
-            id="payroll"
-            value={form.payroll}
-            onChangeText={(t) => set("payroll", t)}
+
+        <SectionLabel>Size</SectionLabel>
+        <Pair>
+          <TextField
+            id="employees"
+            label="Employees"
+            value={form.employees}
+            onChange={(t) => set("employees", t)}
             inputMode="numeric"
           />
-        </Field>
-        <Field label="Annual revenue (USD)" htmlFor="revenue">
-          <Input
-            id="revenue"
-            value={form.revenue}
-            onChangeText={(t) => set("revenue", t)}
+          <TextField
+            id="owners"
+            label="Owners / members"
+            value={form.owners}
+            onChange={(t) => set("owners", t)}
             inputMode="numeric"
           />
-        </Field>
-        <YStack gap="2">
-          <CheckField
-            id="sellsGoods"
-            label="Sells taxable goods"
-            checked={form.sellsGoods}
-            onChange={(v) => set("sellsGoods", v)}
-          />
-          <CheckField
-            id="homeBased"
-            label="Home-based"
-            checked={form.homeBased}
-            onChange={(v) => set("homeBased", v)}
-          />
-          <CheckField
-            id="tradeName"
-            label="Uses a trade name (DBA)"
-            checked={form.tradeName}
-            onChange={(v) => set("tradeName", v)}
-          />
-          <CheckField
-            id="isNew"
-            label="Not formed yet"
-            checked={form.isNew}
-            onChange={(v) => set("isNew", v)}
-          />
+        </Pair>
+        <TextField
+          id="payroll"
+          label="Annual payroll (USD)"
+          value={form.payroll}
+          onChange={(t) => set("payroll", t)}
+          inputMode="numeric"
+        />
+        <TextField
+          id="revenue"
+          label="Annual revenue (USD)"
+          value={form.revenue}
+          onChange={(t) => set("revenue", t)}
+          inputMode="numeric"
+        />
+
+        <SectionLabel>Details</SectionLabel>
+        <YStack>
+          {check("sellsGoods", "Sells taxable goods")}
+          {check("homeBased", "Home-based")}
+          {check("tradeName", "Uses a trade name (DBA)")}
+          {check("isNew", "Not formed yet")}
         </YStack>
+
+        <SectionLabel>Dates</SectionLabel>
         {!form.isNew && (
-          <Field label="Formation date" htmlFor="formationDate">
-            <input
-              id="formationDate"
-              type="date"
-              value={form.formationDate}
-              onChange={(e) => set("formationDate", e.target.value)}
-              className="cre-date"
-            />
-          </Field>
+          <DateField
+            id="formationDate"
+            label="Formation date"
+            value={form.formationDate}
+            onChange={(v) => set("formationDate", v)}
+            max={asOf || undefined}
+          />
         )}
-        <XStack gap="2.5">
-          <YStack flex={1}>
-            <Field label="Start / today" htmlFor="asOf">
-              <input
-                id="asOf"
-                type="date"
-                value={asOf}
-                onChange={(e) => setAsOf(e.target.value)}
-                className="cre-date"
-              />
-            </Field>
-          </YStack>
-          <YStack flex={1}>
-            <Field label="Target opening date" htmlFor="openingDate">
-              <input
-                id="openingDate"
-                type="date"
-                value={openingDate}
-                onChange={(e) => setOpeningDate(e.target.value)}
-                className="cre-date"
-              />
-            </Field>
-          </YStack>
-        </XStack>
+        <Pair>
+          <DateField id="asOf" label="Start / today" value={asOf} onChange={setAsOf} />
+          <DateField
+            id="openingDate"
+            label="Target opening"
+            value={openingDate}
+            onChange={setOpeningDate}
+            min={asOf || undefined}
+            clearable
+          />
+        </Pair>
         <Button type="submit" disabled={busy} theme="accent" marginTop="1">
-          Show my obligations
+          {busy ? "Working…" : "Show my obligations"}
         </Button>
       </Panel>
     </form>
