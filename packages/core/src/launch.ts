@@ -1,5 +1,6 @@
 import { estimateCosts, type CostEstimate } from "./costs";
 import { evaluate, type ComplianceResult, type EvaluateOptions } from "./engine";
+import { todayIso } from "./iso";
 import type { BusinessProfile, ComplianceItem } from "./types";
 
 export type LaunchPhaseId = "prepare" | "form" | "identify" | "register" | "license" | "employ" | "operate";
@@ -175,7 +176,7 @@ const addDays = (iso: string, n: number) => {
 };
 const daysBetween = (a: string, b: string) =>
   Math.round((Date.parse(`${b}T00:00:00Z`) - Date.parse(`${a}T00:00:00Z`)) / 86_400_000);
-const today = () => new Date().toISOString().slice(0, 10);
+const today = () => todayIso();
 
 /**
  * Builds an ordered plan for opening a new business: phases with dependencies, planned dates and the
