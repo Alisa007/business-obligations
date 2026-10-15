@@ -391,8 +391,9 @@ Pages (output in `apps/web/out/`; serve it with any static server). Set `BASE_PA
 ### Analytics on the playground
 
 The hosted playground can report anonymous usage with [PostHog](https://posthog.com): page views, which tab was
-opened, and that a plan or calendar was generated (with only the entity type and industry). It never sends form values,
-uses no cookies or session recording, and respects Do Not Track. It is off unless `posthogKey` is set in
+opened, which form fields are edited (by name), and that a plan or calendar was generated. Generating a plan also
+sends the values entered in the form (ZIP, entity type, industry, profession, headcount, payroll, revenue, the yes/no
+options and dates). It uses no cookies or session recording and respects Do Not Track. It is off unless `posthogKey` is set in
 `NEXT_PUBLIC_POSTHOG_KEY` and `NEXT_PUBLIC_POSTHOG_HOST` and is always off in `npm run dev`. The library itself has no telemetry.
 
 ## Size

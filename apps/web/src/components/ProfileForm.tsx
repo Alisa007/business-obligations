@@ -47,17 +47,22 @@ export function ProfileForm({
   today,
   busy,
   onSubmit,
+  onFieldUsed,
 }: {
   today: string;
   busy: boolean;
   onSubmit: (request: PlanRequest) => void;
+  /** Called with a field's name (never its value) when the user edits it. */
+  onFieldUsed?: (field: string) => void;
 }) {
   const [form, setForm] = useState<FormValues>(INITIAL);
   const [asOf, setAsOf] = useState(today);
   const [openingDate, setOpeningDate] = useState("");
   const [place, setPlace] = useState("");
-  const set = <K extends keyof FormValues>(key: K, value: FormValues[K]) =>
+  const set = <K extends keyof FormValues>(key: K, value: FormValues[K]) => {
+    onFieldUsed?.(key);
     setForm((f) => ({ ...f, [key]: value }));
+  };
   const check = (key: "sellsGoods" | "homeBased" | "tradeName" | "isNew", label: string) => (
     <CheckField id={key} label={label} checked={form[key]} onChange={(v) => set(key, v)} />
   );
@@ -175,12 +180,23 @@ export function ProfileForm({
           />
         )}
         <Pair>
-          <DateField id="asOf" label="Start / today" value={asOf} onChange={setAsOf} />
+          <DateField
+            id="asOf"
+            label="Start / today"
+            value={asOf}
+            onChange={(v) => {
+              onFieldUsed?.("asOf");
+              setAsOf(v);
+            }}
+          />
           <DateField
             id="openingDate"
             label="Target opening"
             value={openingDate}
-            onChange={setOpeningDate}
+            onChange={(v) => {
+              onFieldUsed?.("openingDate");
+              setOpeningDate(v);
+            }}
             min={asOf || undefined}
             clearable
           />

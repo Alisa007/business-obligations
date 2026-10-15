@@ -1,9 +1,17 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Anchor, H1, Paragraph, ScrollView, Tabs, Text, YStack } from "tamagui";
 import { SITE_CONFIG } from "../lib/config";
-import { NO_FILTERS, analyze, buildProfile, today, type Analysis, type ObligationFilters } from "../lib/plan";
+import {
+  NO_FILTERS,
+  analyze,
+  buildProfile,
+  needsProfession,
+  today,
+  type Analysis,
+  type ObligationFilters,
+} from "../lib/plan";
 import { useAnalytics } from "../hooks/useAnalytics";
 import { useDoneSteps } from "../hooks/useDoneSteps";
 import { ProfileForm, lookupZip, type PlanRequest } from "./ProfileForm";
@@ -31,6 +39,14 @@ export function Playground() {
 
   useEffect(() => setNow(today()), []);
 
+  // Report each field once per visit, by name only.
+  const usedFields = useRef(new Set<string>());
+  const fieldUsed = (field: string) => {
+    if (usedFields.current.has(field)) return;
+    usedFields.current.add(field);
+    analytics.track("field_used", { field });
+  };
+
   const submit = async ({ form, asOf, openingDate }: PlanRequest) => {
     setBusy(true);
     try {
@@ -41,9 +57,24 @@ export function Playground() {
         openingDate: openingDate || undefined,
         isNew: form.isNew,
       });
-      const props = { entityType: form.entityType, industry: form.industry, isNew: form.isNew };
-      analytics.track("plan_generated", props);
-      analytics.log("plan_generated", props);
+      const num = (v: string) => (v.trim() !== "" && Number.isFinite(Number(v)) ? Number(v) : undefined);
+      analytics.track("plan_generated", {
+        ...form,
+        zip: form.zip.trim(),
+        profession: needsProfession(form) ? form.profession : undefined,
+        employees: num(form.employees),
+        owners: num(form.owners),
+        payroll: num(form.payroll),
+        revenue: num(form.revenue),
+        formationDate: form.isNew ? undefined : form.formationDate || undefined,
+        asOf: asOf || undefined,
+        openingDate: openingDate || undefined,
+      });
+      analytics.log("plan_generated", {
+        entityType: form.entityType,
+        industry: form.industry,
+        isNew: form.isNew,
+      });
       setData(result);
       setError(undefined);
     } catch (err) {
@@ -93,7 +124,6 @@ export function Playground() {
       gap="5"
     >
       <YStack gap="2" alignItems="flex-start">
-        <Chip>Runs in your browser · nothing is sent anywhere</Chip>
         <H1 fontSize="3xl">Compliance rules engine</H1>
         <Paragraph fontSize="base" color="placeholder-color" maxWidth={620}>
           Describe a US business; get the licenses, permits, filings and deadlines that apply, in order.
@@ -111,7 +141,7 @@ export function Playground() {
           position={{ default: "relative", md: "sticky" }}
           top={16}
         >
-          <ProfileForm today={now} busy={busy} onSubmit={submit} />
+          <ProfileForm today={now} busy={busy} onSubmit={submit} onFieldUsed={fieldUsed} />
         </YStack>
         <YStack flex={1} minWidth={0} aria-live="polite">
           <Panel gap="3">
@@ -177,18 +207,19 @@ export function Playground() {
       </YStack>
 
       <YStack gap="1" borderTopWidth={1} borderColor="border-color" paddingTop="4">
+        {analytics.enabled && (
+          <Muted>
+            Anonymous usage statistics are collected with PostHog: page views, which tabs and fields are used,
+            and the details you enter when you generate a plan (ZIP, entity type, industry, headcount,
+            payroll, revenue and dates). No cookies, no session recording; Do Not Track is respected.
+          </Muted>
+        )}
         <Muted>
           General information, not legal or tax advice. Data is compiled from public sources; see each
           item&apos;s provenance and the{" "}
           <Anchor href={`${SITE_CONFIG.repoUrl}/blob/main/packages/core/COVERAGE.md`}>coverage report</Anchor>
           . <Anchor href={SITE_CONFIG.repoUrl}>Source on GitHub</Anchor>.
         </Muted>
-        {analytics.enabled && (
-          <Muted>
-            Anonymous usage statistics (page views and which tabs are used, never what you enter) are
-            collected with PostHog; Do Not Track is respected.
-          </Muted>
-        )}
       </YStack>
     </YStack>
   );

@@ -1,17 +1,34 @@
 // Anonymous, minimal usage analytics (PostHog). What is sent: page views, a few coarse events, a few log lines and
-// unhandled errors. What is never sent: anything typed into the form (ZIP, city, headcount, payroll, ...), cookies,
-// session recordings, autocapture.
+// unhandled errors. When a plan is generated, the form values are sent with it (ZIP, entity type, headcount,
+// payroll, ...); editing a field reports only its name. Never sent: cookies, session recordings, autocapture.
 
-export type EventName = "plan_generated" | "tab_viewed" | "ics_downloaded";
+export type EventName = "plan_generated" | "tab_viewed" | "ics_downloaded" | "field_used";
 export type LogName = "plan_generated" | "ics_downloaded" | "plan_generation_failed";
 type Props = Record<string, unknown>;
 type Primitive = string | number | boolean;
 
 /** Event names and the only properties each may carry. Anything else is dropped before sending. */
 export const ALLOWED: Record<EventName, readonly string[]> = {
-  plan_generated: ["entityType", "industry", "isNew"],
+  plan_generated: [
+    "zip",
+    "entityType",
+    "industry",
+    "profession",
+    "employees",
+    "owners",
+    "payroll",
+    "revenue",
+    "sellsGoods",
+    "homeBased",
+    "tradeName",
+    "isNew",
+    "formationDate",
+    "asOf",
+    "openingDate",
+  ],
   tab_viewed: ["tab"],
   ics_downloaded: ["events"],
+  field_used: ["field"],
 };
 
 const LOGS: Record<LogName, { level: "info" | "warn"; message: string; attributes: readonly string[] }> = {

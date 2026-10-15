@@ -124,6 +124,7 @@ describe("analytics", () => {
       isNew: true,
       zip: "78701",
       employees: 5,
+      city: "Austin",
     });
     a.track("not_allowed" as never, { zip: "78701" });
     a.log("plan_generation_failed", { reason: "unknown_zip", zip: "78701" });
@@ -136,7 +137,11 @@ describe("analytics", () => {
       respect_dnt: true,
     });
     expect(calls.filter((c) => c[0] === "capture")).toEqual([
-      ["capture", "plan_generated", { entityType: "llc", industry: "general", isNew: true }],
+      [
+        "capture",
+        "plan_generated",
+        { entityType: "llc", industry: "general", isNew: true, zip: "78701", employees: 5 },
+      ],
     ]);
     expect(calls.filter((c) => c[0] === "warn")).toEqual([
       ["warn", "Compliance plan generation failed", { reason: "unknown_zip" }],
@@ -146,6 +151,16 @@ describe("analytics", () => {
   it("sanitizes property values", () => {
     expect(sanitize("tab_viewed", { tab: { nested: 1 } })).toEqual({});
     expect(sanitize("ics_downloaded", { events: 12, extra: "x" })).toEqual({ events: 12 });
+    expect(sanitize("field_used", { field: "zip", value: "78701" })).toEqual({ field: "zip" });
+    expect(
+      sanitize("plan_generated", {
+        zip: "78701",
+        payroll: 90000,
+        isNew: true,
+        secret: "x",
+        nested: { a: 1 },
+      }),
+    ).toEqual({ zip: "78701", payroll: 90000, isNew: true });
     expect(sanitize("nope")).toBeUndefined();
   });
 });
