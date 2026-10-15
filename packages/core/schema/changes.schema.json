@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Alisa007/compliance-rules-engine/schema/changes.schema.json",
+  "title": "Rule change registry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["rulesetVersion", "changes"],
+  "properties": {
+    "rulesetVersion": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}\\.\\d+$" },
+    "changes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "effective", "status", "kind", "summary", "scope"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]+$" },
+          "effective": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+          "announced": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+          "status": { "enum": ["enacted", "proposed"] },
+          "kind": {
+            "enum": ["fee", "deadline", "requirement", "repeal", "threshold", "enforcement", "other"]
+          },
+          "summary": { "type": "string", "minLength": 10 },
+          "scope": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "country": { "const": "US" },
+              "state": { "type": "string", "pattern": "^[A-Z]{2}$" },
+              "rules": { "type": "array", "items": { "type": "string" }, "minItems": 1 }
+            }
+          },
+          "patches": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["path", "value"],
+              "properties": { "path": { "type": "string" }, "value": {} }
+            }
+          },
+          "source": { "type": "string", "pattern": "^https://" }
+        }
+      }
+    }
+  }
+}

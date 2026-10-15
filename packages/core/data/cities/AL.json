@@ -1,0 +1,87 @@
+[
+  {
+    "state": "AL",
+    "city": "Birmingham",
+    "counties": ["Jefferson", "Shelby"],
+    "items": [
+      {
+        "id": "birmingham.business-license",
+        "title": "Renew Birmingham business license",
+        "category": "license",
+        "authority": "City of Birmingham Finance Department, Tax and License Administration Division",
+        "description": "Businesses in Birmingham need a city business license. The license year runs January 1 to December 31 and licenses expire on December 31.",
+        "frequency": "annual",
+        "deadline": "Licenses expire December 31",
+        "url": "https://birminghamal.gov/2024/08/09/the-city-of-birmingham-encourages-businesses-to-enroll-in-new-business-tax-and-license-system",
+        "appliesTo": ["all"]
+      }
+    ]
+  },
+  {
+    "state": "AL",
+    "city": "Huntsville",
+    "counties": ["Madison", "Limestone"],
+    "items": [
+      {
+        "id": "huntsville.business-license",
+        "title": "Renew Huntsville business license",
+        "category": "license",
+        "authority": "City of Huntsville Finance Department",
+        "description": "Licenses expire December 31; renewal is due January 31, a 15% penalty applies from February 1 and 30% from March 1 (insurance licenses are due the last day of February).",
+        "frequency": "annual",
+        "deadline": "January 31",
+        "due": {
+          "type": "fixed",
+          "month": 1,
+          "day": 31
+        },
+        "url": "https://www.huntsvilleal.gov/?p=121",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "AL",
+    "city": "Mobile",
+    "counties": ["Mobile"],
+    "items": [
+      {
+        "id": "mobile-al.business-license",
+        "title": "Renew Mobile business license",
+        "category": "license",
+        "authority": "City of Mobile Revenue Department",
+        "description": "Licenses expire December 31, are due January 1 and become delinquent after January 31; a 15% penalty applies in February and 30% from March 1.",
+        "frequency": "annual",
+        "deadline": "January 1 (delinquent after January 31)",
+        "due": {
+          "type": "fixed",
+          "month": 1,
+          "day": 31
+        },
+        "url": "https://www.cityofmobile.gov/business-license-overview/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "AL",
+    "city": "Montgomery",
+    "counties": ["Montgomery"],
+    "items": [
+      {
+        "id": "montgomery-al.business-license",
+        "title": "Renew Montgomery business license",
+        "category": "license",
+        "authority": "City of Montgomery License and Revenue Division",
+        "description": "Licenses expire December 31. The city sets the penalty-free renewal date each year (February 2 for 2026) with a 15% penalty after and 30% a month later; city tax accounts must be current.",
+        "frequency": "annual",
+        "deadline": "Set by the city each year (late January or early February)",
+        "url": "https://www.montgomeryal.gov/home/showpublisheddocument/19226/638978622752270000",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-13"
+  }
+]

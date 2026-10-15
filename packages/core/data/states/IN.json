@@ -1,0 +1,138 @@
+{
+  "code": "IN",
+  "name": "Indiana",
+  "filing": {
+    "name": "Indiana Secretary of State (INBiz)",
+    "url": "https://inbiz.in.gov"
+  },
+  "revenue": {
+    "name": "Indiana Department of Revenue",
+    "url": "https://www.in.gov/dor"
+  },
+  "labor": {
+    "name": "Indiana Department of Workforce Development",
+    "url": "https://www.in.gov/dwd"
+  },
+  "workersComp": {
+    "agency": "Indiana Worker's Compensation Board",
+    "threshold": "1 employee",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "biennial",
+    "fee": "$31 (online)",
+    "deadline": "Last day of the anniversary month, every 2 years",
+    "title": "File Business Entity Report",
+    "due": {
+      "type": "anniversary",
+      "point": "end_of_month"
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 31,
+      "online": 31
+    }
+  },
+  "corpReport": {
+    "frequency": "biennial",
+    "fee": "$31 (online)",
+    "deadline": "Last day of the anniversary month, every 2 years",
+    "title": "File Business Entity Report",
+    "due": {
+      "type": "anniversary",
+      "point": "end_of_month"
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 31,
+      "online": 31
+    }
+  },
+  "entityTax": "Corporate adjusted gross income tax",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Registered Retail Merchant Certificate",
+    "agency": null,
+    "alternative": null
+  },
+  "local": {
+    "title": "Local permits",
+    "authority": "City or county",
+    "description": "Indiana has no general local business license; local zoning/occupancy and industry permits apply."
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "county",
+  "industry": {
+    "contractor": null,
+    "realEstate": "Indiana Professional Licensing Agency",
+    "alcohol": "Indiana Alcohol and Tobacco Commission",
+    "childCare": "Indiana FSSA Bureau of Child Care",
+    "health": "Indiana Department of Health"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
+    "sources": ["https://www.in.gov/sos/business/business-entity-reports"],
+    "unconfirmed": [],
+    "dba": "checked"
+  },
+  "dbaOffice": "County recorder",
+  "lpReport": {
+    "frequency": "biennial",
+    "fee": "$50",
+    "deadline": "Last day of the anniversary month, every 2 years",
+    "title": "File Business Entity Report",
+    "due": {
+      "type": "anniversary",
+      "point": "end_of_month"
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 50
+    }
+  },
+  "llpReport": {
+    "frequency": "biennial",
+    "fee": "$50",
+    "deadline": "Last day of the anniversary month, every 2 years",
+    "title": "File Business Entity Report",
+    "due": {
+      "type": "anniversary",
+      "point": "end_of_month"
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 50
+    }
+  },
+  "cannabis": {
+    "status": "cbd_only",
+    "regulator": null
+  },
+  "localSalesTax": "none",
+  "unemployment": {
+    "wageBase": 9500,
+    "minRate": 0.5,
+    "maxRate": 7.4,
+    "newEmployerRate": 2.5,
+    "year": 2026
+  },
+  "links": {
+    "formation": "https://www.in.gov/sos/business/",
+    "annualReport": "https://inbiz.in.gov/business-filings/business-entityreport",
+    "uiRegistration": "https://www.in.gov/dwd/indiana-unemployment/employers/ess",
+    "withholding": "https://www.in.gov/dor/i-am-a/business-corp/withholding/",
+    "salesTax": "https://www.in.gov/dor/i-am-a/business-corp/sales-tax/",
+    "entityTax": "https://inbiz.in.gov/taxes-fees/tax-registration",
+    "laborPosters": "https://www.in.gov/dwd/indiana-unemployment/employers/forms-downloads/required-employer-posters",
+    "dba": "https://faqs.in.gov/hc/en-us/articles/115005053207-How-do-I-file-an-Assumed-Business-Name-DBA"
+  }
+}

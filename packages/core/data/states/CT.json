@@ -1,0 +1,118 @@
+{
+  "code": "CT",
+  "name": "Connecticut",
+  "filing": {
+    "name": "Connecticut Secretary of the State",
+    "url": "https://business.ct.gov"
+  },
+  "revenue": {
+    "name": "Connecticut Department of Revenue Services",
+    "url": "https://portal.ct.gov/drs"
+  },
+  "labor": {
+    "name": "Connecticut Department of Labor",
+    "url": "https://portal.ct.gov/dol"
+  },
+  "workersComp": {
+    "agency": "Connecticut Workers' Compensation Commission",
+    "threshold": "1 employee",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "$80",
+    "deadline": "March 31",
+    "due": {
+      "type": "fixed",
+      "month": 3,
+      "day": 31
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 80
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$150",
+    "deadline": "End of the anniversary month",
+    "due": {
+      "type": "anniversary",
+      "point": "end_of_month"
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 150
+    }
+  },
+  "entityTax": "Corporation Business Tax; optional Pass-Through Entity Tax",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Sales and use tax permit",
+    "agency": null,
+    "alternative": null
+  },
+  "paidLeave": {
+    "title": "CT Paid Leave contributions",
+    "agency": "Connecticut Paid Leave Authority",
+    "description": "Employers withhold 0.5% of wages and remit quarterly.",
+    "minEmployees": 1
+  },
+  "local": {
+    "title": "Town zoning/occupancy approvals",
+    "authority": "Town clerk / zoning office",
+    "description": "Connecticut has no general local business license; trade names are registered with the town clerk."
+  },
+  "paidSickLeave": {
+    "minEmployees": 25
+  },
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "town",
+  "industry": {
+    "contractor": "Connecticut Department of Consumer Protection (home improvement contractor registration)",
+    "realEstate": "Connecticut Department of Consumer Protection",
+    "alcohol": "Connecticut DCP Liquor Control Division",
+    "childCare": "Connecticut Office of Early Childhood",
+    "health": "Connecticut Department of Public Health"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
+    "sources": [
+      "https://business.ct.gov/knowledge-base/articles/domestic-annual-report-forms-and-fees",
+      "https://business.ct.gov/knowledge-base/articles/trade-names"
+    ],
+    "unconfirmed": [],
+    "dba": "checked"
+  },
+  "dbaOffice": "Town clerk",
+  "cannabis": {
+    "status": "adult_use",
+    "regulator": "Connecticut Department of Consumer Protection"
+  },
+  "localSalesTax": "none",
+  "unemployment": {
+    "wageBase": 27000,
+    "minRate": 0.1,
+    "maxRate": 10,
+    "newEmployerRate": 1.9,
+    "year": 2026
+  },
+  "links": {
+    "formation": "https://business.ct.gov/knowledge-base/articles/business-formation-and-registration",
+    "annualReport": "https://business.ct.gov/business-services/file-annual-report",
+    "uiRegistration": "https://portal.ct.gov/dol/divisions/unemployment-insurance-tax",
+    "withholding": "https://portal.ct.gov/drs/withholding-taxes/new-employer-information",
+    "salesTax": "https://portal.ct.gov/drs/sales-tax",
+    "entityTax": "https://portal.ct.gov/drs/corporation-tax",
+    "laborPosters": "https://portal.ct.gov/dol/divisions/wage-and-workplace-standards/labor-regulation-posters",
+    "dba": "https://business.ct.gov/knowledge-base/articles/trade-names"
+  },
+  "dbaEntitiesFileLocally": true
+}

@@ -1,0 +1,127 @@
+{
+  "code": "GA",
+  "name": "Georgia",
+  "filing": {
+    "name": "Georgia Secretary of State, Corporations Division",
+    "url": "https://sos.ga.gov/corporations-division"
+  },
+  "revenue": {
+    "name": "Georgia Department of Revenue",
+    "url": "https://dor.georgia.gov"
+  },
+  "labor": {
+    "name": "Georgia Department of Labor",
+    "url": "https://dol.georgia.gov"
+  },
+  "workersComp": {
+    "agency": "Georgia State Board of Workers' Compensation",
+    "threshold": "3 employees",
+    "trigger": {
+      "minEmployees": 3
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "$50 ($60 online including service charge)",
+    "deadline": "January 1 \u2013 April 1",
+    "title": "File Annual Registration",
+    "due": {
+      "type": "fixed",
+      "month": 4,
+      "day": 1
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 50,
+      "online": 60,
+      "note": "online amount includes a service charge"
+    },
+    "lateFee": {
+      "amount": 25,
+      "note": "Penalty for late annual registration"
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$50 ($60 online including service charge)",
+    "deadline": "January 1 \u2013 April 1",
+    "title": "File Annual Registration",
+    "due": {
+      "type": "fixed",
+      "month": 4,
+      "day": 1
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 50,
+      "online": 60,
+      "note": "online amount includes a service charge"
+    },
+    "lateFee": {
+      "amount": 25,
+      "note": "Penalty for late annual registration"
+    }
+  },
+  "entityTax": "Corporate income tax and net worth tax",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Georgia sales tax number (Georgia Tax Center)",
+    "agency": null,
+    "alternative": null
+  },
+  "local": {
+    "title": "City or county occupation tax certificate",
+    "authority": "City or county business license office",
+    "description": "Georgia local governments issue business/occupation tax certificates."
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "county",
+  "industry": {
+    "contractor": "Georgia State Licensing Board for Residential and General Contractors",
+    "realEstate": "Georgia Real Estate Commission",
+    "alcohol": "Georgia Department of Revenue, Alcohol and Tobacco Division",
+    "childCare": "Georgia Department of Early Care and Learning",
+    "health": "Georgia Department of Community Health"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
+    "sources": [
+      "https://sos.ga.gov/how-to-guide/how-file-annual-registration",
+      "https://sos.ga.gov/page/business-division-faq"
+    ],
+    "unconfirmed": [],
+    "dba": "checked"
+  },
+  "dbaOffice": "Clerk of Superior Court",
+  "cannabis": {
+    "status": "medical_only",
+    "regulator": "Georgia Access to Medical Cannabis Commission",
+    "note": "Georgia's program is limited to low-THC oil."
+  },
+  "localSalesTax": "state_administered",
+  "unemployment": {
+    "wageBase": 9500,
+    "minRate": 0.04,
+    "maxRate": 8.1,
+    "newEmployerRate": 2.64,
+    "year": 2026
+  },
+  "links": {
+    "formation": "https://sos.ga.gov/corporations-division-georgia-secretary-states-office",
+    "annualReport": "https://ecorp.sos.ga.gov/OneClickAR",
+    "uiRegistration": "https://dol.georgia.gov/employers",
+    "withholding": "https://dor.georgia.gov/taxes/withholding-tax-employers",
+    "salesTax": "https://dor.georgia.gov/taxes/sales-use-tax",
+    "entityTax": "https://dor.georgia.gov/taxes/taxes-corporations",
+    "laborPosters": "https://dol.georgia.gov/laws-and-rules/gdol-required-workplace-posters",
+    "dba": "https://sos.ga.gov/page/business-division-faq"
+  },
+  "dbaEntitiesFileLocally": true
+}

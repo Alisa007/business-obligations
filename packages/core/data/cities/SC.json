@@ -1,0 +1,48 @@
+[
+  {
+    "state": "SC",
+    "city": "Charleston",
+    "counties": ["Charleston", "Berkeley"],
+    "items": [
+      {
+        "id": "charleston-sc.business-license",
+        "title": "Renew City of Charleston business license",
+        "category": "license",
+        "authority": "City of Charleston Revenue Collections Division",
+        "description": "Business licenses expire April 30 each year and are renewed on the previous year's gross income; the city's page gives the fee as payable by May 31 with penalties after June 30.",
+        "frequency": "annual",
+        "deadline": "April 30 (license expiration)",
+        "due": {
+          "type": "fixed",
+          "month": 4,
+          "day": 30
+        },
+        "url": "https://charleston-sc.gov/135",
+        "appliesTo": ["all"]
+      }
+    ]
+  },
+  {
+    "state": "SC",
+    "city": "Columbia",
+    "counties": ["Richland", "Lexington"],
+    "items": [
+      {
+        "id": "columbia-sc.business-license",
+        "title": "Renew City of Columbia business license",
+        "category": "license",
+        "authority": "City of Columbia Business Licenses Division",
+        "description": "Business licenses expire April 30 each year; a 5% penalty accrues per month from May 1.",
+        "frequency": "annual",
+        "deadline": "April 30",
+        "due": {
+          "type": "fixed",
+          "month": 4,
+          "day": 30
+        },
+        "url": "https://columbiasc.gov/city-of-columbia-business-license-division-gives-reminder-to-renew-business-license-7/",
+        "appliesTo": ["all"]
+      }
+    ]
+  }
+]

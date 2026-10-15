@@ -1,0 +1,113 @@
+[
+  {
+    "state": "MI",
+    "city": "Ann Arbor",
+    "status": "unverified",
+    "note": "Sources disagree and no official city page on a general business license was found; Michigan cities generally license specific activities.",
+    "counties": ["Washtenaw"],
+    "items": [],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "MI",
+    "city": "Detroit",
+    "counties": ["Wayne"],
+    "items": [
+      {
+        "id": "detroit.income-tax-withholding",
+        "title": "Register for and withhold Detroit city income tax",
+        "category": "registration",
+        "authority": "City of Detroit Income Tax Division / Michigan Department of Treasury",
+        "description": "Employers with a location in Detroit or doing business there register with the city, withhold city income tax monthly or quarterly, and file the annual reconciliation.",
+        "frequency": "quarterly",
+        "url": "https://detroitmi.gov/incometax",
+        "appliesTo": ["employees"]
+      },
+      {
+        "id": "detroit.corporate-income-tax",
+        "title": "File Detroit corporate or partnership income tax return",
+        "category": "filing",
+        "authority": "Michigan Department of Treasury (for the City of Detroit)",
+        "description": "Corporations and partnerships doing business in Detroit file the city return, which the Michigan Department of Treasury has processed since 2017.",
+        "frequency": "annual",
+        "url": "https://www.michigan.gov/taxes/citytax/detroit",
+        "appliesTo": ["corporation"]
+      }
+    ]
+  },
+  {
+    "state": "MI",
+    "city": "Flint",
+    "counties": ["Genesee"],
+    "items": [
+      {
+        "id": "flint.withholding-reconciliation",
+        "title": "File Flint city income tax withholding reconciliation",
+        "category": "filing",
+        "authority": "City of Flint Income Tax Division",
+        "description": "Employers withhold city income tax, file quarterly returns and reconcile annually on Form FW-3 by February 28. From January 1, 2027, business returns move to the Michigan Department of Treasury and withholding becomes monthly.",
+        "frequency": "annual",
+        "deadline": "February 28",
+        "due": {
+          "type": "fixed",
+          "month": 2,
+          "day": 28
+        },
+        "url": "https://www.michigan.gov/taxes/citytax/flint/business",
+        "appliesTo": ["employees"]
+      }
+    ],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "MI",
+    "city": "Grand Rapids",
+    "counties": ["Kent", "Ottawa"],
+    "items": [
+      {
+        "id": "grandrapids.income-tax-return",
+        "title": "File Grand Rapids city income tax business return",
+        "category": "filing",
+        "authority": "City of Grand Rapids Income Tax Department",
+        "description": "Corporations (GR-1120) and partnerships (GR-1065) file the city income tax return; calendar-year filers are due April 30 and fiscal-year filers four months after year end.",
+        "frequency": "annual",
+        "deadline": "April 30 (calendar-year filers)",
+        "due": {
+          "type": "fixed",
+          "month": 4,
+          "day": 30
+        },
+        "url": "https://www.grandrapidsmi.gov/media/ptdntgg5/2025-1120-website.pdf",
+        "appliesTo": ["corporation", "unincorporated"]
+      }
+    ],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "MI",
+    "city": "Lansing",
+    "status": "unverified",
+    "note": "The city's individual income tax return is due April 30; business-specific forms and dates were not confirmed.",
+    "counties": ["Ingham", "Eaton", "Clinton"],
+    "items": [],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "MI",
+    "city": "Sterling Heights",
+    "status": "unverified",
+    "note": "Sources disagree and no official city page on a general business license was found; Michigan cities generally license specific activities.",
+    "counties": ["Macomb"],
+    "items": [],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "MI",
+    "city": "Warren",
+    "status": "unverified",
+    "note": "Sources disagree and no official city page on a general business license was found; Michigan cities generally license specific activities.",
+    "counties": ["Macomb"],
+    "items": [],
+    "checkedOn": "2026-10-13"
+  }
+]

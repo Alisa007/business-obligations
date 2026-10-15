@@ -1,0 +1,100 @@
+[
+  {
+    "state": "NY",
+    "city": "Albany",
+    "status": "unverified",
+    "note": "No Albany, New York page on a general business license was found.",
+    "counties": ["Albany"],
+    "items": [],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "NY",
+    "city": "Buffalo",
+    "status": "none",
+    "sourceUrl": "https://www.buffalony.gov/638/Licenses",
+    "note": "The city has no general business license; licenses are required for certain business types through the Office of Licenses.",
+    "counties": ["Erie"],
+    "items": [],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "NY",
+    "city": "New York",
+    "counties": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+    "items": [
+      {
+        "id": "nyc.business-corporation-tax",
+        "title": "File NYC Business Corporation Tax return",
+        "category": "filing",
+        "authority": "NYC Department of Finance",
+        "description": "C and S corporations doing business in New York City file NYC-2 / NYC-4S (or NYC-3L for general corporations) and pay the tax.",
+        "frequency": "annual",
+        "deadline": "April 15 (calendar-year filers)",
+        "due": {
+          "type": "fixed",
+          "month": 4,
+          "day": 15
+        },
+        "url": "https://www.nyc.gov/site/finance/taxes/business.page",
+        "appliesTo": ["corporation"]
+      },
+      {
+        "id": "nyc.ubt",
+        "title": "File NYC Unincorporated Business Tax (UBT) return",
+        "category": "filing",
+        "authority": "NYC Department of Finance",
+        "description": "Sole proprietors, partnerships and LLCs taxed as such that carry on a business in New York City file NYC-202 / NYC-204 (4% rate, with credits for some owners).",
+        "frequency": "annual",
+        "deadline": "April 15 (calendar-year filers)",
+        "due": {
+          "type": "fixed",
+          "month": 4,
+          "day": 15
+        },
+        "url": "https://www.nyc.gov/site/finance/taxes/business.page",
+        "appliesTo": ["unincorporated"]
+      },
+      {
+        "id": "nyc.safe-sick-leave",
+        "title": "Provide NYC Earned Safe and Sick Time",
+        "category": "recordkeeping",
+        "authority": "NYC Department of Consumer and Worker Protection",
+        "description": "Employers must provide safe and sick leave, post the required notice and give employees written policy.",
+        "frequency": "ongoing",
+        "url": "https://www.nyc.gov/dcwp",
+        "appliesTo": ["employees"]
+      }
+    ],
+    "aliases": ["Brooklyn", "Queens", "Bronx", "The Bronx", "Manhattan", "Staten Island"]
+  },
+  {
+    "state": "NY",
+    "city": "Rochester",
+    "status": "unverified",
+    "note": "A city business permit applies to listed business types (tobacco and vape, auto service, salons and tattoo); no general license was confirmed.",
+    "counties": ["Monroe"],
+    "sourceUrl": "https://cityofrochester.gov/sites/default/files/2024-10/Business%20Permit%20Application.pdf",
+    "items": [],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "NY",
+    "city": "Syracuse",
+    "status": "unverified",
+    "note": "A Certificate of Use is required only for listed business types (bars, restaurants, small markets and others) and a tobacco retail license for tobacco sellers; no general license was confirmed.",
+    "counties": ["Onondaga"],
+    "sourceUrl": "https://www.syr.gov/Departments/Central-Permit-Office/Self-Services/Certificate-of-Use-License",
+    "items": [],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "NY",
+    "city": "Yonkers",
+    "status": "unverified",
+    "note": "The Consumer Protection Bureau issues activity-specific licenses; no general license was confirmed.",
+    "counties": ["Westchester"],
+    "items": [],
+    "checkedOn": "2026-10-13"
+  }
+]

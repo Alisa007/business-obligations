@@ -1,0 +1,107 @@
+{
+  "code": "WY",
+  "name": "Wyoming",
+  "filing": {
+    "name": "Wyoming Secretary of State",
+    "url": "https://sos.wyo.gov/Business/Default.aspx"
+  },
+  "revenue": {
+    "name": "Wyoming Department of Revenue",
+    "url": "https://revenue.wyo.gov"
+  },
+  "labor": {
+    "name": "Wyoming Department of Workforce Services",
+    "url": "https://dws.wyo.gov"
+  },
+  "workersComp": {
+    "agency": "Wyoming Department of Workforce Services, Workers' Compensation Division",
+    "threshold": "1 employee (mandatory in extra-hazardous industries; optional otherwise)",
+    "stateFund": true,
+    "trigger": {
+      "minEmployees": 1
+    }
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "$60 minimum license tax",
+    "deadline": "First day of the anniversary month",
+    "title": "File Annual Report and pay license tax",
+    "due": {
+      "type": "anniversary",
+      "point": "start_of_month"
+    },
+    "feeDetail": {
+      "basis": "varies",
+      "min": 60,
+      "note": "greater of $60 or 0.0002 of Wyoming assets"
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$60 minimum license tax",
+    "deadline": "First day of the anniversary month",
+    "title": "File Annual Report and pay license tax",
+    "due": {
+      "type": "anniversary",
+      "point": "start_of_month"
+    },
+    "feeDetail": {
+      "basis": "varies",
+      "min": 60,
+      "note": "greater of $60 or 0.0002 of Wyoming assets"
+    }
+  },
+  "entityTax": "No corporate or individual income tax",
+  "wageWithholding": false,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Wyoming sales tax license",
+    "agency": null,
+    "alternative": null
+  },
+  "local": {
+    "title": "City/town business license",
+    "authority": "City or town clerk",
+    "description": "Wyoming cities and towns issue local business licenses."
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "none",
+  "industry": {
+    "contractor": null,
+    "realEstate": "Wyoming Real Estate Commission",
+    "alcohol": "Wyoming Department of Revenue, Liquor Division (with local licensing)",
+    "childCare": "Wyoming Department of Family Services",
+    "health": "Wyoming Department of Health"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
+    "sources": ["https://sos.wyo.gov/faqs.aspx?root=BUS"],
+    "unconfirmed": [],
+    "dba": "checked"
+  },
+  "cannabis": {
+    "status": "cbd_only",
+    "regulator": null
+  },
+  "localSalesTax": "state_administered",
+  "unemployment": {
+    "wageBase": 33800,
+    "minRate": 0.1,
+    "maxRate": 8.5,
+    "newEmployerRate": null,
+    "year": 2026
+  },
+  "links": {
+    "formation": "https://sos.wyo.gov/Business/Default.aspx",
+    "annualReport": "https://sos.wyo.gov/Business/Default.aspx",
+    "uiRegistration": "https://dws.wyo.gov/dws-division/unemployment-insurance/",
+    "salesTax": "https://revenue.wyo.gov/divisions/",
+    "entityTax": "https://revenue.wyo.gov/divisions/",
+    "laborPosters": "https://dws.wyo.gov/dws-division/labor-standards/forms-and-resources/labor-law-poster/"
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "code": "DC",
+  "name": "District of Columbia",
+  "filing": {
+    "name": "DC Department of Licensing and Consumer Protection",
+    "url": "https://dlcp.dc.gov"
+  },
+  "revenue": {
+    "name": "DC Office of Tax and Revenue",
+    "url": "https://otr.cfo.dc.gov"
+  },
+  "labor": {
+    "name": "DC Department of Employment Services",
+    "url": "https://does.dc.gov"
+  },
+  "workersComp": {
+    "agency": "DC DOES Office of Workers' Compensation",
+    "threshold": "1 employee",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "biennial",
+    "fee": "$300",
+    "deadline": "April 1 of every second year",
+    "title": "File Biennial Report",
+    "due": {
+      "type": "fixed",
+      "month": 4,
+      "day": 1,
+      "cycleFrom": "year_after_formation"
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 300
+    }
+  },
+  "corpReport": {
+    "frequency": "biennial",
+    "fee": "$300",
+    "deadline": "April 1 of every second year",
+    "title": "File Biennial Report",
+    "due": {
+      "type": "fixed",
+      "month": 4,
+      "day": 1,
+      "cycleFrom": "year_after_formation"
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 300
+    }
+  },
+  "entityTax": "Franchise tax (corporations) and Unincorporated Business Franchise Tax",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Sales and use tax registration (FR-500)",
+    "agency": null,
+    "alternative": null
+  },
+  "businessLicense": {
+    "title": "DC Basic Business License (BBL)",
+    "authority": "DC Department of Licensing and Consumer Protection",
+    "fee": "Varies by license category",
+    "renewal": "biennial",
+    "feeDetail": {
+      "basis": "varies",
+      "note": "Varies by license category"
+    }
+  },
+  "paidLeave": {
+    "title": "DC Paid Family Leave tax",
+    "agency": "DC Office of Paid Family Leave",
+    "description": "Employers pay a quarterly payroll tax to the Universal Paid Leave Fund.",
+    "minEmployees": 1
+  },
+  "local": {
+    "title": "DC Certificate of Occupancy / Home Occupation permit",
+    "authority": "DC Department of Buildings / DLCP",
+    "description": "The District is both city and state; occupancy and zoning approvals are issued locally."
+  },
+  "paidSickLeave": {
+    "minEmployees": 1
+  },
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "state",
+  "industry": {
+    "contractor": "DC Department of Licensing and Consumer Protection",
+    "realEstate": "DC Real Estate Commission",
+    "alcohol": "DC Alcoholic Beverage and Cannabis Administration",
+    "childCare": "DC Office of the State Superintendent of Education",
+    "health": "DC Health"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
+    "sources": ["https://dlcp.dc.gov/page/corporations-division-fees-limited-liability-company"],
+    "unconfirmed": [],
+    "dba": "checked"
+  },
+  "cannabis": {
+    "status": "medical_only",
+    "regulator": "DC Alcoholic Beverage and Cannabis Administration",
+    "note": "Adult possession is legal but commercial adult-use sales are not licensed; the medical program is licensed."
+  },
+  "localSalesTax": "none",
+  "unemployment": {
+    "wageBase": 9000,
+    "minRate": 1.9,
+    "maxRate": 7.4,
+    "newEmployerRate": 2.7,
+    "year": 2026
+  },
+  "links": {
+    "formation": "https://dlcp.dc.gov/page/corporations-division-business-registration-faqs",
+    "annualReport": "https://dlcp.dc.gov/page/corporations-division-business-registration-faqs",
+    "uiRegistration": "https://does.dc.gov/page/ui-tax-employers",
+    "withholding": "https://otr.cfo.dc.gov/sites/default/files/dc/sites/otr/publication/attachments/FR-500_314.pdf",
+    "salesTax": "https://otr.cfo.dc.gov/sites/default/files/dc/sites/otr/publication/attachments/FR-500_314.pdf",
+    "entityTax": "https://otr.cfo.dc.gov/sites/default/files/dc/sites/otr/publication/attachments/2025_D-20_Book_Final_wLinks_02272026.pdf",
+    "laborPosters": "https://does.dc.gov/page/office-wage-hour-employers",
+    "dba": "https://dlcp.dc.gov/node/1619191",
+    "businessLicense": "https://dlcp.dc.gov/node/1618236"
+  }
+}

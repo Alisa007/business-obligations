@@ -1,0 +1,57 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  # Development tooling (ESLint, Vitest) needs a current Node; the library itself supports Node 18+,
+  # which the compat job verifies against the built package.
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm run format:check
+      - run: npm test
+      - run: npm run build
+      - run: npm run size
+      # The playground is a static Next.js export of the built library; building it here catches breakage early.
+      - run: npm run build:web
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: packages/core/dist
+
+  compat:
+    needs: check
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [18, 20, 22]
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: ${{ matrix.node }}
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: packages/core/dist
+      - name: Smoke test the built package (CJS, ESM, CLI, examples)
+        working-directory: packages/core
+        run: |
+          node -e 'const m=require("./dist/index.cjs"); if(!m.getComplianceItems({entityType:"llc",zip:"94105",city:"San Francisco",county:"San Francisco"}).length) process.exit(1)'
+          node --input-type=module -e 'import {getComplianceItems} from "./dist/index.js"; if(!getComplianceItems({entityType:"llc",zip:"94105",city:"San Francisco",county:"San Francisco"}).length) process.exit(1)'
+          node dist/cli.js --zip 94105 --entity llc | grep -q "FEDERAL"
+          node examples/quickstart.cjs
+          node examples/quickstart.mjs > /dev/null
+          node dist/cli.js rules --json | node -e 'JSON.parse(require("fs").readFileSync(0,"utf8"))'

@@ -1,0 +1,32 @@
+{
+  "name": "@cre/web",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Playground for compliance-rules-engine: Next.js (static export) with Tamagui.",
+  "type": "module",
+  "scripts": {
+    "dev": "tamagui generate-css && next dev",
+    "build": "tamagui generate-css && next build",
+    "start": "npx serve out",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@tamagui/config": "^3.0.16",
+    "@tamagui/next-theme": "^3.0.16",
+    "compliance-rules-engine": "*",
+    "next": "^16.4.2",
+    "posthog-js": "^1.438.12",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "tamagui": "^3.0.16"
+  },
+  "devDependencies": {
+    "@tamagui/cli": "^3.0.16",
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "typescript": "^5.6.0",
+    "vitest": "^5.0.3"
+  }
+}

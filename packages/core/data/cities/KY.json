@@ -1,0 +1,44 @@
+[
+  {
+    "state": "KY",
+    "city": "Lexington",
+    "status": "unverified",
+    "note": "Net profit and withholding returns appear in older Lexington-Fayette forms (April 15 for calendar-year filers); current-year pages were not confirmed.",
+    "counties": ["Fayette"],
+    "items": [],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "KY",
+    "city": "Louisville",
+    "counties": ["Jefferson"],
+    "items": [
+      {
+        "id": "louisville.occupational-license-net-profits",
+        "title": "File Louisville Metro occupational license tax net profits return (OL-3)",
+        "category": "filing",
+        "authority": "Louisville Metro Revenue Commission",
+        "description": "Entities with business nexus in Louisville/Jefferson County pay the occupational license tax (2.2% resident rate) on net profits; due the 15th day of the 4th month after fiscal year end.",
+        "frequency": "annual",
+        "deadline": "April 15 (calendar-year filers)",
+        "due": {
+          "type": "fixed",
+          "month": 4,
+          "day": 15
+        },
+        "url": "https://louisvilleky.gov/government/revenue-commission",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "louisville.occupational-license-withholding",
+        "title": "Register for and withhold Louisville occupational license tax (W-1)",
+        "category": "registration",
+        "authority": "Louisville Metro Revenue Commission",
+        "description": "Employers register with the Revenue Commission and withhold occupational license tax from employee compensation.",
+        "frequency": "quarterly",
+        "url": "https://louisvilleky.gov/government/revenue-commission",
+        "appliesTo": ["employees"]
+      }
+    ]
+  }
+]

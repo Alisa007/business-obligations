@@ -1,0 +1,151 @@
+{
+  "code": "IL",
+  "name": "Illinois",
+  "filing": {
+    "name": "Illinois Secretary of State, Business Services",
+    "url": "https://www.ilsos.gov/departments/business_services"
+  },
+  "revenue": {
+    "name": "Illinois Department of Revenue",
+    "url": "https://tax.illinois.gov"
+  },
+  "labor": {
+    "name": "Illinois Department of Employment Security",
+    "url": "https://ides.illinois.gov"
+  },
+  "workersComp": {
+    "agency": "Illinois Workers' Compensation Commission",
+    "threshold": "1 employee (even part-time)",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "$75",
+    "deadline": "Before the first day of the anniversary month",
+    "title": "File Annual Report",
+    "due": {
+      "type": "anniversary",
+      "point": "start_of_month"
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 75
+    },
+    "lateFee": {
+      "amount": 100,
+      "note": "When filed more than 60 days after the due date"
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$75",
+    "deadline": "Before the first day of the anniversary month",
+    "title": "File Annual Report",
+    "due": {
+      "type": "anniversary",
+      "point": "start_of_month"
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 75
+    }
+  },
+  "entityTax": "Corporate income tax; Personal Property Replacement Tax on partnerships and S corporations",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Illinois Certificate of Registration (Retailers' Occupation Tax)",
+    "agency": null,
+    "alternative": null
+  },
+  "local": {
+    "title": "Municipal business license",
+    "authority": "City/village clerk",
+    "description": "Chicago and many municipalities require business licenses (Chicago: BACP)."
+  },
+  "paidLeave": null,
+  "paidSickLeave": {
+    "minEmployees": 1
+  },
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "county",
+  "industry": {
+    "contractor": null,
+    "realEstate": "Illinois Department of Financial and Professional Regulation",
+    "alcohol": "Illinois Liquor Control Commission",
+    "childCare": "Illinois Department of Children and Family Services",
+    "health": "Illinois Department of Public Health"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
+    "sources": ["https://www.ilsos.gov/departments/business-services/annual-reports/llc-instructions.html"],
+    "unconfirmed": [],
+    "dba": "checked"
+  },
+  "dbaOffice": "County clerk",
+  "llpReport": {
+    "frequency": "annual",
+    "fee": "$100 per partner (minimum $200, maximum $5,000); form UPA 1003(D)",
+    "deadline": "Within the 60 days before the registration expires; registration lasts one year",
+    "title": "File LLP renewal statement",
+    "due": {
+      "type": "anniversary",
+      "point": "date"
+    },
+    "feeDetail": {
+      "basis": "per_partner",
+      "perUnit": 100,
+      "min": 200,
+      "max": 5000
+    },
+    "lateFee": {
+      "amount": 100,
+      "note": "When filed more than 60 days after the due date"
+    }
+  },
+  "lpReport": {
+    "frequency": "annual",
+    "fee": "$100",
+    "deadline": "Before the first day of the anniversary month",
+    "due": {
+      "type": "anniversary",
+      "point": "start_of_month"
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 100
+    },
+    "lateFee": {
+      "amount": 100,
+      "note": "When filed more than 60 days after the due date"
+    }
+  },
+  "cannabis": {
+    "status": "adult_use",
+    "regulator": "Illinois Department of Financial and Professional Regulation and Department of Agriculture"
+  },
+  "localSalesTax": "state_administered",
+  "unemployment": {
+    "wageBase": 14250,
+    "minRate": 0.2,
+    "maxRate": 6.5,
+    "newEmployerRate": 2.8,
+    "year": 2026
+  },
+  "links": {
+    "formation": "https://www.ilsos.gov/departments/business-services.html",
+    "annualReport": "https://www.ilsos.gov/departments/business-services/annual-reports.html",
+    "uiRegistration": "https://ides.illinois.gov/employer-resources/taxes-reporting/are-you-a-new-employer-register.html",
+    "withholding": "https://tax.illinois.gov/research/taxinformation/withholdingincometax.html",
+    "salesTax": "https://tax.illinois.gov/businesses/registration.html",
+    "entityTax": "https://tax.illinois.gov/businesses.html",
+    "laborPosters": "https://labor.illinois.gov/employers/posters.html",
+    "dba": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
+  }
+}

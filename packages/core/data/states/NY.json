@@ -1,0 +1,132 @@
+{
+  "code": "NY",
+  "name": "New York",
+  "filing": {
+    "name": "New York Department of State, Division of Corporations",
+    "url": "https://dos.ny.gov/division-corporations-state-records-and-uniform-commercial-code"
+  },
+  "revenue": {
+    "name": "New York Department of Taxation and Finance",
+    "url": "https://www.tax.ny.gov"
+  },
+  "labor": {
+    "name": "New York State Department of Labor",
+    "url": "https://dol.ny.gov"
+  },
+  "workersComp": {
+    "agency": "New York Workers' Compensation Board",
+    "threshold": "1 employee",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "biennial",
+    "fee": "$9",
+    "deadline": "During the anniversary month every 2 years",
+    "title": "File Biennial Statement",
+    "due": {
+      "type": "anniversary",
+      "point": "end_of_month"
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 9
+    }
+  },
+  "lpReport": null,
+  "llpReport": {
+    "frequency": "every_five_years",
+    "fee": "$20",
+    "deadline": "Within the 60 days before the fifth anniversary of registration, then every five years",
+    "title": "File LLP statement",
+    "due": {
+      "type": "anniversary",
+      "point": "date"
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 20
+    }
+  },
+  "corpReport": {
+    "frequency": "biennial",
+    "fee": "$9",
+    "deadline": "During the anniversary month every 2 years",
+    "title": "File Biennial Statement",
+    "due": {
+      "type": "anniversary",
+      "point": "end_of_month"
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 9
+    }
+  },
+  "entityTax": "Corporate franchise tax (fixed-dollar minimum, MTA surcharge); LLC filing fee; optional Pass-Through Entity Tax",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "New York Certificate of Authority",
+    "agency": null,
+    "alternative": null
+  },
+  "paidLeave": {
+    "title": "NY Disability Benefits and Paid Family Leave coverage",
+    "agency": "New York Workers' Compensation Board",
+    "description": "Employers must carry DBL and PFL coverage (typically through an insurer).",
+    "minEmployees": 1
+  },
+  "local": {
+    "title": "City licenses (e.g., NYC DCWP)",
+    "authority": "City licensing agency",
+    "description": "New York has no general business license; NYC and other cities license specific industries."
+  },
+  "llcPublication": "New York LLCs must publish notice of formation in two newspapers for six weeks within 120 days and file a Certificate of Publication.",
+  "paidSickLeave": {
+    "minEmployees": 1
+  },
+  "businessLicense": null,
+  "economicNexusUsd": 500000,
+  "dbaFiling": "county",
+  "industry": {
+    "contractor": null,
+    "realEstate": "New York Department of State, Division of Licensing Services",
+    "alcohol": "New York State Liquor Authority",
+    "childCare": "New York Office of Children and Family Services",
+    "health": "New York State Department of Health"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
+    "sources": [
+      "https://dos.ny.gov/biennial-statements-business-corporations-and-limited-liability-companies"
+    ],
+    "unconfirmed": [],
+    "dba": "checked"
+  },
+  "dbaOffice": "County clerk",
+  "cannabis": {
+    "status": "adult_use",
+    "regulator": "New York Office of Cannabis Management"
+  },
+  "localSalesTax": "state_administered",
+  "unemployment": {
+    "wageBase": 17600,
+    "minRate": 2.025,
+    "maxRate": 9.825,
+    "newEmployerRate": 4.025,
+    "year": 2026
+  },
+  "links": {
+    "formation": "https://dos.ny.gov/form-corporation-or-business",
+    "annualReport": "https://dos.ny.gov/form-corporation-or-business",
+    "uiRegistration": "https://dol.ny.gov/register-unemployment-insurance-0",
+    "withholding": "https://www.tax.ny.gov/bus/doingbus/hire.htm",
+    "salesTax": "https://www.tax.ny.gov/bus/st/stidx.htm",
+    "entityTax": "https://www.tax.ny.gov/bus/ct/ctidx.htm",
+    "laborPosters": "https://dol.ny.gov/posting-requirements",
+    "dba": "https://dos.ny.gov/certificate-assumed-name"
+  }
+}

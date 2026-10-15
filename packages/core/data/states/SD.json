@@ -1,0 +1,117 @@
+{
+  "code": "SD",
+  "name": "South Dakota",
+  "filing": {
+    "name": "South Dakota Secretary of State",
+    "url": "https://sdsos.gov/business-services"
+  },
+  "revenue": {
+    "name": "South Dakota Department of Revenue",
+    "url": "https://dor.sd.gov"
+  },
+  "labor": {
+    "name": "South Dakota Department of Labor & Regulation",
+    "url": "https://dlr.sd.gov"
+  },
+  "workersComp": {
+    "agency": "South Dakota Division of Labor and Management",
+    "threshold": "Optional (not required by state law; uninsured employers can be sued in tort)",
+    "trigger": {
+      "minEmployees": 1,
+      "elective": true
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "$55 online ($70 paper)",
+    "deadline": "First day of the anniversary month",
+    "due": {
+      "type": "anniversary",
+      "point": "start_of_month"
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 55,
+      "online": 55,
+      "paper": 70
+    },
+    "lateFee": {
+      "amount": 55,
+      "note": "Fee for delinquent annual reports"
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$55 online ($70 paper)",
+    "deadline": "First day of the anniversary month",
+    "due": {
+      "type": "anniversary",
+      "point": "start_of_month"
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 55,
+      "online": 55,
+      "paper": 70
+    },
+    "lateFee": {
+      "amount": 55,
+      "note": "Fee for delinquent annual reports"
+    }
+  },
+  "entityTax": "No corporate or individual income tax (financial institution franchise tax only)",
+  "wageWithholding": false,
+  "salesTax": {
+    "statewide": true,
+    "permit": "South Dakota sales tax license",
+    "agency": null,
+    "alternative": null
+  },
+  "local": {
+    "title": "City business license",
+    "authority": "City finance office",
+    "description": "Some South Dakota cities require licenses for specific businesses."
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "state",
+  "industry": {
+    "contractor": null,
+    "realEstate": "South Dakota Real Estate Commission",
+    "alcohol": "South Dakota Department of Revenue (with local licensing)",
+    "childCare": "South Dakota Department of Social Services",
+    "health": "South Dakota Department of Health"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
+    "sources": ["https://sdsos.gov/general-information/filing-fees.aspx"],
+    "unconfirmed": [],
+    "dba": "checked"
+  },
+  "cannabis": {
+    "status": "medical_only",
+    "regulator": "South Dakota Department of Health, Medical Cannabis Program"
+  },
+  "localSalesTax": "state_administered",
+  "unemployment": {
+    "wageBase": 15000,
+    "minRate": 0,
+    "maxRate": 8.52,
+    "newEmployerRate": 1.2,
+    "year": 2026
+  },
+  "links": {
+    "formation": "https://sdsos.gov/business-services/",
+    "annualReport": "https://sdsos.gov/business-services/",
+    "uiRegistration": "https://dlr.sd.gov/ra/businesses/registration.aspx",
+    "salesTax": "https://dor.sd.gov/businesses/taxes/sales-use-tax/",
+    "entityTax": "https://dor.sd.gov/businesses/taxes/",
+    "laborPosters": "https://dlr.sd.gov/employment_laws/posting_requirements.aspx",
+    "dba": "https://sdsos.gov/business-services/default.aspx"
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "code": "TN",
+  "name": "Tennessee",
+  "filing": {
+    "name": "Tennessee Secretary of State",
+    "url": "https://sos.tn.gov/business-services"
+  },
+  "revenue": {
+    "name": "Tennessee Department of Revenue",
+    "url": "https://www.tn.gov/revenue"
+  },
+  "labor": {
+    "name": "Tennessee Department of Labor and Workforce Development",
+    "url": "https://www.tn.gov/workforce"
+  },
+  "workersComp": {
+    "agency": "Tennessee Bureau of Workers' Compensation",
+    "threshold": "5 employees (1 in construction)",
+    "trigger": {
+      "minEmployees": 5,
+      "constructionMinEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "$300 base, plus $50 per member over 6 (maximum $3,000)",
+    "deadline": "First day of the 4th month after fiscal year end (April 1)",
+    "due": {
+      "type": "fixed",
+      "month": 4,
+      "day": 1
+    },
+    "feeDetail": {
+      "basis": "per_member",
+      "amount": 300,
+      "perUnit": 50,
+      "freeUnits": 6,
+      "min": 300,
+      "max": 3000
+    }
+  },
+  "llpReport": {
+    "frequency": "annual",
+    "fee": "$50 per partner (minimum $250, maximum $2,500)",
+    "deadline": "Date set by the Secretary of State",
+    "title": "Pay LLP annual fee",
+    "feeDetail": {
+      "basis": "per_partner",
+      "perUnit": 50,
+      "min": 250,
+      "max": 2500
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$20 minimum",
+    "deadline": "First day of the 4th month after fiscal year end (April 1)",
+    "due": {
+      "type": "fixed",
+      "month": 4,
+      "day": 1
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 20,
+      "min": 20,
+      "note": "$20 minimum"
+    }
+  },
+  "entityTax": "Franchise and Excise taxes (apply to LLCs, corporations and limited partnerships)",
+  "wageWithholding": false,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Tennessee sales and use tax registration",
+    "agency": null,
+    "alternative": null
+  },
+  "local": {
+    "title": "City/county business license (Business Tax)",
+    "authority": "City or county clerk",
+    "description": "Tennessee businesses obtain a local business license and file state-local Business Tax returns."
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "county",
+  "industry": {
+    "contractor": "Tennessee Board for Licensing Contractors",
+    "realEstate": "Tennessee Real Estate Commission",
+    "alcohol": "Tennessee Alcoholic Beverage Commission",
+    "childCare": "Tennessee Department of Human Services",
+    "health": "Tennessee Department of Health"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
+    "sources": ["https://sos.tn.gov/businesses/faqs"],
+    "unconfirmed": ["lpReport.fee"],
+    "dba": "checked"
+  },
+  "dbaOffice": "County clerk",
+  "cannabis": {
+    "status": "cbd_only",
+    "regulator": null
+  },
+  "localSalesTax": "state_administered",
+  "lpReport": {
+    "frequency": "annual",
+    "fee": "$50 per partner (minimum $250, maximum $2,500) \u2014 best estimate; the statute and Secretary of State schedule could not be read",
+    "deadline": "First day of the 4th month after fiscal year end (April 1)",
+    "due": {
+      "type": "fixed",
+      "month": 4,
+      "day": 1
+    },
+    "feeDetail": {
+      "basis": "per_partner",
+      "perUnit": 50,
+      "min": 250,
+      "max": 2500,
+      "estimate": true
+    }
+  },
+  "unemployment": {
+    "wageBase": 7000,
+    "minRate": 0.01,
+    "maxRate": 10,
+    "newEmployerRate": 2.7,
+    "year": 2026
+  },
+  "links": {
+    "formation": "https://sos.tn.gov/businesses/services",
+    "annualReport": "https://sos.tn.gov/products/business-services/how-file-annual-report-%E2%80%93-llc",
+    "uiRegistration": "https://www.tn.gov/workforce/employers.html",
+    "salesTax": "https://www.tn.gov/revenue/taxes/sales-and-use-tax.html",
+    "entityTax": "https://www.tn.gov/revenue/taxes/franchise---excise-tax.html",
+    "laborPosters": "https://www.tn.gov/workforce/general-resources/major-publications0/major-publications-redirect/posters-redirect/required-posters.html",
+    "dba": "https://sos.tn.gov/businesses/services/business-forms-fees"
+  }
+}

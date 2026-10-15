@@ -1,0 +1,21 @@
+name: Source links
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      # Fails on bare domains and on links that are gone (404, DNS). Bot-blocked pages are listed but not counted.
+      - run: node scripts/check-urls.mjs --data
+        working-directory: packages/core

@@ -1,0 +1,31 @@
+name: Add a city
+description: Local licenses, permits or taxes for a city that is not seeded yet
+labels: [data, good first issue]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks! Cities are plain JSON in `data/cities/<STATE>.json`; see CONTRIBUTING.md ("Adding a city"). You can open this
+        issue with what you know and someone can turn it into a pull request, or send the pull request yourself.
+  - type: input
+    id: city
+    attributes:
+      label: City and state
+      placeholder: "e.g. Austin, TX"
+    validations:
+      required: true
+  - type: textarea
+    id: items
+    attributes:
+      label: Local requirements
+      description: Licenses, permits, taxes and recurring filings a typical business needs, one per line, with the city's own page for each.
+      placeholder: |
+        - Business tax receipt, annual, due Sept 30: https://...
+        - Short-term rental permit: https://...
+    validations:
+      required: true
+  - type: textarea
+    id: applies
+    attributes:
+      label: Who it applies to
+      description: All businesses? Only those with employees, that sell goods, or corporations?

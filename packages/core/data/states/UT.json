@@ -1,0 +1,107 @@
+{
+  "code": "UT",
+  "name": "Utah",
+  "filing": {
+    "name": "Utah Division of Corporations and Commercial Code",
+    "url": "https://corporations.utah.gov"
+  },
+  "revenue": {
+    "name": "Utah State Tax Commission",
+    "url": "https://tax.utah.gov"
+  },
+  "labor": {
+    "name": "Utah Department of Workforce Services",
+    "url": "https://jobs.utah.gov"
+  },
+  "workersComp": {
+    "agency": "Utah Labor Commission",
+    "threshold": "1 employee",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "$18",
+    "deadline": "Last day of the anniversary month",
+    "title": "File Annual Renewal",
+    "due": {
+      "type": "anniversary",
+      "point": "end_of_month"
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 18
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$18",
+    "deadline": "Last day of the anniversary month",
+    "title": "File Annual Renewal",
+    "due": {
+      "type": "anniversary",
+      "point": "end_of_month"
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 18
+    }
+  },
+  "entityTax": "Corporate franchise and income tax ($100 minimum)",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Utah sales tax license",
+    "agency": null,
+    "alternative": null
+  },
+  "local": {
+    "title": "City or county business license",
+    "authority": "City or county business licensing office",
+    "description": "Utah cities and counties require business licenses."
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "state",
+  "industry": {
+    "contractor": "Utah Division of Professional Licensing (DOPL)",
+    "realEstate": "Utah Division of Real Estate",
+    "alcohol": "Utah Department of Alcoholic Beverage Services",
+    "childCare": "Utah Department of Health and Human Services, Office of Licensing",
+    "health": "Utah Department of Health and Human Services"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
+    "sources": ["https://commerce.utah.gov/wp-content/uploads/2023/04/currentfees.pdf"],
+    "unconfirmed": [],
+    "dba": "checked"
+  },
+  "cannabis": {
+    "status": "medical_only",
+    "regulator": "Utah Department of Agriculture and Food, Center for Medical Cannabis"
+  },
+  "localSalesTax": "state_administered",
+  "unemployment": {
+    "wageBase": 50700,
+    "minRate": 0.2,
+    "maxRate": 7.2,
+    "newEmployerRate": null,
+    "year": 2026
+  },
+  "links": {
+    "formation": "https://commerce.utah.gov/corporations/business-entities/",
+    "annualReport": "https://commerce.utah.gov/corporations/renewal-process/",
+    "uiRegistration": "https://jobs.utah.gov/ui/employer.html",
+    "withholding": "https://tax.utah.gov/business/withholding-overview/withholding/",
+    "salesTax": "https://tax.utah.gov/business/sales-tax/sales/",
+    "entityTax": "https://tax.utah.gov/business/corporate-income-tax/c-corp-tax/",
+    "laborPosters": "https://jobs.utah.gov/employer/business/empposter.pdf",
+    "dba": "https://commerce.utah.gov/corporations/business-entities/dba/"
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "code": "NJ",
+  "name": "New Jersey",
+  "filing": {
+    "name": "New Jersey Division of Revenue and Enterprise Services",
+    "url": "https://www.nj.gov/treasury/revenue"
+  },
+  "revenue": {
+    "name": "New Jersey Division of Taxation",
+    "url": "https://www.nj.gov/treasury/taxation"
+  },
+  "labor": {
+    "name": "New Jersey Department of Labor and Workforce Development",
+    "url": "https://www.nj.gov/labor"
+  },
+  "workersComp": {
+    "agency": "New Jersey Division of Workers' Compensation",
+    "threshold": "1 employee",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "$75",
+    "deadline": "Last day of the anniversary month",
+    "due": {
+      "type": "anniversary",
+      "point": "end_of_month"
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 75
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$75",
+    "deadline": "Last day of the anniversary month",
+    "due": {
+      "type": "anniversary",
+      "point": "end_of_month"
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 75
+    }
+  },
+  "entityTax": "Corporation Business Tax (minimum tax $500\u2013$2,000); partnership filing fee per partner",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "New Jersey Certificate of Authority",
+    "agency": null,
+    "alternative": null
+  },
+  "paidLeave": {
+    "title": "NJ Temporary Disability and Family Leave Insurance contributions",
+    "agency": "New Jersey Department of Labor and Workforce Development",
+    "description": "Employers withhold employee contributions and pay employer TDI contributions with quarterly UI reports.",
+    "minEmployees": 1
+  },
+  "local": {
+    "title": "Municipal business registration",
+    "authority": "Municipal clerk",
+    "description": "Municipalities require certificates of occupancy and, in many towns, business registration."
+  },
+  "paidSickLeave": {
+    "minEmployees": 1
+  },
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "county",
+  "industry": {
+    "contractor": "New Jersey Division of Consumer Affairs (home improvement contractor registration)",
+    "realEstate": "New Jersey Real Estate Commission",
+    "alcohol": "New Jersey Division of Alcoholic Beverage Control (with municipal licensing)",
+    "childCare": "New Jersey Department of Children and Families",
+    "health": "New Jersey Department of Health"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
+    "sources": ["https://business.nj.gov/pages/filings-and-accounting"],
+    "unconfirmed": [],
+    "dba": "checked"
+  },
+  "dbaOffice": "County clerk",
+  "cannabis": {
+    "status": "adult_use",
+    "regulator": "New Jersey Cannabis Regulatory Commission"
+  },
+  "localSalesTax": "none",
+  "unemployment": {
+    "wageBase": 44800,
+    "minRate": 0.5,
+    "maxRate": 5.8,
+    "newEmployerRate": 2.8,
+    "year": 2026
+  },
+  "links": {
+    "formation": "https://www.nj.gov/treasury/revenue/",
+    "annualReport": "https://www.nj.gov/treasury/revenue/",
+    "uiRegistration": "https://www.nj.gov/labor/employer-services/",
+    "withholding": "https://www.nj.gov/treasury/revenue/gettingregistered.shtml",
+    "salesTax": "https://www.nj.gov/treasury/taxation/salestax.shtml",
+    "entityTax": "https://www.nj.gov/treasury/taxation/prntcbt.shtml",
+    "laborPosters": "https://www.nj.gov/labor/wageandhour/tools-resources/forms-publications/employer-poster-packet/",
+    "dba": "https://www.nj.gov/state/bac/assets/pdf/how/regsiter-a-trade-name.pdf"
+  }
+}

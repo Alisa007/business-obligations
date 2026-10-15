@@ -1,0 +1,145 @@
+{
+  "code": "KS",
+  "name": "Kansas",
+  "filing": {
+    "name": "Kansas Secretary of State",
+    "url": "https://sos.ks.gov/business/business.html"
+  },
+  "revenue": {
+    "name": "Kansas Department of Revenue",
+    "url": "https://www.ksrevenue.gov"
+  },
+  "labor": {
+    "name": "Kansas Department of Labor",
+    "url": "https://www.dol.ks.gov"
+  },
+  "workersComp": {
+    "agency": "Kansas Division of Workers Compensation",
+    "threshold": "Annual payroll over $20,000",
+    "trigger": {
+      "minEmployees": 1,
+      "andAnnualPayrollOver": 20000
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "biennial",
+    "fee": "$90 online ($110 paper)",
+    "deadline": "April 15 of the odd or even year matching the formation year",
+    "due": {
+      "type": "fixed",
+      "month": 4,
+      "day": 15,
+      "cycleFrom": "formation_year"
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 90,
+      "online": 90,
+      "paper": 110
+    }
+  },
+  "corpReport": {
+    "frequency": "biennial",
+    "fee": "$90 online ($110 paper)",
+    "deadline": "April 15 of the odd or even year matching the formation year",
+    "due": {
+      "type": "fixed",
+      "month": 4,
+      "day": 15,
+      "cycleFrom": "formation_year"
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 90,
+      "online": 90,
+      "paper": 110
+    }
+  },
+  "entityTax": "Corporate income tax and privilege tax",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Kansas retailers' sales tax registration",
+    "agency": null,
+    "alternative": null
+  },
+  "local": {
+    "title": "City occupation/business license",
+    "authority": "City clerk",
+    "description": "Many Kansas cities require a local occupation or business license."
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "none",
+  "industry": {
+    "contractor": null,
+    "realEstate": "Kansas Real Estate Commission",
+    "alcohol": "Kansas Alcoholic Beverage Control",
+    "childCare": "Kansas Department of Health and Environment",
+    "health": "Kansas Department of Health and Environment"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
+    "sources": ["https://www.sos.ks.gov/Pubs/Businesses/Biennial-Filing.pdf"],
+    "unconfirmed": [],
+    "dba": "checked"
+  },
+  "lpReport": {
+    "frequency": "biennial",
+    "fee": "$90 online ($110 paper)",
+    "deadline": "April 15 of the odd or even year matching the formation year",
+    "due": {
+      "type": "fixed",
+      "month": 4,
+      "day": 15
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 90,
+      "online": 90,
+      "paper": 110
+    }
+  },
+  "llpReport": {
+    "frequency": "biennial",
+    "fee": "$90 online ($110 paper)",
+    "deadline": "April 15 of the odd or even year matching the formation year",
+    "due": {
+      "type": "fixed",
+      "month": 4,
+      "day": 15
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 90,
+      "online": 90,
+      "paper": 110
+    }
+  },
+  "cannabis": {
+    "status": "cbd_only",
+    "regulator": null
+  },
+  "localSalesTax": "state_administered",
+  "unemployment": {
+    "wageBase": 15100,
+    "minRate": 0,
+    "maxRate": 6.95,
+    "newEmployerRate": 1.75,
+    "year": 2026
+  },
+  "links": {
+    "formation": "https://sos.ks.gov/business/business.html",
+    "annualReport": "https://sos.ks.gov/businesses/information-reports.html",
+    "uiRegistration": "https://www.dol.ks.gov/employers/employer-services/unemployment-tax",
+    "withholding": "https://www.ksrevenue.gov/bustaxtypeswh.html",
+    "salesTax": "https://www.ksrevenue.gov/bustaxtypessales.html",
+    "entityTax": "https://www.ksrevenue.gov/bustaxtypescorp.html",
+    "laborPosters": "https://www.dol.ks.gov/employers/workplace-laws/posters-in-the-workplace"
+  }
+}
