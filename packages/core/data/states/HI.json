@@ -1,0 +1,116 @@
+{
+  "code": "HI",
+  "name": "Hawaii",
+  "filing": {
+    "name": "Hawaii Department of Commerce and Consumer Affairs, Business Registration Division",
+    "url": "https://cca.hawaii.gov/breg"
+  },
+  "revenue": {
+    "name": "Hawaii Department of Taxation",
+    "url": "https://tax.hawaii.gov"
+  },
+  "labor": {
+    "name": "Hawaii Department of Labor and Industrial Relations",
+    "url": "https://labor.hawaii.gov/ui"
+  },
+  "workersComp": {
+    "agency": "Hawaii DLIR Disability Compensation Division",
+    "threshold": "1 employee",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "$15",
+    "deadline": "Last day of the quarter containing the registration anniversary",
+    "title": "File Annual Return",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 15
+    },
+    "lateFee": {
+      "amount": 10,
+      "note": "Per year delinquent"
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$15 ($12.50 if filed online)",
+    "deadline": "Last day of the quarter containing the registration anniversary",
+    "title": "File Annual Return",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 15,
+      "online": 12.5
+    },
+    "lateFee": {
+      "amount": 10,
+      "note": "Per year delinquent"
+    }
+  },
+  "entityTax": "Corporate income tax and General Excise Tax",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "General Excise Tax (GET) license",
+    "agency": {
+      "name": "Hawaii Department of Taxation",
+      "url": "https://tax.hawaii.gov"
+    },
+    "alternative": null
+  },
+  "paidLeave": {
+    "title": "Temporary Disability Insurance (TDI) coverage",
+    "agency": "Hawaii DLIR Disability Compensation Division",
+    "description": "Employers must provide TDI coverage for employees; employees may be charged up to half the premium.",
+    "minEmployees": 1
+  },
+  "local": {
+    "title": "County permits",
+    "authority": "County business/permit office",
+    "description": "Hawaii has no general local business license; counties issue zoning, building and industry permits."
+  },
+  "paidSickLeave": null,
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "none",
+  "industry": {
+    "contractor": "Hawaii Contractors License Board",
+    "realEstate": "Hawaii Real Estate Commission",
+    "alcohol": "County liquor commission",
+    "childCare": "Hawaii Department of Human Services",
+    "health": "Hawaii Department of Health"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
+    "sources": ["https://cca.hawaii.gov/breg/registration/dllc/fees/"],
+    "unconfirmed": [],
+    "dba": "checked"
+  },
+  "cannabis": {
+    "status": "medical_only",
+    "regulator": "Hawaii Department of Health, Office of Medical Cannabis Control and Regulation",
+    "note": "Adult-use sales are not authorised; possession is decriminalized."
+  },
+  "localSalesTax": "state_administered",
+  "unemployment": {
+    "wageBase": 64500,
+    "minRate": 0,
+    "maxRate": 5.6,
+    "newEmployerRate": 2.4,
+    "year": 2026
+  },
+  "links": {
+    "formation": "https://cca.hawaii.gov/breg/registration/",
+    "annualReport": "https://cca.hawaii.gov/breg/",
+    "uiRegistration": "https://labor.hawaii.gov/ui/",
+    "withholding": "https://tax.hawaii.gov/geninfo/a2_b2_4empl_whhold/",
+    "salesTax": "https://tax.hawaii.gov/get/FAQ/",
+    "entityTax": "https://tax.hawaii.gov/forms/a1_2taxforms/",
+    "laborPosters": "https://labor.hawaii.gov/labor-law-poster/"
+  }
+}

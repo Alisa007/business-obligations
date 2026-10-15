@@ -1,0 +1,114 @@
+{
+  "code": "VT",
+  "name": "Vermont",
+  "filing": {
+    "name": "Vermont Secretary of State",
+    "url": "https://sos.vermont.gov/business-services/business-filings"
+  },
+  "revenue": {
+    "name": "Vermont Department of Taxes",
+    "url": "https://tax.vermont.gov"
+  },
+  "labor": {
+    "name": "Vermont Department of Labor",
+    "url": "https://labor.vermont.gov"
+  },
+  "workersComp": {
+    "agency": "Vermont Department of Labor, Workers' Compensation",
+    "threshold": "1 employee",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "$45",
+    "deadline": "3 months after fiscal year end",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 45
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$60",
+    "deadline": "2.5 months after fiscal year end",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 60
+    }
+  },
+  "entityTax": "Corporate income tax ($300 minimum)",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Vermont sales tax license",
+    "agency": null,
+    "alternative": null
+  },
+  "local": {
+    "title": "Town licenses and zoning permits",
+    "authority": "Town clerk / zoning administrator",
+    "description": "Vermont has no general business license; town zoning and local permits apply."
+  },
+  "paidLeave": null,
+  "paidSickLeave": {
+    "minEmployees": 1
+  },
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "state",
+  "industry": {
+    "contractor": null,
+    "realEstate": "Vermont Office of Professional Regulation",
+    "alcohol": "Vermont Department of Liquor and Lottery",
+    "childCare": "Vermont DCF, Child Development Division",
+    "health": "Vermont Department of Health"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
+    "sources": ["https://sos.vermont.gov/business-services/fees-statutes"],
+    "unconfirmed": [],
+    "dba": "checked"
+  },
+  "lpReport": null,
+  "llpReport": {
+    "frequency": "annual",
+    "fee": "$45",
+    "deadline": "January 1 \u2013 April 1",
+    "due": {
+      "type": "fixed",
+      "month": 4,
+      "day": 1
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 45
+    }
+  },
+  "cannabis": {
+    "status": "adult_use",
+    "regulator": "Vermont Cannabis Control Board"
+  },
+  "localSalesTax": "state_administered",
+  "unemployment": {
+    "wageBase": 15400,
+    "minRate": 0.4,
+    "maxRate": 5.4,
+    "newEmployerRate": 1,
+    "year": 2026
+  },
+  "links": {
+    "formation": "https://sos.vermont.gov/business-services/business-filings/domestic-formation/llc",
+    "annualReport": "https://sos.vermont.gov/business-services/business-filings/annualbiennial-reports",
+    "uiRegistration": "https://labor.vermont.gov/unemployment-insurance/unemployment-information-employers/employer-online-services/register-ui",
+    "withholding": "https://tax.vermont.gov/business/withholding",
+    "salesTax": "https://tax.vermont.gov/business/sales-and-use-tax",
+    "entityTax": "https://tax.vermont.gov/business/corporate-income-tax",
+    "laborPosters": "https://labor.vermont.gov/mandatory-workplace-posters",
+    "dba": "https://sos.vermont.gov/business-services/business-filings/assumed-name"
+  }
+}

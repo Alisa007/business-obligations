@@ -1,0 +1,255 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Alisa007/compliance-rules-engine/schema/business-profile.schema.json",
+  "title": "BusinessProfile",
+  "description": "Input to getComplianceItems(). `state` is derived from `zip` when omitted.",
+  "type": "object",
+  "required": ["entityType", "zip", "city", "county"],
+  "additionalProperties": false,
+  "properties": {
+    "country": {
+      "const": "US"
+    },
+    "entityType": {
+      "enum": [
+        "sole_proprietorship",
+        "partnership",
+        "llc",
+        "pllc",
+        "lp",
+        "llp",
+        "c_corp",
+        "s_corp",
+        "pc",
+        "benefit_corp",
+        "nonprofit"
+      ]
+    },
+    "zip": {
+      "type": "string",
+      "pattern": "^\\d{5}(-\\d{4})?$"
+    },
+    "city": {
+      "type": "string",
+      "minLength": 1
+    },
+    "county": {
+      "type": "string",
+      "minLength": 1
+    },
+    "state": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "formationState": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "multistate": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["state"],
+        "additionalProperties": false,
+        "properties": {
+          "state": {
+            "type": "string",
+            "pattern": "^[A-Z]{2}$"
+          },
+          "employeeCount": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "hasProperty": {
+            "type": "boolean"
+          },
+          "salesUsd": {
+            "type": "number",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "llcTaxClassification": {
+      "enum": ["disregarded", "partnership", "s_corp", "c_corp"]
+    },
+    "sCorpElection": {
+      "type": "boolean"
+    },
+    "formationDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "fiscalYearEndMonth": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 12
+    },
+    "dissolutionDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "isFormed": {
+      "type": "boolean"
+    },
+    "industry": {
+      "enum": [
+        "general",
+        "retail",
+        "restaurant",
+        "construction",
+        "healthcare",
+        "real_estate",
+        "professional_services",
+        "transportation",
+        "alcohol",
+        "childcare",
+        "cannabis"
+      ]
+    },
+    "alcoholActivity": {
+      "enum": ["manufacture", "import", "wholesale", "retail"]
+    },
+    "commercialVehicles": {
+      "type": "object",
+      "required": ["interstate"],
+      "additionalProperties": false,
+      "properties": {
+        "interstate": {
+          "type": "boolean"
+        },
+        "grossWeightLbs": {
+          "type": "number",
+          "minimum": 0
+        },
+        "passengerCapacity": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "carriesHazmat": {
+          "type": "boolean"
+        },
+        "forHire": {
+          "type": "boolean"
+        }
+      }
+    },
+    "employeeCount": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "annualPayroll": {
+      "type": "number",
+      "minimum": 0
+    },
+    "priorYearPayrollTaxLiability": {
+      "type": "number",
+      "minimum": 0
+    },
+    "largestContractorPaymentUsd": {
+      "type": "number",
+      "minimum": 0
+    },
+    "sellsTaxableGoods": {
+      "type": "boolean"
+    },
+    "homeBased": {
+      "type": "boolean"
+    },
+    "usesTradeName": {
+      "type": "boolean"
+    },
+    "profession": {
+      "enum": ["attorney", "cpa", "physician", "architect", "engineer", "other"]
+    },
+    "hasTaxExemptStatus": {
+      "type": "boolean"
+    },
+    "annualRevenue": {
+      "type": "number",
+      "minimum": 0
+    },
+    "annualNetIncome": {
+      "type": "number",
+      "minimum": 0
+    },
+    "fullTimeEmployeeCount": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "cannabisActivity": {
+      "enum": ["cultivation", "manufacturing", "retail", "distribution", "testing"]
+    },
+    "ownerCount": {
+      "type": "integer",
+      "minimum": 1
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "industry": {
+            "const": "alcohol"
+          }
+        },
+        "required": ["industry"]
+      },
+      "then": {
+        "required": ["alcoholActivity"]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "industry": {
+            "const": "transportation"
+          }
+        },
+        "required": ["industry"]
+      },
+      "then": {
+        "required": ["commercialVehicles"]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "entityType": {
+            "enum": ["pllc", "pc", "llp"]
+          }
+        },
+        "required": ["entityType"]
+      },
+      "then": {
+        "required": ["profession"]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "industry": {
+            "const": "professional_services"
+          }
+        },
+        "required": ["industry"]
+      },
+      "then": {
+        "required": ["profession"]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "industry": {
+            "const": "cannabis"
+          }
+        },
+        "required": ["industry"]
+      },
+      "then": {
+        "required": ["cannabisActivity"]
+      }
+    }
+  ]
+}

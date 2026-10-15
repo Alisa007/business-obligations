@@ -1,0 +1,146 @@
+{
+  "code": "WV",
+  "name": "West Virginia",
+  "filing": {
+    "name": "West Virginia Secretary of State",
+    "url": "https://sos.wv.gov/business"
+  },
+  "revenue": {
+    "name": "West Virginia State Tax Department",
+    "url": "https://tax.wv.gov"
+  },
+  "labor": {
+    "name": "WorkForce West Virginia",
+    "url": "https://workforcewv.org"
+  },
+  "workersComp": {
+    "agency": "West Virginia Offices of the Insurance Commissioner",
+    "threshold": "1 employee",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "$25 ($50 late fee)",
+    "deadline": "June 30",
+    "due": {
+      "type": "fixed",
+      "month": 6,
+      "day": 30
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 25,
+      "note": "$25 ($50 late fee)"
+    },
+    "lateFee": {
+      "amount": 50,
+      "note": "Statutory late fee that the office cannot waive"
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$25 ($50 late fee)",
+    "deadline": "June 30",
+    "due": {
+      "type": "fixed",
+      "month": 6,
+      "day": 30
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 25,
+      "note": "$25 ($50 late fee)"
+    },
+    "lateFee": {
+      "amount": 50,
+      "note": "Statutory late fee that the office cannot waive"
+    }
+  },
+  "entityTax": "Corporation net income tax",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "West Virginia business registration certificate (includes sales tax)",
+    "agency": null,
+    "alternative": null
+  },
+  "businessLicense": {
+    "title": "West Virginia business registration certificate",
+    "authority": "West Virginia State Tax Department",
+    "fee": "$30",
+    "renewal": "once",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 30
+    }
+  },
+  "local": {
+    "title": "Municipal business and occupation (B&O) tax",
+    "authority": "City",
+    "description": "West Virginia municipalities levy B&O taxes and issue local business licenses."
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "state",
+  "industry": {
+    "contractor": "West Virginia Contractor Licensing Board",
+    "realEstate": "West Virginia Real Estate Commission",
+    "alcohol": "West Virginia Alcohol Beverage Control Administration",
+    "childCare": "West Virginia Department of Health",
+    "health": "West Virginia Department of Health, Office of Health Facility Licensure and Certification"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
+    "sources": ["https://sos.wv.gov/business/updates-and-changes/annual-reports"],
+    "unconfirmed": [],
+    "dba": "checked"
+  },
+  "llpReport": {
+    "frequency": "annual",
+    "fee": "$500",
+    "deadline": "Between January 1 and July 1 each year",
+    "title": "Pay LLP annual registration fee",
+    "due": {
+      "type": "fixed",
+      "month": 7,
+      "day": 1
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 500
+    },
+    "lateFee": {
+      "amount": 50,
+      "note": "Statutory late fee that the office cannot waive"
+    }
+  },
+  "cannabis": {
+    "status": "medical_only",
+    "regulator": "West Virginia Department of Health, Office of Medical Cannabis"
+  },
+  "localSalesTax": "state_administered",
+  "unemployment": {
+    "wageBase": 9500,
+    "minRate": 1.5,
+    "maxRate": 7.5,
+    "newEmployerRate": 2.7,
+    "year": 2026
+  },
+  "links": {
+    "formation": "https://sos.wv.gov/register-new-wv-business",
+    "annualReport": "https://sos.wv.gov/business/updates-and-changes/annual-reports",
+    "uiRegistration": "https://workforcewv.org/businesses/unemployment-tax-information/navigate-the-unemployment-process/",
+    "withholding": "https://tax.wv.gov/Business/BusinessRegistration/Pages/BusinessRegistrationQuestionsAndAnswers.aspx",
+    "salesTax": "https://tax.wv.gov/Business/SalesAndUseTax/Pages/SalesAndUseTax.aspx",
+    "entityTax": "https://tax.wv.gov/Business/CorporateIncomeTax/Pages/CorporateIncomeTaxPriorYears.aspx",
+    "laborPosters": "https://labor.wv.gov/required-posters",
+    "dba": "https://sos.wv.gov/business/registration-and-waivers/register-trade-name-dba",
+    "businessLicense": "https://tax.wv.gov/Business/BusinessRegistration/Pages/BusinessRegistrationQuestionsAndAnswers.aspx"
+  }
+}

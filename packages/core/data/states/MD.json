@@ -1,0 +1,112 @@
+{
+  "code": "MD",
+  "name": "Maryland",
+  "filing": {
+    "name": "Maryland Department of Assessments and Taxation",
+    "url": "https://dat.maryland.gov/businesses"
+  },
+  "revenue": {
+    "name": "Comptroller of Maryland",
+    "url": "https://www.marylandtaxes.gov"
+  },
+  "labor": {
+    "name": "Maryland Department of Labor, Division of Unemployment Insurance",
+    "url": "https://labor.maryland.gov/employment"
+  },
+  "workersComp": {
+    "agency": "Maryland Workers' Compensation Commission",
+    "threshold": "1 employee",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "$300",
+    "deadline": "April 15",
+    "title": "File Annual Report and Personal Property Return",
+    "due": {
+      "type": "fixed",
+      "month": 4,
+      "day": 15
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 300
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$300 ($0 for non-stock corporations)",
+    "deadline": "April 15",
+    "title": "File Annual Report and Personal Property Return",
+    "due": {
+      "type": "fixed",
+      "month": 4,
+      "day": 15
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 300,
+      "note": "$300 ($0 for non-stock corporations)"
+    }
+  },
+  "entityTax": "Corporate income tax; optional pass-through entity tax",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Maryland sales and use tax license",
+    "agency": null,
+    "alternative": null
+  },
+  "local": {
+    "title": "County trader's license",
+    "authority": "Clerk of the Circuit Court",
+    "description": "Retailers and others selling goods need a trader's license from the county circuit court clerk; Baltimore and counties also require occupancy permits."
+  },
+  "paidLeave": null,
+  "paidSickLeave": {
+    "minEmployees": 1
+  },
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "state",
+  "industry": {
+    "contractor": "Maryland Home Improvement Commission",
+    "realEstate": "Maryland Real Estate Commission",
+    "alcohol": "Maryland Alcohol, Tobacco and Cannabis Commission (with local boards)",
+    "childCare": "Maryland State Department of Education, Office of Child Care",
+    "health": "Maryland Department of Health"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
+    "sources": ["https://dat.maryland.gov/SDAT%20Forms/PPR_Forms/2026_Form3.pdf"],
+    "unconfirmed": [],
+    "dba": "checked"
+  },
+  "cannabis": {
+    "status": "adult_use",
+    "regulator": "Maryland Cannabis Administration"
+  },
+  "localSalesTax": "none",
+  "unemployment": {
+    "wageBase": 8500,
+    "minRate": 0.3,
+    "maxRate": 7.5,
+    "newEmployerRate": 2.6,
+    "year": 2026
+  },
+  "links": {
+    "formation": "https://dat.maryland.gov/businesses/Pages/default.aspx",
+    "annualReport": "https://dat.maryland.gov/Pages/sdatforms.aspx",
+    "uiRegistration": "https://labor.maryland.gov/unemployment-insurance/employer-agent/tax-rate.shtml",
+    "withholding": "https://services.marylandcomptroller.gov/taxes?id=kb_article_view&sysparm_article=KB0010017",
+    "salesTax": "https://services.marylandcomptroller.gov/taxes/en/sales-and-use-tax?id=kb_article_view&sysparm_article=KB0010107",
+    "entityTax": "https://www.marylandcomptroller.gov/businesses/tax-services.html",
+    "laborPosters": "https://labor.maryland.gov/oeope/posters.shtml",
+    "dba": "https://dat.maryland.gov/sdat%20forms/nameappl.pdf"
+  }
+}

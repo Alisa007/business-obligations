@@ -1,0 +1,117 @@
+{
+  "code": "LA",
+  "name": "Louisiana",
+  "filing": {
+    "name": "Louisiana Secretary of State",
+    "url": "https://www.sos.la.gov/business-services"
+  },
+  "revenue": {
+    "name": "Louisiana Department of Revenue",
+    "url": "https://revenue.louisiana.gov"
+  },
+  "labor": {
+    "name": "Louisiana Workforce Commission",
+    "url": "https://www.louisianaworks.net"
+  },
+  "workersComp": {
+    "agency": "Louisiana Office of Workers' Compensation Administration",
+    "threshold": "1 employee",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "$35",
+    "deadline": "On the anniversary date of formation",
+    "due": {
+      "type": "anniversary",
+      "point": "date"
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 35
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$35",
+    "deadline": "On the anniversary date of formation",
+    "due": {
+      "type": "anniversary",
+      "point": "date"
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 35
+    }
+  },
+  "entityTax": "Corporate income tax; corporate franchise tax (being phased out)",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Louisiana sales tax account (LaTAP)",
+    "agency": null,
+    "alternative": null
+  },
+  "local": {
+    "title": "Parish/municipal occupational license",
+    "authority": "Parish or city",
+    "description": "Parishes and cities issue occupational licenses and many collect their own sales tax."
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "county",
+  "industry": {
+    "contractor": "Louisiana State Licensing Board for Contractors",
+    "realEstate": "Louisiana Real Estate Commission",
+    "alcohol": "Louisiana Office of Alcohol and Tobacco Control",
+    "childCare": "Louisiana Department of Education",
+    "health": "Louisiana Department of Health"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
+    "sources": ["https://static.sos.la.gov/shared/fee_changes_2026.pdf"],
+    "unconfirmed": [],
+    "dba": "checked"
+  },
+  "dbaOffice": "Parish clerk of court",
+  "cannabis": {
+    "status": "medical_only",
+    "regulator": "Louisiana Department of Agriculture and Forestry (production) and Louisiana Board of Pharmacy (dispensing)"
+  },
+  "localSalesTax": "locally_administered",
+  "llpReport": {
+    "frequency": "periodic",
+    "fee": "$155 (renewal of registration)",
+    "deadline": "Renewal before the registration term expires",
+    "title": "Renew LLP registration",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 155,
+      "note": "$155 (renewal of registration)"
+    }
+  },
+  "unemployment": {
+    "wageBase": 7000,
+    "minRate": 0.09,
+    "maxRate": 6,
+    "newEmployerRate": null,
+    "year": 2026
+  },
+  "links": {
+    "formation": "https://www.sos.la.gov/business-services/forms-fee-schedule",
+    "annualReport": "https://www.sos.la.gov/business-services/file-business-documents",
+    "uiRegistration": "https://www.laworks.net/unemploymentinsurance/ui_employers.asp",
+    "withholding": "https://revenue.louisiana.gov/businesses/widely-used-tax-types/withholding/",
+    "salesTax": "https://revenue.louisiana.gov/businesses/general-sales-and-use-taxes/general-sales-use-tax/",
+    "entityTax": "https://revenue.louisiana.gov/businesses/widely-used-tax-types/corporate-income-franchise-tax/",
+    "laborPosters": "https://www2.laworks.net/Downloads/Downloads_Posters.asp",
+    "dba": "https://www.sos.la.gov/business-services/file-business-documents"
+  }
+}

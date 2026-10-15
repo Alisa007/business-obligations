@@ -1,0 +1,105 @@
+{
+  "code": "ID",
+  "name": "Idaho",
+  "filing": {
+    "name": "Idaho Secretary of State",
+    "url": "https://sos.idaho.gov/business-services/"
+  },
+  "revenue": {
+    "name": "Idaho State Tax Commission",
+    "url": "https://tax.idaho.gov"
+  },
+  "labor": {
+    "name": "Idaho Department of Labor",
+    "url": "https://www.labor.idaho.gov"
+  },
+  "workersComp": {
+    "agency": "Idaho Industrial Commission",
+    "threshold": "1 employee",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "Free",
+    "deadline": "End of the anniversary month",
+    "due": {
+      "type": "anniversary",
+      "point": "end_of_month"
+    },
+    "feeDetail": {
+      "basis": "none",
+      "amount": 0
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "Free",
+    "deadline": "End of the anniversary month",
+    "due": {
+      "type": "anniversary",
+      "point": "end_of_month"
+    },
+    "feeDetail": {
+      "basis": "none",
+      "amount": 0
+    }
+  },
+  "entityTax": "Corporate income tax ($20 minimum)",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Idaho seller's permit",
+    "agency": null,
+    "alternative": null
+  },
+  "local": {
+    "title": "City business license",
+    "authority": "City clerk",
+    "description": "Some Idaho cities require business licenses; most licensing is industry-specific."
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "state",
+  "industry": {
+    "contractor": "Idaho Division of Occupational and Professional Licenses (contractor registration)",
+    "realEstate": "Idaho Real Estate Commission",
+    "alcohol": "Idaho State Police, Alcohol Beverage Control",
+    "childCare": "Idaho Department of Health and Welfare (with city/county licensing)",
+    "health": "Idaho Department of Health and Welfare"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
+    "sources": ["https://sos.idaho.gov/business-services/"],
+    "unconfirmed": [],
+    "dba": "checked"
+  },
+  "cannabis": {
+    "status": "cbd_only",
+    "regulator": null
+  },
+  "localSalesTax": "state_administered",
+  "unemployment": {
+    "wageBase": 58300,
+    "minRate": 0.208,
+    "maxRate": 5.4,
+    "newEmployerRate": 1,
+    "year": 2026
+  },
+  "links": {
+    "formation": "https://sos.idaho.gov/business-resources/",
+    "annualReport": "https://sos.idaho.gov/business-resources/",
+    "uiRegistration": "https://www.labor.idaho.gov/businesses/",
+    "withholding": "https://tax.idaho.gov/taxes/income-tax/withholding/",
+    "salesTax": "https://tax.idaho.gov/taxes/sales-use/",
+    "entityTax": "https://tax.idaho.gov/taxes/income-tax/",
+    "laborPosters": "https://www.labor.idaho.gov/businesses/labor-laws/required-posters/",
+    "dba": "https://sos.idaho.gov/business-services-resources/business-entities-assumed-business-names-faq/"
+  }
+}

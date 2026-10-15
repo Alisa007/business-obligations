@@ -1,0 +1,123 @@
+{
+  "code": "RI",
+  "name": "Rhode Island",
+  "filing": {
+    "name": "Rhode Island Secretary of State",
+    "url": "https://business.sos.ri.gov"
+  },
+  "revenue": {
+    "name": "Rhode Island Division of Taxation",
+    "url": "https://tax.ri.gov"
+  },
+  "labor": {
+    "name": "Rhode Island Department of Labor and Training",
+    "url": "https://dlt.ri.gov"
+  },
+  "workersComp": {
+    "agency": "Rhode Island Department of Labor and Training, Workers' Compensation",
+    "threshold": "1 employee",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "$50",
+    "deadline": "February 1 \u2013 May 1 (late fee after May 31)",
+    "due": {
+      "type": "fixed",
+      "month": 5,
+      "day": 1
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 50
+    },
+    "lateFee": {
+      "amount": 25,
+      "note": "Penalty when filed more than 30 days late"
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$50",
+    "deadline": "February 1 \u2013 May 1 (late fee after May 31)",
+    "due": {
+      "type": "fixed",
+      "month": 5,
+      "day": 1
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 50
+    },
+    "lateFee": {
+      "amount": 25,
+      "note": "Penalty when filed more than 30 days late"
+    }
+  },
+  "entityTax": "Corporate income tax ($400 minimum)",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Rhode Island seller's permit",
+    "agency": null,
+    "alternative": null
+  },
+  "paidLeave": {
+    "title": "Rhode Island TDI/TCI payroll tax",
+    "agency": "Rhode Island Division of Taxation",
+    "description": "Employees fund Temporary Disability/Caregiver Insurance; employers withhold and remit with wage withholding.",
+    "minEmployees": 1
+  },
+  "local": {
+    "title": "City/town licenses",
+    "authority": "City or town clerk",
+    "description": "Local licensing councils issue specific business licenses; no general license."
+  },
+  "paidSickLeave": {
+    "minEmployees": 1
+  },
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "state",
+  "industry": {
+    "contractor": "Rhode Island Contractors' Registration and Licensing Board",
+    "realEstate": "Rhode Island Department of Business Regulation",
+    "alcohol": "Rhode Island DBR Liquor Control Administration (with local boards)",
+    "childCare": "Rhode Island Department of Children, Youth and Families",
+    "health": "Rhode Island Department of Health"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
+    "sources": ["https://www.sos.ri.gov/divisions/business-services/ri-business/file-your-annual-report"],
+    "unconfirmed": [],
+    "dba": "checked"
+  },
+  "cannabis": {
+    "status": "adult_use",
+    "regulator": "Rhode Island Cannabis Control Commission"
+  },
+  "localSalesTax": "none",
+  "unemployment": {
+    "wageBase": 30800,
+    "minRate": 0.69,
+    "maxRate": 9.19,
+    "newEmployerRate": 1,
+    "note": "New employer rate excludes the 0.21% Job Development Assessment; the wage base is $32,300 for employers at the highest rate.",
+    "year": 2026
+  },
+  "links": {
+    "formation": "https://www.sos.ri.gov/divisions/business-services",
+    "annualReport": "https://www.sos.ri.gov/divisions/business-services",
+    "uiRegistration": "https://dlt.ri.gov/employers",
+    "withholding": "https://tax.ri.gov/tax-sections/withholding-tax",
+    "salesTax": "https://tax.ri.gov/tax-sections/sales-excise-taxes/sales-use-tax",
+    "entityTax": "https://tax.ri.gov/resources/businesses/corporate",
+    "laborPosters": "https://dlt.ri.gov/employers/required-workplace-posters",
+    "dba": "https://www.sos.ri.gov/divisions/business-services/ri-trade-names"
+  }
+}

@@ -1,0 +1,139 @@
+[
+  {
+    "state": "MO",
+    "city": "Columbia",
+    "counties": ["Boone"],
+    "items": [
+      {
+        "id": "columbia-mo.business-license",
+        "title": "Renew Columbia business license",
+        "category": "license",
+        "authority": "City of Columbia Business Licenses",
+        "description": "Businesses in Columbia hold an annual business license, renewed online with the license number from the renewal postcard.",
+        "frequency": "annual",
+        "url": "https://www.como.gov/?p=8900",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "MO",
+    "city": "Independence",
+    "counties": ["Jackson"],
+    "items": [
+      {
+        "id": "independence-mo.business-license",
+        "title": "Renew Independence business license",
+        "category": "license",
+        "authority": "City of Independence Regulated Industries Division",
+        "description": "Business licenses are effective for one year from the month issued and renewed each year; the fee scales with projected gross receipts.",
+        "frequency": "annual",
+        "deadline": "Anniversary of the month issued",
+        "url": "https://independencemo.gov/government/city-departments/community-development/business-license-liquor-license-and-employee-permitting",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "MO",
+    "city": "Kansas City",
+    "counties": ["Jackson", "Clay", "Platte"],
+    "items": [
+      {
+        "id": "kansascity.business-license",
+        "title": "Obtain and renew Kansas City business license",
+        "category": "license",
+        "authority": "City of Kansas City, Missouri Finance Department",
+        "description": "New businesses register (Form RD-100) and file the business license (Form RD-105) within 60 days of opening, renewing by March 1 each year; the fee depends on prior-year gross receipts.",
+        "frequency": "annual",
+        "deadline": "March 1",
+        "due": {
+          "type": "fixed",
+          "month": 3,
+          "day": 1
+        },
+        "url": "https://www.kcmo.gov/city-hall/departments/finance",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "kansascity.earnings-profits-tax",
+        "title": "File Kansas City earnings and profits tax return (RD-108)",
+        "category": "filing",
+        "authority": "City of Kansas City, Missouri Finance Department",
+        "description": "Businesses pay the 1% tax on net profits (return due April 15, even in a loss year) while the earnings tax remains in effect.",
+        "frequency": "annual",
+        "deadline": "April 15 (calendar-year filers)",
+        "due": {
+          "type": "fixed",
+          "month": 4,
+          "day": 15
+        },
+        "url": "https://www.kcmo.gov/city-hall/departments/finance",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "kansascity.earnings-tax-withholding",
+        "title": "Withhold and remit Kansas City earnings tax (RD-110)",
+        "category": "payment",
+        "authority": "City of Kansas City, Missouri Finance Department",
+        "description": "Employers withhold the 1% earnings tax for employees who live or work in the city and file the quarterly return.",
+        "frequency": "quarterly",
+        "url": "https://www.kcmo.gov/city-hall/departments/finance",
+        "appliesTo": ["employees"]
+      }
+    ]
+  },
+  {
+    "state": "MO",
+    "city": "Lee's Summit",
+    "status": "unverified",
+    "note": "City letters confirm an annual renewal but with license-specific penalty dates; no single date was found.",
+    "counties": ["Jackson", "Cass"],
+    "items": [],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "MO",
+    "city": "Springfield",
+    "status": "unverified",
+    "note": "Only a third-party listing (December 31) was found for the renewal; the city's own page was not confirmed.",
+    "counties": ["Greene", "Christian"],
+    "items": [],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "MO",
+    "city": "St. Louis",
+    "counties": ["St. Louis City"],
+    "items": [
+      {
+        "id": "stlouis.business-earnings-tax",
+        "title": "File St. Louis business earnings tax return",
+        "category": "filing",
+        "authority": "City of St. Louis Collector of Revenue, Earnings Tax Department",
+        "description": "Businesses located in or working in the City of St. Louis pay a 1% tax on business earnings; account application Form E-9; return due April 15 (calendar year).",
+        "frequency": "annual",
+        "deadline": "April 15 (calendar-year filers)",
+        "due": {
+          "type": "fixed",
+          "month": 4,
+          "day": 15
+        },
+        "url": "https://www.stlouis-mo.gov/government/departments/collector/earnings-tax/",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "stlouis.payroll-expense-tax",
+        "title": "File St. Louis payroll expense tax and earnings tax withholding (P-10/W-10)",
+        "category": "payment",
+        "authority": "City of St. Louis Collector of Revenue, Earnings Tax Department",
+        "description": "Employers pay the 0.5% payroll expense tax and withhold earnings tax for employees working in the city, filing quarterly.",
+        "frequency": "quarterly",
+        "url": "https://www.stlouis-mo.gov/government/departments/collector/earnings-tax/",
+        "appliesTo": ["employees"]
+      }
+    ]
+  }
+]

@@ -1,0 +1,136 @@
+{
+  "code": "ND",
+  "name": "North Dakota",
+  "filing": {
+    "name": "North Dakota Secretary of State",
+    "url": "https://sos.nd.gov/business"
+  },
+  "revenue": {
+    "name": "North Dakota Office of State Tax Commissioner",
+    "url": "https://www.tax.nd.gov"
+  },
+  "labor": {
+    "name": "Job Service North Dakota",
+    "url": "https://www.jobsnd.com"
+  },
+  "workersComp": {
+    "agency": "North Dakota Workforce Safety & Insurance (WSI)",
+    "threshold": "1 employee",
+    "stateFund": true,
+    "trigger": {
+      "minEmployees": 1
+    }
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "$50",
+    "deadline": "November 15",
+    "due": {
+      "type": "fixed",
+      "month": 11,
+      "day": 15
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 50
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$25",
+    "deadline": "August 1",
+    "due": {
+      "type": "fixed",
+      "month": 8,
+      "day": 1
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 25
+    }
+  },
+  "entityTax": "Corporate income tax",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "North Dakota sales tax permit",
+    "agency": null,
+    "alternative": null
+  },
+  "local": {
+    "title": "City business license",
+    "authority": "City auditor/clerk",
+    "description": "Some North Dakota cities license specific businesses."
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "state",
+  "industry": {
+    "contractor": "North Dakota Secretary of State (contractor licensing)",
+    "realEstate": "North Dakota Real Estate Commission",
+    "alcohol": "North Dakota Office of Attorney General (with local licensing)",
+    "childCare": "North Dakota Department of Health and Human Services",
+    "health": "North Dakota Department of Health and Human Services"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
+    "sources": ["https://www.sos.nd.gov/business/business-services/business-structures/corporation"],
+    "unconfirmed": [],
+    "dba": "checked"
+  },
+  "lpReport": {
+    "frequency": "annual",
+    "fee": "$25",
+    "deadline": "March 31",
+    "due": {
+      "type": "fixed",
+      "month": 3,
+      "day": 31
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 25
+    }
+  },
+  "llpReport": {
+    "frequency": "annual",
+    "fee": "$25",
+    "deadline": "March 31",
+    "due": {
+      "type": "fixed",
+      "month": 3,
+      "day": 31
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 25
+    }
+  },
+  "cannabis": {
+    "status": "medical_only",
+    "regulator": "North Dakota Department of Health and Human Services, Division of Medical Marijuana"
+  },
+  "localSalesTax": "state_administered",
+  "unemployment": {
+    "wageBase": 46600,
+    "minRate": 0.07,
+    "maxRate": 9.67,
+    "newEmployerRate": 1,
+    "note": "New construction employers pay a different new-employer rate.",
+    "year": 2026
+  },
+  "links": {
+    "formation": "https://www.sos.nd.gov/business/business-services",
+    "annualReport": "https://www.sos.nd.gov/business",
+    "uiRegistration": "https://www.jobsnd.com/unemployment-business-tax",
+    "withholding": "https://www.tax.nd.gov/income-tax-withholding",
+    "salesTax": "https://www.tax.nd.gov/sales-and-use-tax",
+    "entityTax": "https://www.tax.nd.gov/corporate-income-tax",
+    "laborPosters": "https://www.nd.gov/labor/required-employer-posters",
+    "dba": "https://sos.nd.gov/business/business-services/trade-name-franchise-name"
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "code": "IA",
+  "name": "Iowa",
+  "filing": {
+    "name": "Iowa Secretary of State",
+    "url": "https://sos.iowa.gov/"
+  },
+  "revenue": {
+    "name": "Iowa Department of Revenue",
+    "url": "https://tax.iowa.gov"
+  },
+  "labor": {
+    "name": "Iowa Workforce Development",
+    "url": "https://workforce.iowa.gov"
+  },
+  "workersComp": {
+    "agency": "Iowa Division of Workers' Compensation",
+    "threshold": "1 employee",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "biennial",
+    "fee": "$30 online ($45 paper)",
+    "deadline": "April 1 of odd-numbered years",
+    "title": "File Biennial Report",
+    "due": {
+      "type": "fixed",
+      "month": 4,
+      "day": 1,
+      "parity": "odd"
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 30,
+      "online": 30,
+      "paper": 45
+    }
+  },
+  "corpReport": {
+    "frequency": "biennial",
+    "fee": "$60",
+    "deadline": "April 1 of even-numbered years",
+    "title": "File Biennial Report",
+    "due": {
+      "type": "fixed",
+      "month": 4,
+      "day": 1,
+      "parity": "even"
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 60
+    }
+  },
+  "entityTax": "Corporate income tax",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Iowa sales tax permit",
+    "agency": null,
+    "alternative": null
+  },
+  "local": {
+    "title": "Local permits",
+    "authority": "City or county",
+    "description": "Iowa has no general local business license; zoning and industry permits apply."
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "county",
+  "industry": {
+    "contractor": "Iowa Division of Labor (contractor registration)",
+    "realEstate": "Iowa Real Estate Commission",
+    "alcohol": "Iowa Alcoholic Beverages Division",
+    "childCare": "Iowa Department of Health and Human Services",
+    "health": "Iowa Department of Inspections, Appeals, and Licensing"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
+    "sources": ["https://sos.iowa.gov/businesses/business-entity-forms-and-fees"],
+    "unconfirmed": [],
+    "dba": "checked"
+  },
+  "dbaOffice": "County recorder",
+  "llpReport": null,
+  "lpReport": {
+    "frequency": "biennial",
+    "fee": "$30 online ($45 paper)",
+    "deadline": "April 1 of the biennial reporting year",
+    "title": "File Biennial Report",
+    "due": {
+      "type": "fixed",
+      "month": 4,
+      "day": 1
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 30,
+      "online": 30,
+      "paper": 45
+    }
+  },
+  "cannabis": {
+    "status": "medical_only",
+    "regulator": "Iowa Department of Health and Human Services, Bureau of Medical Cannabidiol",
+    "note": "Iowa's medical program caps THC content."
+  },
+  "localSalesTax": "state_administered",
+  "unemployment": {
+    "wageBase": 20400,
+    "minRate": 0,
+    "maxRate": 5.4,
+    "newEmployerRate": 1,
+    "year": 2026
+  },
+  "links": {
+    "formation": "https://sos.iowa.gov/businesses/business-entity-forms-and-fees",
+    "annualReport": "https://help.sos.iowa.gov/how-do-i-file-biennial-report",
+    "uiRegistration": "https://workforce.iowa.gov/employers",
+    "withholding": "https://revenue.iowa.gov/taxes/tax-guidance/withholding-tax",
+    "salesTax": "https://revenue.iowa.gov/permits-licensing/business-permit-registration",
+    "entityTax": "https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/starting-business",
+    "laborPosters": "https://workforce.iowa.gov/employers/resources/posters",
+    "dba": "https://help.sos.iowa.gov/understanding-name-availability-iowa"
+  }
+}

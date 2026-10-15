@@ -1,0 +1,53 @@
+[
+  {
+    "state": "LA",
+    "city": "Baton Rouge",
+    "counties": ["East Baton Rouge"],
+    "items": [
+      {
+        "id": "batonrouge.occupational-license",
+        "title": "Renew Baton Rouge occupational license",
+        "category": "license",
+        "authority": "City of Baton Rouge / East Baton Rouge Parish Finance Department, Revenue Division",
+        "description": "The occupational license renewal is due January 1 and becomes delinquent March 1, with a penalty of 5% per month up to 25% and interest of 15% per year. Electronic filings are due by the last day of February.",
+        "frequency": "annual",
+        "deadline": "January 1 (delinquent March 1)",
+        "due": {
+          "type": "fixed",
+          "month": 1,
+          "day": 1
+        },
+        "url": "https://www.brla.gov/1461/Occupational-License-Tax",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "LA",
+    "city": "Lafayette",
+    "status": "unverified",
+    "note": "An older report says Lafayette had no occupational license tax; the current position was not confirmed.",
+    "counties": ["Lafayette"],
+    "items": [],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "state": "LA",
+    "city": "New Orleans",
+    "counties": ["Orleans"],
+    "items": [
+      {
+        "id": "neworleans.occupational-license",
+        "title": "Obtain and renew New Orleans occupational license",
+        "category": "license",
+        "authority": "City of New Orleans Safety and Permits (zoning review) and Bureau of Revenue",
+        "description": "Any business in Orleans Parish needs an occupational license, with zoning approval first and fees set by business type and gross sales; licenses expire December 31.",
+        "frequency": "annual",
+        "deadline": "Expires December 31",
+        "url": "https://nola.gov/occupational-license/",
+        "appliesTo": ["all"]
+      }
+    ]
+  }
+]

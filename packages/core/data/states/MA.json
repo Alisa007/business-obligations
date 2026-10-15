@@ -1,0 +1,147 @@
+{
+  "code": "MA",
+  "name": "Massachusetts",
+  "filing": {
+    "name": "Massachusetts Secretary of the Commonwealth, Corporations Division",
+    "url": "https://www.sec.state.ma.us/divisions/corporations/"
+  },
+  "revenue": {
+    "name": "Massachusetts Department of Revenue",
+    "url": "https://www.mass.gov/orgs/massachusetts-department-of-revenue"
+  },
+  "labor": {
+    "name": "Massachusetts Department of Unemployment Assistance",
+    "url": "https://www.mass.gov/orgs/department-of-unemployment-assistance"
+  },
+  "workersComp": {
+    "agency": "Massachusetts Department of Industrial Accidents",
+    "threshold": "1 employee",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "annual",
+    "fee": "$500",
+    "deadline": "On the anniversary of formation",
+    "due": {
+      "type": "anniversary",
+      "point": "date"
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 500
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$125 ($100 if filed electronically)",
+    "deadline": "15th day of the 3rd month after fiscal year end (March 15)",
+    "due": {
+      "type": "fixed",
+      "month": 3,
+      "day": 15
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 125,
+      "online": 100
+    }
+  },
+  "entityTax": "Corporate excise tax ($456 minimum)",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Massachusetts sales tax registration (MassTaxConnect)",
+    "agency": null,
+    "alternative": null
+  },
+  "paidLeave": {
+    "title": "Massachusetts Paid Family and Medical Leave contributions",
+    "agency": "Massachusetts Department of Family and Medical Leave",
+    "description": "Employers remit contributions quarterly via MassTaxConnect.",
+    "minEmployees": 1
+  },
+  "local": {
+    "title": "City/town clerk business certificate and local licenses",
+    "authority": "City or town clerk",
+    "description": "DBAs are filed with the town/city clerk; boards of health and licensing boards issue permits."
+  },
+  "paidSickLeave": {
+    "minEmployees": 1
+  },
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 100000,
+  "dbaFiling": "town",
+  "industry": {
+    "contractor": "Massachusetts Office of Public Safety and Inspections (construction supervisor / home improvement contractor)",
+    "realEstate": "Massachusetts Board of Registration of Real Estate Brokers and Salespersons",
+    "alcohol": "Massachusetts Alcoholic Beverages Control Commission (with local licensing board)",
+    "childCare": "Massachusetts Department of Early Education and Care",
+    "health": "Massachusetts Department of Public Health"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
+    "sources": [
+      "https://www.mass.gov/info-details/starting-a-limited-liability-company-llc-in-massachusetts",
+      "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"
+    ],
+    "unconfirmed": [],
+    "dba": "checked"
+  },
+  "dbaOffice": "City or town clerk",
+  "lpReport": {
+    "frequency": "annual",
+    "fee": "$500 ($450 if filed electronically)",
+    "deadline": "On or before the anniversary of the certificate of limited partnership",
+    "due": {
+      "type": "anniversary",
+      "point": "date"
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 500,
+      "online": 450
+    }
+  },
+  "llpReport": {
+    "frequency": "annual",
+    "fee": "$500",
+    "deadline": "Last day of February",
+    "due": {
+      "type": "fixed",
+      "month": 2,
+      "day": 28
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 500
+    }
+  },
+  "cannabis": {
+    "status": "adult_use",
+    "regulator": "Massachusetts Cannabis Control Commission"
+  },
+  "localSalesTax": "none",
+  "unemployment": {
+    "wageBase": 15000,
+    "minRate": 0.94,
+    "maxRate": 14.37,
+    "newEmployerRate": 2.42,
+    "year": 2026
+  },
+  "links": {
+    "formation": "https://www.mass.gov/info-details/starting-a-limited-liability-company-llc-in-massachusetts",
+    "annualReport": "https://www.mass.gov/info-details/dcms-tip-sheet-volume-5-edition-13-reminders-regarding-your-annual-report",
+    "uiRegistration": "https://www.mass.gov/orgs/department-of-unemployment-assistance",
+    "withholding": "https://www.mass.gov/info-details/massachusetts-withholding-tax-guide",
+    "salesTax": "https://www.mass.gov/guides/sales-and-use-tax",
+    "entityTax": "https://www.mass.gov/corporate-excise-tax",
+    "laborPosters": "https://www.mass.gov/info-details/massachusetts-workplace-poster-requirements",
+    "dba": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"
+  },
+  "dbaEntitiesFileLocally": true
+}

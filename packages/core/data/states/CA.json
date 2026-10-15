@@ -1,0 +1,116 @@
+{
+  "code": "CA",
+  "name": "California",
+  "filing": {
+    "name": "California Secretary of State",
+    "url": "https://bizfileonline.sos.ca.gov"
+  },
+  "revenue": {
+    "name": "California Franchise Tax Board",
+    "url": "https://www.ftb.ca.gov"
+  },
+  "labor": {
+    "name": "California Employment Development Department",
+    "url": "https://edd.ca.gov"
+  },
+  "workersComp": {
+    "agency": "California Division of Workers' Compensation",
+    "threshold": "1 employee",
+    "trigger": {
+      "minEmployees": 1
+    },
+    "stateFund": false
+  },
+  "llcReport": {
+    "frequency": "biennial",
+    "fee": "$20",
+    "deadline": "Within the anniversary month and the 5 months before it, every 2 years",
+    "title": "File Statement of Information",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 20
+    }
+  },
+  "corpReport": {
+    "frequency": "annual",
+    "fee": "$25",
+    "deadline": "Within the anniversary month and the 5 months before it",
+    "title": "File Statement of Information",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 25
+    }
+  },
+  "entityTax": "Corporation franchise/income tax; $800 minimum franchise tax for LLCs and corporations",
+  "wageWithholding": true,
+  "salesTax": {
+    "statewide": true,
+    "permit": "Seller's permit",
+    "agency": {
+      "name": "California Department of Tax and Fee Administration",
+      "url": "https://www.cdtfa.ca.gov"
+    },
+    "alternative": null
+  },
+  "paidLeave": {
+    "title": "State Disability Insurance and Paid Family Leave (employee-funded)",
+    "agency": "California EDD",
+    "description": "Employers withhold SDI from wages and report it with the quarterly payroll return (DE 9).",
+    "minEmployees": 1
+  },
+  "local": {
+    "title": "City business tax certificate",
+    "authority": "City finance/business tax office",
+    "description": "Every California city levies a business license tax; unincorporated areas use the county. Fictitious names are filed with the county clerk."
+  },
+  "paidSickLeave": {
+    "minEmployees": 1
+  },
+  "businessLicense": null,
+  "llcPublication": null,
+  "economicNexusUsd": 500000,
+  "dbaFiling": "county",
+  "industry": {
+    "contractor": "California Contractors State License Board",
+    "realEstate": "California Department of Real Estate",
+    "alcohol": "California Department of Alcoholic Beverage Control",
+    "childCare": "California Department of Social Services, Community Care Licensing",
+    "health": "California Department of Public Health"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
+    "sources": [
+      "https://www.sos.ca.gov/business-programs/business-entities/faqs",
+      "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+    ],
+    "unconfirmed": [],
+    "dba": "checked"
+  },
+  "dbaOffice": "County clerk",
+  "cannabis": {
+    "status": "adult_use",
+    "regulator": "California Department of Cannabis Control"
+  },
+  "localSalesTax": "state_administered",
+  "lpReport": null,
+  "llpReport": null,
+  "unemployment": {
+    "wageBase": 7000,
+    "minRate": 1.5,
+    "maxRate": 6.2,
+    "newEmployerRate": 3.4,
+    "year": 2026
+  },
+  "links": {
+    "formation": "https://www.sos.ca.gov/business-programs/business-entities/forms",
+    "annualReport": "https://www.sos.ca.gov/business-programs/business-entities/statements",
+    "uiRegistration": "https://edd.ca.gov/en/payroll_taxes/",
+    "withholding": "https://edd.ca.gov/en/payroll_taxes/",
+    "salesTax": "https://cdtfa.ca.gov/formspubs/pub107/applying-for-a-sellers-permit.htm",
+    "entityTax": "https://www.ftb.ca.gov/file/business/types/limited-liability-company/index.html",
+    "laborPosters": "https://www.dir.ca.gov/dlse/RequiredPosters.html",
+    "dba": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  "dbaEntitiesFileLocally": true
+}
