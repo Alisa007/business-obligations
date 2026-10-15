@@ -13,6 +13,8 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ### Added
 
+- Local seeds: Charleston, WV (registration, B&O tax and City Service Fee items from the city's own page), Des Moines, IA and Kanawha County, WV (unverified); Western Connecticut is skipped as a planning region.
+
 - Counties: `data/counties/<STATE>.json` seeds county-level filings for the 300 largest US counties, mainly the
   annual business personal property return filed with the county assessor, property appraiser or appraisal district
   (with the state's due date and a county-specific page where one was confirmed). `findCounty`, `indexCounties` and
