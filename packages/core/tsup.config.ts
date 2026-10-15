@@ -13,7 +13,7 @@ export default defineConfig([
     entry: { cli: "src/cli.ts" },
     format: ["esm"],
     platform: "node",
-    target: "node18",
+    target: "node20",
     clean: false,
     sourcemap: false,
     // Self-contained executable: the ZIP data is bundled so `--zip` works without extra files.

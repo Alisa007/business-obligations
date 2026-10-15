@@ -8,7 +8,6 @@ import {
   type BusinessProfile,
   type ComplianceItem,
   type EntityType,
-  type Industry,
 } from "compliance-rules-engine";
 
 export const ENTITY_TYPES: Array<[EntityType, string]> = [
@@ -101,7 +100,11 @@ export function buildProfile(form: FormValues, place: Place): BusinessProfile {
   return profile as unknown as BusinessProfile;
 }
 
-export const today = (): string => new Date().toISOString().slice(0, 10);
+/** Today's date in the visitor's time zone; `toISOString()` is UTC and is already tomorrow on a US evening. */
+export const today = (now: Date = new Date()): string => {
+  const pad = (n: number) => String(n).padStart(2, "0");
+  return `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}`;
+};
 
 function addYears(iso: string, n: number): string {
   const d = new Date(`${iso}T00:00:00Z`);
@@ -109,7 +112,7 @@ function addYears(iso: string, n: number): string {
   return d.toISOString().slice(0, 10);
 }
 
-export interface AnalyzeOptions {
+interface AnalyzeOptions {
   asOf?: string;
   openingDate?: string;
   isNew?: boolean;
@@ -186,5 +189,3 @@ export function countBy<T extends Filterable>(
   for (const i of kept) counts[i[key]] = (counts[i[key]] ?? 0) + 1;
   return counts;
 }
-
-export type { ComplianceItem, Industry };

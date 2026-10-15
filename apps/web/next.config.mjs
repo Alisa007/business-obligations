@@ -18,11 +18,6 @@ export default {
   images: { unoptimized: true },
   trailingSlash: true,
   reactStrictMode: true,
-  env: {
-    // The Vite-era names are still accepted so existing variables keep working.
-    NEXT_PUBLIC_POSTHOG_KEY: process.env.NEXT_PUBLIC_POSTHOG_KEY ?? process.env.VITE_POSTHOG_KEY ?? "",
-    NEXT_PUBLIC_POSTHOG_HOST: process.env.NEXT_PUBLIC_POSTHOG_HOST ?? process.env.VITE_POSTHOG_HOST ?? "",
-  },
   turbopack: {
     resolveAlias: {
       "react-native": "react-native-web",

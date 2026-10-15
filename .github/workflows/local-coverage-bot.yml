@@ -2,11 +2,15 @@ name: Local coverage bot
 
 # Weekly: picks the biggest cities and counties that appear in the ZIP data but have no seed, asks Claude to
 # research them from official sources, and opens ONE pull request for a human to review. It never merges or pushes
-# to main. Uses a Claude Pro/Max subscription, no API billing: create the token with `claude setup-token` and store it as
-# the CLAUDE_CODE_OAUTH_TOKEN repository secret. It also needs "Allow GitHub Actions to create and approve pull
-# requests" enabled under Settings > Actions > General. To have CI run on the bot's PRs (pull requests opened with
-# the default token do not trigger workflows), also add a BOT_TOKEN secret: a fine-grained PAT with contents and
-# pull-requests write access.
+# to main.
+#
+# Two jobs, so the agent never holds a write token:
+#   research: read-only token, runs Claude, exports a patch of allowed files only.
+#   publish:  write token, validates every path in the patch against an allowlist, then commits and opens the PR.
+#
+# Setup: store a Claude Pro/Max token (`claude setup-token`) as the CLAUDE_CODE_OAUTH_TOKEN secret, and enable
+# "Allow GitHub Actions to create and approve pull requests" under Settings > Actions > General.
+# CI is started on the bot's branch by this workflow (pull requests opened with GITHUB_TOKEN do not trigger it).
 
 on:
   schedule:
@@ -28,24 +32,25 @@ concurrency:
   cancel-in-progress: false
 
 permissions:
-  contents: write
-  pull-requests: write
-  id-token: write
+  contents: read
 
 jobs:
-  propose:
+  research:
     runs-on: ubuntu-latest
     timeout-minutes: 45
-    env:
-      GH_TOKEN: ${{ secrets.BOT_TOKEN || secrets.GITHUB_TOKEN }}
+    permissions:
+      contents: read
+      pull-requests: read
+    outputs:
+      has_changes: ${{ steps.patch.outputs.has_changes }}
     steps:
       - uses: actions/checkout@v7
-        with:
-          token: ${{ secrets.BOT_TOKEN || secrets.GITHUB_TOKEN }}
 
       # One reviewable PR at a time: do nothing while the previous bot PR is still open.
       - name: Skip while a bot PR is open
         id: open
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           n=$(gh pr list --state open --label local-coverage-bot --json number --jq length)
           echo "count=$n" >> "$GITHUB_OUTPUT"
@@ -77,14 +82,15 @@ jobs:
 
       - name: Research candidates
         if: steps.open.outputs.count == '0' && steps.pick.outputs.total != '0'
-        uses: anthropics/claude-code-action@v1
+        # Pinned to a commit: this step handles the Claude token and reads untrusted web pages.
+        uses: anthropics/claude-code-action@374f254f5efaf968abfe15d399fd90972e8138b9 # v1
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-          github_token: ${{ secrets.BOT_TOKEN || secrets.GITHUB_TOKEN }}
+          github_token: ${{ github.token }}
           show_full_output: true
           claude_args: >-
             --model claude-haiku-5-5 --max-turns 60
-            --allowedTools "Read,Edit,Write,Glob,Grep,WebSearch,WebFetch,Bash(node packages/core/scripts/*),Bash(npm run *),Bash(npm test*),Bash(npm --prefix packages/core *),Bash(git diff*),Bash(git status*)"
+            --allowedTools "Read,Edit,Write,Glob,Grep,WebSearch,WebFetch,Bash(node packages/core/scripts/*),Bash(npm --prefix packages/core run coverage),Bash(npm --prefix packages/core run check),Bash(npm --prefix packages/core run test:update),Bash(git diff*),Bash(git status*)"
           prompt: |
             You maintain the local-jurisdiction data of this compliance rules engine. Add seeds for the cities and
             counties below, which appear in the ZIP data but have no entry yet. Follow CONTRIBUTING.md ("Adding a
@@ -128,34 +134,82 @@ jobs:
             / none / unverified / skipped), the official source link, and anything a reviewer should double-check.
             Do not put anything else in `.bot/`.
 
-      - name: Open pull request
+      # Export only files the bot is allowed to change. Anything else Claude touched is dropped here, and the
+      # publish job checks the patch again before applying it.
+      - name: Export patch
+        id: patch
         if: steps.open.outputs.count == '0' && steps.pick.outputs.total != '0'
         run: |
-          # Generated and hand-edited files must match the repo's Prettier style or CI's format check fails.
-          npx prettier --write packages/core/COVERAGE.md packages/core/CHANGELOG.md packages/core/data packages/core/scripts/local-skip.json
-          if [ -z "$(git status --porcelain -- packages/core)" ]; then
-            echo "Claude made no data changes; nothing to propose."
-            exit 0
+          mkdir -p "$RUNNER_TEMP/out"
+          git add -A -- \
+            'packages/core/data/cities/*.json' \
+            'packages/core/data/counties/*.json' \
+            packages/core/scripts/local-skip.json \
+            packages/core/COVERAGE.md \
+            packages/core/CHANGELOG.md \
+            'packages/core/test/__snapshots__/*'
+          git diff --cached --binary > "$RUNNER_TEMP/out/changes.patch"
+          cp .bot/pr-body.md "$RUNNER_TEMP/out/pr-body.md" 2>/dev/null || echo "Seeds added by the local coverage bot. Review every source before merging." > "$RUNNER_TEMP/out/pr-body.md"
+          if [ -s "$RUNNER_TEMP/out/changes.patch" ]; then echo "has_changes=true" >> "$GITHUB_OUTPUT"; else echo "has_changes=false" >> "$GITHUB_OUTPUT"; fi
+
+      - uses: actions/upload-artifact@v4
+        if: steps.patch.outputs.has_changes == 'true'
+        with:
+          name: coverage-bot-patch
+          path: ${{ runner.temp }}/out
+          retention-days: 7
+
+  publish:
+    needs: research
+    if: needs.research.outputs.has_changes == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      actions: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: coverage-bot-patch
+          path: ${{ runner.temp }}/in
+
+      - name: Validate the patch paths
+        run: |
+          allowed='^(packages/core/data/(cities|counties)/[A-Z]{2}\.json|packages/core/scripts/local-skip\.json|packages/core/COVERAGE\.md|packages/core/CHANGELOG\.md|packages/core/test/__snapshots__/[^/]+)$'
+          bad=$(git apply --numstat "$RUNNER_TEMP/in/changes.patch" | cut -f3 | grep -Ev "$allowed" || true)
+          if [ -n "$bad" ]; then
+            echo "Patch touches files outside the allowlist:" >&2
+            echo "$bad" >&2
+            exit 1
           fi
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Apply, format, commit, push and open the pull request
+        run: |
+          git apply --index "$RUNNER_TEMP/in/changes.patch"
+          npm ci
+          npx prettier --write packages/core/COVERAGE.md packages/core/CHANGELOG.md packages/core/data packages/core/scripts/local-skip.json
+          git add -A -- packages/core
           git config user.name "local-coverage-bot"
           git config user.email "local-coverage-bot@users.noreply.github.com"
           branch="bot/local-coverage-${{ github.run_id }}"
           git checkout -b "$branch"
-          git add -- packages/core
           git commit -m "Seed missing cities and counties (local coverage bot)"
-          # main may have moved while Claude worked (a branch cut from an older main would "update" workflow files
-          # and be refused without the workflows permission), so replay the commit onto the latest main.
-          git fetch --depth=50 origin main
-          git rebase origin/main
-          if git diff --name-only origin/main HEAD | grep -qv '^packages/core/'; then
-            echo "Refusing to push: the bot changed files outside packages/core." >&2
-            git diff --name-only origin/main HEAD >&2
-            exit 1
-          fi
           git push origin "$branch"
           gh label create local-coverage-bot --description "Opened by the local coverage bot" 2>/dev/null || true
-          body=".bot/pr-body.md"
-          [ -s "$body" ] || { echo "Seeds added by the local coverage bot. Review every source before merging." > "$body"; }
           gh pr create --base main --head "$branch" \
             --title "Seed missing cities and counties (local coverage bot)" \
-            --body-file "$body" --label local-coverage-bot
+            --body-file "$RUNNER_TEMP/in/pr-body.md" --label local-coverage-bot
+          # Pull requests opened with GITHUB_TOKEN do not start CI, so start it on the branch ourselves; the
+          # required checks match by name and commit.
+          gh workflow run ci.yml --ref "$branch"

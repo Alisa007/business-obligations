@@ -1,4 +1,4 @@
-// Anonymous, minimal usage analytics (PostHog). What is sent: page views, a few coarse events, a few log lines and
+// Minimal usage analytics (PostHog). What is sent: page views, a few coarse events, a few log lines and
 // unhandled errors. When a plan is generated, the form values are sent with it (ZIP, entity type, headcount,
 // payroll, ...); editing a field reports only its name. Never sent: cookies, session recordings, autocapture.
 
@@ -8,7 +8,7 @@ type Props = Record<string, unknown>;
 type Primitive = string | number | boolean;
 
 /** Event names and the only properties each may carry. Anything else is dropped before sending. */
-export const ALLOWED: Record<EventName, readonly string[]> = {
+const ALLOWED: Record<EventName, readonly string[]> = {
   plan_generated: [
     "zip",
     "entityType",
@@ -46,7 +46,7 @@ const LOGS: Record<LogName, { level: "info" | "warn"; message: string; attribute
 };
 
 /** Keeps only the listed properties, and only primitive values. */
-export function pick(allowed: readonly string[], props: Props = {}): Record<string, Primitive> {
+function pick(allowed: readonly string[], props: Props = {}): Record<string, Primitive> {
   const out: Record<string, Primitive> = {};
   for (const key of allowed) {
     const v = props[key];
@@ -68,7 +68,7 @@ export interface PostHogClient {
   logger?: Partial<Record<"info" | "warn", (message: string, attributes?: Record<string, unknown>) => void>>;
 }
 
-export interface AnalyticsOptions {
+interface AnalyticsOptions {
   key?: string;
   host?: string;
   hostname?: string;

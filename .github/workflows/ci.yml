@@ -4,10 +4,15 @@ on:
   push:
     branches: [main]
   pull_request:
+  # Lets the coverage bot start CI on its branch (pull requests opened with GITHUB_TOKEN do not trigger it).
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
-  # Development tooling (ESLint, Vitest) needs a current Node; the library itself supports Node 18+,
-  # which the compat job verifies against the built package.
+  # Node policy: the library supports Node 20+ (the compat job runs the built package on 20, 22 and 24); the
+  # repository's tooling supports Node 20.19+ (the node-floor job), and day-to-day development uses the current LTS.
   check:
     runs-on: ubuntu-latest
     steps:
@@ -36,7 +41,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node: [18, 20, 22]
+        node: [20, 22, 24]
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
@@ -55,3 +60,18 @@ jobs:
           node examples/quickstart.cjs
           node examples/quickstart.mjs > /dev/null
           node dist/cli.js rules --json | node -e 'JSON.parse(require("fs").readFileSync(0,"utf8"))'
+
+  # The oldest Node the repository claims to support: type-check, lint, test and build the playground on it.
+  node-floor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 20.19.0
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm test
+      - run: npm run build:web

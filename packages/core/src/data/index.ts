@@ -8,7 +8,6 @@ import { resolveState } from "../changes";
 
 export { STATES };
 export const STATE_CODES = Object.keys(STATES);
-export { CITIES };
 export const LOCAL_JURISDICTIONS: LocalJurisdiction[] = Object.values(CITIES).flat();
 
 /** Lowercased, punctuation-free city name used for lookups ("St. Louis" and "Saint Louis" match). */
@@ -50,7 +49,6 @@ export function indexCities(list: LocalJurisdiction[]): CityLookup {
   };
 }
 
-export { COUNTIES };
 export const COUNTY_JURISDICTIONS: CountyJurisdiction[] = Object.values(COUNTIES).flat();
 
 /** Lowercased county name without "County", "Parish" or "Borough" ("St. Louis" and "Saint Louis" match). */
