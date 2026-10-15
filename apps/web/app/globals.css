@@ -1,0 +1,90 @@
+html,
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--color);
+  font:
+    15px/1.5 system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+}
+.cre-date,
+.cre-search {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 7px 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--background);
+  color: var(--color);
+  font: inherit;
+  font-size: 14px;
+}
+.cre-search {
+  width: auto;
+  flex: 1 1 200px;
+}
+.cre-details {
+  border-top: 1px solid var(--border-color);
+  padding: 10px 0;
+}
+.cre-details > summary {
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+.cre-details > summary::marker {
+  content: none;
+}
+.cre-details > summary::before {
+  content: "\25B8";
+  display: inline-block;
+  width: 1ch;
+  transition: transform 0.15s;
+}
+.cre-details[open] > summary::before {
+  transform: rotate(90deg);
+}
+.cre-step {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 8px 0;
+  border-top: 1px solid var(--border-color);
+  cursor: pointer;
+}
+.cre-step input {
+  margin-top: 4px;
+}
+.cre-dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 4px 16px;
+  margin: 0;
+  font-size: 14px;
+}
+.cre-dl dt {
+  font-weight: 600;
+}
+.cre-dl dd {
+  margin: 0;
+}
+.cre-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.cre-table th,
+.cre-table td {
+  text-align: left;
+  padding: 6px 8px;
+  border-top: 1px solid var(--border-color);
+  font-size: 14px;
+  vertical-align: top;
+}
+.cre-num {
+  text-align: right;
+  white-space: nowrap;
+}

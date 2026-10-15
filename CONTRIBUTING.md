@@ -1,5 +1,8 @@
 # Contributing
 
+The repository is an npm-workspaces monorepo: the library is in `packages/core` and the playground in `apps/web`. Paths
+below (`data/`, `src/`, `test/`, `scripts/`) are relative to `packages/core`. Run `npm run check` from the root.
+
 Thanks for helping keep compliance data correct. The most valuable contributions are **data corrections with an
 official source**.
 
@@ -83,7 +86,8 @@ Use the issue templates. For security issues see [SECURITY.md](SECURITY.md).
 
 ## Playground
 
-`npm run dev` starts a Vite dev server for the playground in `site/` with hot reload (library loaded from `src/`).
+The playground lives in `apps/web` (Next.js, React, Tamagui). `npm run dev` builds the library and starts it at http://localhost:3000.
+Prefer Tamagui's default components and tokens over custom styling.
 
 ## Regenerating the coverage report
 

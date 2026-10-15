@@ -18,3 +18,4 @@ jobs:
           node-version: 22
       # Fails on bare domains and on links that are gone (404, DNS). Bot-blocked pages are listed but not counted.
       - run: node scripts/check-urls.mjs --data
+        working-directory: packages/core

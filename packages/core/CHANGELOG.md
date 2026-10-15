@@ -5,6 +5,12 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ## [Unreleased]
 
+### Changed
+
+- The repository is now an npm-workspaces monorepo (`packages/core`, `apps/web`). The published package is unchanged.
+- The playground is rebuilt with Next.js (static export), React and Tamagui, and reports anonymous usage and unhandled
+  errors with PostHog when configured (no cookies, no form values).
+
 ### Added
 
 - Counties: `data/counties/<STATE>.json` seeds county-level filings for the 300 largest US counties, mainly the

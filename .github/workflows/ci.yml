@@ -23,10 +23,12 @@ jobs:
       - run: npm test
       - run: npm run build
       - run: npm run size
+      # The playground is a static Next.js export of the built library; building it here catches breakage early.
+      - run: npm run build:web
       - uses: actions/upload-artifact@v4
         with:
           name: dist
-          path: dist
+          path: packages/core/dist
 
   compat:
     needs: check
@@ -43,8 +45,9 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           name: dist
-          path: dist
+          path: packages/core/dist
       - name: Smoke test the built package (CJS, ESM, CLI, examples)
+        working-directory: packages/core
         run: |
           node -e 'const m=require("./dist/index.cjs"); if(!m.getComplianceItems({entityType:"llc",zip:"94105",city:"San Francisco",county:"San Francisco"}).length) process.exit(1)'
           node --input-type=module -e 'import {getComplianceItems} from "./dist/index.js"; if(!getComplianceItems({entityType:"llc",zip:"94105",city:"San Francisco",county:"San Francisco"}).length) process.exit(1)'

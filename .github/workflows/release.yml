@@ -21,6 +21,6 @@ jobs:
       - run: npm ci
       - run: npm run check
       - run: npm run build
-      - run: npm publish --provenance --access public
+      - run: npm publish -w compliance-rules-engine --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

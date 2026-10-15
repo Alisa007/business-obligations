@@ -1,0 +1,105 @@
+{
+  "name": "compliance-rules-engine",
+  "version": "0.2.0",
+  "description": "What licenses, permits, filings and deadlines does a US business need? A pure TypeScript rules engine: describe the business, get an ordered, sourced list.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "schema",
+    "data/states",
+    "data/cities",
+    "data/counties",
+    "LICENSE",
+    "NOTICE",
+    "README.md",
+    "CHANGELOG.md",
+    "COVERAGE.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:update": "vitest run -u",
+    "check": "npm run typecheck && npm test",
+    "prepack": "node scripts/prepack.mjs",
+    "prepublishOnly": "npm run check && npm run build && npm run size",
+    "coverage": "node scripts/coverage.mjs",
+    "size": "node scripts/size.mjs",
+    "check:links": "node scripts/check-urls.mjs --data"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
+    "tsup": "^8.5.1",
+    "typescript": "^5.6.0",
+    "vitest": "^5.0.3"
+  },
+  "author": "Alisa Belousova",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alisa007/compliance-rules-engine.git",
+    "directory": "packages/core"
+  },
+  "bugs": {
+    "url": "https://github.com/Alisa007/compliance-rules-engine/issues"
+  },
+  "homepage": "https://alisa007.github.io/compliance-rules-engine/",
+  "keywords": [
+    "annual-report",
+    "business",
+    "business-licenses",
+    "calendar",
+    "cli",
+    "compliance",
+    "filings",
+    "ics",
+    "legal-tech",
+    "licenses",
+    "llc",
+    "open-data",
+    "payroll",
+    "permits",
+    "regulatory-compliance",
+    "rules-engine",
+    "small-business",
+    "startup",
+    "typescript",
+    "us"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./zip": {
+      "import": {
+        "types": "./dist/zip.d.ts",
+        "default": "./dist/zip.js"
+      },
+      "require": {
+        "types": "./dist/zip.d.cts",
+        "default": "./dist/zip.cjs"
+      }
+    },
+    "./schema/*": "./schema/*",
+    "./package.json": "./package.json"
+  },
+  "module": "./dist/index.js",
+  "sideEffects": false,
+  "bin": {
+    "compliance-rules-engine": "./dist/cli.js"
+  }
+}

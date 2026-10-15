@@ -67,12 +67,12 @@ Every item says **why** it applies (`reason`), **who** to deal with (`authority`
   ```sh
   npx compliance-rules-engine launch --zip 60601 --entity llc --employees 3 --start 2026-11-02 --opening 2027-02-01
   ```
-- **In code:** `npm install compliance-rules-engine`, then see [`examples/`](examples).
+- **In code:** `npm install compliance-rules-engine`, then see [`examples/`](packages/core/examples).
 
 ## Why trust it (and when not to)
 
 - **Honest about its confidence.** Each state records what was checked against official pages and on what date; what
-  could not be confirmed is listed, not hidden. See [COVERAGE.md](COVERAGE.md), generated from the data.
+  could not be confirmed is listed, not hidden. See [COVERAGE.md](packages/core/COVERAGE.md), generated from the data.
 - **Specific, not generic.** All 50 states and DC have their own filing agency, report fees and deadlines, unemployment
   insurance parameters, workers' compensation triggers and licensing authorities. Twenty-six cities are seeded
   with local requirements; the rest get the state's local licensing regime.
@@ -126,9 +126,9 @@ evaluate({ entityType: "LLC", zip: "78701", city: "Austin", county: "Travis", em
 ```
 
 `validateProfile(profile)` returns the same issues without throwing, which suits form handlers. For other languages,
-[`schema/business-profile.schema.json`](schema/business-profile.schema.json) and
-[`schema/compliance-result.schema.json`](schema/compliance-result.schema.json) describe the input and output.
-Runnable versions: [`examples/quickstart.cjs`](examples/quickstart.cjs) and the `.mjs` examples.
+[`schema/business-profile.schema.json`](packages/core/schema/business-profile.schema.json) and
+[`schema/compliance-result.schema.json`](packages/core/schema/compliance-result.schema.json) describe the input and output.
+Runnable versions: [`examples/quickstart.cjs`](packages/core/examples/quickstart.cjs) and the `.mjs` examples.
 
 ## Core API
 
@@ -187,7 +187,7 @@ are introspectable with `listRules()`, which returns each rule's id, description
 
 ## Input (`BusinessProfile`)
 
-Machine-readable: [`schema/business-profile.schema.json`](schema/business-profile.schema.json).
+Machine-readable: [`schema/business-profile.schema.json`](packages/core/schema/business-profile.schema.json).
 
 | Field                                                                                             | Notes                                                                                                                                                         |
 | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -219,7 +219,7 @@ Machine-readable: [`schema/business-profile.schema.json`](schema/business-profil
 - **City (seeded):** the 300 largest US cities (2020 census, ranks beyond 100 approximate) are all covered, in `data/cities/<STATE>.json`: some
   with city-specific taxes and licenses, some checked and found to have no general city license or tax
   (`status: "none"`), and some researched but not confirmed from an official page (`status: "unverified"`).
-  [`COVERAGE.md`](COVERAGE.md) lists them. Every other city returns the state's typical local licensing regime,
+  [`COVERAGE.md`](packages/core/COVERAGE.md) lists them. Every other city returns the state's typical local licensing regime,
   named for the city and county you pass in. City data is one file per state and looked up by an index, so adding
   thousands more is a data change; to keep the bundle small you can also load city data yourself and add it with
   `seededCityRule(indexCities(seeds))`.
@@ -366,23 +366,34 @@ This is general information, not legal, tax or accounting advice. The disclaimer
 summary and has not been reviewed by a lawyer; if you build a product on this library, have counsel review the wording
 shown to your users. The MIT license disclaims all warranties.
 
+## Repository layout
+
+This is an npm-workspaces monorepo:
+
+| Path            | What it is                                                                                 |
+| --------------- | ------------------------------------------------------------------------------------------ |
+| `packages/core` | The published `compliance-rules-engine` library: `src/`, `data/`, `schema/`, `test/`, CLI. |
+| `apps/web`      | The playground: Next.js (static export) with React and Tamagui. Not published.             |
+
+Paths such as `data/states/` or `src/rules/` in this README and in CONTRIBUTING.md are relative to `packages/core`.
+
 ## Running the playground locally
 
 ```sh
 npm install
-npm run dev    # Vite dev server at http://localhost:5173 with hot reload
+npm run dev    # builds the library, then starts Next.js at http://localhost:3000
 ```
 
-Dev mode serves `site/` and loads the library straight from `src/`, so changes to the engine, the data files or the
-page appear immediately. `npm run site` builds the static version that is published to GitHub Pages (output in
-`_site/`, serve it with any static server).
+The playground imports the built library (`packages/core/dist`), so after changing the engine or its data, run
+`npm run build` again (or restart `npm run dev`). `npm run site` builds the static export that is published to GitHub
+Pages (output in `apps/web/out/`; serve it with any static server). Set `BASE_PATH=""` to serve it from a root path.
 
 ### Analytics on the playground
 
 The hosted playground can report anonymous usage with [PostHog](https://posthog.com): page views, which tab was
 opened, and that a plan or calendar was generated (with only the entity type and industry). It never sends form values,
 uses no cookies or session recording, and respects Do Not Track. It is off unless `posthogKey` is set in
-[`site/config.js`](site/config.js) and is always off in `npm run dev`. The library itself has no telemetry.
+`NEXT_PUBLIC_POSTHOG_KEY` and `NEXT_PUBLIC_POSTHOG_HOST` and is always off in `npm run dev`. The library itself has no telemetry.
 
 ## Size
 
@@ -398,8 +409,8 @@ import { evaluate, defaultRules } from "compliance-rules-engine";
 evaluate(profile, { rules: [...defaultRules, myRule] });
 ```
 
-State data lives in [`data/states/*.json`](data/states), validated by
-[`schema/state.schema.json`](schema/state.schema.json); city seeds in [`data/cities/`](data/cities).
+State data lives in [`data/states/*.json`](packages/core/data/states), validated by
+[`schema/state.schema.json`](packages/core/schema/state.schema.json); city seeds in [`data/cities/`](packages/core/data/cities).
 
 ## Versioning
 

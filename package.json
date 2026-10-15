@@ -1,117 +1,38 @@
 {
-  "name": "compliance-rules-engine",
-  "version": "0.2.0",
-  "description": "What licenses, permits, filings and deadlines does a US business need? A pure TypeScript rules engine: describe the business, get an ordered, sourced list.",
+  "name": "compliance-rules-engine-monorepo",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Monorepo: the compliance-rules-engine library (packages/core) and its Next.js playground (apps/web).",
   "license": "MIT",
   "type": "module",
-  "main": "./dist/index.cjs",
-  "types": "./dist/index.d.ts",
-  "files": [
-    "dist",
-    "schema",
-    "data/states",
-    "data/cities",
-    "data/counties",
-    "LICENSE",
-    "NOTICE",
-    "README.md",
-    "CHANGELOG.md",
-    "COVERAGE.md"
+  "workspaces": [
+    "packages/*",
+    "apps/*"
   ],
   "scripts": {
-    "build": "tsup",
-    "typecheck": "tsc --noEmit",
+    "build": "npm run build -w compliance-rules-engine",
+    "build:web": "npm run build -w @cre/web",
+    "dev": "npm run build -w compliance-rules-engine && npm run dev -w @cre/web",
+    "typecheck": "npm run typecheck --workspaces --if-present",
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "test": "vitest run",
-    "test:update": "vitest run -u",
+    "test": "npm test --workspaces --if-present",
     "check": "npm run typecheck && npm run lint && npm run format:check && npm test",
-    "prepublishOnly": "npm run check && npm run build && npm run size",
-    "coverage": "node scripts/coverage.mjs",
-    "size": "node scripts/size.mjs",
-    "site": "npm run build && node scripts/build-site.mjs",
-    "check:links": "node scripts/check-urls.mjs --data",
-    "dev": "vite --config vite.site.config.mjs"
+    "size": "npm run size -w compliance-rules-engine",
+    "coverage": "npm run coverage -w compliance-rules-engine",
+    "check:links": "npm run check:links -w compliance-rules-engine",
+    "site": "npm run build && npm run build:web"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@types/node": "^26.6.5",
-    "ajv": "^8.20.0",
-    "ajv-formats": "^3.0.1",
     "eslint": "^10.12.0",
     "globals": "^17.13.0",
     "prettier": "^3.9.10",
-    "tsup": "^8.5.1",
     "typescript": "^5.6.0",
-    "typescript-eslint": "^8.71.2",
-    "vite": "^8.3.4",
-    "vitest": "^5.0.3"
+    "typescript-eslint": "^8.71.2"
   },
-  "author": "Alisa Belousova",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Alisa007/compliance-rules-engine.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Alisa007/compliance-rules-engine/issues"
-  },
-  "homepage": "https://alisa007.github.io/compliance-rules-engine/",
-  "keywords": [
-    "annual-report",
-    "business",
-    "business-licenses",
-    "calendar",
-    "cli",
-    "compliance",
-    "filings",
-    "ics",
-    "legal-tech",
-    "licenses",
-    "llc",
-    "open-data",
-    "payroll",
-    "permits",
-    "regulatory-compliance",
-    "rules-engine",
-    "small-business",
-    "startup",
-    "typescript",
-    "us"
-  ],
   "engines": {
-    "node": ">=18"
-  },
-  "exports": {
-    ".": {
-      "import": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/index.js"
-      },
-      "require": {
-        "types": "./dist/index.d.cts",
-        "default": "./dist/index.cjs"
-      }
-    },
-    "./zip": {
-      "import": {
-        "types": "./dist/zip.d.ts",
-        "default": "./dist/zip.js"
-      },
-      "require": {
-        "types": "./dist/zip.d.cts",
-        "default": "./dist/zip.cjs"
-      }
-    },
-    "./schema/*": "./schema/*",
-    "./package.json": "./package.json"
-  },
-  "module": "./dist/index.js",
-  "sideEffects": false,
-  "bin": {
-    "compliance-rules-engine": "./dist/cli.js"
-  },
-  "dependencies": {
-    "posthog-js": "^1.438.12"
+    "node": ">=20.9"
   }
 }

@@ -3,7 +3,19 @@ import tseslint from "typescript-eslint";
 import globals from "globals";
 
 export default tseslint.config(
-  { ignores: ["dist", "_site", "node_modules", "data", "coverage"] },
+  {
+    ignores: [
+      "**/dist",
+      "**/node_modules",
+      "**/data",
+      "**/coverage",
+      "**/.next",
+      "**/out",
+      "**/.tamagui",
+      "**/next-env.d.ts",
+      "apps/web/public",
+    ],
+  },
   js.configs.recommended,
   ...tseslint.configs.recommended,
   {
@@ -18,7 +30,7 @@ export default tseslint.config(
     rules: { "@typescript-eslint/no-require-imports": "off" },
   },
   {
-    files: ["site/**/*.js"],
+    files: ["apps/web/**/*.{ts,tsx}"],
     languageOptions: { globals: { ...globals.browser } },
   },
 );
