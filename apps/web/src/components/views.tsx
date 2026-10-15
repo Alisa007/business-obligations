@@ -14,7 +14,6 @@ import {
   ListRow,
   Muted,
   NativeSelect,
-  Panel,
   Stat,
   useControlProps,
 } from "./ui";
@@ -409,5 +408,3 @@ export function WhatIfView({ data }: { data: Analysis }) {
     </YStack>
   );
 }
-
-export { Panel };

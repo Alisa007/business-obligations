@@ -1,9 +1,9 @@
 import { defaultConfig } from "@tamagui/config/v6";
 import { createTamagui } from "tamagui";
 
-export const tamaguiConfig = createTamagui(defaultConfig);
+const tamaguiConfig = createTamagui(defaultConfig);
 
-export type AppConfig = typeof tamaguiConfig;
+type AppConfig = typeof tamaguiConfig;
 
 declare module "tamagui" {
   // eslint-disable-next-line @typescript-eslint/no-empty-object-type -- the documented augmentation pattern

@@ -62,7 +62,7 @@ Every item says **why** it applies (`reason`), **who** to deal with (`authority`
 ## Try it
 
 - **In the browser:** the [playground](https://alisa007.github.io/compliance-rules-engine/) runs the library locally
-  in your browser. If anonymous analytics is enabled on the hosted site, the details you enter are sent when you generate a
+  in your browser. If analytics is enabled on the hosted site, the details you enter are sent when you generate a
   plan (see [Analytics on the playground](#analytics-on-the-playground)).
 - **From the terminal:**
   ```sh
@@ -97,7 +97,7 @@ them. Start with [CONTRIBUTING.md](CONTRIBUTING.md) and the issues labelled
 npm install compliance-rules-engine
 ```
 
-ESM and CommonJS are both supported. Node 18+. About 57 KB gzipped, no runtime dependencies.
+ESM and CommonJS are both supported. Node 20+. About 57 KB gzipped, no runtime dependencies.
 
 ## Using it from plain JavaScript
 
@@ -391,11 +391,11 @@ Pages (output in `apps/web/out/`; serve it with any static server). Set `BASE_PA
 
 ### Analytics on the playground
 
-The hosted playground can report anonymous usage with [PostHog](https://posthog.com): page views, which tab was
-opened, which form fields are edited (by name), and that a plan or calendar was generated. Generating a plan also
-sends the values entered in the form (ZIP, entity type, industry, profession, headcount, payroll, revenue, the yes/no
-options and dates). It uses no cookies or session recording and respects Do Not Track. It is off unless `posthogKey` is set in
-`NEXT_PUBLIC_POSTHOG_KEY` and `NEXT_PUBLIC_POSTHOG_HOST` and is always off in `npm run dev`. The library itself has no telemetry.
+The hosted playground can record usage with [PostHog](https://posthog.com): page views, which tabs and form fields are
+used (by name), and that a plan or calendar was generated. Generating a plan also sends the values you entered (ZIP,
+entity type, industry, profession, headcount, payroll, revenue, the yes/no options and dates), but not the plan itself.
+It sets no cookies, records no sessions and respects Do Not Track. It is off unless `NEXT_PUBLIC_POSTHOG_KEY` and
+`NEXT_PUBLIC_POSTHOG_HOST` are set, and always off in `npm run dev`. The library itself has no telemetry.
 
 ## Size
 

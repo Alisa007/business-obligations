@@ -214,9 +214,10 @@ export function Playground() {
       <YStack gap="1" borderTopWidth={1} borderColor="border-color" paddingTop="4">
         {analytics.enabled && (
           <Muted>
-            Anonymous usage statistics are collected with PostHog: page views, which tabs and fields are used,
-            and the details you enter when you generate a plan (ZIP, entity type, industry, headcount,
-            payroll, revenue and dates). No cookies, no session recording; Do Not Track is respected.
+            This site records usage with PostHog: page views, which tabs and fields you use, and the details
+            you enter when you generate a plan (ZIP, entity type, industry, headcount, payroll, revenue and
+            dates). The plan itself is not sent. There are no cookies or session recordings, and your
+            browser&apos;s Do Not Track setting is respected.
           </Muted>
         )}
         <Muted>
