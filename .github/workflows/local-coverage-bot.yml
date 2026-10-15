@@ -83,7 +83,7 @@ jobs:
           github_token: ${{ secrets.BOT_TOKEN || secrets.GITHUB_TOKEN }}
           show_full_output: true
           claude_args: >-
-            --max-turns 60
+            --model claude-haiku-5-5 --max-turns 60
             --allowedTools "Read,Edit,Write,Glob,Grep,WebSearch,WebFetch,Bash(node packages/core/scripts/*),Bash(npm run *),Bash(npm test*),Bash(npm --prefix packages/core *),Bash(git diff*),Bash(git status*)"
           prompt: |
             You maintain the local-jurisdiction data of this compliance rules engine. Add seeds for the cities and
