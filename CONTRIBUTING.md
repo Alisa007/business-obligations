@@ -125,6 +125,15 @@ short `"note"` on what the city requires instead.
 `appliesTo` takes `all`, `employees`, `sells_goods`, `corporation`, `unincorporated` or `trade_name`. Use the city's own
 page for `url`, run `npm run coverage` and `npm run check`, and add a line to the Unreleased section of `CHANGELOG.md`.
 
+## Local coverage bot
+
+`.github/workflows/local-coverage-bot.yml` runs weekly (or on demand from the Actions tab). It uses
+`packages/core/scripts/missing-local.mjs` to find the biggest cities and counties in the ZIP data that have no seed,
+asks Claude to research them on official sites, and opens one pull request that a maintainer reviews like any other
+data change. It never merges. Prefer `unverified` over guesses: reject bot PRs that cite aggregator sites or
+unreadable sources. Places that are not real jurisdictions are recorded in `scripts/local-skip.json` so they are not
+proposed again. Run the finder yourself with `node packages/core/scripts/missing-local.mjs --cities 10 --counties 10`.
+
 ## Release checklist (maintainers)
 
 1. Move **Unreleased** in `CHANGELOG.md` under the new version and bump `version` in `package.json`.
