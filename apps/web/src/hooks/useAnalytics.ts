@@ -6,7 +6,7 @@ import { SITE_CONFIG } from "../lib/config";
 
 const off: Analytics = { enabled: false, track: () => {}, log: () => {} };
 
-/** The anonymous usage tracker. Created after mount, because it needs the browser's host name and settings. */
+/** The usage tracker. Created after mount, because it needs the browser's host name and settings. */
 export function useAnalytics(): Analytics {
   const [analytics, setAnalytics] = useState<Analytics>(off);
   useEffect(() => {

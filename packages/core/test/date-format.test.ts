@@ -11,7 +11,7 @@ import {
   validateProfile,
   type BusinessProfile,
 } from "../src";
-import { isIsoDate } from "../src/iso";
+import { isIsoDate, todayIso } from "../src/iso";
 
 /**
  * Convention:
@@ -46,6 +46,15 @@ const dataFiles = [
   "data/changes.json",
   "data/professions.json",
 ];
+
+describe("todayIso", () => {
+  it("uses the local calendar date, not the UTC date", () => {
+    // 8:30 pm local time: UTC may already be the next day, the local date must not be.
+    expect(todayIso(new Date(2026, 9, 15, 20, 30))).toBe("2026-10-15");
+    expect(todayIso(new Date(2026, 0, 1, 0, 5))).toBe("2026-01-01");
+    expect(todayIso(new Date(2026, 11, 31, 23, 59))).toBe("2026-12-31");
+  });
+});
 
 describe("isIsoDate", () => {
   it("accepts real dates and rejects impossible or differently formatted ones", () => {

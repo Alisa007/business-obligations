@@ -1,5 +1,5 @@
 import { BUNDLED_CHANGES } from "./changes";
-import { isIsoDate } from "./iso";
+import { isIsoDate, todayIso } from "./iso";
 import { evaluate, InvalidProfileError, type EvaluateOptions } from "./engine";
 import { occurrencesBetween } from "./dates";
 import type { BusinessProfile, ComplianceItem } from "./types";
@@ -29,7 +29,7 @@ export interface CalendarOptions extends Omit<EvaluateOptions, "asOf"> {
   to?: string;
 }
 
-const today = () => new Date().toISOString().slice(0, 10);
+const today = () => todayIso();
 const addDays = (iso: string, n: number) => {
   const d = new Date(`${iso}T00:00:00Z`);
   d.setUTCDate(d.getUTCDate() + n);

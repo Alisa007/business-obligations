@@ -12,7 +12,7 @@ import { isState } from "./states";
 import { federalRules } from "./rules/federal";
 import { extraStateRules, stateRules } from "./rules/state";
 import { dissolutionRules } from "./rules/dissolution";
-import { isIsoDate } from "./iso";
+import { isIsoDate, todayIso } from "./iso";
 import { validateProfile, type ProfileIssue } from "./validate";
 import { localRules } from "./rules/local";
 import { industryRules } from "./rules/industry";
@@ -245,7 +245,7 @@ export interface ComplianceResult {
   disclaimer: string;
 }
 
-const today = () => new Date().toISOString().slice(0, 10);
+const today = () => todayIso();
 
 const addDays = (iso: string, days: number) => {
   const d = new Date(`${iso}T00:00:00Z`);

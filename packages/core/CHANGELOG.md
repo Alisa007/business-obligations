@@ -5,11 +5,18 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ## [Unreleased]
 
+### Fixed
+
+- "Today" is now the local calendar date, not the UTC date. Default start dates, "days until" figures and the CLI's
+  `--upcoming` were a day ahead in the evening in US time zones.
+
 ### Changed
 
+- **Minimum Node is now 20** for the library and CLI; the repository's tooling needs Node 20.19 or newer.
+  CI checks both floors (library on 20, 22 and 24; repository on 20.19). `.nvmrc` pins Node 22 for development.
 - The repository is now an npm-workspaces monorepo (`packages/core`, `apps/web`). The published package is unchanged.
-- The playground is rebuilt with Next.js (static export), React and Tamagui, and reports anonymous usage and unhandled
-  errors with PostHog when configured (no cookies, no form values).
+- The playground is rebuilt with Next.js (static export), React and Tamagui, and reports usage, the form values you enter
+  when generating a plan, and unhandled errors with PostHog when configured (no cookies, no session recording).
 
 ### Added
 

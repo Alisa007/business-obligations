@@ -13,6 +13,7 @@ import {
   type BusinessProfile,
   type ComplianceItem,
 } from "./index";
+import { todayIso } from "./iso";
 import { withZip } from "./zip-entry";
 
 const HELP = `compliance-rules-engine: US business compliance items from a business profile
@@ -129,7 +130,7 @@ function run(argv: string[]): number {
   }
   if (args.command === "changes") {
     const state = typeof args.flags.state === "string" ? args.flags.state.toUpperCase() : undefined;
-    const from = args.flags.upcoming ? (asOf ?? new Date().toISOString().slice(0, 10)) : undefined;
+    const from = args.flags.upcoming ? (asOf ?? todayIso()) : undefined;
     const changes = listChanges({ state, from });
     emit(
       changes,

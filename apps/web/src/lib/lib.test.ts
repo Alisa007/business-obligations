@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { createAnalytics, sanitize, type PostHogClient } from "./analytics";
 import { CONFIDENCE, formatDate, frequencyLabel, hostOf, money, relativeDays, safeUrl } from "./format";
-import { analyze, buildProfile, countBy, groupObligations, type FormValues } from "./plan";
+import { analyze, buildProfile, countBy, groupObligations, today, type FormValues } from "./plan";
 
 const form: FormValues = {
   zip: "60601",
@@ -74,6 +74,13 @@ describe("formatting", () => {
     expect(frequencyLabel("weird")).toBe("weird");
     expect(CONFIDENCE.checked).toMatch(/official/);
     expect(relativeDays("2026-10-20", "2026-10-13", "en-US")).toMatch(/7 days|in 1 week/);
+  });
+});
+
+describe("today", () => {
+  it("is the local calendar date", () => {
+    expect(today(new Date(2026, 9, 15, 20, 30))).toBe("2026-10-15");
+    expect(today(new Date(2026, 0, 1, 0, 5))).toBe("2026-01-01");
   });
 });
 

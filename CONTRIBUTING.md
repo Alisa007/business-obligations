@@ -84,6 +84,12 @@ TypeScript strict mode, Prettier (`npm run format`), ESLint (`npm run lint`). Ke
 
 Use the issue templates. For security issues see [SECURITY.md](SECURITY.md).
 
+## Node versions
+
+The library and CLI support Node 20+. The repository's tooling (ESLint 10, Vitest, Next.js) needs Node 20.19+, and
+`.nvmrc` pins the current LTS (22) for day-to-day work (`nvm use`). CI runs the built package on 20, 22 and 24 and the
+full check on 20.19, so don't add dependencies or syntax that need newer.
+
 ## Playground
 
 The playground lives in `apps/web` (Next.js, React, Tamagui). `npm run dev` builds the library and starts it at http://localhost:3000.
