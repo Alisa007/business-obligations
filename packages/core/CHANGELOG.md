@@ -12,6 +12,10 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ### Changed
 
+- Release tooling: `npm run release` prepares a version, the Release workflow smoke-tests the packed tarball, supports
+  npm trusted publishing and creates the GitHub release. The published tarball no longer ships sourcemaps (about 40%
+  smaller) and its README links are absolute.
+
 - **Minimum Node is now 20** for the library and CLI; the repository's tooling needs Node 20.19 or newer.
   CI checks both floors (library on 20, 22 and 24; repository on 20.19). `.nvmrc` pins Node 22 for development.
 - The repository is now an npm-workspaces monorepo (`packages/core`, `apps/web`). The published package is unchanged.
