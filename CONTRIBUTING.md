@@ -140,9 +140,29 @@ data change. It never merges. Prefer `unverified` over guesses: reject bot PRs t
 unreadable sources. Places that are not real jurisdictions are recorded in `scripts/local-skip.json` so they are not
 proposed again. Run the finder yourself with `node packages/core/scripts/missing-local.mjs --cities 10 --counties 10`.
 
-## Release checklist (maintainers)
+## Releasing to npm (maintainers)
 
-1. Move **Unreleased** in `CHANGELOG.md` under the new version and bump `version` in `package.json`.
-2. `npm run check && npm run build && npm run size`.
-3. Tag `vX.Y.Z` and push the tag; the release workflow publishes to npm with provenance.
-4. Enable GitHub Pages (Settings, Pages, Source: GitHub Actions) once so the playground deploys on each push to `main`.
+One-time setup:
+
+1. Create or sign in to an npm account with 2FA enabled. The package name `compliance-rules-engine` is currently free.
+2. Pick one way for GitHub Actions to publish:
+   - **Trusted publishing (recommended, no secret to leak):** publish `0.x` once by hand with
+     `npm login && npm publish -w compliance-rules-engine --access public`, then on npmjs.com open the package,
+     Settings, Trusted Publisher, GitHub Actions, and enter owner `Alisa007`, repository
+     `compliance-rules-engine`, workflow `release.yml`.
+   - **Token:** create a granular access token (publish rights for this package only, short expiry) and store it as
+     the `NPM_TOKEN` repository secret. The workflow uses it when present.
+3. Optional: protect tags `v*` (Settings, Rules) so only maintainers can create release tags.
+
+Each release:
+
+1. `npm run release -- patch` (or `minor`, `major`, or an explicit `X.Y.Z`). It bumps `packages/core/package.json` and
+   turns the Unreleased changelog section into a dated version section. Open a PR with that change and merge it.
+2. Optional rehearsal: Actions, Release, Run workflow with "dry run" on. It checks, builds, packs and installs the
+   tarball without publishing.
+3. Tag the merged commit on `main` and push the tag: `git tag vX.Y.Z && git push origin vX.Y.Z`.
+4. The Release workflow verifies the tag is on `main` and matches the package version, runs the checks and a packed-install
+   smoke test, publishes with provenance, and creates the GitHub release from the changelog section.
+
+Other one-time setup: enable GitHub Pages (Settings, Pages, Source: GitHub Actions) so the playground deploys on each
+push to `main`.

@@ -22,7 +22,8 @@
     "size": "npm run size -w compliance-rules-engine",
     "coverage": "npm run coverage -w compliance-rules-engine",
     "check:links": "npm run check:links -w compliance-rules-engine",
-    "site": "npm run build && npm run build:web"
+    "site": "npm run build && npm run build:web",
+    "release": "npm run release -w compliance-rules-engine --"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
