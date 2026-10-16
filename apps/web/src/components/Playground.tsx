@@ -13,6 +13,8 @@ import {
   type ObligationFilters,
 } from "../lib/plan";
 import { useAnalytics } from "../hooks/useAnalytics";
+import { useUrlState } from "../hooks/useUrlState";
+import { isRunnable, parseQuery } from "../lib/query";
 import { useDoneSteps } from "../hooks/useDoneSteps";
 import { ProfileForm, lookupZip, type PlanRequest } from "./ProfileForm";
 import { CalendarView, CostsView, ObligationsView, PlanView, ResultSummary, WhatIfView } from "./views";
@@ -36,6 +38,7 @@ export function Playground() {
   const [busy, setBusy] = useState(false);
   const [tab, setTab] = useState<TabId>("plan");
   const [filters, setFilters] = useState<ObligationFilters>(NO_FILTERS);
+  const [sidebar, setSidebar] = useUrlState();
 
   useEffect(() => setNow(today()), []);
 
@@ -94,6 +97,24 @@ export function Playground() {
     }
   };
 
+  // A link (or Back/Forward) that carries a ZIP shows its result straight away.
+  const submitRef = useRef(submit);
+  submitRef.current = submit;
+  useEffect(() => {
+    const fromUrl = () => {
+      const state = parseQuery(window.location.search);
+      if (isRunnable(state))
+        void submitRef.current({
+          form: state.form,
+          asOf: state.asOf,
+          openingDate: state.openingDate,
+        });
+    };
+    fromUrl();
+    window.addEventListener("popstate", fromUrl);
+    return () => window.removeEventListener("popstate", fromUrl);
+  }, []);
+
   const download = () => {
     if (!data) return;
     analytics.track("ics_downloaded", { events: data.events.length });
@@ -146,7 +167,14 @@ export function Playground() {
           position={{ default: "relative", md: "sticky" }}
           top={16}
         >
-          <ProfileForm today={now} busy={busy} onSubmit={submit} onFieldUsed={fieldUsed} />
+          <ProfileForm
+            today={now}
+            busy={busy}
+            value={sidebar}
+            onChange={setSidebar}
+            onSubmit={submit}
+            onFieldUsed={fieldUsed}
+          />
         </YStack>
         <YStack flex={1} minWidth={0} aria-live="polite">
           <Panel gap="3">
@@ -217,8 +245,9 @@ export function Playground() {
           <Muted>
             This site records usage with PostHog: page views, which tabs and fields you use, and the details
             you enter when you generate a plan (ZIP, entity type, industry, headcount, payroll, revenue and
-            dates). The plan itself is not sent. There are no cookies or session recordings, and your
-            browser&apos;s Do Not Track setting is respected.
+            dates). The plan itself is not sent. Your entries are also kept in this page's address so you can
+            bookmark or share a link; the address is not sent with page views. There are no cookies or session
+            recordings, and your browser&apos;s Do Not Track setting is respected.
           </Muted>
         )}
         <Muted>

@@ -10,6 +10,7 @@ import {
   type FormValues,
   type Place,
 } from "../lib/plan";
+import type { SidebarState } from "../lib/query";
 import { CheckField, Field, Muted, NativeSelect, Pair, Panel, SectionLabel, TextField } from "./ui";
 import { DateField } from "./DateField";
 
@@ -27,49 +28,33 @@ export async function lookupZip(zip: string): Promise<Place | undefined> {
   return info ? { city: info.city, county: info.county, state: info.state } : undefined;
 }
 
-const INITIAL: FormValues = {
-  // Only the two most common answers are pre-selected; everything the user alone knows starts empty, and the
-  // engine treats an empty number as "unknown" and lists what would change.
-  zip: "",
-  entityType: "llc",
-  industry: "general",
-  profession: "",
-  employees: "",
-  payroll: "",
-  revenue: "",
-  owners: "",
-  sellsGoods: false,
-  homeBased: false,
-  tradeName: false,
-  isNew: true,
-  formationDate: "",
-};
-
 export function ProfileForm({
   today,
   busy,
+  value,
+  onChange,
   onSubmit,
   onFieldUsed,
 }: {
   today: string;
   busy: boolean;
+  /** The sidebar state, which lives in the URL (see `useUrlState`). */
+  value: SidebarState;
+  onChange: (next: SidebarState) => void;
   onSubmit: (request: PlanRequest) => void;
   /** Called with a field's name (never its value) when the user edits it. */
   onFieldUsed?: (field: string) => void;
 }) {
-  const [form, setForm] = useState<FormValues>(INITIAL);
-  const [asOf, setAsOf] = useState(today);
-  const [openingDate, setOpeningDate] = useState("");
+  const { form, openingDate } = value;
+  const asOf = value.asOf || today;
   const [place, setPlace] = useState("");
-  const set = <K extends keyof FormValues>(key: K, value: FormValues[K]) => {
+  const set = <K extends keyof FormValues>(key: K, v: FormValues[K]) => {
     onFieldUsed?.(key);
-    setForm((f) => ({ ...f, [key]: value }));
+    onChange({ ...value, form: { ...form, [key]: v } });
   };
   const check = (key: "sellsGoods" | "homeBased" | "tradeName" | "isNew", label: string) => (
     <CheckField id={key} label={label} checked={form[key]} onChange={(v) => set(key, v)} />
   );
-
-  useEffect(() => setAsOf(today), [today]);
 
   useEffect(() => {
     const zip = form.zip.trim();
@@ -193,7 +178,7 @@ export function ProfileForm({
             value={asOf}
             onChange={(v) => {
               onFieldUsed?.("asOf");
-              setAsOf(v);
+              onChange({ ...value, asOf: v });
             }}
           />
           <DateField
@@ -202,7 +187,7 @@ export function ProfileForm({
             value={openingDate}
             onChange={(v) => {
               onFieldUsed?.("openingDate");
-              setOpeningDate(v);
+              onChange({ ...value, openingDate: v });
             }}
             min={asOf || undefined}
             clearable
