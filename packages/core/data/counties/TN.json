@@ -11,9 +11,27 @@
         "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1",
         "url": "https://comptroller.tn.gov/office-functions/pa/property-taxes/tangible-personal-property.html",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "davidson-tn.hotel-occupancy-tax-return",
+        "title": "File the Metro Nashville and Davidson County hotel/motel occupancy tax return",
+        "category": "filing",
+        "authority": "Metro Nashville Collections Office (Department of Finance)",
+        "description": "Monthly hotel occupancy returns, with the exemption report, are due to the Collections Office by the 20th of each month. The local rate is 7% from July 1, 2023, plus a $2.50 nightly fee. Forms are downloaded, not mailed out. Short-term rentals pay through a separate page.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://www.nashville.gov/departments/finance/division-accounts/collections/pay-hotel-occupancy-privilege-tax",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Hamilton",
@@ -27,9 +45,27 @@
         "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1",
         "url": "https://www.hamiltontn.gov/AssessorOfProperty_FAQs.aspx",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "hamilton-tn.hotel-occupancy-tax-return",
+        "title": "File the Hamilton County hotel/motel occupancy tax return",
+        "category": "filing",
+        "authority": "Hamilton County Trustee",
+        "description": "Reports and payment are due at the Trustee's office by the 20th of the following month, and a return is required monthly even if no tax is due. County delinquency costs 12% interest a year plus 2% for each month or fraction late.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://www.hamiltontn.gov/pdf/trustee/docs/CountyBlankTaxForm.pdf",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Knox",
@@ -43,9 +79,27 @@
         "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1",
         "url": "https://property.knoxcounty.org/departments/personal-property/",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "knox-tn.hotel-occupancy-tax-return",
+        "title": "File the Knox County hotel/motel occupancy tax return",
+        "category": "filing",
+        "authority": "Knox County Clerk",
+        "description": "The hotel/motel/campground occupancy tax return must be filed with the County Clerk by the 20th of the following month, even when no tax is due (form dated 2017; confirm it is current). Knoxville's city lodging tax is separate.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://www.KnoxCounty.org/clerk/pdfs/OccupancyTaxReturnKCOTR_2017.pdf",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Rutherford",
@@ -61,7 +115,8 @@
         "appliesTo": ["all"]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16",
+    "note": "Rutherford County has a hotel tax collected by the County Clerk under a private act, but its monthly due date was not found (the City of Murfreesboro's is the 20th)."
   },
   {
     "county": "Shelby",
@@ -75,9 +130,27 @@
         "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1",
         "url": "https://comptroller.tn.gov/office-functions/pa/property-taxes/tangible-personal-property.html",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "shelby-tn.hotel-occupancy-tax-return",
+        "title": "File the Shelby County hotel/motel occupancy tax return",
+        "category": "filing",
+        "authority": "Shelby County Clerk",
+        "description": "The County Clerk collects a 5% room occupancy privilege tax on hotel, motel and bed-and-breakfast stays (Private Acts of 1969, chapter 131). The page read does not give the return due date; call the Clerk at (901) 222-3059.",
+        "frequency": "monthly",
+        "url": "https://shelbycountytn.gov/570/Room-Occupancy-Taxes",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Williamson",
@@ -93,6 +166,7 @@
         "appliesTo": ["all"]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16",
+    "note": "Williamson County has a 4% hotel privilege tax remitted to the County Clerk under a private act, but its due date was not found (the City of Franklin's is the 20th)."
   }
 ]
