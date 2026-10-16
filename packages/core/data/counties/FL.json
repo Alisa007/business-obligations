@@ -52,6 +52,92 @@
     "checkedOn": "2026-10-16"
   },
   {
+    "county": "Baker",
+    "items": [
+      {
+        "id": "baker-fl.business-personal-property",
+        "title": "File Baker County business personal property return",
+        "category": "filing",
+        "authority": "Baker County Property Appraiser",
+        "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption of up to $25,000. The county page was not individually confirmed; the state's guidance applies and the return goes to the county property appraiser.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Baker County collects its own tourist development tax (3%, per Florida's DR-15TDT), but no official county page with the registration steps and due date could be read."
+  },
+  {
+    "county": "Bay",
+    "items": [
+      {
+        "id": "bay-fl.business-personal-property",
+        "title": "File Bay County business personal property return",
+        "category": "filing",
+        "authority": "Bay County Property Appraiser",
+        "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption of up to $25,000. A separate return is needed for each business location in the county.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://baypa.net/filing-tips/",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "bay-fl.tourist-development-tax-registration",
+        "title": "Register for the Bay County tourist development tax",
+        "category": "registration",
+        "authority": "Bay County Tax Collector",
+        "description": "Operators of hotels, motels and short-term rentals (stays of six months or less) register with the county to collect the 5% (ZIP codes 32401, 32404, 32405, 32407, 32408, 32410 and the Bay part of 32413) tourist development tax. Florida's Department of Revenue lists Bay as a county that collects it directly rather than through the state sales tax return; the state sales tax on the same rentals is still filed on the DR-15 (line D).",
+        "frequency": "once",
+        "url": "https://tdc.baycoclerk.com/touristtax",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "bay-fl.tourist-development-tax-return",
+        "title": "File the Bay County tourist development tax return",
+        "category": "filing",
+        "authority": "Bay County Tax Collector",
+        "description": "Returns are due monthly by the 20th of the following month, even with no income to report. Late reports lose the collection allowance and bear interest and a minimum $50 penalty. The Clerk administered the tax until September 30, 2026; from October 1, 2026 the Tax Collector administers it.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://tdc.baycoclerk.com/touristtax",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-16"
+  },
+  {
+    "county": "Bradford",
+    "items": [
+      {
+        "id": "bradford-fl.business-personal-property",
+        "title": "File Bradford County business personal property return",
+        "category": "filing",
+        "authority": "Bradford County Property Appraiser",
+        "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption of up to $25,000. A separate return is needed for each business location in the county.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://bradfordappraiser.com/Tangible_Personal_Property",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Florida's DR-15TDT lists Bradford County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county."
+  },
+  {
     "county": "Brevard",
     "items": [
       {
@@ -176,6 +262,144 @@
     "checkedOn": "2026-10-16"
   },
   {
+    "county": "Calhoun",
+    "items": [
+      {
+        "id": "calhoun-fl.business-personal-property",
+        "title": "File Calhoun County business personal property return",
+        "category": "filing",
+        "authority": "Calhoun County Property Appraiser",
+        "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption of up to $25,000. The county page was not individually confirmed; the state's guidance applies and the return goes to the county property appraiser.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Florida's DR-15TDT lists no tourist development tax for Calhoun County (0%)."
+  },
+  {
+    "county": "Charlotte",
+    "items": [
+      {
+        "id": "charlotte-fl.business-personal-property",
+        "title": "File Charlotte County business personal property return",
+        "category": "filing",
+        "authority": "Charlotte County Property Appraiser",
+        "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption of up to $25,000. The county page was not individually confirmed; the state's guidance applies and the return goes to the county property appraiser.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "charlotte-fl.tourist-development-tax-registration",
+        "title": "Register for the Charlotte County tourist development tax",
+        "category": "registration",
+        "authority": "Charlotte County Tax Collector",
+        "description": "Operators of hotels, motels and short-term rentals (stays of six months or less) register with the county to collect the 5% tourist development tax. Florida's Department of Revenue lists Charlotte as a county that collects it directly rather than through the state sales tax return; the state sales tax on the same rentals is still filed on the DR-15 (line D).",
+        "frequency": "once",
+        "url": "https://taxcollector.charlottecountyfl.gov/tourist-tax",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "charlotte-fl.tourist-development-tax-return",
+        "title": "File the Charlotte County tourist development tax return",
+        "category": "filing",
+        "authority": "Charlotte County Tax Collector",
+        "description": "Remitted monthly, due by the 20th of the month after collection; delinquent if not postmarked by the 20th. Keep records for three years.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://taxcollector.charlottecountyfl.gov/tourist-tax",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-16"
+  },
+  {
+    "county": "Citrus",
+    "items": [
+      {
+        "id": "citrus-fl.business-personal-property",
+        "title": "File Citrus County business personal property return",
+        "category": "filing",
+        "authority": "Citrus County Property Appraiser",
+        "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption of up to $25,000. The county page was not individually confirmed; the state's guidance applies and the return goes to the county property appraiser.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Florida's DR-15TDT lists Citrus County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county."
+  },
+  {
+    "county": "Clay",
+    "items": [
+      {
+        "id": "clay-fl.business-personal-property",
+        "title": "File Clay County business personal property return",
+        "category": "filing",
+        "authority": "Clay County Property Appraiser",
+        "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption of up to $25,000. The county page was not individually confirmed; the state's guidance applies and the return goes to the county property appraiser.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "clay-fl.tourist-development-tax-registration",
+        "title": "Register for the Clay County tourist development tax",
+        "category": "registration",
+        "authority": "Clay County Tax Collector",
+        "description": "Operators of hotels, motels and short-term rentals (stays of six months or less) register with the county to collect the 5% tourist development tax. Florida's Department of Revenue lists Clay as a county that collects it directly rather than through the state sales tax return; the state sales tax on the same rentals is still filed on the DR-15 (line D).",
+        "frequency": "once",
+        "url": "https://claycountytax.com/tourist_taxes/",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "clay-fl.tourist-development-tax-return",
+        "title": "File the Clay County tourist development tax return",
+        "category": "filing",
+        "authority": "Clay County Tax Collector",
+        "description": "Returns and payments are due on the 1st of the month after collection and delinquent if not submitted by the 20th. Register and pay through the TouristExpress portal.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://claycountytax.com/tourist_taxes/",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-16"
+  },
+  {
     "county": "Collier",
     "items": [
       {
@@ -201,6 +425,57 @@
     ],
     "checkedOn": "2026-10-16",
     "note": "Collier County collects its own tourist development tax (5%, per Florida's DR-15TDT), but no official county page with the registration steps and due date could be read."
+  },
+  {
+    "county": "Columbia",
+    "items": [
+      {
+        "id": "columbia-fl.business-personal-property",
+        "title": "File Columbia County business personal property return",
+        "category": "filing",
+        "authority": "Columbia County Property Appraiser",
+        "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption of up to $25,000. The county page was not individually confirmed; the state's guidance applies and the return goes to the county property appraiser.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Florida's DR-15TDT lists Columbia County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county."
+  },
+  {
+    "county": "DeSoto",
+    "items": [
+      {
+        "id": "desoto-fl.business-personal-property",
+        "title": "File DeSoto County business personal property return",
+        "category": "filing",
+        "authority": "DeSoto County Property Appraiser",
+        "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption of up to $25,000. A separate return is needed for each business location in the county.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://desotopa.com/Tangible_Personal_Property",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Florida's DR-15TDT lists DeSoto County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county."
+  },
+  {
+    "county": "Dixie",
+    "items": [
+      {
+        "id": "dixie-fl.business-personal-property",
+        "title": "File Dixie County business personal property return",
+        "category": "filing",
+        "authority": "Dixie County Property Appraiser",
+        "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption of up to $25,000. The county page was not individually confirmed; the state's guidance applies and the return goes to the county property appraiser.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Florida's DR-15TDT lists Dixie County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county."
   },
   {
     "county": "Duval",
@@ -327,6 +602,333 @@
     "checkedOn": "2026-10-16"
   },
   {
+    "county": "Flagler",
+    "items": [
+      {
+        "id": "flagler-fl.business-personal-property",
+        "title": "File Flagler County business personal property return",
+        "category": "filing",
+        "authority": "Flagler County Property Appraiser",
+        "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption of up to $25,000. The county page was not individually confirmed; the state's guidance applies and the return goes to the county property appraiser.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "flagler-fl.tourist-development-tax-registration",
+        "title": "Register for the Flagler County tourist development tax",
+        "category": "registration",
+        "authority": "Flagler County Tax Collector",
+        "description": "Operators of hotels, motels and short-term rentals (stays of six months or less) register with the county to collect the 5% tourist development tax. Florida's Department of Revenue lists Flagler as a county that collects it directly rather than through the state sales tax return; the state sales tax on the same rentals is still filed on the DR-15 (line D).",
+        "frequency": "once",
+        "url": "https://www.flaglertax.gov/tourist-development-tax/",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "flagler-fl.tourist-development-tax-return",
+        "title": "File the Flagler County tourist development tax return",
+        "category": "filing",
+        "authority": "Flagler County Tax Collector",
+        "description": "Since August 2018 the tax is reported and paid directly to the Tax Collector. The page read does not give the monthly due date.",
+        "frequency": "monthly",
+        "url": "https://www.flaglertax.gov/tourist-development-tax/",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-16"
+  },
+  {
+    "county": "Franklin",
+    "items": [
+      {
+        "id": "franklin-fl.business-personal-property",
+        "title": "File Franklin County business personal property return",
+        "category": "filing",
+        "authority": "Franklin County Property Appraiser",
+        "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption of up to $25,000. The county page was not individually confirmed; the state's guidance applies and the return goes to the county property appraiser.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Florida's DR-15TDT lists Franklin County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county."
+  },
+  {
+    "county": "Gadsden",
+    "items": [
+      {
+        "id": "gadsden-fl.business-personal-property",
+        "title": "File Gadsden County business personal property return",
+        "category": "filing",
+        "authority": "Gadsden County Property Appraiser",
+        "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption of up to $25,000. The county page was not individually confirmed; the state's guidance applies and the return goes to the county property appraiser.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Florida's DR-15TDT lists Gadsden County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county."
+  },
+  {
+    "county": "Gilchrist",
+    "items": [
+      {
+        "id": "gilchrist-fl.business-personal-property",
+        "title": "File Gilchrist County business personal property return",
+        "category": "filing",
+        "authority": "Gilchrist County Property Appraiser",
+        "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption of up to $25,000. The county page was not individually confirmed; the state's guidance applies and the return goes to the county property appraiser.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Florida's DR-15TDT lists Gilchrist County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county."
+  },
+  {
+    "county": "Glades",
+    "items": [
+      {
+        "id": "glades-fl.business-personal-property",
+        "title": "File Glades County business personal property return",
+        "category": "filing",
+        "authority": "Glades County Property Appraiser",
+        "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption of up to $25,000. The county page was not individually confirmed; the state's guidance applies and the return goes to the county property appraiser.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Florida's DR-15TDT lists Glades County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county."
+  },
+  {
+    "county": "Gulf",
+    "items": [
+      {
+        "id": "gulf-fl.business-personal-property",
+        "title": "File Gulf County business personal property return",
+        "category": "filing",
+        "authority": "Gulf County Property Appraiser",
+        "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption of up to $25,000. The county page was not individually confirmed; the state's guidance applies and the return goes to the county property appraiser.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "gulf-fl.tourist-development-tax-registration",
+        "title": "Register for the Gulf County tourist development tax",
+        "category": "registration",
+        "authority": "Gulf County",
+        "description": "Operators of hotels, motels and short-term rentals (stays of six months or less) register with the county to collect the 5% tourist development tax. Florida's Department of Revenue lists Gulf as a county that collects it directly rather than through the state sales tax return; the state sales tax on the same rentals is still filed on the DR-15 (line D).",
+        "frequency": "once",
+        "url": "https://gulfcountyfl.munirevs.com/faq/",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "gulf-fl.tourist-development-tax-return",
+        "title": "File the Gulf County tourist development tax return",
+        "category": "filing",
+        "authority": "Gulf County",
+        "description": "Payments are due monthly by the 20th of the month after the reporting month, including a zero return when there was no rental activity. The late penalty is the greater of $50 or 10% of the tax due, and interest runs at 11% a year.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://gulfcountyfl.munirevs.com/faq/",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-16"
+  },
+  {
+    "county": "Hamilton",
+    "items": [
+      {
+        "id": "hamilton-fl.business-personal-property",
+        "title": "File Hamilton County business personal property return",
+        "category": "filing",
+        "authority": "Hamilton County Property Appraiser",
+        "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption of up to $25,000. The county page was not individually confirmed; the state's guidance applies and the return goes to the county property appraiser.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Florida's DR-15TDT lists Hamilton County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county."
+  },
+  {
+    "county": "Hardee",
+    "items": [
+      {
+        "id": "hardee-fl.business-personal-property",
+        "title": "File Hardee County business personal property return",
+        "category": "filing",
+        "authority": "Hardee County Property Appraiser",
+        "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption of up to $25,000. The county page was not individually confirmed; the state's guidance applies and the return goes to the county property appraiser.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Florida's DR-15TDT lists Hardee County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county."
+  },
+  {
+    "county": "Hendry",
+    "items": [
+      {
+        "id": "hendry-fl.business-personal-property",
+        "title": "File Hendry County business personal property return",
+        "category": "filing",
+        "authority": "Hendry County Property Appraiser",
+        "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption of up to $25,000. The county page was not individually confirmed; the state's guidance applies and the return goes to the county property appraiser.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Florida's DR-15TDT lists Hendry County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county."
+  },
+  {
+    "county": "Hernando",
+    "items": [
+      {
+        "id": "hernando-fl.business-personal-property",
+        "title": "File Hernando County business personal property return",
+        "category": "filing",
+        "authority": "Hernando County Property Appraiser",
+        "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption of up to $25,000. The county page was not individually confirmed; the state's guidance applies and the return goes to the county property appraiser.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "hernando-fl.tourist-development-tax-registration",
+        "title": "Register for the Hernando County tourist development tax",
+        "category": "registration",
+        "authority": "Hernando County Clerk of Circuit Court",
+        "description": "Operators of hotels, motels and short-term rentals (stays of six months or less) register with the county to collect the 5% tourist development tax. Florida's Department of Revenue lists Hernando as a county that collects it directly rather than through the state sales tax return; the state sales tax on the same rentals is still filed on the DR-15 (line D).",
+        "frequency": "once",
+        "url": "https://hernandoclerk.com/",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "hernando-fl.tourist-development-tax-return",
+        "title": "File the Hernando County tourist development tax return",
+        "category": "filing",
+        "authority": "Hernando County Clerk of Circuit Court",
+        "description": "County ordinance 2008-12 has the tax remitted to the Clerk under the chapter 212 dealer rules; the Clerk may authorize quarterly returns. The monthly due date was not found.",
+        "frequency": "monthly",
+        "url": "https://hernandoclerk.com/",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-16"
+  },
+  {
+    "county": "Highlands",
+    "items": [
+      {
+        "id": "highlands-fl.business-personal-property",
+        "title": "File Highlands County business personal property return",
+        "category": "filing",
+        "authority": "Highlands County Property Appraiser",
+        "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption of up to $25,000. The county page was not individually confirmed; the state's guidance applies and the return goes to the county property appraiser.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "highlands-fl.tourist-development-tax-registration",
+        "title": "Register for the Highlands County tourist development tax",
+        "category": "registration",
+        "authority": "Highlands County Tax Collector",
+        "description": "Operators of hotels, motels and short-term rentals (stays of six months or less) register with the county to collect the 5% tourist development tax. Florida's Department of Revenue lists Highlands as a county that collects it directly rather than through the state sales tax return; the state sales tax on the same rentals is still filed on the DR-15 (line D).",
+        "frequency": "once",
+        "url": "https://www.hctaxcollector.com/tourist-taxes/",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "highlands-fl.tourist-development-tax-return",
+        "title": "File the Highlands County tourist development tax return",
+        "category": "filing",
+        "authority": "Highlands County Tax Collector",
+        "description": "Tax collected on or after October 1, 2026 is reported and paid to the Tax Collector (Ordinance 25-26-16); before that date it went to the state with the sales tax return. The due date was not found.",
+        "frequency": "monthly",
+        "url": "https://www.hctaxcollector.com/tourist-taxes/",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-16"
+  },
+  {
     "county": "Hillsborough",
     "items": [
       {
@@ -387,6 +989,125 @@
       }
     ],
     "checkedOn": "2026-10-16"
+  },
+  {
+    "county": "Holmes",
+    "items": [
+      {
+        "id": "holmes-fl.business-personal-property",
+        "title": "File Holmes County business personal property return",
+        "category": "filing",
+        "authority": "Holmes County Property Appraiser",
+        "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption of up to $25,000. The county page was not individually confirmed; the state's guidance applies and the return goes to the county property appraiser.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16"
+  },
+  {
+    "county": "Indian River",
+    "items": [
+      {
+        "id": "indian-river-fl.business-personal-property",
+        "title": "File Indian River County business personal property return",
+        "category": "filing",
+        "authority": "Indian River County Property Appraiser",
+        "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption of up to $25,000. The county page was not individually confirmed; the state's guidance applies and the return goes to the county property appraiser.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "indian-river-fl.tourist-development-tax-registration",
+        "title": "Register for the Indian River County tourist development tax",
+        "category": "registration",
+        "authority": "Indian River County Clerk of Court",
+        "description": "Operators of hotels, motels and short-term rentals (stays of six months or less) register with the county to collect the 5% (the county's return form still shows 4%; confirm with the Clerk) tourist development tax. Florida's Department of Revenue lists Indian River as a county that collects it directly rather than through the state sales tax return; the state sales tax on the same rentals is still filed on the DR-15 (line D).",
+        "frequency": "once",
+        "url": "https://indianriverclerk.com/tourist-development-tax/",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "indian-river-fl.tourist-development-tax-return",
+        "title": "File the Indian River County tourist development tax return",
+        "category": "filing",
+        "authority": "Indian River County Clerk of Court",
+        "description": "The monthly return must be remitted or postmarked by the 20th of the month after collection (next working day if that is a weekend or holiday).",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://indianriverclerk.com/tourist-development-tax/",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-16"
+  },
+  {
+    "county": "Jackson",
+    "items": [
+      {
+        "id": "jackson-fl.business-personal-property",
+        "title": "File Jackson County business personal property return",
+        "category": "filing",
+        "authority": "Jackson County Property Appraiser",
+        "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption of up to $25,000. The county page was not individually confirmed; the state's guidance applies and the return goes to the county property appraiser.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Florida's DR-15TDT lists Jackson County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county."
+  },
+  {
+    "county": "Jefferson",
+    "items": [
+      {
+        "id": "jefferson-fl.business-personal-property",
+        "title": "File Jefferson County business personal property return",
+        "category": "filing",
+        "authority": "Jefferson County Property Appraiser",
+        "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption of up to $25,000. The county page was not individually confirmed; the state's guidance applies and the return goes to the county property appraiser.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Florida's DR-15TDT lists Jefferson County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county."
+  },
+  {
+    "county": "Lafayette",
+    "items": [
+      {
+        "id": "lafayette-fl.business-personal-property",
+        "title": "File Lafayette County business personal property return",
+        "category": "filing",
+        "authority": "Lafayette County Property Appraiser",
+        "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption of up to $25,000. The county page was not individually confirmed; the state's guidance applies and the return goes to the county property appraiser.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Florida's DR-15TDT lists no tourist development tax for Lafayette County (0%)."
   },
   {
     "county": "Lake",
@@ -510,6 +1231,57 @@
     "checkedOn": "2026-10-16"
   },
   {
+    "county": "Levy",
+    "items": [
+      {
+        "id": "levy-fl.business-personal-property",
+        "title": "File Levy County business personal property return",
+        "category": "filing",
+        "authority": "Levy County Property Appraiser",
+        "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption of up to $25,000. The county page was not individually confirmed; the state's guidance applies and the return goes to the county property appraiser.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Florida's DR-15TDT lists Levy County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county."
+  },
+  {
+    "county": "Liberty",
+    "items": [
+      {
+        "id": "liberty-fl.business-personal-property",
+        "title": "File Liberty County business personal property return",
+        "category": "filing",
+        "authority": "Liberty County Property Appraiser",
+        "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption of up to $25,000. The county page was not individually confirmed; the state's guidance applies and the return goes to the county property appraiser.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Florida's DR-15TDT lists no tourist development tax for Liberty County (0%)."
+  },
+  {
+    "county": "Madison",
+    "items": [
+      {
+        "id": "madison-fl.business-personal-property",
+        "title": "File Madison County business personal property return",
+        "category": "filing",
+        "authority": "Madison County Property Appraiser",
+        "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption of up to $25,000. A separate return is needed for each business location in the county.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://madisonpa.com/?p=168",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Florida's DR-15TDT lists Madison County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county."
+  },
+  {
     "county": "Manatee",
     "items": [
       {
@@ -614,6 +1386,23 @@
     "checkedOn": "2026-10-16"
   },
   {
+    "county": "Martin",
+    "items": [
+      {
+        "id": "martin-fl.business-personal-property",
+        "title": "File Martin County business personal property return",
+        "category": "filing",
+        "authority": "Martin County Property Appraiser",
+        "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption of up to $25,000. The county page was not individually confirmed; the state's guidance applies and the return goes to the county property appraiser.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Martin County collects its own tourist development tax (5%, per Florida's DR-15TDT), but no official county page with the registration steps and due date could be read."
+  },
+  {
     "county": "Miami-Dade",
     "items": [
       {
@@ -674,6 +1463,144 @@
       }
     ],
     "checkedOn": "2026-10-16"
+  },
+  {
+    "county": "Monroe",
+    "items": [
+      {
+        "id": "monroe-fl.business-personal-property",
+        "title": "File Monroe County business personal property return",
+        "category": "filing",
+        "authority": "Monroe County Property Appraiser",
+        "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption of up to $25,000. The county page was not individually confirmed; the state's guidance applies and the return goes to the county property appraiser.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Monroe County collects its own tourist development tax (5%, per Florida's DR-15TDT), but no official county page with the registration steps and due date could be read."
+  },
+  {
+    "county": "Nassau",
+    "items": [
+      {
+        "id": "nassau-fl.business-personal-property",
+        "title": "File Nassau County business personal property return",
+        "category": "filing",
+        "authority": "Nassau County Property Appraiser",
+        "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption of up to $25,000. A separate return is needed for each business location in the county.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://nassauflpa.com/?p=9",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "nassau-fl.tourist-development-tax-registration",
+        "title": "Register for the Nassau County tourist development tax",
+        "category": "registration",
+        "authority": "Nassau County Tax Collector",
+        "description": "Operators of hotels, motels and short-term rentals (stays of six months or less) register with the county to collect the 5% (Amelia Island, ZIP 32034) tourist development tax. Florida's Department of Revenue lists Nassau as a county that collects it directly rather than through the state sales tax return; the state sales tax on the same rentals is still filed on the DR-15 (line D).",
+        "frequency": "once",
+        "url": "https://www.nassautaxes.com/Documents/TDT%20Return%20TEMPLATE%2005-2018.pdf",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "nassau-fl.tourist-development-tax-return",
+        "title": "File the Nassau County tourist development tax return",
+        "category": "filing",
+        "authority": "Nassau County Tax Collector",
+        "description": "The county's return form (2018 revision, the latest found) says to file and pay by the 20th of each month after collection. The late penalty is 10% per 30 days up to 50%, minimum $50.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://www.nassautaxes.com/Documents/TDT%20Return%20TEMPLATE%2005-2018.pdf",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-16"
+  },
+  {
+    "county": "Okaloosa",
+    "items": [
+      {
+        "id": "okaloosa-fl.business-personal-property",
+        "title": "File Okaloosa County business personal property return",
+        "category": "filing",
+        "authority": "Okaloosa County Property Appraiser",
+        "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption of up to $25,000. The county page was not individually confirmed; the state's guidance applies and the return goes to the county property appraiser.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "okaloosa-fl.tourist-development-tax-registration",
+        "title": "Register for the Okaloosa County tourist development tax",
+        "category": "registration",
+        "authority": "Okaloosa County Clerk of Court",
+        "description": "Operators of hotels, motels and short-term rentals (stays of six months or less) register with the county to collect the 6% tourist development tax. Florida's Department of Revenue lists Okaloosa as a county that collects it directly rather than through the state sales tax return; the state sales tax on the same rentals is still filed on the DR-15 (line D).",
+        "frequency": "once",
+        "url": "https://okaloosaclerk.com/board-services/tourist-development-tax/",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "okaloosa-fl.tourist-development-tax-return",
+        "title": "File the Okaloosa County tourist development tax return",
+        "category": "filing",
+        "authority": "Okaloosa County Clerk of Court",
+        "description": "Since January 1, 2022 the Clerk, not the state, collects the tax. Returns are monthly through the Clerk's online portal, due the 1st and penalized if not filed and paid by the 20th (an older FAQ says postmarked by the 20th). The penalty is 10% or $50, whichever is greater.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://okaloosaclerk.com/board-services/tourist-development-tax/",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-16"
+  },
+  {
+    "county": "Okeechobee",
+    "items": [
+      {
+        "id": "okeechobee-fl.business-personal-property",
+        "title": "File Okeechobee County business personal property return",
+        "category": "filing",
+        "authority": "Okeechobee County Property Appraiser",
+        "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption of up to $25,000. The county page was not individually confirmed; the state's guidance applies and the return goes to the county property appraiser.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Florida's DR-15TDT lists Okeechobee County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county."
   },
   {
     "county": "Orange",
@@ -1038,6 +1965,75 @@
     "checkedOn": "2026-10-16"
   },
   {
+    "county": "Putnam",
+    "items": [
+      {
+        "id": "putnam-fl.business-personal-property",
+        "title": "File Putnam County business personal property return",
+        "category": "filing",
+        "authority": "Putnam County Property Appraiser",
+        "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption of up to $25,000. The county page was not individually confirmed; the state's guidance applies and the return goes to the county property appraiser.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Putnam County collects its own tourist development tax (4%, per Florida's DR-15TDT), but no official county page with the registration steps and due date could be read."
+  },
+  {
+    "county": "Santa Rosa",
+    "items": [
+      {
+        "id": "santa-rosa-fl.business-personal-property",
+        "title": "File Santa Rosa County business personal property return",
+        "category": "filing",
+        "authority": "Santa Rosa County Property Appraiser",
+        "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption of up to $25,000. The county page was not individually confirmed; the state's guidance applies and the return goes to the county property appraiser.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "santa-rosa-fl.tourist-development-tax-registration",
+        "title": "Register for the Santa Rosa County tourist development tax",
+        "category": "registration",
+        "authority": "Santa Rosa County Clerk of Court",
+        "description": "Operators of hotels, motels and short-term rentals (stays of six months or less) register with the county to collect the 5% tourist development tax. Florida's Department of Revenue lists Santa Rosa as a county that collects it directly rather than through the state sales tax return; the state sales tax on the same rentals is still filed on the DR-15 (line D).",
+        "frequency": "once",
+        "url": "https://santarosaclerk.com/other-services/tourist-development-tax/",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "santa-rosa-fl.tourist-development-tax-return",
+        "title": "File the Santa Rosa County tourist development tax return",
+        "category": "filing",
+        "authority": "Santa Rosa County Clerk of Court",
+        "description": "Filed monthly with the Clerk, due the 1st; penalty and interest apply to returns not filed and paid by the 20th of the following month, including zero returns. The county has no agreement with Airbnb, VRBO or other platforms, so owners and managers must collect and remit.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://santarosaclerk.com/other-services/tourist-development-tax/",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-16"
+  },
+  {
     "county": "Sarasota",
     "items": [
       {
@@ -1231,6 +2227,109 @@
     "note": "St. Lucie County collects its own tourist development tax (5%, per Florida's DR-15TDT), but no official county page with the registration steps and due date could be read."
   },
   {
+    "county": "Sumter",
+    "items": [
+      {
+        "id": "sumter-fl.business-personal-property",
+        "title": "File Sumter County business personal property return",
+        "category": "filing",
+        "authority": "Sumter County Property Appraiser",
+        "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption of up to $25,000. The county page was not individually confirmed; the state's guidance applies and the return goes to the county property appraiser.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Florida's DR-15TDT lists no tourist development tax for Sumter County (0%)."
+  },
+  {
+    "county": "Suwannee",
+    "items": [
+      {
+        "id": "suwannee-fl.business-personal-property",
+        "title": "File Suwannee County business personal property return",
+        "category": "filing",
+        "authority": "Suwannee County Property Appraiser",
+        "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption of up to $25,000. The county page was not individually confirmed; the state's guidance applies and the return goes to the county property appraiser.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Suwannee County collects its own tourist development tax (3%, per Florida's DR-15TDT), but no official county page with the registration steps and due date could be read."
+  },
+  {
+    "county": "Taylor",
+    "items": [
+      {
+        "id": "taylor-fl.business-personal-property",
+        "title": "File Taylor County business personal property return",
+        "category": "filing",
+        "authority": "Taylor County Property Appraiser",
+        "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption of up to $25,000. The county page was not individually confirmed; the state's guidance applies and the return goes to the county property appraiser.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "taylor-fl.tourist-development-tax-registration",
+        "title": "Register for the Taylor County tourist development tax",
+        "category": "registration",
+        "authority": "Taylor County Tax Collector",
+        "description": "Operators of hotels, motels and short-term rentals (stays of six months or less) register with the county to collect the 5% tourist development tax. Florida's Department of Revenue lists Taylor as a county that collects it directly rather than through the state sales tax return; the state sales tax on the same rentals is still filed on the DR-15 (line D).",
+        "frequency": "once",
+        "url": "https://www.taylorcountytaxcollector.com/tourist-development",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "taylor-fl.tourist-development-tax-return",
+        "title": "File the Taylor County tourist development tax return",
+        "category": "filing",
+        "authority": "Taylor County Tax Collector",
+        "description": "Remitted monthly, due the 1st of the month after collection and delinquent if not paid or postmarked by the 20th.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://www.taylorcountytaxcollector.com/tourist-development",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-16"
+  },
+  {
+    "county": "Union",
+    "items": [
+      {
+        "id": "union-fl.business-personal-property",
+        "title": "File Union County business personal property return",
+        "category": "filing",
+        "authority": "Union County Property Appraiser",
+        "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption of up to $25,000. The county page was not individually confirmed; the state's guidance applies and the return goes to the county property appraiser.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Florida's DR-15TDT lists no tourist development tax for Union County (0%)."
+  },
+  {
     "county": "Volusia",
     "items": [
       {
@@ -1282,5 +2381,91 @@
     ],
     "checkedOn": "2026-10-16",
     "note": "Volusia County repealed its business tax receipt ordinance effective January 1, 2024 (county Treasury and Billing page), so the county issues no receipt; cities may still require their own."
+  },
+  {
+    "county": "Wakulla",
+    "items": [
+      {
+        "id": "wakulla-fl.business-personal-property",
+        "title": "File Wakulla County business personal property return",
+        "category": "filing",
+        "authority": "Wakulla County Property Appraiser",
+        "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption of up to $25,000. The county page was not individually confirmed; the state's guidance applies and the return goes to the county property appraiser.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Florida's DR-15TDT lists Wakulla County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county."
+  },
+  {
+    "county": "Walton",
+    "items": [
+      {
+        "id": "walton-fl.business-personal-property",
+        "title": "File Walton County business personal property return",
+        "category": "filing",
+        "authority": "Walton County Property Appraiser",
+        "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption of up to $25,000. The county page was not individually confirmed; the state's guidance applies and the return goes to the county property appraiser.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "walton-fl.tourist-development-tax-registration",
+        "title": "Register for the Walton County tourist development tax",
+        "category": "registration",
+        "authority": "Walton County Clerk of Court",
+        "description": "Operators of hotels, motels and short-term rentals (stays of six months or less) register with the county to collect the 5% (2% in parts of the county; the county says 3% north of Choctawhatchee Bay) tourist development tax. Florida's Department of Revenue lists Walton as a county that collects it directly rather than through the state sales tax return; the state sales tax on the same rentals is still filed on the DR-15 (line D).",
+        "frequency": "once",
+        "url": "https://waltonclerkfl.gov/touristtax",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "walton-fl.tourist-development-tax-return",
+        "title": "File the Walton County tourist development tax return",
+        "category": "filing",
+        "authority": "Walton County Clerk of Court",
+        "description": "Returns are due by the 20th of the month following the stay, including months with no bookings. Register and file through the county's GovOS online portal.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://waltonclerkfl.gov/touristtax",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-16"
+  },
+  {
+    "county": "Washington",
+    "items": [
+      {
+        "id": "washington-fl.business-personal-property",
+        "title": "File Washington County business personal property return",
+        "category": "filing",
+        "authority": "Washington County Property Appraiser",
+        "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption of up to $25,000. The county page was not individually confirmed; the state's guidance applies and the return goes to the county property appraiser.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Florida's DR-15TDT lists Washington County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county."
   }
 ]
