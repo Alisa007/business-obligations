@@ -71,6 +71,7 @@ jobs:
           node -e 'const m=require("./dist/index.cjs"); if(!m.getComplianceItems({entityType:"llc",zip:"94105",city:"San Francisco",county:"San Francisco"}).length) process.exit(1)'
           node --input-type=module -e 'import {getComplianceItems} from "./dist/index.js"; if(!getComplianceItems({entityType:"llc",zip:"94105",city:"San Francisco",county:"San Francisco"}).length) process.exit(1)'
           node dist/cli.js --zip 94105 --entity llc | grep -q "FEDERAL"
+          node dist/cli.js --version | grep -qE "^[0-9]+\.[0-9]+\.[0-9]+"
           node examples/quickstart.cjs
           node examples/quickstart.mjs > /dev/null
           node dist/cli.js rules --json | node -e 'JSON.parse(require("fs").readFileSync(0,"utf8"))'
