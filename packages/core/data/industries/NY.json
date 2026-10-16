@@ -1837,6 +1837,261 @@
     "exemptions": ["Events under 5,000 people or shorter than 24 hours"]
   },
   {
+    "id": "ny.nyc-doh-barber-shop-permit",
+    "title": "Get a NYC barber shop permit",
+    "category": "permit",
+    "authority": "NYC Department of Health and Mental Hygiene",
+    "description": "The owner of a barber shop in New York City files for a DOHMH permit, valid one year. A separate state licence is needed for the appearance enhancement business. The DOHMH page states no fee, so confirm it on the permit page.",
+    "naics": ["812111"],
+    "appliesTo": ["all"],
+    "url": "https://www1.nyc.gov/nycbusiness/description/barber-shop-permit",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "frequency": "annual",
+    "renewal": "Every year"
+  },
+  {
+    "id": "ny.nyc-doh-beekeeper-registration",
+    "title": "Register beehives with the NYC Health Department",
+    "category": "registration",
+    "authority": "NYC Department of Health and Mental Hygiene",
+    "description": "Anyone keeping non-aggressive honeybees in New York City, for recreation or business, registers with DOHMH. Unregistered hives can be fined. The DOHMH page states no fee, so confirm it on the permit page.",
+    "naics": ["112910"],
+    "appliesTo": ["all"],
+    "url": "https://nyc-business.nyc.gov/nycbusiness/description/beekeeper-registration/apply",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "frequency": "ongoing"
+  },
+  {
+    "id": "ny.nyc-doh-funeral-director-burial-cremation-registration",
+    "title": "Register funeral directors and get burial and cremation permits in NYC",
+    "category": "registration",
+    "authority": "NYC Department of Health and Mental Hygiene",
+    "description": "Funeral directors licensed by the state register with DOHMH's Burial Desk, and burial, cremation and transit permits for disposal of remains are issued to registered funeral directors, undertakers and hospitals. The DOHMH page states no fee, so confirm it on the permit page.",
+    "naics": ["812210", "812220"],
+    "appliesTo": ["all"],
+    "url": "https://www.nyc.gov/site/doh/business/permits-and-licenses/other-services-burial-and-cremation-permits.page",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "frequency": "ongoing"
+  },
+  {
+    "id": "ny.nyc-doh-tanning-establishment-permit",
+    "title": "Get a NYC tanning establishment permit",
+    "category": "permit",
+    "authority": "NYC Department of Health and Mental Hygiene",
+    "description": "Operators of indoor tanning facilities in New York City hold a DOHMH permit and must give every customer a health risk fact sheet. This is in addition to the state permit. The DOHMH page states no fee, so confirm it on the permit page.",
+    "naics": ["812199"],
+    "appliesTo": ["all"],
+    "url": "https://www1.nyc.gov/nycbusiness/description/tanning-facility-permit",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "frequency": "ongoing"
+  },
+  {
+    "id": "ny.nyc-doh-pet-shop-permit",
+    "title": "Get a NYC pet shop permit",
+    "category": "permit",
+    "authority": "NYC Department of Health and Mental Hygiene",
+    "description": "Pet shops in New York City need a DOHMH permit. The state also bars pet stores from selling dogs, cats and rabbits. The DOHMH page states no fee, so confirm it on the permit page.",
+    "naics": ["459910"],
+    "appliesTo": ["all"],
+    "url": "https://www.nyc.gov/site/doh/business/permits-and-licenses/animal-facilities.page",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "frequency": "ongoing"
+  },
+  {
+    "id": "ny.nyc-doh-animal-boarding-grooming-training-permit",
+    "title": "Get a NYC permit for animal boarding, grooming or training",
+    "category": "permit",
+    "authority": "NYC Department of Health and Mental Hygiene",
+    "description": "Small animal boarding establishments, small animal grooming establishments and small animal training establishments in New York City each need a DOHMH permit, and shelters for homeless animals have their own permit. The DOHMH page states no fee, so confirm it on the permit page.",
+    "naics": ["812910", "812990"],
+    "appliesTo": ["all"],
+    "url": "https://www.nyc.gov/site/doh/business/permits-and-licenses/animal-facilities.page",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "frequency": "ongoing"
+  },
+  {
+    "id": "ny.nyc-doh-petting-zoo-exotic-animal-permit",
+    "title": "Get a NYC permit for petting zoos, exotic animal exhibits and commercial stables",
+    "category": "permit",
+    "authority": "NYC Department of Health and Mental Hygiene",
+    "description": "Petting zoos, exhibits of exotic animals and commercial horse stables in New York City need DOHMH permits or licences, and keeping prohibited wild animals is barred. The DOHMH page states no fee, so confirm it on the permit page.",
+    "naics": ["712130", "115210", "713990"],
+    "appliesTo": ["all"],
+    "url": "https://www.nyc.gov/site/doh/business/permits-and-licenses/animal-facilities.page",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "frequency": "ongoing"
+  },
+  {
+    "id": "ny.nyc-doh-summer-camp-permit",
+    "title": "Get a NYC summer camp permit",
+    "category": "permit",
+    "authority": "NYC Department of Health and Mental Hygiene",
+    "description": "A camp caring for 10 or more children during the summer in New York City needs a DOHMH permit, renewed before each summer season, under Article 48 of the Health Code. New operators and directors attend a Health Department orientation, camps with aquatics send their aquatics director to one, and staff need first aid, CPR and aquatic certifications and insurance. The DOHMH page states no fee, so confirm it on the permit page.",
+    "naics": ["721214", "624410"],
+    "appliesTo": ["all"],
+    "url": "https://www.nyc.gov/site/doh/business/permits-and-licenses/camp-directors-information.page",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "frequency": "annual",
+    "renewal": "Before each summer season"
+  },
+  {
+    "id": "ny.nyc-doh-hookah-establishment-permit",
+    "title": "Hold a NYC hookah-serving establishment permit",
+    "category": "registration",
+    "authority": "NYC Department of Health and Mental Hygiene",
+    "description": "All hookah-serving establishments in New York City need a DOHMH permit, and no new permit applications are currently being accepted. Tobacco and e-cigarette retail stores and events may operate under a registered exemption from the smoke-free air rules if their primary activity is retail sale of those products. The DOHMH page states no fee, so confirm it on the permit page.",
+    "naics": ["7224", "459991"],
+    "appliesTo": ["all"],
+    "url": "https://www.nyc.gov/site/doh/business/permits-and-licenses/smoke-free-air-act-exemptions-and-registrations.page",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "frequency": "ongoing"
+  },
+  {
+    "id": "ny.nyc-doh-bathing-beach-permit",
+    "title": "Get a NYC bathing beach permit",
+    "category": "permit",
+    "authority": "NYC Department of Health and Mental Hygiene",
+    "description": "Installing, operating or constructing a bathing beach in New York City needs a DOHMH permit to operate a bathing beach. The DOHMH page states no fee, so confirm it on the permit page.",
+    "naics": ["713990", "721211"],
+    "appliesTo": ["all"],
+    "url": "https://www.nyc.gov/site/doh/business/permits-and-licenses/beaches.page",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "frequency": "ongoing"
+  },
+  {
+    "id": "ny.nyc-doh-radiological-equipment-registration",
+    "title": "Register radiological equipment with the NYC Health Department",
+    "category": "registration",
+    "authority": "NYC Department of Health and Mental Hygiene",
+    "description": "X-ray equipment in New York City needs a DOHMH certificate of registration, radioactive materials a DOHMH licence, and therapeutic radiation units (linear accelerators) a certified registration, in addition to state requirements. The DOHMH page states no fee, so confirm it on the permit page.",
+    "naics": ["621111", "621112", "621210", "621511", "621512"],
+    "appliesTo": ["all"],
+    "url": "https://www.nyc.gov/site/doh/business/permits-and-licenses/radiological-equipment-x-rays-and-materials.page",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "frequency": "ongoing"
+  },
+  {
+    "id": "ny.nyc-doh-water-tank-annual-inspection",
+    "title": "File the annual NYC building water tank inspection report",
+    "category": "filing",
+    "authority": "NYC Department of Health and Mental Hygiene",
+    "description": "Buildings with a drinking water tank in New York City need an annual inspection and water quality sample each year, with a qualified water tank inspector submitting the report to the Health Department. Chemical treatment of a building's drinking water needs an adding-chemicals permit and a well that supplies buildings needs a well water permit. The DOHMH page states no fee, so confirm it on the permit page.",
+    "naics": ["531110", "531120", "531190", "531311", "531312", "721110", "622110"],
+    "appliesTo": ["all"],
+    "url": "https://www.nyc.gov/site/doh/business/permits-and-licenses/drinking-water.page",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "frequency": "annual",
+    "renewal": "Every year"
+  },
+  {
     "id": "ny.state-park-film-permit",
     "title": "Get a photography or film permit for New York State parks and historic sites",
     "category": "permit",
