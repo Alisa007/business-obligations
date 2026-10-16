@@ -3236,6 +3236,92 @@
     "renewal": "Every two years"
   },
   {
+    "id": "ny.nyc-tow-truck-driver-license",
+    "title": "Have DCWP-licensed NYC tow truck drivers",
+    "category": "license",
+    "authority": "NYC Department of Consumer and Worker Protection",
+    "description": "Each tow truck driver in New York City needs a DCWP licence, expiring October 31 of even-numbered years. The fee is $20 for applications from November 1 of an even year, $15, $10, and $5 (or $25 for the longer term) from May 1 of an even year. Drivers must be 18 or older and hold a state licence with a tow truck operator (W) endorsement.",
+    "naics": ["488410"],
+    "appliesTo": ["employees"],
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-tow-truck-driver.page",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=10;BYMONTHDAY=31",
+    "anchor": "2026-10-31"
+  },
+  {
+    "id": "ny.nyc-process-server-individual-license",
+    "title": "Have DCWP-licensed NYC process servers",
+    "category": "license",
+    "authority": "NYC Department of Consumer and Worker Protection",
+    "description": "Each individual serving process in New York City needs a DCWP licence, expiring February 28 of even-numbered years. The fee is $340 for applications from March 1 of an even year, $255, $170, and $85 (or $425 for the longer term) from September 1 of an odd year, plus a $75 exam fee. It needs a roster of process serving agencies, an electronic device certification and a recordkeeping certification.",
+    "naics": ["561491"],
+    "appliesTo": ["employees"],
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-process-server-individual.page",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=2;BYMONTHDAY=28",
+    "anchor": "2026-02-28"
+  },
+  {
+    "id": "ny.nyc-pedicab-driver-license",
+    "title": "Have DCWP-licensed NYC pedicab drivers",
+    "category": "license",
+    "authority": "NYC Department of Consumer and Worker Protection",
+    "description": "Each pedicab driver in New York City needs a DCWP licence, expiring April 30 each year. The fee is $35 if filed May 1 to November 1, and $18 (or $53 for the longer term) from November 2. Drivers must be 18 or older with a valid driver's licence.",
+    "naics": ["485999"],
+    "appliesTo": ["employees"],
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-pedicab-driver.page",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=30"
+  },
+  {
+    "id": "ny.nyc-ticket-seller-individual-license",
+    "title": "Have DCWP-licensed NYC ticket sellers",
+    "category": "license",
+    "authority": "NYC Department of Consumer and Worker Protection",
+    "description": "Each individual selling tickets as a ticket seller in New York City needs a DCWP licence, expiring July 31 each year. The fee is on the DCWP checklist.",
+    "naics": ["561599", "711310"],
+    "appliesTo": ["employees"],
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-ticket-seller-business.page",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "rrule": "FREQ=YEARLY;BYMONTH=7;BYMONTHDAY=31"
+  },
+  {
     "id": "ny.x-ray-equipment-registration",
     "title": "Register X-ray equipment with the NY Department of Health",
     "category": "registration",
