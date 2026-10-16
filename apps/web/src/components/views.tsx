@@ -439,6 +439,10 @@ export function ObligationsView({
 // ---- Calendar, fees, what-if ----
 
 export function CalendarView({ data, onDownload }: { data: Analysis; onDownload: () => void }) {
+  // Items the calendar cannot place: no machine-readable due date (one-time setup, or rules stated only as text).
+  const undated = data.result.items.filter(
+    (i) => !i.due && i.frequency !== "ongoing" && i.frequency !== "per_event",
+  );
   return (
     <YStack gap="3" alignItems="flex-start">
       <Button size="sm" onPress={onDownload}>
@@ -460,6 +464,24 @@ export function CalendarView({ data, onDownload }: { data: Analysis; onDownload:
                   <ExternalLink url={e.url}>{e.title}</ExternalLink>
                 </Text>
                 <Muted>{e.authority}</Muted>
+              </YStack>
+            </ListRow>
+          ))}
+        </YStack>
+      )}
+      {undated.length > 0 && (
+        <YStack width="100%" gap="1">
+          <Muted>No fixed date, so not in the calendar or the .ics file:</Muted>
+          {undated.map((i) => (
+            <ListRow key={i.id} columnGap="4">
+              <Text fontWeight="600" width={120}>
+                {i.frequency === "once" ? "One time" : "See rule"}
+              </Text>
+              <YStack flex={1} flexBasis={220} minWidth={0}>
+                <Text>
+                  <ExternalLink url={i.url}>{i.title}</ExternalLink>
+                </Text>
+                {i.deadline && <Muted>{i.deadline}</Muted>}
               </YStack>
             </ListRow>
           ))}
