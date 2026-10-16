@@ -1519,5 +1519,43 @@
     "exemptions": [
       "Out-of-state companies licensed elsewhere under equal or stricter rules, with no New York office or clients, may seek an exemption"
     ]
+  },
+  {
+    "id": "ny.pbm-license",
+    "title": "Obtain a New York pharmacy benefit manager license",
+    "category": "license",
+    "authority": "NYS Department of Financial Services",
+    "description": "A pharmacy benefit manager needs a DFS licence before it begins or continues PBM services in New York (Insurance Law Article 29 and Public Health Law 280-a). Apply, upload documents and pay the licensing fee through DFS Connect. The licence lasts 3 years, and a renewal filed at least 60 days before expiry keeps the existing licence in force. DFS bills four quarterly assessments by share of New York pharmacy claims, plus a final true-up.",
+    "naics": ["524292"],
+    "appliesTo": ["all"],
+    "url": "https://www.dfs.ny.gov/apps_and_licensing/pharmacy_benefit_managers",
+    "checkedOn": "2026-10-16",
+    "frequency": "ongoing",
+    "renewal": "Every three years"
+  },
+  {
+    "id": "ny.pbm-annual-report",
+    "title": "File the annual pharmacy benefit manager report with NY DFS",
+    "category": "filing",
+    "authority": "NYS Department of Financial Services",
+    "description": "Every licensed PBM files the annual report by July 1, covering the prior calendar year, with the spreadsheet and an attestation signed by the CEO or president, plus supporting documents in one zipped file through the MySend dropbox.",
+    "naics": ["524292"],
+    "appliesTo": ["all"],
+    "url": "https://www.dfs.ny.gov/apps_and_licensing/pharmacy_benefit_managers",
+    "checkedOn": "2026-10-16",
+    "rrule": "FREQ=YEARLY;BYMONTH=7;BYMONTHDAY=1",
+    "anchor": "2026-07-01"
+  },
+  {
+    "id": "ny.bail-bond-agent-license",
+    "title": "Renew a New York bail bond agent license",
+    "category": "license",
+    "authority": "NYS Department of Financial Services",
+    "description": "Bail bond agents hold a DFS licence, with the exam run by PSI and all officers, directors and executive personnel fingerprinted. Renewal is filed through NY LINX and the licence expires if the deadline is missed; DFS's 2026 notice sets December 31, 2026. A $5,000 renewal bond covering January 1 to December 31 is uploaded with it (Insurance Law 6802), with a $10 late fee if processed less than 60 days before expiry. Agents must give principals the Bail Bond Statement of Rights and bail receipts (11 NYCRR 28.17-18).",
+    "naics": ["812990"],
+    "appliesTo": ["all"],
+    "url": "https://www.dfs.ny.gov/apps_and_licensing/bail_bond_agents/home",
+    "checkedOn": "2026-10-16",
+    "frequency": "ongoing"
   }
 ]
