@@ -413,7 +413,7 @@ It sets no cookies, records no sessions and respects Do Not Track. It is off unl
 
 ## Size
 
-The core bundle is about 115 KB gzipped with all 51 jurisdictions' data. ZIP lookup (about 305 KB gzipped) lives in the
+The core bundle is about 125 KB gzipped with all 51 jurisdictions' data. ZIP lookup (about 305 KB gzipped) lives in the
 separate `business-obligations/zip` entry and is only loaded when you import it. `npm run size` enforces the budgets.
 
 ## Extending
