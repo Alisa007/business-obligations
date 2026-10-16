@@ -105,7 +105,23 @@ data test requires all 51 jurisdictions for every profession.
 Counties live in `data/counties/<STATE>.json`, one file per state and DC. An entry has `county` (the name as
 the ZIP data spells it, without "County"), optional `aliases`, and `items` in the same shape as city items. Use
 `"status": "none"` (with `sourceUrl`) or `"unverified"` (with `note`) and `"checkedOn"` when the county has no
-filing of its own or you could not confirm one. Cite the county's own page for the filing, not a bare domain.
+obligation of its own or you could not confirm one. Cite the county's own page for each obligation, not a bare domain.
+
+A county entry covers **every county-level business obligation**, not only property tax. Check each of these before
+you call a county `none`:
+
+- a general business license, business tax or occupational tax (for example Florida's local business tax receipt,
+  Tennessee's county business tax, Kentucky and Georgia occupational taxes, Maryland's trader's license);
+- a lodging, occupancy or tourism tax, and any registration for it;
+- a business personal property return or similar assessor filing;
+- county clerk filings (assumed names, publication, certificates) beyond what the state file already records;
+- county health, environmental, fire or building permits that apply to businesses generally (record activity-specific
+  ones only when they apply to a common business type such as food service);
+- county sales or use tax registrations, where the county rather than the state administers them.
+
+`none` means all of these were checked. If you checked only some (for example only the personal property return),
+use `unverified` and say in the `note` what was checked and what was not. A test fails if a `none` county's text
+mentions only personal property.
 
 ## Adding a city
 
