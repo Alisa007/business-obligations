@@ -150,19 +150,45 @@ export function toRRule(due: Due, frequency: string): { rrule: string; anchor?: 
   return undefined;
 }
 
-/** Display text for a schedule, for the common shapes; undefined when the data should say it in its own words. */
-export function describeSchedule({ due, frequency }: Schedule): string | undefined {
+/** A month and day, for a date without a year. */
+export interface MonthDay {
+  month: number;
+  day: number;
+}
+
+const dayText = (month: number, day: number) =>
+  day > lastDay(month) ? `Last day of ${MONTH_NAMES[month - 1]}` : `${MONTH_NAMES[month - 1]} ${day}`;
+const listText = (items: string[]) =>
+  items.length < 2 ? items.join("") : `${items.slice(0, -1).join(", ")} and ${items.at(-1)}`;
+
+/**
+ * Display text for a schedule, for the common shapes; undefined when the data should say it in its own words.
+ * `opens` is the day a filing window opens, giving "January 1 – May 1".
+ */
+export function describeSchedule({ due, frequency }: Schedule, opens?: MonthDay): string | undefined {
+  if (due.type === "anniversary" && frequency === "biennial" && due.point !== "date")
+    return `${describeSchedule({ due, frequency: "annual" })}, every second year`;
   if (due.type === "anniversary" && frequency === "annual")
     return due.point === "date"
       ? "On the anniversary of formation"
       : due.point === "end_of_month"
         ? "Last day of the anniversary month"
         : "First day of the anniversary month";
-  if (due.type !== "fixed" || due.cycleFrom) return undefined;
-  const date =
-    due.day > lastDay(due.month)
-      ? `Last day of ${MONTH_NAMES[due.month - 1]}`
-      : `${MONTH_NAMES[due.month - 1]} ${due.day}`;
+  if (due.type === "multi" && (frequency === "quarterly" || frequency === "monthly") && !opens)
+    return frequency === "monthly"
+      ? undefined
+      : listText(due.dates.map((d) => `${MONTH_NAMES[d.month - 1]} ${d.day}`));
+  if (due.type !== "fixed") return undefined;
+  const date = dayText(due.month, due.day);
+  if (opens)
+    return frequency === "annual" && !due.cycleFrom
+      ? `${dayText(opens.month, opens.day)} – ${date}`
+      : undefined;
+  if (due.cycleFrom && frequency === "biennial")
+    return due.cycleFrom === "year_after_formation"
+      ? `${date} of every second year after formation`
+      : `${date} of every second year, starting with the formation year`;
+  if (due.cycleFrom) return undefined;
   if (frequency === "annual") return date;
   if (frequency === "biennial" && due.parity) return `${date} of ${due.parity}-numbered years`;
   return undefined;
@@ -181,12 +207,17 @@ export interface ScheduleFields {
   anchor?: ScheduleAnchor;
   frequency?: string;
   deadline?: string;
+  /** A qualifier appended in parentheses to the generated deadline text ("calendar-year filers"). */
+  deadlineNote?: string;
+  /** The day a filing window opens; the closing day is the rule's date. */
+  opens?: MonthDay;
   due?: Due;
 }
 
 /**
  * The frequency, due rule and display deadline of a data entry. With an `rrule` they are derived from it
- * (`deadline` text in the data overrides the generated one, e.g. "April 15 (penalty after May 15)"); without
+ * (`deadlineNote` adds a qualifier to the generated text; a full `deadline` in the data replaces it when the rule
+ * cannot say it, such as "Before the first day of the anniversary month"); without
  * one, the entry's own `frequency`, `deadline` and `due` are used, which keeps hand-written data working.
  */
 export function resolveSchedule<F extends string>(
@@ -194,5 +225,7 @@ export function resolveSchedule<F extends string>(
 ): { frequency: F | ScheduleFrequency; deadline?: string; due?: Due } {
   if (!it.rrule) return { frequency: it.frequency as F, deadline: it.deadline, due: it.due };
   const s = parseRRule(it.rrule, it.anchor);
-  return { frequency: s.frequency, due: s.due, deadline: it.deadline ?? describeSchedule(s) };
+  const generated = describeSchedule(s, it.opens);
+  const text = generated && it.deadlineNote ? `${generated} (${it.deadlineNote})` : generated;
+  return { frequency: s.frequency, due: s.due, deadline: it.deadline ?? text };
 }

@@ -37,7 +37,10 @@
   "llpReport": {
     "title": "Pay LLP annual registration fee",
     "rrule": "FREQ=YEARLY;BYMONTH=7;BYMONTHDAY=1",
-    "deadline": "Between January 1 and July 1 each year",
+    "opens": {
+      "month": 1,
+      "day": 1
+    },
     "feeDetail": {
       "basis": "flat",
       "amount": 500

@@ -561,13 +561,36 @@
           ],
           "description": "Start of a cycle longer than a year: an ISO date, or the entity's formation year or the year after."
         },
+        "opens": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["month", "day"],
+          "properties": {
+            "month": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 12
+            },
+            "day": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 31
+            }
+          },
+          "description": "The day a filing window opens; the rule's date is the day it closes. Gives text such as \"January 1 – May 1\"."
+        },
         "frequency": {
           "enum": ["annual", "biennial", "every_five_years", "periodic"]
         },
         "deadline": {
           "type": "string",
           "minLength": 1,
-          "description": "Display text; generated from rrule when omitted."
+          "description": "Full deadline text, only for what the rule cannot say (for example \"Before the first day of the anniversary month\"). Generated from rrule when omitted."
+        },
+        "deadlineNote": {
+          "type": "string",
+          "minLength": 3,
+          "description": "Qualifier shown in parentheses after the generated deadline (\"calendar-year filers\"). Must not repeat the rule's own date."
         },
         "fee": {
           "type": "string",

@@ -126,8 +126,12 @@ export interface ReportRule {
   rrule?: string;
   /** Start of a cycle longer than a year: an ISO date, `formation_year` or `year_after_formation`. */
   anchor?: string;
-  /** Human-readable deadline; generated from `rrule` when omitted. */
+  /** Human-readable deadline; generated from `rrule` when omitted. Only for what the rule cannot say. */
   deadline?: string;
+  /** Qualifier appended in parentheses to the generated deadline ("calendar-year filers"). */
+  deadlineNote?: string;
+  /** The day a filing window opens; the closing day is the rrule's date. */
+  opens?: { month: number; day: number };
   /** Overrides the default "File annual report" title. */
   title?: string;
   /** Machine-readable form of `deadline` for data without an `rrule`. */
@@ -274,8 +278,12 @@ export interface LocalItem {
   rrule?: string;
   /** Start of a cycle longer than a year (see `ReportRule.anchor`). */
   anchor?: string;
-  /** Human-readable deadline; generated from `rrule` when omitted. */
+  /** Human-readable deadline; generated from `rrule` when omitted. Only for what the rule cannot say. */
   deadline?: string;
+  /** Qualifier appended in parentheses to the generated deadline ("calendar-year filers"). */
+  deadlineNote?: string;
+  /** The day a filing window opens; the closing day is the rrule's date. */
+  opens?: { month: number; day: number };
   /** Machine-readable form of `deadline` for data without an `rrule`. */
   due?: Due;
   url?: string;
