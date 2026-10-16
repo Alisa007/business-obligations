@@ -60,7 +60,7 @@ export function provenanceFor(item: ComplianceItem, p: ResolvedProfile): Provena
 
   if (item.id.startsWith("state.annual-report")) {
     const k = reportKey(p, item.state);
-    field = has(k, `${k}.fee`, `${k}.deadline`) ? "unconfirmed" : "checked";
+    field = has(k, `${k}.feeDetail`, `${k}.deadline`) ? "unconfirmed" : "checked";
   } else if (item.id.startsWith("state.employer") && /workers' compensation/.test(item.title)) {
     field = has("workersComp.trigger", "workersComp.threshold") ? "unconfirmed" : "checked";
   } else if (item.id.startsWith("state.trade-name")) {

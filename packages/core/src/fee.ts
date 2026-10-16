@@ -2,56 +2,64 @@ import type { FeeDetail } from "./data/types";
 
 const money = (n: number) => `$${Number.isInteger(n) ? n.toLocaleString("en-US") : n.toFixed(2)}`;
 
-/**
- * Display text for a fee that its structured form says completely, or undefined when it needs words of its own
- * (a waiver, an estimate, a rate, a note). The data stores `fee` text only for those; everything else is generated
- * from `feeDetail`, so the amount is written once.
- */
-export function describeFee(fd: FeeDetail): string | undefined {
-  if (fd.note || fd.waived || fd.estimate || fd.rate !== undefined || fd.base !== undefined) return undefined;
-  const { amount, online, paper, perUnit, freeUnits, min, max } = fd;
+/** The headline of a fee, from its numbers alone. */
+function headline(fd: FeeDetail, limits: string[]): string {
+  const { amount, online, paper, perUnit, freeUnits, min, max, rate } = fd;
+  const unit = fd.basis === "per_member" ? "member" : "partner";
   switch (fd.basis) {
     case "none":
-      return amount === 0 && online === undefined && paper === undefined ? "Free" : undefined;
-    case "flat":
-      if (amount === undefined || perUnit !== undefined || freeUnits !== undefined) return undefined;
-      if (min !== undefined || max !== undefined) return undefined;
-      if (online !== undefined && paper !== undefined)
-        return online === amount ? `${money(online)} online (${money(paper)} paper)` : undefined;
-      if (paper !== undefined) return undefined;
-      if (online !== undefined)
-        return online < amount ? `${money(amount)} (${money(online)} if filed online)` : undefined;
-      return money(amount);
+      return "Free";
+    case "varies":
+      return min !== undefined ? `From ${money(min)}` : "Varies";
+    case "percent": {
+      if (min !== undefined) limits.push(`minimum ${money(min)}`);
+      return rate !== undefined ? `${rate}%` : "Varies";
+    }
     case "per_partner":
     case "per_member": {
-      if (perUnit === undefined || online !== undefined || paper !== undefined) return undefined;
-      const who = fd.basis === "per_partner" ? "partner" : "member";
-      const limits = [
-        min !== undefined && min !== amount ? `minimum ${money(min)}` : "",
-        max !== undefined ? `maximum ${money(max)}` : "",
-      ].filter(Boolean);
-      const tail = limits.length ? ` (${limits.join(", ")})` : "";
-      if (amount === undefined && freeUnits === undefined) return `${money(perUnit)} per ${who}${tail}`;
-      if (amount !== undefined && freeUnits !== undefined)
-        return `${money(amount)} base, plus ${money(perUnit)} per ${who} over ${freeUnits}${tail}`;
-      return undefined;
+      if (min !== undefined && min !== amount) limits.push(`minimum ${money(min)}`);
+      if (max !== undefined) limits.push(`maximum ${money(max)}`);
+      if (perUnit === undefined) return "Varies";
+      if (amount === undefined) return `${money(perUnit)} per ${unit}`;
+      if (freeUnits === undefined) return `${money(amount)} plus ${money(perUnit)} per ${unit}`;
+      return `${money(amount)} base, plus ${money(perUnit)} per ${unit} over ${freeUnits}`;
     }
-    default:
-      return undefined;
+    case "flat": {
+      if (fd.waived) return "Waived";
+      if (amount === undefined) return "Varies";
+      if (online !== undefined && paper !== undefined)
+        return `${money(online)} online (${money(paper)} paper)`;
+      if (online !== undefined) {
+        if (online === amount) return `${money(amount)} online`;
+        return online < amount
+          ? `${money(amount)} (${money(online)} if filed online)`
+          : `${money(amount)} (${money(online)} online)`;
+      }
+      if (paper !== undefined) return `${money(amount)} (${money(paper)} on paper)`;
+      if (min !== undefined && min === amount) return `${money(amount)} minimum`;
+      return money(amount);
+    }
   }
 }
 
-/** The fee text of a report or license: the stored text when there is one, else generated from `feeDetail`. */
-export function feeText(it: { fee?: string; feeDetail?: FeeDetail }): string {
-  return it.fee ?? (it.feeDetail ? describeFee(it.feeDetail) : undefined) ?? "Varies";
+/**
+ * The display text of a fee, generated from its structured form: the numbers give the headline ("$30 online ($45
+ * paper)", "$100 per partner (minimum $200, maximum $5,000)") and `note` adds the qualifier that numbers cannot carry
+ * ("annual tax", "$0 for nonprofit corporations"). The fee is written once, in the data's `feeDetail`.
+ */
+export function describeFee(fd: FeeDetail): string {
+  const limits: string[] = [];
+  const head = headline(fd, limits);
+  const range = limits.length ? [limits.join(", ")] : [];
+  const extras =
+    fd.basis === "percent" ? [fd.note, ...range] : [...range, fd.estimate ? "estimate" : undefined, fd.note];
+  const parts = extras.filter((x): x is string => !!x);
+  if (!parts.length) return head;
+  // A headline that already ends in a parenthesis takes the extras inside it.
+  return head.endsWith(")") ? `${head.slice(0, -1)}; ${parts.join("; ")})` : `${head} (${parts.join("; ")})`;
 }
 
-/**
- * The `cost` of an item from a report or license: `feeDetail` plus, when the data carries its own fee text, that
- * text as the note (it holds what the numbers cannot, such as a waiver).
- */
-export function feeCost(it: { fee?: string; feeDetail?: FeeDetail }) {
-  if (!it.feeDetail) return {};
-  const note = it.feeDetail.note ?? it.fee;
-  return { cost: { ...it.feeDetail, ...(note ? { note } : {}), currency: "USD" as const } };
+/** The `cost` of an item from a report or license. */
+export function feeCost(it: { feeDetail?: FeeDetail }) {
+  return it.feeDetail ? { cost: { ...it.feeDetail, currency: "USD" as const } } : {};
 }

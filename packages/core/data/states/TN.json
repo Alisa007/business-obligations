@@ -27,7 +27,6 @@
   "corpReport": {
     "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
     "deadline": "First day of the 4th month after fiscal year end (April 1)",
-    "fee": "$20 minimum",
     "feeDetail": {
       "basis": "flat",
       "amount": 20,
@@ -37,7 +36,6 @@
   "lpReport": {
     "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
     "deadline": "First day of the 4th month after fiscal year end (April 1)",
-    "fee": "$50 per partner (minimum $250, maximum $2,500) \u2014 best estimate; the statute and Secretary of State schedule could not be read",
     "feeDetail": {
       "basis": "per_partner",
       "perUnit": 50,
@@ -114,6 +112,6 @@
   "verification": {
     "checkedOn": "2026-10-13",
     "sources": ["https://sos.tn.gov/businesses/faqs"],
-    "unconfirmed": ["lpReport.fee"]
+    "unconfirmed": ["lpReport.feeDetail"]
   }
 }

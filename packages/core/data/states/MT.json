@@ -14,11 +14,11 @@
   },
   "llcReport": {
     "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
-    "fee": "Waived if filed by April 15; $35 after",
     "feeDetail": {
       "basis": "flat",
       "amount": 0,
-      "waived": true
+      "waived": true,
+      "note": "if filed by April 15"
     },
     "lateFee": {
       "amount": 35,
@@ -27,11 +27,11 @@
   },
   "corpReport": {
     "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
-    "fee": "Waived if filed by April 15; $35 after",
     "feeDetail": {
       "basis": "flat",
       "amount": 0,
-      "waived": true
+      "waived": true,
+      "note": "if filed by April 15"
     },
     "lateFee": {
       "amount": 35,
@@ -42,10 +42,10 @@
     "title": "Renew limited partnership certificate",
     "frequency": "periodic",
     "deadline": "Renewal before the certificate term expires",
-    "fee": "$15 (certificate of renewal)",
     "feeDetail": {
       "basis": "flat",
-      "amount": 15
+      "amount": 15,
+      "note": "certificate of renewal"
     },
     "lateFee": {
       "amount": 35,
@@ -56,10 +56,10 @@
     "title": "Renew LLP registration",
     "frequency": "periodic",
     "deadline": "Renewal before the registration term expires",
-    "fee": "$20 (renewal of registration)",
     "feeDetail": {
       "basis": "flat",
-      "amount": 20
+      "amount": 20,
+      "note": "renewal of registration"
     },
     "lateFee": {
       "amount": 35,

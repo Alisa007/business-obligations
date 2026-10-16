@@ -22,18 +22,17 @@
   "corpReport": {
     "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
     "deadline": "15th day of the 4th month after fiscal year end",
-    "fee": "$18 online (plus $3 card fee)",
     "feeDetail": {
       "basis": "flat",
       "amount": 18,
-      "online": 18
+      "online": 18,
+      "note": "plus $3 card fee"
     }
   },
   "lpReport": null,
   "llpReport": {
     "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
     "deadline": "15th day of the 4th month after fiscal year end",
-    "fee": "$200 ($203 online)",
     "feeDetail": {
       "basis": "flat",
       "amount": 200,

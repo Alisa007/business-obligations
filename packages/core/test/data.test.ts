@@ -8,6 +8,7 @@ import { PROFILE_FIELDS, STATES } from "../src";
 import { COUNTY_JURISDICTIONS, LOCAL_JURISDICTIONS, findCity, findCounty } from "../src/data";
 import type { LocalItem } from "../src/data/types";
 import { describeSchedule, parseRRule, toRRule } from "../src/rrule";
+import { describeFee } from "../src/fee";
 import { describeTrigger } from "../src/trigger";
 
 const root = path.resolve(__dirname, "..");
@@ -121,6 +122,27 @@ describe("state data files", () => {
     }
   });
 
+  it("generates the fee text from feeDetail", () => {
+    const text = (code: string, key: string) => describeFee(read(`data/states/${code}.json`)[key].feeDetail);
+    expect(text("TX", "llcReport")).toBe(
+      "Free (no tax due at or below $2.65 million of annualized revenue (2026 report))",
+    );
+    expect(text("AK", "llcReport")).toBe("$100");
+    expect(text("IA", "llcReport")).toBe("$30 online ($45 paper)");
+    expect(text("HI", "corpReport")).toBe("$15 ($12.50 if filed online)");
+    expect(text("GA", "llcReport")).toBe("$50 ($60 online; includes a service charge)");
+    expect(text("MN", "llpReport")).toBe("$155 online ($135 paper)");
+    expect(text("MT", "llcReport")).toBe("Waived (if filed by April 15)");
+    expect(text("IL", "llpReport")).toBe("$100 per partner (minimum $200, maximum $5,000; form UPA 1003(D))");
+    expect(text("TN", "lpReport")).toBe("$50 per partner (minimum $250, maximum $2,500; estimate)");
+    expect(text("TN", "llcReport")).toBe("$300 base, plus $50 per member over 6 (maximum $3,000)");
+    expect(text("MO", "llpReport")).toBe("$105 plus $50 per partner (maximum $205)");
+    expect(text("SC", "corpReport")).toBe(
+      "0.1% (of capital stock and paid-in surplus, plus $15; minimum $25)",
+    );
+    expect(text("WY", "llcReport")).toBe("From $60 (or 0.0002 of Wyoming assets, if greater)");
+  });
+
   it("keeps related state fields consistent", () => {
     for (const f of files) {
       const s = read(`data/states/${f}`);
@@ -157,18 +179,24 @@ describe("state data files", () => {
     }
   });
 
-  it("stores fee text only where the numbers cannot say it", async () => {
-    const { describeFee } = await import("../src/fee");
+  it("writes each fee once, in feeDetail, and never repeats its numbers in the note", () => {
+    const money = (n: number) => `$${Number.isInteger(n) ? n.toLocaleString("en-US") : n.toFixed(2)}`;
     for (const f of files) {
       const s = read(`data/states/${f}`);
       for (const k of ["llcReport", "corpReport", "lpReport", "llpReport", "businessLicense"]) {
         const node = s[k];
         if (!node) continue;
+        expect(node.fee, `${f} ${k} has fee text next to feeDetail`).toBeUndefined();
         expect(node.feeDetail, `${f} ${k}`).toBeDefined();
-        if (node.fee) {
-          expect(node.fee, `${f} ${k} fee repeats feeDetail`).not.toBe(describeFee(node.feeDetail));
-          expect(node.feeDetail.note, `${f} ${k} note repeats fee`).not.toBe(node.fee);
-        } else expect(describeFee(node.feeDetail), `${f} ${k} needs fee text`).toBeDefined();
+        const note: string = node.feeDetail.note ?? "";
+        for (const key of ["amount", "online", "paper", "perUnit", "min", "max"] as const) {
+          const v = node.feeDetail[key];
+          if (typeof v === "number")
+            expect(note.includes(money(v)) && v !== 0, `${f} ${k}: note repeats ${key} ${money(v)}`).toBe(
+              false,
+            );
+        }
+        expect(describeFee(node.feeDetail), `${f} ${k}`).not.toMatch(/undefined|NaN/);
       }
     }
   });
@@ -389,6 +417,28 @@ describe("local and profession data schemas", () => {
       { ...ok, status: undefined, items: [{ ...item, due: { type: "date", date: "2026-02-30" } }] },
     ];
     for (const entry of bad) expect(cityFile([entry]), JSON.stringify(entry)).toBe(false);
+    // An item names its page, and a county entry says when it was checked.
+    expect(cityFile([{ ...ok, status: undefined, items: [item] }])).toBe(false);
+    expect(cityFile([{ ...ok, status: undefined, items: [{ ...item, url: "https://example.gov/x" }] }])).toBe(
+      true,
+    );
+    expect(
+      countyFile([{ county: "Travis", status: "unverified", note: "No filing was confirmed.", items: [] }]),
+    ).toBe(false);
+  });
+
+  it("requires the numbers a fee basis needs", () => {
+    const report = read("data/states/AK.json");
+    const withFee = (feeDetail: unknown) => ({ ...report, llcReport: { ...report.llcReport, feeDetail } });
+    const fresh = new Ajv2020({ allErrors: true, strict: false });
+    addFormats(fresh);
+    const validate = fresh.compile(read("schema/state.schema.json"));
+    expect(validate(withFee({ basis: "flat", amount: 100 }))).toBe(true);
+    expect(validate(withFee({ basis: "flat" }))).toBe(false);
+    expect(validate(withFee({ basis: "none" }))).toBe(false);
+    expect(validate(withFee({ basis: "per_partner", amount: 100 }))).toBe(false);
+    expect(validate(withFee({ basis: "percent", min: 25 }))).toBe(false);
+    expect(validate(withFee({ basis: "varies", note: "by license category" }))).toBe(true);
   });
 });
 

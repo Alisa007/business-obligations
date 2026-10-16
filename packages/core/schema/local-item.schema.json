@@ -4,7 +4,7 @@
   "title": "City or county obligation",
   "type": "object",
   "additionalProperties": false,
-  "required": ["id", "title", "category", "authority", "description", "appliesTo"],
+  "required": ["id", "title", "category", "authority", "description", "url", "appliesTo"],
   "properties": {
     "id": {
       "type": "string",
@@ -46,95 +46,6 @@
       "minLength": 3,
       "pattern": "^\\S(.*[^\\s.])?$",
       "description": "Human-readable deadline; month names in full (\"April 15\"). Machine form goes in `due`."
-    },
-    "due": {
-      "oneOf": [
-        {
-          "type": "object",
-          "additionalProperties": false,
-          "required": ["type", "date"],
-          "properties": {
-            "type": {
-              "const": "date"
-            },
-            "date": {
-              "type": "string",
-              "format": "date",
-              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
-            }
-          }
-        },
-        {
-          "type": "object",
-          "additionalProperties": false,
-          "required": ["type", "month", "day"],
-          "properties": {
-            "type": {
-              "const": "fixed"
-            },
-            "month": {
-              "type": "integer",
-              "minimum": 1,
-              "maximum": 12
-            },
-            "day": {
-              "type": "integer",
-              "minimum": 1,
-              "maximum": 31
-            },
-            "parity": {
-              "enum": ["odd", "even"]
-            },
-            "cycleFrom": {
-              "enum": ["formation_year", "year_after_formation"]
-            }
-          }
-        },
-        {
-          "type": "object",
-          "additionalProperties": false,
-          "required": ["type", "dates"],
-          "properties": {
-            "type": {
-              "const": "multi"
-            },
-            "dates": {
-              "type": "array",
-              "minItems": 2,
-              "items": {
-                "type": "object",
-                "additionalProperties": false,
-                "required": ["month", "day"],
-                "properties": {
-                  "month": {
-                    "type": "integer",
-                    "minimum": 1,
-                    "maximum": 12
-                  },
-                  "day": {
-                    "type": "integer",
-                    "minimum": 1,
-                    "maximum": 31
-                  }
-                }
-              }
-            }
-          }
-        },
-        {
-          "type": "object",
-          "additionalProperties": false,
-          "required": ["type", "point"],
-          "properties": {
-            "type": {
-              "const": "anniversary"
-            },
-            "point": {
-              "enum": ["start_of_month", "end_of_month", "date"]
-            }
-          }
-        }
-      ]
     },
     "url": {
       "type": "string",

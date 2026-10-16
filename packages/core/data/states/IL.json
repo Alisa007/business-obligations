@@ -50,12 +50,12 @@
     "title": "File LLP renewal statement",
     "rrule": "FREQ=YEARLY",
     "deadline": "Within the 60 days before the registration expires; registration lasts one year",
-    "fee": "$100 per partner (minimum $200, maximum $5,000); form UPA 1003(D)",
     "feeDetail": {
       "basis": "per_partner",
       "perUnit": 100,
       "min": 200,
-      "max": 5000
+      "max": 5000,
+      "note": "form UPA 1003(D)"
     },
     "lateFee": {
       "amount": 100,
