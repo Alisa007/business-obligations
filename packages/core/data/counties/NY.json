@@ -2,8 +2,7 @@
   {
     "county": "Albany",
     "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
+    "note": "Albany County lists a short term rental tax covering all hotel rooms and short term rentals on its taxes page, and a county document cited 6.5% from January 1, 2025 with quarterly returns due March, June, September and December 20, but the county's current rate, registration and return pages could not be read. Other county-level business duties were not checked.",
     "items": [],
     "checkedOn": "2026-10-15"
   },
@@ -344,18 +343,88 @@
   },
   {
     "county": "Dutchess",
-    "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
-    "items": [],
+    "items": [
+      {
+        "id": "dutchess-ny.occupancy-tax-registration",
+        "title": "Register for the Dutchess County occupancy tax",
+        "category": "registration",
+        "authority": "Dutchess County Commissioner of Finance",
+        "description": "Every hotel, motel, bed and breakfast, boarding house, conference center, short-term rental and tourist home used to lodge guests registers with the Commissioner of Finance through the county's secure online process.",
+        "frequency": "once",
+        "url": "https://www.dutchessny.gov/Departments/Finance/Hotel-Occupancy-Tax.htm",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "dutchess-ny.occupancy-tax-return",
+        "title": "File the Dutchess County occupancy tax return",
+        "category": "filing",
+        "authority": "Dutchess County Commissioner of Finance",
+        "description": "Operators file quarterly, 20 days after each quarter ends (April, July, October and January 20), and remit the tax, which rose from 4% to 5% under Local Law 1 of 2025 (the county asked operators to apply it from March 1, 2025). Airbnb already collects the tax on its bookings; operators must collect it on all other short-term rentals.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=20",
+        "url": "https://www.dutchessny.gov/Departments/Finance/Hotel-Occupancy-Tax.htm",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
     "checkedOn": "2026-10-15"
   },
   {
     "county": "Erie",
-    "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
-    "items": [],
+    "items": [
+      {
+        "id": "erie-ny.occupancy-tax-registration",
+        "title": "Register for the Erie County occupancy tax",
+        "category": "registration",
+        "authority": "Erie County Comptroller, Hotel Tax Division",
+        "description": "Operators file a Certificate of Registration with the Comptroller, who issues a Certificate of Authority to collect the tax under Local Law 01-2024. Short-term rental registrations are renewed every two years.",
+        "frequency": "once",
+        "deadline": "Within three days after opening the business or acquiring the hotel",
+        "url": "https://www4.erie.gov/comptroller/hotel-tax-registration-and-return",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "erie-ny.occupancy-tax-return",
+        "title": "File the Erie County occupancy tax return",
+        "category": "filing",
+        "authority": "Erie County Comptroller, Hotel Tax Division",
+        "description": "A return is required every quarter, even when no tax was collected, with payment of any tax due (3% for hotels with 30 or fewer rooms, 5% for larger hotels). Returns are due March 20, June 20, September 20 and December 20. A vendor that owed no more than $250 over the four quarters ending May 31 may file once a year, by June 20. Online payment by ACH or card carries convenience fees.",
+        "rrule": "FREQ=YEARLY;BYMONTH=3,6,9,12;BYMONTHDAY=20",
+        "exemptions": ["Permanent residents"],
+        "url": "https://www4.erie.gov/comptroller/hotel-tax-registration-and-return",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
     "checkedOn": "2026-10-15"
   },
   {
@@ -667,10 +736,44 @@
   },
   {
     "county": "Monroe",
-    "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
-    "items": [],
+    "items": [
+      {
+        "id": "monroe-ny.occupancy-tax-registration",
+        "title": "Register for the Monroe County occupancy tax",
+        "category": "registration",
+        "authority": "Monroe County Department of Finance, Hotel Tax Division",
+        "description": "Operators complete the Certificate of Registration and Application for Certificate of Authority to Collect Hotel Room Occupancy Tax and send it to the Hotel Tax Division in Rochester. Monroe County opted out of the state short-term rental registry (Local Law 8 of 2025), which also requires some extra information on returns.",
+        "frequency": "once",
+        "url": "https://Www2.monroecounty.gov/files/finance/Hotel_RegForm.pdf",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "monroe-ny.occupancy-tax-return",
+        "title": "File the Monroe County occupancy tax return",
+        "category": "filing",
+        "authority": "Monroe County Department of Finance, Hotel Tax Division",
+        "description": "Operators file a Return of Tax on Occupancy of Hotel Rooms each quarter, due the 20th of April, July, October and January, and remit 6% of taxable room rental income. A late return adds a 9% penalty on the tax due and interest of 1.5% a month after 30 days.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=20",
+        "url": "https://www.monroecounty.gov/files/finance/tax-on-occupancy-hotel-rooms-form-fillable-v2.pdf",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
     "checkedOn": "2026-10-15"
   },
   {
@@ -1431,8 +1534,7 @@
   {
     "county": "Wayne",
     "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
+    "note": "New York Tax Law section 1202-ii (2023) lets Wayne County tax hotel, motel and seasonal rental occupancy at up to 5%, but no county local law, registration or return pages were found. Other county-level business duties were not checked.",
     "items": [],
     "checkedOn": "2026-10-15"
   },
