@@ -214,7 +214,7 @@ jobs:
           git push origin "$branch"
           gh label create local-coverage-bot --description "Opened by the local coverage bot" 2>/dev/null || true
           gh pr create --base main --head "$branch" \
-            --title "Seed missing cities and counties (local coverage bot)" \
+            --title "fix(data): seed missing cities and counties (local coverage bot)" \
             --body-file "$RUNNER_TEMP/in/pr-body.md" --label local-coverage-bot
           # Pull requests opened with GITHUB_TOKEN do not start CI, so start it on the branch ourselves; the
           # required checks match by name and commit.
