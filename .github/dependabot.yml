@@ -7,6 +7,11 @@ updates:
     open-pull-requests-limit: 5
     commit-message:
       prefix: "chore(deps)"
+    ignore:
+      # TypeScript 7 is the native compiler without the JavaScript API that typescript-eslint and tsup's type
+      # generation use, and typescript-eslint supports TypeScript below 6.1 only. Revisit when it supports 7.
+      - dependency-name: "typescript"
+        versions: [">=6.1.0"]
   - package-ecosystem: github-actions
     directory: /
     schedule:
