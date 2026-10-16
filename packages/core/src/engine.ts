@@ -33,19 +33,20 @@ import {
 
 /** Rule packs by country. Add a country by registering its pack here. */
 export const RULE_PACKS: Record<Country, Rule[]> = {
-  US: [
-    ...federalRules,
-    ...stateRules,
-    ...extraStateRules,
-    ...industryRules,
-    ...localRules,
-    ...premisesRules,
-    ...dissolutionRules,
-  ],
+  // `.flat()` rather than spreads: bundlers can drop an unused call marked pure, but not an array spread.
+  US: /* @__PURE__ */ [
+    federalRules,
+    stateRules,
+    extraStateRules,
+    industryRules,
+    localRules,
+    premisesRules,
+    dissolutionRules,
+  ].flat(),
 };
 
 /** The built-in US rules. */
-export const defaultRules: Rule[] = RULE_PACKS.US;
+export const defaultRules: Rule[] = /* @__PURE__ */ (() => RULE_PACKS.US)();
 
 export const DATA_VERSION = "2026-10-13";
 

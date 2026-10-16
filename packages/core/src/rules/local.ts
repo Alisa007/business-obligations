@@ -174,8 +174,8 @@ export const localRules: Rule[] = [
         : "Business operates from commercial premises",
     }),
   },
-  seededCityRule(findCity),
-  seededCountyRule(findCounty),
+  /* @__PURE__ */ seededCityRule(findCity),
+  /* @__PURE__ */ seededCountyRule(findCounty),
 ];
 
 /** City permits triggered by premises facts rather than by seeded city data. */
