@@ -1,10 +1,9 @@
 // Automatic versioning for continuous deployment. Reads the commit subjects that touched packages/core since the last
-// v* tag and decides the next version from Conventional Commit titles. Nothing is committed: the version lives in the
-// git tag and GitHub release; package.json is only set inside the release build.
+// v* tag and decides the next version from Conventional Commit titles.
 //
 //   node scripts/auto-release.mjs                    print { current, bump, version, commits } as JSON
-//   node scripts/auto-release.mjs --apply            also set "version" in package.json (release build only)
-//   node scripts/auto-release.mjs --notes FILE       also write generated release notes (Markdown) to FILE
+//   node scripts/auto-release.mjs --apply            also set "version" in package.json and add the changelog section
+//   node scripts/auto-release.mjs --notes FILE       also write the generated release notes (Markdown) to FILE
 //
 // Rules (squash merges make each PR title the commit subject):
 //   feat: -> minor    fix:, perf:, revert: -> patch    "type!:" or a BREAKING CHANGE footer -> major
@@ -16,6 +15,7 @@ import { fileURLToPath } from "node:url";
 
 const here = (p) => fileURLToPath(new URL(p, import.meta.url));
 const pkgPath = here("../package.json");
+const logPath = here("../CHANGELOG.md");
 
 const RELEASING = new Set(["feat", "fix", "perf", "revert"]);
 const SECTIONS = [
@@ -70,6 +70,19 @@ export function renderGenerated(commits) {
   return out.join("\n").trim();
 }
 
+/** Moves hand-written Unreleased notes plus the generated entries under a dated version heading. */
+export function applyChangelog(log, version, date, commits) {
+  const marker = "## [Unreleased]";
+  const start = log.indexOf(marker);
+  if (start < 0) throw new Error("CHANGELOG.md has no [Unreleased] section");
+  const after = start + marker.length;
+  const next = log.indexOf("\n## [", after);
+  const manual = log.slice(after, next < 0 ? undefined : next).trim();
+  const body = [manual, renderGenerated(commits)].filter(Boolean).join("\n\n") || "Maintenance release.";
+  const tail = next < 0 ? "" : log.slice(next);
+  return `${log.slice(0, start)}${marker}\n\n## [${version}] - ${date}\n\n${body}\n${tail}`;
+}
+
 function git(...args) {
   return execFileSync("git", args, { encoding: "utf8", cwd: here("..") }).trim();
 }
@@ -102,13 +115,17 @@ export function commitsSinceLastTag() {
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const pkg = JSON.parse(readFileSync(pkgPath, "utf8"));
-  // The tag is the source of truth for what is published; package.json only seeds the very first release.
+  // The last tag is what is published; package.json only seeds the very first release.
   const tag = lastTag();
   const current = tag ? tag.replace(/^v/, "") : pkg.version;
   const commits = commitsSinceLastTag();
   const bump = decideBump(commits, current);
   const version = bump ? bumpVersion(current, bump) : null;
   if (version && process.argv.includes("--apply")) {
+    const t = new Date();
+    const pad = (n) => String(n).padStart(2, "0");
+    const date = `${t.getFullYear()}-${pad(t.getMonth() + 1)}-${pad(t.getDate())}`;
+    writeFileSync(logPath, applyChangelog(readFileSync(logPath, "utf8"), version, date, commits));
     writeFileSync(pkgPath, `${JSON.stringify({ ...pkg, version }, null, 2)}\n`);
   }
   const notesAt = process.argv.indexOf("--notes");
