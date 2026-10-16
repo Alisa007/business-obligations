@@ -6,6 +6,7 @@ import type {
   ResolvedProfile,
   Rule,
   Country,
+  Industry,
 } from "./types";
 import { stateFromZip } from "./zip";
 import { isState } from "./states";
@@ -14,11 +15,11 @@ import { extraStateRules, stateRules } from "./rules/state";
 import { dissolutionRules } from "./rules/dissolution";
 import { isIsoDate, todayIso } from "./iso";
 import { validateProfile, type ProfileIssue } from "./validate";
-import { localRules } from "./rules/local";
+import { localRules, premisesRules } from "./rules/local";
 import { industryRules } from "./rules/industry";
 import { nextDueDate } from "./dates";
 import { describeProvenance, provenanceFor } from "./provenance";
-import { jurisdictionId, STATE_FIPS } from "./jurisdiction";
+import { jurisdictionId, placeFacts, STATE_FIPS } from "./jurisdiction";
 import {
   BUNDLED_CHANGES,
   RULESET_VERSION,
@@ -37,6 +38,7 @@ export const RULE_PACKS: Record<Country, Rule[]> = {
     ...extraStateRules,
     ...industryRules,
     ...localRules,
+    ...premisesRules,
     ...dissolutionRules,
   ],
 };
@@ -127,6 +129,8 @@ export function resolveProfile(input: BusinessProfile): ResolvedProfile {
   nonNeg("annualRevenue", input.annualRevenue);
   nonNeg("annualNetIncome", input.annualNetIncome);
   nonNeg("largestContractorPaymentUsd", input.largestContractorPaymentUsd);
+  if (input.naics !== undefined && !/^\d{2,6}$/.test(input.naics))
+    throw new InvalidProfileError("`naics` must be a 2 to 6 digit NAICS code");
   nonNeg("projectValueUsd", input.projectValueUsd);
   nonNeg("disturbedAcres", input.disturbedAcres);
   nonNeg("floorAreaSqFt", input.floorAreaSqFt);
@@ -202,7 +206,7 @@ export function resolveProfile(input: BusinessProfile): ResolvedProfile {
     state,
     formationState,
     isFormed: input.isFormed ?? true,
-    industry: input.industry ?? "general",
+    industry: input.industry ?? industryFromNaics(input.naics) ?? "general",
     employeeCount,
     fullTimeEmployeeCount: input.fullTimeEmployeeCount ?? employeeCount,
     hasEmployees: employeeCount > 0,
@@ -250,6 +254,17 @@ export interface ComplianceResult {
 }
 
 const today = () => todayIso();
+
+/** Industry implied by a NAICS code, for the sectors that map cleanly onto the bundled industries. */
+function industryFromNaics(naics: string | undefined): Industry | undefined {
+  if (!naics) return undefined;
+  if (naics.startsWith("23")) return "construction";
+  if (naics.startsWith("722")) return "restaurant";
+  if (naics.startsWith("44") || naics.startsWith("45")) return "retail";
+  if (naics.startsWith("531")) return "real_estate";
+  if (/^62[123]/.test(naics)) return "healthcare";
+  return undefined;
+}
 const FEEDBACK_URL =
   "https://github.com/Alisa007/business-obligations/issues/new?template=data-correction.yml&title=";
 
@@ -291,6 +306,12 @@ export function evaluate(input: BusinessProfile, options: EvaluateOptions = {}):
         item.provenance = describeProvenance(provenanceFor(item, profile), asOf);
         item.jurisdictionId = jurisdictionId(item, profile);
         if (item.state && STATE_FIPS[item.state]) item.stateFips = STATE_FIPS[item.state];
+        const facts = placeFacts(item, profile);
+        if (facts) {
+          item.fips = facts.fips;
+          if (item.jurisdiction === "city" && facts.incorporated !== undefined)
+            item.incorporated = facts.incorporated;
+        }
         item.feedbackUrl = `${FEEDBACK_URL}${encodeURIComponent(`Data correction: ${item.id}`)}`;
         const upcoming = changes
           .filter((c) => c.effective > asOf && changeMatchesItem(c, item))
@@ -298,6 +319,14 @@ export function evaluate(input: BusinessProfile, options: EvaluateOptions = {}):
           .map(toNotice);
         if (upcoming.length) item.upcomingChanges = upcoming;
         items.push(item);
+      }
+    }
+    // An item that supersedes another marks it as preempted, so consumers can hide or explain the loser.
+    const byId = new Map(items.map((it) => [it.id, it]));
+    for (const it of items) {
+      for (const target of it.supersedes ?? []) {
+        const other = byId.get(target);
+        if (other && other !== it && !other.preemptedBy) other.preemptedBy = it.id;
       }
     }
     const states = new Set([profile.formationState, ...profile.presence.map((x) => x.state)]);

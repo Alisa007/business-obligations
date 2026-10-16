@@ -40,6 +40,15 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 - **Applicability and precedence fields:** `appliesWhen` (machine-readable conditions), `exemptions`, `supersedes` and
   `preemptedBy`, available to rules and data packs. The new stormwater rule is the first to populate them.
 - **Filing mechanics:** optional `formId`, `filingMethod`, `processingTime` and `renewal` on items (set for the EIN).
+- **Census FIPS codes and incorporated status.** County items carry a 5-digit `fips`, city items a 7-digit place `fips`
+  and `incorporated`, for the 301 counties and 299 cities in `data/` that match the 2020 Census unambiguously (the
+  rest, such as consolidated city-counties, are left out rather than guessed). Regenerate with
+  `node scripts/build-places.mjs <census dir>`.
+- **Precedence is resolved.** An item listing another item's id in `supersedes` marks it `preemptedBy`.
+- **New rules for the new inputs:** sign permit (`hasSignage`), building permit (`projectValueUsd`), food permit for
+  non-restaurants (`foodService`); the certificate-of-occupancy and contractor items now use `floorAreaSqFt` and
+  `licenseClass`; `naics` implies an industry for construction, food service, retail, real estate and healthcare.
+- `formId` and `filingMethod` on the federal income tax return, Form 941, Form 940, Form 1099-NEC and Form 1023.
 - **New profile inputs:** `naics`, `activities`, `projectValueUsd`, `disturbedAcres`, `licenseClass`, `floorAreaSqFt`,
   `hasSignage`, `foodService`. `disturbedAcres` of 1 or more adds the NPDES construction stormwater permit for
   construction businesses; the others are accepted and validated for upcoming local rules.

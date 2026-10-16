@@ -37,7 +37,7 @@ export const industryRules: Rule[] = [
   {
     id: "industry.construction",
     description: "Contractor licensing",
-    inputs: ["industry", "state", "zip"],
+    inputs: ["industry", "state", "zip", "licenseClass"],
     when: (p) => p.industry === "construction",
     items: (p) => ({
       title: auth(p.state).contractor
@@ -50,7 +50,8 @@ export const industryRules: Rule[] = [
         auth(p.state).contractor ??
         `${p.city} building department and state trade boards (${stateName(p.state)})`,
       description:
-        "Contractors generally need a license or registration, bonding and proof of insurance; thresholds and classifications vary.",
+        "Contractors generally need a license or registration, bonding and proof of insurance; thresholds and classifications vary." +
+        (p.licenseClass ? ` Classification requested: ${p.licenseClass}.` : ""),
       frequency: "biennial",
       reason: "Industry is construction",
     }),
@@ -84,6 +85,49 @@ export const industryRules: Rule[] = [
       filingMethod: ["online"],
       reason: `Construction site disturbs ${p.disturbedAcres} acres (one acre or more triggers coverage)`,
       url: "https://www.epa.gov/npdes/stormwater-discharges-construction-activities",
+    }),
+  },
+  {
+    id: "industry.construction-building-permit",
+    description: "Building permits for a construction project",
+    inputs: ["industry", "projectValueUsd", "city", "county", "state"],
+    when: (p) => p.industry === "construction" && (p.projectValueUsd ?? 0) > 0,
+    items: (p) => ({
+      title: "Obtain building permit(s) for the construction project",
+      category: "permit",
+      jurisdiction: "city",
+      state: p.state,
+      authority: `${p.city} building department (or ${p.county} County where unincorporated)`,
+      description:
+        "Most jurisdictions require a building permit, plan review and inspections before work starts; fees are usually based on project valuation, and separate trade permits (electrical, plumbing, mechanical) are common.",
+      frequency: "per_event",
+      appliesWhen: [
+        {
+          field: "projectValueUsd",
+          op: ">",
+          value: 0,
+          description: "A construction project with a stated value",
+        },
+      ],
+      reason: `Construction project valued at ${p.projectValueUsd} USD`,
+    }),
+  },
+  {
+    id: "industry.food-service-premises",
+    description: "Food permits for businesses that serve food but are not restaurants",
+    inputs: ["foodService", "industry", "county", "state"],
+    when: (p) => p.foodService === true && p.industry !== "restaurant",
+    items: (p) => ({
+      title: "Obtain food establishment / health permit",
+      category: "permit",
+      jurisdiction: "county",
+      state: p.state,
+      authority: `${p.county} County health department (${stateName(p.state)})`,
+      description:
+        "Businesses that prepare or serve food (cafes inside retail, caterers, bars with food) generally need a health department permit and inspection, even when food is not their main activity.",
+      frequency: "annual",
+      appliesWhen: [{ field: "foodService", op: "==", value: true, description: "Prepares or serves food" }],
+      reason: "Business prepares or serves food",
     }),
   },
   {
