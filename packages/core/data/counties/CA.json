@@ -49,7 +49,8 @@
         "appliesTo": ["all"]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16",
+    "note": "Contra Costa County levies a 10% transient occupancy tax in unincorporated areas, but its due date was not found."
   },
   {
     "county": "Fresno",
@@ -66,7 +67,8 @@
         "appliesTo": ["all"]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16",
+    "note": "Fresno County had no transient occupancy tax in its unincorporated areas as of early 2026; the Board of Supervisors voted to put a 12% tax on the November 2026 ballot, and the outcome was not confirmed."
   },
   {
     "county": "Kern",
@@ -536,9 +538,27 @@
         "deadlineNote": "penalty after May 7",
         "url": "https://santacruzcountyca.gov/Departments/AssessorsOffice/BusinessPersonalProperty/BusinessProperty.aspx",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "santa-cruz-ca.transient-occupancy-tax-return",
+        "title": "File the Santa Cruz County transient occupancy tax return",
+        "category": "filing",
+        "authority": "Santa Cruz County Tax Collector",
+        "description": "Applies to hotels, motels and short-term rentals in the unincorporated area. The tax is 12% for hotels and motels and 14% for vacation rentals. Returns are quarterly: April 30, July 31, October 31 and January 31. Register within 30 days of starting. Airbnb and VRBO remit for bookings made through them. The Tourism Marketing District assessment is separate.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
+        "url": "https://santacruzcountyca.gov/Departments/TaxCollector/TaxCollectionDivision/TOT.aspx",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Solano",
@@ -552,6 +572,24 @@
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": "https://www.boe.ca.gov/proptaxes/forms.htm",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "solano-ca.transient-occupancy-tax-return",
+        "title": "File the Solano County transient occupancy tax return",
+        "category": "filing",
+        "authority": "Solano County Treasurer-Tax Collector-County Clerk",
+        "description": "Applies to hotels, motels and short-term rentals in the unincorporated area. The tax is 5% of rent. Returns are quarterly, due October 31, January 31, April 30 and July 31, counted as on time only if received or postmarked by then (County Code chapter 11-26 penalties).",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
+        "url": "https://solanocounty.com/depts/ttcc/tax_collector/transient_occupancy_tax.asp",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
       }
     ],
     "checkedOn": "2026-10-16"
@@ -569,9 +607,27 @@
         "deadlineNote": "penalty after May 7",
         "url": "https://sonomacounty.gov/administrative-support-and-fiscal-services/clerk-recorder-assessor/assessor/business-and-personal-property",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "sonoma-ca.transient-occupancy-tax-return",
+        "title": "File the Sonoma County transient occupancy tax return",
+        "category": "filing",
+        "authority": "Sonoma County Auditor-Controller-Treasurer-Tax Collector",
+        "description": "Applies to hotels, motels and short-term rentals in the unincorporated area. The tax is 12%. Returns are quarterly, due by 5 p.m. on April 30, July 31, October 31 and January 31, and are required even if no tax is due. The county's pages differ on whether a weekend due date moves to the next business day. File online through the HdL portal or by mail. Keep records for five years.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
+        "url": "https://sonomacounty.gov/acttc-tot/bia-due-dates-and-contact-information",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Stanislaus",
@@ -585,6 +641,24 @@
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": "https://www.boe.ca.gov/proptaxes/forms.htm",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "stanislaus-ca.transient-occupancy-tax-return",
+        "title": "File the Stanislaus County transient occupancy tax return",
+        "category": "filing",
+        "authority": "Stanislaus County Treasurer-Tax Collector",
+        "description": "Applies to hotels, motels and short-term rentals in the unincorporated area. The tax is 8%. The quarterly report is due the last day of the month after each quarter and must be filed even if no tax is due. Late penalty is 10% within 30 days and 20% after, plus 0.5% monthly interest.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
+        "url": "https://www.stancounty.com/tr-tax/pdf/transient-occupancy-tax-2025.pdf",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
       }
     ],
     "checkedOn": "2026-10-16"
@@ -602,9 +676,27 @@
         "deadlineNote": "penalty after May 7",
         "url": "https://tularecounty.ca.gov/assessor/property-information/business-owners/property-statements",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "tulare-ca.transient-occupancy-tax-return",
+        "title": "File the Tulare County transient occupancy tax return",
+        "category": "filing",
+        "authority": "Tulare County Treasurer-Tax Collector",
+        "description": "Applies to hotels, motels and short-term rentals in the unincorporated area. The tax is 10% of rent for vacation rentals. Taxes are due quarterly and the Tax Collector sends a quarterly statement to complete and return; the exact due dates were not found. File online with the certificate or agent number and business ID.",
+        "frequency": "quarterly",
+        "url": "https://tularecounty.ca.gov/treasurertaxcollector/tax-collector/faqs/what-is-a-transient-occupancy-tax-tot-",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Ventura",
@@ -619,8 +711,26 @@
         "deadlineNote": "penalty after May 7",
         "url": "https://assessor.venturacounty.gov/property-information/business-owners/property-statement-filing/",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "ventura-ca.transient-occupancy-tax-return",
+        "title": "File the Ventura County transient occupancy tax return",
+        "category": "filing",
+        "authority": "Ventura County Treasurer-Tax Collector",
+        "description": "Applies to hotels, motels and short-term rentals in the unincorporated area. The tax is 8% of rent, remitted quarterly. The county page gives April 30 and July 31 for the first two quarters; October 31 and January 31 follow the same pattern but were not seen. TOT desk: (805) 654-3727.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
+        "url": "https://ventura.org/ttc/?p=249",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16"
   }
 ]
