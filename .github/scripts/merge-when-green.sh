@@ -29,7 +29,8 @@ gh run watch "$run" --interval 15 --exit-status
 now=$(gh pr view "$pr" --json headRefOid --jq .headRefOid)
 [ "$now" = "$sha" ] || { echo "#$pr changed while CI ran; leaving it for the next run."; exit 0; }
 
-gh pr merge "$pr" --squash --delete-branch
+gh pr merge "$pr" --squash --repo "$GITHUB_REPOSITORY"
+gh api -X DELETE "repos/$GITHUB_REPOSITORY/git/refs/heads/$branch" || echo "::warning::Could not delete $branch."
 echo "Merged #$pr"
 gh workflow run release.yml --ref main -f dry_run=false
 gh workflow run pages.yml --ref main
