@@ -9,8 +9,8 @@
         "category": "license",
         "authority": "City of Birmingham Finance Department, Tax and License Administration Division",
         "description": "Businesses in Birmingham need a city business license. The license year runs January 1 to December 31 and licenses expire on December 31.",
-        "frequency": "annual",
-        "deadline": "Licenses expire December 31",
+        "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=31",
+        "deadlineNote": "licenses expire",
         "url": "https://birminghamal.gov/2024/08/09/the-city-of-birmingham-encourages-businesses-to-enroll-in-new-business-tax-and-license-system",
         "appliesTo": ["all"]
       }

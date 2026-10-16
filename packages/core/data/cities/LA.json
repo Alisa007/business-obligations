@@ -35,8 +35,8 @@
         "category": "license",
         "authority": "City of New Orleans Safety and Permits (zoning review) and Bureau of Revenue",
         "description": "Any business in Orleans Parish needs an occupational license, with zoning approval first and fees set by business type and gross sales; licenses expire December 31.",
-        "frequency": "annual",
-        "deadline": "Expires December 31",
+        "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=31",
+        "deadlineNote": "licenses expire",
         "url": "https://nola.gov/occupational-license/",
         "appliesTo": ["all"]
       }
