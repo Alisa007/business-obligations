@@ -3,14 +3,19 @@ name: Release
 # Continuous deployment with automatic versioning and a generated changelog, using only normal pull requests (no
 # personal access token, no bypass of branch protection).
 #
-#   1. A merge to main that touches packages/core and contains a releasable Conventional Commit title (feat, fix,
-#      perf, revert, or a breaking change) makes the "prepare" job open or update ONE pull request,
-#      "chore(release): vX.Y.Z", from branch release/next. It sets the version in packages/core/package.json and adds
-#      the generated section to CHANGELOG.md (hand-written Unreleased notes are kept). CI is started on the branch and
-#      auto-merge is enabled, so it merges itself once the required checks pass.
-#   2. The merge of that PR is itself a push to main whose title starts with "chore(release):". That run is the
-#      "build" and "publish" jobs: check, pack, smoke test, approval of the "npm" environment, npm publish, and a
-#      vX.Y.Z GitHub release (which creates the tag at that exact commit).
+# This workflow POLLS instead of waiting for a push: pull requests merged by the auto-merge workflow are merged by
+# github-actions[bot], and GitHub does not start workflows for pushes made with the Actions token. A schedule, a
+# push (when a person merges) and a manual run all do the same thing: look at the repository and decide the next step.
+#
+#   publish  package.json has a version that is neither on npm nor tagged (the release PR was merged):
+#            check, pack, smoke test, approval of the "npm" environment, npm publish, then a vX.Y.Z GitHub release,
+#            which creates the tag at that exact commit.
+#   prepare  otherwise, if releasable Conventional Commit titles landed since the last tag (feat, fix, perf, revert,
+#            or a breaking change; only commits touching packages/core): open or update ONE pull request,
+#            "chore(release): vX.Y.Z", from release/next that sets the version and adds the generated CHANGELOG.md
+#            section (hand-written Unreleased notes are kept). CI is started on the branch and auto-merge enabled.
+#   tag      the version is on npm but untagged (a previous run stopped after publishing): create the release.
+#   none     nothing to do.
 #
 # Version rules (packages/core/scripts/auto-release.mjs): feat -> minor; fix, perf, revert -> patch; breaking ->
 # major (minor before 1.0); docs, chore, ci, build, test, refactor, style do not release.
@@ -19,16 +24,18 @@ name: Release
 #   - npm trusted publishing (no secret): on npmjs.com open the package, Settings, Trusted Publisher, GitHub
 #     Actions, workflow release.yml, environment "npm". Provenance is attached automatically.
 #   - an NPM_TOKEN secret stored on the "npm" environment (granular token with publish rights and bypass-2FA).
-# Run it by hand (Actions > Release > Run workflow): with "dry run" on it only prints the version it would release.
+# Run it by hand (Actions > Release > Run workflow): with "dry run" on it only prints what it would do.
 
 on:
+  schedule:
+    - cron: "*/20 * * * *"
   push:
     branches: [main]
     paths: ["packages/core/**"]
   workflow_dispatch:
     inputs:
       dry_run:
-        description: Only print the version that would be released; do not open the release pull request
+        description: Only print what would happen; do not open a pull request or publish
         type: boolean
         default: true
 
@@ -40,8 +47,60 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  plan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      actions: read # to see whether the last run failed
+    outputs:
+      mode: ${{ steps.plan.outputs.mode }}
+      version: ${{ steps.plan.outputs.version }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0 # tags and history, to find the last release
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - name: Decide what to do
+        id: plan
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          pkg=$(node -p "require('./packages/core/package.json').version")
+          tagged=false; git rev-parse -q --verify "refs/tags/v$pkg" >/dev/null && tagged=true
+          published=false; npm view "business-obligations@$pkg" version >/dev/null 2>&1 && published=true
+          mode=none; version=""
+          if [ "$published" = false ] && [ "$tagged" = false ]; then
+            mode=publish; version=$pkg
+          elif [ "$published" = true ] && [ "$tagged" = false ]; then
+            mode=tag; version=$pkg
+          else
+            out=$(node packages/core/scripts/auto-release.mjs)
+            echo "$out"
+            version=$(node -p "JSON.parse(process.argv[1]).version || ''" "$out")
+            [ -n "$version" ] && mode=prepare
+          fi
+          # Back off: after a failed run (for example the npm trusted publisher is not configured yet), scheduled
+          # polls do not rebuild and retry every 20 minutes. A push or a manual run always goes ahead.
+          if [ "$mode" != none ] && [ "$GITHUB_EVENT_NAME" = schedule ]; then
+            recent=$(gh run list --workflow release.yml --limit 10 --json databaseId,conclusion,createdAt --jq \
+              "[.[] | select(.databaseId != $GITHUB_RUN_ID and .conclusion != null and .conclusion != \"cancelled\" and .conclusion != \"skipped\")][0] | select(.conclusion == \"failure\" and ((now - (.createdAt | fromdateiso8601)) < 21600)) | .databaseId" || true)
+            if [ -n "$recent" ]; then
+              echo "Run $recent failed less than 6 hours ago; not retrying on a schedule (run the workflow by hand to retry)." | tee -a "$GITHUB_STEP_SUMMARY"
+              mode=none; version=""
+            fi
+          fi
+          echo "mode=$mode" >> "$GITHUB_OUTPUT"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "Release plan: **$mode** ${version:+(v$version)}" | tee -a "$GITHUB_STEP_SUMMARY"
+
   prepare:
-    if: ${{ github.event_name == 'workflow_dispatch' || !startsWith(github.event.head_commit.message, 'chore(release):') }}
+    needs: plan
+    if: ${{ needs.plan.outputs.mode == 'prepare' && github.ref == 'refs/heads/main' && !(github.event_name == 'workflow_dispatch' && inputs.dry_run) }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
     permissions:
@@ -53,7 +112,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
         with:
-          fetch-depth: 0 # tags and history, to find the last release
+          fetch-depth: 0
 
       - uses: actions/setup-node@v7
         with:
@@ -63,27 +122,27 @@ jobs:
       # Dependency install scripts must not run in a release pipeline.
       - run: npm ci --ignore-scripts
 
-      - name: Decide the version and write the release files
+      - name: Write the release files
         id: ver
         run: |
           out=$(node packages/core/scripts/auto-release.mjs --apply --notes "$RUNNER_TEMP/notes.md")
           echo "$out"
-          v=$(node -p "JSON.parse(process.argv[1]).version || ''" "$out")
-          if [ -z "$v" ]; then
-            echo "No releasable commits (feat/fix/perf/revert/breaking) since the last tag; nothing to release." | tee -a "$GITHUB_STEP_SUMMARY"
-            echo "version=" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
+          echo "version=$(node -p "JSON.parse(process.argv[1]).version" "$out")" >> "$GITHUB_OUTPUT"
           npx prettier --write packages/core/CHANGELOG.md packages/core/package.json
-          echo "version=$v" >> "$GITHUB_OUTPUT"
-          { echo "Would release **v$v**"; echo; cat "$RUNNER_TEMP/notes.md"; } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Open or update the release pull request
-        if: ${{ steps.ver.outputs.version != '' && !(github.event_name == 'workflow_dispatch' && inputs.dry_run) }}
         env:
           VERSION: ${{ steps.ver.outputs.version }}
         run: |
           branch=release/next
+          # Nothing to do when the open release branch already carries exactly these files.
+          if git ls-remote --exit-code --heads origin "$branch" >/dev/null 2>&1; then
+            git fetch -q origin "$branch"
+            if git diff --quiet "origin/$branch" -- packages/core/package.json packages/core/CHANGELOG.md; then
+              echo "release/next is already up to date for v$VERSION"
+              exit 0
+            fi
+          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -B "$branch"
@@ -104,13 +163,12 @@ jobs:
           gh pr merge "$branch" --auto --squash
 
   build:
-    # A push to main whose title starts with "chore(release):" is the merge of the release pull request.
-    if: ${{ github.event_name == 'push' && startsWith(github.event.head_commit.message, 'chore(release):') }}
+    needs: plan
+    if: ${{ needs.plan.outputs.mode == 'publish' && github.ref == 'refs/heads/main' && !(github.event_name == 'workflow_dispatch' && inputs.dry_run) }}
     runs-on: ubuntu-latest
     timeout-minutes: 20
-    outputs:
-      version: ${{ steps.ver.outputs.version }}
-      publish: ${{ steps.ver.outputs.publish }}
+    env:
+      VERSION: ${{ needs.plan.outputs.version }}
     steps:
       - uses: actions/checkout@v7
         with:
@@ -121,27 +179,10 @@ jobs:
           node-version: 22
           cache: npm
 
+      # Dependency install scripts must not run in a release pipeline.
       - run: npm ci --ignore-scripts
 
-      - name: Version to publish
-        id: ver
-        run: |
-          v=$(node -p "require('./packages/core/package.json').version")
-          echo "version=$v" >> "$GITHUB_OUTPUT"
-          if git rev-parse -q --verify "refs/tags/v$v" >/dev/null; then
-            echo "v$v is already tagged; nothing to publish."
-            echo "publish=false" >> "$GITHUB_OUTPUT"
-          elif npm view "business-obligations@$v" version >/dev/null 2>&1; then
-            echo "business-obligations@$v is already on npm but has no tag; refusing to publish it again" >&2
-            exit 1
-          else
-            echo "publish=true" >> "$GITHUB_OUTPUT"
-          fi
-
       - name: Release notes from the changelog
-        if: steps.ver.outputs.publish == 'true'
-        env:
-          VERSION: ${{ steps.ver.outputs.version }}
         run: |
           node -e '
             const log = require("fs").readFileSync("packages/core/CHANGELOG.md", "utf8");
@@ -152,14 +193,10 @@ jobs:
           ' "$VERSION" > "$RUNNER_TEMP/notes.md"
 
       - run: npm run check
-        if: steps.ver.outputs.publish == 'true'
       - run: npm run build
-        if: steps.ver.outputs.publish == 'true'
       - run: npm run size
-        if: steps.ver.outputs.publish == 'true'
 
       - name: Pack
-        if: steps.ver.outputs.publish == 'true'
         run: |
           mkdir -p "$RUNNER_TEMP/pack"
           npm pack -w business-obligations --pack-destination "$RUNNER_TEMP/pack"
@@ -167,7 +204,6 @@ jobs:
           ls -l "$RUNNER_TEMP/pack"
 
       - name: Smoke test the packed tarball
-        if: steps.ver.outputs.publish == 'true'
         run: |
           mkdir -p "$RUNNER_TEMP/app"
           cd "$RUNNER_TEMP/app"
@@ -177,8 +213,7 @@ jobs:
           node --input-type=module -e 'import {getComplianceItems} from "business-obligations"; import {lookupZip} from "business-obligations/zip"; const p=lookupZip("78701"); if(!p||!getComplianceItems({entityType:"llc",zip:"78701",city:p.city,county:p.county}).length) process.exit(1)'
           npx --no-install business-obligations --zip 94105 --entity llc | grep -q FEDERAL
 
-      - uses: actions/upload-artifact@v7
-        if: steps.ver.outputs.publish == 'true'
+      - uses: actions/upload-artifact@v4
         with:
           name: npm-release
           path: |
@@ -188,8 +223,8 @@ jobs:
           retention-days: 7
 
   publish:
-    needs: build
-    if: ${{ needs.build.outputs.publish == 'true' }}
+    needs: [plan, build]
+    if: ${{ needs.build.result == 'success' }}
     runs-on: ubuntu-latest
     timeout-minutes: 10
     environment: npm
@@ -198,7 +233,7 @@ jobs:
       id-token: write # npm provenance / trusted publishing
     env:
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-      VERSION: ${{ needs.build.outputs.version }}
+      VERSION: ${{ needs.plan.outputs.version }}
     steps:
       - uses: actions/setup-node@v7
         with:
@@ -208,7 +243,7 @@ jobs:
       # Trusted publishing needs npm 11.5.1 or newer; Node 22 ships an older npm.
       - run: npm install -g npm@^11.5.1
 
-      - uses: actions/download-artifact@v8
+      - uses: actions/download-artifact@v4
         with:
           name: npm-release
           path: ${{ runner.temp }}/release
@@ -230,3 +265,26 @@ jobs:
         run: |
           gh release create "v$VERSION" --repo "$GITHUB_REPOSITORY" --title "v$VERSION" \
             --notes-file "$RUNNER_TEMP/release/notes.md" --target "$GITHUB_SHA"
+
+  tag:
+    needs: plan
+    if: ${{ needs.plan.outputs.mode == 'tag' && github.ref == 'refs/heads/main' && !(github.event_name == 'workflow_dispatch' && inputs.dry_run) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      VERSION: ${{ needs.plan.outputs.version }}
+    steps:
+      - uses: actions/checkout@v7
+      - name: Create the release for an already published version
+        run: |
+          node -e '
+            const log = require("fs").readFileSync("packages/core/CHANGELOG.md", "utf8");
+            const start = log.indexOf("## [" + process.argv[1] + "]");
+            if (start < 0) { console.log("See CHANGELOG.md"); process.exit(0); }
+            const end = log.indexOf("\n## [", start + 1);
+            console.log(log.slice(log.indexOf("\n", start) + 1, end < 0 ? undefined : end).trim());
+          ' "$VERSION" > "$RUNNER_TEMP/notes.md"
+          gh release create "v$VERSION" --title "v$VERSION" --notes-file "$RUNNER_TEMP/notes.md" --target "$GITHUB_SHA"

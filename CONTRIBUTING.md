@@ -168,7 +168,9 @@ Releases are automatic and need no extra secrets. Contributing a releasable chan
    `feat!: ...` (or a `BREAKING CHANGE:` footer) is breaking: major, or minor while the version is below 1.0.
    `docs`, `chore`, `ci`, `build`, `test`, `refactor` and `style` do not release by themselves. Only commits that
    touch `packages/core` count, so playground-only changes never release the library.
-2. After such a PR merges, the Release workflow opens (or updates) **one** pull request,
+2. Within about 20 minutes of such a PR merging, the Release workflow (it polls on a schedule, because pull requests
+   merged by the auto-merge workflow are merged by `github-actions[bot]` and GitHub starts no workflows for those
+   pushes) opens (or updates) **one** pull request,
    `chore(release): vX.Y.Z`, that sets the version in `packages/core/package.json` and adds the generated section to
    `CHANGELOG.md`. Hand-written notes under Unreleased are kept and merged into that section. It starts CI on its
    branch and enables auto-merge, so it merges itself once the required checks pass.
