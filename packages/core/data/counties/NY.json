@@ -166,10 +166,44 @@
   },
   {
     "county": "Columbia",
-    "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
-    "items": [],
+    "items": [
+      {
+        "id": "columbia-ny.occupancy-tax-registration",
+        "title": "Register for the Columbia County occupancy tax",
+        "category": "registration",
+        "authority": "Columbia County Treasurer",
+        "description": "Anyone renting a building or rooms for under 30 consecutive days registers each property online through the county's registration form and receives a registration number for the tax portal. The 4% lodging tax has applied to hotels, motels and short-term rentals since January 1, 2025; properties inside the City of Hudson are covered by the city's own occupancy tax instead.",
+        "frequency": "once",
+        "url": "https://www.columbiacountyny.gov/948/Short-Term-Rental",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "columbia-ny.occupancy-tax-return",
+        "title": "File the Columbia County occupancy tax return",
+        "category": "filing",
+        "authority": "Columbia County Treasurer",
+        "description": "Since January 1, 2026 the county takes payments quarterly through its online portal, due the 20th of the month after each quarter (for example October 20 for July to September). Airbnb collects and remits for bookings made through Airbnb from April 1, 2026, but not other platforms.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=20",
+        "url": "https://www.columbiacountyny.gov/948/Short-Term-Rental",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
     "checkedOn": "2026-10-15"
   },
   {
@@ -182,10 +216,45 @@
   },
   {
     "county": "Delaware",
-    "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
-    "items": [],
+    "items": [
+      {
+        "id": "delaware-ny.occupancy-tax-registration",
+        "title": "Register for the Delaware County occupancy tax",
+        "category": "registration",
+        "authority": "Delaware County Treasurer",
+        "description": "Operators file a Certificate of Registration with the County Treasurer, who issues a Certificate of Authority within 10 days to collect the 2% hotel and motel occupancy tax.",
+        "frequency": "once",
+        "deadline": "Existing businesses as soon as possible; new businesses by their opening day",
+        "url": "https://delcony.gov/departments/treas/octax_faq.htm",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "delaware-ny.occupancy-tax-return",
+        "title": "File the Delaware County occupancy tax return",
+        "category": "filing",
+        "authority": "Delaware County Treasurer",
+        "description": "Reports are monthly, quarterly or annual, following the operator's New York sales tax filing frequency (all quarterly if the operator files no state sales tax return). Quarterly reports are due March 20, June 20, September 20 and December 20; annual filers by March 20. The county pages read carry 2022 dates, so confirm the rate and schedule.",
+        "rrule": "FREQ=YEARLY;BYMONTH=3,6,9,12;BYMONTHDAY=20",
+        "url": "https://delcony.gov/departments/treas/octax_faq.htm",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
     "checkedOn": "2026-10-15"
   },
   {
@@ -206,10 +275,44 @@
   },
   {
     "county": "Essex",
-    "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
-    "items": [],
+    "items": [
+      {
+        "id": "essex-ny.occupancy-tax-registration",
+        "title": "Register for the Essex County occupancy tax",
+        "category": "registration",
+        "authority": "Essex County Treasurer",
+        "description": "Each rental property registers separately with the County Treasurer, choosing a reporting period: the same as the operator's New York sales tax period, or quarterly on the sales tax quarters (December to February, March to May, June to August, September to November) if not registered for state sales tax.",
+        "frequency": "once",
+        "url": "https://essexcountyny.gov/downloads/Treasurers/Room_Occupancy_Tax_Registration_Form_2026-02-10.pdf",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "essex-ny.occupancy-tax-return",
+        "title": "File the Essex County occupancy tax return",
+        "category": "filing",
+        "authority": "Essex County Treasurer",
+        "description": "Operators file for their chosen period and remit the 5% room occupancy tax on net revenue by the 20th of the month after the period ends (March 20, June 20, September 20 and December 20 for quarterly filers). A payment not paid or postmarked by the 20th adds a 5% penalty, and interest of 1% a month applies when payment is more than 30 days after the period.",
+        "rrule": "FREQ=YEARLY;BYMONTH=3,6,9,12;BYMONTHDAY=20",
+        "url": "https://essexcountyny.gov/downloads/Treasurers/Room_Occupancy_Tax_Registration_Form_2026-02-10.pdf",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
     "checkedOn": "2026-10-15"
   },
   {
@@ -538,17 +641,50 @@
   },
   {
     "county": "Oswego",
-    "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
-    "items": [],
+    "items": [
+      {
+        "id": "oswego-ny.occupancy-tax-registration",
+        "title": "Register for the Oswego County occupancy tax",
+        "category": "registration",
+        "authority": "Oswego County Treasurer",
+        "description": "Everyone who rents rooms in the county registers online with the County Treasurer, and a business must be registered before it can file a quarterly return. The county has no collection agreement with Airbnb, VRBO or other booking sites, so hosts on those platforms register and file themselves.",
+        "frequency": "once",
+        "url": "https://oswegocounty.com/departments/finance_and_personnel/county_treasurer/occupancy_tax_return_information.php",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "oswego-ny.occupancy-tax-return",
+        "title": "File the Oswego County occupancy tax return",
+        "category": "filing",
+        "authority": "Oswego County Treasurer",
+        "description": "Operators file for periods ending in February, May, August and November and remit the 4% tax by the 20th of March, June, September and December. A return filed early is rejected (except a final return from a closing business), and a mailed payment must be postmarked by the due date or a minimum $50 late fee applies.",
+        "rrule": "FREQ=YEARLY;BYMONTH=3,6,9,12;BYMONTHDAY=20",
+        "url": "https://oswegocounty.com/departments/finance_and_personnel/county_treasurer/occupancy_tax_return_information.php",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
     "checkedOn": "2026-10-15"
   },
   {
     "county": "Otsego",
     "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
+    "note": "New York Tax Law section 1202-j lets Otsego County tax hotel and motel rooms at up to 6%, but the county's own rate, registration and return pages were not found. Other county-level business duties were not checked.",
     "items": [],
     "checkedOn": "2026-10-15"
   },
@@ -571,8 +707,7 @@
   {
     "county": "Rensselaer",
     "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
+    "note": "New York Tax Law section 1202-n lets Rensselaer County tax hotel and motel rooms at up to 3% (permanent residents are those staying 14 or more days), but the county's own registration and return pages were not found. Other county-level business duties were not checked.",
     "items": [],
     "checkedOn": "2026-10-15"
   },
@@ -650,8 +785,7 @@
   {
     "county": "St. Lawrence",
     "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
+    "note": "New York Tax Law section 1202-ll lets St. Lawrence County tax hotel and motel rooms (cap raised to 5% in 2026), and the Board of Legislators took up a new Room Occupancy Tax Local Law in May 2026, but the adopted rate, registration and return dates were not found. Other county-level business duties were not checked.",
     "items": [],
     "checkedOn": "2026-10-15"
   },
@@ -884,10 +1018,45 @@
   },
   {
     "county": "Warren",
-    "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
-    "items": [],
+    "items": [
+      {
+        "id": "warren-ny.occupancy-tax-registration",
+        "title": "Register for the Warren County occupancy tax",
+        "category": "registration",
+        "authority": "Warren County Treasurer",
+        "description": "Hotels, motels and short-term rentals (any dwelling unit rented for under 30 consecutive days) register by sending the county's registration form to the Warren County Treasurer in Lake George, choosing a monthly, quarterly or annual filing cycle.",
+        "frequency": "once",
+        "url": "https://www.warrencountyny.gov/sites/default/files/treasurer/docs/occtax/2026WarrenCountyOccTaxRegistration.pdf",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "warren-ny.occupancy-tax-return",
+        "title": "File the Warren County occupancy tax return",
+        "category": "filing",
+        "authority": "Warren County Treasurer",
+        "description": "Operators file for their chosen cycle and remit the county tax of 4% of net rental income. Postmarks do not count, the payment must arrive by the due date; a late payment adds a 5% penalty and interest of 1% a month. The guest is liable for the tax and the operator collects it.",
+        "frequency": "ongoing",
+        "deadline": "20th of the month after the reporting period ends",
+        "url": "https://www.warrencountyny.gov/sites/default/files/treasurer/docs/occtax/2026WarrenCountyOccTaxRegistration.pdf",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
     "checkedOn": "2026-10-15"
   },
   {
