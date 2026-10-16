@@ -3,12 +3,12 @@ import {
   buildCalendar,
   estimateCosts,
   evaluate,
+  industryFromNaics,
   planLaunch,
   toICS,
   type BusinessProfile,
   type ComplianceItem,
   type EntityType,
-  type Industry,
   type Profession,
 } from "business-obligations";
 
@@ -27,19 +27,6 @@ const ENTITY_LABELS: Record<EntityType, string> = {
   nonprofit: "Nonprofit",
 };
 
-/** Industries the form does not offer yet (they need an activity or vehicle questionnaire). */
-type HiddenIndustry = "transportation" | "alcohol" | "cannabis";
-const INDUSTRY_LABELS: Record<Exclude<Industry, HiddenIndustry>, string> = {
-  general: "General / other",
-  retail: "Retail",
-  restaurant: "Restaurant / food service",
-  construction: "Construction",
-  healthcare: "Healthcare",
-  real_estate: "Real estate",
-  professional_services: "Professional services",
-  childcare: "Childcare",
-};
-
 const PROFESSION_LABELS: Record<Profession, string> = {
   attorney: "Attorney",
   cpa: "CPA",
@@ -51,14 +38,14 @@ const PROFESSION_LABELS: Record<Profession, string> = {
 
 const options = <K extends string>(labels: Record<K, string>) => Object.entries(labels) as Array<[K, string]>;
 export const ENTITY_TYPES = options(ENTITY_LABELS);
-export const INDUSTRIES = options(INDUSTRY_LABELS);
 export const PROFESSIONS = options(PROFESSION_LABELS);
 
 /** Raw values of the profile form. Numbers are kept as the text the user typed. */
 export interface FormValues {
   zip: string;
   entityType: string;
-  industry: string;
+  /** NAICS code, 2 to 6 digits, or empty. */
+  naics: string;
   profession: string;
   employees: string;
   payroll: string;
@@ -84,8 +71,9 @@ const num = (v: string): number | undefined => {
 };
 
 /** Whether the profession question applies to these answers. */
-export const needsProfession = (f: Pick<FormValues, "entityType" | "industry">): boolean =>
-  ["pllc", "pc", "llp"].includes(f.entityType) || f.industry === "professional_services";
+export const needsProfession = (f: Pick<FormValues, "entityType" | "naics">): boolean =>
+  ["pllc", "pc", "llp"].includes(f.entityType) ||
+  industryFromNaics(f.naics)?.industry === "professional_services";
 
 /** Turns form values into a BusinessProfile; `place` is the result of a ZIP lookup. */
 export function buildProfile(form: FormValues, place: Place): BusinessProfile {
@@ -95,7 +83,7 @@ export function buildProfile(form: FormValues, place: Place): BusinessProfile {
     city: place.city,
     county: place.county,
     state: place.state,
-    industry: form.industry === "general" ? undefined : form.industry,
+    naics: form.naics || undefined,
     profession: needsProfession(form) ? form.profession || "other" : undefined,
     employeeCount: num(form.employees),
     annualPayroll: num(form.payroll),

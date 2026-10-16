@@ -107,6 +107,16 @@
         "default": "./dist/zip.cjs"
       }
     },
+    "./naics": {
+      "import": {
+        "types": "./dist/naics.d.ts",
+        "default": "./dist/naics.js"
+      },
+      "require": {
+        "types": "./dist/naics.d.cts",
+        "default": "./dist/naics.cjs"
+      }
+    },
     "./schema/*": "./schema/*",
     "./package.json": "./package.json"
   },

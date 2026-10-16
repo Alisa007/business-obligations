@@ -1,3 +1,4 @@
+import { evaluate } from "business-obligations";
 import { describe, expect, it } from "vitest";
 import { createAnalytics, sanitize, stripQuery, type PostHogClient } from "./analytics";
 import { EMPTY_STATE, isRunnable, parseQuery, toQuery, type SidebarState } from "./query";
@@ -16,7 +17,7 @@ import {
 const form: FormValues = {
   zip: "60601",
   entityType: "llc",
-  industry: "restaurant",
+  naics: "722511",
   profession: "",
   employees: "3",
   payroll: "90000",
@@ -34,7 +35,8 @@ describe("playground logic", () => {
   it("builds a profile from form values", () => {
     const p = buildProfile(form, place);
     expect(p).toMatchObject({ entityType: "llc", zip: "60601", city: "Chicago", employeeCount: 3 });
-    expect(p.industry).toBe("restaurant");
+    expect(p.naics).toBe("722511");
+    expect(evaluate(p).profile.industry).toBe("restaurant");
     expect(p.formationDate).toBeUndefined();
     expect(p.profession).toBeUndefined();
   });
@@ -137,7 +139,7 @@ describe("analytics", () => {
     expect(a.enabled).toBe(true);
     a.track("plan_generated", {
       entityType: "llc",
-      industry: "general",
+      naics: "722511",
       isNew: true,
       zip: "78701",
       employees: 5,
@@ -157,7 +159,7 @@ describe("analytics", () => {
       [
         "capture",
         "plan_generated",
-        { entityType: "llc", industry: "general", isNew: true, zip: "78701", employees: 5 },
+        { entityType: "llc", naics: "722511", isNew: true, zip: "78701", employees: 5 },
       ],
     ]);
     expect(calls.filter((c) => c[0] === "warn")).toEqual([
@@ -239,7 +241,7 @@ describe("sidebar state in the URL", () => {
     form: {
       zip: "78701",
       entityType: "s_corp",
-      industry: "restaurant",
+      naics: "722511",
       profession: "",
       employees: "3",
       owners: "2",
@@ -273,16 +275,24 @@ describe("sidebar state in the URL", () => {
 
   it("falls back to defaults for invalid or hand-edited values", () => {
     const s = parseQuery(
-      "zip=ab12345678&entity=spaceship&industry=%3Cscript%3E&employees=-4&payroll=1e9&start=tomorrow&formed=1&formedOn=soon",
+      "zip=ab12345678&entity=spaceship&naics=%3Cscript%3E&employees=-4&payroll=1e9&start=tomorrow&formed=1&formedOn=soon",
     );
     expect(s.form.zip).toBe("12345");
     expect(s.form.entityType).toBe("llc");
-    expect(s.form.industry).toBe("general");
+    expect(s.form.naics).toBe("");
     expect(s.form.employees).toBe("");
     expect(s.form.payroll).toBe("");
     expect(s.asOf).toBe("");
     expect(s.form.isNew).toBe(false);
     expect(s.form.formationDate).toBe("");
+  });
+
+  it("reads links made when the form had an industry list", () => {
+    expect(parseQuery("industry=restaurant").form.naics).toBe("722");
+    expect(parseQuery("industry=construction&zip=78701").form.naics).toBe("23");
+    expect(parseQuery("industry=general").form.naics).toBe("");
+    expect(parseQuery("industry=restaurant&naics=236220").form.naics).toBe("236220");
+    expect(toQuery(parseQuery("industry=restaurant"))).toBe("naics=722");
   });
 
   it("only treats a full ZIP as runnable", () => {

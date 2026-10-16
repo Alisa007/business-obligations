@@ -2,17 +2,11 @@
 
 import { useEffect, useState } from "react";
 import { Button, YStack } from "tamagui";
-import {
-  ENTITY_TYPES,
-  INDUSTRIES,
-  PROFESSIONS,
-  needsProfession,
-  type FormValues,
-  type Place,
-} from "../lib/plan";
+import { ENTITY_TYPES, PROFESSIONS, needsProfession, type FormValues, type Place } from "../lib/plan";
 import type { SidebarState } from "../lib/query";
 import { CheckField, Field, Muted, NativeSelect, Pair, Panel, SectionLabel, TextField } from "./ui";
 import { DateField } from "./DateField";
+import { NaicsField } from "./NaicsField";
 
 export interface PlanRequest {
   form: FormValues;
@@ -98,14 +92,7 @@ export function ProfileForm({
             options={ENTITY_TYPES}
           />
         </Field>
-        <Field label="Industry" htmlFor="industry">
-          <NativeSelect
-            id="industry"
-            value={form.industry}
-            onChange={(v) => set("industry", v)}
-            options={INDUSTRIES}
-          />
-        </Field>
+        <NaicsField value={form.naics} onChange={(v) => set("naics", v)} />
         {needsProfession(form) && (
           <Field label="Profession" htmlFor="profession">
             <NativeSelect

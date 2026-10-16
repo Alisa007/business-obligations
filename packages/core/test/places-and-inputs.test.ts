@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { evaluate, type Rule } from "../src";
+import { evaluate, industryFromNaics, type Rule } from "../src";
 
 const austin = { entityType: "llc", zip: "78701", city: "Austin", county: "Travis" } as const;
 const ids = (r: ReturnType<typeof evaluate>) => r.items.map((i) => i.ruleId);
@@ -52,6 +52,28 @@ describe("rules driven by the new inputs", () => {
     expect(evaluate({ ...austin, naics: "722511" }).profile.industry).toBe("restaurant");
     expect(evaluate({ ...austin, naics: "236220", industry: "retail" }).profile.industry).toBe("retail");
     expect(() => evaluate({ ...austin, naics: "abc" })).toThrow(/NAICS/);
+  });
+
+  it("derives the alcohol activity and the profession from a NAICS code", () => {
+    const brewery = evaluate({ ...austin, naics: "312120" }).profile;
+    expect([brewery.industry, brewery.alcoholActivity]).toEqual(["alcohol", "manufacture"]);
+    const shop = evaluate({ ...austin, naics: "445320" }).profile;
+    expect([shop.industry, shop.alcoholActivity]).toEqual(["alcohol", "retail"]);
+    expect(evaluate({ ...austin, naics: "722410" }).profile.industry).toBe("alcohol");
+    expect(evaluate({ ...austin, naics: "722515" }).profile.industry).toBe("restaurant");
+    const law = evaluate({ ...austin, naics: "541110" }).profile;
+    expect([law.industry, law.profession]).toEqual(["professional_services", "attorney"]);
+    expect(evaluate({ ...austin, naics: "541211" }).profile.profession).toBe("cpa");
+    expect(evaluate({ ...austin, naics: "624410" }).profile.industry).toBe("childcare");
+    expect(evaluate({ ...austin, naics: "541511" }).profile.industry).toBe("general");
+    expect(industryFromNaics("54")).toBeUndefined();
+  });
+
+  it("lets explicit answers win over the code", () => {
+    const p = evaluate({ ...austin, naics: "312120", industry: "retail" }).profile;
+    expect([p.industry, p.alcoholActivity]).toEqual(["retail", undefined]);
+    const q = evaluate({ ...austin, naics: "445320", alcoholActivity: "wholesale" }).profile;
+    expect(q.alcoholActivity).toBe("wholesale");
   });
 });
 
