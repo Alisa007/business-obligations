@@ -1,9 +1,19 @@
 [
   {
     "county": "Anchorage Municipality",
-    "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "anchorage-ak.business-personal-property",
+        "title": "File Anchorage business personal property return",
+        "category": "filing",
+        "authority": "Municipality of Anchorage Property Appraisal",
+        "description": "Businesses operating in Anchorage on January 1 with assets over $20,000 file the Business Property Assessment Return by April 30 (postmarked; meter strips are not accepted); late returns carry a 10% penalty. The first $100,000 of assessed value of taxable personal property per taxpayer is exempt from municipal tax from 2026. A sold or closed business still files to say so.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=30",
+        "url": "https://www.muni.org/Departments/finance/property_appraisal/Business",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Only business personal property was checked at municipal level."
   }
 ]

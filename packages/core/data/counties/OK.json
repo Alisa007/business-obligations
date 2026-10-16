@@ -1,10 +1,19 @@
 [
   {
     "county": "Cleveland",
-    "status": "unverified",
-    "reason": "bpp-state-rules-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "cleveland-county-ok.business-personal-property",
+        "title": "File Cleveland County business personal property return",
+        "category": "filing",
+        "authority": "Cleveland County Assessor",
+        "description": "Oklahoma businesses file a Business Personal Property Rendition (OTC Form 901) with the county assessor between January 1 and March 15 (68 O.S. 2836); after March 15 a mandatory 10% penalty applies, and 20% after April 15. Mailed renditions must be postmarked by March 15. The county's own page was not individually confirmed; the state rule applies. The link is the state statute.",
+        "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=15",
+        "url": "https://law.justia.com/codes/oklahoma/2021/title-68/section-68-2836/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Oklahoma",
@@ -24,9 +33,18 @@
   },
   {
     "county": "Tulsa",
-    "status": "unverified",
-    "reason": "bpp-state-rules-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "tulsa-county-ok.business-personal-property",
+        "title": "File Tulsa County business personal property return",
+        "category": "filing",
+        "authority": "Tulsa County Assessor",
+        "description": "Oklahoma businesses file a Business Personal Property Rendition (OTC Form 901) with the county assessor between January 1 and March 15 (68 O.S. 2836); after March 15 a mandatory 10% penalty applies, and 20% after April 15. Mailed renditions must be postmarked by March 15. The county's own page was not individually confirmed; the state rule applies. The link is the state statute.",
+        "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=15",
+        "url": "https://law.justia.com/codes/oklahoma/2021/title-68/section-68-2836/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16"
   }
 ]

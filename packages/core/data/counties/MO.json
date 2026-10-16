@@ -33,37 +33,82 @@
   },
   {
     "county": "Jackson",
-    "status": "unverified",
-    "reason": "bpp-state-rules-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "jackson-county-mo.business-personal-property",
+        "title": "File Jackson County business personal property return",
+        "category": "filing",
+        "authority": "Jackson County Assessment Department",
+        "description": "Missouri businesses declare taxable tangible personal property (machinery, equipment, furniture, fixtures) owned on January 1 to the county assessor by March 1; a late-filing penalty is added to the tax bill and may be waived if the list arrives by May 1 (RSMo 137.115, 137.345). File through the county E-File Portal; late filers can owe $15 to $105 depending on assessed value.",
+        "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1",
+        "url": "https://www.jacksongov.org/Government/Departments/Assessment/Business-Personal-Property",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Jefferson",
-    "status": "unverified",
-    "reason": "bpp-state-rules-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "jefferson-county-mo.business-personal-property",
+        "title": "File Jefferson County business personal property return",
+        "category": "filing",
+        "authority": "Jefferson County Assessor",
+        "description": "Missouri businesses declare taxable tangible personal property (machinery, equipment, furniture, fixtures) owned on January 1 to the county assessor by March 1; a late-filing penalty is added to the tax bill and may be waived if the list arrives by May 1 (RSMo 137.115, 137.345). The assessor says lists must be returned by March 1 to avoid late penalties.",
+        "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1",
+        "url": "https://www.jeffcomo.gov/Archive.aspx?ADID=321",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "St. Charles",
-    "status": "unverified",
-    "reason": "bpp-state-rules-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "st-charles-county-mo.business-personal-property",
+        "title": "File St. Charles County business personal property return",
+        "category": "filing",
+        "authority": "St. Charles County Assessor",
+        "description": "Missouri businesses declare taxable tangible personal property (machinery, equipment, furniture, fixtures) owned on January 1 to the county assessor by March 1; a late-filing penalty is added to the tax bill and may be waived if the list arrives by May 1 (RSMo 137.115, 137.345). The county's own page was not individually confirmed; the state rule applies. The link is the state statute.",
+        "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1",
+        "url": "https://revisor.mo.gov/main/OneSection.aspx?section=137.115",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "St. Louis",
-    "status": "unverified",
-    "reason": "bpp-state-rules-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "st-louis-county-mo.business-personal-property",
+        "title": "File St. Louis County business personal property return",
+        "category": "filing",
+        "authority": "St. Louis County Assessor",
+        "description": "Missouri businesses declare taxable tangible personal property (machinery, equipment, furniture, fixtures) owned on January 1 to the county assessor by March 1; a late-filing penalty is added to the tax bill and may be waived if the list arrives by May 1 (RSMo 137.115, 137.345). The county's own page was not individually confirmed; the state rule applies. The link is the state statute.",
+        "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1",
+        "url": "https://revisor.mo.gov/main/OneSection.aspx?section=137.115",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "St. Louis (city)",
-    "status": "unverified",
-    "reason": "bpp-state-rules-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "st-louis-city-mo.business-personal-property",
+        "title": "File City of St. Louis business personal property return",
+        "category": "filing",
+        "authority": "St. Louis City Assessor",
+        "description": "The City of St. Louis Assessor takes personal property declarations online, by mail or in person by April 1 to avoid a 10% assessment penalty (the city's date differs from the March 1 used by Missouri counties). Corporate personal property: (314) 622-4181.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://stlouis-mo.gov/government/departments/assessor/personal-property/index.cfm",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16"
   }
 ]
