@@ -140,6 +140,74 @@
     "frequency": "ongoing"
   },
   {
+    "id": "ny.bait-license",
+    "title": "Get a DEC bait license",
+    "category": "license",
+    "authority": "NYS Department of Environmental Conservation",
+    "description": "Harvesting and selling minnows, smelt and certain aquatic insects as bait needs a DEC bait licence. Fees run $2 to $30 depending on the method and business location, and it expires December 31, so apply again each year.",
+    "naics": ["114111", "424460"],
+    "appliesTo": ["all"],
+    "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/1956",
+    "checkedOn": "2026-10-16",
+    "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=31",
+    "anchor": "2026-12-31"
+  },
+  {
+    "id": "ny.protected-wildlife-sale-license",
+    "title": "Get a DEC license to possess and sell protected wildlife",
+    "category": "license",
+    "authority": "NYS Department of Environmental Conservation",
+    "description": "Possessing or selling protected fish, wildlife, shellfish, crustacea or aquatic insects for propagation, scientific or exhibition use needs a DEC licence, $10 a year. The federal Special Purpose and USDA Commercial Animal Dealer permits come first.",
+    "naics": ["112990", "424590"],
+    "appliesTo": ["all"],
+    "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/2620",
+    "checkedOn": "2026-10-16",
+    "frequency": "annual",
+    "renewal": "Every year"
+  },
+  {
+    "id": "ny.fishing-preserve-license",
+    "title": "Get a DEC fishing preserve license",
+    "category": "license",
+    "authority": "NYS Department of Environmental Conservation",
+    "description": "A landowner with a man-made pond who lets the public fish for a fee needs a fishing preserve licence, $50 a year, renewed annually.",
+    "naics": ["713990"],
+    "appliesTo": ["all"],
+    "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/2289",
+    "checkedOn": "2026-10-16",
+    "frequency": "annual",
+    "renewal": "Every year"
+  },
+  {
+    "id": "ny.tax-preparer-registration",
+    "title": "Register commercial tax return preparers with the Tax Department",
+    "category": "registration",
+    "authority": "NYS Department of Taxation and Finance",
+    "description": "Commercial tax return preparers register with New York and pay an annual registration fee of $100.",
+    "naics": ["541213"],
+    "appliesTo": ["all"],
+    "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/2916",
+    "checkedOn": "2026-10-16",
+    "frequency": "annual",
+    "renewal": "Every year",
+    "exemptions": [
+      "Preparers who are not paid to prepare New York returns, such as attorneys, CPAs and enrolled agents who are exempt"
+    ]
+  },
+  {
+    "id": "ny.atv-dealer-registration",
+    "title": "Register an ATV dealer with DMV",
+    "category": "registration",
+    "authority": "NYS Department of Motor Vehicles",
+    "description": "Selling all-terrain vehicles needs a DMV dealer registration (VS-1 and related forms), listed at $50 for two years.",
+    "naics": ["441227", "4412"],
+    "appliesTo": ["all"],
+    "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/1941",
+    "checkedOn": "2026-10-16",
+    "frequency": "ongoing",
+    "renewal": "Every two years"
+  },
+  {
     "id": "ny.professional-entity-consent",
     "title": "File for NYSED consent to form a professional corporation or PLLC",
     "category": "registration",
