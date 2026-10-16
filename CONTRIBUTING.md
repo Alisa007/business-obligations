@@ -178,6 +178,14 @@ employees there. Ids start with the state code (`ca.calsavers-registration`). Ph
 the description, because the obligation continues for new employers. `npm run check` validates the file against
 `schema/employer-items.schema.json`; a new state's file also needs a line in `src/data/employers.ts`.
 
+## Adding state duties
+
+What a state requires of any business that operates there, whatever its size or industry (unclaimed property reporting), lives
+in `data/duties/<STATE>.json`: the same items as a city file, `appliesTo: ["all"]`, `checkedOn` and the official page in
+`url`. Items appear for the home state and for every state where the business has employees or property. Ids start with
+the state code (`de.unclaimed-property-report`). `npm run check` validates the file against
+`schema/duties-items.schema.json`; a new state's file also needs a line in `src/data/duties.ts`.
+
 ## Adding a country
 
 Add a rule pack under `src/rules/<country>/`, register it in `RULE_PACKS` in `src/engine.ts`, extend the `Country`

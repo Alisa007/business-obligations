@@ -2,6 +2,7 @@ import { describeFee, feeCost } from "../fee";
 import { resolveSchedule } from "../rrule";
 import type { ItemDraft, Presence, ResolvedProfile, Rule } from "../types";
 import { professionBoard, stateInfo as info } from "../data";
+import { DUTY_ITEMS } from "../data/duties";
 import { EMPLOYER_ITEMS } from "../data/employers";
 import { applicable, extras } from "./local";
 import type { BoardRef } from "../data";
@@ -560,6 +561,36 @@ export function salesStates(p: ResolvedProfile): Array<{ x: Presence; reason: st
 }
 
 export const extraStateRules: Rule[] = [
+  {
+    id: "state.duties",
+    description:
+      "State duties that apply to any business operating in the state, such as unclaimed property reporting (see data/duties/)",
+    inputs: ["multistate"],
+    when: (p) => operating(p).some((x) => (DUTY_ITEMS[x.state]?.length ?? 0) > 0),
+    items: (p) =>
+      operating(p).flatMap((x) =>
+        applicable(DUTY_ITEMS[x.state] ?? [], {
+          ...p,
+          state: x.state,
+          employeeCount: x.employeeCount,
+          hasEmployees: x.employeeCount > 0,
+        }).map((it) => ({
+          key: it.id,
+          title: it.title,
+          category: it.category,
+          jurisdiction: "state" as const,
+          state: x.state,
+          authority: it.authority,
+          description: it.description,
+          ...resolveSchedule(it),
+          url: it.url,
+          ...extras(it, undefined),
+          reason: x.home
+            ? `Business operates in ${x.state}`
+            : `Business has employees or property in ${x.state}`,
+        })),
+      ),
+  },
   {
     id: "state.employer-mandates",
     description:

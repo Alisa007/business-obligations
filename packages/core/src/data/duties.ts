@@ -1,0 +1,108 @@
+// Per-state files of duties that apply to any business operating in the state; edit data/duties/*.json, then list the file here.
+import AK from "../../data/duties/AK.json";
+import AL from "../../data/duties/AL.json";
+import AR from "../../data/duties/AR.json";
+import AZ from "../../data/duties/AZ.json";
+import CA from "../../data/duties/CA.json";
+import CO from "../../data/duties/CO.json";
+import CT from "../../data/duties/CT.json";
+import DC from "../../data/duties/DC.json";
+import DE from "../../data/duties/DE.json";
+import FL from "../../data/duties/FL.json";
+import GA from "../../data/duties/GA.json";
+import HI from "../../data/duties/HI.json";
+import IA from "../../data/duties/IA.json";
+import ID from "../../data/duties/ID.json";
+import IL from "../../data/duties/IL.json";
+import IN from "../../data/duties/IN.json";
+import KS from "../../data/duties/KS.json";
+import KY from "../../data/duties/KY.json";
+import LA from "../../data/duties/LA.json";
+import MA from "../../data/duties/MA.json";
+import MD from "../../data/duties/MD.json";
+import ME from "../../data/duties/ME.json";
+import MI from "../../data/duties/MI.json";
+import MN from "../../data/duties/MN.json";
+import MO from "../../data/duties/MO.json";
+import MS from "../../data/duties/MS.json";
+import MT from "../../data/duties/MT.json";
+import NC from "../../data/duties/NC.json";
+import ND from "../../data/duties/ND.json";
+import NE from "../../data/duties/NE.json";
+import NH from "../../data/duties/NH.json";
+import NJ from "../../data/duties/NJ.json";
+import NM from "../../data/duties/NM.json";
+import NV from "../../data/duties/NV.json";
+import NY from "../../data/duties/NY.json";
+import OH from "../../data/duties/OH.json";
+import OK from "../../data/duties/OK.json";
+import OR from "../../data/duties/OR.json";
+import PA from "../../data/duties/PA.json";
+import RI from "../../data/duties/RI.json";
+import SC from "../../data/duties/SC.json";
+import SD from "../../data/duties/SD.json";
+import TN from "../../data/duties/TN.json";
+import TX from "../../data/duties/TX.json";
+import UT from "../../data/duties/UT.json";
+import VA from "../../data/duties/VA.json";
+import VT from "../../data/duties/VT.json";
+import WA from "../../data/duties/WA.json";
+import WI from "../../data/duties/WI.json";
+import WV from "../../data/duties/WV.json";
+import WY from "../../data/duties/WY.json";
+import type { LocalItem } from "./types";
+
+/** Obligations a state places on any business operating there (unclaimed property reporting, ...), by state code. */
+export const DUTY_ITEMS: Record<string, LocalItem[]> = {
+  AK: AK as LocalItem[],
+  AL: AL as LocalItem[],
+  AR: AR as LocalItem[],
+  AZ: AZ as LocalItem[],
+  CA: CA as LocalItem[],
+  CO: CO as LocalItem[],
+  CT: CT as LocalItem[],
+  DC: DC as LocalItem[],
+  DE: DE as LocalItem[],
+  FL: FL as LocalItem[],
+  GA: GA as LocalItem[],
+  HI: HI as LocalItem[],
+  IA: IA as LocalItem[],
+  ID: ID as LocalItem[],
+  IL: IL as LocalItem[],
+  IN: IN as LocalItem[],
+  KS: KS as LocalItem[],
+  KY: KY as LocalItem[],
+  LA: LA as LocalItem[],
+  MA: MA as LocalItem[],
+  MD: MD as LocalItem[],
+  ME: ME as LocalItem[],
+  MI: MI as LocalItem[],
+  MN: MN as LocalItem[],
+  MO: MO as LocalItem[],
+  MS: MS as LocalItem[],
+  MT: MT as LocalItem[],
+  NC: NC as LocalItem[],
+  ND: ND as LocalItem[],
+  NE: NE as LocalItem[],
+  NH: NH as LocalItem[],
+  NJ: NJ as LocalItem[],
+  NM: NM as LocalItem[],
+  NV: NV as LocalItem[],
+  NY: NY as LocalItem[],
+  OH: OH as LocalItem[],
+  OK: OK as LocalItem[],
+  OR: OR as LocalItem[],
+  PA: PA as LocalItem[],
+  RI: RI as LocalItem[],
+  SC: SC as LocalItem[],
+  SD: SD as LocalItem[],
+  TN: TN as LocalItem[],
+  TX: TX as LocalItem[],
+  UT: UT as LocalItem[],
+  VA: VA as LocalItem[],
+  VT: VT as LocalItem[],
+  WA: WA as LocalItem[],
+  WI: WI as LocalItem[],
+  WV: WV as LocalItem[],
+  WY: WY as LocalItem[],
+};

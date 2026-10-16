@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Alisa007/business-obligations/schema/duties-items.schema.json",
+  "title": "Business duties for one state",
+  "description": "Obligations a state places on any business that operates there, such as unclaimed property reporting. Each item names the date it was checked against its official page.",
+  "type": "array",
+  "minItems": 1,
+  "items": {
+    "$ref": "local-item.schema.json",
+    "required": ["checkedOn", "url"]
+  }
+}
