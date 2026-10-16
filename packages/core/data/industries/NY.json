@@ -1440,5 +1440,55 @@
     "frequency": "ongoing",
     "renewal": "Every year",
     "exemptions": ["Breeders selling under 25 dogs and cats a year born and raised at their home"]
+  },
+  {
+    "id": "ny.food-fishing-license",
+    "title": "Get a DEC commercial food fishing license",
+    "category": "license",
+    "authority": "NYS Department of Environmental Conservation, Marine Permit Office",
+    "description": "Commercial fishing for food fish in marine waters needs a DEC licence from the Marine Permit Office, subject to limited-entry rules. The statutory base fee is $250 for a New York resident and $1,250 for a non-resident, though one DEC page shows $500 for a related permit, so confirm the amount. The licence expires every December 31.",
+    "naics": ["114111"],
+    "appliesTo": ["all"],
+    "url": "https://dec.ny.gov/things-to-do/saltwater-fishing/marine-permits-licenses/food-fish-landing-license",
+    "checkedOn": "2026-10-16",
+    "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=31",
+    "anchor": "2026-12-31"
+  },
+  {
+    "id": "ny.party-charter-boat-license",
+    "title": "Get a DEC party or charter boat license",
+    "category": "license",
+    "authority": "NYS Department of Environmental Conservation, Marine Permit Office",
+    "description": "The owner or operator of a party or charter boat that takes anglers out for hire needs a DEC licence, $250 a year under ECL 13-0336, plus the recreational marine fishing registration. It expires every December 31.",
+    "naics": ["487210"],
+    "appliesTo": ["all"],
+    "url": "https://dec.ny.gov/things-to-do/saltwater-fishing/marine-permits-licenses",
+    "checkedOn": "2026-10-16",
+    "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=31",
+    "anchor": "2026-12-31"
+  },
+  {
+    "id": "ny.bail-enforcement-agent-license",
+    "title": "Get a New York bail enforcement agent license",
+    "category": "license",
+    "authority": "NYS Department of State, Division of Licensing Services",
+    "description": "No one may act or advertise as a bail enforcement agent without a Department of State licence under General Business Law Article 7. Requirements are age 25 or older, qualifying experience (three years in certain police or investigator roles, or 20 years as a police officer), at least 25 hours of approved training, fingerprints, and a $500,000 surety bond.",
+    "naics": ["561499"],
+    "appliesTo": ["all"],
+    "url": "https://dos.ny.gov/become-bail-enforcement-agent",
+    "checkedOn": "2026-10-16",
+    "frequency": "ongoing"
+  },
+  {
+    "id": "ny.bottled-bulk-water-certification",
+    "title": "Certify a bottled or bulk water facility with the NY Department of Health",
+    "category": "registration",
+    "authority": "NYS Department of Health, Bottled and Bulk Water Program",
+    "description": "Bottled or bulk water sold or delivered for drinking or food preparation must be certified by the Department under 10 NYCRR Subpart 5-6. The application needs an engineering drawing of the source and facility, a sanitation and operations report, label samples and water quality data, and a written recall plan is required. Certification lapses if renewal requirements are missed.",
+    "naics": ["312112", "221310"],
+    "appliesTo": ["all"],
+    "url": "https://www.health.ny.gov/environmental/water/drinking/bulk_bottle/",
+    "checkedOn": "2026-10-16",
+    "frequency": "ongoing"
   }
 ]
