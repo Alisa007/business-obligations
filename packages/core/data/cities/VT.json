@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "city": "Burlington",
+    "status": "unverified",
+    "counties": ["Chittenden"],
+    "note": "Burlington eliminated its tax on nonresidential personal property effective July 1, 2026 (FY27), so business personal property reports are no longer filed; FY26 and earlier taxes stay owed. No page on a general city business license was found.",
+    "sourceUrl": "https://www.burlingtonvt.gov/920/Business-Personal-Property-Tax",
+    "items": [],
+    "checkedOn": "2026-10-15"
+  },
+  {
+    "city": "Montpelier",
+    "counties": ["Washington"],
+    "items": [
+      {
+        "id": "montpelier-vt.business-personal-property-report",
+        "title": "File the Montpelier business personal property report",
+        "category": "filing",
+        "authority": "City of Montpelier Assessor",
+        "description": "Montpelier asks business owners to file a business personal property report with the Assessor each year by April 20, the date Vermont's lister calendar sets for business personal property forms (32 V.S.A. section 3618). The state's 2020 list shows Montpelier taxes business machinery and equipment but not inventory.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=20",
+        "url": "https://www.montpelier-vt.org/1474/Notices-to-Taxpayers-Archive",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-15"
+  }
+]

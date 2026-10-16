@@ -1,1 +1,57 @@
-[]
+[
+  {
+    "city": "Dover",
+    "counties": ["Kent"],
+    "items": [
+      {
+        "id": "dover-de.business-license",
+        "title": "Pay the City of Dover business license fee",
+        "category": "license",
+        "authority": "City of Dover Department of Planning and Inspections",
+        "description": "Dover's code licenses trades, businesses and occupations operating in the city. A license runs from August 1 to July 31, and a penalty set in the code's fee schedule applies when the fee is not paid by August 31; the fee itself depends on the type of business (Chapter 26, Article II and Appendix F of the Dover Code).",
+        "rrule": "FREQ=YEARLY;BYMONTH=8;BYMONTHDAY=31",
+        "opens": {
+          "month": 8,
+          "day": 1
+        },
+        "url": "https://www.cityofdover.gov/media/Government/Ordinances-Resolutions-Tributes/2016/2016-06.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-15"
+  },
+  {
+    "city": "Newark",
+    "counties": ["New Castle"],
+    "items": [
+      {
+        "id": "newark-de.business-license",
+        "title": "Obtain a City of Newark business license",
+        "category": "license",
+        "authority": "City of Newark Planning Department",
+        "description": "A business license is required for businesses operating in the City of Newark, Delaware. Fees are set from estimates of the demand and cost of municipal services related to business activity, under Chapter 13, Article VII of the City Code (section 13-43 and following). The page read gives no amount or renewal date.",
+        "frequency": "ongoing",
+        "url": "https://newarkde.gov/715/Business-License",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-15"
+  },
+  {
+    "city": "Wilmington",
+    "counties": ["New Castle"],
+    "items": [
+      {
+        "id": "wilmington-de.business-license",
+        "title": "Obtain a City of Wilmington business license",
+        "category": "license",
+        "authority": "City of Wilmington Finance Department, Wage and Business License Division",
+        "description": "Businesses operating within Wilmington need a Delaware state business license and also a city business license; the city application asks for a copy of the state license. Some trades (heating, plumbing, air conditioning) must pass a trade test with the Department of Licenses and Inspections first, and restaurants must supply a Board of Health certificate. The fee and renewal date were not stated on the pages read.",
+        "frequency": "ongoing",
+        "url": "https://www.wilmingtonde.gov/government/city-offices/economic-development/cost-of-doing-business",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-15"
+  }
+]
