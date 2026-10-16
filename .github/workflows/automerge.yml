@@ -1,0 +1,24 @@
+name: Auto-merge
+
+# GitHub's "Allow auto-merge" repository setting only permits auto-merge; it has to be switched on for each pull
+# request. This does that for every PR from this repository (including Dependabot and bot PRs), so a PR merges by itself
+# once the required checks on main pass. It never checks out or runs PR code.
+
+on:
+  pull_request_target:
+    types: [opened, reopened, ready_for_review]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  enable:
+    if: github.event.pull_request.head.repo.full_name == github.repository && !github.event.pull_request.draft
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - run: gh pr merge --auto --squash "$PR_URL"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GH_TOKEN: ${{ github.token }}
