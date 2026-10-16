@@ -38,12 +38,10 @@
       "minLength": 1
     },
     "state": {
-      "type": "string",
-      "pattern": "^[A-Z]{2}$"
+      "$ref": "common.schema.json#/$defs/stateCode"
     },
     "formationState": {
-      "type": "string",
-      "pattern": "^[A-Z]{2}$"
+      "$ref": "common.schema.json#/$defs/stateCode"
     },
     "multistate": {
       "type": "array",
@@ -53,8 +51,7 @@
         "additionalProperties": false,
         "properties": {
           "state": {
-            "type": "string",
-            "pattern": "^[A-Z]{2}$"
+            "$ref": "common.schema.json#/$defs/stateCode"
           },
           "employeeCount": {
             "type": "integer",
@@ -77,8 +74,7 @@
       "type": "boolean"
     },
     "formationDate": {
-      "type": "string",
-      "format": "date"
+      "$ref": "common.schema.json#/$defs/isoDate"
     },
     "fiscalYearEndMonth": {
       "type": "integer",
@@ -86,8 +82,7 @@
       "maximum": 12
     },
     "dissolutionDate": {
-      "type": "string",
-      "format": "date"
+      "$ref": "common.schema.json#/$defs/isoDate"
     },
     "isFormed": {
       "type": "boolean"

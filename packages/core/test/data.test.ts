@@ -13,8 +13,14 @@ import { describeTrigger } from "../src/trigger";
 
 const root = path.resolve(__dirname, "..");
 const read = (p: string) => JSON.parse(fs.readFileSync(path.join(root, p), "utf8"));
-const ajv = new Ajv2020({ allErrors: true, strict: false });
-addFormats(ajv);
+/** A validator with the shared definitions loaded, as every schema $refs them. */
+const newAjv = () => {
+  const a = new Ajv2020({ allErrors: true, strict: false });
+  addFormats(a);
+  a.addSchema(read("schema/common.schema.json"));
+  return a;
+};
+const ajv = newAjv();
 
 describe("state data files", () => {
   const validate = ajv.compile(read("schema/state.schema.json"));
@@ -64,8 +70,11 @@ describe("state data files", () => {
   };
   it("lists keys in the schema's order, so diffs stay small", () => {
     const schema = read("schema/state.schema.json") as SchemaNode;
+    const common = read("schema/common.schema.json") as SchemaNode;
     const resolve = (n: SchemaNode): SchemaNode =>
-      n.$ref ? resolve(schema.$defs![n.$ref.split("/").pop()!]!) : n;
+      n.$ref
+        ? resolve((n.$ref.startsWith("common.") ? common : schema).$defs![n.$ref.split("/").pop()!]!)
+        : n;
     const pick = (n: SchemaNode, v: unknown): SchemaNode => {
       n = resolve(n);
       for (const b of n.oneOf ?? n.anyOf ?? []) {
@@ -342,8 +351,7 @@ describe("profession directory", () => {
 });
 
 describe("local and profession data schemas", () => {
-  const local = new Ajv2020({ allErrors: true, strict: false });
-  addFormats(local);
+  const local = newAjv();
   local.addSchema(read("schema/local-item.schema.json"));
   const cityFile = local.compile(read("schema/cities.schema.json"));
   const countyFile = local.compile(read("schema/counties.schema.json"));
@@ -430,8 +438,7 @@ describe("local and profession data schemas", () => {
   it("requires the numbers a fee basis needs", () => {
     const report = read("data/states/AK.json");
     const withFee = (feeDetail: unknown) => ({ ...report, llcReport: { ...report.llcReport, feeDetail } });
-    const fresh = new Ajv2020({ allErrors: true, strict: false });
-    addFormats(fresh);
+    const fresh = newAjv();
     const validate = fresh.compile(read("schema/state.schema.json"));
     expect(validate(withFee({ basis: "flat", amount: 100 }))).toBe(true);
     expect(validate(withFee({ basis: "flat" }))).toBe(false);
@@ -668,5 +675,20 @@ describe("schedules in data files", () => {
       "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=15;BYMONTH=6",
     ])
       expect(() => parseRRule(bad), bad).toThrow();
+  });
+});
+
+describe("schema reuse", () => {
+  const patterns = (n: unknown): string[] =>
+    !n || typeof n !== "object"
+      ? []
+      : Object.entries(n).flatMap(([k, v]) => (k === "pattern" && typeof v === "string" ? [v] : patterns(v)));
+
+  it("writes dates, https URLs, state codes and rrules once, in common.schema.json", () => {
+    const shared = [/\^\\d\{4\}-\\d\{2\}-\\d\{2\}\$/, /^\^https:\/\/$/, /^\^\[A-Z\]\{2\}\$$/, /^\^FREQ=/];
+    const files = fs.readdirSync(path.join(root, "schema")).filter((f) => f !== "common.schema.json");
+    for (const f of files)
+      for (const p of patterns(read(`schema/${f}`)))
+        for (const re of shared) expect(p, `${f} repeats a shared pattern`).not.toMatch(re);
   });
 });

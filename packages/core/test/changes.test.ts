@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import Ajv2020 from "ajv/dist/2020";
+import addFormats from "ajv-formats";
 import { describe, expect, it } from "vitest";
 import {
   BUNDLED_CHANGES,
@@ -33,9 +34,10 @@ describe("change registry", () => {
   it("is valid against the schema and has unique ids", () => {
     const root = path.resolve(__dirname, "..");
     const read = (p: string) => JSON.parse(fs.readFileSync(path.join(root, p), "utf8"));
-    const validate = new Ajv2020({ allErrors: true, strict: false }).compile(
-      read("schema/changes.schema.json"),
-    );
+    const ajv = new Ajv2020({ allErrors: true, strict: false });
+    addFormats(ajv);
+    ajv.addSchema(read("schema/common.schema.json"));
+    const validate = ajv.compile(read("schema/changes.schema.json"));
     const data = read("data/changes.json");
     expect(validate.errors ?? []).toEqual([]);
     expect(validate(data)).toBe(true);

@@ -48,9 +48,7 @@
       "description": "Human-readable deadline; month names in full (\"April 15\"). Machine form goes in `due`."
     },
     "url": {
-      "type": "string",
-      "format": "uri",
-      "pattern": "^https://"
+      "$ref": "common.schema.json#/$defs/httpsUrl"
     },
     "appliesTo": {
       "type": "array",
@@ -141,16 +139,13 @@
       "minLength": 3
     },
     "rrule": {
-      "type": "string",
-      "pattern": "^FREQ=YEARLY(;INTERVAL=[25])?(;BYMONTH=\\d{1,2}(,\\d{1,2})*)?(;BYMONTHDAY=-?\\d{1,2})?$",
+      "$ref": "common.schema.json#/$defs/rrule",
       "description": "iCalendar (RFC 5545) recurrence rule. The source of truth for frequency and due date; see src/rrule.ts for the supported subset."
     },
     "anchor": {
       "anyOf": [
         {
-          "type": "string",
-          "format": "date",
-          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+          "$ref": "common.schema.json#/$defs/isoDate"
         },
         {
           "enum": ["formation_year", "year_after_formation"]
