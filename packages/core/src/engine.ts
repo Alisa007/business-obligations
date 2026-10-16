@@ -17,7 +17,8 @@ import { validateProfile, type ProfileIssue } from "./validate";
 import { localRules } from "./rules/local";
 import { industryRules } from "./rules/industry";
 import { nextDueDate } from "./dates";
-import { provenanceFor } from "./provenance";
+import { describeProvenance, provenanceFor } from "./provenance";
+import { jurisdictionId, STATE_FIPS } from "./jurisdiction";
 import {
   BUNDLED_CHANGES,
   RULESET_VERSION,
@@ -126,6 +127,9 @@ export function resolveProfile(input: BusinessProfile): ResolvedProfile {
   nonNeg("annualRevenue", input.annualRevenue);
   nonNeg("annualNetIncome", input.annualNetIncome);
   nonNeg("largestContractorPaymentUsd", input.largestContractorPaymentUsd);
+  nonNeg("projectValueUsd", input.projectValueUsd);
+  nonNeg("disturbedAcres", input.disturbedAcres);
+  nonNeg("floorAreaSqFt", input.floorAreaSqFt);
 
   const employeeCount = input.employeeCount ?? 0;
   const presence: Presence[] = [{ state, home: true, employeeCount, hasProperty: true }];
@@ -246,6 +250,8 @@ export interface ComplianceResult {
 }
 
 const today = () => todayIso();
+const FEEDBACK_URL =
+  "https://github.com/Alisa007/business-obligations/issues/new?template=data-correction.yml&title=";
 
 const addDays = (iso: string, days: number) => {
   const d = new Date(`${iso}T00:00:00Z`);
@@ -282,7 +288,10 @@ export function evaluate(input: BusinessProfile, options: EvaluateOptions = {}):
           });
           if (next) item.nextDue = next;
         }
-        item.provenance = provenanceFor(item, profile);
+        item.provenance = describeProvenance(provenanceFor(item, profile), asOf);
+        item.jurisdictionId = jurisdictionId(item, profile);
+        if (item.state && STATE_FIPS[item.state]) item.stateFips = STATE_FIPS[item.state];
+        item.feedbackUrl = `${FEEDBACK_URL}${encodeURIComponent(`Data correction: ${item.id}`)}`;
         const upcoming = changes
           .filter((c) => c.effective > asOf && changeMatchesItem(c, item))
           .sort((a, b) => a.effective.localeCompare(b.effective))

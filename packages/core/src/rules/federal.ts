@@ -71,6 +71,9 @@ export const federalRules: Rule[] = [
       authority: "IRS",
       description: "Free, one-time federal tax ID needed for tax filings, payroll and bank accounts.",
       frequency: "once",
+      formId: "SS-4",
+      filingMethod: ["online", "fax", "mail"],
+      processingTime: "Immediate online; about four business days by fax; about four weeks by mail",
       reason:
         p.entityType !== "sole_proprietorship"
           ? `${p.entityType} entities need an EIN`

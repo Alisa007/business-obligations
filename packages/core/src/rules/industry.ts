@@ -56,6 +56,37 @@ export const industryRules: Rule[] = [
     }),
   },
   {
+    id: "industry.construction-stormwater",
+    description: "NPDES construction stormwater permit coverage",
+    inputs: ["industry", "disturbedAcres", "state"],
+    when: (p) => p.industry === "construction" && (p.disturbedAcres ?? 0) >= 1,
+    items: (p) => ({
+      title: "Obtain construction stormwater permit coverage (NPDES CGP) and prepare a SWPPP",
+      category: "permit",
+      jurisdiction: "state",
+      state: p.state,
+      authority: `EPA or the ${stateName(p.state)} NPDES stormwater authority`,
+      description:
+        "Construction that disturbs one acre or more, or is part of a larger common plan of development, needs coverage under the Construction General Permit (file a Notice of Intent) and a stormwater pollution prevention plan. Cities and counties may add their own grading or erosion-control permits.",
+      frequency: "per_event",
+      appliesWhen: [
+        {
+          field: "disturbedAcres",
+          op: ">=",
+          value: 1,
+          description: "One or more acres of land disturbed",
+        },
+      ],
+      exemptions: [
+        "Sites that disturb under one acre and are not part of a larger common plan of development",
+      ],
+      formId: "Notice of Intent (NOI)",
+      filingMethod: ["online"],
+      reason: `Construction site disturbs ${p.disturbedAcres} acres (one acre or more triggers coverage)`,
+      url: "https://www.epa.gov/npdes/stormwater-discharges-construction-activities",
+    }),
+  },
+  {
     id: "industry.real-estate",
     description: "Real estate broker licensing",
     inputs: ["industry", "state"],

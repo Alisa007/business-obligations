@@ -66,6 +66,10 @@ const { items } = evaluate({
 | Output in another language                  | `localize(result, catalog)`                                 |
 | The command line                            | `npx business-obligations --zip 78701 --entity llc`         |
 
+Each item also carries a `provenance.reviewBy` date and `stale` flag, per-source archive links, a stable
+`jurisdictionId` (for example `US-TX/city/austin`) and a `feedbackUrl` that opens a pre-filled correction issue. Where
+the trigger is a number, `appliesWhen` and `exemptions` state it.
+
 Every item says **why** it applies (`reason`), **who** to deal with (`authority`, `url`), **when** (`nextDue`),
 **how much** (`cost`, `penalty`) and **how sure we are** (`provenance`: checked, compiled or unconfirmed, with sources).
 
