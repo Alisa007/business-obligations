@@ -29,6 +29,16 @@
             "description": "Operates a hotel, motel or short-term rental"
           }
         ]
+      },
+      {
+        "id": "baldwin-al.county-sales-tax-return",
+        "title": "File the Baldwin County sales, use and rental tax return",
+        "authority": "Baldwin County Sales and Use Tax Department",
+        "description": "Baldwin County's sales, use and rental taxes are filed and paid electronically through My Alabama Taxes by 4 p.m. Central on the 20th of the month after the period (next business day if a weekend or holiday). New filers file monthly, and a return is required even with no taxable activity; quarterly or annual filing can be requested in writing after 12 months. Questions about the county portion: 251-972-6844.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://www.revenue.alabama.gov/faqs/local-lodgings-tax/",
+        "appliesTo": ["sells_goods"],
+        "category": "filing"
       }
     ],
     "checkedOn": "2026-10-16"
@@ -63,6 +73,16 @@
             "description": "Operates a hotel, motel or short-term rental"
           }
         ]
+      },
+      {
+        "id": "jefferson-al.county-sales-tax-return",
+        "title": "File the Jefferson County sales tax return",
+        "authority": "Jefferson County Department of Revenue",
+        "description": "Jefferson County collects its own sales tax, separate from the state's. The return and payment must reach the county Department of Revenue by the 20th of the month after the period, filed through My Alabama Taxes (select Jefferson County; do not also file on paper). Since January 1, 2025 the general and special revenue sales taxes are one return; seller's use tax and consumer's use tax each need their own return. A late return costs 10% of the tax (minimum $50) plus interest; a 5% discount applies to tax up to $100 and 2% above that if paid before the 20th.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://paca.jccal.org/763/Frequently-Asked-Questions",
+        "appliesTo": ["sells_goods"],
+        "category": "filing"
       }
     ],
     "checkedOn": "2026-10-16"
@@ -82,7 +102,7 @@
       }
     ],
     "checkedOn": "2026-10-16",
-    "note": "Alabama taxes lodging at the state level and not every county or city lodging tax is state-administered; Madison County's own lodging tax rules were not found."
+    "note": "Alabama taxes lodging at the state level and not every county or city lodging tax is state-administered; Madison County's own lodging tax rules were not found. Madison County runs its own Sales Tax Department (256-532-3498); the page read gives a 15th-of-the-month due date only for beer, wine and liquor excise taxes, so the general sales tax due date is unconfirmed."
   },
   {
     "county": "Mobile",
@@ -114,6 +134,16 @@
             "description": "Operates a hotel, motel or short-term rental"
           }
         ]
+      },
+      {
+        "id": "mobile-al.county-sales-tax-return",
+        "title": "File the Mobile County sales and use tax return",
+        "authority": "Mobile County License Commission",
+        "description": "Mobile County's sales, use, lease and lodging tax returns are due on the 20th of the month after the period, filed through ONE SPOT in My Alabama Taxes (EFT by 4 p.m. Central). The general rate is 1.5% (1% county plus 0.5% school tax, not reported separately). A late return costs the greater of 10% or $50, a zero return must still be filed on time, and there is no on-time discount (penalty page dated 2016; confirm current rules). Phone 251-574-4800.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://www.mobilecountylc.gov/information/sales-tax/penalty",
+        "appliesTo": ["sells_goods"],
+        "category": "filing"
       }
     ],
     "checkedOn": "2026-10-16"
@@ -133,7 +163,7 @@
       }
     ],
     "checkedOn": "2026-10-16",
-    "note": "Montgomery County's lodging tax rules were not checked."
+    "note": "Montgomery County's lodging tax rules were not checked. Whether the county's sales tax is state-administered or self-administered was not confirmed (see the Department of Revenue's list of self-administered localities)."
   },
   {
     "county": "Tuscaloosa",
@@ -150,6 +180,6 @@
       }
     ],
     "checkedOn": "2026-10-16",
-    "note": "Tuscaloosa County's lodging tax rules were not checked."
+    "note": "Tuscaloosa County's lodging tax rules were not checked. Whether the county's sales tax is state-administered or self-administered was not confirmed (see the Department of Revenue's list of self-administered localities)."
   }
 ]
