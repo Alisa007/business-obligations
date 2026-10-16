@@ -337,10 +337,14 @@ export function evaluate(input: BusinessProfile, options: EvaluateOptions = {}):
       }
     }
     const states = new Set([profile.formationState, ...profile.presence.map((x) => x.state)]);
+    // A change concerns the business when it is tied to the change's state and, if the change names rules, when one
+    // of the business's items comes from them. A repeal is the exception: the repealed obligation no longer
+    // produces an item, so the state tie has to be enough.
     const relevant = (c: RuleChange) =>
-      c.scope.state
-        ? states.has(c.scope.state)
-        : !c.scope.rules || items.some((it) => changeMatchesItem(c, it));
+      (!c.scope.state || states.has(c.scope.state)) &&
+      (!c.scope.rules ||
+        (c.kind === "repeal" && !!c.scope.state) ||
+        items.some((it) => changeMatchesItem(c, it)));
     const since = addDays(asOf, -(options.recentDays ?? 365));
     const upcomingChanges = changes
       .filter((c) => c.effective > asOf && relevant(c))

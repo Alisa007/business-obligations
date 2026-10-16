@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { dueToRRule, getComplianceItems, nextDueDate } from "../src";
+import { occurrencesBetween } from "../src/dates";
 import { parseRRule, toRRule } from "../src/rrule";
 
 const base = { city: "Austin", county: "Travis", zip: "78701" } as const;
@@ -121,6 +122,16 @@ describe("dueToRRule", () => {
         "annual",
       ),
     ).toBeUndefined();
+  });
+});
+
+describe("biennial anniversary cycles", () => {
+  it("are first due on the second anniversary, then every two years", () => {
+    const due = { type: "anniversary", point: "end_of_month" } as const;
+    const ctx = { biennial: true, formationDate: "2025-05-10" };
+    expect(nextDueDate(due, { ...ctx, asOf: "2026-01-01" })).toBe("2027-05-31");
+    expect(nextDueDate(due, { ...ctx, asOf: "2027-06-01" })).toBe("2029-05-31");
+    expect(occurrencesBetween(due, ctx, "2026-01-01", "2030-01-01")).toEqual(["2027-05-31", "2029-05-31"]);
   });
 });
 
