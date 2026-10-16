@@ -95,6 +95,8 @@ export const federalRules: Rule[] = [
         authority: "IRS",
         description: "Annual federal income tax return (extensions available via Form 7004 / 4868).",
         frequency: "annual",
+        formId: form,
+        filingMethod: ["online", "mail"],
         deadline,
         due,
         reason: `Federal tax treatment is ${p.taxTreatment}`,
@@ -175,6 +177,8 @@ export const federalRules: Rule[] = [
           authority: "IRS",
           description: "Quarterly reconciliation of wages and payroll taxes.",
           frequency: "quarterly",
+          formId: "941",
+          filingMethod: ["online", "mail"],
           deadline: "April 30, July 31, October 31, January 31",
           due: {
             type: "multi",
@@ -194,6 +198,8 @@ export const federalRules: Rule[] = [
           authority: "IRS",
           description: "Annual FUTA return and payment.",
           frequency: "annual",
+          formId: "940",
+          filingMethod: ["online", "mail"],
           deadline: "January 31",
           due: { type: "fixed", month: 1, day: 31 },
           reason: "Business has employees",
@@ -253,6 +259,8 @@ export const federalRules: Rule[] = [
       description:
         "Required for each non-employee paid $2,000 or more in the year (payments made after 2025).",
       frequency: "annual",
+      formId: "1099-NEC",
+      filingMethod: ["online", "mail"],
       deadline: "January 31",
       due: { type: "fixed", month: 1, day: 31 },
       reason: `Largest contractor payment is ${p.largestContractorPaymentUsd}, at or above the $2,000 threshold`,
@@ -271,6 +279,10 @@ export const federalRules: Rule[] = [
       description:
         "Recognition of 501(c)(3) status; generally due within 27 months of formation for retroactive effect.",
       frequency: "once",
+      formId: "1023 / 1023-EZ",
+      filingMethod: ["online"],
+      processingTime:
+        "IRS issues 80% of Form 1023-EZ determinations within 22 days and 80% of Form 1023 determinations within 191 days (IRS status page, reviewed June 2026; queue times change)",
       reason: "Nonprofit without recognized exempt status",
       url: "https://www.irs.gov/charities-non-profits/application-for-recognition-of-exemption",
     }),

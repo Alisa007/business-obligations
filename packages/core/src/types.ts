@@ -253,6 +253,13 @@ export interface ComplianceItem {
   jurisdictionId?: string;
   /** Two-digit FIPS code of the item's state. */
   stateFips?: string;
+  /**
+   * Census FIPS code of the item's county (5 digits) or city (7 digits, state + place). Present for the counties
+   * and cities bundled in `data/`, when the Census name matches unambiguously.
+   */
+  fips?: string;
+  /** For city items: whether the place is an incorporated municipality (false for unincorporated communities). */
+  incorporated?: boolean;
   /** Government form or filing name, e.g. "SS-4". */
   formId?: string;
   filingMethod?: FilingMethod[];

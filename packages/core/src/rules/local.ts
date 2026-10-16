@@ -121,7 +121,7 @@ export const localRules: Rule[] = [
   {
     id: "local.certificate-of-occupancy",
     description: "Certificate of occupancy for commercial premises",
-    inputs: ["homeBased", "industry", "city", "county"],
+    inputs: ["homeBased", "industry", "city", "county", "floorAreaSqFt"],
     when: (p) => !p.homeBased && p.industry !== "transportation",
     items: (p) => ({
       title: `Obtain certificate of occupancy for premises in ${p.city}`,
@@ -131,9 +131,40 @@ export const localRules: Rule[] = [
       authority: `${p.city} (${p.county} County) building department`,
       description: "The commercial space must be approved for its intended use before operating.",
       frequency: "once",
-      reason: "Business operates from commercial premises",
+      appliesWhen: [
+        { field: "homeBased", op: "==", value: false, description: "Operates from commercial premises" },
+      ],
+      exemptions: [
+        "Home-based businesses, which are usually covered by home-occupation rules instead",
+        "Transportation businesses without a fixed premises",
+      ],
+      reason: p.floorAreaSqFt
+        ? `Business operates from ${p.floorAreaSqFt} sq ft of commercial premises`
+        : "Business operates from commercial premises",
     }),
   },
   seededCityRule(findCity),
   seededCountyRule(findCounty),
+];
+
+/** City permits triggered by premises facts rather than by seeded city data. */
+export const premisesRules: Rule[] = [
+  {
+    id: "local.sign-permit",
+    description: "Sign permit for exterior signage",
+    inputs: ["hasSignage", "city", "state"],
+    when: (p) => p.hasSignage === true,
+    items: (p) => ({
+      title: "Obtain a sign permit before installing exterior signage",
+      category: "permit",
+      jurisdiction: "city",
+      state: p.state,
+      authority: `${p.city} planning or building department`,
+      description:
+        "Most cities require a permit for permanent exterior signs and regulate size, illumination and placement; landlords and zoning overlays may add rules.",
+      frequency: "once",
+      appliesWhen: [{ field: "hasSignage", op: "==", value: true, description: "Displays exterior signage" }],
+      reason: "Business displays exterior signage",
+    }),
+  },
 ];

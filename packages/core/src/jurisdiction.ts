@@ -1,3 +1,4 @@
+import places from "./data/places.json";
 import type { ComplianceItem } from "./types";
 
 /** Two-digit FIPS codes of the states and DC. */
@@ -58,9 +59,19 @@ export const STATE_FIPS: Readonly<Record<string, string>> = {
 const slug = (s: string) =>
   s
     .toLowerCase()
-    .replace(/\bcounty$/, "")
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
+
+/** Drops the generic suffix of a county name ("Travis County" and "Travis" are the same county). */
+const countySlug = (s: string) =>
+  slug(
+    s
+      .replace(/\s+(county|parish|borough|census area|municipality|city and borough)$/i, "")
+      .replace(/\s+county$/i, ""),
+  );
+
+type PlaceTable = Record<string, { c: Record<string, string>; p: Record<string, string> }>;
+const PLACES = places as PlaceTable;
 
 /** Stable id for the jurisdiction an item belongs to. City and county names come from the evaluated profile. */
 export function jurisdictionId(
@@ -69,7 +80,27 @@ export function jurisdictionId(
 ): string {
   if (item.jurisdiction === "federal" || !item.state) return "US";
   const base = `US-${item.state}`;
-  if (item.jurisdiction === "county") return `${base}/county/${slug(place.county)}`;
+  if (item.jurisdiction === "county") return `${base}/county/${countySlug(place.county)}`;
   if (item.jurisdiction === "city") return `${base}/city/${slug(place.city)}`;
   return base;
+}
+
+/** Census FIPS code (and incorporated status for cities) for a county or city item, when it is known. */
+export function placeFacts(
+  item: Pick<ComplianceItem, "jurisdiction" | "state">,
+  place: { city: string; county: string },
+): { fips: string; incorporated?: boolean } | undefined {
+  const st = item.state;
+  const fp = st ? STATE_FIPS[st] : undefined;
+  const table = st ? PLACES[st] : undefined;
+  if (!fp || !table) return undefined;
+  if (item.jurisdiction === "county") {
+    const code = table.c[countySlug(place.county)];
+    return code ? { fips: fp + code } : undefined;
+  }
+  if (item.jurisdiction === "city") {
+    const code = table.p[slug(place.city)];
+    return code ? { fips: fp + code.slice(0, 5), incorporated: code.endsWith("i") } : undefined;
+  }
+  return undefined;
 }
