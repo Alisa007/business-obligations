@@ -2,11 +2,17 @@ name: Release
 
 # Publishes packages/core to npm when a version tag (vX.Y.Z) is pushed, then creates a GitHub release.
 #
+# Two jobs, so the job that can publish never installs dependencies:
+#   build:   read-only; installs with scripts disabled, runs the checks, packs and smoke-tests the tarball.
+#   publish: runs in the protected "npm" environment (a required reviewer must approve), has id-token: write, and
+#            only publishes the tarball built above.
+#
 # Authentication, either of:
-#   - npm trusted publishing (no secret): configure this repository and workflow under the package's
-#     Settings > Trusted Publisher on npmjs.com. Provenance is attached automatically.
-#   - an NPM_TOKEN repository secret (a granular access token with publish rights for this package).
+#   - npm trusted publishing (no secret): on npmjs.com open the package, Settings, Trusted Publisher, GitHub
+#     Actions, workflow release.yml, environment "npm". Provenance is attached automatically.
+#   - an NPM_TOKEN secret stored on the "npm" environment (granular token, publish rights for this package only).
 # Run it by hand (Actions > Release > Run workflow) with "dry run" on to build, test and pack without publishing.
+# Tags v* can only be created by repository admins (ruleset "Protect release tags").
 
 on:
   push:
@@ -19,15 +25,16 @@ on:
         default: true
 
 permissions:
-  contents: write # GitHub release
-  id-token: write # npm provenance / trusted publishing
+  contents: read
+
+concurrency:
+  group: release
+  cancel-in-progress: false
 
 jobs:
-  publish:
+  build:
     runs-on: ubuntu-latest
     timeout-minutes: 20
-    env:
-      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     steps:
       - uses: actions/checkout@v7
         with:
@@ -43,12 +50,9 @@ jobs:
         with:
           node-version: 22
           cache: npm
-          registry-url: https://registry.npmjs.org
 
-      # Trusted publishing needs npm 11.5.1 or newer; Node 22 ships an older npm.
-      - run: npm install -g npm@^11.5.1
-
-      - run: npm ci
+      # Dependency install scripts must not run in a release pipeline.
+      - run: npm ci --ignore-scripts
 
       - name: Tag matches package version
         if: github.ref_type == 'tag'
@@ -60,10 +64,15 @@ jobs:
       - run: npm run build
       - run: npm run size
 
+      - name: Pack
+        run: |
+          mkdir -p "$RUNNER_TEMP/pack"
+          npm pack -w compliance-rules-engine --pack-destination "$RUNNER_TEMP/pack"
+          ls -l "$RUNNER_TEMP/pack"
+
       - name: Smoke test the packed tarball
         run: |
-          mkdir -p "$RUNNER_TEMP/pack" "$RUNNER_TEMP/app"
-          npm pack -w compliance-rules-engine --pack-destination "$RUNNER_TEMP/pack"
+          mkdir -p "$RUNNER_TEMP/app"
           cd "$RUNNER_TEMP/app"
           npm init -y >/dev/null
           npm install --ignore-scripts "$RUNNER_TEMP"/pack/compliance-rules-engine-*.tgz
@@ -71,15 +80,53 @@ jobs:
           node --input-type=module -e 'import {getComplianceItems} from "compliance-rules-engine"; import {lookupZip} from "compliance-rules-engine/zip"; const p=lookupZip("78701"); if(!p||!getComplianceItems({entityType:"llc",zip:"78701",city:p.city,county:p.county}).length) process.exit(1)'
           npx --no-install compliance-rules-engine --zip 94105 --entity llc | grep -q FEDERAL
 
+      - uses: actions/upload-artifact@v4
+        with:
+          name: npm-tarball
+          path: ${{ runner.temp }}/pack/*.tgz
+          if-no-files-found: error
+          retention-days: 7
+
+  publish:
+    needs: build
+    if: ${{ !(github.event_name == 'workflow_dispatch' && inputs.dry_run) && (github.ref_type == 'tag' || github.ref == 'refs/heads/main') }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: npm
+    permissions:
+      contents: write # GitHub release
+      id-token: write # npm provenance / trusted publishing
+    env:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+    steps:
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org
+
+      # Trusted publishing needs npm 11.5.1 or newer; Node 22 ships an older npm.
+      - run: npm install -g npm@^11.5.1
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: npm-tarball
+          path: ${{ runner.temp }}/pack
+
       - name: Publish with an npm token
-        if: ${{ (github.ref_type == 'tag' || github.ref == 'refs/heads/main') && !(github.event_name == 'workflow_dispatch' && inputs.dry_run) && env.NPM_TOKEN != '' }}
-        run: npm publish -w compliance-rules-engine --provenance --access public
+        if: ${{ env.NPM_TOKEN != '' }}
+        run: npm publish "$RUNNER_TEMP"/pack/compliance-rules-engine-*.tgz --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Publish with trusted publishing (OIDC)
-        if: ${{ (github.ref_type == 'tag' || github.ref == 'refs/heads/main') && !(github.event_name == 'workflow_dispatch' && inputs.dry_run) && env.NPM_TOKEN == '' }}
-        run: npm publish -w compliance-rules-engine --access public
+        if: ${{ env.NPM_TOKEN == '' }}
+        run: npm publish "$RUNNER_TEMP"/pack/compliance-rules-engine-*.tgz --access public
+
+      - uses: actions/checkout@v7
+        if: github.ref_type == 'tag'
+        with:
+          sparse-checkout: packages/core/CHANGELOG.md
+          sparse-checkout-cone-mode: false
 
       - name: Create the GitHub release
         if: github.ref_type == 'tag'

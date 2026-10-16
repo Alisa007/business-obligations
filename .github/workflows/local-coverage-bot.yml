@@ -64,13 +64,19 @@ jobs:
       - name: Pick candidates
         id: pick
         if: steps.open.outputs.count == '0'
+        env:
+          # Manual inputs reach the script only through the environment and are validated, never interpolated.
+          IN_CITIES: ${{ inputs.cities || '2' }}
+          IN_COUNTIES: ${{ inputs.counties || '2' }}
+          IN_STATE: ${{ inputs.state }}
         run: |
-          npm ci
-          node packages/core/scripts/missing-local.mjs \
-            --cities "${{ inputs.cities || '2' }}" \
-            --counties "${{ inputs.counties || '2' }}" \
-            ${{ inputs.state && format('--state {0}', inputs.state) || '' }} \
-            --json > "$RUNNER_TEMP/candidates.json"
+          [[ "$IN_CITIES" =~ ^[0-9]{1,2}$ ]] || { echo "cities must be a number" >&2; exit 1; }
+          [[ "$IN_COUNTIES" =~ ^[0-9]{1,2}$ ]] || { echo "counties must be a number" >&2; exit 1; }
+          [[ -z "$IN_STATE" || "$IN_STATE" =~ ^[A-Za-z]{2}$ ]] || { echo "state must be two letters" >&2; exit 1; }
+          npm ci --ignore-scripts
+          args=(--cities "$IN_CITIES" --counties "$IN_COUNTIES" --json)
+          [ -n "$IN_STATE" ] && args+=(--state "$(printf '%s' "$IN_STATE" | tr a-z A-Z)")
+          node packages/core/scripts/missing-local.mjs "${args[@]}" > "$RUNNER_TEMP/candidates.json"
           cat "$RUNNER_TEMP/candidates.json"
           total=$(node -e 'const c=require(process.argv[1]);console.log(c.cities.length+c.counties.length)' "$RUNNER_TEMP/candidates.json")
           echo "total=$total" >> "$GITHUB_OUTPUT"
@@ -197,7 +203,7 @@ jobs:
       - name: Apply, format, commit, push and open the pull request
         run: |
           git apply --index "$RUNNER_TEMP/in/changes.patch"
-          npm ci
+          npm ci --ignore-scripts
           npx prettier --write packages/core/COVERAGE.md packages/core/CHANGELOG.md packages/core/data packages/core/scripts/local-skip.json
           git add -A -- packages/core
           git config user.name "local-coverage-bot"
