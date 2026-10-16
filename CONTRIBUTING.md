@@ -152,20 +152,28 @@ One-time setup:
      `business-obligations`, workflow `release.yml`, environment `npm`.
    - **Token:** create a granular access token (publish rights for this package only, short expiry) and store it as
      the `NPM_TOKEN` secret of the **`npm` environment** (Settings, Environments, npm). The workflow uses it when present.
-3. Already configured on this repository: tags `v*` can only be created by admins (ruleset "Protect release tags"),
-   and the publish job runs in the `npm` environment, which needs a required reviewer's approval. The build job installs
-   dependencies with scripts disabled and never holds publish rights; the publish job only uploads the built tarball.
+3. Already configured on this repository: the publish job runs in the `npm` environment, which needs a required
+   reviewer's approval, and the build job installs dependencies with scripts disabled and never holds publish rights.
+   Tags `v*` cannot be changed or deleted (ruleset "Protect release tags"); pushing a tag does not publish anything.
 
-Each release:
+Releases are automatic and need no extra secrets. Merging a pull request to `main` publishes a new version when it
+contains a releasable change:
 
-1. `npm run release -- patch` (or `minor`, `major`, or an explicit `X.Y.Z`). It bumps `packages/core/package.json` and
-   turns the Unreleased changelog section into a dated version section. Open a PR with that change and merge it.
-2. Optional rehearsal: Actions, Release, Run workflow with "dry run" on. It checks, builds, packs and installs the
-   tarball without publishing.
-3. Tag the merged commit on `main` and push the tag: `git tag vX.Y.Z && git push origin vX.Y.Z`.
-4. The Release workflow verifies the tag is on `main` and matches the package version, runs the checks and a packed-install
-   smoke test, then waits for approval of the `npm` environment before it publishes with provenance and creates the
-   GitHub release from the changelog section.
+1. **Title your PR as a Conventional Commit** (CI checks it, and squash merge makes it the commit subject):
+   `feat(scope): ...` bumps the minor version, `fix(...)`, `perf(...)` and `revert(...)` bump the patch version, and
+   `feat!: ...` (or a `BREAKING CHANGE:` footer) is breaking: major, or minor while the version is below 1.0.
+   `docs`, `chore`, `ci`, `build`, `test`, `refactor` and `style` do not release by themselves. Only commits that
+   touch `packages/core` count, so playground-only changes never release the library.
+2. On merge, the Release workflow takes the last `vX.Y.Z` tag as the current version, reads the PR titles since then and
+   decides the next one. It runs the checks, packs and smoke-tests the tarball, waits for approval of the `npm`
+   environment, publishes with provenance and creates the GitHub release for `vX.Y.Z` (which creates the tag), with
+   generated release notes.
+3. Nothing is committed back to `main`: the version of record is the tag and the release page, so the `version` in
+   `packages/core/package.json` is only a starting point and is set during the release build. Hand-written highlights
+   still go in `CHANGELOG.md`.
+4. Rehearse any time: Actions, Release, Run workflow with "dry run" on prints the version it would release.
+5. To release without waiting for approval, remove the required reviewer from the `npm` environment (Settings,
+   Environments, npm).
 
 Other one-time setup: enable GitHub Pages (Settings, Pages, Source: GitHub Actions) so the playground deploys on each
 push to `main`.

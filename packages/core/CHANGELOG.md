@@ -12,6 +12,9 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ### Changed
 
+- **Releases are automatic.** Merging a PR with a `feat`, `fix`, `perf`, `revert` or breaking Conventional Commit title
+  publishes a new version, tagged and released on GitHub with generated notes. PR titles are checked in CI.
+
 - **Renamed to `business-obligations`** (was `compliance-rules-engine`): npm package, CLI command, repository and
   playground address. Import from `business-obligations` and `business-obligations/zip`; the CLI is now
   `business-obligations`. Calendar exports use `@business-obligations` in event UIDs.

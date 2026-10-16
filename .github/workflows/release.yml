@@ -1,31 +1,33 @@
 name: Release
 
-# Publishes packages/core to npm, then creates a GitHub release. Triggers: a version tag (vX.Y.Z) is pushed, or a merge
-# to main changes packages/core/package.json to a version that is not on npm yet (the tag is then created for you).
-# To release: `npm run release -- patch`, open a PR, merge it.
+# Continuous deployment with automatic versioning and no secrets beyond npm itself.
+#
+# On every merge to main that touches packages/core, the next version is decided from the Conventional Commit PR
+# titles since the last v* tag (packages/core/scripts/auto-release.mjs): feat -> minor, fix/perf/revert -> patch,
+# breaking -> major (minor before 1.0). Nothing releasable (docs, chore, ci, ...) means nothing is published.
+# Nothing is committed to main: the version lives in the git tag and GitHub release, which this workflow creates, and
+# package.json is only set inside the release build.
 #
 # Two jobs, so the job that can publish never installs dependencies:
-#   build:   read-only; installs with scripts disabled, runs the checks, packs and smoke-tests the tarball.
+#   build:   read-only; installs with scripts disabled, decides the version, runs the checks, packs and smoke-tests
+#            the tarball, and writes the release notes.
 #   publish: runs in the protected "npm" environment (a required reviewer must approve), has id-token: write, and
-#            only publishes the tarball built above.
+#            only publishes the tarball built above, then creates the vX.Y.Z release (which creates the tag).
 #
 # Authentication, either of:
 #   - npm trusted publishing (no secret): on npmjs.com open the package, Settings, Trusted Publisher, GitHub
 #     Actions, workflow release.yml, environment "npm". Provenance is attached automatically.
-#   - an NPM_TOKEN secret stored on the "npm" environment (granular token, publish rights for this package only).
-# Run it by hand (Actions > Release > Run workflow) with "dry run" on to build, test and pack without publishing.
-# Tags v* can only be created by repository admins (ruleset "Protect release tags").
+#   - an NPM_TOKEN secret stored on the "npm" environment (granular token with publish rights and bypass-2FA).
+# Run it by hand (Actions > Release > Run workflow) with "dry run" on to see the version it would release.
 
 on:
   push:
-    tags: ["v*"]
-    # Continuous deployment: a merge to main that changes the package publishes it when that version is not on npm yet.
     branches: [main]
-    paths: ["packages/core/package.json"]
+    paths: ["packages/core/**"]
   workflow_dispatch:
     inputs:
       dry_run:
-        description: Build, test and pack only; do not publish
+        description: Decide the version, build, test and pack only; do not publish
         type: boolean
         default: true
 
@@ -46,13 +48,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
         with:
-          fetch-depth: 0
-
-      - name: Tag must be on main
-        if: github.ref_type == 'tag'
-        run: |
-          git fetch origin main
-          git merge-base --is-ancestor "$GITHUB_SHA" origin/main || { echo "Tag $GITHUB_REF_NAME is not on main" >&2; exit 1; }
+          fetch-depth: 0 # tags and history, to find the last release
 
       - uses: actions/setup-node@v7
         with:
@@ -62,35 +58,43 @@ jobs:
       # Dependency install scripts must not run in a release pipeline.
       - run: npm ci --ignore-scripts
 
-      - name: Tag matches package version
-        if: github.ref_type == 'tag'
-        run: |
-          v=$(node -p "require('./packages/core/package.json').version")
-          [ "v$v" = "$GITHUB_REF_NAME" ] || { echo "Tag $GITHUB_REF_NAME does not match package version $v" >&2; exit 1; }
-
-      - name: Version and whether it is already on npm
+      - name: Decide the version
         id: ver
         run: |
-          v=$(node -p "require('./packages/core/package.json').version")
-          echo "version=$v" >> "$GITHUB_OUTPUT"
-          if npm view "business-obligations@$v" version >/dev/null 2>&1; then
-            echo "business-obligations@$v is already on npm; nothing to publish"
+          out=$(node packages/core/scripts/auto-release.mjs --apply --notes "$RUNNER_TEMP/notes.md")
+          echo "$out"
+          v=$(node -p "JSON.parse(process.argv[1]).version || ''" "$out")
+          if [ -z "$v" ]; then
+            echo "No releasable commits (feat/fix/perf/revert/breaking) since the last tag; nothing to publish." | tee -a "$GITHUB_STEP_SUMMARY"
             echo "publish=false" >> "$GITHUB_OUTPUT"
-          else
-            echo "publish=true" >> "$GITHUB_OUTPUT"
+            exit 0
           fi
+          if npm view "business-obligations@$v" version >/dev/null 2>&1; then
+            echo "business-obligations@$v is already on npm but has no tag; refusing to publish it again" >&2
+            exit 1
+          fi
+          echo "version=$v" >> "$GITHUB_OUTPUT"
+          echo "publish=true" >> "$GITHUB_OUTPUT"
+          echo "Will release v$v" | tee -a "$GITHUB_STEP_SUMMARY"
+          cat "$RUNNER_TEMP/notes.md" >> "$GITHUB_STEP_SUMMARY"
 
       - run: npm run check
+        if: steps.ver.outputs.publish == 'true'
       - run: npm run build
+        if: steps.ver.outputs.publish == 'true'
       - run: npm run size
+        if: steps.ver.outputs.publish == 'true'
 
       - name: Pack
+        if: steps.ver.outputs.publish == 'true'
         run: |
           mkdir -p "$RUNNER_TEMP/pack"
           npm pack -w business-obligations --pack-destination "$RUNNER_TEMP/pack"
+          cp "$RUNNER_TEMP/notes.md" "$RUNNER_TEMP/pack/notes.md"
           ls -l "$RUNNER_TEMP/pack"
 
       - name: Smoke test the packed tarball
+        if: steps.ver.outputs.publish == 'true'
         run: |
           mkdir -p "$RUNNER_TEMP/app"
           cd "$RUNNER_TEMP/app"
@@ -101,23 +105,27 @@ jobs:
           npx --no-install business-obligations --zip 94105 --entity llc | grep -q FEDERAL
 
       - uses: actions/upload-artifact@v4
+        if: steps.ver.outputs.publish == 'true'
         with:
-          name: npm-tarball
-          path: ${{ runner.temp }}/pack/*.tgz
+          name: npm-release
+          path: |
+            ${{ runner.temp }}/pack/*.tgz
+            ${{ runner.temp }}/pack/notes.md
           if-no-files-found: error
           retention-days: 7
 
   publish:
     needs: build
-    if: ${{ needs.build.outputs.publish == 'true' && !(github.event_name == 'workflow_dispatch' && inputs.dry_run) && (github.ref_type == 'tag' || github.ref == 'refs/heads/main') }}
+    if: ${{ needs.build.outputs.publish == 'true' && !(github.event_name == 'workflow_dispatch' && inputs.dry_run) && github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
     timeout-minutes: 10
     environment: npm
     permissions:
-      contents: write # GitHub release
+      contents: write # GitHub release (creates the tag)
       id-token: write # npm provenance / trusted publishing
     env:
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      VERSION: ${{ needs.build.outputs.version }}
     steps:
       - uses: actions/setup-node@v7
         with:
@@ -129,40 +137,23 @@ jobs:
 
       - uses: actions/download-artifact@v4
         with:
-          name: npm-tarball
-          path: ${{ runner.temp }}/pack
+          name: npm-release
+          path: ${{ runner.temp }}/release
 
       - name: Publish with an npm token
         if: ${{ env.NPM_TOKEN != '' }}
-        run: npm publish "$RUNNER_TEMP"/pack/business-obligations-*.tgz --provenance --access public
+        run: npm publish "$RUNNER_TEMP"/release/business-obligations-*.tgz --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Publish with trusted publishing (OIDC)
         if: ${{ env.NPM_TOKEN == '' }}
-        run: npm publish "$RUNNER_TEMP"/pack/business-obligations-*.tgz --access public
+        run: npm publish "$RUNNER_TEMP"/release/business-obligations-*.tgz --access public
 
-      - uses: actions/checkout@v7
-        with:
-          sparse-checkout: packages/core/CHANGELOG.md
-          sparse-checkout-cone-mode: false
-
+      # Creates the vX.Y.Z tag at the released commit and the release page, with the generated notes.
       - name: Create the GitHub release
         env:
           GH_TOKEN: ${{ github.token }}
-          VERSION: ${{ needs.build.outputs.version }}
         run: |
-          v="$VERSION"
-          node -e '
-            const log = require("fs").readFileSync("packages/core/CHANGELOG.md", "utf8");
-            const start = log.indexOf("## [" + process.argv[1] + "]");
-            if (start < 0) { console.log("See CHANGELOG.md"); process.exit(0); }
-            const end = log.indexOf("\n## [", start + 1);
-            console.log(log.slice(log.indexOf("\n", start) + 1, end < 0 ? undefined : end).trim());
-          ' "$v" > "$RUNNER_TEMP/notes.md"
-          if [ "$GITHUB_REF_TYPE" = tag ]; then
-            gh release create "$GITHUB_REF_NAME" --title "$GITHUB_REF_NAME" --notes-file "$RUNNER_TEMP/notes.md" --verify-tag
-          else
-            # Merge to main: the release creates the vX.Y.Z tag at the published commit.
-            gh release create "v$v" --title "v$v" --notes-file "$RUNNER_TEMP/notes.md" --target "$GITHUB_SHA"
-          fi
+          gh release create "v$VERSION" --repo "$GITHUB_REPOSITORY" --title "v$VERSION" \
+            --notes-file "$RUNNER_TEMP/release/notes.md" --target "$GITHUB_SHA"
