@@ -1296,5 +1296,81 @@
     "url": "https://nysm.nysed.gov/charter-museum-or-historical-society",
     "checkedOn": "2026-10-16",
     "frequency": "once"
+  },
+  {
+    "id": "ny.public-work-contractor-registry",
+    "title": "Register with the NY Department of Labor to bid on or perform public work",
+    "category": "registration",
+    "authority": "NYS Department of Labor, Bureau of Public Work",
+    "description": "Contractors and subcontractors that bid on or perform construction work on public work projects, or on private projects covered by Article 8 of the Labor Law, must be on the state's contractor registry. Register before bidding or starting new covered work, and confirm that subcontractors are registered. The page does not state a fee or renewal period, so confirm both on the registry page.",
+    "naics": ["236", "237", "238"],
+    "appliesTo": ["all"],
+    "url": "https://dol.ny.gov/public-work",
+    "checkedOn": "2026-10-16",
+    "frequency": "ongoing",
+    "exemptions": ["Work that is neither public work nor a private project covered by Article 8"]
+  },
+  {
+    "id": "ny.certified-payroll-public-work",
+    "title": "File certified payroll electronically for NY public work",
+    "category": "filing",
+    "authority": "NYS Department of Labor, Bureau of Public Work",
+    "description": "Since December 31, 2025, contractors and subcontractors on Article 8 projects must submit certified payroll records electronically through the Certified Payroll portal in MPWR. Prevailing wage rates apply to the workers on those projects.",
+    "naics": ["236", "237", "238"],
+    "appliesTo": ["all"],
+    "url": "https://dol.ny.gov/public-work",
+    "checkedOn": "2026-10-16",
+    "frequency": "ongoing",
+    "exemptions": ["Contractors with no public work or Article 8 project"]
+  },
+  {
+    "id": "ny.construction-stormwater-permit",
+    "title": "Get construction stormwater permit coverage before disturbing soil in New York",
+    "category": "permit",
+    "authority": "NYS Department of Environmental Conservation",
+    "description": "Construction that disturbs one acre or more of soil needs coverage under the DEC's SPDES construction stormwater general permit (GP-0-25-001) before work starts, by electronic notice of intent. Coverage does not renew automatically, so request continued coverage before it ends. Plan for at least 5 business days before earth disturbance, which can stretch to 60 business days if DEC requires a full SWPPP review. DEC bills an annual regulatory fee, quoted at $110 in a 2026 authorisation letter, so confirm the current amount. Disturbing more than five acres at once has an extra requirement.",
+    "naics": ["236", "237", "238"],
+    "appliesTo": ["all"],
+    "url": "https://dec.ny.gov/environmental-protection/water/water-quality/stormwater/construction-activity-permit",
+    "checkedOn": "2026-10-16",
+    "frequency": "ongoing",
+    "exemptions": ["Projects disturbing under one acre"]
+  },
+  {
+    "id": "ny.elevator-contractor-license",
+    "title": "Get a NY elevator contractor license",
+    "category": "license",
+    "authority": "NYS Department of Labor",
+    "description": "The business must own or employ a New York licensed elevator mechanic to license an elevator contractor. The licence is issued to the business entity, costs $600 and renews every two years. It requires $1 million minimum general liability, personal injury and property damage cover, plus workers' compensation and disability insurance.",
+    "naics": ["238290"],
+    "appliesTo": ["all"],
+    "url": "https://dol.ny.gov/elevator-licensing-information",
+    "checkedOn": "2026-10-16",
+    "frequency": "ongoing",
+    "renewal": "Every two years"
+  },
+  {
+    "id": "ny.cable-franchise-confirmation",
+    "title": "Get PSC confirmation of a cable television franchise",
+    "category": "registration",
+    "authority": "NYS Public Service Commission",
+    "description": "A cable franchise from a municipality is not effective until the Public Service Commission confirms it, by a transmittal letter and a completed application for a certificate of confirmation. The PSC may hold a hearing or grant a conditional certificate.",
+    "naics": ["517111"],
+    "appliesTo": ["all"],
+    "url": "https://dps.ny.gov/issues-cable-franchising-filing-certificate-confirmation",
+    "checkedOn": "2026-10-16",
+    "frequency": "once"
+  },
+  {
+    "id": "ny.redemption-center-registration",
+    "title": "Register a bottle bill redemption center with DEC",
+    "category": "registration",
+    "authority": "NYS Department of Environmental Conservation",
+    "description": "A redemption center that pays refund value on empty beverage containers, or collects them for dealers or distributors, files the 6 NYCRR Part 367 notification form with DEC. Registration is free and takes about 30 days. Proof of compliance with local zoning and business requirements goes with the application, and a redemption warning sign must be posted.",
+    "naics": ["562920"],
+    "appliesTo": ["all"],
+    "url": "https://dec.ny.gov/environmental-protection/recycling-composting/bottle-bill/how-to-become-redemption-center",
+    "checkedOn": "2026-10-16",
+    "frequency": "once"
   }
 ]
