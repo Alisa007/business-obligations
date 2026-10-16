@@ -73,6 +73,10 @@
       },
       "description": "NAICS code prefixes (2 to 6 digits). The item applies only when the business's NAICS code starts with one of them."
     },
+    "jurisdiction": {
+      "enum": ["city", "county"],
+      "description": "Level of government issuing an industry item when it is not the state; state when omitted. Scope it with appliesWhen on county."
+    },
     "checkedOn": {
       "$ref": "common.schema.json#/$defs/isoDate",
       "description": "Date this item was checked against its official page; overrides the entry's date."

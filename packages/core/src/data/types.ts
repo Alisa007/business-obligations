@@ -293,6 +293,8 @@ export interface LocalItem {
    * one of them, so a business that gave no code does not get it.
    */
   naics?: string[];
+  /** Level of government that issues the item when it is not the state (industry items only); defaults to `state`. */
+  jurisdiction?: "city" | "county";
   /** Date (YYYY-MM-DD) this item was checked against its official page; overrides the entry's `checkedOn`. */
   checkedOn?: string;
   /** Tags; the item applies if any matches. */

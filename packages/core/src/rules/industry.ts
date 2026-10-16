@@ -17,7 +17,7 @@ const naicsLicences: Rule = {
     applicable(INDUSTRY_ITEMS[p.state] ?? [], p).map((it) => ({
       title: it.title,
       category: it.category,
-      jurisdiction: "state" as const,
+      jurisdiction: it.jurisdiction ?? ("state" as const),
       state: p.state,
       authority: it.authority,
       description: it.description,
