@@ -233,10 +233,26 @@
   },
   {
     "county": "Nassau",
-    "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
-    "items": [],
+    "items": [
+      {
+        "id": "nassau-ny.occupancy-tax-registration",
+        "title": "Register for the Nassau County occupancy tax",
+        "category": "registration",
+        "authority": "Nassau County Treasurer",
+        "description": "All owners of hotels and motels register with the County Treasurer and obtain a Certificate of Authority, which must be displayed where guests can see it. The operator collects a tax of 3% of the per diem room rate with the rent and remits it to the Treasurer (rate per the county page, which lists Local Law 5 of 2025 among its amendments). The page read does not give return due dates; filing is electronic.",
+        "frequency": "once",
+        "url": "https://nassaucountyny.gov/538/Hotel-Motel-Occupancy-Tax",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
     "checkedOn": "2026-10-15"
   },
   {
@@ -257,18 +273,89 @@
   },
   {
     "county": "Oneida",
-    "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
-    "items": [],
+    "items": [
+      {
+        "id": "oneida-ny.occupancy-tax-registration",
+        "title": "Register for the Oneida County occupancy tax",
+        "category": "registration",
+        "authority": "Oneida County Department of Finance",
+        "description": "Any new business renting one room or more completes a certification form for the Finance Department, which sends a permit that must be displayed. Hosts of short-term rentals (stays under 30 consecutive nights) have also had to register their unit with the Commissioner of Finance since January 1, 2026; the county was not charging for it.",
+        "frequency": "once",
+        "url": "https://oneidacountyny.gov/departments/finance/real-estate/hotel-motel-tax-information/",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "oneida-ny.occupancy-tax-return",
+        "title": "File the Oneida County occupancy tax return",
+        "category": "filing",
+        "authority": "Oneida County Department of Finance",
+        "description": "Operators file quarterly returns with the Commissioner of Finance within 20 days after each quarter ends and remit the 5% tax on the per diem room rate. A late return carries a 5% penalty plus interest, and records must be kept for three years.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=20",
+        "exemptions": ["Qualifying nonprofit organizations"],
+        "url": "https://oneidacountyny.gov/departments/finance/real-estate/hotel-motel-tax-information/",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
     "checkedOn": "2026-10-15"
   },
   {
     "county": "Onondaga",
-    "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
-    "items": [],
+    "items": [
+      {
+        "id": "onondaga-ny.occupancy-tax-registration",
+        "title": "Register for the Onondaga County occupancy tax",
+        "category": "registration",
+        "authority": "Onondaga County Department of Finance",
+        "description": "Hotel and motel operators register with the county Commissioner of Finance, who issues a Certificate of Authority (within five days) that lets the operator collect the 7% room occupancy tax. Short-term rental hosts register their property with the county as well; that registration is valid for two years.",
+        "frequency": "once",
+        "deadline": "Within three days of filing a certificate of registration",
+        "url": "https://onondaga.gov/finance/occupancy",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "onondaga-ny.occupancy-tax-return",
+        "title": "File the Onondaga County occupancy tax return",
+        "category": "filing",
+        "authority": "Onondaga County Department of Finance",
+        "description": "Operators file a quarterly room occupancy tax return and remit the 7% tax; the return must be postmarked by the due date (metered mail is not accepted). A late return or payment adds 5% a month plus 1% monthly interest.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=20",
+        "exemptions": ["Permanent residents (stays of 30 or more consecutive days)"],
+        "url": "https://onondaga.gov/finance/occupancy",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
     "checkedOn": "2026-10-15"
   },
   {
@@ -281,10 +368,44 @@
   },
   {
     "county": "Orange",
-    "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
-    "items": [],
+    "items": [
+      {
+        "id": "orange-ny.occupancy-tax-registration",
+        "title": "Register for the Orange County occupancy tax",
+        "category": "registration",
+        "authority": "Orange County Commissioner of Finance",
+        "description": "Every lodging facility in the county registers with the Commissioner of Finance, who assigns an identification number and supplies a Certificate of Authority, forms and instructions. The certificate must be displayed prominently. The operator collects the 5% tax from guests and holds it in trust for the county.",
+        "frequency": "once",
+        "url": "https://www.orangecountyny.gov/528/Hotel-Motel-Occupancy-Tax",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "orange-ny.occupancy-tax-return",
+        "title": "File the Orange County occupancy tax return",
+        "category": "filing",
+        "authority": "Orange County Commissioner of Finance",
+        "description": "Operators file a Return of Tax on Occupancy of Hotel and Motel Rooms for each period ending the last day of February, May, August and November, within 20 days after the period closes. Late returns bring penalties and interest.",
+        "rrule": "FREQ=YEARLY;BYMONTH=3,6,9,12;BYMONTHDAY=20",
+        "url": "https://www.orangecountyny.gov/528/Hotel-Motel-Occupancy-Tax",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
     "checkedOn": "2026-10-15"
   },
   {
@@ -346,17 +467,32 @@
   {
     "county": "Rockland",
     "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
+    "note": "New York Tax Law section 1202-k authorizes a Rockland County hotel and motel room tax of up to 3% administered by the Commissioner of Finance, but the county's current rate, registration and return dates were not found on its website. Other county-level business duties were not checked.",
     "items": [],
     "checkedOn": "2026-10-15"
   },
   {
     "county": "Saratoga",
-    "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
-    "items": [],
+    "items": [
+      {
+        "id": "saratoga-ny.occupancy-tax",
+        "title": "Register for and pay the Saratoga County occupancy tax",
+        "category": "registration",
+        "authority": "Saratoga County Treasurer",
+        "description": "The County Treasurer collects and regulates the county occupancy tax and runs a registration and tax portal for short-term rental owners and operators. The rate was 1% under state law as of early 2025, and a county resolution of January 2026 refers to a local law setting up a short-term rental registry and applying the tax to short-term rental units; the current rate and the return dates were not confirmed.",
+        "frequency": "ongoing",
+        "url": "https://www.saratogacountyny.gov/departments/county-treasurer/",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
     "checkedOn": "2026-10-15"
   },
   {
@@ -409,10 +545,46 @@
   },
   {
     "county": "Suffolk",
-    "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
-    "items": [],
+    "items": [
+      {
+        "id": "suffolk-ny.occupancy-tax-registration",
+        "title": "Register for the Suffolk County occupancy tax",
+        "category": "registration",
+        "authority": "Suffolk County Comptroller, Hotel and Motel Tax",
+        "description": "Every facility that rents lodging for under 30 days in Suffolk County must register with the county, including residences and tourist homes, not only hotels and motels. Operating unregistered carries a fine of $50 a day per facility.",
+        "frequency": "once",
+        "deadline": "Within ten days of the first rental",
+        "url": "https://suffolkcountyny.gov/comptroller/Hotel-Motel-Tax",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "suffolk-ny.occupancy-tax-return",
+        "title": "File the Suffolk County occupancy tax return",
+        "category": "filing",
+        "authority": "Suffolk County Comptroller, Hotel and Motel Tax",
+        "description": "Registered facilities file through the county's portal and remit the 5.5% occupancy tax (rate effective June 1, 2023) on the per diem room rate every quarter. A late filing adds a 10% penalty plus 1% monthly interest starting 30 days after the deadline.",
+        "rrule": "FREQ=YEARLY;BYMONTH=3,6,9,12;BYMONTHDAY=20",
+        "exemptions": ["Permanent residents (stays of 30 or more consecutive days)"],
+        "url": "https://suffolkcountyny.gov/comptroller/Hotel-Motel-Tax",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
     "checkedOn": "2026-10-15"
   },
   {
@@ -510,10 +682,46 @@
   },
   {
     "county": "Westchester",
-    "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
-    "items": [],
+    "items": [
+      {
+        "id": "westchester-ny.occupancy-tax-registration",
+        "title": "Register for the Westchester County occupancy tax",
+        "category": "registration",
+        "authority": "Westchester County Department of Finance, Room Occupancy Tax division",
+        "description": "Hotel and room operators register under Chapter 285 of the county code, submitting an Application for Certificate of Authority and an online-filing verification form to the Department of Finance. The county then issues the Certificate of Authority that allows the operator to collect the 3% room occupancy tax from guests.",
+        "frequency": "once",
+        "deadline": "Within three days of opening or starting a hotel or room occupancy business",
+        "url": "https://finance.westchestergov.com/room-occupancy-tax-faq",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "westchester-ny.occupancy-tax-return",
+        "title": "File the Westchester County occupancy tax return",
+        "category": "filing",
+        "authority": "Westchester County Department of Finance, Room Occupancy Tax division",
+        "description": "Every registered operator files a return each quarter through the county's online system and remits the 3% tax collected, even when there were no room rentals. A return falling due on a weekend or bank holiday is due the next business day.",
+        "rrule": "FREQ=YEARLY;BYMONTH=3,6,9,12;BYMONTHDAY=20",
+        "exemptions": ["Permanent residents and exempt occupants"],
+        "url": "https://finance.westchestergov.com/room-occupancy-tax-faq",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
     "checkedOn": "2026-10-15"
   },
   {
