@@ -125,3 +125,28 @@ describe("consolidated governments and renewal", () => {
     expect(items.find((i) => i.frequency === "once")?.renewal).toBeUndefined();
   });
 });
+
+describe("sourced facts", () => {
+  it("states Florida's local contractor-licensing preemption only for Florida", () => {
+    const fl = evaluate({
+      entityType: "llc",
+      zip: "33101",
+      city: "Miami",
+      county: "Miami-Dade",
+      industry: "construction",
+    });
+    const item = fl.items.find((i) => i.ruleId === "industry.construction")!;
+    expect(item.exemptions?.join(" ")).toMatch(/163\.211/);
+    const tx = evaluate({ ...austin, industry: "construction" }).items.find(
+      (i) => i.ruleId === "industry.construction",
+    )!;
+    expect(tx.exemptions).toBeUndefined();
+  });
+
+  it("gives IRS processing figures for tax-exempt applications", () => {
+    const item = evaluate({ ...austin, entityType: "nonprofit" }).items.find(
+      (i) => i.ruleId === "fed.exempt-application",
+    )!;
+    expect(item.processingTime).toMatch(/22 days/);
+  });
+});

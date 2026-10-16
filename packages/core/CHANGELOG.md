@@ -51,6 +51,9 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
   `licenseClass`; `naics` implies an industry for construction, food service, retail, real estate and healthcare.
 - `renewal` is derived for licences, permits and registrations that recur annually, every two years or every five
   years ("Renew every two years; due ...").
+- Sourced facts: the Form 1023 / 1023-EZ item carries the IRS's published processing figures, and Florida
+  construction items state that cities and counties cannot require their own license for scopes outside the state
+  contractor categories (s. 163.211, Florida Statutes).
 - `formId` and `filingMethod` on the federal income tax return, Form 941, Form 940, Form 1099-NEC and Form 1023.
 - **New profile inputs:** `naics`, `activities`, `projectValueUsd`, `disturbedAcres`, `licenseClass`, `floorAreaSqFt`,
   `hasSignage`, `foodService`. `disturbedAcres` of 1 or more adds the NPDES construction stormwater permit for

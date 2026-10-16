@@ -53,6 +53,15 @@ export const industryRules: Rule[] = [
         "Contractors generally need a license or registration, bonding and proof of insurance; thresholds and classifications vary." +
         (p.licenseClass ? ` Classification requested: ${p.licenseClass}.` : ""),
       frequency: "biennial",
+      // Florida s. 163.211, F.S. (ch. 2021-214): occupational licensing is preempted to the state, so cities and
+      // counties cannot license scopes outside the Construction Industry Licensing Board's categories.
+      ...(p.state === "FL"
+        ? {
+            exemptions: [
+              "Cities and counties cannot require their own license for work outside the state contractor categories, such as painting, flooring, cabinetry, interior remodeling or handyman work (s. 163.211 and s. 489.117(4)(a), Florida Statutes)",
+            ],
+          }
+        : {}),
       reason: "Industry is construction",
     }),
   },

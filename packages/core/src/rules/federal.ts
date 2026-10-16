@@ -281,6 +281,8 @@ export const federalRules: Rule[] = [
       frequency: "once",
       formId: "1023 / 1023-EZ",
       filingMethod: ["online"],
+      processingTime:
+        "IRS issues 80% of Form 1023-EZ determinations within 22 days and 80% of Form 1023 determinations within 191 days (IRS status page, reviewed June 2026; queue times change)",
       reason: "Nonprofit without recognized exempt status",
       url: "https://www.irs.gov/charities-non-profits/application-for-recognition-of-exemption",
     }),
