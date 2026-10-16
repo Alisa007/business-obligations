@@ -1372,5 +1372,73 @@
     "url": "https://dec.ny.gov/environmental-protection/recycling-composting/bottle-bill/how-to-become-redemption-center",
     "checkedOn": "2026-10-16",
     "frequency": "once"
+  },
+  {
+    "id": "ny.firearms-dealer-license",
+    "title": "Get a New York firearms dealer licence",
+    "category": "license",
+    "authority": "Local licensing officer, under NYS Penal Law 400.00",
+    "description": "A business that sells pistols, revolvers, assault weapons or large-capacity magazines needs a state dealer licence under Penal Law 400.00, applied for with the local licensing officer in the city or county. Sellers of rifles and shotguns only are not required to hold the state licence. Licensed dealers and gunsmiths must also follow General Business Law Article 39-BB: electronic ammunition transaction records, secure storage and alarm standards, employee training within 30 days of hire and yearly, and a posted firearms warning notice.",
+    "naics": ["459110", "332994"],
+    "appliesTo": ["all"],
+    "url": "https://gunsafety.ny.gov/resources-gun-dealers",
+    "checkedOn": "2026-10-16",
+    "frequency": "ongoing",
+    "exemptions": [
+      "Sporting goods stores that do not sell firearms",
+      "Sellers of rifles and shotguns only, for the state licence"
+    ]
+  },
+  {
+    "id": "ny.firearms-dealer-annual-certification",
+    "title": "Certify compliance each year to the NY State Police as a gun dealer",
+    "category": "filing",
+    "authority": "New York State Police",
+    "description": "Licensed firearm dealers and gunsmiths email a compliance certification under General Business Law Article 39-BB to the State Police by January 31 each year. The first was due January 31, 2024.",
+    "naics": ["459110", "332994"],
+    "appliesTo": ["all"],
+    "url": "https://gunsafety.ny.gov/resources-gun-dealers",
+    "checkedOn": "2026-10-16",
+    "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=31",
+    "anchor": "2026-01-31",
+    "exemptions": ["Businesses without a dealer or gunsmith licence"]
+  },
+  {
+    "id": "ny.sales-finance-company-license",
+    "title": "Obtain a New York sales finance company license",
+    "category": "license",
+    "authority": "NYS Department of Financial Services",
+    "description": "Under Banking Law section 492, a business that buys retail instalment contracts, for example from car dealers, needs a sales finance company licence from the Superintendent. Apply through NMLS. Licensees file an annual report with DFS in March; the last date DFS posted was March 17, 2025, so confirm the current one. Fees are on separate DFS fee pages.",
+    "naics": ["522220"],
+    "appliesTo": ["all"],
+    "url": "https://www.dfs.ny.gov/apps_and_licensing/sales_finance_companies",
+    "checkedOn": "2026-10-16",
+    "frequency": "ongoing"
+  },
+  {
+    "id": "ny.premium-finance-agency-license",
+    "title": "Obtain a New York premium finance agency license",
+    "category": "license",
+    "authority": "NYS Department of Financial Services",
+    "description": "Anyone other than a lending institution or an authorised insurer who finances insurance premiums needs a premium finance agency licence under Article 12-B of the Banking Law. Apply through NMLS. DFS posts an annual report deadline in early February, last posted as February 2, 2025, so confirm the current date and the fees on the DFS pages.",
+    "naics": ["522220", "524210"],
+    "appliesTo": ["all"],
+    "url": "https://www.dfs.ny.gov/apps_and_licensing/premium_finance_agencies",
+    "checkedOn": "2026-10-16",
+    "frequency": "ongoing"
+  },
+  {
+    "id": "ny.pet-dealer-license",
+    "title": "Get a New York pet dealer license",
+    "category": "license",
+    "authority": "NYS Department of Agriculture and Markets",
+    "description": "A facility selling nine or more dogs or cats a year needs an Article 26-A pet dealer licence, inspected before issue and renewed yearly; apply at least 30 days before the current one ends. Humane societies, shelters and rescues must be licensed from December 15, 2025. Pet stores can no longer be licensed to sell dogs, cats or rabbits under the Puppy Mill Pipeline Act. The application fee is reported as $25 to $150 depending on volume and page, so confirm it.",
+    "naics": ["812910", "813312"],
+    "appliesTo": ["all"],
+    "url": "https://agriculture.ny.gov/become-pet-dealer",
+    "checkedOn": "2026-10-16",
+    "frequency": "ongoing",
+    "renewal": "Every year",
+    "exemptions": ["Breeders selling under 25 dogs and cats a year born and raised at their home"]
   }
 ]
