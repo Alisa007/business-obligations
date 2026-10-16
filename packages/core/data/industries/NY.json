@@ -1133,5 +1133,113 @@
     "frequency": "annual",
     "deadline": "Annual renewal through CRD/IARD",
     "exemptions": ["Federally covered advisers, which make a notice filing"]
+  },
+  {
+    "id": "ny.temporary-residence-permit",
+    "title": "Obtain a permit to operate a New York hotel, motel or cabin colony",
+    "category": "permit",
+    "authority": "Local health department (NYS Department of Health, Subpart 7-1)",
+    "description": "A hotel, motel or cabin colony needs a permit from the permit-issuing health official for up to three years. It cannot be transferred and expires when the operator changes, and must be posted. The regulation asks for the application 60 days before operation while the state form says 30, so confirm the lead time locally.",
+    "naics": ["721110", "721191", "721199"],
+    "appliesTo": ["all"],
+    "url": "https://regs.health.ny.gov/content/section-7-13-permit-operation-inspection-access",
+    "checkedOn": "2026-10-16",
+    "frequency": "ongoing",
+    "renewal": "At least every three years"
+  },
+  {
+    "id": "ny.omh-operating-certificate",
+    "title": "Obtain an OMH operating certificate for a mental health outpatient program",
+    "category": "license",
+    "authority": "NYS Office of Mental Health",
+    "description": "An outpatient or nonresidential mental health program needs an operating certificate under Mental Hygiene Law section 31.02, after prior approval review, a site visit and a certificate of occupancy. Each clinic site has its own certificate, the first one lasts twelve months, and renewals can run up to three years.",
+    "naics": ["621420"],
+    "appliesTo": ["all"],
+    "url": "https://omh.ny.gov/omhweb/licensing/",
+    "checkedOn": "2026-10-16",
+    "frequency": "ongoing",
+    "renewal": "First certificate twelve months; renewals up to three years"
+  },
+  {
+    "id": "ny.oasas-operating-certificate",
+    "title": "Obtain an OASAS operating certificate for a substance use treatment program",
+    "category": "license",
+    "authority": "NYS Office of Addiction Services and Supports",
+    "description": "A provider must get the Commissioner's prior approval before establishing a substance use disorder program, showing public need, relevant experience among its owners and criminal history reviews. The first operating certificate lasts no more than a year, can be renewed, and cannot be transferred.",
+    "naics": ["621420"],
+    "appliesTo": ["all"],
+    "url": "https://oasas.ny.gov/provider-certification-part-810",
+    "checkedOn": "2026-10-16",
+    "frequency": "ongoing",
+    "renewal": "First certificate up to one year, then renewed"
+  },
+  {
+    "id": "ny.appraisal-management-company-registration",
+    "title": "Register an appraisal management company with the NY Department of State",
+    "category": "registration",
+    "authority": "NYS Department of State, Division of Licensing Services",
+    "description": "An appraisal management company registers for two years at $250, with a $25 fee per panel appraiser for the national registry and an annual roster report that must be filed before renewal. Companies regulated by a federal financial regulator are exempt from registering but still report annually.",
+    "naics": ["531320", "531390"],
+    "appliesTo": ["all"],
+    "url": "https://dos.ny.gov/get-appraisal-management-company-license",
+    "checkedOn": "2026-10-16",
+    "frequency": "biennial",
+    "renewal": "Every two years, with the annual roster report filed first",
+    "exemptions": [
+      "Appraisal management companies regulated by a federal financial institution regulator, and their wholly owned subsidiaries"
+    ]
+  },
+  {
+    "id": "ny.inspection-station-license",
+    "title": "License a New York vehicle inspection station",
+    "category": "license",
+    "authority": "NYS Department of Motor Vehicles, Vehicle Safety",
+    "description": "A station must be a registered repair shop at the same location, employ a full-time certified inspector, and have the computerized inspection equipment required since December 1, 2023. Emissions and diesel inspections need their own licenses, and counties at their station limit keep a waitlist. Inspection station licenses are valid for two years.",
+    "naics": ["811111", "811114", "811191"],
+    "appliesTo": ["all"],
+    "url": "https://dmv.ny.gov/business/open-an-inspection-station",
+    "checkedOn": "2026-10-16",
+    "frequency": "biennial",
+    "renewal": "Every two years",
+    "exemptions": ["Shops that do not perform state inspections"]
+  },
+  {
+    "id": "ny.chemical-bulk-storage-registration",
+    "title": "Register chemical bulk storage tanks with NY DEC",
+    "category": "registration",
+    "authority": "NYS Department of Environmental Conservation",
+    "description": "A facility storing regulated hazardous substances in bulk tanks registers them under Part 598 and renews every two years from the last certificate, with a per-tank fee (capped at $50,000 a site) that DEC's FAQ and the regulation state differently, so confirm the amounts. A transfer of ownership means registering again.",
+    "naics": ["325", "424690"],
+    "appliesTo": ["all"],
+    "url": "https://dec.ny.gov/environmental-protection/hazardous-substance-bulk-storage/cbs-registration-renewal-faqs",
+    "checkedOn": "2026-10-16",
+    "frequency": "biennial",
+    "renewal": "Every two years",
+    "exemptions": ["Facilities with no regulated bulk storage tanks"]
+  },
+  {
+    "id": "ny.hospital-establishment-approval",
+    "title": "Get Article 28 approval to establish a hospital or treatment center",
+    "category": "license",
+    "authority": "NYS Department of Health, with the Public Health and Health Planning Council",
+    "description": "No hospital may be established without written approval of the Public Health and Health Planning Council, and a facility providing medical services within Article 28, including one calling itself a center or clinic, needs an establishment application with the required schedules through the certificate of need process.",
+    "naics": ["622", "621493", "621498"],
+    "appliesTo": ["all"],
+    "url": "https://www.health.ny.gov/facilities/hospital/",
+    "checkedOn": "2026-10-16",
+    "frequency": "once"
+  },
+  {
+    "id": "ny.passenger-car-rental-tax",
+    "title": "Collect the New York special tax on passenger car rentals",
+    "category": "payment",
+    "authority": "NYS Department of Taxation and Finance",
+    "description": "Short-term rentals (under a year) of passenger cars rented in New York, or elsewhere for use in New York, carry a special tax on top of sales tax, with a supplemental rate that depends on whether the car is delivered inside the Metropolitan Commuter Transportation District. It is reported with the regular sales tax return, so the company needs a sales tax Certificate of Authority first.",
+    "naics": ["532111"],
+    "appliesTo": ["all"],
+    "url": "https://www.tax.ny.gov/pubs_and_bulls/tg_bulletins/st/sales_tax_rates_additional_sales_taxes_and_fees.htm",
+    "checkedOn": "2026-10-16",
+    "frequency": "ongoing",
+    "deadline": "With each sales tax return"
   }
 ]
