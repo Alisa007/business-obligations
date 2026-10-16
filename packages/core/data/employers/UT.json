@@ -1,0 +1,21 @@
+[
+  {
+    "id": "ut.e-verify",
+    "title": "Enroll in E-Verify and verify new hires (Utah)",
+    "category": "registration",
+    "authority": "Utah employment eligibility law / U.S. Citizenship and Immigration Services",
+    "description": "Utah requires employers with more than 150 employees to use E-Verify for new hires.",
+    "frequency": "ongoing",
+    "url": "https://www.e-verify.gov/about-e-verify/e-verify-mandates",
+    "appliesTo": ["employees"],
+    "checkedOn": "2026-10-16",
+    "appliesWhen": [
+      {
+        "field": "employeeCount",
+        "op": ">=",
+        "value": 150,
+        "description": "150 or more employees in the state"
+      }
+    ]
+  }
+]

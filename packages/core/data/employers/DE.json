@@ -1,0 +1,41 @@
+[
+  {
+    "id": "de.delaware-earns-registration",
+    "title": "Register with Delaware EARNS or certify a retirement plan exemption",
+    "category": "registration",
+    "authority": "Delaware EARNS (Office of the State Treasurer)",
+    "description": "Employers in business at least six months with five or more employees (part-time included) and no qualified plan must register or certify an exemption; deadlines were October 15, 2024 and October 15, 2025, and June 30, 2025 for newly eligible businesses. After a notice and 90 days, the board can penalize up to $250 per eligible employee a year, capped at $5,000.",
+    "frequency": "ongoing",
+    "url": "https://www.earnsdelaware.com/employers",
+    "appliesTo": ["employees"],
+    "checkedOn": "2026-10-16",
+    "appliesWhen": [
+      {
+        "field": "employeeCount",
+        "op": ">=",
+        "value": 5,
+        "description": "5 or more employees in the state"
+      }
+    ],
+    "exemptions": ["Employers that sponsor a qualified retirement plan (they still certify the exemption)"]
+  },
+  {
+    "id": "de.harassment-prevention-training",
+    "title": "Train employees on sexual harassment prevention",
+    "category": "recordkeeping",
+    "authority": "Delaware Department of Labor",
+    "description": "Employers with 50 or more employees must give interactive training to new employees within one year of hire and refresh it every two years, with extra training for supervisors.",
+    "frequency": "ongoing",
+    "url": "https://labor.delaware.gov/divisions/industrial-affairs/anti-discrimination/",
+    "appliesTo": ["employees"],
+    "checkedOn": "2026-10-16",
+    "appliesWhen": [
+      {
+        "field": "employeeCount",
+        "op": ">=",
+        "value": 50,
+        "description": "50 or more employees in the state"
+      }
+    ]
+  }
+]

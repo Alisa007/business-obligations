@@ -1,0 +1,22 @@
+[
+  {
+    "id": "nv.nevada-nest-registration",
+    "title": "Register with Nevada Employee Savings Trust (NEST) or certify a retirement plan exemption",
+    "category": "registration",
+    "authority": "Nevada Employee Savings Trust (Nevada State Treasurer)",
+    "description": "Employers with six or more employees in business at least 36 months and no qualified plan must register or certify an exemption; the deadline was September 1, 2025. No penalty schedule had been published in the sources found.",
+    "frequency": "ongoing",
+    "url": "https://www.nevadatreasurer.gov/FinancialSecurity/emp-savings/About/",
+    "appliesTo": ["employees"],
+    "checkedOn": "2026-10-16",
+    "appliesWhen": [
+      {
+        "field": "employeeCount",
+        "op": ">=",
+        "value": 6,
+        "description": "6 or more employees in the state"
+      }
+    ],
+    "exemptions": ["Employers that sponsor a qualified retirement plan (they still certify the exemption)"]
+  }
+]
