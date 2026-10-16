@@ -9,5 +9,24 @@
     "url": "https://www.unclaimedproperty.nj.gov/reportinginfounclaim.shtml",
     "appliesTo": ["all"],
     "checkedOn": "2026-10-16"
+  },
+  {
+    "id": "nj.contractor-classification-abc-test",
+    "title": "Classify contractors with the ABC test before treating workers as independent (New Jersey)",
+    "category": "recordkeeping",
+    "authority": "New Jersey Department of Labor and Workforce Development",
+    "description": "New Jersey applies the ABC test to wage, hour and unemployment law. Failing any prong makes the worker an employee, with back contributions and per-worker penalties. One source says new misclassification regulations take effect October 1, 2026; check the Department of Labor.",
+    "frequency": "ongoing",
+    "url": "https://www.nj.gov/labor/",
+    "appliesTo": ["all"],
+    "checkedOn": "2026-10-16",
+    "appliesWhen": [
+      {
+        "field": "largestContractorPaymentUsd",
+        "op": ">=",
+        "value": 1,
+        "description": "Pays independent contractors"
+      }
+    ]
   }
 ]

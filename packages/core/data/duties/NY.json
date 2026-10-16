@@ -9,5 +9,24 @@
     "url": "https://www.osc.state.ny.us/unclaimed-funds/reporters",
     "appliesTo": ["all"],
     "checkedOn": "2026-10-16"
+  },
+  {
+    "id": "ny.freelance-written-contract",
+    "title": "Put freelance work of $800 or more in a written contract (New York)",
+    "category": "recordkeeping",
+    "authority": "New York State Department of Labor",
+    "description": "Under the Freelance Isn't Free Act (statewide since August 28, 2024), hiring a freelancer for $800 or more, counting all contracts with the same freelancer in the previous 120 days, requires a written contract with names and mailing addresses, an itemized list of services, the value, the rate and method of pay and the pay date. Keep it six years; the freelancer must be paid by the contract date or within 30 days of completing the work. Damages for failing to provide a contract on request start at $250 and can rise to the contract value.",
+    "frequency": "per_event",
+    "url": "https://dol.ny.gov/freelance-isnt-free-act",
+    "appliesTo": ["all"],
+    "checkedOn": "2026-10-16",
+    "appliesWhen": [
+      {
+        "field": "largestContractorPaymentUsd",
+        "op": ">=",
+        "value": 800,
+        "description": "Paid a freelancer $800 or more"
+      }
+    ]
   }
 ]

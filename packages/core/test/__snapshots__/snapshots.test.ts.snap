@@ -630,6 +630,7 @@ exports[`snapshot AZ > c corp formed in the state with no employees 1`] = `
   "state.annual-report:AZ | File Annual Report (Arizona) | On or before the anniversary of incorporation | ",
   "state.entity-tax:AZ | Register for and file Arizona entity-level taxes |  | ",
   "state.duties:AZ:az.unclaimed-property-report | File the annual unclaimed property holder report (Arizona) | November 1 | 2026-11-01",
+  "state.duties:AZ:az.data-breach-notification | Notify residents and regulators of a data breach within 45 days (Arizona) |  | ",
   "local.business-license:AZ | City TPT license / business license — Sampletown, Sample County, Arizona |  | ",
   "local.certificate-of-occupancy:AZ | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -814,6 +815,14 @@ exports[`snapshot AZ > llc with employees, sales and a trade name 1`] = `
     "title": "File the annual unclaimed property holder report (Arizona)",
   },
   {
+    "authority": "Arizona Attorney General",
+    "deadline": undefined,
+    "frequency": "per_event",
+    "id": "state.duties:AZ:az.data-breach-notification",
+    "nextDue": undefined,
+    "title": "Notify residents and regulators of a data breach within 45 days (Arizona)",
+  },
+  {
     "authority": "Arizona employment eligibility law / U.S. Citizenship and Immigration Services",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -865,6 +874,7 @@ exports[`snapshot CA > c corp formed in the state with no employees 1`] = `
   "state.entity-tax:CA | Register for and file California entity-level taxes |  | ",
   "state.ca-franchise-tax:CA | Pay California minimum franchise tax ($800) | 15th day of the 4th month of the tax year (estimated); return due 15th day of 3rd/4th month after year end | ",
   "state.duties:CA:ca.unclaimed-property-report | File the annual unclaimed property holder report (California) | October 31 | 2026-10-31",
+  "state.duties:CA:ca.data-breach-notification | Notify residents and regulators of a data breach within 30 days (California) |  | ",
   "local.business-license:CA | City business tax certificate — Sampletown, Sample County, California |  | ",
   "local.certificate-of-occupancy:CA | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -1065,6 +1075,14 @@ exports[`snapshot CA > llc with employees, sales and a trade name 1`] = `
     "title": "File the annual unclaimed property holder report (California)",
   },
   {
+    "authority": "California Attorney General",
+    "deadline": undefined,
+    "frequency": "per_event",
+    "id": "state.duties:CA:ca.data-breach-notification",
+    "nextDue": undefined,
+    "title": "Notify residents and regulators of a data breach within 30 days (California)",
+  },
+  {
     "authority": "CalSavers Retirement Savings Program (California State Treasurer)",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -1123,6 +1141,7 @@ exports[`snapshot CO > c corp formed in the state with no employees 1`] = `
   "state.annual-report:CO | File Periodic Report (Colorado) | From 2 months before to 2 months after the periodic report month | ",
   "state.entity-tax:CO | Register for and file Colorado entity-level taxes |  | ",
   "state.duties:CO:co.unclaimed-property-report | File the annual unclaimed property holder report (Colorado) | November 1 | 2026-11-01",
+  "state.duties:CO:co.data-breach-notification | Notify residents and regulators of a data breach within 30 days (Colorado) |  | ",
   "local.business-license:CO | Local sales tax licenses / business license — Sampletown, Sample County, Colorado |  | ",
   "local.certificate-of-occupancy:CO | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -1315,6 +1334,14 @@ exports[`snapshot CO > llc with employees, sales and a trade name 1`] = `
     "title": "File the annual unclaimed property holder report (Colorado)",
   },
   {
+    "authority": "Colorado Attorney General",
+    "deadline": undefined,
+    "frequency": "per_event",
+    "id": "state.duties:CO:co.data-breach-notification",
+    "nextDue": undefined,
+    "title": "Notify residents and regulators of a data breach within 30 days (Colorado)",
+  },
+  {
     "authority": "Colorado SecureSavings Program (Colorado State Treasurer)",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -1365,6 +1392,7 @@ exports[`snapshot CT > c corp formed in the state with no employees 1`] = `
   "state.annual-report:CT | File Annual Report (Connecticut) | Last day of the anniversary month | 2027-03-31",
   "state.entity-tax:CT | Register for and file Connecticut entity-level taxes |  | ",
   "state.duties:CT:ct.unclaimed-property-report | File the annual unclaimed property holder report (Connecticut) | March 31 | 2027-03-31",
+  "state.duties:CT:ct.data-breach-notification | Notify residents and regulators of a data breach within 60 days (Connecticut) |  | ",
   "local.business-license:CT | Town zoning/occupancy approvals — Sampletown, Sample County, Connecticut |  | ",
   "local.certificate-of-occupancy:CT | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -1547,6 +1575,14 @@ exports[`snapshot CT > llc with employees, sales and a trade name 1`] = `
     "id": "state.duties:CT:ct.unclaimed-property-report",
     "nextDue": "2027-03-31",
     "title": "File the annual unclaimed property holder report (Connecticut)",
+  },
+  {
+    "authority": "Connecticut Attorney General",
+    "deadline": undefined,
+    "frequency": "per_event",
+    "id": "state.duties:CT:ct.data-breach-notification",
+    "nextDue": undefined,
+    "title": "Notify residents and regulators of a data breach within 60 days (Connecticut)",
   },
   {
     "authority": "MyCTSavings (Connecticut Retirement Security Authority)",
@@ -1835,6 +1871,7 @@ exports[`snapshot DE > c corp formed in the state with no employees 1`] = `
   "state.entity-tax:DE | Register for and file Delaware entity-level taxes |  | ",
   "state.business-license:DE | Delaware business license and gross receipts tax |  | ",
   "state.duties:DE:de.unclaimed-property-report | File the annual unclaimed property holder report (Delaware) | March 1 | 2027-03-01",
+  "state.duties:DE:de.data-breach-notification | Notify residents and regulators of a data breach within 60 days (Delaware) |  | ",
   "local.business-license:DE | County/city business license — Sampletown, Sample County, Delaware |  | ",
   "local.certificate-of-occupancy:DE | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -2011,6 +2048,14 @@ exports[`snapshot DE > llc with employees, sales and a trade name 1`] = `
     "title": "File the annual unclaimed property holder report (Delaware)",
   },
   {
+    "authority": "Delaware Department of Justice",
+    "deadline": undefined,
+    "frequency": "per_event",
+    "id": "state.duties:DE:de.data-breach-notification",
+    "nextDue": undefined,
+    "title": "Notify residents and regulators of a data breach within 60 days (Delaware)",
+  },
+  {
     "authority": "Delaware EARNS (Office of the State Treasurer)",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -2053,6 +2098,7 @@ exports[`snapshot FL > c corp formed in the state with no employees 1`] = `
   "state.annual-report:FL | File Annual Report (Florida) | January 1 – May 1 | 2027-05-01",
   "state.entity-tax:FL | Register for and file Florida entity-level taxes |  | ",
   "state.duties:FL:fl.unclaimed-property-report | File the annual unclaimed property holder report (Florida) | April 30 | 2027-04-30",
+  "state.duties:FL:fl.data-breach-notification | Notify residents and regulators of a data breach within 30 days (Florida) |  | ",
   "local.business-license:FL | County and city Local Business Tax Receipt — Sampletown, Sample County, Florida |  | ",
   "local.certificate-of-occupancy:FL | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -2219,6 +2265,14 @@ exports[`snapshot FL > llc with employees, sales and a trade name 1`] = `
     "id": "state.duties:FL:fl.unclaimed-property-report",
     "nextDue": "2027-04-30",
     "title": "File the annual unclaimed property holder report (Florida)",
+  },
+  {
+    "authority": "Florida Department of Legal Affairs",
+    "deadline": undefined,
+    "frequency": "per_event",
+    "id": "state.duties:FL:fl.data-breach-notification",
+    "nextDue": undefined,
+    "title": "Notify residents and regulators of a data breach within 30 days (Florida)",
   },
   {
     "authority": "Florida Department of Revenue (Reemployment Tax)",
@@ -7625,6 +7679,7 @@ exports[`snapshot OH > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:OH | Maintain a registered agent in Ohio |  | ",
   "state.entity-tax:OH | Register for and file Ohio entity-level taxes |  | ",
   "state.duties:OH:oh.unclaimed-property-report | File the annual unclaimed property holder report (Ohio) | November 1 | 2026-11-01",
+  "state.duties:OH:oh.data-breach-notification | Notify residents and regulators of a data breach within 45 days (Ohio) |  | ",
   "local.business-license:OH | Municipal income tax registration — Sampletown, Sample County, Ohio |  | ",
   "local.certificate-of-occupancy:OH | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -7791,6 +7846,14 @@ exports[`snapshot OH > llc with employees, sales and a trade name 1`] = `
     "id": "state.duties:OH:oh.unclaimed-property-report",
     "nextDue": "2026-11-01",
     "title": "File the annual unclaimed property holder report (Ohio)",
+  },
+  {
+    "authority": "Ohio Attorney General",
+    "deadline": undefined,
+    "frequency": "per_event",
+    "id": "state.duties:OH:oh.data-breach-notification",
+    "nextDue": undefined,
+    "title": "Notify residents and regulators of a data breach within 45 days (Ohio)",
   },
   {
     "authority": "Ohio Department of Job and Family Services",
@@ -8464,6 +8527,7 @@ exports[`snapshot RI > c corp formed in the state with no employees 1`] = `
   "state.annual-report:RI | File Annual Report (Rhode Island) | February 1 – May 1 | 2027-05-01",
   "state.entity-tax:RI | Register for and file Rhode Island entity-level taxes |  | ",
   "state.duties:RI:ri.unclaimed-property-report | File the annual unclaimed property holder report (Rhode Island) | November 1 | 2026-11-01",
+  "state.duties:RI:ri.data-breach-notification | Notify residents and regulators of a data breach within 45 days (Rhode Island) |  | ",
   "local.business-license:RI | City/town licenses — Sampletown, Sample County, Rhode Island |  | ",
   "local.certificate-of-occupancy:RI | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -8646,6 +8710,14 @@ exports[`snapshot RI > llc with employees, sales and a trade name 1`] = `
     "id": "state.duties:RI:ri.unclaimed-property-report",
     "nextDue": "2026-11-01",
     "title": "File the annual unclaimed property holder report (Rhode Island)",
+  },
+  {
+    "authority": "Rhode Island Attorney General",
+    "deadline": undefined,
+    "frequency": "per_event",
+    "id": "state.duties:RI:ri.data-breach-notification",
+    "nextDue": undefined,
+    "title": "Notify residents and regulators of a data breach within 45 days (Rhode Island)",
   },
   {
     "authority": "Rhode Island Department of Labor and Training",
@@ -8892,6 +8964,7 @@ exports[`snapshot SD > c corp formed in the state with no employees 1`] = `
   "state.annual-report:SD | File Annual Report (South Dakota) | First day of the anniversary month | 2027-03-01",
   "state.entity-tax:SD | Register for and file South Dakota entity-level taxes |  | ",
   "state.duties:SD:sd.unclaimed-property-report | File the annual unclaimed property holder report (South Dakota) | November 1 | 2026-11-01",
+  "state.duties:SD:sd.data-breach-notification | Notify residents and regulators of a data breach within 60 days (South Dakota) |  | ",
   "local.business-license:SD | City business license — Sampletown, Sample County, South Dakota |  | ",
   "local.certificate-of-occupancy:SD | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -9058,6 +9131,14 @@ exports[`snapshot SD > llc with employees, sales and a trade name 1`] = `
     "id": "state.duties:SD:sd.unclaimed-property-report",
     "nextDue": "2026-11-01",
     "title": "File the annual unclaimed property holder report (South Dakota)",
+  },
+  {
+    "authority": "South Dakota Attorney General",
+    "deadline": undefined,
+    "frequency": "per_event",
+    "id": "state.duties:SD:sd.data-breach-notification",
+    "nextDue": undefined,
+    "title": "Notify residents and regulators of a data breach within 60 days (South Dakota)",
   },
   {
     "authority": "South Dakota Department of Labor & Regulation",
@@ -9296,6 +9377,7 @@ exports[`snapshot TX > c corp formed in the state with no employees 1`] = `
   "state.annual-report:TX | File Franchise Tax Report and Public Information Report (Texas) | May 15 | 2027-05-15",
   "state.entity-tax:TX | Register for and file Texas entity-level taxes |  | ",
   "state.duties:TX:tx.unclaimed-property-report | File the annual unclaimed property holder report (Texas) | July 1 | 2027-07-01",
+  "state.duties:TX:tx.data-breach-notification | Notify residents and regulators of a data breach within 60 days (Texas) |  | ",
   "local.business-license:TX | Local permits — Sampletown, Sample County, Texas |  | ",
   "local.certificate-of-occupancy:TX | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -9462,6 +9544,14 @@ exports[`snapshot TX > llc with employees, sales and a trade name 1`] = `
     "id": "state.duties:TX:tx.unclaimed-property-report",
     "nextDue": "2027-07-01",
     "title": "File the annual unclaimed property holder report (Texas)",
+  },
+  {
+    "authority": "Texas Attorney General",
+    "deadline": undefined,
+    "frequency": "per_event",
+    "id": "state.duties:TX:tx.data-breach-notification",
+    "nextDue": undefined,
+    "title": "Notify residents and regulators of a data breach within 60 days (Texas)",
   },
   {
     "authority": "Texas Workforce Commission",
@@ -10145,6 +10235,7 @@ exports[`snapshot WA > c corp formed in the state with no employees 1`] = `
   "state.entity-tax:WA | Register for and file Washington entity-level taxes |  | ",
   "state.business-license:WA | Washington state business license (Business Licensing Service) |  | ",
   "state.duties:WA:wa.unclaimed-property-report | File the annual unclaimed property holder report (Washington) | October 31 | 2026-10-31",
+  "state.duties:WA:wa.data-breach-notification | Notify residents and regulators of a data breach within 30 days (Washington) |  | ",
   "local.business-license:WA | City business license endorsement — Sampletown, Sample County, Washington |  | ",
   "local.certificate-of-occupancy:WA | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -10329,6 +10420,14 @@ exports[`snapshot WA > llc with employees, sales and a trade name 1`] = `
     "title": "File the annual unclaimed property holder report (Washington)",
   },
   {
+    "authority": "Washington Attorney General",
+    "deadline": undefined,
+    "frequency": "per_event",
+    "id": "state.duties:WA:wa.data-breach-notification",
+    "nextDue": undefined,
+    "title": "Notify residents and regulators of a data breach within 30 days (Washington)",
+  },
+  {
     "authority": "Washington Employment Security Department",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -10371,6 +10470,7 @@ exports[`snapshot WI > c corp formed in the state with no employees 1`] = `
   "state.annual-report:WI | File Annual Report (Wisconsin) | Last day of the calendar quarter containing the anniversary month | ",
   "state.entity-tax:WI | Register for and file Wisconsin entity-level taxes |  | ",
   "state.duties:WI:wi.unclaimed-property-report | File the annual unclaimed property holder report (Wisconsin) | November 1 | 2026-11-01",
+  "state.duties:WI:wi.data-breach-notification | Notify residents and regulators of a data breach within 45 days (Wisconsin) |  | ",
   "local.business-license:WI | Local permits — Sampletown, Sample County, Wisconsin |  | ",
   "local.certificate-of-occupancy:WI | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -10545,6 +10645,14 @@ exports[`snapshot WI > llc with employees, sales and a trade name 1`] = `
     "id": "state.duties:WI:wi.unclaimed-property-report",
     "nextDue": "2026-11-01",
     "title": "File the annual unclaimed property holder report (Wisconsin)",
+  },
+  {
+    "authority": "Wisconsin Department of Agriculture, Trade and Consumer Protection",
+    "deadline": undefined,
+    "frequency": "per_event",
+    "id": "state.duties:WI:wi.data-breach-notification",
+    "nextDue": undefined,
+    "title": "Notify residents and regulators of a data breach within 45 days (Wisconsin)",
   },
   {
     "authority": "Wisconsin Department of Workforce Development (UI)",
