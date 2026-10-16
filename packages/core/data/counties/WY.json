@@ -1,1 +1,41 @@
-[]
+[
+  {
+    "county": "Laramie",
+    "items": [
+      {
+        "id": "laramie-wy.business-personal-property-listing",
+        "title": "List business personal property with the Laramie County Assessor",
+        "category": "filing",
+        "authority": "Laramie County Assessor",
+        "description": "All tangible personal property used in a business (furniture, equipment, computers, software, tools) is taxable and must be listed; inventory held for resale is not reported. The assessor mails forms in late November and they must be returned by March 1. A business that does not report gets an estimated value from the best information available, and an assessment can be appealed within 30 days of the mailing date.",
+        "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1",
+        "url": "https://www.laramiecountywy.gov/Resident-Services/Property-Information/Personal-Property-Reporting",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-15"
+  },
+  {
+    "county": "Lincoln",
+    "status": "unverified",
+    "note": "Wyoming Statute 39-13-107 sets a March 1 listing date for business personal property in every county, but Lincoln County's own assessor pages could not be found, so its form and process are unconfirmed.",
+    "items": [],
+    "checkedOn": "2026-10-15"
+  },
+  {
+    "county": "Natrona",
+    "items": [
+      {
+        "id": "natrona-wy.business-personal-property-listing",
+        "title": "List business personal property with the Natrona County Assessor",
+        "category": "filing",
+        "authority": "Natrona County Assessor",
+        "description": "Wyoming law (W.S. 39-13-107) requires business personal property to be listed with the county assessor by March 1. Natrona County sends a blank Business Personal Property Rendition to businesses licensed in the county that have no asset list on file. The county's own pages read did not state the date, which is taken from the statute as quoted by the Albany County assessor.",
+        "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1",
+        "url": "https://www.natronacounty-wy.gov/faq",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-15"
+  }
+]
