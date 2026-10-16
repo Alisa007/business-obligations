@@ -686,6 +686,27 @@ describe("New York county items follow their conditions", () => {
   });
 });
 
+describe("Florida county tourist development tax", () => {
+  const orlando: BusinessProfile = {
+    entityType: "llc",
+    zip: "32801",
+    city: "Orlando",
+    county: "Orange",
+    state: "FL",
+  };
+  const titles = (p: BusinessProfile) =>
+    evaluate(p, { asOf: "2026-10-16" })
+      .items.filter((i) => i.jurisdiction === "county")
+      .map((i) => i.title);
+
+  it("shows the county tax only to lodging businesses", () => {
+    expect(titles(orlando).some((t) => /tourist development tax/.test(t))).toBe(false);
+    const lodging = titles({ ...orlando, activities: ["lodging"] });
+    expect(lodging).toContain("Register for the Orange County tourist development tax");
+    expect(lodging).toContain("File the Orange County tourist development tax return");
+  });
+});
+
 describe("bring-your-own city data", () => {
   const profile: BusinessProfile = {
     entityType: "llc",
