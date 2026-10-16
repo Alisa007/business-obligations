@@ -128,3 +128,26 @@ export function occurrencesBetween(
   }
   return out.sort();
 }
+
+/** BYMONTHDAY value for a day of a month: -1 (the last day) for days that some years' month does not have. */
+const monthDay = (month: number, day: number) => (day > lastDay(2025, month) && day >= 29 ? -1 : day);
+
+/**
+ * The due rule as an iCalendar recurrence rule (RFC 5545 `RRULE` value, without the `RRULE:` prefix), for example
+ * `FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=15`. Only rules that repeat every year on fixed dates can be written without
+ * a start date; biennial, five-year, anniversary and one-off rules return undefined.
+ */
+export function dueToRRule(due: Due, frequency: string): string | undefined {
+  if (frequency !== "annual") return undefined;
+  if (due.type === "fixed") {
+    if (due.parity || due.cycleFrom) return undefined;
+    return `FREQ=YEARLY;BYMONTH=${due.month};BYMONTHDAY=${monthDay(due.month, due.day)}`;
+  }
+  if (due.type === "multi") {
+    const days = new Set(due.dates.map((d) => monthDay(d.month, d.day)));
+    if (days.size !== 1) return undefined;
+    const months = [...new Set(due.dates.map((d) => d.month))].sort((a, b) => a - b);
+    return `FREQ=YEARLY;BYMONTH=${months.join(",")};BYMONTHDAY=${[...days][0]}`;
+  }
+  return undefined;
+}

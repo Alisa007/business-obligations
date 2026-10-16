@@ -171,6 +171,63 @@ describe("profession directory", () => {
   });
 });
 
+describe("local and profession data schemas", () => {
+  const local = new Ajv2020({ allErrors: true, strict: false });
+  addFormats(local);
+  local.addSchema(read("schema/local-item.schema.json"));
+  const cityFile = local.compile(read("schema/cities.schema.json"));
+  const countyFile = local.compile(read("schema/counties.schema.json"));
+  const list = (dir: string) => fs.readdirSync(path.join(root, dir)).filter((f) => f.endsWith(".json"));
+
+  it.each(list("data/cities"))("cities/%s matches the schema", (f) => {
+    cityFile(read(`data/cities/${f}`));
+    expect(cityFile.errors ?? []).toEqual([]);
+  });
+  it.each(list("data/counties"))("counties/%s matches the schema", (f) => {
+    countyFile(read(`data/counties/${f}`));
+    expect(countyFile.errors ?? []).toEqual([]);
+  });
+  it("professions.json matches the schema", () => {
+    const validate = local.compile(read("schema/professions.schema.json"));
+    validate(read("data/professions.json"));
+    expect(validate.errors ?? []).toEqual([]);
+  });
+
+  it("rejects malformed local entries", () => {
+    const ok = {
+      state: "TX",
+      city: "Austin",
+      status: "unverified",
+      note: "No general license was confirmed.",
+      items: [],
+    };
+    expect(cityFile([ok])).toBe(true);
+    const item = {
+      id: "x.fee",
+      title: "Pay the fee",
+      category: "payment",
+      authority: "City Hall",
+      description: "Pay the annual fee to the city.",
+      frequency: "annual",
+      appliesTo: ["all"],
+    };
+    const bad: unknown[] = [
+      { ...ok, checkedOn: "2026-02-30" },
+      { ...ok, checkedOn: "10/13/2026" },
+      { ...ok, state: "tx" },
+      { ...ok, status: undefined },
+      { ...ok, status: "none" },
+      { ...ok, items: [item] },
+      { ...ok, status: undefined, items: [{ ...item, id: "Bad Id" }] },
+      { ...ok, status: undefined, items: [{ ...item, url: "http://insecure.example" }] },
+      { ...ok, status: undefined, items: [{ ...item, frequency: "yearly" }] },
+      { ...ok, status: undefined, items: [{ ...item, due: { type: "fixed", month: 13, day: 1 } }] },
+      { ...ok, status: undefined, items: [{ ...item, due: { type: "date", date: "2026-02-30" } }] },
+    ];
+    for (const entry of bad) expect(cityFile([entry]), JSON.stringify(entry)).toBe(false);
+  });
+});
+
 describe("coverage report", () => {
   it("COVERAGE.md is up to date (run `npm run coverage`)", async () => {
     // @ts-expect-error plain JS module
