@@ -1,26 +1,97 @@
 name: Release
 
+# Publishes packages/core to npm when a version tag (vX.Y.Z) is pushed, then creates a GitHub release.
+#
+# Authentication, either of:
+#   - npm trusted publishing (no secret): configure this repository and workflow under the package's
+#     Settings > Trusted Publisher on npmjs.com. Provenance is attached automatically.
+#   - an NPM_TOKEN repository secret (a granular access token with publish rights for this package).
+# Run it by hand (Actions > Release > Run workflow) with "dry run" on to build, test and pack without publishing.
+
 on:
   push:
     tags: ["v*"]
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Build, test and pack only; do not publish
+        type: boolean
+        default: true
 
 permissions:
-  contents: read
-  id-token: write # npm provenance
+  contents: write # GitHub release
+  id-token: write # npm provenance / trusted publishing
 
 jobs:
   publish:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     steps:
       - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Tag must be on main
+        if: github.ref_type == 'tag'
+        run: |
+          git fetch origin main
+          git merge-base --is-ancestor "$GITHUB_SHA" origin/main || { echo "Tag $GITHUB_REF_NAME is not on main" >&2; exit 1; }
+
       - uses: actions/setup-node@v7
         with:
           node-version: 22
           cache: npm
           registry-url: https://registry.npmjs.org
+
+      # Trusted publishing needs npm 11.5.1 or newer; Node 22 ships an older npm.
+      - run: npm install -g npm@^11.5.1
+
       - run: npm ci
+
+      - name: Tag matches package version
+        if: github.ref_type == 'tag'
+        run: |
+          v=$(node -p "require('./packages/core/package.json').version")
+          [ "v$v" = "$GITHUB_REF_NAME" ] || { echo "Tag $GITHUB_REF_NAME does not match package version $v" >&2; exit 1; }
+
       - run: npm run check
       - run: npm run build
-      - run: npm publish -w compliance-rules-engine --provenance --access public
+      - run: npm run size
+
+      - name: Smoke test the packed tarball
+        run: |
+          mkdir -p "$RUNNER_TEMP/pack" "$RUNNER_TEMP/app"
+          npm pack -w compliance-rules-engine --pack-destination "$RUNNER_TEMP/pack"
+          cd "$RUNNER_TEMP/app"
+          npm init -y >/dev/null
+          npm install --ignore-scripts "$RUNNER_TEMP"/pack/compliance-rules-engine-*.tgz
+          node -e 'const m=require("compliance-rules-engine"); if(!m.getComplianceItems({entityType:"llc",zip:"94105",city:"San Francisco",county:"San Francisco"}).length) process.exit(1)'
+          node --input-type=module -e 'import {getComplianceItems} from "compliance-rules-engine"; import {lookupZip} from "compliance-rules-engine/zip"; const p=lookupZip("78701"); if(!p||!getComplianceItems({entityType:"llc",zip:"78701",city:p.city,county:p.county}).length) process.exit(1)'
+          npx --no-install compliance-rules-engine --zip 94105 --entity llc | grep -q FEDERAL
+
+      - name: Publish with an npm token
+        if: ${{ (github.ref_type == 'tag' || github.ref == 'refs/heads/main') && !(github.event_name == 'workflow_dispatch' && inputs.dry_run) && env.NPM_TOKEN != '' }}
+        run: npm publish -w compliance-rules-engine --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Publish with trusted publishing (OIDC)
+        if: ${{ (github.ref_type == 'tag' || github.ref == 'refs/heads/main') && !(github.event_name == 'workflow_dispatch' && inputs.dry_run) && env.NPM_TOKEN == '' }}
+        run: npm publish -w compliance-rules-engine --access public
+
+      - name: Create the GitHub release
+        if: github.ref_type == 'tag'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          v="${GITHUB_REF_NAME#v}"
+          node -e '
+            const log = require("fs").readFileSync("packages/core/CHANGELOG.md", "utf8");
+            const start = log.indexOf("## [" + process.argv[1] + "]");
+            if (start < 0) { console.log("See CHANGELOG.md"); process.exit(0); }
+            const end = log.indexOf("\n## [", start + 1);
+            console.log(log.slice(log.indexOf("\n", start) + 1, end < 0 ? undefined : end).trim());
+          ' "$v" > "$RUNNER_TEMP/notes.md"
+          gh release create "$GITHUB_REF_NAME" --title "$GITHUB_REF_NAME" --notes-file "$RUNNER_TEMP/notes.md" --verify-tag

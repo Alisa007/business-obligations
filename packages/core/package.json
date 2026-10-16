@@ -8,6 +8,7 @@
   "types": "./dist/index.d.ts",
   "files": [
     "dist",
+    "!dist/**/*.map",
     "schema",
     "data/states",
     "data/cities",
@@ -28,7 +29,8 @@
     "prepublishOnly": "npm run check && npm run build && npm run size",
     "coverage": "node scripts/coverage.mjs && prettier --write COVERAGE.md",
     "size": "node scripts/size.mjs",
-    "check:links": "node scripts/check-urls.mjs --data"
+    "check:links": "node scripts/check-urls.mjs --data",
+    "release": "node scripts/release.mjs"
   },
   "devDependencies": {
     "@types/node": "^26.6.5",
@@ -101,5 +103,8 @@
   "sideEffects": false,
   "bin": {
     "compliance-rules-engine": "./dist/cli.js"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
