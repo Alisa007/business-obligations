@@ -23,7 +23,7 @@ export interface CalendarEvent {
 }
 
 export interface CalendarOptions extends Omit<EvaluateOptions, "asOf"> {
-  /** First day of the window (YYYY-MM-DD). Defaults to today (UTC). */
+  /** First day of the window (YYYY-MM-DD). Defaults to today (local date). */
   from?: string;
   /** Last day of the window (YYYY-MM-DD), inclusive. Defaults to one year after `from`. */
   to?: string;

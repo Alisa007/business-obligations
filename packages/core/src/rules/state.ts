@@ -348,10 +348,9 @@ export const stateRules: Rule[] = [
           jurisdiction: "state",
           state: "CA",
           authority: "California Franchise Tax Board",
-          description:
-            p.taxTreatment === "c_corp"
-              ? "Minimum $800 franchise tax; S corporations pay the greater of $800 or 1.5% of net income."
-              : "Annual $800 minimum tax for LLCs (Form 3522), plus Form 568 / 100 / 100S return.",
+          description: isCorpLike(p)
+            ? "Minimum $800 franchise tax; S corporations pay the greater of $800 or 1.5% of net income."
+            : "Annual $800 minimum tax for LLCs (Form 3522), plus Form 568 / 100 / 100S return.",
           frequency: "annual",
           deadline:
             "15th day of the 4th month of the tax year (estimated); return due 15th day of 3rd/4th month after year end",
