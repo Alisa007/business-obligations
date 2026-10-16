@@ -1490,5 +1490,34 @@
     "url": "https://www.health.ny.gov/environmental/water/drinking/bulk_bottle/",
     "checkedOn": "2026-10-16",
     "frequency": "ongoing"
+  },
+  {
+    "id": "ny.apparel-industry-registration",
+    "title": "Register as an apparel manufacturer or contractor with the NY Department of Labor",
+    "category": "registration",
+    "authority": "NYS Department of Labor",
+    "description": "Any firm that produces garments or garment accessories in New York must register under Labor Law Article 12A each year by January 15, on Form LS-154 through MPWR. A retailer that works directly with a contractor to produce garments counts as a manufacturer. Registration requires workers' compensation and disability insurance, unemployment insurance coverage and payment of outstanding civil penalties. The page does not state the fee.",
+    "naics": ["315"],
+    "appliesTo": ["all"],
+    "url": "https://dol.ny.gov/apparel-industry",
+    "checkedOn": "2026-10-16",
+    "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=15",
+    "anchor": "2026-01-15"
+  },
+  {
+    "id": "ny.model-management-company-registration",
+    "title": "Register a model management company under the Fashion Workers Act",
+    "category": "registration",
+    "authority": "NYS Department of Labor",
+    "description": "Model management companies working in New York register with the Department of Labor under the Fashion Workers Act. Reported fees are $500 for five or fewer employees and $700 for more, and companies with more than five employees upload a $50,000 surety bond. Registration renews every two calendar years, at least 90 days before expiry, and the number goes in advertising and contracts. Confirm fees and dates on the DOL page.",
+    "naics": ["711410"],
+    "appliesTo": ["all"],
+    "url": "https://dol.ny.gov/fashion-workers-registry-preparing-register",
+    "checkedOn": "2026-10-16",
+    "frequency": "ongoing",
+    "renewal": "Every two calendar years",
+    "exemptions": [
+      "Out-of-state companies licensed elsewhere under equal or stricter rules, with no New York office or clients, may seek an exemption"
+    ]
   }
 ]
