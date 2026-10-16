@@ -340,7 +340,7 @@
         {
           "type": "object",
           "additionalProperties": false,
-          "required": ["title", "authority", "renewal", "feeDetail"],
+          "required": ["title", "authority", "url", "renewal", "feeDetail"],
           "properties": {
             "title": {
               "type": "string"
@@ -635,9 +635,6 @@
         },
         "lateFee": {
           "$ref": "#/$defs/lateFee"
-        },
-        "due": {
-          "$ref": "#/$defs/due"
         }
       },
       "anyOf": [
@@ -726,7 +723,45 @@
         "note": {
           "type": "string"
         }
-      }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "basis": {
+                "enum": ["flat", "none"]
+              }
+            }
+          },
+          "then": {
+            "required": ["amount"]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "basis": {
+                "enum": ["per_partner", "per_member"]
+              }
+            }
+          },
+          "then": {
+            "required": ["perUnit"]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "basis": {
+                "const": "percent"
+              }
+            }
+          },
+          "then": {
+            "required": ["rate"]
+          }
+        }
+      ]
     },
     "lateFee": {
       "type": "object",

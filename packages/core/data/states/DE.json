@@ -15,10 +15,10 @@
   "llcReport": {
     "title": "Pay LLC annual tax",
     "rrule": "FREQ=YEARLY;BYMONTH=6;BYMONTHDAY=1",
-    "fee": "$400 annual tax",
     "feeDetail": {
       "basis": "flat",
-      "amount": 400
+      "amount": 400,
+      "note": "annual tax"
     },
     "lateFee": {
       "amount": 200,
@@ -29,10 +29,10 @@
   "corpReport": {
     "title": "File annual franchise tax report",
     "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1",
-    "fee": "Franchise tax (from $175, min) + $50 report fee",
     "feeDetail": {
       "basis": "varies",
-      "min": 175
+      "min": 175,
+      "note": "franchise tax, plus a $50 report fee"
     },
     "lateFee": {
       "amount": 200,
@@ -90,11 +90,11 @@
     "title": "Delaware business license and gross receipts tax",
     "authority": "Delaware Division of Revenue",
     "url": "https://revenue.delaware.gov/frequently-asked-questions/business-licenses-faqs/",
-    "fee": "$75 plus gross receipts tax",
     "renewal": "annual",
     "feeDetail": {
       "basis": "flat",
-      "amount": 75
+      "amount": 75,
+      "note": "plus gross receipts tax"
     }
   },
   "local": {

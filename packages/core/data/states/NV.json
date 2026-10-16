@@ -15,10 +15,10 @@
   "llcReport": {
     "title": "File Annual List of Managers/Officers and Business License Renewal",
     "rrule": "FREQ=YEARLY;BYMONTHDAY=-1",
-    "fee": "$150 annual list fee",
     "feeDetail": {
       "basis": "flat",
-      "amount": 150
+      "amount": 150,
+      "note": "annual list fee"
     },
     "lateFee": {
       "amount": 175,
@@ -28,10 +28,10 @@
   "corpReport": {
     "title": "File Annual List of Managers/Officers and Business License Renewal",
     "rrule": "FREQ=YEARLY;BYMONTHDAY=-1",
-    "fee": "$150 annual list fee",
     "feeDetail": {
       "basis": "flat",
-      "amount": 150
+      "amount": 150,
+      "note": "annual list fee"
     },
     "lateFee": {
       "amount": 175,
@@ -76,11 +76,11 @@
     "title": "Nevada State Business License",
     "authority": "Nevada Secretary of State",
     "url": "https://www.nvsos.gov/sos/licensing/state-business-license",
-    "fee": "$200 ($500 for corporations)",
     "renewal": "annual",
     "feeDetail": {
       "basis": "flat",
-      "amount": 200
+      "amount": 200,
+      "note": "$500 for corporations"
     }
   },
   "local": {

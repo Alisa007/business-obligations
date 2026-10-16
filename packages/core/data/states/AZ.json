@@ -23,10 +23,10 @@
   },
   "llpReport": {
     "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=30",
-    "fee": "$3 if filed January 1 \u2013 April 30; $28 after",
     "feeDetail": {
       "basis": "flat",
-      "amount": 3
+      "amount": 3,
+      "note": "$28 if filed after April 30"
     }
   },
   "llcPublication": "LLCs formed in Maricopa or Pima County must publish a notice of formation in a county newspaper within 60 days.",
