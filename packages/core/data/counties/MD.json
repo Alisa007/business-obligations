@@ -1,66 +1,156 @@
 [
   {
     "county": "Anne Arundel",
-    "status": "unverified",
     "sourceUrl": "https://dat.maryland.gov/SDAT%20Forms/PPR_Forms/2024_Form_1_Manual.pdf",
-    "reason": "md-bpp-state-filing",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "anne-arundel-md.hotel-tax-return",
+        "title": "File the Anne Arundel County hotel/room rental tax return",
+        "category": "filing",
+        "authority": "Anne Arundel County Office of Finance",
+        "description": "Operators remit the tax by the 25th of each month, with a return even if no tax was collected (per the county code archive; confirm on the county's current page). Late returns carry a 10% penalty plus 0.5% interest for each month or part of a month. Short-term rentals inside Annapolis follow the city's own tax.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=25",
+        "url": "https://www.aacounty.org/sites/default/files/2023-03/user-occupancy-tax-return-short-term-rental.pdf",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Only the lodging tax was checked for Anne Arundel; its personal property return is filed with the State Department of Assessments and Taxation (Form 1, due April 15) and trader's licenses come from the circuit court clerk."
   },
   {
     "county": "Baltimore",
     "status": "unverified",
     "sourceUrl": "https://dat.maryland.gov/SDAT%20Forms/PPR_Forms/2024_Form_1_Manual.pdf",
-    "reason": "md-bpp-state-filing",
     "items": [],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16",
+    "note": "Personal property returns go to the State Department of Assessments and Taxation (Form 1, due April 15), not the county. Baltimore County reportedly levies a 9.5% transient occupancy tax remitted monthly to its Office of Budget and Finance, but only third-party sources were found for the rules and due date."
   },
   {
     "county": "Baltimore (city)",
-    "status": "unverified",
     "sourceUrl": "https://dat.maryland.gov/SDAT%20Forms/PPR_Forms/2024_Form_1_Manual.pdf",
-    "reason": "md-bpp-state-filing",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "baltimore-city-md.hotel-tax-return",
+        "title": "File the Baltimore City hotel/room rental tax return",
+        "category": "filing",
+        "authority": "Baltimore City Bureau of Revenue Collections",
+        "description": "Hotel tax is filed monthly through the city's MUNIS self-service portal after registering for an account; a 2021 city notice put the August filing due September 25, so the 25th is used. Confirm with the Bureau (410-396-3000).",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=25",
+        "url": "https://finance.baltimorecity.gov/bureaus/collections",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Only the lodging tax was checked for Baltimore (city); its personal property return is filed with the State Department of Assessments and Taxation (Form 1, due April 15) and trader's licenses come from the circuit court clerk."
   },
   {
     "county": "Frederick",
-    "status": "unverified",
     "sourceUrl": "https://dat.maryland.gov/SDAT%20Forms/PPR_Forms/2024_Form_1_Manual.pdf",
-    "reason": "md-bpp-state-filing",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "frederick-md.hotel-tax-return",
+        "title": "File the Frederick County hotel/room rental tax return",
+        "category": "filing",
+        "authority": "Frederick County Treasurer",
+        "description": "Hotels file the room rental tax return with the Treasurer on or before the 21st of each month for the prior month, even when no tax is due. A 1.5% discount applies if filed and paid on time; late payment adds 0.5% interest a month and a 10% penalty after a month.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=21",
+        "url": "https://www.frederickcountymd.gov/1369/Hotel-Room-Rental-Tax",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Only the lodging tax was checked for Frederick; its personal property return is filed with the State Department of Assessments and Taxation (Form 1, due April 15) and trader's licenses come from the circuit court clerk."
   },
   {
     "county": "Harford",
-    "status": "unverified",
     "sourceUrl": "https://dat.maryland.gov/SDAT%20Forms/PPR_Forms/2024_Form_1_Manual.pdf",
-    "reason": "md-bpp-state-filing",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "harford-md.hotel-tax-return",
+        "title": "File the Harford County hotel/room rental tax return",
+        "category": "filing",
+        "authority": "Harford County Treasurer, Revenue Collections",
+        "description": "The hotel occupancy tax report and payment are due on the 25th of each month for the prior month, even when no tax is owed. Late filers owe 0.5% interest a month plus a 10% penalty (County Code 123-67C).",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=25",
+        "url": "https://www.harfordcountymd.gov/DocumentCenter/View/23158/Hotel-Occupancy-Tax-Report-PDF",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Only the lodging tax was checked for Harford; its personal property return is filed with the State Department of Assessments and Taxation (Form 1, due April 15) and trader's licenses come from the circuit court clerk."
   },
   {
     "county": "Howard",
     "status": "unverified",
     "sourceUrl": "https://dat.maryland.gov/SDAT%20Forms/PPR_Forms/2024_Form_1_Manual.pdf",
-    "reason": "md-bpp-state-filing",
     "items": [],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16",
+    "note": "Personal property returns go to the State Department of Assessments and Taxation (Form 1, due April 15), not the county. Howard County has a hotel/motel room rental tax form on its finance page, but the general due date was not stated on the page read."
   },
   {
     "county": "Montgomery",
-    "status": "unverified",
     "sourceUrl": "https://dat.maryland.gov/SDAT%20Forms/PPR_Forms/2024_Form_1_Manual.pdf",
-    "reason": "md-bpp-state-filing",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "montgomery-md.hotel-tax-return",
+        "title": "File the Montgomery County hotel/room rental tax return",
+        "category": "filing",
+        "authority": "Montgomery County Division of Treasury, Excise Tax Unit",
+        "description": "Monthly returns are filed and paid online by the last day of the month for the prior month (approved quarterly filers file April 30, July 31, October 31 and January 31). Late filing carries a 5% monthly penalty up to 25% plus 1% monthly interest. The guide read is the FY24 version.",
+        "frequency": "monthly",
+        "url": "https://www.montgomerycountymd.gov/Finance/Resources/Files/FY24RoomRental-TransientTax%20Information.pdf",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Only the lodging tax was checked for Montgomery; its personal property return is filed with the State Department of Assessments and Taxation (Form 1, due April 15) and trader's licenses come from the circuit court clerk."
   },
   {
     "county": "Prince George's",
     "status": "unverified",
     "sourceUrl": "https://dat.maryland.gov/SDAT%20Forms/PPR_Forms/2024_Form_1_Manual.pdf",
-    "reason": "md-bpp-state-filing",
     "items": [],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16",
+    "note": "Personal property returns go to the State Department of Assessments and Taxation (Form 1, due April 15), not the county. Prince George's County levies a hotel and motel tax under County Code Subtitle 10, Division 3, but its due date was not found."
   }
 ]
