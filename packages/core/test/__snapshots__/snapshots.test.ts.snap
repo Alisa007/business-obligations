@@ -8,6 +8,7 @@ exports[`snapshot AK > c corp formed in the state with no employees 1`] = `
   "state.annual-report:AK | File Biennial Report (Alaska) | January 2 of every second year after formation | ",
   "state.entity-tax:AK | Register for and file Alaska entity-level taxes |  | ",
   "state.business-license:AK | Alaska state business license |  | ",
+  "state.duties:AK:ak.unclaimed-property-report | File the annual unclaimed property holder report (Alaska) | November 1 | 2026-11-01",
   "local.business-license:AK | Borough/city business license — Sampletown, Sample County, Alaska |  | ",
   "local.certificate-of-occupancy:AK | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -168,6 +169,14 @@ exports[`snapshot AK > llc with employees, sales and a trade name 1`] = `
     "title": "Register assumed name / DBA with the Alaska Division of Corporations, Business and Professional Licensing",
   },
   {
+    "authority": "Alaska unclaimed property program",
+    "deadline": "November 1",
+    "frequency": "annual",
+    "id": "state.duties:AK:ak.unclaimed-property-report",
+    "nextDue": "2026-11-01",
+    "title": "File the annual unclaimed property holder report (Alaska)",
+  },
+  {
     "authority": "Alaska Department of Labor and Workforce Development",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -200,6 +209,7 @@ exports[`snapshot AL > c corp formed in the state with no employees 1`] = `
   "fed.income-tax-return | File federal income tax return: Form 1120 | April 15 | 2027-04-15",
   "state.registered-agent:AL | Maintain a registered agent in Alabama |  | ",
   "state.entity-tax:AL | Register for and file Alabama entity-level taxes |  | ",
+  "state.duties:AL:al.unclaimed-property-report | File the annual unclaimed property holder report (Alabama) | November 1 | 2026-11-01",
   "local.business-license:AL | Municipal or county business license — Sampletown, Sample County, Alabama |  | ",
   "local.certificate-of-occupancy:AL | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -360,6 +370,14 @@ exports[`snapshot AL > llc with employees, sales and a trade name 1`] = `
     "title": "Carry workers' compensation insurance (Alabama)",
   },
   {
+    "authority": "Alabama unclaimed property program",
+    "deadline": "November 1",
+    "frequency": "annual",
+    "id": "state.duties:AL:al.unclaimed-property-report",
+    "nextDue": "2026-11-01",
+    "title": "File the annual unclaimed property holder report (Alabama)",
+  },
+  {
     "authority": "Alabama employment eligibility law / U.S. Citizenship and Immigration Services",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -401,6 +419,7 @@ exports[`snapshot AR > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:AR | Maintain a registered agent in Arkansas |  | ",
   "state.annual-report:AR | File Annual Franchise Tax Report (Arkansas) | May 1 | 2027-05-01",
   "state.entity-tax:AR | Register for and file Arkansas entity-level taxes |  | ",
+  "state.duties:AR:ar.unclaimed-property-report | File the annual unclaimed property holder report (Arkansas) | November 1 | 2026-11-01",
   "local.business-license:AR | City business license — Sampletown, Sample County, Arkansas |  | ",
   "local.certificate-of-occupancy:AR | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -569,6 +588,14 @@ exports[`snapshot AR > llc with employees, sales and a trade name 1`] = `
     "title": "Register assumed name / DBA with the Arkansas Secretary of State",
   },
   {
+    "authority": "Arkansas unclaimed property program",
+    "deadline": "November 1",
+    "frequency": "annual",
+    "id": "state.duties:AR:ar.unclaimed-property-report",
+    "nextDue": "2026-11-01",
+    "title": "File the annual unclaimed property holder report (Arkansas)",
+  },
+  {
     "authority": "Arkansas Division of Workforce Services",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -602,6 +629,7 @@ exports[`snapshot AZ > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:AZ | Maintain a registered agent in Arizona |  | ",
   "state.annual-report:AZ | File Annual Report (Arizona) | On or before the anniversary of incorporation | ",
   "state.entity-tax:AZ | Register for and file Arizona entity-level taxes |  | ",
+  "state.duties:AZ:az.unclaimed-property-report | File the annual unclaimed property holder report (Arizona) | November 1 | 2026-11-01",
   "local.business-license:AZ | City TPT license / business license — Sampletown, Sample County, Arizona |  | ",
   "local.certificate-of-occupancy:AZ | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -778,6 +806,14 @@ exports[`snapshot AZ > llc with employees, sales and a trade name 1`] = `
     "title": "Register assumed name / DBA with the Arizona Corporation Commission",
   },
   {
+    "authority": "Arizona unclaimed property program",
+    "deadline": "November 1",
+    "frequency": "annual",
+    "id": "state.duties:AZ:az.unclaimed-property-report",
+    "nextDue": "2026-11-01",
+    "title": "File the annual unclaimed property holder report (Arizona)",
+  },
+  {
     "authority": "Arizona employment eligibility law / U.S. Citizenship and Immigration Services",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -828,6 +864,7 @@ exports[`snapshot CA > c corp formed in the state with no employees 1`] = `
   "state.annual-report:CA | File Statement of Information (California) | Within the anniversary month and the 5 months before it | ",
   "state.entity-tax:CA | Register for and file California entity-level taxes |  | ",
   "state.ca-franchise-tax:CA | Pay California minimum franchise tax ($800) | 15th day of the 4th month of the tax year (estimated); return due 15th day of 3rd/4th month after year end | ",
+  "state.duties:CA:ca.unclaimed-property-report | File the annual unclaimed property holder report (California) | October 31 | 2026-10-31",
   "local.business-license:CA | City business tax certificate — Sampletown, Sample County, California |  | ",
   "local.certificate-of-occupancy:CA | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -1020,6 +1057,14 @@ exports[`snapshot CA > llc with employees, sales and a trade name 1`] = `
     "title": "Register assumed name / DBA with the Sample County — County clerk (California)",
   },
   {
+    "authority": "California unclaimed property program",
+    "deadline": "October 31",
+    "frequency": "annual",
+    "id": "state.duties:CA:ca.unclaimed-property-report",
+    "nextDue": "2026-10-31",
+    "title": "File the annual unclaimed property holder report (California)",
+  },
+  {
     "authority": "CalSavers Retirement Savings Program (California State Treasurer)",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -1077,6 +1122,7 @@ exports[`snapshot CO > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:CO | Maintain a registered agent in Colorado |  | ",
   "state.annual-report:CO | File Periodic Report (Colorado) | From 2 months before to 2 months after the periodic report month | ",
   "state.entity-tax:CO | Register for and file Colorado entity-level taxes |  | ",
+  "state.duties:CO:co.unclaimed-property-report | File the annual unclaimed property holder report (Colorado) | November 1 | 2026-11-01",
   "local.business-license:CO | Local sales tax licenses / business license — Sampletown, Sample County, Colorado |  | ",
   "local.certificate-of-occupancy:CO | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -1261,6 +1307,14 @@ exports[`snapshot CO > llc with employees, sales and a trade name 1`] = `
     "title": "Register assumed name / DBA with the Colorado Secretary of State",
   },
   {
+    "authority": "Colorado unclaimed property program",
+    "deadline": "November 1",
+    "frequency": "annual",
+    "id": "state.duties:CO:co.unclaimed-property-report",
+    "nextDue": "2026-11-01",
+    "title": "File the annual unclaimed property holder report (Colorado)",
+  },
+  {
     "authority": "Colorado SecureSavings Program (Colorado State Treasurer)",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -1310,6 +1364,7 @@ exports[`snapshot CT > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:CT | Maintain a registered agent in Connecticut |  | ",
   "state.annual-report:CT | File Annual Report (Connecticut) | Last day of the anniversary month | 2027-03-31",
   "state.entity-tax:CT | Register for and file Connecticut entity-level taxes |  | ",
+  "state.duties:CT:ct.unclaimed-property-report | File the annual unclaimed property holder report (Connecticut) | March 31 | 2027-03-31",
   "local.business-license:CT | Town zoning/occupancy approvals — Sampletown, Sample County, Connecticut |  | ",
   "local.certificate-of-occupancy:CT | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -1486,6 +1541,14 @@ exports[`snapshot CT > llc with employees, sales and a trade name 1`] = `
     "title": "Register assumed name / DBA with the Sampletown — Town clerk (Connecticut)",
   },
   {
+    "authority": "Connecticut unclaimed property program",
+    "deadline": "March 31",
+    "frequency": "annual",
+    "id": "state.duties:CT:ct.unclaimed-property-report",
+    "nextDue": "2027-03-31",
+    "title": "File the annual unclaimed property holder report (Connecticut)",
+  },
+  {
     "authority": "MyCTSavings (Connecticut Retirement Security Authority)",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -1536,6 +1599,7 @@ exports[`snapshot DC > c corp formed in the state with no employees 1`] = `
   "state.annual-report:DC | File Biennial Report (District of Columbia) | April 1 of every second year after formation | 2027-04-01",
   "state.entity-tax:DC | Register for and file District of Columbia entity-level taxes |  | ",
   "state.business-license:DC | DC Basic Business License (BBL) |  | ",
+  "state.duties:DC:dc.unclaimed-property-report | File the annual unclaimed property holder report (District of Columbia) | November 1 | 2026-11-01",
   "local.business-license:DC | DC Certificate of Occupancy / Home Occupation permit — Sampletown, Sample County, District of Columbia |  | ",
   "local.certificate-of-occupancy:DC | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -1720,6 +1784,14 @@ exports[`snapshot DC > llc with employees, sales and a trade name 1`] = `
     "title": "Register assumed name / DBA with the DC Department of Licensing and Consumer Protection",
   },
   {
+    "authority": "District of Columbia unclaimed property program",
+    "deadline": "November 1",
+    "frequency": "annual",
+    "id": "state.duties:DC:dc.unclaimed-property-report",
+    "nextDue": "2026-11-01",
+    "title": "File the annual unclaimed property holder report (District of Columbia)",
+  },
+  {
     "authority": "DC Department of Employment Services",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -1762,6 +1834,7 @@ exports[`snapshot DE > c corp formed in the state with no employees 1`] = `
   "state.annual-report:DE | File annual franchise tax report (Delaware) | March 1 | 2027-03-01",
   "state.entity-tax:DE | Register for and file Delaware entity-level taxes |  | ",
   "state.business-license:DE | Delaware business license and gross receipts tax |  | ",
+  "state.duties:DE:de.unclaimed-property-report | File the annual unclaimed property holder report (Delaware) | March 1 | 2027-03-01",
   "local.business-license:DE | County/city business license — Sampletown, Sample County, Delaware |  | ",
   "local.certificate-of-occupancy:DE | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -1930,6 +2003,14 @@ exports[`snapshot DE > llc with employees, sales and a trade name 1`] = `
     "title": "Register assumed name / DBA with the Delaware Division of Corporations",
   },
   {
+    "authority": "Delaware unclaimed property program",
+    "deadline": "March 1",
+    "frequency": "annual",
+    "id": "state.duties:DE:de.unclaimed-property-report",
+    "nextDue": "2027-03-01",
+    "title": "File the annual unclaimed property holder report (Delaware)",
+  },
+  {
     "authority": "Delaware EARNS (Office of the State Treasurer)",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -1971,6 +2052,7 @@ exports[`snapshot FL > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:FL | Maintain a registered agent in Florida |  | ",
   "state.annual-report:FL | File Annual Report (Florida) | January 1 – May 1 | 2027-05-01",
   "state.entity-tax:FL | Register for and file Florida entity-level taxes |  | ",
+  "state.duties:FL:fl.unclaimed-property-report | File the annual unclaimed property holder report (Florida) | April 30 | 2027-04-30",
   "local.business-license:FL | County and city Local Business Tax Receipt — Sampletown, Sample County, Florida |  | ",
   "local.certificate-of-occupancy:FL | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -2131,6 +2213,14 @@ exports[`snapshot FL > llc with employees, sales and a trade name 1`] = `
     "title": "Register assumed name / DBA with the Florida Division of Corporations (Sunbiz)",
   },
   {
+    "authority": "Florida unclaimed property program",
+    "deadline": "April 30",
+    "frequency": "annual",
+    "id": "state.duties:FL:fl.unclaimed-property-report",
+    "nextDue": "2027-04-30",
+    "title": "File the annual unclaimed property holder report (Florida)",
+  },
+  {
     "authority": "Florida Department of Revenue (Reemployment Tax)",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -2164,6 +2254,7 @@ exports[`snapshot GA > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:GA | Maintain a registered agent in Georgia |  | ",
   "state.annual-report:GA | File Annual Registration (Georgia) | January 1 – April 1 | 2027-04-01",
   "state.entity-tax:GA | Register for and file Georgia entity-level taxes |  | ",
+  "state.duties:GA:ga.unclaimed-property-report | File the annual unclaimed property holder report (Georgia) | November 1 | 2026-11-01",
   "local.business-license:GA | City or county occupation tax certificate — Sampletown, Sample County, Georgia |  | ",
   "local.certificate-of-occupancy:GA | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -2332,6 +2423,14 @@ exports[`snapshot GA > llc with employees, sales and a trade name 1`] = `
     "title": "Register assumed name / DBA with the Sample County — Clerk of Superior Court (Georgia)",
   },
   {
+    "authority": "Georgia unclaimed property program",
+    "deadline": "November 1",
+    "frequency": "annual",
+    "id": "state.duties:GA:ga.unclaimed-property-report",
+    "nextDue": "2026-11-01",
+    "title": "File the annual unclaimed property holder report (Georgia)",
+  },
+  {
     "authority": "Georgia Department of Labor",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -2365,6 +2464,7 @@ exports[`snapshot HI > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:HI | Maintain a registered agent in Hawaii |  | ",
   "state.annual-report:HI | File Annual Return (Hawaii) | Last day of the quarter containing the registration anniversary | ",
   "state.entity-tax:HI | Register for and file Hawaii entity-level taxes |  | ",
+  "state.duties:HI:hi.unclaimed-property-report | File the annual unclaimed property holder report (Hawaii) | November 1 | 2026-11-01",
   "local.business-license:HI | County permits — Sampletown, Sample County, Hawaii |  | ",
   "local.certificate-of-occupancy:HI | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -2533,6 +2633,14 @@ exports[`snapshot HI > llc with employees, sales and a trade name 1`] = `
     "title": "Temporary Disability Insurance (TDI) coverage",
   },
   {
+    "authority": "Hawaii unclaimed property program",
+    "deadline": "November 1",
+    "frequency": "annual",
+    "id": "state.duties:HI:hi.unclaimed-property-report",
+    "nextDue": "2026-11-01",
+    "title": "File the annual unclaimed property holder report (Hawaii)",
+  },
+  {
     "authority": "Hawaii Department of Labor and Industrial Relations",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -2566,6 +2674,7 @@ exports[`snapshot IA > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:IA | Maintain a registered agent in Iowa |  | ",
   "state.annual-report:IA | File Biennial Report (Iowa) | April 1 of even-numbered years | 2028-04-01",
   "state.entity-tax:IA | Register for and file Iowa entity-level taxes |  | ",
+  "state.duties:IA:ia.unclaimed-property-report | File the annual unclaimed property holder report (Iowa) | November 1 | 2026-11-01",
   "local.business-license:IA | Local permits — Sampletown, Sample County, Iowa |  | ",
   "local.certificate-of-occupancy:IA | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -2734,6 +2843,14 @@ exports[`snapshot IA > llc with employees, sales and a trade name 1`] = `
     "title": "Register assumed name / DBA with the Iowa Secretary of State",
   },
   {
+    "authority": "Iowa unclaimed property program",
+    "deadline": "November 1",
+    "frequency": "annual",
+    "id": "state.duties:IA:ia.unclaimed-property-report",
+    "nextDue": "2026-11-01",
+    "title": "File the annual unclaimed property holder report (Iowa)",
+  },
+  {
     "authority": "Iowa Workforce Development",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -2767,6 +2884,7 @@ exports[`snapshot ID > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:ID | Maintain a registered agent in Idaho |  | ",
   "state.annual-report:ID | File Annual Report (Idaho) | Last day of the anniversary month | 2027-03-31",
   "state.entity-tax:ID | Register for and file Idaho entity-level taxes |  | ",
+  "state.duties:ID:id.unclaimed-property-report | File the annual unclaimed property holder report (Idaho) | November 1 | 2026-11-01",
   "local.business-license:ID | City business license — Sampletown, Sample County, Idaho |  | ",
   "local.certificate-of-occupancy:ID | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -2935,6 +3053,14 @@ exports[`snapshot ID > llc with employees, sales and a trade name 1`] = `
     "title": "Register assumed name / DBA with the Idaho Secretary of State",
   },
   {
+    "authority": "Idaho unclaimed property program",
+    "deadline": "November 1",
+    "frequency": "annual",
+    "id": "state.duties:ID:id.unclaimed-property-report",
+    "nextDue": "2026-11-01",
+    "title": "File the annual unclaimed property holder report (Idaho)",
+  },
+  {
     "authority": "Idaho Department of Labor",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -2968,6 +3094,7 @@ exports[`snapshot IL > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:IL | Maintain a registered agent in Illinois |  | ",
   "state.annual-report:IL | File Annual Report (Illinois) | Before the first day of the anniversary month | 2027-03-01",
   "state.entity-tax:IL | Register for and file Illinois entity-level taxes |  | ",
+  "state.duties:IL:il.unclaimed-property-report | File the annual unclaimed property holder report (Illinois) | May 1 | 2027-05-01",
   "local.business-license:IL | Municipal business license — Sampletown, Sample County, Illinois |  | ",
   "local.certificate-of-occupancy:IL | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -3136,6 +3263,14 @@ exports[`snapshot IL > llc with employees, sales and a trade name 1`] = `
     "title": "Register assumed name / DBA with the Illinois Secretary of State, Business Services",
   },
   {
+    "authority": "Illinois unclaimed property program",
+    "deadline": "May 1",
+    "frequency": "annual",
+    "id": "state.duties:IL:il.unclaimed-property-report",
+    "nextDue": "2027-05-01",
+    "title": "File the annual unclaimed property holder report (Illinois)",
+  },
+  {
     "authority": "Illinois Secure Choice Savings Program (Illinois State Treasurer)",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -3193,6 +3328,7 @@ exports[`snapshot IN > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:IN | Maintain a registered agent in Indiana |  | ",
   "state.annual-report:IN | File Business Entity Report (Indiana) | Last day of the anniversary month, every second year | 2028-03-31",
   "state.entity-tax:IN | Register for and file Indiana entity-level taxes |  | ",
+  "state.duties:IN:in.unclaimed-property-report | File the annual unclaimed property holder report (Indiana) | November 1 | 2026-11-01",
   "local.business-license:IN | Local permits — Sampletown, Sample County, Indiana |  | ",
   "local.certificate-of-occupancy:IN | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -3361,6 +3497,14 @@ exports[`snapshot IN > llc with employees, sales and a trade name 1`] = `
     "title": "Register assumed name / DBA with the Indiana Secretary of State (INBiz)",
   },
   {
+    "authority": "Indiana unclaimed property program",
+    "deadline": "November 1",
+    "frequency": "annual",
+    "id": "state.duties:IN:in.unclaimed-property-report",
+    "nextDue": "2026-11-01",
+    "title": "File the annual unclaimed property holder report (Indiana)",
+  },
+  {
     "authority": "Indiana Department of Workforce Development",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -3394,6 +3538,7 @@ exports[`snapshot KS > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:KS | Maintain a registered agent in Kansas |  | ",
   "state.annual-report:KS | File Biennial Report (Kansas) | April 15 of every second year, starting with the formation year | 2028-04-15",
   "state.entity-tax:KS | Register for and file Kansas entity-level taxes |  | ",
+  "state.duties:KS:ks.unclaimed-property-report | File the annual unclaimed property holder report (Kansas) | November 1 | 2026-11-01",
   "local.business-license:KS | City occupation/business license — Sampletown, Sample County, Kansas |  | ",
   "local.certificate-of-occupancy:KS | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -3554,6 +3699,14 @@ exports[`snapshot KS > llc with employees, sales and a trade name 1`] = `
     "title": "Carry workers' compensation insurance (Kansas)",
   },
   {
+    "authority": "Kansas unclaimed property program",
+    "deadline": "November 1",
+    "frequency": "annual",
+    "id": "state.duties:KS:ks.unclaimed-property-report",
+    "nextDue": "2026-11-01",
+    "title": "File the annual unclaimed property holder report (Kansas)",
+  },
+  {
     "authority": "Kansas Department of Labor",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -3587,6 +3740,7 @@ exports[`snapshot KY > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:KY | Maintain a registered agent in Kentucky |  | ",
   "state.annual-report:KY | File Annual Report (Kentucky) | June 30 | 2027-06-30",
   "state.entity-tax:KY | Register for and file Kentucky entity-level taxes |  | ",
+  "state.duties:KY:ky.unclaimed-property-report | File the annual unclaimed property holder report (Kentucky) | November 1 | 2026-11-01",
   "local.business-license:KY | City/county occupational license — Sampletown, Sample County, Kentucky |  | ",
   "local.certificate-of-occupancy:KY | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -3755,6 +3909,14 @@ exports[`snapshot KY > llc with employees, sales and a trade name 1`] = `
     "title": "Register assumed name / DBA with the Kentucky Secretary of State",
   },
   {
+    "authority": "Kentucky unclaimed property program",
+    "deadline": "November 1",
+    "frequency": "annual",
+    "id": "state.duties:KY:ky.unclaimed-property-report",
+    "nextDue": "2026-11-01",
+    "title": "File the annual unclaimed property holder report (Kentucky)",
+  },
+  {
     "authority": "Kentucky Office of Unemployment Insurance",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -3788,6 +3950,7 @@ exports[`snapshot LA > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:LA | Maintain a registered agent in Louisiana |  | ",
   "state.annual-report:LA | File Annual Report (Louisiana) | On the anniversary of formation | 2027-03-10",
   "state.entity-tax:LA | Register for and file Louisiana entity-level taxes |  | ",
+  "state.duties:LA:la.unclaimed-property-report | File the annual unclaimed property holder report (Louisiana) | November 1 | 2026-11-01",
   "local.business-license:LA | Parish/municipal occupational license — Sampletown, Sample County, Louisiana |  | ",
   "local.certificate-of-occupancy:LA | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -3964,6 +4127,14 @@ exports[`snapshot LA > llc with employees, sales and a trade name 1`] = `
     "title": "Register assumed name / DBA with the Louisiana Secretary of State",
   },
   {
+    "authority": "Louisiana unclaimed property program",
+    "deadline": "November 1",
+    "frequency": "annual",
+    "id": "state.duties:LA:la.unclaimed-property-report",
+    "nextDue": "2026-11-01",
+    "title": "File the annual unclaimed property holder report (Louisiana)",
+  },
+  {
     "authority": "Louisiana employment eligibility law / U.S. Citizenship and Immigration Services",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -4005,6 +4176,7 @@ exports[`snapshot MA > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:MA | Maintain a registered agent in Massachusetts |  | ",
   "state.annual-report:MA | File Annual Report (Massachusetts) | 15th day of the 3rd month after fiscal year end (March 15) | 2027-03-15",
   "state.entity-tax:MA | Register for and file Massachusetts entity-level taxes |  | ",
+  "state.duties:MA:ma.unclaimed-property-report | File the annual unclaimed property holder report (Massachusetts) | November 1 | 2026-11-01",
   "local.business-license:MA | City/town clerk business certificate and local licenses — Sampletown, Sample County, Massachusetts |  | ",
   "local.certificate-of-occupancy:MA | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -4181,6 +4353,14 @@ exports[`snapshot MA > llc with employees, sales and a trade name 1`] = `
     "title": "Register assumed name / DBA with the Sampletown — City or town clerk (Massachusetts)",
   },
   {
+    "authority": "Massachusetts unclaimed property program",
+    "deadline": "November 1",
+    "frequency": "annual",
+    "id": "state.duties:MA:ma.unclaimed-property-report",
+    "nextDue": "2026-11-01",
+    "title": "File the annual unclaimed property holder report (Massachusetts)",
+  },
+  {
     "authority": "Massachusetts Department of Unemployment Assistance",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -4222,6 +4402,7 @@ exports[`snapshot MD > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:MD | Maintain a registered agent in Maryland |  | ",
   "state.annual-report:MD | File Annual Report and Personal Property Return (Maryland) | April 15 | 2027-04-15",
   "state.entity-tax:MD | Register for and file Maryland entity-level taxes |  | ",
+  "state.duties:MD:md.unclaimed-property-report | File the annual unclaimed property holder report (Maryland) | October 31 | 2026-10-31",
   "local.business-license:MD | County trader's license — Sampletown, Sample County, Maryland |  | ",
   "local.certificate-of-occupancy:MD | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -4390,6 +4571,14 @@ exports[`snapshot MD > llc with employees, sales and a trade name 1`] = `
     "title": "Register assumed name / DBA with the Maryland Department of Assessments and Taxation",
   },
   {
+    "authority": "Maryland unclaimed property program",
+    "deadline": "October 31",
+    "frequency": "annual",
+    "id": "state.duties:MD:md.unclaimed-property-report",
+    "nextDue": "2026-10-31",
+    "title": "File the annual unclaimed property holder report (Maryland)",
+  },
+  {
     "authority": "MarylandSaves (Maryland Supplemental Retirement Plans)",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -4439,6 +4628,7 @@ exports[`snapshot ME > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:ME | Maintain a registered agent in Maine |  | ",
   "state.annual-report:ME | File Annual Report (Maine) | June 1 | 2027-06-01",
   "state.entity-tax:ME | Register for and file Maine entity-level taxes |  | ",
+  "state.duties:ME:me.unclaimed-property-report | File the annual unclaimed property holder report (Maine) | November 1 | 2026-11-01",
   "local.business-license:ME | Municipal licenses — Sampletown, Sample County, Maine |  | ",
   "local.certificate-of-occupancy:ME | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -4615,6 +4805,14 @@ exports[`snapshot ME > llc with employees, sales and a trade name 1`] = `
     "title": "Register assumed name / DBA with the Maine Secretary of State, Bureau of Corporations",
   },
   {
+    "authority": "Maine unclaimed property program",
+    "deadline": "November 1",
+    "frequency": "annual",
+    "id": "state.duties:ME:me.unclaimed-property-report",
+    "nextDue": "2026-11-01",
+    "title": "File the annual unclaimed property holder report (Maine)",
+  },
+  {
     "authority": "Maine Retirement Savings Board (Maine State Treasurer)",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -4656,6 +4854,7 @@ exports[`snapshot MI > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:MI | Maintain a registered agent in Michigan |  | ",
   "state.annual-report:MI | File Annual Report (Michigan) | May 15 | 2027-05-15",
   "state.entity-tax:MI | Register for and file Michigan entity-level taxes |  | ",
+  "state.duties:MI:mi.unclaimed-property-report | File the annual unclaimed property holder report (Michigan) | July 1 | 2027-07-01",
   "local.business-license:MI | City business license — Sampletown, Sample County, Michigan |  | ",
   "local.certificate-of-occupancy:MI | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -4824,6 +5023,14 @@ exports[`snapshot MI > llc with employees, sales and a trade name 1`] = `
     "title": "Register assumed name / DBA with the Michigan LARA, Corporations Division",
   },
   {
+    "authority": "Michigan unclaimed property program",
+    "deadline": "July 1",
+    "frequency": "annual",
+    "id": "state.duties:MI:mi.unclaimed-property-report",
+    "nextDue": "2027-07-01",
+    "title": "File the annual unclaimed property holder report (Michigan)",
+  },
+  {
     "authority": "Michigan Unemployment Insurance Agency",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -4865,6 +5072,7 @@ exports[`snapshot MN > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:MN | Maintain a registered agent in Minnesota |  | ",
   "state.annual-report:MN | File Annual Renewal (Minnesota) | December 31 | 2026-12-31",
   "state.entity-tax:MN | Register for and file Minnesota entity-level taxes |  | ",
+  "state.duties:MN:mn.unclaimed-property-report | File the annual unclaimed property holder report (Minnesota) | October 31 | 2026-10-31",
   "local.business-license:MN | City business licenses — Sampletown, Sample County, Minnesota |  | ",
   "local.certificate-of-occupancy:MN | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -5041,6 +5249,14 @@ exports[`snapshot MN > llc with employees, sales and a trade name 1`] = `
     "title": "Register assumed name / DBA with the Minnesota Secretary of State",
   },
   {
+    "authority": "Minnesota unclaimed property program",
+    "deadline": "October 31",
+    "frequency": "annual",
+    "id": "state.duties:MN:mn.unclaimed-property-report",
+    "nextDue": "2026-10-31",
+    "title": "File the annual unclaimed property holder report (Minnesota)",
+  },
+  {
     "authority": "Minnesota Secure Choice Retirement Program Board",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -5090,6 +5306,7 @@ exports[`snapshot MO > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:MO | Maintain a registered agent in Missouri |  | ",
   "state.annual-report:MO | File Annual Registration Report (Missouri) | End of the month of incorporation or qualification | 2027-03-31",
   "state.entity-tax:MO | Register for and file Missouri entity-level taxes |  | ",
+  "state.duties:MO:mo.unclaimed-property-report | File the annual unclaimed property holder report (Missouri) | November 1 | 2026-11-01",
   "local.business-license:MO | City business license — Sampletown, Sample County, Missouri |  | ",
   "local.certificate-of-occupancy:MO | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -5250,6 +5467,14 @@ exports[`snapshot MO > llc with employees, sales and a trade name 1`] = `
     "title": "Register assumed name / DBA with the Missouri Secretary of State",
   },
   {
+    "authority": "Missouri unclaimed property program",
+    "deadline": "November 1",
+    "frequency": "annual",
+    "id": "state.duties:MO:mo.unclaimed-property-report",
+    "nextDue": "2026-11-01",
+    "title": "File the annual unclaimed property holder report (Missouri)",
+  },
+  {
     "authority": "Missouri Division of Employment Security",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -5283,6 +5508,7 @@ exports[`snapshot MS > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:MS | Maintain a registered agent in Mississippi |  | ",
   "state.annual-report:MS | File Annual Report (Mississippi) | April 15 (calendar-year filers) | 2027-04-15",
   "state.entity-tax:MS | Register for and file Mississippi entity-level taxes |  | ",
+  "state.duties:MS:ms.unclaimed-property-report | File the annual unclaimed property holder report (Mississippi) | November 1 | 2026-11-01",
   "local.business-license:MS | Privilege license — Sampletown, Sample County, Mississippi |  | ",
   "local.certificate-of-occupancy:MS | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -5443,6 +5669,14 @@ exports[`snapshot MS > llc with employees, sales and a trade name 1`] = `
     "title": "Carry workers' compensation insurance (Mississippi)",
   },
   {
+    "authority": "Mississippi unclaimed property program",
+    "deadline": "November 1",
+    "frequency": "annual",
+    "id": "state.duties:MS:ms.unclaimed-property-report",
+    "nextDue": "2026-11-01",
+    "title": "File the annual unclaimed property holder report (Mississippi)",
+  },
+  {
     "authority": "Mississippi employment eligibility law / U.S. Citizenship and Immigration Services",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -5484,6 +5718,7 @@ exports[`snapshot MT > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:MT | Maintain a registered agent in Montana |  | ",
   "state.annual-report:MT | File Annual Report (Montana) | April 15 | 2027-04-15",
   "state.entity-tax:MT | Register for and file Montana entity-level taxes |  | ",
+  "state.duties:MT:mt.unclaimed-property-report | File the annual unclaimed property holder report (Montana) | November 1 | 2026-11-01",
   "local.business-license:MT | City/county business license — Sampletown, Sample County, Montana |  | ",
   "local.certificate-of-occupancy:MT | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -5644,6 +5879,14 @@ exports[`snapshot MT > llc with employees, sales and a trade name 1`] = `
     "title": "Register assumed name / DBA with the Montana Secretary of State",
   },
   {
+    "authority": "Montana unclaimed property program",
+    "deadline": "November 1",
+    "frequency": "annual",
+    "id": "state.duties:MT:mt.unclaimed-property-report",
+    "nextDue": "2026-11-01",
+    "title": "File the annual unclaimed property holder report (Montana)",
+  },
+  {
     "authority": "Montana Department of Labor & Industry",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -5677,6 +5920,7 @@ exports[`snapshot NC > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:NC | Maintain a registered agent in North Carolina |  | ",
   "state.annual-report:NC | File Annual Report (North Carolina) | 15th day of the 4th month after fiscal year end | 2027-04-15",
   "state.entity-tax:NC | Register for and file North Carolina entity-level taxes |  | ",
+  "state.duties:NC:nc.unclaimed-property-report | File the annual unclaimed property holder report (North Carolina) | November 1 | 2026-11-01",
   "local.business-license:NC | City/county business registration — Sampletown, Sample County, North Carolina |  | ",
   "local.certificate-of-occupancy:NC | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -5845,6 +6089,14 @@ exports[`snapshot NC > llc with employees, sales and a trade name 1`] = `
     "title": "Register assumed name / DBA with the Sample County — County register of deeds (North Carolina)",
   },
   {
+    "authority": "North Carolina unclaimed property program",
+    "deadline": "November 1",
+    "frequency": "annual",
+    "id": "state.duties:NC:nc.unclaimed-property-report",
+    "nextDue": "2026-11-01",
+    "title": "File the annual unclaimed property holder report (North Carolina)",
+  },
+  {
     "authority": "North Carolina Division of Employment Security",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -5878,6 +6130,7 @@ exports[`snapshot ND > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:ND | Maintain a registered agent in North Dakota |  | ",
   "state.annual-report:ND | File Annual Report (North Dakota) | August 1 | 2027-08-01",
   "state.entity-tax:ND | Register for and file North Dakota entity-level taxes |  | ",
+  "state.duties:ND:nd.unclaimed-property-report | File the annual unclaimed property holder report (North Dakota) | November 1 | 2026-11-01",
   "local.business-license:ND | City business license — Sampletown, Sample County, North Dakota |  | ",
   "local.certificate-of-occupancy:ND | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -6046,6 +6299,14 @@ exports[`snapshot ND > llc with employees, sales and a trade name 1`] = `
     "title": "Register assumed name / DBA with the North Dakota Secretary of State",
   },
   {
+    "authority": "North Dakota unclaimed property program",
+    "deadline": "November 1",
+    "frequency": "annual",
+    "id": "state.duties:ND:nd.unclaimed-property-report",
+    "nextDue": "2026-11-01",
+    "title": "File the annual unclaimed property holder report (North Dakota)",
+  },
+  {
     "authority": "Job Service North Dakota",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -6079,6 +6340,7 @@ exports[`snapshot NE > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:NE | Maintain a registered agent in Nebraska |  | ",
   "state.annual-report:NE | File Biennial Occupation Tax Report (Nebraska) | March 1 of even-numbered years | 2028-03-01",
   "state.entity-tax:NE | Register for and file Nebraska entity-level taxes |  | ",
+  "state.duties:NE:ne.unclaimed-property-report | File the annual unclaimed property holder report (Nebraska) | November 1 | 2026-11-01",
   "local.business-license:NE | City occupation tax / license — Sampletown, Sample County, Nebraska |  | ",
   "local.certificate-of-occupancy:NE | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -6239,6 +6501,14 @@ exports[`snapshot NE > llc with employees, sales and a trade name 1`] = `
     "title": "Carry workers' compensation insurance (Nebraska)",
   },
   {
+    "authority": "Nebraska unclaimed property program",
+    "deadline": "November 1",
+    "frequency": "annual",
+    "id": "state.duties:NE:ne.unclaimed-property-report",
+    "nextDue": "2026-11-01",
+    "title": "File the annual unclaimed property holder report (Nebraska)",
+  },
+  {
     "authority": "Nebraska Department of Labor",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -6272,6 +6542,7 @@ exports[`snapshot NH > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:NH | Maintain a registered agent in New Hampshire |  | ",
   "state.annual-report:NH | File Annual Report (New Hampshire) | April 1 | 2027-04-01",
   "state.entity-tax:NH | Register for and file New Hampshire entity-level taxes |  | ",
+  "state.duties:NH:nh.unclaimed-property-report | File the annual unclaimed property holder report (New Hampshire) | November 1 | 2026-11-01",
   "local.business-license:NH | Town/city licenses — Sampletown, Sample County, New Hampshire |  | ",
   "local.certificate-of-occupancy:NH | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -6424,6 +6695,14 @@ exports[`snapshot NH > llc with employees, sales and a trade name 1`] = `
     "title": "Register assumed name / DBA with the New Hampshire Secretary of State",
   },
   {
+    "authority": "New Hampshire unclaimed property program",
+    "deadline": "November 1",
+    "frequency": "annual",
+    "id": "state.duties:NH:nh.unclaimed-property-report",
+    "nextDue": "2026-11-01",
+    "title": "File the annual unclaimed property holder report (New Hampshire)",
+  },
+  {
     "authority": "New Hampshire Employment Security",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -6457,6 +6736,7 @@ exports[`snapshot NJ > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:NJ | Maintain a registered agent in New Jersey |  | ",
   "state.annual-report:NJ | File Annual Report (New Jersey) | Last day of the anniversary month | 2027-03-31",
   "state.entity-tax:NJ | Register for and file New Jersey entity-level taxes |  | ",
+  "state.duties:NJ:nj.unclaimed-property-report | File the annual unclaimed property holder report (New Jersey) | November 1 | 2026-11-01",
   "local.business-license:NJ | Municipal business registration — Sampletown, Sample County, New Jersey |  | ",
   "local.certificate-of-occupancy:NJ | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -6633,6 +6913,14 @@ exports[`snapshot NJ > llc with employees, sales and a trade name 1`] = `
     "title": "Register assumed name / DBA with the New Jersey Division of Revenue and Enterprise Services",
   },
   {
+    "authority": "New Jersey unclaimed property program",
+    "deadline": "November 1",
+    "frequency": "annual",
+    "id": "state.duties:NJ:nj.unclaimed-property-report",
+    "nextDue": "2026-11-01",
+    "title": "File the annual unclaimed property holder report (New Jersey)",
+  },
+  {
     "authority": "New Jersey Department of Labor and Workforce Development",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -6674,6 +6962,7 @@ exports[`snapshot NM > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:NM | Maintain a registered agent in New Mexico |  | ",
   "state.annual-report:NM | File Biennial Report (New Mexico) | April 15, every 2 years (aligned with the federal corporate return) | ",
   "state.entity-tax:NM | Register for and file New Mexico entity-level taxes |  | ",
+  "state.duties:NM:nm.unclaimed-property-report | File the annual unclaimed property holder report (New Mexico) | November 1 | 2026-11-01",
   "local.business-license:NM | City/county business registration — Sampletown, Sample County, New Mexico |  | ",
   "local.certificate-of-occupancy:NM | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -6826,6 +7115,14 @@ exports[`snapshot NM > llc with employees, sales and a trade name 1`] = `
     "title": "Carry workers' compensation insurance (New Mexico)",
   },
   {
+    "authority": "New Mexico unclaimed property program",
+    "deadline": "November 1",
+    "frequency": "annual",
+    "id": "state.duties:NM:nm.unclaimed-property-report",
+    "nextDue": "2026-11-01",
+    "title": "File the annual unclaimed property holder report (New Mexico)",
+  },
+  {
     "authority": "New Mexico Department of Workforce Solutions",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -6868,6 +7165,7 @@ exports[`snapshot NV > c corp formed in the state with no employees 1`] = `
   "state.annual-report:NV | File Annual List of Managers/Officers and Business License Renewal (Nevada) | Last day of the anniversary month | 2027-03-31",
   "state.entity-tax:NV | Register for and file Nevada entity-level taxes |  | ",
   "state.business-license:NV | Nevada State Business License |  | ",
+  "state.duties:NV:nv.unclaimed-property-report | File the annual unclaimed property holder report (Nevada) | October 31 | 2026-10-31",
   "local.business-license:NV | City or county business license — Sampletown, Sample County, Nevada |  | ",
   "local.certificate-of-occupancy:NV | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -7036,6 +7334,14 @@ exports[`snapshot NV > llc with employees, sales and a trade name 1`] = `
     "title": "Register assumed name / DBA with the Sample County — County clerk (Nevada)",
   },
   {
+    "authority": "Nevada unclaimed property program",
+    "deadline": "October 31",
+    "frequency": "annual",
+    "id": "state.duties:NV:nv.unclaimed-property-report",
+    "nextDue": "2026-10-31",
+    "title": "File the annual unclaimed property holder report (Nevada)",
+  },
+  {
     "authority": "Nevada Employee Savings Trust (Nevada State Treasurer)",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -7077,6 +7383,7 @@ exports[`snapshot NY > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:NY | Maintain a registered agent in New York |  | ",
   "state.annual-report:NY | File Biennial Statement (New York) | During the anniversary month every 2 years | 2028-03-31",
   "state.entity-tax:NY | Register for and file New York entity-level taxes |  | ",
+  "state.duties:NY:ny.unclaimed-property-report | File the annual unclaimed property holder report (New York) | March 10 | 2027-03-10",
   "local.business-license:NY | City licenses (e.g., NYC DCWP) — Sampletown, Sample County, New York |  | ",
   "local.certificate-of-occupancy:NY | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -7261,6 +7568,14 @@ exports[`snapshot NY > llc with employees, sales and a trade name 1`] = `
     "title": "Register assumed name / DBA with the New York Department of State, Division of Corporations",
   },
   {
+    "authority": "New York unclaimed property program",
+    "deadline": "March 10",
+    "frequency": "annual",
+    "id": "state.duties:NY:ny.unclaimed-property-report",
+    "nextDue": "2027-03-10",
+    "title": "File the annual unclaimed property holder report (New York)",
+  },
+  {
     "authority": "New York State Department of Labor",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -7309,6 +7624,7 @@ exports[`snapshot OH > c corp formed in the state with no employees 1`] = `
   "fed.income-tax-return | File federal income tax return: Form 1120 | April 15 | 2027-04-15",
   "state.registered-agent:OH | Maintain a registered agent in Ohio |  | ",
   "state.entity-tax:OH | Register for and file Ohio entity-level taxes |  | ",
+  "state.duties:OH:oh.unclaimed-property-report | File the annual unclaimed property holder report (Ohio) | November 1 | 2026-11-01",
   "local.business-license:OH | Municipal income tax registration — Sampletown, Sample County, Ohio |  | ",
   "local.certificate-of-occupancy:OH | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -7469,6 +7785,14 @@ exports[`snapshot OH > llc with employees, sales and a trade name 1`] = `
     "title": "Register assumed name / DBA with the Ohio Secretary of State",
   },
   {
+    "authority": "Ohio unclaimed property program",
+    "deadline": "November 1",
+    "frequency": "annual",
+    "id": "state.duties:OH:oh.unclaimed-property-report",
+    "nextDue": "2026-11-01",
+    "title": "File the annual unclaimed property holder report (Ohio)",
+  },
+  {
     "authority": "Ohio Department of Job and Family Services",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -7501,6 +7825,7 @@ exports[`snapshot OK > c corp formed in the state with no employees 1`] = `
   "fed.income-tax-return | File federal income tax return: Form 1120 | April 15 | 2027-04-15",
   "state.registered-agent:OK | Maintain a registered agent in Oklahoma |  | ",
   "state.entity-tax:OK | Register for and file Oklahoma entity-level taxes |  | ",
+  "state.duties:OK:ok.unclaimed-property-report | File the annual unclaimed property holder report (Oklahoma) | November 1 | 2026-11-01",
   "local.business-license:OK | City business license — Sampletown, Sample County, Oklahoma |  | ",
   "local.certificate-of-occupancy:OK | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -7661,6 +7986,14 @@ exports[`snapshot OK > llc with employees, sales and a trade name 1`] = `
     "title": "Register assumed name / DBA with the Oklahoma Secretary of State",
   },
   {
+    "authority": "Oklahoma unclaimed property program",
+    "deadline": "November 1",
+    "frequency": "annual",
+    "id": "state.duties:OK:ok.unclaimed-property-report",
+    "nextDue": "2026-11-01",
+    "title": "File the annual unclaimed property holder report (Oklahoma)",
+  },
+  {
     "authority": "Oklahoma Employment Security Commission",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -7694,6 +8027,7 @@ exports[`snapshot OR > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:OR | Maintain a registered agent in Oregon |  | ",
   "state.annual-report:OR | File Annual Report (Oregon) | On the anniversary of formation | 2027-03-10",
   "state.entity-tax:OR | Register for and file Oregon entity-level taxes |  | ",
+  "state.duties:OR:or.unclaimed-property-report | File the annual unclaimed property holder report (Oregon) | November 1 | 2026-11-01",
   "local.business-license:OR | City business license and local business income taxes — Sampletown, Sample County, Oregon |  | ",
   "local.certificate-of-occupancy:OR | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -7862,6 +8196,14 @@ exports[`snapshot OR > llc with employees, sales and a trade name 1`] = `
     "title": "Register assumed name / DBA with the Oregon Secretary of State, Corporation Division",
   },
   {
+    "authority": "Oregon unclaimed property program",
+    "deadline": "November 1",
+    "frequency": "annual",
+    "id": "state.duties:OR:or.unclaimed-property-report",
+    "nextDue": "2026-11-01",
+    "title": "File the annual unclaimed property holder report (Oregon)",
+  },
+  {
     "authority": "OregonSaves (Oregon State Treasury)",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -7911,6 +8253,7 @@ exports[`snapshot PA > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:PA | Maintain a registered agent in Pennsylvania |  | ",
   "state.annual-report:PA | File Annual Report (Pennsylvania) | June 30 | 2027-06-30",
   "state.entity-tax:PA | Register for and file Pennsylvania entity-level taxes |  | ",
+  "state.duties:PA:pa.unclaimed-property-report | File the annual unclaimed property holder report (Pennsylvania) | April 15 | 2027-04-15",
   "local.business-license:PA | Local earned income tax and business privilege registration — Sampletown, Sample County, Pennsylvania |  | ",
   "local.certificate-of-occupancy:PA | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -8079,6 +8422,14 @@ exports[`snapshot PA > llc with employees, sales and a trade name 1`] = `
     "title": "Register assumed name / DBA with the Pennsylvania Department of State, Bureau of Corporations",
   },
   {
+    "authority": "Pennsylvania unclaimed property program",
+    "deadline": "April 15",
+    "frequency": "annual",
+    "id": "state.duties:PA:pa.unclaimed-property-report",
+    "nextDue": "2027-04-15",
+    "title": "File the annual unclaimed property holder report (Pennsylvania)",
+  },
+  {
     "authority": "Pennsylvania Department of Labor & Industry (UC)",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -8112,6 +8463,7 @@ exports[`snapshot RI > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:RI | Maintain a registered agent in Rhode Island |  | ",
   "state.annual-report:RI | File Annual Report (Rhode Island) | February 1 – May 1 | 2027-05-01",
   "state.entity-tax:RI | Register for and file Rhode Island entity-level taxes |  | ",
+  "state.duties:RI:ri.unclaimed-property-report | File the annual unclaimed property holder report (Rhode Island) | November 1 | 2026-11-01",
   "local.business-license:RI | City/town licenses — Sampletown, Sample County, Rhode Island |  | ",
   "local.certificate-of-occupancy:RI | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -8288,6 +8640,14 @@ exports[`snapshot RI > llc with employees, sales and a trade name 1`] = `
     "title": "Register assumed name / DBA with the Rhode Island Secretary of State",
   },
   {
+    "authority": "Rhode Island unclaimed property program",
+    "deadline": "November 1",
+    "frequency": "annual",
+    "id": "state.duties:RI:ri.unclaimed-property-report",
+    "nextDue": "2026-11-01",
+    "title": "File the annual unclaimed property holder report (Rhode Island)",
+  },
+  {
     "authority": "Rhode Island Department of Labor and Training",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -8329,6 +8689,7 @@ exports[`snapshot SC > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:SC | Maintain a registered agent in South Carolina |  | ",
   "state.annual-report:SC | File Annual Report and Corporate License Fee (with SCDOR) (South Carolina) | With the corporate income tax return (April 15) | ",
   "state.entity-tax:SC | Register for and file South Carolina entity-level taxes |  | ",
+  "state.duties:SC:sc.unclaimed-property-report | File the annual unclaimed property holder report (South Carolina) | November 1 | 2026-11-01",
   "local.business-license:SC | Municipal or county business license — Sampletown, Sample County, South Carolina |  | ",
   "local.certificate-of-occupancy:SC | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -8481,6 +8842,14 @@ exports[`snapshot SC > llc with employees, sales and a trade name 1`] = `
     "title": "Carry workers' compensation insurance (South Carolina)",
   },
   {
+    "authority": "South Carolina unclaimed property program",
+    "deadline": "November 1",
+    "frequency": "annual",
+    "id": "state.duties:SC:sc.unclaimed-property-report",
+    "nextDue": "2026-11-01",
+    "title": "File the annual unclaimed property holder report (South Carolina)",
+  },
+  {
     "authority": "South Carolina employment eligibility law / U.S. Citizenship and Immigration Services",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -8522,6 +8891,7 @@ exports[`snapshot SD > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:SD | Maintain a registered agent in South Dakota |  | ",
   "state.annual-report:SD | File Annual Report (South Dakota) | First day of the anniversary month | 2027-03-01",
   "state.entity-tax:SD | Register for and file South Dakota entity-level taxes |  | ",
+  "state.duties:SD:sd.unclaimed-property-report | File the annual unclaimed property holder report (South Dakota) | November 1 | 2026-11-01",
   "local.business-license:SD | City business license — Sampletown, Sample County, South Dakota |  | ",
   "local.certificate-of-occupancy:SD | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -8682,6 +9052,14 @@ exports[`snapshot SD > llc with employees, sales and a trade name 1`] = `
     "title": "Register assumed name / DBA with the South Dakota Secretary of State",
   },
   {
+    "authority": "South Dakota unclaimed property program",
+    "deadline": "November 1",
+    "frequency": "annual",
+    "id": "state.duties:SD:sd.unclaimed-property-report",
+    "nextDue": "2026-11-01",
+    "title": "File the annual unclaimed property holder report (South Dakota)",
+  },
+  {
     "authority": "South Dakota Department of Labor & Regulation",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -8715,6 +9093,7 @@ exports[`snapshot TN > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:TN | Maintain a registered agent in Tennessee |  | ",
   "state.annual-report:TN | File Annual Report (Tennessee) | First day of the 4th month after fiscal year end (April 1) | 2027-04-01",
   "state.entity-tax:TN | Register for and file Tennessee entity-level taxes |  | ",
+  "state.duties:TN:tn.unclaimed-property-report | File the annual unclaimed property holder report (Tennessee) | November 1 | 2026-11-01",
   "local.business-license:TN | City/county business license (Business Tax) — Sampletown, Sample County, Tennessee |  | ",
   "local.certificate-of-occupancy:TN | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -8875,6 +9254,14 @@ exports[`snapshot TN > llc with employees, sales and a trade name 1`] = `
     "title": "Register assumed name / DBA with the Tennessee Secretary of State",
   },
   {
+    "authority": "Tennessee unclaimed property program",
+    "deadline": "November 1",
+    "frequency": "annual",
+    "id": "state.duties:TN:tn.unclaimed-property-report",
+    "nextDue": "2026-11-01",
+    "title": "File the annual unclaimed property holder report (Tennessee)",
+  },
+  {
     "authority": "Tennessee Department of Labor and Workforce Development",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -8908,6 +9295,7 @@ exports[`snapshot TX > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:TX | Maintain a registered agent in Texas |  | ",
   "state.annual-report:TX | File Franchise Tax Report and Public Information Report (Texas) | May 15 | 2027-05-15",
   "state.entity-tax:TX | Register for and file Texas entity-level taxes |  | ",
+  "state.duties:TX:tx.unclaimed-property-report | File the annual unclaimed property holder report (Texas) | July 1 | 2027-07-01",
   "local.business-license:TX | Local permits — Sampletown, Sample County, Texas |  | ",
   "local.certificate-of-occupancy:TX | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -9068,6 +9456,14 @@ exports[`snapshot TX > llc with employees, sales and a trade name 1`] = `
     "title": "Register assumed name / DBA with the Texas Secretary of State",
   },
   {
+    "authority": "Texas unclaimed property program",
+    "deadline": "July 1",
+    "frequency": "annual",
+    "id": "state.duties:TX:tx.unclaimed-property-report",
+    "nextDue": "2027-07-01",
+    "title": "File the annual unclaimed property holder report (Texas)",
+  },
+  {
     "authority": "Texas Workforce Commission",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -9101,6 +9497,7 @@ exports[`snapshot UT > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:UT | Maintain a registered agent in Utah |  | ",
   "state.annual-report:UT | File Annual Renewal (Utah) | Last day of the anniversary month | 2027-03-31",
   "state.entity-tax:UT | Register for and file Utah entity-level taxes |  | ",
+  "state.duties:UT:ut.unclaimed-property-report | File the annual unclaimed property holder report (Utah) | November 1 | 2026-11-01",
   "local.business-license:UT | City or county business license — Sampletown, Sample County, Utah |  | ",
   "local.certificate-of-occupancy:UT | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -9269,6 +9666,14 @@ exports[`snapshot UT > llc with employees, sales and a trade name 1`] = `
     "title": "Register assumed name / DBA with the Utah Division of Corporations and Commercial Code",
   },
   {
+    "authority": "Utah unclaimed property program",
+    "deadline": "November 1",
+    "frequency": "annual",
+    "id": "state.duties:UT:ut.unclaimed-property-report",
+    "nextDue": "2026-11-01",
+    "title": "File the annual unclaimed property holder report (Utah)",
+  },
+  {
     "authority": "Utah Department of Workforce Services",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -9302,6 +9707,7 @@ exports[`snapshot VA > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:VA | Maintain a registered agent in Virginia |  | ",
   "state.annual-report:VA | Pay Annual Registration Fee (Virginia) | Last day of the anniversary month | 2027-03-31",
   "state.entity-tax:VA | Register for and file Virginia entity-level taxes |  | ",
+  "state.duties:VA:va.unclaimed-property-report | File the annual unclaimed property holder report (Virginia) | November 1 | 2026-11-01",
   "local.business-license:VA | City/county BPOL license — Sampletown, Sample County, Virginia |  | ",
   "local.certificate-of-occupancy:VA | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -9470,6 +9876,14 @@ exports[`snapshot VA > llc with employees, sales and a trade name 1`] = `
     "title": "Register assumed name / DBA with the Virginia State Corporation Commission",
   },
   {
+    "authority": "Virginia unclaimed property program",
+    "deadline": "November 1",
+    "frequency": "annual",
+    "id": "state.duties:VA:va.unclaimed-property-report",
+    "nextDue": "2026-11-01",
+    "title": "File the annual unclaimed property holder report (Virginia)",
+  },
+  {
     "authority": "Virginia Employment Commission",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -9503,6 +9917,7 @@ exports[`snapshot VT > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:VT | Maintain a registered agent in Vermont |  | ",
   "state.annual-report:VT | File Annual Report (Vermont) | 2.5 months after fiscal year end | ",
   "state.entity-tax:VT | Register for and file Vermont entity-level taxes |  | ",
+  "state.duties:VT:vt.unclaimed-property-report | File the annual unclaimed property holder report (Vermont) | May 1 | 2027-05-01",
   "local.business-license:VT | Town licenses and zoning permits — Sampletown, Sample County, Vermont |  | ",
   "local.certificate-of-occupancy:VT | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -9671,6 +10086,14 @@ exports[`snapshot VT > llc with employees, sales and a trade name 1`] = `
     "title": "Register assumed name / DBA with the Vermont Secretary of State",
   },
   {
+    "authority": "Vermont unclaimed property program",
+    "deadline": "May 1",
+    "frequency": "annual",
+    "id": "state.duties:VT:vt.unclaimed-property-report",
+    "nextDue": "2027-05-01",
+    "title": "File the annual unclaimed property holder report (Vermont)",
+  },
+  {
     "authority": "Vermont Saves (Vermont State Treasurer)",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -9721,6 +10144,7 @@ exports[`snapshot WA > c corp formed in the state with no employees 1`] = `
   "state.annual-report:WA | File Annual Report (Washington) | Last day of the anniversary month | 2027-03-31",
   "state.entity-tax:WA | Register for and file Washington entity-level taxes |  | ",
   "state.business-license:WA | Washington state business license (Business Licensing Service) |  | ",
+  "state.duties:WA:wa.unclaimed-property-report | File the annual unclaimed property holder report (Washington) | October 31 | 2026-10-31",
   "local.business-license:WA | City business license endorsement — Sampletown, Sample County, Washington |  | ",
   "local.certificate-of-occupancy:WA | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -9897,6 +10321,14 @@ exports[`snapshot WA > llc with employees, sales and a trade name 1`] = `
     "title": "Register assumed name / DBA with the Washington Secretary of State, Corporations and Charities",
   },
   {
+    "authority": "Washington unclaimed property program",
+    "deadline": "October 31",
+    "frequency": "annual",
+    "id": "state.duties:WA:wa.unclaimed-property-report",
+    "nextDue": "2026-10-31",
+    "title": "File the annual unclaimed property holder report (Washington)",
+  },
+  {
     "authority": "Washington Employment Security Department",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -9938,6 +10370,7 @@ exports[`snapshot WI > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:WI | Maintain a registered agent in Wisconsin |  | ",
   "state.annual-report:WI | File Annual Report (Wisconsin) | Last day of the calendar quarter containing the anniversary month | ",
   "state.entity-tax:WI | Register for and file Wisconsin entity-level taxes |  | ",
+  "state.duties:WI:wi.unclaimed-property-report | File the annual unclaimed property holder report (Wisconsin) | November 1 | 2026-11-01",
   "local.business-license:WI | Local permits — Sampletown, Sample County, Wisconsin |  | ",
   "local.certificate-of-occupancy:WI | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -10106,6 +10539,14 @@ exports[`snapshot WI > llc with employees, sales and a trade name 1`] = `
     "title": "Register assumed name / DBA with the Wisconsin Department of Financial Institutions",
   },
   {
+    "authority": "Wisconsin unclaimed property program",
+    "deadline": "November 1",
+    "frequency": "annual",
+    "id": "state.duties:WI:wi.unclaimed-property-report",
+    "nextDue": "2026-11-01",
+    "title": "File the annual unclaimed property holder report (Wisconsin)",
+  },
+  {
     "authority": "Wisconsin Department of Workforce Development (UI)",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -10140,6 +10581,7 @@ exports[`snapshot WV > c corp formed in the state with no employees 1`] = `
   "state.annual-report:WV | File Annual Report (West Virginia) | June 30 | 2027-06-30",
   "state.entity-tax:WV | Register for and file West Virginia entity-level taxes |  | ",
   "state.business-license:WV | West Virginia business registration certificate |  | ",
+  "state.duties:WV:wv.unclaimed-property-report | File the annual unclaimed property holder report (West Virginia) | November 1 | 2026-11-01",
   "local.business-license:WV | Municipal business and occupation (B&O) tax — Sampletown, Sample County, West Virginia |  | ",
   "local.certificate-of-occupancy:WV | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -10316,6 +10758,14 @@ exports[`snapshot WV > llc with employees, sales and a trade name 1`] = `
     "title": "Register assumed name / DBA with the West Virginia Secretary of State",
   },
   {
+    "authority": "West Virginia unclaimed property program",
+    "deadline": "November 1",
+    "frequency": "annual",
+    "id": "state.duties:WV:wv.unclaimed-property-report",
+    "nextDue": "2026-11-01",
+    "title": "File the annual unclaimed property holder report (West Virginia)",
+  },
+  {
     "authority": "WorkForce West Virginia",
     "deadline": undefined,
     "frequency": "ongoing",
@@ -10349,6 +10799,7 @@ exports[`snapshot WY > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:WY | Maintain a registered agent in Wyoming |  | ",
   "state.annual-report:WY | File Annual Report and pay license tax (Wyoming) | First day of the anniversary month | 2027-03-01",
   "state.entity-tax:WY | Register for and file Wyoming entity-level taxes |  | ",
+  "state.duties:WY:wy.unclaimed-property-report | File the annual unclaimed property holder report (Wyoming) | November 1 | 2026-11-01",
   "local.business-license:WY | City/town business license — Sampletown, Sample County, Wyoming |  | ",
   "local.certificate-of-occupancy:WY | Obtain certificate of occupancy for premises in Sampletown |  | ",
 ]
@@ -10499,6 +10950,14 @@ exports[`snapshot WY > llc with employees, sales and a trade name 1`] = `
     "id": "state.employer:WY#3",
     "nextDue": undefined,
     "title": "Carry workers' compensation insurance (Wyoming)",
+  },
+  {
+    "authority": "Wyoming unclaimed property program",
+    "deadline": "November 1",
+    "frequency": "annual",
+    "id": "state.duties:WY:wy.unclaimed-property-report",
+    "nextDue": "2026-11-01",
+    "title": "File the annual unclaimed property holder report (Wyoming)",
   },
   {
     "authority": "Wyoming Department of Workforce Services",
