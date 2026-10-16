@@ -265,7 +265,7 @@ function obligationDetails(
     rows.push(["Changing", `${c.summary} (effective ${formatDate(c.effective)})`]);
   if (i.penalty) {
     const late = i.penalty.percentPerMonth ? ` plus ${i.penalty.percentPerMonth}% per month` : "";
-    rows.push(["If late", `${money(i.penalty.amount)}${late}. ${i.penalty.note}`]);
+    rows.push(["If late", `${money(i.penalty.amount)}${late}${i.penalty.note ? `. ${i.penalty.note}` : ""}`]);
   }
   const p = i.provenance;
   if (p && p.sources.length > 0) {

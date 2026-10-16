@@ -5169,7 +5169,7 @@ exports[`snapshot MS > c corp formed in the state with no employees 1`] = `
   "fed.ein | Obtain an Employer Identification Number (EIN) |  | ",
   "fed.income-tax-return | File federal income tax return: Form 1120 | April 15 | 2027-04-15",
   "state.registered-agent:MS | Maintain a registered agent in Mississippi |  | ",
-  "state.annual-report:MS | File Annual Report (Mississippi) | April 15 (calendar-year entities) | 2027-04-15",
+  "state.annual-report:MS | File Annual Report (Mississippi) | April 15 (calendar-year filers) | 2027-04-15",
   "state.entity-tax:MS | Register for and file Mississippi entity-level taxes |  | ",
   "local.business-license:MS | Privilege license — Sampletown, Sample County, Mississippi |  | ",
   "local.certificate-of-occupancy:MS | Obtain certificate of occupancy for premises in Sampletown |  | ",
@@ -5260,7 +5260,7 @@ exports[`snapshot MS > llc with employees, sales and a trade name 1`] = `
   },
   {
     "authority": "Mississippi Secretary of State",
-    "deadline": "April 15 (calendar-year entities)",
+    "deadline": "April 15 (calendar-year filers)",
     "frequency": "annual",
     "id": "state.annual-report:MS",
     "nextDue": "2027-04-15",
