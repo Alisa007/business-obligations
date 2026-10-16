@@ -6,6 +6,9 @@
 
 <p align="center">
   <a href="https://github.com/Alisa007/business-obligations/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/Alisa007/business-obligations/actions/workflows/ci.yml/badge.svg" /></a>
+  <a href="https://www.npmjs.com/package/business-obligations"><img alt="npm version" src="https://img.shields.io/npm/v/business-obligations.svg" /></a>
+  <a href="https://www.npmjs.com/package/business-obligations"><img alt="npm downloads" src="https://img.shields.io/npm/dm/business-obligations.svg" /></a>
+  <img alt="Node 20+" src="https://img.shields.io/node/v/business-obligations.svg" />
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-blue.svg" /></a>
   <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-strict-3178c6.svg" />
   <img alt="Zero dependencies" src="https://img.shields.io/badge/dependencies-0-brightgreen.svg" />
@@ -14,6 +17,13 @@
 </p>
 
 **[Try it in your browser](https://alisa007.github.io/business-obligations/)**: no install; the plan is computed in your browser.
+
+<!-- Add a short GIF or screenshot of the playground here, e.g. docs/playground.gif:
+<p align="center"><img alt="Playground: an LLC in Austin gets an ordered plan of filings, licenses and deadlines" src="docs/playground.gif" width="720" /></p>
+-->
+
+**Built for** formation and compliance tools, accounting and payroll software, SaaS onboarding flows, and anyone who
+needs "what does this business owe, to whom, and by when?" as data rather than a pile of agency pages.
 
 Starting or running a business in the US means a pile of obligations spread over the IRS, 50 state agencies and your
 city: formation, EIN, state tax accounts, licenses, annual reports, payroll filings, insurance. They depend on the
