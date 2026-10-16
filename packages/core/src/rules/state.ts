@@ -1,3 +1,4 @@
+import { feeCost, feeText } from "../fee";
 import { resolveSchedule } from "../rrule";
 import type { ItemDraft, Presence, ResolvedProfile, Rule } from "../types";
 import { professionBoard, stateInfo as info } from "../data";
@@ -289,10 +290,10 @@ export const stateRules: Rule[] = [
             jurisdiction: "state" as const,
             state: code,
             authority: s.filing.name,
-            description: `Fee: ${r.fee}. Required to keep the entity in good standing.`,
+            description: `Fee: ${feeText(r)}. Required to keep the entity in good standing.`,
             ...schedule,
             frequency: schedule.frequency === "periodic" ? ("ongoing" as const) : schedule.frequency,
-            ...(r.feeDetail ? { cost: { ...r.feeDetail, currency: "USD" as const } } : {}),
+            ...feeCost(r),
             ...(r.lateFee ? { penalty: { ...r.lateFee, currency: "USD" as const } } : {}),
             reason: foreign
               ? `Registered as a foreign ${p.entityType} in ${code}`
@@ -406,11 +407,11 @@ export const stateRules: Rule[] = [
             jurisdiction: "state" as const,
             state: x.state,
             authority: l.authority,
-            description: `Fee: ${l.fee}. General state license required to operate in ${s.name}.`,
+            description: `Fee: ${feeText(l)}. General state license required to operate in ${s.name}.`,
             frequency: l.renewal,
-            ...(l.feeDetail ? { cost: { ...l.feeDetail, currency: "USD" as const } } : {}),
+            ...feeCost(l),
             reason: `${s.name} requires a general state business license`,
-            url: s.links.businessLicense ?? s.revenue.url,
+            url: l.url ?? s.revenue.url,
           };
         }),
   },

@@ -25,11 +25,47 @@ describe("state data files", () => {
     const ok = validate(data);
     expect(validate.errors ?? []).toEqual([]);
     expect(ok).toBe(true);
-    expect(data.code + ".json").toBe(f);
+    expect(data.code, "the file name is the state code").toBeUndefined();
+    expect(data.wageWithholding, "withholding follows links.withholding").toBeUndefined();
   });
 
-  it("generated loader matches the JSON files", () => {
-    for (const f of files) expect(STATES[f.slice(0, 2)]).toEqual(read(`data/states/${f}`));
+  it("the loader adds the code and the fields that follow from other fields", () => {
+    for (const f of files) {
+      const code = f.slice(0, 2);
+      const raw = read(`data/states/${f}`);
+      expect(STATES[code]).toEqual({ code, ...raw, wageWithholding: !!raw.links.withholding });
+    }
+  });
+
+  it("keeps related state fields consistent", () => {
+    for (const f of files) {
+      const s = read(`data/states/${f}`);
+      const code = f.slice(0, 2);
+      // A statewide sales tax has a permit page and an economic nexus threshold; Alaska has a nexus rule for local taxes.
+      if (s.salesTax.statewide) {
+        expect(s.links.salesTax, `${code} links.salesTax`).toBeDefined();
+        expect(s.economicNexusUsd, `${code} economicNexusUsd`).not.toBeNull();
+      } else if (code !== "AK") expect(s.economicNexusUsd, `${code} economicNexusUsd`).toBeNull();
+      if (s.salesTax.statewide) expect(s.salesTax.alternative, `${code} alternative`).toBeNull();
+      else expect(s.salesTax.alternative, `${code} alternative`).toBeTruthy();
+      if (s.businessLicense) expect(s.businessLicense.url, `${code} license page`).toMatch(/^https:\/\//);
+    }
+  });
+
+  it("stores fee text only where the numbers cannot say it", async () => {
+    const { describeFee } = await import("../src/fee");
+    for (const f of files) {
+      const s = read(`data/states/${f}`);
+      for (const k of ["llcReport", "corpReport", "lpReport", "llpReport", "businessLicense"]) {
+        const node = s[k];
+        if (!node) continue;
+        expect(node.feeDetail, `${f} ${k}`).toBeDefined();
+        if (node.fee) {
+          expect(node.fee, `${f} ${k} fee repeats feeDetail`).not.toBe(describeFee(node.feeDetail));
+          expect(node.feeDetail.note, `${f} ${k} note repeats fee`).not.toBe(node.fee);
+        } else expect(describeFee(node.feeDetail), `${f} ${k} needs fee text`).toBeDefined();
+      }
+    }
   });
 });
 
@@ -73,8 +109,8 @@ describe("city data files", () => {
   const files = fs.readdirSync(path.join(root, "data/cities")).filter((f) => f.endsWith(".json"));
   it("has one file per state and DC", () => expect(files).toHaveLength(51));
   it.each(files)("%s only holds cities of its own state", (f) => {
-    const list = read(`data/cities/${f}`) as Array<{ state: string; city: string }>;
-    for (const c of list) expect(c.state + ".json").toBe(f);
+    const list = read(`data/cities/${f}`) as Array<{ state?: string; city: string }>;
+    for (const c of list) expect(c.state, "the file name is the state").toBeUndefined();
     const names = list.map((c) => c.city);
     expect(new Set(names).size).toBe(names.length);
   });
@@ -107,8 +143,8 @@ describe("county data files", () => {
   const files = fs.readdirSync(path.join(root, "data/counties")).filter((f) => f.endsWith(".json"));
   it("has one file per state and DC", () => expect(files).toHaveLength(51));
   it.each(files)("%s only holds counties of its own state, once each", (f) => {
-    const list = read(`data/counties/${f}`) as Array<{ state: string; county: string }>;
-    for (const c of list) expect(c.state + ".json").toBe(f);
+    const list = read(`data/counties/${f}`) as Array<{ state?: string; county: string }>;
+    for (const c of list) expect(c.state, "the file name is the state").toBeUndefined();
     const names = list.map((c) => c.county);
     expect(new Set(names).size).toBe(names.length);
   });
@@ -196,7 +232,6 @@ describe("local and profession data schemas", () => {
 
   it("rejects malformed local entries", () => {
     const ok = {
-      state: "TX",
       city: "Austin",
       status: "unverified",
       note: "No general license was confirmed.",
@@ -215,7 +250,7 @@ describe("local and profession data schemas", () => {
     const bad: unknown[] = [
       { ...ok, checkedOn: "2026-02-30" },
       { ...ok, checkedOn: "10/13/2026" },
-      { ...ok, state: "tx" },
+      { ...ok, state: "TX" },
       { ...ok, status: undefined },
       { ...ok, status: "none" },
       { ...ok, items: [item] },

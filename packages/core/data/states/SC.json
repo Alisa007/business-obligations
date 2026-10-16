@@ -1,5 +1,4 @@
 {
-  "code": "SC",
   "name": "South Carolina",
   "filing": {
     "name": "South Carolina Secretary of State",
@@ -30,12 +29,10 @@
     "title": "File Annual Report and Corporate License Fee (with SCDOR)",
     "feeDetail": {
       "basis": "percent",
-      "min": 25,
-      "note": "License fee: 0.1% of capital stock and paid-in surplus plus $15 (minimum $25)"
+      "min": 25
     }
   },
   "entityTax": "Corporate income tax and corporate license fee",
-  "wageWithholding": true,
   "salesTax": {
     "statewide": true,
     "permit": "South Carolina retail license",
@@ -70,7 +67,6 @@
   },
   "llpReport": {
     "rrule": "FREQ=YEARLY",
-    "fee": "$100",
     "deadline": "Anniversary of registration",
     "title": "Renew LLP certificate",
     "feeDetail": {

@@ -1,5 +1,4 @@
 {
-  "code": "NV",
   "name": "Nevada",
   "filing": {
     "name": "Nevada Secretary of State",
@@ -27,8 +26,7 @@
     "title": "File Annual List of Managers/Officers and Business License Renewal",
     "feeDetail": {
       "basis": "flat",
-      "amount": 150,
-      "note": "$150 annual list fee"
+      "amount": 150
     },
     "lateFee": {
       "amount": 175,
@@ -41,8 +39,7 @@
     "title": "File Annual List of Managers/Officers and Business License Renewal",
     "feeDetail": {
       "basis": "flat",
-      "amount": 150,
-      "note": "$150 annual list fee"
+      "amount": 150
     },
     "lateFee": {
       "amount": 175,
@@ -50,7 +47,6 @@
     }
   },
   "entityTax": "Commerce Tax (gross receipts over $4 million) and Modified Business Tax on payroll; no corporate income tax",
-  "wageWithholding": false,
   "salesTax": {
     "statewide": true,
     "permit": "Nevada seller's permit",
@@ -60,13 +56,13 @@
   "businessLicense": {
     "title": "Nevada State Business License",
     "authority": "Nevada Secretary of State",
+    "url": "https://www.nvsos.gov/sos/licensing/state-business-license",
     "fee": "$200 ($500 for corporations)",
-    "renewal": "annual",
     "feeDetail": {
       "basis": "flat",
-      "amount": 200,
-      "note": "$200 ($500 for corporations)"
-    }
+      "amount": 200
+    },
+    "renewal": "annual"
   },
   "local": {
     "title": "City or county business license",
@@ -124,8 +120,7 @@
     "salesTax": "https://tax.nv.gov/tax-types/sales-tax-use-tax/",
     "entityTax": "https://tax.nv.gov/tax-types/commerce-tax/",
     "laborPosters": "https://labor.nv.gov/Employer/Employer_Posters/",
-    "dba": "https://www.nvsos.gov/sos-information/office-facts/faqs-all-division/service-marks-trademarks-trade-names",
-    "businessLicense": "https://www.nvsos.gov/sos/licensing/state-business-license"
+    "dba": "https://www.nvsos.gov/sos-information/office-facts/faqs-all-division/service-marks-trademarks-trade-names"
   },
   "dbaEntitiesFileLocally": true
 }

@@ -11,7 +11,7 @@ const read = (p) => JSON.parse(readFileSync(join(root, p), "utf8"));
 const jsonIn = (dir) =>
   readdirSync(join(root, dir))
     .filter((f) => f.endsWith(".json"))
-    .flatMap((f) => read(`${dir}/${f}`));
+    .flatMap((f) => read(`${dir}/${f}`).map((e) => ({ state: f.slice(0, 2), ...e }))); // the file name is the state
 
 /** Case, punctuation and "St."/"Saint" differences should not make a seeded place look missing. */
 export const norm = (s) =>

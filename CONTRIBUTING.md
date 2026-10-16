@@ -19,10 +19,19 @@ npm run test:update  # accept intentional snapshot changes, then review the diff
 1. Edit `data/states/<XX>.json`. Validate with `npm test` (the schema in `schema/state.schema.json` is enforced).
 2. Use an **official** source (the state agency's own page or statute). Add its URL to `verification.sources`, set
    `verification.checkedOn` to today's date, and remove the field from `verification.unconfirmed` if you confirmed it.
-3. Write the schedule as one iCalendar recurrence rule in `rrule` (see "Schedules" below); do not also write
+3. Give the fee as numbers in `feeDetail`. Add `fee` text only when the numbers cannot say it (a waiver, an
+   estimate, a rate): a test fails if `fee` just repeats what `feeDetail` generates.
+4. Write the schedule as one iCalendar recurrence rule in `rrule` (see "Schedules" below); do not also write
    `frequency`, `due` or a `deadline` that merely repeats it.
-4. Run `npm run test:update` and check the snapshot diff in `test/__snapshots__` shows only what you intended.
-5. Add a line to the **Unreleased** section of `CHANGELOG.md`.
+5. Run `npm run test:update` and check the snapshot diff in `test/__snapshots__` shows only what you intended.
+6. Add a line to the **Unreleased** section of `CHANGELOG.md`.
+
+## Fields stored once
+
+The file name is the state: state files have no `code`, city and county files have no `state` per entry, and
+`wageWithholding` follows from `links.withholding`. A license's page is `businessLicense.url`. Allowed values
+(entity types, industries, categories, ...) live in `src/enums.ts`; the JSON schemas must list the same values, and a
+test checks that.
 
 ## Schedules
 
@@ -58,7 +67,7 @@ When a fee, deadline, threshold or requirement changes (or is announced), add an
 - `effective` is the date it takes effect; `status` is `enacted` or `proposed` (proposed changes are never applied).
 - `scope.state` and `scope.rules` (rule-id prefixes such as `state.annual-report`) decide which items get the notice.
 - For an **enacted change in the future**, add `patches` (dotted paths into `data/states/<XX>.json`, e.g.
-  `llcReport.fee`) so the engine applies it automatically from `effective`. Leave the base data at today's value.
+  `llcReport.feeDetail.amount`; the fee text follows the number) so the engine applies it automatically from `effective`. Leave the base data at today's value.
 - For a change that already took effect, update the base data and record the entry **without** `patches` (history).
 - Include a `source` URL. `npm test` validates the registry against `schema/changes.schema.json`.
 
@@ -78,14 +87,14 @@ data test requires all 51 jurisdictions for every profession.
 
 ## Adding a county
 
-Counties live in `data/counties/<STATE>.json`, one file per state and DC. An entry has `state`, `county` (the name as
+Counties live in `data/counties/<STATE>.json`, one file per state and DC. An entry has `county` (the name as
 the ZIP data spells it, without "County"), optional `aliases`, and `items` in the same shape as city items. Use
 `"status": "none"` (with `sourceUrl`) or `"unverified"` (with `note`) and `"checkedOn"` when the county has no
 filing of its own or you could not confirm one. Cite the county's own page for the filing, not a bare domain.
 
 ## Adding a city
 
-Cities live in `data/cities/<STATE>.json` (one file per state and DC). Each entry has `state`, `city`, optional `counties` and `aliases` (neighbourhood or borough names that resolve to the city), and `items`:
+Cities live in `data/cities/<STATE>.json` (one file per state and DC). Each entry has `city`, optional `counties` and `aliases` (neighbourhood or borough names that resolve to the city), and `items`:
 
 ```json
 {

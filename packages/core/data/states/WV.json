@@ -1,5 +1,4 @@
 {
-  "code": "WV",
   "name": "West Virginia",
   "filing": {
     "name": "West Virginia Secretary of State",
@@ -26,8 +25,7 @@
     "fee": "$25 ($50 late fee)",
     "feeDetail": {
       "basis": "flat",
-      "amount": 25,
-      "note": "$25 ($50 late fee)"
+      "amount": 25
     },
     "lateFee": {
       "amount": 50,
@@ -39,8 +37,7 @@
     "fee": "$25 ($50 late fee)",
     "feeDetail": {
       "basis": "flat",
-      "amount": 25,
-      "note": "$25 ($50 late fee)"
+      "amount": 25
     },
     "lateFee": {
       "amount": 50,
@@ -48,7 +45,6 @@
     }
   },
   "entityTax": "Corporation net income tax",
-  "wageWithholding": true,
   "salesTax": {
     "statewide": true,
     "permit": "West Virginia business registration certificate (includes sales tax)",
@@ -58,12 +54,12 @@
   "businessLicense": {
     "title": "West Virginia business registration certificate",
     "authority": "West Virginia State Tax Department",
-    "fee": "$30",
-    "renewal": "once",
+    "url": "https://tax.wv.gov/Business/BusinessRegistration/Pages/BusinessRegistrationQuestionsAndAnswers.aspx",
     "feeDetail": {
       "basis": "flat",
       "amount": 30
-    }
+    },
+    "renewal": "once"
   },
   "local": {
     "title": "Municipal business and occupation (B&O) tax",
@@ -91,7 +87,6 @@
   },
   "llpReport": {
     "rrule": "FREQ=YEARLY;BYMONTH=7;BYMONTHDAY=1",
-    "fee": "$500",
     "deadline": "Between January 1 and July 1 each year",
     "title": "Pay LLP annual registration fee",
     "feeDetail": {
@@ -123,7 +118,6 @@
     "salesTax": "https://tax.wv.gov/Business/SalesAndUseTax/Pages/SalesAndUseTax.aspx",
     "entityTax": "https://tax.wv.gov/Business/CorporateIncomeTax/Pages/CorporateIncomeTaxPriorYears.aspx",
     "laborPosters": "https://labor.wv.gov/required-posters",
-    "dba": "https://sos.wv.gov/business/registration-and-waivers/register-trade-name-dba",
-    "businessLicense": "https://tax.wv.gov/Business/BusinessRegistration/Pages/BusinessRegistrationQuestionsAndAnswers.aspx"
+    "dba": "https://sos.wv.gov/business/registration-and-waivers/register-trade-name-dba"
   }
 }

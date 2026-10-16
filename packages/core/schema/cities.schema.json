@@ -6,12 +6,8 @@
   "items": {
     "type": "object",
     "additionalProperties": false,
-    "required": ["state", "city", "items"],
+    "required": ["city", "items"],
     "properties": {
-      "state": {
-        "type": "string",
-        "pattern": "^[A-Z]{2}$"
-      },
       "city": {
         "type": "string",
         "minLength": 2,
