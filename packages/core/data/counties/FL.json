@@ -11,9 +11,45 @@
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "alachua-fl.tourist-development-tax-registration",
+        "title": "Register for the Alachua County tourist development tax",
+        "category": "registration",
+        "authority": "Alachua County Tax Collector",
+        "description": "Operators of hotels, motels and short-term rentals (stays of six months or less) register with the county to collect the 5% tourist development tax. Florida's Department of Revenue lists Alachua as a county that collects it directly rather than through the state sales tax return; the state sales tax on the same rentals is still filed on the DR-15 (line D).",
+        "frequency": "once",
+        "url": "https://alachuacounty.us/News/Article/Pages/Short-Term-Vacation-Rental-Tax-Compliance.aspx",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "alachua-fl.tourist-development-tax-return",
+        "title": "File the Alachua County tourist development tax return",
+        "category": "filing",
+        "authority": "Alachua County Tax Collector",
+        "description": "Hosts file monthly returns through the Tax Collector's TouristExpress portal. The pages read do not state the day of the month.",
+        "frequency": "monthly",
+        "url": "https://alachuacounty.us/News/Article/Pages/Short-Term-Vacation-Rental-Tax-Compliance.aspx",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Brevard",
@@ -27,9 +63,45 @@
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": "https://bcpao.us/tangible.aspx?t=1.2",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "brevard-fl.tourist-development-tax-registration",
+        "title": "Register for the Brevard County tourist development tax",
+        "category": "registration",
+        "authority": "Brevard County Clerk of the Circuit Court",
+        "description": "Operators of hotels, motels and short-term rentals (stays of six months or less) register with the county to collect the 5% tourist development tax. Florida's Department of Revenue lists Brevard as a county that collects it directly rather than through the state sales tax return; the state sales tax on the same rentals is still filed on the DR-15 (line D).",
+        "frequency": "once",
+        "url": "https://www.brevardclerk.us/tourist-de",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "brevard-fl.tourist-development-tax-return",
+        "title": "File the Brevard County tourist development tax return",
+        "category": "filing",
+        "authority": "Brevard County Clerk of the Circuit Court",
+        "description": "Since October 1, 2025 the Clerk, not the Tax Collector, collects the tax. Returns and payment are due by the 20th of the following month, and a late return carries a 10% penalty (minimum $50) plus interest.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://www.brevardclerk.us/tourist-de",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Broward",
@@ -43,9 +115,45 @@
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": "https://bcpa.net/TPP.asp",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "broward-fl.tourist-development-tax-registration",
+        "title": "Register for the Broward County tourist development tax",
+        "category": "registration",
+        "authority": "Broward County Records, Taxes and Treasury Division",
+        "description": "Operators of hotels, motels and short-term rentals (stays of six months or less) register with the county to collect the 6% tourist development tax. Florida's Department of Revenue lists Broward as a county that collects it directly rather than through the state sales tax return; the state sales tax on the same rentals is still filed on the DR-15 (line D).",
+        "frequency": "once",
+        "url": "https://www.broward.org/RecordsTaxesTreasury/TaxesFees/Pages/TouristDevelopmentTaxes.aspx",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "broward-fl.tourist-development-tax-return",
+        "title": "File the Broward County tourist development tax return",
+        "category": "filing",
+        "authority": "Broward County Records, Taxes and Treasury Division",
+        "description": "Returns are due on the 1st of the month after collection and are delinquent if not postmarked by the 20th. The minimum late penalty is $50, or 10% of the tax if not more than 30 days late.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://www.broward.org/RecordsTaxesTreasury/TaxesFees/Pages/TouristDevelopmentTaxes.aspx",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Collier",
@@ -61,7 +169,8 @@
         "appliesTo": ["all"]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16",
+    "note": "Collier County collects its own tourist development tax (5%, per Florida's DR-15TDT), but no official county page with the registration steps and due date could be read."
   },
   {
     "county": "Duval",
@@ -75,9 +184,45 @@
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": "https://www.jacksonville.gov/departments/property-appraiser/tangible-personal-property",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "duval-fl.tourist-development-tax-registration",
+        "title": "Register for the Duval County tourist development tax",
+        "category": "registration",
+        "authority": "Duval County Tax Collector (Jacksonville)",
+        "description": "Operators of hotels, motels and short-term rentals (stays of six months or less) register with the county to collect the 6% tourist development tax. Florida's Department of Revenue lists Duval as a county that collects it directly rather than through the state sales tax return; the state sales tax on the same rentals is still filed on the DR-15 (line D).",
+        "frequency": "once",
+        "url": "https://taxcollector.jacksonville.gov/taxes/convention-tourist-development-tax-(short-term-rentals)",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "duval-fl.tourist-development-tax-return",
+        "title": "File the Duval County tourist development tax return",
+        "category": "filing",
+        "authority": "Duval County Tax Collector (Jacksonville)",
+        "description": "Returns are monthly and due on the 1st of the month after collection; they are late after the 20th. A return is required every month, even with no tax collected. The late penalty is 10% a month up to 50%, with a $50 minimum.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://taxcollector.jacksonville.gov/taxes/convention-tourist-development-tax-(short-term-rentals)",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Escambia",
@@ -91,9 +236,45 @@
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "escambia-fl.tourist-development-tax-registration",
+        "title": "Register for the Escambia County tourist development tax",
+        "category": "registration",
+        "authority": "Escambia County Clerk of the Circuit Court",
+        "description": "Operators of hotels, motels and short-term rentals (stays of six months or less) register with the county to collect the 5% tourist development tax. Florida's Department of Revenue lists Escambia as a county that collects it directly rather than through the state sales tax return; the state sales tax on the same rentals is still filed on the DR-15 (line D).",
+        "frequency": "once",
+        "url": "https://www.escambiaclerk.com/FAQ.aspx?QID=192",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "escambia-fl.tourist-development-tax-return",
+        "title": "File the Escambia County tourist development tax return",
+        "category": "filing",
+        "authority": "Escambia County Clerk of the Circuit Court",
+        "description": "The Clerk, not the Tax Collector, collects the tax. It is due on the 1st of the month after collection and is late if not postmarked by the 20th. A return is required even with no receipts. The late penalty is 10% per 30 days up to 50%, with a $50 minimum.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://www.escambiaclerk.com/FAQ.aspx?QID=192",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Hillsborough",
@@ -107,9 +288,45 @@
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": "https://www.hcpafl.org/Property-Info/Tangible-Personal-Property",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "hillsborough-fl.tourist-development-tax-registration",
+        "title": "Register for the Hillsborough County tourist development tax",
+        "category": "registration",
+        "authority": "Hillsborough County Tax Collector",
+        "description": "Operators of hotels, motels and short-term rentals (stays of six months or less) register with the county to collect the 6% tourist development tax. Florida's Department of Revenue lists Hillsborough as a county that collects it directly rather than through the state sales tax return; the state sales tax on the same rentals is still filed on the DR-15 (line D).",
+        "frequency": "once",
+        "url": "https://www.hillstaxfl.gov/?p=751",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "hillsborough-fl.tourist-development-tax-return",
+        "title": "File the Hillsborough County tourist development tax return",
+        "category": "filing",
+        "authority": "Hillsborough County Tax Collector",
+        "description": "Monthly: due on the 1st of the month after collection and delinquent if not paid or postmarked by the 20th.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://www.hillstaxfl.gov/?p=751",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Lake",
@@ -123,9 +340,45 @@
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": "https://lakecopropappr.com/business_owners.aspx",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "lake-fl.tourist-development-tax-registration",
+        "title": "Register for the Lake County tourist development tax",
+        "category": "registration",
+        "authority": "Lake County Tax Collector",
+        "description": "Operators of hotels, motels and short-term rentals (stays of six months or less) register with the county to collect the 4% tourist development tax. Florida's Department of Revenue lists Lake as a county that collects it directly rather than through the state sales tax return; the state sales tax on the same rentals is still filed on the DR-15 (line D).",
+        "frequency": "once",
+        "url": "https://laketax.com/tourist-development-tax/",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "lake-fl.tourist-development-tax-return",
+        "title": "File the Lake County tourist development tax return",
+        "category": "filing",
+        "authority": "Lake County Tax Collector",
+        "description": "Returns are filed through the TouristExpress portal and are due by the 20th of the following month. Filing and paying late forfeits the 2.5% collection allowance (capped at $30) and adds penalties and interest.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://laketax.com/tourist-development-tax/",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Lee",
@@ -141,7 +394,8 @@
         "appliesTo": ["all"]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16",
+    "note": "Lee County collects its own tourist development tax (5%, per Florida's DR-15TDT), apparently through the Clerk of Court, but no official county page with the registration steps and due date could be read."
   },
   {
     "county": "Leon",
@@ -155,9 +409,45 @@
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": "https://www.leonpa.gov/E-File/Tangible-Tax-Return",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "leon-fl.tourist-development-tax-registration",
+        "title": "Register for the Leon County tourist development tax",
+        "category": "registration",
+        "authority": "Leon County Tax Collector",
+        "description": "Operators of hotels, motels and short-term rentals (stays of six months or less) register with the county to collect the 5% tourist development tax. Florida's Department of Revenue lists Leon as a county that collects it directly rather than through the state sales tax return; the state sales tax on the same rentals is still filed on the DR-15 (line D).",
+        "frequency": "once",
+        "url": "https://leontaxcollector.net/Services/Tourist-Development",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "leon-fl.tourist-development-tax-return",
+        "title": "File the Leon County tourist development tax return",
+        "category": "filing",
+        "authority": "Leon County Tax Collector",
+        "description": "Report and pay online through the Tourist Development login; electronic filing is needed to keep the collection allowance. The page does not give return due dates (call 850-606-4700).",
+        "frequency": "monthly",
+        "url": "https://leontaxcollector.net/Services/Tourist-Development",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Manatee",
@@ -171,9 +461,45 @@
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": "https://manateepao.gov/tpp",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "manatee-fl.tourist-development-tax-registration",
+        "title": "Register for the Manatee County tourist development tax",
+        "category": "registration",
+        "authority": "Manatee County Tax Collector",
+        "description": "Operators of hotels, motels and short-term rentals (stays of six months or less) register with the county to collect the 6% tourist development tax. Florida's Department of Revenue lists Manatee as a county that collects it directly rather than through the state sales tax return; the state sales tax on the same rentals is still filed on the DR-15 (line D).",
+        "frequency": "once",
+        "url": "https://helpcenter.taxcollector.com/hc/en-us/articles/26749980712461-Tourist-Development-Tax",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "manatee-fl.tourist-development-tax-return",
+        "title": "File the Manatee County tourist development tax return",
+        "category": "filing",
+        "authority": "Manatee County Tax Collector",
+        "description": "Returns are monthly or quarterly, due on the 1st and late after the 20th of the month following each period. A zero return is still required. The late penalty is 10% with a $50 minimum, plus daily interest. The monthly due date is shown.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://helpcenter.taxcollector.com/hc/en-us/articles/26749980712461-Tourist-Development-Tax",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Marion",
@@ -187,9 +513,45 @@
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "marion-fl.tourist-development-tax-registration",
+        "title": "Register for the Marion County tourist development tax",
+        "category": "registration",
+        "authority": "Marion County Tax Collector",
+        "description": "Operators of hotels, motels and short-term rentals (stays of six months or less) register with the county to collect the 4% tourist development tax. Florida's Department of Revenue lists Marion as a county that collects it directly rather than through the state sales tax return; the state sales tax on the same rentals is still filed on the DR-15 (line D).",
+        "frequency": "once",
+        "url": "https://www.mariontax.com/td-home",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "marion-fl.tourist-development-tax-return",
+        "title": "File the Marion County tourist development tax return",
+        "category": "filing",
+        "authority": "Marion County Tax Collector",
+        "description": "A return is required every month, even with no tax collected. The county's pages give the 1st as the due date and the 20th as the date after which it is delinquent (its FAQ says due on the 20th). Late returns cost 10% or $50, whichever is greater, plus interest.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://www.mariontax.com/td-home",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Miami-Dade",
@@ -203,9 +565,45 @@
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "miami-dade-fl.tourist-development-tax-registration",
+        "title": "Register for the Miami-Dade County tourist development tax",
+        "category": "registration",
+        "authority": "Miami-Dade County",
+        "description": "Operators of hotels, motels and short-term rentals (stays of six months or less) register with the county to collect the 6% (7% in Miami Beach; 4% in Surfside and Bal Harbour) tourist development tax. Florida's Department of Revenue lists Miami-Dade as a county that collects it directly rather than through the state sales tax return; the state sales tax on the same rentals is still filed on the DR-15 (line D).",
+        "frequency": "once",
+        "url": "https://www.miamidade.gov/taxcollector/tourist-taxes.asp",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "miami-dade-fl.tourist-development-tax-return",
+        "title": "File the Miami-Dade County tourist development tax return",
+        "category": "filing",
+        "authority": "Miami-Dade County",
+        "description": "The county's convention and tourist tax return is monthly, due on the 1st and late if not received by the 20th of the following month (next business day if that is a weekend or holiday), even with no tax collected. Non-electronic filing costs $10 per filing and payment since October 2025.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://www.miamidade.gov/taxcollector/tourist-taxes.asp",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Orange",
@@ -219,9 +617,45 @@
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "orange-fl.tourist-development-tax-registration",
+        "title": "Register for the Orange County tourist development tax",
+        "category": "registration",
+        "authority": "Orange County Comptroller",
+        "description": "Operators of hotels, motels and short-term rentals (stays of six months or less) register with the county to collect the 6% tourist development tax. Florida's Department of Revenue lists Orange as a county that collects it directly rather than through the state sales tax return; the state sales tax on the same rentals is still filed on the DR-15 (line D).",
+        "frequency": "once",
+        "url": "https://www.occompt.com/FAQ.aspx?QID=139",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "orange-fl.tourist-development-tax-return",
+        "title": "File the Orange County tourist development tax return",
+        "category": "filing",
+        "authority": "Orange County Comptroller",
+        "description": "The Comptroller administers the tax. It is remitted monthly, due on the 1st of the month after collection and delinquent if not postmarked by the 20th. Online filing is available.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://www.occompt.com/FAQ.aspx?QID=139",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Osceola",
@@ -235,9 +669,45 @@
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "osceola-fl.tourist-development-tax-registration",
+        "title": "Register for the Osceola County tourist development tax",
+        "category": "registration",
+        "authority": "Osceola County Tax Collector",
+        "description": "Operators of hotels, motels and short-term rentals (stays of six months or less) register with the county to collect the 6% tourist development tax. Florida's Department of Revenue lists Osceola as a county that collects it directly rather than through the state sales tax return; the state sales tax on the same rentals is still filed on the DR-15 (line D).",
+        "frequency": "once",
+        "url": "https://osceolataxcollector.org/wp-content/uploads/2025/09/Instructions-for-Calculating-Osceola-County-TDT.pdf",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "osceola-fl.tourist-development-tax-return",
+        "title": "File the Osceola County tourist development tax return",
+        "category": "filing",
+        "authority": "Osceola County Tax Collector",
+        "description": "Returns postmarked after the 20th of the month due incur a penalty of 10% of the tax or $50, whichever is greater; returns postmarked by the 20th may keep a 2.5% collection allowance (maximum $30). The county does not contract with Airbnb, VRBO or similar platforms to collect for owners.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://osceolataxcollector.org/wp-content/uploads/2025/09/Instructions-for-Calculating-Osceola-County-TDT.pdf",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Palm Beach",
@@ -251,9 +721,45 @@
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": "https://secure.pbc.gov/tangefile",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "palm-beach-fl.tourist-development-tax-registration",
+        "title": "Register for the Palm Beach County tourist development tax",
+        "category": "registration",
+        "authority": "Palm Beach County Tax Collector",
+        "description": "Operators of hotels, motels and short-term rentals (stays of six months or less) register with the county to collect the 6% tourist development tax. Florida's Department of Revenue lists Palm Beach as a county that collects it directly rather than through the state sales tax return; the state sales tax on the same rentals is still filed on the DR-15 (line D).",
+        "frequency": "once",
+        "url": "https://www.pbctax.gov/tourist-development-tax",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "palm-beach-fl.tourist-development-tax-return",
+        "title": "File the Palm Beach County tourist development tax return",
+        "category": "filing",
+        "authority": "Palm Beach County Tax Collector",
+        "description": "Monthly reporting is due on the 1st and late after the 20th, with interest and penalties. Online platforms do not remit to the Tax Collector for hosts.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://www.pbctax.gov/tourist-development-tax",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Pasco",
@@ -267,9 +773,45 @@
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": "https://pascopa.gov/information-and-tools/tangible-personal-property/",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "pasco-fl.tourist-development-tax-registration",
+        "title": "Register for the Pasco County tourist development tax",
+        "category": "registration",
+        "authority": "Pasco County Tax Collector",
+        "description": "Operators of hotels, motels and short-term rentals (stays of six months or less) register with the county to collect the 5% tourist development tax. Florida's Department of Revenue lists Pasco as a county that collects it directly rather than through the state sales tax return; the state sales tax on the same rentals is still filed on the DR-15 (line D).",
+        "frequency": "once",
+        "url": "https://pascotaxes.com/taxes/tdt/",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "pasco-fl.tourist-development-tax-return",
+        "title": "File the Pasco County tourist development tax return",
+        "category": "filing",
+        "authority": "Pasco County Tax Collector",
+        "description": "Register and file online through Tourist Express (pasco.county-taxes.com/tourist). The page does not give return due dates (call 352-518-5097).",
+        "frequency": "monthly",
+        "url": "https://pascotaxes.com/taxes/tdt/",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Pinellas",
@@ -283,9 +825,45 @@
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": "https://legacy.pcpao.org/TPP%20Tax%20Return%20Form%20DR-405%202023.pdf",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "pinellas-fl.tourist-development-tax-registration",
+        "title": "Register for the Pinellas County tourist development tax",
+        "category": "registration",
+        "authority": "Pinellas County Tax Collector",
+        "description": "Operators of hotels, motels and short-term rentals (stays of six months or less) register with the county to collect the 6% tourist development tax. Florida's Department of Revenue lists Pinellas as a county that collects it directly rather than through the state sales tax return; the state sales tax on the same rentals is still filed on the DR-15 (line D).",
+        "frequency": "once",
+        "url": "https://pinellastaxcollector.gov/property-tax/tourist-development-taxes",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "pinellas-fl.tourist-development-tax-return",
+        "title": "File the Pinellas County tourist development tax return",
+        "category": "filing",
+        "authority": "Pinellas County Tax Collector",
+        "description": "Returns are monthly and delinquent unless filed and paid by the 20th of the month following collection, even if no rental activity. The late penalty is 10% with a $50 minimum, plus interest.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://pinellastaxcollector.gov/property-tax/tourist-development-taxes",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Polk",
@@ -299,9 +877,45 @@
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": "https://polkflpa.gov/Downloads/Files/TangiblePersonalProperty.pdf",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "polk-fl.tourist-development-tax-registration",
+        "title": "Register for the Polk County tourist development tax",
+        "category": "registration",
+        "authority": "Polk County Tax Collector",
+        "description": "Operators of hotels, motels and short-term rentals (stays of six months or less) register with the county to collect the 5% tourist development tax. Florida's Department of Revenue lists Polk as a county that collects it directly rather than through the state sales tax return; the state sales tax on the same rentals is still filed on the DR-15 (line D).",
+        "frequency": "once",
+        "url": "https://www.polktaxes.com/services/tourist-development-tax/",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "polk-fl.tourist-development-tax-return",
+        "title": "File the Polk County tourist development tax return",
+        "category": "filing",
+        "authority": "Polk County Tax Collector",
+        "description": "Remittances are due on the 1st of the month after collection and are delinquent if not paid by the 20th. From August 17, 2026 monthly filings must be entered in the Phenix online system. The Tax Collector may approve quarterly, semiannual or annual filing for accounts that meet its criteria.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://www.polktaxes.com/services/tourist-development-tax/",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Sarasota",
@@ -315,9 +929,45 @@
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": "https://www.sarasotapropertyappraiser.gov/appraisal-info/tangible-personal-property/",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "sarasota-fl.tourist-development-tax-registration",
+        "title": "Register for the Sarasota County tourist development tax",
+        "category": "registration",
+        "authority": "Sarasota County Tax Collector",
+        "description": "Operators of hotels, motels and short-term rentals (stays of six months or less) register with the county to collect the 6% tourist development tax. Florida's Department of Revenue lists Sarasota as a county that collects it directly rather than through the state sales tax return; the state sales tax on the same rentals is still filed on the DR-15 (line D).",
+        "frequency": "once",
+        "url": "https://www.sarasotataxcollector.gov/services/tax-services/tourist-tax/new-account",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "sarasota-fl.tourist-development-tax-return",
+        "title": "File the Sarasota County tourist development tax return",
+        "category": "filing",
+        "authority": "Sarasota County Tax Collector",
+        "description": "The return must be postmarked by the 20th of the month after collection, even if no tax is due (the registration form says payments are due on the 1st; the return form and existing-accounts page say the 20th).",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://www.sarasotataxcollector.gov/services/tax-services/tourist-tax/new-account",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Seminole",
@@ -331,9 +981,45 @@
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "seminole-fl.tourist-development-tax-registration",
+        "title": "Register for the Seminole County tourist development tax",
+        "category": "registration",
+        "authority": "Seminole County Tax Collector",
+        "description": "Operators of hotels, motels and short-term rentals (stays of six months or less) register with the county to collect the 5% tourist development tax. Florida's Department of Revenue lists Seminole as a county that collects it directly rather than through the state sales tax return; the state sales tax on the same rentals is still filed on the DR-15 (line D).",
+        "frequency": "once",
+        "url": "https://seminolecounty.tax/services/business-services/tourist-development-tax",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "seminole-fl.tourist-development-tax-return",
+        "title": "File the Seminole County tourist development tax return",
+        "category": "filing",
+        "authority": "Seminole County Tax Collector",
+        "description": "Due by the 20th of the month after collection; a postmark of the 21st or later adds interest and penalties. Independent rentals also need a Business Tax Receipt from the Tax Collector. Airbnb, VRBO and similar platforms collect for hosts who use them.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://seminolecounty.tax/services/business-services/tourist-development-tax",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "St. Johns",
@@ -347,9 +1033,45 @@
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "st-johns-fl.tourist-development-tax-registration",
+        "title": "Register for the St. Johns County tourist development tax",
+        "category": "registration",
+        "authority": "St. Johns County Tax Collector",
+        "description": "Operators of hotels, motels and short-term rentals (stays of six months or less) register with the county to collect the 5% tourist development tax. Florida's Department of Revenue lists St. Johns as a county that collects it directly rather than through the state sales tax return; the state sales tax on the same rentals is still filed on the DR-15 (line D).",
+        "frequency": "once",
+        "url": "https://sjctax.us/tourist-development-tax/",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "st-johns-fl.tourist-development-tax-return",
+        "title": "File the St. Johns County tourist development tax return",
+        "category": "filing",
+        "authority": "St. Johns County Tax Collector",
+        "description": "Due on the 1st of the month after collection and delinquent if not postmarked by the 20th. A return is required every month even when no tax is due. Registering needs a Florida sales tax number, a St. Johns County Business Tax Receipt and the county's tourist development tax application.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://sjctax.us/tourist-development-tax/",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "St. Lucie",
@@ -365,7 +1087,8 @@
         "appliesTo": ["all"]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16",
+    "note": "St. Lucie County collects its own tourist development tax (5%, per Florida's DR-15TDT), but no official county page with the registration steps and due date could be read."
   },
   {
     "county": "Volusia",
@@ -379,8 +1102,44 @@
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": "https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "volusia-fl.tourist-development-tax-registration",
+        "title": "Register for the Volusia County tourist development tax",
+        "category": "registration",
+        "authority": "Volusia County Treasury and Billing Division",
+        "description": "Operators of hotels, motels and short-term rentals (stays of six months or less) register with the county to collect the 6% tourist development tax. Florida's Department of Revenue lists Volusia as a county that collects it directly rather than through the state sales tax return; the state sales tax on the same rentals is still filed on the DR-15 (line D).",
+        "frequency": "once",
+        "url": "https://www.volusia.org/_deleted/revenue-services-old/tourist-and-convention-development-tax/frequently-asked-questions.stml",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "volusia-fl.tourist-development-tax-return",
+        "title": "File the Volusia County tourist development tax return",
+        "category": "filing",
+        "authority": "Volusia County Treasury and Billing Division",
+        "description": "Monthly returns are due by the 20th of the following month (next working day if that is a weekend or holiday). Accounts collecting under $1,000 of tax a year may file quarterly (April, July, October and January 20). The late penalty is 10% with a $50 minimum, plus interest.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://www.volusia.org/_deleted/revenue-services-old/tourist-and-convention-development-tax/frequently-asked-questions.stml",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16"
   }
 ]
