@@ -104,7 +104,7 @@
         "authority": "DeKalb County Property Appraisal",
         "description": "Georgia business personal property returns (Form PT-50P) are due to the county between January 1 and April 1 for property held on January 1; a 10% penalty applies to unreported property if the return is late. Returns must be postmarked by midnight April 1; late filers risk penalties and loss of depreciation and exemptions. The county mails forms as a courtesy.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
-        "url": "https://www.dekalbcountyga.gov/node/6006",
+        "url": "https://dekalbcountyga.gov/departments/property-appraisal",
         "appliesTo": ["all"]
       },
       {
@@ -112,10 +112,10 @@
         "title": "Obtain or renew the DeKalb County business license",
         "category": "license",
         "authority": "DeKalb County Business License Division",
-        "description": "DeKalb County's business tax has an administrative fee ($75 in the forms found), a minimum gross receipts tax ($50), tax on gross receipts over $20,000 and a per-employee fee; these amounts are from 2020 to 2023 county forms and may have changed. Transferring a business ends the license and starts a new one. Lodging operators also report hotel/motel excise tax on a separate excise account.",
-        "frequency": "annual",
-        "url": "https://www.dekalbcountyga.gov/node/1205973",
-        "appliesTo": ["all"]
+        "description": "DeKalb County's business occupational tax certificate is renewed through the county's online licensing portal (paper or emailed applications are not processed); the 2026 renewal window was January 1 to April 15, with penalties rising after February 1 and April 15. The fee has an administrative fee ($75 in 2024) and a minimum gross receipts tax ($50), so confirm current amounts. Transferring a business ends the license and starts a new one. Lodging operators also report hotel/motel excise tax on a separate excise account.",
+        "url": "https://dekalbcountyga.gov/departments/planning-and-sustainability/business-and-alcohol-license",
+        "appliesTo": ["all"],
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15"
       }
     ],
     "checkedOn": "2026-10-16"
@@ -138,10 +138,10 @@
         "title": "Obtain or renew the Forsyth County occupational tax certificate",
         "category": "license",
         "authority": "Forsyth County Business License Office",
-        "description": "All businesses operating in unincorporated Forsyth County must hold a current occupational tax certificate (business license), renewed annually. New businesses must apply within 30 days of starting and need a Business Location Verification Decision Letter from the county's CSS portal; applications are by mail or in person, not email.",
-        "frequency": "annual",
-        "url": "https://www.forsythco.com/DepartmentsOffices/BusinessLicenses/Applications",
-        "appliesTo": ["all"]
+        "description": "All businesses operating in unincorporated Forsyth County must hold a current occupational tax certificate (business license). Renewal runs December 1 to March 31 (the county emails a custom renewal form on December 1); renewals received after 5 p.m. on March 31 are late, with a 10% penalty and 1.5% interest a month. New businesses must apply within 30 days of starting and need a Business Location Verification Decision Letter from the county's CSS portal; new applications are by mail or in person, not email.",
+        "url": "https://www.forsythco.com/Departments-Offices/Business-Licenses/Applications",
+        "appliesTo": ["all"],
+        "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=31"
       }
     ],
     "checkedOn": "2026-10-16"
