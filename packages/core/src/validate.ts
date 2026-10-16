@@ -42,7 +42,8 @@ const ENUMS: Record<string, readonly string[]> = {
   profession: ["attorney", "cpa", "physician", "architect", "engineer", "other"],
 };
 
-type Kind = "string" | "boolean" | "number" | "integer" | "date" | "enum" | "multistate" | "vehicles";
+type Kind =
+  "string" | "stringArray" | "boolean" | "number" | "integer" | "date" | "enum" | "multistate" | "vehicles";
 
 const FIELDS: Record<string, Kind> = {
   country: "string",
@@ -76,6 +77,14 @@ const FIELDS: Record<string, Kind> = {
   hasTaxExemptStatus: "boolean",
   annualRevenue: "number",
   annualNetIncome: "number",
+  naics: "string",
+  activities: "stringArray",
+  projectValueUsd: "number",
+  disturbedAcres: "number",
+  licenseClass: "string",
+  floorAreaSqFt: "number",
+  hasSignage: "boolean",
+  foodService: "boolean",
 };
 
 /** Profile field names, for tooling and tests. */
@@ -152,6 +161,10 @@ function checkValue(field: string, kind: Kind, value: unknown, issues: ProfileIs
       }
       break;
     }
+    case "stringArray":
+      if (!Array.isArray(value) || value.some((v) => typeof v !== "string"))
+        add(`\`${field}\` must be an array of strings`);
+      break;
     case "multistate":
       if (!Array.isArray(value)) {
         add("`multistate` must be an array");

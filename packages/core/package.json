@@ -30,7 +30,8 @@
     "coverage": "node scripts/coverage.mjs && prettier --write COVERAGE.md",
     "size": "node scripts/size.mjs",
     "check:links": "node scripts/check-urls.mjs --data",
-    "release": "node scripts/release.mjs"
+    "release": "node scripts/release.mjs",
+    "report:stale": "node scripts/stale-report.mjs"
   },
   "devDependencies": {
     "@types/node": "^26.6.5",

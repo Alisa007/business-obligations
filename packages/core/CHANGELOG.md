@@ -29,6 +29,17 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ### Added
 
+- **Trust and review fields on every item.** `provenance.reviewBy` and `provenance.stale` (data checked more than a year
+  before `asOf` is stale), `provenance.sourceDetails` (kind, retrieval date and an Internet Archive link per source),
+  `jurisdictionId` (`US`, `US-TX`, `US-TX/city/austin`), `stateFips`, and `feedbackUrl` (a pre-filled data-correction
+  issue). `npm run report:stale -w business-obligations` lists states that need re-verification.
+- **Applicability and precedence fields:** `appliesWhen` (machine-readable conditions), `exemptions`, `supersedes` and
+  `preemptedBy`, available to rules and data packs. The new stormwater rule is the first to populate them.
+- **Filing mechanics:** optional `formId`, `filingMethod`, `processingTime` and `renewal` on items (set for the EIN).
+- **New profile inputs:** `naics`, `activities`, `projectValueUsd`, `disturbedAcres`, `licenseClass`, `floorAreaSqFt`,
+  `hasSignage`, `foodService`. `disturbedAcres` of 1 or more adds the NPDES construction stormwater permit for
+  construction businesses; the others are accepted and validated for upcoming local rules.
+
 - Local seeds: Charleston, WV (registration, B&O tax and City Service Fee items from the city's own page), Des Moines, IA and Kanawha County, WV (unverified); Western Connecticut is skipped as a planning region.
 
 - Counties: `data/counties/<STATE>.json` seeds county-level filings for the 300 largest US counties, mainly the
