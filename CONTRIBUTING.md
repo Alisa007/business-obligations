@@ -171,13 +171,14 @@ Releases are automatic and need no extra secrets. Contributing a releasable chan
 2. Right after such a PR merges, the Release workflow opens (or updates) **one** pull request,
    `chore(release): vX.Y.Z`, that sets the version in `packages/core/package.json` and adds the generated section to
    `CHANGELOG.md`. Hand-written notes under Unreleased are kept and merged into that section. Its CI run starts on
-   its branch and, when it passes, the Auto-merge workflow merges it.
+   its branch and, when it passes, the same job merges it and dispatches the release.
 3. Merging that PR publishes: the workflow runs the checks, packs and smoke-tests the tarball, waits for approval of the
    `npm` environment, publishes to npm with provenance and creates the `vX.Y.Z` GitHub release (which creates the tag
    at the release commit). Version, changelog, tag and npm always agree.
-4. Merging, releasing and deploying are event-driven (no polling): the Auto-merge workflow merges a PR when its CI
-   run succeeds and then dispatches Release and Playground itself, because a push made by the Actions token starts no
-   workflows. Add the label `no-automerge` to keep a PR from merging by itself.
+4. Merging, releasing and deploying are event-driven (no polling). A push made by the Actions token starts no
+   workflows, so the workflow that merges also dispatches Release and Playground itself: the Auto-merge workflow does
+   it for pull requests from people and Dependabot (when their CI run succeeds), and the Release and coverage-bot jobs
+   do it for the pull requests they open (`.github/scripts/merge-when-green.sh`). Add the label `no-automerge` to keep a PR from merging by itself.
 5. Rehearse any time: Actions, Release, Run workflow with "dry run" on prints the version it would release; turn dry
    run off to open the release pull request on demand.
 6. To publish without waiting for approval, remove the required reviewer from the `npm` environment (Settings,
