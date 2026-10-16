@@ -288,6 +288,13 @@ export interface LocalItem {
   /** Machine-readable form of `deadline` for data without an `rrule`. */
   due?: Due;
   url?: string;
+  /**
+   * NAICS code prefixes (2 to 6 digits). When present, the item applies only if the business's `naics` starts with
+   * one of them, so a business that gave no code does not get it.
+   */
+  naics?: string[];
+  /** Date (YYYY-MM-DD) this item was checked against its official page; overrides the entry's `checkedOn`. */
+  checkedOn?: string;
   /** Tags; the item applies if any matches. */
   appliesTo: Array<(typeof APPLIES_TO)[number]>;
   /**

@@ -1,10 +1,35 @@
 import type { Rule } from "../types";
 import { stateName } from "../states";
 import { industryAuthorities, stateInfo } from "../data";
+import { INDUSTRY_ITEMS } from "../data/industries";
+import { resolveSchedule } from "../rrule";
+import { applicable, extras } from "./local";
 
 const auth = industryAuthorities;
 
+/** Items a state requires of the business's NAICS code (see data/industries/). */
+const naicsLicences: Rule = {
+  id: "industry.naics-licences",
+  description: "State licenses, permits and registrations that depend on the business's NAICS code",
+  inputs: ["naics", "state", "employeeCount", "entityType", "usesTradeName", "sellsTaxableGoods"],
+  when: (p) => !!p.naics && applicable(INDUSTRY_ITEMS[p.state] ?? [], p).length > 0,
+  items: (p) =>
+    applicable(INDUSTRY_ITEMS[p.state] ?? [], p).map((it) => ({
+      title: it.title,
+      category: it.category,
+      jurisdiction: "state" as const,
+      state: p.state,
+      authority: it.authority,
+      description: it.description,
+      ...resolveSchedule(it),
+      url: it.url,
+      ...extras(it, undefined),
+      reason: `The business's NAICS code ${p.naics} falls under ${it.naics!.find((x) => p.naics!.startsWith(x))}`,
+    })),
+};
+
 export const industryRules: Rule[] = [
+  naicsLicences,
   {
     id: "industry.food-service",
     description: "Food service permits",
