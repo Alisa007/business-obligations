@@ -2,7 +2,7 @@
 
 import { useMemo } from "react";
 import { Button, Input, Paragraph, Text, XStack, YStack } from "tamagui";
-import type { ComplianceItem } from "compliance-rules-engine";
+import type { ComplianceItem } from "business-obligations";
 import { CONFIDENCE, formatDate, frequencyLabel, hostOf, money, relativeDays } from "../lib/format";
 import { JURISDICTIONS, countBy, groupObligations, type Analysis, type ObligationFilters } from "../lib/plan";
 import {

@@ -142,7 +142,7 @@ export function toICS(events: CalendarEvent[], options: IcsOptions = {}): string
   const lines: string[] = [
     "BEGIN:VCALENDAR",
     "VERSION:2.0",
-    `PRODID:${options.prodId ?? "-//compliance-rules-engine//EN"}`,
+    `PRODID:${options.prodId ?? "-//business-obligations//EN"}`,
     "CALSCALE:GREGORIAN",
     `X-WR-CALNAME:${esc(options.calendarName ?? "Compliance deadlines")}`,
   ];
@@ -157,7 +157,7 @@ export function toICS(events: CalendarEvent[], options: IcsOptions = {}): string
     if (e.url) parts.push(e.url);
     lines.push(
       "BEGIN:VEVENT",
-      `UID:${e.itemId}-${e.date}@compliance-rules-engine`,
+      `UID:${e.itemId}-${e.date}@business-obligations`,
       `DTSTAMP:${stamp}T000000Z`,
       `DTSTART;VALUE=DATE:${compact(e.date)}`,
       `DTEND;VALUE=DATE:${compact(addDays(e.date, 1))}`,

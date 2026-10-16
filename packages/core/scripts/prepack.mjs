@@ -5,7 +5,7 @@ import { copyFileSync, existsSync, readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 
 const here = (p) => fileURLToPath(new URL(p, import.meta.url));
-const REPO = "https://github.com/Alisa007/compliance-rules-engine";
+const REPO = "https://github.com/Alisa007/business-obligations";
 
 /** Rewrites `](relative/path)` and `](./path#frag)` Markdown link targets to absolute repository URLs. */
 export function absolutizeLinks(markdown, repo = REPO) {

@@ -16,10 +16,10 @@ import {
 import { todayIso } from "./iso";
 import { withZip } from "./zip-entry";
 
-const HELP = `compliance-rules-engine: US business compliance items from a business profile
+const HELP = `business-obligations: US business compliance items from a business profile
 
 Usage:
-  compliance-rules-engine <command> [profile.json | -] [options]
+  business-obligations <command> [profile.json | -] [options]
 
 Commands:
   evaluate    List compliance items (default)

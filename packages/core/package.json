@@ -1,5 +1,5 @@
 {
-  "name": "compliance-rules-engine",
+  "name": "business-obligations",
   "version": "0.2.0",
   "description": "What licenses, permits, filings and deadlines does a US business need? A pure TypeScript rules engine: describe the business, get an ordered, sourced list.",
   "license": "MIT",
@@ -43,13 +43,13 @@
   "author": "Alisa Belousova",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Alisa007/compliance-rules-engine.git",
+    "url": "git+https://github.com/Alisa007/business-obligations.git",
     "directory": "packages/core"
   },
   "bugs": {
-    "url": "https://github.com/Alisa007/compliance-rules-engine/issues"
+    "url": "https://github.com/Alisa007/business-obligations/issues"
   },
-  "homepage": "https://alisa007.github.io/compliance-rules-engine/",
+  "homepage": "https://alisa007.github.io/business-obligations/",
   "keywords": [
     "annual-report",
     "business",
@@ -102,7 +102,7 @@
   "module": "./dist/index.js",
   "sideEffects": false,
   "bin": {
-    "compliance-rules-engine": "./dist/cli.js"
+    "business-obligations": "./dist/cli.js"
   },
   "publishConfig": {
     "access": "public"

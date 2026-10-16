@@ -144,12 +144,12 @@ proposed again. Run the finder yourself with `node packages/core/scripts/missing
 
 One-time setup:
 
-1. Create or sign in to an npm account with 2FA enabled. The package name `compliance-rules-engine` is currently free.
+1. Create or sign in to an npm account with 2FA enabled. The package name `business-obligations` is currently free.
 2. Pick one way for GitHub Actions to publish:
    - **Trusted publishing (recommended, no secret to leak):** publish `0.x` once by hand with
-     `npm login && npm publish -w compliance-rules-engine --access public`, then on npmjs.com open the package,
+     `npm login && npm publish -w business-obligations --access public`, then on npmjs.com open the package,
      Settings, Trusted Publisher, GitHub Actions, and enter owner `Alisa007`, repository
-     `compliance-rules-engine`, workflow `release.yml`, environment `npm`.
+     `business-obligations`, workflow `release.yml`, environment `npm`.
    - **Token:** create a granular access token (publish rights for this package only, short expiry) and store it as
      the `NPM_TOKEN` secret of the **`npm` environment** (Settings, Environments, npm). The workflow uses it when present.
 3. Already configured on this repository: tags `v*` can only be created by admins (ruleset "Protect release tags"),

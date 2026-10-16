@@ -1,5 +1,5 @@
 // What changes if the business hires, adds a partner, or opens in another state?  node examples/what-if.mjs
-import { explainTransition } from "compliance-rules-engine";
+import { explainTransition } from "business-obligations";
 
 const business = { entityType: "llc", zip: "78701", city: "Austin", county: "Travis" };
 
