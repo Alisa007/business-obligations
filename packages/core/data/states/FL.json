@@ -15,7 +15,10 @@
   "llcReport": {
     "title": "File Annual Report",
     "rrule": "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=1",
-    "deadline": "January 1 \u2013 May 1 (late fee $400)",
+    "opens": {
+      "month": 1,
+      "day": 1
+    },
     "feeDetail": {
       "basis": "flat",
       "amount": 138.75
@@ -28,7 +31,10 @@
   "corpReport": {
     "title": "File Annual Report",
     "rrule": "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=1",
-    "deadline": "January 1 \u2013 May 1 (late fee $400)",
+    "opens": {
+      "month": 1,
+      "day": 1
+    },
     "feeDetail": {
       "basis": "flat",
       "amount": 150,
@@ -41,7 +47,10 @@
   },
   "lpReport": {
     "rrule": "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=1",
-    "deadline": "January 1 \u2013 May 1 (late fee $400)",
+    "opens": {
+      "month": 1,
+      "day": 1
+    },
     "feeDetail": {
       "basis": "flat",
       "amount": 500,
@@ -54,7 +63,10 @@
   },
   "llpReport": {
     "rrule": "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=1",
-    "deadline": "January 1 \u2013 May 1",
+    "opens": {
+      "month": 1,
+      "day": 1
+    },
     "feeDetail": {
       "basis": "flat",
       "amount": 25

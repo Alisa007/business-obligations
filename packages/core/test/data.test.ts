@@ -610,6 +610,21 @@ describe("bring-your-own city data", () => {
   });
 });
 
+const MONTHS = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
 describe("schedules in data files", () => {
   type Node = Record<string, unknown>;
   const nodes: Array<[string, Node]> = [];
@@ -632,8 +647,29 @@ describe("schedules in data files", () => {
       const s = parseRRule(o.rrule as string, o.anchor as string | undefined);
       expect(o.frequency, `${where} frequency is derived from rrule`).toBeUndefined();
       expect(o.due, `${where} due is derived from rrule`).toBeUndefined();
-      if (o.deadline)
-        expect(o.deadline, `${where} deadline equals the generated text`).not.toBe(describeSchedule(s));
+      const generated = describeSchedule(s, o.opens as { month: number; day: number } | undefined);
+      if (o.deadline) {
+        expect(o.deadline, `${where} deadline equals the generated text`).not.toBe(generated);
+        // A qualifier belongs in deadlineNote: the date is written once, in the rrule.
+        if (generated)
+          expect(
+            (o.deadline as string).startsWith(`${generated} (`),
+            `${where} deadline "${o.deadline}" repeats the generated date; use deadlineNote`,
+          ).toBe(false);
+        expect(o.deadlineNote, `${where} has deadline and deadlineNote`).toBeUndefined();
+      }
+      for (const text of [o.deadline, o.deadlineNote])
+        if (text) expect(text as string, `${where} quotes a late fee; use lateFee`).not.toMatch(/late fee/i);
+      if (o.deadlineNote) {
+        expect(generated, `${where} deadlineNote needs a rule that generates text`).toBeDefined();
+        // The note may not name one of the rule's own dates.
+        const dates = s.due.type === "fixed" ? [s.due] : s.due.type === "multi" ? s.due.dates : [];
+        for (const d of dates)
+          expect(
+            (o.deadlineNote as string).includes(`${MONTHS[d.month - 1]} ${d.day}`),
+            `${where} deadlineNote repeats ${MONTHS[d.month - 1]} ${d.day}`,
+          ).toBe(false);
+      }
     }
   });
 

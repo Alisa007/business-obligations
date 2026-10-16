@@ -31,7 +31,10 @@
   "lpReport": null,
   "llpReport": {
     "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
-    "deadline": "January 1 \u2013 April 1",
+    "opens": {
+      "month": 1,
+      "day": 1
+    },
     "feeDetail": {
       "basis": "flat",
       "amount": 45

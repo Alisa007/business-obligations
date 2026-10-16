@@ -14,7 +14,10 @@
   },
   "llcReport": {
     "rrule": "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=1",
-    "deadline": "February 1 \u2013 May 1 (late fee after May 31)",
+    "opens": {
+      "month": 2,
+      "day": 1
+    },
     "feeDetail": {
       "basis": "flat",
       "amount": 50
@@ -26,7 +29,10 @@
   },
   "corpReport": {
     "rrule": "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=1",
-    "deadline": "February 1 \u2013 May 1 (late fee after May 31)",
+    "opens": {
+      "month": 2,
+      "day": 1
+    },
     "feeDetail": {
       "basis": "flat",
       "amount": 50
