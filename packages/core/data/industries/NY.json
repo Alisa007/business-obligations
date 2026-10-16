@@ -1241,5 +1241,60 @@
     "checkedOn": "2026-10-16",
     "frequency": "ongoing",
     "deadline": "With each sales tax return"
+  },
+  {
+    "id": "ny.migrant-labor-camp-permit",
+    "title": "Obtain a permit to operate a New York farm labor camp",
+    "category": "permit",
+    "authority": "Local health department (NYS Department of Health, Part 15)",
+    "description": "Housing for five or more migrant workers, at least one of whom does farm work, needs a permit to operate from the local health department, applied for at least 30 days before opening with proof of workers' compensation and disability coverage. The operator must arrange medical care, an emergency communication system and a first-aid kit, and the housing must meet Subpart 15-1.",
+    "naics": ["111", "112"],
+    "appliesTo": ["all"],
+    "url": "https://www.health.ny.gov/regulations/public_health_law/section/225/",
+    "checkedOn": "2026-10-16",
+    "frequency": "ongoing",
+    "exemptions": ["Farms that do not house migrant workers, or house fewer than five"]
+  },
+  {
+    "id": "ny.private-pesticide-applicator-certification",
+    "title": "Certify a New York farmer to use restricted use pesticides",
+    "category": "license",
+    "authority": "NYS Department of Environmental Conservation",
+    "description": "A farmer who buys or uses a restricted use pesticide on their own farmland needs private applicator certification, through a $100 exam fee and a $25 certification fee, with a $5 fee for a secondary applicator on the same farm. The card lasts five years and recertification is by credits or exam, with a six-credit penalty if completed more than 90 days late.",
+    "naics": ["111"],
+    "appliesTo": ["all"],
+    "url": "https://dec.ny.gov/environmental-protection/pesticides/pesticide-applicator-technician-certification/how-to-become-a-certified-private-pesticide-applicator",
+    "checkedOn": "2026-10-16",
+    "frequency": "ongoing",
+    "renewal": "Every five years",
+    "exemptions": [
+      "Farms that use only general use pesticides",
+      "Work on land not owned or leased by the applicator, which needs commercial certification"
+    ]
+  },
+  {
+    "id": "ny.drug-wholesaler-manufacturer-registration",
+    "title": "Register a drug wholesaler or manufacturer with the NY State Education Department",
+    "category": "registration",
+    "authority": "NYS Education Department, Office of the Professions",
+    "description": "A business wholesaling or manufacturing drugs must be registered with the Board of Pharmacy for its address, with an $825 application fee and $520 every three years, filed 8 to 12 weeks before opening. Out-of-state firms shipping prescription drugs into New York must register as well, except for isolated sales under $10,000 a year.",
+    "naics": ["424210", "325412"],
+    "appliesTo": ["all"],
+    "url": "https://www.op.nysed.gov/professions/pharmacy-establishments/information/application-requirements-forms-manufacturer",
+    "checkedOn": "2026-10-16",
+    "frequency": "ongoing",
+    "renewal": "Every three years"
+  },
+  {
+    "id": "ny.museum-charter",
+    "title": "Charter a New York museum with the Board of Regents",
+    "category": "registration",
+    "authority": "NYS Board of Regents, State Education Department",
+    "description": "A museum with collections petitions the Regents for a provisional charter of up to five years, then an absolute charter, which also counts as registration. Registration needs at least five years of existence and sufficient resources, and the words museum and library are restricted to chartered institutions. Fee sources conflict ($60 or $100), so confirm.",
+    "naics": ["712110"],
+    "appliesTo": ["all"],
+    "url": "https://nysm.nysed.gov/charter-museum-or-historical-society",
+    "checkedOn": "2026-10-16",
+    "frequency": "once"
   }
 ]
