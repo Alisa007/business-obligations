@@ -150,7 +150,7 @@ When the city's rule conflicts with or replaces a state default, record it on th
 business profile: the item is returned only when every condition holds, and a profile that leaves the field out does
 not match (except for `!=`). A list field such as `activities` matches when any entry does, so an obligation that only
 lodging operators have is `{ "field": "activities", "op": "in", "value": ["lodging"] }`. `exemptions` lists who is
-excluded, in plain text. Use the activity tag `lodging` for hotels, motels and short-term rentals. Cite the ordinance or
+excluded, in plain text. Activity tags in use: `lodging` (hotels, motels and short-term rentals) and `home_improvement` (residential repair and remodelling work, which several counties license). Cite the ordinance or
 page in `url`.
 
 `appliesTo` takes `all`, `employees`, `sells_goods`, `corporation`, `unincorporated` or `trade_name`. Use the city's own

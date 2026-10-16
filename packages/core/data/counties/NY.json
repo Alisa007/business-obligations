@@ -15,10 +15,30 @@
   },
   {
     "county": "Bronx",
-    "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
-    "items": [],
+    "items": [
+      {
+        "id": "bronx-ny.mctmt-return",
+        "title": "File the Metropolitan Commuter Transportation Mobility Tax (MCTMT) return",
+        "category": "filing",
+        "authority": "New York State Department of Taxation and Finance",
+        "description": "Employers that must withhold New York income tax and have more than $312,500 of payroll expense in a quarter within the Metropolitan Commuter Transportation District (the five New York City counties and Dutchess, Nassau, Orange, Putnam, Rockland, Suffolk and Westchester) file Form MTA-305 each quarter. Bronx County is in Zone 1, where the tax is 0.055% on payroll up to $375,000, 0.115% up to $437,500, 0.60% up to $2.5 million and 0.895% above. The employer pays it and may not deduct it from wages. There are no extensions.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
+        "exemptions": [
+          "Employers whose payroll expense in the Metropolitan Commuter Transportation District is $312,500 or less in the quarter",
+          "Federal agencies, the United Nations and similar exempt employers"
+        ],
+        "url": "https://www.tax.ny.gov/pdf/current_forms/mctmt/mta305i.pdf",
+        "appliesTo": ["employees"],
+        "appliesWhen": [
+          {
+            "field": "annualPayroll",
+            "op": ">",
+            "value": 1250000,
+            "description": "Payroll above $312,500 in a quarter (about $1.25 million a year)"
+          }
+        ]
+      }
+    ],
     "checkedOn": "2026-10-15"
   },
   {
@@ -379,6 +399,29 @@
             "description": "Operates a hotel, motel or short-term rental"
           }
         ]
+      },
+      {
+        "id": "dutchess-ny.mctmt-return",
+        "title": "File the Metropolitan Commuter Transportation Mobility Tax (MCTMT) return",
+        "category": "filing",
+        "authority": "New York State Department of Taxation and Finance",
+        "description": "Employers that must withhold New York income tax and have more than $312,500 of payroll expense in a quarter within the Metropolitan Commuter Transportation District (the five New York City counties and Dutchess, Nassau, Orange, Putnam, Rockland, Suffolk and Westchester) file Form MTA-305 each quarter. Dutchess County is in Zone 2, where the tax is 0.055% on payroll up to $375,000, 0.115% up to $437,500, 0.34% up to $2.5 million and 0.635% above. The employer pays it and may not deduct it from wages. There are no extensions.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
+        "exemptions": [
+          "Employers whose payroll expense in the Metropolitan Commuter Transportation District is $312,500 or less in the quarter",
+          "Federal agencies, the United Nations and similar exempt employers",
+          "Local government employers (not subject to the tax in Zone 2)"
+        ],
+        "url": "https://www.tax.ny.gov/pdf/current_forms/mctmt/mta305i.pdf",
+        "appliesTo": ["employees"],
+        "appliesWhen": [
+          {
+            "field": "annualPayroll",
+            "op": ">",
+            "value": 1250000,
+            "description": "Payroll above $312,500 in a quarter (about $1.25 million a year)"
+          }
+        ]
       }
     ],
     "checkedOn": "2026-10-15"
@@ -630,10 +673,30 @@
   },
   {
     "county": "Kings",
-    "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
-    "items": [],
+    "items": [
+      {
+        "id": "kings-ny.mctmt-return",
+        "title": "File the Metropolitan Commuter Transportation Mobility Tax (MCTMT) return",
+        "category": "filing",
+        "authority": "New York State Department of Taxation and Finance",
+        "description": "Employers that must withhold New York income tax and have more than $312,500 of payroll expense in a quarter within the Metropolitan Commuter Transportation District (the five New York City counties and Dutchess, Nassau, Orange, Putnam, Rockland, Suffolk and Westchester) file Form MTA-305 each quarter. Kings County is in Zone 1, where the tax is 0.055% on payroll up to $375,000, 0.115% up to $437,500, 0.60% up to $2.5 million and 0.895% above. The employer pays it and may not deduct it from wages. There are no extensions.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
+        "exemptions": [
+          "Employers whose payroll expense in the Metropolitan Commuter Transportation District is $312,500 or less in the quarter",
+          "Federal agencies, the United Nations and similar exempt employers"
+        ],
+        "url": "https://www.tax.ny.gov/pdf/current_forms/mctmt/mta305i.pdf",
+        "appliesTo": ["employees"],
+        "appliesWhen": [
+          {
+            "field": "annualPayroll",
+            "op": ">",
+            "value": 1250000,
+            "description": "Payroll above $312,500 in a quarter (about $1.25 million a year)"
+          }
+        ]
+      }
+    ],
     "checkedOn": "2026-10-15"
   },
   {
@@ -803,16 +866,77 @@
             "description": "Operates a hotel, motel or short-term rental"
           }
         ]
+      },
+      {
+        "id": "nassau-ny.mctmt-return",
+        "title": "File the Metropolitan Commuter Transportation Mobility Tax (MCTMT) return",
+        "category": "filing",
+        "authority": "New York State Department of Taxation and Finance",
+        "description": "Employers that must withhold New York income tax and have more than $312,500 of payroll expense in a quarter within the Metropolitan Commuter Transportation District (the five New York City counties and Dutchess, Nassau, Orange, Putnam, Rockland, Suffolk and Westchester) file Form MTA-305 each quarter. Nassau County is in Zone 2, where the tax is 0.055% on payroll up to $375,000, 0.115% up to $437,500, 0.34% up to $2.5 million and 0.635% above. The employer pays it and may not deduct it from wages. There are no extensions.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
+        "exemptions": [
+          "Employers whose payroll expense in the Metropolitan Commuter Transportation District is $312,500 or less in the quarter",
+          "Federal agencies, the United Nations and similar exempt employers",
+          "Local government employers (not subject to the tax in Zone 2)"
+        ],
+        "url": "https://www.tax.ny.gov/pdf/current_forms/mctmt/mta305i.pdf",
+        "appliesTo": ["employees"],
+        "appliesWhen": [
+          {
+            "field": "annualPayroll",
+            "op": ">",
+            "value": 1250000,
+            "description": "Payroll above $312,500 in a quarter (about $1.25 million a year)"
+          }
+        ]
+      },
+      {
+        "id": "nassau-ny.home-improvement-license",
+        "title": "Obtain a Nassau County home improvement license",
+        "category": "license",
+        "authority": "Nassau County Department of Consumer Affairs",
+        "description": "Home improvement businesses working in Nassau County need a county license, which lasts two years. The fee schedule lists $650 for a new license or a renewal, plus a separate $50 restitution fund payment, a one-time fingerprinting cost of about $90 and a $110 late fee on renewals filed more than 15 days after expiry; renewals are accepted up to three months after expiry, and outstanding judgments and open consumer complaints must be resolved first. A license from another county does not cover Nassau.",
+        "frequency": "biennial",
+        "url": "https://www.nassaucountyny.gov/5384/Fees",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["home_improvement"],
+            "description": "Does home improvement work on residential property"
+          }
+        ]
       }
     ],
     "checkedOn": "2026-10-15"
   },
   {
     "county": "New York",
-    "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
-    "items": [],
+    "items": [
+      {
+        "id": "new-york-ny.mctmt-return",
+        "title": "File the Metropolitan Commuter Transportation Mobility Tax (MCTMT) return",
+        "category": "filing",
+        "authority": "New York State Department of Taxation and Finance",
+        "description": "Employers that must withhold New York income tax and have more than $312,500 of payroll expense in a quarter within the Metropolitan Commuter Transportation District (the five New York City counties and Dutchess, Nassau, Orange, Putnam, Rockland, Suffolk and Westchester) file Form MTA-305 each quarter. New York County is in Zone 1, where the tax is 0.055% on payroll up to $375,000, 0.115% up to $437,500, 0.60% up to $2.5 million and 0.895% above. The employer pays it and may not deduct it from wages. There are no extensions.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
+        "exemptions": [
+          "Employers whose payroll expense in the Metropolitan Commuter Transportation District is $312,500 or less in the quarter",
+          "Federal agencies, the United Nations and similar exempt employers"
+        ],
+        "url": "https://www.tax.ny.gov/pdf/current_forms/mctmt/mta305i.pdf",
+        "appliesTo": ["employees"],
+        "appliesWhen": [
+          {
+            "field": "annualPayroll",
+            "op": ">",
+            "value": 1250000,
+            "description": "Payroll above $312,500 in a quarter (about $1.25 million a year)"
+          }
+        ]
+      }
+    ],
     "checkedOn": "2026-10-15"
   },
   {
@@ -971,6 +1095,29 @@
             "description": "Operates a hotel, motel or short-term rental"
           }
         ]
+      },
+      {
+        "id": "orange-ny.mctmt-return",
+        "title": "File the Metropolitan Commuter Transportation Mobility Tax (MCTMT) return",
+        "category": "filing",
+        "authority": "New York State Department of Taxation and Finance",
+        "description": "Employers that must withhold New York income tax and have more than $312,500 of payroll expense in a quarter within the Metropolitan Commuter Transportation District (the five New York City counties and Dutchess, Nassau, Orange, Putnam, Rockland, Suffolk and Westchester) file Form MTA-305 each quarter. Orange County is in Zone 2, where the tax is 0.055% on payroll up to $375,000, 0.115% up to $437,500, 0.34% up to $2.5 million and 0.635% above. The employer pays it and may not deduct it from wages. There are no extensions.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
+        "exemptions": [
+          "Employers whose payroll expense in the Metropolitan Commuter Transportation District is $312,500 or less in the quarter",
+          "Federal agencies, the United Nations and similar exempt employers",
+          "Local government employers (not subject to the tax in Zone 2)"
+        ],
+        "url": "https://www.tax.ny.gov/pdf/current_forms/mctmt/mta305i.pdf",
+        "appliesTo": ["employees"],
+        "appliesWhen": [
+          {
+            "field": "annualPayroll",
+            "op": ">",
+            "value": 1250000,
+            "description": "Payroll above $312,500 in a quarter (about $1.25 million a year)"
+          }
+        ]
       }
     ],
     "checkedOn": "2026-10-15"
@@ -1033,18 +1180,59 @@
   },
   {
     "county": "Putnam",
-    "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
-    "items": [],
+    "items": [
+      {
+        "id": "putnam-ny.mctmt-return",
+        "title": "File the Metropolitan Commuter Transportation Mobility Tax (MCTMT) return",
+        "category": "filing",
+        "authority": "New York State Department of Taxation and Finance",
+        "description": "Employers that must withhold New York income tax and have more than $312,500 of payroll expense in a quarter within the Metropolitan Commuter Transportation District (the five New York City counties and Dutchess, Nassau, Orange, Putnam, Rockland, Suffolk and Westchester) file Form MTA-305 each quarter. Putnam County is in Zone 2, where the tax is 0.055% on payroll up to $375,000, 0.115% up to $437,500, 0.34% up to $2.5 million and 0.635% above. The employer pays it and may not deduct it from wages. There are no extensions.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
+        "exemptions": [
+          "Employers whose payroll expense in the Metropolitan Commuter Transportation District is $312,500 or less in the quarter",
+          "Federal agencies, the United Nations and similar exempt employers",
+          "Local government employers (not subject to the tax in Zone 2)"
+        ],
+        "url": "https://www.tax.ny.gov/pdf/current_forms/mctmt/mta305i.pdf",
+        "appliesTo": ["employees"],
+        "appliesWhen": [
+          {
+            "field": "annualPayroll",
+            "op": ">",
+            "value": 1250000,
+            "description": "Payroll above $312,500 in a quarter (about $1.25 million a year)"
+          }
+        ]
+      }
+    ],
     "checkedOn": "2026-10-15"
   },
   {
     "county": "Queens",
-    "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
-    "items": [],
+    "items": [
+      {
+        "id": "queens-ny.mctmt-return",
+        "title": "File the Metropolitan Commuter Transportation Mobility Tax (MCTMT) return",
+        "category": "filing",
+        "authority": "New York State Department of Taxation and Finance",
+        "description": "Employers that must withhold New York income tax and have more than $312,500 of payroll expense in a quarter within the Metropolitan Commuter Transportation District (the five New York City counties and Dutchess, Nassau, Orange, Putnam, Rockland, Suffolk and Westchester) file Form MTA-305 each quarter. Queens County is in Zone 1, where the tax is 0.055% on payroll up to $375,000, 0.115% up to $437,500, 0.60% up to $2.5 million and 0.895% above. The employer pays it and may not deduct it from wages. There are no extensions.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
+        "exemptions": [
+          "Employers whose payroll expense in the Metropolitan Commuter Transportation District is $312,500 or less in the quarter",
+          "Federal agencies, the United Nations and similar exempt employers"
+        ],
+        "url": "https://www.tax.ny.gov/pdf/current_forms/mctmt/mta305i.pdf",
+        "appliesTo": ["employees"],
+        "appliesWhen": [
+          {
+            "field": "annualPayroll",
+            "op": ">",
+            "value": 1250000,
+            "description": "Payroll above $312,500 in a quarter (about $1.25 million a year)"
+          }
+        ]
+      }
+    ],
     "checkedOn": "2026-10-15"
   },
   {
@@ -1056,17 +1244,77 @@
   },
   {
     "county": "Richmond",
-    "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
-    "items": [],
+    "items": [
+      {
+        "id": "richmond-ny.mctmt-return",
+        "title": "File the Metropolitan Commuter Transportation Mobility Tax (MCTMT) return",
+        "category": "filing",
+        "authority": "New York State Department of Taxation and Finance",
+        "description": "Employers that must withhold New York income tax and have more than $312,500 of payroll expense in a quarter within the Metropolitan Commuter Transportation District (the five New York City counties and Dutchess, Nassau, Orange, Putnam, Rockland, Suffolk and Westchester) file Form MTA-305 each quarter. Richmond County is in Zone 1, where the tax is 0.055% on payroll up to $375,000, 0.115% up to $437,500, 0.60% up to $2.5 million and 0.895% above. The employer pays it and may not deduct it from wages. There are no extensions.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
+        "exemptions": [
+          "Employers whose payroll expense in the Metropolitan Commuter Transportation District is $312,500 or less in the quarter",
+          "Federal agencies, the United Nations and similar exempt employers"
+        ],
+        "url": "https://www.tax.ny.gov/pdf/current_forms/mctmt/mta305i.pdf",
+        "appliesTo": ["employees"],
+        "appliesWhen": [
+          {
+            "field": "annualPayroll",
+            "op": ">",
+            "value": 1250000,
+            "description": "Payroll above $312,500 in a quarter (about $1.25 million a year)"
+          }
+        ]
+      }
+    ],
     "checkedOn": "2026-10-15"
   },
   {
     "county": "Rockland",
-    "status": "unverified",
-    "note": "New York Tax Law section 1202-k authorizes a Rockland County hotel and motel room tax of up to 3% administered by the Commissioner of Finance, but the county's current rate, registration and return dates were not found on its website. Other county-level business duties were not checked.",
-    "items": [],
+    "items": [
+      {
+        "id": "rockland-ny.mctmt-return",
+        "title": "File the Metropolitan Commuter Transportation Mobility Tax (MCTMT) return",
+        "category": "filing",
+        "authority": "New York State Department of Taxation and Finance",
+        "description": "Employers that must withhold New York income tax and have more than $312,500 of payroll expense in a quarter within the Metropolitan Commuter Transportation District (the five New York City counties and Dutchess, Nassau, Orange, Putnam, Rockland, Suffolk and Westchester) file Form MTA-305 each quarter. Rockland County is in Zone 2, where the tax is 0.055% on payroll up to $375,000, 0.115% up to $437,500, 0.34% up to $2.5 million and 0.635% above. The employer pays it and may not deduct it from wages. There are no extensions.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
+        "exemptions": [
+          "Employers whose payroll expense in the Metropolitan Commuter Transportation District is $312,500 or less in the quarter",
+          "Federal agencies, the United Nations and similar exempt employers",
+          "Local government employers (not subject to the tax in Zone 2)"
+        ],
+        "url": "https://www.tax.ny.gov/pdf/current_forms/mctmt/mta305i.pdf",
+        "appliesTo": ["employees"],
+        "appliesWhen": [
+          {
+            "field": "annualPayroll",
+            "op": ">",
+            "value": 1250000,
+            "description": "Payroll above $312,500 in a quarter (about $1.25 million a year)"
+          }
+        ]
+      },
+      {
+        "id": "rockland-ny.home-improvement-license",
+        "title": "Obtain a Rockland County home improvement contractor license",
+        "category": "license",
+        "authority": "Rockland County Office of Consumer Protection",
+        "description": "Anyone doing home improvement work on residential property in Rockland County needs a county license. The application (experience-based, out-of-jurisdiction for those licensed elsewhere for five years without complaints, or surety bond) needs proof of insurance and of experience for each classification, plus a fee that the county's pages do not list. Since April 2025 renewals are online only, with an email reminder.",
+        "frequency": "ongoing",
+        "url": "https://www.rocklandcountyny.gov/departments/consumer-protection-weights-measures/for-contractors/licenses-and-permits",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["home_improvement"],
+            "description": "Does home improvement work on residential property"
+          }
+        ]
+      }
+    ],
     "checkedOn": "2026-10-15"
   },
   {
@@ -1296,6 +1544,47 @@
             "op": "in",
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "suffolk-ny.mctmt-return",
+        "title": "File the Metropolitan Commuter Transportation Mobility Tax (MCTMT) return",
+        "category": "filing",
+        "authority": "New York State Department of Taxation and Finance",
+        "description": "Employers that must withhold New York income tax and have more than $312,500 of payroll expense in a quarter within the Metropolitan Commuter Transportation District (the five New York City counties and Dutchess, Nassau, Orange, Putnam, Rockland, Suffolk and Westchester) file Form MTA-305 each quarter. Suffolk County is in Zone 2, where the tax is 0.055% on payroll up to $375,000, 0.115% up to $437,500, 0.34% up to $2.5 million and 0.635% above. The employer pays it and may not deduct it from wages. There are no extensions.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
+        "exemptions": [
+          "Employers whose payroll expense in the Metropolitan Commuter Transportation District is $312,500 or less in the quarter",
+          "Federal agencies, the United Nations and similar exempt employers",
+          "Local government employers (not subject to the tax in Zone 2)"
+        ],
+        "url": "https://www.tax.ny.gov/pdf/current_forms/mctmt/mta305i.pdf",
+        "appliesTo": ["employees"],
+        "appliesWhen": [
+          {
+            "field": "annualPayroll",
+            "op": ">",
+            "value": 1250000,
+            "description": "Payroll above $312,500 in a quarter (about $1.25 million a year)"
+          }
+        ]
+      },
+      {
+        "id": "suffolk-ny.home-improvement-license",
+        "title": "Obtain a Suffolk County home improvement license",
+        "category": "license",
+        "authority": "Suffolk County Department of Consumer Affairs",
+        "description": "Home improvement contractors need a county license. Applicants pass a written exam on Suffolk Code chapter 563 and New York General Business Law, and the code sets a $200 application fee and a $200 per year license fee with a two-year term (confirm the amount owed with the office). A renewal must be applied for and paid before expiry or the license becomes void, and pool and spa contractors need six hours of continuing education to renew.",
+        "frequency": "biennial",
+        "url": "https://suffolkcountyny.gov/Departments/Consumer-Affairs/Type-of-License/Home-Improvement-Contractors",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["home_improvement"],
+            "description": "Does home improvement work on residential property"
           }
         ]
       }
@@ -1576,6 +1865,47 @@
             "op": "in",
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "westchester-ny.mctmt-return",
+        "title": "File the Metropolitan Commuter Transportation Mobility Tax (MCTMT) return",
+        "category": "filing",
+        "authority": "New York State Department of Taxation and Finance",
+        "description": "Employers that must withhold New York income tax and have more than $312,500 of payroll expense in a quarter within the Metropolitan Commuter Transportation District (the five New York City counties and Dutchess, Nassau, Orange, Putnam, Rockland, Suffolk and Westchester) file Form MTA-305 each quarter. Westchester County is in Zone 2, where the tax is 0.055% on payroll up to $375,000, 0.115% up to $437,500, 0.34% up to $2.5 million and 0.635% above. The employer pays it and may not deduct it from wages. There are no extensions.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
+        "exemptions": [
+          "Employers whose payroll expense in the Metropolitan Commuter Transportation District is $312,500 or less in the quarter",
+          "Federal agencies, the United Nations and similar exempt employers",
+          "Local government employers (not subject to the tax in Zone 2)"
+        ],
+        "url": "https://www.tax.ny.gov/pdf/current_forms/mctmt/mta305i.pdf",
+        "appliesTo": ["employees"],
+        "appliesWhen": [
+          {
+            "field": "annualPayroll",
+            "op": ">",
+            "value": 1250000,
+            "description": "Payroll above $312,500 in a quarter (about $1.25 million a year)"
+          }
+        ]
+      },
+      {
+        "id": "westchester-ny.home-improvement-license",
+        "title": "Obtain a Westchester County home improvement license",
+        "category": "license",
+        "authority": "Westchester County Department of Consumer Protection, Licensing Division",
+        "description": "Home improvement contractors need a county license, applied for with a notarized application sent to the Licensing Division in White Plains and requiring proof of insurance and workers' compensation coverage. Since January 1, 2026 the fee is $750 for a two-year license ($100 more for optional expedited review); a renewal received after expiry adds a $50 late fee and is not accepted after 60 days, and vehicle decals cost $10 each. Processing takes about 60 business days.",
+        "frequency": "biennial",
+        "url": "https://consumer.westchestergov.com/home-contractors-and-trades/home-improvement-licensing-fees",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["home_improvement"],
+            "description": "Does home improvement work on residential property"
           }
         ]
       }
