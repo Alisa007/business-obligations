@@ -105,6 +105,22 @@ describe("federal", () => {
     expect(has(50_000)).toBe(true);
   });
 
+  it("corporate estimated tax follows the corporation's tax year, not the owners' calendar", () => {
+    const due = (extra: object) =>
+      getComplianceItems(
+        profile({ entityType: "c_corp", zip: "78701", annualNetIncome: 100_000, ...extra }),
+        {
+          asOf: "2026-01-01",
+        },
+      ).find((i) => i.id === "fed.estimated-tax")!;
+    expect(due({}).deadline).toBe("April 15, June 15, September 15, December 15");
+    expect(due({ fiscalYearEndMonth: 6 }).deadline).toBe("October 15, December 15, March 15, June 15");
+    const owners = getComplianceItems(
+      profile({ entityType: "llc", zip: "78701", annualNetIncome: 100_000 }),
+    ).find((i) => i.id === "fed.estimated-tax")!;
+    expect(owners.deadline).toBe("April 15, June 15, September 15, January 15");
+  });
+
   it("maps LLC tax classification to the right federal return", () => {
     const items = getComplianceItems(
       profile({ entityType: "llc", zip: "33101", llcTaxClassification: "s_corp" }),

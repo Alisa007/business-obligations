@@ -230,7 +230,7 @@ export interface EvaluateOptions {
   rules?: Rule[];
   /**
    * Evaluation date (YYYY-MM-DD). Rules and data are resolved as of this date: enacted changes that have
-   * taken effect by then are applied, and `nextDue` is computed from it. Defaults to today (UTC).
+   * taken effect by then are applied, and `nextDue` is computed from it. Defaults to today (local date).
    */
   asOf?: string;
   /** Additional rule changes (for example your own, or ones not yet bundled), appended to the bundled ones. */
