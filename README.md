@@ -1,19 +1,19 @@
-<h1 align="center">compliance-rules-engine</h1>
+<h1 align="center">business-obligations</h1>
 
 <p align="center">
   <b>What licenses, permits, filings and deadlines does a US business need? Describe the business, get the list, in order.</b>
 </p>
 
 <p align="center">
-  <a href="https://github.com/Alisa007/compliance-rules-engine/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/Alisa007/compliance-rules-engine/actions/workflows/ci.yml/badge.svg" /></a>
+  <a href="https://github.com/Alisa007/business-obligations/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/Alisa007/business-obligations/actions/workflows/ci.yml/badge.svg" /></a>
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-blue.svg" /></a>
   <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-strict-3178c6.svg" />
   <img alt="Zero dependencies" src="https://img.shields.io/badge/dependencies-0-brightgreen.svg" />
-  <a href="https://alisa007.github.io/compliance-rules-engine/"><img alt="Live demo" src="https://img.shields.io/badge/demo-try%20it%20in%20your%20browser-1f5f4a.svg" /></a>
+  <a href="https://alisa007.github.io/business-obligations/"><img alt="Live demo" src="https://img.shields.io/badge/demo-try%20it%20in%20your%20browser-1f5f4a.svg" /></a>
   <img alt="Jurisdictions" src="https://img.shields.io/badge/jurisdictions-50%20states%20%2B%20DC-informational.svg" />
 </p>
 
-**[Try it in your browser](https://alisa007.github.io/compliance-rules-engine/)**: no install, nothing is uploaded.
+**[Try it in your browser](https://alisa007.github.io/business-obligations/)**: no install, nothing is uploaded.
 
 Starting or running a business in the US means a pile of obligations spread over the IRS, 50 state agencies and your
 city: formation, EIN, state tax accounts, licenses, annual reports, payroll filings, insurance. They depend on the
@@ -23,7 +23,7 @@ This library puts that knowledge in one pure TypeScript function. No network, no
 same profile always gives the same answer, so you can test it, cache it and run it anywhere (Node, browsers, edge).
 
 ```ts
-import { evaluate } from "compliance-rules-engine";
+import { evaluate } from "business-obligations";
 
 const { items } = evaluate({
   entityType: "llc",
@@ -54,21 +54,21 @@ const { items } = evaluate({
 | What changes in the law next, and when      | `previewChanges(profile, { to })`, `result.upcomingChanges` |
 | How to **close** a business                 | set `dissolutionDate`                                       |
 | Output in another language                  | `localize(result, catalog)`                                 |
-| The command line                            | `npx compliance-rules-engine --zip 78701 --entity llc`      |
+| The command line                            | `npx business-obligations --zip 78701 --entity llc`         |
 
 Every item says **why** it applies (`reason`), **who** to deal with (`authority`, `url`), **when** (`nextDue`),
 **how much** (`cost`, `penalty`) and **how sure we are** (`provenance`: checked, compiled or unconfirmed, with sources).
 
 ## Try it
 
-- **In the browser:** the [playground](https://alisa007.github.io/compliance-rules-engine/) runs the library locally
+- **In the browser:** the [playground](https://alisa007.github.io/business-obligations/) runs the library locally
   in your browser. If analytics is enabled on the hosted site, the details you enter are sent when you generate a
   plan (see [Analytics on the playground](#analytics-on-the-playground)).
 - **From the terminal:**
   ```sh
-  npx compliance-rules-engine launch --zip 60601 --entity llc --employees 3 --start 2026-11-02 --opening 2027-02-01
+  npx business-obligations launch --zip 60601 --entity llc --employees 3 --start 2026-11-02 --opening 2027-02-01
   ```
-- **In code:** `npm install compliance-rules-engine`, then see [`examples/`](packages/core/examples).
+- **In code:** `npm install business-obligations`, then see [`examples/`](packages/core/examples).
 
 ## Why trust it (and when not to)
 
@@ -89,12 +89,12 @@ Every item says **why** it applies (`reason`), **who** to deal with (`authority`
 
 The most valuable contributions are **data**: correct a fee, add a city, add an industry. No code is needed for most of
 them. Start with [CONTRIBUTING.md](CONTRIBUTING.md) and the issues labelled
-[`good first issue`](https://github.com/Alisa007/compliance-rules-engine/labels/good%20first%20issue).
+[`good first issue`](https://github.com/Alisa007/business-obligations/labels/good%20first%20issue).
 
 ## Install
 
 ```sh
-npm install compliance-rules-engine
+npm install business-obligations
 ```
 
 ESM and CommonJS are both supported. Node 20+. About 57 KB gzipped, no runtime dependencies.
@@ -106,9 +106,9 @@ like VS Code use for autocomplete, even in `.js` files.
 
 ```js
 // CommonJS
-const { evaluate, validateProfile } = require("compliance-rules-engine");
+const { evaluate, validateProfile } = require("business-obligations");
 // ESM
-import { evaluate, validateProfile } from "compliance-rules-engine";
+import { evaluate, validateProfile } from "business-obligations";
 
 const profile = { entityType: "llc", zip: "78701", city: "Austin", county: "Travis", employeeCount: 2 };
 
@@ -136,7 +136,7 @@ Runnable versions: [`examples/quickstart.cjs`](packages/core/examples/quickstart
 ### Evaluate
 
 ```ts
-import { evaluate } from "compliance-rules-engine";
+import { evaluate } from "business-obligations";
 
 const { items, disclaimer } = evaluate(
   {
@@ -165,8 +165,8 @@ the business does with alcohol, vehicle weight), that fact is an input, and a mi
 ### Only have a ZIP?
 
 ```ts
-import { evaluate } from "compliance-rules-engine";
-import { withZip } from "compliance-rules-engine/zip"; // bundles ~41k US ZIP codes (1.3 MB)
+import { evaluate } from "business-obligations";
+import { withZip } from "business-obligations/zip"; // bundles ~41k US ZIP codes (1.3 MB)
 
 evaluate(withZip({ entityType: "llc", zip: "60601", employeeCount: 2 }));
 ```
@@ -249,7 +249,7 @@ Rules change. The library tracks dated changes so users can prepare:
 - **`listChanges({ state, from, to, status })`** browses the registry (`data/changes.json`).
 
 ```ts
-import { evaluate, previewChanges } from "compliance-rules-engine";
+import { evaluate, previewChanges } from "business-obligations";
 
 const now = evaluate(profile);
 now.upcomingChanges; // [{ id, effective, status: "enacted" | "proposed", kind, summary, source }]
@@ -264,7 +264,7 @@ Past changes are informational: the bundled data already reflects them.
 ## Costs, calendar, provenance and sensitivity
 
 ```ts
-import { evaluate, estimateCosts, buildCalendar, toICS, analyzeInputs } from "compliance-rules-engine";
+import { evaluate, estimateCosts, buildCalendar, toICS, analyzeInputs } from "business-obligations";
 
 const result = evaluate(profile);
 result.items[0].cost; // { basis: "flat", amount: 300, online: 300, currency: "USD", ... }
@@ -296,7 +296,7 @@ analyzeInputs(profile);
 recurring obligations that start afterwards.
 
 ```ts
-import { planLaunch } from "compliance-rules-engine";
+import { planLaunch } from "business-obligations";
 
 const plan = planLaunch(profile, { startDate: "2026-11-02", openingDate: "2027-02-01" });
 plan.phases; // prepare -> form -> identify (EIN) -> register -> license -> employ -> operate
@@ -312,7 +312,7 @@ plan.costs; // known government fees: one-time and per year
   agencies publish for your case. A step's `legalDeadline` appears only when the rules give a real due date.
 - **After opening:** the `operate` phase lists recurring items in due-date order, with first due dates computed from the
   planned formation date.
-- From the command line: `npx compliance-rules-engine launch profile.json --start 2026-11-02 --opening 2027-02-01`.
+- From the command line: `npx business-obligations launch profile.json --start 2026-11-02 --opening 2027-02-01`.
 
 ## Winding down
 
@@ -325,7 +325,7 @@ not suppressed, because a final report is often still due.
 ## What happens if...
 
 ```ts
-import { explainTransition } from "compliance-rules-engine";
+import { explainTransition } from "business-obligations";
 
 const t = explainTransition(profile, { type: "hire", count: 2, annualPayroll: 90_000 });
 t.added; // new obligations (unemployment registration, payroll deposits, new-hire reporting, ...)
@@ -339,11 +339,11 @@ just the changed profile.
 ## Command line
 
 ```sh
-npx compliance-rules-engine --zip 78701 --entity llc --employees 2 --payroll 80000
-npx compliance-rules-engine calendar profile.json --from 2026-10-13 --to 2027-12-31 --ics deadlines.ics
-npx compliance-rules-engine costs profile.json --json
-npx compliance-rules-engine analyze profile.json
-npx compliance-rules-engine changes --state CA --upcoming
+npx business-obligations --zip 78701 --entity llc --employees 2 --payroll 80000
+npx business-obligations calendar profile.json --from 2026-10-13 --to 2027-12-31 --ics deadlines.ics
+npx business-obligations costs profile.json --json
+npx business-obligations analyze profile.json
+npx business-obligations changes --state CA --upcoming
 ```
 
 `profile.json` is a `BusinessProfile`; use `-` to read it from stdin. City and county are filled from the ZIP.
@@ -371,10 +371,10 @@ shown to your users. The MIT license disclaims all warranties.
 
 This is an npm-workspaces monorepo:
 
-| Path            | What it is                                                                                 |
-| --------------- | ------------------------------------------------------------------------------------------ |
-| `packages/core` | The published `compliance-rules-engine` library: `src/`, `data/`, `schema/`, `test/`, CLI. |
-| `apps/web`      | The playground: Next.js (static export) with React and Tamagui. Not published.             |
+| Path            | What it is                                                                              |
+| --------------- | --------------------------------------------------------------------------------------- |
+| `packages/core` | The published `business-obligations` library: `src/`, `data/`, `schema/`, `test/`, CLI. |
+| `apps/web`      | The playground: Next.js (static export) with React and Tamagui. Not published.          |
 
 Paths such as `data/states/` or `src/rules/` in this README and in CONTRIBUTING.md are relative to `packages/core`.
 
@@ -400,14 +400,14 @@ It sets no cookies, records no sessions and respects Do Not Track. It is off unl
 ## Size
 
 The core bundle is about 57 KB gzipped with all 51 jurisdictions' data. ZIP lookup (about 305 KB gzipped) lives in the
-separate `compliance-rules-engine/zip` entry and is only loaded when you import it. `npm run size` enforces the budgets.
+separate `business-obligations/zip` entry and is only loaded when you import it. `npm run size` enforces the budgets.
 
 ## Extending
 
 Rules are plain objects (`{ id, description, inputs, when(profile), items(profile) }`):
 
 ```ts
-import { evaluate, defaultRules } from "compliance-rules-engine";
+import { evaluate, defaultRules } from "business-obligations";
 evaluate(profile, { rules: [...defaultRules, myRule] });
 ```
 

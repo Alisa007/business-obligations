@@ -19,10 +19,10 @@ export interface PlanRequest {
   openingDate: string;
 }
 
-let zipModule: Promise<typeof import("compliance-rules-engine/zip")> | undefined;
+let zipModule: Promise<typeof import("business-obligations/zip")> | undefined;
 /** Loads the ZIP table on first use; it is a separate bundle. */
 export async function lookupZip(zip: string): Promise<Place | undefined> {
-  zipModule ??= import("compliance-rules-engine/zip");
+  zipModule ??= import("business-obligations/zip");
   const info = (await zipModule).lookupZip(zip);
   return info ? { city: info.city, county: info.county, state: info.state } : undefined;
 }

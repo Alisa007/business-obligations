@@ -4,5 +4,5 @@ export const SITE_CONFIG = {
   posthogKey: process.env.NEXT_PUBLIC_POSTHOG_KEY ?? "",
   /** PostHog ingestion host, e.g. https://us.i.posthog.com. */
   posthogHost: process.env.NEXT_PUBLIC_POSTHOG_HOST ?? "",
-  repoUrl: "https://github.com/Alisa007/compliance-rules-engine",
+  repoUrl: "https://github.com/Alisa007/business-obligations",
 };

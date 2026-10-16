@@ -73,8 +73,8 @@ jobs:
         run: |
           v=$(node -p "require('./packages/core/package.json').version")
           echo "version=$v" >> "$GITHUB_OUTPUT"
-          if npm view "compliance-rules-engine@$v" version >/dev/null 2>&1; then
-            echo "compliance-rules-engine@$v is already on npm; nothing to publish"
+          if npm view "business-obligations@$v" version >/dev/null 2>&1; then
+            echo "business-obligations@$v is already on npm; nothing to publish"
             echo "publish=false" >> "$GITHUB_OUTPUT"
           else
             echo "publish=true" >> "$GITHUB_OUTPUT"
@@ -87,7 +87,7 @@ jobs:
       - name: Pack
         run: |
           mkdir -p "$RUNNER_TEMP/pack"
-          npm pack -w compliance-rules-engine --pack-destination "$RUNNER_TEMP/pack"
+          npm pack -w business-obligations --pack-destination "$RUNNER_TEMP/pack"
           ls -l "$RUNNER_TEMP/pack"
 
       - name: Smoke test the packed tarball
@@ -95,10 +95,10 @@ jobs:
           mkdir -p "$RUNNER_TEMP/app"
           cd "$RUNNER_TEMP/app"
           npm init -y >/dev/null
-          npm install --ignore-scripts "$RUNNER_TEMP"/pack/compliance-rules-engine-*.tgz
-          node -e 'const m=require("compliance-rules-engine"); if(!m.getComplianceItems({entityType:"llc",zip:"94105",city:"San Francisco",county:"San Francisco"}).length) process.exit(1)'
-          node --input-type=module -e 'import {getComplianceItems} from "compliance-rules-engine"; import {lookupZip} from "compliance-rules-engine/zip"; const p=lookupZip("78701"); if(!p||!getComplianceItems({entityType:"llc",zip:"78701",city:p.city,county:p.county}).length) process.exit(1)'
-          npx --no-install compliance-rules-engine --zip 94105 --entity llc | grep -q FEDERAL
+          npm install --ignore-scripts "$RUNNER_TEMP"/pack/business-obligations-*.tgz
+          node -e 'const m=require("business-obligations"); if(!m.getComplianceItems({entityType:"llc",zip:"94105",city:"San Francisco",county:"San Francisco"}).length) process.exit(1)'
+          node --input-type=module -e 'import {getComplianceItems} from "business-obligations"; import {lookupZip} from "business-obligations/zip"; const p=lookupZip("78701"); if(!p||!getComplianceItems({entityType:"llc",zip:"78701",city:p.city,county:p.county}).length) process.exit(1)'
+          npx --no-install business-obligations --zip 94105 --entity llc | grep -q FEDERAL
 
       - uses: actions/upload-artifact@v4
         with:
@@ -134,13 +134,13 @@ jobs:
 
       - name: Publish with an npm token
         if: ${{ env.NPM_TOKEN != '' }}
-        run: npm publish "$RUNNER_TEMP"/pack/compliance-rules-engine-*.tgz --provenance --access public
+        run: npm publish "$RUNNER_TEMP"/pack/business-obligations-*.tgz --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Publish with trusted publishing (OIDC)
         if: ${{ env.NPM_TOKEN == '' }}
-        run: npm publish "$RUNNER_TEMP"/pack/compliance-rules-engine-*.tgz --access public
+        run: npm publish "$RUNNER_TEMP"/pack/business-obligations-*.tgz --access public
 
       - uses: actions/checkout@v7
         with:

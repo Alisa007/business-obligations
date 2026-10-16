@@ -12,6 +12,11 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ### Changed
 
+- **Renamed to `business-obligations`** (was `compliance-rules-engine`): npm package, CLI command, repository and
+  playground address. Import from `business-obligations` and `business-obligations/zip`; the CLI is now
+  `business-obligations`. Calendar exports use `@business-obligations` in event UIDs.
+- Minnesota SOS links no longer go through a bot-challenge redirect.
+
 - Release tooling: `npm run release` prepares a version, the Release workflow smoke-tests the packed tarball, supports
   npm trusted publishing and creates the GitHub release. The published tarball no longer ships sourcemaps (about 40%
   smaller) and its README links are absolute.
@@ -56,7 +61,7 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 - Dissolution: `dissolutionDate` input and `dissolution.*` rules with dated deadlines; new `date` due type.
 - Localization: `ruleId` on every item, `localize()` and `catalogTemplate()`.
 - `schema/compliance-result.schema.json` for `evaluate()` output.
-- Command line (`compliance-rules-engine`), bundle-size budgets (`npm run size`) and a CI smoke test.
+- Command line (`business-obligations`), bundle-size budgets (`npm run size`) and a CI smoke test.
 - `planLaunch()`: ordered plan for opening a new business with phases, dependencies, planned dates, opening-date
   check and first-year fees; `launch` CLI command.
 - Browser playground (`site/`, deployed by `.github/workflows/pages.yml`), runnable `examples/`, `ROADMAP.md`, an
@@ -136,7 +141,7 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 - Per-state data moved to `data/states/*.json` with a JSON Schema; city seeds in `data/local.json`.
 - `evaluate()` returning items with the resolved profile, `asOf`, `dataVersion` and a disclaimer; `listRules()`.
 - Structured due dates and `nextDue`, with `asOf`, `formationDate` and `fiscalYearEndMonth` inputs.
-- `compliance-rules-engine/zip` subpath with exact ZIP → city/county/state lookup (GeoNames, CC BY 4.0).
+- `business-obligations/zip` subpath with exact ZIP → city/county/state lookup (GeoNames, CC BY 4.0).
 - Entity types `pllc`, `lp`, `llp`, `pc`, `benefit_corp`; `country` selector and rule packs.
 - State paid sick leave mandates, workplace notices (federal and state), professional entity and benefit report items.
 - Seeded city rules: NYC, San Francisco, Los Angeles, Chicago, Seattle, Portland, Philadelphia, Denver.

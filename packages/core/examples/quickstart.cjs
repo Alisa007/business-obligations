@@ -1,5 +1,5 @@
 // The same thing from CommonJS, no TypeScript or build step needed.  node examples/quickstart.cjs
-const { evaluate, validateProfile, InvalidProfileError } = require("compliance-rules-engine");
+const { evaluate, validateProfile, InvalidProfileError } = require("business-obligations");
 
 const profile = {
   entityType: "llc",

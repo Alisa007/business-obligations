@@ -8,7 +8,7 @@ import { readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 
 const UA =
-  "Mozilla/5.0 (compatible; compliance-rules-engine link check; +https://github.com/Alisa007/compliance-rules-engine)";
+  "Mozilla/5.0 (compatible; business-obligations link check; +https://github.com/Alisa007/business-obligations)";
 
 export const isBareDomain = (url) => {
   const u = new URL(url);

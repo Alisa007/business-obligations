@@ -8,7 +8,7 @@ import {
   type BusinessProfile,
   type ComplianceItem,
   type EntityType,
-} from "compliance-rules-engine";
+} from "business-obligations";
 
 export const ENTITY_TYPES: Array<[EntityType, string]> = [
   ["llc", "LLC"],

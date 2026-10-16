@@ -1,5 +1,5 @@
 // An ordered plan for opening a restaurant LLC in Chicago.  node examples/launch-plan.mjs
-import { planLaunch } from "compliance-rules-engine";
+import { planLaunch } from "business-obligations";
 
 const plan = planLaunch(
   {

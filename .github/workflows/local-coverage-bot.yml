@@ -98,7 +98,7 @@ jobs:
             --model claude-haiku-5-5 --max-turns 60
             --allowedTools "Read,Edit,Write,Glob,Grep,WebSearch,WebFetch,Bash(node packages/core/scripts/*),Bash(npm --prefix packages/core run coverage),Bash(npm --prefix packages/core run check),Bash(npm --prefix packages/core run test:update),Bash(git diff*),Bash(git status*)"
           prompt: |
-            You maintain the local-jurisdiction data of this compliance rules engine. Add seeds for the cities and
+            You maintain the local-jurisdiction data of this business-obligations project. Add seeds for the cities and
             counties below, which appear in the ZIP data but have no entry yet. Follow CONTRIBUTING.md ("Adding a
             city", "Adding a county") exactly.
 

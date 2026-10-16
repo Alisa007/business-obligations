@@ -129,7 +129,7 @@ export function Playground() {
       gap="5"
     >
       <YStack gap="2" alignItems="flex-start">
-        <H1 fontSize="3xl">Compliance rules engine</H1>
+        <H1 fontSize="3xl">Business obligations</H1>
         <Paragraph fontSize="base" color="placeholder-color" maxWidth={620}>
           Describe a US business; get the licenses, permits, filings and deadlines that apply, in order.
         </Paragraph>
