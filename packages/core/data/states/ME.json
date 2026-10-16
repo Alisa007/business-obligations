@@ -12,14 +12,6 @@
     "name": "Maine Department of Labor",
     "url": "https://www.maine.gov/labor"
   },
-  "workersComp": {
-    "agency": "Maine Workers' Compensation Board",
-    "threshold": "1 employee",
-    "trigger": {
-      "minEmployees": 1
-    },
-    "stateFund": false
-  },
   "llcReport": {
     "rrule": "FREQ=YEARLY;BYMONTH=6;BYMONTHDAY=1",
     "feeDetail": {
@@ -43,6 +35,7 @@
       "note": "Added when the annual report is received after June 1"
     }
   },
+  "llcPublication": null,
   "entityTax": "Corporate income tax",
   "salesTax": {
     "statewide": true,
@@ -50,24 +43,38 @@
     "agency": null,
     "alternative": null
   },
+  "localSalesTax": "none",
+  "economicNexusUsd": 100000,
+  "unemployment": {
+    "wageBase": 12000,
+    "minRate": 0,
+    "maxRate": 6.29,
+    "newEmployerRate": 2.23
+  },
+  "workersComp": {
+    "agency": "Maine Workers' Compensation Board",
+    "stateFund": false,
+    "trigger": {
+      "minEmployees": 1
+    }
+  },
   "paidLeave": {
     "title": "Maine Paid Family and Medical Leave contributions",
     "agency": "Maine Department of Labor, PFML Division",
     "description": "Employers with 15+ employees remit contributions quarterly; smaller employers deduct from employees.",
     "minEmployees": 1
   },
+  "paidSickLeave": {
+    "minEmployees": 11
+  },
+  "businessLicense": null,
   "local": {
     "title": "Municipal licenses",
     "authority": "Town or city clerk",
     "description": "Maine has no general business license; municipalities license specific activities."
   },
-  "paidSickLeave": {
-    "minEmployees": 11
-  },
-  "businessLicense": null,
-  "llcPublication": null,
-  "economicNexusUsd": 100000,
   "dbaFiling": "town",
+  "dbaOffice": "Municipal clerk",
   "industry": {
     "contractor": null,
     "realEstate": "Maine Real Estate Commission",
@@ -75,24 +82,9 @@
     "childCare": "Maine Department of Health and Human Services",
     "health": "Maine Department of Health and Human Services"
   },
-  "verification": {
-    "checkedOn": "2026-10-13",
-    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
-    "sources": ["https://www.maine.gov/sos/corporations-commissions/filing-an-annual-report"],
-    "unconfirmed": [],
-    "dba": "checked"
-  },
-  "dbaOffice": "Municipal clerk",
   "cannabis": {
     "status": "adult_use",
     "regulator": "Maine Office of Cannabis Policy (Department of Administrative and Financial Services)"
-  },
-  "localSalesTax": "none",
-  "unemployment": {
-    "wageBase": 12000,
-    "minRate": 0,
-    "maxRate": 6.29,
-    "newEmployerRate": 2.23
   },
   "links": {
     "formation": "https://www.maine.gov/sos/corporations-commissions/corporations-business-services",
@@ -103,5 +95,10 @@
     "entityTax": "https://www.maine.gov/revenue/taxes/income-estate-tax",
     "laborPosters": "https://www.maine.gov/labor/posters",
     "dba": "https://legislature.maine.gov/statutes/31/title31sec1510.html"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "sources": ["https://www.maine.gov/sos/corporations-commissions/filing-an-annual-report"],
+    "unconfirmed": []
   }
 }

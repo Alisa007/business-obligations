@@ -146,6 +146,8 @@ export interface WcTrigger {
   orFullTimeEmployees?: number;
   /** Payroll that must be exceeded in addition to the employee count (KS). */
   andAnnualPayrollOver?: number;
+  /** Payroll that must be reached (at or above) in addition to the employee count (SC). */
+  andAnnualPayrollAtLeast?: number;
   /** Lower employee threshold in construction. */
   constructionMinEmployees?: number;
   /** Coverage is elective for private employers (TX). */

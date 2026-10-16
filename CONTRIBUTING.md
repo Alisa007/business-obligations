@@ -33,6 +33,11 @@ The file name is the state: state files have no `code`, city and county files ha
 (entity types, industries, categories, ...) live in `src/enums.ts`; the JSON schemas must list the same values, and a
 test checks that.
 
+In a state file the keys follow the order of `schema/state.schema.json` (a test fails otherwise), `workersComp.threshold`
+is written only when it says more than the employee count (it is generated from `trigger` otherwise), and
+`verification.scope` only when it differs from `data/verification.json`. List a field in `verification.unconfirmed`
+by its dotted path; a test checks the path exists, and `dbaFiling` there marks the DBA level as unconfirmed.
+
 A `note` that several cities or counties share word for word is stored once in `data/local-notes.json` and referenced
 with `"reason": "<code>"` instead (use one or the other). Reuse a code when your entry says exactly the same; a test fails
 if a code is used by fewer than two entries or a note repeats a shared text.

@@ -12,33 +12,58 @@
     "name": "Ohio Department of Job and Family Services",
     "url": "https://jfs.ohio.gov/unemployment-services/for-employers"
   },
-  "workersComp": {
-    "agency": "Ohio Bureau of Workers' Compensation",
-    "threshold": "1 employee",
-    "stateFund": true,
-    "trigger": {
-      "minEmployees": 1
-    }
-  },
   "llcReport": null,
   "corpReport": null,
+  "lpReport": null,
+  "llpReport": {
+    "title": "File Biennial Report",
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=7;BYMONTHDAY=1",
+    "anchor": "2027-07-01",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 25
+    }
+  },
+  "llcPublication": null,
   "entityTax": "Commercial Activity Tax (CAT) on gross receipts; no corporate income tax",
+  "entityTaxDetail": {
+    "kind": "gross_receipts",
+    "thresholdUsd": 6000000,
+    "rate": 0.26,
+    "summary": "0.26% of Ohio taxable gross receipts above a $6 million exclusion; there is no annual minimum tax",
+    "source": "https://codes.ohio.gov/ohio-revised-code/section-5751.03",
+    "checkedOn": "2026-10-13"
+  },
   "salesTax": {
     "statewide": true,
     "permit": "Ohio vendor's license",
     "agency": null,
     "alternative": null
   },
+  "localSalesTax": "state_administered",
+  "economicNexusUsd": 100000,
+  "unemployment": {
+    "wageBase": 9000,
+    "minRate": 0.4,
+    "maxRate": 10.1,
+    "newEmployerRate": 2.7,
+    "note": "Construction employers' new-employer rate differs from the general rate."
+  },
+  "workersComp": {
+    "agency": "Ohio Bureau of Workers' Compensation",
+    "stateFund": true,
+    "trigger": {
+      "minEmployees": 1
+    }
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
   "local": {
     "title": "Municipal income tax registration",
     "authority": "City tax administrator / Ohio Business Gateway",
     "description": "Ohio municipalities levy net profits and payroll income taxes; register via the Ohio Business Gateway or the city."
   },
-  "paidLeave": null,
-  "paidSickLeave": null,
-  "businessLicense": null,
-  "llcPublication": null,
-  "economicNexusUsd": 100000,
   "dbaFiling": "state",
   "industry": {
     "contractor": "Ohio Construction Industry Licensing Board (commercial trades)",
@@ -47,42 +72,9 @@
     "childCare": "Ohio Department of Children and Youth",
     "health": "Ohio Department of Health"
   },
-  "verification": {
-    "checkedOn": "2026-10-13",
-    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
-    "sources": ["https://www.ohiosos.gov/business/ohio-business-roadmap/frequently-asked-questions"],
-    "unconfirmed": [],
-    "dba": "checked"
-  },
-  "lpReport": null,
-  "llpReport": {
-    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=7;BYMONTHDAY=1",
-    "anchor": "2027-07-01",
-    "title": "File Biennial Report",
-    "feeDetail": {
-      "basis": "flat",
-      "amount": 25
-    }
-  },
   "cannabis": {
     "status": "adult_use",
     "regulator": "Ohio Division of Cannabis Control (Department of Commerce)"
-  },
-  "localSalesTax": "state_administered",
-  "unemployment": {
-    "wageBase": 9000,
-    "minRate": 0.4,
-    "maxRate": 10.1,
-    "newEmployerRate": 2.7,
-    "note": "Construction employers' new-employer rate differs from the general rate."
-  },
-  "entityTaxDetail": {
-    "kind": "gross_receipts",
-    "thresholdUsd": 6000000,
-    "rate": 0.26,
-    "summary": "0.26% of Ohio taxable gross receipts above a $6 million exclusion; there is no annual minimum tax",
-    "source": "https://codes.ohio.gov/ohio-revised-code/section-5751.03",
-    "checkedOn": "2026-10-13"
   },
   "links": {
     "formation": "https://www.ohiosos.gov/business/business-filing-forms",
@@ -93,5 +85,10 @@
     "entityTax": "https://tax.ohio.gov/business/ohio-business-taxes/commercial-activity-tax",
     "laborPosters": "https://com.ohio.gov/divisions-and-programs/industrial-compliance/wage-and-hour/guides-and-resources/minimum-wage-posters",
     "dba": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "sources": ["https://www.ohiosos.gov/business/ohio-business-roadmap/frequently-asked-questions"],
+    "unconfirmed": []
   }
 }

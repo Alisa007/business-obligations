@@ -12,14 +12,6 @@
     "name": "Rhode Island Department of Labor and Training",
     "url": "https://dlt.ri.gov"
   },
-  "workersComp": {
-    "agency": "Rhode Island Department of Labor and Training, Workers' Compensation",
-    "threshold": "1 employee",
-    "trigger": {
-      "minEmployees": 1
-    },
-    "stateFund": false
-  },
   "llcReport": {
     "rrule": "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=1",
     "deadline": "February 1 \u2013 May 1 (late fee after May 31)",
@@ -44,6 +36,7 @@
       "note": "Penalty when filed more than 30 days late"
     }
   },
+  "llcPublication": null,
   "entityTax": "Corporate income tax ($400 minimum)",
   "salesTax": {
     "statewide": true,
@@ -51,23 +44,37 @@
     "agency": null,
     "alternative": null
   },
+  "localSalesTax": "none",
+  "economicNexusUsd": 100000,
+  "unemployment": {
+    "wageBase": 30800,
+    "minRate": 0.69,
+    "maxRate": 9.19,
+    "newEmployerRate": 1,
+    "note": "New employer rate excludes the 0.21% Job Development Assessment; the wage base is $32,300 for employers at the highest rate."
+  },
+  "workersComp": {
+    "agency": "Rhode Island Department of Labor and Training, Workers' Compensation",
+    "stateFund": false,
+    "trigger": {
+      "minEmployees": 1
+    }
+  },
   "paidLeave": {
     "title": "Rhode Island TDI/TCI payroll tax",
     "agency": "Rhode Island Division of Taxation",
     "description": "Employees fund Temporary Disability/Caregiver Insurance; employers withhold and remit with wage withholding.",
     "minEmployees": 1
   },
+  "paidSickLeave": {
+    "minEmployees": 1
+  },
+  "businessLicense": null,
   "local": {
     "title": "City/town licenses",
     "authority": "City or town clerk",
     "description": "Local licensing councils issue specific business licenses; no general license."
   },
-  "paidSickLeave": {
-    "minEmployees": 1
-  },
-  "businessLicense": null,
-  "llcPublication": null,
-  "economicNexusUsd": 100000,
   "dbaFiling": "state",
   "industry": {
     "contractor": "Rhode Island Contractors' Registration and Licensing Board",
@@ -76,24 +83,9 @@
     "childCare": "Rhode Island Department of Children, Youth and Families",
     "health": "Rhode Island Department of Health"
   },
-  "verification": {
-    "checkedOn": "2026-10-13",
-    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
-    "sources": ["https://www.sos.ri.gov/divisions/business-services/ri-business/file-your-annual-report"],
-    "unconfirmed": [],
-    "dba": "checked"
-  },
   "cannabis": {
     "status": "adult_use",
     "regulator": "Rhode Island Cannabis Control Commission"
-  },
-  "localSalesTax": "none",
-  "unemployment": {
-    "wageBase": 30800,
-    "minRate": 0.69,
-    "maxRate": 9.19,
-    "newEmployerRate": 1,
-    "note": "New employer rate excludes the 0.21% Job Development Assessment; the wage base is $32,300 for employers at the highest rate."
   },
   "links": {
     "formation": "https://www.sos.ri.gov/divisions/business-services",
@@ -104,5 +96,10 @@
     "entityTax": "https://tax.ri.gov/resources/businesses/corporate",
     "laborPosters": "https://dlt.ri.gov/employers/required-workplace-posters",
     "dba": "https://www.sos.ri.gov/divisions/business-services/ri-trade-names"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "sources": ["https://www.sos.ri.gov/divisions/business-services/ri-business/file-your-annual-report"],
+    "unconfirmed": []
   }
 }

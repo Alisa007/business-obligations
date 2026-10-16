@@ -12,19 +12,10 @@
     "name": "Florida Department of Revenue (Reemployment Tax)",
     "url": "https://floridarevenue.com/taxes/taxesfees/Pages/reemployment.aspx"
   },
-  "workersComp": {
-    "agency": "Florida Division of Workers' Compensation",
-    "threshold": "4 employees (1 in construction)",
-    "trigger": {
-      "minEmployees": 4,
-      "constructionMinEmployees": 1
-    },
-    "stateFund": false
-  },
   "llcReport": {
+    "title": "File Annual Report",
     "rrule": "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=1",
     "deadline": "January 1 \u2013 May 1 (late fee $400)",
-    "title": "File Annual Report",
     "feeDetail": {
       "basis": "flat",
       "amount": 138.75
@@ -35,10 +26,10 @@
     }
   },
   "corpReport": {
-    "rrule": "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=1",
-    "fee": "$150 (profit) / $61.25 (nonprofit)",
-    "deadline": "January 1 \u2013 May 1 (late fee $400)",
     "title": "File Annual Report",
+    "rrule": "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=1",
+    "deadline": "January 1 \u2013 May 1 (late fee $400)",
+    "fee": "$150 (profit) / $61.25 (nonprofit)",
     "feeDetail": {
       "basis": "flat",
       "amount": 150
@@ -48,42 +39,10 @@
       "note": "Profit corporations only; added after May 1"
     }
   },
-  "entityTax": "Corporate income tax (C corporations only; no individual income tax)",
-  "salesTax": {
-    "statewide": true,
-    "permit": "Florida Certificate of Registration (sales and use tax)",
-    "agency": null,
-    "alternative": null
-  },
-  "local": {
-    "title": "County and city Local Business Tax Receipt",
-    "authority": "County tax collector and city",
-    "description": "Florida counties and cities each issue a Local Business Tax Receipt (renewed annually by September 30)."
-  },
-  "paidLeave": null,
-  "paidSickLeave": null,
-  "businessLicense": null,
-  "llcPublication": null,
-  "economicNexusUsd": 100000,
-  "dbaFiling": "state",
-  "industry": {
-    "contractor": "Florida Construction Industry Licensing Board (DBPR)",
-    "realEstate": "Florida Real Estate Commission",
-    "alcohol": "Florida Division of Alcoholic Beverages and Tobacco",
-    "childCare": "Florida Department of Children and Families",
-    "health": "Florida Agency for Health Care Administration"
-  },
-  "verification": {
-    "checkedOn": "2026-10-13",
-    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
-    "sources": ["https://dos.fl.gov/sunbiz/forms/fees/llc-fees/"],
-    "unconfirmed": [],
-    "dba": "checked"
-  },
   "lpReport": {
     "rrule": "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=1",
-    "fee": "$500 ($411.25 plus $88.75 supplemental fee)",
     "deadline": "January 1 \u2013 May 1 (late fee $400)",
+    "fee": "$500 ($411.25 plus $88.75 supplemental fee)",
     "feeDetail": {
       "basis": "flat",
       "amount": 500
@@ -105,16 +64,49 @@
       "note": "Added to the annual report after May 1; no provision to waive"
     }
   },
-  "cannabis": {
-    "status": "medical_only",
-    "regulator": "Florida Office of Medical Marijuana Use (Department of Health)"
+  "llcPublication": null,
+  "entityTax": "Corporate income tax (C corporations only; no individual income tax)",
+  "salesTax": {
+    "statewide": true,
+    "permit": "Florida Certificate of Registration (sales and use tax)",
+    "agency": null,
+    "alternative": null
   },
   "localSalesTax": "state_administered",
+  "economicNexusUsd": 100000,
   "unemployment": {
     "wageBase": 7000,
     "minRate": 0.1,
     "maxRate": 5.4,
     "newEmployerRate": 2.7
+  },
+  "workersComp": {
+    "agency": "Florida Division of Workers' Compensation",
+    "stateFund": false,
+    "trigger": {
+      "minEmployees": 4,
+      "constructionMinEmployees": 1
+    }
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
+  "local": {
+    "title": "County and city Local Business Tax Receipt",
+    "authority": "County tax collector and city",
+    "description": "Florida counties and cities each issue a Local Business Tax Receipt (renewed annually by September 30)."
+  },
+  "dbaFiling": "state",
+  "industry": {
+    "contractor": "Florida Construction Industry Licensing Board (DBPR)",
+    "realEstate": "Florida Real Estate Commission",
+    "alcohol": "Florida Division of Alcoholic Beverages and Tobacco",
+    "childCare": "Florida Department of Children and Families",
+    "health": "Florida Agency for Health Care Administration"
+  },
+  "cannabis": {
+    "status": "medical_only",
+    "regulator": "Florida Office of Medical Marijuana Use (Department of Health)"
   },
   "links": {
     "formation": "https://dos.fl.gov/sunbiz/start-business/",
@@ -124,5 +116,10 @@
     "entityTax": "https://floridarevenue.com/taxes/taxesfees/Pages/corporate.aspx",
     "laborPosters": "https://floridajobs.org/florida-minimum-wage",
     "dba": "https://dos.fl.gov/sunbiz/start-business/efile/fl-fictitious-name-registration/"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "sources": ["https://dos.fl.gov/sunbiz/forms/fees/llc-fees/"],
+    "unconfirmed": []
   }
 }

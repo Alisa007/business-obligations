@@ -12,14 +12,6 @@
     "name": "Oregon Employment Department",
     "url": "https://www.oregon.gov/employ"
   },
-  "workersComp": {
-    "agency": "Oregon Workers' Compensation Division",
-    "threshold": "1 employee",
-    "trigger": {
-      "minEmployees": 1
-    },
-    "stateFund": false
-  },
   "llcReport": {
     "rrule": "FREQ=YEARLY",
     "feeDetail": {
@@ -34,56 +26,8 @@
       "amount": 100
     }
   },
-  "entityTax": "Corporate excise tax and Corporate Activity Tax (CAT, gross receipts over $1 million); minimum excise tax by sales",
-  "salesTax": {
-    "statewide": false,
-    "permit": "None",
-    "alternative": "Oregon has no sales tax; see the Corporate Activity Tax under entity taxes.",
-    "agency": null
-  },
-  "paidLeave": {
-    "title": "Paid Leave Oregon contributions",
-    "agency": "Oregon Employment Department",
-    "description": "Employers remit contributions quarterly with payroll tax reports.",
-    "minEmployees": 1
-  },
-  "local": {
-    "title": "City business license and local business income taxes",
-    "authority": "City (e.g., Portland Revenue Division)",
-    "description": "Portland and Multnomah County levy business income taxes; many cities require business licenses."
-  },
-  "paidSickLeave": {
-    "minEmployees": 1
-  },
-  "businessLicense": null,
   "llcPublication": null,
-  "economicNexusUsd": null,
-  "dbaFiling": "state",
-  "industry": {
-    "contractor": "Oregon Construction Contractors Board",
-    "realEstate": "Oregon Real Estate Agency",
-    "alcohol": "Oregon Liquor and Cannabis Commission",
-    "childCare": "Oregon Department of Early Learning and Care",
-    "health": "Oregon Health Authority"
-  },
-  "verification": {
-    "checkedOn": "2026-10-13",
-    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
-    "sources": ["https://sos.oregon.gov/business/Pages/obr-annual-report-renewal.aspx"],
-    "unconfirmed": [],
-    "dba": "checked"
-  },
-  "cannabis": {
-    "status": "adult_use",
-    "regulator": "Oregon Liquor and Cannabis Commission"
-  },
-  "localSalesTax": "none",
-  "unemployment": {
-    "wageBase": 56700,
-    "minRate": 0.9,
-    "maxRate": 5.4,
-    "newEmployerRate": 2.4
-  },
+  "entityTax": "Corporate excise tax and Corporate Activity Tax (CAT, gross receipts over $1 million); minimum excise tax by sales",
   "entityTaxDetail": {
     "kind": "gross_receipts",
     "thresholdUsd": 1000000,
@@ -93,6 +37,54 @@
     "source": "https://www.oregon.gov/dor/programs/businesses/Pages/Corporate-Activity-Tax.aspx",
     "checkedOn": "2026-10-13"
   },
+  "salesTax": {
+    "statewide": false,
+    "permit": "None",
+    "agency": null,
+    "alternative": "Oregon has no sales tax; see the Corporate Activity Tax under entity taxes."
+  },
+  "localSalesTax": "none",
+  "economicNexusUsd": null,
+  "unemployment": {
+    "wageBase": 56700,
+    "minRate": 0.9,
+    "maxRate": 5.4,
+    "newEmployerRate": 2.4
+  },
+  "workersComp": {
+    "agency": "Oregon Workers' Compensation Division",
+    "stateFund": false,
+    "trigger": {
+      "minEmployees": 1
+    }
+  },
+  "paidLeave": {
+    "title": "Paid Leave Oregon contributions",
+    "agency": "Oregon Employment Department",
+    "description": "Employers remit contributions quarterly with payroll tax reports.",
+    "minEmployees": 1
+  },
+  "paidSickLeave": {
+    "minEmployees": 1
+  },
+  "businessLicense": null,
+  "local": {
+    "title": "City business license and local business income taxes",
+    "authority": "City (e.g., Portland Revenue Division)",
+    "description": "Portland and Multnomah County levy business income taxes; many cities require business licenses."
+  },
+  "dbaFiling": "state",
+  "industry": {
+    "contractor": "Oregon Construction Contractors Board",
+    "realEstate": "Oregon Real Estate Agency",
+    "alcohol": "Oregon Liquor and Cannabis Commission",
+    "childCare": "Oregon Department of Early Learning and Care",
+    "health": "Oregon Health Authority"
+  },
+  "cannabis": {
+    "status": "adult_use",
+    "regulator": "Oregon Liquor and Cannabis Commission"
+  },
   "links": {
     "formation": "https://sos.oregon.gov/business/register/pages/default.aspx",
     "annualReport": "https://sos.oregon.gov/business/Pages/default.aspx",
@@ -101,5 +93,10 @@
     "entityTax": "https://www.oregon.gov/dor/programs/businesses/Pages/Corporate-Activity-Tax.aspx",
     "laborPosters": "https://www.oregon.gov/boli/employers/pages/required-worksite-postings.aspx",
     "dba": "https://sos.oregon.gov/business/Pages/obr-assumed-business-name-registration.aspx"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "sources": ["https://sos.oregon.gov/business/Pages/obr-annual-report-renewal.aspx"],
+    "unconfirmed": []
   }
 }

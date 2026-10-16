@@ -12,14 +12,6 @@
     "name": "WorkForce West Virginia",
     "url": "https://workforcewv.org"
   },
-  "workersComp": {
-    "agency": "West Virginia Offices of the Insurance Commissioner",
-    "threshold": "1 employee",
-    "trigger": {
-      "minEmployees": 1
-    },
-    "stateFund": false
-  },
   "llcReport": {
     "rrule": "FREQ=YEARLY;BYMONTH=6;BYMONTHDAY=30",
     "fee": "$25 ($50 late fee)",
@@ -44,51 +36,10 @@
       "note": "Statutory late fee that the office cannot waive"
     }
   },
-  "entityTax": "Corporation net income tax",
-  "salesTax": {
-    "statewide": true,
-    "permit": "West Virginia business registration certificate (includes sales tax)",
-    "agency": null,
-    "alternative": null
-  },
-  "businessLicense": {
-    "title": "West Virginia business registration certificate",
-    "authority": "West Virginia State Tax Department",
-    "url": "https://tax.wv.gov/Business/BusinessRegistration/Pages/BusinessRegistrationQuestionsAndAnswers.aspx",
-    "feeDetail": {
-      "basis": "flat",
-      "amount": 30
-    },
-    "renewal": "once"
-  },
-  "local": {
-    "title": "Municipal business and occupation (B&O) tax",
-    "authority": "City",
-    "description": "West Virginia municipalities levy B&O taxes and issue local business licenses."
-  },
-  "paidLeave": null,
-  "paidSickLeave": null,
-  "llcPublication": null,
-  "economicNexusUsd": 100000,
-  "dbaFiling": "state",
-  "industry": {
-    "contractor": "West Virginia Contractor Licensing Board",
-    "realEstate": "West Virginia Real Estate Commission",
-    "alcohol": "West Virginia Alcohol Beverage Control Administration",
-    "childCare": "West Virginia Department of Health",
-    "health": "West Virginia Department of Health, Office of Health Facility Licensure and Certification"
-  },
-  "verification": {
-    "checkedOn": "2026-10-13",
-    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
-    "sources": ["https://sos.wv.gov/business/updates-and-changes/annual-reports"],
-    "unconfirmed": [],
-    "dba": "checked"
-  },
   "llpReport": {
+    "title": "Pay LLP annual registration fee",
     "rrule": "FREQ=YEARLY;BYMONTH=7;BYMONTHDAY=1",
     "deadline": "Between January 1 and July 1 each year",
-    "title": "Pay LLP annual registration fee",
     "feeDetail": {
       "basis": "flat",
       "amount": 500
@@ -98,16 +49,57 @@
       "note": "Statutory late fee that the office cannot waive"
     }
   },
-  "cannabis": {
-    "status": "medical_only",
-    "regulator": "West Virginia Department of Health, Office of Medical Cannabis"
+  "llcPublication": null,
+  "entityTax": "Corporation net income tax",
+  "salesTax": {
+    "statewide": true,
+    "permit": "West Virginia business registration certificate (includes sales tax)",
+    "agency": null,
+    "alternative": null
   },
   "localSalesTax": "state_administered",
+  "economicNexusUsd": 100000,
   "unemployment": {
     "wageBase": 9500,
     "minRate": 1.5,
     "maxRate": 7.5,
     "newEmployerRate": 2.7
+  },
+  "workersComp": {
+    "agency": "West Virginia Offices of the Insurance Commissioner",
+    "stateFund": false,
+    "trigger": {
+      "minEmployees": 1
+    }
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": {
+    "title": "West Virginia business registration certificate",
+    "authority": "West Virginia State Tax Department",
+    "url": "https://tax.wv.gov/Business/BusinessRegistration/Pages/BusinessRegistrationQuestionsAndAnswers.aspx",
+    "renewal": "once",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 30
+    }
+  },
+  "local": {
+    "title": "Municipal business and occupation (B&O) tax",
+    "authority": "City",
+    "description": "West Virginia municipalities levy B&O taxes and issue local business licenses."
+  },
+  "dbaFiling": "state",
+  "industry": {
+    "contractor": "West Virginia Contractor Licensing Board",
+    "realEstate": "West Virginia Real Estate Commission",
+    "alcohol": "West Virginia Alcohol Beverage Control Administration",
+    "childCare": "West Virginia Department of Health",
+    "health": "West Virginia Department of Health, Office of Health Facility Licensure and Certification"
+  },
+  "cannabis": {
+    "status": "medical_only",
+    "regulator": "West Virginia Department of Health, Office of Medical Cannabis"
   },
   "links": {
     "formation": "https://sos.wv.gov/register-new-wv-business",
@@ -118,5 +110,10 @@
     "entityTax": "https://tax.wv.gov/Business/CorporateIncomeTax/Pages/CorporateIncomeTaxPriorYears.aspx",
     "laborPosters": "https://labor.wv.gov/required-posters",
     "dba": "https://sos.wv.gov/business/registration-and-waivers/register-trade-name-dba"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "sources": ["https://sos.wv.gov/business/updates-and-changes/annual-reports"],
+    "unconfirmed": []
   }
 }

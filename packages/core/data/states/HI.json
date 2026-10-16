@@ -12,18 +12,10 @@
     "name": "Hawaii Department of Labor and Industrial Relations",
     "url": "https://labor.hawaii.gov/ui"
   },
-  "workersComp": {
-    "agency": "Hawaii DLIR Disability Compensation Division",
-    "threshold": "1 employee",
-    "trigger": {
-      "minEmployees": 1
-    },
-    "stateFund": false
-  },
   "llcReport": {
+    "title": "File Annual Return",
     "frequency": "annual",
     "deadline": "Last day of the quarter containing the registration anniversary",
-    "title": "File Annual Return",
     "feeDetail": {
       "basis": "flat",
       "amount": 15
@@ -34,9 +26,9 @@
     }
   },
   "corpReport": {
+    "title": "File Annual Return",
     "frequency": "annual",
     "deadline": "Last day of the quarter containing the registration anniversary",
-    "title": "File Annual Return",
     "feeDetail": {
       "basis": "flat",
       "amount": 15,
@@ -47,6 +39,7 @@
       "note": "Per year delinquent"
     }
   },
+  "llcPublication": null,
   "entityTax": "Corporate income tax and General Excise Tax",
   "salesTax": {
     "statewide": true,
@@ -57,21 +50,34 @@
     },
     "alternative": null
   },
+  "localSalesTax": "state_administered",
+  "economicNexusUsd": 100000,
+  "unemployment": {
+    "wageBase": 64500,
+    "minRate": 0,
+    "maxRate": 5.6,
+    "newEmployerRate": 2.4
+  },
+  "workersComp": {
+    "agency": "Hawaii DLIR Disability Compensation Division",
+    "stateFund": false,
+    "trigger": {
+      "minEmployees": 1
+    }
+  },
   "paidLeave": {
     "title": "Temporary Disability Insurance (TDI) coverage",
     "agency": "Hawaii DLIR Disability Compensation Division",
     "description": "Employers must provide TDI coverage for employees; employees may be charged up to half the premium.",
     "minEmployees": 1
   },
+  "paidSickLeave": null,
+  "businessLicense": null,
   "local": {
     "title": "County permits",
     "authority": "County business/permit office",
     "description": "Hawaii has no general local business license; counties issue zoning, building and industry permits."
   },
-  "paidSickLeave": null,
-  "businessLicense": null,
-  "llcPublication": null,
-  "economicNexusUsd": 100000,
   "dbaFiling": "none",
   "industry": {
     "contractor": "Hawaii Contractors License Board",
@@ -80,24 +86,10 @@
     "childCare": "Hawaii Department of Human Services",
     "health": "Hawaii Department of Health"
   },
-  "verification": {
-    "checkedOn": "2026-10-13",
-    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
-    "sources": ["https://cca.hawaii.gov/breg/registration/dllc/fees/"],
-    "unconfirmed": [],
-    "dba": "checked"
-  },
   "cannabis": {
     "status": "medical_only",
     "regulator": "Hawaii Department of Health, Office of Medical Cannabis Control and Regulation",
     "note": "Adult-use sales are not authorised; possession is decriminalized."
-  },
-  "localSalesTax": "state_administered",
-  "unemployment": {
-    "wageBase": 64500,
-    "minRate": 0,
-    "maxRate": 5.6,
-    "newEmployerRate": 2.4
   },
   "links": {
     "formation": "https://cca.hawaii.gov/breg/registration/",
@@ -107,5 +99,10 @@
     "salesTax": "https://tax.hawaii.gov/get/FAQ/",
     "entityTax": "https://tax.hawaii.gov/forms/a1_2taxforms/",
     "laborPosters": "https://labor.hawaii.gov/labor-law-poster/"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "sources": ["https://cca.hawaii.gov/breg/registration/dllc/fees/"],
+    "unconfirmed": []
   }
 }
