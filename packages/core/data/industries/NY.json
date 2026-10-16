@@ -1372,5 +1372,46 @@
     "url": "https://dec.ny.gov/environmental-protection/recycling-composting/bottle-bill/how-to-become-redemption-center",
     "checkedOn": "2026-10-16",
     "frequency": "once"
+  },
+  {
+    "id": "ny.bank-aml-transaction-monitoring-certification",
+    "title": "File the annual BSA/AML transaction monitoring certification with NY DFS",
+    "category": "filing",
+    "authority": "NYS Department of Financial Services",
+    "description": "DFS-regulated banks submit the certification (Part 504) by April 15 each year for the prior calendar year, through the DFS Portal. Only the form is filed; the supporting records must be kept.",
+    "naics": ["522110", "522120"],
+    "appliesTo": ["all"],
+    "url": "https://www.dfs.ny.gov/apps_and_licensing/banks_and_trusts",
+    "checkedOn": "2026-10-16",
+    "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
+    "anchor": "2026-04-15",
+    "exemptions": ["Institutions not regulated by DFS, such as national banks"]
+  },
+  {
+    "id": "ny.bank-atm-safety-report",
+    "title": "File the semi-annual ATM Safety Act report with NY DFS",
+    "category": "filing",
+    "authority": "NYS Department of Financial Services",
+    "description": "Banks operating covered ATM facilities certify compliance with the ATM Safety Act by January 15 and July 15 each year, noting any variances or exemptions.",
+    "naics": ["522110", "522120"],
+    "appliesTo": ["all"],
+    "url": "https://www.dfs.ny.gov/apps_and_licensing/banks_and_trusts",
+    "checkedOn": "2026-10-16",
+    "rrule": "FREQ=YEARLY;BYMONTH=1,7;BYMONTHDAY=15",
+    "anchor": "2026-01-15",
+    "exemptions": ["Banks without covered ATM facilities"]
+  },
+  {
+    "id": "ny.landscape-architect-license",
+    "title": "Have a licensed landscape architect, licensed through NYSED",
+    "category": "license",
+    "authority": "NYS Education Department, Office of the Professions",
+    "description": "Practising landscape architecture or using the title landscape architect requires a New York licence, except in certain exempt settings. The licence and first registration fee is $294, or $399 for applicants licensed after ten years of lawful practice elsewhere; confirm the registration period and renewal fee on the NYSED page.",
+    "naics": ["541320"],
+    "appliesTo": ["all"],
+    "url": "https://www.op.nysed.gov/professions/landscape-architecture/license-requirements",
+    "checkedOn": "2026-10-16",
+    "frequency": "ongoing",
+    "exemptions": ["Certain exempt settings listed by NYSED"]
   }
 ]
