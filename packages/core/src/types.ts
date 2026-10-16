@@ -194,9 +194,14 @@ export interface Provenance {
    */
   confidence: "checked" | "compiled" | "unconfirmed";
   checkedOn?: string;
-  /** Date after which the item should be re-verified (`checkedOn` plus one year). Absent when never checked. */
+  /**
+   * Date the bundled dataset this item comes from was compiled (the result's `dataVersion`). Set on every item, so
+   * an item that was never individually checked still has an age.
+   */
+  compiledOn?: string;
+  /** Date after which the item should be re-verified: one year after `checkedOn`, or after `compiledOn` when never checked. */
   reviewBy?: string;
-  /** True when `reviewBy` is before the evaluation date: the data may be out of date. */
+  /** True when `reviewBy` is before the evaluation date: the data may be out of date. Applies to every item. */
   stale?: boolean;
   sources: string[];
   /** The same sources with kind, retrieval date and an archive link. */

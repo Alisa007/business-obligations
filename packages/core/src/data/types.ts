@@ -1,3 +1,4 @@
+import type { Applicability, FilingMethod } from "../types";
 export interface Agency {
   name: string;
   url?: string;
@@ -260,6 +261,23 @@ export interface LocalItem {
   url?: string;
   /** Tags; the item applies if any matches. */
   appliesTo: Array<"all" | "employees" | "sells_goods" | "corporation" | "unincorporated" | "trade_name">;
+  /** Machine-readable conditions under which the item applies, beyond the `appliesTo` tags. */
+  appliesWhen?: Applicability[];
+  /** Situations in which the item does not apply even when it otherwise would. */
+  exemptions?: string[];
+  /**
+   * Items this one replaces, by item id (for example `state.annual-report:TX`) or by rule id (every item of that
+   * rule). The replaced items come back marked `preemptedBy` this item.
+   */
+  supersedes?: string[];
+  /** Id or rule id of an item that takes precedence over this one when both apply. */
+  preemptedBy?: string;
+  /** Government form or filing name. */
+  formId?: string;
+  filingMethod?: FilingMethod[];
+  processingTime?: string;
+  /** How the item is renewed, when that is more specific than `frequency`. */
+  renewal?: string;
 }
 
 /** A county-level rule seed: what a county (or parish, borough) requires of businesses located in it. */

@@ -150,3 +150,37 @@ describe("sourced facts", () => {
     expect(item.processingTime).toMatch(/22 days/);
   });
 });
+
+describe("precedence authored in seed data", () => {
+  it("passes appliesWhen, exemptions and supersedes through a city seed", async () => {
+    const { indexCities, seededCityRule, defaultRules } = await import("../src");
+    const seed = {
+      state: "TX",
+      city: "Austin",
+      items: [
+        {
+          id: "austin-tx.replacement",
+          title: "City registration replacing the state default",
+          category: "registration" as const,
+          authority: "City of Austin",
+          description: "d",
+          frequency: "annual" as const,
+          url: "https://www.austintexas.gov/",
+          appliesTo: ["all" as const],
+          appliesWhen: [{ field: "employeeCount", op: ">=" as const, value: 1 }],
+          exemptions: ["Sole proprietors"],
+          supersedes: ["fed.ein"],
+        },
+      ],
+      checkedOn: "2026-10-01",
+    };
+    const rules = [...defaultRules, seededCityRule(indexCities([seed]), "test.seed")];
+    const { items } = evaluate({ ...austin, employeeCount: 2 }, { rules, asOf: "2026-10-14" });
+    const mine = items.find((i) => i.ruleId === "test.seed")!;
+    expect(mine.appliesWhen).toEqual(seed.items[0]!.appliesWhen);
+    expect(mine.exemptions).toEqual(["Sole proprietors"]);
+    expect(mine.provenance).toMatchObject({ confidence: "checked", checkedOn: "2026-10-01" });
+    // A rule id target marks every item that rule produced.
+    expect(items.find((i) => i.ruleId === "fed.ein")!.preemptedBy).toBe(mine.id);
+  });
+});
