@@ -87,7 +87,7 @@ Every item says **why** it applies (`reason`), **who** to deal with (`authority`
 ## Why trust it (and when not to)
 
 - **Honest about its confidence.** Each state records what was checked against official pages and on what date; what
-  could not be confirmed is listed, not hidden. See [COVERAGE.md](packages/core/COVERAGE.md), generated from the data.
+  could not be confirmed is listed, not hidden. See [COVERAGE.md](packages/core/COVERAGE.md) for where that is recorded in the JSON.
 - **Specific, not generic.** All 50 states and DC have their own filing agency, report fees and deadlines, unemployment
   insurance parameters, workers' compensation triggers and licensing authorities. Twenty-six cities are seeded
   with local requirements; the rest get the state's local licensing regime.
@@ -234,7 +234,7 @@ Machine-readable: [`schema/business-profile.schema.json`](packages/core/schema/b
 - **City (seeded):** the 300 largest US cities (2020 census, ranks beyond 100 approximate) are all covered, in `data/cities/<STATE>.json`: some
   with city-specific taxes and licenses, some checked and found to have no general city license or tax
   (`status: "none"`), and some researched but not confirmed from an official page (`status: "unverified"`).
-  [`COVERAGE.md`](packages/core/COVERAGE.md) lists them. Every other city returns the state's typical local licensing regime,
+  The JSON in [`data/cities`](packages/core/data/cities) lists them (see [`COVERAGE.md`](packages/core/COVERAGE.md)). Every other city returns the state's typical local licensing regime,
   named for the city and county you pass in. City data is one file per state and looked up by an index, so adding
   thousands more is a data change; to keep the bundle small you can also load city data yourself and add it with
   `seededCityRule(indexCities(seeds))`.
