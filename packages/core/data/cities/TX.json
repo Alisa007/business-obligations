@@ -16,6 +16,34 @@
     "checkedOn": "2026-10-13"
   },
   {
+    "city": "Amarillo",
+    "counties": ["Potter", "Randall"],
+    "note": "No general city business license was found on the city's pages or code; the items cover the hotel occupancy tax, which applies to lodging providers only.",
+    "items": [
+      {
+        "id": "amarillo.hotel-occupancy-registration",
+        "title": "Register as a lodging provider for Amarillo hotel occupancy tax",
+        "category": "registration",
+        "authority": "City of Amarillo Finance Department",
+        "description": "Lodging providers register with the city each year through Localgov, at no fee, by January 1.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=1",
+        "url": "https://amarillo.gov/finance/hotel-motel-taxes",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "amarillo.hotel-occupancy-tax-return",
+        "title": "File the Amarillo hotel occupancy tax report",
+        "category": "filing",
+        "authority": "City of Amarillo Finance Department",
+        "description": "Lodging providers file a monthly hotel occupancy tax report and payment through Localgov, including a zero return when there was no revenue. The city rate is 7%, plus 2% for the Amarillo-Potter Events Venue District.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=10",
+        "url": "https://amarillo.gov/finance/hotel-motel-taxes",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16"
+  },
+  {
     "city": "Arlington",
     "status": "unverified",
     "reason": "city-license-unconfirmed",
