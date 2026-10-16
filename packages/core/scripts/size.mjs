@@ -34,4 +34,25 @@ for (const b of budgets) {
     `${ok ? "ok  " : "FAIL"} ${b.file}: ${kb(raw.length)} KB raw, ${kb(gz)} KB gzip (budget ${b.maxGzipKb} KB) — ${b.note}`,
   );
 }
+// Tree-shaking: a consumer importing one small function must not drag in the rule and place data.
+// A new top-level call or array spread over data keeps it alive; mark such calls `/* @__PURE__ */`.
+const { build } = await import("esbuild");
+const shaken = await build({
+  stdin: {
+    contents: 'export { nextDueDate, dueToRRule } from "./dist/index.js";',
+    resolveDir: process.cwd(),
+  },
+  bundle: true,
+  minify: true,
+  format: "esm",
+  write: false,
+  logLevel: "error",
+});
+const shakenKb = shaken.outputFiles[0].contents.length / 1024;
+const shakenOk = shakenKb <= 20;
+if (!shakenOk) failed = true;
+console.log(
+  `${shakenOk ? "ok  " : "FAIL"} tree-shaking: importing nextDueDate + dueToRRule bundles to ${shakenKb.toFixed(1)} KB (budget 20 KB)`,
+);
+
 process.exit(failed ? 1 : 0);

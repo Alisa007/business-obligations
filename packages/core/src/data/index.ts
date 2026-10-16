@@ -7,8 +7,8 @@ import type { CountyJurisdiction, LocalJurisdiction } from "./types";
 import { resolveState } from "../changes";
 
 export { STATES };
-export const STATE_CODES = Object.keys(STATES);
-export const LOCAL_JURISDICTIONS: LocalJurisdiction[] = Object.values(CITIES).flat();
+export const STATE_CODES = /* @__PURE__ */ Object.keys(STATES);
+export const LOCAL_JURISDICTIONS: LocalJurisdiction[] = /* @__PURE__ */ Object.values(CITIES).flat();
 
 /** Lowercased, punctuation-free city name used for lookups ("St. Louis" and "Saint Louis" match). */
 export const normalizeCity = (s: string) =>
@@ -49,7 +49,7 @@ export function indexCities(list: LocalJurisdiction[]): CityLookup {
   };
 }
 
-export const COUNTY_JURISDICTIONS: CountyJurisdiction[] = Object.values(COUNTIES).flat();
+export const COUNTY_JURISDICTIONS: CountyJurisdiction[] = /* @__PURE__ */ Object.values(COUNTIES).flat();
 
 /** Lowercased county name without "County", "Parish" or "Borough" ("St. Louis" and "Saint Louis" match). */
 export const normalizeCounty = (s: string) =>
@@ -70,10 +70,10 @@ export function indexCounties(list: CountyJurisdiction[]): CountyLookup {
 }
 
 /** The bundled seed for a county, if there is one. */
-export const findCounty: CountyLookup = indexCounties(COUNTY_JURISDICTIONS);
+export const findCounty: CountyLookup = /* @__PURE__ */ indexCounties(COUNTY_JURISDICTIONS);
 
 /** The bundled seed for a city, if there is one. */
-export const findCity: CityLookup = indexCities(LOCAL_JURISDICTIONS);
+export const findCity: CityLookup = /* @__PURE__ */ indexCities(LOCAL_JURISDICTIONS);
 
 export function stateInfo(code: string): StateInfo {
   const s = STATES[code];
@@ -88,10 +88,9 @@ export interface BoardRef {
   url?: string;
 }
 
-const PROFESSIONS = (professionData as unknown as { professions: Record<string, Record<string, BoardRef>> })
-  .professions;
+const professions = professionData as unknown as { professions: Record<string, Record<string, BoardRef>> };
 
 /** The state board for a licensed profession, or undefined for "other". */
 export function professionBoard(profession: string, state: string): BoardRef | undefined {
-  return PROFESSIONS[profession]?.[state];
+  return professions.professions[profession]?.[state];
 }

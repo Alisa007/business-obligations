@@ -72,7 +72,7 @@ const FIELDS: Record<string, Kind> = {
 };
 
 /** Profile field names, for tooling and tests. */
-export const PROFILE_FIELDS: readonly string[] = Object.keys(FIELDS);
+export const PROFILE_FIELDS: readonly string[] = /* @__PURE__ */ Object.keys(FIELDS);
 /** Allowed values of the enumerated fields. */
 export const PROFILE_ENUMS: Readonly<Record<string, readonly string[]>> = ENUMS;
 

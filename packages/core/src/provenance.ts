@@ -35,14 +35,11 @@ export function describeProvenance(p: Provenance, asOf: string, compiledOn: stri
  * reports, workers' comp thresholds, DBA filing level, cannabis regulators) are `checked`, or
  * `unconfirmed` when the state's verification block lists the field. Everything else is `compiled`.
  */
-const DOL_UI_SOURCE = uiSource.source;
-const UI_CHECKED_ON = uiSource.checkedOn;
-
 export function provenanceFor(item: ComplianceItem, p: ResolvedProfile): Provenance {
   const url = item.url ? [item.url] : [];
   if (item.id.startsWith("state.employer") && item.title.includes("unemployment insurance contributions")) {
     // Wage base and rates come from the U.S. DOL's table of state UI laws (see data/ui-source.json).
-    return { confidence: "checked", checkedOn: UI_CHECKED_ON, sources: [DOL_UI_SOURCE, ...url] };
+    return { confidence: "checked", checkedOn: uiSource.checkedOn, sources: [uiSource.source, ...url] };
   }
   if (item.id.startsWith("state.entity-tax") && item.state) {
     const detail = stateInfo(item.state).entityTaxDetail;
