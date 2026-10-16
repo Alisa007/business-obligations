@@ -165,6 +165,9 @@ for a business whose NAICS code starts with one of the prefixes, so it needs the
 belong to a real 2022 NAICS code (the tests check it), and `npm run check` validates the file against
 `schema/industry-items.schema.json`. A new state's file also needs a line in `src/data/industries.ts`.
 
+An item issued by a city or county rather than the state (New York City's DCWP, DOHMH and TLC licences) sets
+`"jurisdiction": "city"` and scopes itself with `appliesWhen` on `county`, so it shows only inside that place.
+
 ## Adding a country
 
 Add a rule pack under `src/rules/<country>/`, register it in `RULE_PACKS` in `src/engine.ts`, extend the `Country`
