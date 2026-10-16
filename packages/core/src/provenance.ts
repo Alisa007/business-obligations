@@ -1,6 +1,39 @@
 import { stateInfo } from "./data";
 import { reportKey } from "./rules/state";
-import type { ComplianceItem, Provenance, ResolvedProfile } from "./types";
+import type { ComplianceItem, Provenance, ResolvedProfile, SourceKind, SourceRef } from "./types";
+
+/** Data checked against official pages should be re-verified after this many days. */
+export const REVIEW_INTERVAL_DAYS = 365;
+
+function addDays(iso: string, days: number): string {
+  const d = new Date(`${iso}T00:00:00Z`);
+  d.setUTCDate(d.getUTCDate() + days);
+  return d.toISOString().slice(0, 10);
+}
+
+function sourceKind(url: string): SourceKind {
+  if (/\.pdf($|[?#])/i.test(url)) return "pdf";
+  if (/municode|amlegal|ordinance|codelibrary/i.test(url)) return "ordinance";
+  if (/statute|legis|law\.cornell|ecfr\.gov|\/code\//i.test(url)) return "statute";
+  if (/\.(csv|json)($|[?#])|data\.gov|doleta\.gov\/unemploy/i.test(url)) return "dataset";
+  return "agency_page";
+}
+
+/** Adds the review date, staleness flag and detailed sources to a provenance record. */
+export function describeProvenance(p: Provenance, asOf: string): Provenance {
+  const out: Provenance = { ...p };
+  if (p.checkedOn) {
+    out.reviewBy = addDays(p.checkedOn, REVIEW_INTERVAL_DAYS);
+    out.stale = out.reviewBy < asOf;
+  }
+  out.sourceDetails = p.sources.map((url): SourceRef => ({
+    url,
+    kind: sourceKind(url),
+    ...(p.checkedOn ? { retrievedOn: p.checkedOn } : {}),
+    archiveUrl: `https://web.archive.org/web/${url}`,
+  }));
+  return out;
+}
 
 /**
  * Derives where an item's data comes from. Fields the project checked against official pages (entity

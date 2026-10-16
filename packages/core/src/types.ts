@@ -138,6 +138,22 @@ export interface BusinessProfile {
   annualRevenue?: number;
   /** Expected annual net income (profit) of the business, USD. Defaults to 0. */
   annualNetIncome?: number;
+  /** Six-digit NAICS code of the main activity, for rules finer than `industry`. */
+  naics?: string;
+  /** Free-form activity tags (for example "demolition", "roofing") that rules may match. */
+  activities?: string[];
+  /** Construction: total value of the project, USD. */
+  projectValueUsd?: number;
+  /** Construction: acres of land disturbed. One or more triggers stormwater permit coverage. */
+  disturbedAcres?: number;
+  /** Construction: contractor license class or classification the business holds or needs. */
+  licenseClass?: string;
+  /** Premises floor area in square feet (occupancy, signage and health permits). */
+  floorAreaSqFt?: number;
+  /** The business displays exterior signage. */
+  hasSignage?: boolean;
+  /** The business prepares or serves food. */
+  foodService?: boolean;
 }
 
 export type ItemCategory =
@@ -146,6 +162,31 @@ export type ItemCategory =
 import type { ChangeNotice, Due, FeeDetail, LateFee } from "./data/types";
 export type { ChangeNotice, Due, FeeDetail, LateFee } from "./data/types";
 
+/** What kind of document a source is. Inferred from the URL unless a data file says otherwise. */
+export type SourceKind = "statute" | "ordinance" | "agency_page" | "pdf" | "dataset";
+
+/** One source an item's data comes from, with a retrieval date and a stable fallback copy. */
+export interface SourceRef {
+  url: string;
+  kind: SourceKind;
+  /** Date the source was last retrieved and read (the provenance's `checkedOn`). */
+  retrievedOn?: string;
+  /** Internet Archive link that resolves to the latest snapshot, for pages and PDFs that move or disappear. */
+  archiveUrl: string;
+}
+
+/** A machine-readable condition under which an item applies, for example `disturbedAcres >= 1`. */
+export interface Applicability {
+  /** Profile field the condition reads. */
+  field: string;
+  op: ">=" | ">" | "<=" | "<" | "==" | "!=" | "in";
+  value: string | number | boolean | string[];
+  /** Plain-language form of the condition. */
+  description?: string;
+}
+
+export type FilingMethod = "online" | "mail" | "in_person" | "fax";
+
 export interface Provenance {
   /**
    * `checked`: confirmed against official pages on `checkedOn`; `compiled`: from public knowledge, not
@@ -153,7 +194,13 @@ export interface Provenance {
    */
   confidence: "checked" | "compiled" | "unconfirmed";
   checkedOn?: string;
+  /** Date after which the item should be re-verified (`checkedOn` plus one year). Absent when never checked. */
+  reviewBy?: string;
+  /** True when `reviewBy` is before the evaluation date: the data may be out of date. */
+  stale?: boolean;
   sources: string[];
+  /** The same sources with kind, retrieval date and an archive link. */
+  sourceDetails?: SourceRef[];
 }
 
 export type Jurisdiction = "federal" | "state" | "county" | "city";
@@ -191,6 +238,30 @@ export interface ComplianceItem {
   /** Why the engine returned this item. */
   reason: string;
   url?: string;
+  /** Conditions under which the item applies (all must hold), when they can be expressed as profile checks. */
+  appliesWhen?: Applicability[];
+  /** Situations in which the item does not apply even if `appliesWhen` holds. */
+  exemptions?: string[];
+  /** Ids of items this one replaces (for example a local requirement that replaces a state default). */
+  supersedes?: string[];
+  /** Id of the item that takes precedence over this one when both are returned. */
+  preemptedBy?: string;
+  /**
+   * Stable jurisdiction identifier: `US`, `US-TX`, `US-TX/county/travis` or `US-TX/city/austin`. Use it instead of
+   * matching names, which collide across states.
+   */
+  jurisdictionId?: string;
+  /** Two-digit FIPS code of the item's state. */
+  stateFips?: string;
+  /** Government form or filing name, e.g. "SS-4". */
+  formId?: string;
+  filingMethod?: FilingMethod[];
+  /** Typical processing time, e.g. "Immediate online; about 4 weeks by mail". */
+  processingTime?: string;
+  /** How and when the item is renewed, e.g. "Every two years before the license expiry date". */
+  renewal?: string;
+  /** Link that opens a pre-filled data-correction issue for this item. */
+  feedbackUrl?: string;
 }
 
 export interface Presence {

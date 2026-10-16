@@ -183,6 +183,45 @@
     "ownerCount": {
       "type": "integer",
       "minimum": 1
+    },
+    "naics": {
+      "type": "string",
+      "pattern": "^\\d{6}$",
+      "description": "Six-digit NAICS code of the main activity."
+    },
+    "activities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Free-form activity tags that rules may match."
+    },
+    "projectValueUsd": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Construction: total project value, USD."
+    },
+    "disturbedAcres": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Construction: acres of land disturbed; 1 or more triggers stormwater permit coverage."
+    },
+    "licenseClass": {
+      "type": "string",
+      "description": "Construction: contractor license class or classification."
+    },
+    "floorAreaSqFt": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Premises floor area in square feet."
+    },
+    "hasSignage": {
+      "type": "boolean",
+      "description": "The business displays exterior signage."
+    },
+    "foodService": {
+      "type": "boolean",
+      "description": "The business prepares or serves food."
     }
   },
   "allOf": [
