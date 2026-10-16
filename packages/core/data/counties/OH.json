@@ -2,37 +2,55 @@
   {
     "county": "Butler",
     "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
     "items": [],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16",
+    "note": "Ohio has no general business personal property tax. Butler County levies a 3% lodging tax (to its Convention and Visitors Bureau), but its return due date was not found."
   },
   {
     "county": "Cuyahoga",
-    "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "cuyahoga-oh.lodging-tax-return",
+        "title": "File the Cuyahoga County lodging tax return",
+        "category": "filing",
+        "authority": "Cuyahoga County Fiscal Office, Lodging Occupancy Tax Office",
+        "description": "The county tax is 6.5% of gross short-term rent, including non-optional fees. Register and get approved first, then file monthly online through the county's GovOS portal by the 21st of the month after the period; a form is required even for months with no rentals. Late: 10% penalty plus 3% monthly interest. Phone 216-443-7140.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=21",
+        "url": "https://it.cuyahogacounty.gov/fiscal-officer/departments/lodging-occupancy-tax",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Ohio has no general business personal property tax; only the lodging tax was checked for Cuyahoga."
   },
   {
     "county": "Franklin",
     "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
     "items": [],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16",
+    "note": "Ohio has no general business personal property tax. Franklin County levies a 4% lodging excise tax (plus 0.9% in Columbus), but its return due date was not found."
   },
   {
     "county": "Hamilton",
     "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
     "items": [],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16",
+    "note": "Ohio has no general business personal property tax. Hamilton County levies a 7.5% hotel lodging excise tax through its Hotel Lodging Tax division (payment portal; 513-946-4319), but the return due date was not found."
   },
   {
     "county": "Lake",
     "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
     "items": [],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16",
+    "note": "Ohio has no general business personal property tax. Lake County has a Hotel/Motel Tax Department (440-350-5580) and a return with a 10% late penalty, but the due date was not found."
   },
   {
     "county": "Lorain",
@@ -44,9 +62,9 @@
   {
     "county": "Lucas",
     "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
     "items": [],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16",
+    "note": "Ohio has no general business personal property tax. Lucas County has a hotel/motel occupancy tax (7% and 10% remittal forms) administered by its Office of Management and Budget, but the due date was not found."
   },
   {
     "county": "Mahoning",
@@ -57,10 +75,28 @@
   },
   {
     "county": "Montgomery",
-    "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "montgomery-oh.lodging-tax-return",
+        "title": "File the Montgomery County lodging tax return",
+        "category": "filing",
+        "authority": "Montgomery County Office of Management and Budget",
+        "description": "The 3% tax applies to hotels and motels with five or more sleeping rooms. Returns are filed electronically on the county website by the last day of the month after the stay (February stays due March 31); register for an account number first. Late filing or payment brings interest, fines and penalties.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
+        "url": "https://www.mcohio.org/1218/HotelMotel-Tax",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Ohio has no general business personal property tax; only the lodging tax was checked for Montgomery."
   },
   {
     "county": "Stark",
@@ -71,10 +107,28 @@
   },
   {
     "county": "Summit",
-    "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "summit-oh.lodging-tax-return",
+        "title": "File the Summit County lodging tax return",
+        "category": "filing",
+        "authority": "Summit County Fiscal Office, Lodging Excise Tax Department",
+        "description": "The tax is 5.5%. Lodging establishments mail each month's return with payment to the Lodging Excise Tax Department in Akron; the page read does not state the day of the month. The lodging registration form is due by January 31 each year. Phone 330-643-2437.",
+        "frequency": "monthly",
+        "url": "https://fiscaloffice.summitoh.net/lodging-excise-tax",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Ohio has no general business personal property tax; only the lodging tax was checked for Summit."
   },
   {
     "county": "Warren",
