@@ -121,7 +121,7 @@ export function createAnalytics({
           respect_dnt: true,
           ip: false,
           logs: {
-            serviceName: "compliance-rules-engine-site",
+            serviceName: "business-obligations-site",
             environment: production ? "production" : "development",
           },
           capture_exceptions: {

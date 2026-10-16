@@ -1,5 +1,5 @@
 // What does a small Austin LLC with two employees need?  node examples/quickstart.mjs
-import { evaluate } from "compliance-rules-engine";
+import { evaluate } from "business-obligations";
 
 const { items } = evaluate({
   entityType: "llc",

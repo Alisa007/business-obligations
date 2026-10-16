@@ -1,6 +1,6 @@
 // Export a year of deadlines to an .ics file you can import into any calendar.  node examples/calendar-ics.mjs
 import { writeFileSync } from "node:fs";
-import { buildCalendar, toICS } from "compliance-rules-engine";
+import { buildCalendar, toICS } from "business-obligations";
 
 const { events } = buildCalendar(
   {

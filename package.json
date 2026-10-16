@@ -1,8 +1,8 @@
 {
-  "name": "compliance-rules-engine-monorepo",
+  "name": "business-obligations-monorepo",
   "private": true,
   "version": "0.0.0",
-  "description": "Monorepo: the compliance-rules-engine library (packages/core) and its Next.js playground (apps/web).",
+  "description": "Monorepo: the business-obligations library (packages/core) and its Next.js playground (apps/web).",
   "license": "MIT",
   "type": "module",
   "workspaces": [
@@ -10,20 +10,20 @@
     "apps/*"
   ],
   "scripts": {
-    "build": "npm run build -w compliance-rules-engine",
-    "build:web": "npm run build -w @cre/web",
-    "dev": "npm run build -w compliance-rules-engine && npm run dev -w @cre/web",
+    "build": "npm run build -w business-obligations",
+    "build:web": "npm run build -w @business-obligations/web",
+    "dev": "npm run build -w business-obligations && npm run dev -w @business-obligations/web",
     "typecheck": "npm run build && npm run typecheck --workspaces --if-present",
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "test": "npm run build && npm test --workspaces --if-present",
     "check": "npm run typecheck && npm run lint && npm run format:check && npm test",
-    "size": "npm run size -w compliance-rules-engine",
-    "coverage": "npm run coverage -w compliance-rules-engine",
-    "check:links": "npm run check:links -w compliance-rules-engine",
+    "size": "npm run size -w business-obligations",
+    "coverage": "npm run coverage -w business-obligations",
+    "check:links": "npm run check:links -w business-obligations",
     "site": "npm run build && npm run build:web",
-    "release": "npm run release -w compliance-rules-engine --"
+    "release": "npm run release -w business-obligations --"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
