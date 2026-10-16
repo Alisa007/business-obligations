@@ -146,8 +146,12 @@ short `"note"` on what the city requires instead.
 
 When the city's rule conflicts with or replaces a state default, record it on the item: `supersedes` lists the ids
 (`state.annual-report:TX`) or rule ids (`state.trade-name`) it replaces, and the replaced items come back with
-`preemptedBy` set. `appliesWhen` (`{ "field": "annualRevenue", "op": ">=", "value": 50000 }`) states a threshold and
-`exemptions` lists who is excluded, both in plain text. Cite the ordinance or page in `url`.
+`preemptedBy` set. `appliesWhen` (`{ "field": "annualRevenue", "op": ">=", "value": 50000 }`) is checked against the
+business profile: the item is returned only when every condition holds, and a profile that leaves the field out does
+not match (except for `!=`). A list field such as `activities` matches when any entry does, so an obligation that only
+lodging operators have is `{ "field": "activities", "op": "in", "value": ["lodging"] }`. `exemptions` lists who is
+excluded, in plain text. Use the activity tag `lodging` for hotels, motels and short-term rentals. Cite the ordinance or
+page in `url`.
 
 `appliesTo` takes `all`, `employees`, `sells_goods`, `corporation`, `unincorporated` or `trade_name`. Use the city's own
 page for `url`, run `npm run check`, and add a line to the Unreleased section of `CHANGELOG.md`.

@@ -290,7 +290,10 @@ export interface LocalItem {
   url?: string;
   /** Tags; the item applies if any matches. */
   appliesTo: Array<(typeof APPLIES_TO)[number]>;
-  /** Machine-readable conditions under which the item applies, beyond the `appliesTo` tags. */
+  /**
+   * Conditions on the business profile that must all hold for the item to be returned, beyond the `appliesTo` tags
+   * (for example `activities in ["lodging"]`). A list-valued profile field matches when any entry does.
+   */
   appliesWhen?: Applicability[];
   /** Situations in which the item does not apply even when it otherwise would. */
   exemptions?: string[];
