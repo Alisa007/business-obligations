@@ -30,7 +30,7 @@
         "description": "Date (YYYY-MM-DD) the entry was checked against official pages. Absent = never individually checked."
       },
       "sourceUrl": {
-        "$ref": "common.schema.json#/$defs/httpsUrl"
+        "$ref": "common.schema.json#/$defs/httpsUrlOrList"
       },
       "reason": {
         "type": "string",
