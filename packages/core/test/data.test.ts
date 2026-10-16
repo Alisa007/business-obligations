@@ -3,7 +3,15 @@ import path from "node:path";
 import Ajv2020 from "ajv/dist/2020";
 import addFormats from "ajv-formats";
 import { describe, expect, it } from "vitest";
-import { defaultRules, evaluate, indexCities, seededCityRule, type BusinessProfile } from "../src";
+import {
+  defaultRules,
+  evaluate,
+  indexCities,
+  indexCounties,
+  seededCityRule,
+  seededCountyRule,
+  type BusinessProfile,
+} from "../src";
 import { PROFILE_FIELDS, STATES } from "../src";
 import { COUNTY_JURISDICTIONS, LOCAL_JURISDICTIONS, findCity, findCounty } from "../src/data";
 import type { LocalItem } from "../src/data/types";
@@ -327,6 +335,21 @@ describe("county data files", () => {
     const missing = top.filter((c) => !findCounty(c.state, c.county)).map((c) => `${c.county}, ${c.state}`);
     expect(missing).toEqual([]);
   });
+  it("a county is only `none` when more than the personal property return was checked", () => {
+    for (const j of COUNTY_JURISDICTIONS.filter((x) => x.status === "none"))
+      expect(
+        j.note ?? "",
+        `${j.state} ${j.county}: none cannot rest on a personal property check alone`,
+      ).not.toMatch(/personal property/i);
+  });
+
+  it("county appliesWhen conditions read real profile fields", () => {
+    for (const j of COUNTY_JURISDICTIONS)
+      for (const it of j.items)
+        for (const w of it.appliesWhen ?? [])
+          expect(PROFILE_FIELDS, `${j.state} ${j.county} appliesWhen field`).toContain(w.field);
+  });
+
   it("matches names regardless of County/Parish suffixes", () => {
     expect(findCounty("CA", "Los Angeles County")?.county).toBe("Los Angeles");
     expect(findCounty("LA", "East Baton Rouge")?.county).toBe("East Baton Rouge Parish");
@@ -586,6 +609,44 @@ describe("citation urls in output", () => {
       void s;
     }
     expect([...new Set(bare)]).toEqual([]);
+  });
+});
+
+describe("seed items with appliesWhen", () => {
+  const seeds = [
+    {
+      state: "NY",
+      county: "Testland",
+      items: [
+        {
+          id: "testland.occupancy-tax",
+          title: "Testland occupancy tax",
+          category: "filing" as const,
+          authority: "Testland Finance",
+          description: "Lodging operators remit the county occupancy tax.",
+          frequency: "quarterly" as const,
+          appliesTo: ["all" as const],
+          appliesWhen: [{ field: "activities", op: "in" as const, value: ["lodging"] }],
+        },
+      ],
+    },
+  ];
+  const base: BusinessProfile = {
+    entityType: "llc",
+    zip: "12401",
+    city: "Kingston",
+    county: "Testland",
+    state: "NY",
+  };
+  const rules = [...defaultRules, seededCountyRule(indexCounties(seeds), "my.counties")];
+  const has = (profile: BusinessProfile) =>
+    evaluate(profile, { asOf: "2026-10-13", rules }).items.some((i) => i.title === "Testland occupancy tax");
+
+  it("shows the item only when the condition holds", () => {
+    expect(has(base)).toBe(false);
+    expect(has({ ...base, activities: ["roofing"] })).toBe(false);
+    expect(has({ ...base, activities: ["lodging"] })).toBe(true);
+    expect(has({ ...base, activities: ["roofing", "lodging"] })).toBe(true);
   });
 });
 

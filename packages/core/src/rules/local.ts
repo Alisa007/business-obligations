@@ -1,3 +1,4 @@
+import { allHold } from "../applicability";
 import { resolveSchedule } from "../rrule";
 import type { Rule } from "../types";
 import { findCity, findCounty, stateInfo, type CityLookup, type CountyLookup } from "../data";
@@ -5,21 +6,26 @@ import type { LocalItem } from "../data/types";
 import type { ResolvedProfile } from "../types";
 import { isCorpLike, isUnincorporated } from "../entity";
 
-/** The seed items that apply to this business: the item's `appliesTo` tags are checked against the profile. */
+/**
+ * The seed items that apply to this business: one of the item's `appliesTo` tags matches the profile, and every
+ * `appliesWhen` condition holds (for example `activities in ["lodging"]` keeps a lodging tax from showing for a shop).
+ */
 function applicable(items: LocalItem[], p: ResolvedProfile): LocalItem[] {
-  return items.filter((it) =>
-    it.appliesTo.some(
-      (tag) =>
-        tag === "all" ||
-        (tag === "employees" && p.hasEmployees) ||
-        (tag === "sells_goods" &&
-          (p.sellsTaxableGoods || p.industry === "retail" || p.industry === "restaurant")) ||
-        (tag === "corporation" &&
-          (isCorpLike(p) || p.taxTreatment === "c_corp" || p.taxTreatment === "s_corp")) ||
-        (tag === "unincorporated" && isUnincorporated(p)) ||
-        (tag === "trade_name" && p.usesTradeName),
-    ),
-  );
+  return items
+    .filter((it) => allHold(it.appliesWhen, p))
+    .filter((it) =>
+      it.appliesTo.some(
+        (tag) =>
+          tag === "all" ||
+          (tag === "employees" && p.hasEmployees) ||
+          (tag === "sells_goods" &&
+            (p.sellsTaxableGoods || p.industry === "retail" || p.industry === "restaurant")) ||
+          (tag === "corporation" &&
+            (isCorpLike(p) || p.taxTreatment === "c_corp" || p.taxTreatment === "s_corp")) ||
+          (tag === "unincorporated" && isUnincorporated(p)) ||
+          (tag === "trade_name" && p.usesTradeName),
+      ),
+    );
 }
 
 /** Optional fields a seed item may carry beyond the common ones, copied onto the emitted item when present. */

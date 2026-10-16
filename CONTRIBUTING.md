@@ -105,7 +105,23 @@ data test requires all 51 jurisdictions for every profession.
 Counties live in `data/counties/<STATE>.json`, one file per state and DC. An entry has `county` (the name as
 the ZIP data spells it, without "County"), optional `aliases`, and `items` in the same shape as city items. Use
 `"status": "none"` (with `sourceUrl`) or `"unverified"` (with `note`) and `"checkedOn"` when the county has no
-filing of its own or you could not confirm one. Cite the county's own page for the filing, not a bare domain.
+obligation of its own or you could not confirm one. Cite the county's own page for each obligation, not a bare domain.
+
+A county entry covers **every county-level business obligation**, not only property tax. Check each of these before
+you call a county `none`:
+
+- a general business license, business tax or occupational tax (for example Florida's local business tax receipt,
+  Tennessee's county business tax, Kentucky and Georgia occupational taxes, Maryland's trader's license);
+- a lodging, occupancy or tourism tax, and any registration for it;
+- a business personal property return or similar assessor filing;
+- county clerk filings (assumed names, publication, certificates) beyond what the state file already records;
+- county health, environmental, fire or building permits that apply to businesses generally (record activity-specific
+  ones only when they apply to a common business type such as food service);
+- county sales or use tax registrations, where the county rather than the state administers them.
+
+`none` means all of these were checked. If you checked only some (for example only the personal property return),
+use `unverified` and say in the `note` what was checked and what was not. A test fails if a `none` county's text
+mentions only personal property.
 
 ## Adding a city
 
@@ -130,8 +146,12 @@ short `"note"` on what the city requires instead.
 
 When the city's rule conflicts with or replaces a state default, record it on the item: `supersedes` lists the ids
 (`state.annual-report:TX`) or rule ids (`state.trade-name`) it replaces, and the replaced items come back with
-`preemptedBy` set. `appliesWhen` (`{ "field": "annualRevenue", "op": ">=", "value": 50000 }`) states a threshold and
-`exemptions` lists who is excluded, both in plain text. Cite the ordinance or page in `url`.
+`preemptedBy` set. `appliesWhen` (`{ "field": "annualRevenue", "op": ">=", "value": 50000 }`) is checked against the
+business profile: the item is returned only when every condition holds, and a profile that leaves the field out does
+not match (except for `!=`). A list field such as `activities` matches when any entry does, so an obligation that only
+lodging operators have is `{ "field": "activities", "op": "in", "value": ["lodging"] }`. `exemptions` lists who is
+excluded, in plain text. Use the activity tag `lodging` for hotels, motels and short-term rentals. Cite the ordinance or
+page in `url`.
 
 `appliesTo` takes `all`, `employees`, `sells_goods`, `corporation`, `unincorporated` or `trade_name`. Use the city's own
 page for `url`, run `npm run check`, and add a line to the Unreleased section of `CHANGELOG.md`.

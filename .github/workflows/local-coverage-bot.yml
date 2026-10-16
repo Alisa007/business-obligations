@@ -131,12 +131,17 @@ jobs:
                are published (Municode, American Legal, Code Publishing, eCode360, General Code or the city's own
                code site), plus council agendas and minutes on the jurisdiction's own domain. Not aggregators, law
                firm blogs or business-registration services. The question: does it require a general business license,
-               business tax, or (counties) a business personal property return or similar filing, and if so what are
-               the fee, the term or due date, who is covered and who is exempt?
+               business tax or occupational tax, and for counties EVERY county-level obligation (a business license or
+               tax, a lodging occupancy tax and its registration, a business personal property return, county clerk
+               filings, county health or building permits that apply to common businesses, county-administered sales
+               tax), and if so what are the fee, the term or due date, who is covered and who is exempt? A county is
+               `none` only when you checked all of those kinds; if you checked only some, use `unverified` and say in
+               the note which kinds you did and did not check.
                Work through this checklist and keep going until it is exhausted or you have the answer:
                a. Search the web for the name plus "business license", "business tax", "occupational license",
                   "business registration", "tax certificate" (counties: "business personal property", "assessor",
-                  "personal property declaration"). Open the official results, not only the first one.
+                  "personal property declaration", "occupancy tax", "hotel motel tax", "tourism tax", "county clerk",
+                  "county business tax"). Open the official results, not only the first one.
                b. Read the jurisdiction's department pages (finance, treasurer, tax collector, clerk, assessor,
                   planning and zoning) and follow every link about licenses, taxes, fees and applications.
                c. Find the ordinance in the municipal or county code ("Business licenses", "Licensing", "Taxation"

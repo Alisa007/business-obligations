@@ -290,7 +290,10 @@ export interface LocalItem {
   url?: string;
   /** Tags; the item applies if any matches. */
   appliesTo: Array<(typeof APPLIES_TO)[number]>;
-  /** Machine-readable conditions under which the item applies, beyond the `appliesTo` tags. */
+  /**
+   * Conditions on the business profile that must all hold for the item to be returned, beyond the `appliesTo` tags
+   * (for example `activities in ["lodging"]`). A list-valued profile field matches when any entry does.
+   */
   appliesWhen?: Applicability[];
   /** Situations in which the item does not apply even when it otherwise would. */
   exemptions?: string[];
@@ -309,14 +312,20 @@ export interface LocalItem {
   renewal?: string;
 }
 
-/** A county-level rule seed: what a county (or parish, borough) requires of businesses located in it. */
+/**
+ * A county-level rule seed: every business obligation a county (or parish, borough) imposes, such as licenses and taxes,
+ * lodging occupancy taxes, business personal property returns and clerk filings.
+ */
 export interface CountyJurisdiction {
   state: string;
   /** County name as the ZIP data spells it, without "County" (for example "Los Angeles", "Miami-Dade"). */
   county: string;
   /** Other names that resolve to this county. */
   aliases?: string[];
-  /** `rules` (default), `none` (checked, nothing county-specific) or `unverified` (no official page confirmed). */
+  /**
+   * `rules` (default), `none` (every kind of county-level obligation was checked and there is none) or `unverified`
+   * (nothing confirmed, or only some kinds checked; the note says which).
+   */
   status?: "rules" | "none" | "unverified";
   /** Date (YYYY-MM-DD) the entry was last checked against the county's official pages. */
   checkedOn?: string;
