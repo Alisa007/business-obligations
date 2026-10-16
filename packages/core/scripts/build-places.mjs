@@ -36,7 +36,7 @@ for (const [st, sfp, cfp, , name] of rows("county.txt")) {
   (counties.get(k) ?? counties.set(k, []).get(k)).push({ fips: sfp + cfp, full: name });
 }
 const places = new Map();
-for (const [st, sfp, pfp, , name, type, cls, func, cos] of rows("place.txt")) {
+for (const [st, sfp, pfp, , name, , cls, , cos] of rows("place.txt")) {
   const k = `${st}|${slug(strip(name))}`;
   // Census class codes: C* incorporated places (including consolidated "balance" entities), U* and M* census places.
   const incorporated = cls.startsWith("C");
