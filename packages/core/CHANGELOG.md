@@ -26,6 +26,7 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 - The repository is now an npm-workspaces monorepo (`packages/core`, `apps/web`). The published package is unchanged.
 - The playground is rebuilt with Next.js (static export), React and Tamagui, and reports usage, the form values you enter
   when generating a plan, and unhandled errors with PostHog when configured (no cookies, no session recording).
+- Local data: seeds for Huntington, WV and Shreveport, LA cities and for Fayette and Schuylkill counties, PA.
 
 ### Added
 
