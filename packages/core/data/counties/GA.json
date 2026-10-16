@@ -1,45 +1,150 @@
 [
   {
     "county": "Chatham",
-    "status": "unverified",
-    "reason": "bpp-state-rules-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "chatham-ga.business-personal-property",
+        "title": "File Chatham County business personal property return",
+        "category": "filing",
+        "authority": "Chatham County Board of Assessors",
+        "description": "Georgia business personal property returns (Form PT-50P) are due to the county between January 1 and April 1 for property held on January 1; a 10% penalty applies to unreported property if the return is late. Returns filed on April 1 must be postmarked that day; metered mail dates are not accepted. Personal property bills are due by November 15.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://boa.chathamcountyga.gov/Valuation/FAQ",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Unincorporated-area lodging tax and business license rules were not found; Chatham's cities (Savannah, Pooler, Port Wentworth) run their own."
   },
   {
     "county": "Cherokee",
-    "status": "unverified",
-    "reason": "bpp-state-rules-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "cherokee-ga.business-personal-property",
+        "title": "File Cherokee County business personal property return",
+        "category": "filing",
+        "authority": "Cherokee County Board of Tax Assessors",
+        "description": "Georgia business personal property returns (Form PT-50P) are due to the county between January 1 and April 1 for property held on January 1; a 10% penalty applies to unreported property if the return is late. The county posts the current-year form on its tax assessor documents page.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://cherokeecountyga.gov/tax-assessors-office/faq",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "cherokee-ga.occupation-tax-certificate",
+        "title": "Obtain the Cherokee County occupation tax certificate",
+        "category": "license",
+        "authority": "Cherokee County Development Service Center",
+        "description": "Any business, trade, profession or occupation in unincorporated Cherokee County must register with the county and obtain a commercial occupation tax certificate, one for each location or branch. Fees start at $30 plus per-employee charges, and the tax is payable annually from January 1. A notarized S.A.V.E. affidavit and business registration documents are required.",
+        "frequency": "annual",
+        "url": "https://cherokeecountyga.gov/dsc/business-licenses/occupation-tax-certificate",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Clayton",
-    "status": "unverified",
-    "reason": "bpp-state-rules-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "clayton-ga.business-personal-property",
+        "title": "File Clayton County business personal property return",
+        "category": "filing",
+        "authority": "Clayton County tax office",
+        "description": "Georgia business personal property returns (Form PT-50P) are due to the county between January 1 and April 1 for property held on January 1; a 10% penalty applies to unreported property if the return is late. A county notice says returns are filed with the Tax Commissioner's office.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://dor.georgia.gov/county-property-tax-facts-clayton",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Clayton County reportedly levies an 8% hotel-motel excise tax (monthly by the 20th) and requires a county business license in unincorporated areas, but only third-party summaries were found, not the county's own pages."
   },
   {
     "county": "Cobb",
-    "status": "unverified",
-    "reason": "bpp-state-rules-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "cobb-ga.business-personal-property",
+        "title": "File Cobb County business personal property return",
+        "category": "filing",
+        "authority": "Cobb County Board of Tax Assessors",
+        "description": "Georgia business personal property returns (Form PT-50P) are due to the county between January 1 and April 1 for property held on January 1; a 10% penalty applies to unreported property if the return is late.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://dor.georgia.gov/county-property-tax-facts-cobb",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "cobb-ga.hotel-motel-excise-tax",
+        "title": "File the Cobb County hotel/motel excise tax report",
+        "category": "filing",
+        "authority": "Cobb County Business License Division",
+        "description": "The Hotel/Motel Occupancy Excise Tax Report is due between the 1st and 20th of the month after the reporting period, with payment by check to the division's Hotel Tax address (form dated 2018; confirm it is current).",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://assets.cobbcounty.gov/files/2018-07/hoteltx_001_0.pdf",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Cobb's occupation tax certificate (expires December 31) is issued by the county for unincorporated Cobb; its fee and renewal date were not confirmed."
   },
   {
     "county": "DeKalb",
-    "status": "unverified",
-    "reason": "bpp-state-rules-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "dekalb-ga.business-personal-property",
+        "title": "File DeKalb County business personal property return",
+        "category": "filing",
+        "authority": "DeKalb County Property Appraisal",
+        "description": "Georgia business personal property returns (Form PT-50P) are due to the county between January 1 and April 1 for property held on January 1; a 10% penalty applies to unreported property if the return is late. Returns must be postmarked by midnight April 1; late filers risk penalties and loss of depreciation and exemptions. The county mails forms as a courtesy.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://dekalbcountyga.gov/departments/property-appraisal",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "dekalb-ga.business-license",
+        "title": "Obtain or renew the DeKalb County business license",
+        "category": "license",
+        "authority": "DeKalb County Business License Division",
+        "description": "DeKalb County's business occupational tax certificate is renewed through the county's online licensing portal (paper or emailed applications are not processed); the 2026 renewal window was January 1 to April 15, with penalties rising after February 1 and April 15. The fee has an administrative fee ($75 in 2024) and a minimum gross receipts tax ($50), so confirm current amounts. Transferring a business ends the license and starts a new one. Lodging operators also report hotel/motel excise tax on a separate excise account.",
+        "url": "https://dekalbcountyga.gov/departments/planning-and-sustainability/business-and-alcohol-license",
+        "appliesTo": ["all"],
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15"
+      }
+    ],
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Forsyth",
-    "status": "unverified",
-    "reason": "bpp-state-rules-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "forsyth-ga.business-personal-property",
+        "title": "File Forsyth County business personal property return",
+        "category": "filing",
+        "authority": "Forsyth County Board of Assessors",
+        "description": "Georgia business personal property returns (Form PT-50P) are due to the county between January 1 and April 1 for property held on January 1; a 10% penalty applies to unreported property if the return is late. The county allows no extensions and does not accept metered mail dates unless counter-stamped by the post office.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://www.forsythco.com/Departments-Offices/Board-of-Assessors/Personal",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "forsyth-ga.occupational-tax-certificate",
+        "title": "Obtain or renew the Forsyth County occupational tax certificate",
+        "category": "license",
+        "authority": "Forsyth County Business License Office",
+        "description": "All businesses operating in unincorporated Forsyth County must hold a current occupational tax certificate (business license). Renewal runs December 1 to March 31 (the county emails a custom renewal form on December 1); renewals received after 5 p.m. on March 31 are late, with a 10% penalty and 1.5% interest a month. New businesses must apply within 30 days of starting and need a Business Location Verification Decision Letter from the county's CSS portal; new applications are by mail or in person, not email.",
+        "url": "https://www.forsythco.com/Departments-Offices/Business-Licenses/Applications",
+        "appliesTo": ["all"],
+        "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=31"
+      }
+    ],
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Fulton",
@@ -52,6 +157,16 @@
         "description": "Georgia business personal property returns (Form PT-50P) are due to the county by April 1; late returns carry a 10% penalty.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": "https://www.fultoncountyga.gov/boardofassessors",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "fulton-ga.business-occupational-tax",
+        "title": "Renew the Fulton County business occupational tax certificate",
+        "category": "license",
+        "authority": "Fulton County Finance Department",
+        "description": "Fulton County licenses only businesses in the Fulton Industrial District (unincorporated); all other Fulton businesses are licensed by their city. The certificate is valid for a calendar year and must be renewed by March 31.",
+        "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=31",
+        "url": "https://fultoncountyga.gov/Inside-Fulton-County/Fulton-County-Departments/Finance/Business-Licenses",
         "appliesTo": ["all"]
       }
     ],
@@ -75,9 +190,19 @@
   },
   {
     "county": "Henry",
-    "status": "unverified",
-    "reason": "bpp-state-rules-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "henry-ga.business-personal-property",
+        "title": "File Henry County business personal property return",
+        "category": "filing",
+        "authority": "Henry County Tax Assessor",
+        "description": "Georgia business personal property returns (Form PT-50P) are due to the county between January 1 and April 1 for property held on January 1; a 10% penalty applies to unreported property if the return is late.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://dor.georgia.gov/county-property-tax-facts-henry",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Henry County's occupation tax certificate and any lodging excise tax could not be confirmed from county pages."
   }
 ]
