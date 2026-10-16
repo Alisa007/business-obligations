@@ -311,8 +311,8 @@ export interface CountyJurisdiction {
   status?: "rules" | "none" | "unverified";
   /** Date (YYYY-MM-DD) the entry was last checked against the county's official pages. */
   checkedOn?: string;
-  /** Official page backing a `none` status. */
-  sourceUrl?: string;
+  /** Official page, or pages, backing a `none` status. */
+  sourceUrl?: string | string[];
   /** Code of a shared explanation in `data/local-notes.json`; resolved into `note` on load. Not together with `note`. */
   reason?: string;
   note?: string;
@@ -336,8 +336,8 @@ export interface LocalJurisdiction {
   status?: "rules" | "none" | "unverified";
   /** Date (YYYY-MM-DD) the entry was last checked against the city's official pages. */
   checkedOn?: string;
-  /** Official page backing a `none` status. */
-  sourceUrl?: string;
+  /** Official page, or pages, backing a `none` status. */
+  sourceUrl?: string | string[];
   /** Code of a shared explanation in `data/local-notes.json`; resolved into `note` on load. Not together with `note`. */
   reason?: string;
   /** Short explanation shown to maintainers (for example what the city does require instead). */

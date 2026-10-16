@@ -261,7 +261,7 @@ describe("city data files", () => {
       expect(["none", "unverified"], j.city).toContain(j.status);
       expect(j.checkedOn, j.city).toMatch(/^\d{4}-\d{2}-\d{2}$/);
       expect(j.note, j.city).toBeTruthy();
-      if (j.status === "none") expect(j.sourceUrl, j.city).toMatch(/^https:\/\//);
+      if (j.status === "none") expect([j.sourceUrl].flat().join(), j.city).toMatch(/^https:\/\//);
     }
   });
   it("entries with items have no status other than rules", () => {
@@ -303,7 +303,7 @@ describe("county data files", () => {
         expect(["none", "unverified"], j.county).toContain(j.status);
         expect(j.checkedOn, j.county).toMatch(/^\d{4}-\d{2}-\d{2}$/);
         expect(j.note, j.county).toBeTruthy();
-        if (j.status === "none") expect(j.sourceUrl, j.county).toMatch(/^https:\/\//);
+        if (j.status === "none") expect([j.sourceUrl].flat().join(), j.county).toMatch(/^https:\/\//);
       }
     }
   });
@@ -690,5 +690,28 @@ describe("schema reuse", () => {
     for (const f of files)
       for (const p of patterns(read(`schema/${f}`)))
         for (const re of shared) expect(p, `${f} repeats a shared pattern`).not.toMatch(re);
+  });
+});
+
+describe("sourceUrl as a list", () => {
+  it("accepts one https URL or a non-empty list of them", () => {
+    const local = newAjv();
+    local.addSchema(read("schema/local-item.schema.json"));
+    const city = local.compile(read("schema/cities.schema.json"));
+    const none = (sourceUrl: unknown) => [
+      {
+        city: "Olathe",
+        status: "none",
+        sourceUrl,
+        note: "The city does not require a general business license.",
+        counties: ["Johnson"],
+        items: [],
+        checkedOn: "2026-01-01",
+      },
+    ];
+    expect(city(none("https://a.example"))).toBe(true);
+    expect(city(none(["https://a.example", "https://b.example"]))).toBe(true);
+    expect(city(none([]))).toBe(false);
+    expect(city(none(["http://a.example"]))).toBe(false);
   });
 });

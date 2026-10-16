@@ -121,7 +121,7 @@ Cities live in `data/cities/<STATE>.json` (one file per state and DC). Each entr
 ```
 
 A city that has no general business license or tax of its own is still worth recording, so nobody has to check
-again: set `"status": "none"`, `"items": []`, `"checkedOn"` (YYYY-MM-DD), `"sourceUrl"` (the official page) and a
+again: set `"status": "none"`, `"items": []`, `"checkedOn"` (YYYY-MM-DD), `"sourceUrl"` (the official page, or a list of pages) and a
 short `"note"` on what the city requires instead.
 
 When the city's rule conflicts with or replaces a state default, record it on the item: `supersedes` lists the ids
