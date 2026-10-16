@@ -1,4 +1,4 @@
-import { feeCost, feeText } from "../fee";
+import { describeFee, feeCost } from "../fee";
 import { resolveSchedule } from "../rrule";
 import type { ItemDraft, Presence, ResolvedProfile, Rule } from "../types";
 import { professionBoard, stateInfo as info } from "../data";
@@ -292,7 +292,7 @@ export const stateRules: Rule[] = [
             jurisdiction: "state" as const,
             state: code,
             authority: s.filing.name,
-            description: `Fee: ${feeText(r)}. Required to keep the entity in good standing.`,
+            description: `Fee: ${describeFee(r.feeDetail)}. Required to keep the entity in good standing.`,
             ...schedule,
             frequency: schedule.frequency === "periodic" ? ("ongoing" as const) : schedule.frequency,
             ...feeCost(r),
@@ -409,7 +409,7 @@ export const stateRules: Rule[] = [
             jurisdiction: "state" as const,
             state: x.state,
             authority: l.authority,
-            description: `Fee: ${feeText(l)}. General state license required to operate in ${s.name}.`,
+            description: `Fee: ${describeFee(l.feeDetail)}. General state license required to operate in ${s.name}.`,
             frequency: l.renewal,
             ...feeCost(l),
             reason: `${s.name} requires a general state business license`,

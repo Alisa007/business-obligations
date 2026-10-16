@@ -6,7 +6,7 @@
   "items": {
     "type": "object",
     "additionalProperties": false,
-    "required": ["county", "items"],
+    "required": ["county", "checkedOn", "items"],
     "properties": {
       "county": {
         "type": "string",
@@ -54,7 +54,11 @@
       }
     },
     "allOf": [
-      { "not": { "required": ["note", "reason"] } },
+      {
+        "not": {
+          "required": ["note", "reason"]
+        }
+      },
       {
         "if": {
           "properties": {

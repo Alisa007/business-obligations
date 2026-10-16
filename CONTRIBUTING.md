@@ -19,8 +19,10 @@ npm run test:update  # accept intentional snapshot changes, then review the diff
 1. Edit `data/states/<XX>.json`. Validate with `npm test` (the schema in `schema/state.schema.json` is enforced).
 2. Use an **official** source (the state agency's own page or statute). Add its URL to `verification.sources`, set
    `verification.checkedOn` to today's date, and remove the field from `verification.unconfirmed` if you confirmed it.
-3. Give the fee as numbers in `feeDetail`. Add `fee` text only when the numbers cannot say it (a waiver, an
-   estimate, a rate): a test fails if `fee` just repeats what `feeDetail` generates.
+3. Write the fee once, in `feeDetail`: the numbers (`amount`, `online`/`paper`, `perUnit`, `min`/`max`, `rate`) and, for
+   what numbers cannot say, a short `note` such as `annual tax` or `$0 for nonprofit corporations`. There is no separate fee
+   text: it is generated ("$30 online ($45 paper)"), and a test fails if a `note` repeats one of the fee's own numbers.
+   `flat` and `none` need an `amount`, `per_partner`/`per_member` a `perUnit`, `percent` a `rate`.
 4. Write the schedule as one iCalendar recurrence rule in `rrule` (see "Schedules" below); do not also write
    `frequency`, `due` or a `deadline` that merely repeats it.
 5. Run `npm run test:update` and check the snapshot diff in `test/__snapshots__` shows only what you intended.
@@ -29,7 +31,7 @@ npm run test:update  # accept intentional snapshot changes, then review the diff
 ## Fields stored once
 
 The file name is the state: state files have no `code`, city and county files have no `state` per entry, and
-`wageWithholding` follows from `links.withholding`. A license's page is `businessLicense.url`. The unemployment-insurance data year is `data/ui-source.json`, not a per-state field. Allowed values
+`wageWithholding` follows from `links.withholding`. A license's page is `businessLicense.url` (required). The unemployment-insurance data year is `data/ui-source.json`, not a per-state field. Allowed values
 (entity types, industries, categories, ...) live in `src/enums.ts`; the JSON schemas must list the same values, and a
 test checks that.
 

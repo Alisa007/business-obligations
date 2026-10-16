@@ -21,7 +21,7 @@ const feeChange: RuleChange = {
   kind: "fee",
   summary: "Test: Texas report fee changes to $25.",
   scope: { state: "TX", rules: ["state.annual-report"] },
-  patches: [{ path: "llcReport.fee", value: "$25 (test)" }],
+  patches: [{ path: "llcReport.feeDetail.note", value: "test fee change" }],
 };
 
 const reportDescription = (asOf: string, changes: RuleChange[]) =>
@@ -58,22 +58,24 @@ describe("change registry", () => {
 
 describe("effective-dated rules", () => {
   it("applies an enacted patch only once its effective date is reached", () => {
-    expect(reportDescription("2026-12-31", [feeChange])).not.toMatch(/\(test\)/);
-    expect(reportDescription("2027-01-01", [feeChange])).toMatch(/\$25 \(test\)/);
-    expect(reportDescription("2028-06-01", [feeChange])).toMatch(/\$25 \(test\)/);
+    expect(reportDescription("2026-12-31", [feeChange])).not.toMatch(/test fee change/);
+    expect(reportDescription("2027-01-01", [feeChange])).toMatch(/test fee change/);
+    expect(reportDescription("2028-06-01", [feeChange])).toMatch(/test fee change/);
   });
 
   it("never applies proposed changes", () => {
     const proposed = { ...feeChange, status: "proposed" as const };
-    expect(reportDescription("2030-01-01", [proposed])).not.toMatch(/\(test\)/);
+    expect(reportDescription("2030-01-01", [proposed])).not.toMatch(/test fee change/);
   });
 
   it("does not leak patched data between evaluations", () => {
     reportDescription("2027-06-01", [feeChange]);
-    expect(reportDescription("2026-10-12", [])).not.toMatch(/\(test\)/);
+    expect(reportDescription("2026-10-12", [])).not.toMatch(/test fee change/);
     // bundled data is untouched
     const items = getComplianceItems({ ...base, formationDate: "2020-01-01" });
-    expect(items.find((i) => i.id.startsWith("state.annual-report:TX"))?.description).not.toMatch(/\(test\)/);
+    expect(items.find((i) => i.id.startsWith("state.annual-report:TX"))?.description).not.toMatch(
+      /test fee change/,
+    );
   });
 });
 

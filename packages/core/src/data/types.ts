@@ -100,6 +100,7 @@ export interface FeeDetail {
   waived?: boolean;
   /** The amount is an estimate that could not be confirmed against the statute or schedule. */
   estimate?: boolean;
+  /** Qualifier shown in parentheses after the generated text. It must not repeat the numbers above. */
   note?: string;
 }
 
@@ -114,13 +115,8 @@ export interface LateFee {
 export interface ReportRule {
   /** Derived from `rrule` when there is one. */
   frequency?: "annual" | "biennial" | "every_five_years" | "periodic";
-  /**
-   * Fee text. Stored only when the structured `feeDetail` cannot say it all (a waiver, an estimate, a rate); otherwise
-   * generated from `feeDetail`.
-   */
-  fee?: string;
-  /** The fee as numbers; the source for the amount. */
-  feeDetail?: FeeDetail;
+  /** The fee. The display text ("$30 online ($45 paper)") is generated from it; see `describeFee`. */
+  feeDetail: FeeDetail;
   lateFee?: LateFee;
   /**
    * The schedule as an iCalendar recurrence rule, e.g. `FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=15` (see `rrule.ts`). When
@@ -211,9 +207,7 @@ export interface StateInfo {
     authority: string;
     /** Page for the license (replaces a separate link entry). */
     url?: string;
-    /** See `ReportRule.fee`. */
-    fee?: string;
-    feeDetail?: FeeDetail;
+    feeDetail: FeeDetail;
     renewal: "annual" | "biennial" | "once";
   } | null;
   /** Mandatory state paid-leave / disability program with employer duties. */
