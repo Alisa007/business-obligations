@@ -23,14 +23,9 @@
     "stateFund": false
   },
   "llcReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
     "fee": "$300 base, plus $50 per member over 6 (maximum $3,000)",
     "deadline": "First day of the 4th month after fiscal year end (April 1)",
-    "due": {
-      "type": "fixed",
-      "month": 4,
-      "day": 1
-    },
     "feeDetail": {
       "basis": "per_member",
       "amount": 300,
@@ -53,14 +48,9 @@
     }
   },
   "corpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
     "fee": "$20 minimum",
     "deadline": "First day of the 4th month after fiscal year end (April 1)",
-    "due": {
-      "type": "fixed",
-      "month": 4,
-      "day": 1
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 20,
@@ -108,14 +98,9 @@
   },
   "localSalesTax": "state_administered",
   "lpReport": {
-    "frequency": "annual",
-    "fee": "$50 per partner (minimum $250, maximum $2,500) \u2014 best estimate; the statute and Secretary of State schedule could not be read",
+    "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+    "fee": "$50 per partner (minimum $250, maximum $2,500) — best estimate; the statute and Secretary of State schedule could not be read",
     "deadline": "First day of the 4th month after fiscal year end (April 1)",
-    "due": {
-      "type": "fixed",
-      "month": 4,
-      "day": 1
-    },
     "feeDetail": {
       "basis": "per_partner",
       "perUnit": 50,

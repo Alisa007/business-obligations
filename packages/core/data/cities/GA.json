@@ -10,13 +10,7 @@
         "category": "license",
         "authority": "Athens-Clarke County Business Tax Office",
         "description": "Occupation tax certificates are valid for the calendar year; renewal is due on or before April 1 and later applications carry a 10% penalty.",
-        "frequency": "annual",
-        "deadline": "April 1",
-        "due": {
-          "type": "fixed",
-          "month": 4,
-          "day": 1
-        },
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": "https://accgov.com/DocumentView.aspx?DID=435",
         "appliesTo": ["all"]
       }
@@ -70,13 +64,7 @@
         "category": "license",
         "authority": "Columbus Consolidated Government Occupation Tax Section",
         "description": "Renewal runs January 1 through April 1 with a signed return, SAVE and E-Verify affidavits; unpaid tax carries a 10% penalty and 1.5% monthly interest.",
-        "frequency": "annual",
-        "deadline": "April 1",
-        "due": {
-          "type": "fixed",
-          "month": 4,
-          "day": 1
-        },
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": "https://resources.columbusga.gov/finance/revenue/2025-2026%20OCCUPATION%20TAX%20RETURN%20INSTRUCTIONS.pdf",
         "appliesTo": ["all"]
       }
@@ -94,13 +82,7 @@
         "category": "license",
         "authority": "City of Sandy Springs Revenue Department",
         "description": "Licenses expire December 31; the city allows a 90-day grace period to March 31, after which a 10% penalty and 1.5% monthly interest apply.",
-        "frequency": "annual",
-        "deadline": "March 31",
-        "due": {
-          "type": "fixed",
-          "month": 3,
-          "day": 31
-        },
+        "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=31",
         "url": "https://www.sandyspringsga.gov/annual-business-license-payment-and-renewal/",
         "appliesTo": ["all"]
       }

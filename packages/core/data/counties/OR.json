@@ -25,13 +25,7 @@
         "category": "filing",
         "authority": "Marion County Assessor",
         "description": "Oregon business personal property returns are due to the county assessor by March 15 each year; late returns incur penalties of 5%, 25% and 50%.",
-        "frequency": "annual",
-        "deadline": "March 15",
-        "due": {
-          "type": "fixed",
-          "month": 3,
-          "day": 15
-        },
+        "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=15",
         "url": "https://co.marion.or.us/AO/Pages/faq.aspx",
         "appliesTo": ["all"]
       }
@@ -48,13 +42,7 @@
         "category": "filing",
         "authority": "Multnomah County Assessor",
         "description": "Oregon business personal property returns are due to the county assessor by March 15 each year; late returns incur penalties of 5%, 25% and 50%. Returns are filed on Form OR-CPPR by email, mail or the county's Smartfile portal.",
-        "frequency": "annual",
-        "deadline": "March 15",
-        "due": {
-          "type": "fixed",
-          "month": 3,
-          "day": 15
-        },
+        "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=15",
         "url": "https://multco.us/assessment-taxation/new-businesses",
         "appliesTo": ["all"]
       }

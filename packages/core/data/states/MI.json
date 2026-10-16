@@ -23,30 +23,18 @@
     "stateFund": false
   },
   "llcReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=15",
     "fee": "$25",
-    "deadline": "February 15",
     "title": "File Annual Statement",
-    "due": {
-      "type": "fixed",
-      "month": 2,
-      "day": 15
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 25
     }
   },
   "corpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=15",
     "fee": "$25",
-    "deadline": "May 15",
     "title": "File Annual Report",
-    "due": {
-      "type": "fixed",
-      "month": 5,
-      "day": 15
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 25
@@ -90,14 +78,10 @@
   "dbaOffice": "County clerk",
   "lpReport": null,
   "llpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "fee": "$100",
     "deadline": "Before the first anniversary of registration, then annually",
     "title": "Renew LLP registration",
-    "due": {
-      "type": "anniversary",
-      "point": "date"
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 100

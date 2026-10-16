@@ -49,13 +49,8 @@
         "category": "payment",
         "authority": "Philadelphia Department of Revenue",
         "description": "Annual tax on gross receipts and net income for entities doing business in Philadelphia.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
         "deadline": "April 15 (calendar-year filers)",
-        "due": {
-          "type": "fixed",
-          "month": 4,
-          "day": 15
-        },
         "url": "https://www.phila.gov/services/payments-assistance-taxes/business-taxes/",
         "appliesTo": ["all"]
       },

@@ -22,32 +22,22 @@
     "stateFund": false
   },
   "llcReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTHDAY=-1",
     "fee": "$75",
-    "deadline": "Last day of the anniversary month",
-    "due": {
-      "type": "anniversary",
-      "point": "end_of_month"
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 75
     }
   },
   "corpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTHDAY=-1",
     "fee": "$75",
-    "deadline": "Last day of the anniversary month",
-    "due": {
-      "type": "anniversary",
-      "point": "end_of_month"
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 75
     }
   },
-  "entityTax": "Corporation Business Tax (minimum tax $500\u2013$2,000); partnership filing fee per partner",
+  "entityTax": "Corporation Business Tax (minimum tax $500–$2,000); partnership filing fee per partner",
   "wageWithholding": true,
   "salesTax": {
     "statewide": true,

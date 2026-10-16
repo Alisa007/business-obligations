@@ -10,13 +10,7 @@
         "category": "license",
         "authority": "Clerk of the Circuit Court for Baltimore City",
         "description": "Retail and wholesale sellers need a trader's license based on inventory value; the license year runs May 1 – April 30 with renewals due by May 31.",
-        "frequency": "annual",
-        "deadline": "May 31",
-        "due": {
-          "type": "fixed",
-          "month": 5,
-          "day": 31
-        },
+        "rrule": "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=31",
         "url": "https://www.marylandtaxes.gov/businesses/new-business/business-licenses.html",
         "appliesTo": ["sells_goods"]
       }

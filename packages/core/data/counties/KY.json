@@ -9,13 +9,7 @@
         "category": "filing",
         "authority": "Fayette County Property Valuation Administrator",
         "description": "Kentucky tangible personal property returns are filed with the county Property Valuation Administrator by May 15; there is no extension. The county's own page was not individually confirmed; the state's guidance applies and the return goes to the county.",
-        "frequency": "annual",
-        "deadline": "May 15",
-        "due": {
-          "type": "fixed",
-          "month": 5,
-          "day": 15
-        },
+        "rrule": "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=15",
         "url": "https://revenue.ky.gov/Forms/62A500(P)%20(2026).pdf",
         "appliesTo": ["all"]
       }
@@ -32,13 +26,7 @@
         "category": "filing",
         "authority": "Jefferson County Property Valuation Administrator",
         "description": "Kentucky tangible personal property returns are filed with the county Property Valuation Administrator by May 15; there is no extension.",
-        "frequency": "annual",
-        "deadline": "May 15",
-        "due": {
-          "type": "fixed",
-          "month": 5,
-          "day": 15
-        },
+        "rrule": "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=15",
         "url": "https://jeffersonpva.ky.gov/wp-content/uploads/2023/04/62A500P.pdf",
         "appliesTo": ["all"]
       }

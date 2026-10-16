@@ -58,16 +58,10 @@
   },
   "lpReport": null,
   "llpReport": {
-    "frequency": "biennial",
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=7;BYMONTHDAY=1",
+    "anchor": "2027-07-01",
     "fee": "$25",
-    "deadline": "July 1 of odd-numbered years",
     "title": "File Biennial Report",
-    "due": {
-      "type": "fixed",
-      "month": 7,
-      "day": 1,
-      "parity": "odd"
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 25

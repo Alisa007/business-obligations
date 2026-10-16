@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { getComplianceItems, nextDueDate } from "../src";
+import { dueToRRule, getComplianceItems, nextDueDate } from "../src";
 
 const base = { city: "Austin", county: "Travis", zip: "78701" } as const;
 
@@ -76,5 +76,49 @@ describe("nextDue on items", () => {
       { asOf: "2026-10-12" },
     );
     expect(items.find((i) => i.id.startsWith("state.annual-report:FL"))?.nextDue).toBe("2027-05-01");
+  });
+});
+
+describe("dueToRRule", () => {
+  it("writes annual fixed dates as iCalendar rules", () => {
+    expect(dueToRRule({ type: "fixed", month: 5, day: 15 }, "annual")).toBe(
+      "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=15",
+    );
+    expect(dueToRRule({ type: "fixed", month: 2, day: 29 }, "annual")).toBe(
+      "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
+    );
+    expect(
+      dueToRRule(
+        {
+          type: "multi",
+          dates: [
+            { month: 1, day: 31 },
+            { month: 4, day: 30 },
+            { month: 7, day: 31 },
+            { month: 10, day: 31 },
+          ],
+        },
+        "quarterly",
+      ),
+    ).toBe("FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1");
+  });
+
+  it("returns nothing for rules a bare RRULE cannot express", () => {
+    expect(dueToRRule({ type: "fixed", month: 5, day: 15, parity: "odd" }, "annual")).toBeUndefined();
+    expect(dueToRRule({ type: "fixed", month: 5, day: 15 }, "biennial")).toBeUndefined();
+    expect(dueToRRule({ type: "anniversary", point: "date" }, "annual")).toBeUndefined();
+    expect(dueToRRule({ type: "date", date: "2027-01-01" }, "once")).toBeUndefined();
+    expect(
+      dueToRRule(
+        {
+          type: "multi",
+          dates: [
+            { month: 4, day: 15 },
+            { month: 10, day: 1 },
+          ],
+        },
+        "annual",
+      ),
+    ).toBeUndefined();
   });
 });

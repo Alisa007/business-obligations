@@ -15,8 +15,8 @@
         "required": ["id", "effective", "status", "kind", "summary", "scope"],
         "properties": {
           "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]+$" },
-          "effective": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
-          "announced": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+          "effective": { "type": "string", "format": "date", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+          "announced": { "type": "string", "format": "date", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
           "status": { "enum": ["enacted", "proposed"] },
           "kind": {
             "enum": ["fee", "deadline", "requirement", "repeal", "threshold", "enforcement", "other"]

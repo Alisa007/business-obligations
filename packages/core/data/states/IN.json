@@ -22,14 +22,10 @@
     "stateFund": false
   },
   "llcReport": {
-    "frequency": "biennial",
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTHDAY=-1",
     "fee": "$31 (online)",
     "deadline": "Last day of the anniversary month, every 2 years",
     "title": "File Business Entity Report",
-    "due": {
-      "type": "anniversary",
-      "point": "end_of_month"
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 31,
@@ -37,14 +33,10 @@
     }
   },
   "corpReport": {
-    "frequency": "biennial",
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTHDAY=-1",
     "fee": "$31 (online)",
     "deadline": "Last day of the anniversary month, every 2 years",
     "title": "File Business Entity Report",
-    "due": {
-      "type": "anniversary",
-      "point": "end_of_month"
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 31,
@@ -86,28 +78,20 @@
   },
   "dbaOffice": "County recorder",
   "lpReport": {
-    "frequency": "biennial",
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTHDAY=-1",
     "fee": "$50",
     "deadline": "Last day of the anniversary month, every 2 years",
     "title": "File Business Entity Report",
-    "due": {
-      "type": "anniversary",
-      "point": "end_of_month"
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 50
     }
   },
   "llpReport": {
-    "frequency": "biennial",
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTHDAY=-1",
     "fee": "$50",
     "deadline": "Last day of the anniversary month, every 2 years",
     "title": "File Business Entity Report",
-    "due": {
-      "type": "anniversary",
-      "point": "end_of_month"
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 50

@@ -22,14 +22,8 @@
     "stateFund": false
   },
   "llcReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTH=6;BYMONTHDAY=30",
     "fee": "$25 ($50 late fee)",
-    "deadline": "June 30",
-    "due": {
-      "type": "fixed",
-      "month": 6,
-      "day": 30
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 25,
@@ -41,14 +35,8 @@
     }
   },
   "corpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTH=6;BYMONTHDAY=30",
     "fee": "$25 ($50 late fee)",
-    "deadline": "June 30",
-    "due": {
-      "type": "fixed",
-      "month": 6,
-      "day": 30
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 25,
@@ -102,15 +90,10 @@
     "dba": "checked"
   },
   "llpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTH=7;BYMONTHDAY=1",
     "fee": "$500",
     "deadline": "Between January 1 and July 1 each year",
     "title": "Pay LLP annual registration fee",
-    "due": {
-      "type": "fixed",
-      "month": 7,
-      "day": 1
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 500

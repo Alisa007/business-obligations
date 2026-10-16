@@ -18,6 +18,7 @@ import { validateProfile, type ProfileIssue } from "./validate";
 import { localRules, premisesRules } from "./rules/local";
 import { industryRules } from "./rules/industry";
 import { nextDueDate } from "./dates";
+import { dueToRRule } from "./rrule";
 import { describeProvenance, provenanceFor } from "./provenance";
 import { jurisdictionId, placeFacts, STATE_FIPS } from "./jurisdiction";
 import {
@@ -300,6 +301,8 @@ export function evaluate(input: BusinessProfile, options: EvaluateOptions = {}):
             intervalYears: d.frequency === "every_five_years" ? 5 : undefined,
           });
           if (next) item.nextDue = next;
+          const recurrence = dueToRRule(d.due, d.frequency);
+          if (recurrence) item.recurrence = recurrence;
         }
         item.provenance = describeProvenance(
           item.provenance ?? provenanceFor(item, profile),
