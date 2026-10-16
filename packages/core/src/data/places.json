@@ -121,6 +121,7 @@
       "torrance": "80000i",
       "vacaville": "81554i",
       "vallejo": "81666i",
+      "ventura": "65042i",
       "victorville": "82590i",
       "visalia": "82954i"
     }
@@ -162,7 +163,7 @@
       "waterbury": "80000i"
     }
   },
-  "DC": { "c": { "district-of-columbia": "001" }, "p": { "washington": "50000u" } },
+  "DC": { "c": { "district-of-columbia": "001" }, "p": { "washington": "50000i" } },
   "DE": { "c": { "new-castle": "003", "sussex": "005" }, "p": {} },
   "FL": {
     "c": {
@@ -226,7 +227,14 @@
       "gwinnett": "135",
       "henry": "151"
     },
-    "p": { "atlanta": "04000i", "columbus": "19000i", "sandy-springs": "68516i", "savannah": "69000i" }
+    "p": {
+      "athens": "03440i",
+      "atlanta": "04000i",
+      "augusta": "04204i",
+      "columbus": "19000i",
+      "sandy-springs": "68516i",
+      "savannah": "69000i"
+    }
   },
   "HI": { "c": { "honolulu": "003" }, "p": {} },
   "IA": {
@@ -261,7 +269,7 @@
   },
   "IN": {
     "c": { "allen": "003", "hamilton": "057", "lake": "089", "marion": "097", "st-joseph": "141" },
-    "p": { "evansville": "22000i", "fort-wayne": "25000i", "indianapolis": "36003u", "south-bend": "71000i" }
+    "p": { "evansville": "22000i", "fort-wayne": "25000i", "indianapolis": "36003i", "south-bend": "71000i" }
   },
   "KS": {
     "c": { "johnson": "091", "sedgwick": "173" },
@@ -273,7 +281,10 @@
       "wichita": "79000i"
     }
   },
-  "KY": { "c": { "fayette": "067", "jefferson": "111" }, "p": { "louisville": "48000u" } },
+  "KY": {
+    "c": { "fayette": "067", "jefferson": "111" },
+    "p": { "lexington": "46027i", "louisville": "48000i" }
+  },
   "LA": {
     "c": {
       "caddo": "017",
@@ -283,7 +294,7 @@
       "orleans": "071",
       "st-tammany": "103"
     },
-    "p": { "baton-rouge": "05000u", "lafayette": "40735u", "new-orleans": "55000i", "shreveport": "70000i" }
+    "p": { "baton-rouge": "05000i", "lafayette": "40735i", "new-orleans": "55000i", "shreveport": "70000i" }
   },
   "MA": {
     "c": {
@@ -309,6 +320,8 @@
   "MD": {
     "c": {
       "anne-arundel": "003",
+      "baltimore": "005",
+      "baltimore-city": "510",
       "frederick": "021",
       "harford": "025",
       "howard": "027",
@@ -342,10 +355,18 @@
   },
   "MN": {
     "c": { "anoka": "003", "dakota": "037", "hennepin": "053", "ramsey": "123", "washington": "163" },
-    "p": { "minneapolis": "43000i", "rochester": "54880i" }
+    "p": { "minneapolis": "43000i", "rochester": "54880i", "saint-paul": "58000i" }
   },
   "MO": {
-    "c": { "clay": "047", "greene": "077", "jackson": "095", "jefferson": "099", "st-charles": "183" },
+    "c": {
+      "clay": "047",
+      "greene": "077",
+      "jackson": "095",
+      "jefferson": "099",
+      "st-charles": "183",
+      "st-louis": "189",
+      "st-louis-city": "510"
+    },
     "p": {
       "columbia": "15670i",
       "independence": "35000i",
@@ -540,7 +561,8 @@
       "clarksville": "15160i",
       "knoxville": "40000i",
       "memphis": "48000i",
-      "murfreesboro": "51560i"
+      "murfreesboro": "51560i",
+      "nashville": "52006i"
     }
   },
   "TX": {
@@ -625,10 +647,15 @@
   "VA": {
     "c": {
       "arlington": "013",
+      "chesapeake-city": "550",
       "chesterfield": "041",
+      "city-of-richmond": "760",
+      "fairfax": "059",
       "henrico": "087",
       "loudoun": "107",
-      "prince-william": "153"
+      "norfolk-city": "710",
+      "prince-william": "153",
+      "virginia-beach-city": "810"
     },
     "p": {
       "alexandria": "01000i",

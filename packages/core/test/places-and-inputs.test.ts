@@ -111,3 +111,17 @@ describe("form ids", () => {
     expect(form("fed.1099-nec", /1099/)).toBe("1099-NEC");
   });
 });
+
+describe("consolidated governments and renewal", () => {
+  it("matches consolidated city-counties and independent cities explicitly", () => {
+    const tn = evaluate({ entityType: "llc", zip: "37201", city: "Nashville", county: "Davidson" });
+    expect(tn.items.find((i) => i.jurisdiction === "city")?.fips).toBe("4752006");
+  });
+
+  it("derives a renewal cycle for recurring licences and permits", () => {
+    const { items } = evaluate({ ...austin, industry: "restaurant" });
+    const permit = items.find((i) => i.category === "permit" && i.frequency === "annual")!;
+    expect(permit.renewal).toMatch(/^Renew every year/);
+    expect(items.find((i) => i.frequency === "once")?.renewal).toBeUndefined();
+  });
+});

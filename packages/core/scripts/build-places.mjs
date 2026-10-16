@@ -38,7 +38,8 @@ for (const [st, sfp, cfp, , name] of rows("county.txt")) {
 const places = new Map();
 for (const [st, sfp, pfp, , name, type, cls, func, cos] of rows("place.txt")) {
   const k = `${st}|${slug(strip(name))}`;
-  const incorporated = func === "A" && !/CENSUS DESIGNATED/i.test(type);
+  // Census class codes: C* incorporated places (including consolidated "balance" entities), U* and M* census places.
+  const incorporated = cls.startsWith("C");
   (places.get(k) ?? places.set(k, []).get(k)).push({
     fips: sfp + pfp,
     incorporated,
@@ -53,18 +54,43 @@ let c = 0,
 for (const f of readdirSync(root("../data/counties/"))) {
   const st = f.replace(".json", "");
   for (const e of JSON.parse(readFileSync(root(`../data/counties/${f}`), "utf8"))) {
-    const m = counties.get(`${st}|${slug(strip(e.county))}`) ?? [];
-    const hit = m.length === 1 ? m[0] : m.find((x) => slug(x.full) === slug(e.county));
+    // "Baltimore (city)" and "City of Richmond" are independent cities; "Baltimore" is the county of that name.
+    const wantsCity = /^city of\b|\(city\)$|\bcity$/i.test(e.county.trim());
+    const plain = e.county.replace(/^city of\s+/i, "").replace(/\s*\(city\)$/i, "");
+    const m = (counties.get(`${st}|${slug(strip(plain))}`) ?? []).filter(
+      (x) => /\scity$/i.test(x.full) === wantsCity,
+    );
+    const hit = m.length === 1 ? m[0] : undefined;
     if (hit) {
       out[`${st}/county/${slug(strip(e.county))}`] = { fips: hit.fips };
       c++;
     } else skipped.push(`${st} county ${e.county}`);
   }
 }
+// Consolidated governments and renamed places whose Census name differs from the common one.
+const PLACE_ALIASES = {
+  "CA|ventura": "San Buenaventura (Ventura) city",
+  "GA|athens": "Athens-Clarke County unified government (balance)",
+  "GA|augusta": "Augusta-Richmond County consolidated government (balance)",
+  "KY|lexington": "Lexington-Fayette urban county",
+  "MN|saint-paul": "St. Paul city",
+  "TN|nashville": "Nashville-Davidson metropolitan government (balance)",
+};
+const aliasRows = rows("place.txt");
 for (const f of readdirSync(root("../data/cities/"))) {
   const st = f.replace(".json", "");
   for (const e of JSON.parse(readFileSync(root(`../data/cities/${f}`), "utf8"))) {
-    let m = places.get(`${st}|${slug(strip(e.city))}`) ?? [];
+    const alias = PLACE_ALIASES[`${st}|${slug(e.city)}`];
+    let m = alias
+      ? aliasRows
+          .filter((r) => r[0] === st && r[4] === alias)
+          .map((r) => ({
+            fips: r[1] + r[2],
+            incorporated: r[6].startsWith("C"),
+            cos: r[8] ?? "",
+            full: r[4],
+          }))
+      : (places.get(`${st}|${slug(strip(e.city))}`) ?? []);
     if (m.length > 1) {
       const inc = m.filter((x) => x.incorporated);
       if (inc.length) m = inc;

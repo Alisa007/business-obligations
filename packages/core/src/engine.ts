@@ -265,6 +265,12 @@ function industryFromNaics(naics: string | undefined): Industry | undefined {
   if (/^62[123]/.test(naics)) return "healthcare";
   return undefined;
 }
+/** Renewal cycle in words, for licence-like items that recur on a fixed period. */
+const RENEWAL_INTERVAL: Partial<Record<ComplianceItem["frequency"], string>> = {
+  annual: "year",
+  biennial: "two years",
+  every_five_years: "five years",
+};
 const FEEDBACK_URL =
   "https://github.com/Alisa007/business-obligations/issues/new?template=data-correction.yml&title=";
 
@@ -306,6 +312,9 @@ export function evaluate(input: BusinessProfile, options: EvaluateOptions = {}):
         item.provenance = describeProvenance(provenanceFor(item, profile), asOf);
         item.jurisdictionId = jurisdictionId(item, profile);
         if (item.state && STATE_FIPS[item.state]) item.stateFips = STATE_FIPS[item.state];
+        const interval = RENEWAL_INTERVAL[item.frequency];
+        if (!item.renewal && interval && ["license", "permit", "registration"].includes(item.category))
+          item.renewal = `Renew every ${interval}${item.deadline ? `; due ${item.deadline}` : ""}`;
         const facts = placeFacts(item, profile);
         if (facts) {
           item.fips = facts.fips;
