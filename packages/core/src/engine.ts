@@ -6,7 +6,6 @@ import type {
   ResolvedProfile,
   Rule,
   Country,
-  Industry,
 } from "./types";
 import { stateFromZip } from "./zip";
 import { isState } from "./states";
@@ -16,6 +15,7 @@ import { dissolutionRules } from "./rules/dissolution";
 import { addDays, isIsoDate, todayIso } from "./iso";
 import { validateProfile, type ProfileIssue } from "./validate";
 import { localRules, premisesRules } from "./rules/local";
+import { industryFromNaics } from "./naics";
 import { industryRules } from "./rules/industry";
 import { nextDueDate } from "./dates";
 import { dueToRRule } from "./rrule";
@@ -94,18 +94,23 @@ export function resolveProfile(input: BusinessProfile): ResolvedProfile {
     throw new InvalidProfileError(`Unknown formation state "${input.formationState}"`);
   if (!input.city?.trim()) throw new InvalidProfileError("`city` is required");
   if (!input.county?.trim()) throw new InvalidProfileError("`county` is required");
-  if (input.industry === "alcohol" && !input.alcoholActivity)
+  // An explicit `industry` wins; otherwise the NAICS code decides, and may also say the activity or profession.
+  const fromNaics = input.industry ? undefined : industryFromNaics(input.naics);
+  const industry = input.industry ?? fromNaics?.industry ?? "general";
+  const alcoholActivity = input.alcoholActivity ?? fromNaics?.alcoholActivity;
+  const profession = input.profession ?? fromNaics?.profession;
+  if (industry === "alcohol" && !alcoholActivity)
     throw new InvalidProfileError('`alcoholActivity` is required when industry is "alcohol"');
-  if (input.industry === "cannabis" && !input.cannabisActivity)
+  if (industry === "cannabis" && !input.cannabisActivity)
     throw new InvalidProfileError('`cannabisActivity` is required when industry is "cannabis"');
-  if (input.industry === "transportation" && !input.commercialVehicles)
+  if (industry === "transportation" && !input.commercialVehicles)
     throw new InvalidProfileError('`commercialVehicles` is required when industry is "transportation"');
   const needsProfession =
     input.entityType === "pllc" ||
     input.entityType === "pc" ||
     input.entityType === "llp" ||
-    input.industry === "professional_services";
-  if (needsProfession && !input.profession)
+    industry === "professional_services";
+  if (needsProfession && !profession)
     throw new InvalidProfileError(
       '`profession` is required for pllc, pc, llp and the "professional_services" industry (use "other" if unlisted)',
     );
@@ -207,7 +212,9 @@ export function resolveProfile(input: BusinessProfile): ResolvedProfile {
     state,
     formationState,
     isFormed: input.isFormed ?? true,
-    industry: input.industry ?? industryFromNaics(input.naics) ?? "general",
+    industry,
+    alcoholActivity,
+    profession,
     employeeCount,
     fullTimeEmployeeCount: input.fullTimeEmployeeCount ?? employeeCount,
     hasEmployees: employeeCount > 0,
@@ -254,16 +261,6 @@ export interface ComplianceResult {
   disclaimer: string;
 }
 
-/** Industry implied by a NAICS code, for the sectors that map cleanly onto the bundled industries. */
-function industryFromNaics(naics: string | undefined): Industry | undefined {
-  if (!naics) return undefined;
-  if (naics.startsWith("23")) return "construction";
-  if (naics.startsWith("722")) return "restaurant";
-  if (naics.startsWith("44") || naics.startsWith("45")) return "retail";
-  if (naics.startsWith("531")) return "real_estate";
-  if (/^62[123]/.test(naics)) return "healthcare";
-  return undefined;
-}
 /** Renewal cycle in words, for licence-like items that recur on a fixed period. */
 const RENEWAL_INTERVAL: Partial<Record<ComplianceItem["frequency"], string>> = {
   annual: "year",

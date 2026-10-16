@@ -12,7 +12,7 @@ const ALLOWED: Record<EventName, readonly string[]> = {
   plan_generated: [
     "zip",
     "entityType",
-    "industry",
+    "naics",
     "profession",
     "employees",
     "owners",
@@ -35,7 +35,7 @@ const LOGS: Record<LogName, { level: "info" | "warn"; message: string; attribute
   plan_generated: {
     level: "info",
     message: "Compliance plan generated",
-    attributes: ["entityType", "industry", "isNew"],
+    attributes: ["entityType", "naics", "isNew"],
   },
   ics_downloaded: { level: "info", message: "Calendar downloaded", attributes: ["events"] },
   plan_generation_failed: {

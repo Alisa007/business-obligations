@@ -16,6 +16,11 @@ const budgets = [
     maxGzipKb: 450,
     note: "ZIP -> city/county/state lookup (subpath, loaded on demand)",
   },
+  {
+    file: "dist/naics.js",
+    maxGzipKb: 40,
+    note: "NAICS code search (subpath, loaded on demand)",
+  },
 ];
 
 let failed = false;

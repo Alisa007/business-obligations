@@ -182,7 +182,7 @@
     "naics": {
       "type": "string",
       "pattern": "^\\d{2,6}$",
-      "description": "NAICS code (2 to 6 digits) of the main activity; implies an industry for construction (23), food service (722), retail (44-45), real estate (531) and healthcare (621-623) when industry is not set."
+      "description": "NAICS code (2 to 6 digits) of the main activity. When industry is not set, the code decides it: construction (23), food service (722), retail (44-45), real estate (531), healthcare (621-623), childcare (6244), legal, accounting and architecture/engineering (5411-5413, which also set the profession) and alcohol (312121-4, 4248, 4453, 7224, which also set alcoholActivity)."
     },
     "activities": {
       "type": "array",

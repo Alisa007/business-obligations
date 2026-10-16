@@ -1,4 +1,4 @@
-import { ENTITY_TYPES, INDUSTRIES, PROFESSIONS, type FormValues } from "./plan";
+import { ENTITY_TYPES, PROFESSIONS, type FormValues } from "./plan";
 
 /** Everything in the left sidebar. The URL query string is the single source of truth for these values. */
 export interface SidebarState {
@@ -13,7 +13,7 @@ export const EMPTY_FORM: FormValues = {
   // engine treats an empty number as "unknown" and lists what would change.
   zip: "",
   entityType: "llc",
-  industry: "general",
+  naics: "",
   profession: "",
   employees: "",
   payroll: "",
@@ -34,11 +34,28 @@ const NUMBER = /^\d{0,12}\.?\d{0,2}$/;
 const oneOf = (value: string | null, options: Array<[string, string]>, fallback: string): string =>
   value !== null && options.some(([k]) => k === value) ? value : fallback;
 
+/** Links made before NAICS codes took over the industry list carry `industry=restaurant`; these are the codes that mean the same. */
+const LEGACY_INDUSTRY: Record<string, string> = {
+  retail: "44",
+  restaurant: "722",
+  construction: "23",
+  healthcare: "621",
+  real_estate: "531",
+  professional_services: "5411",
+  childcare: "6244",
+};
+const naicsFromQuery = (naics: string | null, legacyIndustry: string | null): string =>
+  naics !== null && /^\d{2,6}$/.test(naics)
+    ? naics
+    : naics === null
+      ? (LEGACY_INDUSTRY[legacyIndustry ?? ""] ?? "")
+      : "";
+
 /** Query parameter for each sidebar field, in the order they are written. */
 const TEXT = [
   ["zip", "zip"],
   ["entityType", "entity"],
-  ["industry", "industry"],
+  ["naics", "naics"],
   ["profession", "profession"],
   ["employees", "employees"],
   ["owners", "owners"],
@@ -71,7 +88,7 @@ export function parseQuery(search: string): SidebarState {
     form: {
       zip: (text("zip") ?? "").replace(/\D/g, "").slice(0, 5),
       entityType: oneOf(text("entity"), ENTITY_TYPES, EMPTY_FORM.entityType),
-      industry: oneOf(text("industry"), INDUSTRIES, EMPTY_FORM.industry),
+      naics: naicsFromQuery(text("naics"), text("industry")),
       profession: oneOf(text("profession"), PROFESSIONS, ""),
       employees: num("employees"),
       owners: num("owners"),

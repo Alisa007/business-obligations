@@ -83,6 +83,7 @@ export interface BusinessProfile {
   dissolutionDate?: string;
   /** Defaults to true. Set false for a business that is still being set up. */
   isFormed?: boolean;
+  /** Overrides what `naics` implies. Leave it out when you give a NAICS code. */
   industry?: Industry;
   alcoholActivity?: AlcoholActivity;
   cannabisActivity?: CannabisActivity;
@@ -124,7 +125,11 @@ export interface BusinessProfile {
   annualRevenue?: number;
   /** Expected annual net income (profit) of the business, USD. Defaults to 0. */
   annualNetIncome?: number;
-  /** Six-digit NAICS code of the main activity, for rules finer than `industry`. */
+  /**
+   * NAICS code (2 to 6 digits) of the main activity. The preferred way to say what the business does: it decides
+   * `industry` (and the alcohol activity or profession where the code says so) unless those are given. The
+   * `business-obligations/naics` subpath has the code list and a search.
+   */
   naics?: string;
   /** Free-form activity tags (for example "demolition", "roofing") that rules may match. */
   activities?: string[];

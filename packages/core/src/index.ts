@@ -17,6 +17,8 @@ export type { EvaluateOptions, ComplianceResult, Preview, ItemDiff } from "./eng
 export { RULESET_VERSION, BUNDLED_CHANGES, listChanges } from "./changes";
 export type { RuleChange, ChangeNotice, ChangeKind, ChangeFilter } from "./changes";
 export { stateFromZip } from "./zip";
+export { industryFromNaics } from "./naics";
+export type { NaicsMatch } from "./naics";
 export { nextDueDate } from "./dates";
 export { dueToRRule, parseRRule, toRRule } from "./rrule";
 export { STATES, STATE_CODES, indexCities, findCity, indexCounties, findCounty } from "./data";
