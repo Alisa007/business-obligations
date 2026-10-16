@@ -1,8 +1,38 @@
 [
   {
     "county": "Allegheny",
-    "status": "unverified",
-    "items": [],
+    "items": [
+      {
+        "id": "allegheny-pa.local-income-tax-registration",
+        "title": "Register with the Allegheny County local tax collector for earned income tax and local services tax",
+        "category": "registration",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
+        "frequency": "once",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      },
+      {
+        "id": "allegheny-pa.local-income-tax-remittance",
+        "title": "Remit local earned income tax and local services tax for Allegheny County worksites",
+        "category": "payment",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      },
+      {
+        "id": "allegheny-pa.local-income-tax-w2r",
+        "title": "File the W-2R earned income tax reconciliation for Allegheny County",
+        "category": "filing",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
+        "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      }
+    ],
     "checkedOn": "2026-10-16",
     "note": "Pennsylvania has no general business personal property tax. Allegheny County levies a 7% hotel room rental tax through the Treasurer's Special Tax Division (Hotel Tax Account Application), but only secondary sources were found for its return due date."
   },
@@ -26,6 +56,36 @@
             "description": "Operates a hotel, motel or short-term rental"
           }
         ]
+      },
+      {
+        "id": "berks-pa.local-income-tax-registration",
+        "title": "Register with the Berks County local tax collector for earned income tax and local services tax",
+        "category": "registration",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
+        "frequency": "once",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      },
+      {
+        "id": "berks-pa.local-income-tax-remittance",
+        "title": "Remit local earned income tax and local services tax for Berks County worksites",
+        "category": "payment",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      },
+      {
+        "id": "berks-pa.local-income-tax-w2r",
+        "title": "File the W-2R earned income tax reconciliation for Berks County",
+        "category": "filing",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
+        "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
       }
     ],
     "checkedOn": "2026-10-16",
@@ -51,6 +111,36 @@
             "description": "Operates a hotel, motel or short-term rental"
           }
         ]
+      },
+      {
+        "id": "bucks-pa.local-income-tax-registration",
+        "title": "Register with the Bucks County local tax collector for earned income tax and local services tax",
+        "category": "registration",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
+        "frequency": "once",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      },
+      {
+        "id": "bucks-pa.local-income-tax-remittance",
+        "title": "Remit local earned income tax and local services tax for Bucks County worksites",
+        "category": "payment",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      },
+      {
+        "id": "bucks-pa.local-income-tax-w2r",
+        "title": "File the W-2R earned income tax reconciliation for Bucks County",
+        "category": "filing",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
+        "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
       }
     ],
     "checkedOn": "2026-10-16",
@@ -76,6 +166,36 @@
             "description": "Operates a hotel, motel or short-term rental"
           }
         ]
+      },
+      {
+        "id": "chester-pa.local-income-tax-registration",
+        "title": "Register with the Chester County local tax collector for earned income tax and local services tax",
+        "category": "registration",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
+        "frequency": "once",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      },
+      {
+        "id": "chester-pa.local-income-tax-remittance",
+        "title": "Remit local earned income tax and local services tax for Chester County worksites",
+        "category": "payment",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      },
+      {
+        "id": "chester-pa.local-income-tax-w2r",
+        "title": "File the W-2R earned income tax reconciliation for Chester County",
+        "category": "filing",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
+        "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
       }
     ],
     "checkedOn": "2026-10-16",
@@ -101,6 +221,36 @@
             "description": "Operates a hotel, motel or short-term rental"
           }
         ]
+      },
+      {
+        "id": "cumberland-pa.local-income-tax-registration",
+        "title": "Register with the Cumberland County local tax collector for earned income tax and local services tax",
+        "category": "registration",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
+        "frequency": "once",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      },
+      {
+        "id": "cumberland-pa.local-income-tax-remittance",
+        "title": "Remit local earned income tax and local services tax for Cumberland County worksites",
+        "category": "payment",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      },
+      {
+        "id": "cumberland-pa.local-income-tax-w2r",
+        "title": "File the W-2R earned income tax reconciliation for Cumberland County",
+        "category": "filing",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
+        "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
       }
     ],
     "checkedOn": "2026-10-16",
@@ -126,6 +276,36 @@
             "description": "Operates a hotel, motel or short-term rental"
           }
         ]
+      },
+      {
+        "id": "dauphin-pa.local-income-tax-registration",
+        "title": "Register with the Dauphin County local tax collector for earned income tax and local services tax",
+        "category": "registration",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
+        "frequency": "once",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      },
+      {
+        "id": "dauphin-pa.local-income-tax-remittance",
+        "title": "Remit local earned income tax and local services tax for Dauphin County worksites",
+        "category": "payment",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      },
+      {
+        "id": "dauphin-pa.local-income-tax-w2r",
+        "title": "File the W-2R earned income tax reconciliation for Dauphin County",
+        "category": "filing",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
+        "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
       }
     ],
     "checkedOn": "2026-10-16",
@@ -151,6 +331,36 @@
             "description": "Operates a hotel, motel or short-term rental"
           }
         ]
+      },
+      {
+        "id": "delaware-pa.local-income-tax-registration",
+        "title": "Register with the Delaware County local tax collector for earned income tax and local services tax",
+        "category": "registration",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
+        "frequency": "once",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      },
+      {
+        "id": "delaware-pa.local-income-tax-remittance",
+        "title": "Remit local earned income tax and local services tax for Delaware County worksites",
+        "category": "payment",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      },
+      {
+        "id": "delaware-pa.local-income-tax-w2r",
+        "title": "File the W-2R earned income tax reconciliation for Delaware County",
+        "category": "filing",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
+        "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
       }
     ],
     "checkedOn": "2026-10-16",
@@ -158,22 +368,112 @@
   },
   {
     "county": "Erie",
-    "status": "unverified",
-    "items": [],
+    "items": [
+      {
+        "id": "erie-pa.local-income-tax-registration",
+        "title": "Register with the Erie County local tax collector for earned income tax and local services tax",
+        "category": "registration",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
+        "frequency": "once",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      },
+      {
+        "id": "erie-pa.local-income-tax-remittance",
+        "title": "Remit local earned income tax and local services tax for Erie County worksites",
+        "category": "payment",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      },
+      {
+        "id": "erie-pa.local-income-tax-w2r",
+        "title": "File the W-2R earned income tax reconciliation for Erie County",
+        "category": "filing",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
+        "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      }
+    ],
     "checkedOn": "2026-10-16",
     "note": "Pennsylvania has no general business personal property tax. Erie County's hotel tax rules were not found (searches returned Erie County, New York)."
   },
   {
     "county": "Fayette",
-    "status": "unverified",
     "note": "Pennsylvania has no general business personal property tax. Fayette County's hotel tax rules were not checked.",
-    "items": [],
+    "items": [
+      {
+        "id": "fayette-pa.local-income-tax-registration",
+        "title": "Register with the Fayette County local tax collector for earned income tax and local services tax",
+        "category": "registration",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
+        "frequency": "once",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      },
+      {
+        "id": "fayette-pa.local-income-tax-remittance",
+        "title": "Remit local earned income tax and local services tax for Fayette County worksites",
+        "category": "payment",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      },
+      {
+        "id": "fayette-pa.local-income-tax-w2r",
+        "title": "File the W-2R earned income tax reconciliation for Fayette County",
+        "category": "filing",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
+        "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      }
+    ],
     "checkedOn": "2026-10-16"
   },
   {
     "county": "Lancaster",
-    "status": "unverified",
-    "items": [],
+    "items": [
+      {
+        "id": "lancaster-pa.local-income-tax-registration",
+        "title": "Register with the Lancaster County local tax collector for earned income tax and local services tax",
+        "category": "registration",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
+        "frequency": "once",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      },
+      {
+        "id": "lancaster-pa.local-income-tax-remittance",
+        "title": "Remit local earned income tax and local services tax for Lancaster County worksites",
+        "category": "payment",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      },
+      {
+        "id": "lancaster-pa.local-income-tax-w2r",
+        "title": "File the W-2R earned income tax reconciliation for Lancaster County",
+        "category": "filing",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
+        "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      }
+    ],
     "checkedOn": "2026-10-16",
     "note": "Pennsylvania has no general business personal property tax. Lancaster County has a hotel room rental tax with a combined monthly report on the Treasurer's hotel tax page, but the due date was not found."
   },
@@ -197,6 +497,36 @@
             "description": "Operates a hotel, motel or short-term rental"
           }
         ]
+      },
+      {
+        "id": "lehigh-pa.local-income-tax-registration",
+        "title": "Register with the Lehigh County local tax collector for earned income tax and local services tax",
+        "category": "registration",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
+        "frequency": "once",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      },
+      {
+        "id": "lehigh-pa.local-income-tax-remittance",
+        "title": "Remit local earned income tax and local services tax for Lehigh County worksites",
+        "category": "payment",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      },
+      {
+        "id": "lehigh-pa.local-income-tax-w2r",
+        "title": "File the W-2R earned income tax reconciliation for Lehigh County",
+        "category": "filing",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
+        "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
       }
     ],
     "checkedOn": "2026-10-16",
@@ -204,22 +534,112 @@
   },
   {
     "county": "Luzerne",
-    "status": "unverified",
-    "items": [],
+    "items": [
+      {
+        "id": "luzerne-pa.local-income-tax-registration",
+        "title": "Register with the Luzerne County local tax collector for earned income tax and local services tax",
+        "category": "registration",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
+        "frequency": "once",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      },
+      {
+        "id": "luzerne-pa.local-income-tax-remittance",
+        "title": "Remit local earned income tax and local services tax for Luzerne County worksites",
+        "category": "payment",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      },
+      {
+        "id": "luzerne-pa.local-income-tax-w2r",
+        "title": "File the W-2R earned income tax reconciliation for Luzerne County",
+        "category": "filing",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
+        "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      }
+    ],
     "checkedOn": "2026-10-16",
     "note": "Pennsylvania has no general business personal property tax. Luzerne County's hotel tax rules were not found."
   },
   {
     "county": "Montgomery",
-    "status": "unverified",
-    "items": [],
+    "items": [
+      {
+        "id": "montgomery-pa.local-income-tax-registration",
+        "title": "Register with the Montgomery County local tax collector for earned income tax and local services tax",
+        "category": "registration",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
+        "frequency": "once",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      },
+      {
+        "id": "montgomery-pa.local-income-tax-remittance",
+        "title": "Remit local earned income tax and local services tax for Montgomery County worksites",
+        "category": "payment",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      },
+      {
+        "id": "montgomery-pa.local-income-tax-w2r",
+        "title": "File the W-2R earned income tax reconciliation for Montgomery County",
+        "category": "filing",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
+        "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      }
+    ],
     "checkedOn": "2026-10-16",
     "note": "Pennsylvania has no general business personal property tax. Montgomery County's hotel tax rules were not found."
   },
   {
     "county": "Northampton",
-    "status": "unverified",
-    "items": [],
+    "items": [
+      {
+        "id": "northampton-pa.local-income-tax-registration",
+        "title": "Register with the Northampton County local tax collector for earned income tax and local services tax",
+        "category": "registration",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
+        "frequency": "once",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      },
+      {
+        "id": "northampton-pa.local-income-tax-remittance",
+        "title": "Remit local earned income tax and local services tax for Northampton County worksites",
+        "category": "payment",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      },
+      {
+        "id": "northampton-pa.local-income-tax-w2r",
+        "title": "File the W-2R earned income tax reconciliation for Northampton County",
+        "category": "filing",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
+        "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      }
+    ],
     "checkedOn": "2026-10-16",
     "note": "Pennsylvania has no general business personal property tax. Northampton County levies a 4% hotel tax, but its return due date was not found."
   },
@@ -243,6 +663,36 @@
             "description": "Operates a hotel, motel or short-term rental"
           }
         ]
+      },
+      {
+        "id": "philadelphia-pa.wage-tax-registration",
+        "title": "Register for the Philadelphia Wage Tax as an employer",
+        "category": "registration",
+        "authority": "Philadelphia Department of Revenue",
+        "description": "Employers with employees working in or residing in Philadelphia withhold the city's Wage Tax and register through the Philadelphia Tax Center; all Wage Tax filings are made there.",
+        "frequency": "once",
+        "url": "https://www.phila.gov/services/payments-assistance-taxes/taxes/business-taxes/business-taxes-by-type/wage-tax-employers/",
+        "appliesTo": ["employees"]
+      },
+      {
+        "id": "philadelphia-pa.wage-tax-return",
+        "title": "File and deposit the Philadelphia Wage Tax",
+        "category": "payment",
+        "authority": "Philadelphia Department of Revenue",
+        "description": "How often depends on the Wage Tax withheld each month: under $350 file quarterly (2026 dates: April 30, July 31, October 31 and February 1, 2027); $350 to under $16,000 monthly, about two to three weeks after the month ends; $16,000 or more semi-monthly or weekly. The city publishes each year's schedule. The employer withholding rate was not confirmed.",
+        "frequency": "monthly",
+        "url": "https://www.phila.gov/documents/wage-tax-due-dates/",
+        "appliesTo": ["employees"]
+      },
+      {
+        "id": "philadelphia-pa.wage-tax-w2",
+        "title": "Submit W-2s and reconcile the Philadelphia Wage Tax",
+        "category": "filing",
+        "authority": "Philadelphia Department of Revenue",
+        "description": "Employers submit W-2s to the city by the last day of February each year.",
+        "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
+        "url": "https://www.phila.gov/documents/w-2-submission-instructions/",
+        "appliesTo": ["employees"]
       }
     ],
     "checkedOn": "2026-10-16",
@@ -250,17 +700,77 @@
   },
   {
     "county": "Schuylkill",
-    "status": "unverified",
     "note": "Pennsylvania has no general business personal property tax. Schuylkill County's hotel tax rules were not checked.",
-    "items": [],
+    "items": [
+      {
+        "id": "schuylkill-pa.local-income-tax-registration",
+        "title": "Register with the Schuylkill County local tax collector for earned income tax and local services tax",
+        "category": "registration",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
+        "frequency": "once",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      },
+      {
+        "id": "schuylkill-pa.local-income-tax-remittance",
+        "title": "Remit local earned income tax and local services tax for Schuylkill County worksites",
+        "category": "payment",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      },
+      {
+        "id": "schuylkill-pa.local-income-tax-w2r",
+        "title": "File the W-2R earned income tax reconciliation for Schuylkill County",
+        "category": "filing",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
+        "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      }
+    ],
     "checkedOn": "2026-10-16"
   },
   {
     "county": "Washington",
-    "status": "unverified",
     "note": "Pennsylvania has no general business personal property tax. Washington County's hotel tax rules were not checked.",
     "sourceUrl": "https://www.washcopa.gov/treasurer",
-    "items": [],
+    "items": [
+      {
+        "id": "washington-pa.local-income-tax-registration",
+        "title": "Register with the Washington County local tax collector for earned income tax and local services tax",
+        "category": "registration",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
+        "frequency": "once",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      },
+      {
+        "id": "washington-pa.local-income-tax-remittance",
+        "title": "Remit local earned income tax and local services tax for Washington County worksites",
+        "category": "payment",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      },
+      {
+        "id": "washington-pa.local-income-tax-w2r",
+        "title": "File the W-2R earned income tax reconciliation for Washington County",
+        "category": "filing",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
+        "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      }
+    ],
     "checkedOn": "2026-10-16"
   },
   {
@@ -283,6 +793,36 @@
             "description": "Operates a hotel, motel or short-term rental"
           }
         ]
+      },
+      {
+        "id": "westmoreland-pa.local-income-tax-registration",
+        "title": "Register with the Westmoreland County local tax collector for earned income tax and local services tax",
+        "category": "registration",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
+        "frequency": "once",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      },
+      {
+        "id": "westmoreland-pa.local-income-tax-remittance",
+        "title": "Remit local earned income tax and local services tax for Westmoreland County worksites",
+        "category": "payment",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      },
+      {
+        "id": "westmoreland-pa.local-income-tax-w2r",
+        "title": "File the W-2R earned income tax reconciliation for Westmoreland County",
+        "category": "filing",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
+        "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
       }
     ],
     "checkedOn": "2026-10-16",
@@ -290,8 +830,38 @@
   },
   {
     "county": "York",
-    "status": "unverified",
-    "items": [],
+    "items": [
+      {
+        "id": "york-pa.local-income-tax-registration",
+        "title": "Register with the York County local tax collector for earned income tax and local services tax",
+        "category": "registration",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
+        "frequency": "once",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      },
+      {
+        "id": "york-pa.local-income-tax-remittance",
+        "title": "Remit local earned income tax and local services tax for York County worksites",
+        "category": "payment",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      },
+      {
+        "id": "york-pa.local-income-tax-w2r",
+        "title": "File the W-2R earned income tax reconciliation for York County",
+        "category": "filing",
+        "authority": "Local tax collector for the worksite's tax collection district",
+        "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
+        "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
+        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "appliesTo": ["employees"]
+      }
+    ],
     "checkedOn": "2026-10-16",
     "note": "Pennsylvania has no general business personal property tax. York County's hotel room rental tax rules were not found."
   }
