@@ -1,6 +1,8 @@
 import { describe, expect, it } from "vitest";
 // @ts-expect-error plain JS module
-import { bumpVersion, decideBump, parseSubject, renderGenerated } from "../scripts/auto-release.mjs";
+import * as autoRelease from "../scripts/auto-release.mjs";
+
+const { applyChangelog, bumpVersion, decideBump, parseSubject, renderGenerated } = autoRelease;
 
 const c = (subject: string, body = "") => parseSubject(subject, body);
 
@@ -48,5 +50,20 @@ describe("auto-release", () => {
       "### Breaking changes\n\n- rename x\n\n### Added\n\n- **cli:** add --json\n\n### Fixed\n\n- ZIP lookup",
     );
     expect(renderGenerated([c("docs: readme")])).toBe("");
+  });
+
+  it("moves hand-written Unreleased notes and generated entries under the new version", () => {
+    const commits = [c("feat(cli): add --json"), c("fix: ZIP lookup"), c("docs: readme")];
+    const log =
+      "# Changelog\n\n## [Unreleased]\n\n### Changed\n\n- Hand-written note.\n\n## [0.2.0] - 2026-10-13\n\n- Old.\n";
+    const out = applyChangelog(log, "0.3.0", "2026-11-01", commits);
+    expect(out).toContain(
+      "## [Unreleased]\n\n## [0.3.0] - 2026-11-01\n\n### Changed\n\n- Hand-written note.\n\n### Added",
+    );
+    expect(out).toContain("- **cli:** add --json");
+    expect(out).toContain("## [0.2.0] - 2026-10-13");
+    expect(applyChangelog("## [Unreleased]\n\n## [0.2.0] - x\n", "0.2.1", "2026-11-01", [])).toContain(
+      "Maintenance release.",
+    );
   });
 });

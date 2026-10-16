@@ -156,23 +156,23 @@ One-time setup:
    reviewer's approval, and the build job installs dependencies with scripts disabled and never holds publish rights.
    Tags `v*` cannot be changed or deleted (ruleset "Protect release tags"); pushing a tag does not publish anything.
 
-Releases are automatic and need no extra secrets. Merging a pull request to `main` publishes a new version when it
-contains a releasable change:
+Releases are automatic and need no extra secrets. Contributing a releasable change is all it takes:
 
 1. **Title your PR as a Conventional Commit** (CI checks it, and squash merge makes it the commit subject):
    `feat(scope): ...` bumps the minor version, `fix(...)`, `perf(...)` and `revert(...)` bump the patch version, and
    `feat!: ...` (or a `BREAKING CHANGE:` footer) is breaking: major, or minor while the version is below 1.0.
    `docs`, `chore`, `ci`, `build`, `test`, `refactor` and `style` do not release by themselves. Only commits that
    touch `packages/core` count, so playground-only changes never release the library.
-2. On merge, the Release workflow takes the last `vX.Y.Z` tag as the current version, reads the PR titles since then and
-   decides the next one. It runs the checks, packs and smoke-tests the tarball, waits for approval of the `npm`
-   environment, publishes with provenance and creates the GitHub release for `vX.Y.Z` (which creates the tag), with
-   generated release notes.
-3. Nothing is committed back to `main`: the version of record is the tag and the release page, so the `version` in
-   `packages/core/package.json` is only a starting point and is set during the release build. Hand-written highlights
-   still go in `CHANGELOG.md`.
-4. Rehearse any time: Actions, Release, Run workflow with "dry run" on prints the version it would release.
-5. To release without waiting for approval, remove the required reviewer from the `npm` environment (Settings,
+2. After such a PR merges, the Release workflow opens (or updates) **one** pull request,
+   `chore(release): vX.Y.Z`, that sets the version in `packages/core/package.json` and adds the generated section to
+   `CHANGELOG.md`. Hand-written notes under Unreleased are kept and merged into that section. It starts CI on its
+   branch and enables auto-merge, so it merges itself once the required checks pass.
+3. Merging that PR publishes: the workflow runs the checks, packs and smoke-tests the tarball, waits for approval of the
+   `npm` environment, publishes to npm with provenance and creates the `vX.Y.Z` GitHub release (which creates the tag
+   at the release commit). Version, changelog, tag and npm always agree.
+4. Rehearse any time: Actions, Release, Run workflow with "dry run" on prints the version it would release; turn dry
+   run off to open the release pull request on demand.
+5. To publish without waiting for approval, remove the required reviewer from the `npm` environment (Settings,
    Environments, npm).
 
 Other one-time setup: enable GitHub Pages (Settings, Pages, Source: GitHub Actions) so the playground deploys on each
