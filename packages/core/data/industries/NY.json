@@ -348,5 +348,156 @@
     "checkedOn": "2026-10-16",
     "frequency": "ongoing",
     "renewal": "Every three years, with 45 hours of continuing education"
+  },
+  {
+    "id": "ny.food-processing-license",
+    "title": "Obtain a New York food processing establishment license",
+    "category": "license",
+    "authority": "NYS Department of Agriculture and Markets",
+    "description": "Any business that makes food for people needs an Article 20-C license, including manufacturers, and stores that cook, slice deli meat or make sandwiches or salads. The two-year fee is $400, or $175 for an independent operation with fewer than 10 full-time employees, and the premises must pass an inspection with an A grade. Licenses cannot be transferred to a new owner or location.",
+    "naics": ["311", "4451", "4452"],
+    "appliesTo": ["all"],
+    "url": "https://agriculture.ny.gov/food-safety/application-food-processing-establishment-license-article-20-c",
+    "checkedOn": "2026-10-16",
+    "frequency": "biennial",
+    "renewal": "Every two years",
+    "exemptions": [
+      "Stores that sell only prepackaged food (they need a retail food store license instead)",
+      "Some Liquor Authority farm licensees and honey, maple syrup and hop processors, which must still follow good manufacturing practices"
+    ]
+  },
+  {
+    "id": "ny.retail-food-store-license",
+    "title": "Obtain a New York retail food store license",
+    "category": "license",
+    "authority": "NYS Department of Agriculture and Markets",
+    "description": "A store that sells only prepackaged foods needing refrigeration, such as milk, cheese or meat, needs a retail food store license under Article 28. A store that also prepares food needs the Article 20-C food processing license.",
+    "naics": ["4451"],
+    "appliesTo": ["all"],
+    "url": "https://agriculture.ny.gov/food-safety/application-retail-food-store-license-article-28",
+    "checkedOn": "2026-10-16",
+    "frequency": "ongoing"
+  },
+  {
+    "id": "ny.tobacco-retail-dealer-registration",
+    "title": "Register and renew a New York cigarette and tobacco retail dealer certificate",
+    "category": "registration",
+    "authority": "NYS Department of Taxation and Finance",
+    "description": "A retailer needs a certificate of registration for each location (and each vending machine) before selling cigarettes or tobacco products, and needs a sales tax Certificate of Authority first. Renewal costs $300 per location, is filed online from September 1 to 20 for the following calendar year, and a lapse means the business cannot legally buy or sell. Selling without registration risks a civil fine of $5,000 to $25,000.",
+    "naics": ["459991"],
+    "appliesTo": ["all"],
+    "url": "https://www.tax.ny.gov/bus/cig/existing-business.htm",
+    "checkedOn": "2026-10-16",
+    "rrule": "FREQ=YEARLY;BYMONTH=9;BYMONTHDAY=20",
+    "opens": {
+      "month": 9,
+      "day": 1
+    }
+  },
+  {
+    "id": "ny.vapor-dealer-registration",
+    "title": "Register and renew a New York vapor products dealer certificate",
+    "category": "registration",
+    "authority": "NYS Department of Taxation and Finance",
+    "description": "Selling vapor products at retail needs its own registration, separate from the cigarette and tobacco one, for each location and vending machine, at $300 each, after the sales tax Certificate of Authority. Certificates last one calendar year and renew online from September 1 to 20, and the 20% supplemental sales tax is collected on sales.",
+    "naics": ["459991"],
+    "appliesTo": ["all"],
+    "url": "https://www.tax.ny.gov/bus/vpt/",
+    "checkedOn": "2026-10-16",
+    "rrule": "FREQ=YEARLY;BYMONTH=9;BYMONTHDAY=20",
+    "opens": {
+      "month": 9,
+      "day": 1
+    }
+  },
+  {
+    "id": "ny.petroleum-bulk-storage-registration",
+    "title": "Register petroleum storage tanks with NY DEC",
+    "category": "registration",
+    "authority": "NYS Department of Environmental Conservation",
+    "description": "A facility with petroleum storage over the registration threshold registers its tanks under the Petroleum Bulk Storage program and renews every five years from the date of the last certificate. The fee depends on total capacity (nothing up to 1,100 gallons, $100 up to 2,000, $300 up to 5,000 and $500 up to 400,000) and covers the five years. A new owner must register within 30 days of buying the property.",
+    "naics": ["4571"],
+    "appliesTo": ["all"],
+    "url": "https://dec.ny.gov/environmental-protection/hazardous-substance-bulk-storage/forms-instructions/pbs-registration-renewal-faq",
+    "checkedOn": "2026-10-16",
+    "frequency": "every_five_years",
+    "renewal": "Every five years, by check or money order"
+  },
+  {
+    "id": "ny.asbestos-handling-license",
+    "title": "Obtain a New York asbestos handling license",
+    "category": "license",
+    "authority": "NYS Department of Labor, License and Certification Unit",
+    "description": "A firm doing asbestos abatement, project design, monitoring, inspection or air sampling needs its own license, and its workers need individual certificates. The license lasts one year, costing $500 originally and $300 to renew, and changes of address, owners, supervisors or insurance are reported within 30 days.",
+    "naics": ["562910"],
+    "appliesTo": ["all"],
+    "url": "https://dol.ny.gov/application-asbestos-handling-license-sh430",
+    "checkedOn": "2026-10-16",
+    "frequency": "annual",
+    "renewal": "Every year, with a renewal notice about two months before expiry"
+  },
+  {
+    "id": "ny.child-day-care-license",
+    "title": "License a child day care program with NY OCFS",
+    "category": "license",
+    "authority": "NYS Office of Children and Family Services",
+    "description": "Child day care programs are licensed or registered by OCFS through its online FAMS system, and an inspection comes before each renewal. Owners and staff need fingerprint background checks at least every five years, and providers complete training, including 30 hours every two years.",
+    "naics": ["624410"],
+    "appliesTo": ["all"],
+    "url": "https://ocfs.ny.gov/programs/childcare/providers/",
+    "checkedOn": "2026-10-16",
+    "frequency": "ongoing",
+    "renewal": "Renewal application in FAMS, with an inspection first"
+  },
+  {
+    "id": "ny.highway-use-tax-registration",
+    "title": "Get a New York highway use tax certificate and decal for each heavy truck",
+    "category": "registration",
+    "authority": "NYS Department of Taxation and Finance",
+    "description": "Each truck, tractor or other self-propelled vehicle over 18,000 pounds gross weight (or over 8,000 pounds unloaded for trucks and 4,000 for tractors if reporting on the unloaded method) needs a certificate of registration and decal before driving on New York public highways. The fee is $1.50 per vehicle.",
+    "naics": ["484"],
+    "appliesTo": ["all"],
+    "url": "https://www.tax.ny.gov/bus/hut/huidx.htm",
+    "checkedOn": "2026-10-16",
+    "frequency": "once",
+    "deadline": "Before operating each vehicle on New York highways"
+  },
+  {
+    "id": "ny.waste-transporter-permit",
+    "title": "Obtain a New York waste transporter permit",
+    "category": "permit",
+    "authority": "NYS Department of Environmental Conservation",
+    "description": "Anyone transporting regulated waste in New York needs a Part 364 permit or registration (Part 381 for radioactive waste), with proof of workers' compensation insurance and larger liability cover for hazardous or waste oil loads. Renewals go in at least 30 days before expiry, and the permit cannot be transferred.",
+    "naics": ["562111", "562112", "562119"],
+    "appliesTo": ["all"],
+    "url": "https://dec.ny.gov/environmental-protection/waste-management/waste-transporters",
+    "checkedOn": "2026-10-16",
+    "frequency": "ongoing",
+    "renewal": "At least 30 days before the permit expires"
+  },
+  {
+    "id": "ny.waste-transporter-annual-report",
+    "title": "File the annual waste transporter volume report",
+    "category": "filing",
+    "authority": "NYS Department of Environmental Conservation",
+    "description": "A permitted waste transporter reports the waste volumes it carried, by destination, each year, and pays the annual regulatory fee, with nonpayment a ground for suspending the permit.",
+    "naics": ["562111", "562112", "562119"],
+    "appliesTo": ["all"],
+    "url": "https://dec.ny.gov/environmental-protection/waste-management/waste-transporters",
+    "checkedOn": "2026-10-16",
+    "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1"
+  },
+  {
+    "id": "ny.pharmacy-registration",
+    "title": "Register a pharmacy with the NY State Education Department",
+    "category": "registration",
+    "authority": "NYS Education Department, Office of the Professions",
+    "description": "A pharmacy is registered for its address, with a $345 application fee and a $260 fee every three years, and the registration is displayed in the store. Changes of location, name, owners or officers are reported to the Board of Pharmacy, within 30 days for corporate officers and holders of 10% or more of the stock. Applications are expected 10 to 14 weeks before opening.",
+    "naics": ["456110"],
+    "appliesTo": ["all"],
+    "url": "https://www.op.nysed.gov/professions/pharmacy-establishments/information/registration-application-requirements",
+    "checkedOn": "2026-10-16",
+    "frequency": "ongoing",
+    "renewal": "Every three years"
   }
 ]
