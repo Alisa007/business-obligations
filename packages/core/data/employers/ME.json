@@ -1,0 +1,41 @@
+[
+  {
+    "id": "me.maine-merit-registration",
+    "title": "Register with the Maine Retirement Investment Trust (MERIT) or certify a retirement plan exemption",
+    "category": "registration",
+    "authority": "Maine Retirement Savings Board (Maine State Treasurer)",
+    "description": "Employers with five or more Maine employees in business at least two years must register on meritsaves.com or exempt themselves. Employers who newly met the criteria in 2025 had until June 30, 2025; fines per employee began in 2025 and rise over time (a bill to lower the threshold was pending).",
+    "frequency": "ongoing",
+    "url": "https://www.maine.gov/treasurer/maine%20retirement%20savings%20board",
+    "appliesTo": ["employees"],
+    "checkedOn": "2026-10-16",
+    "appliesWhen": [
+      {
+        "field": "employeeCount",
+        "op": ">=",
+        "value": 5,
+        "description": "5 or more employees in the state"
+      }
+    ],
+    "exemptions": ["Employers that sponsor a qualified retirement plan (they still certify the exemption)"]
+  },
+  {
+    "id": "me.harassment-prevention-training",
+    "title": "Train new employees on sexual harassment within one year of hire",
+    "category": "recordkeeping",
+    "authority": "Maine Human Rights Commission",
+    "description": "Employers with 15 or more employees must give training to new employees within one year of hire and provide supervisors with additional training.",
+    "frequency": "ongoing",
+    "url": "https://www.maine.gov/mhrc",
+    "appliesTo": ["employees"],
+    "checkedOn": "2026-10-16",
+    "appliesWhen": [
+      {
+        "field": "employeeCount",
+        "op": ">=",
+        "value": 15,
+        "description": "15 or more employees in the state"
+      }
+    ]
+  }
+]

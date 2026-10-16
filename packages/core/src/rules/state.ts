@@ -2,6 +2,8 @@ import { describeFee, feeCost } from "../fee";
 import { resolveSchedule } from "../rrule";
 import type { ItemDraft, Presence, ResolvedProfile, Rule } from "../types";
 import { professionBoard, stateInfo as info } from "../data";
+import { EMPLOYER_ITEMS } from "../data/employers";
+import { applicable, extras } from "./local";
 import type { BoardRef } from "../data";
 import type { EntityTaxDetail, ReportRule } from "../data/types";
 import { isCorpLike, isLlcLike, isLlcSubtype, isProfessionalEntity, isSeparateEntity } from "../entity";
@@ -558,6 +560,36 @@ export function salesStates(p: ResolvedProfile): Array<{ x: Presence; reason: st
 }
 
 export const extraStateRules: Rule[] = [
+  {
+    id: "state.employer-mandates",
+    description:
+      "State employer mandates that depend on headcount: retirement plan registration, E-Verify and harassment training (see data/employers/)",
+    inputs: ["employeeCount", "multistate"],
+    when: (p) => p.presence.some((x) => x.employeeCount > 0 && (EMPLOYER_ITEMS[x.state]?.length ?? 0) > 0),
+    items: (p) =>
+      p.presence
+        .filter((x) => x.employeeCount > 0)
+        .flatMap((x) =>
+          applicable(EMPLOYER_ITEMS[x.state] ?? [], {
+            ...p,
+            state: x.state,
+            employeeCount: x.employeeCount,
+            hasEmployees: true,
+          }).map((it) => ({
+            key: it.id,
+            title: it.title,
+            category: it.category,
+            jurisdiction: "state" as const,
+            state: x.state,
+            authority: it.authority,
+            description: it.description,
+            ...resolveSchedule(it),
+            url: it.url,
+            ...extras(it, undefined),
+            reason: `${x.employeeCount} employees in ${x.state}`,
+          })),
+        ),
+  },
   {
     id: "state.paid-sick-leave",
     description: "Statewide paid sick leave mandates",

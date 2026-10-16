@@ -1,0 +1,22 @@
+[
+  {
+    "id": "mn.minnesota-secure-choice-registration",
+    "title": "Register with Minnesota Secure Choice or certify a retirement plan exemption",
+    "category": "registration",
+    "authority": "Minnesota Secure Choice Retirement Program Board",
+    "description": "Private employers with five or more employees and no qualified plan must enroll in the program or file an exemption, on a staggered schedule: 100 or more employees by June 30, 2026, down to 5 to 9 employees by June 30, 2028. Sources conflict on penalties (up to $100 or up to $500 per employee after a warning period).",
+    "frequency": "ongoing",
+    "url": "https://www.mn.gov/scrb",
+    "appliesTo": ["employees"],
+    "checkedOn": "2026-10-16",
+    "appliesWhen": [
+      {
+        "field": "employeeCount",
+        "op": ">=",
+        "value": 5,
+        "description": "5 or more employees in the state"
+      }
+    ],
+    "exemptions": ["Employers that sponsor a qualified retirement plan (they still certify the exemption)"]
+  }
+]

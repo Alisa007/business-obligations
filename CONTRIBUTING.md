@@ -168,6 +168,16 @@ belong to a real 2022 NAICS code (the tests check it), and `npm run check` valid
 An item issued by a city or county rather than the state (New York City's DCWP, DOHMH and TLC licences) sets
 `"jurisdiction": "city"` and scopes itself with `appliesWhen` on `county`, so it shows only inside that place.
 
+## Adding employer mandates
+
+What a state requires of employers by headcount (state retirement plan registration, E-Verify, harassment training) lives
+in `data/employers/<STATE>.json`: the same items as a city file, with `appliesTo: ["employees"]`, `checkedOn` and the
+official page in `url`. The headcount goes in `appliesWhen` on `employeeCount` (`{ "field": "employeeCount", "op": ">=",
+"value": 5 }`), and it is counted in that state, so a multi-state business gets a state's items only when it has enough
+employees there. Ids start with the state code (`ca.calsavers-registration`). Phase-in dates that have passed belong in
+the description, because the obligation continues for new employers. `npm run check` validates the file against
+`schema/employer-items.schema.json`; a new state's file also needs a line in `src/data/employers.ts`.
+
 ## Adding a country
 
 Add a rule pack under `src/rules/<country>/`, register it in `RULE_PACKS` in `src/engine.ts`, extend the `Country`
