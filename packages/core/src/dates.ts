@@ -60,12 +60,12 @@ export function nextDueDate(due: Due, ctx: DueContext): string | undefined {
       const fy = Number(ctx.formationDate.slice(0, 4));
       const day = (y: number) =>
         due.point === "start_of_month" ? 1 : due.point === "end_of_month" ? lastDay(y, fm) : fd;
-      // Annual reports are first due in the year after formation; biennial cycles repeat every two years;
-      // longer cycles (five-year statements) are first due on the Nth anniversary.
+      // Annual reports are first due in the year after formation. A cycle of N years (biennial statements,
+      // five-year statements) is first due on the Nth anniversary and every N years after.
       const long = ctx.intervalYears !== undefined && ctx.intervalYears > 2;
       const step = long ? ctx.intervalYears! : ctx.biennial ? 2 : 1;
       const startYear = Number(ctx.asOf.slice(0, 4));
-      for (let y = fy + (long ? step : 1); y <= startYear + step + 2; y += step) {
+      for (let y = fy + step; y <= startYear + step + 2; y += step) {
         const d = iso(y, fm, Math.min(day(y), lastDay(y, fm)));
         if (d >= ctx.asOf) return d;
       }
@@ -121,8 +121,7 @@ export function occurrencesBetween(
       const day = (y: number) =>
         due.point === "start_of_month" ? 1 : due.point === "end_of_month" ? lastDay(y, fm) : fd;
       const step = long ? ctx.intervalYears! : ctx.biennial ? 2 : 1;
-      for (let y = fy + (long ? step : 1); y <= y1; y += step)
-        push(iso(y, fm, Math.min(day(y), lastDay(y, fm))));
+      for (let y = fy + step; y <= y1; y += step) push(iso(y, fm, Math.min(day(y), lastDay(y, fm))));
       break;
     }
   }

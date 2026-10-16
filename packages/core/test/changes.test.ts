@@ -104,6 +104,16 @@ describe("upcoming and recent changes", () => {
     expect(r.upcomingChanges.some((c) => c.id.startsWith("pa-"))).toBe(false);
   });
 
+  it("shows a state's rule change only to businesses that have items from the rules it names", () => {
+    const va = { ...base, zip: "23219", city: "Richmond", county: "Richmond" } as const;
+    const ids = (p: object) =>
+      evaluate(p as typeof va, { asOf: "2026-10-13" }).upcomingChanges.map((c) => c.id);
+    expect(ids(va)).not.toContain("va-adult-use-retail-licensing-2027-07-01");
+    expect(ids({ ...va, industry: "cannabis", cannabisActivity: "retail" })).toContain(
+      "va-adult-use-retail-licensing-2027-07-01",
+    );
+  });
+
   it("includes a state when the business registers there via multistate", () => {
     const r = evaluate({ ...base, multistate: [{ state: "PA", employeeCount: 1 }] }, { asOf: "2026-10-13" });
     expect(r.upcomingChanges.some((c) => c.id.startsWith("pa-"))).toBe(true);
