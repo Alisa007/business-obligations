@@ -119,16 +119,19 @@ interface AnalyzeOptions {
 /** Runs every analysis the playground shows. Throws the library's errors for the UI to display. */
 export function analyze(profile: BusinessProfile, options: AnalyzeOptions = {}) {
   const asOf = options.asOf || today();
-  const result = evaluate({ ...profile, isFormed: !options.isNew }, { asOf });
+  // Every view answers for the same business: a new one has not formed yet, so its annual reports and returns
+  // are not on the calendar and "what if" starts from the unformed profile.
+  const current = { ...profile, isFormed: !options.isNew };
+  const result = evaluate(current, { asOf });
   const plan = planLaunch(profile, { startDate: asOf, openingDate: options.openingDate || undefined });
-  const calendar = buildCalendar(profile, { from: asOf, to: addYears(asOf, 1) });
+  const calendar = buildCalendar(current, { from: asOf, to: addYears(asOf, 1) });
   return {
     result,
     plan,
     events: calendar.events,
     ics: toICS(calendar.events, { calendarName: "Compliance deadlines" }),
     costs: estimateCosts(result.items, { profile: result.profile, ownerCount: result.profile.ownerCount }),
-    analysis: analyzeInputs(profile, { asOf }),
+    analysis: analyzeInputs(current, { asOf }),
   };
 }
 

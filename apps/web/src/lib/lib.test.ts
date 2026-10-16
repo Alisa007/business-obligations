@@ -56,6 +56,15 @@ describe("playground logic", () => {
     expect(d.costs.currency).toBe("USD");
     expect(Array.isArray(d.analysis.sensitivity)).toBe(true);
   });
+
+  it("a new business has no income tax return on the calendar, a formed one does", () => {
+    const profile = buildProfile(form, place);
+    const asOf = "2026-10-13";
+    const returns = (isNew: boolean) =>
+      analyze(profile, { asOf, isNew }).events.filter((e) => e.itemId === "fed.income-tax-return");
+    expect(returns(true)).toHaveLength(0);
+    expect(returns(false).length).toBeGreaterThan(0);
+  });
 });
 
 describe("formatting", () => {
