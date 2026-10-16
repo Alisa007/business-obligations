@@ -66,15 +66,40 @@ describe("the state duties rule", () => {
     evaluate(p, { asOf: "2026-10-16" }).items.filter((i) => i.ruleId === "state.duties");
 
   it("gives every business its home state's unclaimed property report", () => {
-    const items = found(base("DE"));
-    expect(items.map((i) => i.title)).toEqual([
-      "File the annual unclaimed property holder report (Delaware)",
-    ]);
-    expect(items[0]?.nextDue).toBe("2027-03-01");
+    const report = found(base("DE")).find((i) => /unclaimed property/.test(i.title));
+    expect(report?.title).toBe("File the annual unclaimed property holder report (Delaware)");
+    expect(report?.nextDue).toBe("2027-03-01");
   });
 
   it("adds a state where the business has employees", () => {
     const items = found(base("TX", { multistate: [{ state: "CA", employeeCount: 2 }] }));
-    expect(items.map((i) => i.state).sort()).toEqual(["CA", "TX"]);
+    expect(new Set(items.map((i) => i.state))).toEqual(new Set(["CA", "TX"]));
+  });
+});
+
+describe("contractor duties follow what the business pays freelancers", () => {
+  const base = (state: string, paid: number): BusinessProfile => ({
+    entityType: "llc",
+    zip: "00000",
+    city: "Anywhere",
+    county: "Anywhere",
+    state,
+    largestContractorPaymentUsd: paid,
+  });
+  const titles = (p: BusinessProfile) =>
+    evaluate(p, { asOf: "2026-10-16" })
+      .items.filter((i) => i.ruleId === "state.duties")
+      .map((i) => i.title);
+
+  it("requires a written contract at each state's threshold", () => {
+    expect(titles(base("NY", 799)).some((t) => /freelance/i.test(t))).toBe(false);
+    expect(titles(base("NY", 800)).some((t) => /freelance/i.test(t))).toBe(true);
+    expect(titles(base("CA", 250)).some((t) => /freelance/i.test(t))).toBe(true);
+    expect(titles(base("IL", 499)).some((t) => /freelance/i.test(t))).toBe(false);
+  });
+
+  it("flags contractor classification only for a business that pays contractors", () => {
+    expect(titles(base("CA", 0)).some((t) => /ABC test/.test(t))).toBe(false);
+    expect(titles(base("CA", 1000)).some((t) => /ABC test/.test(t))).toBe(true);
   });
 });

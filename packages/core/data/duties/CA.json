@@ -9,5 +9,54 @@
     "url": "https://www.sco.ca.gov/upd_rptg.html",
     "appliesTo": ["all"],
     "checkedOn": "2026-10-16"
+  },
+  {
+    "id": "ca.freelance-written-contract",
+    "title": "Put freelance work of $250 or more in a written contract (California)",
+    "category": "recordkeeping",
+    "authority": "California Labor Commissioner",
+    "description": "Under the Freelance Worker Protection Act (SB 988, from January 1, 2025), hiring a single-person freelancer for $250 or more, counting contracts in the previous 120 days, requires a written contract itemizing the services, their value and the rate and method of pay, with the parties' names and mailing addresses and the payment date. Give the freelancer a signed copy and keep it four years; pay by the contract date or within 30 days of completing the work. Retaliation is prohibited. Damages are in Business and Professions Code section 18100 and following.",
+    "frequency": "per_event",
+    "url": "https://www.dir.ca.gov/dlse/",
+    "appliesTo": ["all"],
+    "checkedOn": "2026-10-16",
+    "appliesWhen": [
+      {
+        "field": "largestContractorPaymentUsd",
+        "op": ">=",
+        "value": 250,
+        "description": "Paid a freelancer $250 or more"
+      }
+    ]
+  },
+  {
+    "id": "ca.contractor-classification-abc-test",
+    "title": "Classify contractors with the ABC test before treating workers as independent (California)",
+    "category": "recordkeeping",
+    "authority": "California Labor Commissioner and Employment Development Department",
+    "description": "California presumes a worker is an employee unless the business shows all three prongs of the ABC test: the worker is free from its control, does work outside its usual course of business, and is customarily engaged in an independent business (Labor Code section 2775, AB 5), with exemptions for some occupations. Misclassification means back wages, payroll taxes, unemployment and disability contributions and penalties.",
+    "frequency": "ongoing",
+    "url": "https://www.dir.ca.gov/dlse/faq_independentcontractor.htm",
+    "appliesTo": ["all"],
+    "checkedOn": "2026-10-16",
+    "appliesWhen": [
+      {
+        "field": "largestContractorPaymentUsd",
+        "op": ">=",
+        "value": 1,
+        "description": "Pays independent contractors"
+      }
+    ]
+  },
+  {
+    "id": "ca.data-breach-notification",
+    "title": "Notify residents and regulators of a data breach within 30 days (California)",
+    "category": "filing",
+    "authority": "California Attorney General",
+    "description": "If personal information of residents of the state is acquired without authorization, notify affected residents within 30 days of discovering the breach and the Attorney General if more than 500 residents are affected (Cal. Civ. Code 1798.82 as amended effective January 1, 2026). This is an event-driven duty, so it has no calendar date. Sources in the PR describe the state's rule in different words; check the statute for the exact trigger and content of the notice.",
+    "frequency": "per_event",
+    "url": "https://oag.ca.gov/privacy/databreach/reporting",
+    "appliesTo": ["all"],
+    "checkedOn": "2026-10-16"
   }
 ]

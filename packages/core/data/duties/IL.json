@@ -9,5 +9,43 @@
     "url": "https://icash.illinoistreasurer.gov/app/submit-a-report",
     "appliesTo": ["all"],
     "checkedOn": "2026-10-16"
+  },
+  {
+    "id": "il.freelance-written-contract",
+    "title": "Put freelance work of $500 or more in a written contract (Illinois)",
+    "category": "recordkeeping",
+    "authority": "Illinois Department of Labor",
+    "description": "Under the Freelance Worker Protection Act (from July 1, 2024), hiring a freelancer for $500 or more, counting contracts in a 120-day window, requires a written contract with both parties' contact information, the scope of work, payment terms and deadlines (the department publishes a model contract). Keep it two years and pay within 30 days of completion. A missing contract costs the greater of $500 or the contract value in statutory damages; late payment costs double the underpayment plus fees; the Attorney General can seek up to $5,000 per violation.",
+    "frequency": "per_event",
+    "url": "https://labor.illinois.gov/laws-rules/legal/freelance-worker-protection-act.html",
+    "appliesTo": ["all"],
+    "checkedOn": "2026-10-16",
+    "appliesWhen": [
+      {
+        "field": "largestContractorPaymentUsd",
+        "op": ">=",
+        "value": 500,
+        "description": "Paid a freelancer $500 or more"
+      }
+    ]
+  },
+  {
+    "id": "il.contractor-classification-abc-test",
+    "title": "Classify contractors correctly for unemployment insurance (Illinois)",
+    "category": "recordkeeping",
+    "authority": "Illinois Department of Employment Security",
+    "description": "Under section 212 of the Unemployment Insurance Act, services for pay are employment unless the business proves the worker is free from its control and direction and the work is outside its usual course or places of business; the exemption is much narrower than the common idea of an independent contractor. Misclassification costs back contributions, 24% interest, penalties and possible personal liability for officers. Construction workers fall under the separate Employee Classification Act.",
+    "frequency": "ongoing",
+    "url": "https://ides.illinois.gov/employer-resources/taxes-reporting/employee-misclassification.html",
+    "appliesTo": ["all"],
+    "checkedOn": "2026-10-16",
+    "appliesWhen": [
+      {
+        "field": "largestContractorPaymentUsd",
+        "op": ">=",
+        "value": 1,
+        "description": "Pays independent contractors"
+      }
+    ]
   }
 ]

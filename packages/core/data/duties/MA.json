@@ -9,5 +9,24 @@
     "url": "https://findmassmoney.gov/app/submit-a-report",
     "appliesTo": ["all"],
     "checkedOn": "2026-10-16"
+  },
+  {
+    "id": "ma.contractor-classification-abc-test",
+    "title": "Classify contractors with the ABC test before treating workers as independent (Massachusetts)",
+    "category": "recordkeeping",
+    "authority": "Massachusetts Attorney General",
+    "description": "Massachusetts applies the three-prong ABC test, including that the work be outside the usual course of the business, to wage, hour and unemployment law. Failing any prong makes the worker an employee; the Attorney General enforces it, including penalties and criminal liability for willful violations.",
+    "frequency": "ongoing",
+    "url": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXXI/Chapter149/Section148B",
+    "appliesTo": ["all"],
+    "checkedOn": "2026-10-16",
+    "appliesWhen": [
+      {
+        "field": "largestContractorPaymentUsd",
+        "op": ">=",
+        "value": 1,
+        "description": "Pays independent contractors"
+      }
+    ]
   }
 ]

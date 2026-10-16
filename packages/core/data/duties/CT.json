@@ -9,5 +9,35 @@
     "url": "https://ctbiglist.com/app/submit-a-report",
     "appliesTo": ["all"],
     "checkedOn": "2026-10-16"
+  },
+  {
+    "id": "ct.contractor-classification-abc-test",
+    "title": "Classify contractors with the ABC test for unemployment and wage law (Connecticut)",
+    "category": "recordkeeping",
+    "authority": "Connecticut Department of Labor",
+    "description": "Connecticut applies the ABC test to unemployment insurance and, per one policy group's table, wage and hour rules; a worker who fails any prong is an employee.",
+    "frequency": "ongoing",
+    "url": "https://portal.ct.gov/dol",
+    "appliesTo": ["all"],
+    "checkedOn": "2026-10-16",
+    "appliesWhen": [
+      {
+        "field": "largestContractorPaymentUsd",
+        "op": ">=",
+        "value": 1,
+        "description": "Pays independent contractors"
+      }
+    ]
+  },
+  {
+    "id": "ct.data-breach-notification",
+    "title": "Notify residents and regulators of a data breach within 60 days (Connecticut)",
+    "category": "filing",
+    "authority": "Connecticut Attorney General",
+    "description": "If personal information of residents of the state is acquired without authorization, notify affected residents within 60 days of discovering the breach (Conn. Gen. Stat. 36a-701b). This is an event-driven duty, so it has no calendar date. Sources in the PR describe the state's rule in different words; check the statute for the exact trigger and content of the notice.",
+    "frequency": "per_event",
+    "url": "https://portal.ct.gov/ag/sections/privacy/the-privacy-and-data-security-department",
+    "appliesTo": ["all"],
+    "checkedOn": "2026-10-16"
   }
 ]
