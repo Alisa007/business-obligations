@@ -29,7 +29,7 @@
         "category": "payment",
         "authority": "City of Charleston Office of the City Collector",
         "description": "Employers withhold a $3.00 per week City Service Fee from covered employees and remit it quarterly. Self-employed individuals pay it themselves.",
-        "frequency": "quarterly",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
         "deadline": "Within one month after each calendar quarter ends",
         "url": "https://charlestonwv.gov/node/143",
         "appliesTo": ["employees", "unincorporated"]
