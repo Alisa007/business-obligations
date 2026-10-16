@@ -52,10 +52,20 @@ describe("state data files", () => {
     }
   });
 
+  type SchemaNode = {
+    $ref?: string;
+    $defs?: Record<string, SchemaNode>;
+    type?: string;
+    oneOf?: SchemaNode[];
+    anyOf?: SchemaNode[];
+    items?: SchemaNode;
+    properties?: Record<string, SchemaNode>;
+  };
   it("lists keys in the schema's order, so diffs stay small", () => {
-    const schema = read("schema/state.schema.json");
-    const resolve = (n: any): any => (n.$ref ? resolve(schema.$defs[n.$ref.split("/").pop()!]) : n);
-    const pick = (n: any, v: unknown): any => {
+    const schema = read("schema/state.schema.json") as SchemaNode;
+    const resolve = (n: SchemaNode): SchemaNode =>
+      n.$ref ? resolve(schema.$defs![n.$ref.split("/").pop()!]!) : n;
+    const pick = (n: SchemaNode, v: unknown): SchemaNode => {
       n = resolve(n);
       for (const b of n.oneOf ?? n.anyOf ?? []) {
         const r = resolve(b);
@@ -68,8 +78,8 @@ describe("state data files", () => {
       return n;
     };
     const misordered: string[] = [];
-    const walk = (n: any, v: unknown, where: string) => {
-      n = pick(n, v);
+    const walk = (node: SchemaNode, v: unknown, where: string) => {
+      const n = pick(node, v);
       if (Array.isArray(v)) return v.forEach((x, i) => n.items && walk(n.items, x, `${where}[${i}]`));
       if (!v || typeof v !== "object" || !n.properties) return;
       const keys = Object.keys(v);
@@ -93,7 +103,10 @@ describe("state data files", () => {
       for (const path of s.verification.unconfirmed as string[]) {
         const found = path
           .split(".")
-          .reduce((o: any, k) => (o && typeof o === "object" ? o[k] : undefined), s);
+          .reduce<unknown>(
+            (o, k) => (o && typeof o === "object" ? (o as Record<string, unknown>)[k] : undefined),
+            s,
+          );
         expect(found, `${f}: unconfirmed path "${path}" does not exist`).not.toBeUndefined();
       }
     }
