@@ -1,5 +1,4 @@
 {
-  "code": "TN",
   "name": "Tennessee",
   "filing": {
     "name": "Tennessee Secretary of State",
@@ -24,7 +23,6 @@
   },
   "llcReport": {
     "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
-    "fee": "$300 base, plus $50 per member over 6 (maximum $3,000)",
     "deadline": "First day of the 4th month after fiscal year end (April 1)",
     "feeDetail": {
       "basis": "per_member",
@@ -37,7 +35,6 @@
   },
   "llpReport": {
     "frequency": "annual",
-    "fee": "$50 per partner (minimum $250, maximum $2,500)",
     "deadline": "Date set by the Secretary of State",
     "title": "Pay LLP annual fee",
     "feeDetail": {
@@ -54,12 +51,10 @@
     "feeDetail": {
       "basis": "flat",
       "amount": 20,
-      "min": 20,
-      "note": "$20 minimum"
+      "min": 20
     }
   },
   "entityTax": "Franchise and Excise taxes (apply to LLCs, corporations and limited partnerships)",
-  "wageWithholding": false,
   "salesTax": {
     "statewide": true,
     "permit": "Tennessee sales and use tax registration",

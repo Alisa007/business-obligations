@@ -1,3 +1,11 @@
+import {
+  ALCOHOL_ACTIVITIES,
+  CANNABIS_ACTIVITIES,
+  ENTITY_TYPES,
+  INDUSTRIES,
+  LLC_TAX_CLASSIFICATIONS,
+  PROFESSIONS,
+} from "./enums";
 import { isIsoDate } from "./iso";
 
 /** One problem found in a business profile. */
@@ -10,36 +18,12 @@ export interface ProfileIssue {
 }
 
 const ENUMS: Record<string, readonly string[]> = {
-  entityType: [
-    "sole_proprietorship",
-    "partnership",
-    "llc",
-    "pllc",
-    "lp",
-    "llp",
-    "c_corp",
-    "s_corp",
-    "pc",
-    "benefit_corp",
-    "nonprofit",
-  ],
-  llcTaxClassification: ["disregarded", "partnership", "s_corp", "c_corp"],
-  industry: [
-    "general",
-    "retail",
-    "restaurant",
-    "construction",
-    "healthcare",
-    "real_estate",
-    "professional_services",
-    "transportation",
-    "alcohol",
-    "childcare",
-    "cannabis",
-  ],
-  alcoholActivity: ["manufacture", "import", "wholesale", "retail"],
-  cannabisActivity: ["cultivation", "manufacturing", "retail", "distribution", "testing"],
-  profession: ["attorney", "cpa", "physician", "architect", "engineer", "other"],
+  entityType: ENTITY_TYPES,
+  llcTaxClassification: LLC_TAX_CLASSIFICATIONS,
+  industry: INDUSTRIES,
+  alcoholActivity: ALCOHOL_ACTIVITIES,
+  cannabisActivity: CANNABIS_ACTIVITIES,
+  profession: PROFESSIONS,
 };
 
 type Kind =

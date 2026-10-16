@@ -115,8 +115,8 @@ jobs:
                personal property return or similar filing?
             3. Add the entry to packages/core/data/cities/<STATE>.json or packages/core/data/counties/<STATE>.json,
                keeping each file's existing order and style.
-               - Found a requirement: add items with a real `url` from the official page, a `frequency`/`due` only
-                 if the page states them, and `appliesTo` tags.
+               - Found a requirement: add items with a real `url` from the official page, an `rrule` (iCalendar
+                 recurrence rule, see CONTRIBUTING.md) only if the page states the date, and `appliesTo` tags.
                - Official page confirms there is none: `"status": "none"`, `"items": []`, `sourceUrl`, `note`,
                  `checkedOn`.
                - Could not confirm either way: `"status": "unverified"`, `"items": []`, a short `note`, `checkedOn`.

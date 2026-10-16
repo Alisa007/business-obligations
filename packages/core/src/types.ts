@@ -1,46 +1,32 @@
-export type EntityType =
-  | "sole_proprietorship"
-  /** General partnership (no state registration). */
-  | "partnership"
-  | "llc"
-  /** Professional LLC. */
-  | "pllc"
-  /** Limited partnership. */
-  | "lp"
-  /** Limited liability partnership. */
-  | "llp"
-  | "c_corp"
-  | "s_corp"
-  /** Professional corporation. */
-  | "pc"
-  | "benefit_corp"
-  | "nonprofit";
+import type {
+  ALCOHOL_ACTIVITIES,
+  CANNABIS_ACTIVITIES,
+  ENTITY_TYPES,
+  FILING_METHODS,
+  FREQUENCIES,
+  INDUSTRIES,
+  ITEM_CATEGORIES,
+  JURISDICTIONS,
+  LLC_TAX_CLASSIFICATIONS,
+  PROFESSIONS,
+} from "./enums";
+
+export type EntityType = (typeof ENTITY_TYPES)[number];
 
 export type Country = "US";
 
-export type Profession = "attorney" | "cpa" | "physician" | "architect" | "engineer" | "other";
+export type Profession = (typeof PROFESSIONS)[number];
 
 /** Federal tax classification of an LLC (ignored for other entity types). */
-export type LlcTaxClassification = "disregarded" | "partnership" | "s_corp" | "c_corp";
+export type LlcTaxClassification = (typeof LLC_TAX_CLASSIFICATIONS)[number];
 
-export type Industry =
-  | "general"
-  | "retail"
-  | "restaurant"
-  | "construction"
-  | "healthcare"
-  | "real_estate"
-  | "professional_services"
-  | "transportation"
-  | "alcohol"
-  | "childcare"
-  | "cannabis";
+export type Industry = (typeof INDUSTRIES)[number];
 
 /** What the business does with alcohol; required when `industry` is "alcohol". */
-export type AlcoholActivity = "manufacture" | "import" | "wholesale" | "retail";
+export type AlcoholActivity = (typeof ALCOHOL_ACTIVITIES)[number];
 
 /** What the business does with cannabis; required when `industry` is "cannabis". */
-export type CannabisActivity = "cultivation" | "manufacturing" | "retail" | "distribution" | "testing";
+export type CannabisActivity = (typeof CANNABIS_ACTIVITIES)[number];
 
 /** Commercial vehicle operations; required when `industry` is "transportation". */
 export interface CommercialVehicles {
@@ -156,8 +142,7 @@ export interface BusinessProfile {
   foodService?: boolean;
 }
 
-export type ItemCategory =
-  "license" | "permit" | "registration" | "filing" | "payment" | "insurance" | "recordkeeping";
+export type ItemCategory = (typeof ITEM_CATEGORIES)[number];
 
 import type { ChangeNotice, Due, FeeDetail, LateFee } from "./data/types";
 export type { ChangeNotice, Due, FeeDetail, LateFee } from "./data/types";
@@ -185,7 +170,7 @@ export interface Applicability {
   description?: string;
 }
 
-export type FilingMethod = "online" | "mail" | "in_person" | "fax";
+export type FilingMethod = (typeof FILING_METHODS)[number];
 
 export interface Provenance {
   /**
@@ -208,10 +193,9 @@ export interface Provenance {
   sourceDetails?: SourceRef[];
 }
 
-export type Jurisdiction = "federal" | "state" | "county" | "city";
+export type Jurisdiction = (typeof JURISDICTIONS)[number];
 
-export type Frequency =
-  "once" | "annual" | "biennial" | "every_five_years" | "quarterly" | "monthly" | "per_event" | "ongoing";
+export type Frequency = (typeof FREQUENCIES)[number];
 
 export interface ComplianceItem {
   id: string;

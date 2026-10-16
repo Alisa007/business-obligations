@@ -1,5 +1,4 @@
 {
-  "code": "VA",
   "name": "Virginia",
   "filing": {
     "name": "Virginia State Corporation Commission",
@@ -23,7 +22,6 @@
   },
   "llcReport": {
     "rrule": "FREQ=YEARLY;BYMONTHDAY=-1",
-    "fee": "$50",
     "title": "Pay Annual Registration Fee",
     "feeDetail": {
       "basis": "flat",
@@ -40,12 +38,10 @@
     "title": "Pay Annual Registration Fee",
     "feeDetail": {
       "basis": "flat",
-      "amount": 100,
-      "note": "$100 (up to 5,000 authorized shares; scales above)"
+      "amount": 100
     }
   },
   "entityTax": "Corporate income tax",
-  "wageWithholding": true,
   "salesTax": {
     "statewide": true,
     "permit": "Virginia Certificate of Registration (sales and use tax)",
@@ -79,7 +75,6 @@
   },
   "llpReport": {
     "rrule": "FREQ=YEARLY;BYMONTH=7;BYMONTHDAY=1",
-    "fee": "$50",
     "title": "File annual continuation report",
     "feeDetail": {
       "basis": "flat",
@@ -92,7 +87,6 @@
   },
   "lpReport": {
     "rrule": "FREQ=YEARLY;BYMONTH=10;BYMONTHDAY=1",
-    "fee": "$50",
     "title": "Pay annual registration fee",
     "feeDetail": {
       "basis": "flat",

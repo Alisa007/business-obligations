@@ -1,4 +1,5 @@
-import type { Applicability, FilingMethod } from "../types";
+import type { APPLIES_TO } from "../enums";
+import type { Applicability, FilingMethod, Frequency, ItemCategory } from "../types";
 export interface Agency {
   name: string;
   url?: string;
@@ -64,8 +65,6 @@ export interface StateLinks {
   laborPosters: string;
   /** Trade name / DBA registration, where it is filed with the state (see `dbaFiling`). */
   dba?: string;
-  /** The state's general business license, where it has one (see `businessLicense`). */
-  businessLicense?: string;
 }
 
 export interface UnemploymentInfo {
@@ -115,8 +114,12 @@ export interface LateFee {
 export interface ReportRule {
   /** Derived from `rrule` when there is one. */
   frequency?: "annual" | "biennial" | "every_five_years" | "periodic";
-  fee: string;
-  /** Structured form of `fee`. */
+  /**
+   * Fee text. Stored only when the structured `feeDetail` cannot say it all (a waiver, an estimate, a rate); otherwise
+   * generated from `feeDetail`.
+   */
+  fee?: string;
+  /** The fee as numbers; the source for the amount. */
   feeDetail?: FeeDetail;
   lateFee?: LateFee;
   /**
@@ -204,7 +207,10 @@ export interface StateInfo {
   businessLicense: {
     title: string;
     authority: string;
-    fee: string;
+    /** Page for the license (replaces a separate link entry). */
+    url?: string;
+    /** See `ReportRule.fee`. */
+    fee?: string;
     feeDetail?: FeeDetail;
     renewal: "annual" | "biennial" | "once";
   } | null;
@@ -262,7 +268,7 @@ export interface StateInfo {
 export interface LocalItem {
   id: string;
   title: string;
-  category: "license" | "permit" | "registration" | "filing" | "payment" | "insurance" | "recordkeeping";
+  category: ItemCategory;
   authority: string;
   description: string;
   /** Derived from `rrule` when there is one. */
@@ -278,7 +284,7 @@ export interface LocalItem {
   due?: Due;
   url?: string;
   /** Tags; the item applies if any matches. */
-  appliesTo: Array<"all" | "employees" | "sells_goods" | "corporation" | "unincorporated" | "trade_name">;
+  appliesTo: Array<(typeof APPLIES_TO)[number]>;
   /** Machine-readable conditions under which the item applies, beyond the `appliesTo` tags. */
   appliesWhen?: Applicability[];
   /** Situations in which the item does not apply even when it otherwise would. */

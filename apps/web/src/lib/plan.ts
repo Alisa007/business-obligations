@@ -8,41 +8,51 @@ import {
   type BusinessProfile,
   type ComplianceItem,
   type EntityType,
+  type Industry,
+  type Profession,
 } from "business-obligations";
 
-export const ENTITY_TYPES: Array<[EntityType, string]> = [
-  ["llc", "LLC"],
-  ["sole_proprietorship", "Sole proprietorship"],
-  ["s_corp", "S corporation"],
-  ["c_corp", "C corporation"],
-  ["partnership", "General partnership"],
-  ["lp", "Limited partnership"],
-  ["llp", "Limited liability partnership"],
-  ["pllc", "Professional LLC"],
-  ["pc", "Professional corporation"],
-  ["benefit_corp", "Benefit corporation"],
-  ["nonprofit", "Nonprofit"],
-];
+// Labels are keyed by the library's own enum types, so adding a value there fails the build until it has a label here.
+const ENTITY_LABELS: Record<EntityType, string> = {
+  llc: "LLC",
+  sole_proprietorship: "Sole proprietorship",
+  s_corp: "S corporation",
+  c_corp: "C corporation",
+  partnership: "General partnership",
+  lp: "Limited partnership",
+  llp: "Limited liability partnership",
+  pllc: "Professional LLC",
+  pc: "Professional corporation",
+  benefit_corp: "Benefit corporation",
+  nonprofit: "Nonprofit",
+};
 
-export const INDUSTRIES: Array<[string, string]> = [
-  ["general", "General / other"],
-  ["retail", "Retail"],
-  ["restaurant", "Restaurant / food service"],
-  ["construction", "Construction"],
-  ["healthcare", "Healthcare"],
-  ["real_estate", "Real estate"],
-  ["professional_services", "Professional services"],
-  ["childcare", "Childcare"],
-];
+/** Industries the form does not offer yet (they need an activity or vehicle questionnaire). */
+type HiddenIndustry = "transportation" | "alcohol" | "cannabis";
+const INDUSTRY_LABELS: Record<Exclude<Industry, HiddenIndustry>, string> = {
+  general: "General / other",
+  retail: "Retail",
+  restaurant: "Restaurant / food service",
+  construction: "Construction",
+  healthcare: "Healthcare",
+  real_estate: "Real estate",
+  professional_services: "Professional services",
+  childcare: "Childcare",
+};
 
-export const PROFESSIONS: Array<[string, string]> = [
-  ["attorney", "Attorney"],
-  ["cpa", "CPA"],
-  ["physician", "Physician"],
-  ["architect", "Architect"],
-  ["engineer", "Engineer"],
-  ["other", "Other"],
-];
+const PROFESSION_LABELS: Record<Profession, string> = {
+  attorney: "Attorney",
+  cpa: "CPA",
+  physician: "Physician",
+  architect: "Architect",
+  engineer: "Engineer",
+  other: "Other",
+};
+
+const options = <K extends string>(labels: Record<K, string>) => Object.entries(labels) as Array<[K, string]>;
+export const ENTITY_TYPES = options(ENTITY_LABELS);
+export const INDUSTRIES = options(INDUSTRY_LABELS);
+export const PROFESSIONS = options(PROFESSION_LABELS);
 
 /** Raw values of the profile form. Numbers are kept as the text the user typed. */
 export interface FormValues {

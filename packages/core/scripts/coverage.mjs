@@ -5,15 +5,18 @@ import { dirname, join } from "node:path";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const read = (p) => JSON.parse(readFileSync(join(root, p), "utf8"));
+/** The entries of every per-state file in a data folder; the file name is the state, so entries do not carry it. */
+const readPlaces = (dir) =>
+  readdirSync(join(root, dir))
+    .filter((f) => f.endsWith(".json"))
+    .flatMap((f) => read(`${dir}/${f}`).map((e) => ({ state: f.slice(0, 2), ...e })));
 
 export function buildCoverage() {
   const states = readdirSync(join(root, "data/states"))
     .filter((f) => f.endsWith(".json"))
-    .map((f) => read(`data/states/${f}`))
+    .map((f) => ({ code: f.slice(0, 2), ...read(`data/states/${f}`) }))
     .sort((a, b) => a.code.localeCompare(b.code));
-  const local = readdirSync(join(root, "data/cities"))
-    .filter((f) => f.endsWith(".json"))
-    .flatMap((f) => read(`data/cities/${f}`));
+  const local = readPlaces("data/cities");
   const cities = (code) => local.filter((c) => c.state === code).map((c) => c.city);
   const reports = (s) =>
     ["llcReport", "corpReport", "lpReport", "llpReport"]
@@ -32,9 +35,7 @@ export function buildCoverage() {
   const withRules = local.filter((c) => c.items.length > 0).length;
   const none = local.filter((c) => c.status === "none").length;
   const unverified = local.filter((c) => c.status === "unverified").length;
-  const counties = readdirSync(join(root, "data/counties"))
-    .filter((f) => f.endsWith(".json"))
-    .flatMap((f) => read(`data/counties/${f}`));
+  const counties = readPlaces("data/counties");
   const countyRules = counties.filter((c) => c.items.length > 0).length;
   const topCounties = read("data/top-counties.json").counties;
   const topCountiesCovered = topCounties.filter((t) =>

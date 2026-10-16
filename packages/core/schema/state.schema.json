@@ -5,7 +5,6 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
-    "code",
     "name",
     "filing",
     "revenue",
@@ -14,7 +13,6 @@
     "llcReport",
     "corpReport",
     "entityTax",
-    "wageWithholding",
     "salesTax",
     "businessLicense",
     "paidLeave",
@@ -30,11 +28,13 @@
     "unemployment",
     "links"
   ],
+  "allOf": [
+    {
+      "if": { "properties": { "dbaFiling": { "enum": ["county", "town"] } } },
+      "then": { "required": ["dbaOffice"] }
+    }
+  ],
   "properties": {
-    "code": {
-      "type": "string",
-      "pattern": "^[A-Z]{2}$"
-    },
     "name": {
       "type": "string",
       "minLength": 2
@@ -123,9 +123,6 @@
       "type": "string",
       "minLength": 3
     },
-    "wageWithholding": {
-      "type": "boolean"
-    },
     "salesTax": {
       "type": "object",
       "additionalProperties": false,
@@ -161,7 +158,7 @@
         {
           "type": "object",
           "additionalProperties": false,
-          "required": ["title", "authority", "fee", "renewal"],
+          "required": ["title", "authority", "renewal", "feeDetail"],
           "properties": {
             "title": {
               "type": "string"
@@ -169,8 +166,15 @@
             "authority": {
               "type": "string"
             },
+            "url": {
+              "type": "string",
+              "format": "uri",
+              "pattern": "^https://"
+            },
             "fee": {
-              "type": "string"
+              "type": "string",
+              "minLength": 1,
+              "description": "Fee text; stored only when feeDetail cannot say it all, otherwise generated from feeDetail."
             },
             "renewal": {
               "enum": ["annual", "biennial", "once"]
@@ -370,8 +374,7 @@
         "salesTax": { "type": "string", "format": "uri" },
         "entityTax": { "type": "string", "format": "uri" },
         "laborPosters": { "type": "string", "format": "uri" },
-        "dba": { "type": "string", "format": "uri" },
-        "businessLicense": { "type": "string", "format": "uri" }
+        "dba": { "type": "string", "format": "uri" }
       }
     },
     "entityTaxDetail": {
@@ -473,14 +476,15 @@
     "report": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["fee"],
+      "required": ["feeDetail"],
       "properties": {
         "frequency": {
           "enum": ["annual", "biennial", "every_five_years", "periodic"]
         },
         "fee": {
           "type": "string",
-          "minLength": 1
+          "minLength": 1,
+          "description": "Fee text; stored only when feeDetail cannot say it all (a waiver, an estimate, a rate), otherwise generated from feeDetail."
         },
         "deadline": {
           "type": "string",
