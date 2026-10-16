@@ -25,18 +25,88 @@
   },
   {
     "county": "Broome",
-    "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
-    "items": [],
+    "items": [
+      {
+        "id": "broome-ny.occupancy-tax-registration",
+        "title": "Register for the Broome County occupancy tax",
+        "category": "registration",
+        "authority": "Broome County Office of Management and Budget",
+        "description": "Hotels, motels, bed and breakfasts and online remarketers apply for a Certificate of Registration (Certificate of Authority) with the Office of Management and Budget, giving facility details such as address, type and number of rooms.",
+        "frequency": "once",
+        "url": "https://broomecountyny.gov/omb/occupancytax",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "broome-ny.occupancy-tax-return",
+        "title": "File the Broome County occupancy tax return",
+        "category": "filing",
+        "authority": "Broome County Office of Management and Budget",
+        "description": "Operators file a quarterly return with payment to the Office of Management and Budget and remit the 5% occupancy tax. A late return adds a 5% penalty plus 1% of the tax per month in interest.",
+        "rrule": "FREQ=YEARLY;BYMONTH=3,6,9,12;BYMONTHDAY=20",
+        "exemptions": ["Permanent residents (stays of 30 or more consecutive days)"],
+        "url": "https://broomecountyny.gov/omb/occupancytax",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
     "checkedOn": "2026-10-15"
   },
   {
     "county": "Cattaraugus",
-    "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
-    "items": [],
+    "items": [
+      {
+        "id": "cattaraugus-ny.occupancy-tax-registration",
+        "title": "Register for the Cattaraugus County occupancy tax",
+        "category": "registration",
+        "authority": "Cattaraugus County Treasurer",
+        "description": "Every operator who must collect the occupancy tax completes a Certification of Registration and returns it to the County Treasurer. The tax covers hotels, motels, bed and breakfasts, inns, cabins, condominiums, cottages, campgrounds and tourist homes.",
+        "frequency": "once",
+        "deadline": "At least twenty days before opening, buying or starting a facility",
+        "url": "https://www.cattco.gov/treasurers-office/occupancy-tax",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "cattaraugus-ny.occupancy-tax-return",
+        "title": "File the Cattaraugus County occupancy tax return",
+        "category": "filing",
+        "authority": "Cattaraugus County Treasurer",
+        "description": "Operators file quarterly for periods ending in February, May, August and November, with the return and payment due within 20 days (the 20th of March, June, September and December), and remit the 5% tax. A late payment adds a 5% penalty, and interest of 1% a month starts after 30 days.",
+        "rrule": "FREQ=YEARLY;BYMONTH=3,6,9,12;BYMONTHDAY=20",
+        "url": "https://www.cattco.gov/treasurers-office/occupancy-tax",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
     "checkedOn": "2026-10-15"
   },
   {
@@ -49,17 +119,32 @@
   },
   {
     "county": "Chautauqua",
-    "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
-    "items": [],
+    "items": [
+      {
+        "id": "chautauqua-ny.occupancy-tax-return",
+        "title": "File the Chautauqua County occupancy tax return",
+        "category": "filing",
+        "authority": "Chautauqua County Department of Finance",
+        "description": "Operators file the county occupancy tax return with payment to the Director of Finance within 20 days after each quarter and remit the 5% tax (the county's finance page lists 5%; a 2023 proposal to raise it was not confirmed as adopted). Operators who collect under $1,500 a year may file once a year, by January 20. The registration steps were not found on the pages read.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=20",
+        "url": "https://chautauquacountyny.gov/sites/default/files/inline-files/1-occupancy%20tax%20return2022-fillable.pdf",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
     "checkedOn": "2026-10-15"
   },
   {
     "county": "Chemung",
     "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
+    "note": "New York Tax Law section 1202-h lets Chemung County tax hotel and motel rooms at up to 4%, but the county's own registration and return pages were not found. Other county-level business duties were not checked.",
     "items": [],
     "checkedOn": "2026-10-15"
   },
@@ -177,10 +262,45 @@
   },
   {
     "county": "Jefferson",
-    "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
-    "items": [],
+    "items": [
+      {
+        "id": "jefferson-ny.occupancy-tax-registration",
+        "title": "Register for the Jefferson County occupancy tax",
+        "category": "registration",
+        "authority": "Jefferson County Treasurer",
+        "description": "Registered hotels, motels and short-term rentals register through the Treasurer's online portal (the office gives the link by phone). The county notes that Airbnb, VRBO and similar platforms have no collection agreement with it, so hosts must make sure the 3% tax is collected and then report it through the portal.",
+        "frequency": "once",
+        "url": "https://www.jeffersoncountyny.gov/departments/CountyTreasurer/occ",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "jefferson-ny.occupancy-tax-return",
+        "title": "File the Jefferson County occupancy tax return",
+        "category": "filing",
+        "authority": "Jefferson County Treasurer",
+        "description": "Operators file quarterly through the Treasurer's portal and remit the 3% tax on the per diem room rate, even when gross sales are zero.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=20",
+        "exemptions": ["Permanent residents (stays of 30 or more consecutive days)"],
+        "url": "https://www.jeffersoncountyny.gov/departments/CountyTreasurer/occ",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
     "checkedOn": "2026-10-15"
   },
   {
@@ -537,10 +657,44 @@
   },
   {
     "county": "Steuben",
-    "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
-    "items": [],
+    "items": [
+      {
+        "id": "steuben-ny.occupancy-tax-registration",
+        "title": "Register for the Steuben County occupancy tax",
+        "category": "registration",
+        "authority": "Steuben County Finance Office",
+        "description": "Hotels, motels, inns and bed and breakfasts register with the Finance Office on a paper application for a Certificate of Authority; short-term rentals booked through platforms such as Airbnb or Vrbo can apply on paper or through the county's online system.",
+        "frequency": "once",
+        "url": "https://www.steubencountyny.gov/305/OccupancyTax",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "steuben-ny.occupancy-tax-return",
+        "title": "File the Steuben County occupancy tax return",
+        "category": "filing",
+        "authority": "Steuben County Finance Office",
+        "description": "A return is required every quarter, even when no tax is owed, and the county tax is 4% of room income. The hotel and motel return lists due dates of March 20, June 20, September 20 and December 20; the platform short-term rental form uses calendar quarters due April 20, July 20, October 20 and January 20, so confirm which form applies. A late return adds a 5% penalty plus 1% a month in interest.",
+        "rrule": "FREQ=YEARLY;BYMONTH=3,6,9,12;BYMONTHDAY=20",
+        "url": "https://www.steubencountyny.gov/305/OccupancyTax",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
     "checkedOn": "2026-10-15"
   },
   {
@@ -589,10 +743,44 @@
   },
   {
     "county": "Sullivan",
-    "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
-    "items": [],
+    "items": [
+      {
+        "id": "sullivan-ny.occupancy-tax-registration",
+        "title": "Register for the Sullivan County occupancy tax",
+        "category": "registration",
+        "authority": "Sullivan County Treasurer, Room Tax Division",
+        "description": "Any facility rented for 90 consecutive days or less to an occupant who does not own it applies to the County Treasurer for a Certificate of Authority. Registration is renewed every two years (the current period runs to December 31, 2026).",
+        "frequency": "once",
+        "url": "https://www.sullivanny.gov/node/151",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "sullivan-ny.occupancy-tax-return",
+        "title": "File the Sullivan County occupancy tax return",
+        "category": "filing",
+        "authority": "Sullivan County Treasurer, Room Tax Division",
+        "description": "Operators file a room tax return every quarter, whether or not tax is owed, and remit the 5% tax; returns for periods ending in February, May, August and November are due within 20 days (the 20th of March, June, September and December). Annual filers file within 20 days after August 31.",
+        "rrule": "FREQ=YEARLY;BYMONTH=3,6,9,12;BYMONTHDAY=20",
+        "url": "https://www.sullivanny.gov/node/151",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
     "checkedOn": "2026-10-15"
   },
   {
@@ -605,10 +793,48 @@
   },
   {
     "county": "Tompkins",
-    "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
-    "items": [],
+    "items": [
+      {
+        "id": "tompkins-ny.occupancy-tax-registration",
+        "title": "Register for the Tompkins County occupancy tax",
+        "category": "registration",
+        "authority": "Tompkins County Finance Department",
+        "description": "Lodging properties register with the Finance Department using the county's online form (or a paper copy by request) to obtain a Certificate of Authority. Short-term rental units pay a $125 registration fee per unit; hotels and motels pay none. Establishments with an existing certificate were asked to re-register.",
+        "frequency": "once",
+        "url": "https://www.tompkinscountyny.gov/All-Departments/Finance-Department/Tompkins-County-Hotel-Room-Occupancy-Tax",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "tompkins-ny.occupancy-tax-return",
+        "title": "File the Tompkins County occupancy tax return",
+        "category": "filing",
+        "authority": "Tompkins County Finance Department",
+        "description": "Returns and payments are quarterly for periods ending in February, May, August and November, due on the 20th of March, June, September and December. The county's room occupancy tax law sets the rate at 4% of the rent (rate taken from a 2019 copy of the law).",
+        "rrule": "FREQ=YEARLY;BYMONTH=3,6,9,12;BYMONTHDAY=20",
+        "exemptions": [
+          "Permanent residents (stays of more than 30 days)",
+          "Certain religious, charitable or educational stays and New York or United States government stays"
+        ],
+        "url": "https://www.tompkinscountyny.gov/All-Departments/Finance-Department/Tompkins-County-Hotel-Room-Occupancy-Tax",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
     "checkedOn": "2026-10-15"
   },
   {
