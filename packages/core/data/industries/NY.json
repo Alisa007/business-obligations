@@ -207,7 +207,7 @@
     "description": "Businesses storing five or more vehicles for a fee in New York City need a DCWP garage, parking lot or combined licence, which expires March 31 of odd-numbered years. For a licence filed April 1 to September 30 of an odd year the fee is $300 for 5 to 25 cars, $380 for 26 to 50, $540 for 51 to 100 and $600 for 101 or more, with lower fees later in the cycle. Property and garagekeepers liability insurance of at least $300,000 combined single limit per accident is required, naming the City as certificate holder; the NYC Business pages list different minimums, so confirm.",
     "naics": ["812930"],
     "appliesTo": ["all"],
-    "url": "https://nyc-business.nyc.gov/nycbusiness/description/garage-andor-parking-lot-license",
+    "url": "https://nyc-business.nyc.gov/nycbusiness/description/garage-license",
     "checkedOn": "2026-10-16",
     "jurisdiction": "city",
     "appliesWhen": [
@@ -273,7 +273,7 @@
     "description": "Retailers selling tobacco products in New York City need a DCWP licence, expiring December 31. The fee is $200 for the full two-year term and $150 for applications filed July 1 to December 31, with community district caps, and pharmacies cannot hold one. It is in addition to the state registration.",
     "naics": ["459991"],
     "appliesTo": ["all"],
-    "url": "https://nyc-business.nyc.gov/nycbusiness/description/tobacco-retail-dealer-license",
+    "url": "https://nyc-business.nyc.gov/nycbusiness/description/cigarette-retail-dealer-license",
     "checkedOn": "2026-10-16",
     "jurisdiction": "city",
     "appliesWhen": [
@@ -359,7 +359,7 @@
     "description": "Third-party food delivery services operating in New York City need a DCWP licence, expiring August 31 of odd-numbered years. The fee is $200 for a full two-year term, with $150, $100 and $50 tiers for shorter terms and $250 for 30 months. A licence not renewed within 59 days of expiry requires a new application.",
     "naics": ["492110", "561990"],
     "appliesTo": ["all"],
-    "url": "https://nyc-business.nyc.gov/nycbusiness/description/third-party-food-delivery-service-license",
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-third-party-food-delivery-service.page",
     "checkedOn": "2026-10-16",
     "jurisdiction": "city",
     "appliesWhen": [
@@ -445,7 +445,7 @@
     "description": "Businesses supplying construction labour in New York City need a DCWP licence, expiring July 31 of even-numbered years. The fee is $200 for applications from August 1 of an even year, $150 from February 1 of an odd year, $100 from August 1 of an odd year, and $50 (or $250 for the longer term) from February 1 of an even year.",
     "naics": ["561320", "238"],
     "appliesTo": ["all"],
-    "url": "https://www.nyc.gov/site/dca/media/pr060922-DCWP-Begins-Licensing-Construction-Labor-Providers.page",
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-construction-labor-provider.page",
     "checkedOn": "2026-10-16",
     "jurisdiction": "city",
     "appliesWhen": [
@@ -598,7 +598,7 @@
     "description": "Businesses selling or repairing commercial scales in New York City need a DCWP licence, expiring February 28 each year. The fee is $60 if filed March 1 to August 28, and $30 (or $90 for the longer term) from August 29.",
     "naics": ["811310", "423440"],
     "appliesTo": ["all"],
-    "url": "https://nyc-business.nyc.gov/nycbusiness/description/scale-dealer-repairer-license",
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-scale-dealer-repairer.page",
     "checkedOn": "2026-10-16",
     "jurisdiction": "city",
     "appliesWhen": [
@@ -3086,7 +3086,7 @@
     "description": "Amusement buildings, cellulose nitrate film and explosives in New York City each need an FDNY permit. Permits required by the Fire Code are paid for before they are issued, on FDNY Business, and the issued permit stays on the premises. Fees and terms are on the permit page.",
     "naics": ["713", "512"],
     "appliesTo": ["all"],
-    "url": "https://www.nyc.gov/site/fdny/business/all-certifications/per-amusemnetpark.page",
+    "url": "https://www.nyc.gov/site/fdny/business/all-certifications/per-amusementpark.page",
     "checkedOn": "2026-10-16",
     "jurisdiction": "city",
     "appliesWhen": [
@@ -3305,10 +3305,10 @@
     "title": "Have DCWP-licensed NYC ticket sellers",
     "category": "license",
     "authority": "NYC Department of Consumer and Worker Protection",
-    "description": "Each individual selling tickets as a ticket seller in New York City needs a DCWP licence, expiring July 31 each year. The fee is on the DCWP checklist.",
+    "description": "Each individual selling tickets as a ticket seller in New York City needs a DCWP licence, a one-year licence expiring July 31. The fee is $45 if filed August 1 to January 31, and $22.50 (or $67.50 for the longer term) from February 1. It needs government photo ID and a passport-style photo.",
     "naics": ["561599", "711310"],
     "appliesTo": ["employees"],
-    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-ticket-seller-business.page",
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-ticket-seller.page",
     "checkedOn": "2026-10-16",
     "jurisdiction": "city",
     "appliesWhen": [
@@ -4427,6 +4427,94 @@
     "checkedOn": "2026-10-16",
     "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=31",
     "anchor": "2026-12-31"
+  },
+  {
+    "id": "ny.nyc-dob-site-safety-manager-registration",
+    "title": "Register a NYC site safety manager",
+    "category": "license",
+    "authority": "NYC Department of Buildings",
+    "description": "Site safety managers on larger New York City construction sites register with DOB at $300 and renew for $150, valid three years, with written and practical exams. Fees are from DOB's licensing fee chart dated November 2022, so confirm the current amounts.",
+    "naics": ["236", "237"],
+    "appliesTo": ["employees"],
+    "url": "https://www.nyc.gov/site/buildings/industry/license-types.page",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "frequency": "ongoing",
+    "renewal": "Every three years"
+  },
+  {
+    "id": "ny.nyc-dob-special-inspection-agency-registration",
+    "title": "Register a NYC special inspection agency",
+    "category": "license",
+    "authority": "NYC Department of Buildings",
+    "description": "Agencies performing special inspections in New York City register with DOB at $200 and renew for $90, valid three years. Fees are from DOB's licensing fee chart dated November 2022, so confirm the current amounts.",
+    "naics": ["541350", "541380", "541990"],
+    "appliesTo": ["all"],
+    "url": "https://www.nyc.gov/site/buildings/industry/license-types.page",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "frequency": "ongoing",
+    "renewal": "Every three years"
+  },
+  {
+    "id": "ny.nyc-dob-welder-license",
+    "title": "Have NYC licensed welders",
+    "category": "license",
+    "authority": "NYC Department of Buildings",
+    "description": "Welding in New York City needs a DOB welder licence: $50 for the licence and $45 to renew, valid three years, with a $330 background investigation fee. Fees are from DOB's licensing fee chart dated November 2022, so confirm the current amounts.",
+    "naics": ["238120", "238990", "332"],
+    "appliesTo": ["employees"],
+    "url": "https://www.nyc.gov/site/buildings/industry/license-types.page",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "frequency": "ongoing",
+    "renewal": "Every three years"
+  },
+  {
+    "id": "ny.nyc-horse-drawn-cab-driver-license",
+    "title": "Have DCWP-licensed NYC horse drawn cab drivers",
+    "category": "license",
+    "authority": "NYC Department of Consumer and Worker Protection",
+    "description": "Each horse drawn cab driver in New York City needs a DCWP licence, expiring May 31 of even-numbered years. The fee is $30 for applications from June 1 of an even year, $23, $15, and $8 (or $38 for the longer term) from December 1 of an odd year. It needs the horse drawn cab operator's course certificate, a recommending certificate and a character and fitness certification, and drivers must be 18 or older.",
+    "naics": ["485999", "713990"],
+    "appliesTo": ["employees"],
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-horse-drawn-cab-driver.page",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=5;BYMONTHDAY=31",
+    "anchor": "2026-05-31"
   },
   {
     "id": "ny.bail-enforcement-agent-license",
