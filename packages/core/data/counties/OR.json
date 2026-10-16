@@ -11,6 +11,26 @@
         "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=15",
         "url": "https://clackamas.us/at/persprop.html",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "clackamas-or.trimet-transit-payroll-tax",
+        "title": "File the TriMet transit payroll tax with the Oregon Quarterly Tax Report",
+        "category": "filing",
+        "authority": "Oregon Department of Revenue",
+        "description": "Employers with payroll in the TriMet district (parts of Multnomah, Washington and Clackamas counties) report and pay the transit payroll tax on Form OQ each quarter, due April 30, July 31, October 31 and January 31 (next business day if a weekend or holiday). The rate is set each year (0.8037% in 2023); a late payment adds 5%.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
+        "url": "https://www.oregon.gov/dor/programs/businesses/Pages/TriMet-Transit.aspx",
+        "appliesTo": ["employees"]
+      },
+      {
+        "id": "clackamas-or.metro-shs-withholding",
+        "title": "Withhold the Metro Supportive Housing Services income tax for high earners",
+        "category": "payment",
+        "authority": "Metro / City of Portland Revenue Division",
+        "description": "Employers offer withholding of Metro's 1% supportive housing services tax on income above $125,000 (individuals) or $200,000 (joint), with payment due on the same dates as federal and Oregon withholding deposits. Reported separately from other local taxes. Applies to workers in the Metro district (Multnomah, Washington and Clackamas counties).",
+        "frequency": "quarterly",
+        "url": "https://www.oregonmetro.gov/public-projects/supportive-housing-services",
+        "appliesTo": ["employees"]
       }
     ],
     "checkedOn": "2026-10-16"
@@ -27,6 +47,16 @@
         "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=15",
         "url": "https://www.lanecountyor.gov/news/archived_news/PR_012726_PersonalPropertyTax",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "lane-or.lane-transit-payroll-tax",
+        "title": "File the Lane Transit District payroll tax with the Oregon Quarterly Tax Report",
+        "category": "filing",
+        "authority": "Oregon Department of Revenue",
+        "description": "Employers with payroll in the Lane Transit District report and pay the transit payroll tax on Form OQ each quarter, due April 30, July 31, October 31 and January 31 (next business day if a weekend or holiday). The rate is set each year (0.79% in 2024); a late payment adds 5%.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
+        "url": "https://www.oregon.gov/dor/programs/businesses/pages/lane-county-transit-district-payroll-tax.aspx",
+        "appliesTo": ["employees"]
       }
     ],
     "checkedOn": "2026-10-16"
@@ -59,9 +89,39 @@
         "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=15",
         "url": "https://multco.us/assessment-taxation/new-businesses",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "multnomah-or.trimet-transit-payroll-tax",
+        "title": "File the TriMet transit payroll tax with the Oregon Quarterly Tax Report",
+        "category": "filing",
+        "authority": "Oregon Department of Revenue",
+        "description": "Employers with payroll in the TriMet district (parts of Multnomah, Washington and Clackamas counties) report and pay the transit payroll tax on Form OQ each quarter, due April 30, July 31, October 31 and January 31 (next business day if a weekend or holiday). The rate is set each year (0.8037% in 2023); a late payment adds 5%.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
+        "url": "https://www.oregon.gov/dor/programs/businesses/Pages/TriMet-Transit.aspx",
+        "appliesTo": ["employees"]
+      },
+      {
+        "id": "multnomah-or.metro-shs-withholding",
+        "title": "Withhold the Metro Supportive Housing Services income tax for high earners",
+        "category": "payment",
+        "authority": "Metro / City of Portland Revenue Division",
+        "description": "Employers offer withholding of Metro's 1% supportive housing services tax on income above $125,000 (individuals) or $200,000 (joint), with payment due on the same dates as federal and Oregon withholding deposits. Reported separately from other local taxes. Applies to workers in the Metro district (Multnomah, Washington and Clackamas counties).",
+        "frequency": "quarterly",
+        "url": "https://www.oregonmetro.gov/public-projects/supportive-housing-services",
+        "appliesTo": ["employees"]
+      },
+      {
+        "id": "multnomah-or.preschool-for-all-withholding",
+        "title": "Withhold the Multnomah County Preschool for All tax from high earners",
+        "category": "payment",
+        "authority": "Multnomah County / City of Portland Revenue Division",
+        "description": "Employers with a Multnomah County location withhold the Preschool for All personal income tax (1.5% above $125,000 or $200,000 joint, and more above $250,000 or $400,000; rates rise in 2026) from employees who work in the county and earn $200,000 or more in the year. It has its own withholding return remitted to the City of Portland.",
+        "frequency": "quarterly",
+        "url": "https://multco.us/file/employer_handbook-0/download",
+        "appliesTo": ["employees"]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Washington",
@@ -75,6 +135,26 @@
         "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=15",
         "url": "https://washingtoncountyor.gov/es/node/19036",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "washington-or.trimet-transit-payroll-tax",
+        "title": "File the TriMet transit payroll tax with the Oregon Quarterly Tax Report",
+        "category": "filing",
+        "authority": "Oregon Department of Revenue",
+        "description": "Employers with payroll in the TriMet district (parts of Multnomah, Washington and Clackamas counties) report and pay the transit payroll tax on Form OQ each quarter, due April 30, July 31, October 31 and January 31 (next business day if a weekend or holiday). The rate is set each year (0.8037% in 2023); a late payment adds 5%.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
+        "url": "https://www.oregon.gov/dor/programs/businesses/Pages/TriMet-Transit.aspx",
+        "appliesTo": ["employees"]
+      },
+      {
+        "id": "washington-or.metro-shs-withholding",
+        "title": "Withhold the Metro Supportive Housing Services income tax for high earners",
+        "category": "payment",
+        "authority": "Metro / City of Portland Revenue Division",
+        "description": "Employers offer withholding of Metro's 1% supportive housing services tax on income above $125,000 (individuals) or $200,000 (joint), with payment due on the same dates as federal and Oregon withholding deposits. Reported separately from other local taxes. Applies to workers in the Metro district (Multnomah, Washington and Clackamas counties).",
+        "frequency": "quarterly",
+        "url": "https://www.oregonmetro.gov/public-projects/supportive-housing-services",
+        "appliesTo": ["employees"]
       }
     ],
     "checkedOn": "2026-10-16"
