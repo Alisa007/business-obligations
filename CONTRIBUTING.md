@@ -156,6 +156,16 @@ full check on 20.19, so don't add dependencies or syntax that need newer.
 The playground lives in `apps/web` (Next.js, React, Tamagui). `npm run dev` builds the library and starts it at http://localhost:3000.
 Prefer Tamagui's default components and tokens over custom styling.
 
+## Researching a place thoroughly
+
+A place is `unverified` only after a real search came up empty: the jurisdiction's own pages, its codified ordinance
+(Municode, American Legal, Code Publishing, eCode360 and similar), and PDFs (fee schedules, applications, ordinances).
+`node packages/core/scripts/read-pdf.mjs <https-url> [--find "business license"] [--pages 3-7]` prints a PDF's text
+(needs `pdftotext` from poppler). When a page says an ordinance or fee exists but does not give it, find the ordinance
+number, the fee schedule or the council minutes that adopted it. The weekly coverage bot follows the same checklist,
+lists what it tried in its pull request, and also re-researches the oldest `unverified` entries
+(`node packages/core/scripts/missing-local.mjs --revisit 5` lists them).
+
 ## Coverage
 
 There is no generated report to refresh: the JSON in `data/` is the record, and `COVERAGE.md` only says where to look.
