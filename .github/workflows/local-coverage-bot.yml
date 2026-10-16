@@ -169,6 +169,7 @@ jobs:
     needs: research
     if: needs.research.outputs.has_changes == 'true'
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     permissions:
       contents: write
       pull-requests: write
@@ -216,6 +217,7 @@ jobs:
           gh pr create --base main --head "$branch" \
             --title "fix(data): seed missing cities and counties (local coverage bot)" \
             --body-file "$RUNNER_TEMP/in/pr-body.md" --label local-coverage-bot
-          # Pull requests opened with GITHUB_TOKEN do not start CI, so start it on the branch ourselves; the
-          # required checks match by name and commit.
-          gh workflow run ci.yml --ref "$branch"
+          # Pull requests opened with GITHUB_TOKEN get no CI and no chained workflow events: run CI on the branch,
+          # wait, merge, and dispatch Release and Playground ourselves.
+          pr=$(gh pr list --head "$branch" --state open --json number --jq '.[0].number')
+          bash .github/scripts/merge-when-green.sh "$branch" "$pr"
