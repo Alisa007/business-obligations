@@ -59,8 +59,12 @@ the same string. Items that do not repeat on a date (`once`, `ongoing`, `per_eve
 | Every second year from formation       | add `"anchor": "formation_year"` or `"year_after_formation"`                                                       |
 | Anniversary of formation               | `FREQ=YEARLY` (`;BYMONTHDAY=1` or `-1` for the first or last day of the anniversary month)                         |
 
-Add `deadline` only when it says more than the rule (for example `"April 15 (penalty after May 15)"`); a test fails if
-it just repeats the generated text. Other `RRULE` parts are rejected.
+The date is written once, in the `rrule`; the deadline text is generated from it. Add a qualifier with `deadlineNote`
+(`"calendar-year filers"` gives "April 15 (calendar-year filers)"), and a filing window's opening day with
+`opens: { "month": 1, "day": 1 }` ("January 1 – May 1"). Write a full `deadline` only for what the rule cannot say
+("Before the first day of the anniversary month", "15th day of the 4th month after fiscal year end"). Tests fail if a
+`deadline` or `deadlineNote` repeats the rule's date, if both are given, or if a late fee is quoted in the text instead
+of `lateFee`. Other `RRULE` parts are rejected.
 
 Dates: use ISO `YYYY-MM-DD` in every date field (`checkedOn`, `effective`, ...) and spell months out in text
 ("April 15", not "Apr 15", "4/15" or "April 15th"); a test fails otherwise.
