@@ -85,11 +85,11 @@ jobs:
     needs: plan
     if: ${{ needs.plan.outputs.mode == 'prepare' && github.ref == 'refs/heads/main' && !(github.event_name == 'workflow_dispatch' && inputs.dry_run) }}
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
     permissions:
-      contents: write # the release/next branch
+      contents: write # the release/next branch, and merging it
       pull-requests: write
-      actions: write # start CI on that branch (pull requests opened with GITHUB_TOKEN do not trigger it)
+      actions: write # run CI on that branch and dispatch Release and Playground
     env:
       GH_TOKEN: ${{ github.token }}
     steps:
@@ -118,32 +118,37 @@ jobs:
           VERSION: ${{ steps.ver.outputs.version }}
         run: |
           branch=release/next
-          # Nothing to do when the open release branch already carries exactly these files.
+          # Push only when the release branch does not already carry exactly these files; either way carry on to
+          # the pull request and the merge, so a run that was interrupted earlier is completed by the next one.
+          changed=true
           if git ls-remote --exit-code --heads origin "$branch" >/dev/null 2>&1; then
             git fetch -q origin "$branch"
             if git diff --quiet "origin/$branch" -- packages/core/package.json packages/core/CHANGELOG.md; then
+              changed=false
               echo "release/next is already up to date for v$VERSION"
-              exit 0
             fi
           fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git checkout -B "$branch"
-          git add packages/core/package.json packages/core/CHANGELOG.md
-          git commit -m "chore(release): v$VERSION"
-          git push --force origin "$branch"
+          if [ "$changed" = true ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git checkout -B "$branch"
+            git add packages/core/package.json packages/core/CHANGELOG.md
+            git commit -m "chore(release): v$VERSION"
+            git push --force origin "$branch"
+          fi
 
           gh label create release --description "Automated release pull request" 2>/dev/null || true
           pr=$(gh pr list --head "$branch" --state open --json number --jq '.[0].number // empty')
           if [ -z "$pr" ]; then
             gh pr create --base main --head "$branch" --title "chore(release): v$VERSION" \
               --body-file "$RUNNER_TEMP/notes.md" --label release
+            pr=$(gh pr list --head "$branch" --state open --json number --jq '.[0].number')
           else
             gh pr edit "$pr" --title "chore(release): v$VERSION" --body-file "$RUNNER_TEMP/notes.md"
           fi
-          # Pull requests opened with GITHUB_TOKEN do not start CI, so start it on the branch. When it passes, the
-          # Auto-merge workflow merges this pull request and dispatches this workflow again, which then publishes.
-          gh workflow run ci.yml --ref "$branch"
+          # Pull requests opened with GITHUB_TOKEN get no CI and no chained workflow events, so this job runs CI on
+          # the branch, waits, merges, and dispatches this workflow again, which then publishes.
+          bash .github/scripts/merge-when-green.sh "$branch" "$pr"
 
   build:
     needs: plan

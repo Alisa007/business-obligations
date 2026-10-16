@@ -10,7 +10,8 @@ name: Auto-merge
 #
 # Safe by construction: it runs from the default branch (workflow_run), never checks out or executes PR code, only
 # acts on pull requests from this repository, and only when the CI run for the PR's current head commit succeeded.
-# CI contains every required check (check, compat on Node 20/22/24, node-floor). Label a PR "no-automerge" to opt out.
+# The head branch is deleted explicitly: GitHub's "delete head branch" setting does not apply to merges made with
+# the Actions token. CI contains every required check (check, compat on Node 20/22/24, node-floor). Label a PR "no-automerge" to opt out.
 
 on:
   workflow_run:
@@ -46,7 +47,7 @@ jobs:
             echo "merged=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          if gh pr merge "$pr" --squash; then
+          if gh pr merge "$pr" --squash --delete-branch; then
             echo "Merged #$pr"
             echo "merged=true" >> "$GITHUB_OUTPUT"
           else
