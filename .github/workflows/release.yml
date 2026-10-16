@@ -3,9 +3,9 @@ name: Release
 # Continuous deployment with automatic versioning and a generated changelog, using only normal pull requests (no
 # personal access token, no bypass of branch protection).
 #
-# This workflow POLLS instead of waiting for a push: pull requests merged by the auto-merge workflow are merged by
-# github-actions[bot], and GitHub does not start workflows for pushes made with the Actions token. A schedule, a
-# push (when a person merges) and a manual run all do the same thing: look at the repository and decide the next step.
+# Triggers: a push to main (a person merged), a manual run, and, for pull requests merged by the Auto-merge workflow,
+# that workflow dispatching this one right after the merge (pushes made with the Actions token start no workflows, but
+# workflow_dispatch is allowed). Every run does the same thing: look at the repository and decide the next step.
 #
 #   publish  package.json has a version that is neither on npm nor tagged (the release PR was merged):
 #            check, pack, smoke test, approval of the "npm" environment, npm publish, then a vX.Y.Z GitHub release,
@@ -13,7 +13,7 @@ name: Release
 #   prepare  otherwise, if releasable Conventional Commit titles landed since the last tag (feat, fix, perf, revert,
 #            or a breaking change; only commits touching packages/core): open or update ONE pull request,
 #            "chore(release): vX.Y.Z", from release/next that sets the version and adds the generated CHANGELOG.md
-#            section (hand-written Unreleased notes are kept). CI is started on the branch and auto-merge enabled.
+#            section (hand-written Unreleased notes are kept). CI is started on the branch; the Auto-merge workflow merges it.
 #   tag      the version is on npm but untagged (a previous run stopped after publishing): create the release.
 #   none     nothing to do.
 #
@@ -27,8 +27,6 @@ name: Release
 # Run it by hand (Actions > Release > Run workflow): with "dry run" on it only prints what it would do.
 
 on:
-  schedule:
-    - cron: "*/20 * * * *"
   push:
     branches: [main]
     paths: ["packages/core/**"]
@@ -50,9 +48,6 @@ jobs:
   plan:
     runs-on: ubuntu-latest
     timeout-minutes: 5
-    permissions:
-      contents: read
-      actions: read # to see whether the last run failed
     outputs:
       mode: ${{ steps.plan.outputs.mode }}
       version: ${{ steps.plan.outputs.version }}
@@ -67,8 +62,6 @@ jobs:
 
       - name: Decide what to do
         id: plan
-        env:
-          GH_TOKEN: ${{ github.token }}
         run: |
           pkg=$(node -p "require('./packages/core/package.json').version")
           tagged=false; git rev-parse -q --verify "refs/tags/v$pkg" >/dev/null && tagged=true
@@ -83,16 +76,6 @@ jobs:
             echo "$out"
             version=$(node -p "JSON.parse(process.argv[1]).version || ''" "$out")
             [ -n "$version" ] && mode=prepare
-          fi
-          # Back off: after a failed run (for example the npm trusted publisher is not configured yet), scheduled
-          # polls do not rebuild and retry every 20 minutes. A push or a manual run always goes ahead.
-          if [ "$mode" != none ] && [ "$GITHUB_EVENT_NAME" = schedule ]; then
-            recent=$(gh run list --workflow release.yml --limit 10 --json databaseId,conclusion,createdAt --jq \
-              "[.[] | select(.databaseId != $GITHUB_RUN_ID and .conclusion != null and .conclusion != \"cancelled\" and .conclusion != \"skipped\")][0] | select(.conclusion == \"failure\" and ((now - (.createdAt | fromdateiso8601)) < 21600)) | .databaseId" || true)
-            if [ -n "$recent" ]; then
-              echo "Run $recent failed less than 6 hours ago; not retrying on a schedule (run the workflow by hand to retry)." | tee -a "$GITHUB_STEP_SUMMARY"
-              mode=none; version=""
-            fi
           fi
           echo "mode=$mode" >> "$GITHUB_OUTPUT"
           echo "version=$version" >> "$GITHUB_OUTPUT"
@@ -158,9 +141,9 @@ jobs:
           else
             gh pr edit "$pr" --title "chore(release): v$VERSION" --body-file "$RUNNER_TEMP/notes.md"
           fi
-          # Required checks match by name and commit, so CI run on the branch satisfies them.
+          # Pull requests opened with GITHUB_TOKEN do not start CI, so start it on the branch. When it passes, the
+          # Auto-merge workflow merges this pull request and dispatches this workflow again, which then publishes.
           gh workflow run ci.yml --ref "$branch"
-          gh pr merge "$branch" --auto --squash
 
   build:
     needs: plan

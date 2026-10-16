@@ -168,18 +168,19 @@ Releases are automatic and need no extra secrets. Contributing a releasable chan
    `feat!: ...` (or a `BREAKING CHANGE:` footer) is breaking: major, or minor while the version is below 1.0.
    `docs`, `chore`, `ci`, `build`, `test`, `refactor` and `style` do not release by themselves. Only commits that
    touch `packages/core` count, so playground-only changes never release the library.
-2. Within about 20 minutes of such a PR merging, the Release workflow (it polls on a schedule, because pull requests
-   merged by the auto-merge workflow are merged by `github-actions[bot]` and GitHub starts no workflows for those
-   pushes) opens (or updates) **one** pull request,
+2. Right after such a PR merges, the Release workflow opens (or updates) **one** pull request,
    `chore(release): vX.Y.Z`, that sets the version in `packages/core/package.json` and adds the generated section to
-   `CHANGELOG.md`. Hand-written notes under Unreleased are kept and merged into that section. It starts CI on its
-   branch and enables auto-merge, so it merges itself once the required checks pass.
+   `CHANGELOG.md`. Hand-written notes under Unreleased are kept and merged into that section. Its CI run starts on
+   its branch and, when it passes, the Auto-merge workflow merges it.
 3. Merging that PR publishes: the workflow runs the checks, packs and smoke-tests the tarball, waits for approval of the
    `npm` environment, publishes to npm with provenance and creates the `vX.Y.Z` GitHub release (which creates the tag
    at the release commit). Version, changelog, tag and npm always agree.
-4. Rehearse any time: Actions, Release, Run workflow with "dry run" on prints the version it would release; turn dry
+4. Merging, releasing and deploying are event-driven (no polling): the Auto-merge workflow merges a PR when its CI
+   run succeeds and then dispatches Release and Playground itself, because a push made by the Actions token starts no
+   workflows. Add the label `no-automerge` to keep a PR from merging by itself.
+5. Rehearse any time: Actions, Release, Run workflow with "dry run" on prints the version it would release; turn dry
    run off to open the release pull request on demand.
-5. To publish without waiting for approval, remove the required reviewer from the `npm` environment (Settings,
+6. To publish without waiting for approval, remove the required reviewer from the `npm` environment (Settings,
    Environments, npm).
 
 Other one-time setup: enable GitHub Pages (Settings, Pages, Source: GitHub Actions) so the playground deploys on each
