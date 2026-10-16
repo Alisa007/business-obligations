@@ -13,7 +13,8 @@
         "appliesTo": ["all"]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-13",
+    "note": "Berkeley County's hospitality tax rules were not found."
   },
   {
     "county": "Charleston",
@@ -26,6 +27,17 @@
         "description": "South Carolina business personal property returns are due the last day of the fourth month after the accounting period closes (April 30 for calendar-year filers), to the county auditor or, for retail and sales-tax businesses, the SCDOR.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=30",
         "url": "https://auditor.charlestoncounty.gov/forms/Business.php",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "charleston-sc.hospitality-tax-return",
+        "title": "File the Charleston County hospitality tax return",
+        "category": "filing",
+        "authority": "Charleston County Revenue Collections",
+        "description": "Restaurants pay a 2% hospitality tax in Charleston County, reported to the county by the 20th of the month after the sales month with a 25% penalty for late remittance. This comes from a town ordinance that follows the county's Chapter 24; the county's own page for unincorporated restaurants was not found.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://sullivansisland.sc.gov/sites/default/files/Documents/Town%20Codes%20%26%20Ordinances/Hospitality%20Tax.pdf",
+        "naics": ["722"],
         "appliesTo": ["all"]
       }
     ],
@@ -44,10 +56,21 @@
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=30",
         "url": "https://dor.sc.gov/resources-site/publications/Publications/Business%20Personal%20Property%20brochure.pdf",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "greenville-sc.hospitality-tax-return",
+        "title": "File the Greenville County hospitality tax return",
+        "category": "filing",
+        "authority": "Greenville County Treasurer, Financial Operations",
+        "description": "Restaurants and bars owe the county's 2% local hospitality tax on prepared food and drink. Remittance is due at the Treasurer's Office or postmarked by the 20th of the month after the reporting period (next business day if the 20th is a weekend or postal holiday). The county assigns monthly or quarterly filing from estimated sales (monthly above about $2,500 a month on an older FAQ). A 5% penalty is added for each month late. Register with Financial Operations first (864-467-7567).",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://greenvillecountysc.gov/FinanceDivision/PDF/general_questions.pdf",
+        "naics": ["722"],
+        "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-16",
-    "note": "Greenville County has an accommodations fee return with the County Treasurer and a 2% local hospitality tax on prepared food and drink (due the 20th of the month after the period); neither is recorded here yet."
+    "note": "Greenville also has a county accommodations fee return with the Treasurer; its due date was not found."
   },
   {
     "county": "Horry",
@@ -79,6 +102,17 @@
             "description": "Operates a hotel, motel or short-term rental"
           }
         ]
+      },
+      {
+        "id": "horry-sc.hospitality-tax-return",
+        "title": "File the Horry County hospitality tax return",
+        "category": "filing",
+        "authority": "Horry County Treasurer, Hospitality Fee Department",
+        "description": "Food and beverage sales outside city limits pay the county's 2.5% hospitality fee, due the 20th of the month after the reporting period; payments after the 20th incur a penalty. Five cities including Myrtle Beach and Conway replaced the county fee inside their limits. Phone 843-915-5620.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://horrycountysc.gov/departments/treasurer/hospitality-fee/",
+        "naics": ["722"],
+        "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-16"
@@ -97,7 +131,8 @@
         "appliesTo": ["all"]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-13",
+    "note": "Lexington County's hospitality tax rules were not found (the Town of Irmo levies 2% monthly); only the property return and tourism development fee form were seen."
   },
   {
     "county": "Richland",
@@ -111,9 +146,20 @@
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=30",
         "url": "https://www.richlandcountysc.gov/Property-Business/Taxes/Business-Taxes/Business-Personal-Property-Taxes",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "richland-sc.hospitality-tax-return",
+        "title": "File the Richland County hospitality tax return",
+        "category": "filing",
+        "authority": "Richland County Treasurer",
+        "description": "The hospitality tax is 2% in unincorporated areas and several cities (1% in Eastover and the county part of Irmo). Remit by the 20th of each month for the prior month's collections, with the signed voucher and the state ST-3 for the same period; a return postmarked the next business day counts if the 20th is a weekend or postal holiday. New businesses file monthly for their first twelve months. Late: 5% per month.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://www.richlandcountysc.gov/Property-Business/Taxes/Business-Taxes/Hospitality-Taxes/Hospitality-Tax-Information",
+        "naics": ["722"],
+        "appliesTo": ["all"]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Spartanburg",
@@ -127,9 +173,20 @@
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=30",
         "url": "https://dor.sc.gov/resources-site/publications/Publications/Business%20Personal%20Property%20brochure.pdf",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "spartanburg-sc.hospitality-tax-return",
+        "title": "File the Spartanburg County hospitality tax return",
+        "category": "filing",
+        "authority": "Spartanburg County Treasurer, Hospitality Tax Division",
+        "description": "Businesses outside the City of Spartanburg and other municipalities pay the county hospitality tax by the 20th of the month after the sales period (next business day if the county is closed). Remittance is monthly when the average monthly tax is over $50, quarterly at $25 to $50 and annually under $25. A 5% penalty is added each month until paid.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://www.spartanburgcounty.gov/363/Treasurer",
+        "naics": ["722"],
+        "appliesTo": ["all"]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "York",
@@ -143,8 +200,19 @@
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=30",
         "url": "https://www.yorkcountygov.com/157/Auditor",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "york-sc.hospitality-tax-return",
+        "title": "File the York County hospitality tax return",
+        "category": "filing",
+        "authority": "York County Treasurer",
+        "description": "The hospitality tax is 2% in unincorporated York County (1% inside Hickory Grove, McConnells, Sharon and Smyrna). Pay at the Treasurer's Office or postmark by the 20th of the following month, with the ST-3 attached; filing is monthly when the estimated average tax is over $50 a month. A 5% penalty applies for each month late.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://www.yorkcountysc.gov/1010/Hospitality-Tax",
+        "naics": ["722"],
+        "appliesTo": ["all"]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16"
   }
 ]

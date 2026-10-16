@@ -707,6 +707,24 @@ describe("Florida county tourist development tax", () => {
   });
 });
 
+describe("South Carolina county hospitality tax follows the NAICS code", () => {
+  const greenville: BusinessProfile = {
+    entityType: "llc",
+    zip: "29601",
+    city: "Greenville",
+    county: "Greenville",
+    state: "SC",
+  };
+  const has = (p: BusinessProfile) =>
+    evaluate(p, { asOf: "2026-10-16" }).items.some((i) => /Greenville County hospitality tax/.test(i.title));
+
+  it("shows the tax to restaurants and bars only", () => {
+    expect(has({ ...greenville, naics: "722511" })).toBe(true);
+    expect(has({ ...greenville, naics: "448140" })).toBe(false);
+    expect(has(greenville)).toBe(false);
+  });
+});
+
 describe("bring-your-own city data", () => {
   const profile: BusinessProfile = {
     entityType: "llc",

@@ -54,7 +54,17 @@ export function extras(it: LocalItem, entryCheckedOn: string | undefined) {
   };
 }
 
-const INPUTS = ["state", "employeeCount", "sellsTaxableGoods", "entityType", "usesTradeName"] as const;
+const INPUTS = [
+  "state",
+  "employeeCount",
+  "sellsTaxableGoods",
+  "entityType",
+  "usesTradeName",
+  "naics",
+  "activities",
+  "annualPayroll",
+  "annualRevenue",
+] as const;
 
 /**
  * A rule that emits city-specific items from city seeds. The bundled rule uses the bundled seeds; pass your own
