@@ -1,6 +1,7 @@
 // Lists cities and counties that appear in the ZIP data but have no seed in data/cities or data/counties,
 // biggest first (ZIP count is the population proxy). Used by the scheduled coverage bot; also handy by hand:
-//   node scripts/missing-local.mjs [--cities 5] [--counties 5] [--state TX] [--json]
+//   node scripts/missing-local.mjs [--cities 5] [--counties 5] [--revisit 0] [--state TX] [--json]
+// `--revisit N` also lists the N oldest entries that were researched but left "unverified", to be researched again.
 // Candidates the bot decided are not real jurisdictions (postal-only place names) go in scripts/local-skip.json.
 import { readFileSync, readdirSync } from "node:fs";
 import { fileURLToPath } from "node:url";
@@ -63,6 +64,43 @@ export function findMissing({ cities = 5, counties = 5, state } = {}) {
   };
 }
 
+/**
+ * Entries researched earlier but left `unverified`, oldest check first and bigger places first, as candidates for another
+ * round of research. Entries with `status: "none"` or with rules are settled and never listed.
+ */
+export function findUnverified({ count = 0, state } = {}) {
+  if (count <= 0) return [];
+  const zips = read("data/zips.json");
+  const size = new Map();
+  for (const entry of Object.values(zips.zips)) {
+    const st = zips.states[entry[2]];
+    for (const [idx, names] of [
+      [0, zips.places],
+      [1, zips.counties],
+    ]) {
+      const name = names[entry[idx]];
+      if (name) size.set(`${idx}:${st}:${norm(name)}`, (size.get(`${idx}:${st}:${norm(name)}`) ?? 0) + 1);
+    }
+  }
+  const rows = [
+    ...jsonIn("data/cities").map((e) => ({ kind: "city", name: e.city, idx: 0, e })),
+    ...jsonIn("data/counties").map((e) => ({ kind: "county", name: e.county, idx: 1, e })),
+  ]
+    .filter(({ e }) => e.status === "unverified" && (!state || e.state === state))
+    .map(({ kind, name, idx, e }) => ({
+      kind,
+      state: e.state,
+      name,
+      checkedOn: e.checkedOn ?? "",
+      note: e.note ?? e.reason ?? "",
+      zips: size.get(`${idx}:${e.state}:${norm(name)}`) ?? 0,
+    }));
+  rows.sort(
+    (a, b) => a.checkedOn.localeCompare(b.checkedOn) || b.zips - a.zips || a.name.localeCompare(b.name),
+  );
+  return rows.slice(0, count).map(({ zips: _zips, ...r }) => r);
+}
+
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const arg = (name, fallback) => {
     const i = process.argv.indexOf(`--${name}`);
@@ -73,11 +111,15 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
     counties: Number(arg("counties", 5)),
     state: arg("state"),
   });
+  out.revisit = findUnverified({ count: Number(arg("revisit", 0)), state: arg("state") });
   if (process.argv.includes("--json")) console.log(JSON.stringify(out, null, 2));
   else {
     console.log("Cities without a seed (by ZIP count):");
     for (const c of out.cities) console.log(`  ${c.state}  ${c.city}  (${c.zips} ZIPs)`);
     console.log("Counties without a seed (by ZIP count):");
     for (const c of out.counties) console.log(`  ${c.state}  ${c.county}  (${c.zips} ZIPs)`);
+    if (out.revisit.length) console.log("Unverified entries to research again (oldest first):");
+    for (const c of out.revisit)
+      console.log(`  ${c.state}  ${c.name} (${c.kind}, checked ${c.checkedOn || "never"})`);
   }
 }

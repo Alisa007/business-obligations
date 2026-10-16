@@ -23,6 +23,9 @@ on:
       counties:
         description: Number of counties to research
         default: "2"
+      revisit:
+        description: Number of existing "unverified" entries to research again (oldest first)
+        default: "2"
       state:
         description: Limit to one state (two-letter code, optional)
         default: ""
@@ -37,7 +40,7 @@ permissions:
 jobs:
   research:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 120
     permissions:
       contents: read
       pull-requests: read
@@ -68,23 +71,31 @@ jobs:
           # Manual inputs reach the script only through the environment and are validated, never interpolated.
           IN_CITIES: ${{ inputs.cities || '2' }}
           IN_COUNTIES: ${{ inputs.counties || '2' }}
+          IN_REVISIT: ${{ inputs.revisit || '2' }}
           IN_STATE: ${{ inputs.state }}
         run: |
           [[ "$IN_CITIES" =~ ^[0-9]{1,2}$ ]] || { echo "cities must be a number" >&2; exit 1; }
           [[ "$IN_COUNTIES" =~ ^[0-9]{1,2}$ ]] || { echo "counties must be a number" >&2; exit 1; }
+          [[ "$IN_REVISIT" =~ ^[0-9]{1,2}$ ]] || { echo "revisit must be a number" >&2; exit 1; }
           [[ -z "$IN_STATE" || "$IN_STATE" =~ ^[A-Za-z]{2}$ ]] || { echo "state must be two letters" >&2; exit 1; }
           npm ci --ignore-scripts
-          args=(--cities "$IN_CITIES" --counties "$IN_COUNTIES" --json)
+          args=(--cities "$IN_CITIES" --counties "$IN_COUNTIES" --revisit "$IN_REVISIT" --json)
           [ -n "$IN_STATE" ] && args+=(--state "$(printf '%s' "$IN_STATE" | tr a-z A-Z)")
           node packages/core/scripts/missing-local.mjs "${args[@]}" > "$RUNNER_TEMP/candidates.json"
           cat "$RUNNER_TEMP/candidates.json"
-          total=$(node -e 'const c=require(process.argv[1]);console.log(c.cities.length+c.counties.length)' "$RUNNER_TEMP/candidates.json")
+          total=$(node -e 'const c=require(process.argv[1]);console.log(c.cities.length+c.counties.length+c.revisit.length)' "$RUNNER_TEMP/candidates.json")
           echo "total=$total" >> "$GITHUB_OUTPUT"
+          echo "today=$(date -u +%F)" >> "$GITHUB_OUTPUT"
           {
             echo "json<<EOF_CANDIDATES"
             cat "$RUNNER_TEMP/candidates.json"
             echo "EOF_CANDIDATES"
           } >> "$GITHUB_OUTPUT"
+
+      # pdftotext lets the agent read ordinances and fee schedules that are only published as PDFs.
+      - name: Install PDF text extraction
+        if: steps.open.outputs.count == '0' && steps.pick.outputs.total != '0'
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
 
       - name: Research candidates
         if: steps.open.outputs.count == '0' && steps.pick.outputs.total != '0'
@@ -95,14 +106,19 @@ jobs:
           github_token: ${{ github.token }}
           show_full_output: true
           claude_args: >-
-            --model claude-haiku-5-5 --max-turns 60
+            --model claude-haiku-5-5 --max-turns 250
             --allowedTools "Read,Edit,Write,Glob,Grep,WebSearch,WebFetch,Bash(node packages/core/scripts/*),Bash(npm --prefix packages/core run check),Bash(npm --prefix packages/core run test:update),Bash(git diff*),Bash(git status*)"
           prompt: |
             You maintain the local-jurisdiction data of this business-obligations project. Add seeds for the cities and
             counties below, which appear in the ZIP data but have no entry yet. Follow CONTRIBUTING.md ("Adding a
             city", "Adding a county") exactly.
 
-            Candidates (JSON; `zips` is only a size hint):
+            Today's date is ${{ steps.pick.outputs.today }}; use it for every `checkedOn`.
+
+            Candidates (JSON; `zips` is only a size hint). `cities` and `counties` have no entry yet. `revisit`
+            lists entries that already exist with `status: "unverified"` (an earlier round could not confirm them;
+            `note` says what was missing): research them again, from a fresh angle that avoids the same dead ends,
+            and replace the entry in place (same position in its file) with what you find, setting `checkedOn`.
 
             ${{ steps.pick.outputs.json }}
 
@@ -110,17 +126,49 @@ jobs:
             1. Decide whether it is a real jurisdiction. Postal-only place names, neighbourhoods and planning
                regions (for example Connecticut's "Western Connecticut") are not. Do not seed those; add them to
                packages/core/scripts/local-skip.json under "cities" or "counties" with a one-line "reason".
-            2. Otherwise research it on the jurisdiction's OWN official website (city or county government, not
-               aggregators): does it require a general business license, business tax, or (counties) a business
-               personal property return or similar filing?
+            2. Otherwise research it until you have the answer. Search persistently; do not give up after a page or two.
+               Official sources are the jurisdiction's own website and PDFs, and its codified ordinances where they
+               are published (Municode, American Legal, Code Publishing, eCode360, General Code or the city's own
+               code site), plus council agendas and minutes on the jurisdiction's own domain. Not aggregators, law
+               firm blogs or business-registration services. The question: does it require a general business license,
+               business tax, or (counties) a business personal property return or similar filing, and if so what are
+               the fee, the term or due date, who is covered and who is exempt?
+               Work through this checklist and keep going until it is exhausted or you have the answer:
+               a. Search the web for the name plus "business license", "business tax", "occupational license",
+                  "business registration", "tax certificate" (counties: "business personal property", "assessor",
+                  "personal property declaration"). Open the official results, not only the first one.
+               b. Read the jurisdiction's department pages (finance, treasurer, tax collector, clerk, assessor,
+                  planning and zoning) and follow every link about licenses, taxes, fees and applications.
+               c. Find the ordinance in the municipal or county code ("Business licenses", "Licensing", "Taxation"
+                  title) and read the section itself: fee, term, renewal, who is covered, exemptions.
+               d. Search for PDFs: add `filetype:pdf` or words such as "fee schedule", "master fee schedule",
+                  "application", "ordinance" to the search. Read a PDF with
+                  `node packages/core/scripts/read-pdf.mjs <https-url>`; for a long document use
+                  `--find "business license"` (lines around each match) or `--pages 12-15`.
+               e. If a page says an ordinance, fee or renewal exists but does not give it, that is a pointer, not an
+                  answer: look for the ordinance number or section it names, the fee schedule, the application
+                  form, council agenda items and minutes that adopted it, and the page's linked documents. If a
+                  link fails, try the print version, a shorter URL, or the Internet Archive copy
+                  (web.archive.org) to read it; cite the original official URL.
+               f. Try different wording and the likely department names; try the state's own page for the county or
+                  city; try the county or city name with the state spelled out.
+               Do at least eight distinct searches or fetches, including at least two PDF attempts, before you
+               conclude "unverified", and keep going while each step is still turning up new leads. Never write a
+               note such as "the ordinance text could not be read" or "gives no fee" unless you actually tried to
+               find the ordinance text, the fee schedule and the application as above.
             3. Add the entry to packages/core/data/cities/<STATE>.json or packages/core/data/counties/<STATE>.json,
                keeping each file's existing order and style.
-               - Found a requirement: add items with a real `url` from the official page, an `rrule` (iCalendar
-                 recurrence rule, see CONTRIBUTING.md) only if the page states the date, and `appliesTo` tags.
-               - Official page confirms there is none: `"status": "none"`, `"items": []`, `sourceUrl`, `note`,
+               - Found a requirement: add items with a real `url` from the official page (or the PDF), the fee,
+                 term and coverage in the description in your own words, an `rrule` (iCalendar recurrence rule,
+                 see CONTRIBUTING.md) only if the source states the date, and `appliesTo` tags. Cite the most
+                 specific page: the code section or PDF, not a home page.
+               - Official source confirms there is none: `"status": "none"`, `"items": []`, `sourceUrl`, `note`,
                  `checkedOn`.
-               - Could not confirm either way: `"status": "unverified"`, `"items": []`, a short `note` (or a `reason` code from
-                 packages/core/data/local-notes.json when it says exactly the same), `checkedOn`.
+               - Only after the checklist above is exhausted, and you could confirm neither way: `"status":
+                 "unverified"`, `"items": []`, a short `note` that names what you tried and what was missing (or a
+                 `reason` code from packages/core/data/local-notes.json when it says exactly the same), `checkedOn`.
+                 If you found that a license exists but not its fee, still add the item with what you did find,
+                 and say what is missing in the pull request description.
             Rules you must follow:
             - Never invent a URL, fee, rate or deadline. If you did not read it on an official page, leave it out and
               use "unverified". Prefer "unverified" over a guess every time.
@@ -137,7 +185,8 @@ jobs:
             As the last step, write the pull request description to `.bot/pr-body.md` (create the folder). It must
             follow the repository's PR template headings, and list, per candidate, the decision (seeded with rules
             / none / unverified / skipped), the official source link, and anything a reviewer should double-check.
-            Do not put anything else in `.bot/`.
+            List the searches and PDFs you tried for each candidate (one line each), especially for any "unverified"
+            result, so a reviewer can see the search was exhaustive. Do not put anything else in `.bot/`.
 
       # Export only files the bot is allowed to change. Anything else Claude touched is dropped here, and the
       # publish job checks the patch again before applying it.
