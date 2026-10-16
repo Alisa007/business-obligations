@@ -1,9 +1,18 @@
 [
   {
     "county": "Hinds",
-    "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "hinds-ms.business-personal-property",
+        "title": "File Hinds County business personal property return",
+        "category": "filing",
+        "authority": "Hinds County Tax Assessor",
+        "description": "Mississippi owners of taxable personal property file a rendition with the county tax assessor; the assessor sets the filing date, which cannot be later than April 1. Failing to list property can raise the assessment by 10% (Miss. Code 27-35-45). Business property is assessed at 15%. The Hinds County assessor's own date was not confirmed; April 1 is the latest allowed. The link is the state rendition form.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://dor.ms.gov/sites/default/files/Property/Rendition2024.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16"
   }
 ]

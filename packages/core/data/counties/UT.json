@@ -1,24 +1,51 @@
 [
   {
     "county": "Davis",
-    "status": "unverified",
-    "reason": "bpp-state-rules-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "davis-county-ut.business-personal-property",
+        "title": "File Davis County business personal property return",
+        "category": "filing",
+        "authority": "Davis County Assessor",
+        "description": "Utah businesses on the county's rolls return a signed statement of personal property to the county assessor; the state default date is May 15 of the year the assessor requests it (60 days if requested on or after March 16), so use the date printed on the statement. A small-holdings exemption (about $30,100 of taxable value in 2026) must be claimed by filing; late filers pay a penalty of $25 or 10% of the tax, whichever is greater. The county's own page was not individually confirmed; the state rule applies. The link is the county assessor's home page.",
+        "rrule": "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=15",
+        "url": "https://www.daviscountyutah.gov/assessor",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Salt Lake",
-    "status": "unverified",
-    "reason": "bpp-state-rules-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "salt-lake-county-ut.business-personal-property",
+        "title": "File Salt Lake County business personal property return",
+        "category": "filing",
+        "authority": "Salt Lake County Assessor",
+        "description": "Utah businesses on the county's rolls return a signed statement of personal property to the county assessor; the state default date is May 15 of the year the assessor requests it (60 days if requested on or after March 16), so use the date printed on the statement. A small-holdings exemption (about $30,100 of taxable value in 2026) must be claimed by filing; late filers pay a penalty of $25 or 10% of the tax, whichever is greater. Salt Lake County mails the statements in January and February and the due date printed at the top controls.",
+        "rrule": "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=15",
+        "url": "https://gis.slco.org/assessor/business-personal-property",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Utah",
-    "status": "unverified",
-    "reason": "bpp-state-rules-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "utah-county-ut.business-personal-property",
+        "title": "File Utah County business personal property return",
+        "category": "filing",
+        "authority": "Utah County Assessor",
+        "description": "Utah businesses on the county's rolls return a signed statement of personal property to the county assessor; the state default date is May 15 of the year the assessor requests it (60 days if requested on or after March 16), so use the date printed on the statement. A small-holdings exemption (about $30,100 of taxable value in 2026) must be claimed by filing; late filers pay a penalty of $25 or 10% of the tax, whichever is greater. The Utah County assessor says the exemption affidavit must be refiled every year by May 15.",
+        "rrule": "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=15",
+        "url": "https://www.lehi-ut.gov/media/t0zniewh/utah-county-assessor-department.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Weber",
