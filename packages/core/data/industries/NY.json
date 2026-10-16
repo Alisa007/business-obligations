@@ -3067,6 +3067,353 @@
     "frequency": "once"
   },
   {
+    "id": "ny.nyc-facade-inspection-fisp",
+    "title": "File the facade inspection report for a building over six stories",
+    "category": "filing",
+    "authority": "NYC Department of Buildings",
+    "description": "Owners of New York City buildings higher than six stories must have the exterior walls inspected by a qualified professional every five years and file a technical report in DOB NOW: Safety. Cycle 10 windows depend on the last digit of the block number: sub-cycle A (4, 5, 6, 9) February 21, 2025 to February 21, 2027; B (0, 7, 8) February 21, 2026 to February 21, 2028; C (1, 2, 3) February 21, 2027 to February 21, 2029. The filing fee is $425 ($305 to extend repairs). Late filing costs $1,000 a month and failing to file $5,000 a year. Confirm the fees and any Local Law 11 changes on DOB's page.",
+    "naics": ["531110", "531120", "531190", "531311", "531312"],
+    "appliesTo": ["all"],
+    "url": "https://www.nyc.gov/site/buildings/safety/facade-local-law.page",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "frequency": "every_five_years",
+    "renewal": "Every five years",
+    "exemptions": ["Buildings six stories or lower"]
+  },
+  {
+    "id": "ny.nyc-boiler-annual-inspection-report",
+    "title": "File the annual boiler inspection report with DOB",
+    "category": "filing",
+    "authority": "NYC Department of Buildings",
+    "description": "Owners of boilers in New York City have each boiler inspected every calendar year and the report filed in DOB NOW: Safety, with a $30 fee per boiler report. DOB's compliance page gives 14 days from the inspection (late filings accepted to January 14), while its fee page and the low-pressure page say 45 days, so confirm. Late filing within 12 months costs $50 a month per boiler, up to $600, and filing later than that draws a $1,000 failure-to-file penalty.",
+    "naics": ["531110", "531120", "531190", "531311", "531312", "721110", "622110"],
+    "appliesTo": ["all"],
+    "url": "https://www.nyc.gov/site/buildings/safety/boiler-compliance.page",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "frequency": "annual",
+    "renewal": "Every calendar year",
+    "exemptions": ["Buildings with no boiler"]
+  },
+  {
+    "id": "ny.nyc-elevator-periodic-inspection-reports",
+    "title": "File elevator inspection and test reports with DOB",
+    "category": "filing",
+    "authority": "NYC Department of Buildings",
+    "description": "Owners of elevators in New York City hire an approved inspection agency not affiliated with the maintenance firm, and the agency files the periodic inspection report (14 days from the inspection, cut-off January 14) and Category 1 test report (21 days, cut-off January 21) in DOB NOW: Safety. Defects must be corrected within 90 days and filed within 14 days of correction. In commercial and mixed-use buildings failing to file a Category 3 or 5 report within twelve months draws $5,000 per elevator. Older DOB material says 60 days for Category 1, so confirm the deadline.",
+    "naics": ["531110", "531120", "531190", "531311", "531312", "721110", "622110"],
+    "appliesTo": ["all"],
+    "url": "https://www.nyc.gov/site/buildings/safety/elevator-compliance.page",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "frequency": "annual",
+    "renewal": "Every calendar year",
+    "exemptions": ["Buildings with no elevator"]
+  },
+  {
+    "id": "ny.nyc-cooling-tower-registration",
+    "title": "Register cooling towers with the NYC Health Department",
+    "category": "registration",
+    "authority": "NYC Department of Health and Mental Hygiene",
+    "description": "Owners and property managers with cooling towers, fluid coolers or evaporative condensers register each one through the DOHMH Cooling Tower Registration portal before it operates (Local Law 77 of 2015), enrolling in the electronic tracking system first, and keep a maintenance plan for each system. Notify the city within 30 days of removing or stopping a tower. The statute allows fees set by rule, which I did not find, and failure to register is a major violation up to $10,000.",
+    "naics": ["531110", "531120", "531190", "531311", "531312", "721110", "622110", "611310"],
+    "appliesTo": ["all"],
+    "url": "https://nyc-business.nyc.gov/nycbusiness/description/cooling-tower-registration",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "frequency": "once",
+    "exemptions": ["Buildings with no cooling tower, fluid cooler or evaporative condenser"]
+  },
+  {
+    "id": "ny.nyc-cooling-tower-annual-certification",
+    "title": "File the cooling tower annual certification with DOHMH",
+    "category": "filing",
+    "authority": "NYC Department of Health and Mental Hygiene",
+    "description": "Owners certify each year that every registered cooling tower was inspected, tested, cleaned and disinfected, with corrective actions documented, through the Cooling Tower Registration Portal by November 1. The city sends a reminder at least 30 days ahead, and missing it is a major violation up to $10,000.",
+    "naics": ["531110", "531120", "531190", "531311", "531312", "721110", "622110", "611310"],
+    "appliesTo": ["all"],
+    "url": "https://www.nyc.gov/assets/doh/downloads/pdf/cd/cooling-tower-annual-certification.pdf",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "rrule": "FREQ=YEARLY;BYMONTH=11;BYMONTHDAY=1",
+    "exemptions": ["Buildings with no registered cooling tower"]
+  },
+  {
+    "id": "ny.nyc-place-of-assembly-certificate-of-operation",
+    "title": "Get a place of assembly certificate of operation from DOB",
+    "category": "permit",
+    "authority": "NYC Department of Buildings",
+    "description": "A New York City premises where 75 or more members of the public gather indoors, or 200 or more outdoors, for religious, recreational, educational, political or social purposes, or to eat or drink, needs a Place of Assembly Certificate of Operation, applied for in DOB NOW: Build after a DOB inspection. It is issued for one year, and within that year the place must obtain an FDNY public assembly permit. No fee is stated on the page.",
+    "naics": ["7111", "7112", "7113", "7224", "7225", "8131", "611", "712110"],
+    "appliesTo": ["all"],
+    "url": "https://www.nyc.gov/site/buildings/property-or-business-owner/place-of-assembly-certificate-of-operation.page",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "frequency": "once",
+    "exemptions": ["Premises under 75 people indoors and 200 outdoors"]
+  },
+  {
+    "id": "ny.nyc-fdny-public-assembly-permit",
+    "title": "Get an FDNY public assembly permit",
+    "category": "permit",
+    "authority": "Fire Department of the City of New York",
+    "description": "Maintaining or operating a place of assembly needs an FDNY public assembly permit, for up to one year and renewed on the results of annual inspections. The fee varies with the number of occupants. It needs the DOB certificate of operation, DOB-approved floor or seating plans and certificates of fitness S-95, F-03 and F-04 as applicable, plus F-01 if required.",
+    "naics": ["7111", "7112", "7113", "7224", "7225", "8131", "611", "712110"],
+    "appliesTo": ["all"],
+    "url": "https://www.nyc.gov/site/fdny/business/all-certifications/per-assemblyoccupancy2.page",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "frequency": "annual",
+    "renewal": "Every year",
+    "exemptions": ["Premises under 75 people indoors and 200 outdoors"]
+  },
+  {
+    "id": "ny.nyc-fdny-fire-alarm-application",
+    "title": "File an FDNY fire alarm system application",
+    "category": "permit",
+    "authority": "Fire Department of the City of New York",
+    "description": "Designing, approving and installing a fire alarm system in New York City needs an FDNY fire alarm application, filed online by the owner, a contractor or a licensed professional, with plans sealed by a New York State registered engineer or architect. The new application fee is $420, plus $525 for a complex technical analysis when required, and $585 to withdraw. It needs the certificate of occupancy or approved Schedule A, a TM-1, floor plans, riser diagram and an I/O matrix, and installation by a licensed master electrician with an S97 certificate. A project authorization is requested before construction.",
+    "naics": ["238210", "561621"],
+    "appliesTo": ["all"],
+    "url": "https://nyc-business.nyc.gov/nycbusiness/description/fire-alarm-application",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "frequency": "per_event"
+  },
+  {
+    "id": "ny.nyc-fdny-commercial-cooking-permit",
+    "title": "Get an FDNY commercial cooking systems permit",
+    "category": "permit",
+    "authority": "Fire Department of the City of New York",
+    "description": "Operating commercial cooking systems in New York City needs an FDNY permit. Permits required by the Fire Code are paid for before they are issued, on FDNY Business, and the issued permit stays on the premises. Fees and terms are on the permit page.",
+    "naics": ["7225", "7224", "722310"],
+    "appliesTo": ["all"],
+    "url": "https://www.nyc.gov/site/fdny/business/all-certifications/per-commercialcookingsystem.page",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "frequency": "ongoing"
+  },
+  {
+    "id": "ny.nyc-fdny-motor-fuel-dispensing-permit",
+    "title": "Get an FDNY motor fuel dispensing facility permit",
+    "category": "permit",
+    "authority": "Fire Department of the City of New York",
+    "description": "Operating a motor fuel dispensing facility in New York City needs an FDNY permit. Permits required by the Fire Code are paid for before they are issued, on FDNY Business, and the issued permit stays on the premises. Fees and terms are on the permit page.",
+    "naics": ["4571", "457110"],
+    "appliesTo": ["all"],
+    "url": "https://www.nyc.gov/site/fdny/business/all-certifications/per-motorfueldispensingfacilities.page",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "frequency": "ongoing"
+  },
+  {
+    "id": "ny.nyc-fdny-repair-garage-permit",
+    "title": "Get an FDNY repair garage permit",
+    "category": "permit",
+    "authority": "Fire Department of the City of New York",
+    "description": "Operating a repair garage in New York City needs an FDNY permit. Permits required by the Fire Code are paid for before they are issued, on FDNY Business, and the issued permit stays on the premises. Fees and terms are on the permit page.",
+    "naics": ["8111"],
+    "appliesTo": ["all"],
+    "url": "https://www.nyc.gov/site/fdny/business/all-certifications/per-repairgarages.page",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "frequency": "ongoing"
+  },
+  {
+    "id": "ny.nyc-fdny-dry-cleaning-facility-permit",
+    "title": "Get an FDNY dry cleaning facility permit",
+    "category": "permit",
+    "authority": "Fire Department of the City of New York",
+    "description": "Operating a dry cleaning facility in New York City needs an FDNY permit. Permits required by the Fire Code are paid for before they are issued, on FDNY Business, and the issued permit stays on the premises. Fees and terms are on the permit page.",
+    "naics": ["812320"],
+    "appliesTo": ["all"],
+    "url": "https://www.nyc.gov/site/fdny/business/all-certifications/per-drycleaningfacilities.page",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "frequency": "ongoing"
+  },
+  {
+    "id": "ny.nyc-fdny-hazardous-materials-permit",
+    "title": "Get FDNY permits for hazardous and combustible materials",
+    "category": "permit",
+    "authority": "Fire Department of the City of New York",
+    "description": "Manufacturing, storing, handling, using or transporting hazardous or combustible materials in New York City, such as compressed gases, cryogenic fluids, flammable and combustible liquids and liquefied petroleum gas, needs the matching FDNY permit. Permits required by the Fire Code are paid for before they are issued, on FDNY Business, and the issued permit stays on the premises. Fees and terms are on the permit page.",
+    "naics": ["325", "324", "4247", "4246", "562211"],
+    "appliesTo": ["all"],
+    "url": "https://www.nyc.gov/site/fdny/business/all-certifications/per-hazordousmaterial.page",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "frequency": "ongoing"
+  },
+  {
+    "id": "ny.nyc-fdny-open-flame-permit",
+    "title": "Get an FDNY open flame permit",
+    "category": "permit",
+    "authority": "Fire Department of the City of New York",
+    "description": "Using open flames, for example by food vendors, needs an FDNY permit at $210 per set-up or vendor, with a business certificate and certificates of fitness such as F-03 and S-95. Permits required by the Fire Code are paid for before they are issued, on FDNY Business, and the issued permit stays on the premises. Fees and terms are on the permit page.",
+    "naics": ["7225", "722330"],
+    "appliesTo": ["all"],
+    "url": "https://www.nyc.gov/site/fdny/business/all-certifications/per-openflames.page",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "frequency": "ongoing"
+  },
+  {
+    "id": "ny.nyc-fdny-special-effects-pyrotechnics-permit",
+    "title": "Get FDNY permits for special effects, fireworks and pyrotechnics",
+    "category": "permit",
+    "authority": "Fire Department of the City of New York",
+    "description": "Producing special effects, fireworks or pyrotechnic displays in New York City needs the matching FDNY permit and certificates of fitness. Permits required by the Fire Code are paid for before they are issued, on FDNY Business, and the issued permit stays on the premises. Fees and terms are on the permit page.",
+    "naics": ["512110", "7111", "711310"],
+    "appliesTo": ["all"],
+    "url": "https://www.nyc.gov/site/fdny/business/all-certifications/per-specialeffects.page",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "frequency": "ongoing"
+  },
+  {
+    "id": "ny.nyc-fdny-tire-storage-permit",
+    "title": "Get an FDNY permit for tires and tire rebuilding",
+    "category": "permit",
+    "authority": "Fire Department of the City of New York",
+    "description": "Storing tires or scrap tires, or running a tire-rebuilding plant, in New York City needs an FDNY permit. Permits required by the Fire Code are paid for before they are issued, on FDNY Business, and the issued permit stays on the premises. Fees and terms are on the permit page.",
+    "naics": ["4413", "326212", "562920"],
+    "appliesTo": ["all"],
+    "url": "https://www.nyc.gov/site/fdny/business/all-certifications/per-tiresscraptirestirebyproducts.page",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "frequency": "ongoing"
+  },
+  {
     "id": "ny.firearms-dealer-license",
     "title": "Get a New York firearms dealer licence",
     "category": "license",
