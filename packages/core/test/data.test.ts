@@ -131,6 +131,20 @@ describe("state data files", () => {
     }
   });
 
+  it("has no note that only restates what the fee already is", () => {
+    const empty =
+      /^(annual list fee|renewal of registration|certificate of renewal|fee for delinquent [a-z ]+|penalty for late [a-z ]+|late filing penalty on the [a-z ]+|penalty when the fee is not received by the due date)$/i;
+    for (const f of files) {
+      const s = read(`data/states/${f}`);
+      for (const k of ["llcReport", "corpReport", "lpReport", "llpReport", "businessLicense"]) {
+        const n = s[k];
+        if (!n) continue;
+        for (const text of [n.feeDetail.note, n.lateFee?.note])
+          if (text) expect(text, `${f} ${k}: "${text}" says nothing the amount does not`).not.toMatch(empty);
+      }
+    }
+  });
+
   it("generates the fee text from feeDetail", () => {
     const text = (code: string, key: string) => describeFee(read(`data/states/${code}.json`)[key].feeDetail);
     expect(text("TX", "llcReport")).toBe(
@@ -172,7 +186,7 @@ describe("state data files", () => {
       const s = read(`data/states/${f}`);
       for (const k of ["llcReport", "corpReport", "lpReport", "llpReport"]) {
         const late = s[k]?.lateFee;
-        const quoted = late?.note.match(/(\d+(?:\.\d+)?)% per month/);
+        const quoted = late?.note?.match(/(\d+(?:\.\d+)?)% per month/);
         if (quoted) expect(Number(quoted[1]), `${f} ${k}`).toBe(late.percentPerMonth);
       }
     }
@@ -651,7 +665,10 @@ describe("schedules in data files", () => {
       if (o.deadline) {
         expect(o.deadline, `${where} deadline equals the generated text`).not.toBe(generated);
         // A qualifier belongs in deadlineNote: the date is written once, in the rrule.
-        if (generated)
+        // (A text that goes on to name a second date, such as another filing, is more than a qualifier.)
+        const rest = generated ? (o.deadline as string).slice(generated.length) : "";
+        const namesAnotherDate = new RegExp(MONTHS.join("|") + " \\d").test(rest);
+        if (generated && !namesAnotherDate)
           expect(
             (o.deadline as string).startsWith(`${generated} (`),
             `${where} deadline "${o.deadline}" repeats the generated date; use deadlineNote`,
@@ -660,6 +677,16 @@ describe("schedules in data files", () => {
       }
       for (const text of [o.deadline, o.deadlineNote])
         if (text) expect(text as string, `${where} quotes a late fee; use lateFee`).not.toMatch(/late fee/i);
+      if (typeof o.deadlineNote === "string") {
+        const open = (o.deadlineNote.match(/\(/g) ?? []).length;
+        expect(open, `${where} deadlineNote has unbalanced parentheses: ${o.deadlineNote}`).toBe(
+          (o.deadlineNote.match(/\)/g) ?? []).length,
+        );
+        // Restating what the item already is says nothing ("expiration", "renewal").
+        expect(o.deadlineNote, `${where} note says nothing`).not.toMatch(
+          /^(license |certificate )?(expiration|renewal)$/i,
+        );
+      }
       if (o.deadlineNote) {
         expect(generated, `${where} deadlineNote needs a rule that generates text`).toBeDefined();
         // The note may not name one of the rule's own dates.

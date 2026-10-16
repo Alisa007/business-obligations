@@ -109,7 +109,8 @@ export interface LateFee {
   amount: number;
   /** Additional interest or penalty as a percentage per month. */
   percentPerMonth?: number;
-  note: string;
+  /** When the fee applies or what makes it special; omitted when it would only say "late fee". */
+  note?: string;
 }
 
 export interface ReportRule {

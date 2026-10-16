@@ -733,7 +733,7 @@
     "lateFee": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["amount", "note"],
+      "required": ["amount"],
       "properties": {
         "amount": {
           "type": "number",
@@ -744,7 +744,9 @@
           "minimum": 0
         },
         "note": {
-          "type": "string"
+          "type": "string",
+          "minLength": 3,
+          "description": "When the fee applies or what makes it special (\"cannot be waived\"). Omit when it would only say \"late fee\"."
         }
       }
     }
