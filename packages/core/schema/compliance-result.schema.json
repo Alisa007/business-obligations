@@ -450,6 +450,13 @@
           "items": {
             "enum": ["online", "mail", "in_person", "fax"]
           }
+        },
+        "fips": {
+          "type": "string",
+          "pattern": "^\\d{5}$|^\\d{7}$"
+        },
+        "incorporated": {
+          "type": "boolean"
         }
       }
     }

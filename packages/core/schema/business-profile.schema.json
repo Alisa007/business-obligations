@@ -186,8 +186,8 @@
     },
     "naics": {
       "type": "string",
-      "pattern": "^\\d{6}$",
-      "description": "Six-digit NAICS code of the main activity."
+      "pattern": "^\\d{2,6}$",
+      "description": "NAICS code (2 to 6 digits) of the main activity; implies an industry for construction (23), food service (722), retail (44-45), real estate (531) and healthcare (621-623) when industry is not set."
     },
     "activities": {
       "type": "array",
