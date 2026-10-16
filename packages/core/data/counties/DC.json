@@ -9,13 +9,7 @@
         "category": "filing",
         "authority": "District of Columbia Office of Tax and Revenue",
         "description": "Businesses with a location in the District file a personal property tax return (FP-31) for tangible personal property as of July 1, due July 31, electronically through MyTax.DC.gov. The county's own page was not individually confirmed; the state's guidance applies and the return goes to the county.",
-        "frequency": "annual",
-        "deadline": "July 31",
-        "due": {
-          "type": "fixed",
-          "month": 7,
-          "day": 31
-        },
+        "rrule": "FREQ=YEARLY;BYMONTH=7;BYMONTHDAY=31",
         "url": "https://otr.cfo.dc.gov/am/node/1794941",
         "appliesTo": ["all"]
       }

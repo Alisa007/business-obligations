@@ -23,15 +23,10 @@
     "stateFund": false
   },
   "llcReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=1",
     "fee": "$138.75",
-    "deadline": "January 1 \u2013 May 1 (late fee $400)",
+    "deadline": "January 1 – May 1 (late fee $400)",
     "title": "File Annual Report",
-    "due": {
-      "type": "fixed",
-      "month": 5,
-      "day": 1
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 138.75
@@ -42,15 +37,10 @@
     }
   },
   "corpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=1",
     "fee": "$150 (profit) / $61.25 (nonprofit)",
-    "deadline": "January 1 \u2013 May 1 (late fee $400)",
+    "deadline": "January 1 – May 1 (late fee $400)",
     "title": "File Annual Report",
-    "due": {
-      "type": "fixed",
-      "month": 5,
-      "day": 1
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 150,
@@ -95,14 +85,9 @@
     "dba": "checked"
   },
   "lpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=1",
     "fee": "$500 ($411.25 plus $88.75 supplemental fee)",
-    "deadline": "January 1 \u2013 May 1 (late fee $400)",
-    "due": {
-      "type": "fixed",
-      "month": 5,
-      "day": 1
-    },
+    "deadline": "January 1 – May 1 (late fee $400)",
     "feeDetail": {
       "basis": "flat",
       "amount": 500,
@@ -114,14 +99,9 @@
     }
   },
   "llpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=1",
     "fee": "$25",
-    "deadline": "January 1 \u2013 May 1",
-    "due": {
-      "type": "fixed",
-      "month": 5,
-      "day": 1
-    },
+    "deadline": "January 1 – May 1",
     "feeDetail": {
       "basis": "flat",
       "amount": 25

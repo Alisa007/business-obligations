@@ -70,18 +70,12 @@
     "dba": "checked"
   },
   "llpReport": {
-    "frequency": "annual",
-    "fee": "$3 if filed January 1 \u2013 April 30; $28 after",
-    "deadline": "April 30",
-    "due": {
-      "type": "fixed",
-      "month": 4,
-      "day": 30
-    },
+    "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=30",
+    "fee": "$3 if filed January 1 – April 30; $28 after",
     "feeDetail": {
       "basis": "flat",
       "amount": 3,
-      "note": "$3 if filed January 1 \u2013 April 30; $28 after"
+      "note": "$3 if filed January 1 – April 30; $28 after"
     }
   },
   "cannabis": {

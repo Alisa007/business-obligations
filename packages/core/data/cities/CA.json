@@ -38,13 +38,7 @@
         "category": "license",
         "authority": "City of Bakersfield Finance Department, Treasury Division",
         "description": "The business tax certificate is valid until June 30 each year. The tax is due July 1 and must be paid before July 31 to avoid penalties; the city does not rely on courtesy reminders.",
-        "frequency": "annual",
-        "deadline": "July 31",
-        "due": {
-          "type": "fixed",
-          "month": 7,
-          "day": 31
-        },
+        "rrule": "FREQ=YEARLY;BYMONTH=7;BYMONTHDAY=31",
         "url": "https://content.civicplus.com/api/assets/ca-bakersfield/67052738-18cd-4bc7-a3b5-03ea0bc76146",
         "appliesTo": ["all"]
       }
@@ -62,13 +56,8 @@
         "category": "license",
         "authority": "City of Berkeley Finance Department",
         "description": "Business licenses expire December 31; renewal must be filed and paid before March 1, after which a 10% penalty and 1% monthly interest apply, with a further 40% penalty from April 1.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1",
         "deadline": "Before March 1",
-        "due": {
-          "type": "fixed",
-          "month": 3,
-          "day": 1
-        },
         "url": "https://berkeleyca.gov/doing-business/operating-berkeley/business-tax/business-tax-certificate-renewals-changes",
         "appliesTo": ["all"]
       }
@@ -133,13 +122,8 @@
         "category": "license",
         "authority": "City of Chula Vista Finance Department",
         "description": "Business licenses expire on December 31 each year and the owner is responsible for renewing; the city's recent notices set a January 31 penalty-free grace date.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=31",
         "deadline": "December 31 (expiration)",
-        "due": {
-          "type": "fixed",
-          "month": 12,
-          "day": 31
-        },
         "url": "https://chulavistaca.gov/home/showpublisheddocument/23263/638318536564370000",
         "appliesTo": ["all"]
       }
@@ -157,13 +141,7 @@
         "category": "license",
         "authority": "City of Clovis Business License Department",
         "description": "Business licenses run on the calendar year and expire December 31; renewal notices go out about 30 days before expiration.",
-        "frequency": "annual",
-        "deadline": "December 31",
-        "due": {
-          "type": "fixed",
-          "month": 12,
-          "day": 31
-        },
+        "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=31",
         "url": "https://businesslicense.clovisca.gov/Renew/Renew1/BusinessLicense",
         "appliesTo": ["all"]
       }
@@ -228,13 +206,7 @@
         "category": "license",
         "authority": "City of Daly City Business License Division",
         "description": "Licenses expire September 30 and payment is due October 1; a state tax extension does not move the date, and missing income documentation can add a $250 fee.",
-        "frequency": "annual",
-        "deadline": "October 1",
-        "due": {
-          "type": "fixed",
-          "month": 10,
-          "day": 1
-        },
+        "rrule": "FREQ=YEARLY;BYMONTH=10;BYMONTHDAY=1",
         "url": "https://www.dalycity.org/DocumentCenter/View/7917/FAQ--Renewing",
         "appliesTo": ["all"]
       }
@@ -252,13 +224,7 @@
         "category": "license",
         "authority": "City of Downey Finance Department",
         "description": "Business registration renewal is due by January 31 each year; notices are mailed in early December and a missing notice does not excuse the renewal.",
-        "frequency": "annual",
-        "deadline": "January 31",
-        "due": {
-          "type": "fixed",
-          "month": 1,
-          "day": 31
-        },
+        "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=31",
         "url": "https://businessregistration.downeyca.org/Renew/Renew1/BusinessLicense",
         "appliesTo": ["all"]
       }
@@ -594,13 +560,8 @@
         "category": "license",
         "authority": "City of Oakland Finance Department, Business Tax Office",
         "description": "Anyone conducting business in Oakland registers and pays the annual business tax (rates vary by business class on gross receipts); certificates expire December 31.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1",
         "deadline": "March 1 (certificate expires December 31)",
-        "due": {
-          "type": "fixed",
-          "month": 3,
-          "day": 1
-        },
         "url": "https://www.oaklandca.gov/services/apply-for-a-business-tax-certificate",
         "appliesTo": ["all"]
       }
@@ -819,13 +780,7 @@
         "category": "license",
         "authority": "San Francisco Office of the Treasurer & Tax Collector",
         "description": "Every business operating in San Francisco must register and renew annually; fee depends on gross receipts.",
-        "frequency": "annual",
-        "deadline": "May 31",
-        "due": {
-          "type": "fixed",
-          "month": 5,
-          "day": 31
-        },
+        "rrule": "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=31",
         "url": "https://sftreasurer.org/business",
         "appliesTo": ["all"]
       },
@@ -835,13 +790,7 @@
         "category": "payment",
         "authority": "San Francisco Office of the Treasurer & Tax Collector",
         "description": "Businesses over the small-business exemption threshold file the annual gross receipts tax return.",
-        "frequency": "annual",
-        "deadline": "February 28",
-        "due": {
-          "type": "fixed",
-          "month": 2,
-          "day": 28
-        },
+        "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=28",
         "url": "https://sftreasurer.org/business",
         "appliesTo": ["all"]
       },
@@ -851,13 +800,7 @@
         "category": "payment",
         "authority": "San Francisco Office of the Treasurer & Tax Collector",
         "description": "Payroll expense tax applies to businesses whose San Francisco payroll exceeds the exclusion amount.",
-        "frequency": "annual",
-        "deadline": "February 28",
-        "due": {
-          "type": "fixed",
-          "month": 2,
-          "day": 28
-        },
+        "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=28",
         "url": "https://sftreasurer.org/business",
         "appliesTo": ["employees"]
       }
@@ -1023,13 +966,7 @@
         "category": "license",
         "authority": "City of Temecula Finance Department",
         "description": "All business licenses expire January 31; renewals received after that date incur a late penalty, and a larger one after March 1.",
-        "frequency": "annual",
-        "deadline": "January 31",
-        "due": {
-          "type": "fixed",
-          "month": 1,
-          "day": 31
-        },
+        "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=31",
         "url": "https://temeculaca.gov/biz",
         "appliesTo": ["all"]
       }
@@ -1066,13 +1003,7 @@
         "category": "license",
         "authority": "City of Torrance Finance Department",
         "description": "Renewals are due January 31; payments after that date carry a penalty that grows by 1% every three days up to 50%.",
-        "frequency": "annual",
-        "deadline": "January 31",
-        "due": {
-          "type": "fixed",
-          "month": 1,
-          "day": 31
-        },
+        "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=31",
         "url": "https://www.torranceca.gov/licenserenewal",
         "appliesTo": ["all"]
       }
@@ -1090,13 +1021,7 @@
         "category": "license",
         "authority": "City of Vacaville Finance Division",
         "description": "Business licenses expire April 30 and a courtesy notice is mailed March 1; renewing by April 30 avoids a penalty.",
-        "frequency": "annual",
-        "deadline": "April 30",
-        "due": {
-          "type": "fixed",
-          "month": 4,
-          "day": 30
-        },
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=30",
         "url": "https://cityofvacaville.gov/business/business-licenses",
         "appliesTo": ["all"]
       }
@@ -1124,13 +1049,7 @@
         "category": "license",
         "authority": "City of Ventura Business Tax Office",
         "description": "Business licenses expire June 30 each year and renewals must be postmarked by July 31 to avoid penalties.",
-        "frequency": "annual",
-        "deadline": "July 31",
-        "due": {
-          "type": "fixed",
-          "month": 7,
-          "day": 31
-        },
+        "rrule": "FREQ=YEARLY;BYMONTH=7;BYMONTHDAY=31",
         "url": "https://www.cityofventura.ca.gov/1554/Renew-Your-Business-License",
         "appliesTo": ["all"]
       }

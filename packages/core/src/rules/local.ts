@@ -1,3 +1,4 @@
+import { resolveSchedule } from "../rrule";
 import type { Rule } from "../types";
 import { findCity, findCounty, stateInfo, type CityLookup, type CountyLookup } from "../data";
 import type { LocalItem } from "../data/types";
@@ -66,9 +67,7 @@ export function seededCityRule(lookup: CityLookup, id = "local.seeded-city"): Ru
         state: p.state,
         authority: it.authority,
         description: it.description,
-        frequency: it.frequency,
-        deadline: it.deadline,
-        due: it.due,
+        ...resolveSchedule(it),
         url: it.url,
         ...extras(it, j.checkedOn),
         reason: `Business is located in ${j.city}, ${j.state}`,
@@ -96,9 +95,7 @@ export function seededCountyRule(lookup: CountyLookup, id = "local.seeded-county
         state: p.state,
         authority: it.authority,
         description: it.description,
-        frequency: it.frequency,
-        deadline: it.deadline,
-        due: it.due,
+        ...resolveSchedule(it),
         url: it.url,
         ...extras(it, j.checkedOn),
         reason: `Business is located in ${j.county} County, ${j.state}`,

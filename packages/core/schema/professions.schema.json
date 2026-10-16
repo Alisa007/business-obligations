@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Alisa007/business-obligations/schema/professions.schema.json",
+  "title": "Professional licensing boards",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["verification", "professions"],
+  "properties": {
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["checkedOn", "scope", "unconfirmed"],
+      "properties": {
+        "checkedOn": {
+          "type": "string",
+          "format": "date",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 10
+        },
+        "unconfirmed": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "professions": {
+      "type": "object",
+      "additionalProperties": false,
+      "propertyNames": {
+        "enum": ["attorney", "cpa", "physician", "architect", "engineer"]
+      },
+      "patternProperties": {
+        "^[a-z]+$": {
+          "type": "object",
+          "additionalProperties": false,
+          "propertyNames": {
+            "pattern": "^[A-Z]{2}$"
+          },
+          "minProperties": 51,
+          "patternProperties": {
+            "^[A-Z]{2}$": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["name"],
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "minLength": 6
+                },
+                "url": {
+                  "type": "string",
+                  "format": "uri",
+                  "pattern": "^https://"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -19,10 +19,28 @@ npm run test:update  # accept intentional snapshot changes, then review the diff
 1. Edit `data/states/<XX>.json`. Validate with `npm test` (the schema in `schema/state.schema.json` is enforced).
 2. Use an **official** source (the state agency's own page or statute). Add its URL to `verification.sources`, set
    `verification.checkedOn` to today's date, and remove the field from `verification.unconfirmed` if you confirmed it.
-3. If a deadline is computable, set the machine-readable `due` (see existing entries): `fixed` month/day (with
-   `parity` or `cycleFrom` for biennial filings), or `anniversary`.
+3. Write the schedule as one iCalendar recurrence rule in `rrule` (see "Schedules" below); do not also write
+   `frequency`, `due` or a `deadline` that merely repeats it.
 4. Run `npm run test:update` and check the snapshot diff in `test/__snapshots__` shows only what you intended.
 5. Add a line to the **Unreleased** section of `CHANGELOG.md`.
+
+## Schedules
+
+A repeating deadline is stored once, as an iCalendar (RFC 5545) recurrence rule in `rrule`. The frequency, the
+machine-readable due rule and the display text ("September 30") are all derived from it, and calendar apps accept
+the same string. Items that do not repeat on a date (`once`, `ongoing`, `per_event`) keep `frequency` and `deadline`.
+
+| Schedule                               | `rrule`                                                                                                            |
+| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| Every September 30                     | `FREQ=YEARLY;BYMONTH=9;BYMONTHDAY=30`                                                                              |
+| Last day of February                   | `FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1`                                                                              |
+| Quarterly, last day of Jan/Apr/Jul/Oct | `FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1`                                                                       |
+| Every second year                      | `FREQ=YEARLY;INTERVAL=2;BYMONTH=4;BYMONTHDAY=1` plus `"anchor": "2026-04-01"` (even years) or `"2027-04-01"` (odd) |
+| Every second year from formation       | add `"anchor": "formation_year"` or `"year_after_formation"`                                                       |
+| Anniversary of formation               | `FREQ=YEARLY` (`;BYMONTHDAY=1` or `-1` for the first or last day of the anniversary month)                         |
+
+Add `deadline` only when it says more than the rule (for example `"April 15 (penalty after May 15)"`); a test fails if
+it just repeats the generated text. Other `RRULE` parts are rejected.
 
 Dates: use ISO `YYYY-MM-DD` in every date field (`checkedOn`, `effective`, ...) and spell months out in text
 ("April 15", not "Apr 15", "4/15" or "April 15th"); a test fails otherwise.
@@ -76,9 +94,7 @@ Cities live in `data/cities/<STATE>.json` (one file per state and DC). Each entr
   "category": "payment",
   "authority": "City of XYZ Finance Department",
   "description": "One or two sentences, in your own words.",
-  "frequency": "annual",
-  "deadline": "September 30",
-  "due": { "type": "fixed", "month": 9, "day": 30 },
+  "rrule": "FREQ=YEARLY;BYMONTH=9;BYMONTHDAY=30",
   "url": "https://www.xyz.gov/business-tax",
   "appliesTo": ["all"]
 }

@@ -22,28 +22,16 @@
     "stateFund": false
   },
   "llcReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTH=6;BYMONTHDAY=30",
     "fee": "$15",
-    "deadline": "June 30",
-    "due": {
-      "type": "fixed",
-      "month": 6,
-      "day": 30
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 15
     }
   },
   "corpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTH=6;BYMONTHDAY=30",
     "fee": "$15",
-    "deadline": "June 30",
-    "due": {
-      "type": "fixed",
-      "month": 6,
-      "day": 30
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 15

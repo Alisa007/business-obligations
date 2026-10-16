@@ -46,13 +46,7 @@
         "category": "filing",
         "authority": "City of Flint Income Tax Division",
         "description": "Employers withhold city income tax, file quarterly returns and reconcile annually on Form FW-3 by February 28. From January 1, 2027, business returns move to the Michigan Department of Treasury and withholding becomes monthly.",
-        "frequency": "annual",
-        "deadline": "February 28",
-        "due": {
-          "type": "fixed",
-          "month": 2,
-          "day": 28
-        },
+        "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=28",
         "url": "https://www.michigan.gov/taxes/citytax/flint/business",
         "appliesTo": ["employees"]
       }
@@ -70,13 +64,8 @@
         "category": "filing",
         "authority": "City of Grand Rapids Income Tax Department",
         "description": "Corporations (GR-1120) and partnerships (GR-1065) file the city income tax return; calendar-year filers are due April 30 and fiscal-year filers four months after year end.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=30",
         "deadline": "April 30 (calendar-year filers)",
-        "due": {
-          "type": "fixed",
-          "month": 4,
-          "day": 30
-        },
         "url": "https://www.grandrapidsmi.gov/media/ptdntgg5/2025-1120-website.pdf",
         "appliesTo": ["corporation", "unincorporated"]
       }

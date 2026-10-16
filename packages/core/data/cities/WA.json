@@ -10,29 +10,8 @@
         "category": "filing",
         "authority": "City of Bellevue Tax Division",
         "description": "The city business license does not expire, but active licenses file B&O returns on the frequency in the welcome letter: quarterly (due April 30, July 31, October 31 and January 31) or annually (April 30).",
-        "frequency": "quarterly",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
         "deadline": "April 30, July 31, October 31 and January 31 (annual filers April 30)",
-        "due": {
-          "type": "multi",
-          "dates": [
-            {
-              "month": 1,
-              "day": 31
-            },
-            {
-              "month": 4,
-              "day": 30
-            },
-            {
-              "month": 7,
-              "day": 31
-            },
-            {
-              "month": 10,
-              "day": 31
-            }
-          ]
-        },
         "url": "https://bellevuewa.gov/city-government/departments/finance/business-taxes",
         "appliesTo": ["all"]
       }
@@ -68,29 +47,8 @@
         "category": "filing",
         "authority": "City of Everett Business Tax Division",
         "description": "The city business license assigns a B&O tax number; annual filers are due April 30 and quarterly filers the last day of the month after each quarter.",
-        "frequency": "quarterly",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
         "deadline": "April 30 for annual filers; quarterly after each quarter",
-        "due": {
-          "type": "multi",
-          "dates": [
-            {
-              "month": 1,
-              "day": 31
-            },
-            {
-              "month": 4,
-              "day": 30
-            },
-            {
-              "month": 7,
-              "day": 31
-            },
-            {
-              "month": 10,
-              "day": 31
-            }
-          ]
-        },
         "url": "https://www.everettwa.gov/166",
         "appliesTo": ["all"]
       }
@@ -180,13 +138,7 @@
         "category": "license",
         "authority": "City of Tacoma Tax and License Division",
         "description": "Renewal notices are mailed in December; payment must be paid or postmarked by January 31 to avoid a late penalty. A state business license does not replace the city license.",
-        "frequency": "annual",
-        "deadline": "January 31",
-        "due": {
-          "type": "fixed",
-          "month": 1,
-          "day": 31
-        },
+        "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=31",
         "url": "https://cityoftacoma.org/government/city_departments/finance/tax_and_license/business_license/existing_businesses",
         "appliesTo": ["all"]
       }

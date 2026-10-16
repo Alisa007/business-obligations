@@ -145,13 +145,8 @@
         "category": "license",
         "authority": "City of Tempe Financial Services, Sales Tax and Licensing",
         "description": "The general business license (effective August 1, 2025) applies to businesses with a permanent Tempe location, including those with no TPT license; the first renewal is due before January 1, 2027 and annually after that. Regulatory licenses are separate.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=31",
         "deadline": "Before January 1 each year (first renewal before January 1, 2027)",
-        "due": {
-          "type": "fixed",
-          "month": 12,
-          "day": 31
-        },
         "url": "https://www.tempe.gov/government/financial-services/sales-tax-licensing/general-business-license",
         "appliesTo": ["all"]
       }

@@ -47,13 +47,7 @@
         "category": "license",
         "authority": "City of Kansas City, Missouri Finance Department",
         "description": "New businesses register (Form RD-100) and file the business license (Form RD-105) within 60 days of opening, renewing by March 1 each year; the fee depends on prior-year gross receipts.",
-        "frequency": "annual",
-        "deadline": "March 1",
-        "due": {
-          "type": "fixed",
-          "month": 3,
-          "day": 1
-        },
+        "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1",
         "url": "https://www.kcmo.gov/city-hall/departments/finance",
         "appliesTo": ["all"]
       },
@@ -63,13 +57,8 @@
         "category": "filing",
         "authority": "City of Kansas City, Missouri Finance Department",
         "description": "Businesses pay the 1% tax on net profits (return due April 15, even in a loss year) while the earnings tax remains in effect.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
         "deadline": "April 15 (calendar-year filers)",
-        "due": {
-          "type": "fixed",
-          "month": 4,
-          "day": 15
-        },
         "url": "https://www.kcmo.gov/city-hall/departments/finance",
         "appliesTo": ["all"]
       },
@@ -114,13 +103,8 @@
         "category": "filing",
         "authority": "City of St. Louis Collector of Revenue, Earnings Tax Department",
         "description": "Businesses located in or working in the City of St. Louis pay a 1% tax on business earnings; account application Form E-9; return due April 15 (calendar year).",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
         "deadline": "April 15 (calendar-year filers)",
-        "due": {
-          "type": "fixed",
-          "month": 4,
-          "day": 15
-        },
         "url": "https://www.stlouis-mo.gov/government/departments/collector/earnings-tax/",
         "appliesTo": ["all"]
       },

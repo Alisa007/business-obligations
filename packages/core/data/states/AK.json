@@ -22,28 +22,18 @@
     "stateFund": false
   },
   "llcReport": {
-    "frequency": "biennial",
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=1;BYMONTHDAY=2",
     "fee": "$100",
     "deadline": "January 2 of every second year after formation",
-    "due": {
-      "type": "fixed",
-      "month": 1,
-      "day": 2
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 100
     }
   },
   "corpReport": {
-    "frequency": "biennial",
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=1;BYMONTHDAY=2",
     "fee": "$100",
     "deadline": "January 2 of every second year after formation",
-    "due": {
-      "type": "fixed",
-      "month": 1,
-      "day": 2
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 100

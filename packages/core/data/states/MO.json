@@ -24,14 +24,10 @@
   },
   "llcReport": null,
   "corpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTHDAY=-1",
     "fee": "$20 online ($45 paper)",
     "deadline": "End of the month of incorporation or qualification",
     "title": "File Annual Registration Report",
-    "due": {
-      "type": "anniversary",
-      "point": "end_of_month"
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 20,
@@ -74,14 +70,10 @@
   },
   "lpReport": null,
   "llpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "fee": "$105 plus $50 for each partner added (maximum $205)",
     "deadline": "Anniversary of registration",
     "title": "Renew LLP registration",
-    "due": {
-      "type": "anniversary",
-      "point": "date"
-    },
     "feeDetail": {
       "basis": "per_partner",
       "amount": 105,

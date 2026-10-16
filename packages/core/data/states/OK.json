@@ -57,14 +57,10 @@
     "dba": "checked"
   },
   "lpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "fee": "$50",
     "deadline": "On the anniversary of registration",
     "title": "File Annual Certificate",
-    "due": {
-      "type": "anniversary",
-      "point": "date"
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 50

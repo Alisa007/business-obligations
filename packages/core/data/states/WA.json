@@ -22,13 +22,8 @@
     }
   },
   "llcReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTHDAY=-1",
     "fee": "$70",
-    "deadline": "Last day of the anniversary month",
-    "due": {
-      "type": "anniversary",
-      "point": "end_of_month"
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 70
@@ -39,13 +34,8 @@
     }
   },
   "corpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTHDAY=-1",
     "fee": "$70",
-    "deadline": "Last day of the anniversary month",
-    "due": {
-      "type": "anniversary",
-      "point": "end_of_month"
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 70

@@ -22,26 +22,18 @@
     "stateFund": false
   },
   "llcReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "fee": "$35",
     "deadline": "On the anniversary date of formation",
-    "due": {
-      "type": "anniversary",
-      "point": "date"
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 35
     }
   },
   "corpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "fee": "$35",
     "deadline": "On the anniversary date of formation",
-    "due": {
-      "type": "anniversary",
-      "point": "date"
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 35

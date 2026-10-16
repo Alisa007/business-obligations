@@ -9,13 +9,7 @@
         "category": "filing",
         "authority": "Clark County Assessor",
         "description": "Nevada business personal property declarations are due to the county assessor by July 31 (or 15 days after a county demand if later), even when the business has no assets.",
-        "frequency": "annual",
-        "deadline": "July 31",
-        "due": {
-          "type": "fixed",
-          "month": 7,
-          "day": 31
-        },
+        "rrule": "FREQ=YEARLY;BYMONTH=7;BYMONTHDAY=31",
         "url": "https://www.clarkcountynv.gov/government/assessor/personal_property.php",
         "appliesTo": ["all"]
       }
@@ -32,13 +26,7 @@
         "category": "filing",
         "authority": "Washoe County Assessor",
         "description": "Nevada business personal property declarations are due to the county assessor by July 31 (or 15 days after a county demand if later), even when the business has no assets. Declarations are filed through the county's online e-Dec system.",
-        "frequency": "annual",
-        "deadline": "July 31",
-        "due": {
-          "type": "fixed",
-          "month": 7,
-          "day": 31
-        },
+        "rrule": "FREQ=YEARLY;BYMONTH=7;BYMONTHDAY=31",
         "url": "https://www.washoecounty.gov/assessor/BusinessPersonalProperty/",
         "appliesTo": ["all"]
       }

@@ -17,13 +17,7 @@
         "category": "filing",
         "authority": "Oklahoma County Assessor",
         "description": "Oklahoma business personal property statements (Form 901) are due to the county assessor by March 15; a 10% penalty applies after.",
-        "frequency": "annual",
-        "deadline": "March 15",
-        "due": {
-          "type": "fixed",
-          "month": 3,
-          "day": 15
-        },
+        "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=15",
         "url": "https://www.oklahomacounty.org/Portals/0/Images/Assessor%20Office/2025_Business_Instruction_Sheet.pdf",
         "appliesTo": ["all"]
       }

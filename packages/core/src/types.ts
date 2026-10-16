@@ -232,6 +232,12 @@ export interface ComplianceItem {
   due?: Due;
   /** Next due date (YYYY-MM-DD) on or after the evaluation date, when computable. */
   nextDue?: string;
+  /**
+   * How the deadline repeats, as an iCalendar (RFC 5545) recurrence rule such as
+   * `FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=15`. Present for annual items with fixed dates; paste it into a calendar
+   * app's custom repeat or an `RRULE:` line. `deadline` is the same thing as display text.
+   */
+  recurrence?: string;
   /** Structured fee, when the item has a government fee or tax with a known basis. */
   cost?: FeeDetail & { currency: "USD" };
   /** Late-filing or late-payment penalty, when known. */
@@ -311,7 +317,7 @@ export interface ResolvedProfile extends BusinessProfile {
 }
 
 /** A rule's output before the engine assigns an id and computes due dates. */
-export type ItemDraft = Omit<ComplianceItem, "id" | "ruleId" | "nextDue"> & {
+export type ItemDraft = Omit<ComplianceItem, "id" | "ruleId" | "nextDue" | "recurrence"> & {
   /** Distinguishes several items from one rule in the same state; becomes part of the id. */
   key?: string;
 };

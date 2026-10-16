@@ -9,13 +9,7 @@
         "category": "filing",
         "authority": "Douglas County County Assessor",
         "description": "The Nebraska personal property return and schedule is due to the county assessor where the property sits on or before May 1; a separate return is needed in each county. The county's own page was not individually confirmed; the state's guidance applies and the return goes to the county.",
-        "frequency": "annual",
-        "deadline": "May 1",
-        "due": {
-          "type": "fixed",
-          "month": 5,
-          "day": 1
-        },
+        "rrule": "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=1",
         "url": "https://revenue.nebraska.gov/sites/revenue.nebraska.gov/files/doc/pad/forms/Nebr_Personal_Prop_Return-1.pdf",
         "appliesTo": ["all"]
       }
@@ -32,13 +26,7 @@
         "category": "filing",
         "authority": "Lancaster County Assessor",
         "description": "The Nebraska personal property return and schedule is due to the county assessor where the property sits on or before May 1; a separate return is needed in each county.",
-        "frequency": "annual",
-        "deadline": "May 1",
-        "due": {
-          "type": "fixed",
-          "month": 5,
-          "day": 1
-        },
+        "rrule": "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=1",
         "url": "https://www.lancaster.ne.gov/m/faq?cat=90",
         "appliesTo": ["all"]
       }

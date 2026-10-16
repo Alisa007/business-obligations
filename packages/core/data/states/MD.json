@@ -22,30 +22,18 @@
     "stateFund": false
   },
   "llcReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
     "fee": "$300",
-    "deadline": "April 15",
     "title": "File Annual Report and Personal Property Return",
-    "due": {
-      "type": "fixed",
-      "month": 4,
-      "day": 15
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 300
     }
   },
   "corpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
     "fee": "$300 ($0 for non-stock corporations)",
-    "deadline": "April 15",
     "title": "File Annual Report and Personal Property Return",
-    "due": {
-      "type": "fixed",
-      "month": 4,
-      "day": 15
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 300,

@@ -33,13 +33,7 @@
         "category": "filing",
         "authority": "Weber County Assessor",
         "description": "Utah business personal property signed statements are due to the county assessor by May 15.",
-        "frequency": "annual",
-        "deadline": "May 15",
-        "due": {
-          "type": "fixed",
-          "month": 5,
-          "day": 15
-        },
+        "rrule": "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=15",
         "url": "https://www.webercountyutah.gov/Assessor/documents/2025/2025-signed-statement-new-business.pdf",
         "appliesTo": ["all"]
       }

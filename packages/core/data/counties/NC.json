@@ -65,13 +65,7 @@
         "category": "filing",
         "authority": "Mecklenburg County Assessor's Office",
         "description": "North Carolina business personal property is listed with the county tax office from January 1 through January 31; a 10% late-listing penalty applies. Listings are filed online through the Assessor's portal; an extension request by the deadline extends it to April 15.",
-        "frequency": "annual",
-        "deadline": "January 31",
-        "due": {
-          "type": "fixed",
-          "month": 1,
-          "day": 31
-        },
+        "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=31",
         "url": "https://cao.mecknc.gov/BPP",
         "appliesTo": ["all"]
       }
@@ -104,13 +98,7 @@
         "category": "filing",
         "authority": "Wake County Tax Administration",
         "description": "North Carolina business personal property is listed with the county tax office from January 1 through January 31; a 10% late-listing penalty applies.",
-        "frequency": "annual",
-        "deadline": "January 31",
-        "due": {
-          "type": "fixed",
-          "month": 1,
-          "day": 31
-        },
+        "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=31",
         "url": "https://www.wake.gov/departments-government/tax-administration/business-property",
         "appliesTo": ["all"]
       }

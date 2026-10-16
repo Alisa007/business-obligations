@@ -22,14 +22,8 @@
     "stateFund": false
   },
   "llcReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
     "fee": "$100",
-    "deadline": "April 1",
-    "due": {
-      "type": "fixed",
-      "month": 4,
-      "day": 1
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 100
@@ -41,14 +35,8 @@
   },
   "lpReport": null,
   "corpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
     "fee": "$100",
-    "deadline": "April 1",
-    "due": {
-      "type": "fixed",
-      "month": 4,
-      "day": 1
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 100
