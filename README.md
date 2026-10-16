@@ -13,7 +13,7 @@
   <img alt="Jurisdictions" src="https://img.shields.io/badge/jurisdictions-50%20states%20%2B%20DC-informational.svg" />
 </p>
 
-**[Try it in your browser](https://alisa007.github.io/business-obligations/)**: no install, nothing is uploaded.
+**[Try it in your browser](https://alisa007.github.io/business-obligations/)**: no install; the plan is computed in your browser.
 
 Starting or running a business in the US means a pile of obligations spread over the IRS, 50 state agencies and your
 city: formation, EIN, state tax accounts, licenses, annual reports, payroll filings, insurance. They depend on the
