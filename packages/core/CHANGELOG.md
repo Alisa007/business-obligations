@@ -5,6 +5,10 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ## [Unreleased]
 
+### Added
+
+- **data:** Trenton (NJ) and Amarillo (TX) city seeds, Ulster (NY) and Washington (PA) county seeds, all unverified
+
 ## [0.3.1] - 2026-10-16
 
 ### Fixed
