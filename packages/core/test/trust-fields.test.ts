@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { evaluate, validateProfile } from "../src";
+import { evaluate, seededCityRule, validateProfile } from "../src";
+import { LOCAL_JURISDICTIONS, findCity } from "../src/data";
 
 const austin = { entityType: "llc", zip: "78701", city: "Austin", county: "Travis" } as const;
 
@@ -89,5 +90,45 @@ describe("new profile inputs", () => {
     ).toEqual([]);
     const issues = validateProfile({ ...austin, activities: "roofing", disturbedAcres: -1 });
     expect(issues.map((i) => i.field).sort()).toEqual(["activities", "disturbedAcres"]);
+  });
+});
+
+describe("compiledOn and review dates for every item", () => {
+  const r = evaluate(austin, { asOf: "2026-10-14" });
+
+  it("gives every item a compilation date, a review date and a staleness flag", () => {
+    for (const i of r.items) {
+      expect(i.provenance?.compiledOn).toBe(r.dataVersion);
+      expect(i.provenance?.reviewBy).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+      expect(typeof i.provenance?.stale).toBe("boolean");
+    }
+  });
+
+  it("ages never-checked items from compilation and flags them as stale a year on", () => {
+    const compiled = r.items.find((i) => i.provenance?.confidence === "compiled")!;
+    expect(compiled.provenance!.checkedOn).toBeUndefined();
+    expect(compiled.provenance!.stale).toBe(false);
+    const later = evaluate(austin, { asOf: "2028-01-01" }).items.find((i) => i.id === compiled.id)!;
+    expect(later.provenance!.stale).toBe(true);
+  });
+
+  it("lets seeded city items inherit the seed's checked date", () => {
+    const seed = LOCAL_JURISDICTIONS.find((j) => j.items.length > 0 && j.checkedOn)!;
+    const r = evaluate(
+      {
+        entityType: "llc",
+        zip: "60601",
+        state: seed.state,
+        city: seed.city,
+        county: seed.counties?.[0] ?? "X",
+      },
+      { rules: [seededCityRule(findCity)] },
+    );
+    const city = r.items;
+    expect(city.length).toBeGreaterThan(0);
+    for (const i of city) {
+      expect(i.provenance?.confidence).toBe("checked");
+      expect(i.provenance?.checkedOn).toBe(seed.checkedOn);
+    }
   });
 });

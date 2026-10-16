@@ -21,6 +21,30 @@ function applicable(items: LocalItem[], p: ResolvedProfile): LocalItem[] {
   );
 }
 
+/** Optional fields a seed item may carry beyond the common ones, copied onto the emitted item when present. */
+function extras(it: LocalItem, checkedOn: string | undefined) {
+  return {
+    ...(it.appliesWhen ? { appliesWhen: it.appliesWhen } : {}),
+    ...(it.exemptions ? { exemptions: it.exemptions } : {}),
+    ...(it.supersedes ? { supersedes: it.supersedes } : {}),
+    ...(it.preemptedBy ? { preemptedBy: it.preemptedBy } : {}),
+    ...(it.formId ? { formId: it.formId } : {}),
+    ...(it.filingMethod ? { filingMethod: it.filingMethod } : {}),
+    ...(it.processingTime ? { processingTime: it.processingTime } : {}),
+    ...(it.renewal ? { renewal: it.renewal } : {}),
+    // A seed entry carries the date it was checked against the official pages; the items inherit it.
+    ...(checkedOn
+      ? {
+          provenance: {
+            confidence: "checked" as const,
+            checkedOn,
+            sources: it.url ? [it.url] : [],
+          },
+        }
+      : {}),
+  };
+}
+
 const INPUTS = ["state", "employeeCount", "sellsTaxableGoods", "entityType", "usesTradeName"] as const;
 
 /**
@@ -46,6 +70,7 @@ export function seededCityRule(lookup: CityLookup, id = "local.seeded-city"): Ru
         deadline: it.deadline,
         due: it.due,
         url: it.url,
+        ...extras(it, j.checkedOn),
         reason: `Business is located in ${j.city}, ${j.state}`,
       }));
     },
@@ -75,6 +100,7 @@ export function seededCountyRule(lookup: CountyLookup, id = "local.seeded-county
         deadline: it.deadline,
         due: it.due,
         url: it.url,
+        ...extras(it, j.checkedOn),
         reason: `Business is located in ${j.county} County, ${j.state}`,
       }));
     },

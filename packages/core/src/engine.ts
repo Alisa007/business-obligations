@@ -309,7 +309,11 @@ export function evaluate(input: BusinessProfile, options: EvaluateOptions = {}):
           });
           if (next) item.nextDue = next;
         }
-        item.provenance = describeProvenance(provenanceFor(item, profile), asOf);
+        item.provenance = describeProvenance(
+          item.provenance ?? provenanceFor(item, profile),
+          asOf,
+          DATA_VERSION,
+        );
         item.jurisdictionId = jurisdictionId(item, profile);
         if (item.state && STATE_FIPS[item.state]) item.stateFips = STATE_FIPS[item.state];
         const interval = RENEWAL_INTERVAL[item.frequency];
@@ -334,8 +338,10 @@ export function evaluate(input: BusinessProfile, options: EvaluateOptions = {}):
     const byId = new Map(items.map((it) => [it.id, it]));
     for (const it of items) {
       for (const target of it.supersedes ?? []) {
-        const other = byId.get(target);
-        if (other && other !== it && !other.preemptedBy) other.preemptedBy = it.id;
+        // A target is an item id, or a rule id that stands for every item that rule produced.
+        const hit = byId.get(target);
+        const hits = hit ? [hit] : items.filter((x) => x.ruleId === target);
+        for (const other of hits) if (other !== it && !other.preemptedBy) other.preemptedBy = it.id;
       }
     }
     const states = new Set([profile.formationState, ...profile.presence.map((x) => x.state)]);

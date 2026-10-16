@@ -128,6 +128,11 @@ A city that has no general business license or tax of its own is still worth rec
 again: set `"status": "none"`, `"items": []`, `"checkedOn"` (YYYY-MM-DD), `"sourceUrl"` (the official page) and a
 short `"note"` on what the city requires instead.
 
+When the city's rule conflicts with or replaces a state default, record it on the item: `supersedes` lists the ids
+(`state.annual-report:TX`) or rule ids (`state.trade-name`) it replaces, and the replaced items come back with
+`preemptedBy` set. `appliesWhen` (`{ "field": "annualRevenue", "op": ">=", "value": 50000 }`) states a threshold and
+`exemptions` lists who is excluded, both in plain text. Cite the ordinance or page in `url`.
+
 `appliesTo` takes `all`, `employees`, `sells_goods`, `corporation`, `unincorporated` or `trade_name`. Use the city's own
 page for `url`, run `npm run coverage` and `npm run check`, and add a line to the Unreleased section of `CHANGELOG.md`.
 
