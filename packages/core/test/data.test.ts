@@ -4,8 +4,9 @@ import Ajv2020 from "ajv/dist/2020";
 import addFormats from "ajv-formats";
 import { describe, expect, it } from "vitest";
 import { defaultRules, evaluate, indexCities, seededCityRule, type BusinessProfile } from "../src";
-import { STATES } from "../src";
+import { PROFILE_FIELDS, STATES } from "../src";
 import { COUNTY_JURISDICTIONS, LOCAL_JURISDICTIONS, findCity, findCounty } from "../src/data";
+import type { LocalItem } from "../src/data/types";
 
 const root = path.resolve(__dirname, "..");
 const read = (p: string) => JSON.parse(fs.readFileSync(path.join(root, p), "utf8"));
@@ -54,6 +55,15 @@ describe("local seed data", () => {
       expect(it.appliesTo.length).toBeGreaterThan(0);
       expect(it.title).toBeTruthy();
       if (it.url) expect(it.url).toMatch(/^https:\/\//);
+      const local = it as LocalItem;
+      for (const f of ["exemptions", "supersedes"] as const)
+        if (local[f])
+          expect(
+            local[f]!.every((x) => typeof x === "string" && x.length > 0),
+            `${j.city} ${f}`,
+          ).toBe(true);
+      for (const w of local.appliesWhen ?? [])
+        expect(PROFILE_FIELDS, `${j.city} appliesWhen field`).toContain(w.field);
     }
   });
 });

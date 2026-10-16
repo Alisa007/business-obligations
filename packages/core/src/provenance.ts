@@ -19,13 +19,12 @@ function sourceKind(url: string): SourceKind {
   return "agency_page";
 }
 
-/** Adds the review date, staleness flag and detailed sources to a provenance record. */
-export function describeProvenance(p: Provenance, asOf: string): Provenance {
-  const out: Provenance = { ...p };
-  if (p.checkedOn) {
-    out.reviewBy = addDays(p.checkedOn, REVIEW_INTERVAL_DAYS);
-    out.stale = out.reviewBy < asOf;
-  }
+/** Adds the compilation date, review date, staleness flag and detailed sources to a provenance record. */
+export function describeProvenance(p: Provenance, asOf: string, compiledOn: string): Provenance {
+  const out: Provenance = { ...p, compiledOn };
+  // The review clock starts at the last check, or at compilation for data that was never individually checked.
+  out.reviewBy = addDays(p.checkedOn ?? compiledOn, REVIEW_INTERVAL_DAYS);
+  out.stale = out.reviewBy < asOf;
   out.sourceDetails = p.sources.map((url): SourceRef => ({
     url,
     kind: sourceKind(url),

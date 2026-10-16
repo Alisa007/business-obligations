@@ -34,6 +34,15 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ### Added
 
+- **Seed data can express precedence.** City and county seed items accept `appliesWhen`, `exemptions`, `supersedes`
+  (item ids or rule ids), `preemptedBy`, `formId`, `filingMethod`, `processingTime` and `renewal`; they are passed
+  through to the emitted items. Superseded items come back marked `preemptedBy`.
+- **`provenance.compiledOn` on every item**, the date of the bundled dataset, so items that were never individually
+  checked still have an age. `reviewBy` and `stale` now apply to every item (counted from `checkedOn`, or from
+  `compiledOn` when never checked).
+- **Seeded city and county items inherit the seed's `checkedOn`** and are reported as `checked` (they were `compiled`
+  with no date although the seed records when it was checked against the official pages).
+
 - **Trust and review fields on every item.** `provenance.reviewBy` and `provenance.stale` (data checked more than a year
   before `asOf` is stale), `provenance.sourceDetails` (kind, retrieval date and an Internet Archive link per source),
   `jurisdictionId` (`US`, `US-TX`, `US-TX/city/austin`), `stateFips`, and `feedbackUrl` (a pre-filled data-correction
