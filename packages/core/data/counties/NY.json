@@ -1,10 +1,47 @@
 [
   {
     "county": "Albany",
-    "status": "unverified",
-    "note": "Albany County lists a short term rental tax covering all hotel rooms and short term rentals on its taxes page, and a county document cited 6.5% from January 1, 2025 with quarterly returns due March, June, September and December 20, but the county's current rate, registration and return pages could not be read. Other county-level business duties were not checked.",
-    "items": [],
-    "checkedOn": "2026-10-15"
+    "note": "The 6.5% rate and the 20-day return window come from the county code and news reports; the county's current registration and return pages could not be read.",
+    "items": [
+      {
+        "id": "albany.occupancy-tax-registration",
+        "title": "Register for the Albany County occupancy tax",
+        "category": "registration",
+        "authority": "Albany County Commissioner of Management and Budget",
+        "description": "Operators of hotels, motels and, since the 2025 Local Law K, short-term rentals (stays under 30 days) register with the county and collect the 6.5% county hotel occupancy tax; hosts also register each unit and obtain a registration number.",
+        "frequency": "once",
+        "url": "https://ecode360.com/34957827",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "albany.occupancy-tax-return",
+        "title": "File the Albany County occupancy tax return",
+        "category": "filing",
+        "authority": "Albany County Commissioner of Management and Budget",
+        "description": "Operators and hosts file a return of occupancy, rents and taxes with the Commissioner of Management and Budget for quarters ending the last day of February, May, August and November. The county code makes returns due within 20 days after the period ends; whether the 2025 amendment changed that was not confirmed.",
+        "rrule": "FREQ=YEARLY;BYMONTH=3,6,9,12;BYMONTHDAY=20",
+        "exemptions": ["Permanent residents (stays of 30 or more consecutive days)"],
+        "url": "https://ecode360.com/34957827",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Allegany",
@@ -197,10 +234,46 @@
   },
   {
     "county": "Chemung",
-    "status": "unverified",
-    "note": "New York Tax Law section 1202-h lets Chemung County tax hotel and motel rooms at up to 4%, but the county's own registration and return pages were not found. Other county-level business duties were not checked.",
-    "items": [],
-    "checkedOn": "2026-10-15"
+    "items": [
+      {
+        "id": "chemung.occupancy-tax-registration",
+        "title": "Register for the Chemung County occupancy tax",
+        "category": "registration",
+        "authority": "Chemung County Treasurer",
+        "description": "Operators of hotels, motels and other lodging register with the County Treasurer using a Certificate of Registration and receive a Certificate of Authority; the county tax is 4% of taxable room rentals. Questions: 607-737-2957.",
+        "frequency": "once",
+        "url": "https://www.chemungcountyny.gov/180",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "chemung-ny.occupancy-tax-return",
+        "title": "File the Chemung County occupancy tax return",
+        "category": "filing",
+        "authority": "Chemung County Treasurer",
+        "description": "Operators file the county's Occupancy Tax Return (PDF on the Treasurer's page) quarterly. The return's exact due dates could not be read.",
+        "frequency": "quarterly",
+        "exemptions": ["Permanent residents (stays of 30 or more consecutive days)"],
+        "url": "https://www.chemungcountyny.gov/180",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Chenango",
@@ -1173,10 +1246,46 @@
   },
   {
     "county": "Otsego",
-    "status": "unverified",
-    "note": "New York Tax Law section 1202-j lets Otsego County tax hotel and motel rooms at up to 6%, but the county's own rate, registration and return pages were not found. Other county-level business duties were not checked.",
-    "items": [],
-    "checkedOn": "2026-10-15"
+    "items": [
+      {
+        "id": "otsego.occupancy-tax-registration",
+        "title": "Register for the Otsego County occupancy tax",
+        "category": "registration",
+        "authority": "Otsego County Treasurer",
+        "description": "Operators of hotels, motels and similar lodging register with the County Treasurer (Certificate of Registration; the older application cites Local Law 5 of 1989, which required registering within three days of starting business) and collect the county room occupancy tax, 6% under Local Law 2 of 2021.",
+        "frequency": "once",
+        "url": "https://www.otsegocountyny.gov/departments/s-y/treasurer/document_center.php",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "otsego.occupancy-tax-return",
+        "title": "File the Otsego County occupancy tax return",
+        "category": "filing",
+        "authority": "Otsego County Treasurer",
+        "description": "The Room Occupancy Tax Return reports gross room income, deducts exempt sales and applies the rate. The Treasurer's important dates page lists the quarterly due dates as March 20, June 20, September 20 and December 20.",
+        "rrule": "FREQ=YEARLY;BYMONTH=3,6,9,12;BYMONTHDAY=20",
+        "exemptions": ["Permanent residents (stays of 30 or more consecutive days)"],
+        "url": "https://www.otsegocounty.com/departments/s-y/treasurer/important_dates.php",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Putnam",
@@ -1635,10 +1744,46 @@
   },
   {
     "county": "Tioga",
-    "status": "unverified",
-    "note": "New York Tax Law section 1202-aa*7 lets Tioga County tax hotel and motel rooms, and a 2017 county resolution sets it at 4% of the per diem rate, but the county's registration and return pages were not found. Other county-level business duties were not checked.",
-    "items": [],
-    "checkedOn": "2026-10-15"
+    "items": [
+      {
+        "id": "tioga.occupancy-tax-registration",
+        "title": "Register for the Tioga County occupancy tax",
+        "category": "registration",
+        "authority": "Tioga County Treasurer",
+        "description": "Everyone who rents rooms in Tioga County registers with the County Treasurer within three days of opening and pays the county hotel/motel tax (the 2014 law set 4% of the per diem rate; later local laws may have changed it).",
+        "frequency": "once",
+        "url": "https://www.tiogacountyny.com/departments/treasurer/",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "tioga-ny.occupancy-tax-return",
+        "title": "File the Tioga County hotel/motel tax return",
+        "category": "filing",
+        "authority": "Tioga County Treasurer",
+        "description": "Returns and payment go to the Treasurer quarterly. The return form and exact due dates were not found.",
+        "frequency": "quarterly",
+        "exemptions": ["Permanent residents (stays of 30 or more consecutive days)"],
+        "url": "https://www.tiogacountyny.com/departments/treasurer/",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Tompkins",
