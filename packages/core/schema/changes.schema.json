@@ -6,7 +6,9 @@
   "additionalProperties": false,
   "required": ["rulesetVersion", "changes"],
   "properties": {
-    "rulesetVersion": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}\\.\\d+$" },
+    "rulesetVersion": {
+      "$ref": "common.schema.json#/$defs/rulesetVersion"
+    },
     "changes": {
       "type": "array",
       "items": {
@@ -14,21 +16,43 @@
         "additionalProperties": false,
         "required": ["id", "effective", "status", "kind", "summary", "scope"],
         "properties": {
-          "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]+$" },
-          "effective": { "type": "string", "format": "date", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
-          "announced": { "type": "string", "format": "date", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
-          "status": { "enum": ["enacted", "proposed"] },
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9-]+$"
+          },
+          "effective": {
+            "$ref": "common.schema.json#/$defs/isoDate"
+          },
+          "announced": {
+            "$ref": "common.schema.json#/$defs/isoDate"
+          },
+          "status": {
+            "enum": ["enacted", "proposed"]
+          },
           "kind": {
             "enum": ["fee", "deadline", "requirement", "repeal", "threshold", "enforcement", "other"]
           },
-          "summary": { "type": "string", "minLength": 10 },
+          "summary": {
+            "type": "string",
+            "minLength": 10
+          },
           "scope": {
             "type": "object",
             "additionalProperties": false,
             "properties": {
-              "country": { "const": "US" },
-              "state": { "type": "string", "pattern": "^[A-Z]{2}$" },
-              "rules": { "type": "array", "items": { "type": "string" }, "minItems": 1 }
+              "country": {
+                "const": "US"
+              },
+              "state": {
+                "$ref": "common.schema.json#/$defs/stateCode"
+              },
+              "rules": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              }
             }
           },
           "patches": {
@@ -37,10 +61,17 @@
               "type": "object",
               "additionalProperties": false,
               "required": ["path", "value"],
-              "properties": { "path": { "type": "string" }, "value": {} }
+              "properties": {
+                "path": {
+                  "type": "string"
+                },
+                "value": {}
+              }
             }
           },
-          "source": { "type": "string", "pattern": "^https://" }
+          "source": {
+            "$ref": "common.schema.json#/$defs/httpsUrl"
+          }
         }
       }
     }

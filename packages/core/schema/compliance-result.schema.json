@@ -27,16 +27,13 @@
       "description": "Business profile with defaults applied."
     },
     "asOf": {
-      "type": "string",
-      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+      "$ref": "common.schema.json#/$defs/isoDate"
     },
     "dataVersion": {
-      "type": "string",
-      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+      "$ref": "common.schema.json#/$defs/isoDate"
     },
     "rulesetVersion": {
-      "type": "string",
-      "pattern": "^\\d{4}-\\d{2}-\\d{2}\\.\\d+$"
+      "$ref": "common.schema.json#/$defs/rulesetVersion"
     },
     "upcomingChanges": {
       "type": "array",
@@ -58,87 +55,16 @@
     "due": {
       "oneOf": [
         {
-          "type": "object",
-          "additionalProperties": false,
-          "required": ["type", "month", "day"],
-          "properties": {
-            "type": {
-              "const": "fixed"
-            },
-            "month": {
-              "type": "integer",
-              "minimum": 1,
-              "maximum": 12
-            },
-            "day": {
-              "type": "integer",
-              "minimum": 1,
-              "maximum": 31
-            },
-            "parity": {
-              "enum": ["odd", "even"]
-            },
-            "cycleFrom": {
-              "enum": ["formation_year", "year_after_formation"]
-            }
-          }
+          "$ref": "common.schema.json#/$defs/dueFixed"
         },
         {
-          "type": "object",
-          "additionalProperties": false,
-          "required": ["type", "point"],
-          "properties": {
-            "type": {
-              "const": "anniversary"
-            },
-            "point": {
-              "enum": ["start_of_month", "end_of_month", "date"]
-            }
-          }
+          "$ref": "common.schema.json#/$defs/dueAnniversary"
         },
         {
-          "type": "object",
-          "additionalProperties": false,
-          "required": ["type", "dates"],
-          "properties": {
-            "type": {
-              "const": "multi"
-            },
-            "dates": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "additionalProperties": false,
-                "required": ["month", "day"],
-                "properties": {
-                  "month": {
-                    "type": "integer",
-                    "minimum": 1,
-                    "maximum": 12
-                  },
-                  "day": {
-                    "type": "integer",
-                    "minimum": 1,
-                    "maximum": 31
-                  }
-                }
-              }
-            }
-          }
+          "$ref": "common.schema.json#/$defs/dueMulti"
         },
         {
-          "type": "object",
-          "additionalProperties": false,
-          "required": ["type", "date"],
-          "properties": {
-            "type": {
-              "const": "date"
-            },
-            "date": {
-              "type": "string",
-              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
-            }
-          }
+          "$ref": "common.schema.json#/$defs/dueDate"
         }
       ]
     },
@@ -209,8 +135,7 @@
           "type": "string"
         },
         "effective": {
-          "type": "string",
-          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+          "$ref": "common.schema.json#/$defs/isoDate"
         },
         "status": {
           "enum": ["enacted", "proposed"]
@@ -260,8 +185,7 @@
           "type": "string"
         },
         "state": {
-          "type": "string",
-          "pattern": "^[A-Z]{2}$"
+          "$ref": "common.schema.json#/$defs/stateCode"
         },
         "description": {
           "type": "string"
@@ -285,13 +209,18 @@
           "$ref": "#/$defs/due"
         },
         "nextDue": {
-          "type": "string",
-          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+          "$ref": "common.schema.json#/$defs/isoDate"
         },
         "recurrence": {
-          "type": "string",
-          "description": "iCalendar (RFC 5545) RRULE value for annual fixed-date deadlines.",
-          "pattern": "^FREQ=YEARLY;BYMONTH=\\d{1,2}(,\\d{1,2})*;BYMONTHDAY=-?\\d{1,2}$"
+          "description": "iCalendar (RFC 5545) RRULE value for annual fixed-date deadlines, always with a concrete month and day.",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/$defs/rrule"
+            },
+            {
+              "pattern": "BYMONTH=.*BYMONTHDAY="
+            }
+          ]
         },
         "cost": {
           "$ref": "#/$defs/cost"
@@ -326,8 +255,7 @@
               "enum": ["checked", "compiled", "unconfirmed"]
             },
             "checkedOn": {
-              "type": "string",
-              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+              "$ref": "common.schema.json#/$defs/isoDate"
             },
             "sources": {
               "type": "array",
@@ -336,8 +264,7 @@
               }
             },
             "reviewBy": {
-              "type": "string",
-              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+              "$ref": "common.schema.json#/$defs/isoDate"
             },
             "stale": {
               "type": "boolean"
@@ -356,8 +283,7 @@
                     "enum": ["statute", "ordinance", "agency_page", "pdf", "dataset"]
                   },
                   "retrievedOn": {
-                    "type": "string",
-                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                    "$ref": "common.schema.json#/$defs/isoDate"
                   },
                   "archiveUrl": {
                     "type": "string"
@@ -366,8 +292,7 @@
               }
             },
             "compiledOn": {
-              "type": "string",
-              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+              "$ref": "common.schema.json#/$defs/isoDate"
             }
           }
         },

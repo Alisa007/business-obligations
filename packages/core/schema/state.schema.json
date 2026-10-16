@@ -142,11 +142,10 @@
           "type": "string"
         },
         "source": {
-          "$ref": "#/$defs/httpsUrl"
+          "$ref": "common.schema.json#/$defs/httpsUrl"
         },
         "checkedOn": {
-          "type": "string",
-          "format": "date"
+          "$ref": "common.schema.json#/$defs/isoDate"
         }
       }
     },
@@ -349,7 +348,7 @@
               "type": "string"
             },
             "url": {
-              "$ref": "#/$defs/httpsUrl"
+              "$ref": "common.schema.json#/$defs/httpsUrl"
             },
             "fee": {
               "type": "string",
@@ -450,28 +449,28 @@
       "required": ["formation", "annualReport", "uiRegistration", "entityTax", "laborPosters"],
       "properties": {
         "formation": {
-          "$ref": "#/$defs/httpsUrl"
+          "$ref": "common.schema.json#/$defs/httpsUrl"
         },
         "annualReport": {
-          "$ref": "#/$defs/httpsUrl"
+          "$ref": "common.schema.json#/$defs/httpsUrl"
         },
         "uiRegistration": {
-          "$ref": "#/$defs/httpsUrl"
+          "$ref": "common.schema.json#/$defs/httpsUrl"
         },
         "withholding": {
-          "$ref": "#/$defs/httpsUrl"
+          "$ref": "common.schema.json#/$defs/httpsUrl"
         },
         "salesTax": {
-          "$ref": "#/$defs/httpsUrl"
+          "$ref": "common.schema.json#/$defs/httpsUrl"
         },
         "entityTax": {
-          "$ref": "#/$defs/httpsUrl"
+          "$ref": "common.schema.json#/$defs/httpsUrl"
         },
         "laborPosters": {
-          "$ref": "#/$defs/httpsUrl"
+          "$ref": "common.schema.json#/$defs/httpsUrl"
         },
         "dba": {
-          "$ref": "#/$defs/httpsUrl"
+          "$ref": "common.schema.json#/$defs/httpsUrl"
         }
       }
     },
@@ -482,9 +481,7 @@
       "required": ["checkedOn", "sources", "unconfirmed"],
       "properties": {
         "checkedOn": {
-          "type": "string",
-          "format": "date",
-          "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+          "$ref": "common.schema.json#/$defs/isoDate",
           "description": "Date (YYYY-MM-DD) of the review."
         },
         "scope": {
@@ -497,7 +494,7 @@
           "minItems": 1,
           "uniqueItems": true,
           "items": {
-            "$ref": "#/$defs/httpsUrl"
+            "$ref": "common.schema.json#/$defs/httpsUrl"
           },
           "description": "Official pages the review relied on."
         },
@@ -514,12 +511,6 @@
     }
   },
   "$defs": {
-    "httpsUrl": {
-      "type": "string",
-      "format": "uri",
-      "pattern": "^https://",
-      "description": "An https URL."
-    },
     "agency": {
       "type": "object",
       "additionalProperties": false,
@@ -530,64 +521,20 @@
           "minLength": 3
         },
         "url": {
-          "$ref": "#/$defs/httpsUrl"
+          "$ref": "common.schema.json#/$defs/httpsUrl"
         }
       }
     },
     "due": {
       "oneOf": [
         {
-          "type": "object",
-          "additionalProperties": false,
-          "required": ["type", "date"],
-          "properties": {
-            "type": {
-              "const": "date"
-            },
-            "date": {
-              "type": "string",
-              "format": "date"
-            }
-          }
+          "$ref": "common.schema.json#/$defs/dueDate"
         },
         {
-          "type": "object",
-          "additionalProperties": false,
-          "required": ["type", "month", "day"],
-          "properties": {
-            "type": {
-              "const": "fixed"
-            },
-            "month": {
-              "type": "integer",
-              "minimum": 1,
-              "maximum": 12
-            },
-            "day": {
-              "type": "integer",
-              "minimum": 1,
-              "maximum": 31
-            },
-            "parity": {
-              "enum": ["odd", "even"]
-            },
-            "cycleFrom": {
-              "enum": ["formation_year", "year_after_formation"]
-            }
-          }
+          "$ref": "common.schema.json#/$defs/dueFixed"
         },
         {
-          "type": "object",
-          "additionalProperties": false,
-          "required": ["type", "point"],
-          "properties": {
-            "type": {
-              "const": "anniversary"
-            },
-            "point": {
-              "enum": ["start_of_month", "end_of_month", "date"]
-            }
-          }
+          "$ref": "common.schema.json#/$defs/dueAnniversary"
         }
       ]
     },
@@ -600,16 +547,13 @@
           "type": "string"
         },
         "rrule": {
-          "type": "string",
-          "pattern": "^FREQ=YEARLY(;INTERVAL=[25])?(;BYMONTH=\\d{1,2}(,\\d{1,2})*)?(;BYMONTHDAY=-?\\d{1,2})?$",
+          "$ref": "common.schema.json#/$defs/rrule",
           "description": "iCalendar (RFC 5545) recurrence rule. The source of truth for frequency and due date; see src/rrule.ts for the supported subset."
         },
         "anchor": {
           "anyOf": [
             {
-              "type": "string",
-              "format": "date",
-              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+              "$ref": "common.schema.json#/$defs/isoDate"
             },
             {
               "enum": ["formation_year", "year_after_formation"]
