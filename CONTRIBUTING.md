@@ -149,10 +149,12 @@ One-time setup:
    - **Trusted publishing (recommended, no secret to leak):** publish `0.x` once by hand with
      `npm login && npm publish -w compliance-rules-engine --access public`, then on npmjs.com open the package,
      Settings, Trusted Publisher, GitHub Actions, and enter owner `Alisa007`, repository
-     `compliance-rules-engine`, workflow `release.yml`.
+     `compliance-rules-engine`, workflow `release.yml`, environment `npm`.
    - **Token:** create a granular access token (publish rights for this package only, short expiry) and store it as
-     the `NPM_TOKEN` repository secret. The workflow uses it when present.
-3. Optional: protect tags `v*` (Settings, Rules) so only maintainers can create release tags.
+     the `NPM_TOKEN` secret of the **`npm` environment** (Settings, Environments, npm). The workflow uses it when present.
+3. Already configured on this repository: tags `v*` can only be created by admins (ruleset "Protect release tags"),
+   and the publish job runs in the `npm` environment, which needs a required reviewer's approval. The build job installs
+   dependencies with scripts disabled and never holds publish rights; the publish job only uploads the built tarball.
 
 Each release:
 
@@ -162,7 +164,8 @@ Each release:
    tarball without publishing.
 3. Tag the merged commit on `main` and push the tag: `git tag vX.Y.Z && git push origin vX.Y.Z`.
 4. The Release workflow verifies the tag is on `main` and matches the package version, runs the checks and a packed-install
-   smoke test, publishes with provenance, and creates the GitHub release from the changelog section.
+   smoke test, then waits for approval of the `npm` environment before it publishes with provenance and creates the
+   GitHub release from the changelog section.
 
 Other one-time setup: enable GitHub Pages (Settings, Pages, Source: GitHub Actions) so the playground deploys on each
 push to `main`.
