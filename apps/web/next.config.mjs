@@ -6,9 +6,9 @@ const { loadEnvConfig } = nextEnv;
 // The repository's .env lives at the monorepo root.
 loadEnvConfig(fileURLToPath(new URL("../..", import.meta.url)));
 
-// GitHub Pages serves the site under /business-obligations; keep the root path in development.
-const basePath =
-  process.env.BASE_PATH ?? (process.env.NODE_ENV === "production" ? "/business-obligations" : "");
+// The site is served from the root of its custom domain (business-obligations.com). Set BASE_PATH when hosting
+// under a subpath, e.g. BASE_PATH=/business-obligations for github.io/business-obligations/.
+const basePath = process.env.BASE_PATH ?? "";
 
 /** @type {import('next').NextConfig} */
 export default {
