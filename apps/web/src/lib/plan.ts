@@ -147,14 +147,46 @@ export interface ObligationFilters {
   jurisdiction: string;
   category: string;
   query: string;
+  /** `verified`: checked against official pages; `unverified`: compiled, unconfirmed or past its review date. */
+  trust: string;
 }
 
-export const NO_FILTERS: ObligationFilters = { jurisdiction: "all", category: "all", query: "" };
+export const NO_FILTERS: ObligationFilters = {
+  jurisdiction: "all",
+  category: "all",
+  query: "",
+  trust: "all",
+};
 
 type Filterable = Pick<
   ComplianceItem,
-  "title" | "authority" | "description" | "reason" | "jurisdiction" | "category" | "nextDue"
+  "title" | "authority" | "description" | "reason" | "jurisdiction" | "category" | "nextDue" | "provenance"
 >;
+
+/** True when the item was checked against official pages and is not past its review date. */
+export const isVerified = (i: Pick<ComplianceItem, "provenance">): boolean =>
+  i.provenance?.confidence === "checked" && !i.provenance.stale;
+
+/** What the result summary shows: size, nearest deadline, how much of the data is verified, and caveats. */
+export function summarize(result: Analysis["result"]) {
+  const items = result.items;
+  const dated = items
+    .filter((i): i is typeof i & { nextDue: string } => Boolean(i.nextDue) && i.nextDue! >= result.asOf)
+    .sort((a, b) => a.nextDue.localeCompare(b.nextDue));
+  const in30 = new Date(`${result.asOf}T00:00:00Z`);
+  in30.setUTCDate(in30.getUTCDate() + 30);
+  const horizon = in30.toISOString().slice(0, 10);
+  return {
+    total: items.length,
+    verified: items.filter(isVerified).length,
+    stale: items.filter((i) => i.provenance?.stale).length,
+    next: dated[0],
+    dueSoon: dated.filter((i) => i.nextDue <= horizon).length,
+    hasCityData: items.some((i) => i.jurisdiction === "city" && i.ruleId === "local.seeded-city"),
+    hasCountyData: items.some((i) => i.jurisdiction === "county" && i.ruleId === "local.seeded-county"),
+    changes: result.upcomingChanges,
+  };
+}
 
 /**
  * Filters obligations and groups them by jurisdiction. Within a group, items with a known next due date come
@@ -162,12 +194,13 @@ type Filterable = Pick<
  */
 export function groupObligations<T extends Filterable>(
   items: T[],
-  { jurisdiction = "all", category = "all", query = "" }: Partial<ObligationFilters> = {},
+  { jurisdiction = "all", category = "all", query = "", trust = "all" }: Partial<ObligationFilters> = {},
 ) {
   const q = query.trim().toLowerCase();
   const match = (i: T) =>
     (jurisdiction === "all" || i.jurisdiction === jurisdiction) &&
     (category === "all" || i.category === category) &&
+    (trust === "all" || (trust === "verified") === isVerified(i)) &&
     (!q || `${i.title} ${i.authority} ${i.description} ${i.reason}`.toLowerCase().includes(q));
   const byDue = (a: T, b: T) =>
     (a.nextDue ?? "9999-12-31").localeCompare(b.nextDue ?? "9999-12-31") || a.title.localeCompare(b.title);

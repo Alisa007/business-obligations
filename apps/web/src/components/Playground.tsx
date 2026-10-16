@@ -15,7 +15,7 @@ import {
 import { useAnalytics } from "../hooks/useAnalytics";
 import { useDoneSteps } from "../hooks/useDoneSteps";
 import { ProfileForm, lookupZip, type PlanRequest } from "./ProfileForm";
-import { CalendarView, CostsView, ObligationsView, PlanView, WhatIfView } from "./views";
+import { CalendarView, CostsView, ObligationsView, PlanView, ResultSummary, WhatIfView } from "./views";
 import { Chip, Muted, Panel } from "./ui";
 
 const TABS = [
@@ -158,6 +158,7 @@ export function Playground() {
             )}
             {data && (
               <>
+                <ResultSummary data={data} />
                 <Tabs
                   value={tab}
                   onValueChange={(v) => {
