@@ -1,15 +1,10 @@
 import { stateInfo } from "./data";
+import { addDays } from "./iso";
 import { reportKey } from "./rules/state";
 import type { ComplianceItem, Provenance, ResolvedProfile, SourceKind, SourceRef } from "./types";
 
 /** Data checked against official pages should be re-verified after this many days. */
-export const REVIEW_INTERVAL_DAYS = 365;
-
-function addDays(iso: string, days: number): string {
-  const d = new Date(`${iso}T00:00:00Z`);
-  d.setUTCDate(d.getUTCDate() + days);
-  return d.toISOString().slice(0, 10);
-}
+const REVIEW_INTERVAL_DAYS = 365;
 
 function sourceKind(url: string): SourceKind {
   if (/\.pdf($|[?#])/i.test(url)) return "pdf";
