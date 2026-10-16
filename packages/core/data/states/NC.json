@@ -12,14 +12,6 @@
     "name": "North Carolina Division of Employment Security",
     "url": "https://des.nc.gov"
   },
-  "workersComp": {
-    "agency": "North Carolina Industrial Commission",
-    "threshold": "3 employees",
-    "trigger": {
-      "minEmployees": 3
-    },
-    "stateFund": false
-  },
   "llcReport": {
     "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
     "feeDetail": {
@@ -29,14 +21,26 @@
   },
   "corpReport": {
     "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
-    "fee": "$18 online (plus $3 card fee)",
     "deadline": "15th day of the 4th month after fiscal year end",
+    "fee": "$18 online (plus $3 card fee)",
     "feeDetail": {
       "basis": "flat",
       "amount": 18,
       "online": 18
     }
   },
+  "lpReport": null,
+  "llpReport": {
+    "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
+    "deadline": "15th day of the 4th month after fiscal year end",
+    "fee": "$200 ($203 online)",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 200,
+      "online": 203
+    }
+  },
+  "llcPublication": null,
   "entityTax": "Corporate income tax and franchise tax",
   "salesTax": {
     "statewide": true,
@@ -44,17 +48,32 @@
     "agency": null,
     "alternative": null
   },
+  "localSalesTax": "state_administered",
+  "economicNexusUsd": 100000,
+  "unemployment": {
+    "wageBase": 34200,
+    "minRate": 0.06,
+    "maxRate": 5.76,
+    "newEmployerRate": 1
+  },
+  "workersComp": {
+    "agency": "North Carolina Industrial Commission",
+    "stateFund": false,
+    "trigger": {
+      "minEmployees": 3
+    }
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
   "local": {
     "title": "City/county business registration",
     "authority": "City or county",
     "description": "North Carolina repealed local privilege licenses; local zoning and occupancy approvals still apply."
   },
-  "paidLeave": null,
-  "paidSickLeave": null,
-  "businessLicense": null,
-  "llcPublication": null,
-  "economicNexusUsd": 100000,
   "dbaFiling": "county",
+  "dbaEntitiesFileLocally": true,
+  "dbaOffice": "County register of deeds",
   "industry": {
     "contractor": "North Carolina Licensing Board for General Contractors",
     "realEstate": "North Carolina Real Estate Commission",
@@ -62,38 +81,9 @@
     "childCare": "North Carolina DHHS, Division of Child Development and Early Education",
     "health": "North Carolina DHHS, Division of Health Service Regulation"
   },
-  "verification": {
-    "checkedOn": "2026-10-13",
-    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
-    "sources": [
-      "https://sosnc.gov/frequently_asked_questions/by_title/_BRD_FAQ_Annual_Reports",
-      "https://www.sosnc.gov/divisions/business_registration/assumed_business_names"
-    ],
-    "unconfirmed": [],
-    "dba": "checked"
-  },
-  "dbaOffice": "County register of deeds",
-  "llpReport": {
-    "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
-    "fee": "$200 ($203 online)",
-    "deadline": "15th day of the 4th month after fiscal year end",
-    "feeDetail": {
-      "basis": "flat",
-      "amount": 200,
-      "online": 203
-    }
-  },
   "cannabis": {
     "status": "cbd_only",
     "regulator": null
-  },
-  "localSalesTax": "state_administered",
-  "lpReport": null,
-  "unemployment": {
-    "wageBase": 34200,
-    "minRate": 0.06,
-    "maxRate": 5.76,
-    "newEmployerRate": 1
   },
   "links": {
     "formation": "https://www.sosnc.gov/divisions/business_registration",
@@ -105,5 +95,12 @@
     "laborPosters": "https://www.labor.nc.gov/safety-and-health/publications/state-and-federal-workplace-poster-requirements",
     "dba": "https://www.sosnc.gov/divisions/business_registration/assumed_business_names"
   },
-  "dbaEntitiesFileLocally": true
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "sources": [
+      "https://sosnc.gov/frequently_asked_questions/by_title/_BRD_FAQ_Annual_Reports",
+      "https://www.sosnc.gov/divisions/business_registration/assumed_business_names"
+    ],
+    "unconfirmed": []
+  }
 }

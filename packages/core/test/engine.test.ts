@@ -157,6 +157,10 @@ describe("state", () => {
     expect(wc("94105", 1)).toBe(true);
     expect(wc("66101", 2, { annualPayroll: 15_000 })).toBe(false); // KS needs payroll > 20k
     expect(wc("66101", 2, { annualPayroll: 25_000 })).toBe(true);
+    // SC: 4 employees and payroll of $3,000 or more (at or above, not over)
+    expect(wc("29201", 4, { annualPayroll: 2_999 })).toBe(false);
+    expect(wc("29201", 4, { annualPayroll: 3_000 })).toBe(true);
+    expect(wc("29201", 3, { annualPayroll: 50_000 })).toBe(false);
   });
 
   it("Texas workers' comp is elective", () => {

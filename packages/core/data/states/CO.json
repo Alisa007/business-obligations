@@ -12,18 +12,10 @@
     "name": "Colorado Department of Labor and Employment",
     "url": "https://cdle.colorado.gov"
   },
-  "workersComp": {
-    "agency": "Colorado Division of Workers' Compensation",
-    "threshold": "1 employee",
-    "trigger": {
-      "minEmployees": 1
-    },
-    "stateFund": false
-  },
   "llcReport": {
+    "title": "File Periodic Report",
     "frequency": "annual",
     "deadline": "From 2 months before to 2 months after the periodic report month",
-    "title": "File Periodic Report",
     "feeDetail": {
       "basis": "flat",
       "amount": 25
@@ -34,9 +26,9 @@
     }
   },
   "corpReport": {
+    "title": "File Periodic Report",
     "frequency": "annual",
     "deadline": "From 2 months before to 2 months after the periodic report month",
-    "title": "File Periodic Report",
     "feeDetail": {
       "basis": "flat",
       "amount": 25
@@ -46,6 +38,7 @@
       "note": "Late filing penalty on the periodic report"
     }
   },
+  "llcPublication": null,
   "entityTax": "Corporate income tax",
   "salesTax": {
     "statewide": true,
@@ -53,23 +46,36 @@
     "agency": null,
     "alternative": null
   },
+  "localSalesTax": "locally_administered",
+  "economicNexusUsd": 100000,
+  "unemployment": {
+    "wageBase": 30600,
+    "minRate": 0.56,
+    "maxRate": 7.34,
+    "newEmployerRate": 1.53
+  },
+  "workersComp": {
+    "agency": "Colorado Division of Workers' Compensation",
+    "stateFund": false,
+    "trigger": {
+      "minEmployees": 1
+    }
+  },
   "paidLeave": {
     "title": "Colorado FAMLI premiums",
     "agency": "Colorado FAMLI Division (CDLE)",
     "description": "Employers remit premiums quarterly via the FAMLI portal and may deduct up to half from employees.",
     "minEmployees": 1
   },
+  "paidSickLeave": {
+    "minEmployees": 1
+  },
+  "businessLicense": null,
   "local": {
     "title": "Local sales tax licenses / business license",
     "authority": "City or county",
     "description": "Home-rule cities (Denver, Aurora, Colorado Springs, etc.) self-collect sales tax and require their own licenses."
   },
-  "paidSickLeave": {
-    "minEmployees": 1
-  },
-  "businessLicense": null,
-  "llcPublication": null,
-  "economicNexusUsd": 100000,
   "dbaFiling": "state",
   "industry": {
     "contractor": null,
@@ -78,23 +84,9 @@
     "childCare": "Colorado Department of Early Childhood",
     "health": "Colorado Department of Public Health and Environment"
   },
-  "verification": {
-    "checkedOn": "2026-10-13",
-    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
-    "sources": ["https://www.sos.state.co.us/pubs/business/FAQs/reports.html"],
-    "unconfirmed": [],
-    "dba": "checked"
-  },
   "cannabis": {
     "status": "adult_use",
     "regulator": "Colorado Marijuana Enforcement Division (Department of Revenue)"
-  },
-  "localSalesTax": "locally_administered",
-  "unemployment": {
-    "wageBase": 30600,
-    "minRate": 0.56,
-    "maxRate": 7.34,
-    "newEmployerRate": 1.53
   },
   "links": {
     "formation": "https://www.sos.state.co.us/pubs/business/businessHome.html",
@@ -105,5 +97,10 @@
     "entityTax": "https://tax.colorado.gov/corporate-income-tax-guide",
     "laborPosters": "https://cdle.colorado.gov/posters",
     "dba": "https://www.sos.state.co.us/pubs/business/FAQs/tradeNames.html"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "sources": ["https://www.sos.state.co.us/pubs/business/FAQs/reports.html"],
+    "unconfirmed": []
   }
 }

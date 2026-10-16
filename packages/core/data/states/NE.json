@@ -12,66 +12,26 @@
     "name": "Nebraska Department of Labor",
     "url": "https://dol.nebraska.gov"
   },
-  "workersComp": {
-    "agency": "Nebraska Workers' Compensation Court",
-    "threshold": "1 employee",
-    "trigger": {
-      "minEmployees": 1
-    },
-    "stateFund": false
-  },
   "llcReport": {
+    "title": "File Biennial Report",
     "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=4;BYMONTHDAY=1",
     "anchor": "2027-04-01",
-    "title": "File Biennial Report",
     "feeDetail": {
       "basis": "flat",
       "amount": 30
     }
   },
-  "lpReport": null,
   "corpReport": {
+    "title": "File Biennial Occupation Tax Report",
     "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=3;BYMONTHDAY=1",
     "anchor": "2026-03-01",
     "fee": "Occupation tax by paid-in capital ($26 up to $10,000; $40 for $10,001\u2013$20,000, +$20 per further $10,000)",
-    "title": "File Biennial Occupation Tax Report",
     "feeDetail": {
       "basis": "varies",
       "min": 26
     }
   },
-  "entityTax": "Corporate income tax",
-  "salesTax": {
-    "statewide": true,
-    "permit": "Nebraska sales tax permit",
-    "agency": null,
-    "alternative": null
-  },
-  "local": {
-    "title": "City occupation tax / license",
-    "authority": "City clerk",
-    "description": "Omaha, Lincoln and others require occupation taxes or business licenses."
-  },
-  "paidLeave": null,
-  "paidSickLeave": null,
-  "businessLicense": null,
-  "llcPublication": null,
-  "economicNexusUsd": 100000,
-  "dbaFiling": "none",
-  "industry": {
-    "contractor": "Nebraska Department of Labor (contractor registration)",
-    "realEstate": "Nebraska Real Estate Commission",
-    "alcohol": "Nebraska Liquor Control Commission",
-    "childCare": "Nebraska Department of Health and Human Services",
-    "health": "Nebraska Department of Health and Human Services"
-  },
-  "verification": {
-    "checkedOn": "2026-10-13",
-    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
-    "sources": ["https://sos.nebraska.gov/business-services/annualbiennial-reporting"],
-    "unconfirmed": [],
-    "dba": "checked"
-  },
+  "lpReport": null,
   "llpReport": {
     "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
     "fee": "$25 ($50 if engaged in the practice of law)",
@@ -80,16 +40,48 @@
       "amount": 25
     }
   },
-  "cannabis": {
-    "status": "medical_only",
-    "regulator": "Nebraska Medical Cannabis Commission"
+  "llcPublication": null,
+  "entityTax": "Corporate income tax",
+  "salesTax": {
+    "statewide": true,
+    "permit": "Nebraska sales tax permit",
+    "agency": null,
+    "alternative": null
   },
   "localSalesTax": "state_administered",
+  "economicNexusUsd": 100000,
   "unemployment": {
     "wageBase": 24000,
     "minRate": 0,
     "maxRate": 5.4,
     "newEmployerRate": 1.25
+  },
+  "workersComp": {
+    "agency": "Nebraska Workers' Compensation Court",
+    "stateFund": false,
+    "trigger": {
+      "minEmployees": 1
+    }
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
+  "local": {
+    "title": "City occupation tax / license",
+    "authority": "City clerk",
+    "description": "Omaha, Lincoln and others require occupation taxes or business licenses."
+  },
+  "dbaFiling": "none",
+  "industry": {
+    "contractor": "Nebraska Department of Labor (contractor registration)",
+    "realEstate": "Nebraska Real Estate Commission",
+    "alcohol": "Nebraska Liquor Control Commission",
+    "childCare": "Nebraska Department of Health and Human Services",
+    "health": "Nebraska Department of Health and Human Services"
+  },
+  "cannabis": {
+    "status": "medical_only",
+    "regulator": "Nebraska Medical Cannabis Commission"
   },
   "links": {
     "formation": "https://sos.nebraska.gov/business-services/business-services-division",
@@ -99,5 +91,10 @@
     "salesTax": "https://revenue.nebraska.gov/businesses/nebraska-sales-and-use-tax",
     "entityTax": "https://revenue.nebraska.gov/about/legal-information/regulations/chapter-24-corporate-income-tax",
     "laborPosters": "https://dol.nebraska.gov/laborstandards/compliance/requiredposters"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "sources": ["https://sos.nebraska.gov/business-services/annualbiennial-reporting"],
+    "unconfirmed": []
   }
 }

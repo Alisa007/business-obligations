@@ -12,15 +12,6 @@
     "name": "Kansas Department of Labor",
     "url": "https://www.dol.ks.gov"
   },
-  "workersComp": {
-    "agency": "Kansas Division of Workers Compensation",
-    "threshold": "Annual payroll over $20,000",
-    "trigger": {
-      "minEmployees": 1,
-      "andAnnualPayrollOver": 20000
-    },
-    "stateFund": false
-  },
   "llcReport": {
     "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=4;BYMONTHDAY=15",
     "anchor": "formation_year",
@@ -43,38 +34,6 @@
       "paper": 110
     }
   },
-  "entityTax": "Corporate income tax and privilege tax",
-  "salesTax": {
-    "statewide": true,
-    "permit": "Kansas retailers' sales tax registration",
-    "agency": null,
-    "alternative": null
-  },
-  "local": {
-    "title": "City occupation/business license",
-    "authority": "City clerk",
-    "description": "Many Kansas cities require a local occupation or business license."
-  },
-  "paidLeave": null,
-  "paidSickLeave": null,
-  "businessLicense": null,
-  "llcPublication": null,
-  "economicNexusUsd": 100000,
-  "dbaFiling": "none",
-  "industry": {
-    "contractor": null,
-    "realEstate": "Kansas Real Estate Commission",
-    "alcohol": "Kansas Alcoholic Beverage Control",
-    "childCare": "Kansas Department of Health and Environment",
-    "health": "Kansas Department of Health and Environment"
-  },
-  "verification": {
-    "checkedOn": "2026-10-13",
-    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
-    "sources": ["https://www.sos.ks.gov/Pubs/Businesses/Biennial-Filing.pdf"],
-    "unconfirmed": [],
-    "dba": "checked"
-  },
   "lpReport": {
     "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=4;BYMONTHDAY=15",
     "deadline": "April 15 of the odd or even year matching the formation year",
@@ -95,16 +54,50 @@
       "paper": 110
     }
   },
-  "cannabis": {
-    "status": "cbd_only",
-    "regulator": null
+  "llcPublication": null,
+  "entityTax": "Corporate income tax and privilege tax",
+  "salesTax": {
+    "statewide": true,
+    "permit": "Kansas retailers' sales tax registration",
+    "agency": null,
+    "alternative": null
   },
   "localSalesTax": "state_administered",
+  "economicNexusUsd": 100000,
   "unemployment": {
     "wageBase": 15100,
     "minRate": 0,
     "maxRate": 6.95,
     "newEmployerRate": 1.75
+  },
+  "workersComp": {
+    "agency": "Kansas Division of Workers Compensation",
+    "threshold": "Annual payroll over $20,000",
+    "stateFund": false,
+    "trigger": {
+      "minEmployees": 1,
+      "andAnnualPayrollOver": 20000
+    }
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
+  "local": {
+    "title": "City occupation/business license",
+    "authority": "City clerk",
+    "description": "Many Kansas cities require a local occupation or business license."
+  },
+  "dbaFiling": "none",
+  "industry": {
+    "contractor": null,
+    "realEstate": "Kansas Real Estate Commission",
+    "alcohol": "Kansas Alcoholic Beverage Control",
+    "childCare": "Kansas Department of Health and Environment",
+    "health": "Kansas Department of Health and Environment"
+  },
+  "cannabis": {
+    "status": "cbd_only",
+    "regulator": null
   },
   "links": {
     "formation": "https://sos.ks.gov/business/business.html",
@@ -114,5 +107,10 @@
     "salesTax": "https://www.ksrevenue.gov/bustaxtypessales.html",
     "entityTax": "https://www.ksrevenue.gov/bustaxtypescorp.html",
     "laborPosters": "https://www.dol.ks.gov/employers/workplace-laws/posters-in-the-workplace"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "sources": ["https://www.sos.ks.gov/Pubs/Businesses/Biennial-Filing.pdf"],
+    "unconfirmed": []
   }
 }

@@ -12,17 +12,9 @@
     "name": "Virginia Employment Commission",
     "url": "https://www.vec.virginia.gov"
   },
-  "workersComp": {
-    "agency": "Virginia Workers' Compensation Commission",
-    "threshold": "3 employees (more than 2 regularly employed)",
-    "trigger": {
-      "minEmployees": 3
-    },
-    "stateFund": false
-  },
   "llcReport": {
-    "rrule": "FREQ=YEARLY;BYMONTHDAY=-1",
     "title": "Pay Annual Registration Fee",
+    "rrule": "FREQ=YEARLY;BYMONTHDAY=-1",
     "feeDetail": {
       "basis": "flat",
       "amount": 50
@@ -33,14 +25,39 @@
     }
   },
   "corpReport": {
+    "title": "Pay Annual Registration Fee",
     "rrule": "FREQ=YEARLY;BYMONTHDAY=-1",
     "fee": "$100 (up to 5,000 authorized shares; scales above)",
-    "title": "Pay Annual Registration Fee",
     "feeDetail": {
       "basis": "flat",
       "amount": 100
     }
   },
+  "lpReport": {
+    "title": "Pay annual registration fee",
+    "rrule": "FREQ=YEARLY;BYMONTH=10;BYMONTHDAY=1",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 50
+    },
+    "lateFee": {
+      "amount": 25,
+      "note": "Penalty when the fee is not received by the due date"
+    }
+  },
+  "llpReport": {
+    "title": "File annual continuation report",
+    "rrule": "FREQ=YEARLY;BYMONTH=7;BYMONTHDAY=1",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 50
+    },
+    "lateFee": {
+      "amount": 25,
+      "note": "Penalty when the fee is not received by the due date"
+    }
+  },
+  "llcPublication": null,
   "entityTax": "Corporate income tax",
   "salesTax": {
     "statewide": true,
@@ -48,16 +65,30 @@
     "agency": null,
     "alternative": null
   },
+  "localSalesTax": "state_administered",
+  "economicNexusUsd": 100000,
+  "unemployment": {
+    "wageBase": 8000,
+    "minRate": 0.1,
+    "maxRate": 6.2,
+    "newEmployerRate": 2.5
+  },
+  "workersComp": {
+    "agency": "Virginia Workers' Compensation Commission",
+    "threshold": "3 employees (more than 2 regularly employed)",
+    "stateFund": false,
+    "trigger": {
+      "minEmployees": 3
+    }
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
   "local": {
     "title": "City/county BPOL license",
     "authority": "Local commissioner of revenue",
     "description": "Virginia localities require a Business, Professional and Occupational License (BPOL)."
   },
-  "paidLeave": null,
-  "paidSickLeave": null,
-  "businessLicense": null,
-  "llcPublication": null,
-  "economicNexusUsd": 100000,
   "dbaFiling": "state",
   "industry": {
     "contractor": "Virginia Board for Contractors (DPOR)",
@@ -66,48 +97,10 @@
     "childCare": "Virginia Department of Education, Office of Early Childhood",
     "health": "Virginia Department of Health"
   },
-  "verification": {
-    "checkedOn": "2026-10-13",
-    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
-    "sources": ["https://www.scc.virginia.gov/businesses/business-faqs/annual-registration-fees/"],
-    "unconfirmed": [],
-    "dba": "checked"
-  },
-  "llpReport": {
-    "rrule": "FREQ=YEARLY;BYMONTH=7;BYMONTHDAY=1",
-    "title": "File annual continuation report",
-    "feeDetail": {
-      "basis": "flat",
-      "amount": 50
-    },
-    "lateFee": {
-      "amount": 25,
-      "note": "Penalty when the fee is not received by the due date"
-    }
-  },
-  "lpReport": {
-    "rrule": "FREQ=YEARLY;BYMONTH=10;BYMONTHDAY=1",
-    "title": "Pay annual registration fee",
-    "feeDetail": {
-      "basis": "flat",
-      "amount": 50
-    },
-    "lateFee": {
-      "amount": 25,
-      "note": "Penalty when the fee is not received by the due date"
-    }
-  },
   "cannabis": {
     "status": "medical_only",
     "regulator": "Virginia Cannabis Control Authority",
     "note": "Adult-use retail sales are slated to begin July 1, 2027; only the medical program is licensed for sales today."
-  },
-  "localSalesTax": "state_administered",
-  "unemployment": {
-    "wageBase": 8000,
-    "minRate": 0.1,
-    "maxRate": 6.2,
-    "newEmployerRate": 2.5
   },
   "links": {
     "formation": "https://www.scc.virginia.gov/businesses/",
@@ -118,5 +111,10 @@
     "entityTax": "https://www.tax.virginia.gov/corporation-income-tax",
     "laborPosters": "https://doli.virginia.gov/resources/required-posters/",
     "dba": "https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "sources": ["https://www.scc.virginia.gov/businesses/business-faqs/annual-registration-fees/"],
+    "unconfirmed": []
   }
 }

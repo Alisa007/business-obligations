@@ -12,16 +12,19 @@
     "name": "Oklahoma Employment Security Commission",
     "url": "https://oklahoma.gov/oesc"
   },
-  "workersComp": {
-    "agency": "Oklahoma Workers' Compensation Commission",
-    "threshold": "1 employee",
-    "trigger": {
-      "minEmployees": 1
-    },
-    "stateFund": false
-  },
   "llcReport": null,
   "corpReport": null,
+  "lpReport": {
+    "title": "File Annual Certificate",
+    "rrule": "FREQ=YEARLY",
+    "deadline": "On the anniversary of registration",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 50
+    }
+  },
+  "llpReport": null,
+  "llcPublication": null,
   "entityTax": "Corporate income tax",
   "salesTax": {
     "statewide": true,
@@ -29,16 +32,29 @@
     "agency": null,
     "alternative": null
   },
+  "localSalesTax": "state_administered",
+  "economicNexusUsd": 100000,
+  "unemployment": {
+    "wageBase": 25000,
+    "minRate": 0.2,
+    "maxRate": 5.8,
+    "newEmployerRate": 1.5
+  },
+  "workersComp": {
+    "agency": "Oklahoma Workers' Compensation Commission",
+    "stateFund": false,
+    "trigger": {
+      "minEmployees": 1
+    }
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
   "local": {
     "title": "City business license",
     "authority": "City clerk",
     "description": "Some Oklahoma cities require business licenses and local sales tax registration."
   },
-  "paidLeave": null,
-  "paidSickLeave": null,
-  "businessLicense": null,
-  "llcPublication": null,
-  "economicNexusUsd": 100000,
   "dbaFiling": "state",
   "industry": {
     "contractor": "Oklahoma Construction Industries Board (trade licenses)",
@@ -47,33 +63,9 @@
     "childCare": "Oklahoma Department of Human Services",
     "health": "Oklahoma State Department of Health"
   },
-  "verification": {
-    "checkedOn": "2026-10-13",
-    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
-    "sources": ["https://www.sos.ok.gov/business/fees.aspx"],
-    "unconfirmed": [],
-    "dba": "checked"
-  },
-  "lpReport": {
-    "rrule": "FREQ=YEARLY",
-    "deadline": "On the anniversary of registration",
-    "title": "File Annual Certificate",
-    "feeDetail": {
-      "basis": "flat",
-      "amount": 50
-    }
-  },
   "cannabis": {
     "status": "medical_only",
     "regulator": "Oklahoma Medical Marijuana Authority"
-  },
-  "localSalesTax": "state_administered",
-  "llpReport": null,
-  "unemployment": {
-    "wageBase": 25000,
-    "minRate": 0.2,
-    "maxRate": 5.8,
-    "newEmployerRate": 1.5
   },
   "links": {
     "formation": "https://www.sos.ok.gov/business/default.aspx",
@@ -84,5 +76,10 @@
     "entityTax": "https://oklahoma.gov/tax/businesses.html",
     "laborPosters": "https://oklahoma.gov/labor/workplace-rights/workplace-posters.html",
     "dba": "https://www.sos.ok.gov/corp/tradeName.aspx?Ety=3"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "sources": ["https://www.sos.ok.gov/business/fees.aspx"],
+    "unconfirmed": []
   }
 }

@@ -12,24 +12,25 @@
     "name": "New Mexico Department of Workforce Solutions",
     "url": "https://www.dws.state.nm.us"
   },
-  "workersComp": {
-    "agency": "New Mexico Workers' Compensation Administration",
-    "threshold": "3 employees",
-    "trigger": {
-      "minEmployees": 3
-    },
-    "stateFund": false
-  },
   "llcReport": null,
   "corpReport": {
+    "title": "File Biennial Report",
     "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=4;BYMONTHDAY=15",
     "deadline": "April 15, every 2 years (aligned with the federal corporate return)",
-    "title": "File Biennial Report",
     "feeDetail": {
       "basis": "flat",
       "amount": 25
     }
   },
+  "llpReport": {
+    "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+    "deadline": "January 1 \u2013 April 1",
+    "fee": "Per Secretary of State fee schedule",
+    "feeDetail": {
+      "basis": "varies"
+    }
+  },
+  "llcPublication": null,
   "entityTax": "Corporate income tax and gross receipts tax",
   "salesTax": {
     "statewide": true,
@@ -40,18 +41,31 @@
     },
     "alternative": null
   },
-  "local": {
-    "title": "City/county business registration",
-    "authority": "City or county",
-    "description": "Albuquerque, Santa Fe and others require local business registration."
+  "localSalesTax": "state_administered",
+  "economicNexusUsd": 100000,
+  "unemployment": {
+    "wageBase": 34800,
+    "minRate": 0.33,
+    "maxRate": 5.4,
+    "newEmployerRate": null
+  },
+  "workersComp": {
+    "agency": "New Mexico Workers' Compensation Administration",
+    "stateFund": false,
+    "trigger": {
+      "minEmployees": 3
+    }
   },
   "paidLeave": null,
   "paidSickLeave": {
     "minEmployees": 1
   },
   "businessLicense": null,
-  "llcPublication": null,
-  "economicNexusUsd": 100000,
+  "local": {
+    "title": "City/county business registration",
+    "authority": "City or county",
+    "description": "Albuquerque, Santa Fe and others require local business registration."
+  },
   "dbaFiling": "none",
   "industry": {
     "contractor": "New Mexico Construction Industries Division",
@@ -60,31 +74,9 @@
     "childCare": "New Mexico Early Childhood Education and Care Department",
     "health": "New Mexico Department of Health"
   },
-  "verification": {
-    "checkedOn": "2026-10-13",
-    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
-    "sources": ["https://www.sos.nm.gov/business-services/"],
-    "unconfirmed": [],
-    "dba": "checked"
-  },
-  "llpReport": {
-    "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
-    "fee": "Per Secretary of State fee schedule",
-    "deadline": "January 1 \u2013 April 1",
-    "feeDetail": {
-      "basis": "varies"
-    }
-  },
   "cannabis": {
     "status": "adult_use",
     "regulator": "New Mexico Cannabis Control Division (Regulation and Licensing Department)"
-  },
-  "localSalesTax": "state_administered",
-  "unemployment": {
-    "wageBase": 34800,
-    "minRate": 0.33,
-    "maxRate": 5.4,
-    "newEmployerRate": null
   },
   "links": {
     "formation": "https://www.sos.nm.gov/business-services/",
@@ -94,5 +86,10 @@
     "salesTax": "https://www.tax.newmexico.gov/businesses/gross-receipts-overview/",
     "entityTax": "https://www.tax.newmexico.gov/businesses/",
     "laborPosters": "https://www.dws.nm.gov/en-us/State-and-Federal-Posters"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "sources": ["https://www.sos.nm.gov/business-services/"],
+    "unconfirmed": []
   }
 }
