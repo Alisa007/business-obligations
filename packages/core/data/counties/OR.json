@@ -1,17 +1,35 @@
 [
   {
     "county": "Clackamas",
-    "status": "unverified",
-    "reason": "bpp-state-rules-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "clackamas-county-or.business-personal-property",
+        "title": "File Clackamas County business personal property return",
+        "category": "filing",
+        "authority": "Clackamas County Assessment and Taxation",
+        "description": "Oregon businesses file a Confidential Personal Property Return with the county assessor by March 15 (March 16 when the 15th falls on a weekend) for taxable personal property held on January 1; returns filed after the deadline pay 5% of the tax through June 1, 25% through August 1 and 50% after (ORS 308.296). Returns can be filed electronically through eNoticesOnline.",
+        "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=15",
+        "url": "https://clackamas.us/at/persprop.html",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Lane",
-    "status": "unverified",
-    "reason": "bpp-state-rules-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "lane-county-or.business-personal-property",
+        "title": "File Lane County business personal property return",
+        "category": "filing",
+        "authority": "Lane County Assessment and Taxation",
+        "description": "Oregon businesses file a Confidential Personal Property Return with the county assessor by March 15 (March 16 when the 15th falls on a weekend) for taxable personal property held on January 1; returns filed after the deadline pay 5% of the tax through June 1, 25% through August 1 and 50% after (ORS 308.296). The 2026 deadline was March 16; free drop-in help is offered at the Eugene office.",
+        "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=15",
+        "url": "https://www.lanecountyor.gov/news/archived_news/PR_012726_PersonalPropertyTax",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Marion",
@@ -47,9 +65,18 @@
   },
   {
     "county": "Washington",
-    "status": "unverified",
-    "reason": "bpp-state-rules-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "washington-county-or.business-personal-property",
+        "title": "File Washington County business personal property return",
+        "category": "filing",
+        "authority": "Washington County Assessment and Taxation",
+        "description": "Oregon businesses file a Confidential Personal Property Return with the county assessor by March 15 (March 16 when the 15th falls on a weekend) for taxable personal property held on January 1; returns filed after the deadline pay 5% of the tax through June 1, 25% through August 1 and 50% after (ORS 308.296). Washington County listed March 16 as the 2026 deadline.",
+        "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=15",
+        "url": "https://washingtoncountyor.gov/es/node/19036",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16"
   }
 ]
