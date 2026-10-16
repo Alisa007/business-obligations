@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Alisa007/business-obligations/schema/common.schema.json",
+  "title": "Shared definitions",
+  "description": "Definitions reused by the other schemas, so each rule is written once.",
+  "$defs": {
+    "isoDate": {
+      "type": "string",
+      "format": "date",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+      "description": "Calendar date, YYYY-MM-DD."
+    },
+    "httpsUrl": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://",
+      "description": "An https URL."
+    },
+    "stateCode": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$",
+      "description": "Two-letter USPS state code (includes DC)."
+    },
+    "rrule": {
+      "type": "string",
+      "pattern": "^FREQ=YEARLY(;INTERVAL=[25])?(;BYMONTH=\\d{1,2}(,\\d{1,2})*)?(;BYMONTHDAY=-?\\d{1,2})?$",
+      "description": "iCalendar (RFC 5545) recurrence rule. The source of truth for frequency and due date; see src/rrule.ts for the supported subset."
+    },
+    "month": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 12
+    },
+    "dayOfMonth": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 31
+    },
+    "dueDate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "date"],
+      "properties": {
+        "type": {
+          "const": "date"
+        },
+        "date": {
+          "$ref": "#/$defs/isoDate"
+        }
+      }
+    },
+    "dueFixed": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "month", "day"],
+      "properties": {
+        "type": {
+          "const": "fixed"
+        },
+        "month": {
+          "$ref": "#/$defs/month"
+        },
+        "day": {
+          "$ref": "#/$defs/dayOfMonth"
+        },
+        "parity": {
+          "enum": ["odd", "even"]
+        },
+        "cycleFrom": {
+          "enum": ["formation_year", "year_after_formation"]
+        }
+      }
+    },
+    "dueAnniversary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "point"],
+      "properties": {
+        "type": {
+          "const": "anniversary"
+        },
+        "point": {
+          "enum": ["start_of_month", "end_of_month", "date"]
+        }
+      }
+    },
+    "dueMulti": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "dates"],
+      "properties": {
+        "type": {
+          "const": "multi"
+        },
+        "dates": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["month", "day"],
+            "properties": {
+              "month": {
+                "$ref": "#/$defs/month"
+              },
+              "day": {
+                "$ref": "#/$defs/dayOfMonth"
+              }
+            }
+          }
+        }
+      }
+    },
+    "rulesetVersion": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}\\.\\d+$",
+      "description": "Ruleset version, YYYY-MM-DD.n."
+    }
+  }
+}

@@ -26,15 +26,11 @@
         "enum": ["rules", "none", "unverified"]
       },
       "checkedOn": {
-        "type": "string",
-        "format": "date",
-        "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+        "$ref": "common.schema.json#/$defs/isoDate",
         "description": "Date (YYYY-MM-DD) the entry was checked against official pages. Absent = never individually checked."
       },
       "sourceUrl": {
-        "type": "string",
-        "format": "uri",
-        "pattern": "^https://"
+        "$ref": "common.schema.json#/$defs/httpsUrl"
       },
       "reason": {
         "type": "string",
@@ -63,7 +59,11 @@
       }
     },
     "allOf": [
-      { "not": { "required": ["note", "reason"] } },
+      {
+        "not": {
+          "required": ["note", "reason"]
+        }
+      },
       {
         "if": {
           "properties": {

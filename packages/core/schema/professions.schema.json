@@ -12,9 +12,7 @@
       "required": ["checkedOn", "scope", "unconfirmed"],
       "properties": {
         "checkedOn": {
-          "type": "string",
-          "format": "date",
-          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+          "$ref": "common.schema.json#/$defs/isoDate"
         },
         "scope": {
           "type": "string",
@@ -38,9 +36,7 @@
         "^[a-z]+$": {
           "type": "object",
           "additionalProperties": false,
-          "propertyNames": {
-            "pattern": "^[A-Z]{2}$"
-          },
+          "propertyNames": { "$ref": "common.schema.json#/$defs/stateCode" },
           "minProperties": 51,
           "patternProperties": {
             "^[A-Z]{2}$": {
@@ -53,9 +49,7 @@
                   "minLength": 6
                 },
                 "url": {
-                  "type": "string",
-                  "format": "uri",
-                  "pattern": "^https://"
+                  "$ref": "common.schema.json#/$defs/httpsUrl"
                 }
               }
             }
