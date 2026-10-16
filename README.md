@@ -111,7 +111,7 @@ them. Start with [CONTRIBUTING.md](CONTRIBUTING.md) and the issues labelled
 npm install business-obligations
 ```
 
-ESM and CommonJS are both supported. Node 20+. About 57 KB gzipped, no runtime dependencies.
+ESM and CommonJS are both supported. Node 20+. About 115 KB gzipped, no runtime dependencies.
 
 ## Using it from plain JavaScript
 
@@ -413,7 +413,7 @@ It sets no cookies, records no sessions and respects Do Not Track. It is off unl
 
 ## Size
 
-The core bundle is about 57 KB gzipped with all 51 jurisdictions' data. ZIP lookup (about 305 KB gzipped) lives in the
+The core bundle is about 115 KB gzipped with all 51 jurisdictions' data. ZIP lookup (about 305 KB gzipped) lives in the
 separate `business-obligations/zip` entry and is only loaded when you import it. `npm run size` enforces the budgets.
 
 ## Extending

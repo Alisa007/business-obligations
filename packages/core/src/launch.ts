@@ -1,6 +1,6 @@
 import { estimateCosts, type CostEstimate } from "./costs";
 import { evaluate, type ComplianceResult, type EvaluateOptions } from "./engine";
-import { todayIso } from "./iso";
+import { addDays, todayIso } from "./iso";
 import type { BusinessProfile, ComplianceItem } from "./types";
 
 export type LaunchPhaseId = "prepare" | "form" | "identify" | "register" | "license" | "employ" | "operate";
@@ -169,14 +169,8 @@ function phaseOf(item: ComplianceItem): LaunchPhaseId {
   return "operate";
 }
 
-const addDays = (iso: string, n: number) => {
-  const d = new Date(`${iso}T00:00:00Z`);
-  d.setUTCDate(d.getUTCDate() + n);
-  return d.toISOString().slice(0, 10);
-};
 const daysBetween = (a: string, b: string) =>
   Math.round((Date.parse(`${b}T00:00:00Z`) - Date.parse(`${a}T00:00:00Z`)) / 86_400_000);
-const today = () => todayIso();
 
 /**
  * Builds an ordered plan for opening a new business: phases with dependencies, planned dates and the
@@ -185,7 +179,7 @@ const today = () => todayIso();
  * The profile describes the business as it will be; `isFormed` and `formationDate` are set by the plan.
  */
 export function planLaunch(input: BusinessProfile, options: LaunchOptions = {}): LaunchPlan {
-  const startDate = options.startDate ?? today();
+  const startDate = options.startDate ?? todayIso();
   const allowance = { ...DEFAULT_ALLOWANCE, ...options.allowanceDays };
 
   // Window per phase, scheduled back to back.

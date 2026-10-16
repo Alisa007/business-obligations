@@ -67,9 +67,34 @@ filing of its own or you could not confirm one. Cite the county's own page for t
 
 ## Adding a city
 
-Add an entry to `data/cities/<STATE>.json`: `state`, `city`, `counties` (optional) and `items` with an `appliesTo` tag list
-(`all`, `employees`, `sells_goods`, `corporation`, `unincorporated`, `trade_name`); add `aliases` for
-neighbourhood or borough names. Cite the city's own page in `url`.
+Cities live in `data/cities/<STATE>.json` (one file per state and DC). Each entry has `state`, `city`, optional `counties` and `aliases` (neighbourhood or borough names that resolve to the city), and `items`:
+
+```json
+{
+  "id": "xyz.business-tax",
+  "title": "Pay the XYZ business tax",
+  "category": "payment",
+  "authority": "City of XYZ Finance Department",
+  "description": "One or two sentences, in your own words.",
+  "frequency": "annual",
+  "deadline": "September 30",
+  "due": { "type": "fixed", "month": 9, "day": 30 },
+  "url": "https://www.xyz.gov/business-tax",
+  "appliesTo": ["all"]
+}
+```
+
+A city that has no general business license or tax of its own is still worth recording, so nobody has to check
+again: set `"status": "none"`, `"items": []`, `"checkedOn"` (YYYY-MM-DD), `"sourceUrl"` (the official page) and a
+short `"note"` on what the city requires instead.
+
+When the city's rule conflicts with or replaces a state default, record it on the item: `supersedes` lists the ids
+(`state.annual-report:TX`) or rule ids (`state.trade-name`) it replaces, and the replaced items come back with
+`preemptedBy` set. `appliesWhen` (`{ "field": "annualRevenue", "op": ">=", "value": 50000 }`) states a threshold and
+`exemptions` lists who is excluded, both in plain text. Cite the ordinance or page in `url`.
+
+`appliesTo` takes `all`, `employees`, `sells_goods`, `corporation`, `unincorporated` or `trade_name`. Use the city's own
+page for `url`, run `npm run coverage` and `npm run check`, and add a line to the Unreleased section of `CHANGELOG.md`.
 
 ## Adding a country
 
@@ -104,37 +129,6 @@ the file is stale.
 
 `npm run build && npm run size` fails when a bundle exceeds its gzip budget (`scripts/size.mjs`). Prefer adding data to
 JSON files over code; raise a budget only with a reason in the pull request.
-
-## Adding a city
-
-Cities live in `data/cities/<STATE>.json` (one file per state and DC). Each entry has `state`, `city`, optional `counties` and `aliases`, and `items`:
-
-```json
-{
-  "id": "xyz.business-tax",
-  "title": "Pay the XYZ business tax",
-  "category": "payment",
-  "authority": "City of XYZ Finance Department",
-  "description": "One or two sentences, in your own words.",
-  "frequency": "annual",
-  "deadline": "September 30",
-  "due": { "type": "fixed", "month": 9, "day": 30 },
-  "url": "https://www.xyz.gov/business-tax",
-  "appliesTo": ["all"]
-}
-```
-
-A city that has no general business license or tax of its own is still worth recording, so nobody has to check
-again: set `"status": "none"`, `"items": []`, `"checkedOn"` (YYYY-MM-DD), `"sourceUrl"` (the official page) and a
-short `"note"` on what the city requires instead.
-
-When the city's rule conflicts with or replaces a state default, record it on the item: `supersedes` lists the ids
-(`state.annual-report:TX`) or rule ids (`state.trade-name`) it replaces, and the replaced items come back with
-`preemptedBy` set. `appliesWhen` (`{ "field": "annualRevenue", "op": ">=", "value": 50000 }`) states a threshold and
-`exemptions` lists who is excluded, both in plain text. Cite the ordinance or page in `url`.
-
-`appliesTo` takes `all`, `employees`, `sells_goods`, `corporation`, `unincorporated` or `trade_name`. Use the city's own
-page for `url`, run `npm run coverage` and `npm run check`, and add a line to the Unreleased section of `CHANGELOG.md`.
 
 ## Local coverage bot
 
