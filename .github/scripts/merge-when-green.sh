@@ -29,7 +29,7 @@ gh run watch "$run" --interval 15 --exit-status
 now=$(gh pr view "$pr" --json headRefOid --jq .headRefOid)
 [ "$now" = "$sha" ] || { echo "#$pr changed while CI ran; leaving it for the next run."; exit 0; }
 
-gh pr merge "$pr" --squash
+gh pr merge "$pr" --squash --delete-branch
 echo "Merged #$pr"
 gh workflow run release.yml --ref main -f dry_run=false
 gh workflow run pages.yml --ref main
