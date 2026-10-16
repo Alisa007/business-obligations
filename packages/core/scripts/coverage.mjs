@@ -27,7 +27,7 @@ export function buildCoverage() {
   const rows = states.map((s) => {
     const v = s.verification;
     const unconfirmed = v.unconfirmed.length ? v.unconfirmed.join(", ") : "—";
-    return `| ${s.code} | ${v.checkedOn} | ${reports(s)} | ${v.dba === "checked" ? "checked" : "unconfirmed"} | ${s.entityTaxDetail ? "structured" : "text"} | ${s.unemployment.year} | ${cities(s.code).join(", ") || "—"} | ${unconfirmed} |`;
+    return `| ${s.code} | ${v.checkedOn} | ${reports(s)} | ${v.dba === "checked" ? "checked" : "unconfirmed"} | ${s.entityTaxDetail ? "structured" : "text"} | ${read("data/ui-source.json").year} | ${cities(s.code).join(", ") || "—"} | ${unconfirmed} |`;
   });
   const total = states.length;
   const withUnconfirmed = states.filter((s) => s.verification.unconfirmed.length).length;
