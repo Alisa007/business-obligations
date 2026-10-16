@@ -114,6 +114,20 @@
     "frequency": "ongoing"
   },
   {
+    "id": "ny.insurer-annual-statement",
+    "title": "File the annual statement with NY DFS as an authorized insurer",
+    "category": "filing",
+    "authority": "NYS Department of Financial Services",
+    "description": "Insurers authorised to do business in New York file an annual statement of their condition at year end by March 1, verified by oath of at least two principal officers (Insurance Law section 307). The Superintendent sets the form, and can grant extensions or exemptions for hardship. DFS enforces the deadlines with civil penalties.",
+    "naics": ["524113", "524114", "524126", "524127", "524128"],
+    "appliesTo": ["all"],
+    "url": "https://www.dfs.ny.gov/apps_and_licensing/insurance_companies",
+    "checkedOn": "2026-10-16",
+    "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1",
+    "anchor": "2027-03-01",
+    "exemptions": ["Insurers not authorised to do business in New York"]
+  },
+  {
     "id": "ny.composting-organics-facility-permit",
     "title": "Get a DEC permit or registration for composting or organics recycling",
     "category": "permit",
