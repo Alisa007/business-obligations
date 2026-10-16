@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { dueToRRule, getComplianceItems, nextDueDate } from "../src";
+import { parseRRule, toRRule } from "../src/rrule";
 
 const base = { city: "Austin", county: "Travis", zip: "78701" } as const;
 
@@ -120,5 +121,16 @@ describe("dueToRRule", () => {
         "annual",
       ),
     ).toBeUndefined();
+  });
+});
+
+describe("last day of the month in monthly and quarterly rules", () => {
+  it("lands on February 29 in a leap year", () => {
+    const { due, frequency } = parseRRule("FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1");
+    expect(nextDueDate(due, { asOf: "2028-02-01", biennial: false })).toBe("2028-02-29");
+    expect(nextDueDate(due, { asOf: "2027-02-01", biennial: false })).toBe("2027-02-28");
+    expect(toRRule(due, frequency)?.rrule).toBe(
+      "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
+    );
   });
 });

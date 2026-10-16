@@ -95,7 +95,10 @@ export function parseRRule(rrule: string, anchor?: ScheduleAnchor): Schedule {
     return {
       due: {
         type: "multi",
-        dates: sorted.map((month) => ({ month, day: rawDay === -1 ? lastDay(month) : rawDay })),
+        dates: sorted.map((month) => ({
+          month,
+          day: rawDay === -1 ? (month === 2 ? 31 : lastDay(month)) : rawDay,
+        })),
       },
       frequency: cycle,
     };
@@ -175,9 +178,7 @@ export function describeSchedule({ due, frequency }: Schedule, opens?: MonthDay)
         ? "Last day of the anniversary month"
         : "First day of the anniversary month";
   if (due.type === "multi" && (frequency === "quarterly" || frequency === "monthly") && !opens)
-    return frequency === "monthly"
-      ? undefined
-      : listText(due.dates.map((d) => `${MONTH_NAMES[d.month - 1]} ${d.day}`));
+    return frequency === "monthly" ? undefined : listText(due.dates.map((d) => dayText(d.month, d.day)));
   if (due.type !== "fixed") return undefined;
   const date = dayText(due.month, due.day);
   if (opens)

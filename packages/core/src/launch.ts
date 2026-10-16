@@ -1,6 +1,6 @@
 import { estimateCosts, type CostEstimate } from "./costs";
-import { evaluate, type ComplianceResult, type EvaluateOptions } from "./engine";
-import { addDays, todayIso } from "./iso";
+import { evaluate, InvalidProfileError, type ComplianceResult, type EvaluateOptions } from "./engine";
+import { addDays, isIsoDate, todayIso } from "./iso";
 import type { BusinessProfile, ComplianceItem } from "./types";
 
 export type LaunchPhaseId = "prepare" | "form" | "identify" | "register" | "license" | "employ" | "operate";
@@ -31,7 +31,7 @@ export interface LaunchPhase {
 }
 
 export interface LaunchOptions extends EvaluateOptions {
-  /** First day of planning (YYYY-MM-DD). Defaults to today (UTC). */
+  /** First day of planning (YYYY-MM-DD). Defaults to today (local date). */
   startDate?: string;
   /** Date you want to open for business. When given, the plan reports whether it fits. */
   openingDate?: string;
@@ -180,6 +180,9 @@ const daysBetween = (a: string, b: string) =>
  */
 export function planLaunch(input: BusinessProfile, options: LaunchOptions = {}): LaunchPlan {
   const startDate = options.startDate ?? todayIso();
+  if (!isIsoDate(startDate)) throw new InvalidProfileError("`startDate` must be YYYY-MM-DD");
+  if (options.openingDate !== undefined && !isIsoDate(options.openingDate))
+    throw new InvalidProfileError("`openingDate` must be YYYY-MM-DD");
   const allowance = { ...DEFAULT_ALLOWANCE, ...options.allowanceDays };
 
   // Window per phase, scheduled back to back.

@@ -58,6 +58,22 @@ function incomeTaxForm(p: ResolvedProfile): { form: string; due: Due; deadline: 
   }
 }
 
+/**
+ * Estimated-tax installments. Owners pay on the calendar year (April 15, June 15, September 15, January 15);
+ * corporations pay on the 15th day of the 4th, 6th, 9th and 12th months of their own tax year (Form 1120-W).
+ */
+function estimatedTaxSchedule(p: ResolvedProfile): { deadline: string; due: Due } {
+  const months =
+    p.taxTreatment === "c_corp"
+      ? [4, 6, 9, 12].map((n) => ((p.fiscalYearEndMonth - 1 + n) % 12) + 1)
+      : [4, 6, 9, 1];
+  const names = months.map((m) => `${MONTHS[m - 1]} 15`);
+  return {
+    deadline: `${names.slice(0, -1).join(", ")}, ${names.at(-1)}`,
+    due: { type: "multi", dates: months.map((month) => ({ month, day: 15 })) },
+  };
+}
+
 export const federalRules: Rule[] = [
   {
     id: "fed.ein",
@@ -128,16 +144,7 @@ export const federalRules: Rule[] = [
           ? "Quarterly estimated payments (Form 1120-W worksheet, deposited via EFTPS)."
           : "Quarterly estimated payments by owners on business income (Form 1040-ES), including self-employment tax.",
       frequency: "quarterly",
-      deadline: "April 15, June 15, September 15, January 15",
-      due: {
-        type: "multi",
-        dates: [
-          { month: 4, day: 15 },
-          { month: 6, day: 15 },
-          { month: 9, day: 15 },
-          { month: 1, day: 15 },
-        ],
-      },
+      ...estimatedTaxSchedule(p),
       reason: `Expected net income of ${p.annualNetIncome} is expected to generate tax due during the year`,
       url: "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes",
     }),

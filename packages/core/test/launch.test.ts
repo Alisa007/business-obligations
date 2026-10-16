@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { planLaunch, type BusinessProfile } from "../src";
+import { InvalidProfileError, planLaunch, type BusinessProfile } from "../src";
 
 const profile: BusinessProfile = {
   entityType: "llc",
@@ -14,6 +14,13 @@ const profile: BusinessProfile = {
 };
 
 describe("planLaunch", () => {
+  it("rejects dates that are not real calendar dates", () => {
+    expect(() => planLaunch(profile, { startDate: "2026-02-30" })).toThrow(InvalidProfileError);
+    expect(() => planLaunch(profile, { startDate: "2026-11-02", openingDate: "soon" })).toThrow(
+      InvalidProfileError,
+    );
+  });
+
   const plan = planLaunch(profile, { startDate: "2026-11-02", openingDate: "2027-02-01" });
   const index = (re: RegExp) => plan.steps.findIndex((s) => re.test(s.item.id));
 
