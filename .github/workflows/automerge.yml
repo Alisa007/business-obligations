@@ -1,24 +1,62 @@
 name: Auto-merge
 
-# GitHub's "Allow auto-merge" repository setting only permits auto-merge; it has to be switched on for each pull
-# request. This does that for every PR from this repository (including Dependabot and bot PRs), so a PR merges by itself
-# once the required checks on main pass. It never checks out or runs PR code.
+# Merges a pull request as soon as its CI run succeeds, then starts the follow-up workflows itself.
+#
+# Why this is a workflow and not GitHub's built-in auto-merge: a pull request merged by github-actions[bot] (which is
+# what built-in auto-merge does when it was enabled with the Actions token) produces a push to main that GitHub does
+# NOT turn into workflow runs, so releases and the playground deploy never started. Workflows started with
+# workflow_dispatch are the one exception, so after merging this workflow dispatches Release and Playground itself.
+# Result: merge, release and deploy happen immediately, with no token and no polling.
+#
+# Safe by construction: it runs from the default branch (workflow_run), never checks out or executes PR code, only
+# acts on pull requests from this repository, and only when the CI run for the PR's current head commit succeeded.
+# CI contains every required check (check, compat on Node 20/22/24, node-floor). Label a PR "no-automerge" to opt out.
 
 on:
-  pull_request_target:
-    types: [opened, reopened, ready_for_review]
+  workflow_run:
+    workflows: [CI]
+    types: [completed]
 
 permissions:
-  contents: write
+  contents: write # merge
   pull-requests: write
+  actions: write # dispatch Release and Playground
+
+concurrency:
+  group: automerge
+  cancel-in-progress: false
 
 jobs:
-  enable:
-    if: github.event.pull_request.head.repo.full_name == github.repository && !github.event.pull_request.draft
+  merge:
+    if: ${{ github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_repository.full_name == github.repository && github.event.workflow_run.head_branch != 'main' }}
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+      BRANCH: ${{ github.event.workflow_run.head_branch }}
+      SHA: ${{ github.event.workflow_run.head_sha }}
     steps:
-      - run: gh pr merge --auto --squash "$PR_URL"
-        env:
-          PR_URL: ${{ github.event.pull_request.html_url }}
-          GH_TOKEN: ${{ github.token }}
+      - name: Merge the pull request whose head this CI run tested
+        id: merge
+        run: |
+          pr=$(gh pr list --head "$BRANCH" --state open --json number,headRefOid,isDraft,labels \
+            --jq "[.[] | select(.headRefOid == \"$SHA\" and (.isDraft | not) and ([.labels[].name] | index(\"no-automerge\") | not))][0].number // empty")
+          if [ -z "$pr" ]; then
+            echo "No open, non-draft pull request at $SHA for branch $BRANCH (or it opted out); nothing to merge."
+            echo "merged=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if gh pr merge "$pr" --squash; then
+            echo "Merged #$pr"
+            echo "merged=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "::warning::Could not merge #$pr (conflict or a required check is still missing)."
+            echo "merged=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      # workflow_dispatch is allowed from the Actions token, so these start immediately.
+      - name: Start the release and the playground deploy
+        if: steps.merge.outputs.merged == 'true'
+        run: |
+          gh workflow run release.yml --ref main -f dry_run=false
+          gh workflow run pages.yml --ref main
