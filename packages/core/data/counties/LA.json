@@ -43,9 +43,27 @@
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": "https://stax.latax.la.gov/API//v1/UploadDocuments/853",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "jefferson-parish-la.lodging-tax-return",
+        "title": "File the Jefferson Parish hotel/motel sales and room occupancy tax return",
+        "category": "filing",
+        "authority": "Louisiana Department of Revenue",
+        "description": "Hotels and motels in Jefferson Parish report the sales and room occupancy taxes monthly on Form R-1029DSO, due by the 20th of the following month, filed electronically through LaTAP. The parish Sheriff and Tax Collector separately issues a 3% east bank hotel occupancy return (filed with the regular sales tax return); its due date was not found.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://dam.ldr.la.gov/taxforms/1029DSOi-1-26.pdf",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Lafayette",
@@ -75,9 +93,27 @@
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": "https://stax.latax.la.gov/API//v1/UploadDocuments/853",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "orleans-la.lodging-tax-return",
+        "title": "File the Orleans Parish hotel/motel sales and room occupancy tax return",
+        "category": "filing",
+        "authority": "Louisiana Department of Revenue",
+        "description": "Hotels in Orleans Parish register for and report the sales and room occupancy taxes monthly on Form R-1029DSO, due by the 20th of the month for the preceding month (next business day if a weekend or holiday), filed and paid electronically through LaTAP. Hotels with ten or more guest rooms also file the Exhibition Hall Authority tax (Form R-1325).",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://dam.ldr.la.gov/taxforms/1029DSOi-1-26.pdf",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "St. Tammany",
