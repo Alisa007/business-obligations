@@ -111,7 +111,7 @@ them. Start with [CONTRIBUTING.md](CONTRIBUTING.md) and the issues labelled
 npm install business-obligations
 ```
 
-ESM and CommonJS are both supported. Node 20+. About 121 KB gzipped, no runtime dependencies.
+ESM and CommonJS are both supported. Node 20+. About 115 KB gzipped, no runtime dependencies.
 
 ## Using it from plain JavaScript
 
@@ -238,11 +238,10 @@ Machine-readable: [`schema/business-profile.schema.json`](packages/core/schema/b
   named for the city and county you pass in. City data is one file per state and looked up by an index, so adding
   thousands more is a data change; to keep the bundle small you can also load city data yourself and add it with
   `seededCityRule(indexCities(seeds))`.
-- **County (seeded):** the largest counties in `data/counties/<STATE>.json`: any county-level business obligation, such
-  as a business license or tax, a lodging occupancy tax, a business personal property return or a clerk filing (due
-  dates from the county or state page). `none` means every kind was checked and the county has nothing; a county
-  checked for only some kinds, or with nothing confirmed, is `unverified` and its note says what was and was not
-  checked. Add your own with `seededCountyRule(indexCounties(seeds))`.
+- **County (seeded):** the 300 largest counties (approximate) in `data/counties/<STATE>.json`, mainly the annual
+  business personal property return in states that levy it (due dates from the state, assessor page per county where
+  confirmed). States without a county-level business filing, or where it is made to the city, town or state, are
+  recorded as `none` or `unverified`. Add your own with `seededCountyRule(indexCounties(seeds))`.
 
 Intentionally not modelled: FinCEN beneficial ownership reporting (domestic companies are exempt under FinCEN's final
 rule effective August 14, 2026; only foreign entities registered in a US state report), local
@@ -414,7 +413,7 @@ It sets no cookies, records no sessions and respects Do Not Track. It is off unl
 
 ## Size
 
-The core bundle is about 121 KB gzipped with all 51 jurisdictions' data. ZIP lookup (about 305 KB gzipped) lives in the
+The core bundle is about 122 KB gzipped with all 51 jurisdictions' data. ZIP lookup (about 305 KB gzipped) lives in the
 separate `business-obligations/zip` entry and is only loaded when you import it. `npm run size` enforces the budgets.
 
 ## Extending
