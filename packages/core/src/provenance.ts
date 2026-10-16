@@ -1,3 +1,4 @@
+import uiSource from "../data/ui-source.json";
 import { stateInfo } from "./data";
 import { addDays } from "./iso";
 import { reportKey } from "./rules/state";
@@ -34,13 +35,13 @@ export function describeProvenance(p: Provenance, asOf: string, compiledOn: stri
  * reports, workers' comp thresholds, DBA filing level, cannabis regulators) are `checked`, or
  * `unconfirmed` when the state's verification block lists the field. Everything else is `compiled`.
  */
-const DOL_UI_SOURCE = "https://oui.doleta.gov/unemploy/content/sigpros/2020-2029/January2026.pdf";
-const UI_CHECKED_ON = "2026-10-13";
+const DOL_UI_SOURCE = uiSource.source;
+const UI_CHECKED_ON = uiSource.checkedOn;
 
 export function provenanceFor(item: ComplianceItem, p: ResolvedProfile): Provenance {
   const url = item.url ? [item.url] : [];
   if (item.id.startsWith("state.employer") && item.title.includes("unemployment insurance contributions")) {
-    // Wage base and rates come from the U.S. DOL's January 2026 table of state UI laws.
+    // Wage base and rates come from the U.S. DOL's table of state UI laws (see data/ui-source.json).
     return { confidence: "checked", checkedOn: UI_CHECKED_ON, sources: [DOL_UI_SOURCE, ...url] };
   }
   if (item.id.startsWith("state.entity-tax") && item.state) {

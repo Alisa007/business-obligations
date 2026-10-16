@@ -119,7 +119,8 @@ jobs:
                  recurrence rule, see CONTRIBUTING.md) only if the page states the date, and `appliesTo` tags.
                - Official page confirms there is none: `"status": "none"`, `"items": []`, `sourceUrl`, `note`,
                  `checkedOn`.
-               - Could not confirm either way: `"status": "unverified"`, `"items": []`, a short `note`, `checkedOn`.
+               - Could not confirm either way: `"status": "unverified"`, `"items": []`, a short `note` (or a `reason` code from
+                 packages/core/data/local-notes.json when it says exactly the same), `checkedOn`.
             Rules you must follow:
             - Never invent a URL, fee, rate or deadline. If you did not read it on an official page, leave it out and
               use "unverified". Prefer "unverified" over a guess every time.

@@ -33,7 +33,12 @@ describe("state data files", () => {
     for (const f of files) {
       const code = f.slice(0, 2);
       const raw = read(`data/states/${f}`);
-      expect(STATES[code]).toEqual({ code, ...raw, wageWithholding: !!raw.links.withholding });
+      expect(STATES[code]).toEqual({
+        code,
+        ...raw,
+        wageWithholding: !!raw.links.withholding,
+        unemployment: { ...raw.unemployment, year: read("data/ui-source.json").year },
+      });
     }
   });
 
@@ -49,6 +54,27 @@ describe("state data files", () => {
       if (s.salesTax.statewide) expect(s.salesTax.alternative, `${code} alternative`).toBeNull();
       else expect(s.salesTax.alternative, `${code} alternative`).toBeTruthy();
       if (s.businessLicense) expect(s.businessLicense.url, `${code} license page`).toMatch(/^https:\/\//);
+    }
+  });
+
+  it("late-fee notes that quote a monthly rate agree with the structured rate", () => {
+    for (const f of files) {
+      const s = read(`data/states/${f}`);
+      for (const k of ["llcReport", "corpReport", "lpReport", "llpReport"]) {
+        const late = s[k]?.lateFee;
+        const quoted = late?.note.match(/(\d+(?:\.\d+)?)% per month/);
+        if (quoted) expect(Number(quoted[1]), `${f} ${k}`).toBe(late.percentPerMonth);
+      }
+    }
+  });
+
+  it("has one UI data year, in data/ui-source.json", () => {
+    const { year, source } = read("data/ui-source.json");
+    expect(source).toContain(String(year));
+    for (const f of files) {
+      const s = read(`data/states/${f}`);
+      expect(s.unemployment.year, `${f} stores the year`).toBeUndefined();
+      expect(STATES[f.slice(0, 2)]!.unemployment.year).toBe(year);
     }
   });
 
@@ -230,6 +256,27 @@ describe("local and profession data schemas", () => {
     expect(validate.errors ?? []).toEqual([]);
   });
 
+  it("shared note codes are used, and only for text more than one entry shares", () => {
+    const notes = read("data/local-notes.json") as Record<string, string>;
+    const used = new Map<string, number>();
+    for (const dir of ["cities", "counties"])
+      for (const f of list(`data/${dir}`))
+        for (const e of read(`data/${dir}/${f}`) as Array<{ reason?: string; note?: string }>) {
+          if (e.reason) used.set(e.reason, (used.get(e.reason) ?? 0) + 1);
+          if (e.note)
+            expect(Object.values(notes), `${dir}/${f}: "${e.note}" has a shared code`).not.toContain(e.note);
+        }
+    for (const [code] of used) expect(notes[code], `unknown reason ${code}`).toBeDefined();
+    for (const code of Object.keys(notes)) expect(used.get(code) ?? 0, `${code} is used`).toBeGreaterThan(1);
+  });
+
+  it("the loader resolves a reason into the note text", () => {
+    const notes = read("data/local-notes.json") as Record<string, string>;
+    const austin = findCity("TX", "Abilene");
+    expect(austin?.reason).toBe("tx-city-license-not-researched");
+    expect(austin?.note).toBe(notes["tx-city-license-not-researched"]);
+  });
+
   it("rejects malformed local entries", () => {
     const ok = {
       city: "Austin",
@@ -248,6 +295,8 @@ describe("local and profession data schemas", () => {
       appliesTo: ["all"],
     };
     const bad: unknown[] = [
+      { ...ok, reason: "tx-city-license-not-researched" },
+      { ...ok, note: undefined, reason: "Not A Code" },
       { ...ok, checkedOn: "2026-02-30" },
       { ...ok, checkedOn: "10/13/2026" },
       { ...ok, state: "TX" },
