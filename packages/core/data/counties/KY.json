@@ -13,7 +13,8 @@
         "appliesTo": ["all"]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16",
+    "note": "Lexington-Fayette Urban County Government requires an occupational license for businesses and levies a transient room tax (reported at 8.5% by a third-party guide), but their due dates were not found."
   },
   {
     "county": "Jefferson",
@@ -27,8 +28,26 @@
         "rrule": "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=15",
         "url": "https://jeffersonpva.ky.gov/wp-content/uploads/2023/04/62A500P.pdf",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "jefferson-ky.lodging-tax-return",
+        "title": "File the Louisville Metro transient room tax return",
+        "category": "filing",
+        "authority": "Louisville Metro Revenue Commission",
+        "description": "Hosts and hotels register with the Revenue Commission and file and pay electronically (EMINTS account) by the last day of the month after the rental month. The Metro rate is 8.5%, and it does not apply to stays of 30 days or more. Form TR1M is for direct bookings; booking platforms use TR1M-P.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
+        "url": "https://louisvilleky.gov/node/22056",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16"
   }
 ]
