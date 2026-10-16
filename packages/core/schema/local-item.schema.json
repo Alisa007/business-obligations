@@ -63,6 +63,20 @@
         "enum": ["all", "employees", "sells_goods", "corporation", "unincorporated", "trade_name"]
       }
     },
+    "naics": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^\\d{2,6}$"
+      },
+      "description": "NAICS code prefixes (2 to 6 digits). The item applies only when the business's NAICS code starts with one of them."
+    },
+    "checkedOn": {
+      "$ref": "common.schema.json#/$defs/isoDate",
+      "description": "Date this item was checked against its official page; overrides the entry's date."
+    },
     "appliesWhen": {
       "type": "array",
       "minItems": 1,
@@ -174,7 +188,7 @@
           "maximum": 31
         }
       },
-      "description": "The day a filing window opens; the rule's date is the day it closes. Gives text such as \"January 1 – May 1\"."
+      "description": "The day a filing window opens; the rule's date is the day it closes. Gives text such as \"January 1 \u2013 May 1\"."
     }
   },
   "anyOf": [
