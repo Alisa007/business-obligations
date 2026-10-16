@@ -87,6 +87,18 @@ describe("the NAICS licences rule", () => {
     );
   });
 
+  it("adds city-issued items only inside New York City", () => {
+    const wash = { ...base, naics: "811192" };
+    const nyc = ids({ ...wash, city: "Brooklyn", county: "Kings", zip: "11201" }).find((i) =>
+      i.title.includes("car wash"),
+    );
+    expect(nyc?.jurisdiction).toBe("city");
+    expect(nyc?.authority).toContain("Consumer and Worker Protection");
+    expect(
+      ids({ ...wash, city: "Albany", county: "Albany", zip: "12207" }).map((i) => i.title),
+    ).not.toContain("Get a NYC car wash license");
+  });
+
   it("does not apply to other states", () => {
     expect(
       ids({ ...base, state: "NJ", zip: "07101", city: "Newark", county: "Essex", naics: "812112" }),

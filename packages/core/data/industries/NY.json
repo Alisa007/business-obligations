@@ -90,6 +90,682 @@
     "frequency": "ongoing"
   },
   {
+    "id": "ny.nyc-home-improvement-contractor-license",
+    "title": "Get a NYC home improvement contractor license",
+    "category": "license",
+    "authority": "NYC Department of Consumer and Worker Protection",
+    "description": "Anyone doing construction, repair, remodelling or other improvement work on residential land or buildings in New York City needs a DCWP licence, which expires February 28 of odd-numbered years. New applications cost $50 to $200 depending on timing, and renewal is $250. It needs workers' compensation cover, EPA lead certification or an affirmation, and either enrollment in the trust fund ($200) or a $20,000 surety bond. One owner or principal must pass the home improvement exam, and fingerprinting is required.",
+    "naics": ["236118", "2381", "2382", "2383", "2389", "561730"],
+    "appliesTo": ["all"],
+    "url": "https://nyc-business.nyc.gov/nycbusiness/description/home-improvement-contractor-license",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=2;BYMONTHDAY=28",
+    "anchor": "2027-02-28"
+  },
+  {
+    "id": "ny.nyc-secondhand-dealer-general-license",
+    "title": "Get a NYC secondhand dealer (general) license",
+    "category": "license",
+    "authority": "NYC Department of Consumer and Worker Protection",
+    "description": "Anyone who buys or sells used goods in New York City needs a DCWP licence, which expires July 31 of odd-numbered years. New applications cost $85 to $340 depending on timing. Not-for-profits, garage sales and online-only sales are exempt, and cars, pianos, art, clothing, shoes and some other goods are excluded.",
+    "naics": ["459510"],
+    "appliesTo": ["all"],
+    "url": "https://nyc-business.nyc.gov/nycbusiness/description/secondhand-dealer-general-license",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "exemptions": ["Not-for-profit organisations, garage sales and sellers dealing exclusively online"],
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=7;BYMONTHDAY=31",
+    "anchor": "2027-07-31"
+  },
+  {
+    "id": "ny.nyc-secondhand-dealer-auto-license",
+    "title": "Get a NYC secondhand dealer (auto) license",
+    "category": "license",
+    "authority": "NYC Department of Consumer and Worker Protection",
+    "description": "Businesses dealing in used cars in New York City need the DCWP secondhand dealer auto licence, which expires July 31 of odd-numbered years. Fees and bond terms are on the DCWP page.",
+    "naics": ["441120"],
+    "appliesTo": ["all"],
+    "url": "https://nyc-business.nyc.gov/nycbusiness/description/secondhand-dealer-auto-license",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=7;BYMONTHDAY=31",
+    "anchor": "2027-07-31"
+  },
+  {
+    "id": "ny.nyc-pawnbroker-license",
+    "title": "Get a NYC pawnbroker license",
+    "category": "license",
+    "authority": "NYC Department of Consumer and Worker Protection",
+    "description": "Businesses that lend money on pledged personal property, or buy goods on condition of selling them back at a set price, need a DCWP licence, renewed every April 30.",
+    "naics": ["522299"],
+    "appliesTo": ["all"],
+    "url": "https://nyc-business.nyc.gov/nycbusiness/description/pawnbroker-license",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=30"
+  },
+  {
+    "id": "ny.nyc-debt-collection-agency-license",
+    "title": "Get a NYC debt collection agency license",
+    "category": "license",
+    "authority": "NYC Department of Consumer and Worker Protection",
+    "description": "Any business collecting personal or household debts from New York City residents needs a DCWP licence, even if located outside the state, including attorneys, law firms and debt buyers. It expires January 31 of odd-numbered years. New fees run $38 to $150 depending on timing (the page lists $38 and $113 for the same period, so confirm), and a $5,000 surety bond is needed only if collecting child support.",
+    "naics": ["561440"],
+    "appliesTo": ["all"],
+    "url": "https://nyc-business.nyc.gov/nycbusiness/description/debt-collection-agency-license",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=1;BYMONTHDAY=31",
+    "anchor": "2027-01-31"
+  },
+  {
+    "id": "ny.nyc-garage-parking-lot-license",
+    "title": "Get a NYC garage or parking lot license",
+    "category": "license",
+    "authority": "NYC Department of Consumer and Worker Protection",
+    "description": "Garages and parking lots in New York City are licensed by DCWP, expiring March 31 of odd-numbered years.",
+    "naics": ["812930"],
+    "appliesTo": ["all"],
+    "url": "https://nyc-business.nyc.gov/nycbusiness/description/garage-andor-parking-lot-license",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=3;BYMONTHDAY=31",
+    "anchor": "2027-03-31"
+  },
+  {
+    "id": "ny.nyc-car-wash-license",
+    "title": "Get a NYC car wash license",
+    "category": "license",
+    "authority": "NYC Department of Consumer and Worker Protection",
+    "description": "Car washes in New York City are licensed by DCWP, expiring October 31 of odd-numbered years.",
+    "naics": ["811192"],
+    "appliesTo": ["all"],
+    "url": "https://nyc-business.nyc.gov/nycbusiness/description/car-wash-license",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=10;BYMONTHDAY=31",
+    "anchor": "2027-10-31"
+  },
+  {
+    "id": "ny.nyc-tow-truck-company-license",
+    "title": "Get a NYC tow truck company license",
+    "category": "license",
+    "authority": "NYC Department of Consumer and Worker Protection",
+    "description": "Businesses that move or remove disabled, illegally parked, abandoned or accident-involved cars in New York City need a DCWP tow truck company licence, which expires April 30 of even-numbered years. It is charged per truck, $150 to $600 depending on when the application is filed, plus $50 per truck inspection and either a $200 trust fund enrollment or a $5,000 bond. Tow truck liability insurance minimums apply, and drivers are licensed separately.",
+    "naics": ["488410"],
+    "appliesTo": ["all"],
+    "url": "https://nyc-business.nyc.gov/nycbusiness/description/tow-truck-company-license",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=4;BYMONTHDAY=30",
+    "anchor": "2026-04-30"
+  },
+  {
+    "id": "ny.nyc-tobacco-retail-dealer-license",
+    "title": "Get a NYC tobacco retail dealer license",
+    "category": "license",
+    "authority": "NYC Department of Consumer and Worker Protection",
+    "description": "Retailers selling tobacco products in New York City need a DCWP tobacco retail dealer licence, expiring December 31 of an odd or even year depending on the filing date. It is in addition to the state registration.",
+    "naics": ["459991"],
+    "appliesTo": ["all"],
+    "url": "https://nyc-business.nyc.gov/nycbusiness/description/tobacco-retail-dealer-license",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "frequency": "biennial"
+  },
+  {
+    "id": "ny.nyc-electronic-cigarette-retail-dealer-license",
+    "title": "Get a NYC electronic cigarette retail dealer license",
+    "category": "license",
+    "authority": "NYC Department of Consumer and Worker Protection",
+    "description": "Retailers selling electronic cigarettes in New York City need a DCWP licence, expiring November 30 of an odd or even year depending on the filing date.",
+    "naics": ["459991"],
+    "appliesTo": ["all"],
+    "url": "https://nyc-business.nyc.gov/nycbusiness/description/electronic-cigarette-retail-dealer-license",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "frequency": "biennial"
+  },
+  {
+    "id": "ny.nyc-self-storage-facility-license",
+    "title": "Get a NYC self-storage facility license",
+    "category": "license",
+    "authority": "NYC Department of Consumer and Worker Protection",
+    "description": "Self-storage facilities in New York City are licensed by DCWP, expiring April 1 of even-numbered years.",
+    "naics": ["531130"],
+    "appliesTo": ["all"],
+    "url": "https://nyc-business.nyc.gov/nycbusiness/description/self-storage-facility-license",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=4;BYMONTHDAY=1",
+    "anchor": "2026-04-01"
+  },
+  {
+    "id": "ny.nyc-storage-warehouse-license",
+    "title": "Get a NYC storage warehouse license",
+    "category": "license",
+    "authority": "NYC Department of Consumer and Worker Protection",
+    "description": "Storage warehouses in New York City are licensed by DCWP, expiring April 1 of odd-numbered years.",
+    "naics": ["493110", "493120", "493190"],
+    "appliesTo": ["all"],
+    "url": "https://nyc-business.nyc.gov/nycbusiness/description/storage-warehouse-license",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=4;BYMONTHDAY=1",
+    "anchor": "2027-04-01"
+  },
+  {
+    "id": "ny.nyc-third-party-food-delivery-service-license",
+    "title": "Get a NYC third-party food delivery service license",
+    "category": "license",
+    "authority": "NYC Department of Consumer and Worker Protection",
+    "description": "Third-party food delivery services operating in New York City need a DCWP licence, expiring August 31 of odd-numbered years.",
+    "naics": ["492110", "561990"],
+    "appliesTo": ["all"],
+    "url": "https://nyc-business.nyc.gov/nycbusiness/description/third-party-food-delivery-service-license",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=8;BYMONTHDAY=31",
+    "anchor": "2027-08-31"
+  },
+  {
+    "id": "ny.nyc-ticket-seller-business-license",
+    "title": "Get a NYC ticket seller business license",
+    "category": "license",
+    "authority": "NYC Department of Consumer and Worker Protection",
+    "description": "Ticket seller businesses in New York City are licensed by DCWP, with the licence expiring July 31 each year.",
+    "naics": ["561599"],
+    "appliesTo": ["all"],
+    "url": "https://nyc-business.nyc.gov/nycbusiness/description/ticket-seller-business-license",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "rrule": "FREQ=YEARLY;BYMONTH=7;BYMONTHDAY=31"
+  },
+  {
+    "id": "ny.nyc-scrap-metal-processor-license",
+    "title": "Get a NYC scrap metal processor license",
+    "category": "license",
+    "authority": "NYC Department of Consumer and Worker Protection",
+    "description": "Businesses that buy, process and ship scrap metal in New York City need a DCWP licence, expiring June 30 each year.",
+    "naics": ["423930", "562920"],
+    "appliesTo": ["all"],
+    "url": "https://nyc-business.nyc.gov/nycbusiness/description/scrap-metal-processor-license",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "rrule": "FREQ=YEARLY;BYMONTH=6;BYMONTHDAY=30"
+  },
+  {
+    "id": "ny.nyc-industrial-laundry-license",
+    "title": "Get a NYC industrial laundry license",
+    "category": "license",
+    "authority": "NYC Department of Consumer and Worker Protection",
+    "description": "Businesses laundering for hotels, hospitals, restaurants, gyms and other businesses in New York City need a DCWP licence, and a delivery licence for vehicles delivering the laundry. Both expire December 31 of odd-numbered years, with fees tiered by application window.",
+    "naics": ["812332"],
+    "appliesTo": ["all"],
+    "url": "https://nyc-business.nyc.gov/nycbusiness/description/industrial-laundry-license",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=12;BYMONTHDAY=31",
+    "anchor": "2027-12-31"
+  },
+  {
+    "id": "ny.nyc-construction-labor-provider-license",
+    "title": "Get a NYC construction labor provider license",
+    "category": "license",
+    "authority": "NYC Department of Consumer and Worker Protection",
+    "description": "Businesses supplying construction labour in New York City need a DCWP licence, expiring July 31 of even-numbered years.",
+    "naics": ["561320", "238"],
+    "appliesTo": ["all"],
+    "url": "https://www.nyc.gov/site/dca/media/pr060922-DCWP-Begins-Licensing-Construction-Labor-Providers.page",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=7;BYMONTHDAY=31",
+    "anchor": "2026-07-31"
+  },
+  {
+    "id": "ny.nyc-employment-agency-license",
+    "title": "Get a NYC employment agency license",
+    "category": "license",
+    "authority": "NYC Department of Consumer and Worker Protection",
+    "description": "In New York City employment agencies are licensed by DCWP rather than the state, with the licence expiring May 1 of even-numbered years.",
+    "naics": ["561311"],
+    "appliesTo": ["all"],
+    "url": "https://nyc-business.nyc.gov/nycbusiness/description/employment-agency-license",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=5;BYMONTHDAY=1",
+    "anchor": "2026-05-01"
+  },
+  {
+    "id": "ny.nyc-process-serving-agency-license",
+    "title": "Get a NYC process serving agency license",
+    "category": "license",
+    "authority": "NYC Department of Consumer and Worker Protection",
+    "description": "Process serving agencies in New York City need a DCWP licence, expiring February 28 of even-numbered years.",
+    "naics": ["561491"],
+    "appliesTo": ["all"],
+    "url": "https://nyc-business.nyc.gov/nycbusiness/description/process-serving-agency-license",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=2;BYMONTHDAY=28",
+    "anchor": "2026-02-28"
+  },
+  {
+    "id": "ny.nyc-booting-company-license",
+    "title": "Get a NYC booting company license",
+    "category": "license",
+    "authority": "NYC Department of Consumer and Worker Protection",
+    "description": "Companies that boot vehicles in New York City need a DCWP licence, expiring December 31 of odd-numbered years.",
+    "naics": ["812930", "561990"],
+    "appliesTo": ["all"],
+    "url": "https://nyc-business.nyc.gov/nycbusiness/description/booting-company-license",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=12;BYMONTHDAY=31",
+    "anchor": "2027-12-31"
+  },
+  {
+    "id": "ny.nyc-sightseeing-bus-license",
+    "title": "Get a NYC sightseeing bus license",
+    "category": "license",
+    "authority": "NYC Department of Consumer and Worker Protection",
+    "description": "Sightseeing buses in New York City are licensed by DCWP, expiring March 31 of even-numbered years, and guides are licensed separately.",
+    "naics": ["487110"],
+    "appliesTo": ["all"],
+    "url": "https://nyc-business.nyc.gov/nycbusiness/description/sightseeing-bus-license",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=3;BYMONTHDAY=31",
+    "anchor": "2026-03-31"
+  },
+  {
+    "id": "ny.nyc-dealer-in-products-for-the-disabled-license",
+    "title": "Get a NYC dealer in products for the disabled license",
+    "category": "license",
+    "authority": "NYC Department of Consumer and Worker Protection",
+    "description": "Dealers of products for people with disabilities in New York City need a DCWP licence, expiring March 15 of odd-numbered years.",
+    "naics": ["456199"],
+    "appliesTo": ["all"],
+    "url": "https://nyc-business.nyc.gov/nycbusiness/description/dealer-in-products-for-the-disabled-license",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=3;BYMONTHDAY=15",
+    "anchor": "2027-03-15"
+  },
+  {
+    "id": "ny.nyc-pedicab-business-license",
+    "title": "Get a NYC pedicab business license",
+    "category": "license",
+    "authority": "NYC Department of Consumer and Worker Protection",
+    "description": "Pedicab businesses in New York City are licensed by DCWP, expiring November 1 each year.",
+    "naics": ["485999"],
+    "appliesTo": ["all"],
+    "url": "https://nyc-business.nyc.gov/nycbusiness/description/pedicab-business-license",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "rrule": "FREQ=YEARLY;BYMONTH=11;BYMONTHDAY=1"
+  },
+  {
+    "id": "ny.nyc-scale-dealer-repairer-license",
+    "title": "Get a NYC scale dealer or repairer license",
+    "category": "license",
+    "authority": "NYC Department of Consumer and Worker Protection",
+    "description": "Businesses selling or repairing commercial scales in New York City need a DCWP licence, expiring February 28 each year.",
+    "naics": ["811310", "423440"],
+    "appliesTo": ["all"],
+    "url": "https://nyc-business.nyc.gov/nycbusiness/description/scale-dealer-repairer-license",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=28"
+  },
+  {
+    "id": "ny.nyc-food-service-establishment-permit",
+    "title": "Get a NYC food service establishment permit",
+    "category": "permit",
+    "authority": "NYC Department of Health and Mental Hygiene",
+    "description": "Any place in New York City that gives food to people, whether sold or free, needs a DOHMH permit. It costs $280 a year, plus $25 for frozen desserts, and expires one year from the end of the month you applied, with a reminder three months ahead. A supervising manager holding a Food Protection Certificate must be on site, and every permitted establishment gets an unscheduled annual inspection. The business can open 22 days after applying, or earlier after a pre-operating inspection.",
+    "naics": ["7225", "7224"],
+    "appliesTo": ["all"],
+    "url": "https://nyc-business.nyc.gov/nycbusiness/description/food-service-establishment-permit",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "frequency": "annual",
+    "renewal": "Every year"
+  },
+  {
+    "id": "ny.nyc-mobile-food-vending-permit",
+    "title": "Get NYC mobile food vending licenses and permits",
+    "category": "permit",
+    "authority": "NYC Department of Health and Mental Hygiene",
+    "description": "Mobile food vendors in New York City need a vending licence and a permit for each unit, both valid two years. Renewal forms are mailed three months before expiry and renewals can be done only in person or by mail. Temporary food service establishments need their own annual permit.",
+    "naics": ["722330"],
+    "appliesTo": ["all"],
+    "url": "https://www.nyc.gov/site/doh/business/food-operators/mobile-and-temporary-food-vendors.page",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "frequency": "biennial",
+    "renewal": "Every two years"
+  },
+  {
+    "id": "ny.nyc-tattoo-artist-license",
+    "title": "Get a NYC tattoo artist license",
+    "category": "license",
+    "authority": "NYC Department of Health and Mental Hygiene",
+    "description": "All tattoo artists in New York City must be licensed under the Health Code, with a two-year licence or a temporary licence for operating fewer than 7 days, $50.",
+    "naics": ["812199"],
+    "appliesTo": ["all"],
+    "url": "https://pl.nyc-business.nyc.gov/nycbusiness/description/tattoo-artist-license-temporary",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "frequency": "biennial",
+    "renewal": "Every two years"
+  },
+  {
+    "id": "ny.nyc-child-care-permit",
+    "title": "Get a NYC child care permit",
+    "category": "permit",
+    "authority": "NYC Department of Health and Mental Hygiene",
+    "description": "Group day care and school-based child care in New York City are permitted by DOHMH rather than the state. The pages reviewed give no fee or term, so confirm with DOHMH.",
+    "naics": ["624410"],
+    "appliesTo": ["all"],
+    "url": "https://www.nyc.gov/site/doh/business/permits-licenses.page",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "frequency": "ongoing"
+  },
+  {
+    "id": "ny.nyc-for-hire-vehicle-base-license",
+    "title": "Get a TLC for-hire vehicle base license",
+    "category": "license",
+    "authority": "NYC Taxi and Limousine Commission",
+    "description": "A business dispatching for-hire vehicles in New York City needs a TLC base licence. A livery base costs $1,500 for three years plus $75 fingerprinting per person, and must attach at least 10 vehicles, or 5 if one is wheelchair accessible. Outstanding fines or judgments owed to TLC or other agencies must be cleared first.",
+    "naics": ["485310", "485320"],
+    "appliesTo": ["all"],
+    "url": "https://nyc-business.nyc.gov/nycbusiness/description/livery-car-base-license",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "frequency": "ongoing",
+    "renewal": "Every three years"
+  },
+  {
+    "id": "ny.nyc-for-hire-vehicle-license",
+    "title": "Get a TLC for-hire vehicle license for each vehicle",
+    "category": "license",
+    "authority": "NYC Taxi and Limousine Commission",
+    "description": "Each for-hire vehicle operating in New York City needs a TLC vehicle licence, $275 a year.",
+    "naics": ["485310", "485320"],
+    "appliesTo": ["all"],
+    "url": "https://www.nyc.gov/site/tlc/businesses/for-hire-vehicles.page",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "frequency": "annual",
+    "renewal": "Every year"
+  },
+  {
+    "id": "ny.nyc-high-volume-for-hire-service-license",
+    "title": "Get a TLC high-volume for-hire service license",
+    "category": "license",
+    "authority": "NYC Taxi and Limousine Commission",
+    "description": "A business dispatching more than 10,000 for-hire vehicle trips a day under one brand in New York City needs a TLC high-volume licence. It lasts two years and the fee is $190,000 a year ($380,000 for two years), non-refundable, due with the application, along with a list of bases and a business plan. The licence is itself a base licence.",
+    "naics": ["485310", "485320"],
+    "appliesTo": ["all"],
+    "url": "https://www.nyc.gov/site/tlc/businesses/high-volume-for-hire-services.page",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "frequency": "biennial",
+    "renewal": "Every two years",
+    "exemptions": ["Dispatchers under 10,000 trips a day"]
+  },
+  {
     "id": "ny.ewaste-recycling-facility-registration",
     "title": "Register an electronic waste recycling or consolidation facility with DEC",
     "category": "registration",
