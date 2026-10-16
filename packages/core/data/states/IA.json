@@ -12,18 +12,10 @@
     "name": "Iowa Workforce Development",
     "url": "https://workforce.iowa.gov"
   },
-  "workersComp": {
-    "agency": "Iowa Division of Workers' Compensation",
-    "threshold": "1 employee",
-    "trigger": {
-      "minEmployees": 1
-    },
-    "stateFund": false
-  },
   "llcReport": {
+    "title": "File Biennial Report",
     "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=4;BYMONTHDAY=1",
     "anchor": "2027-04-01",
-    "title": "File Biennial Report",
     "feeDetail": {
       "basis": "flat",
       "amount": 30,
@@ -32,52 +24,18 @@
     }
   },
   "corpReport": {
+    "title": "File Biennial Report",
     "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=4;BYMONTHDAY=1",
     "anchor": "2026-04-01",
-    "title": "File Biennial Report",
     "feeDetail": {
       "basis": "flat",
       "amount": 60
     }
   },
-  "entityTax": "Corporate income tax",
-  "salesTax": {
-    "statewide": true,
-    "permit": "Iowa sales tax permit",
-    "agency": null,
-    "alternative": null
-  },
-  "local": {
-    "title": "Local permits",
-    "authority": "City or county",
-    "description": "Iowa has no general local business license; zoning and industry permits apply."
-  },
-  "paidLeave": null,
-  "paidSickLeave": null,
-  "businessLicense": null,
-  "llcPublication": null,
-  "economicNexusUsd": 100000,
-  "dbaFiling": "county",
-  "industry": {
-    "contractor": "Iowa Division of Labor (contractor registration)",
-    "realEstate": "Iowa Real Estate Commission",
-    "alcohol": "Iowa Alcoholic Beverages Division",
-    "childCare": "Iowa Department of Health and Human Services",
-    "health": "Iowa Department of Inspections, Appeals, and Licensing"
-  },
-  "verification": {
-    "checkedOn": "2026-10-13",
-    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
-    "sources": ["https://sos.iowa.gov/businesses/business-entity-forms-and-fees"],
-    "unconfirmed": [],
-    "dba": "checked"
-  },
-  "dbaOffice": "County recorder",
-  "llpReport": null,
   "lpReport": {
+    "title": "File Biennial Report",
     "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=4;BYMONTHDAY=1",
     "deadline": "April 1 of the biennial reporting year",
-    "title": "File Biennial Report",
     "feeDetail": {
       "basis": "flat",
       "amount": 30,
@@ -85,17 +43,51 @@
       "paper": 45
     }
   },
-  "cannabis": {
-    "status": "medical_only",
-    "regulator": "Iowa Department of Health and Human Services, Bureau of Medical Cannabidiol",
-    "note": "Iowa's medical program caps THC content."
+  "llpReport": null,
+  "llcPublication": null,
+  "entityTax": "Corporate income tax",
+  "salesTax": {
+    "statewide": true,
+    "permit": "Iowa sales tax permit",
+    "agency": null,
+    "alternative": null
   },
   "localSalesTax": "state_administered",
+  "economicNexusUsd": 100000,
   "unemployment": {
     "wageBase": 20400,
     "minRate": 0,
     "maxRate": 5.4,
     "newEmployerRate": 1
+  },
+  "workersComp": {
+    "agency": "Iowa Division of Workers' Compensation",
+    "stateFund": false,
+    "trigger": {
+      "minEmployees": 1
+    }
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
+  "local": {
+    "title": "Local permits",
+    "authority": "City or county",
+    "description": "Iowa has no general local business license; zoning and industry permits apply."
+  },
+  "dbaFiling": "county",
+  "dbaOffice": "County recorder",
+  "industry": {
+    "contractor": "Iowa Division of Labor (contractor registration)",
+    "realEstate": "Iowa Real Estate Commission",
+    "alcohol": "Iowa Alcoholic Beverages Division",
+    "childCare": "Iowa Department of Health and Human Services",
+    "health": "Iowa Department of Inspections, Appeals, and Licensing"
+  },
+  "cannabis": {
+    "status": "medical_only",
+    "regulator": "Iowa Department of Health and Human Services, Bureau of Medical Cannabidiol",
+    "note": "Iowa's medical program caps THC content."
   },
   "links": {
     "formation": "https://sos.iowa.gov/businesses/business-entity-forms-and-fees",
@@ -106,5 +98,10 @@
     "entityTax": "https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/starting-business",
     "laborPosters": "https://workforce.iowa.gov/employers/resources/posters",
     "dba": "https://help.sos.iowa.gov/understanding-name-availability-iowa"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "sources": ["https://sos.iowa.gov/businesses/business-entity-forms-and-fees"],
+    "unconfirmed": []
   }
 }

@@ -12,14 +12,6 @@
     "name": "Alaska Department of Labor and Workforce Development",
     "url": "https://labor.alaska.gov"
   },
-  "workersComp": {
-    "agency": "Alaska Division of Workers' Compensation",
-    "threshold": "1 employee",
-    "trigger": {
-      "minEmployees": 1
-    },
-    "stateFund": false
-  },
   "llcReport": {
     "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=1;BYMONTHDAY=2",
     "deadline": "January 2 of every second year after formation",
@@ -36,32 +28,47 @@
       "amount": 100
     }
   },
+  "llcPublication": null,
   "entityTax": "Corporate income tax (no individual income tax)",
   "salesTax": {
     "statewide": false,
     "permit": "Local (borough/city) sales tax registration",
-    "alternative": "Alaska has no statewide sales tax; many boroughs and cities levy their own and sellers into Alaska register with the Alaska Remote Seller Sales Tax Commission (ARSSTC).",
-    "agency": null
+    "agency": null,
+    "alternative": "Alaska has no statewide sales tax; many boroughs and cities levy their own and sellers into Alaska register with the Alaska Remote Seller Sales Tax Commission (ARSSTC)."
   },
+  "localSalesTax": "locally_administered",
+  "economicNexusUsd": 100000,
+  "unemployment": {
+    "wageBase": 54200,
+    "minRate": 1,
+    "maxRate": 5.4,
+    "newEmployerRate": 1,
+    "note": "Employees also contribute; the 1.00% minimum applies to employers."
+  },
+  "workersComp": {
+    "agency": "Alaska Division of Workers' Compensation",
+    "stateFund": false,
+    "trigger": {
+      "minEmployees": 1
+    }
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
   "businessLicense": {
     "title": "Alaska state business license",
     "authority": "Alaska Division of Corporations, Business and Professional Licensing",
     "url": "https://www.commerce.alaska.gov/web/cbpl/BusinessLicensing",
+    "renewal": "biennial",
     "feeDetail": {
       "basis": "flat",
       "amount": 50
-    },
-    "renewal": "biennial"
+    }
   },
   "local": {
     "title": "Borough/city business license",
     "authority": "City or borough clerk",
     "description": "Local licenses and sales tax registration where the municipality has them."
   },
-  "paidLeave": null,
-  "paidSickLeave": null,
-  "llcPublication": null,
-  "economicNexusUsd": 100000,
   "dbaFiling": "state",
   "industry": {
     "contractor": "Alaska Division of Corporations, Business and Professional Licensing",
@@ -70,24 +77,9 @@
     "childCare": "Alaska Department of Health, Child Care Program Office",
     "health": "Alaska Department of Health"
   },
-  "verification": {
-    "checkedOn": "2026-10-13",
-    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
-    "sources": ["https://www.commerce.alaska.gov/web/cbpl/Corporations/BiennialReports"],
-    "unconfirmed": [],
-    "dba": "checked"
-  },
   "cannabis": {
     "status": "adult_use",
     "regulator": "Alaska Alcohol and Marijuana Control Office (Marijuana Control Board)"
-  },
-  "localSalesTax": "locally_administered",
-  "unemployment": {
-    "wageBase": 54200,
-    "minRate": 1,
-    "maxRate": 5.4,
-    "newEmployerRate": 1,
-    "note": "Employees also contribute; the 1.00% minimum applies to employers."
   },
   "links": {
     "formation": "https://www.commerce.alaska.gov/web/cbpl/Corporations/CreateFileNewEntity",
@@ -97,5 +89,10 @@
     "entityTax": "https://www.tax.alaska.gov/programs/programs/other/corporate/MEF.aspx",
     "laborPosters": "https://labor.alaska.gov/lss/posters.htm",
     "dba": "https://www.commerce.alaska.gov/web/cbpl/Corporations/ReservingRegisteringBusinessName.aspx"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "sources": ["https://www.commerce.alaska.gov/web/cbpl/Corporations/BiennialReports"],
+    "unconfirmed": []
   }
 }

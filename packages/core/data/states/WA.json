@@ -12,14 +12,6 @@
     "name": "Washington Employment Security Department",
     "url": "https://esd.wa.gov"
   },
-  "workersComp": {
-    "agency": "Washington Department of Labor & Industries",
-    "threshold": "1 employee",
-    "stateFund": true,
-    "trigger": {
-      "minEmployees": 1
-    }
-  },
   "llcReport": {
     "rrule": "FREQ=YEARLY;BYMONTHDAY=-1",
     "feeDetail": {
@@ -42,6 +34,7 @@
       "note": "Delinquency fee after the expiration date (not for nonprofits)"
     }
   },
+  "llcPublication": null,
   "entityTax": "Business & Occupation (B&O) tax on gross receipts; no corporate or individual income tax",
   "salesTax": {
     "statewide": true,
@@ -49,16 +42,20 @@
     "agency": null,
     "alternative": null
   },
-  "businessLicense": {
-    "title": "Washington state business license (Business Licensing Service)",
-    "authority": "Washington Department of Revenue, Business Licensing Service",
-    "url": "https://dor.wa.gov/open-business/apply-business-license",
-    "fee": "$90 application (varies by endorsements)",
-    "feeDetail": {
-      "basis": "flat",
-      "amount": 90
-    },
-    "renewal": "annual"
+  "localSalesTax": "state_administered",
+  "economicNexusUsd": 100000,
+  "unemployment": {
+    "wageBase": 78200,
+    "minRate": 0,
+    "maxRate": 5.4,
+    "newEmployerRate": null
+  },
+  "workersComp": {
+    "agency": "Washington Department of Labor & Industries",
+    "stateFund": true,
+    "trigger": {
+      "minEmployees": 1
+    }
   },
   "paidLeave": {
     "title": "Washington Paid Family and Medical Leave and WA Cares premiums",
@@ -66,17 +63,30 @@
     "description": "Employers report hours and remit premiums quarterly.",
     "minEmployees": 1
   },
+  "paidSickLeave": {
+    "minEmployees": 1
+  },
+  "businessLicense": {
+    "title": "Washington state business license (Business Licensing Service)",
+    "authority": "Washington Department of Revenue, Business Licensing Service",
+    "url": "https://dor.wa.gov/open-business/apply-business-license",
+    "fee": "$90 application (varies by endorsements)",
+    "renewal": "annual",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 90
+    }
+  },
   "local": {
     "title": "City business license endorsement",
     "authority": "City via Business Licensing Service",
     "description": "City licenses are added as endorsements to the state business license; Seattle and others levy local B&O taxes."
   },
-  "paidSickLeave": {
-    "minEmployees": 1
-  },
-  "llcPublication": null,
-  "economicNexusUsd": 100000,
   "dbaFiling": "state",
+  "dbaAuthority": {
+    "name": "Washington Department of Revenue, Business Licensing Service",
+    "url": "https://dor.wa.gov/open-business/apply-business-license"
+  },
   "industry": {
     "contractor": "Washington Department of Labor & Industries (contractor registration)",
     "realEstate": "Washington Department of Licensing",
@@ -84,29 +94,9 @@
     "childCare": "Washington Department of Children, Youth, and Families",
     "health": "Washington Department of Health"
   },
-  "verification": {
-    "checkedOn": "2026-10-13",
-    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
-    "sources": [
-      "https://www.sos.wa.gov/corporations-charities/frequently-asked-questions-faqs/fee-scheduleexpedited-service"
-    ],
-    "unconfirmed": [],
-    "dba": "checked"
-  },
-  "dbaAuthority": {
-    "name": "Washington Department of Revenue, Business Licensing Service",
-    "url": "https://dor.wa.gov/open-business/apply-business-license"
-  },
   "cannabis": {
     "status": "adult_use",
     "regulator": "Washington State Liquor and Cannabis Board"
-  },
-  "localSalesTax": "state_administered",
-  "unemployment": {
-    "wageBase": 78200,
-    "minRate": 0,
-    "maxRate": 5.4,
-    "newEmployerRate": null
   },
   "links": {
     "formation": "https://www.sos.wa.gov/corporations-charities",
@@ -116,5 +106,12 @@
     "entityTax": "https://dor.wa.gov/taxes-rates/business-occupation-tax",
     "laborPosters": "https://www.lni.wa.gov/forms-publications/required-workplace-posters",
     "dba": "https://dor.wa.gov/manage-business/grow-business/register-trade-names"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "sources": [
+      "https://www.sos.wa.gov/corporations-charities/frequently-asked-questions-faqs/fee-scheduleexpedited-service"
+    ],
+    "unconfirmed": []
   }
 }

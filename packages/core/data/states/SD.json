@@ -12,15 +12,6 @@
     "name": "South Dakota Department of Labor & Regulation",
     "url": "https://dlr.sd.gov"
   },
-  "workersComp": {
-    "agency": "South Dakota Division of Labor and Management",
-    "threshold": "Optional (not required by state law; uninsured employers can be sued in tort)",
-    "trigger": {
-      "minEmployees": 1,
-      "elective": true
-    },
-    "stateFund": false
-  },
   "llcReport": {
     "rrule": "FREQ=YEARLY;BYMONTHDAY=1",
     "feeDetail": {
@@ -47,6 +38,7 @@
       "note": "Fee for delinquent annual reports"
     }
   },
+  "llcPublication": null,
   "entityTax": "No corporate or individual income tax (financial institution franchise tax only)",
   "salesTax": {
     "statewide": true,
@@ -54,16 +46,31 @@
     "agency": null,
     "alternative": null
   },
+  "localSalesTax": "state_administered",
+  "economicNexusUsd": 100000,
+  "unemployment": {
+    "wageBase": 15000,
+    "minRate": 0,
+    "maxRate": 8.52,
+    "newEmployerRate": 1.2
+  },
+  "workersComp": {
+    "agency": "South Dakota Division of Labor and Management",
+    "threshold": "Optional (not required by state law; uninsured employers can be sued in tort)",
+    "stateFund": false,
+    "trigger": {
+      "minEmployees": 1,
+      "elective": true
+    }
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
   "local": {
     "title": "City business license",
     "authority": "City finance office",
     "description": "Some South Dakota cities require licenses for specific businesses."
   },
-  "paidLeave": null,
-  "paidSickLeave": null,
-  "businessLicense": null,
-  "llcPublication": null,
-  "economicNexusUsd": 100000,
   "dbaFiling": "state",
   "industry": {
     "contractor": null,
@@ -72,23 +79,9 @@
     "childCare": "South Dakota Department of Social Services",
     "health": "South Dakota Department of Health"
   },
-  "verification": {
-    "checkedOn": "2026-10-13",
-    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
-    "sources": ["https://sdsos.gov/general-information/filing-fees.aspx"],
-    "unconfirmed": [],
-    "dba": "checked"
-  },
   "cannabis": {
     "status": "medical_only",
     "regulator": "South Dakota Department of Health, Medical Cannabis Program"
-  },
-  "localSalesTax": "state_administered",
-  "unemployment": {
-    "wageBase": 15000,
-    "minRate": 0,
-    "maxRate": 8.52,
-    "newEmployerRate": 1.2
   },
   "links": {
     "formation": "https://sdsos.gov/business-services/",
@@ -98,5 +91,10 @@
     "entityTax": "https://dor.sd.gov/businesses/taxes/",
     "laborPosters": "https://dlr.sd.gov/employment_laws/posting_requirements.aspx",
     "dba": "https://sdsos.gov/business-services/default.aspx"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "sources": ["https://sdsos.gov/general-information/filing-fees.aspx"],
+    "unconfirmed": []
   }
 }

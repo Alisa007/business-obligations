@@ -12,31 +12,33 @@
     "name": "Michigan Unemployment Insurance Agency",
     "url": "https://www.michigan.gov/leo/bureaus-agencies/uia"
   },
-  "workersComp": {
-    "agency": "Michigan Workers' Disability Compensation Agency",
-    "threshold": "3 employees, or 1 employee working 35+ hours per week for 13 weeks",
-    "trigger": {
-      "minEmployees": 3,
-      "orFullTimeEmployees": 1
-    },
-    "stateFund": false
-  },
   "llcReport": {
-    "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=15",
     "title": "File Annual Statement",
+    "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=15",
     "feeDetail": {
       "basis": "flat",
       "amount": 25
     }
   },
   "corpReport": {
-    "rrule": "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=15",
     "title": "File Annual Report",
+    "rrule": "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=15",
     "feeDetail": {
       "basis": "flat",
       "amount": 25
     }
   },
+  "lpReport": null,
+  "llpReport": {
+    "title": "Renew LLP registration",
+    "rrule": "FREQ=YEARLY",
+    "deadline": "Before the first anniversary of registration, then annually",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 100
+    }
+  },
+  "llcPublication": null,
   "entityTax": "Corporate Income Tax (CIT)",
   "salesTax": {
     "statewide": true,
@@ -44,19 +46,35 @@
     "agency": null,
     "alternative": null
   },
-  "local": {
-    "title": "City business license",
-    "authority": "City clerk",
-    "description": "Michigan cities may require local business licenses; several levy city income taxes (e.g., Detroit)."
+  "localSalesTax": "none",
+  "economicNexusUsd": 100000,
+  "unemployment": {
+    "wageBase": 9500,
+    "minRate": 0.06,
+    "maxRate": 10.3,
+    "newEmployerRate": 2.7
+  },
+  "workersComp": {
+    "agency": "Michigan Workers' Disability Compensation Agency",
+    "threshold": "3 employees, or 1 employee working 35+ hours per week for 13 weeks",
+    "stateFund": false,
+    "trigger": {
+      "minEmployees": 3,
+      "orFullTimeEmployees": 1
+    }
   },
   "paidLeave": null,
   "paidSickLeave": {
     "minEmployees": 1
   },
   "businessLicense": null,
-  "llcPublication": null,
-  "economicNexusUsd": 100000,
+  "local": {
+    "title": "City business license",
+    "authority": "City clerk",
+    "description": "Michigan cities may require local business licenses; several levy city income taxes (e.g., Detroit)."
+  },
   "dbaFiling": "county",
+  "dbaOffice": "County clerk",
   "industry": {
     "contractor": "Michigan LARA (residential builders and maintenance and alteration contractors)",
     "realEstate": "Michigan LARA",
@@ -64,34 +82,9 @@
     "childCare": "Michigan LARA, Child Care Licensing Bureau",
     "health": "Michigan LARA"
   },
-  "verification": {
-    "checkedOn": "2026-10-13",
-    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
-    "sources": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/frequently-asked-questions"],
-    "unconfirmed": [],
-    "dba": "checked"
-  },
-  "dbaOffice": "County clerk",
-  "lpReport": null,
-  "llpReport": {
-    "rrule": "FREQ=YEARLY",
-    "deadline": "Before the first anniversary of registration, then annually",
-    "title": "Renew LLP registration",
-    "feeDetail": {
-      "basis": "flat",
-      "amount": 100
-    }
-  },
   "cannabis": {
     "status": "adult_use",
     "regulator": "Michigan Cannabis Regulatory Agency (Department of Licensing and Regulatory Affairs)"
-  },
-  "localSalesTax": "none",
-  "unemployment": {
-    "wageBase": 9500,
-    "minRate": 0.06,
-    "maxRate": 10.3,
-    "newEmployerRate": 2.7
   },
   "links": {
     "formation": "https://www.michigan.gov/lara/bureau-list/cscl/corps/michigan-business-roadmap",
@@ -102,5 +95,10 @@
     "entityTax": "https://www.michigan.gov/taxes/business-taxes/cit",
     "laborPosters": "https://www.michigan.gov/leo/bureaus-agencies/ber/wage-and-hour/poster-wage-and-hour-posting-requirements-for-employers",
     "dba": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "sources": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/frequently-asked-questions"],
+    "unconfirmed": []
   }
 }

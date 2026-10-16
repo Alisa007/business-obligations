@@ -8,6 +8,7 @@ import { PROFILE_FIELDS, STATES } from "../src";
 import { COUNTY_JURISDICTIONS, LOCAL_JURISDICTIONS, findCity, findCounty } from "../src/data";
 import type { LocalItem } from "../src/data/types";
 import { describeSchedule, parseRRule, toRRule } from "../src/rrule";
+import { describeTrigger } from "../src/trigger";
 
 const root = path.resolve(__dirname, "..");
 const read = (p: string) => JSON.parse(fs.readFileSync(path.join(root, p), "utf8"));
@@ -38,7 +39,72 @@ describe("state data files", () => {
         ...raw,
         wageWithholding: !!raw.links.withholding,
         unemployment: { ...raw.unemployment, year: read("data/ui-source.json").year },
+        workersComp: {
+          ...raw.workersComp,
+          threshold: raw.workersComp.threshold ?? describeTrigger(raw.workersComp.trigger) ?? "Varies",
+        },
+        verification: {
+          ...raw.verification,
+          scope: raw.verification.scope ?? read("data/verification.json").scope,
+          dba: raw.verification.unconfirmed.includes("dbaFiling") ? "unconfirmed" : "checked",
+        },
       });
+    }
+  });
+
+  it("lists keys in the schema's order, so diffs stay small", () => {
+    const schema = read("schema/state.schema.json");
+    const resolve = (n: any): any => (n.$ref ? resolve(schema.$defs[n.$ref.split("/").pop()!]) : n);
+    const pick = (n: any, v: unknown): any => {
+      n = resolve(n);
+      for (const b of n.oneOf ?? n.anyOf ?? []) {
+        const r = resolve(b);
+        if (
+          (r.type === "object" && v && typeof v === "object" && !Array.isArray(v)) ||
+          (r.type === "array" && Array.isArray(v))
+        )
+          return r;
+      }
+      return n;
+    };
+    const misordered: string[] = [];
+    const walk = (n: any, v: unknown, where: string) => {
+      n = pick(n, v);
+      if (Array.isArray(v)) return v.forEach((x, i) => n.items && walk(n.items, x, `${where}[${i}]`));
+      if (!v || typeof v !== "object" || !n.properties) return;
+      const keys = Object.keys(v);
+      const want = Object.keys(n.properties).filter((k) => keys.includes(k));
+      if (keys.join() !== want.join())
+        misordered.push(`${where}: ${keys.join(",")} (want ${want.join(",")})`);
+      for (const [k, x] of Object.entries(v)) if (n.properties[k]) walk(n.properties[k], x, `${where}.${k}`);
+    };
+    for (const f of files) walk(schema, read(`data/states/${f}`), f);
+    expect(misordered).toEqual([]);
+  });
+
+  it("keeps unemployment figures and verification paths coherent", () => {
+    for (const f of files) {
+      const s = read(`data/states/${f}`);
+      const u = s.unemployment;
+      expect(u.minRate, `${f} minRate <= maxRate`).toBeLessThanOrEqual(u.maxRate);
+      if (u.newEmployerRate !== null)
+        expect(u.newEmployerRate, `${f} new employer rate within range`).toBeGreaterThanOrEqual(u.minRate);
+      if (u.newEmployerRate !== null) expect(u.newEmployerRate).toBeLessThanOrEqual(u.maxRate);
+      for (const path of s.verification.unconfirmed as string[]) {
+        const found = path
+          .split(".")
+          .reduce((o: any, k) => (o && typeof o === "object" ? o[k] : undefined), s);
+        expect(found, `${f}: unconfirmed path "${path}" does not exist`).not.toBeUndefined();
+      }
+    }
+  });
+
+  it("generates the workers' comp threshold text for plain employee counts", () => {
+    for (const f of files) {
+      const w = read(`data/states/${f}`).workersComp;
+      if (w.threshold)
+        expect(w.threshold, `${f} threshold repeats trigger`).not.toBe(describeTrigger(w.trigger));
+      else expect(describeTrigger(w.trigger), `${f} needs threshold text`).toBeDefined();
     }
   });
 

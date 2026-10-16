@@ -134,7 +134,9 @@ function employerItems(x: Presence, p: ResolvedProfile): ItemDraft[] {
       : wc.minEmployees;
   const fullTime = x.home ? p.fullTimeEmployeeCount : n;
   const wcRequired =
-    (n >= minEmployees && (wc.andAnnualPayrollOver === undefined || payroll > wc.andAnnualPayrollOver)) ||
+    (n >= minEmployees &&
+      (wc.andAnnualPayrollOver === undefined || payroll > wc.andAnnualPayrollOver) &&
+      (wc.andAnnualPayrollAtLeast === undefined || payroll >= wc.andAnnualPayrollAtLeast)) ||
     (wc.orAnnualPayroll !== undefined && x.home && n >= 1 && payroll >= wc.orAnnualPayroll) ||
     (wc.orFullTimeEmployees !== undefined && fullTime >= wc.orFullTimeEmployees);
   if (wcRequired) {

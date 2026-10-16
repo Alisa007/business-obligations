@@ -12,19 +12,11 @@
     "name": "Georgia Department of Labor",
     "url": "https://dol.georgia.gov"
   },
-  "workersComp": {
-    "agency": "Georgia State Board of Workers' Compensation",
-    "threshold": "3 employees",
-    "trigger": {
-      "minEmployees": 3
-    },
-    "stateFund": false
-  },
   "llcReport": {
-    "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
-    "fee": "$50 ($60 online including service charge)",
-    "deadline": "January 1 \u2013 April 1",
     "title": "File Annual Registration",
+    "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+    "deadline": "January 1 \u2013 April 1",
+    "fee": "$50 ($60 online including service charge)",
     "feeDetail": {
       "basis": "flat",
       "amount": 50,
@@ -37,10 +29,10 @@
     }
   },
   "corpReport": {
-    "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
-    "fee": "$50 ($60 online including service charge)",
-    "deadline": "January 1 \u2013 April 1",
     "title": "File Annual Registration",
+    "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+    "deadline": "January 1 \u2013 April 1",
+    "fee": "$50 ($60 online including service charge)",
     "feeDetail": {
       "basis": "flat",
       "amount": 50,
@@ -52,6 +44,7 @@
       "note": "Penalty for late annual registration"
     }
   },
+  "llcPublication": null,
   "entityTax": "Corporate income tax and net worth tax",
   "salesTax": {
     "statewide": true,
@@ -59,17 +52,32 @@
     "agency": null,
     "alternative": null
   },
+  "localSalesTax": "state_administered",
+  "economicNexusUsd": 100000,
+  "unemployment": {
+    "wageBase": 9500,
+    "minRate": 0.04,
+    "maxRate": 8.1,
+    "newEmployerRate": 2.64
+  },
+  "workersComp": {
+    "agency": "Georgia State Board of Workers' Compensation",
+    "stateFund": false,
+    "trigger": {
+      "minEmployees": 3
+    }
+  },
+  "paidLeave": null,
+  "paidSickLeave": null,
+  "businessLicense": null,
   "local": {
     "title": "City or county occupation tax certificate",
     "authority": "City or county business license office",
     "description": "Georgia local governments issue business/occupation tax certificates."
   },
-  "paidLeave": null,
-  "paidSickLeave": null,
-  "businessLicense": null,
-  "llcPublication": null,
-  "economicNexusUsd": 100000,
   "dbaFiling": "county",
+  "dbaEntitiesFileLocally": true,
+  "dbaOffice": "Clerk of Superior Court",
   "industry": {
     "contractor": "Georgia State Licensing Board for Residential and General Contractors",
     "realEstate": "Georgia Real Estate Commission",
@@ -77,28 +85,10 @@
     "childCare": "Georgia Department of Early Care and Learning",
     "health": "Georgia Department of Community Health"
   },
-  "verification": {
-    "checkedOn": "2026-10-13",
-    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
-    "sources": [
-      "https://sos.ga.gov/how-to-guide/how-file-annual-registration",
-      "https://sos.ga.gov/page/business-division-faq"
-    ],
-    "unconfirmed": [],
-    "dba": "checked"
-  },
-  "dbaOffice": "Clerk of Superior Court",
   "cannabis": {
     "status": "medical_only",
     "regulator": "Georgia Access to Medical Cannabis Commission",
     "note": "Georgia's program is limited to low-THC oil."
-  },
-  "localSalesTax": "state_administered",
-  "unemployment": {
-    "wageBase": 9500,
-    "minRate": 0.04,
-    "maxRate": 8.1,
-    "newEmployerRate": 2.64
   },
   "links": {
     "formation": "https://sos.ga.gov/corporations-division-georgia-secretary-states-office",
@@ -110,5 +100,12 @@
     "laborPosters": "https://dol.georgia.gov/laws-and-rules/gdol-required-workplace-posters",
     "dba": "https://sos.ga.gov/page/business-division-faq"
   },
-  "dbaEntitiesFileLocally": true
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "sources": [
+      "https://sos.ga.gov/how-to-guide/how-file-annual-registration",
+      "https://sos.ga.gov/page/business-division-faq"
+    ],
+    "unconfirmed": []
+  }
 }

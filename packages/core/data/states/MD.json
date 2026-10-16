@@ -12,31 +12,24 @@
     "name": "Maryland Department of Labor, Division of Unemployment Insurance",
     "url": "https://labor.maryland.gov/employment"
   },
-  "workersComp": {
-    "agency": "Maryland Workers' Compensation Commission",
-    "threshold": "1 employee",
-    "trigger": {
-      "minEmployees": 1
-    },
-    "stateFund": false
-  },
   "llcReport": {
-    "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
     "title": "File Annual Report and Personal Property Return",
+    "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
     "feeDetail": {
       "basis": "flat",
       "amount": 300
     }
   },
   "corpReport": {
+    "title": "File Annual Report and Personal Property Return",
     "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
     "fee": "$300 ($0 for non-stock corporations)",
-    "title": "File Annual Report and Personal Property Return",
     "feeDetail": {
       "basis": "flat",
       "amount": 300
     }
   },
+  "llcPublication": null,
   "entityTax": "Corporate income tax; optional pass-through entity tax",
   "salesTax": {
     "statewide": true,
@@ -44,18 +37,31 @@
     "agency": null,
     "alternative": null
   },
-  "local": {
-    "title": "County trader's license",
-    "authority": "Clerk of the Circuit Court",
-    "description": "Retailers and others selling goods need a trader's license from the county circuit court clerk; Baltimore and counties also require occupancy permits."
+  "localSalesTax": "none",
+  "economicNexusUsd": 100000,
+  "unemployment": {
+    "wageBase": 8500,
+    "minRate": 0.3,
+    "maxRate": 7.5,
+    "newEmployerRate": 2.6
+  },
+  "workersComp": {
+    "agency": "Maryland Workers' Compensation Commission",
+    "stateFund": false,
+    "trigger": {
+      "minEmployees": 1
+    }
   },
   "paidLeave": null,
   "paidSickLeave": {
     "minEmployees": 1
   },
   "businessLicense": null,
-  "llcPublication": null,
-  "economicNexusUsd": 100000,
+  "local": {
+    "title": "County trader's license",
+    "authority": "Clerk of the Circuit Court",
+    "description": "Retailers and others selling goods need a trader's license from the county circuit court clerk; Baltimore and counties also require occupancy permits."
+  },
   "dbaFiling": "state",
   "industry": {
     "contractor": "Maryland Home Improvement Commission",
@@ -64,23 +70,9 @@
     "childCare": "Maryland State Department of Education, Office of Child Care",
     "health": "Maryland Department of Health"
   },
-  "verification": {
-    "checkedOn": "2026-10-13",
-    "scope": "Entity annual/biennial report fee and deadline, workers' comp coverage thresholds (states not listed under unconfirmed), and DBA filing level were checked against web search results on 2026-10-13, primarily official state pages where available; other fields are compiled from public knowledge and not individually checked.",
-    "sources": ["https://dat.maryland.gov/SDAT%20Forms/PPR_Forms/2026_Form3.pdf"],
-    "unconfirmed": [],
-    "dba": "checked"
-  },
   "cannabis": {
     "status": "adult_use",
     "regulator": "Maryland Cannabis Administration"
-  },
-  "localSalesTax": "none",
-  "unemployment": {
-    "wageBase": 8500,
-    "minRate": 0.3,
-    "maxRate": 7.5,
-    "newEmployerRate": 2.6
   },
   "links": {
     "formation": "https://dat.maryland.gov/businesses/Pages/default.aspx",
@@ -91,5 +83,10 @@
     "entityTax": "https://www.marylandcomptroller.gov/businesses/tax-services.html",
     "laborPosters": "https://labor.maryland.gov/oeope/posters.shtml",
     "dba": "https://dat.maryland.gov/sdat%20forms/nameappl.pdf"
+  },
+  "verification": {
+    "checkedOn": "2026-10-13",
+    "sources": ["https://dat.maryland.gov/SDAT%20Forms/PPR_Forms/2026_Form3.pdf"],
+    "unconfirmed": []
   }
 }

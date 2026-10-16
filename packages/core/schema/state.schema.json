@@ -30,73 +30,38 @@
   ],
   "allOf": [
     {
-      "if": { "properties": { "dbaFiling": { "enum": ["county", "town"] } } },
-      "then": { "required": ["dbaOffice"] }
+      "if": {
+        "properties": {
+          "dbaFiling": {
+            "enum": ["county", "town"]
+          }
+        }
+      },
+      "then": {
+        "required": ["dbaOffice"]
+      }
     }
   ],
   "properties": {
     "name": {
+      "description": "Full state name.",
       "type": "string",
       "minLength": 2
     },
     "filing": {
+      "description": "Agency where entities are formed and reports are filed.",
       "$ref": "#/$defs/agency"
     },
     "revenue": {
+      "description": "Primary tax agency (income/franchise, and sales tax unless salesTax.agency is set).",
       "$ref": "#/$defs/agency"
     },
     "labor": {
+      "description": "Unemployment insurance agency.",
       "$ref": "#/$defs/agency"
     },
-    "workersComp": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["agency", "threshold", "stateFund", "trigger"],
-      "properties": {
-        "agency": {
-          "type": "string",
-          "minLength": 3
-        },
-        "threshold": {
-          "type": "string",
-          "minLength": 3
-        },
-        "stateFund": {
-          "type": "boolean"
-        },
-        "trigger": {
-          "type": "object",
-          "additionalProperties": false,
-          "required": ["minEmployees"],
-          "properties": {
-            "minEmployees": {
-              "type": "integer",
-              "minimum": 1
-            },
-            "orAnnualPayroll": {
-              "type": "number",
-              "minimum": 0
-            },
-            "andAnnualPayrollOver": {
-              "type": "number",
-              "minimum": 0
-            },
-            "constructionMinEmployees": {
-              "type": "integer",
-              "minimum": 1
-            },
-            "elective": {
-              "type": "boolean"
-            },
-            "orFullTimeEmployees": {
-              "type": "integer",
-              "minimum": 1
-            }
-          }
-        }
-      }
-    },
     "llcReport": {
+      "description": "Periodic report required of LLCs formed in the state; null = none.",
       "oneOf": [
         {
           "type": "null"
@@ -107,6 +72,29 @@
       ]
     },
     "corpReport": {
+      "description": "Periodic report required of corporations and nonprofits formed in the state; null = none.",
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "#/$defs/report"
+        }
+      ]
+    },
+    "lpReport": {
+      "description": "Report for limited partnerships when it differs from the LLC report; null = none, absent = same as LLC.",
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "#/$defs/report"
+        }
+      ]
+    },
+    "llpReport": {
+      "description": "Report for limited liability partnerships when it differs from the LLC report; null = none, absent = same as LLC.",
       "oneOf": [
         {
           "type": "null"
@@ -117,13 +105,53 @@
       ]
     },
     "llcReportAppliesWhenTaxedAsCorp": {
+      "description": "LLCs taxed as corporations must file the corporate report even though plain LLCs do not (SC).",
       "type": "boolean"
     },
+    "llcPublication": {
+      "description": "Post-formation newspaper publication requirement for LLCs; null = none.",
+      "type": ["string", "null"]
+    },
     "entityTax": {
+      "description": "Entity-level income, franchise or gross-receipts taxes, in words.",
       "type": "string",
       "minLength": 3
     },
+    "entityTaxDetail": {
+      "description": "Threshold and rate of the state's gross-receipts or margin tax, where it is modelled.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "thresholdUsd", "summary", "source", "checkedOn"],
+      "properties": {
+        "kind": {
+          "enum": ["gross_receipts", "margin"]
+        },
+        "thresholdUsd": {
+          "type": "number",
+          "minimum": 0
+        },
+        "rate": {
+          "type": "number",
+          "minimum": 0
+        },
+        "baseUsd": {
+          "type": "number",
+          "minimum": 0
+        },
+        "summary": {
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/$defs/httpsUrl"
+        },
+        "checkedOn": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
     "salesTax": {
+      "description": "Statewide sales and use tax regime.",
       "type": "object",
       "additionalProperties": false,
       "required": ["statewide", "permit", "agency", "alternative"],
@@ -150,43 +178,114 @@
         }
       }
     },
-    "businessLicense": {
-      "oneOf": [
-        {
-          "type": "null"
+    "localSalesTax": {
+      "description": "Who administers local (city/county) sales taxes.",
+      "enum": ["locally_administered", "state_administered", "none"]
+    },
+    "economicNexusUsd": {
+      "description": "Annual sales into the state, in USD, at which a remote seller must register; null = no statewide sales tax.",
+      "type": ["integer", "null"],
+      "minimum": 1
+    },
+    "unemployment": {
+      "description": "State unemployment insurance (SUI) employer tax parameters; the data year is in data/ui-source.json.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["wageBase", "minRate", "maxRate", "newEmployerRate"],
+      "properties": {
+        "wageBase": {
+          "type": "integer",
+          "minimum": 1000,
+          "description": "Annual wages per employee subject to the tax, USD."
         },
-        {
+        "minRate": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 30,
+          "description": "Lowest experience-rated contribution rate, in percent (2.7 means 2.7%)."
+        },
+        "maxRate": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 30,
+          "description": "Highest experience-rated contribution rate, in percent."
+        },
+        "newEmployerRate": {
+          "type": ["number", "null"],
+          "minimum": 0,
+          "maximum": 30,
+          "description": "Rate for new employers, in percent; null when it depends on the employer's industry average."
+        },
+        "note": {
+          "type": "string",
+          "minLength": 5
+        }
+      }
+    },
+    "workersComp": {
+      "description": "Workers' compensation coverage requirement.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["agency", "stateFund", "trigger"],
+      "properties": {
+        "agency": {
+          "type": "string",
+          "minLength": 3
+        },
+        "threshold": {
+          "type": "string",
+          "minLength": 3,
+          "description": "Threshold in words. Stored only when it says more than the employee count; otherwise generated from trigger."
+        },
+        "stateFund": {
+          "type": "boolean",
+          "description": "Coverage must be bought from an exclusive state fund."
+        },
+        "trigger": {
           "type": "object",
           "additionalProperties": false,
-          "required": ["title", "authority", "renewal", "feeDetail"],
+          "required": ["minEmployees"],
           "properties": {
-            "title": {
-              "type": "string"
+            "minEmployees": {
+              "type": "integer",
+              "minimum": 1,
+              "description": "Employees at which coverage becomes mandatory."
             },
-            "authority": {
-              "type": "string"
+            "constructionMinEmployees": {
+              "type": "integer",
+              "minimum": 1,
+              "description": "Lower employee threshold in construction."
             },
-            "url": {
-              "type": "string",
-              "format": "uri",
-              "pattern": "^https://"
+            "orFullTimeEmployees": {
+              "type": "integer",
+              "minimum": 1,
+              "description": "Alternative: this many full-time (35+ hour) employees makes coverage mandatory."
             },
-            "fee": {
-              "type": "string",
-              "minLength": 1,
-              "description": "Fee text; stored only when feeDetail cannot say it all, otherwise generated from feeDetail."
+            "orAnnualPayroll": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Alternative: annual payroll at or above this makes coverage mandatory."
             },
-            "renewal": {
-              "enum": ["annual", "biennial", "once"]
+            "andAnnualPayrollOver": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Payroll that must be exceeded in addition to the employee count."
             },
-            "feeDetail": {
-              "$ref": "#/$defs/feeDetail"
+            "andAnnualPayrollAtLeast": {
+              "type": "number",
+              "minimum": 0,
+              "description": "Payroll that must be reached (at or above) in addition to the employee count."
+            },
+            "elective": {
+              "type": "boolean",
+              "description": "Coverage is elective for private employers."
             }
           }
         }
-      ]
+      }
     },
     "paidLeave": {
+      "description": "Mandatory state paid-leave or disability program with employer duties; null = none.",
       "oneOf": [
         {
           "type": "null"
@@ -214,6 +313,7 @@
       ]
     },
     "paidSickLeave": {
+      "description": "Statewide paid sick leave mandate; null = none.",
       "oneOf": [
         {
           "type": "null"
@@ -231,7 +331,43 @@
         }
       ]
     },
+    "businessLicense": {
+      "description": "General state-level business license; null = the state has none.",
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["title", "authority", "renewal", "feeDetail"],
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "authority": {
+              "type": "string"
+            },
+            "url": {
+              "$ref": "#/$defs/httpsUrl"
+            },
+            "fee": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Fee text; stored only when feeDetail cannot say it all, otherwise generated from feeDetail."
+            },
+            "renewal": {
+              "enum": ["annual", "biennial", "once"]
+            },
+            "feeDetail": {
+              "$ref": "#/$defs/feeDetail"
+            }
+          }
+        }
+      ]
+    },
     "local": {
+      "description": "Typical general local licensing in the state.",
       "type": "object",
       "additionalProperties": false,
       "required": ["title", "authority", "description"],
@@ -247,20 +383,24 @@
         }
       }
     },
-    "llcPublication": {
-      "type": ["string", "null"]
-    },
-    "economicNexusUsd": {
-      "type": ["integer", "null"],
-      "minimum": 0
-    },
-    "dbaEntitiesFileLocally": {
-      "type": "boolean"
-    },
     "dbaFiling": {
+      "description": "Where a sole proprietor's trade name (DBA) is registered; none = no filing required.",
       "enum": ["state", "county", "town", "none"]
     },
+    "dbaEntitiesFileLocally": {
+      "description": "Registered entities also file assumed names at the county or town level.",
+      "type": "boolean"
+    },
+    "dbaOffice": {
+      "description": "Name of the county or town office when dbaFiling is county or town.",
+      "type": "string"
+    },
+    "dbaAuthority": {
+      "description": "State agency taking trade names when it is not the entity filing agency.",
+      "$ref": "#/$defs/agency"
+    },
     "industry": {
+      "description": "State licensing authorities by industry.",
       "type": "object",
       "additionalProperties": false,
       "required": ["contractor", "realEstate", "alcohol", "childCare", "health"],
@@ -286,64 +426,8 @@
         }
       }
     },
-    "verification": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["checkedOn", "scope", "sources", "unconfirmed", "dba"],
-      "properties": {
-        "checkedOn": {
-          "type": "string",
-          "format": "date",
-          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
-        },
-        "scope": {
-          "type": "string"
-        },
-        "sources": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "pattern": "^https://"
-          }
-        },
-        "unconfirmed": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "dba": {
-          "enum": ["checked", "unconfirmed"]
-        }
-      }
-    },
-    "dbaOffice": {
-      "type": "string"
-    },
-    "dbaAuthority": {
-      "$ref": "#/$defs/agency"
-    },
-    "lpReport": {
-      "oneOf": [
-        {
-          "type": "null"
-        },
-        {
-          "$ref": "#/$defs/report"
-        }
-      ]
-    },
-    "llpReport": {
-      "oneOf": [
-        {
-          "type": "null"
-        },
-        {
-          "$ref": "#/$defs/report"
-        }
-      ]
-    },
     "cannabis": {
+      "description": "State cannabis licensing regime.",
       "type": "object",
       "additionalProperties": false,
       "required": ["status", "regulator"],
@@ -359,52 +443,83 @@
         }
       }
     },
-    "localSalesTax": {
-      "enum": ["locally_administered", "state_administered", "none"]
-    },
     "links": {
+      "description": "Specific agency pages (not home pages) for the obligations the rules cite.",
       "type": "object",
       "additionalProperties": false,
       "required": ["formation", "annualReport", "uiRegistration", "entityTax", "laborPosters"],
       "properties": {
-        "formation": { "type": "string", "format": "uri" },
-        "annualReport": { "type": "string", "format": "uri" },
-        "uiRegistration": { "type": "string", "format": "uri" },
-        "withholding": { "type": "string", "format": "uri" },
-        "salesTax": { "type": "string", "format": "uri" },
-        "entityTax": { "type": "string", "format": "uri" },
-        "laborPosters": { "type": "string", "format": "uri" },
-        "dba": { "type": "string", "format": "uri" }
+        "formation": {
+          "$ref": "#/$defs/httpsUrl"
+        },
+        "annualReport": {
+          "$ref": "#/$defs/httpsUrl"
+        },
+        "uiRegistration": {
+          "$ref": "#/$defs/httpsUrl"
+        },
+        "withholding": {
+          "$ref": "#/$defs/httpsUrl"
+        },
+        "salesTax": {
+          "$ref": "#/$defs/httpsUrl"
+        },
+        "entityTax": {
+          "$ref": "#/$defs/httpsUrl"
+        },
+        "laborPosters": {
+          "$ref": "#/$defs/httpsUrl"
+        },
+        "dba": {
+          "$ref": "#/$defs/httpsUrl"
+        }
       }
     },
-    "entityTaxDetail": {
+    "verification": {
+      "description": "What was checked, when, and against which sources.",
       "type": "object",
       "additionalProperties": false,
-      "required": ["kind", "thresholdUsd", "summary", "source", "checkedOn"],
+      "required": ["checkedOn", "sources", "unconfirmed"],
       "properties": {
-        "kind": { "enum": ["gross_receipts", "margin"] },
-        "thresholdUsd": { "type": "number", "minimum": 0 },
-        "rate": { "type": "number", "minimum": 0 },
-        "baseUsd": { "type": "number", "minimum": 0 },
-        "summary": { "type": "string" },
-        "source": { "type": "string", "format": "uri" },
-        "checkedOn": { "type": "string", "format": "date" }
-      }
-    },
-    "unemployment": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["wageBase", "minRate", "maxRate", "newEmployerRate"],
-      "properties": {
-        "wageBase": { "type": "number", "minimum": 0 },
-        "minRate": { "type": "number", "minimum": 0 },
-        "maxRate": { "type": "number", "minimum": 0 },
-        "newEmployerRate": { "type": ["number", "null"], "minimum": 0 },
-        "note": { "type": "string" }
+        "checkedOn": {
+          "type": "string",
+          "format": "date",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+          "description": "Date (YYYY-MM-DD) of the review."
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 10,
+          "description": "What the review covered. Stored only when it differs from the shared text in data/verification.json."
+        },
+        "sources": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/httpsUrl"
+          },
+          "description": "Official pages the review relied on."
+        },
+        "unconfirmed": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z]+(\\.[A-Za-z]+)*$"
+          },
+          "description": "Dotted field paths that could not be confirmed against an official source (checked against the data by a test). dbaFiling here means the DBA level is unconfirmed."
+        }
       }
     }
   },
   "$defs": {
+    "httpsUrl": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://",
+      "description": "An https URL."
+    },
     "agency": {
       "type": "object",
       "additionalProperties": false,
@@ -415,8 +530,7 @@
           "minLength": 3
         },
         "url": {
-          "type": "string",
-          "pattern": "^https://"
+          "$ref": "#/$defs/httpsUrl"
         }
       }
     },
@@ -427,8 +541,13 @@
           "additionalProperties": false,
           "required": ["type", "date"],
           "properties": {
-            "type": { "const": "date" },
-            "date": { "type": "string", "format": "date" }
+            "type": {
+              "const": "date"
+            },
+            "date": {
+              "type": "string",
+              "format": "date"
+            }
           }
         },
         {
@@ -477,30 +596,8 @@
       "additionalProperties": false,
       "required": ["feeDetail"],
       "properties": {
-        "frequency": {
-          "enum": ["annual", "biennial", "every_five_years", "periodic"]
-        },
-        "fee": {
-          "type": "string",
-          "minLength": 1,
-          "description": "Fee text; stored only when feeDetail cannot say it all (a waiver, an estimate, a rate), otherwise generated from feeDetail."
-        },
-        "deadline": {
-          "type": "string",
-          "minLength": 1,
-          "description": "Display text; generated from rrule when omitted."
-        },
         "title": {
           "type": "string"
-        },
-        "due": {
-          "$ref": "#/$defs/due"
-        },
-        "feeDetail": {
-          "$ref": "#/$defs/feeDetail"
-        },
-        "lateFee": {
-          "$ref": "#/$defs/lateFee"
         },
         "rrule": {
           "type": "string",
@@ -519,6 +616,28 @@
             }
           ],
           "description": "Start of a cycle longer than a year: an ISO date, or the entity's formation year or the year after."
+        },
+        "frequency": {
+          "enum": ["annual", "biennial", "every_five_years", "periodic"]
+        },
+        "deadline": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Display text; generated from rrule when omitted."
+        },
+        "fee": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Fee text; stored only when feeDetail cannot say it all (a waiver, an estimate, a rate), otherwise generated from feeDetail."
+        },
+        "feeDetail": {
+          "$ref": "#/$defs/feeDetail"
+        },
+        "lateFee": {
+          "$ref": "#/$defs/lateFee"
+        },
+        "due": {
+          "$ref": "#/$defs/due"
         }
       },
       "anyOf": [
@@ -627,5 +746,6 @@
         }
       }
     }
-  }
+  },
+  "description": "One state's rule data (data/states/<XX>.json; the file name is the state code)."
 }

@@ -1,10 +1,17 @@
 import notes from "../../data/local-notes.json";
 import uiSource from "../../data/ui-source.json";
+import verification from "../../data/verification.json";
+import { describeTrigger } from "../trigger";
 import type { CountyJurisdiction, LocalJurisdiction, StateInfo } from "./types";
 
 /** A state file as stored: the file name is the state code, and withholding is implied by the withholding page. */
-export type StoredState = Omit<StateInfo, "code" | "wageWithholding" | "unemployment"> & {
+export type StoredState = Omit<
+  StateInfo,
+  "code" | "wageWithholding" | "unemployment" | "workersComp" | "verification"
+> & {
   unemployment: Omit<StateInfo["unemployment"], "year">;
+  workersComp: Omit<StateInfo["workersComp"], "threshold"> & { threshold?: string };
+  verification: Omit<StateInfo["verification"], "scope" | "dba"> & { scope?: string };
 };
 
 /** Completes a stored state file with the fields that follow from other fields. */
@@ -15,6 +22,15 @@ export function state(code: string, raw: unknown): StateInfo {
     ...s,
     wageWithholding: !!s.links.withholding,
     unemployment: { ...s.unemployment, year: uiSource.year },
+    workersComp: {
+      ...s.workersComp,
+      threshold: s.workersComp.threshold ?? describeTrigger(s.workersComp.trigger) ?? "Varies",
+    },
+    verification: {
+      ...s.verification,
+      scope: s.verification.scope ?? verification.scope,
+      dba: s.verification.unconfirmed.includes("dbaFiling") ? "unconfirmed" : "checked",
+    },
   };
 }
 
