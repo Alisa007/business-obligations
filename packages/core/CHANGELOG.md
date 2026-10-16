@@ -5,6 +5,12 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ## [Unreleased]
 
+## [0.3.1] - 2026-10-16
+
+### Fixed
+
+- **data:** Minneapolis sick and safe time, Nashville license fee, Austin sourcing
+
 ## [0.3.0] - 2026-10-16
 
 ### Fixed
