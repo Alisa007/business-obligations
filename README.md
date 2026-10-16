@@ -18,6 +18,13 @@
 
 **[Try it in your browser](https://alisa007.github.io/business-obligations/)**: no install; the plan is computed in your browser.
 
+<!-- Add a short GIF or screenshot of the playground here, e.g. docs/playground.gif:
+<p align="center"><img alt="Playground: an LLC in Austin gets an ordered plan of filings, licenses and deadlines" src="docs/playground.gif" width="720" /></p>
+-->
+
+**Built for** formation and compliance tools, accounting and payroll software, SaaS onboarding flows, and anyone who
+needs "what does this business owe, to whom, and by when?" as data rather than a pile of agency pages.
+
 Starting or running a business in the US means a pile of obligations spread over the IRS, 50 state agencies and your
 city: formation, EIN, state tax accounts, licenses, annual reports, payroll filings, insurance. They depend on the
 entity type, the state, headcount, industry and more, and the answers live in dozens of scattered agency pages.
