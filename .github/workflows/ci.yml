@@ -4,6 +4,7 @@ on:
   push:
     branches: [main]
   pull_request:
+    types: [opened, synchronize, reopened, edited]
   # Lets the coverage bot start CI on its branch (pull requests opened with GITHUB_TOKEN do not trigger it).
   workflow_dispatch:
 
@@ -16,6 +17,19 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
+      # Squash merges make the PR title the commit subject, and releases are versioned from it.
+      - name: PR title is a Conventional Commit
+        if: github.event_name == 'pull_request'
+        env:
+          TITLE: ${{ github.event.pull_request.title }}
+        run: |
+          re='^(feat|fix|perf|revert|docs|chore|ci|build|test|refactor|style)(\([a-z0-9._/-]+\))?!?: .+'
+          if ! [[ "$TITLE" =~ $re ]]; then
+            echo "PR title must look like 'feat(scope): add thing', 'fix: correct thing' or 'chore: tidy'." >&2
+            echo "  feat -> minor release, fix/perf/revert -> patch, type! -> breaking; docs/chore/ci/build/test/refactor/style -> no release." >&2
+            echo "Got: $TITLE" >&2
+            exit 1
+          fi
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
         with:
