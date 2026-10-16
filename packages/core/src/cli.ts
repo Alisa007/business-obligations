@@ -13,6 +13,7 @@ import {
   type BusinessProfile,
   type ComplianceItem,
 } from "./index";
+import pkg from "../package.json";
 import { todayIso } from "./iso";
 import { withZip } from "./zip-entry";
 
@@ -37,6 +38,7 @@ Options:
   --as-of YYYY-MM-DD   Evaluation date (default: today)
   --json               Machine-readable output
   --channel online|paper   Fee channel for costs
+  -v, --version
   -h, --help
 `;
 
@@ -50,7 +52,7 @@ function parseArgs(argv: string[]): Args {
   const commands = ["evaluate", "calendar", "costs", "analyze", "changes", "launch", "rules"];
   const flags: Args["flags"] = {};
   const positional: string[] = [];
-  const boolean = new Set(["json", "help", "h", "upcoming"]);
+  const boolean = new Set(["json", "help", "h", "version", "v", "upcoming"]);
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i]!;
     if (a === "-") positional.push(a);
@@ -114,6 +116,10 @@ function run(argv: string[]): number {
   const args = parseArgs(argv);
   if (args.flags.help || args.flags.h) {
     console.log(HELP);
+    return 0;
+  }
+  if (args.flags.version || args.flags.v) {
+    console.log(pkg.version);
     return 0;
   }
   const asOf = typeof args.flags["as-of"] === "string" ? args.flags["as-of"] : undefined;
