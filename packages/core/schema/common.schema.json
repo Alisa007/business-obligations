@@ -16,6 +16,22 @@
       "pattern": "^https://",
       "description": "An https URL."
     },
+    "httpsUrlOrList": {
+      "description": "One https URL, or a list when the answer is spread over several official pages.",
+      "oneOf": [
+        {
+          "$ref": "#/$defs/httpsUrl"
+        },
+        {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/httpsUrl"
+          }
+        }
+      ]
+    },
     "stateCode": {
       "type": "string",
       "pattern": "^[A-Z]{2}$",
