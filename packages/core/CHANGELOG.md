@@ -5,6 +5,8 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-10-16
+
 ### Fixed
 
 - "Today" is now the local calendar date, not the UTC date. Default start dates, "days until" figures and the CLI's
@@ -172,6 +174,12 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 - DBA registration authority corrected for many states (e.g. AL, KS, IN, IA, NH, RI from 2026, VA, WV, DE from 2026).
 - Dead agency URLs replaced (FL, IA, LA, ME, NY, NH, VT, WY, MA) and city URLs repaired.
 - Report data refined: MA/ME/HI corporate fees, NE occupation tax schedule, OK corporations (franchise tax repealed).
+
+### Added
+
+- **cli:** add --version flag
+- precedence in seed data, compiledOn on every item
+- Census FIPS codes, rules for new profile inputs, precedence and renewal
 
 ## [0.2.0] - 2026-10-13
 
