@@ -1837,6 +1837,45 @@
     "frequency": "ongoing"
   },
   {
+    "id": "ny.boat-dealer-yacht-broker-registration",
+    "title": "Register a boat dealer or yacht broker with DMV",
+    "category": "registration",
+    "authority": "NYS Department of Motor Vehicles",
+    "description": "DMV regulates businesses selling motorized boats and brokering sales between buyers and sellers, as dealers and yacht brokers. Fees and bond terms are on the DMV application.",
+    "naics": ["441222", "425120"],
+    "appliesTo": ["all"],
+    "url": "https://dmv.ny.gov/transaction-message/dmv-regulated-business-type-descriptions",
+    "checkedOn": "2026-10-16",
+    "frequency": "ongoing"
+  },
+  {
+    "id": "ny.salvage-pool-registration",
+    "title": "Register a salvage pool or itinerant vehicle collector with DMV",
+    "category": "registration",
+    "authority": "NYS Department of Motor Vehicles",
+    "description": "Salvage pools that sell junk or salvage vehicles or major components for owners or insurers, and itinerant vehicle collectors who acquire inoperable vehicles and sell them to dismantlers and scrap processors, are DMV-regulated businesses. Scrap collectors and scrap processors that buy vehicles are regulated in the same group.",
+    "naics": ["425120", "423140", "423930"],
+    "appliesTo": ["all"],
+    "url": "https://dmv.ny.gov/transaction-message/dmv-regulated-business-type-descriptions",
+    "checkedOn": "2026-10-16",
+    "frequency": "ongoing"
+  },
+  {
+    "id": "ny.wholesale-vehicle-dealer-registration",
+    "title": "Register a wholesale motor vehicle dealer with DMV",
+    "category": "registration",
+    "authority": "NYS Department of Motor Vehicles",
+    "description": "A dealer that buys and sells motor vehicles, motorcycles or trailers only at wholesale is a separate DMV dealer category from retail. Dealers file the VS-1D application and, unless exempt, a dealer bond under Vehicle and Traffic Law 415(6-b); dealers selling only trailers, motorcycles, vehicles over 10,000 pounds, ATVs, boats, snowmobiles or limited use vehicles are exempt from the bond.",
+    "naics": ["423110", "423120"],
+    "appliesTo": ["all"],
+    "url": "https://dmv.ny.gov/transaction-message/dmv-regulated-business-type-descriptions",
+    "checkedOn": "2026-10-16",
+    "frequency": "ongoing",
+    "exemptions": [
+      "Dealers selling only trailers, motorcycles, vehicles over 10,000 pounds, ATVs, boats, snowmobiles and limited use vehicles are exempt from the bond"
+    ]
+  },
+  {
     "id": "ny.bottled-bulk-water-certification",
     "title": "Certify a bottled or bulk water facility with the NY Department of Health",
     "category": "registration",
