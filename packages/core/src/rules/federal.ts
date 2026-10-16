@@ -295,6 +295,105 @@ export const federalRules: Rule[] = [
     }),
   },
   {
+    id: "fed.aca-reporting",
+    description:
+      "Affordable Care Act employer reporting for applicable large employers (Forms 1094-C and 1095-C)",
+    inputs: ["fullTimeEmployeeCount"],
+    when: (p) => p.fullTimeEmployeeCount >= 50,
+    items: (p) => [
+      {
+        title: "Furnish Form 1095-C to full-time employees",
+        category: "filing",
+        jurisdiction: "federal",
+        authority: "IRS",
+        description:
+          "Applicable large employers (50 or more full-time employees, counting part-time hours as full-time equivalents) give each full-time employee a Form 1095-C. The January 31 deadline is extended automatically by 30 days, to March 2 in most years (March 1 for the 2026 forms).",
+        frequency: "annual",
+        formId: "1095-C",
+        deadline: "March 1 or 2 (January 31, extended automatically by 30 days)",
+        due: { type: "fixed", month: 3, day: 1 },
+        reason: `${p.fullTimeEmployeeCount} full-time employees, at or above the 50 that make an applicable large employer`,
+        url: "https://www.irs.gov/affordable-care-act/employers/employer-shared-responsibility-provisions",
+      },
+      {
+        title: "File Forms 1094-C and 1095-C with the IRS",
+        category: "filing",
+        jurisdiction: "federal",
+        authority: "IRS",
+        description:
+          "The transmittal Form 1094-C and each Form 1095-C are due to the IRS at the end of February on paper or March 31 electronically; employers filing 10 or more information returns in total must file electronically. Penalties apply per late or incorrect form.",
+        frequency: "annual",
+        formId: "1094-C",
+        filingMethod: ["online", "mail"],
+        deadline: "March 31 electronically (end of February on paper)",
+        due: { type: "fixed", month: 3, day: 31 },
+        reason: `${p.fullTimeEmployeeCount} full-time employees, at or above the 50 that make an applicable large employer`,
+        url: "https://www.irs.gov/forms-pubs/about-form-1094-c",
+      },
+    ],
+  },
+  {
+    id: "fed.eeo1",
+    description: "EEO-1 Component 1 workforce demographic report for employers with 100 or more employees",
+    inputs: ["employeeCount"],
+    when: (p) => p.employeeCount >= 100,
+    items: (p) => ({
+      title: "File the EEO-1 Component 1 workforce report",
+      category: "filing",
+      jurisdiction: "federal",
+      authority: "U.S. Equal Employment Opportunity Commission",
+      description:
+        "Private employers with 100 or more employees file annually through the EEOC's online system; federal contractors with 50 or more employees and certain contracts have also filed. The EEOC sets each year's window (the 2024 report was due June 24, 2025, with no extensions), so check its data collections page.",
+      frequency: "annual",
+      deadline: "Set each year by the EEOC (late spring or early summer)",
+      reason: `${p.employeeCount} employees, at or above the 100 that require an EEO-1 report`,
+      url: "https://www.eeoc.gov/data/eeo-data-collections",
+    }),
+  },
+  {
+    id: "fed.osha-recordkeeping",
+    description: "OSHA injury and illness records, annual summary posting and electronic submission",
+    inputs: ["employeeCount"],
+    when: (p) => p.employeeCount > 10,
+    items: (p) => [
+      {
+        title: "Keep OSHA injury and illness records and post the annual summary (Form 300A)",
+        category: "recordkeeping",
+        jurisdiction: "federal",
+        authority: "OSHA",
+        description:
+          "Employers with more than 10 employees keep Forms 300 and 301 for work-related injuries and illnesses, and post the Form 300A summary for the previous year at each establishment from February 1 through April 30. Records are kept five years. Report a work-related fatality within 8 hours and an inpatient hospitalization, amputation or loss of an eye within 24 hours.",
+        frequency: "annual",
+        formId: "300A",
+        deadline: "Post by February 1 and leave up through April 30",
+        due: { type: "fixed", month: 2, day: 1 },
+        exemptions: [
+          "Employers with 10 or fewer employees (except for fatality and severe-injury reporting)",
+          "Establishments in partially exempt low-hazard industries such as retail, finance, insurance, real estate and many services (29 CFR 1904 Appendix A)",
+        ],
+        reason: `${p.employeeCount} employees, above the 10-employee threshold`,
+        url: "https://www.osha.gov/recordkeeping",
+      },
+      ...(p.employeeCount >= 250
+        ? [
+            {
+              title: "Submit OSHA injury and illness data electronically",
+              category: "filing" as const,
+              jurisdiction: "federal" as const,
+              authority: "OSHA",
+              description:
+                "Establishments with 250 or more employees submit their Form 300A summary through OSHA's Injury Tracking Application by March 2. Establishments with 20 to 249 employees in designated higher-hazard industries must also submit the summary, and those with 100 or more in the most hazardous industries submit Forms 300 and 301 data.",
+              frequency: "annual" as const,
+              deadline: "March 2",
+              due: { type: "fixed" as const, month: 3, day: 2 },
+              reason: `${p.employeeCount} employees, at or above the 250 that require electronic submission`,
+              url: "https://www.osha.gov/injuryreporting",
+            },
+          ]
+        : []),
+    ],
+  },
+  {
     id: "fed.ttb-alcohol",
     description: "TTB permits for alcohol producers, importers and wholesalers",
     inputs: ["industry", "alcoholActivity"],
