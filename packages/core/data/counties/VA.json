@@ -1,31 +1,79 @@
 [
   {
     "county": "Arlington",
-    "status": "unverified",
-    "reason": "bpp-state-rules-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "arlington-va.business-personal-property",
+        "title": "File Arlington County business tangible personal property return",
+        "category": "filing",
+        "authority": "Arlington County Business Tax Division",
+        "description": "Virginia businesses report furniture, fixtures, machinery and equipment they owned or used on January 1, even if the business owes little or nothing. The return is due by 11:59 p.m. on May 1 with no extension; file and amend later to avoid a 10% late penalty. The Treasurer bills in August, due September 5.",
+        "rrule": "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=1",
+        "url": "https://www.arlingtonva.us/Government/Programs/Taxes/Business-License-and-Taxes/Business-Tangible-Personal-Property-Taxes",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "arlington-va.business-license",
+        "title": "Renew the Arlington County business license (BPOL)",
+        "category": "license",
+        "authority": "Arlington County Business Tax Division",
+        "description": "New businesses register within 75 days of starting; the annual license is filed by March 1 (next business day if a weekend). A second installment on June 15 is available only to qualifying businesses.",
+        "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1",
+        "url": "https://www.arlingtonva.us/Government/Programs/Taxes/Business-License-and-Taxes",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Chesapeake (city)",
     "status": "unverified",
-    "reason": "bpp-state-rules-not-researched",
     "items": [],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-13",
+    "note": "Chesapeake's business personal property and business license dates were not confirmed from city pages (a third-party site says the license is renewed by March 1)."
   },
   {
     "county": "Chesterfield",
-    "status": "unverified",
-    "reason": "bpp-state-rules-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "chesterfield-va.business-personal-property",
+        "title": "File Chesterfield County business tangible personal property return",
+        "category": "filing",
+        "authority": "Chesterfield County Commissioner of the Revenue",
+        "description": "Virginia businesses report furniture, fixtures, machinery and equipment they owned or used on January 1, even if the business owes little or nothing. Returns are due March 1 (the 2026 form shows March 2, as March 1 was a Sunday), through the Citizen Portal or mail; a business with no property still files and enters NONE. Vehicles are not included. Late returns get a penalty.",
+        "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1",
+        "url": "https://www.chesterfield.gov/311/Business-Taxes",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Chesterfield's business license (BPOL) filing date was not confirmed from a county page."
   },
   {
     "county": "City of Richmond",
-    "status": "unverified",
-    "reason": "bpp-state-rules-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "richmond-va.business-personal-property",
+        "title": "File City of Richmond business tangible personal property return",
+        "category": "filing",
+        "authority": "City of Richmond Department of Finance",
+        "description": "Virginia businesses report furniture, fixtures, machinery and equipment they owned or used on January 1, even if the business owes little or nothing. Returns are due March 1 and tax is paid June 5. Late filing or payment carries a 10% penalty (minimum $10) and unpaid tax accrues 10% interest. The city's pages read are from 2023.",
+        "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1",
+        "url": "https://www.rva.gov/finance/btpp-tax",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "richmond-va.business-license",
+        "title": "Renew the City of Richmond business license (BPOL)",
+        "category": "license",
+        "authority": "City of Richmond Department of Finance",
+        "description": "The renewal application with payment is due March 1 (city calendar from 2023).",
+        "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1",
+        "url": "https://www.rva.gov/sites/default/files/2023-01/Renewal%20Business%20License%202023.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Fairfax",
@@ -46,37 +94,132 @@
   },
   {
     "county": "Henrico",
-    "status": "unverified",
-    "reason": "bpp-state-rules-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "henrico-va.business-personal-property",
+        "title": "File Henrico County business tangible personal property return",
+        "category": "filing",
+        "authority": "Henrico County Finance Department",
+        "description": "Virginia businesses report furniture, fixtures, machinery and equipment they owned or used on January 1, even if the business owes little or nothing. Returns are due March 1; tax is paid June 5 and December 5. A late return carries a 10% penalty; unpaid balances accrue 4% annual interest and a late payment adds 10%.",
+        "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1",
+        "url": "https://henrico.us/services/business-personal-property-tax/",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "henrico-va.business-license",
+        "title": "Renew the Henrico County business license (BPOL)",
+        "category": "license",
+        "authority": "Henrico County Finance Department",
+        "description": "Almost every business needs a license before it starts and renews each year. There is normally no license tax under $500,000 of gross receipts, but the license must still be filed; second-half payments after June 15 face a 10% penalty. The renewal date was not stated on the page read.",
+        "frequency": "annual",
+        "url": "https://henrico.us/services/business-license",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Loudoun",
-    "status": "unverified",
-    "reason": "bpp-state-rules-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "loudoun-va.business-personal-property",
+        "title": "File Loudoun County business tangible personal property return",
+        "category": "filing",
+        "authority": "Loudoun County Commissioner of the Revenue",
+        "description": "Virginia businesses report furniture, fixtures, machinery and equipment they owned or used on January 1, even if the business owes little or nothing. File online at loudoun.gov/efile by March 1; a 10% late filing penalty applies, plus a 10% late payment penalty and interest. New businesses register within 30 days of starting.",
+        "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1",
+        "url": "https://www.loudoun.gov/taxcalendar",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "loudoun-va.business-license",
+        "title": "Renew the Loudoun County business license (BPOL)",
+        "category": "license",
+        "authority": "Loudoun County Commissioner of the Revenue",
+        "description": "Each business reports the prior year's gross receipts and pays the license tax by March 1; the license is issued once the tax is paid.",
+        "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1",
+        "url": "https://www.loudoun.gov/taxcalendar",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Norfolk (city)",
-    "status": "unverified",
-    "reason": "bpp-state-rules-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "norfolk-va.business-personal-property",
+        "title": "File City of Norfolk business tangible personal property return",
+        "category": "filing",
+        "authority": "Norfolk Commissioner of the Revenue",
+        "description": "Virginia businesses report furniture, fixtures, machinery and equipment they owned or used on January 1, even if the business owes little or nothing. The return is due to the Commissioner by March 1 unless a written extension is granted (up to 90 days); payment is due June 5. A 10% penalty applies to late returns.",
+        "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1",
+        "url": "https://norfolk.gov/782/Business-Personal-Property",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "norfolk-va.business-license",
+        "title": "Renew the City of Norfolk business license (BPOL)",
+        "category": "license",
+        "authority": "Norfolk Commissioner of the Revenue",
+        "description": "The business license filing date is March 1; late payment brings a penalty of $10 or 10% of the tax, whichever is greater, plus interest.",
+        "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1",
+        "url": "https://norfolk.gov/782/Business-Personal-Property",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Prince William",
-    "status": "unverified",
-    "reason": "bpp-state-rules-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "prince-william-va.business-personal-property",
+        "title": "File Prince William County business tangible personal property return",
+        "category": "filing",
+        "authority": "Prince William County Tax Administration",
+        "description": "Virginia businesses report furniture, fixtures, machinery and equipment they owned or used on January 1, even if the business owes little or nothing. The 2026 filing date was April 15 (postmark or submit by then to avoid a 10% late penalty); the county posts each year's date, so confirm it. Manufacturers and certain other businesses file itemized lists by March 1.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
+        "url": "https://pwcva.gov/department/tax-administration/business-tangible-property-tax",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "prince-william-va.business-license",
+        "title": "Renew the Prince William County business license (BPOL)",
+        "category": "license",
+        "authority": "Prince William County Tax Administration",
+        "description": "Business license payments and renewals were due March 2 in 2026 (March 1 was a Sunday).",
+        "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1",
+        "url": "https://pwcva.gov/department/tax-administration/business-tangible-property-tax",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Virginia Beach (city)",
-    "status": "unverified",
-    "reason": "bpp-state-rules-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "virginia-beach-va.business-personal-property",
+        "title": "File City of Virginia Beach business tangible personal property return",
+        "category": "filing",
+        "authority": "Virginia Beach Commissioner of the Revenue",
+        "description": "Every taxpayer operating a business in Virginia Beach on January 1 files a tangible personal property return (form CR-13) by March 1; a late filing can bring a penalty or a summons. A written extension request made by March 1 can add up to 90 days.",
+        "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1",
+        "url": "https://cor.virginiabeach.gov/businesses/business-property",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "virginia-beach-va.business-license",
+        "title": "Renew the City of Virginia Beach business license (BPOL)",
+        "category": "license",
+        "authority": "Virginia Beach Commissioner of the Revenue",
+        "description": "Renewal returns are mailed in early January and payment is due by March 1; unpaid after that, the business is considered unlicensed and penalty and interest may apply (city guide from 2022).",
+        "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1",
+        "url": "https://www.yesvirginiabeach.com/_assets/Documents/Resources/Business-License-Requirements-2022.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16"
   }
 ]
