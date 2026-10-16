@@ -156,6 +156,15 @@ page in `url`.
 `appliesTo` takes `all`, `employees`, `sells_goods`, `corporation`, `unincorporated` or `trade_name`. Use the city's own
 page for `url`, run `npm run check`, and add a line to the Unreleased section of `CHANGELOG.md`.
 
+## Adding industry rules
+
+What a state requires of particular industries (a barbershop license, a pesticide business registration) lives in
+`data/industries/<STATE>.json`: a list of the same items as a city file, each with `naics` (code prefixes, 2 to 6
+digits, such as `["8111"]` for all automotive repair), `checkedOn` and the official page in `url`. An item appears only
+for a business whose NAICS code starts with one of the prefixes, so it needs the code to be given. Every prefix must
+belong to a real 2022 NAICS code (the tests check it), and `npm run check` validates the file against
+`schema/industry-items.schema.json`. A new state's file also needs a line in `src/data/industries.ts`.
+
 ## Adding a country
 
 Add a rule pack under `src/rules/<country>/`, register it in `RULE_PACKS` in `src/engine.ts`, extend the `Country`

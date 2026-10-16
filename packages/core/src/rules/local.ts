@@ -10,8 +10,9 @@ import { isCorpLike, isUnincorporated } from "../entity";
  * The seed items that apply to this business: one of the item's `appliesTo` tags matches the profile, and every
  * `appliesWhen` condition holds (for example `activities in ["lodging"]` keeps a lodging tax from showing for a shop).
  */
-function applicable(items: LocalItem[], p: ResolvedProfile): LocalItem[] {
+export function applicable(items: LocalItem[], p: ResolvedProfile): LocalItem[] {
   return items
+    .filter((it) => !it.naics || it.naics.some((prefix) => p.naics?.startsWith(prefix)))
     .filter((it) => allHold(it.appliesWhen, p))
     .filter((it) =>
       it.appliesTo.some(
@@ -29,7 +30,8 @@ function applicable(items: LocalItem[], p: ResolvedProfile): LocalItem[] {
 }
 
 /** Optional fields a seed item may carry beyond the common ones, copied onto the emitted item when present. */
-function extras(it: LocalItem, checkedOn: string | undefined) {
+export function extras(it: LocalItem, entryCheckedOn: string | undefined) {
+  const checkedOn = it.checkedOn ?? entryCheckedOn;
   return {
     ...(it.appliesWhen ? { appliesWhen: it.appliesWhen } : {}),
     ...(it.exemptions ? { exemptions: it.exemptions } : {}),

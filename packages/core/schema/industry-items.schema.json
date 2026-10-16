@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Alisa007/business-obligations/schema/industry-items.schema.json",
+  "title": "Industry rules for one state",
+  "description": "Licenses, permits and registrations a state requires of particular industries. Each item names the NAICS code prefixes it applies to and the date it was checked against its official page.",
+  "type": "array",
+  "minItems": 1,
+  "items": {
+    "$ref": "local-item.schema.json",
+    "required": ["naics", "checkedOn", "url"]
+  }
+}
