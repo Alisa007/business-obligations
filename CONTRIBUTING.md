@@ -130,7 +130,7 @@ When the city's rule conflicts with or replaces a state default, record it on th
 `exemptions` lists who is excluded, both in plain text. Cite the ordinance or page in `url`.
 
 `appliesTo` takes `all`, `employees`, `sells_goods`, `corporation`, `unincorporated` or `trade_name`. Use the city's own
-page for `url`, run `npm run coverage` and `npm run check`, and add a line to the Unreleased section of `CHANGELOG.md`.
+page for `url`, run `npm run check`, and add a line to the Unreleased section of `CHANGELOG.md`.
 
 ## Adding a country
 
@@ -156,10 +156,10 @@ full check on 20.19, so don't add dependencies or syntax that need newer.
 The playground lives in `apps/web` (Next.js, React, Tamagui). `npm run dev` builds the library and starts it at http://localhost:3000.
 Prefer Tamagui's default components and tokens over custom styling.
 
-## Regenerating the coverage report
+## Coverage
 
-`COVERAGE.md` is generated from `data/`. After changing state or local data, run `npm run coverage`; a test fails when
-the file is stale.
+There is no generated report to refresh: the JSON in `data/` is the record, and `COVERAGE.md` only says where to look.
+`npm run coverage` prints counts and a per-state table from the JSON on demand (`-- --json` for machine-readable).
 
 ## Bundle size
 

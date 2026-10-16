@@ -449,14 +449,25 @@ describe("local and profession data schemas", () => {
   });
 });
 
-describe("coverage report", () => {
-  it("COVERAGE.md is up to date (run `npm run coverage`)", async () => {
+describe("coverage", () => {
+  it("COVERAGE.md only points at files and folders that exist", () => {
+    const md = fs.readFileSync(path.join(root, "COVERAGE.md"), "utf8");
+    const links = [...md.matchAll(/\]\((?!https?:)([^)#]+)\)/g)].map((m) => m[1]!);
+    expect(links.length).toBeGreaterThan(3);
+    for (const link of links) expect(fs.existsSync(path.join(root, link)), link).toBe(true);
+    expect(md, "COVERAGE.md must not hold generated figures").not.toMatch(/\b\d{3}\b with/);
+  });
+
+  it("the coverage script counts straight from the JSON", async () => {
     // @ts-expect-error plain JS module
-    const { buildCoverage } = await import("../scripts/coverage.mjs");
-    // Prettier re-flows tables and long lines; compare content only.
-    const norm = (t: string) => t.replace(/-{2,}/g, "-").replace(/\s+/g, " ").trim();
-    const actual = fs.readFileSync(path.join(__dirname, "..", "COVERAGE.md"), "utf8");
-    expect(norm(actual)).toBe(norm(buildCoverage()));
+    const { coverage } = await import("../scripts/coverage.mjs");
+    const c = coverage();
+    expect(c.states.total).toBe(51);
+    expect(c.byState).toHaveLength(51);
+    expect(c.cities.total).toBe(LOCAL_JURISDICTIONS.length);
+    expect(c.cities.withRules + c.cities.checkedNone + c.cities.unverified).toBe(c.cities.total);
+    expect(c.counties.total).toBe(COUNTY_JURISDICTIONS.length);
+    expect(c.counties.withRules + c.counties.checkedNone + c.counties.unverified).toBe(c.counties.total);
   });
 });
 
