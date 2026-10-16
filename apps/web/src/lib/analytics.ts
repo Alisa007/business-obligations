@@ -45,6 +45,15 @@ const LOGS: Record<LogName, { level: "info" | "warn"; message: string; attribute
   },
 };
 
+/**
+ * The playground keeps the form in the URL (shareable links), so page URLs must not carry the query string to
+ * PostHog: the form values are sent only when a plan is generated, as disclosed on the site.
+ */
+export function stripQuery(url: string): string {
+  const i = url.search(/[?#]/);
+  return i === -1 ? url : url.slice(0, i);
+}
+
 /** Keeps only the listed properties, and only primitive values. */
 function pick(allowed: readonly string[], props: Props = {}): Record<string, Primitive> {
   const out: Record<string, Primitive> = {};
@@ -115,6 +124,13 @@ export function createAnalytics({
           defaults: "2026-05-30",
           autocapture: false,
           capture_pageview: true,
+          before_send: (event: { properties?: Record<string, unknown> } | null) => {
+            const props = event?.properties;
+            if (props)
+              for (const k of ["$current_url", "$referrer", "$initial_referrer"])
+                if (typeof props[k] === "string") props[k] = stripQuery(props[k] as string);
+            return event;
+          },
           disable_session_recording: true,
           persistence: "memory", // no cookies or local storage, so no consent banner is needed
           person_profiles: "identified_only",

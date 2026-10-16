@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { createAnalytics, sanitize, type PostHogClient } from "./analytics";
+import { createAnalytics, sanitize, stripQuery, type PostHogClient } from "./analytics";
+import { EMPTY_STATE, isRunnable, parseQuery, toQuery, type SidebarState } from "./query";
 import { CONFIDENCE, formatDate, frequencyLabel, hostOf, money, relativeDays, safeUrl } from "./format";
 import {
   analyze,
@@ -230,5 +231,70 @@ describe("result summary and trust filter", () => {
     expect(isVerified({ provenance: { confidence: "checked", sources: [], stale: true } })).toBe(false);
     expect(isVerified({ provenance: { confidence: "checked", sources: [] } })).toBe(true);
     expect(isVerified({ provenance: { confidence: "compiled", sources: [] } })).toBe(false);
+  });
+});
+
+describe("sidebar state in the URL", () => {
+  const full: SidebarState = {
+    form: {
+      zip: "78701",
+      entityType: "s_corp",
+      industry: "restaurant",
+      profession: "",
+      employees: "3",
+      owners: "2",
+      payroll: "90000",
+      revenue: "250000.5",
+      sellsGoods: true,
+      homeBased: false,
+      tradeName: true,
+      isNew: false,
+      formationDate: "2024-03-01",
+    },
+    asOf: "2026-10-14",
+    openingDate: "2027-02-01",
+  };
+
+  it("round-trips every sidebar field", () => {
+    expect(parseQuery(toQuery(full))).toEqual(full);
+  });
+
+  it("writes nothing for an untouched sidebar and omits defaults", () => {
+    expect(toQuery(EMPTY_STATE)).toBe("");
+    expect(parseQuery("")).toEqual(EMPTY_STATE);
+    expect(toQuery({ ...EMPTY_STATE, form: { ...EMPTY_STATE.form, zip: "60601" } })).toBe("zip=60601");
+  });
+
+  it("keeps partially typed values so typing is not interrupted", () => {
+    expect(parseQuery("zip=787").form.zip).toBe("787");
+    expect(isRunnable(parseQuery("zip=787"))).toBe(false);
+    expect(parseQuery("payroll=12.").form.payroll).toBe("12.");
+  });
+
+  it("falls back to defaults for invalid or hand-edited values", () => {
+    const s = parseQuery(
+      "zip=ab12345678&entity=spaceship&industry=%3Cscript%3E&employees=-4&payroll=1e9&start=tomorrow&formed=1&formedOn=soon",
+    );
+    expect(s.form.zip).toBe("12345");
+    expect(s.form.entityType).toBe("llc");
+    expect(s.form.industry).toBe("general");
+    expect(s.form.employees).toBe("");
+    expect(s.form.payroll).toBe("");
+    expect(s.asOf).toBe("");
+    expect(s.form.isNew).toBe(false);
+    expect(s.form.formationDate).toBe("");
+  });
+
+  it("only treats a full ZIP as runnable", () => {
+    expect(isRunnable(parseQuery("zip=78701"))).toBe(true);
+    expect(isRunnable(parseQuery("entity=llc"))).toBe(false);
+  });
+});
+
+describe("analytics page URLs", () => {
+  it("drops the query string and fragment so form values are not sent with page views", () => {
+    expect(stripQuery("https://example.org/?zip=78701&payroll=90000")).toBe("https://example.org/");
+    expect(stripQuery("https://example.org/page#top")).toBe("https://example.org/page");
+    expect(stripQuery("https://example.org/")).toBe("https://example.org/");
   });
 });
