@@ -1,7 +1,16 @@
 import { describe, expect, it } from "vitest";
 import { createAnalytics, sanitize, type PostHogClient } from "./analytics";
 import { CONFIDENCE, formatDate, frequencyLabel, hostOf, money, relativeDays, safeUrl } from "./format";
-import { analyze, buildProfile, countBy, groupObligations, today, type FormValues } from "./plan";
+import {
+  analyze,
+  buildProfile,
+  countBy,
+  groupObligations,
+  isVerified,
+  summarize,
+  today,
+  type FormValues,
+} from "./plan";
 
 const form: FormValues = {
   zip: "60601",
@@ -194,5 +203,32 @@ describe("obligation helpers", () => {
 
   it("counts ignoring its own filter", () => {
     expect(countBy(list, "category", { category: "license" })).toEqual({ tax: 2, license: 1 });
+  });
+});
+
+describe("result summary and trust filter", () => {
+  const data = analyze(buildProfile(form, place), { asOf: "2026-10-14", isNew: true });
+  const s = summarize(data.result);
+
+  it("summarises size, the nearest deadline and how much data is verified", () => {
+    expect(s.total).toBe(data.result.items.length);
+    expect(s.verified).toBeGreaterThan(0);
+    expect(s.verified).toBeLessThanOrEqual(s.total);
+    if (s.next) expect(s.next.nextDue >= data.result.asOf).toBe(true);
+  });
+
+  it("filters to verified and unverified obligations without losing any", () => {
+    const items = data.result.items;
+    const verified = groupObligations(items, { trust: "verified" }).flatMap((g) => g.items);
+    const unverified = groupObligations(items, { trust: "unverified" }).flatMap((g) => g.items);
+    expect(verified.every(isVerified)).toBe(true);
+    expect(unverified.some(isVerified)).toBe(false);
+    expect(verified.length + unverified.length).toBe(items.length);
+  });
+
+  it("treats a checked item past its review date as unverified", () => {
+    expect(isVerified({ provenance: { confidence: "checked", sources: [], stale: true } })).toBe(false);
+    expect(isVerified({ provenance: { confidence: "checked", sources: [] } })).toBe(true);
+    expect(isVerified({ provenance: { confidence: "compiled", sources: [] } })).toBe(false);
   });
 });

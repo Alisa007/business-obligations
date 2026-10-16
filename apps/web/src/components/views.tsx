@@ -4,7 +4,14 @@ import { useMemo } from "react";
 import { Button, Input, Paragraph, Text, XStack, YStack } from "tamagui";
 import type { ComplianceItem } from "business-obligations";
 import { CONFIDENCE, formatDate, frequencyLabel, hostOf, money, relativeDays } from "../lib/format";
-import { JURISDICTIONS, countBy, groupObligations, type Analysis, type ObligationFilters } from "../lib/plan";
+import {
+  JURISDICTIONS,
+  countBy,
+  groupObligations,
+  summarize,
+  type Analysis,
+  type ObligationFilters,
+} from "../lib/plan";
 import {
   CheckField,
   Chip,
@@ -24,12 +31,35 @@ const confidenceTone = { checked: "good", compiled: "neutral", unconfirmed: "war
 
 function Confidence({ p }: { p?: Provenance }) {
   if (!p) return null;
+  const label =
+    p.confidence === "checked"
+      ? `checked${p.checkedOn ? ` ${formatDate(p.checkedOn)}` : ""}`
+      : p.confidence === "unconfirmed"
+        ? "partly unconfirmed"
+        : "not individually checked";
   const title = `${CONFIDENCE[p.confidence] ?? ""}${p.checkedOn ? `, checked ${formatDate(p.checkedOn)}` : ""}`;
   return (
-    <Chip outline tone={confidenceTone[p.confidence] ?? "neutral"} title={title}>
-      {p.confidence}
-    </Chip>
+    <>
+      <Chip outline tone={confidenceTone[p.confidence] ?? "neutral"} title={title}>
+        {label}
+      </Chip>
+      {p.stale && (
+        <Chip
+          outline
+          tone="warn"
+          title={`Past its review date${p.reviewBy ? ` (${formatDate(p.reviewBy)})` : ""}`}
+        >
+          review overdue
+        </Chip>
+      )}
+    </>
   );
+}
+
+/** Within the next 30 days. */
+function soon(due: string, asOf: string): boolean {
+  const days = (Date.parse(`${due}T00:00:00Z`) - Date.parse(`${asOf}T00:00:00Z`)) / 86_400_000;
+  return days >= 0 && days <= 30;
 }
 
 function Fee({ item }: { item: ComplianceItem }) {
@@ -185,30 +215,96 @@ export function PlanView({
 
 // ---- Obligations ----
 
-function obligationDetails(i: ComplianceItem): Array<[string, React.ReactNode]> {
-  const rows: Array<[string, React.ReactNode]> = [
-    ["Why it applies", i.reason],
-    ["Authority", <ExternalLink url={i.url}>{i.authority}</ExternalLink>],
-  ];
+const FILING_METHOD: Record<string, string> = {
+  online: "online",
+  mail: "by mail",
+  in_person: "in person",
+  fax: "by fax",
+};
+
+const OP: Record<string, string> = {
+  ">=": "at least",
+  ">": "more than",
+  "<=": "at most",
+  "<": "less than",
+  "==": "is",
+  "!=": "is not",
+  in: "is one of",
+};
+
+function obligationDetails(
+  i: ComplianceItem,
+  titleOf: (id: string) => string | undefined,
+): Array<[string, React.ReactNode]> {
+  const rows: Array<[string, React.ReactNode]> = [["Why it applies", i.reason]];
+  if (i.preemptedBy) {
+    rows.push(["Replaced by", titleOf(i.preemptedBy) ?? i.preemptedBy]);
+  }
+  if (i.appliesWhen?.length) {
+    rows.push([
+      "Applies when",
+      i.appliesWhen
+        .map(
+          (w) =>
+            w.description ??
+            `${w.field} ${OP[w.op] ?? w.op} ${Array.isArray(w.value) ? w.value.join(", ") : String(w.value)}`,
+        )
+        .join("; "),
+    ]);
+  }
+  if (i.exemptions?.length) rows.push(["Exceptions", i.exemptions.join("; ")]);
+  rows.push(["Authority", <ExternalLink url={i.url}>{i.authority}</ExternalLink>]);
+  const how = [
+    i.formId ? `Form ${i.formId}` : undefined,
+    i.filingMethod?.length ? i.filingMethod.map((m) => FILING_METHOD[m] ?? m).join(", ") : undefined,
+    i.processingTime,
+  ].filter(Boolean);
+  if (how.length) rows.push(["How to file", how.join(" · ")]);
+  if (i.renewal) rows.push(["Renewal", i.renewal]);
+  for (const c of i.upcomingChanges ?? [])
+    rows.push(["Changing", `${c.summary} (effective ${formatDate(c.effective)})`]);
   if (i.penalty) {
     const late = i.penalty.percentPerMonth ? ` plus ${i.penalty.percentPerMonth}% per month` : "";
     rows.push(["If late", `${money(i.penalty.amount)}${late}. ${i.penalty.note}`]);
   }
   const p = i.provenance;
   if (p && p.sources.length > 0) {
+    const details =
+      p.sourceDetails ?? p.sources.map((url) => ({ url, kind: "agency_page" as const, archiveUrl: "" }));
     rows.push([
       "Sources",
       <>
-        {p.sources.slice(0, 3).map((u, n) => (
-          <span key={u}>
-            {n > 0 && ", "}
-            <ExternalLink url={u}>{hostOf(u)}</ExternalLink>
+        {details.slice(0, 3).map((s, n) => (
+          <span key={s.url}>
+            {n > 0 && "; "}
+            <ExternalLink url={s.url}>{hostOf(s.url)}</ExternalLink>
+            {s.kind === "pdf" ? " (PDF)" : ""}
+            {s.archiveUrl ? (
+              <>
+                {" "}
+                (<ExternalLink url={s.archiveUrl}>archived copy</ExternalLink>)
+              </>
+            ) : null}
           </span>
         ))}
-        {p.checkedOn ? ` (checked ${formatDate(p.checkedOn)})` : ""}
       </>,
     ]);
   }
+  if (p) {
+    const state =
+      p.confidence === "checked" && p.checkedOn
+        ? `Checked against official pages on ${formatDate(p.checkedOn)}`
+        : `Compiled from public sources${p.compiledOn ? ` on ${formatDate(p.compiledOn)}` : ""}; not individually checked`;
+    rows.push([
+      "Data",
+      `${state}${p.reviewBy ? `. ${p.stale ? "Review overdue since" : "Review due by"} ${formatDate(p.reviewBy)}.` : ""}`,
+    ]);
+  }
+  if (i.feedbackUrl)
+    rows.push([
+      "See an error?",
+      <ExternalLink url={i.feedbackUrl}>Report it or suggest a correction</ExternalLink>,
+    ]);
   return rows;
 }
 
@@ -224,6 +320,7 @@ export function ObligationsView({
   const controlProps = useControlProps();
   const items = data.result.items;
   const asOf = data.result.asOf;
+  const titleById = useMemo(() => new Map(items.map((i) => [i.id, i.title])), [items]);
   const byJurisdiction = useMemo(() => countBy(items, "jurisdiction", filters), [items, filters]);
   const byCategory = useMemo(() => countBy(items, "category", filters), [items, filters]);
   const categories = useMemo(
@@ -258,6 +355,19 @@ export function ObligationsView({
         </YStack>
         <YStack flexBasis={220} flexGrow={1}>
           <NativeSelect
+            id="trust"
+            label="Data confidence"
+            value={filters.trust}
+            onChange={(trust) => onFilters({ ...filters, trust })}
+            options={[
+              ["all", "All obligations"],
+              ["verified", "Checked against official pages"],
+              ["unverified", "Needs verification"],
+            ]}
+          />
+        </YStack>
+        <YStack flexBasis={220} flexGrow={1}>
+          <NativeSelect
             id="category"
             label="Category"
             value={filters.category}
@@ -288,13 +398,18 @@ export function ObligationsView({
               <Disclosure
                 key={i.id}
                 summary={
-                  <YStack gap="1.5">
-                    <Text fontWeight="600">
+                  <YStack gap="1.5" alignItems="flex-start" width="100%">
+                    <Text fontWeight="600" textAlign="left">
                       <ExternalLink url={i.url}>{i.title}</ExternalLink>
                     </Text>
                     <XStack gap="1.5" flexWrap="wrap" alignItems="center">
+                      {i.preemptedBy && (
+                        <Chip outline tone="warn" title="Another item replaces this one">
+                          replaced
+                        </Chip>
+                      )}
                       {i.nextDue ? (
-                        <Chip tone="info" outline>
+                        <Chip tone={soon(i.nextDue, asOf) ? "warn" : "info"} outline>
                           due {formatDate(i.nextDue)} · {relativeDays(i.nextDue, asOf)}
                         </Chip>
                       ) : i.deadline ? (
@@ -310,7 +425,7 @@ export function ObligationsView({
               >
                 <YStack gap="2" paddingBottom="2">
                   <Paragraph>{i.description}</Paragraph>
-                  <DefinitionList items={obligationDetails(i)} />
+                  <DefinitionList items={obligationDetails(i, (id) => titleById.get(id))} />
                 </YStack>
               </Disclosure>
             ))}
@@ -404,6 +519,71 @@ export function WhatIfView({ data }: { data: Analysis }) {
             </ListRow>
           ))}
         </YStack>
+      )}
+    </YStack>
+  );
+}
+
+// ---- Summary above the tabs ----
+
+export function ResultSummary({ data }: { data: Analysis }) {
+  const { result } = data;
+  const s = summarize(result);
+  const city = result.profile.city;
+  return (
+    <YStack gap="3">
+      <XStack flexWrap="wrap" gap="3">
+        <Stat
+          label="Obligations"
+          value={String(s.total)}
+          note={s.dueSoon > 0 ? `${s.dueSoon} due in the next 30 days` : "None due in the next 30 days"}
+        />
+        <Stat
+          label="Next deadline"
+          value={s.next ? formatDate(s.next.nextDue) : "None dated"}
+          note={
+            s.next
+              ? `${s.next.title} · ${relativeDays(s.next.nextDue, result.asOf)}`
+              : "Add a formation date for anniversary filings"
+          }
+        />
+        <Stat
+          label="Checked against official pages"
+          value={`${s.verified} of ${s.total}`}
+          note={`Data compiled ${formatDate(result.dataVersion)}`}
+        />
+      </XStack>
+      {s.verified < s.total && (
+        <Muted>
+          {s.total - s.verified} obligations were compiled from public sources and not individually checked
+          {s.stale > 0 ? `; ${s.stale} are past their review date` : ""}. Each item shows its sources and a
+          link to report errors.
+        </Muted>
+      )}
+      {!s.hasCityData && (
+        <Muted>
+          No city-specific requirements are on file for {city}. Local licenses and permits may still apply;
+          check with the city.
+        </Muted>
+      )}
+      {s.changes.length > 0 && (
+        <Disclosure
+          summary={
+            <Text fontWeight="600">
+              {s.changes.length} rule {s.changes.length === 1 ? "change" : "changes"} coming that affect this
+              business
+            </Text>
+          }
+        >
+          <YStack gap="1" paddingBottom="2">
+            {s.changes.map((c) => (
+              <Paragraph key={c.id}>
+                <Text fontWeight="600">{formatDate(c.effective)}</Text> · {c.summary}{" "}
+                {c.source ? <ExternalLink url={c.source}>source</ExternalLink> : null}
+              </Paragraph>
+            ))}
+          </YStack>
+        </Disclosure>
       )}
     </YStack>
   );
