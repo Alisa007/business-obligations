@@ -29,9 +29,13 @@ npm run test:update  # accept intentional snapshot changes, then review the diff
 ## Fields stored once
 
 The file name is the state: state files have no `code`, city and county files have no `state` per entry, and
-`wageWithholding` follows from `links.withholding`. A license's page is `businessLicense.url`. Allowed values
+`wageWithholding` follows from `links.withholding`. A license's page is `businessLicense.url`. The unemployment-insurance data year is `data/ui-source.json`, not a per-state field. Allowed values
 (entity types, industries, categories, ...) live in `src/enums.ts`; the JSON schemas must list the same values, and a
 test checks that.
+
+A `note` that several cities or counties share word for word is stored once in `data/local-notes.json` and referenced
+with `"reason": "<code>"` instead (use one or the other). Reuse a code when your entry says exactly the same; a test fails
+if a code is used by fewer than two entries or a note repeats a shared text.
 
 ## Schedules
 

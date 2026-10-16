@@ -394,14 +394,13 @@
     "unemployment": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["wageBase", "minRate", "maxRate", "newEmployerRate", "year"],
+      "required": ["wageBase", "minRate", "maxRate", "newEmployerRate"],
       "properties": {
         "wageBase": { "type": "number", "minimum": 0 },
         "minRate": { "type": "number", "minimum": 0 },
         "maxRate": { "type": "number", "minimum": 0 },
         "newEmployerRate": { "type": ["number", "null"], "minimum": 0 },
-        "note": { "type": "string" },
-        "year": { "type": "integer", "minimum": 2024 }
+        "note": { "type": "string" }
       }
     }
   },

@@ -76,7 +76,7 @@ export interface UnemploymentInfo {
   /** Rate for new employers, percent; null when it depends on the employer's industry average. */
   newEmployerRate: number | null;
   note?: string;
-  /** Calendar year the figures apply to. */
+  /** Calendar year the figures apply to; the same for every state (`data/ui-source.json`), added on load. */
   year: number;
 }
 
@@ -317,6 +317,8 @@ export interface CountyJurisdiction {
   checkedOn?: string;
   /** Official page backing a `none` status. */
   sourceUrl?: string;
+  /** Code of a shared explanation in `data/local-notes.json`; resolved into `note` on load. Not together with `note`. */
+  reason?: string;
   note?: string;
   items: LocalItem[];
 }
@@ -340,6 +342,8 @@ export interface LocalJurisdiction {
   checkedOn?: string;
   /** Official page backing a `none` status. */
   sourceUrl?: string;
+  /** Code of a shared explanation in `data/local-notes.json`; resolved into `note` on load. Not together with `note`. */
+  reason?: string;
   /** Short explanation shown to maintainers (for example what the city does require instead). */
   note?: string;
   items: LocalItem[];

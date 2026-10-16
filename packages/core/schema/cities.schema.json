@@ -36,6 +36,11 @@
         "format": "uri",
         "pattern": "^https://"
       },
+      "reason": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+        "description": "Code of a shared explanation in data/local-notes.json, for notes that several entries have in common."
+      },
       "note": {
         "type": "string",
         "minLength": 10,
@@ -58,6 +63,7 @@
       }
     },
     "allOf": [
+      { "not": { "required": ["note", "reason"] } },
       {
         "if": {
           "properties": {
