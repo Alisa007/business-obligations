@@ -15,3 +15,10 @@ export function todayIso(now: Date = new Date()): string {
   const pad = (n: number) => String(n).padStart(2, "0");
   return `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}`;
 }
+
+/** The calendar date `days` after `iso` (YYYY-MM-DD); negative values go back. Works in UTC so DST cannot shift it. */
+export function addDays(iso: string, days: number): string {
+  const d = new Date(`${iso}T00:00:00Z`);
+  d.setUTCDate(d.getUTCDate() + days);
+  return d.toISOString().slice(0, 10);
+}

@@ -1,5 +1,5 @@
 import { BUNDLED_CHANGES } from "./changes";
-import { isIsoDate, todayIso } from "./iso";
+import { addDays, isIsoDate, todayIso } from "./iso";
 import { evaluate, InvalidProfileError, type EvaluateOptions } from "./engine";
 import { occurrencesBetween } from "./dates";
 import type { BusinessProfile, ComplianceItem } from "./types";
@@ -29,13 +29,6 @@ export interface CalendarOptions extends Omit<EvaluateOptions, "asOf"> {
   to?: string;
 }
 
-const today = () => todayIso();
-const addDays = (iso: string, n: number) => {
-  const d = new Date(`${iso}T00:00:00Z`);
-  d.setUTCDate(d.getUTCDate() + n);
-  return d.toISOString().slice(0, 10);
-};
-
 function toEvent(item: ComplianceItem, date: string): CalendarEvent {
   return {
     date,
@@ -62,7 +55,7 @@ export function buildCalendar(
   input: BusinessProfile,
   options: CalendarOptions = {},
 ): { events: CalendarEvent[]; result: ComplianceResult } {
-  const from = options.from ?? today();
+  const from = options.from ?? todayIso();
   if (!isIsoDate(from)) throw new InvalidProfileError("`from` must be YYYY-MM-DD");
   const to = options.to ?? addDays(from, 365);
   if (!isIsoDate(to)) throw new InvalidProfileError("`to` must be YYYY-MM-DD");
@@ -138,7 +131,7 @@ const compact = (iso: string) => iso.replace(/-/g, "");
 
 /** Renders events as an iCalendar (.ics) document with all-day events. */
 export function toICS(events: CalendarEvent[], options: IcsOptions = {}): string {
-  const stamp = compact(options.stamp ?? events[0]?.date ?? today());
+  const stamp = compact(options.stamp ?? events[0]?.date ?? todayIso());
   const lines: string[] = [
     "BEGIN:VCALENDAR",
     "VERSION:2.0",

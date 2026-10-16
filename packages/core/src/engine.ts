@@ -13,7 +13,7 @@ import { isState } from "./states";
 import { federalRules } from "./rules/federal";
 import { extraStateRules, stateRules } from "./rules/state";
 import { dissolutionRules } from "./rules/dissolution";
-import { isIsoDate, todayIso } from "./iso";
+import { addDays, isIsoDate, todayIso } from "./iso";
 import { validateProfile, type ProfileIssue } from "./validate";
 import { localRules, premisesRules } from "./rules/local";
 import { industryRules } from "./rules/industry";
@@ -253,8 +253,6 @@ export interface ComplianceResult {
   disclaimer: string;
 }
 
-const today = () => todayIso();
-
 /** Industry implied by a NAICS code, for the sectors that map cleanly onto the bundled industries. */
 function industryFromNaics(naics: string | undefined): Industry | undefined {
   if (!naics) return undefined;
@@ -274,16 +272,10 @@ const RENEWAL_INTERVAL: Partial<Record<ComplianceItem["frequency"], string>> = {
 const FEEDBACK_URL =
   "https://github.com/Alisa007/business-obligations/issues/new?template=data-correction.yml&title=";
 
-const addDays = (iso: string, days: number) => {
-  const d = new Date(`${iso}T00:00:00Z`);
-  d.setUTCDate(d.getUTCDate() + days);
-  return d.toISOString().slice(0, 10);
-};
-
 /** Evaluates a profile and returns items together with the resolved profile and disclaimer. */
 export function evaluate(input: BusinessProfile, options: EvaluateOptions = {}): ComplianceResult {
   const profile = resolveProfile(input);
-  const asOf = options.asOf ?? today();
+  const asOf = options.asOf ?? todayIso();
   if (!isIsoDate(asOf)) throw new InvalidProfileError("`asOf` must be YYYY-MM-DD");
   const rules = options.rules ?? RULE_PACKS[profile.country];
   const changes = [...BUNDLED_CHANGES, ...(options.changes ?? [])];
@@ -431,7 +423,7 @@ export function previewChanges(
   input: BusinessProfile,
   options: { from?: string; to: string; rules?: Rule[]; changes?: RuleChange[] },
 ): Preview {
-  const from = options.from ?? today();
+  const from = options.from ?? todayIso();
   const base = { rules: options.rules, changes: options.changes };
   const before = evaluate(input, { ...base, asOf: from });
   const after = evaluate(input, { ...base, asOf: options.to });
