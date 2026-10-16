@@ -1,5 +1,4 @@
 {
-  "code": "DC",
   "name": "District of Columbia",
   "filing": {
     "name": "DC Department of Licensing and Consumer Protection",
@@ -24,7 +23,6 @@
   "llcReport": {
     "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=4;BYMONTHDAY=1",
     "anchor": "year_after_formation",
-    "fee": "$300",
     "deadline": "April 1 of every second year",
     "title": "File Biennial Report",
     "feeDetail": {
@@ -35,7 +33,6 @@
   "corpReport": {
     "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=4;BYMONTHDAY=1",
     "anchor": "year_after_formation",
-    "fee": "$300",
     "deadline": "April 1 of every second year",
     "title": "File Biennial Report",
     "feeDetail": {
@@ -44,7 +41,6 @@
     }
   },
   "entityTax": "Franchise tax (corporations) and Unincorporated Business Franchise Tax",
-  "wageWithholding": true,
   "salesTax": {
     "statewide": true,
     "permit": "Sales and use tax registration (FR-500)",
@@ -54,12 +50,12 @@
   "businessLicense": {
     "title": "DC Basic Business License (BBL)",
     "authority": "DC Department of Licensing and Consumer Protection",
+    "url": "https://dlcp.dc.gov/node/1618236",
     "fee": "Varies by license category",
-    "renewal": "biennial",
     "feeDetail": {
-      "basis": "varies",
-      "note": "Varies by license category"
-    }
+      "basis": "varies"
+    },
+    "renewal": "biennial"
   },
   "paidLeave": {
     "title": "DC Paid Family Leave tax",
@@ -113,7 +109,6 @@
     "salesTax": "https://otr.cfo.dc.gov/sites/default/files/dc/sites/otr/publication/attachments/FR-500_314.pdf",
     "entityTax": "https://otr.cfo.dc.gov/sites/default/files/dc/sites/otr/publication/attachments/2025_D-20_Book_Final_wLinks_02272026.pdf",
     "laborPosters": "https://does.dc.gov/page/office-wage-hour-employers",
-    "dba": "https://dlcp.dc.gov/node/1619191",
-    "businessLicense": "https://dlcp.dc.gov/node/1618236"
+    "dba": "https://dlcp.dc.gov/node/1619191"
   }
 }

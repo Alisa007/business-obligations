@@ -1,5 +1,4 @@
 {
-  "code": "CT",
   "name": "Connecticut",
   "filing": {
     "name": "Connecticut Secretary of the State",
@@ -23,7 +22,6 @@
   },
   "llcReport": {
     "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=31",
-    "fee": "$80",
     "feeDetail": {
       "basis": "flat",
       "amount": 80
@@ -31,7 +29,6 @@
   },
   "corpReport": {
     "rrule": "FREQ=YEARLY;BYMONTHDAY=-1",
-    "fee": "$150",
     "deadline": "End of the anniversary month",
     "feeDetail": {
       "basis": "flat",
@@ -39,7 +36,6 @@
     }
   },
   "entityTax": "Corporation Business Tax; optional Pass-Through Entity Tax",
-  "wageWithholding": true,
   "salesTax": {
     "statewide": true,
     "permit": "Sales and use tax permit",

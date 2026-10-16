@@ -1,5 +1,4 @@
 {
-  "code": "AR",
   "name": "Arkansas",
   "filing": {
     "name": "Arkansas Secretary of State",
@@ -23,7 +22,6 @@
   },
   "llcReport": {
     "rrule": "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=1",
-    "fee": "$150",
     "title": "File Annual Franchise Tax Report",
     "feeDetail": {
       "basis": "flat",
@@ -37,12 +35,10 @@
     "feeDetail": {
       "basis": "flat",
       "amount": 150,
-      "min": 150,
-      "note": "$150 minimum franchise tax"
+      "min": 150
     }
   },
   "entityTax": "Corporate income tax and franchise tax",
-  "wageWithholding": true,
   "salesTax": {
     "statewide": true,
     "permit": "Arkansas sales tax permit",
@@ -80,8 +76,7 @@
     "fee": "$15 (no franchise tax)",
     "feeDetail": {
       "basis": "flat",
-      "amount": 15,
-      "note": "$15 (no franchise tax)"
+      "amount": 15
     }
   },
   "llpReport": {
@@ -89,8 +84,7 @@
     "fee": "$15 (no franchise tax)",
     "feeDetail": {
       "basis": "flat",
-      "amount": 15,
-      "note": "$15 (no franchise tax)"
+      "amount": 15
     }
   },
   "cannabis": {

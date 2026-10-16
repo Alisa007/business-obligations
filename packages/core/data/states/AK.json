@@ -1,5 +1,4 @@
 {
-  "code": "AK",
   "name": "Alaska",
   "filing": {
     "name": "Alaska Division of Corporations, Business and Professional Licensing",
@@ -23,7 +22,6 @@
   },
   "llcReport": {
     "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=1;BYMONTHDAY=2",
-    "fee": "$100",
     "deadline": "January 2 of every second year after formation",
     "feeDetail": {
       "basis": "flat",
@@ -32,7 +30,6 @@
   },
   "corpReport": {
     "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=1;BYMONTHDAY=2",
-    "fee": "$100",
     "deadline": "January 2 of every second year after formation",
     "feeDetail": {
       "basis": "flat",
@@ -40,7 +37,6 @@
     }
   },
   "entityTax": "Corporate income tax (no individual income tax)",
-  "wageWithholding": false,
   "salesTax": {
     "statewide": false,
     "permit": "Local (borough/city) sales tax registration",
@@ -50,12 +46,12 @@
   "businessLicense": {
     "title": "Alaska state business license",
     "authority": "Alaska Division of Corporations, Business and Professional Licensing",
-    "fee": "$50",
-    "renewal": "biennial",
+    "url": "https://www.commerce.alaska.gov/web/cbpl/BusinessLicensing",
     "feeDetail": {
       "basis": "flat",
       "amount": 50
-    }
+    },
+    "renewal": "biennial"
   },
   "local": {
     "title": "Borough/city business license",
@@ -101,7 +97,6 @@
     "salesTax": "https://arsstc.org/business-sellers/",
     "entityTax": "https://www.tax.alaska.gov/programs/programs/other/corporate/MEF.aspx",
     "laborPosters": "https://labor.alaska.gov/lss/posters.htm",
-    "dba": "https://www.commerce.alaska.gov/web/cbpl/Corporations/ReservingRegisteringBusinessName.aspx",
-    "businessLicense": "https://www.commerce.alaska.gov/web/cbpl/BusinessLicensing"
+    "dba": "https://www.commerce.alaska.gov/web/cbpl/Corporations/ReservingRegisteringBusinessName.aspx"
   }
 }

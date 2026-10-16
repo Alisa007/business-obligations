@@ -1,5 +1,4 @@
 {
-  "code": "WA",
   "name": "Washington",
   "filing": {
     "name": "Washington Secretary of State, Corporations and Charities",
@@ -23,7 +22,6 @@
   },
   "llcReport": {
     "rrule": "FREQ=YEARLY;BYMONTHDAY=-1",
-    "fee": "$70",
     "feeDetail": {
       "basis": "flat",
       "amount": 70
@@ -35,7 +33,6 @@
   },
   "corpReport": {
     "rrule": "FREQ=YEARLY;BYMONTHDAY=-1",
-    "fee": "$70",
     "feeDetail": {
       "basis": "flat",
       "amount": 70
@@ -46,7 +43,6 @@
     }
   },
   "entityTax": "Business & Occupation (B&O) tax on gross receipts; no corporate or individual income tax",
-  "wageWithholding": false,
   "salesTax": {
     "statewide": true,
     "permit": "Washington business license with retail sales tax endorsement",
@@ -56,13 +52,13 @@
   "businessLicense": {
     "title": "Washington state business license (Business Licensing Service)",
     "authority": "Washington Department of Revenue, Business Licensing Service",
+    "url": "https://dor.wa.gov/open-business/apply-business-license",
     "fee": "$90 application (varies by endorsements)",
-    "renewal": "annual",
     "feeDetail": {
       "basis": "flat",
-      "amount": 90,
-      "note": "$90 application (varies by endorsements)"
-    }
+      "amount": 90
+    },
+    "renewal": "annual"
   },
   "paidLeave": {
     "title": "Washington Paid Family and Medical Leave and WA Cares premiums",
@@ -120,7 +116,6 @@
     "salesTax": "https://dor.wa.gov/taxes-rates/retail-sales-tax",
     "entityTax": "https://dor.wa.gov/taxes-rates/business-occupation-tax",
     "laborPosters": "https://www.lni.wa.gov/forms-publications/required-workplace-posters",
-    "dba": "https://dor.wa.gov/manage-business/grow-business/register-trade-names",
-    "businessLicense": "https://dor.wa.gov/open-business/apply-business-license"
+    "dba": "https://dor.wa.gov/manage-business/grow-business/register-trade-names"
   }
 }

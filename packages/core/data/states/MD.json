@@ -1,5 +1,4 @@
 {
-  "code": "MD",
   "name": "Maryland",
   "filing": {
     "name": "Maryland Department of Assessments and Taxation",
@@ -23,7 +22,6 @@
   },
   "llcReport": {
     "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
-    "fee": "$300",
     "title": "File Annual Report and Personal Property Return",
     "feeDetail": {
       "basis": "flat",
@@ -36,12 +34,10 @@
     "title": "File Annual Report and Personal Property Return",
     "feeDetail": {
       "basis": "flat",
-      "amount": 300,
-      "note": "$300 ($0 for non-stock corporations)"
+      "amount": 300
     }
   },
   "entityTax": "Corporate income tax; optional pass-through entity tax",
-  "wageWithholding": true,
   "salesTax": {
     "statewide": true,
     "permit": "Maryland sales and use tax license",
