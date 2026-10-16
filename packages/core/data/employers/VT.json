@@ -1,0 +1,22 @@
+[
+  {
+    "id": "vt.vermont-saves-registration",
+    "title": "Register with Vermont Saves or certify a retirement plan exemption",
+    "category": "registration",
+    "authority": "Vermont Saves (Vermont State Treasurer)",
+    "description": "Employers with five or more employees and no qualified plan must register or certify an exemption; phase-in ended around July 1, 2026. Penalty up to $20 per covered employee through September 30, 2026 and $75 per covered employee per calendar year from October 1, 2026; paying does not end the obligation.",
+    "frequency": "ongoing",
+    "url": "https://www.vermonttreasurer.gov/vermont-saves",
+    "appliesTo": ["employees"],
+    "checkedOn": "2026-10-16",
+    "appliesWhen": [
+      {
+        "field": "employeeCount",
+        "op": ">=",
+        "value": 5,
+        "description": "5 or more employees in the state"
+      }
+    ],
+    "exemptions": ["Employers that sponsor a qualified retirement plan (they still certify the exemption)"]
+  }
+]

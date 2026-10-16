@@ -1,0 +1,22 @@
+[
+  {
+    "id": "nj.retireready-nj-registration",
+    "title": "Register with RetireReady NJ or certify a retirement plan exemption",
+    "category": "registration",
+    "authority": "RetireReady NJ (NJ Secure Choice Savings Board)",
+    "description": "Employers above the program's size threshold with no qualified plan must register or certify an exemption. The threshold was 25 employees (deadline for 25 to 39 employees August 15, 2025); one 2026 source says it dropped to 10 with an April 1 deadline, so check the program. Penalties: a warning in year one, rising to $500 per employee by year five.",
+    "frequency": "ongoing",
+    "url": "https://www.retirereadynj.org/employers",
+    "appliesTo": ["employees"],
+    "checkedOn": "2026-10-16",
+    "appliesWhen": [
+      {
+        "field": "employeeCount",
+        "op": ">=",
+        "value": 25,
+        "description": "25 or more employees in the state"
+      }
+    ],
+    "exemptions": ["Employers that sponsor a qualified retirement plan (they still certify the exemption)"]
+  }
+]
