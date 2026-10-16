@@ -158,7 +158,7 @@ jobs:
           cp .bot/pr-body.md "$RUNNER_TEMP/out/pr-body.md" 2>/dev/null || echo "Seeds added by the local coverage bot. Review every source before merging." > "$RUNNER_TEMP/out/pr-body.md"
           if [ -s "$RUNNER_TEMP/out/changes.patch" ]; then echo "has_changes=true" >> "$GITHUB_OUTPUT"; else echo "has_changes=false" >> "$GITHUB_OUTPUT"; fi
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: steps.patch.outputs.has_changes == 'true'
         with:
           name: coverage-bot-patch

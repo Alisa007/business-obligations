@@ -104,7 +104,7 @@ jobs:
           node --input-type=module -e 'import {getComplianceItems} from "business-obligations"; import {lookupZip} from "business-obligations/zip"; const p=lookupZip("78701"); if(!p||!getComplianceItems({entityType:"llc",zip:"78701",city:p.city,county:p.county}).length) process.exit(1)'
           npx --no-install business-obligations --zip 94105 --entity llc | grep -q FEDERAL
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: steps.ver.outputs.publish == 'true'
         with:
           name: npm-release
