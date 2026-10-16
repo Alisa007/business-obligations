@@ -76,7 +76,7 @@ export function Playground() {
       });
       analytics.log("plan_generated", {
         entityType: form.entityType,
-        industry: form.industry,
+        naics: form.naics,
         isNew: form.isNew,
       });
       setData(result);
