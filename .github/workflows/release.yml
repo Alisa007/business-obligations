@@ -1,6 +1,8 @@
 name: Release
 
-# Publishes packages/core to npm when a version tag (vX.Y.Z) is pushed, then creates a GitHub release.
+# Publishes packages/core to npm, then creates a GitHub release. Triggers: a version tag (vX.Y.Z) is pushed, or a merge
+# to main changes packages/core/package.json to a version that is not on npm yet (the tag is then created for you).
+# To release: `npm run release -- patch`, open a PR, merge it.
 #
 # Two jobs, so the job that can publish never installs dependencies:
 #   build:   read-only; installs with scripts disabled, runs the checks, packs and smoke-tests the tarball.
@@ -17,6 +19,9 @@ name: Release
 on:
   push:
     tags: ["v*"]
+    # Continuous deployment: a merge to main that changes the package publishes it when that version is not on npm yet.
+    branches: [main]
+    paths: ["packages/core/package.json"]
   workflow_dispatch:
     inputs:
       dry_run:
@@ -35,6 +40,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    outputs:
+      version: ${{ steps.ver.outputs.version }}
+      publish: ${{ steps.ver.outputs.publish }}
     steps:
       - uses: actions/checkout@v7
         with:
@@ -59,6 +67,18 @@ jobs:
         run: |
           v=$(node -p "require('./packages/core/package.json').version")
           [ "v$v" = "$GITHUB_REF_NAME" ] || { echo "Tag $GITHUB_REF_NAME does not match package version $v" >&2; exit 1; }
+
+      - name: Version and whether it is already on npm
+        id: ver
+        run: |
+          v=$(node -p "require('./packages/core/package.json').version")
+          echo "version=$v" >> "$GITHUB_OUTPUT"
+          if npm view "compliance-rules-engine@$v" version >/dev/null 2>&1; then
+            echo "compliance-rules-engine@$v is already on npm; nothing to publish"
+            echo "publish=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "publish=true" >> "$GITHUB_OUTPUT"
+          fi
 
       - run: npm run check
       - run: npm run build
@@ -89,7 +109,7 @@ jobs:
 
   publish:
     needs: build
-    if: ${{ !(github.event_name == 'workflow_dispatch' && inputs.dry_run) && (github.ref_type == 'tag' || github.ref == 'refs/heads/main') }}
+    if: ${{ needs.build.outputs.publish == 'true' && !(github.event_name == 'workflow_dispatch' && inputs.dry_run) && (github.ref_type == 'tag' || github.ref == 'refs/heads/main') }}
     runs-on: ubuntu-latest
     timeout-minutes: 10
     environment: npm
@@ -123,17 +143,16 @@ jobs:
         run: npm publish "$RUNNER_TEMP"/pack/compliance-rules-engine-*.tgz --access public
 
       - uses: actions/checkout@v7
-        if: github.ref_type == 'tag'
         with:
           sparse-checkout: packages/core/CHANGELOG.md
           sparse-checkout-cone-mode: false
 
       - name: Create the GitHub release
-        if: github.ref_type == 'tag'
         env:
           GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ needs.build.outputs.version }}
         run: |
-          v="${GITHUB_REF_NAME#v}"
+          v="$VERSION"
           node -e '
             const log = require("fs").readFileSync("packages/core/CHANGELOG.md", "utf8");
             const start = log.indexOf("## [" + process.argv[1] + "]");
@@ -141,4 +160,9 @@ jobs:
             const end = log.indexOf("\n## [", start + 1);
             console.log(log.slice(log.indexOf("\n", start) + 1, end < 0 ? undefined : end).trim());
           ' "$v" > "$RUNNER_TEMP/notes.md"
-          gh release create "$GITHUB_REF_NAME" --title "$GITHUB_REF_NAME" --notes-file "$RUNNER_TEMP/notes.md" --verify-tag
+          if [ "$GITHUB_REF_TYPE" = tag ]; then
+            gh release create "$GITHUB_REF_NAME" --title "$GITHUB_REF_NAME" --notes-file "$RUNNER_TEMP/notes.md" --verify-tag
+          else
+            # Merge to main: the release creates the vX.Y.Z tag at the published commit.
+            gh release create "v$v" --title "v$v" --notes-file "$RUNNER_TEMP/notes.md" --target "$GITHUB_SHA"
+          fi
