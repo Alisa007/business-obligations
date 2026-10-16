@@ -441,11 +441,32 @@
   },
   {
     "county": "Ulster",
-    "status": "none",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
-    "items": [],
-    "checkedOn": "2026-10-15"
+    "note": "No county general business license or business personal property return was found; the county's business filing is the occupancy tax for lodging operators.",
+    "items": [
+      {
+        "id": "ulster-ny.occupancy-tax-registration",
+        "title": "Register for the Ulster County occupancy tax",
+        "category": "registration",
+        "authority": "Ulster County Department of Finance",
+        "description": "Hotel, motel and short-term rental operators must obtain a Certificate of Authority from the county at no cost and display it at the property. It applies to operators of lodging only.",
+        "frequency": "once",
+        "deadline": "No later than three days after commencing business",
+        "url": "https://www.ulstercountyny.gov/Departments/Finance/Tax-Information/Occupancy-Tax/HotelMotelSTR-Registration",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "ulster-ny.occupancy-tax-return",
+        "title": "File the Ulster County occupancy tax return",
+        "category": "filing",
+        "authority": "Ulster County Department of Finance",
+        "description": "Lodging operators file a quarterly occupancy tax return and remit the 4% tax collected from occupants, even when nothing is owed. Booking services such as Airbnb and VRBO remit for the bookings they facilitate.",
+        "rrule": "FREQ=YEARLY;BYMONTH=3,6,9,12;BYMONTHDAY=20",
+        "exemptions": ["Permanent residents occupying a room for at least 90 consecutive days"],
+        "url": "https://www.ulstercountyny.gov/Departments/Finance/Tax-Information/Occupancy-Tax/File-Occupancy-Tax-Returns",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Warren",

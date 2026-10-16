@@ -212,10 +212,20 @@
   },
   {
     "county": "San Diego",
-    "status": "unverified",
-    "note": "The Assessor/Recorder/County Clerk's business property statement page was not confirmed; state law (Form 571-L, due April 1) applies.",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "san-diego-ca.business-personal-property",
+        "title": "File San Diego County business personal property return",
+        "category": "filing",
+        "authority": "San Diego County Assessor-Recorder-County Clerk",
+        "description": "California business property statements (Form 571-L) are due April 1 and a 10% penalty applies if not filed by May 7. The county e-file opens February 1; businesses with $100,000 or more of taxable property must file even without a request.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "deadline": "April 1 (penalty after May 7)",
+        "url": "https://www.sdarcc.gov/content/arcc/home/divisions/assessor/business-vessels-aircraft/business-personal-property.html",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "San Francisco",
