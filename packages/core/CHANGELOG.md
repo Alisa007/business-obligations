@@ -5,6 +5,105 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ## [Unreleased]
 
+## [0.5.0] - 2026-10-16
+
+### Added
+
+- **data:** freelance contract laws, contractor classification and breach notification
+- **data:** New York charity registration and CHAR500, and waste combustion permits
+- **data:** New York title agents, notaries, opticians and wider NAICS reach
+- federal ACA reporting, EEO-1 and OSHA recordkeeping by headcount
+- unclaimed property holder reports for every state
+- **data:** NYC individual DCWP licences for tow, process, pedicab and ticket staff
+- state employer mandates: retirement plan registration, E-Verify and harassment training
+- **data:** NYC hotel, newsstand, stoop line stand and horse drawn cab licences
+- **data:** remaining NYC DOHMH permits and registrations
+- **data:** NYC DOB trade licences and the remaining FDNY permits
+- **data:** NYC DOB, FDNY and cooling tower obligations
+- **data:** NYC licence fees and the missing TLC, pool and FDNY items
+- **data:** county food establishment health permits for six large counties
+- **data:** New York City licences by NAICS code (DCWP, DOHMH, TLC)
+- **data:** Alabama county and Louisiana parish sales tax returns
+- **data:** local payroll taxes: Pennsylvania, Kentucky and Oregon
+- **data:** Pennsylvania and Ohio county lodging tax returns
+- **data:** California county transient occupancy tax returns
+- **data:** New York lodging taxes for Otsego, Albany, Chemung and Tioga
+- **data:** New York controlled substance activity licence
+- **data:** New York college alcohol permit, real estate course approval and tour bus licence
+- **data:** Indiana county innkeeper's tax returns
+- **data:** Nevada, Kentucky and Louisiana county lodging tax returns
+- **data:** New York bait, wildlife, preserve, tax preparer and ATV dealer items
+- **data:** Tennessee county hotel/motel occupancy tax returns
+- **data:** Florida counties: tourist development tax, business tax receipts, all 67 counties
+- **data:** Virginia county and city business property returns and licenses
+- **data:** Georgia county property tax returns, occupation tax and hotel tax
+- **data:** Maryland county hotel tax returns
+- **data:** business personal property returns for 32 more counties
+- **data:** South Carolina and Alabama county lodging tax returns
+- **data:** New York mold licensing and OPWDD operating certificate
+- **data:** New York insurer annual statement
+- **data:** New York professional entity and geologist items
+- **data:** New York livestock dealer, fur breeder, dispatch, mass gathering and film permits
+- **data:** New York mortgage servicer, fund raiser, gaming supplier and lab items
+- **data:** New York telephone, manufactured home park and ELAP items
+- **data:** New York assisted living, service bureau and SLA permit items
+- **data:** New York hospice, snowmobile dealer, guide and SLA permit items
+- **data:** New York farm dealer, nursery, labor and tramway items
+- **data:** New York alcohol, opioid, TNC and tire fee tax filings
+- **data:** New York DMV boat dealer, salvage pool and wholesale dealer items
+- **data:** New York DEC waste, water well and CAFO permits
+- **data:** New York DEC fishing, wildlife, fuel and pesticide permits
+- **data:** New York Department of State licensing items
+- **data:** New York nursing home operating certificate
+- **data:** New York banking, meat, DFS, PBM and professions items
+- **data:** New York apparel registration and model management items
+- **data:** New York fishing, charter boat, bail enforcement and bottled water items
+- **data:** New York firearms dealer, DFS finance and pet dealer items
+- **data:** New York construction, elevator, cable and redemption-centre items
+- **data:** New York industry rules, batch 9 (4 items)
+- **data:** New York industry rules, batch 8 (8 items)
+- **data:** New York industry rules, batch 7 (10 items)
+- **data:** New York industry rules, batch 6 (12 items)
+- **data:** New York industry rules, batch 5 (11 items)
+- **data:** New York industry rules, batch 4 (15 items)
+- **data:** New York industry rules, batch 3 (11 items)
+- **data:** New York industry rules, batch 2 (13 items)
+- **data:** state industry rules by NAICS code, New York batch 1
+- **data:** New York county MCTMT payroll tax and home improvement licenses
+- NAICS code as the main way to say what the business does
+- **data:** New York county lodging taxes, batch F
+- **data:** New York cities, batch 6 (6 cities)
+- **data:** New York county lodging taxes, batch E
+- **data:** New York cities, batch 5 (10 cities)
+- **data:** New York county lodging taxes, batch D
+- **data:** New York cities, batch 4 (9 cities)
+- **data:** New York county lodging taxes, batch C
+- **data:** New York cities, batch 3 (10 cities)
+- **data:** New York county lodging taxes, batch B
+- **data:** New York cities, batch 2 (10 cities)
+- **data:** New York county lodging taxes, batch A
+- **data:** New York cities, batch 1 (10 cities)
+- **data:** New York counties, batch 3 of 3
+- **data:** New York counties, batch 2 of 3
+- **data:** New York counties, batch 1 of 3
+- **data:** seed local data for the states that had none
+
+### Fixed
+
+- **data:** give deadlines that were text only a machine-readable date
+- **data:** repair dead NYC source links and cover the last DOB and DCWP licences
+- **data:** drop unused shared note code that fails the data test
+- biennial report due dates, rule-change relevance, new-business playground views
+- corporate estimated-tax dates, leap-year last day, launch date validation
+- enforce appliesWhen on seeded city and county items
+- **data:** a county is none only when every county-level obligation was checked
+- **data:** seed missing cities and counties (local coverage bot)
+- **data:** remove notes that only restate the item; fix a broken deadline note
+
+### Changed
+
+- make the core bundle tree-shakable
+
 ## [0.4.0] - 2026-10-16
 
 ### Breaking changes
