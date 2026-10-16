@@ -29,7 +29,8 @@
         "appliesTo": ["all"]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16",
+    "note": "Charleston County's Revenue Collections Division collects a 2% local accommodations fee (Ordinance 910), also on behalf of the cities of Charleston, North Charleston and Folly Beach, but its return due date was not found."
   },
   {
     "county": "Greenville",
@@ -45,7 +46,8 @@
         "appliesTo": ["all"]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16",
+    "note": "Greenville County has an accommodations fee return with the County Treasurer and a 2% local hospitality tax on prepared food and drink (due the 20th of the month after the period); neither is recorded here yet."
   },
   {
     "county": "Horry",
@@ -59,9 +61,27 @@
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=30",
         "url": "https://dor.sc.gov/resources-site/publications/Publications/Business%20Personal%20Property%20brochure.pdf",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "horry-sc.lodging-tax-return",
+        "title": "File the Horry County lodging tax return",
+        "category": "filing",
+        "authority": "Horry County Hospitality Fee Department",
+        "description": "Accommodations remittance forms and payment are due by the 20th of the month after the reporting period (monthly, quarterly or yearly per account); a zero return must still be signed and mailed. Register your account with the Hospitality Fee Department (843-915-5620); unincorporated short-term rentals also need a county business license and the state forms ST-388, ST-3T and ST-389.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://horrycountysc.gov/media/bdfbj3pq/accommodations-reporting-form.pdf",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Lexington",

@@ -11,9 +11,27 @@
         "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=31",
         "url": "https://www.revenue.alabama.gov/oppal-ready-for-personal-property-returns-through-jan-31/",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "baldwin-al.lodging-tax-return",
+        "title": "File the Baldwin County lodging tax return",
+        "category": "filing",
+        "authority": "Baldwin County Sales and Use Tax Department",
+        "description": "Baldwin County's sales, use and rental taxes, which cover lodging, are filed and paid electronically through My Alabama Taxes by 4 p.m. Central on the 20th of the month after the month of the taxable transactions (next business day if a weekend or holiday). Returns are monthly at first, and a return is required even with no taxable activity. Call 251-972-6844 with questions about the county portion of an account. The link is the state's local lodgings tax FAQ (the county's own page moved).",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://www.revenue.alabama.gov/faqs/local-lodgings-tax/",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Jefferson",
@@ -27,9 +45,27 @@
         "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=31",
         "url": "https://www.revenue.alabama.gov/oppal-ready-for-personal-property-returns-through-jan-31/",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "jefferson-al.lodging-tax-return",
+        "title": "File the Jefferson County lodging tax return",
+        "category": "filing",
+        "authority": "Jefferson County Department of Revenue",
+        "description": "The lodgings tax return (Form LL) must be postmarked by the 20th of the month after the reporting period; most filers use My Alabama Taxes (select Jefferson County, code 7537) and must not file both on paper and electronically. The tax applies to rentals of fewer than 180 days. Some cities in the county levy their own lodging taxes.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://www.jccal.org/Sites/Jefferson_County/Documents/Revenue/Business%20Tax%20Returns/Lodgings%20Tax%20Return.pdf",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Madison",
@@ -45,7 +81,8 @@
         "appliesTo": ["all"]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16",
+    "note": "Alabama taxes lodging at the state level and not every county or city lodging tax is state-administered; Madison County's own lodging tax rules were not found."
   },
   {
     "county": "Mobile",
@@ -59,9 +96,27 @@
         "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=31",
         "url": "https://www.revenue.alabama.gov/oppal-ready-for-personal-property-returns-through-jan-31/",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "mobile-al.lodging-tax-return",
+        "title": "File the Mobile County lodging tax return",
+        "category": "filing",
+        "authority": "Mobile County License Commission",
+        "description": "Lodging returns are due on or before the 20th of the month after the month the tax accrued; the county recommends filing through My Alabama Taxes (ONE SPOT). Late returns pay the greater of 10% or $50, and late payments 10%; a zero return filed on time avoids the $50 minimum. Operators in the City of Mobile also file the city's lodging tax form.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://www.mobilecountylc.gov/information/sales-tax/penalty",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16"
   },
   {
     "county": "Montgomery",
@@ -77,7 +132,8 @@
         "appliesTo": ["all"]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16",
+    "note": "Montgomery County's lodging tax rules were not checked."
   },
   {
     "county": "Tuscaloosa",
@@ -93,6 +149,7 @@
         "appliesTo": ["all"]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16",
+    "note": "Tuscaloosa County's lodging tax rules were not checked."
   }
 ]
