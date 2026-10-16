@@ -22,15 +22,9 @@
     "stateFund": false
   },
   "llcReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTH=9;BYMONTHDAY=30",
     "fee": "$7 ($0 for not-for-profit LLCs)",
-    "deadline": "September 30",
     "title": "File Annual Report",
-    "due": {
-      "type": "fixed",
-      "month": 9,
-      "day": 30
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 7,
@@ -38,15 +32,9 @@
     }
   },
   "corpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTH=6;BYMONTHDAY=30",
     "fee": "$7 ($0 for nonprofit corporations)",
-    "deadline": "June 30",
     "title": "File Annual Report",
-    "due": {
-      "type": "fixed",
-      "month": 6,
-      "day": 30
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 7,
@@ -89,14 +77,8 @@
     "dba": "checked"
   },
   "lpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=31",
     "fee": "$7 ($0 for not-for-profit LPs)",
-    "deadline": "December 31",
-    "due": {
-      "type": "fixed",
-      "month": 12,
-      "day": 31
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 7,
@@ -104,15 +86,10 @@
     }
   },
   "llpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
     "fee": "$470 per general partner (2026) plus $7 annual report",
     "deadline": "April 15 (certificate of annual registration); December 31 (annual report)",
     "title": "File Certificate of Annual Registration and annual report",
-    "due": {
-      "type": "fixed",
-      "month": 4,
-      "day": 15
-    },
     "feeDetail": {
       "basis": "per_partner",
       "perUnit": 470,

@@ -22,14 +22,8 @@
     "stateFund": false
   },
   "llcReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
     "fee": "Waived if filed by April 15; $35 after",
-    "deadline": "April 15",
-    "due": {
-      "type": "fixed",
-      "month": 4,
-      "day": 15
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 0,
@@ -42,14 +36,8 @@
     }
   },
   "corpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
     "fee": "Waived if filed by April 15; $35 after",
-    "deadline": "April 15",
-    "due": {
-      "type": "fixed",
-      "month": 4,
-      "day": 15
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 0,

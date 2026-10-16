@@ -28,13 +28,7 @@
         "category": "license",
         "authority": "City of Huntsville Finance Department",
         "description": "Licenses expire December 31; renewal is due January 31, a 15% penalty applies from February 1 and 30% from March 1 (insurance licenses are due the last day of February).",
-        "frequency": "annual",
-        "deadline": "January 31",
-        "due": {
-          "type": "fixed",
-          "month": 1,
-          "day": 31
-        },
+        "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=31",
         "url": "https://www.huntsvilleal.gov/?p=121",
         "appliesTo": ["all"]
       }
@@ -52,13 +46,8 @@
         "category": "license",
         "authority": "City of Mobile Revenue Department",
         "description": "Licenses expire December 31, are due January 1 and become delinquent after January 31; a 15% penalty applies in February and 30% from March 1.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=31",
         "deadline": "January 1 (delinquent after January 31)",
-        "due": {
-          "type": "fixed",
-          "month": 1,
-          "day": 31
-        },
         "url": "https://www.cityofmobile.gov/business-license-overview/",
         "appliesTo": ["all"]
       }

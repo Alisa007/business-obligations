@@ -1,3 +1,4 @@
+import { resolveSchedule } from "../rrule";
 import type { ItemDraft, Presence, ResolvedProfile, Rule } from "../types";
 import { professionBoard, stateInfo as info } from "../data";
 import type { BoardRef } from "../data";
@@ -281,16 +282,16 @@ export const stateRules: Rule[] = [
           const s = info(code);
           const r = reportFor(p, code)!;
           const foreign = code !== p.formationState;
+          const schedule = resolveSchedule(r);
           return {
-            title: `${r.title ?? (r.frequency === "annual" ? "File Annual Report" : r.frequency === "biennial" ? "File Biennial Report" : "File Periodic Report")} (${s.name}${foreign ? ", foreign entity" : ""})`,
+            title: `${r.title ?? (schedule.frequency === "annual" ? "File Annual Report" : schedule.frequency === "biennial" ? "File Biennial Report" : "File Periodic Report")} (${s.name}${foreign ? ", foreign entity" : ""})`,
             category: "filing" as const,
             jurisdiction: "state" as const,
             state: code,
             authority: s.filing.name,
             description: `Fee: ${r.fee}. Required to keep the entity in good standing.`,
-            frequency: r.frequency === "periodic" ? ("ongoing" as const) : r.frequency,
-            deadline: r.deadline,
-            due: r.due,
+            ...schedule,
+            frequency: schedule.frequency === "periodic" ? ("ongoing" as const) : schedule.frequency,
             ...(r.feeDetail ? { cost: { ...r.feeDetail, currency: "USD" as const } } : {}),
             ...(r.lateFee ? { penalty: { ...r.lateFee, currency: "USD" as const } } : {}),
             reason: foreign

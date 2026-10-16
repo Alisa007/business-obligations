@@ -92,13 +92,15 @@ describe("dueToRRule", () => {
         {
           type: "multi",
           dates: [
-            { month: 4, day: 15 },
-            { month: 10, day: 15 },
+            { month: 1, day: 31 },
+            { month: 4, day: 30 },
+            { month: 7, day: 31 },
+            { month: 10, day: 31 },
           ],
         },
-        "annual",
+        "quarterly",
       ),
-    ).toBe("FREQ=YEARLY;BYMONTH=4,10;BYMONTHDAY=15");
+    ).toBe("FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1");
   });
 
   it("returns nothing for rules a bare RRULE cannot express", () => {

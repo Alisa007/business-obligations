@@ -22,27 +22,17 @@
     "stateFund": false
   },
   "llcReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "fee": "$500",
-    "deadline": "On the anniversary of formation",
-    "due": {
-      "type": "anniversary",
-      "point": "date"
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 500
     }
   },
   "corpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=15",
     "fee": "$125 ($100 if filed electronically)",
     "deadline": "15th day of the 3rd month after fiscal year end (March 15)",
-    "due": {
-      "type": "fixed",
-      "month": 3,
-      "day": 15
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 125,
@@ -94,13 +84,9 @@
   },
   "dbaOffice": "City or town clerk",
   "lpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "fee": "$500 ($450 if filed electronically)",
     "deadline": "On or before the anniversary of the certificate of limited partnership",
-    "due": {
-      "type": "anniversary",
-      "point": "date"
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 500,
@@ -108,14 +94,9 @@
     }
   },
   "llpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=28",
     "fee": "$500",
     "deadline": "Last day of February",
-    "due": {
-      "type": "fixed",
-      "month": 2,
-      "day": 28
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 500

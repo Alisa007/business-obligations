@@ -22,14 +22,8 @@
     "stateFund": false
   },
   "llcReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTH=6;BYMONTHDAY=1",
     "fee": "$85",
-    "deadline": "June 1",
-    "due": {
-      "type": "fixed",
-      "month": 6,
-      "day": 1
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 85
@@ -40,14 +34,8 @@
     }
   },
   "corpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTH=6;BYMONTHDAY=1",
     "fee": "$85 ($35 for nonprofit corporations)",
-    "deadline": "June 1",
-    "due": {
-      "type": "fixed",
-      "month": 6,
-      "day": 1
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 85,

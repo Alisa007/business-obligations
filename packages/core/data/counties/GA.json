@@ -57,13 +57,7 @@
         "category": "filing",
         "authority": "Fulton County Board of Assessors",
         "description": "Georgia business personal property returns (Form PT-50P) are due to the county by April 1; late returns carry a 10% penalty.",
-        "frequency": "annual",
-        "deadline": "April 1",
-        "due": {
-          "type": "fixed",
-          "month": 4,
-          "day": 1
-        },
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": "https://www.fultoncountyga.gov/boardofassessors",
         "appliesTo": ["all"]
       }
@@ -80,13 +74,7 @@
         "category": "filing",
         "authority": "Gwinnett County Tax Assessors Office",
         "description": "Georgia business personal property returns (Form PT-50P) are due to the county by April 1; late returns carry a 10% penalty. Returns must be postmarked by April 1; email, fax and metered mail are not accepted as proof.",
-        "frequency": "annual",
-        "deadline": "April 1",
-        "due": {
-          "type": "fixed",
-          "month": 4,
-          "day": 1
-        },
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": "https://www.gwinnettcounty.com/departments/financialservices/taxassessorsoffice/business-personal-property",
         "appliesTo": ["all"]
       }

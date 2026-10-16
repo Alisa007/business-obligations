@@ -22,26 +22,18 @@
     "stateFund": false
   },
   "llcReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTHDAY=-1",
     "fee": "Free",
     "deadline": "End of the anniversary month",
-    "due": {
-      "type": "anniversary",
-      "point": "end_of_month"
-    },
     "feeDetail": {
       "basis": "none",
       "amount": 0
     }
   },
   "corpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTHDAY=-1",
     "fee": "Free",
     "deadline": "End of the anniversary month",
-    "due": {
-      "type": "anniversary",
-      "point": "end_of_month"
-    },
     "feeDetail": {
       "basis": "none",
       "amount": 0

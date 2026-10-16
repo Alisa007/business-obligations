@@ -4,7 +4,7 @@
   "title": "City or county obligation",
   "type": "object",
   "additionalProperties": false,
-  "required": ["id", "title", "category", "authority", "description", "frequency", "appliesTo"],
+  "required": ["id", "title", "category", "authority", "description", "appliesTo"],
   "properties": {
     "id": {
       "type": "string",
@@ -30,7 +30,16 @@
       "pattern": "^\\S(.*\\S)?$"
     },
     "frequency": {
-      "enum": ["once", "annual", "biennial", "quarterly", "monthly", "per_event", "ongoing"]
+      "enum": [
+        "once",
+        "annual",
+        "biennial",
+        "every_five_years",
+        "quarterly",
+        "monthly",
+        "per_event",
+        "ongoing"
+      ]
     },
     "deadline": {
       "type": "string",
@@ -219,6 +228,56 @@
     "renewal": {
       "type": "string",
       "minLength": 3
+    },
+    "rrule": {
+      "type": "string",
+      "pattern": "^FREQ=YEARLY(;INTERVAL=[25])?(;BYMONTH=\\d{1,2}(,\\d{1,2})*)?(;BYMONTHDAY=-?\\d{1,2})?$",
+      "description": "iCalendar (RFC 5545) recurrence rule. The source of truth for frequency and due date; see src/rrule.ts for the supported subset."
+    },
+    "anchor": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        {
+          "enum": ["formation_year", "year_after_formation"]
+        }
+      ],
+      "description": "Start of a cycle longer than a year: an ISO date, or the entity's formation year or the year after."
     }
-  }
+  },
+  "anyOf": [
+    {
+      "required": ["rrule"]
+    },
+    {
+      "required": ["frequency"]
+    }
+  ],
+  "allOf": [
+    {
+      "if": {
+        "required": ["rrule"]
+      },
+      "then": {
+        "not": {
+          "anyOf": [
+            {
+              "required": ["frequency"]
+            },
+            {
+              "required": ["due"]
+            }
+          ]
+        }
+      },
+      "else": {
+        "not": {
+          "required": ["anchor"]
+        }
+      }
+    }
+  ]
 }

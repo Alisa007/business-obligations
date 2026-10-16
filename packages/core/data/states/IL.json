@@ -22,14 +22,10 @@
     "stateFund": false
   },
   "llcReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTHDAY=1",
     "fee": "$75",
     "deadline": "Before the first day of the anniversary month",
     "title": "File Annual Report",
-    "due": {
-      "type": "anniversary",
-      "point": "start_of_month"
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 75
@@ -40,14 +36,10 @@
     }
   },
   "corpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTHDAY=1",
     "fee": "$75",
     "deadline": "Before the first day of the anniversary month",
     "title": "File Annual Report",
-    "due": {
-      "type": "anniversary",
-      "point": "start_of_month"
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 75
@@ -90,14 +82,10 @@
   },
   "dbaOffice": "County clerk",
   "llpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "fee": "$100 per partner (minimum $200, maximum $5,000); form UPA 1003(D)",
     "deadline": "Within the 60 days before the registration expires; registration lasts one year",
     "title": "File LLP renewal statement",
-    "due": {
-      "type": "anniversary",
-      "point": "date"
-    },
     "feeDetail": {
       "basis": "per_partner",
       "perUnit": 100,
@@ -110,13 +98,9 @@
     }
   },
   "lpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTHDAY=1",
     "fee": "$100",
     "deadline": "Before the first day of the anniversary month",
-    "due": {
-      "type": "anniversary",
-      "point": "start_of_month"
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 100

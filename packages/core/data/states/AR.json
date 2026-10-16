@@ -22,30 +22,18 @@
     "stateFund": false
   },
   "llcReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=1",
     "fee": "$150",
-    "deadline": "May 1",
     "title": "File Annual Franchise Tax Report",
-    "due": {
-      "type": "fixed",
-      "month": 5,
-      "day": 1
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 150
     }
   },
   "corpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=1",
     "fee": "$150 minimum franchise tax",
-    "deadline": "May 1",
     "title": "File Annual Franchise Tax Report",
-    "due": {
-      "type": "fixed",
-      "month": 5,
-      "day": 1
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 150,
@@ -88,14 +76,8 @@
   },
   "dbaOffice": "County clerk",
   "lpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=1",
     "fee": "$15 (no franchise tax)",
-    "deadline": "May 1",
-    "due": {
-      "type": "fixed",
-      "month": 5,
-      "day": 1
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 15,
@@ -103,14 +85,8 @@
     }
   },
   "llpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
     "fee": "$15 (no franchise tax)",
-    "deadline": "April 1",
-    "due": {
-      "type": "fixed",
-      "month": 4,
-      "day": 1
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 15,

@@ -22,28 +22,17 @@
     "stateFund": false
   },
   "llcReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
     "fee": "$200",
-    "deadline": "April 15",
-    "due": {
-      "type": "fixed",
-      "month": 4,
-      "day": 15
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 200
     }
   },
   "corpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
     "fee": "$18 online (plus $3 card fee)",
     "deadline": "15th day of the 4th month after fiscal year end",
-    "due": {
-      "type": "fixed",
-      "month": 4,
-      "day": 15
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 18,
@@ -89,14 +78,9 @@
   },
   "dbaOffice": "County register of deeds",
   "llpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
     "fee": "$200 ($203 online)",
     "deadline": "15th day of the 4th month after fiscal year end",
-    "due": {
-      "type": "fixed",
-      "month": 4,
-      "day": 15
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 200,

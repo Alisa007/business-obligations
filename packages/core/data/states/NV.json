@@ -22,14 +22,9 @@
     "stateFund": false
   },
   "llcReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTHDAY=-1",
     "fee": "$150 annual list fee",
-    "deadline": "Last day of the anniversary month",
     "title": "File Annual List of Managers/Officers and Business License Renewal",
-    "due": {
-      "type": "anniversary",
-      "point": "end_of_month"
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 150,
@@ -41,14 +36,9 @@
     }
   },
   "corpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTHDAY=-1",
     "fee": "$150 annual list fee",
-    "deadline": "Last day of the anniversary month",
     "title": "File Annual List of Managers/Officers and Business License Renewal",
-    "due": {
-      "type": "anniversary",
-      "point": "end_of_month"
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 150,

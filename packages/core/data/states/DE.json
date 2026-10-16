@@ -22,15 +22,9 @@
     "stateFund": false
   },
   "llcReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTH=6;BYMONTHDAY=1",
     "fee": "$400 annual tax",
-    "deadline": "June 1",
     "title": "Pay LLC annual tax",
-    "due": {
-      "type": "fixed",
-      "month": 6,
-      "day": 1
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 400,
@@ -43,15 +37,9 @@
     }
   },
   "corpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1",
     "fee": "Franchise tax (from $175, min) + $50 report fee",
-    "deadline": "March 1",
     "title": "File annual franchise tax report",
-    "due": {
-      "type": "fixed",
-      "month": 3,
-      "day": 1
-    },
     "feeDetail": {
       "basis": "varies",
       "min": 175,
@@ -118,15 +106,9 @@
     "url": "https://revenue.delaware.gov/trade-names-faqs"
   },
   "llpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTH=6;BYMONTHDAY=1",
     "fee": "$300 per partner (maximum $180,000)",
-    "deadline": "June 1",
     "title": "Pay LLP annual fee",
-    "due": {
-      "type": "fixed",
-      "month": 6,
-      "day": 1
-    },
     "feeDetail": {
       "basis": "per_partner",
       "perUnit": 300,

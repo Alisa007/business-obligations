@@ -23,15 +23,10 @@
   },
   "llcReport": null,
   "corpReport": {
-    "frequency": "biennial",
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=4;BYMONTHDAY=15",
     "fee": "$25",
     "deadline": "April 15, every 2 years (aligned with the federal corporate return)",
     "title": "File Biennial Report",
-    "due": {
-      "type": "fixed",
-      "month": 4,
-      "day": 15
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 25
@@ -76,14 +71,9 @@
     "dba": "checked"
   },
   "llpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
     "fee": "Per Secretary of State fee schedule",
-    "deadline": "January 1 \u2013 April 1",
-    "due": {
-      "type": "fixed",
-      "month": 4,
-      "day": 1
-    },
+    "deadline": "January 1 – April 1",
     "feeDetail": {
       "basis": "varies",
       "note": "Per Secretary of State fee schedule"

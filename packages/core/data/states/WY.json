@@ -22,14 +22,9 @@
     }
   },
   "llcReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTHDAY=1",
     "fee": "$60 minimum license tax",
-    "deadline": "First day of the anniversary month",
     "title": "File Annual Report and pay license tax",
-    "due": {
-      "type": "anniversary",
-      "point": "start_of_month"
-    },
     "feeDetail": {
       "basis": "varies",
       "min": 60,
@@ -37,14 +32,9 @@
     }
   },
   "corpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTHDAY=1",
     "fee": "$60 minimum license tax",
-    "deadline": "First day of the anniversary month",
     "title": "File Annual Report and pay license tax",
-    "due": {
-      "type": "anniversary",
-      "point": "start_of_month"
-    },
     "feeDetail": {
       "basis": "varies",
       "min": 60,

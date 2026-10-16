@@ -22,16 +22,10 @@
     "stateFund": false
   },
   "llcReport": {
-    "frequency": "biennial",
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=4;BYMONTHDAY=1",
+    "anchor": "2027-04-01",
     "fee": "$30 online ($45 paper)",
-    "deadline": "April 1 of odd-numbered years",
     "title": "File Biennial Report",
-    "due": {
-      "type": "fixed",
-      "month": 4,
-      "day": 1,
-      "parity": "odd"
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 30,
@@ -40,16 +34,10 @@
     }
   },
   "corpReport": {
-    "frequency": "biennial",
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=4;BYMONTHDAY=1",
+    "anchor": "2026-04-01",
     "fee": "$60",
-    "deadline": "April 1 of even-numbered years",
     "title": "File Biennial Report",
-    "due": {
-      "type": "fixed",
-      "month": 4,
-      "day": 1,
-      "parity": "even"
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 60
@@ -91,15 +79,10 @@
   "dbaOffice": "County recorder",
   "llpReport": null,
   "lpReport": {
-    "frequency": "biennial",
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=4;BYMONTHDAY=1",
     "fee": "$30 online ($45 paper)",
     "deadline": "April 1 of the biennial reporting year",
     "title": "File Biennial Report",
-    "due": {
-      "type": "fixed",
-      "month": 4,
-      "day": 1
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 30,

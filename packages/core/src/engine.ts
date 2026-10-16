@@ -17,7 +17,8 @@ import { addDays, isIsoDate, todayIso } from "./iso";
 import { validateProfile, type ProfileIssue } from "./validate";
 import { localRules, premisesRules } from "./rules/local";
 import { industryRules } from "./rules/industry";
-import { dueToRRule, nextDueDate } from "./dates";
+import { nextDueDate } from "./dates";
+import { dueToRRule } from "./rrule";
 import { describeProvenance, provenanceFor } from "./provenance";
 import { jurisdictionId, placeFacts, STATE_FIPS } from "./jurisdiction";
 import {

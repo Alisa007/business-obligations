@@ -473,7 +473,7 @@
     "report": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["frequency", "fee", "deadline"],
+      "required": ["fee"],
       "properties": {
         "frequency": {
           "enum": ["annual", "biennial", "every_five_years", "periodic"]
@@ -484,7 +484,8 @@
         },
         "deadline": {
           "type": "string",
-          "minLength": 1
+          "minLength": 1,
+          "description": "Display text; generated from rrule when omitted."
         },
         "title": {
           "type": "string"
@@ -497,8 +498,58 @@
         },
         "lateFee": {
           "$ref": "#/$defs/lateFee"
+        },
+        "rrule": {
+          "type": "string",
+          "pattern": "^FREQ=YEARLY(;INTERVAL=[25])?(;BYMONTH=\\d{1,2}(,\\d{1,2})*)?(;BYMONTHDAY=-?\\d{1,2})?$",
+          "description": "iCalendar (RFC 5545) recurrence rule. The source of truth for frequency and due date; see src/rrule.ts for the supported subset."
+        },
+        "anchor": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+            },
+            {
+              "enum": ["formation_year", "year_after_formation"]
+            }
+          ],
+          "description": "Start of a cycle longer than a year: an ISO date, or the entity's formation year or the year after."
         }
-      }
+      },
+      "anyOf": [
+        {
+          "required": ["rrule"]
+        },
+        {
+          "required": ["frequency", "deadline"]
+        }
+      ],
+      "allOf": [
+        {
+          "if": {
+            "required": ["rrule"]
+          },
+          "then": {
+            "not": {
+              "anyOf": [
+                {
+                  "required": ["frequency"]
+                },
+                {
+                  "required": ["due"]
+                }
+              ]
+            }
+          },
+          "else": {
+            "not": {
+              "required": ["anchor"]
+            }
+          }
+        }
+      ]
     },
     "feeDetail": {
       "type": "object",

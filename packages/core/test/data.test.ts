@@ -7,6 +7,7 @@ import { defaultRules, evaluate, indexCities, seededCityRule, type BusinessProfi
 import { PROFILE_FIELDS, STATES } from "../src";
 import { COUNTY_JURISDICTIONS, LOCAL_JURISDICTIONS, findCity, findCounty } from "../src/data";
 import type { LocalItem } from "../src/data/types";
+import { describeSchedule, parseRRule, toRRule } from "../src/rrule";
 
 const root = path.resolve(__dirname, "..");
 const read = (p: string) => JSON.parse(fs.readFileSync(path.join(root, p), "utf8"));
@@ -375,5 +376,84 @@ describe("bring-your-own city data", () => {
     const rules = [...defaultRules, seededCityRule(indexCities(seeds), "my.cities")];
     const result = evaluate(profile, { asOf: "2026-10-13", rules });
     expect(result.items.some((i) => i.title === "Smallville permit")).toBe(true);
+  });
+});
+
+describe("schedules in data files", () => {
+  type Node = Record<string, unknown>;
+  const nodes: Array<[string, Node]> = [];
+  const collect = (value: unknown, where: string) => {
+    if (Array.isArray(value)) value.forEach((v, i) => collect(v, `${where}[${i}]`));
+    else if (value && typeof value === "object") {
+      const o = value as Node;
+      if ("rrule" in o) nodes.push([where, o]);
+      for (const [k, v] of Object.entries(o)) collect(v, `${where}.${k}`);
+    }
+  };
+  for (const dir of ["states", "cities", "counties"])
+    for (const f of fs.readdirSync(path.join(root, "data", dir)))
+      collect(read(`data/${dir}/${f}`), `${dir}/${f}`);
+
+  it("has recurrence rules", () => expect(nodes.length).toBeGreaterThan(300));
+
+  it("every rrule parses, and nothing repeats what it says", () => {
+    for (const [where, o] of nodes) {
+      const s = parseRRule(o.rrule as string, o.anchor as string | undefined);
+      expect(o.frequency, `${where} frequency is derived from rrule`).toBeUndefined();
+      expect(o.due, `${where} due is derived from rrule`).toBeUndefined();
+      if (o.deadline)
+        expect(o.deadline, `${where} deadline equals the generated text`).not.toBe(describeSchedule(s));
+    }
+  });
+
+  it("an explicit deadline names the month the rrule says", () => {
+    const months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+    for (const [where, o] of nodes) {
+      const { due } = parseRRule(o.rrule as string, o.anchor as string | undefined);
+      if (typeof o.deadline !== "string" || due.type === "anniversary") continue;
+      // Text such as "15th day of the 4th month after fiscal year end" names no month.
+      if (!months.some((m) => (o.deadline as string).includes(m))) continue;
+      const dueMonths =
+        due.type === "fixed" ? [due.month] : due.type === "multi" ? due.dates.map((d) => d.month) : [];
+      // "Before January 1" is a December 31 deadline, so the following month counts too; a multi-month cycle
+      // only has to name one of its months ("April 30 for annual filers; quarterly after each quarter").
+      const named = dueMonths.some((m) =>
+        [months[m - 1]!, months[m % 12]!].some((name) => (o.deadline as string).includes(name)),
+      );
+      expect(named, `${where}: deadline "${o.deadline}" names a due month`).toBe(true);
+    }
+  });
+
+  it("round-trips through parseRRule and toRRule", () => {
+    for (const [where, o] of nodes) {
+      const s = parseRRule(o.rrule as string, o.anchor as string | undefined);
+      const back = toRRule(s.due, s.frequency);
+      expect(back, where).toEqual({ rrule: o.rrule, ...(o.anchor ? { anchor: o.anchor } : {}) });
+    }
+  });
+
+  it("rejects unsupported rules", () => {
+    for (const bad of [
+      "FREQ=MONTHLY",
+      "FREQ=YEARLY;BYDAY=MO",
+      "FREQ=YEARLY;BYMONTH=13;BYMONTHDAY=1",
+      "FREQ=YEARLY;BYMONTH=5",
+      "FREQ=YEARLY;INTERVAL=3;BYMONTH=5;BYMONTHDAY=1",
+      "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=15;BYMONTH=6",
+    ])
+      expect(() => parseRRule(bad), bad).toThrow();
   });
 });

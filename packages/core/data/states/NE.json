@@ -22,16 +22,10 @@
     "stateFund": false
   },
   "llcReport": {
-    "frequency": "biennial",
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=4;BYMONTHDAY=1",
+    "anchor": "2027-04-01",
     "fee": "$30",
-    "deadline": "April 1 of odd-numbered years",
     "title": "File Biennial Report",
-    "due": {
-      "type": "fixed",
-      "month": 4,
-      "day": 1,
-      "parity": "odd"
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 30
@@ -39,20 +33,14 @@
   },
   "lpReport": null,
   "corpReport": {
-    "frequency": "biennial",
-    "fee": "Occupation tax by paid-in capital ($26 up to $10,000; $40 for $10,001\u2013$20,000, +$20 per further $10,000)",
-    "deadline": "March 1 of even-numbered years",
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=3;BYMONTHDAY=1",
+    "anchor": "2026-03-01",
+    "fee": "Occupation tax by paid-in capital ($26 up to $10,000; $40 for $10,001–$20,000, +$20 per further $10,000)",
     "title": "File Biennial Occupation Tax Report",
-    "due": {
-      "type": "fixed",
-      "month": 3,
-      "day": 1,
-      "parity": "even"
-    },
     "feeDetail": {
       "basis": "varies",
       "min": 26,
-      "note": "Occupation tax by paid-in capital ($26 up to $10,000; $40 for $10,001\u2013$20,000, +$20 per further $10,000)"
+      "note": "Occupation tax by paid-in capital ($26 up to $10,000; $40 for $10,001–$20,000, +$20 per further $10,000)"
     }
   },
   "entityTax": "Corporate income tax",
@@ -89,14 +77,8 @@
     "dba": "checked"
   },
   "llpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
     "fee": "$25 ($50 if engaged in the practice of law)",
-    "deadline": "April 1",
-    "due": {
-      "type": "fixed",
-      "month": 4,
-      "day": 1
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 25,

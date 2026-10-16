@@ -22,28 +22,16 @@
     }
   },
   "llcReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTH=11;BYMONTHDAY=15",
     "fee": "$50",
-    "deadline": "November 15",
-    "due": {
-      "type": "fixed",
-      "month": 11,
-      "day": 15
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 50
     }
   },
   "corpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTH=8;BYMONTHDAY=1",
     "fee": "$25",
-    "deadline": "August 1",
-    "due": {
-      "type": "fixed",
-      "month": 8,
-      "day": 1
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 25
@@ -83,28 +71,16 @@
     "dba": "checked"
   },
   "lpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=31",
     "fee": "$25",
-    "deadline": "March 31",
-    "due": {
-      "type": "fixed",
-      "month": 3,
-      "day": 31
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 25
     }
   },
   "llpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=31",
     "fee": "$25",
-    "deadline": "March 31",
-    "due": {
-      "type": "fixed",
-      "month": 3,
-      "day": 31
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 25

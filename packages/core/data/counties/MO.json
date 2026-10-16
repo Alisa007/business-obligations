@@ -9,13 +9,7 @@
         "category": "filing",
         "authority": "Clay County Assessor",
         "description": "Missouri personal property assessment lists are due to the county assessor by March 1 (the next business day if it falls on a weekend).",
-        "frequency": "annual",
-        "deadline": "March 1",
-        "due": {
-          "type": "fixed",
-          "month": 3,
-          "day": 1
-        },
+        "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1",
         "url": "https://www.claycountymo.gov/DocumentCenter/View/2836/2026-Form-A-Cover-Letter",
         "appliesTo": ["all"]
       }
@@ -32,13 +26,7 @@
         "category": "filing",
         "authority": "Greene County Assessor",
         "description": "Missouri personal property assessment lists are due to the county assessor by March 1 (the next business day if it falls on a weekend).",
-        "frequency": "annual",
-        "deadline": "March 1",
-        "due": {
-          "type": "fixed",
-          "month": 3,
-          "day": 1
-        },
+        "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1",
         "url": "https://www.greenecountyassessor.org/smartfile/Filing/FilingType/Info/PP_2025",
         "appliesTo": ["all"]
       }

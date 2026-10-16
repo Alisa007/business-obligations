@@ -113,15 +113,25 @@ export interface LateFee {
 }
 
 export interface ReportRule {
-  frequency: "annual" | "biennial" | "every_five_years" | "periodic";
+  /** Derived from `rrule` when there is one. */
+  frequency?: "annual" | "biennial" | "every_five_years" | "periodic";
   fee: string;
   /** Structured form of `fee`. */
   feeDetail?: FeeDetail;
   lateFee?: LateFee;
-  deadline: string;
+  /**
+   * The schedule as an iCalendar recurrence rule, e.g. `FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=15` (see `rrule.ts`). When
+   * present, `frequency` and `due` are derived from it and must be left out, and `deadline` is generated unless
+   * it adds detail the rule cannot (such as a grace period).
+   */
+  rrule?: string;
+  /** Start of a cycle longer than a year: an ISO date, `formation_year` or `year_after_formation`. */
+  anchor?: string;
+  /** Human-readable deadline; generated from `rrule` when omitted. */
+  deadline?: string;
   /** Overrides the default "File annual report" title. */
   title?: string;
-  /** Machine-readable form of `deadline`, when it can be computed. */
+  /** Machine-readable form of `deadline` for data without an `rrule`. */
   due?: Due;
 }
 
@@ -255,8 +265,16 @@ export interface LocalItem {
   category: "license" | "permit" | "registration" | "filing" | "payment" | "insurance" | "recordkeeping";
   authority: string;
   description: string;
-  frequency: "once" | "annual" | "biennial" | "quarterly" | "monthly" | "per_event" | "ongoing";
+  /** Derived from `rrule` when there is one. */
+  frequency?:
+    "once" | "annual" | "biennial" | "every_five_years" | "quarterly" | "monthly" | "per_event" | "ongoing";
+  /** The schedule as an iCalendar recurrence rule (see `ReportRule.rrule`). */
+  rrule?: string;
+  /** Start of a cycle longer than a year (see `ReportRule.anchor`). */
+  anchor?: string;
+  /** Human-readable deadline; generated from `rrule` when omitted. */
   deadline?: string;
+  /** Machine-readable form of `deadline` for data without an `rrule`. */
   due?: Due;
   url?: string;
   /** Tags; the item applies if any matches. */
@@ -318,19 +336,7 @@ export interface LocalJurisdiction {
   sourceUrl?: string;
   /** Short explanation shown to maintainers (for example what the city does require instead). */
   note?: string;
-  items: Array<{
-    id: string;
-    title: string;
-    category: "license" | "permit" | "registration" | "filing" | "payment" | "insurance" | "recordkeeping";
-    authority: string;
-    description: string;
-    frequency: "once" | "annual" | "biennial" | "quarterly" | "monthly" | "per_event" | "ongoing";
-    deadline?: string;
-    due?: Due;
-    url?: string;
-    /** Tags; the item applies if any matches. */
-    appliesTo: Array<"all" | "employees" | "sells_goods" | "corporation" | "unincorporated" | "trade_name">;
-  }>;
+  items: LocalItem[];
 }
 
 /** What a rule change is about. */

@@ -69,14 +69,10 @@
     "dba": "checked"
   },
   "llpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "fee": "$100",
     "deadline": "Anniversary of registration",
     "title": "Renew LLP certificate",
-    "due": {
-      "type": "anniversary",
-      "point": "date"
-    },
     "feeDetail": {
       "basis": "flat",
       "amount": 100

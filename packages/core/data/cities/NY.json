@@ -29,13 +29,8 @@
         "category": "filing",
         "authority": "NYC Department of Finance",
         "description": "C and S corporations doing business in New York City file NYC-2 / NYC-4S (or NYC-3L for general corporations) and pay the tax.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
         "deadline": "April 15 (calendar-year filers)",
-        "due": {
-          "type": "fixed",
-          "month": 4,
-          "day": 15
-        },
         "url": "https://www.nyc.gov/site/finance/taxes/business.page",
         "appliesTo": ["corporation"]
       },
@@ -45,13 +40,8 @@
         "category": "filing",
         "authority": "NYC Department of Finance",
         "description": "Sole proprietors, partnerships and LLCs taxed as such that carry on a business in New York City file NYC-202 / NYC-204 (4% rate, with credits for some owners).",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
         "deadline": "April 15 (calendar-year filers)",
-        "due": {
-          "type": "fixed",
-          "month": 4,
-          "day": 15
-        },
         "url": "https://www.nyc.gov/site/finance/taxes/business.page",
         "appliesTo": ["unincorporated"]
       },
