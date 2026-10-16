@@ -10,8 +10,7 @@
   {
     "county": "Allegany",
     "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
+    "note": "New York Tax Law section 1202-u caps Allegany County's hotel and motel tax at 4%, while the county's tax page lists 8% of room rent with monthly reports due the 15th, so the current rate could not be settled and the registration steps were not found. Other county-level business duties were not checked.",
     "items": [],
     "checkedOn": "2026-10-15"
   },
@@ -111,10 +110,46 @@
   },
   {
     "county": "Cayuga",
-    "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
-    "items": [],
+    "items": [
+      {
+        "id": "cayuga-ny.occupancy-tax-registration",
+        "title": "Register for the Cayuga County occupancy tax",
+        "category": "registration",
+        "authority": "Cayuga County Treasurer",
+        "description": "Every operator submits the Certificate of Registration and Application for Certificate of Authority to the County Treasurer in Auburn to collect the county's 5% tax on room rent.",
+        "frequency": "once",
+        "deadline": "Within three days of opening the business",
+        "url": "https://www.cayugacounty.gov/1239/Occupancy-Tax",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "cayuga-ny.occupancy-tax-return",
+        "title": "File the Cayuga County occupancy tax return",
+        "category": "filing",
+        "authority": "Cayuga County Treasurer",
+        "description": "Operators file the Return of Tax on Occupancy of Hotel/Motel Rooms each quarter, due the 20th of April, July, October and January. The county law was last renewed in 2018 for three years, so confirm its current status with the Treasurer.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=20",
+        "exemptions": ["Permanent residents", "Rooms costing four dollars or less per day"],
+        "url": "https://www.cayugacounty.gov/1239/Occupancy-Tax",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
     "checkedOn": "2026-10-15"
   },
   {
@@ -192,10 +227,27 @@
   },
   {
     "county": "Clinton",
-    "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
-    "items": [],
+    "items": [
+      {
+        "id": "clinton-ny.occupancy-tax-return",
+        "title": "File the Clinton County occupancy tax return",
+        "category": "filing",
+        "authority": "Clinton County Treasurer",
+        "description": "Operators file a quarterly room occupancy tax return with payment, within 15 days after the period, due the 15th of April, July, October and January per the county form, and remit 3% of taxable room rentals. A return postmarked late carries a 10% penalty, plus interest of 1.5% after 30 days. Local Law 3 of 2024 governs the tax; confirm the current rate and form.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=15",
+        "exemptions": ["Permanent residents (30 or more consecutive days)"],
+        "url": "https://www.clintoncountyny.gov/sites/default/files/treasurer/pdf/ClintonCountyOccupancyTaxInvoice.pdf",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
     "checkedOn": "2026-10-15"
   },
   {
@@ -399,10 +451,46 @@
   },
   {
     "county": "Genesee",
-    "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
-    "items": [],
+    "items": [
+      {
+        "id": "genesee-ny.occupancy-tax-registration",
+        "title": "Register for the Genesee County occupancy tax",
+        "category": "registration",
+        "authority": "Genesee County Treasurer",
+        "description": "Under Local Law 8 of 2021, any facility that provides overnight lodging for more than 14 days in a calendar year registers with the County Treasurer, with a separate certificate of registration for each location. The county opted out of the state short-term rental registry (Local Law 3 of 2026), so short-term rentals follow the county bed tax law.",
+        "frequency": "once",
+        "url": "https://www.geneseeny.gov/Department-Content/Treasurer-and-Real-Property/Bed-Tax",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "genesee-ny.occupancy-tax-return",
+        "title": "File the Genesee County bed tax return",
+        "category": "filing",
+        "authority": "Genesee County Treasurer",
+        "description": "Operators file the county bed tax return with payment and remit 3% of taxable room rentals. A late return adds a 5% monthly penalty and 1% monthly interest. The forms read are the 2022 and 2023 versions, so confirm the current ones.",
+        "frequency": "quarterly",
+        "deadline": "Within 20 days after each return period ends",
+        "exemptions": ["Permanent residents (stays of 30 or more consecutive days)"],
+        "url": "https://www.geneseeny.gov/Department-Content/Treasurer-and-Real-Property/Bed-Tax",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
     "checkedOn": "2026-10-15"
   },
   {
@@ -424,8 +512,7 @@
   {
     "county": "Herkimer",
     "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
+    "note": "New York Tax Law section 1202-zz-3 authorizes Herkimer County to adopt an occupancy tax, but no county law, rate, registration or return pages were found. Other county-level business duties were not checked.",
     "items": [],
     "checkedOn": "2026-10-15"
   },
@@ -482,10 +569,49 @@
   },
   {
     "county": "Lewis",
-    "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
-    "items": [],
+    "items": [
+      {
+        "id": "lewis-ny.occupancy-tax-registration",
+        "title": "Register for the Lewis County occupancy tax",
+        "category": "registration",
+        "authority": "Lewis County Treasurer",
+        "description": "The owner files a Certificate of Registration with the County Treasurer, who issues a Certificate of Authority within 10 business days to collect the 5% occupancy tax (Local Law 9 of 2004, amended 2019).",
+        "frequency": "once",
+        "deadline": "At least twenty days before commencing business",
+        "url": "https://lewiscountyny.gov/wp-content/uploads/2023/07/Occupancy-Tax-FAQs-1.pdf",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "lewis-ny.occupancy-tax-return",
+        "title": "File the Lewis County occupancy tax return",
+        "category": "filing",
+        "authority": "Lewis County Treasurer",
+        "description": "Quarterly filers follow the New York sales tax calendar: periods ending in February, May, August and November are due March 20, June 20, September 20 and December 20, within 20 days of the period's last day. Short-term rentals may file once a year, for December to November, due December 20. The county documents read date from 2022 and 2023.",
+        "rrule": "FREQ=YEARLY;BYMONTH=3,6,9,12;BYMONTHDAY=20",
+        "exemptions": [
+          "Entities exempt from New York sales tax (Form ST-129)",
+          "Permanent residents (30 or more consecutive days)"
+        ],
+        "url": "https://lewiscountyny.gov/wp-content/uploads/2023/07/Occupancy-Tax-FAQs-1.pdf",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
     "checkedOn": "2026-10-15"
   },
   {
@@ -589,8 +715,7 @@
   {
     "county": "Niagara",
     "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
+    "note": "New York Tax Law section 1202-t lets Niagara County tax hotel and motel rooms, and the state's sales tax schedules for Niagara include a hotel and motel occupancy line, but the county's own registration and return pages were not found. Other county-level business duties were not checked.",
     "items": [],
     "checkedOn": "2026-10-15"
   },
@@ -683,10 +808,26 @@
   },
   {
     "county": "Ontario",
-    "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
-    "items": [],
+    "items": [
+      {
+        "id": "ontario-ny.occupancy-tax-return",
+        "title": "File the Ontario County occupancy tax return",
+        "category": "filing",
+        "authority": "Ontario County Treasurer",
+        "description": "Operators file the county room occupancy tax return each quarter, due March 20, June 20, September 20 and December 20, and remit 3% of net taxable income. A 5% penalty applies after the due date, with 1% monthly interest after 30 days. The county's registration steps were not found on the pages read.",
+        "rrule": "FREQ=YEARLY;BYMONTH=3,6,9,12;BYMONTHDAY=20",
+        "url": "https://www.ontariocountyny.gov/DocumentCenter/View/29791/Occupancy-Tax-Quarterly-Letter-PDF",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
     "checkedOn": "2026-10-15"
   },
   {
@@ -734,8 +875,7 @@
   {
     "county": "Orleans",
     "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
+    "note": "Orleans County extended its hotel and motel occupancy tax to short-term rentals in April 2026 (Tax Law section 1202-u*3), but the rate, registration and return pages were not found. Other county-level business duties were not checked.",
     "items": [],
     "checkedOn": "2026-10-15"
   },
@@ -919,8 +1059,7 @@
   {
     "county": "Schuyler",
     "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
+    "note": "New York Tax Law section 1202-i lets Schuyler County tax hotel and motel rooms, but no county law, rate, registration or return pages were found. Other county-level business duties were not checked.",
     "items": [],
     "checkedOn": "2026-10-15"
   },
@@ -1343,18 +1482,69 @@
   },
   {
     "county": "Wyoming",
-    "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
-    "items": [],
+    "items": [
+      {
+        "id": "wyoming-ny.occupancy-tax-registration",
+        "title": "Register for the Wyoming County occupancy tax",
+        "category": "registration",
+        "authority": "Wyoming County Treasurer",
+        "description": "Operators complete the county's Registration and Application for Certificate of Authority to Collect Guest Room Occupancy Tax, giving business details, room count, business type and ownership, and send it to the Treasurer's Office in Warsaw. The rate and return dates were not found on the page read.",
+        "frequency": "once",
+        "url": "https://www.wyomingcountyny.gov/640/Occupancy-Tax-Certification-of-Registrat",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
     "checkedOn": "2026-10-15"
   },
   {
     "county": "Yates",
-    "status": "unverified",
-    "sourceUrl": "https://www.tax.ny.gov/pit/property/learn/proptax.htm",
-    "reason": "ny-no-personal-property-tax",
-    "items": [],
+    "items": [
+      {
+        "id": "yates-ny.occupancy-tax-registration",
+        "title": "Register for the Yates County occupancy tax",
+        "category": "registration",
+        "authority": "Yates County Department of Finance",
+        "description": "Operators file a Certification of Registration with the Department of Finance, which issues a Certificate of Authority for each location within ten days. VRBO collects and remits the tax on its bookings; Airbnb does not, so the owner is responsible for Airbnb bookings.",
+        "frequency": "once",
+        "url": "https://www.yatescountyny.gov/520/Occupancy-Tax",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      },
+      {
+        "id": "yates-ny.occupancy-tax-return",
+        "title": "File the Yates County occupancy tax return",
+        "category": "filing",
+        "authority": "Yates County Department of Finance",
+        "description": "A quarterly return is required even when no tax is due; the periods end February 28, May 31, August 31 and November 30 and the returns are due March 20, June 20, September 20 and December 20. The tax is 4% of rent, with a 5% penalty the day after the due date and interest after 30 days. The 5% administrative credit ends with the third quarter of 2026.",
+        "rrule": "FREQ=YEARLY;BYMONTH=3,6,9,12;BYMONTHDAY=20",
+        "exemptions": ["Permanent residents", "Certain exempt organizations"],
+        "url": "https://www.yatescountyny.gov/520/Occupancy-Tax",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
     "checkedOn": "2026-10-15"
   }
 ]
