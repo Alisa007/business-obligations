@@ -6,6 +6,9 @@
 
 <p align="center">
   <a href="https://github.com/Alisa007/business-obligations/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/Alisa007/business-obligations/actions/workflows/ci.yml/badge.svg" /></a>
+  <a href="https://www.npmjs.com/package/business-obligations"><img alt="npm version" src="https://img.shields.io/npm/v/business-obligations.svg" /></a>
+  <a href="https://www.npmjs.com/package/business-obligations"><img alt="npm downloads" src="https://img.shields.io/npm/dm/business-obligations.svg" /></a>
+  <img alt="Node 20+" src="https://img.shields.io/node/v/business-obligations.svg" />
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-blue.svg" /></a>
   <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-strict-3178c6.svg" />
   <img alt="Zero dependencies" src="https://img.shields.io/badge/dependencies-0-brightgreen.svg" />
