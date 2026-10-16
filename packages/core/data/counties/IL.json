@@ -1,10 +1,21 @@
 [
   {
     "county": "Cook",
-    "status": "unverified",
-    "note": "Illinois local governments no longer levy business personal property tax; businesses pay a state replacement tax instead, so Cook County has no business personal property return. Other county-level business duties, such as the hotel accommodations tax and licenses, were not checked.",
+    "note": "Illinois has no general business personal property tax. Cook County also has a 1% hotel accommodations tax with its own registration (taxregistration@cookcountyil.gov), but its return due date was not found; only the food establishment license was recorded.",
     "sourceUrl": "https://tax.illinois.gov/questionsandanswers/answer.82.html",
-    "items": [],
+    "items": [
+      {
+        "id": "cook-il.food-establishment-permit",
+        "title": "Get and renew the suburban Cook County food establishment health permit",
+        "category": "permit",
+        "authority": "Cook County Department of Public Health",
+        "description": "The department issues retail food establishment licenses and inspects food businesses in unincorporated Cook County and a few municipalities; elsewhere in the county the local health official does. The page lists an annual license fee that includes inspection; no cash is accepted.",
+        "frequency": "annual",
+        "url": "https://cookcountypublichealth.org/contact-us/permits-and-licenses/retail-food-establishment-application/",
+        "naics": ["722", "445"],
+        "appliesTo": ["all"]
+      }
+    ],
     "checkedOn": "2026-10-16"
   },
   {
