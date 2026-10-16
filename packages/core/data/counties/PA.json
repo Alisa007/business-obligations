@@ -2,135 +2,297 @@
   {
     "county": "Allegheny",
     "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
     "items": [],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16",
+    "note": "Pennsylvania has no general business personal property tax. Allegheny County levies a 7% hotel room rental tax through the Treasurer's Special Tax Division (Hotel Tax Account Application), but only secondary sources were found for its return due date."
   },
   {
     "county": "Berks",
-    "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "berks-pa.hotel-room-rental-tax-return",
+        "title": "File the Berks County hotel room rental tax return",
+        "category": "filing",
+        "authority": "Berks County Treasurer",
+        "description": "All hotel operators send the monthly remittance report to the Treasurer on or before the 25th for the prior month's room sales, even when no tax is due. Late filings more than 5 days past due cost $100 plus 1.5% monthly interest under the county's 2016 rules.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=25",
+        "url": "https://www.berkspa.gov/Departments/Treasurer/Hotel-Tax",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Pennsylvania has no general business personal property tax; only the lodging tax was checked for Berks."
   },
   {
     "county": "Bucks",
-    "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "bucks-pa.hotel-room-rental-tax-return",
+        "title": "File the Bucks County hotel room rental tax return",
+        "category": "filing",
+        "authority": "Bucks County Treasurer",
+        "description": "The tax is 5% of the gross room rental. Establishments with fewer than 100 rooms, including short-term rentals, file quarterly: April 30, July 31, October 31 and January 31. Establishments with 100 or more rooms file monthly, due at the end of the following month.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
+        "url": "https://buckscounty.gov/1064/Filing-Due-Dates",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Pennsylvania has no general business personal property tax; only the lodging tax was checked for Bucks."
   },
   {
     "county": "Chester",
-    "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "chester-pa.hotel-room-rental-tax-return",
+        "title": "File the Chester County hotel room rental tax return",
+        "category": "filing",
+        "authority": "Chester County",
+        "description": "The tax is 5% of the gross room charge (4.65% when breakfast is included). Hotels submit a monthly tax report by midnight on the 25th after the close of each calendar month.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=25",
+        "url": "https://www.chesco.org/1104/Hotel-Tax",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Pennsylvania has no general business personal property tax; only the lodging tax was checked for Chester."
   },
   {
     "county": "Cumberland",
-    "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "cumberland-pa.hotel-room-rental-tax-return",
+        "title": "File the Cumberland County hotel room rental tax return",
+        "category": "filing",
+        "authority": "Cumberland County Treasurer",
+        "description": "The tax is 5% since April 1, 2024. Online reports and payments are due by the 20th of the following month (mailed ones postmarked by then), and a report is required even with no bookings. Booking-platform hosts must still register and file; a 1.5% late fee is added each month unpaid.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://cumberlandcountypa.munirevs.com/faq/",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Pennsylvania has no general business personal property tax; only the lodging tax was checked for Cumberland."
   },
   {
     "county": "Dauphin",
-    "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "dauphin-pa.hotel-room-rental-tax-return",
+        "title": "File the Dauphin County hotel room rental tax return",
+        "category": "filing",
+        "authority": "Dauphin County Treasurer",
+        "description": "The tax is 5% of revenue, due on the last day of the month after the period collected. Late remittances and reports cost $100 plus 9% annual interest, with no provision for waiver.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
+        "url": "https://www.dauphincounty.gov/government/publicly-elected-officials/treasurer/hotel-tax-forms",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Pennsylvania has no general business personal property tax; only the lodging tax was checked for Dauphin."
   },
   {
     "county": "Delaware",
-    "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "delaware-pa.hotel-room-rental-tax-return",
+        "title": "File the Delaware County hotel room rental tax return",
+        "category": "filing",
+        "authority": "Delaware County Treasurer",
+        "description": "The tax is 3% of each room rental. Operators file and pay on or before the 10th of the month after collection, with interest and penalties of 1.5% a month. Since February 1, 2026 hotel and short-term rental operators register and report online in the county's GovOS portal.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=10",
+        "url": "https://delcopa.gov/sites/default/files/2026-01/GovOsFlyer.pdf",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Pennsylvania has no general business personal property tax; only the lodging tax was checked for Delaware."
   },
   {
     "county": "Erie",
     "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
     "items": [],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16",
+    "note": "Pennsylvania has no general business personal property tax. Erie County's hotel tax rules were not found (searches returned Erie County, New York)."
   },
   {
     "county": "Fayette",
     "status": "unverified",
-    "note": "The official county site's Businesses and License & Permit Fees pages describe no county business license, business tax or business filing; no explicit statement that none exists was found.",
+    "note": "Pennsylvania has no general business personal property tax. Fayette County's hotel tax rules were not checked.",
     "items": [],
     "checkedOn": "2026-10-16"
   },
   {
     "county": "Lancaster",
     "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
     "items": [],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16",
+    "note": "Pennsylvania has no general business personal property tax. Lancaster County has a hotel room rental tax with a combined monthly report on the Treasurer's hotel tax page, but the due date was not found."
   },
   {
     "county": "Lehigh",
-    "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "lehigh-pa.hotel-room-rental-tax-return",
+        "title": "File the Lehigh County hotel room rental tax return",
+        "category": "filing",
+        "authority": "Lehigh County Fiscal Office",
+        "description": "The tax is 4%. Operators remit on or before the 20th of the month after the tax was levied, with 1.5% a month penalty on unpaid tax (forms read are from 2020; confirm they are current).",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+        "url": "https://lehighcounty.org/Portals/0/PDF/Fiscal/Hotel_Tax_Return.pdf",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Pennsylvania has no general business personal property tax; only the lodging tax was checked for Lehigh."
   },
   {
     "county": "Luzerne",
     "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
     "items": [],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16",
+    "note": "Pennsylvania has no general business personal property tax. Luzerne County's hotel tax rules were not found."
   },
   {
     "county": "Montgomery",
     "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
     "items": [],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16",
+    "note": "Pennsylvania has no general business personal property tax. Montgomery County's hotel tax rules were not found."
   },
   {
     "county": "Northampton",
     "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
     "items": [],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16",
+    "note": "Pennsylvania has no general business personal property tax. Northampton County levies a 4% hotel tax, but its return due date was not found."
   },
   {
     "county": "Philadelphia",
-    "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "philadelphia-pa.hotel-room-rental-tax-return",
+        "title": "File the City of Philadelphia hotel room rental tax return",
+        "category": "filing",
+        "authority": "Philadelphia Department of Revenue",
+        "description": "The city's hotel tax is 8.5% of the amount the guest pays; returns and payments are due by the 15th of the month after the rental month, filed on the Philadelphia Tax Center.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=15",
+        "url": "https://www.phila.gov/services/payments-assistance-taxes/business-taxes/hotel-tax/",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Pennsylvania has no general business personal property tax; only the lodging tax was checked for Philadelphia."
   },
   {
     "county": "Schuylkill",
     "status": "unverified",
-    "note": "The official county site's tax pages cover real estate and per capita taxes only; no county business license, business tax or business filing was confirmed.",
+    "note": "Pennsylvania has no general business personal property tax. Schuylkill County's hotel tax rules were not checked.",
     "items": [],
     "checkedOn": "2026-10-16"
   },
   {
     "county": "Washington",
     "status": "unverified",
-    "note": "The county treasurer's page links a Hotel Tax Return PDF, but the PDF is an unreadable scan and no filing frequency or due date was confirmed on an official page.",
+    "note": "Pennsylvania has no general business personal property tax. Washington County's hotel tax rules were not checked.",
     "sourceUrl": "https://www.washcopa.gov/treasurer",
     "items": [],
     "checkedOn": "2026-10-16"
   },
   {
     "county": "Westmoreland",
-    "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "westmoreland-pa.hotel-room-rental-tax-return",
+        "title": "File the Westmoreland County hotel room rental tax return",
+        "category": "filing",
+        "authority": "Westmoreland County Treasurer",
+        "description": "Operators file the Hotel Room Rental Tax Return on or before the 25th of each month for the prior month, with payment, and attach exemption certificates for any exempt guests.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=25",
+        "url": "https://www.westmorelandcountypa.gov/1455/Hotel-Tax-Forms",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Operates a hotel, motel or short-term rental"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-16",
+    "note": "Pennsylvania has no general business personal property tax; only the lodging tax was checked for Westmoreland."
   },
   {
     "county": "York",
     "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
     "items": [],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-16",
+    "note": "Pennsylvania has no general business personal property tax. York County's hotel room rental tax rules were not found."
   }
 ]
