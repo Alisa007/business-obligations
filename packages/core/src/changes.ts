@@ -9,10 +9,10 @@ const REGISTRY = changeData as unknown as { rulesetVersion: string; changes: Rul
  * Version of the bundled rules and data. Bumped whenever any rule or data file changes; the format is
  * `YYYY-MM-DD.n` (date of the data review, then a revision counter).
  */
-export const RULESET_VERSION: string = REGISTRY.rulesetVersion;
+export const RULESET_VERSION: string = /* @__PURE__ */ (() => REGISTRY.rulesetVersion)();
 
 /** Dated changes bundled with the library, sorted by effective date. */
-export const BUNDLED_CHANGES: readonly RuleChange[] = [...REGISTRY.changes].sort((a, b) =>
+export const BUNDLED_CHANGES: readonly RuleChange[] = /* @__PURE__ */ [...REGISTRY.changes].sort((a, b) =>
   a.effective.localeCompare(b.effective),
 );
 
