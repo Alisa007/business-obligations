@@ -2118,6 +2118,94 @@
     "exemptions": ["Buyers of under $20,000 a year of New York farm products"]
   },
   {
+    "id": "ny.nyc-hotel-license",
+    "title": "Get a NYC hotel license",
+    "category": "license",
+    "authority": "NYC Department of Consumer and Worker Protection",
+    "description": "Anyone who operates, owns, leases or manages a hotel in New York City and controls its day-to-day operations needs a separate DCWP licence for each hotel, expiring September 30 of even-numbered years. The fee is $350 for applications from October 1 of an even year, $262.50 from April 1 of an odd year, $175 from October 1 of an odd year, and $87.50 (or $437.50 for the longer term) from April 1 of an even year. A DOB determination that guests can occupy the rooms is also required.",
+    "naics": ["721110"],
+    "appliesTo": ["all"],
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-hotel.page",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=9;BYMONTHDAY=30",
+    "anchor": "2026-09-30"
+  },
+  {
+    "id": "ny.nyc-newsstand-license",
+    "title": "Get a NYC newsstand license",
+    "category": "license",
+    "authority": "NYC Department of Consumer and Worker Protection",
+    "description": "Newsstands in New York City need a DCWP licence with a two-year term expiring September 30 or March 31 of even-numbered years. The fee is charged in two parts, $269 at submission and the rest after construction, for a total of $269 to $1,076 depending on the window; legally blind applicants may have it waived.",
+    "naics": ["459210", "4592"],
+    "appliesTo": ["all"],
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-newsstand.page",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "frequency": "biennial",
+    "renewal": "Every two years"
+  },
+  {
+    "id": "ny.nyc-stoop-line-stand-license",
+    "title": "Get a NYC stoop line stand license",
+    "category": "license",
+    "authority": "NYC Department of Consumer and Worker Protection",
+    "description": "Stoop line stands selling fruit, vegetables, soft drinks, flowers, confectionery, ice cream or ices in New York City need a DCWP licence, expiring March 31 of even-numbered years. The fee depends on the goods sold and when you file, for example from $200 for a mixed stand filed April 1 to September 30 of an even year to $20 for a confectionery or ice cream stand filed in the last six months.",
+    "naics": ["4452", "4453", "445230"],
+    "appliesTo": ["all"],
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-stoop-line-stand.page",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=3;BYMONTHDAY=31",
+    "anchor": "2026-03-31"
+  },
+  {
+    "id": "ny.nyc-horse-drawn-cab-owner-license",
+    "title": "Get a NYC horse drawn cab owner license",
+    "category": "license",
+    "authority": "NYC Department of Consumer and Worker Protection",
+    "description": "Owners of horse drawn cabs in New York City need a DCWP licence, expiring March 31 of even-numbered years. The fee is $100 for applications from April 1 of an even year, $75 from October 1, $50 from April 1 of an odd year, and $25 (or $125 for the longer term) from October 1 of an odd year. Liability cover with minimums from $10,000 for property damage to $100,000 for deaths of two or more people is required, naming DCWP as certificate holder. Drivers are licensed separately.",
+    "naics": ["485999", "713990"],
+    "appliesTo": ["all"],
+    "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-horse-drawn-cab-owner.page",
+    "checkedOn": "2026-10-16",
+    "jurisdiction": "city",
+    "appliesWhen": [
+      {
+        "field": "county",
+        "op": "in",
+        "value": ["New York", "Kings", "Queens", "Bronx", "Richmond"],
+        "description": "Located in New York City"
+      }
+    ],
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=3;BYMONTHDAY=31",
+    "anchor": "2026-03-31"
+  },
+  {
     "id": "ny.ammonium-nitrate-retailer-license",
     "title": "Get an ammonium nitrate fertilizer retailer license",
     "category": "license",
