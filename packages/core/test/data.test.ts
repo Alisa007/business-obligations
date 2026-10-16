@@ -650,6 +650,42 @@ describe("seed items with appliesWhen", () => {
   });
 });
 
+describe("New York county items follow their conditions", () => {
+  const nassau: BusinessProfile = {
+    entityType: "llc",
+    zip: "11501",
+    city: "Mineola",
+    county: "Nassau",
+    state: "NY",
+    employeeCount: 40,
+    annualPayroll: 3_000_000,
+  };
+  const titles = (p: BusinessProfile) =>
+    evaluate(p, { asOf: "2026-10-15" })
+      .items.filter((i) => i.jurisdiction === "county")
+      .map((i) => i.title);
+  const has = (p: BusinessProfile, text: RegExp) => titles(p).some((x) => text.test(x));
+
+  it("shows the MCTMT only for employers with enough payroll in the commuter district", () => {
+    expect(has(nassau, /MCTMT/)).toBe(true);
+    expect(has({ ...nassau, annualPayroll: 500_000 }, /MCTMT/)).toBe(false);
+    expect(has({ ...nassau, employeeCount: 0, annualPayroll: 0 }, /MCTMT/)).toBe(false);
+    // Albany County is outside the district.
+    expect(has({ ...nassau, zip: "12207", city: "Albany", county: "Albany" }, /MCTMT/)).toBe(false);
+  });
+
+  it("shows lodging and home improvement obligations only to those businesses", () => {
+    expect(has(nassau, /home improvement/i)).toBe(false);
+    expect(has(nassau, /occupancy tax/i)).toBe(false);
+    expect(
+      has({ ...nassau, activities: ["home_improvement"] }, /Nassau County home improvement license/),
+    ).toBe(true);
+    const westchester = { ...nassau, county: "Westchester", zip: "10601", city: "White Plains" };
+    expect(has(westchester, /Westchester County occupancy tax/)).toBe(false);
+    expect(has({ ...westchester, activities: ["lodging"] }, /Westchester County occupancy tax/)).toBe(true);
+  });
+});
+
 describe("bring-your-own city data", () => {
   const profile: BusinessProfile = {
     entityType: "llc",
