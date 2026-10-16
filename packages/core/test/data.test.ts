@@ -327,6 +327,14 @@ describe("county data files", () => {
     const missing = top.filter((c) => !findCounty(c.state, c.county)).map((c) => `${c.county}, ${c.state}`);
     expect(missing).toEqual([]);
   });
+  it("a county is only `none` when more than the personal property return was checked", () => {
+    for (const j of COUNTY_JURISDICTIONS.filter((x) => x.status === "none"))
+      expect(
+        j.note ?? "",
+        `${j.state} ${j.county}: none cannot rest on a personal property check alone`,
+      ).not.toMatch(/personal property/i);
+  });
+
   it("matches names regardless of County/Parish suffixes", () => {
     expect(findCounty("CA", "Los Angeles County")?.county).toBe("Los Angeles");
     expect(findCounty("LA", "East Baton Rouge")?.county).toBe("East Baton Rouge Parish");

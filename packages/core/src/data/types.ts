@@ -309,14 +309,20 @@ export interface LocalItem {
   renewal?: string;
 }
 
-/** A county-level rule seed: what a county (or parish, borough) requires of businesses located in it. */
+/**
+ * A county-level rule seed: every business obligation a county (or parish, borough) imposes, such as licenses and taxes,
+ * lodging occupancy taxes, business personal property returns and clerk filings.
+ */
 export interface CountyJurisdiction {
   state: string;
   /** County name as the ZIP data spells it, without "County" (for example "Los Angeles", "Miami-Dade"). */
   county: string;
   /** Other names that resolve to this county. */
   aliases?: string[];
-  /** `rules` (default), `none` (checked, nothing county-specific) or `unverified` (no official page confirmed). */
+  /**
+   * `rules` (default), `none` (every kind of county-level obligation was checked and there is none) or `unverified`
+   * (nothing confirmed, or only some kinds checked; the note says which).
+   */
   status?: "rules" | "none" | "unverified";
   /** Date (YYYY-MM-DD) the entry was last checked against the county's official pages. */
   checkedOn?: string;
