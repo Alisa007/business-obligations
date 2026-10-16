@@ -5,6 +5,23 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-10-16
+
+### Breaking changes
+
+- **data:** one fee source (feeDetail, text generated); required fields where data always has them
+- **data:** store fees, state codes, withholding and enum values once
+
+### Added
+
+- **data:** sourceUrl may be a list of official pages
+- **data:** stricter, documented state schema in a logical key order; fewer stored duplicates
+- **data:** iCalendar rrule as the single source for schedules; schemas for city, county and profession data
+
+### Fixed
+
+- **data:** write each deadline date once, in the rrule
+
 ## [0.3.1] - 2026-10-16
 
 ### Fixed
