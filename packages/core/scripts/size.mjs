@@ -17,6 +17,11 @@ const budgets = [
     note: "ZIP -> city/county/state lookup (subpath, loaded on demand)",
   },
   {
+    file: "dist/locales/es.cjs",
+    maxGzipKb: 250,
+    note: "Spanish catalog: labels, rule text and the text of every bundled state, city and county item (subpath, loaded on demand)",
+  },
+  {
     file: "dist/naics.js",
     maxGzipKb: 40,
     note: "NAICS code search (subpath, loaded on demand)",
