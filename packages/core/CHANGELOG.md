@@ -5,6 +5,8 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ## [Unreleased]
 
+## [0.6.0] - 2026-10-17
+
 ### Added
 
 - **i18n:** a bundled Spanish catalog (`business-obligations/locales/es`) covering every rule, label and the text of all
@@ -13,6 +15,10 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 - **i18n:** catalogs can translate exact text (`strings`), text with variable parts (`patterns`), bare date lists
   (`months`, `monthDay`), and name entity types, filing methods and data confidence
 - **i18n:** `LocalizedItem.labels` includes `filingMethod` and `confidence`
+
+### Added
+
+- English and Spanish translations for core and ui
 
 ## [0.5.0] - 2026-10-16
 
