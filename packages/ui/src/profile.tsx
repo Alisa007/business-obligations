@@ -1,6 +1,6 @@
 import { useEffect, useId, useState } from "react";
 import { ENTITY_TYPES, INDUSTRIES, type EntityType, type Industry } from "business-obligations";
-import { Checkbox, Label, Text, XStack, YStack } from "tamagui";
+import { Label, Text, XStack, YStack } from "tamagui";
 import { nativeControl } from "./controls";
 import { WithLocale, useI18n } from "./i18n";
 import type { Messages } from "./messages";
@@ -136,6 +136,14 @@ export interface DetailsInputProps extends Omit<ProfileInputProps, "id"> {
   fields?: readonly DetailField[];
 }
 
+const checkboxStyle = {
+  width: 16,
+  height: 16,
+  margin: 0,
+  accentColor: "var(--accent-background)",
+  cursor: "pointer",
+} as const;
+
 /** The S election only exists for corporations that can make one. */
 const S_ELECTION_TYPES: readonly EntityType[] = ["pc", "benefit_corp"];
 
@@ -156,18 +164,14 @@ function DetailChecks({ fields }: { fields: readonly DetailField[] }) {
           const id = `${prefix}-${field}`;
           return (
             <XStack key={field} gap="2" alignItems="center">
-              <Checkbox
+              {/* A native checkbox: small by nature, and it renders the same on the server and the client. */}
+              <input
+                type="checkbox"
                 id={id}
-                size="sm"
                 checked={choices[field]}
-                onCheckedChange={(value) => set({ [field]: value === true })}
-              >
-                <Checkbox.Indicator>
-                  <Text fontSize="xs" lineHeight={1}>
-                    ✓
-                  </Text>
-                </Checkbox.Indicator>
-              </Checkbox>
+                onChange={(event) => set({ [field]: event.target.checked })}
+                style={checkboxStyle}
+              />
               <Label htmlFor={id} cursor="pointer" fontSize="sm">
                 {m.profile.detailLabels[field]}
               </Label>
