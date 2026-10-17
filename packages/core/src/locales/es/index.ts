@@ -3,12 +3,15 @@ import { labels } from "./labels";
 import deadlines from "./strings/deadlines.json";
 import authority from "./strings/authority.json";
 import descriptions from "./strings/descriptions.json";
+import industries from "./strings/industries.json";
 import localDescriptions from "./strings/local-descriptions.json";
 import local from "./strings/local.json";
 import notes from "./strings/notes.json";
 import reasons from "./strings/reasons.json";
+import rulesExtra from "./strings/rules-extra.json";
 import terms from "./strings/terms.json";
 import titles from "./strings/titles.json";
+import { rulePatterns } from "./patterns-rules";
 import { authorityPatterns } from "./patterns-authority";
 import { patterns } from "./patterns";
 import { localPatterns } from "./patterns-local";
@@ -36,16 +39,19 @@ export const es: Catalog = {
     ...reasons,
     ...descriptions,
     ...local,
+    ...industries,
     ...authority,
     ...localDescriptions,
     ...terms,
+    ...rulesExtra,
   },
   patterns: [
     ...localPatterns,
     ...patterns,
     ...statePatterns,
+    ...rulePatterns,
     ...authorityPatterns,
     // Last resort for "<text> (<qualifier>)": translates each part on its own.
-    ["{1} ({2!})", "{1} ({2})"],
+    ["{1:w} ({2!})", "{1} ({2})"],
   ],
 };

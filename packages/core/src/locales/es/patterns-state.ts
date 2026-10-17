@@ -60,6 +60,10 @@ export const statePatterns: NonNullable<Catalog["patterns"]> = [
     "Coverage is optional for most private employers; non-subscribers lose common-law defenses in injury suits. Rule: {1}.",
     "La cobertura es opcional para la mayoría de los empleadores privados; quienes no se suscriben pierden las defensas del derecho común en las demandas por lesiones. Regla: {1}.",
   ],
+  [
+    "Required at: {1:n} employees (annual payroll of {2} or more).",
+    "Obligatorio a partir de: {1} empleados (nómina anual de {2} o más).",
+  ],
   ["Required at: {1}.", "Obligatorio a partir de: {1}."],
   [
     "Federal law requires reporting each new hire within {1} days of hire (some states require sooner).",

@@ -1,8 +1,5 @@
-import fs from "node:fs";
-import path from "node:path";
 import { describe, expect, it } from "vitest";
 import {
-  STATE_CODES,
   evaluate,
   localize,
   localizePlan,
@@ -13,6 +10,7 @@ import {
 } from "../src";
 import { en } from "../src/locales/en";
 import { es } from "../src/locales/es";
+import { collectCorpus } from "./helpers/i18n-corpus";
 
 const base: BusinessProfile = {
   entityType: "llc",
@@ -123,53 +121,12 @@ describe("es catalog", () => {
     );
   });
 
-  it("translates every state-level text for every state", () => {
-    const untranslated: string[] = [];
-    for (const state of STATE_CODES) {
-      for (const entityType of ["llc", "c_corp", "nonprofit"] as const) {
-        const result = evaluate(
-          { ...base, state, entityType, city: "X", county: "Y", isFormed: true, employeeCount: 4 },
-          { asOf },
-        );
-        const spanish = localize(result, es);
-        spanish.items.forEach((item, i) => {
-          const english = result.items[i]!;
-          for (const field of ["title", "description", "reason", "deadline", "renewal"] as const) {
-            const before = english[field];
-            if (before && item[field] === before)
-              untranslated.push(`${state} ${english.ruleId} ${field}: ${before}`);
-          }
-        });
-      }
-    }
-    expect(untranslated).toEqual([]);
-  });
-
-  it("translates every bundled city and county text", () => {
-    const root = path.join(import.meta.dirname, "..", "data");
-    const untranslated: string[] = [];
-    const check = (text: unknown, where: string) => {
-      if (typeof text !== "string" || !text.trim()) return;
-      if (localizeText(text, es) === text) untranslated.push(`${where}: ${text}`);
-    };
-    for (const dir of ["states", "cities", "counties"]) {
-      for (const file of fs.readdirSync(path.join(root, dir)).filter((f) => f.endsWith(".json"))) {
-        const walk = (node: unknown, key: string, parent: string) => {
-          if (Array.isArray(node)) return node.forEach((n) => walk(n, key, parent));
-          if (!node || typeof node !== "object") return;
-          for (const [k, value] of Object.entries(node)) {
-            if (typeof value === "string") {
-              const text = ["title", "description", "deadline", "renewal", "processingTime"].includes(k);
-              const note = k === "note" && ["feeDetail", "lateFee", "unemployment"].includes(parent);
-              if (text || note) check(value, `${dir}/${file} ${k}`);
-            } else if (k === "exemptions" && Array.isArray(value))
-              value.forEach((e) => check(e, `${dir}/${file} exemption`));
-            else walk(value, k, key);
-          }
-        };
-        walk(JSON.parse(fs.readFileSync(path.join(root, dir, file), "utf8")), "", "");
-      }
-    }
+  it("translates every text the engine can show", { timeout: 120_000 }, () => {
+    // Official agency names (the `authority` field) stay as the agency writes them.
+    const { corpus } = collectCorpus();
+    const untranslated = [...corpus]
+      .filter(([text, meta]) => meta.field !== "authority" && localizeText(text, es) === text)
+      .map(([text, meta]) => `[${meta.ruleId}] ${meta.field}: ${text}`);
     expect(untranslated).toEqual([]);
   });
 

@@ -53,6 +53,8 @@ export interface Catalog {
   months?: readonly string[];
   /** How a month and a day are written, e.g. `{day} de {month}`. */
   monthDay?: string;
+  /** How a month, a day and a year are written, e.g. `{day} de {month} de {year}`. Defaults to `monthDay`. */
+  monthDayYear?: string;
   /** Display names for entity types, used by `{entityType}` in rule messages. */
   entityTypes?: Record<string, string>;
   filingMethods?: Partial<Record<FilingMethod, string>>;
@@ -96,12 +98,12 @@ const MONTHS_EN = [
   "November",
   "December",
 ];
-const MONTH_DAY = new RegExp(`\\b(${MONTHS_EN.join("|")}) (\\d{1,2})\\b`, "g");
+const MONTH_DAY = new RegExp(`\\b(${MONTHS_EN.join("|")}) (\\d{1,2})(?:, (\\d{4}))?\\b`, "g");
 
 // A sentence ends at ". " before a capital letter, but not after an initial or abbreviation ("N.C.G.S.", "Rev. Stat.").
 const SENTENCE_BREAK =
-  /(?<=[.!?])(?<!\b[A-Z]\.)(?<!\b(?:Rev|Stat|Code|Gen|Ann|Misc|Miss|Sec|No|St|Co|Inc|Ltd|Dept|Ch)\.)\s+(?=[A-Z$(])/;
-const DATE = `(?:${MONTHS_EN.join("|")}) \\d{1,2}`;
+  /(?<=[.!?])(?<!\b[A-Z]\.)(?<!\b(?:Rev|Stat|Code|Gen|Ann|Misc|Miss|Sec|No|St|Co|Inc|Ltd|Dept|Ch)\.)\s+(?=[A-Z0-9$(])/;
+const DATE = `(?:${MONTHS_EN.join("|")}) \\d{1,2}(?:, \\d{4})?`;
 const PURE_DATES = new RegExp(`^${DATE}(?:, ${DATE})*$`);
 
 const compiled = new WeakMap<Catalog, Array<Pattern>>();
@@ -201,9 +203,13 @@ export function localizeText(text: string, catalog: Catalog, depth = 0): string 
   // alone: the sentence has to be translated as a whole, or it would come out half in each language.
   if (catalog.months?.length === 12 && catalog.monthDay && PURE_DATES.test(text)) {
     const { months, monthDay } = catalog;
-    return text.replace(MONTH_DAY, (_, month: string, day: string) =>
-      monthDay.replace("{month}", months[MONTHS_EN.indexOf(month)] ?? month).replace("{day}", day),
-    );
+    return text.replace(MONTH_DAY, (_, month: string, day: string, year?: string) => {
+      const template = year ? (catalog.monthDayYear ?? monthDay) : monthDay;
+      return template
+        .replace("{month}", months[MONTHS_EN.indexOf(month)] ?? month)
+        .replace("{day}", day)
+        .replace("{year}", year ?? "");
+    });
   }
   return text;
 }
@@ -241,6 +247,13 @@ function localizeItem(item: ComplianceItem, p: ResolvedProfile, catalog: Catalog
     ...(item.renewal !== undefined ? { renewal: text(item.renewal) } : {}),
     ...(item.processingTime !== undefined ? { processingTime: text(item.processingTime) } : {}),
     ...(item.exemptions ? { exemptions: item.exemptions.map(text) } : {}),
+    ...(item.appliesWhen
+      ? {
+          appliesWhen: item.appliesWhen.map((w) =>
+            w.description ? { ...w, description: text(w.description) } : w,
+          ),
+        }
+      : {}),
     ...(item.cost?.note !== undefined ? { cost: { ...item.cost, note: text(item.cost.note) } } : {}),
     ...(item.penalty?.note !== undefined
       ? { penalty: { ...item.penalty, note: text(item.penalty.note) } }

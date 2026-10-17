@@ -54,4 +54,5 @@ export const labels: Omit<Catalog, "locale"> = {
     "diciembre",
   ],
   monthDay: "{day} de {month}",
+  monthDayYear: "{day} de {month} de {year}",
 };

@@ -55,24 +55,69 @@ export const patterns: NonNullable<Catalog["patterns"]> = [
     "{1} empleados (más de {2} empleados de forma regular)",
   ],
   ["{1:n} employees ({2:n} in construction)", "{1} empleados ({2} en construcción)"],
+  ["Annual payroll over {1}", "Nómina anual superior a {1}"],
+  ["{1:n} employees (annual payroll of {2} or more)", "{1} empleados (nómina anual de {2} o más)"],
   ["{1:n} employees", "{1} empleados"],
   ["{1:n} employee", "{1} empleado"],
 
   // ── Federal forms
   [
+    "File the final federal income tax return ({1!})",
+    "Presentar la declaración federal final del impuesto sobre la renta ({1})",
+  ],
+  [
+    "Form {1:w} with Schedule C (mark the business closed)",
+    "Formulario {1} con el Anexo C (marque el negocio como cerrado)",
+  ],
+  ["Form {1:w} (mark the business closed)", "Formulario {1} (marque el negocio como cerrado)"],
+  [
+    "Keep OSHA injury and illness records and post the annual summary (Form {1:w})",
+    "Conservar los registros de lesiones y enfermedades de OSHA y exhibir el resumen anual (Formulario {1})",
+  ],
+  [
+    "Pay California LLC fee on gross receipts (Form {1:w})",
+    "Pagar la tarifa de LLC de California sobre los ingresos brutos (Formulario {1})",
+  ],
+  [
+    "Classify contractors with the ABC test before treating workers as independent ({1:p})",
+    "Clasificar a los contratistas con la prueba ABC antes de tratarlos como trabajadores independientes ({1})",
+  ],
+  [
+    "Classify contractors with the ABC test for unemployment and wage law ({1:p})",
+    "Clasificar a los contratistas con la prueba ABC para las leyes de desempleo y de salarios ({1})",
+  ],
+  [
+    "Classify contractors correctly for unemployment insurance ({1:p})",
+    "Clasificar correctamente a los contratistas para el seguro de desempleo ({1})",
+  ],
+  [
+    "Put freelance work of {1:w} or more in a written contract ({2:p})",
+    "Formalizar en un contrato escrito el trabajo independiente de {1} o más ({2})",
+  ],
+  ["File LLP statement ({1:p})", "Presentar la declaración de LLP ({1})"],
+  [
+    "File Certificate of Annual Registration and annual report ({1:p})",
+    "Presentar el certificado de registro anual y el informe anual ({1})",
+  ],
+  ["Renew LLP certificate ({1:p})", "Renovar el certificado de LLP ({1})"],
+  ["Pay LLP annual registration fee ({1:p})", "Pagar la tarifa de registro anual de LLP ({1})"],
+  [
     "File federal income tax return: {1}",
     "Presentar la declaración federal del impuesto sobre la renta: {1}",
   ],
-  ["Form {1} with Schedule C", "Formulario {1} con el Anexo C"],
-  ["Form {1} (and Schedule K-1 for each partner)", "Formulario {1} (y Anexo K-1 para cada socio)"],
-  ["Form {1} (and Schedule K-1 for each shareholder)", "Formulario {1} (y Anexo K-1 para cada accionista)"],
-  ["Form {1} / {2} / {3}", "Formulario {1} / {2} / {3}"],
-  ["Form {1}", "Formulario {1}"],
+  ["Form {1:w} with Schedule C", "Formulario {1} con el Anexo C"],
+  ["Form {1:w} (and Schedule K-1 for each partner)", "Formulario {1} (y Anexo K-1 para cada socio)"],
+  ["Form {1:w} (and Schedule K-1 for each shareholder)", "Formulario {1} (y Anexo K-1 para cada accionista)"],
+  ["Form {1:w} / {2:w} / {3:w}", "Formulario {1} / {2} / {3}"],
+  ["Form {1:w}", "Formulario {1}"],
   [
     "File Form {1} (Employer's Quarterly Federal Tax Return)",
     "Presentar el Formulario {1} (Declaración Federal Trimestral del Empleador)",
   ],
-  ["File Form {1} (Federal Unemployment Tax)", "Presentar el Formulario {1} (Impuesto Federal de Desempleo)"],
+  [
+    "File Form {1:w} (Federal Unemployment Tax)",
+    "Presentar el Formulario {1} (Impuesto Federal de Desempleo)",
+  ],
   [
     "File Form {1} for independent contractors",
     "Presentar el Formulario {1} para contratistas independientes",
