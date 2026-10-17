@@ -11,11 +11,21 @@
 //   docs, chore, ci, build, test, refactor, style -> no release by themselves.
 import { execFileSync } from "node:child_process";
 import { readFileSync, writeFileSync } from "node:fs";
+import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const here = (p) => fileURLToPath(new URL(p, import.meta.url));
-const pkgPath = here("../package.json");
-const logPath = here("../CHANGELOG.md");
+const repoRoot = here("../../../");
+const option = (name, fallback) => {
+  const index = process.argv.indexOf(name);
+  return index >= 0 ? process.argv[index + 1] : fallback;
+};
+const packageOption = option("--package", "");
+const changelogOption = option("--changelog", "");
+const pkgPath = packageOption ? resolve(repoRoot, packageOption) : here("../package.json");
+const logPath = changelogOption ? resolve(repoRoot, changelogOption) : here("../CHANGELOG.md");
+const packageScope = packageOption ? packageOption.replace(/\/package\.json$/, "") : "packages/core";
+const tagPrefix = option("--tag-prefix", "v");
 
 const RELEASING = new Set(["feat", "fix", "perf", "revert"]);
 const SECTIONS = [
@@ -84,23 +94,23 @@ export function applyChangelog(log, version, date, commits) {
 }
 
 function git(...args) {
-  return execFileSync("git", args, { encoding: "utf8", cwd: here("..") }).trim();
+  return execFileSync("git", args, { encoding: "utf8", cwd: repoRoot }).trim();
 }
 
-/** The last v* tag, or undefined when the repository has none yet. */
-export function lastTag() {
+/** The last package tag, or undefined when the repository has none yet. */
+export function lastTag(prefix = "v") {
   try {
-    return git("describe", "--tags", "--abbrev=0", "--match", "v*");
+    return git("describe", "--tags", "--abbrev=0", "--match", `${prefix}*`);
   } catch {
     return undefined;
   }
 }
 
-/** Commits that touched this package since the last v* tag (newest first). */
-export function commitsSinceLastTag() {
-  const tag = lastTag();
+/** Commits since the last package tag (newest first). */
+export function commitsSinceLastTag(prefix = "v") {
+  const tag = lastTag(prefix);
   const range = tag ? `${tag}..HEAD` : "HEAD";
-  const raw = git("log", range, "--format=%H%x1f%s%x1f%b%x1e", "--", ".");
+  const raw = git("log", range, "--format=%H%x1f%s%x1f%b%x1e", "--", packageScope);
   return raw
     .split("\x1e")
     .map((r) => r.trim())
@@ -116,9 +126,9 @@ export function commitsSinceLastTag() {
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const pkg = JSON.parse(readFileSync(pkgPath, "utf8"));
   // The last tag is what is published; package.json only seeds the very first release.
-  const tag = lastTag();
-  const current = tag ? tag.replace(/^v/, "") : pkg.version;
-  const commits = commitsSinceLastTag();
+  const tag = lastTag(tagPrefix);
+  const current = tag ? tag.slice(tagPrefix.length) : pkg.version;
+  const commits = commitsSinceLastTag(tagPrefix);
   const bump = decideBump(commits, current);
   const version = bump ? bumpVersion(current, bump) : null;
   if (version && process.argv.includes("--apply")) {
