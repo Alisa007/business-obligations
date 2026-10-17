@@ -1,0 +1,57 @@
+import type { Catalog } from "../../i18n";
+
+/** Spanish display labels for enum values, entity types, months and the disclaimer. */
+export const labels: Omit<Catalog, "locale"> = {
+  disclaimer:
+    "Información general sobre cumplimiento; no es asesoría legal, fiscal ni contable, y no crea una relación abogado-cliente. Los requisitos dependen de hechos que esta biblioteca no puede ver y cambian con frecuencia; los datos se compilan a partir de fuentes públicas y pueden estar incompletos o desactualizados (consulte la procedencia de cada elemento y la versión de datos del resultado). Confirme los requisitos con la autoridad citada o con un profesional calificado antes de basarse en ellos.",
+  categories: {
+    license: "Licencia",
+    permit: "Permiso",
+    registration: "Registro",
+    filing: "Presentación",
+    payment: "Pago",
+    insurance: "Seguro",
+    recordkeeping: "Conservación de registros",
+  },
+  frequencies: {
+    once: "Una sola vez",
+    annual: "Anual",
+    biennial: "Cada dos años",
+    every_five_years: "Cada cinco años",
+    quarterly: "Trimestral",
+    monthly: "Mensual",
+    per_event: "Por evento",
+    ongoing: "Continuo",
+  },
+  jurisdictions: { federal: "Federal", state: "Estatal", county: "Condado", city: "Ciudad" },
+  filingMethods: { online: "En línea", mail: "Por correo", in_person: "En persona", fax: "Por fax" },
+  confidence: { checked: "Verificado", compiled: "Compilado", unconfirmed: "Sin confirmar" },
+  entityTypes: {
+    sole_proprietorship: "empresa individual",
+    partnership: "sociedad colectiva",
+    llc: "LLC",
+    pllc: "PLLC",
+    lp: "sociedad en comandita",
+    llp: "sociedad de responsabilidad limitada",
+    c_corp: "corporación C",
+    s_corp: "corporación S",
+    pc: "corporación profesional",
+    benefit_corp: "corporación de beneficio público",
+    nonprofit: "organización sin fines de lucro",
+  },
+  months: [
+    "enero",
+    "febrero",
+    "marzo",
+    "abril",
+    "mayo",
+    "junio",
+    "julio",
+    "agosto",
+    "septiembre",
+    "octubre",
+    "noviembre",
+    "diciembre",
+  ],
+  monthDay: "{day} de {month}",
+};
