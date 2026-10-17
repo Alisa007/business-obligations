@@ -90,6 +90,8 @@ export function Panel({ children, ...rest }: ComponentProps<typeof YStack>) {
       borderWidth={1}
       borderColor="border-color"
       borderRadius="lg"
+      boxSizing="border-box"
+      minWidth={0}
       padding="4"
       {...rest}
     >
@@ -205,7 +207,13 @@ export function Disclosure({
           >
             {({ open: isOpen }: { open: boolean }) => (
               <>
-                <Text color="placeholder-color" width={14} marginTop={2} rotate={isOpen ? "90deg" : "0deg"}>
+                <Text
+                  color="placeholder-color"
+                  width={14}
+                  marginTop={2}
+                  rotate={isOpen ? "90deg" : "0deg"}
+                  transition="transform 180ms ease-out"
+                >
                   ▸
                 </Text>
                 <YStack flex={1} minWidth={0}>
@@ -215,15 +223,19 @@ export function Disclosure({
             )}
           </Accordion.Trigger>
         </Accordion.Header>
-        <Accordion.Content
-          backgroundColor="transparent"
-          paddingTop="0"
-          paddingBottom="3"
-          paddingLeft={card ? "3" : "0"}
-          paddingRight={card ? "3" : "0"}
+        <Accordion.HeightAnimator
+          transition={{ duration: 220, easing: "ease-out", properties: "min-height" }}
         >
-          <YStack paddingLeft="6">{children}</YStack>
-        </Accordion.Content>
+          <Accordion.Content
+            backgroundColor="transparent"
+            paddingTop="0"
+            paddingBottom="3"
+            paddingLeft={card ? "3" : "0"}
+            paddingRight={card ? "3" : "0"}
+          >
+            <YStack paddingLeft="6">{children}</YStack>
+          </Accordion.Content>
+        </Accordion.HeightAnimator>
       </Accordion.Item>
     </Accordion>
   );
