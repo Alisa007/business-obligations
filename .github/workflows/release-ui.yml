@@ -147,6 +147,7 @@ jobs:
           cache: npm
 
       - run: npm ci --ignore-scripts
+      - run: npm run build -w business-obligations
       - run: npm run typecheck -w business-obligations-ui
       - run: npm test -w business-obligations-ui
       - run: npm run build -w business-obligations-ui
