@@ -42,8 +42,16 @@ export type { InputAnalysis, DefaultedInput, Sensitivity } from "./analysis";
 export { occurrencesBetween } from "./dates";
 export { applyEvent, explainTransition } from "./lifecycle";
 export type { LifecycleEvent, Transition } from "./lifecycle";
-export { localize, catalogTemplate } from "./i18n";
-export type { Catalog, RuleMessages, LocalizedItem, LocalizedResult } from "./i18n";
+export { localize, localizePlan, localizeText, catalogTemplate } from "./i18n";
+export type {
+  Catalog,
+  RuleMessages,
+  LocalizedItem,
+  LocalizedResult,
+  LocalizedPlan,
+  LocalizedPhase,
+  LocalizedStep,
+} from "./i18n";
 export { planLaunch } from "./launch";
 export type { LaunchPlan, LaunchPhase, LaunchStep, LaunchOptions, LaunchPhaseId } from "./launch";
 export { validateProfile, PROFILE_FIELDS, PROFILE_ENUMS } from "./validate";

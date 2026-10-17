@@ -2,7 +2,14 @@ import { defineConfig } from "tsup";
 
 export default defineConfig([
   {
-    entry: { index: "src/index.ts", zip: "src/zip-entry.ts", naics: "src/naics-entry.ts" },
+    entry: {
+      index: "src/index.ts",
+      zip: "src/zip-entry.ts",
+      naics: "src/naics-entry.ts",
+      "locales/index": "src/locales/index.ts",
+      "locales/en": "src/locales/en.ts",
+      "locales/es": "src/locales/es/index.ts",
+    },
     format: ["esm", "cjs"],
     dts: true,
     clean: true,
