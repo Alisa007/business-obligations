@@ -45,18 +45,53 @@ for (const state of STATE_CODES) {
   for (const entityType of PROFILE_ENUMS.entityType)
     for (const industry of PROFILE_ENUMS.industry)
       for (const employeeCount of [0, 4])
-        for (const isFormed of [false, true]) run({ state, entityType, industry, employeeCount, isFormed, city: "X", county: "Y" });
+        for (const isFormed of [false, true])
+          run({ state, entityType, industry, employeeCount, isFormed, city: "X", county: "Y" });
   const seeds = [
     ...readSeeds("cities", state).map((c) => ({ city: c.city, county: c.counties?.[0] ?? "" })),
     ...readSeeds("counties", state).map((c) => ({ city: "", county: c.county })),
   ];
   for (const { city, county } of seeds)
-    for (const industry of ["general", "restaurant", "retail", "construction", "healthcare", "alcohol", "childcare"])
+    for (const industry of [
+      "general",
+      "restaurant",
+      "retail",
+      "construction",
+      "healthcare",
+      "alcohol",
+      "childcare",
+    ])
       for (const entityType of ["llc", "c_corp", "sole_proprietorship"])
         run({ state, city, county, entityType, industry, isFormed: true });
 }
+// Text in the data files that the sample profiles above might not reach (items gated by industry, NAICS code, ...).
+const TEXT_KEYS = new Set(["title", "description", "deadline", "renewal", "processingTime"]);
+const NOTE_PARENTS = new Set(["feeDetail", "lateFee", "unemployment"]);
+const walk = (node, parentKey, file) => {
+  if (Array.isArray(node)) return node.forEach((n) => walk(n, parentKey, file));
+  if (!node || typeof node !== "object") return;
+  for (const [key, value] of Object.entries(node)) {
+    if (typeof value === "string") {
+      if (TEXT_KEYS.has(key) || (key === "note" && NOTE_PARENTS.has(parentKey)))
+        add(value, key === "note" ? "costNote" : key, `data:${file}`, file);
+    } else if (key === "exemptions" && Array.isArray(value))
+      value.forEach((e) => add(e, "exemption", `data:${file}`, file));
+    else walk(value, key, file);
+  }
+};
+for (const dir of ["states", "cities", "counties"])
+  for (const f of fs.readdirSync(path.join(root, "data", dir)).filter((n) => n.endsWith(".json")))
+    walk(JSON.parse(fs.readFileSync(path.join(root, "data", dir, f), "utf8")), "", `${dir}/${f}`);
+
 // Launch plan wording (phase titles and descriptions).
-const plan = planLaunch({ ...base, state: "NY", entityType: "llc", industry: "restaurant", city: "New York", county: "New York" });
+const plan = planLaunch({
+  ...base,
+  state: "NY",
+  entityType: "llc",
+  industry: "restaurant",
+  city: "New York",
+  county: "New York",
+});
 for (const ph of plan.phases) {
   add(ph.title, "phaseTitle", ph.id, "");
   add(ph.description, "phaseDescription", ph.id, "");

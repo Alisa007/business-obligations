@@ -2,7 +2,14 @@ import { stateName } from "./states";
 import type { ComplianceResult } from "./engine";
 import type { CostEstimate } from "./costs";
 import type { LaunchPhase, LaunchPlan, LaunchStep } from "./launch";
-import type { ComplianceItem, FilingMethod, Frequency, ItemCategory, Jurisdiction, ResolvedProfile } from "./types";
+import type {
+  ComplianceItem,
+  FilingMethod,
+  Frequency,
+  ItemCategory,
+  Jurisdiction,
+  ResolvedProfile,
+} from "./types";
 
 /** Translated templates for one rule. Placeholders look like `{state}`, `{city}` or `{authority}`. */
 export interface RuleMessages {
@@ -91,29 +98,59 @@ const MONTHS_EN = [
 ];
 const MONTH_DAY = new RegExp(`\\b(${MONTHS_EN.join("|")}) (\\d{1,2})\\b`, "g");
 
-const compiled = new WeakMap<Catalog, Array<[RegExp, string]>>();
+// A sentence ends at ". " before a capital letter, but not after an initial or abbreviation ("N.C.G.S.", "Rev. Stat.").
+const SENTENCE_BREAK =
+  /(?<=[.!?])(?<!\b[A-Z]\.)(?<!\b(?:Rev|Stat|Code|Gen|Ann|Misc|Miss|Sec|No|St|Co|Inc|Ltd|Dept|Ch)\.)\s+(?=[A-Z$(])/;
+const DATE = `(?:${MONTHS_EN.join("|")}) \\d{1,2}`;
+const PURE_DATES = new RegExp(`^${DATE}(?:, ${DATE})*$`);
+
+const compiled = new WeakMap<Catalog, Array<Pattern>>();
 const escape = (text: string) => text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
-/** `File {1} for {2}` -> /^File (?<g1>.+?) for (?<g2>.+?)$/s (a repeated number must repeat the same text). */
-const compilePattern = (template: string): RegExp => {
-  const seen = new Set<string>();
-  const source = template
-    .split(/(\{\d\})/)
-    .map((part) => {
-      const n = /^\{(\d)\}$/.exec(part)?.[1];
-      if (n === undefined) return escape(part);
-      if (seen.has(n)) return `\\k<g${n}>`;
-      seen.add(n);
-      return `(?<g${n}>.+?)`;
-    })
-    .join("");
-  return new RegExp(`^${source}$`, "s");
+interface Pattern {
+  regex: RegExp;
+  localized: string;
+  /** Parts that must come out translated for the template to apply. */
+  required: string[];
+}
+
+/** What a part may match: any text by default, or a number, a single word or a two-letter state code. */
+const NAME = "[A-Z][\\p{L}.'’-]*";
+const PART: Record<string, string> = {
+  n: "\\d[\\d,.]*",
+  w: "\\S+",
+  c: "[A-Z]{2}",
+  // Capitalised words, optionally joined by "of"/"the"/"and" (a state or place name).
+  p: `${NAME}(?: (?:(?:of|the|and) )?${NAME}){0,3}`,
 };
 
-const patternsOf = (catalog: Catalog): Array<[RegExp, string]> => {
+/**
+ * `File {1} for {2}` -> /^File (?<g1>.+?) for (?<g2>.+?)$/s. A part can be typed (`{1:n}` number, `{1:w}` word,
+ * `{1:c}` state code, `{1:p}` capitalised name) and marked `!` (`{1!}`) when the template should only apply if that part gets translated. A
+ * repeated number must repeat the same text.
+ */
+const compilePattern = (template: string, localized: string): Pattern => {
+  const seen = new Set<string>();
+  const required: string[] = [];
+  const source = template
+    .split(/(\{\d(?::[nwcp])?!?\})/)
+    .map((part) => {
+      const m = /^\{(\d)(?::([nwcp]))?(!)?\}$/.exec(part);
+      if (!m) return escape(part);
+      const [, n, type, must] = m as unknown as [string, string, string | undefined, string | undefined];
+      if (must && !required.includes(n)) required.push(n);
+      if (seen.has(n)) return `\\k<g${n}>`;
+      seen.add(n);
+      return `(?<g${n}>${type ? PART[type] : ".+?"})`;
+    })
+    .join("");
+  return { regex: new RegExp(`^${source}$`, "su"), localized, required };
+};
+
+const patternsOf = (catalog: Catalog): Pattern[] => {
   let list = compiled.get(catalog);
   if (!list) {
-    list = (catalog.patterns ?? []).map(([english, localized]) => [compilePattern(english), localized]);
+    list = (catalog.patterns ?? []).map(([english, localized]) => compilePattern(english, localized));
     compiled.set(catalog, list);
   }
   return list;
@@ -124,18 +161,45 @@ const patternsOf = (catalog: Catalog): Array<[RegExp, string]> => {
  * `patterns` template, else month-and-day phrases ("April 15"). Text without a translation is returned unchanged.
  */
 export function localizeText(text: string, catalog: Catalog, depth = 0): string {
-  const exact = catalog.strings?.[text];
+  const trimmed = text.trim();
+  if (trimmed !== text) {
+    if (!trimmed) return text;
+    const lead = text.slice(0, text.length - text.trimStart().length);
+    const trail = text.slice(text.trimEnd().length);
+    return lead + localizeText(trimmed, catalog, depth) + trail;
+  }
+  const exact = catalog.strings?.[text] ?? catalog.entityTypes?.[text];
   if (exact !== undefined) return exact;
   if (depth < 4) {
-    for (const [re, replace] of patternsOf(catalog)) {
-      const m = re.exec(text);
-      if (m)
-        return replace.replace(/\{(\d)\}/g, (_, n: string) =>
-          localizeText(m.groups?.[`g${n}`] ?? "", catalog, depth + 1),
-        );
+    for (const { regex, localized, required } of patternsOf(catalog)) {
+      const m = regex.exec(text);
+      if (!m) continue;
+      const parts = new Map<string, string>();
+      const part = (n: string) => {
+        let value = parts.get(n);
+        if (value === undefined) {
+          value = localizeText(m.groups?.[`g${n}`] ?? "", catalog, depth + 1);
+          parts.set(n, value);
+        }
+        return value;
+      };
+      if (required.some((n) => part(n) === m.groups?.[`g${n}`])) continue;
+      const out = localized.replace(/\{(\d)(?::[nwcp])?!?\}/g, (_, n: string) => part(n));
+      // A text that begins with a translated value (an entity type) starts with a capital letter.
+      return localized.startsWith("{") ? out.charAt(0).toLocaleUpperCase(catalog.locale) + out.slice(1) : out;
     }
   }
-  if (catalog.months?.length === 12 && catalog.monthDay) {
+  // Several sentences: translate each one, but only when every sentence has a translation.
+  if (depth < 4) {
+    const sentences = text.split(SENTENCE_BREAK);
+    if (sentences.length > 1) {
+      const parts = sentences.map((sentence) => localizeText(sentence, catalog, depth + 1));
+      if (parts.every((part, i) => part !== sentences[i])) return parts.join(" ");
+    }
+  }
+  // A text that is only month-and-day dates ("April 30, July 31") needs no template. Dates inside a sentence are left
+  // alone: the sentence has to be translated as a whole, or it would come out half in each language.
+  if (catalog.months?.length === 12 && catalog.monthDay && PURE_DATES.test(text)) {
     const { months, monthDay } = catalog;
     return text.replace(MONTH_DAY, (_, month: string, day: string) =>
       monthDay.replace("{month}", months[MONTHS_EN.indexOf(month)] ?? month).replace("{day}", day),
@@ -178,7 +242,9 @@ function localizeItem(item: ComplianceItem, p: ResolvedProfile, catalog: Catalog
     ...(item.processingTime !== undefined ? { processingTime: text(item.processingTime) } : {}),
     ...(item.exemptions ? { exemptions: item.exemptions.map(text) } : {}),
     ...(item.cost?.note !== undefined ? { cost: { ...item.cost, note: text(item.cost.note) } } : {}),
-    ...(item.penalty?.note !== undefined ? { penalty: { ...item.penalty, note: text(item.penalty.note) } } : {}),
+    ...(item.penalty?.note !== undefined
+      ? { penalty: { ...item.penalty, note: text(item.penalty.note) } }
+      : {}),
     ...(item.upcomingChanges
       ? { upcomingChanges: item.upcomingChanges.map((c) => ({ ...c, summary: text(c.summary) })) }
       : {}),
@@ -234,7 +300,8 @@ export interface LocalizedPlan extends Omit<LaunchPlan, "result" | "phases" | "s
 export function localizePlan(plan: LaunchPlan, catalog: Catalog): LocalizedPlan {
   const result = localize(plan.result, catalog);
   const byId = new Map(result.items.map((i) => [i.id, i]));
-  const itemOf = (item: ComplianceItem) => byId.get(item.id) ?? localizeItem(item, plan.result.profile, catalog);
+  const itemOf = (item: ComplianceItem) =>
+    byId.get(item.id) ?? localizeItem(item, plan.result.profile, catalog);
   const step = (s: LaunchStep): LocalizedStep => ({ ...s, item: itemOf(s.item) });
   const title = (id: string, fallback: string) => byId.get(id)?.title ?? localizeText(fallback, catalog);
   const steps = plan.steps.map(step);

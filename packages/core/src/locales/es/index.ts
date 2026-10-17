@@ -1,9 +1,23 @@
 import type { Catalog } from "../../i18n";
-import core from "./core.json";
 import { labels } from "./labels";
-import local from "./local.json";
+import deadlines from "./strings/deadlines.json";
+import authority from "./strings/authority.json";
+import descriptions from "./strings/descriptions.json";
+import localDescriptions from "./strings/local-descriptions.json";
+import local from "./strings/local.json";
+import notes from "./strings/notes.json";
+import reasons from "./strings/reasons.json";
+import terms from "./strings/terms.json";
+import titles from "./strings/titles.json";
+import { authorityPatterns } from "./patterns-authority";
 import { patterns } from "./patterns";
+import { localPatterns } from "./patterns-local";
+import { statePatterns } from "./patterns-state";
 import { stateNames } from "./states";
+
+// The engine's DISCLAIMER, spelled out so that this module does not import the engine.
+const ENGLISH_DISCLAIMER =
+  "General compliance information, not legal, tax or accounting advice, and no attorney-client relationship is created. Requirements depend on facts this library cannot see and change often; data is compiled from public sources and may be incomplete or out of date (see each item's provenance and the result's dataVersion). Confirm requirements with the cited authority or a qualified professional before relying on them.";
 
 /**
  * Spanish catalog: labels, rule and data text, and the templates for generated text. Import it from
@@ -13,14 +27,25 @@ export const es: Catalog = {
   ...labels,
   locale: "es",
   strings: {
+    [ENGLISH_DISCLAIMER]: labels.disclaimer as string,
     ...stateNames,
     sole_prop: "empresa individual",
-    partnership: "sociedad colectiva",
-    s_corp: "corporación S",
-    c_corp: "corporación C",
-    nonprofit: "organización sin fines de lucro",
-    ...(core as Record<string, string>),
-    ...(local as Record<string, string>),
+    ...notes,
+    ...deadlines,
+    ...titles,
+    ...reasons,
+    ...descriptions,
+    ...local,
+    ...authority,
+    ...localDescriptions,
+    ...terms,
   },
-  patterns,
+  patterns: [
+    ...localPatterns,
+    ...patterns,
+    ...statePatterns,
+    ...authorityPatterns,
+    // Last resort for "<text> (<qualifier>)": translates each part on its own.
+    ["{1} ({2!})", "{1} ({2})"],
+  ],
 };

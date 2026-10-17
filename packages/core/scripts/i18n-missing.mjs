@@ -36,7 +36,8 @@ let total = 0;
 for (const [text, meta] of Object.entries(corpus)) {
   if (only ? meta.field !== only : meta.field === "authority") continue;
   total++;
-  if (localizeText(text, catalog) === text && !/^[\d\s$.,%()/-]*$/.test(text)) (missing[meta.field] ??= []).push([text, meta.ruleId]);
+  if (localizeText(text, catalog) === text && !/^[\d\s$.,%()/-]*$/.test(text))
+    (missing[meta.field] ??= []).push([text, meta.ruleId]);
 }
 const count = Object.values(missing).reduce((n, l) => n + l.length, 0);
 for (const [field, list] of Object.entries(missing)) {
