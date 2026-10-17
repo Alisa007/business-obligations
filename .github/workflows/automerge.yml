@@ -63,4 +63,5 @@ jobs:
         if: steps.merge.outputs.merged == 'true'
         run: |
           gh workflow run release.yml --ref main -f dry_run=false
+          gh workflow run release-ui.yml --ref main -f dry_run=false
           gh workflow run pages.yml --ref main
