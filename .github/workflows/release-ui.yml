@@ -1,0 +1,151 @@
+name: Release UI
+
+# Publishes business-obligations-ui when its package version is not yet on npm.
+# For trusted publishing, configure npmjs.com to trust this repository's
+# .github/workflows/release-ui.yml workflow in the npm environment.
+
+on:
+  push:
+    branches: [main]
+    paths: ["packages/ui/**"]
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Only print what would happen; do not publish
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-ui
+  cancel-in-progress: false
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      mode: ${{ steps.plan.outputs.mode }}
+      version: ${{ steps.plan.outputs.version }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - name: Decide what to do
+        id: plan
+        run: |
+          pkg=$(node -p "require('./packages/ui/package.json').version")
+          tagged=false; git rev-parse -q --verify "refs/tags/ui-v$pkg" >/dev/null && tagged=true
+          published=false; npm view "business-obligations-ui@$pkg" version >/dev/null 2>&1 && published=true
+          mode=none; version=""
+          if [ "$published" = false ] && [ "$tagged" = false ]; then
+            mode=publish; version=$pkg
+          elif [ "$published" = true ] && [ "$tagged" = false ]; then
+            mode=tag; version=$pkg
+          fi
+          echo "mode=$mode" >> "$GITHUB_OUTPUT"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "Release plan: **$mode** ${version:+(ui-v$version)}" | tee -a "$GITHUB_STEP_SUMMARY"
+
+  build:
+    needs: plan
+    if: ${{ needs.plan.outputs.mode == 'publish' && github.ref == 'refs/heads/main' && !(github.event_name == 'workflow_dispatch' && inputs.dry_run) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      VERSION: ${{ needs.plan.outputs.version }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci --ignore-scripts
+      - run: npm run typecheck -w business-obligations-ui
+      - run: npm test -w business-obligations-ui
+      - run: npm run build -w business-obligations-ui
+
+      - name: Pack
+        run: |
+          mkdir -p "$RUNNER_TEMP/pack"
+          npm pack -w business-obligations-ui --pack-destination "$RUNNER_TEMP/pack"
+          printf 'Published business-obligations-ui v%s.\n' "$VERSION" > "$RUNNER_TEMP/pack/notes.md"
+          ls -l "$RUNNER_TEMP/pack"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: npm-release-ui
+          path: |
+            ${{ runner.temp }}/pack/*.tgz
+            ${{ runner.temp }}/pack/notes.md
+          if-no-files-found: error
+          retention-days: 7
+
+  publish:
+    needs: [plan, build]
+    if: ${{ needs.build.result == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: npm
+    permissions:
+      contents: write
+      id-token: write
+    env:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      VERSION: ${{ needs.plan.outputs.version }}
+    steps:
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org
+
+      - run: npm install -g npm@^11.5.1
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: npm-release-ui
+          path: ${{ runner.temp }}/release
+
+      - name: Publish with an npm token
+        if: ${{ env.NPM_TOKEN != '' }}
+        run: npm publish "$RUNNER_TEMP"/release/business-obligations-ui-*.tgz --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Publish with trusted publishing (OIDC)
+        if: ${{ env.NPM_TOKEN == '' }}
+        run: npm publish "$RUNNER_TEMP"/release/business-obligations-ui-*.tgz --access public
+
+      - name: Create the GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "ui-v$VERSION" --repo "$GITHUB_REPOSITORY" --title "business-obligations-ui v$VERSION" \
+            --notes-file "$RUNNER_TEMP/release/notes.md" --target "$GITHUB_SHA"
+
+  tag:
+    needs: plan
+    if: ${{ needs.plan.outputs.mode == 'tag' && github.ref == 'refs/heads/main' && !(github.event_name == 'workflow_dispatch' && inputs.dry_run) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      VERSION: ${{ needs.plan.outputs.version }}
+    steps:
+      - uses: actions/checkout@v7
+      - name: Create the release for an already published version
+        run: |
+          printf 'Published business-obligations-ui v%s.\n' "$VERSION" > "$RUNNER_TEMP/notes.md"
+          gh release create "ui-v$VERSION" --title "business-obligations-ui v$VERSION" \
+            --notes-file "$RUNNER_TEMP/notes.md" --target "$GITHUB_SHA"
