@@ -149,7 +149,7 @@ export interface ObligationFilters {
   category: string;
   query: string;
   /** `verified`: checked against official pages; `unverified`: compiled, unconfirmed or past its review date. */
-  trust: string;
+  trust: "all" | "verified" | "unverified";
 }
 
 export const NO_FILTERS: ObligationFilters = {

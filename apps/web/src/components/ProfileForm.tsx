@@ -180,7 +180,7 @@ export function ProfileForm({
             clearable
           />
         </Pair>
-        <Button type="submit" disabled={busy} theme="accent" marginTop="1">
+        <Button type="submit" disabled={busy} theme="accent" marginTop="1" width="100%">
           {busy ? "Working…" : "Show my obligations"}
         </Button>
       </Panel>
