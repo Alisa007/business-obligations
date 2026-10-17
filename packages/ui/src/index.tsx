@@ -1,7 +1,9 @@
-import { createContext, useContext, useMemo, type ReactNode } from "react";
+import type { ReactNode } from "react";
 import type { ComplianceItem, LaunchPlan } from "business-obligations";
 import { Accordion, Anchor, Button, Checkbox, Input, Label, Paragraph, Text, XStack, YStack } from "tamagui";
-import { getMessages, type Messages } from "./messages";
+import { nativeControl } from "./controls";
+import { useI18n, WithLocale } from "./i18n";
+import type { Messages } from "./messages";
 
 export interface LaunchListProps {
   plan: LaunchPlan;
@@ -44,58 +46,6 @@ export interface ObligationsListProps {
 
 const JURISDICTIONS = ["federal", "state", "county", "city"] as const;
 
-/** The interface text and the formatters for one locale. */
-interface I18n {
-  /** BCP 47 tag handed to `Intl`. */
-  tag: string;
-  m: Messages;
-  money: (amount: number) => string;
-  date: (value?: string) => string;
-  relativeDays: (value: string | undefined, from: string) => string;
-}
-
-function createI18n(locale = "en", custom?: Messages): I18n {
-  // The data is about US businesses, so a bare language code formats numbers and dates the US way ("$1,250.00").
-  const tag = locale === "en" ? "en-US" : locale === "es" ? "es-US" : locale;
-  const money = new Intl.NumberFormat(tag, { style: "currency", currency: "USD", maximumFractionDigits: 2 });
-  const day = new Intl.DateTimeFormat(tag, {
-    month: "short",
-    day: "numeric",
-    year: "numeric",
-    timeZone: "UTC",
-  });
-  const relative = new Intl.RelativeTimeFormat(tag, { numeric: "auto" });
-  return {
-    tag,
-    m: custom ?? getMessages(locale),
-    money: (amount) => money.format(amount),
-    date: (value) => (value ? day.format(new Date(`${value}T00:00:00Z`)) : ""),
-    relativeDays: (value, from) => {
-      if (!value) return "";
-      const days = Math.round(
-        (Date.parse(`${value}T00:00:00Z`) - Date.parse(`${from}T00:00:00Z`)) / 86_400_000,
-      );
-      return relative.format(days, "day");
-    },
-  };
-}
-
-const I18nContext = createContext<I18n>(createI18n());
-const useI18n = () => useContext(I18nContext);
-
-function WithLocale({
-  locale,
-  messages,
-  children,
-}: {
-  locale?: string;
-  messages?: Messages;
-  children: ReactNode;
-}) {
-  const i18n = useMemo(() => createI18n(locale, messages), [locale, messages]);
-  return <I18nContext.Provider value={i18n}>{children}</I18nContext.Provider>;
-}
-
 /** Lower case without accents, so that "licencia" finds "Licencia" and "licéncia". */
 const fold = (value: string) => value.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase();
 
@@ -105,18 +55,6 @@ const isVerified = (item: Pick<ComplianceItem, "provenance">) =>
 const isSoon = (value: string, asOf: string) => {
   const days = (Date.parse(`${value}T00:00:00Z`) - Date.parse(`${asOf}T00:00:00Z`)) / 86_400_000;
   return days >= 0 && days <= 30;
-};
-
-const nativeControl = {
-  width: "100%",
-  minHeight: 44,
-  padding: "8px 10px",
-  borderRadius: 8,
-  border: "1px solid var(--border-color)",
-  background: "var(--background)",
-  color: "var(--color)",
-  font: "inherit",
-  fontSize: 16,
 };
 
 const safeUrl = (value?: string) => {
@@ -756,3 +694,16 @@ function ObligationsListBody({ items, asOf, filters, onFilters }: ObligationsLis
 export { messages, getMessages } from "./messages";
 export type { Locale, Messages } from "./messages";
 export type { ComplianceItem, LaunchPlan };
+export { TypeInput, IndustryInput, EmployeesInput, DetailsInput } from "./profile";
+export type { ProfileInputProps, DetailsInputProps } from "./profile";
+export {
+  DETAIL_FIELDS,
+  PROFILE_DEFAULTS,
+  PROFILE_PARAMS,
+  ProfileQueryProvider,
+  readProfileQuery,
+  setProfileQuery,
+  useProfileChoices,
+  writeProfileQuery,
+} from "./profileQuery";
+export type { DetailField, ProfileChoices } from "./profileQuery";

@@ -1,4 +1,5 @@
-import type { ComplianceItem } from "business-obligations";
+import type { ComplianceItem, EntityType, Industry } from "business-obligations";
+import type { DetailField } from "./profileQuery";
 
 export type Locale = "en" | "es";
 
@@ -86,6 +87,16 @@ export interface Messages {
   /** Names of the profile fields that an "applies when" condition can read; unknown fields are shown as they are. */
   fields: Record<string, string>;
   confidence: Record<Confidence, string>;
+  // Business details (TypeInput, IndustryInput, EmployeesInput, DetailsInput)
+  profile: {
+    entityType: string;
+    industry: string;
+    employees: string;
+    details: string;
+    entityTypes: Record<EntityType, string>;
+    industries: Record<Industry, string>;
+    detailLabels: Record<DetailField, string>;
+  };
 }
 
 const plural = (locale: string, n: number, one: string, other: string) =>
@@ -185,6 +196,47 @@ const en: Messages = {
   },
   fields: {},
   confidence: { checked: "checked", compiled: "not individually checked", unconfirmed: "partly unconfirmed" },
+  profile: {
+    entityType: "Business type",
+    industry: "Industry",
+    employees: "Employees",
+    details: "Details",
+    entityTypes: {
+      sole_proprietorship: "Sole proprietorship",
+      partnership: "Partnership",
+      llc: "LLC",
+      pllc: "PLLC",
+      lp: "LP",
+      llp: "LLP",
+      c_corp: "C corporation",
+      s_corp: "S corporation",
+      pc: "Professional corporation",
+      benefit_corp: "Benefit corporation",
+      nonprofit: "Nonprofit",
+    },
+    industries: {
+      general: "General",
+      retail: "Retail",
+      restaurant: "Restaurant",
+      construction: "Construction",
+      healthcare: "Healthcare",
+      real_estate: "Real estate",
+      professional_services: "Professional services",
+      transportation: "Transportation",
+      alcohol: "Alcohol",
+      childcare: "Childcare",
+      cannabis: "Cannabis",
+    },
+    detailLabels: {
+      sellsTaxableGoods: "Sells taxable goods",
+      homeBased: "Run from home",
+      usesTradeName: "Uses a trade name (DBA)",
+      hasTaxExemptStatus: "Has tax-exempt status",
+      hasSignage: "Has exterior signage",
+      foodService: "Prepares or serves food",
+      sCorpElection: "S election in effect",
+    },
+  },
 };
 
 const es: Messages = {
@@ -305,6 +357,47 @@ const es: Messages = {
     checked: "verificado",
     compiled: "no verificado individualmente",
     unconfirmed: "parcialmente sin confirmar",
+  },
+  profile: {
+    entityType: "Tipo de negocio",
+    industry: "Sector",
+    employees: "Empleados",
+    details: "Detalles",
+    entityTypes: {
+      sole_proprietorship: "Empresa unipersonal",
+      partnership: "Sociedad colectiva",
+      llc: "LLC",
+      pllc: "PLLC",
+      lp: "LP",
+      llp: "LLP",
+      c_corp: "Corporación C",
+      s_corp: "Corporación S",
+      pc: "Corporación profesional",
+      benefit_corp: "Corporación de beneficio",
+      nonprofit: "Sin fines de lucro",
+    },
+    industries: {
+      general: "General",
+      retail: "Comercio minorista",
+      restaurant: "Restaurante",
+      construction: "Construcción",
+      healthcare: "Salud",
+      real_estate: "Bienes raíces",
+      professional_services: "Servicios profesionales",
+      transportation: "Transporte",
+      alcohol: "Alcohol",
+      childcare: "Cuidado infantil",
+      cannabis: "Cannabis",
+    },
+    detailLabels: {
+      sellsTaxableGoods: "Vende bienes gravables",
+      homeBased: "Se opera desde casa",
+      usesTradeName: "Usa un nombre comercial (DBA)",
+      hasTaxExemptStatus: "Tiene estatus de exención de impuestos",
+      hasSignage: "Tiene letreros exteriores",
+      foodService: "Prepara o sirve comida",
+      sCorpElection: "Elección S vigente",
+    },
   },
 };
 
