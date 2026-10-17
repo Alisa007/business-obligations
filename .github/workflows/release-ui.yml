@@ -1,6 +1,6 @@
 name: Release UI
 
-# Publishes business-obligations-ui when its package version is not yet on npm.
+# Automatically versions and publishes business-obligations-ui from Conventional Commit titles.
 # For trusted publishing, configure npmjs.com to trust this repository's
 # .github/workflows/release-ui.yml workflow in the npm environment.
 
@@ -49,10 +49,87 @@ jobs:
             mode=publish; version=$pkg
           elif [ "$published" = true ] && [ "$tagged" = false ]; then
             mode=tag; version=$pkg
+          else
+            out=$(node packages/core/scripts/auto-release.mjs \
+              --package packages/ui/package.json \
+              --changelog packages/ui/CHANGELOG.md \
+              --tag-prefix ui-v)
+            echo "$out"
+            version=$(node -p "JSON.parse(process.argv[1]).version || ''" "$out")
+            [ -n "$version" ] && mode=prepare
           fi
           echo "mode=$mode" >> "$GITHUB_OUTPUT"
           echo "version=$version" >> "$GITHUB_OUTPUT"
           echo "Release plan: **$mode** ${version:+(ui-v$version)}" | tee -a "$GITHUB_STEP_SUMMARY"
+
+  prepare:
+    needs: plan
+    if: ${{ needs.plan.outputs.mode == 'prepare' && github.ref == 'refs/heads/main' && !(github.event_name == 'workflow_dispatch' && inputs.dry_run) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+      pull-requests: write
+      actions: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci --ignore-scripts
+      - name: Write the release files
+        id: ver
+        run: |
+          out=$(node packages/core/scripts/auto-release.mjs \
+            --package packages/ui/package.json \
+            --changelog packages/ui/CHANGELOG.md \
+            --tag-prefix ui-v \
+            --apply --notes "$RUNNER_TEMP/notes.md")
+          echo "$out"
+          echo "version=$(node -p "JSON.parse(process.argv[1]).version" "$out")" >> "$GITHUB_OUTPUT"
+          npx prettier --write packages/ui/CHANGELOG.md packages/ui/package.json
+
+      - name: Open or update the release pull request
+        env:
+          VERSION: ${{ steps.ver.outputs.version }}
+        run: |
+          branch=release/ui-next
+          changed=true
+          if git ls-remote --exit-code --heads origin "$branch" >/dev/null 2>&1; then
+            git fetch -q origin "$branch"
+            if git diff --quiet "origin/$branch" -- packages/ui/package.json packages/ui/CHANGELOG.md; then
+              changed=false
+              echo "release/ui-next is already up to date for v$VERSION"
+            fi
+          fi
+          if [ "$changed" = true ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git checkout -B "$branch"
+            git add packages/ui/package.json packages/ui/CHANGELOG.md
+            git commit -m "chore(release): business-obligations-ui v$VERSION"
+            git push --force origin "$branch"
+          fi
+
+          gh label create release --description "Automated release pull request" 2>/dev/null || true
+          pr=$(gh pr list --head "$branch" --state open --json number --jq '.[0].number // empty')
+          if [ -z "$pr" ]; then
+            gh pr create --base main --head "$branch" \
+              --title "chore(release): business-obligations-ui v$VERSION" \
+              --body-file "$RUNNER_TEMP/notes.md" --label release
+            pr=$(gh pr list --head "$branch" --state open --json number --jq '.[0].number')
+          else
+            gh pr edit "$pr" --title "chore(release): business-obligations-ui v$VERSION" \
+              --body-file "$RUNNER_TEMP/notes.md"
+          fi
+          bash .github/scripts/merge-when-green.sh "$branch" "$pr"
 
   build:
     needs: plan
