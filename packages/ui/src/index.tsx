@@ -213,11 +213,14 @@ function Disclosure({
   children,
   open = false,
   card = false,
+  level,
 }: {
   summary: ReactNode;
   children: ReactNode;
   open?: boolean;
   card?: boolean;
+  /** Heading level of the trigger's wrapper, so the page keeps a single h1. */
+  level: 2 | 3;
 }) {
   return (
     <Accordion
@@ -228,7 +231,7 @@ function Disclosure({
         : { borderTopWidth: 1, borderColor: "border-color" })}
     >
       <Accordion.Item value="item">
-        <Accordion.Header>
+        <Accordion.Header render={`h${level}`}>
           <Accordion.Trigger
             flexDirection="row"
             alignItems="flex-start"
@@ -412,6 +415,7 @@ function LaunchListBody({ plan, costs, done = new Set(), onToggle }: LaunchListP
           <Disclosure
             key={phase.id}
             card
+            level={2}
             open={remaining > 0 || phase.id === "operate"}
             summary={
               <YStack gap="1">
@@ -441,6 +445,8 @@ function LaunchListBody({ plan, costs, done = new Set(), onToggle }: LaunchListP
                   .filter((item): item is ComplianceItem => Boolean(item))
                   .slice(0, 2)
                   .map((item) => item.title);
+                // A date from the rules (a legal deadline or a filing schedule) is statutory; any other date is a planning allowance.
+                const statutory = Boolean(step.legalDeadline || (step.target && step.item.deadline));
                 return (
                   <YStack key={step.item.id} gap="1">
                     <CheckStep
@@ -450,12 +456,9 @@ function LaunchListBody({ plan, costs, done = new Set(), onToggle }: LaunchListP
                       onChange={onToggle ? (checked) => onToggle(step.item.id, checked) : undefined}
                     />
                     <XStack flexWrap="wrap" gap="1.5" paddingLeft="8">
-                      {step.legalDeadline ? (
+                      {statutory ? (
                         <Chip outline tone="bad">
-                          {m.dueOn(
-                            date(step.legalDeadline),
-                            relativeDays(step.legalDeadline, plan.startDate),
-                          )}
+                          {m.dueOn(date(step.legalDeadline ?? step.target), relativeDays(step.legalDeadline ?? step.target, plan.startDate))}
                         </Chip>
                       ) : step.target ? (
                         <Chip>{m.by(date(step.target))}</Chip>
@@ -464,6 +467,11 @@ function LaunchListBody({ plan, costs, done = new Set(), onToggle }: LaunchListP
                       <Chip>{m.frequencies[step.item.frequency] ?? step.item.frequency}</Chip>
                       <Confidence item={step.item} />
                     </XStack>
+                    {statutory && (
+                      <Text fontSize="sm" color="placeholder-color" paddingLeft="8">
+                        {m.triggeredBy(step.item.reason, step.item.deadline)}
+                      </Text>
+                    )}
                     {needs.length > 0 && (
                       <Text fontSize="sm" color="placeholder-color" paddingLeft="8">
                         {m.after} {needs.join("; ")}
@@ -695,7 +703,7 @@ function ObligationsListBody({ items, asOf, filters, onFilters }: ObligationsLis
           return (
             <YStack key={jurisdiction}>
               <XStack gap="2" alignItems="center" paddingTop="3" paddingBottom="1">
-                <Text fontSize="lg" fontWeight="600">
+                <Text render="h2" fontSize="lg" fontWeight="600" margin={0}>
                   {m.jurisdictions[jurisdiction]}
                 </Text>
                 <Chip tone="info">{group.length}</Chip>
@@ -705,6 +713,7 @@ function ObligationsListBody({ items, asOf, filters, onFilters }: ObligationsLis
                   <Disclosure
                     key={item.id}
                     card
+                    level={3}
                     summary={
                       <YStack gap="1.5" alignItems="flex-start" width="100%">
                         <Text fontWeight="600" textAlign="left" alignSelf="stretch">

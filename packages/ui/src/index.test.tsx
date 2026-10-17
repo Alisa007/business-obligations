@@ -207,4 +207,22 @@ describe("business-obligations-ui in Spanish", () => {
       expect(table.toDo(2), locale).toBeTruthy();
     }
   });
+
+  it("keeps one heading hierarchy: no h1, h2 for phases and jurisdictions, h3 for obligations", () => {
+    const launch = render(<LaunchList plan={plan} locale="en" />);
+    expect(launch).not.toContain("<h1");
+    expect(launch).toContain("<h2");
+
+    const list = render(<ObligationsList items={plan.result.items} asOf={plan.result.asOf} filters={filters()} onFilters={() => {}} locale="en" />);
+    expect(list).not.toContain("<h1");
+    expect(list).toContain("<h2");
+    expect(list).toContain("<h3");
+  });
+
+  it("labels each date as a suggested planning date or a statutory deadline, with what triggers the deadline", () => {
+    const html = render(<LaunchList plan={plan} locale="en" />);
+    expect(html).toContain("Suggested planning date:");
+    expect(html).toContain("Statutory deadline:");
+    expect(html).toContain("Applies because:");
+  });
 });

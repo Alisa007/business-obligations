@@ -34,6 +34,8 @@ export interface Messages {
   after: string;
   dueOn: (date: string, relative: string) => string;
   by: (date: string) => string;
+  /** What makes a legal deadline apply: the reason it applies and, when the rule has one, its schedule. */
+  triggeredBy: (reason: string, schedule?: string) => string;
   planNote: string;
   // Chips
   fee: (amount: string) => string;
@@ -107,10 +109,11 @@ const en: Messages = {
   toDo: (n) => `${n} to do`,
   onward: "onward",
   after: "After:",
-  dueOn: (date, relative) => `due ${date} · ${relative}`,
-  by: (date) => `by ${date}`,
+  dueOn: (date, relative) => `Statutory deadline: ${date} · ${relative}`,
+  by: (date) => `Suggested planning date: ${date}`,
+  triggeredBy: (reason, schedule) => `Applies because: ${reason}.${schedule ? ` Schedule: ${schedule}.` : ""}`,
   planNote:
-    "Dates are planning allowances, not agency processing times. Legal due dates are shown where the rules give one.",
+    "Suggested planning dates are allowances, not agency processing times. Statutory deadlines come from the rules and are labeled as such.",
   fee: (amount) => `fee ${amount}`,
   checked: (date) => `checked${date ? ` ${date}` : ""}`,
   partlyUnconfirmed: "partly unconfirmed",
@@ -201,10 +204,11 @@ const es: Messages = {
   toDo: (n) => `${n} por hacer`,
   onward: "en adelante",
   after: "Después de:",
-  dueOn: (date, relative) => `vence el ${date} · ${relative}`,
-  by: (date) => `antes del ${date}`,
+  dueOn: (date, relative) => `Plazo legal: ${date} · ${relative}`,
+  by: (date) => `Fecha de planificación sugerida: ${date}`,
+  triggeredBy: (reason, schedule) => `Se aplica porque: ${reason}.${schedule ? ` Calendario: ${schedule}.` : ""}`,
   planNote:
-    "Las fechas son márgenes de planificación, no plazos de trámite de las agencias. Los plazos legales se muestran cuando las reglas los establecen.",
+    "Las fechas de planificación sugeridas son márgenes, no plazos de trámite de las agencias. Los plazos legales provienen de las reglas y se indican como tales.",
   fee: (amount) => `tarifa ${amount}`,
   checked: (date) => `verificado${date ? ` ${date}` : ""}`,
   partlyUnconfirmed: "parcialmente sin confirmar",
