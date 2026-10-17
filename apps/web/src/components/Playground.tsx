@@ -1,23 +1,16 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Anchor, H1, Paragraph, ScrollView, Tabs, Text, YStack } from "tamagui";
+import { Anchor, H1, Paragraph, ScrollView, Tabs, Text, XStack, YStack } from "tamagui";
+import { LaunchList, ObligationsList, type ObligationFilters } from "business-obligations-ui";
 import { SITE_CONFIG } from "../lib/config";
-import {
-  NO_FILTERS,
-  analyze,
-  buildProfile,
-  needsProfession,
-  today,
-  type Analysis,
-  type ObligationFilters,
-} from "../lib/plan";
+import { NO_FILTERS, analyze, buildProfile, needsProfession, today, type Analysis } from "../lib/plan";
 import { useAnalytics } from "../hooks/useAnalytics";
 import { useUrlState } from "../hooks/useUrlState";
 import { isRunnable, parseQuery } from "../lib/query";
 import { useDoneSteps } from "../hooks/useDoneSteps";
 import { ProfileForm, lookupZip, type PlanRequest } from "./ProfileForm";
-import { CalendarView, CostsView, ObligationsView, PlanView, ResultSummary, WhatIfView } from "./views";
+import { CalendarView, CostsView, ResultSummary, WhatIfView } from "./views";
 import { Chip, Muted, Panel } from "./ui";
 
 const TABS = [
@@ -28,6 +21,37 @@ const TABS = [
   ["whatif", "What if"],
 ] as const;
 type TabId = (typeof TABS)[number][0];
+
+function EmptyPlanState() {
+  const steps = [
+    ["1", "Describe", "Your location and business"],
+    ["2", "Review", "The obligations that apply"],
+    ["3", "Act", "Deadlines in a simple plan"],
+  ];
+  return (
+    <YStack gap="4" justifyContent="center" flex={1} paddingVertical="3">
+      <YStack gap="1.5">
+        <Text fontSize="xl" fontWeight="700">
+          Build your plan
+        </Text>
+        <Muted>Start with your ZIP code. We’ll use it to find the state and local requirements.</Muted>
+      </YStack>
+      <XStack gap="3" flexWrap="wrap">
+        {steps.map(([number, title, description]) => (
+          <XStack key={number} gap="2.5" flex={1} flexBasis={150} alignItems="flex-start">
+            <Chip tone="info" outline>
+              {number}
+            </Chip>
+            <YStack gap="0.5" flex={1}>
+              <Text fontWeight="600">{title}</Text>
+              <Muted size="xs">{description}</Muted>
+            </YStack>
+          </XStack>
+        ))}
+      </XStack>
+    </YStack>
+  );
+}
 
 export function Playground() {
   const analytics = useAnalytics();
@@ -128,9 +152,16 @@ export function Playground() {
     if (!data) return null;
     switch (tab) {
       case "plan":
-        return <PlanView data={data} done={done} onToggle={toggle} />;
+        return <LaunchList plan={data.plan} costs={data.costs} done={done} onToggle={toggle} />;
       case "items":
-        return <ObligationsView data={data} filters={filters} onFilters={setFilters} />;
+        return (
+          <ObligationsList
+            items={data.result.items}
+            asOf={data.result.asOf}
+            filters={filters}
+            onFilters={setFilters}
+          />
+        );
       case "calendar":
         return <CalendarView data={data} onDownload={download} />;
       case "costs":
@@ -144,15 +175,37 @@ export function Playground() {
     <YStack
       maxWidth={1180}
       width="100%"
+      boxSizing="border-box"
       marginHorizontal="auto"
       paddingHorizontal="4"
       paddingVertical="6"
-      gap="5"
+      gap="6"
     >
-      <YStack gap="2" alignItems="flex-start">
-        <H1 fontSize="3xl">Business obligations</H1>
-        <Paragraph fontSize="base" color="placeholder-color" maxWidth={620}>
-          Describe a US business; get the licenses, permits, filings and deadlines that apply, in order.
+      <YStack gap="2.5" alignItems="flex-start" width="100%" maxWidth={720}>
+        <Chip tone="info" outline>
+          Compliance planning, simplified
+        </Chip>
+        <H1
+          fontSize={{ default: "2xl", md: "4xl" }}
+          lineHeight={1.05}
+          letterSpacing={-1}
+          whiteSpace="normal"
+          wordWrap="break-word"
+          width="100%"
+          minWidth={0}
+        >
+          Business obligations, in order.
+        </H1>
+        <Paragraph
+          fontSize={{ default: "base", md: "lg" }}
+          color="placeholder-color"
+          maxWidth={620}
+          whiteSpace="normal"
+          width="100%"
+          minWidth={0}
+        >
+          Describe a US business and get a practical checklist of the licenses, permits, filings, and
+          deadlines that apply.
         </Paragraph>
       </YStack>
 
@@ -177,8 +230,8 @@ export function Playground() {
           />
         </YStack>
         <YStack flex={1} minWidth={0} aria-live="polite">
-          <Panel gap="3">
-            {!data && !error && <Muted>Fill in the form and press the button.</Muted>}
+          <Panel gap="4" padding="4" minHeight={220} minWidth={0}>
+            {!data && !error && <EmptyPlanState />}
             {error && (
               <Text color="amber-700" role="alert">
                 {error}

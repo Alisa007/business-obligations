@@ -11,9 +11,9 @@
   ],
   "scripts": {
     "build": "npm run build -w business-obligations",
-    "build:web": "npm run build -w @business-obligations/web",
-    "dev": "npm run build -w business-obligations && npm run dev -w @business-obligations/web",
-    "typecheck": "npm run build && npm run typecheck --workspaces --if-present",
+    "build:web": "npm run build -w business-obligations-ui && npm run build -w @business-obligations/web",
+    "dev": "node scripts/dev.mjs",
+    "typecheck": "npm run build && npm run build -w business-obligations-ui && npm run typecheck --workspaces --if-present",
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
