@@ -4,6 +4,8 @@ All notable changes to `business-obligations-ui` are documented here.
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-10-17
+
 ### Added
 
 - `TypeInput`, `IndustryInput`, `EmployeesInput` and `DetailsInput` (every yes/no detail except "not formed yet"), with
@@ -12,6 +14,10 @@ All notable changes to `business-obligations-ui` are documented here.
 - `useProfileChoices`, `ProfileQueryProvider`, `readProfileQuery`, `writeProfileQuery`, `setProfileQuery`,
   `PROFILE_PARAMS`, `PROFILE_DEFAULTS` and `DETAIL_FIELDS`
 - `messages.<locale>.profile`
+
+### Added
+
+- **ui:** business-detail inputs that keep their values in the URL
 
 ## [0.2.1] - 2026-10-17
 
