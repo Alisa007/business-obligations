@@ -4,6 +4,12 @@ All notable changes to `business-obligations-ui` are documented here.
 
 ## [Unreleased]
 
+## [0.2.1] - 2026-10-17
+
+### Fixed
+
+- **ui:** one heading hierarchy and labeled planning dates versus statutory deadlines
+
 ## [0.2.0] - 2026-10-17
 
 ### Added
