@@ -78,7 +78,7 @@ jobs:
         run: |
           mkdir -p "$RUNNER_TEMP/pack"
           npm pack -w business-obligations-ui --pack-destination "$RUNNER_TEMP/pack"
-          printf 'Release business-obligations-ui v%s\n' "$VERSION" > "$RUNNER_TEMP/pack/notes.md"
+          printf 'Published business-obligations-ui v%s.\n' "$VERSION" > "$RUNNER_TEMP/pack/notes.md"
           ls -l "$RUNNER_TEMP/pack"
 
       - uses: actions/upload-artifact@v4
@@ -146,6 +146,6 @@ jobs:
       - uses: actions/checkout@v7
       - name: Create the release for an already published version
         run: |
-          printf 'Release business-obligations-ui v%s\n' "$VERSION" > "$RUNNER_TEMP/notes.md"
+          printf 'Published business-obligations-ui v%s.\n' "$VERSION" > "$RUNNER_TEMP/notes.md"
           gh release create "ui-v$VERSION" --title "business-obligations-ui v$VERSION" \
             --notes-file "$RUNNER_TEMP/notes.md" --target "$GITHUB_SHA"
