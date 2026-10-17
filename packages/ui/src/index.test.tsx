@@ -213,7 +213,15 @@ describe("business-obligations-ui in Spanish", () => {
     expect(launch).not.toContain("<h1");
     expect(launch).toContain("<h2");
 
-    const list = render(<ObligationsList items={plan.result.items} asOf={plan.result.asOf} filters={filters()} onFilters={() => {}} locale="en" />);
+    const list = render(
+      <ObligationsList
+        items={plan.result.items}
+        asOf={plan.result.asOf}
+        filters={filters()}
+        onFilters={() => {}}
+        locale="en"
+      />,
+    );
     expect(list).not.toContain("<h1");
     expect(list).toContain("<h2");
     expect(list).toContain("<h3");

@@ -458,7 +458,10 @@ function LaunchListBody({ plan, costs, done = new Set(), onToggle }: LaunchListP
                     <XStack flexWrap="wrap" gap="1.5" paddingLeft="8">
                       {statutory ? (
                         <Chip outline tone="bad">
-                          {m.dueOn(date(step.legalDeadline ?? step.target), relativeDays(step.legalDeadline ?? step.target, plan.startDate))}
+                          {m.dueOn(
+                            date(step.legalDeadline ?? step.target),
+                            relativeDays(step.legalDeadline ?? step.target, plan.startDate),
+                          )}
                         </Chip>
                       ) : step.target ? (
                         <Chip>{m.by(date(step.target))}</Chip>

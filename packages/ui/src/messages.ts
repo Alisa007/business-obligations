@@ -111,7 +111,8 @@ const en: Messages = {
   after: "After:",
   dueOn: (date, relative) => `Statutory deadline: ${date} · ${relative}`,
   by: (date) => `Suggested planning date: ${date}`,
-  triggeredBy: (reason, schedule) => `Applies because: ${reason}.${schedule ? ` Schedule: ${schedule}.` : ""}`,
+  triggeredBy: (reason, schedule) =>
+    `Applies because: ${reason}.${schedule ? ` Schedule: ${schedule}.` : ""}`,
   planNote:
     "Suggested planning dates are allowances, not agency processing times. Statutory deadlines come from the rules and are labeled as such.",
   fee: (amount) => `fee ${amount}`,
@@ -206,7 +207,8 @@ const es: Messages = {
   after: "Después de:",
   dueOn: (date, relative) => `Plazo legal: ${date} · ${relative}`,
   by: (date) => `Fecha de planificación sugerida: ${date}`,
-  triggeredBy: (reason, schedule) => `Se aplica porque: ${reason}.${schedule ? ` Calendario: ${schedule}.` : ""}`,
+  triggeredBy: (reason, schedule) =>
+    `Se aplica porque: ${reason}.${schedule ? ` Calendario: ${schedule}.` : ""}`,
   planNote:
     "Las fechas de planificación sugeridas son márgenes, no plazos de trámite de las agencias. Los plazos legales provienen de las reglas y se indican como tales.",
   fee: (amount) => `tarifa ${amount}`,
