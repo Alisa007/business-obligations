@@ -1,12 +1,20 @@
-import type { ReactNode } from "react";
+import { createContext, useContext, useMemo, type ReactNode } from "react";
 import type { ComplianceItem, LaunchPlan } from "business-obligations";
 import { Accordion, Anchor, Button, Checkbox, Input, Label, Paragraph, Text, XStack, YStack } from "tamagui";
+import { getMessages, type Messages } from "./messages";
 
 export interface LaunchListProps {
   plan: LaunchPlan;
   costs?: { oneTime: number; annual: number };
   done?: ReadonlySet<string>;
   onToggle?: (id: string, checked: boolean) => void;
+  /**
+   * Language of the interface text and of dates, numbers and relative times: "en" (default) or "es", or any other
+   * locale tag together with `messages`. Text from the data is translated separately, with `localizePlan`.
+   */
+  locale?: string;
+  /** Interface text for a language the package does not bundle. */
+  messages?: Messages;
 }
 
 export interface ObligationFilters {
@@ -28,29 +36,68 @@ export interface ObligationsListProps {
   asOf: string;
   filters: ObligationFilters;
   onFilters: (filters: ObligationFilters) => void;
+  /** See `LaunchListProps.locale`. */
+  locale?: string;
+  /** See `LaunchListProps.messages`. */
+  messages?: Messages;
 }
 
-const JURISDICTIONS = [
-  ["federal", "Federal"],
-  ["state", "State"],
-  ["county", "County"],
-  ["city", "City"],
-] as const;
+const JURISDICTIONS = ["federal", "state", "county", "city"] as const;
 
-const money = (amount: number) =>
-  new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 2 }).format(
-    amount,
-  );
+/** The interface text and the formatters for one locale. */
+interface I18n {
+  /** BCP 47 tag handed to `Intl`. */
+  tag: string;
+  m: Messages;
+  money: (amount: number) => string;
+  date: (value?: string) => string;
+  relativeDays: (value: string | undefined, from: string) => string;
+}
 
-const date = (value?: string) =>
-  value
-    ? new Intl.DateTimeFormat("en-US", {
-        month: "short",
-        day: "numeric",
-        year: "numeric",
-        timeZone: "UTC",
-      }).format(new Date(`${value}T00:00:00Z`))
-    : "";
+function createI18n(locale = "en", custom?: Messages): I18n {
+  // The data is about US businesses, so a bare language code formats numbers and dates the US way ("$1,250.00").
+  const tag = locale === "en" ? "en-US" : locale === "es" ? "es-US" : locale;
+  const money = new Intl.NumberFormat(tag, { style: "currency", currency: "USD", maximumFractionDigits: 2 });
+  const day = new Intl.DateTimeFormat(tag, {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+    timeZone: "UTC",
+  });
+  const relative = new Intl.RelativeTimeFormat(tag, { numeric: "auto" });
+  return {
+    tag,
+    m: custom ?? getMessages(locale),
+    money: (amount) => money.format(amount),
+    date: (value) => (value ? day.format(new Date(`${value}T00:00:00Z`)) : ""),
+    relativeDays: (value, from) => {
+      if (!value) return "";
+      const days = Math.round(
+        (Date.parse(`${value}T00:00:00Z`) - Date.parse(`${from}T00:00:00Z`)) / 86_400_000,
+      );
+      return relative.format(days, "day");
+    },
+  };
+}
+
+const I18nContext = createContext<I18n>(createI18n());
+const useI18n = () => useContext(I18nContext);
+
+function WithLocale({
+  locale,
+  messages,
+  children,
+}: {
+  locale?: string;
+  messages?: Messages;
+  children: ReactNode;
+}) {
+  const i18n = useMemo(() => createI18n(locale, messages), [locale, messages]);
+  return <I18nContext.Provider value={i18n}>{children}</I18nContext.Provider>;
+}
+
+/** Lower case without accents, so that "licencia" finds "Licencia" and "licéncia". */
+const fold = (value: string) => value.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase();
 
 const isVerified = (item: Pick<ComplianceItem, "provenance">) =>
   item.provenance?.confidence === "checked" && !item.provenance.stale;
@@ -70,24 +117,6 @@ const nativeControl = {
   color: "var(--color)",
   font: "inherit",
   fontSize: 16,
-};
-
-const frequency = (value: string) =>
-  ({
-    once: "One-time",
-    annual: "Annual",
-    biennial: "Every 2 years",
-    every_five_years: "Every 5 years",
-    quarterly: "Quarterly",
-    monthly: "Monthly",
-    per_event: "Per event",
-    ongoing: "Ongoing",
-  })[value] ?? value;
-
-const relativeDays = (value: string | undefined, from: string) => {
-  if (!value) return "";
-  const days = Math.round((Date.parse(`${value}T00:00:00Z`) - Date.parse(`${from}T00:00:00Z`)) / 86_400_000);
-  return new Intl.RelativeTimeFormat("en-US", { numeric: "auto" }).format(days, "day");
 };
 
 const safeUrl = (value?: string) => {
@@ -245,14 +274,15 @@ function Disclosure({
 }
 
 function Confidence({ item }: { item: ComplianceItem }) {
+  const { m, date } = useI18n();
   const provenance = item.provenance;
   if (!provenance) return null;
   const label =
     provenance.confidence === "checked"
-      ? `checked${provenance.checkedOn ? ` ${date(provenance.checkedOn)}` : ""}`
+      ? m.checked(provenance.checkedOn ? date(provenance.checkedOn) : undefined)
       : provenance.confidence === "unconfirmed"
-        ? "partly unconfirmed"
-        : "not individually checked";
+        ? m.partlyUnconfirmed
+        : m.notIndividuallyChecked;
   const tone =
     provenance.confidence === "checked"
       ? "good"
@@ -266,7 +296,7 @@ function Confidence({ item }: { item: ComplianceItem }) {
       </Chip>
       {provenance.stale && (
         <Chip outline tone="warn">
-          review overdue
+          {m.reviewOverdue}
         </Chip>
       )}
     </>
@@ -274,7 +304,8 @@ function Confidence({ item }: { item: ComplianceItem }) {
 }
 
 function Fee({ item }: { item: ComplianceItem }) {
-  return item.cost?.amount !== undefined ? <Chip>fee {money(item.cost.amount)}</Chip> : null;
+  const { m, money } = useI18n();
+  return item.cost?.amount !== undefined ? <Chip>{m.fee(money(item.cost.amount))}</Chip> : null;
 }
 
 function CheckStep({
@@ -315,51 +346,56 @@ function CheckStep({
   );
 }
 
-export function LaunchList({ plan, costs, done = new Set(), onToggle }: LaunchListProps) {
+export function LaunchList(props: LaunchListProps) {
+  return (
+    <WithLocale locale={props.locale} messages={props.messages}>
+      <LaunchListBody {...props} />
+    </WithLocale>
+  );
+}
+
+function LaunchListBody({ plan, costs, done = new Set(), onToggle }: LaunchListProps) {
+  const { m, money, date, relativeDays } = useI18n();
   const completed = plan.steps.filter((step) => done.has(step.item.id)).length;
   const byId = new Map(plan.steps.map((step) => [step.item.id, step.item]));
   return (
     <YStack gap="4">
       <XStack flexWrap="wrap" gap="3">
         <Stat
-          label="File formation"
+          label={m.fileFormation}
           value={date(plan.formationDate)}
           note={relativeDays(plan.formationDate, plan.startDate)}
         />
         <Stat
-          label="Ready to operate"
+          label={m.readyToOperate}
           value={date(plan.readyDate)}
           note={relativeDays(plan.readyDate, plan.startDate)}
         />
         {plan.onTrack === undefined ? (
-          <Stat
-            label="Opening date"
-            value="Not set"
-            note="Add a target opening date to check the plan fits"
-          />
+          <Stat label={m.openingDate} value={m.notSet} note={m.addOpeningDate} />
         ) : (
           <Stat
-            label="Opening"
+            label={m.opening}
             value={date(plan.openingDate)}
             note={
               plan.onTrack ? (
-                <Text color="green-600">On track, {plan.slackDays} days of slack</Text>
+                <Text color="green-600">{m.onTrack(plan.slackDays ?? 0)}</Text>
               ) : (
-                <Text color="red-600">{-(plan.slackDays ?? 0)} days too soon</Text>
+                <Text color="red-600">{m.tooSoon(-(plan.slackDays ?? 0))}</Text>
               )
             }
           />
         )}
-        <Stat label="Progress" value={`${completed} / ${plan.steps.length}`} note="Saved in this browser" />
+        <Stat label={m.progress} value={`${completed} / ${plan.steps.length}`} note={m.savedInBrowser} />
         {costs && (
           <Stat
-            label="Known fees"
+            label={m.knownFees}
             value={
               <>
-                {money(costs.oneTime)} <Text fontSize="sm">one-time</Text>
+                {money(costs.oneTime)} <Text fontSize="sm">{m.oneTime}</Text>
               </>
             }
-            note={`${money(costs.annual)} per year`}
+            note={m.perYear(money(costs.annual))}
           />
         )}
       </XStack>
@@ -385,12 +421,12 @@ export function LaunchList({ plan, costs, done = new Set(), onToggle }: LaunchLi
                   </Chip>
                   <Text fontWeight="600">{phase.title}</Text>
                   <Chip tone={remaining === 0 ? "good" : "neutral"} outline={remaining === 0}>
-                    {remaining === 0 ? "done" : `${remaining} to do`}
+                    {remaining === 0 ? m.done : m.toDo(remaining)}
                   </Chip>
                 </XStack>
                 <Text fontSize="sm" color="placeholder-color">
                   {date(phase.start)}
-                  {phase.end ? ` → ${date(phase.end)}` : " onward"}
+                  {phase.end ? ` → ${date(phase.end)}` : ` ${m.onward}`}
                 </Text>
               </YStack>
             }
@@ -416,18 +452,21 @@ export function LaunchList({ plan, costs, done = new Set(), onToggle }: LaunchLi
                     <XStack flexWrap="wrap" gap="1.5" paddingLeft="8">
                       {step.legalDeadline ? (
                         <Chip outline tone="bad">
-                          due {date(step.legalDeadline)} · {relativeDays(step.legalDeadline, plan.startDate)}
+                          {m.dueOn(
+                            date(step.legalDeadline),
+                            relativeDays(step.legalDeadline, plan.startDate),
+                          )}
                         </Chip>
                       ) : step.target ? (
-                        <Chip>by {date(step.target)}</Chip>
+                        <Chip>{m.by(date(step.target))}</Chip>
                       ) : null}
                       <Fee item={step.item} />
-                      <Chip>{frequency(step.item.frequency)}</Chip>
+                      <Chip>{m.frequencies[step.item.frequency] ?? step.item.frequency}</Chip>
                       <Confidence item={step.item} />
                     </XStack>
                     {needs.length > 0 && (
                       <Text fontSize="sm" color="placeholder-color" paddingLeft="8">
-                        After: {needs.join("; ")}
+                        {m.after} {needs.join("; ")}
                       </Text>
                     )}
                   </YStack>
@@ -438,43 +477,25 @@ export function LaunchList({ plan, costs, done = new Set(), onToggle }: LaunchLi
         );
       })}
       <Text fontSize="sm" color="placeholder-color">
-        Dates are planning allowances, not agency processing times. Legal due dates are shown where the rules
-        give one.
+        {m.planNote}
       </Text>
     </YStack>
   );
 }
 
 function itemMatches(item: ComplianceItem, filters: ObligationFilters) {
-  const query = filters.query.trim().toLowerCase();
+  const query = fold(filters.query.trim());
   return (
     (filters.jurisdiction === "all" || item.jurisdiction === filters.jurisdiction) &&
     (filters.category === "all" || item.category === filters.category) &&
     (filters.trust === "all" || (filters.trust === "verified") === isVerified(item)) &&
-    (!query ||
-      `${item.title} ${item.authority} ${item.description} ${item.reason}`.toLowerCase().includes(query))
+    (!query || fold(`${item.title} ${item.authority} ${item.description} ${item.reason}`).includes(query))
   );
 }
 
 export function filterObligations(items: ComplianceItem[], filters: ObligationFilters): ComplianceItem[] {
   return items.filter((item) => itemMatches(item, filters));
 }
-
-const FILING_METHOD: Record<string, string> = {
-  online: "online",
-  mail: "by mail",
-  in_person: "in person",
-  fax: "by fax",
-};
-const OP: Record<string, string> = {
-  ">=": "at least",
-  ">": "more than",
-  "<=": "at most",
-  "<": "less than",
-  "==": "is",
-  "!=": "is not",
-  in: "is one of",
-};
 
 function ObligationDetails({
   item,
@@ -483,34 +504,35 @@ function ObligationDetails({
   item: ComplianceItem;
   titleOf: (id: string) => string | undefined;
 }) {
-  const rows: Array<[string, ReactNode]> = [["Why it applies", item.reason]];
-  if (item.preemptedBy) rows.push(["Replaced by", titleOf(item.preemptedBy) ?? item.preemptedBy]);
+  const { m, money, date } = useI18n();
+  const rows: Array<[string, ReactNode]> = [[m.whyItApplies, item.reason]];
+  if (item.preemptedBy) rows.push([m.replacedBy, titleOf(item.preemptedBy) ?? item.preemptedBy]);
   if (item.appliesWhen?.length)
     rows.push([
-      "Applies when",
+      m.appliesWhen,
       item.appliesWhen
         .map(
           (when) =>
             when.description ??
-            `${when.field} ${OP[when.op] ?? when.op} ${Array.isArray(when.value) ? when.value.join(", ") : String(when.value)}`,
+            `${m.fields[when.field] ?? when.field} ${m.operators[when.op] ?? when.op} ${Array.isArray(when.value) ? when.value.join(", ") : String(when.value)}`,
         )
         .join("; "),
     ]);
-  if (item.exemptions?.length) rows.push(["Exceptions", item.exemptions.join("; ")]);
-  rows.push(["Authority", <ExternalLink url={item.url}>{item.authority}</ExternalLink>]);
+  if (item.exemptions?.length) rows.push([m.exceptions, item.exemptions.join("; ")]);
+  rows.push([m.authority, <ExternalLink url={item.url}>{item.authority}</ExternalLink>]);
   const how = [
-    item.formId ? `Form ${item.formId}` : undefined,
+    item.formId ? m.form(item.formId) : undefined,
     item.filingMethod?.length
-      ? item.filingMethod.map((method) => FILING_METHOD[method] ?? method).join(", ")
+      ? item.filingMethod.map((method) => m.filingMethods[method] ?? method).join(", ")
       : undefined,
     item.processingTime,
   ].filter(Boolean);
-  if (how.length) rows.push(["How to file", how.join(" · ")]);
-  if (item.renewal) rows.push(["Renewal", item.renewal]);
+  if (how.length) rows.push([m.howToFile, how.join(" · ")]);
+  if (item.renewal) rows.push([m.renewal, item.renewal]);
   if (item.penalty)
     rows.push([
-      "If late",
-      `${money(item.penalty.amount)}${item.penalty.percentPerMonth ? ` plus ${item.penalty.percentPerMonth}% per month` : ""}${item.penalty.note ? `. ${item.penalty.note}` : ""}`,
+      m.ifLate,
+      `${money(item.penalty.amount)}${item.penalty.percentPerMonth ? m.plusPerMonth(item.penalty.percentPerMonth) : ""}${item.penalty.note ? `. ${item.penalty.note}` : ""}`,
     ]);
   const provenance = item.provenance;
   if (provenance?.sources.length) {
@@ -518,17 +540,17 @@ function ObligationDetails({
       provenance.sourceDetails ??
       provenance.sources.map((url) => ({ url, kind: "agency_page" as const, archiveUrl: "" }));
     rows.push([
-      "Sources",
+      m.sources,
       <>
         {sources.slice(0, 3).map((source, index) => (
           <span key={source.url}>
             {index > 0 && "; "}
             <ExternalLink url={source.url}>{host(source.url)}</ExternalLink>
-            {source.kind === "pdf" ? " (PDF)" : ""}
+            {source.kind === "pdf" ? m.pdf : ""}
             {source.archiveUrl ? (
               <>
                 {" "}
-                (<ExternalLink url={source.archiveUrl}>archived copy</ExternalLink>)
+                (<ExternalLink url={source.archiveUrl}>{m.archivedCopy}</ExternalLink>)
               </>
             ) : null}
           </span>
@@ -538,14 +560,11 @@ function ObligationDetails({
   }
   if (provenance)
     rows.push([
-      "Data",
-      `${provenance.confidence === "checked" && provenance.checkedOn ? `Checked against official pages on ${date(provenance.checkedOn)}` : `Compiled from public sources${provenance.compiledOn ? ` on ${date(provenance.compiledOn)}` : ""}; not individually checked`}${provenance.reviewBy ? `. ${provenance.stale ? "Review overdue since" : "Review due by"} ${date(provenance.reviewBy)}.` : ""}`,
+      m.data,
+      `${provenance.confidence === "checked" && provenance.checkedOn ? m.checkedAgainst(date(provenance.checkedOn)) : m.compiledFrom(provenance.compiledOn ? date(provenance.compiledOn) : undefined)}${provenance.reviewBy ? `. ${provenance.stale ? m.reviewOverdueSince(date(provenance.reviewBy)) : m.reviewDueBy(date(provenance.reviewBy))}.` : ""}`,
     ]);
   if (item.feedbackUrl)
-    rows.push([
-      "See an error?",
-      <ExternalLink url={item.feedbackUrl}>Report it or suggest a correction</ExternalLink>,
-    ]);
+    rows.push([m.seeAnError, <ExternalLink url={item.feedbackUrl}>{m.reportIt}</ExternalLink>]);
   return (
     <YStack gap="2" paddingBottom="2">
       <Paragraph>{item.description}</Paragraph>
@@ -563,8 +582,20 @@ function ObligationDetails({
   );
 }
 
-export function ObligationsList({ items, asOf, filters, onFilters }: ObligationsListProps) {
-  const categories = [...new Set(items.map((item) => item.category))].sort();
+export function ObligationsList(props: ObligationsListProps) {
+  return (
+    <WithLocale locale={props.locale} messages={props.messages}>
+      <ObligationsListBody {...props} />
+    </WithLocale>
+  );
+}
+
+function ObligationsListBody({ items, asOf, filters, onFilters }: ObligationsListProps) {
+  const { m, tag, date, relativeDays } = useI18n();
+  const categoryLabel = (category: ComplianceItem["category"]) => m.categories[category] ?? category;
+  const categories = [...new Set(items.map((item) => item.category))].sort((a, b) =>
+    categoryLabel(a).localeCompare(categoryLabel(b), tag),
+  );
   const filtered = filterObligations(items, filters);
   const titleById = new Map(items.map((item) => [item.id, item.title]));
   const count = (jurisdiction: string) =>
@@ -581,14 +612,14 @@ export function ObligationsList({ items, asOf, filters, onFilters }: Obligations
     <YStack gap="3">
       <XStack justifyContent="space-between" gap="3" flexWrap="wrap" alignItems="baseline">
         <YStack gap="0.5">
-          <Text fontWeight="700">Find an obligation</Text>
+          <Text fontWeight="700">{m.findObligation}</Text>
           <Text fontSize="sm" color="placeholder-color">
-            Showing {filtered.length} of {items.length} obligations
+            {m.showing(filtered.length, items.length)}
           </Text>
         </YStack>
         {hasFilters && (
           <Button size="sm" onPress={clearFilters}>
-            Clear filters
+            {m.clearFilters}
           </Button>
         )}
       </XStack>
@@ -596,51 +627,51 @@ export function ObligationsList({ items, asOf, filters, onFilters }: Obligations
         <Input
           flex={1}
           flexBasis={220}
-          placeholder="Search obligations"
-          aria-label="Search obligations"
+          placeholder={m.searchObligations}
+          aria-label={m.searchObligations}
           value={filters.query}
           onChangeText={(query) => onFilters({ ...filters, query })}
         />
         <YStack flexBasis={220} flexGrow={1} gap="0.5">
           <Label htmlFor="obligation-category" fontSize="sm" color="placeholder-color">
-            Category
+            {m.category}
           </Label>
           <select
             id="obligation-category"
-            aria-label="Category"
+            aria-label={m.category}
             style={nativeControl}
             value={filters.category}
             onChange={(event) => onFilters({ ...filters, category: event.target.value })}
           >
-            <option value="all">All categories</option>
+            <option value="all">{m.allCategories}</option>
             {categories.map((category) => (
               <option key={category} value={category}>
-                {category} ({categoryCount(category)})
+                {categoryLabel(category)} ({categoryCount(category)})
               </option>
             ))}
           </select>
         </YStack>
         <YStack flexBasis={220} flexGrow={1} gap="0.5">
           <Label htmlFor="obligation-trust" fontSize="sm" color="placeholder-color">
-            Data confidence
+            {m.dataConfidence}
           </Label>
           <select
             id="obligation-trust"
-            aria-label="Data confidence"
+            aria-label={m.dataConfidence}
             style={nativeControl}
             value={filters.trust}
             onChange={(event) =>
               onFilters({ ...filters, trust: event.target.value as ObligationFilters["trust"] })
             }
           >
-            <option value="all">All confidence levels</option>
-            <option value="verified">Checked against official pages</option>
-            <option value="unverified">Needs verification</option>
+            <option value="all">{m.allConfidenceLevels}</option>
+            <option value="verified">{m.checkedAgainstOfficial}</option>
+            <option value="unverified">{m.needsVerification}</option>
           </select>
         </YStack>
       </XStack>
       <XStack gap="1.5" flexWrap="wrap">
-        {[["all", "All"] as const, ...JURISDICTIONS].map(([key, label]) => (
+        {(["all", ...JURISDICTIONS] as const).map((key) => (
           <Button
             key={key}
             size="sm"
@@ -649,14 +680,14 @@ export function ObligationsList({ items, asOf, filters, onFilters }: Obligations
             onPress={() => onFilters({ ...filters, jurisdiction: key })}
             aria-pressed={filters.jurisdiction === key}
           >
-            {label} {key === "all" ? filtered.length : count(key)}
+            {key === "all" ? m.all : m.jurisdictions[key]} {key === "all" ? filtered.length : count(key)}
           </Button>
         ))}
       </XStack>
       {filtered.length === 0 ? (
-        <Text color="placeholder-color">No obligations match these filters.</Text>
+        <Text color="placeholder-color">{m.noMatch}</Text>
       ) : (
-        JURISDICTIONS.map(([jurisdiction, label]) => {
+        JURISDICTIONS.map((jurisdiction) => {
           const group = filtered
             .filter((item) => item.jurisdiction === jurisdiction)
             .sort((a, b) => (a.nextDue ?? "9999-12-31").localeCompare(b.nextDue ?? "9999-12-31"));
@@ -665,7 +696,7 @@ export function ObligationsList({ items, asOf, filters, onFilters }: Obligations
             <YStack key={jurisdiction}>
               <XStack gap="2" alignItems="center" paddingTop="3" paddingBottom="1">
                 <Text fontSize="lg" fontWeight="600">
-                  {label}
+                  {m.jurisdictions[jurisdiction]}
                 </Text>
                 <Chip tone="info">{group.length}</Chip>
               </XStack>
@@ -685,13 +716,13 @@ export function ObligationsList({ items, asOf, filters, onFilters }: Obligations
                         <XStack gap="1.5" flexWrap="wrap">
                           {item.nextDue ? (
                             <Chip tone={isSoon(item.nextDue, asOf) ? "warn" : "info"} outline>
-                              due {date(item.nextDue)} · {relativeDays(item.nextDue, asOf)}
+                              {m.dueOn(date(item.nextDue), relativeDays(item.nextDue, asOf))}
                             </Chip>
                           ) : item.deadline ? (
                             <Chip>{item.deadline}</Chip>
                           ) : null}
-                          <Chip>{frequency(item.frequency)}</Chip>
-                          <Chip>{item.category}</Chip>
+                          <Chip>{m.frequencies[item.frequency] ?? item.frequency}</Chip>
+                          <Chip>{categoryLabel(item.category)}</Chip>
                           <Fee item={item} />
                           <Confidence item={item} />
                         </XStack>
@@ -710,4 +741,6 @@ export function ObligationsList({ items, asOf, filters, onFilters }: Obligations
   );
 }
 
+export { messages, getMessages } from "./messages";
+export type { Locale, Messages } from "./messages";
 export type { ComplianceItem, LaunchPlan };

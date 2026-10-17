@@ -1,9 +1,11 @@
+import type { ReactElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
 import { defaultConfig } from "@tamagui/config/v6";
 import { TamaguiProvider, createTamagui } from "tamagui";
-import { planLaunch, type BusinessProfile } from "business-obligations";
-import { filterObligations, LaunchList, ObligationsList, type ObligationFilters } from "./index";
+import { localizePlan, planLaunch, type BusinessProfile } from "business-obligations";
+import { es } from "business-obligations/locales/es";
+import { filterObligations, LaunchList, messages, ObligationsList, type ObligationFilters } from "./index";
 
 const profile: BusinessProfile = {
   entityType: "llc",
@@ -102,5 +104,107 @@ describe("business-obligations-ui", () => {
     expect(html).toContain("Clear filters");
     expect(html).toContain('href="https://');
     expect(html).not.toContain("text-align:center");
+  });
+});
+
+describe("business-obligations-ui in Spanish", () => {
+  const plan = planLaunch(profile, { startDate: "2026-11-02", openingDate: "2027-02-01" });
+  const spanish = localizePlan(plan, es);
+  const render = (node: ReactElement) =>
+    renderToStaticMarkup(
+      <TamaguiProvider config={tamaguiConfig} defaultTheme="light">
+        {node}
+      </TamaguiProvider>,
+    );
+
+  it("shows the launch list in Spanish, with Spanish dates and relative times", () => {
+    const html = render(<LaunchList plan={spanish} costs={spanish.costs} locale="es" />);
+    expect(html).toContain("Presentar la constitución");
+    expect(html).toContain("Listo para operar");
+    expect(html).toContain("Tarifas conocidas");
+    expect(html).toContain("Guardado en este navegador");
+    expect(html).toContain("Preparar la presentación");
+    expect(html).not.toContain("File formation");
+    expect(html).not.toContain("Known fees");
+    // Dates and relative times come from Intl in the locale: "2 nov 2026", "en 7 días".
+    expect(html).toMatch(/\d{1,2} \w{3,4}\.? 2026/);
+    expect(html).toContain("días");
+    // US conventions for money: "$4.50", not "4,50 US$".
+    expect(html).toMatch(/\$\d/);
+    expect(html).not.toContain("US$");
+  });
+
+  it("shows the obligations list in Spanish", () => {
+    const html = render(
+      <ObligationsList
+        items={spanish.result.items}
+        asOf="2026-11-02"
+        filters={filters()}
+        onFilters={() => undefined}
+        locale="es"
+      />,
+    );
+    expect(html).toContain("Buscar una obligación");
+    expect(html).toContain("Mostrando");
+    expect(html).toContain("Categoría");
+    expect(html).toContain("Estatal");
+    expect(html).toContain("Anual");
+    expect(html).not.toContain("Find an obligation");
+    expect(html).not.toContain("Showing");
+  });
+
+  it("keeps English as the default and for unknown languages", () => {
+    const base = render(<LaunchList plan={plan} costs={plan.costs} />);
+    expect(render(<LaunchList plan={plan} costs={plan.costs} locale="en" />)).toBe(base);
+    expect(base).toContain("Known fees");
+    // A language without a table falls back to English text but formats dates for the locale.
+    expect(render(<LaunchList plan={plan} costs={plan.costs} locale="fr" />)).toContain("Known fees");
+  });
+
+  it("accepts a custom message table for another language", () => {
+    const html = render(
+      <LaunchList
+        plan={plan}
+        costs={plan.costs}
+        locale="fr"
+        messages={{ ...messages.en, knownFees: "Frais connus", fileFormation: "Constitution" }}
+      />,
+    );
+    expect(html).toContain("Frais connus");
+    expect(html).toContain("Constitution");
+  });
+
+  it("finds Spanish text typed without accents", () => {
+    const item = spanish.result.items.find((i) => /[áéíóúñ]/i.test(i.title));
+    if (!item) throw new Error("expected a Spanish title with an accent");
+    const plain = item.title.normalize("NFD").replace(/\p{M}/gu, "").slice(0, 12);
+    const found = filterObligations(spanish.result.items, filters({ query: plain }));
+    expect(found.some((candidate) => candidate.id === item.id)).toBe(true);
+    // Upper case and accents do not matter.
+    expect(filterObligations(spanish.result.items, filters({ query: plain.toUpperCase() })).length).toBe(
+      found.length,
+    );
+  });
+
+  it("has Spanish text for every message", () => {
+    const keys = (value: unknown): string[] =>
+      value && typeof value === "object"
+        ? Object.entries(value).flatMap(([key, inner]) =>
+            typeof inner === "object" ? keys(inner).map((k) => `${key}.${k}`) : [key],
+          )
+        : [];
+    expect(keys(messages.es).sort()).toEqual(
+      keys(messages.en)
+        .sort()
+        .filter((k) => !k.startsWith("fields."))
+        .concat(keys(messages.es).filter((k) => k.startsWith("fields.")))
+        .sort(),
+    );
+    expect(Object.keys(messages.es.fields).sort()).toEqual(Object.keys(messages.en.fields).sort());
+    for (const [locale, table] of Object.entries(messages)) {
+      expect(table.onTrack(1), locale).toBeTruthy();
+      expect(table.onTrack(5), locale).not.toBe(table.onTrack(1));
+      expect(table.toDo(2), locale).toBeTruthy();
+    }
   });
 });
