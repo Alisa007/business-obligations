@@ -167,12 +167,34 @@
   },
   {
     "city": "Houston",
-    "status": "none",
     "sourceUrl": "https://cohips.houstontx.gov/ara/business-licensing.html",
     "note": "The city issues no general business license; permits are activity-specific (alcohol, coin-operated machines, dealers, game rooms, noise, street vendors). Physical businesses need a certificate of occupancy.",
     "counties": ["Harris"],
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "houston.food-establishment-permit",
+        "title": "Renew your Houston food establishment permit",
+        "category": "license",
+        "authority": "Houston Health Department",
+        "description": "Any operation that stores, prepares, packages, serves or sells food, such as a restaurant, food warehouse, packaged-food store or commissary, needs a Houston Health Department permit. The permit fee runs from $224.44 to $739.44 depending on risk level, and the permit is valid for one year. Renewal invoices are mailed 30 to 45 days before it expires, and the late fee is $66.21. New construction or a remodel also needs plan review and a preoperational inspection first.",
+        "frequency": "annual",
+        "url": "https://www.houstonpermittingcenter.org/hhd1003",
+        "naics": ["722", "445", "311", "4244", "493120"],
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "houston.mobile-food-unit-medallion",
+        "title": "Renew your Houston mobile food unit medallion",
+        "category": "license",
+        "authority": "Houston Health Department",
+        "description": "A food truck, food trailer, ice cream truck or cart needs a mobile food unit medallion from the Houston Health Department. The fee is $258.00 plus a $112.57 inspection fee, and the medallion is valid for one year. A new unit needs plan review and an inspection first. Renewal invoices are mailed 30 to 45 days before it expires.",
+        "frequency": "annual",
+        "url": "https://www.houstonpermittingcenter.org/hhd1008",
+        "naics": ["722330", "722515"],
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "Irving",
