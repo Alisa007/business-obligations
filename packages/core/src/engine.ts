@@ -130,7 +130,12 @@ export function resolveProfile(input: BusinessProfile): ResolvedProfile {
   nonNeg("fullTimeEmployeeCount", input.fullTimeEmployeeCount);
   if (input.ownerCount !== undefined && !(Number.isInteger(input.ownerCount) && input.ownerCount >= 1))
     throw new InvalidProfileError("`ownerCount` must be an integer of at least 1");
-  if ((input.fullTimeEmployeeCount ?? 0) > (input.employeeCount ?? 0))
+  // Only compared when both are given: with no head count, the full-time ones are the employees that are known.
+  if (
+    input.fullTimeEmployeeCount !== undefined &&
+    input.employeeCount !== undefined &&
+    input.fullTimeEmployeeCount > input.employeeCount
+  )
     throw new InvalidProfileError("`fullTimeEmployeeCount` cannot exceed `employeeCount`");
   nonNeg("annualPayroll", input.annualPayroll);
   nonNeg("annualRevenue", input.annualRevenue);
@@ -142,7 +147,7 @@ export function resolveProfile(input: BusinessProfile): ResolvedProfile {
   nonNeg("disturbedAcres", input.disturbedAcres);
   nonNeg("floorAreaSqFt", input.floorAreaSqFt);
 
-  const employeeCount = input.employeeCount ?? 0;
+  const employeeCount = input.employeeCount ?? input.fullTimeEmployeeCount ?? 0;
   const presence: Presence[] = [{ state, home: true, employeeCount, hasProperty: true }];
   for (const m of input.multistate ?? []) {
     const code = m.state.toUpperCase();

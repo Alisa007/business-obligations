@@ -1,10 +1,9 @@
-"use client";
-
 import { useState } from "react";
 import { Button, Popover, Text, XStack, YStack } from "tamagui";
-import { formatDate } from "../lib/format";
-import { today } from "../lib/plan";
-import { Field, useControlProps } from "./ui";
+import { useI18n } from "../../i18n/context";
+import { todayIso } from "../../i18n/format";
+import { useControlProps } from "../../shared/controls";
+import { Labeled } from "./controls";
 
 const pad = (n: number) => String(n).padStart(2, "0");
 const iso = (y: number, m: number, d: number) => `${y}-${pad(m + 1)}-${pad(d)}`;
@@ -21,13 +20,6 @@ function monthGrid(year: number, month: number): Array<Array<string | undefined>
   return Array.from({ length: cells.length / 7 }, (_, w) => cells.slice(w * 7, w * 7 + 7));
 }
 
-const monthLabel = new Intl.DateTimeFormat(undefined, { month: "long", year: "numeric", timeZone: "UTC" });
-const weekdays = Array.from({ length: 7 }, (_, i) =>
-  new Intl.DateTimeFormat(undefined, { weekday: "narrow", timeZone: "UTC" }).format(
-    new Date(Date.UTC(2023, 0, 1 + i)),
-  ),
-);
-
 function Calendar({
   value,
   min,
@@ -39,21 +31,28 @@ function Calendar({
   max?: string;
   onPick: (iso: string) => void;
 }) {
-  const start = /^\d{4}-\d{2}-\d{2}$/.test(value) ? value : (min ?? today());
+  const { m, tag, date } = useI18n();
+  const start = /^\d{4}-\d{2}-\d{2}$/.test(value) ? value : (min ?? todayIso());
   const [view, setView] = useState({ year: Number(start.slice(0, 4)), month: Number(start.slice(5, 7)) - 1 });
   const shift = (by: number) =>
     setView(({ year, month }) => {
       const d = new Date(Date.UTC(year, month + by, 1));
       return { year: d.getUTCFullYear(), month: d.getUTCMonth() };
     });
+  const monthLabel = new Intl.DateTimeFormat(tag, { month: "long", year: "numeric", timeZone: "UTC" });
+  const weekdays = Array.from({ length: 7 }, (_, i) =>
+    new Intl.DateTimeFormat(tag, { weekday: "narrow", timeZone: "UTC" }).format(
+      new Date(Date.UTC(2023, 0, 1 + i)),
+    ),
+  );
   return (
     <YStack gap="2" width={280}>
       <XStack alignItems="center" justifyContent="space-between">
-        <Button size="sm" aria-label="Previous month" onPress={() => shift(-1)}>
+        <Button size="sm" aria-label={m.profileForm.previousMonth} onPress={() => shift(-1)}>
           ‹
         </Button>
         <Text fontWeight="600">{monthLabel.format(new Date(Date.UTC(view.year, view.month, 1)))}</Text>
-        <Button size="sm" aria-label="Next month" onPress={() => shift(1)}>
+        <Button size="sm" aria-label={m.profileForm.nextMonth} onPress={() => shift(1)}>
           ›
         </Button>
       </XStack>
@@ -75,7 +74,7 @@ function Calendar({
                 paddingHorizontal={0}
                 theme={day === value ? "accent" : undefined}
                 disabled={Boolean((min && day < min) || (max && day > max))}
-                aria-label={formatDate(day)}
+                aria-label={date(day)}
                 aria-pressed={day === value}
                 onPress={() => onPick(day)}
               >
@@ -91,7 +90,6 @@ function Calendar({
   );
 }
 
-/** A date selector built from Tamagui parts: a trigger styled like the other inputs and a `Popover` calendar. */
 export function DateField({
   id,
   label,
@@ -109,10 +107,11 @@ export function DateField({
   max?: string;
   clearable?: boolean;
 }) {
+  const { m, date } = useI18n();
   const [open, setOpen] = useState(false);
   const controlProps = useControlProps();
   return (
-    <Field label={label} htmlFor={id}>
+    <Labeled id={id} label={label}>
       <Popover open={open} onOpenChange={setOpen} placement="top-start">
         <Popover.Trigger asChild>
           <Button
@@ -124,7 +123,7 @@ export function DateField({
             backgroundColor="background"
           >
             <Text fontSize={controlProps.fontSize} color={value ? "color" : "placeholder-color"}>
-              {value ? formatDate(value) : "Select date"}
+              {value ? date(value) : m.profileForm.selectDate}
             </Text>
           </Button>
         </Popover.Trigger>
@@ -149,11 +148,11 @@ export function DateField({
                 setOpen(false);
               }}
             >
-              Clear date
+              {m.profileForm.clearDate}
             </Button>
           ) : null}
         </Popover.Content>
       </Popover>
-    </Field>
+    </Labeled>
   );
 }

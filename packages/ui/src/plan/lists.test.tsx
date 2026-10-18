@@ -5,7 +5,7 @@ import { defaultConfig } from "@tamagui/config/v6";
 import { TamaguiProvider, createTamagui } from "tamagui";
 import { localizePlan, planLaunch, type BusinessProfile } from "business-obligations";
 import { es } from "business-obligations/locales/es";
-import { filterObligations, LaunchList, messages, ObligationsList, type ObligationFilters } from "./index";
+import { filterObligations, LaunchList, messages, ObligationsList, type ObligationFilters } from "../index";
 
 const profile: BusinessProfile = {
   entityType: "llc",
@@ -43,6 +43,51 @@ describe("business-obligations-ui", () => {
     expect(
       verified.every((item) => item.provenance?.confidence === "checked" && !item.provenance.stale),
     ).toBe(true);
+  });
+
+  it("shows items that apply only under conditions in their own section, with what would bring them in", () => {
+    const item = items[0];
+    if (!item) throw new Error("expected launch fixture to contain an obligation");
+    const maybe = { ...item, id: "maybe-1", title: "Only with a payroll" };
+    const render = (locale?: "es", query = "") =>
+      renderToStaticMarkup(
+        <TamaguiProvider config={tamaguiConfig} defaultTheme="light">
+          <ObligationsList
+            items={items}
+            conditional={[
+              {
+                item: maybe,
+                when: [
+                  { field: "employeeCount", values: [1, 2, 3, 4] },
+                  { field: "homeBased", values: [true] },
+                ],
+              },
+            ]}
+            asOf="2026-11-02"
+            filters={filters({ query })}
+            onFilters={() => undefined}
+            locale={locale}
+          />
+        </TamaguiProvider>,
+      );
+    const html = render();
+    expect(html).toContain("Conditionally applicable");
+    expect(html).toContain("Only with a payroll");
+    expect(html).toContain("Applies if");
+    expect(html).toContain("1, 2, 3 …");
+    expect(html).toContain("yes");
+    // the section follows the others, and goes away when nothing in it matches the search
+    expect(html.indexOf("Conditionally applicable")).toBeGreaterThan(html.indexOf("Federal</"));
+    expect(render(undefined, "zzzz-no-match")).not.toContain("Conditionally applicable");
+    expect(render("es")).toContain("Aplicables según condiciones");
+    // without the prop there is no section
+    expect(
+      renderToStaticMarkup(
+        <TamaguiProvider config={tamaguiConfig} defaultTheme="light">
+          <ObligationsList items={items} asOf="2026-11-02" filters={filters()} onFilters={() => undefined} />
+        </TamaguiProvider>,
+      ),
+    ).not.toContain("Conditionally applicable");
   });
 
   it("filters by category and combines category with search", () => {
