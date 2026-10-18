@@ -9,6 +9,7 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ### Added
 
+- **core:** Delaware Division of Professional Regulation licenses (36 boards and programs, with application fees and renewal dates), with Spanish text
 - **core:** Houston Health Department food establishment permit and mobile food unit medallion, with Spanish text
 - **core:** New York State Liquor Authority on-premises and off-premises (liquor store) licenses, with Spanish text
 - **core:** Syracuse Certificate of Use, and Rochester business permits, food truck and towing licenses, each scoped by NAICS code, with Spanish text
