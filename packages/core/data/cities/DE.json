@@ -8,17 +8,17 @@
         "title": "Pay the City of Dover business license fee",
         "category": "license",
         "authority": "City of Dover Department of Planning and Inspections",
-        "description": "Dover's code licenses trades, businesses and occupations operating in the city. A license runs from August 1 to July 31, and a penalty set in the code's fee schedule applies when the fee is not paid by August 31; the fee itself depends on the type of business (Chapter 26, Article II and Appendix F of the Dover Code).",
+        "description": "A business working in Dover needs a city license, valid August 1 to July 31, and one bought after July is prorated by the months left. The fee depends on the type of business, set by ordinance 2024-22: for example $128 for an eating establishment, $180 for a food truck, $192 for a car wash or fitness trainer, $320 for each attorney, dentist or physician, and $52 to $320 for other businesses by employee count. Manufacturers and contractors pay $0.00046 of gross receipts with a $128 minimum, and merchants and bottlers the same rate on purchases for resale with a $64 minimum. A renewal not paid by August 31 adds a penalty of 10% of the fee for each month.",
         "rrule": "FREQ=YEARLY;BYMONTH=8;BYMONTHDAY=31",
+        "url": "https://www.cityofdover.gov/media/Planning%20and%20Inspections/Forms%20and%20Brochures/Brochures/Business%20Licenses",
+        "appliesTo": ["all"],
         "opens": {
           "month": 8,
           "day": 1
-        },
-        "url": "https://www.cityofdover.gov/media/Government/Ordinances-Resolutions-Tributes/2016/2016-06.pdf",
-        "appliesTo": ["all"]
+        }
       }
     ],
-    "checkedOn": "2026-10-15"
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "Middletown",
@@ -50,9 +50,31 @@
         "frequency": "ongoing",
         "url": "https://newarkde.gov/715/Business-License",
         "appliesTo": ["all"]
+      },
+      {
+        "id": "newark-de.rental-license",
+        "title": "Get a Newark rental license",
+        "category": "license",
+        "authority": "City of Newark Planning and Development",
+        "description": "A landlord renting in Newark needs a rental license for each unit. The 2026 fees are $234 per unit in a single-family or two-family home, $160 per townhouse or condominium unit, $86 per unit in buildings of three or more units, and $49 per occupant in fraternities, sororities and boarding houses. A bill paid late adds 5% and then 1.5% a month, and a $5 technology fee applies to every business and rental license.",
+        "frequency": "annual",
+        "url": "https://newarkde.gov/DocumentCenter/View/18740/2024-Fee-Schedule",
+        "naics": ["5311", "531110", "531311"],
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "newark-de.contractor-fire-licenses",
+        "title": "Get Newark contractor and fire licenses",
+        "category": "license",
+        "authority": "City of Newark Planning and Development",
+        "description": "The 2026 Newark fee schedule charges $100 for a contractor's license, $50 for an elevator license, and $100 a year for a fire license. Fire safety registration is $100 per registration and each fire alarm or suppression system report $25. Annual sign fees are $1.25 per square foot with a $55 minimum.",
+        "frequency": "annual",
+        "url": "https://newarkde.gov/DocumentCenter/View/18740/2024-Fee-Schedule",
+        "naics": ["236", "237", "238"],
+        "appliesTo": ["all"]
       }
     ],
-    "checkedOn": "2026-10-15"
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "Smyrna",

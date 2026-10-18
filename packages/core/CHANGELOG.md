@@ -9,6 +9,8 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ### Added
 
+- **core:** Newark (Delaware) rental, contractor and fire licenses, with Spanish text
+- **core:** updated Dover (Delaware) business license fees, with Spanish text
 - **core:** Smyrna (Delaware) business and rental licenses, with Spanish text
 - **core:** Middletown (Delaware) business license, with fees by industry, with Spanish text
 - **core:** Delaware DNREC permits and licenses (storage tanks, well and septic contractors, stormwater, air, wetlands and marinas) and the motor vehicle dealer license, with Spanish text
