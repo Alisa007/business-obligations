@@ -555,11 +555,22 @@
   },
   {
     "city": "Oceanside",
-    "status": "unverified",
-    "note": "No Oceanside-specific renewal rule was found.",
+    "note": "The late-renewal penalty for the general business license was not confirmed from the city's own pages.",
     "counties": ["San Diego"],
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "oceanside.business-license",
+        "title": "Obtain and renew an Oceanside business license",
+        "category": "license",
+        "authority": "City of Oceanside Business License Office",
+        "description": "All businesses operating in the city, including home-based ones, need a business license. The tax is based on gross receipts for the past 12 months, at 50 cents per $1,000 with a $50 minimum. The city mails a renewal form around the 15th of the month the license expires, and the form and payment are due by the 20th of the following month.",
+        "frequency": "annual",
+        "deadline": "Before opening, then renew by the 20th of the month after the license expires",
+        "url": "https://www.ci.oceanside.ca.us/government/financial-services/business-license",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "Ontario",
@@ -607,11 +618,22 @@
   },
   {
     "city": "Palmdale",
-    "status": "unverified",
-    "note": "Only third-party sources described the renewal (end of the quarter of issuance); the city's own page was not confirmed.",
+    "note": "The renewal date and the current late-renewal penalty were not confirmed from the city's own pages.",
     "counties": ["Los Angeles"],
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "palmdale.business-license",
+        "title": "Obtain and renew a Palmdale business license",
+        "category": "license",
+        "authority": "City of Palmdale Business Licensing Division",
+        "description": "Anyone doing business in the city, including businesses located outside it and single-family rentals, needs a city business license. Payment is not due until the application has been reviewed and approved, and the amount due follows by email within three business days. The state's $4 accessibility training fee is added to new licenses and renewals.",
+        "frequency": "annual",
+        "deadline": "Before opening, then renew each year",
+        "url": "https://www.cityofpalmdaleca.gov/156/Business-License",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "Pomona",
