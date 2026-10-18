@@ -9,6 +9,7 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ### Added
 
+- **core:** Delaware DelDOT contractor registration and public carrier certificate, with Spanish text
 - **core:** Delaware coastal, chemical reporting, plumbing, injection well, radiation and security employee items, with Spanish text
 - **core:** Delaware pesticide, CAFO, tonnage, open burning, waste, tank, constable, racing and mortgage broker items, with Spanish text
 - **core:** Delaware nutrient management, timber, weights and measures, tank, wildlife, aquaculture, water operator and nursing assistant items, with Spanish text
