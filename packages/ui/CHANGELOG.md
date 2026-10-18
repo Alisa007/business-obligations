@@ -6,8 +6,8 @@ All notable changes to `business-obligations-ui` are documented here.
 
 ### Changed
 
-- `Select`: the list of options is at least 240px wide (and never wider than the screen), so a long option is not cut
-  off when the control is narrow
+- `Select`: the list of options is at least as wide as the control and 240px (and never wider than the screen), instead
+  of only as wide as its longest option
 - `ProfileForm`: every group of fields is now a grid of as many equal columns as fit, each at least a minimum width, so
   there are no breakpoints and no gaps: the business type, the industry and the ZIP code share a row (the type and
   the industry at 50% each when the ZIP code is not asked), the employees, owners and full-time staff share a row, the
