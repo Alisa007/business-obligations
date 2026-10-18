@@ -9,6 +9,7 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ### Added
 
+- **core:** Delaware lead, stormwater, air, waste, fishing, shellfish and wastewater licenses and permits, with Spanish text
 - **core:** Delaware auto body, child care, alarm and security agencies, tobacco, body art, pawnbroker, pool and other state licenses, with Spanish text
 - **core:** Delaware fire protection licenses, fire alarm plan review, electric supplier annual report and notary commission, with Spanish text
 - **core:** Delaware adult-use cannabis licenses and health care facility licenses, with Spanish text
