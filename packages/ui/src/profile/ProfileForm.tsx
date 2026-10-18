@@ -1,4 +1,4 @@
-import { useEffect, useId, useRef, type ReactNode } from "react";
+import { useEffect, useId, useRef, type CSSProperties, type ReactNode } from "react";
 import { LLC_TAX_CLASSIFICATIONS, PROFESSIONS } from "business-obligations";
 import { Text } from "tamagui";
 import { WithLocale, useI18n } from "../i18n/context";
@@ -34,32 +34,23 @@ function SectionLabel({ children }: { children: ReactNode }) {
 }
 
 /**
- * The layout follows the width of the form itself (container queries), not of the window, on a twelve-column grid so
- * that the fields can take fractions of a row that change in small steps as the form grows. A `short` field (a
- * count, an amount, a date) takes half a row in a narrow sidebar, a quarter from 520px; the amounts fill a row of as many columns of at least 130px as fit; a `half` field (the type
- * and the industry when the ZIP code is not asked, the fiscal year end and the LLC tax, the dates) is a whole row in
- * a narrow form and half of it from 420px; a `wide` field (text, lists, long labels) is a whole row, half from 420px
- * and a third from 900px; headings and the yes/no details always take the whole row. The form is as wide as the
- * element it is put in (the host sets that width). The first group has no heading: the form needs no title to say
- * what it starts with.
+ * The layout follows the width of the form itself (container queries are not even needed): every group of fields is
+ * a grid of as many equal columns as fit, each at least as wide as the group's `min`, so the two fields of a group
+ * share a row at 50% each as soon as there is room, three at a third, and the amounts all five on one line, with no
+ * breakpoints to leave a gap between them. Headings and the yes/no details take the whole row. The form is as wide as
+ * the element it is put in (the host sets that width). The first group has no heading: the form needs no title to
+ * say what it starts with.
  */
 const FORM_CSS = `
 /* container-type makes the width independent of the content, so the form takes the width it is given */
 .bo-form{container-type:inline-size;width:100%;min-width:0}
-.bo-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:12px;row-gap:14px;align-items:start}
-.bo-grid>*{min-width:0}
-.bo-wide,.bo-half{grid-column:span 12}
-.bo-short{grid-column:span 6}
-.bo-full{grid-column:1/-1}
-/* amounts: as many columns as fit (at least 130px each), so five of them share a line on a wide form */
-.bo-money{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));column-gap:12px;row-gap:14px;align-items:end}
-.bo-money>*{min-width:0}
+.bo-grid{display:flex;flex-direction:column;gap:14px}
+.bo-fluid{display:grid;grid-template-columns:repeat(auto-fit,minmax(var(--bo-min,140px),1fr));column-gap:12px;row-gap:14px;align-items:start}
+.bo-fluid>*{min-width:0}
+.bo-fluid.bo-end{align-items:end}
 .bo-section{display:flex;align-items:center;gap:10px;margin-top:10px}
 .bo-section:first-child{display:none}
 .bo-rule{flex:1;height:1px;background:var(--border-color)}
-@container (min-width:420px){.bo-wide,.bo-half{grid-column:span 6}}
-@container (min-width:520px){.bo-short{grid-column:span 3}}
-@container (min-width:900px){.bo-wide{grid-column:span 4}}
 `;
 
 const MONEY_FIELDS = [
@@ -70,9 +61,13 @@ const MONEY_FIELDS = [
   "priorYearPayrollTaxLiability",
 ] as const;
 
-/** One field in the grid; see `FORM_CSS`. */
-function Cell({ size = "wide", children }: { size?: "wide" | "short" | "half"; children: ReactNode }) {
-  return <div className={`bo-${size}`}>{children}</div>;
+/** The fields of one group: as many equal columns as fit, each at least `min` px wide; see `FORM_CSS`. */
+function Group({ min, end, children }: { min: number; end?: boolean; children: ReactNode }) {
+  return (
+    <div className={end ? "bo-fluid bo-end" : "bo-fluid"} style={{ "--bo-min": `${min}px` } as CSSProperties}>
+      {children}
+    </div>
+  );
 }
 
 /** Something that takes every column of the grid. */
@@ -123,8 +118,6 @@ function ProfileFormBody({ today, onFieldUsed }: Pick<ProfileFormProps, "today" 
     );
     return name.charAt(0).toLocaleUpperCase(tag) + name.slice(1);
   };
-  // Without the ZIP code (the host gave the place) the type and the industry are half the row each, at any width.
-  const half = shows("zip") ? "wide" : "half";
   const askProfession = shows("profession") && needsProfession(choices);
   const askLlcTax = shows("llcTaxClassification") && ["", "llc", "pllc"].includes(choices.entityType ?? "");
   const askDetails = shows("isFormed", ...DETAIL_FIELDS);
@@ -132,61 +125,73 @@ function ProfileFormBody({ today, onFieldUsed }: Pick<ProfileFormProps, "today" 
   return (
     <div className="bo-grid">
       {(shows("zip", "entityType", "naics") || askProfession) && <SectionLabel>{f.business}</SectionLabel>}
-      {shows("entityType") && (
-        <Cell size={half}>
-          <TypeField />
-        </Cell>
-      )}
-      {shows("naics") && (
-        <Cell size={half}>
-          <IndustryField />
-        </Cell>
-      )}
-      {shows("zip") && (
-        <Cell>
-          <ZipField id={`${prefix}-zip`} />
-        </Cell>
-      )}
-      {askProfession && (
-        <Cell>
-          <ChoiceField
-            id={`${prefix}-profession`}
-            label={f.profession}
-            value={choices.profession ?? ""}
-            blank={f.professionPlaceholder}
-            options={PROFESSIONS.map((profession) => [profession, f.professions[profession]])}
-            onChange={(value) => set({ profession: (value || undefined) as ProfileChoices["profession"] })}
-          />
-        </Cell>
+      {(shows("zip", "entityType", "naics") || askProfession) && (
+        <Group min={200}>
+          {shows("entityType") && (
+            <div>
+              <TypeField />
+            </div>
+          )}
+          {shows("naics") && (
+            <div>
+              <IndustryField />
+            </div>
+          )}
+          {shows("zip") && (
+            <div>
+              <ZipField id={`${prefix}-zip`} />
+            </div>
+          )}
+          {askProfession && (
+            <div>
+              <ChoiceField
+                id={`${prefix}-profession`}
+                label={f.profession}
+                value={choices.profession ?? ""}
+                blank={f.professionPlaceholder}
+                options={PROFESSIONS.map((profession) => [profession, f.professions[profession]])}
+                onChange={(value) =>
+                  set({ profession: (value || undefined) as ProfileChoices["profession"] })
+                }
+              />
+            </div>
+          )}
+        </Group>
       )}
 
       {shows("employeeCount", "ownerCount", "fullTimeEmployeeCount") && <SectionLabel>{f.size}</SectionLabel>}
-      {shows("employeeCount") && (
-        <Cell size="short">
-          <EmployeesField placeholder="0" />
-        </Cell>
-      )}
-      {shows("ownerCount") && (
-        <Cell size="short">
-          <NumberControl
-            id={`${prefix}-owners`}
-            field="ownerCount"
-            label={f.owners}
-            placeholder={f.ownersPlaceholder}
-            kind="owners"
-          />
-        </Cell>
-      )}
-      {shows("fullTimeEmployeeCount") && (
-        <Cell>
-          <NumberControl
-            id={`${prefix}-fullTime`}
-            field="fullTimeEmployeeCount"
-            label={f.fullTime}
-            placeholder={f.fullTimePlaceholder}
-            kind="employees"
-          />
-        </Cell>
+      {shows("employeeCount", "ownerCount", "fullTimeEmployeeCount") && (
+        <Group min={110}>
+          {shows("employeeCount") && (
+            <div>
+              <EmployeesField placeholder="0" />
+            </div>
+          )}
+          {shows("ownerCount") && (
+            <div>
+              <NumberControl
+                id={`${prefix}-owners`}
+                field="ownerCount"
+                label={f.owners}
+                hint={f.hints.owners}
+                placeholder={f.ownersPlaceholder}
+                kind="owners"
+              />
+            </div>
+          )}
+          {shows("fullTimeEmployeeCount") && (
+            <div>
+              <NumberControl
+                id={`${prefix}-fullTime`}
+                field="fullTimeEmployeeCount"
+                label={f.fullTime}
+                hint={f.hints.fullTime}
+                placeholder={f.fullTimePlaceholder}
+                kind="employees"
+              />
+            </div>
+          )}
+        </Group>
       )}
 
       {shows(
@@ -198,59 +203,68 @@ function ProfileFormBody({ today, onFieldUsed }: Pick<ProfileFormProps, "today" 
       ) && <SectionLabel>{f.money}</SectionLabel>}
       {/* The amounts share one fluid row: as many as fit, so all five side by side when the form is wide. */}
       {MONEY_FIELDS.some((field) => shows(field)) && (
-        <div className="bo-full bo-money">
+        <Group min={130} end>
           {(
             [
-              ["annualPayroll", f.payroll],
-              ["annualRevenue", f.revenue],
-              ["annualNetIncome", f.netIncome],
-              ["largestContractorPaymentUsd", f.contractor],
-              ["priorYearPayrollTaxLiability", f.priorTax],
+              ["annualPayroll", f.payroll, f.hints.payroll, f.examples.payroll],
+              ["annualRevenue", f.revenue, f.hints.revenue, f.examples.revenue],
+              ["annualNetIncome", f.netIncome, f.hints.netIncome, f.examples.netIncome],
+              ["largestContractorPaymentUsd", f.contractor, f.hints.contractor, f.examples.contractor],
+              ["priorYearPayrollTaxLiability", f.priorTax, f.hints.priorTax, f.examples.priorTax],
             ] as const
           ).map(
-            ([field, label]) =>
+            ([field, label, hint, example]) =>
               shows(field) && (
                 <div key={field}>
                   <NumberControl
                     id={`${prefix}-${field}`}
                     field={field}
                     label={label}
-                    placeholder={f.optional}
+                    hint={hint}
+                    placeholder={example}
                     kind="amount"
                     prefix="$"
                   />
                 </div>
               ),
           )}
-        </div>
+        </Group>
       )}
 
       {(shows("fiscalYearEndMonth") || askLlcTax) && <SectionLabel>{f.tax}</SectionLabel>}
-      {shows("fiscalYearEndMonth") && (
-        <Cell size="half">
-          <ChoiceField
-            id={`${prefix}-fiscalMonth`}
-            label={f.fiscalMonth}
-            value={choices.fiscalYearEndMonth === undefined ? "" : String(choices.fiscalYearEndMonth)}
-            blank={f.calendarYear}
-            options={Array.from({ length: 11 }, (_, month) => [String(month + 1), monthName(month)])}
-            onChange={(value) => set({ fiscalYearEndMonth: value ? Number(value) : undefined })}
-          />
-        </Cell>
-      )}
-      {askLlcTax && (
-        <Cell size="half">
-          <ChoiceField
-            id={`${prefix}-llcTax`}
-            label={f.llcTax}
-            value={choices.llcTaxClassification ?? ""}
-            blank={f.notSure}
-            options={LLC_TAX_CLASSIFICATIONS.map((kind) => [kind, f.llcTaxClassifications[kind]])}
-            onChange={(value) =>
-              set({ llcTaxClassification: (value || undefined) as ProfileChoices["llcTaxClassification"] })
-            }
-          />
-        </Cell>
+      {(shows("fiscalYearEndMonth") || askLlcTax) && (
+        <Group min={200}>
+          {shows("fiscalYearEndMonth") && (
+            <div>
+              <ChoiceField
+                id={`${prefix}-fiscalMonth`}
+                label={f.fiscalMonth}
+                hint={f.hints.fiscalMonth}
+                value={choices.fiscalYearEndMonth === undefined ? "" : String(choices.fiscalYearEndMonth)}
+                blank={f.calendarYear}
+                options={Array.from({ length: 11 }, (_, month) => [String(month + 1), monthName(month)])}
+                onChange={(value) => set({ fiscalYearEndMonth: value ? Number(value) : undefined })}
+              />
+            </div>
+          )}
+          {askLlcTax && (
+            <div>
+              <ChoiceField
+                id={`${prefix}-llcTax`}
+                label={f.llcTax}
+                hint={f.hints.llcTax}
+                value={choices.llcTaxClassification ?? ""}
+                blank={f.notSure}
+                options={LLC_TAX_CLASSIFICATIONS.map((kind) => [kind, f.llcTaxClassifications[kind]])}
+                onChange={(value) =>
+                  set({
+                    llcTaxClassification: (value || undefined) as ProfileChoices["llcTaxClassification"],
+                  })
+                }
+              />
+            </div>
+          )}
+        </Group>
       )}
 
       {askDetails && <SectionLabel>{m.profile.details}</SectionLabel>}
@@ -261,38 +275,45 @@ function ProfileFormBody({ today, onFieldUsed }: Pick<ProfileFormProps, "today" 
       {(shows("asOf", "openingDate") || (choices.isFormed && shows("formationDate"))) && (
         <SectionLabel>{f.dates}</SectionLabel>
       )}
-      {choices.isFormed && shows("formationDate") && (
-        <Cell size="half">
-          <DateField
-            id={`${prefix}-formationDate`}
-            label={f.formationDate}
-            value={choices.formationDate}
-            onChange={(value) => set({ formationDate: value })}
-            max={asOf}
-          />
-        </Cell>
-      )}
-      {shows("asOf") && (
-        <Cell size="half">
-          <DateField
-            id={`${prefix}-asOf`}
-            label={f.startToday}
-            value={asOf}
-            onChange={(value) => set({ asOf: value === now ? "" : value })}
-          />
-        </Cell>
-      )}
-      {shows("openingDate") && (
-        <Cell size="half">
-          <DateField
-            id={`${prefix}-openingDate`}
-            label={f.targetOpening}
-            value={choices.openingDate}
-            onChange={(value) => set({ openingDate: value })}
-            min={asOf}
-            clearable
-          />
-        </Cell>
+      {(shows("asOf", "openingDate") || (choices.isFormed && shows("formationDate"))) && (
+        <Group min={190}>
+          {choices.isFormed && shows("formationDate") && (
+            <div>
+              <DateField
+                id={`${prefix}-formationDate`}
+                label={f.formationDate}
+                hint={f.hints.formationDate}
+                value={choices.formationDate}
+                onChange={(value) => set({ formationDate: value })}
+                max={asOf}
+              />
+            </div>
+          )}
+          {shows("asOf") && (
+            <div>
+              <DateField
+                id={`${prefix}-asOf`}
+                label={f.startToday}
+                hint={f.hints.startToday}
+                value={asOf}
+                onChange={(value) => set({ asOf: value === now ? "" : value })}
+              />
+            </div>
+          )}
+          {shows("openingDate") && (
+            <div>
+              <DateField
+                id={`${prefix}-openingDate`}
+                label={f.targetOpening}
+                hint={f.hints.targetOpening}
+                value={choices.openingDate}
+                onChange={(value) => set({ openingDate: value })}
+                min={asOf}
+                clearable
+              />
+            </div>
+          )}
+        </Group>
       )}
     </div>
   );

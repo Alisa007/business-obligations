@@ -98,6 +98,7 @@ export function DateField({
   min,
   max,
   clearable = false,
+  hint,
 }: {
   id: string;
   label: string;
@@ -106,12 +107,14 @@ export function DateField({
   min?: string;
   max?: string;
   clearable?: boolean;
+  /** What the field is for, in a tooltip next to the label. */
+  hint?: string;
 }) {
   const { m, date } = useI18n();
   const [open, setOpen] = useState(false);
   const controlProps = useControlProps();
   return (
-    <Labeled id={id} label={label}>
+    <Labeled id={id} label={label} hint={hint}>
       <Popover open={open} onOpenChange={setOpen} placement="top-start">
         <Popover.Trigger asChild>
           <Button

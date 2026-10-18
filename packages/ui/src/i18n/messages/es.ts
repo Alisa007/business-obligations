@@ -142,19 +142,26 @@ export const es: Messages = {
       other: "Otra",
     },
     size: "Tamaño",
-    owners: "Propietarios / miembros",
+    owners: "Propietarios",
     ownersPlaceholder: "1",
-    fullTime: "Empleados a tiempo completo (35+ horas)",
+    fullTime: "Tiempo completo",
     fullTimePlaceholder: "Igual que los empleados",
     money: "Dinero (USD)",
     optional: "Opcional",
+    examples: {
+      payroll: "p. ej. 250,000",
+      revenue: "p. ej. 500,000",
+      netIncome: "p. ej. 80,000",
+      contractor: "p. ej. 5,000",
+      priorTax: "p. ej. 12,000",
+    },
     payroll: "Nómina anual",
     revenue: "Ingresos anuales",
-    netIncome: "Ingreso neto anual esperado",
-    contractor: "Mayor pago a un contratista",
-    priorTax: "Impuestos de nómina del año pasado",
+    netIncome: "Ingreso neto",
+    contractor: "Pago a contratistas",
+    priorTax: "Nómina del año pasado",
     tax: "Impuestos",
-    fiscalMonth: "El año fiscal termina en",
+    fiscalMonth: "Cierre del año fiscal",
     calendarYear: "Diciembre (año calendario)",
     llcTax: "La LLC tributa como",
     notSure: "Aún no estoy seguro",
@@ -167,9 +174,35 @@ export const es: Messages = {
     notFormed: "Aún no constituido",
     formationDate: "Fecha de constitución",
     dates: "Fechas",
-    startToday: "Inicio / hoy",
+    startToday: "Fecha de inicio",
     targetOpening: "Apertura prevista",
     selectDate: "Seleccione la fecha",
+    about: (label) => `Más información sobre ${label}`,
+    hints: {
+      industry:
+        "El código NAICS es el código de industria del gobierno. Algunas licencias y permisos dependen de él.",
+      owners: "Propietarios, socios o miembros de la LLC. Algunas tarifas se cobran por miembro.",
+      fullTime:
+        "Empleados que trabajan 35 horas o más por semana. No puede ser mayor que el número de empleados.",
+      payroll: "Total de sueldos que paga a sus empleados en un año.",
+      revenue:
+        "Ventas o ingresos brutos del año, antes de gastos. Los impuestos locales y los umbrales lo usan.",
+      netIncome:
+        "La ganancia que espera en el año, después de gastos. Los pagos de impuestos estimados dependen de ella.",
+      contractor:
+        "Lo máximo que pagó a un solo contratista en un año. Determina si debe presentar formularios 1099.",
+      priorTax:
+        "El total de impuestos de nómina que debió el año pasado. Determina con qué frecuencia deposita los impuestos de nómina.",
+      fiscalMonth:
+        "El mes en que termina su año fiscal. Deje diciembre (año calendario) salvo que haya elegido otro año fiscal.",
+      llcTax:
+        "Cómo trata el IRS a su LLC. Salvo que haya elegido otra cosa, un propietario es una entidad ignorada y dos o más una sociedad.",
+      formationDate:
+        "La fecha en que el estado registró su negocio. Las presentaciones anuales siguen su aniversario.",
+      startToday:
+        "La fecha desde la que empieza el plan. Déjela como hoy salvo que planifique con anticipación.",
+      targetOpening: "La fecha en que quiere abrir. El plan verifica si los plazos caben antes de ella.",
+    },
     clearDate: "Borrar la fecha",
     previousMonth: "Mes anterior",
     nextMonth: "Mes siguiente",

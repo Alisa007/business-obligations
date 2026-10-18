@@ -9,6 +9,7 @@ export function ChoiceField({
   options,
   blank,
   onChange,
+  hint,
 }: {
   id: string;
   label: string;
@@ -17,10 +18,12 @@ export function ChoiceField({
   /** Text shown while nothing is chosen. */
   blank: string;
   onChange: (value: string) => void;
+  /** What the field is for, in a tooltip next to the label. */
+  hint?: string;
 }) {
   const { m } = useI18n();
   return (
-    <Labeled id={id} label={label}>
+    <Labeled id={id} label={label} hint={hint}>
       <Select
         id={id}
         value={value}

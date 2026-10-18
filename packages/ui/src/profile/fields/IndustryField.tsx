@@ -120,7 +120,7 @@ function IndustryControl({ id }: { id: string }) {
   };
 
   return (
-    <Labeled id={id} label={m.profile.industry}>
+    <Labeled id={id} label={m.profile.industry} hint={m.profileForm.hints.industry}>
       {/* keydown bubbles up from the input, so the arrows, Enter and Escape work whichever element has the focus */}
       <div
         style={{ position: "relative", width: "100%" }}
