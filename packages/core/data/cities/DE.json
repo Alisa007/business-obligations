@@ -17,6 +17,40 @@
     "checkedOn": "2026-10-18"
   },
   {
+    "city": "Camden",
+    "counties": ["Kent"],
+    "items": [
+      {
+        "id": "camden-de.business-license",
+        "title": "Renew your Camden business license",
+        "category": "license",
+        "authority": "Town of Camden",
+        "description": "A business in Camden applies each year under Ordinance 2007-104 for a license for the period ending December 31, naming the number of people employed and whether the business is commercial or residential. The application needs a copy of the State of Delaware business license and a certificate of insurance naming the Town of Camden as certificate holder. The form shows no fee.",
+        "frequency": "annual",
+        "url": "https://camden.delaware.gov/files/2026/03/Business-License-Application.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "city": "Clayton",
+    "counties": ["Kent", "New Castle"],
+    "items": [
+      {
+        "id": "clayton-de.business-license",
+        "title": "Renew your Clayton business license",
+        "category": "license",
+        "authority": "Town of Clayton",
+        "description": "A business with a building in Clayton needs a town license for $75, valid through December 31, and a renewal received after January 31 carries a late fee and penalty. A contractor, meaning any business outside town limits, pays $125 for a license valid 12 months from issue and must show liability insurance naming the town ($500,000 residential, $1,000,000 commercial). A mobile food vendor pays $25, and a solicitor $100 plus $25 for each person soliciting. All debts owed to the town must be paid before a license is approved.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=31",
+        "url": "https://www.clayton.delaware.gov/DocumentCenter/View/404/License-Application-Form-PDF",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18"
+  },
+  {
     "city": "Dewey Beach",
     "counties": ["Sussex"],
     "items": [
@@ -50,6 +84,23 @@
           "month": 8,
           "day": 1
         }
+      }
+    ],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "city": "Elsmere",
+    "counties": ["New Castle"],
+    "items": [
+      {
+        "id": "elsmere-de.business-license",
+        "title": "Renew your Elsmere business license",
+        "category": "license",
+        "authority": "Town of Elsmere Code Enforcement",
+        "description": "A business in Elsmere, or one working for the town, needs a town license for the period November 1 to October 31. The fee is $150 for a general contractor or any other business and $125 for a subcontractor. The application needs a copy of any State of Delaware or New Castle County license and proof of business insurance, and fees are doubled for a business that operates before getting the license.",
+        "frequency": "annual",
+        "url": "https://townofelsmere.com/wp-content/uploads/2023/01/Business-License-Application-New.pdf",
+        "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18"
@@ -151,6 +202,23 @@
         "description": "A business in Millville needs a town license, which runs with the town's fiscal year, May 1 to April 30. The fee is $100, renewal invoices are mailed around May 1 and are due June 1, and an invoice not paid by June 1 adds a $50 late fee. A license bought after November 1 costs $50 and a temporary license of up to 30 days $25. The application needs a copy of the Delaware state business license, and contractors also need proof of liability insurance in the business's name.",
         "rrule": "FREQ=YEARLY;BYMONTH=6;BYMONTHDAY=1",
         "url": "https://millville.delaware.gov/wp-content/uploads/2026/03/Business-License-3-11-2026-FILLABLE-FORM.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "city": "New Castle",
+    "counties": ["New Castle"],
+    "items": [
+      {
+        "id": "new-castle-de.business-license",
+        "title": "Renew your City of New Castle business license",
+        "category": "license",
+        "authority": "City of New Castle",
+        "description": "A business in the City of New Castle needs a new city license each year, with the fee set by headcount including the owner and counting all employees wherever they work: $50 for 1 to 3, $90 for 4 to 8, $210 for 9 to 20 and $360 for 21 or more. An application received after February 1 adds a late charge of 10% a month. The city can also require a surety bond under its code, and the Building Official can waive it for low-risk businesses.",
+        "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=1",
+        "url": "https://newcastlecity.delaware.gov/files/2025/12/2026-Business-License-Application-blank-Upload.pdf",
         "appliesTo": ["all"]
       }
     ],

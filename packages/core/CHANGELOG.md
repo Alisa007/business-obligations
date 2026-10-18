@@ -9,6 +9,10 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ### Added
 
+- **core:** Camden (Delaware) business license, with Spanish text
+- **core:** Clayton (Delaware) business license, with Spanish text
+- **core:** Elsmere (Delaware) business license, with Spanish text
+- **core:** City of New Castle (Delaware) business license, with Spanish text
 - **core:** Milford (Delaware) business license, with Spanish text
 - **core:** Georgetown (Delaware) business license, with Spanish text
 - **core:** Selbyville (Delaware) business license, with Spanish text
