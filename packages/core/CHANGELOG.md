@@ -9,6 +9,7 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ### Added
 
+- **core:** Delaware Department of Agriculture licenses (pesticide business and dealer, beekeeper, hemp, agricultural dealer, feed and fertilizer, nursery, livestock and meat), with Spanish text
 - **core:** Delaware liquor licenses (on-premises, store, wholesaler, manufacturer and nonprofit gathering), with Spanish text
 - **core:** Delaware Division of Professional Regulation licenses (36 boards and programs, with application fees and renewal dates), with Spanish text
 - **core:** Houston Health Department food establishment permit and mobile food unit medallion, with Spanish text

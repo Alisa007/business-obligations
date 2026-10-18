@@ -530,5 +530,102 @@
     "url": "https://oabcc.delaware.gov/fee-schedule/",
     "checkedOn": "2026-10-18",
     "frequency": "ongoing"
+  },
+  {
+    "id": "de.pesticide-business-license",
+    "title": "Renew your Delaware pesticide business license",
+    "category": "license",
+    "authority": "Delaware Department of Agriculture, Pesticide Management",
+    "description": "A business that applies pesticides to another person's property for pay needs a Delaware pesticide business license, with at least one certified commercial applicator and general liability insurance with completed operations of at least $300,000 for bodily injury per occurrence and $100,000 for property damage. The license expires each December 31, or sooner if the insurance policy does. The department sends renewal notices by October 1, and a renewal received after January 1 pays a 20% late penalty. Vehicles in some categories must show the license number.",
+    "naics": ["561710", "561730", "115112", "1151", "56179"],
+    "appliesTo": ["all"],
+    "url": "https://agriculture.delaware.gov/pesticide-management/business-licenses/",
+    "checkedOn": "2026-10-18",
+    "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=31"
+  },
+  {
+    "id": "de.restricted-use-pesticide-dealer-permit",
+    "title": "Renew your Delaware restricted-use pesticide dealer permit",
+    "category": "license",
+    "authority": "Delaware Department of Agriculture, Pesticide Management",
+    "description": "A business that sells restricted-use pesticides needs a Delaware pesticide dealer permit for each location where they are made available, and the permit is valid through December 31 of each year. The permit holder is responsible for employees who solicit, sell or recommend pesticide use.",
+    "naics": ["444240", "424910", "4442"],
+    "appliesTo": ["all"],
+    "url": "https://agriculture.delaware.gov/pesticide-management/retailers-dealers/",
+    "checkedOn": "2026-10-18",
+    "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=31"
+  },
+  {
+    "id": "de.beekeeper-registration",
+    "title": "Register your Delaware bee colonies each year",
+    "category": "registration",
+    "authority": "Delaware Department of Agriculture, State Apiarist",
+    "description": "Anyone keeping bees in Delaware, from one hive to a hundred, including migratory colonies and bees kept for others, must register online on or before January 30 each year and tell the State Apiarist within 10 days of getting bees. A violation carries a civil penalty of $100 to $1,000 per count.",
+    "naics": ["112910"],
+    "appliesTo": ["all"],
+    "url": "https://agriculture.delaware.gov/plant-industries/honeybee/",
+    "checkedOn": "2026-10-18",
+    "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=30"
+  },
+  {
+    "id": "de.hemp-license",
+    "title": "Get a Delaware hemp producer, processor or handler license",
+    "category": "license",
+    "authority": "Delaware Department of Agriculture, Hemp Program",
+    "description": "Growing, processing or handling hemp in Delaware needs a license from the Department of Agriculture. A producer license costs $300 (application window November 1 to February 1), a processor license $300 (apply by October 31) and a handler license $100. Growing sites are registered each year at $500 per site, and processing facilities at $1,000 per year. Producer and processor licenses are renewed every 3 years.",
+    "naics": ["111998", "111419", "311", "424590"],
+    "appliesTo": ["all"],
+    "url": "https://agriculture.delaware.gov/plant-industries/hemp-program/",
+    "checkedOn": "2026-10-18",
+    "frequency": "ongoing",
+    "renewal": "Producer and processor licenses renew every 3 years; growing sites and processing facilities register each year"
+  },
+  {
+    "id": "de.agricultural-dealer-license",
+    "title": "Get a Delaware agricultural dealer license",
+    "category": "license",
+    "authority": "Delaware Department of Agriculture, Food Products Inspection",
+    "description": "Dealers who buy agricultural products from producers or auction markets in Delaware, including Delaware brokers and out-of-state brokers, must be licensed and bonded by the Department of Agriculture under 3 Del. C. Chapter 25. The department's list shows each licensee's bond number and an expiration date, most of them March 31. The page gives no fee or bond amount.",
+    "naics": ["4244", "4245", "424910"],
+    "appliesTo": ["all"],
+    "url": "https://agriculture.delaware.gov/food-products-inspection/dealer/",
+    "checkedOn": "2026-10-18",
+    "frequency": "annual"
+  },
+  {
+    "id": "de.feed-fertilizer-product-registration",
+    "title": "Register commercial feed, pet food and fertilizer products in Delaware",
+    "category": "registration",
+    "authority": "Delaware Department of Agriculture, Agriculture Compliance",
+    "description": "Commercial feeds, pet foods, fertilizers, soil conditioners and liming materials must be registered with the Department of Agriculture's Agriculture Compliance section before they are sold in Delaware. Registration is online (feed other than dog or cat food, pet food, and fertilizer are separate), and a commercial fertilizer mixing facility also registers. The page gives no fees or renewal dates.",
+    "naics": ["311111", "311119", "325314", "424910", "424590"],
+    "appliesTo": ["all"],
+    "url": "https://agriculture.delaware.gov/agriculture-compliance/",
+    "checkedOn": "2026-10-18",
+    "frequency": "annual"
+  },
+  {
+    "id": "de.nursery-industry-license",
+    "title": "Get a Delaware nursery industry license",
+    "category": "license",
+    "authority": "Delaware Department of Agriculture, Plant Industries",
+    "description": "A business that grows, distributes or sells nursery stock, Christmas trees or cut flowers in Delaware needs a Nursery Industry License from the Department of Agriculture's Plant Industries section, applied for online through the department's nursery portal. The licenses and permits page gives no fee or term.",
+    "naics": ["111421", "444240", "424930", "561730"],
+    "appliesTo": ["all"],
+    "url": "https://agriculture.delaware.gov/licenses-permits/",
+    "checkedOn": "2026-10-18",
+    "frequency": "annual"
+  },
+  {
+    "id": "de.livestock-meat-poultry-establishment-licenses",
+    "title": "Get the Delaware livestock dealer and meat and poultry establishment licenses",
+    "category": "license",
+    "authority": "Delaware Department of Agriculture",
+    "description": "Anyone buying or selling livestock or poultry needs a livestock dealer's license, and an establishment that slaughters, prepares, buys, sells, transports or stores livestock or poultry products for human consumption needs a meat and poultry products establishment license, both from the Department of Agriculture. The licenses and permits page gives no fees or terms.",
+    "naics": ["4245", "311611", "311612", "311615", "424470", "424440", "484230"],
+    "appliesTo": ["all"],
+    "url": "https://agriculture.delaware.gov/licenses-permits/",
+    "checkedOn": "2026-10-18",
+    "frequency": "ongoing"
   }
 ]
