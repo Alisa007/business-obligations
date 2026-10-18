@@ -9,6 +9,7 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ### Added
 
+- **core:** Delaware DNREC permits and licenses (storage tanks, well and septic contractors, stormwater, air, wetlands and marinas) and the motor vehicle dealer license, with Spanish text
 - **core:** Delaware insurance producer and State Bank Commissioner licenses (licensed lenders, mortgage loan originators, check cashers and others), with Spanish text
 - **core:** Delaware Department of Agriculture licenses (pesticide business and dealer, beekeeper, hemp, agricultural dealer, feed and fertilizer, nursery, livestock and meat), with Spanish text
 - **core:** Delaware liquor licenses (on-premises, store, wholesaler, manufacturer and nonprofit gathering), with Spanish text
