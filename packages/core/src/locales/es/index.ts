@@ -7,8 +7,10 @@ import industries from "./strings/industries.json";
 import localDescriptions from "./strings/local-descriptions.json";
 import local from "./strings/local.json";
 import notes from "./strings/notes.json";
+import places from "./strings/places.json";
 import reasons from "./strings/reasons.json";
 import rulesExtra from "./strings/rules-extra.json";
+import stateTaxes from "./strings/state-taxes.json";
 import terms from "./strings/terms.json";
 import titles from "./strings/titles.json";
 import { rulePatterns } from "./patterns-rules";
@@ -32,6 +34,8 @@ export const es: Catalog = {
   strings: {
     [ENGLISH_DISCLAIMER]: labels.disclaimer as string,
     ...stateNames,
+    ...places,
+    ...stateTaxes,
     sole_prop: "empresa individual",
     ...notes,
     ...deadlines,
