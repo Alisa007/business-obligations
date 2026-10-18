@@ -4,6 +4,33 @@ All notable changes to `business-obligations-ui` are documented here.
 
 ## [Unreleased]
 
+### Added
+
+- `ProfileForm`: the whole business-details form, laid out by its own width. Any value passed in `values` (a choice, a
+  `zip`, or `city`, `county` and `state`) hides its field. `useProfilePlace` gives the place for the engine
+- `Select` and `Collapse` (animated, chevron on the left or the right)
+- fields: `NumberField` kinds for owners and money (with a `$`), a clear button on every field, zod validation with
+  red errors, tri-state yes/no details, and "Not formed yet" inside `DetailsField`
+- a "Conditionally applicable" section in `ObligationsList`, drawn only from inputs the person has not answered
+- `formatMoney`, `formatDate`, `relativeDays` and `todayIso`; the package is tree-shakable
+
+### Changed
+
+- **breaking:** `TypeInput`, `IndustryInput`, `EmployeesInput` and `DetailsInput` are now `TypeField`, `IndustryField`,
+  `EmployeesField` and `DetailsField`; `industry` (`?industry=`) is replaced by a NAICS code (`?naics=`); the default
+  head count is unset; `PROFILE_DEFAULTS` and `ProfileChoices` have many more keys
+- **breaking:** `Disclosure` is replaced by `Collapse` (`open` is now `defaultOpen`); the native selects of the
+  lists are replaced by `Select`
+- whole dollars show without cents ("$1,250"); a date that is not ISO is shown as it is instead of throwing
+- the source is split into `i18n`, `shared`, `plan` and `profile`; the profile type, defaults, URL parameters and
+  reading and writing come from one table
+
+### Fixed
+
+- an unknown ZIP code is shown as an error; owners of 0 and dates that do not exist (`?formedOn=2020-02-30`) no longer
+  make the engine refuse the profile; long text and chips wrap on phones; the empty progress bar looked like a
+  scrollbar; a field inside a form no longer falls back to English in a Spanish form
+
 ## [0.3.0] - 2026-10-17
 
 ### Added

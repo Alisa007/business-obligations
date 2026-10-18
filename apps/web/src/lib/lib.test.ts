@@ -1,55 +1,31 @@
-import { evaluate } from "business-obligations";
+import {
+  PROFILE_DEFAULTS,
+  isVerified,
+  profileFromChoices,
+  type ProfileChoices,
+} from "business-obligations-ui";
 import { describe, expect, it } from "vitest";
 import { createAnalytics, sanitize, stripQuery, type PostHogClient } from "./analytics";
-import { EMPTY_STATE, isRunnable, parseQuery, toQuery, type SidebarState } from "./query";
-import { CONFIDENCE, formatDate, frequencyLabel, hostOf, money, relativeDays, safeUrl } from "./format";
-import {
-  analyze,
-  buildProfile,
-  countBy,
-  groupObligations,
-  isVerified,
-  summarize,
-  today,
-  type FormValues,
-} from "./plan";
+import { analyze, summarize } from "./plan";
 
-const form: FormValues = {
+const choices: ProfileChoices = {
+  ...PROFILE_DEFAULTS,
   zip: "60601",
   entityType: "llc",
   naics: "722511",
-  profession: "",
-  employees: "3",
-  payroll: "90000",
-  revenue: "250000",
-  owners: "1",
-  sellsGoods: true,
-  homeBased: false,
-  tradeName: false,
-  isNew: true,
-  formationDate: "",
+  employeeCount: 3,
+  annualPayroll: 90000,
+  annualRevenue: 250000,
+  ownerCount: 1,
+  sellsTaxableGoods: true,
 };
+const buildProfile = (overrides: Partial<ProfileChoices>, where = place) =>
+  profileFromChoices({ ...choices, ...overrides }, where);
 const place = { city: "Chicago", county: "Cook", state: "IL" };
 
 describe("playground logic", () => {
-  it("builds a profile from form values", () => {
-    const p = buildProfile(form, place);
-    expect(p).toMatchObject({ entityType: "llc", zip: "60601", city: "Chicago", employeeCount: 3 });
-    expect(p.naics).toBe("722511");
-    expect(evaluate(p).profile.industry).toBe("restaurant");
-    expect(p.formationDate).toBeUndefined();
-    expect(p.profession).toBeUndefined();
-  });
-
-  it("asks for a profession only for professional entities", () => {
-    expect(buildProfile({ ...form, entityType: "pllc", profession: "attorney" }, place).profession).toBe(
-      "attorney",
-    );
-    expect(buildProfile({ ...form, entityType: "pllc", profession: "" }, place).profession).toBe("other");
-  });
-
   it("produces every view without errors", () => {
-    const d = analyze(buildProfile(form, place), { asOf: "2026-10-13", isNew: true });
+    const d = analyze(buildProfile({}), { asOf: "2026-10-13", isNew: true });
     expect(d.plan.steps.length).toBeGreaterThan(5);
     expect(d.result.items.length).toBeGreaterThan(5);
     expect(d.ics.startsWith("BEGIN:VCALENDAR")).toBe(true);
@@ -58,7 +34,7 @@ describe("playground logic", () => {
   });
 
   it("a new business has no income tax return on the calendar, a formed one does", () => {
-    const profile = buildProfile(form, place);
+    const profile = buildProfile({});
     const asOf = "2026-10-13";
     const returns = (isNew: boolean) =>
       analyze(profile, { asOf, isNew }).events.filter((e) => e.itemId === "fed.income-tax-return");
@@ -67,41 +43,36 @@ describe("playground logic", () => {
   });
 });
 
-describe("formatting", () => {
-  it("formats calendar dates in the given locale without shifting the day", () => {
-    expect(formatDate("2027-01-31", "en-US")).toBe("Jan 31, 2027");
-    expect(formatDate("2027-01-31", "de-DE")).toBe("31.01.2027");
-    expect(formatDate("2027-03-01", "en-US")).toBe("Mar 1, 2027");
+describe("conditionally applicable items", () => {
+  const profile = buildProfile({ employeeCount: undefined });
+
+  it("come from the details that are still unknown", () => {
+    const result = analyze(profile, { asOf: "2026-11-02" });
+    const fields = result.conditional.flatMap(({ when }) => when.map((w) => w.field));
+    expect(result.conditional.length).toBeGreaterThan(0);
+    expect(fields).toContain("employeeCount");
+    // none of them is in the result already
+    const have = new Set(result.result.items.map((item) => item.id));
+    expect(result.conditional.every(({ item }) => !have.has(item.id))).toBe(true);
   });
 
-  it("passes through anything that is not an ISO date", () => {
-    expect(formatDate("April 15")).toBe("April 15");
-    expect(formatDate(undefined)).toBe("");
+  it("drop a detail that was answered no, as well as one answered yes", () => {
+    // Arizona, where selling taxable goods adds a transaction privilege tax licence
+    const gilbert = { city: "Gilbert", county: "Maricopa", state: "AZ" };
+    const base = { zip: "85234", employeeCount: 3, naics: "" };
+    const open = analyze(buildProfile({ ...base, sellsTaxableGoods: undefined }, gilbert), {
+      asOf: "2026-11-02",
+    });
+    const no = analyze(buildProfile({ ...base, sellsTaxableGoods: false }, gilbert), { asOf: "2026-11-02" });
+    const fields = (a: typeof open) => a.conditional.flatMap(({ when }) => when.map((w) => w.field));
+    expect(fields(open)).toContain("sellsTaxableGoods");
+    expect(fields(no)).not.toContain("sellsTaxableGoods");
   });
 
-  it("formats dollars per locale", () => {
-    expect(money(1272, "en-US")).toBe("$1,272");
-    expect(money(12.345, "en-US")).toBe("$12.35");
-  });
-
-  it("links only http(s) urls", () => {
-    expect(safeUrl("javascript:alert(1)")).toBeUndefined();
-    expect(safeUrl("https://example.gov/page")).toBe("https://example.gov/page");
-    expect(hostOf("https://www.irs.gov/businesses")).toBe("irs.gov");
-  });
-
-  it("labels frequencies and confidence", () => {
-    expect(frequencyLabel("annual")).toBe("Annual");
-    expect(frequencyLabel("weird")).toBe("weird");
-    expect(CONFIDENCE.checked).toMatch(/official/);
-    expect(relativeDays("2026-10-20", "2026-10-13", "en-US")).toMatch(/7 days|in 1 week/);
-  });
-});
-
-describe("today", () => {
-  it("is the local calendar date", () => {
-    expect(today(new Date(2026, 9, 15, 20, 30))).toBe("2026-10-15");
-    expect(today(new Date(2026, 0, 1, 0, 5))).toBe("2026-01-01");
+  it("do not come from a detail the person gave", () => {
+    const given = analyze({ ...profile, employeeCount: 3 }, { asOf: "2026-11-02" });
+    const fields = given.conditional.flatMap(({ when }) => when.map((w) => w.field));
+    expect(fields).not.toContain("employeeCount");
   });
 });
 
@@ -193,33 +164,8 @@ describe("analytics", () => {
   });
 });
 
-describe("obligation helpers", () => {
-  const base = { authority: "", description: "", reason: "" };
-  const items = [
-    { ...base, id: "a", title: "B thing", jurisdiction: "state", category: "tax", nextDue: "2027-02-01" },
-    { ...base, id: "b", title: "A thing", jurisdiction: "state", category: "license", nextDue: "2027-01-01" },
-    { ...base, id: "c", title: "Fed thing", jurisdiction: "federal", category: "tax" },
-  ] as const;
-  const list = [...items] as unknown as Parameters<typeof groupObligations>[0];
-
-  it("groups, filters and sorts", () => {
-    const all = groupObligations(list);
-    expect(all.map((g) => g.jurisdiction)).toEqual(["federal", "state"]);
-    expect(all.find((g) => g.jurisdiction === "state")!.items.map((i) => i.title)).toEqual([
-      "A thing",
-      "B thing",
-    ]);
-    expect(groupObligations(list, { category: "tax" }).flatMap((g) => g.items)).toHaveLength(2);
-    expect(groupObligations(list, { query: "fed" }).flatMap((g) => g.items)).toHaveLength(1);
-  });
-
-  it("counts ignoring its own filter", () => {
-    expect(countBy(list, "category", { category: "license" })).toEqual({ tax: 2, license: 1 });
-  });
-});
-
-describe("result summary and trust filter", () => {
-  const data = analyze(buildProfile(form, place), { asOf: "2026-10-14", isNew: true });
+describe("result summary", () => {
+  const data = analyze(buildProfile({}), { asOf: "2026-10-14", isNew: true });
   const s = summarize(data.result);
 
   it("summarises size, the nearest deadline and how much data is verified", () => {
@@ -229,84 +175,10 @@ describe("result summary and trust filter", () => {
     if (s.next) expect(s.next.nextDue >= data.result.asOf).toBe(true);
   });
 
-  it("filters to verified and unverified obligations without losing any", () => {
-    const items = data.result.items;
-    const verified = groupObligations(items, { trust: "verified" }).flatMap((g) => g.items);
-    const unverified = groupObligations(items, { trust: "unverified" }).flatMap((g) => g.items);
-    expect(verified.every(isVerified)).toBe(true);
-    expect(unverified.some(isVerified)).toBe(false);
-    expect(verified.length + unverified.length).toBe(items.length);
-  });
-
   it("treats a checked item past its review date as unverified", () => {
     expect(isVerified({ provenance: { confidence: "checked", sources: [], stale: true } })).toBe(false);
     expect(isVerified({ provenance: { confidence: "checked", sources: [] } })).toBe(true);
     expect(isVerified({ provenance: { confidence: "compiled", sources: [] } })).toBe(false);
-  });
-});
-
-describe("sidebar state in the URL", () => {
-  const full: SidebarState = {
-    form: {
-      zip: "78701",
-      entityType: "s_corp",
-      naics: "722511",
-      profession: "",
-      employees: "3",
-      owners: "2",
-      payroll: "90000",
-      revenue: "250000.5",
-      sellsGoods: true,
-      homeBased: false,
-      tradeName: true,
-      isNew: false,
-      formationDate: "2024-03-01",
-    },
-    asOf: "2026-10-14",
-    openingDate: "2027-02-01",
-  };
-
-  it("round-trips every sidebar field", () => {
-    expect(parseQuery(toQuery(full))).toEqual(full);
-  });
-
-  it("writes nothing for an untouched sidebar and omits defaults", () => {
-    expect(toQuery(EMPTY_STATE)).toBe("");
-    expect(parseQuery("")).toEqual(EMPTY_STATE);
-    expect(toQuery({ ...EMPTY_STATE, form: { ...EMPTY_STATE.form, zip: "60601" } })).toBe("zip=60601");
-  });
-
-  it("keeps partially typed values so typing is not interrupted", () => {
-    expect(parseQuery("zip=787").form.zip).toBe("787");
-    expect(isRunnable(parseQuery("zip=787"))).toBe(false);
-    expect(parseQuery("payroll=12.").form.payroll).toBe("12.");
-  });
-
-  it("falls back to defaults for invalid or hand-edited values", () => {
-    const s = parseQuery(
-      "zip=ab12345678&entity=spaceship&naics=%3Cscript%3E&employees=-4&payroll=1e9&start=tomorrow&formed=1&formedOn=soon",
-    );
-    expect(s.form.zip).toBe("12345");
-    expect(s.form.entityType).toBe("llc");
-    expect(s.form.naics).toBe("");
-    expect(s.form.employees).toBe("");
-    expect(s.form.payroll).toBe("");
-    expect(s.asOf).toBe("");
-    expect(s.form.isNew).toBe(false);
-    expect(s.form.formationDate).toBe("");
-  });
-
-  it("reads links made when the form had an industry list", () => {
-    expect(parseQuery("industry=restaurant").form.naics).toBe("722");
-    expect(parseQuery("industry=construction&zip=78701").form.naics).toBe("23");
-    expect(parseQuery("industry=general").form.naics).toBe("");
-    expect(parseQuery("industry=restaurant&naics=236220").form.naics).toBe("236220");
-    expect(toQuery(parseQuery("industry=restaurant"))).toBe("naics=722");
-  });
-
-  it("only treats a full ZIP as runnable", () => {
-    expect(isRunnable(parseQuery("zip=78701"))).toBe(true);
-    expect(isRunnable(parseQuery("entity=llc"))).toBe(false);
   });
 });
 

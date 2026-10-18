@@ -189,6 +189,12 @@ describe("workers' comp hours test (MI) and payroll floor (SC)", () => {
       getComplianceItems({ ...base, entityType: "llc", employeeCount: 1, fullTimeEmployeeCount: 2 }),
     ).toThrow(/fullTimeEmployeeCount/);
   });
+  it("does not compare fullTimeEmployeeCount with a head count that is not given", () => {
+    const profile = { ...base, entityType: "llc" as const, fullTimeEmployeeCount: 2 };
+    expect(() => getComplianceItems(profile)).not.toThrow();
+    // the full-time employees are the employees that are known
+    expect(evaluate(profile).profile.employeeCount).toBe(2);
+  });
 });
 
 describe("DBA filing level", () => {
