@@ -7,6 +7,7 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ### Added
 
+- **core:** New York State Liquor Authority on-premises and off-premises (liquor store) licenses, with Spanish text
 - **core:** Syracuse Certificate of Use, and Rochester business permits, food truck and towing licenses, each scoped by NAICS code, with Spanish text
 - **core:** business licenses for Oceanside, Palmdale and West Valley City, with Spanish text
 - **core:** business licenses for Santa Ana and Huntington Beach, with Spanish text
