@@ -7,7 +7,8 @@ All notable changes to `business-obligations-ui` are documented here.
 ### Changed
 
 - `ProfileForm`: the industry field is no longer always a full row, so the business type and the industry share a row
-  from 520px wide (the ZIP code joins them from 800px, and now comes after them); in a narrow sidebar they still stack
+  from 520px wide (the ZIP code joins them from 800px, and now comes after them); in a narrow sidebar they still stack. The money fields are narrower too (one column, two on the widest layout), so
+  two fit on a row in a sidebar and four from 520px
 
 ### Added
 

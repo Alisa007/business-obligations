@@ -187,7 +187,7 @@ function ProfileFormBody({ today, onFieldUsed }: Pick<ProfileFormProps, "today" 
       ).map(
         ([field, label]) =>
           shows(field) && (
-            <Cell key={field}>
+            <Cell key={field} size="short">
               <NumberControl
                 id={`${prefix}-${field}`}
                 field={field}
