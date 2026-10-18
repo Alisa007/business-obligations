@@ -5,6 +5,16 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ## [Unreleased]
 
+## [0.7.0] - 2026-10-18
+
+### Added
+
+- **core:** Spanish names for places with one, state entity-tax descriptions and more local authority labels
+
+### Fixed
+
+- **data:** correct city-to-county mappings
+
 ## [0.6.0] - 2026-10-17
 
 ### Added
