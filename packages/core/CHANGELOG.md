@@ -9,6 +9,8 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ### Added
 
+- **core:** New Castle County (Delaware) contractor license, with Spanish text
+- **core:** Sussex County (Delaware) septage hauler license and Master Plumber requirement, with Spanish text
 - **core:** Camden (Delaware) business license, with Spanish text
 - **core:** Clayton (Delaware) business license, with Spanish text
 - **core:** Elsmere (Delaware) business license, with Spanish text

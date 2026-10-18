@@ -1,16 +1,54 @@
 [
   {
-    "county": "New Castle",
+    "county": "Kent",
     "status": "unverified",
     "reason": "no-bpp-tax-secondary-source",
     "items": [],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "New Castle",
+    "items": [
+      {
+        "id": "new-castle-county-de.contractor-license",
+        "title": "Get a New Castle County contractor license",
+        "category": "license",
+        "authority": "New Castle County Land Use, Permit Section",
+        "description": "A contractor doing construction work in New Castle County that needs a building, mechanical or plumbing permit must hold a county contractor license. The county requires a State of Delaware business license first and identifies the business by its federal EIN, and the Permit Section can be reached at 302-395-5420. The county's online lookup shows the license fee for payment, and its page does not state the amount or renewal date.",
+        "frequency": "annual",
+        "url": "https://secure.nccde.org/ContractorLicensePayment/Lookup/",
+        "naics": ["236", "237", "238"],
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18"
   },
   {
     "county": "Sussex",
-    "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "sussex-de.septage-hauler-license",
+        "title": "Get a Sussex County septage waste hauler license",
+        "category": "license",
+        "authority": "Sussex County Engineering Department",
+        "description": "A hauler that brings septage to Sussex County's treatment plants needs a county license, which costs $250.00, plus $0.080 per gallon discharged. The hauler must hold a DNREC permit or letter, a copy of the State of Delaware business license, and certificates of insurance for $500,000 commercial general liability, $1,000,000 business auto liability and Delaware workers' compensation. The county accepts waste only from properties in Sussex County, and each discharge needs a holding tank or hook-up permit number or the owner's name and address.",
+        "frequency": "annual",
+        "url": "https://sussexcountyde.gov/sussex-county-septage-program-waste-hauler-requirements",
+        "naics": ["562991", "562998", "484230"],
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "sussex-de.master-plumber-requirement",
+        "title": "Hold a state Master Plumber license for Sussex County sewer and water work",
+        "category": "license",
+        "authority": "Sussex County Engineering Department",
+        "description": "Under section 110-61 of the Sussex County Code, anyone who installs, alters or maintains plumbing tied to sewer and water connections in the county's sewer and water districts must first hold a Master Plumber license from the State of Delaware. The county's page lists no fee.",
+        "frequency": "ongoing",
+        "url": "https://sussexcountyde.gov/plumber-licensing-requirements",
+        "naics": ["238220"],
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18"
   }
 ]
