@@ -4,6 +4,8 @@ All notable changes to `business-obligations-ui` are documented here.
 
 ## [Unreleased]
 
+## [0.6.0] - 2026-10-18
+
 ### Changed
 
 - `Select`: the list of options is at least as wide as the control and 240px (and never wider than the screen), instead
@@ -17,6 +19,19 @@ All notable changes to `business-obligations-ui` are documented here.
   tax", "Fiscal year end", "Start date") with a "?" tooltip beside the label of every field that needs an explanation,
   and example amounts as the placeholders of the money fields. `Messages` gains `profileForm.about`, `hints` and
   `examples`, which a custom translation must provide
+
+### Added
+
+- **ui:** fluid group layout, short labels with tooltips, example placeholders
+- **ui:** fluid twelve-column profile form layout
+- **ui:** conditionally applicable items in the launch list
+
+### Fixed
+
+- **ui:** the select list is at least as wide as its control
+- **ui:** business type and industry half a row each without the ZIP code
+- **ui:** narrower money fields so more fit on a row
+- **ui:** business type and industry on the same row when wide enough
 
 ## [0.5.0] - 2026-10-18
 
