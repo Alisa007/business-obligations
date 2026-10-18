@@ -35,7 +35,7 @@ function SectionLabel({ children }: { children: ReactNode }) {
 
 /**
  * The layout follows the width of the form itself (container queries), not of the window: two columns in a narrow
- * sidebar, four in a panel, six in a wide area. A `wide` field (text, lists, long labels) takes two columns, a `short`
+ * sidebar, four in a panel, six in a wide area. A `wide` field (text, lists, long labels, the business type and the industry) takes two columns, a `short`
  * one (a count or a date) one, or two on the widest layout; headings and the yes/no details take them all. The form is as wide as the element it is put in (the host sets that width). The first group has no heading: the form needs no title to say what it starts with.
  */
 const FORM_CSS = `
@@ -123,9 +123,9 @@ function ProfileFormBody({ today, onFieldUsed }: Pick<ProfileFormProps, "today" 
         </Cell>
       )}
       {shows("naics") && (
-        <Full>
+        <Cell>
           <IndustryField />
-        </Full>
+        </Cell>
       )}
       {askProfession && (
         <Cell>

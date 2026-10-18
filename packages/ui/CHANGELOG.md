@@ -4,6 +4,12 @@ All notable changes to `business-obligations-ui` are documented here.
 
 ## [Unreleased]
 
+### Changed
+
+- `ProfileForm`: the industry field is no longer always a full row, so the business type and the industry share a row
+  when the form is wide enough (the ZIP code, type and industry sit on one row from 800px, type and industry from
+  520px); in a narrow sidebar they still stack
+
 ### Added
 
 - `LaunchList` takes an optional `conditional` list (the same `ConditionalItem[]` as `ObligationsList`) and shows those
