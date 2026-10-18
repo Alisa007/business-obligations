@@ -5,10 +5,18 @@ import type { Messages } from "../i18n/messages";
 import { Collapse } from "../shared/Collapse";
 import { Chip, ExternalLink, Stat } from "../shared/primitives";
 import { Confidence, Fee } from "./chips";
+import { JURISDICTIONS } from "./filters";
+import { describeWhen } from "./ObligationCard";
+import type { ConditionalItem } from "./ObligationsList";
 
 export interface LaunchListProps {
   plan: LaunchPlan;
   costs?: { oneTime: number; annual: number };
+  /**
+   * Items that apply only under conditions not yet known (see `ObligationsListProps.conditional`). Shown after the
+   * phases, grouped by level (city first), each with what would bring it in; they have no checkbox.
+   */
+  conditional?: ConditionalItem[];
   done?: ReadonlySet<string>;
   onToggle?: (id: string, checked: boolean) => void;
   /**
@@ -66,7 +74,7 @@ export function LaunchList(props: LaunchListProps) {
   );
 }
 
-function LaunchListBody({ plan, costs, done = new Set(), onToggle }: LaunchListProps) {
+function LaunchListBody({ plan, costs, conditional = [], done = new Set(), onToggle }: LaunchListProps) {
   const { m, money, date, relativeDays } = useI18n();
   const completed = plan.steps.filter((step) => done.has(step.item.id)).length;
   const byId = new Map(plan.steps.map((step) => [step.item.id, step.item]));
@@ -209,6 +217,54 @@ function LaunchListBody({ plan, costs, done = new Set(), onToggle }: LaunchListP
           </Collapse>
         );
       })}
+      {conditional.length > 0 && (
+        <Collapse
+          card
+          level={2}
+          summary={
+            <XStack gap="2" alignItems="center" flexWrap="wrap">
+              <Text fontWeight="600">{m.conditionalHeading}</Text>
+              <Chip tone="warn" outline>
+                {conditional.length}
+              </Chip>
+            </XStack>
+          }
+        >
+          <YStack gap="3">
+            <Paragraph fontSize="sm" color="placeholder-color">
+              {m.conditionalNote}
+            </Paragraph>
+            {JURISDICTIONS.map((jurisdiction) => {
+              const group = conditional.filter(({ item }) => item.jurisdiction === jurisdiction);
+              if (!group.length) return null;
+              return (
+                <YStack key={jurisdiction} gap="2">
+                  <Text fontSize="sm" fontWeight="700" color="placeholder-color">
+                    {m.jurisdictions[jurisdiction]}
+                  </Text>
+                  {group.map(({ item, when }) => (
+                    <YStack key={item.id} gap="1" paddingVertical="1">
+                      <Text fontWeight="600">
+                        <ExternalLink url={item.url}>{item.title}</ExternalLink>
+                      </Text>
+                      <Text fontSize="sm" color="placeholder-color">
+                        {item.authority}
+                      </Text>
+                      <XStack flexWrap="wrap" gap="1.5">
+                        <Chip tone="warn" outline>
+                          {m.appliesIf(when.map((condition) => describeWhen(m, condition)).join("; "))}
+                        </Chip>
+                        <Fee item={item} />
+                        <Chip>{m.frequencies[item.frequency] ?? item.frequency}</Chip>
+                      </XStack>
+                    </YStack>
+                  ))}
+                </YStack>
+              );
+            })}
+          </YStack>
+        </Collapse>
+      )}
       <Text fontSize="sm" color="placeholder-color">
         {m.planNote}
       </Text>
