@@ -2,9 +2,10 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/Alisa007/business-obligations/schema/business-profile.schema.json",
   "title": "BusinessProfile",
-  "description": "Input to getComplianceItems(). `state` is derived from `zip` when omitted.",
+  "description": "Input to getComplianceItems(). `state` is derived from `zip` when omitted; `zip` may be omitted when `state` is given.",
   "type": "object",
-  "required": ["entityType", "zip", "city", "county"],
+  "required": ["entityType", "city", "county"],
+  "anyOf": [{ "required": ["zip"] }, { "required": ["state"] }],
   "additionalProperties": false,
   "properties": {
     "country": {
