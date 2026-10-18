@@ -308,10 +308,23 @@
   },
   {
     "city": "Felton",
-    "status": "unverified",
-    "note": "The Town takes license payments through an online portal and has a contractor's license application, but no business license fee was on a page that could be read.",
     "counties": ["Kent"],
-    "items": [],
+    "items": [
+      {
+        "id": "felton-de.contractor-license",
+        "title": "Get a Felton contractor's license",
+        "category": "license",
+        "authority": "Town of Felton",
+        "description": "A contractor working in Felton needs a town contractor's license, which costs $100 on the town's fee schedule for July 1, 2025 to June 30, 2026, applied for with a copy of the Delaware business license and a certificate of liability insurance. The town takes license payments through its online portal, and its pages show no fee for a general business license.",
+        "frequency": "annual",
+        "url": "https://felton.delaware.gov/building-permits/",
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "flat",
+          "amount": 100
+        }
+      }
+    ],
     "checkedOn": "2026-10-18"
   },
   {
