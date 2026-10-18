@@ -34,7 +34,9 @@ export function lookupZip(zip: string): ZipInfo | undefined {
  * Explicit values win. Throws when the ZIP is unknown and a value is missing.
  */
 export function withZip(
-  profile: Omit<BusinessProfile, "city" | "county"> & Partial<Pick<BusinessProfile, "city" | "county">>,
+  profile: Omit<BusinessProfile, "city" | "county" | "zip"> &
+    Required<Pick<BusinessProfile, "zip">> &
+    Partial<Pick<BusinessProfile, "city" | "county">>,
 ): BusinessProfile {
   const info = lookupZip(profile.zip);
   if (!info && (!profile.city || !profile.county)) {

@@ -207,10 +207,13 @@ export function validateProfile(input: unknown): ProfileIssue[] {
     return [{ field: "", message: "A business profile must be an object" }];
   const issues: ProfileIssue[] = [];
   const profile = input as Record<string, unknown>;
-  for (const required of ["entityType", "zip", "city", "county"]) {
+  for (const required of ["entityType", "city", "county"]) {
     if (profile[required] === undefined || profile[required] === "")
       issues.push({ field: required, message: `\`${required}\` is required` });
   }
+  const missing = (key: string) => profile[key] === undefined || profile[key] === "";
+  if (missing("zip") && missing("state"))
+    issues.push({ field: "zip", message: "`zip` is required unless `state` is given" });
   for (const [key, value] of Object.entries(profile)) {
     if (value === undefined) continue;
     const kind = FIELDS[key];

@@ -81,7 +81,7 @@ export function resolveProfile(input: BusinessProfile): ResolvedProfile {
   const country = input.country ?? "US";
   if (!(country in RULE_PACKS)) throw new InvalidProfileError(`Unsupported country "${country}"`);
 
-  const zipState = stateFromZip(input.zip);
+  const zipState = input.zip ? stateFromZip(input.zip) : undefined;
   const state = (input.state ?? zipState)?.toUpperCase();
   if (!state || !isState(state)) {
     throw new InvalidProfileError(

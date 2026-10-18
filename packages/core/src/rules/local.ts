@@ -125,7 +125,7 @@ export const localRules: Rule[] = [
         category: "license",
         jurisdiction: "city",
         state: p.state,
-        authority: `${s.local.authority}: ${p.city} / ${p.county} County (ZIP ${p.zip})`,
+        authority: `${s.local.authority}: ${p.city} / ${p.county} County${p.zip ? ` (ZIP ${p.zip})` : ""}`,
         description: s.local.description,
         frequency: "annual",
         reason: `Business is located in ${p.city}, ${p.state}`,

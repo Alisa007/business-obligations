@@ -64,9 +64,21 @@ describe("validateProfile", () => {
   });
 
   it("requires the core fields and rejects non-objects", () => {
-    expect(validateProfile({}).map((i) => i.field)).toEqual(["entityType", "zip", "city", "county"]);
+    expect(validateProfile({}).map((i) => i.field)).toEqual(["entityType", "city", "county", "zip"]);
     expect(validateProfile(null)[0]?.message).toMatch(/object/);
     expect(validateProfile("llc")[0]?.message).toMatch(/object/);
+  });
+
+  it("takes a place named by state, city and county instead of a ZIP", () => {
+    const place = { entityType: "llc", state: "TX", city: "Austin", county: "Travis" };
+    expect(validateProfile(place)).toEqual([]);
+    const result = evaluate(place as never);
+    const local = result.items.find((item) => item.ruleId === "local.business-license");
+    expect(local?.authority).toContain("Austin / Travis County");
+    expect(local?.authority).not.toContain("ZIP");
+    expect(
+      validateProfile({ entityType: "llc", city: "Austin", county: "Travis" }).map((i) => i.field),
+    ).toEqual(["zip"]);
   });
 
   it("is used by evaluate, which reports every issue at once", () => {

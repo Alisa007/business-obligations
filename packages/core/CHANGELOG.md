@@ -5,6 +5,11 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ## [Unreleased]
 
+### Changed
+
+- `zip` is optional when `state` is given: a place is named by `city`, `county` and `state`, and the local authority
+  names then leave the ZIP out. A profile with neither still fails validation
+
 ## [0.8.0] - 2026-10-18
 
 ### Fixed
