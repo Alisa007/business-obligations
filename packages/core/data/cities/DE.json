@@ -21,6 +21,23 @@
     "checkedOn": "2026-10-15"
   },
   {
+    "city": "Middletown",
+    "counties": ["New Castle"],
+    "items": [
+      {
+        "id": "middletown-de.business-license",
+        "title": "Renew your Middletown business license",
+        "category": "license",
+        "authority": "Town of Middletown Permits, Licensing & Inspections",
+        "description": "Every business located in Middletown, and every contractor working within the town, needs a town business license, renewed by February 15. The fee depends on the kind of business: $135 for a construction, retail-service, administrative, educational or one-or-two-person personal care business, $275 for professional, finance, health care or larger daycare businesses, and $5.50 per space for a mobile home park. Manufacturers, retailers, wholesalers and bottlers instead pay $0.00046 on gross receipts above $400,000, with a $135 minimum, or $50 if gross receipts are under $100,000 and the town gets a letter by February 15. Payments after February 15 pay a penalty of 1% a month and a $100 failure to file fee.",
+        "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=15",
+        "url": "https://www.middletown.delaware.gov/businesslicenses",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18"
+  },
+  {
     "city": "Newark",
     "counties": ["New Castle"],
     "items": [
@@ -36,6 +53,34 @@
       }
     ],
     "checkedOn": "2026-10-15"
+  },
+  {
+    "city": "Smyrna",
+    "counties": ["Kent", "New Castle"],
+    "items": [
+      {
+        "id": "smyrna-de.business-license",
+        "title": "Get and renew a Smyrna business license",
+        "category": "license",
+        "authority": "Town of Smyrna Business Office",
+        "description": "Any business that sells goods or services from a location in Smyrna must be licensed and registered before it opens, and licenses are for the calendar year. The 2026 fee schedule charges $125 per location for most businesses, $250 for each architect, attorney, accountant, dentist, physician, engineer and similar professional, for banks and loan agencies and for daycares over six children, and $125 for the first two barbers or beauticians. A business outside town limits that works in Smyrna needs a $125 contractor license, and a peddler or solicitor $125. The town's page does not give a renewal date.",
+        "frequency": "annual",
+        "url": "https://smyrna.delaware.gov/233/Doing-Business-in-Smyrna",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "smyrna-de.rental-license",
+        "title": "Get a Smyrna rental license",
+        "category": "license",
+        "authority": "Town of Smyrna Code Enforcement",
+        "description": "A landlord who rents out property in Smyrna needs a rental license, which costs $100 in 2026, plus a $75 rental inspection and $100 for any re-inspection.",
+        "frequency": "annual",
+        "url": "https://smyrna.delaware.gov/DocumentCenter/View/3314/2026-Town-of-Smyrna-Fee-Schedule",
+        "naics": ["5311", "531110", "531311"],
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "Wilmington",
