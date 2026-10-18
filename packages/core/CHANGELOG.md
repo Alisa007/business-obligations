@@ -9,6 +9,7 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ### Added
 
+- **core:** Felton (Delaware) contractor's license, with Spanish text
 - **data:** Dallas food establishment permit
 - **data:** more Delaware towns
 
