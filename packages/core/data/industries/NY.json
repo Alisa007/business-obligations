@@ -292,7 +292,7 @@
         "description": "Located in New York City"
       }
     ],
-    "frequency": "biennial",
+    "rrule": "FREQ=YEARLY;INTERVAL=2",
     "feeDetail": {
       "basis": "flat",
       "amount": 200
@@ -317,7 +317,7 @@
         "description": "Located in New York City"
       }
     ],
-    "frequency": "biennial",
+    "rrule": "FREQ=YEARLY;INTERVAL=2",
     "feeDetail": {
       "basis": "flat",
       "amount": 200
@@ -650,7 +650,7 @@
         "description": "Located in New York City"
       }
     ],
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "renewal": "Every year",
     "feeDetail": {
       "basis": "flat",
@@ -676,7 +676,7 @@
         "description": "Located in New York City"
       }
     ],
-    "frequency": "biennial",
+    "rrule": "FREQ=YEARLY;INTERVAL=2",
     "renewal": "Every two years"
   },
   {
@@ -698,7 +698,7 @@
         "description": "Located in New York City"
       }
     ],
-    "frequency": "biennial",
+    "rrule": "FREQ=YEARLY;INTERVAL=2",
     "renewal": "Every two years"
   },
   {
@@ -767,7 +767,7 @@
         "description": "Located in New York City"
       }
     ],
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "renewal": "Every year",
     "feeDetail": {
       "basis": "flat",
@@ -793,7 +793,7 @@
         "description": "Located in New York City"
       }
     ],
-    "frequency": "biennial",
+    "rrule": "FREQ=YEARLY;INTERVAL=2",
     "renewal": "Every two years",
     "exemptions": ["Dispatchers under 10,000 trips a day"],
     "feeDetail": {
@@ -830,7 +830,7 @@
     "frequency": "ongoing",
     "feeDetail": {
       "basis": "varies",
-      "min": 5000.0
+      "min": 5000
     }
   },
   {
@@ -882,7 +882,7 @@
     "appliesTo": ["all"],
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/2620",
     "checkedOn": "2026-10-16",
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "renewal": "Every year",
     "feeDetail": {
       "basis": "flat",
@@ -899,7 +899,7 @@
     "appliesTo": ["all"],
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/2289",
     "checkedOn": "2026-10-16",
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "renewal": "Every year",
     "feeDetail": {
       "basis": "flat",
@@ -916,7 +916,7 @@
     "appliesTo": ["all"],
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/2916",
     "checkedOn": "2026-10-16",
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "renewal": "Every year",
     "exemptions": [
       "Preparers who are not paid to prepare New York returns, such as attorneys, CPAs and enrolled agents who are exempt"
@@ -1123,7 +1123,7 @@
     "appliesTo": ["all"],
     "url": "https://dmv.ny.gov/business/open-a-repair-or-body-shop",
     "checkedOn": "2026-10-16",
-    "frequency": "biennial",
+    "rrule": "FREQ=YEARLY;INTERVAL=2",
     "renewal": "Every two years; renew online from 60 days before expiry"
   },
   {
@@ -1136,7 +1136,7 @@
     "appliesTo": ["all"],
     "url": "https://dmv.ny.gov/dealers/dealer-surety-bond",
     "checkedOn": "2026-10-16",
-    "frequency": "biennial",
+    "rrule": "FREQ=YEARLY;INTERVAL=2",
     "renewal": "Every two years, on the DMV renewal application (VS-2)"
   },
   {
@@ -1161,7 +1161,7 @@
     "appliesTo": ["all"],
     "url": "https://dec.ny.gov/environmental-protection/air-quality/controlling-pollution-from-facilities/dry-cleaner-regulation",
     "checkedOn": "2026-10-16",
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "deadline": "Once a year"
   },
   {
@@ -1174,7 +1174,7 @@
     "appliesTo": ["all"],
     "url": "https://agriculture.ny.gov/become-pet-dealer",
     "checkedOn": "2026-10-16",
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "deadline": "30 days before the license expires",
     "exemptions": [
       "Breeders selling 25 or fewer dogs and cats a year",
@@ -1217,7 +1217,7 @@
     "appliesTo": ["employees"],
     "url": "https://dos.ny.gov/security-guard",
     "checkedOn": "2026-10-16",
-    "frequency": "biennial",
+    "rrule": "FREQ=YEARLY;INTERVAL=2",
     "renewal": "Every two years, online from 90 days before expiry"
   },
   {
@@ -1230,11 +1230,11 @@
     "appliesTo": ["all"],
     "url": "https://dos.ny.gov/private-investigator1",
     "checkedOn": "2026-10-16",
-    "frequency": "biennial",
+    "rrule": "FREQ=YEARLY;INTERVAL=2",
     "renewal": "Every two years, filed at least six weeks before expiry",
     "feeDetail": {
       "basis": "varies",
-      "min": 400.0
+      "min": 400
     }
   },
   {
@@ -1286,7 +1286,7 @@
     "appliesTo": ["all"],
     "url": "https://dos.ny.gov/real-estate-broker-frequently-asked-questions",
     "checkedOn": "2026-10-16",
-    "frequency": "biennial",
+    "rrule": "FREQ=YEARLY;INTERVAL=2",
     "renewal": "Every two years, online from three months before expiry"
   },
   {
@@ -1299,7 +1299,7 @@
     "appliesTo": ["all"],
     "url": "https://dos.ny.gov/home-inspector1",
     "checkedOn": "2026-10-16",
-    "frequency": "biennial",
+    "rrule": "FREQ=YEARLY;INTERVAL=2",
     "renewal": "Every two years, with 24 hours of continuing education",
     "feeDetail": {
       "basis": "flat",
@@ -1390,7 +1390,7 @@
     "appliesTo": ["all"],
     "url": "https://www.nycourts.gov/biennial-attorney-registration/biennial-attorney-registration",
     "checkedOn": "2026-10-16",
-    "frequency": "biennial",
+    "rrule": "FREQ=YEARLY;INTERVAL=2",
     "deadline": "Within 30 days of the attorney's birthday, every two years",
     "feeDetail": {
       "basis": "flat",
@@ -1471,7 +1471,7 @@
     "appliesTo": ["all"],
     "url": "https://dos.ny.gov/get-bedding-manufacturers-refurbisher-license",
     "checkedOn": "2026-10-16",
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "renewal": "Every year",
     "feeDetail": {
       "basis": "flat",
@@ -1521,7 +1521,7 @@
     "appliesTo": ["all"],
     "url": "https://www.op.nysed.gov/Public-Accounting-Firms-CPA-Guidance-and-Forms",
     "checkedOn": "2026-10-16",
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "deadline": "By the firm's registration anniversary"
   },
   {
@@ -1564,7 +1564,7 @@
     "appliesTo": ["all"],
     "url": "https://agriculture.ny.gov/food-safety/application-food-processing-establishment-license-article-20-c",
     "checkedOn": "2026-10-16",
-    "frequency": "biennial",
+    "rrule": "FREQ=YEARLY;INTERVAL=2",
     "renewal": "Every two years",
     "exemptions": [
       "Stores that sell only prepackaged food (they need a retail food store license instead)",
@@ -1572,7 +1572,7 @@
     ],
     "feeDetail": {
       "basis": "varies",
-      "min": 175.0
+      "min": 175
     }
   },
   {
@@ -1585,7 +1585,7 @@
     "appliesTo": ["all"],
     "url": "https://agriculture.ny.gov/food-safety/application-retail-food-store-license-article-28",
     "checkedOn": "2026-10-18",
-    "frequency": "biennial",
+    "rrule": "FREQ=YEARLY;INTERVAL=2",
     "feeDetail": {
       "basis": "flat",
       "amount": 250
@@ -1637,7 +1637,7 @@
     "appliesTo": ["all"],
     "url": "https://dec.ny.gov/environmental-protection/hazardous-substance-bulk-storage/forms-instructions/pbs-registration-renewal-faq",
     "checkedOn": "2026-10-16",
-    "frequency": "every_five_years",
+    "rrule": "FREQ=YEARLY;INTERVAL=5",
     "renewal": "Every five years, by check or money order"
   },
   {
@@ -1650,7 +1650,7 @@
     "appliesTo": ["all"],
     "url": "https://dol.ny.gov/application-asbestos-handling-license-sh430",
     "checkedOn": "2026-10-16",
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "renewal": "Every year, with a renewal notice about two months before expiry",
     "feeDetail": {
       "basis": "flat",
@@ -1706,7 +1706,7 @@
     "appliesTo": ["all"],
     "url": "https://dec.ny.gov/regulatory/permits-licenses/commercial-fishing-and-aquaculture-permits",
     "checkedOn": "2026-10-16",
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "feeDetail": {
       "basis": "flat",
       "amount": 250
@@ -1722,7 +1722,7 @@
     "appliesTo": ["all"],
     "url": "https://dec.ny.gov/regulatory/permits-licenses/commercial-fishing-and-aquaculture-permits",
     "checkedOn": "2026-10-16",
-    "frequency": "annual"
+    "rrule": "FREQ=YEARLY"
   },
   {
     "id": "ny.shellfish-digger-permit",
@@ -1734,10 +1734,10 @@
     "appliesTo": ["all"],
     "url": "https://dec.ny.gov/regulatory/permits-licenses/commercial-fishing-and-aquaculture-permits",
     "checkedOn": "2026-10-16",
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "feeDetail": {
       "basis": "varies",
-      "min": 50.0
+      "min": 50
     }
   },
   {
@@ -1750,11 +1750,11 @@
     "appliesTo": ["all"],
     "url": "https://dec.ny.gov/regulatory/permits-licenses/commercial-fishing-and-aquaculture-permits",
     "checkedOn": "2026-10-16",
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "exemptions": ["New lobster permits are under a moratorium"],
     "feeDetail": {
       "basis": "varies",
-      "min": 150.0
+      "min": 150
     }
   },
   {
@@ -1799,7 +1799,7 @@
     "frequency": "ongoing",
     "feeDetail": {
       "basis": "varies",
-      "min": 60.0
+      "min": 60
     }
   },
   {
@@ -1848,7 +1848,7 @@
     "appliesTo": ["all"],
     "url": "https://www.wadsworth.org/regulatory/elap",
     "checkedOn": "2026-10-16",
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "renewal": "Every year, April 1 to March 31"
   },
   {
@@ -1968,7 +1968,7 @@
     "appliesTo": ["all"],
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/2056",
     "checkedOn": "2026-10-16",
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "renewal": "Every year",
     "feeDetail": {
       "basis": "flat",
@@ -2011,7 +2011,7 @@
         "description": "Located in New York City"
       }
     ],
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "renewal": "Every year"
   },
   {
@@ -2159,7 +2159,7 @@
         "description": "Located in New York City"
       }
     ],
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "renewal": "Before each summer season"
   },
   {
@@ -2244,7 +2244,7 @@
         "description": "Located in New York City"
       }
     ],
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "renewal": "Every year"
   },
   {
@@ -2269,7 +2269,7 @@
     "appliesTo": ["all"],
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/2278",
     "checkedOn": "2026-10-16",
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "renewal": "Every year",
     "exemptions": ["Buyers of under $20,000 a year of New York farm products"]
   },
@@ -2314,7 +2314,7 @@
         "description": "Located in New York City"
       }
     ],
-    "frequency": "biennial",
+    "rrule": "FREQ=YEARLY;INTERVAL=2",
     "renewal": "Every two years"
   },
   {
@@ -2371,7 +2371,7 @@
     "appliesTo": ["all"],
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/1915",
     "checkedOn": "2026-10-16",
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "renewal": "Every year",
     "feeDetail": {
       "basis": "flat",
@@ -2405,7 +2405,7 @@
     "appliesTo": ["all"],
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/2276",
     "checkedOn": "2026-10-16",
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "renewal": "Every year"
   },
   {
@@ -2418,11 +2418,11 @@
     "appliesTo": ["all"],
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/2837",
     "checkedOn": "2026-10-16",
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "renewal": "Every year",
     "feeDetail": {
       "basis": "varies",
-      "min": 25.0
+      "min": 25
     }
   },
   {
@@ -2478,7 +2478,7 @@
     "appliesTo": ["all"],
     "url": "https://dmv.ny.gov/business/driver-training/open-a-driving-school",
     "checkedOn": "2026-10-16",
-    "frequency": "biennial",
+    "rrule": "FREQ=YEARLY;INTERVAL=2",
     "renewal": "Every two years, filed 30 to 60 days before expiry",
     "feeDetail": {
       "basis": "flat",
@@ -2544,7 +2544,7 @@
     "appliesTo": ["all"],
     "url": "https://www.health.ny.gov/facilities/home_care/provider.htm",
     "checkedOn": "2026-10-16",
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "deadline": "Each year, on the Department's registration notice"
   },
   {
@@ -2557,7 +2557,7 @@
     "appliesTo": ["all"],
     "url": "https://www.wadsworth.org/regulatory/clep/clinical-labs/re-apply-for-permit",
     "checkedOn": "2026-10-16",
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "deadline": "Reapply each spring; the permit year starts July 1",
     "feeDetail": {
       "basis": "flat",
@@ -2574,7 +2574,7 @@
     "appliesTo": ["all"],
     "url": "https://www.op.nysed.gov/registration-renewal/online-registration-renewal",
     "checkedOn": "2026-10-16",
-    "frequency": "biennial",
+    "rrule": "FREQ=YEARLY;INTERVAL=2",
     "renewal": "Every two years, in the licensee's birth month"
   },
   {
@@ -2625,11 +2625,11 @@
     "appliesTo": ["all"],
     "url": "https://dec.ny.gov/environmental-protection/mining-reclamation/reclamation-permit/annual-regulatory-fee",
     "checkedOn": "2026-10-16",
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "deadline": "Billed in August, due in September",
     "feeDetail": {
       "basis": "varies",
-      "min": 400.0
+      "min": 400
     }
   },
   {
@@ -2655,7 +2655,7 @@
     "appliesTo": ["all"],
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/2531",
     "checkedOn": "2026-10-16",
-    "frequency": "annual"
+    "rrule": "FREQ=YEARLY"
   },
   {
     "id": "ny.professional-fund-raiser-registration",
@@ -2667,7 +2667,7 @@
     "appliesTo": ["all"],
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/3025",
     "checkedOn": "2026-10-16",
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "renewal": "Every year"
   },
   {
@@ -2680,7 +2680,7 @@
     "appliesTo": ["all"],
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/2326",
     "checkedOn": "2026-10-16",
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "renewal": "Every year"
   },
   {
@@ -2740,7 +2740,7 @@
     "appliesTo": ["all"],
     "url": "https://dos.ny.gov/hearing-aid-business1",
     "checkedOn": "2026-10-16",
-    "frequency": "biennial",
+    "rrule": "FREQ=YEARLY;INTERVAL=2",
     "renewal": "Every two years, from 90 days before expiry",
     "exemptions": ["Businesses that do not sell or fit hearing aids"]
   },
@@ -2782,7 +2782,7 @@
     "appliesTo": ["all"],
     "url": "https://www.dot.ny.gov/divisions/operating/osss/truck/registration-licensing",
     "checkedOn": "2026-10-16",
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "deadline": "Vehicle identification renews each registration year"
   },
   {
@@ -2820,7 +2820,7 @@
     "appliesTo": ["all"],
     "url": "https://www.tax.ny.gov/bus/petrol/ptidx.htm",
     "checkedOn": "2026-10-16",
-    "frequency": "monthly",
+    "rrule": "FREQ=MONTHLY",
     "deadline": "By the 20th of the following month"
   },
   {
@@ -2833,7 +2833,7 @@
     "appliesTo": ["all"],
     "url": "https://agriculture.ny.gov/food-safety/commercial-feed",
     "checkedOn": "2026-10-16",
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "deadline": "Each year, before the license expires at the start of the calendar year",
     "feeDetail": {
       "basis": "flat",
@@ -2879,7 +2879,7 @@
     "appliesTo": ["all"],
     "url": "https://agriculture.ny.gov/dairy/dairy-business-licensing",
     "checkedOn": "2026-10-16",
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "exemptions": ["Dealers handling less than 3,000 pounds of milk a month"],
     "feeDetail": {
       "basis": "flat",
@@ -2896,7 +2896,7 @@
     "appliesTo": ["all"],
     "url": "https://dol.ny.gov/professional-employer-organizations-peo",
     "checkedOn": "2026-10-16",
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "deadline": "Within 180 days after the fiscal year ends",
     "exemptions": [
       "Out-of-state PEOs licensed elsewhere with no New York office and no more than 25 New York worksite employees (a reduced registration applies)"
@@ -3433,7 +3433,7 @@
     "appliesTo": ["all"],
     "url": "https://dos.ny.gov/telemarketer-business",
     "checkedOn": "2026-10-16",
-    "frequency": "biennial",
+    "rrule": "FREQ=YEARLY;INTERVAL=2",
     "renewal": "Every two years",
     "feeDetail": {
       "basis": "flat",
@@ -3467,7 +3467,7 @@
     "appliesTo": ["employees"],
     "url": "https://dos.ny.gov/get-armored-car-guard-license",
     "checkedOn": "2026-10-16",
-    "frequency": "biennial",
+    "rrule": "FREQ=YEARLY;INTERVAL=2",
     "renewal": "Every two years",
     "feeDetail": {
       "basis": "flat",
@@ -3484,7 +3484,7 @@
     "appliesTo": ["all"],
     "url": "https://dos.ny.gov/athlete-agent",
     "checkedOn": "2026-10-16",
-    "frequency": "biennial",
+    "rrule": "FREQ=YEARLY;INTERVAL=2",
     "renewal": "Every two years",
     "feeDetail": {
       "basis": "flat",
@@ -3587,11 +3587,11 @@
     "appliesTo": ["all"],
     "url": "https://www.health.ny.gov/environmental/radiological/radon/registration.htm",
     "checkedOn": "2026-10-16",
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "exemptions": ["Practices without radiation-producing equipment"],
     "feeDetail": {
       "basis": "varies",
-      "min": 50.0
+      "min": 50
     }
   },
   {
@@ -3618,7 +3618,7 @@
     "appliesTo": ["all"],
     "url": "https://www.health.ny.gov/professionals/ems/municipal_certificate_of_need.htm",
     "checkedOn": "2026-10-16",
-    "frequency": "biennial",
+    "rrule": "FREQ=YEARLY;INTERVAL=2",
     "renewal": "Biennial recertification"
   },
   {
@@ -3727,7 +3727,7 @@
     "appliesTo": ["all"],
     "url": "https://dec.ny.gov/regulatory/regulations/policy-dshm-pes-05-02-pesticide-product-registration-commercial-permits",
     "checkedOn": "2026-10-16",
-    "frequency": "biennial",
+    "rrule": "FREQ=YEARLY;INTERVAL=2",
     "renewal": "Every two years, 45 days before expiry",
     "exemptions": ["Stores that sell only general use pesticides"]
   },
@@ -3750,7 +3750,7 @@
         "description": "Located in New York City"
       }
     ],
-    "frequency": "biennial",
+    "rrule": "FREQ=YEARLY;INTERVAL=2",
     "renewal": "Every two years"
   },
   {
@@ -3772,7 +3772,7 @@
         "description": "Located in New York City"
       }
     ],
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "renewal": "Every year"
   },
   {
@@ -3819,7 +3819,7 @@
         "description": "Located in New York City"
       }
     ],
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "renewal": "Annual to April 30 or seasonal to November 1"
   },
   {
@@ -3858,7 +3858,7 @@
     "appliesTo": ["all"],
     "url": "https://www.health.ny.gov/environmental/outdoors/camps/",
     "checkedOn": "2026-10-16",
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "deadline": "At least 60 days before children and staff arrive each season"
   },
   {
@@ -3884,7 +3884,7 @@
     "appliesTo": ["all"],
     "url": "https://dol.ny.gov/amusement-device-permitting-new-york-state",
     "checkedOn": "2026-10-16",
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "deadline": "At least 10 days before the first use each year",
     "exemptions": [
       "Devices permitted by the NYC Department of Consumer and Worker Protection and used only within New York City",
@@ -4032,7 +4032,7 @@
     "appliesTo": ["all"],
     "url": "https://ag.ny.gov/resources/organizations/investments-registration-regulation/investor-protection-filing-fee-guide",
     "checkedOn": "2026-10-18",
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "feeDetail": {
       "basis": "flat",
       "amount": 200
@@ -4067,7 +4067,7 @@
     "appliesTo": ["all"],
     "url": "https://ag.ny.gov/resources/government-organizations/charities-nonprofits-fundraisers/charities-annual-filing-char500",
     "checkedOn": "2026-10-16",
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "deadline": "By the 15th day of the fifth month after the fiscal year ends, extended automatically by six months",
     "renewal": "Every year",
     "exemptions": [
@@ -4136,7 +4136,7 @@
     "appliesTo": ["all"],
     "url": "https://dos.ny.gov/get-appraisal-management-company-license",
     "checkedOn": "2026-10-16",
-    "frequency": "biennial",
+    "rrule": "FREQ=YEARLY;INTERVAL=2",
     "renewal": "Every two years, with the annual roster report filed first",
     "exemptions": [
       "Appraisal management companies regulated by a federal financial institution regulator, and their wholly owned subsidiaries"
@@ -4156,7 +4156,7 @@
     "appliesTo": ["all"],
     "url": "https://dmv.ny.gov/business/open-an-inspection-station",
     "checkedOn": "2026-10-16",
-    "frequency": "biennial",
+    "rrule": "FREQ=YEARLY;INTERVAL=2",
     "renewal": "Every two years",
     "exemptions": ["Shops that do not perform state inspections"]
   },
@@ -4170,7 +4170,7 @@
     "appliesTo": ["all"],
     "url": "https://dec.ny.gov/environmental-protection/hazardous-substance-bulk-storage/cbs-registration-renewal-faqs",
     "checkedOn": "2026-10-16",
-    "frequency": "biennial",
+    "rrule": "FREQ=YEARLY;INTERVAL=2",
     "renewal": "Every two years",
     "exemptions": ["Facilities with no regulated bulk storage tanks"]
   },
@@ -4357,7 +4357,7 @@
         "description": "Located in New York City"
       }
     ],
-    "frequency": "every_five_years",
+    "rrule": "FREQ=YEARLY;INTERVAL=5",
     "renewal": "Every five years",
     "exemptions": ["Buildings six stories or lower"],
     "feeDetail": {
@@ -4384,7 +4384,7 @@
         "description": "Located in New York City"
       }
     ],
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "renewal": "Every calendar year",
     "exemptions": ["Buildings with no boiler"]
   },
@@ -4407,7 +4407,7 @@
         "description": "Located in New York City"
       }
     ],
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "renewal": "Every calendar year",
     "exemptions": ["Buildings with no elevator"]
   },
@@ -4496,7 +4496,7 @@
         "description": "Located in New York City"
       }
     ],
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "renewal": "Every year",
     "exemptions": ["Premises under 75 people indoors and 200 outdoors"]
   },
@@ -4737,7 +4737,7 @@
     "appliesTo": ["all"],
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/2390",
     "checkedOn": "2026-10-16",
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "renewal": "Every year",
     "feeDetail": {
       "basis": "flat",
@@ -4754,7 +4754,7 @@
     "appliesTo": ["all"],
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/2692",
     "checkedOn": "2026-10-16",
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "renewal": "Every year"
   },
   {
@@ -4767,7 +4767,7 @@
     "appliesTo": ["all"],
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/2574",
     "checkedOn": "2026-10-16",
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "renewal": "Every year"
   },
   {
@@ -5049,7 +5049,7 @@
     "appliesTo": ["all"],
     "url": "https://dol.ny.gov/fashion-workers-registry-preparing-register",
     "checkedOn": "2026-10-18",
-    "frequency": "biennial",
+    "rrule": "FREQ=YEARLY;INTERVAL=2",
     "renewal": "Every two calendar years",
     "feeDetail": {
       "basis": "tiered",
@@ -5058,13 +5058,25 @@
           "label": "Five or fewer employees",
           "basis": "flat",
           "amount": 500,
-          "when": [{ "field": "employeeCount", "op": "<=", "value": 5 }]
+          "when": [
+            {
+              "field": "employeeCount",
+              "op": "<=",
+              "value": 5
+            }
+          ]
         },
         {
           "label": "More than five employees",
           "basis": "flat",
           "amount": 700,
-          "when": [{ "field": "employeeCount", "op": ">", "value": 5 }]
+          "when": [
+            {
+              "field": "employeeCount",
+              "op": ">",
+              "value": 5
+            }
+          ]
         }
       ]
     },
@@ -5248,7 +5260,7 @@
     "appliesTo": ["all"],
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/2022",
     "checkedOn": "2026-10-16",
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "renewal": "Every year",
     "feeDetail": {
       "basis": "flat",
@@ -5326,7 +5338,7 @@
     "anchor": "2027-02-28",
     "feeDetail": {
       "basis": "varies",
-      "min": 250.0
+      "min": 250
     }
   },
   {

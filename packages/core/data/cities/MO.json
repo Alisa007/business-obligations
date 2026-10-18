@@ -9,7 +9,7 @@
         "category": "license",
         "authority": "City of Columbia Business Licenses",
         "description": "Businesses in Columbia hold an annual business license, renewed online with the license number from the renewal postcard.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://www.como.gov/?p=8900",
         "appliesTo": ["all"]
       }
@@ -27,7 +27,7 @@
         "category": "license",
         "authority": "City of Independence Regulated Industries Division",
         "description": "Business licenses are effective for one year from the month issued and renewed each year; the fee scales with projected gross receipts.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "Anniversary of the month issued",
         "url": "https://independencemo.gov/government/city-departments/community-development/business-license-liquor-license-and-employee-permitting",
         "appliesTo": ["all"]
@@ -67,7 +67,7 @@
         "category": "payment",
         "authority": "City of Kansas City, Missouri Finance Department",
         "description": "Employers withhold the 1% earnings tax for employees who live or work in the city and file the quarterly return.",
-        "frequency": "quarterly",
+        "rrule": "FREQ=MONTHLY;INTERVAL=3",
         "url": "https://www.kcmo.gov/city-hall/departments/finance",
         "appliesTo": ["employees"]
       }
@@ -136,7 +136,7 @@
         "category": "payment",
         "authority": "City of St. Louis Collector of Revenue, Earnings Tax Department",
         "description": "Employers pay the 0.5% payroll expense tax and withhold earnings tax for employees working in the city, filing quarterly.",
-        "frequency": "quarterly",
+        "rrule": "FREQ=MONTHLY;INTERVAL=3",
         "url": "https://www.stlouis-mo.gov/government/departments/collector/earnings-tax/",
         "appliesTo": ["employees"]
       }

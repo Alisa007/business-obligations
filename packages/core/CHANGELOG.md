@@ -13,6 +13,8 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ### Changed
 
+- **core:** every recurring item is an `rrule` (annual, biennial, every five years, quarterly, monthly), in the data files and in rules written in code; `frequency` is only for `once`, `ongoing`, `per_event` and `periodic`, and a schema and the engine reject it on anything that recurs. A recurrence without a fixed date is a bare rule (`FREQ=YEARLY`, `FREQ=MONTHLY`, `FREQ=MONTHLY;INTERVAL=3`); the anniversary of formation now needs `anchor: "formation"`. A state `businessLicense` carries `rrule` or `frequency` instead of `renewal`. `ItemDraft` takes `rrule` (and `anchor`) in place of `frequency` and `due` for a recurrence
+
 - **data:** `data/top-cities.json` is removed (the coverage report no longer lists missing large cities)
 - the core bundle budget is 600 KB gzip (it was 300 KB), for the larger local data
 

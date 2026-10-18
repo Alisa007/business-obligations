@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { getComplianceItems, InvalidProfileError, stateFromZip, STATES } from "../src";
+import { evaluate, getComplianceItems, InvalidProfileError, stateFromZip, STATES } from "../src";
 import type { BusinessProfile } from "../src";
 
 const base = { city: "Springfield", county: "Greene" };
@@ -329,5 +329,53 @@ describe("state coverage", () => {
     expect(text).toContain(s.workersComp.agency);
     expect(items.filter((i) => i.state && i.state !== code)).toHaveLength(0);
     expect(new Set(ids(items)).size).toBe(items.length);
+  });
+});
+
+describe("recurrence of rule output", () => {
+  const draft = {
+    title: "Renew the thing",
+    category: "license" as const,
+    jurisdiction: "state" as const,
+    authority: "State",
+    description: "Renew the thing every year.",
+    reason: "Always",
+  };
+  const run = (items: object) =>
+    evaluate({ entityType: "llc", state: "TX", city: "Austin", county: "Travis" } as never, {
+      asOf: "2026-01-01",
+      rules: [{ id: "t.x", description: "", inputs: [], when: () => true, items: () => items as never }],
+    }).items;
+
+  it("derives frequency and due date from an rrule", () => {
+    const [item] = run({ ...draft, rrule: "FREQ=YEARLY;BYMONTH=9;BYMONTHDAY=30" });
+    expect(item).toMatchObject({
+      frequency: "annual",
+      due: { type: "fixed", month: 9, day: 30 },
+      nextDue: "2026-09-30",
+    });
+  });
+
+  it("rejects an invalid rrule and a recurring frequency without one", () => {
+    expect(() => run({ ...draft, rrule: "FREQ=DAILY" })).toThrow();
+    expect(() => run({ ...draft, frequency: "annual" })).toThrow(/rrule/);
+  });
+
+  it("gives every bundled rule's recurring items a frequency that matches its rrule", () => {
+    for (const state of ["TX", "CA", "NY", "DE"]) {
+      const items = evaluate(
+        {
+          entityType: "llc",
+          state,
+          city: "Springfield",
+          county: "Greene",
+          employeeCount: 3,
+          sellsTaxableGoods: true,
+          industry: "restaurant",
+        } as never,
+        { asOf: "2026-01-01" },
+      ).items;
+      for (const i of items) if (i.recurrence) expect(i.recurrence, i.id).toMatch(/^FREQ=/);
+    }
   });
 });

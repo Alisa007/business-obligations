@@ -126,7 +126,7 @@
         "category": "license",
         "authority": "Town of Blades",
         "description": "The Town of Blades fee schedule effective August 12, 2024 charges $100.00 for a general services business license, $200.00 for a rental license on an apartment, cottage or house of one or two bedrooms, and $100.00 for an office or building rental.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://blades.delaware.gov/files/2024/11/2024-UPDATED-Town-Fee-Schedule-08.12.2024.pdf",
         "appliesTo": ["all"],
         "feeDetail": {
@@ -167,7 +167,7 @@
         "category": "license",
         "authority": "Town of Bridgeville",
         "description": "Every business in Bridgeville fills in the town's yearly business license application, with a copy of its Delaware business license and a certificate of liability insurance. The annual fee is $100, but a business physically inside the town limits does not have to pay it. Payment is online at the town's site and the documents go to the town by email.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://bridgeville.delaware.gov/license/",
         "appliesTo": ["all"],
         "feeDetail": {
@@ -188,7 +188,7 @@
         "category": "license",
         "authority": "Town of Camden",
         "description": "A business in Camden applies each year under Ordinance 2007-104 for a license for the period ending December 31, naming the number of people employed and whether the business is commercial or residential. The application needs a copy of the State of Delaware business license and a certificate of insurance naming the Town of Camden as certificate holder. The form shows no fee.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://camden.delaware.gov/files/2026/03/Business-License-Application.pdf",
         "appliesTo": ["all"]
       }
@@ -206,12 +206,12 @@
         "category": "license",
         "authority": "Town of Cheswold",
         "description": "A business in Cheswold needs a town license renewed every year, with the initial fee paid with the application and renewals at the same rates. The town's schedule, revised February 3, 2025, charges $100 for a bar, restaurant, auto repair or day care of 1 to 5 children, $65 for a one-chair barber or beauty shop plus $15 per extra chair, $120 for retail and grocery up to 3,000 square feet, $150 for auto sales, $175 for accounting, $200 for a commercial contractor, $300 for each attorney and $500 for a bank or gas station, among other types. Mobile home parks of 35 or fewer homes are exempt, and some fees are not listed.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://cheswold.delaware.gov/businesslicense/",
         "appliesTo": ["all"],
         "feeDetail": {
           "basis": "varies",
-          "min": 50.0
+          "min": 50
         }
       }
     ],
@@ -302,7 +302,7 @@
         "appliesTo": ["all"],
         "feeDetail": {
           "basis": "varies",
-          "min": 50.0
+          "min": 50
         }
       }
     ],
@@ -346,7 +346,7 @@
         },
         "feeDetail": {
           "basis": "varies",
-          "min": 28.0
+          "min": 28
         }
       }
     ],
@@ -363,7 +363,7 @@
         "category": "license",
         "authority": "Town of Ellendale",
         "description": "Anyone doing work within Ellendale town limits, including construction, lawn care, heating and air, surveying, tree work, plumbing, painting, cable and TV services and repairs, and anyone placing advertising signs in town, needs a town business license on top of the state license. The fee is $125.00 per calendar year with no proration, and the application needs a copy of the Delaware state license and liability insurance.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://ellendale.delaware.gov/business-licenses-are-required/",
         "appliesTo": ["all"],
         "feeDetail": {
@@ -385,12 +385,12 @@
         "category": "license",
         "authority": "Town of Elsmere Code Enforcement",
         "description": "A business in Elsmere, or one working for the town, needs a town license for the period November 1 to October 31. The fee is $150 for a general contractor or any other business and $125 for a subcontractor. The application needs a copy of any State of Delaware or New Castle County license and proof of business insurance, and fees are doubled for a business that operates before getting the license.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://townofelsmere.com/wp-content/uploads/2023/01/Business-License-Application-New.pdf",
         "appliesTo": ["all"],
         "feeDetail": {
           "basis": "varies",
-          "min": 125.0
+          "min": 125
         }
       }
     ],
@@ -426,7 +426,7 @@
         "category": "license",
         "authority": "Town of Felton",
         "description": "A contractor working in Felton needs a town contractor's license, which costs $100 on the town's fee schedule for July 1, 2025 to June 30, 2026, applied for with a copy of the Delaware business license and a certificate of liability insurance. The town takes license payments through its online portal, and its pages show no fee for a general business license.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://felton.delaware.gov/building-permits/",
         "appliesTo": ["all"],
         "feeDetail": {
@@ -458,12 +458,12 @@
         "category": "license",
         "authority": "Town of Fenwick Island",
         "description": "A business or landlord in Fenwick Island needs a town license for each calendar year, obtained before opening or continuing business. The fiscal 2026-2027 fees are $185 plus $0.10 per square foot of floor space plus a $60 EMS fee for a retail merchant, $75 for a contractor earning under $1,500 in town and $200 above that, $185 for a rental landlord (plus $7.20 per sleeping unit for motels and hotels), and $25 to $250 per vending machine depending on its type. Late payment of the fee costs $100.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://fenwickisland.delaware.gov/files/2026/07/FY-2026-2027-Fee-Schedule.pdf",
         "appliesTo": ["all"],
         "feeDetail": {
           "basis": "varies",
-          "min": 75.0
+          "min": 75
         }
       }
     ],
@@ -480,7 +480,7 @@
         "category": "license",
         "authority": "Town of Frankford",
         "description": "A business in Frankford needs a town license, which costs $75.00 and is valid for one year, from January 1 through December 31. Failing to get one may bring a $150.00 penalty and a stop work order, and the application asks for the Delaware state license number.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://frankford.delaware.gov/forms-and-applications/",
         "appliesTo": ["all"],
         "feeDetail": {
@@ -503,7 +503,7 @@
         "category": "license",
         "authority": "Town of Frederica",
         "description": "Frederica’s fee schedule lists an annual business license and the town provides a business-license application.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://frederica.delaware.gov/files/2025/06/24-04-Updated-Fees.pdf",
         "appliesTo": ["all"],
         "feeDetail": {
@@ -535,7 +535,7 @@
         "category": "license",
         "authority": "Town of Georgetown Planning Department",
         "description": "A person or company doing business within Georgetown town limits needs a town business license under Chapter 130 of the town code. The cost varies with the type and location of the business, with fees set in Chapter 98, and the application is at the Planning Department on The Circle or on the town's website. A Delaware state business license from the Division of Revenue is also needed.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://www.georgetowndel.com/starting-a-business.htm",
         "appliesTo": ["all"]
       }
@@ -553,12 +553,12 @@
         "category": "license",
         "authority": "Town of Greenwood",
         "description": "A business in Greenwood needs a town license for the calendar year. The 2026 fee schedule charges $75 for a resident business and $150 for a non-resident one, $25 for a peddler or solicitor, and $100 per unit for a rental license. The schedule file is marked as proposed on December 10, 2025.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://greenwood.delaware.gov/files/2026/01/adopted-fee-schedule-2026.pdf",
         "appliesTo": ["all"],
         "feeDetail": {
           "basis": "varies",
-          "min": 75.0
+          "min": 75
         }
       }
     ],
@@ -612,12 +612,12 @@
         "category": "license",
         "authority": "Town of Henlopen Acres",
         "description": "Anyone selling merchandise or providing services for profit in Henlopen Acres, contractors and subcontractors included, needs a town business license for the calendar year, with no proration. The 2025-2026 schedule charges $50.00 for a business of up to 5 employees, $175.00 for 6 or more, and $275.00 for a business using trucks over 26,000 pounds.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://henlopenacres.delaware.gov/files/2025/07/2025-26-Fee-Schedule_FINAL.pdf",
         "appliesTo": ["all"],
         "feeDetail": {
           "basis": "varies",
-          "min": 50.0
+          "min": 50
         }
       }
     ],
@@ -682,7 +682,7 @@
         "category": "license",
         "authority": "Town of Laurel Code Enforcement",
         "description": "A business opening in Laurel needs a town business license, obtained after the Delaware state business license, the pre-development meeting with the Code Enforcement Officer, and final inspection and approval. The town's guide gives no fee, and the application is on its website. Depending on the business, approvals from DelDOT, the State Fire Marshal, Sussex County, the Division of Public Health or DNREC may also be needed.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://www.townoflaurel.net/pdfs/How_to_start_a_business.pdf",
         "appliesTo": ["all"]
       }
@@ -719,7 +719,7 @@
         "category": "license",
         "authority": "City of Lewes Building Department",
         "description": "Anyone engaged for profit within Lewes city limits pays an annual license fee for the calendar year, and a new license obtained in October, November or December costs half. The April 2025 schedule charges $108 for a rental, commercial rental, restaurant-space or parking lot, $135 for a barber, beauty parlor or dry cleaner, $190 for an insurance agent, food service business, medical or other professional, $163 for retail up to 2,500 square feet and $300 for 2,501 to 5,000, $218 for a restaurant that does not serve alcohol and $410 for one that does, $465 for a bank, $150 for a contractor with 1 to 5 employees and $360 for 6 or more, and $245 for manufacturing.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://www.ci.lewes.de.us/DocumentCenter/View/4914/Fees-and-Charges-for-City-412025",
         "appliesTo": ["all"],
         "feeDetail": {
@@ -732,7 +732,7 @@
         "category": "license",
         "authority": "City of Lewes Building Department",
         "description": "Each residential rental unit in Lewes, short-term or long-term, needs a city rental license, which costs $200 a year. A second violation notice costs $250 and a third $500 with the rental license suspended for 12 months.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://www.ci.lewes.de.us/DocumentCenter/View/4914/Fees-and-Charges-for-City-412025",
         "naics": ["5311", "531110", "531311", "721199"],
         "appliesTo": ["all"],
@@ -806,7 +806,7 @@
         "appliesTo": ["all"],
         "feeDetail": {
           "basis": "varies",
-          "min": 50.0
+          "min": 50
         }
       }
     ],
@@ -823,7 +823,7 @@
         "category": "license",
         "authority": "City of Milford Planning & Economic Development",
         "description": "A business with a physical location in Milford must hold a city business license from the Planning & Economic Development Department, and residential rentals need a rental license for the calendar year January 1 to December 31. The city's FAQ gives no fee, and applications go through its permits and licenses portal.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://cityofmilford.com/m/faq?cat=15",
         "appliesTo": ["all"]
       }
@@ -841,7 +841,7 @@
         "category": "license",
         "authority": "Town of Millsboro",
         "description": "A business in Millsboro needs a town license for the calendar year, which costs $50.00, and renewals must match the name and address on the renewal letter exactly. Rental registration costs $25 per motel room, $35 per apartment and $65 per single-family or townhouse unit, and mobile food vendors and single-day vendors have their own forms.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://www.millsboro.org/business/licenses_forms.php",
         "appliesTo": ["all"],
         "feeDetail": {
@@ -919,7 +919,7 @@
         "appliesTo": ["all"],
         "feeDetail": {
           "basis": "varies",
-          "min": 50.0
+          "min": 50
         }
       }
     ],
@@ -946,13 +946,13 @@
         "category": "license",
         "authority": "City of Newark Planning and Development",
         "description": "A landlord renting in Newark needs a rental license for each unit. The 2026 fees are $234 per unit in a single-family or two-family home, $160 per townhouse or condominium unit, $86 per unit in buildings of three or more units, and $49 per occupant in fraternities, sororities and boarding houses. A bill paid late adds 5% and then 1.5% a month, and a $5 technology fee applies to every business and rental license.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://newarkde.gov/DocumentCenter/View/18740/2024-Fee-Schedule",
         "naics": ["5311", "531110", "531311"],
         "appliesTo": ["all"],
         "feeDetail": {
           "basis": "varies",
-          "min": 49.0
+          "min": 49
         }
       },
       {
@@ -961,7 +961,7 @@
         "category": "license",
         "authority": "City of Newark Planning and Development",
         "description": "The 2026 Newark fee schedule charges $100 for a contractor's license, $50 for an elevator license, and $100 a year for a fire license. Fire safety registration is $100 per registration and each fire alarm or suppression system report $25. Annual sign fees are $1.25 per square foot with a $55 minimum.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://newarkde.gov/DocumentCenter/View/18740/2024-Fee-Schedule",
         "naics": ["236", "237", "238"],
         "appliesTo": ["all"],
@@ -984,7 +984,7 @@
         "category": "license",
         "authority": "Town of Newport",
         "description": "Every business located in Newport, and every outside contractor working in the town, needs a town business license on top of the state license, and owners who lease commercial or residential property need a renter's license. The town posts a 2026 application and fee schedule, which could not be read here. Structural, plumbing, mechanical and electrical permits cost $11 for the first $1,000 of job value and $6 for each additional $1,000, with a $50 minimum.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://newport.delaware.gov/business-licensespermits/",
         "appliesTo": ["all"]
       }
@@ -1002,7 +1002,7 @@
         "category": "license",
         "authority": "Town of Ocean View",
         "description": "Anyone performing a job in Ocean View needs a town business license, which follows the calendar year and costs $200 for a full year. Anyone renting property in the town also needs a $150 yearly rental license, and a gross rental receipts tax is due to the town twice a year.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://www.oceanviewde.gov/BusinessRentalLicenses",
         "appliesTo": ["all"],
         "feeDetail": {
@@ -1043,7 +1043,7 @@
         "category": "license",
         "authority": "City of Rehoboth Beach Building & Licensing Department",
         "description": "Every business inside Rehoboth Beach city limits, and every contractor or company providing products or services within the city, must hold a current city business license from the Building & Licensing Department. Renewal needs a copy of the current Delaware business license and a certificate of liability insurance naming the city as certificate holder, and residential rentals, outdoor dining on public space and restaurants have their own licenses or permits. A Restaurant Permit of Compliance application costs $1,000. The city's pages show no business license fee table; call 302-227-6181.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://www.rehobothbeachde.gov/35/Businesses",
         "appliesTo": ["all"]
       }
@@ -1080,7 +1080,7 @@
         "category": "license",
         "authority": "Town of Selbyville",
         "description": "Under an ordinance passed May 1, 2023, anyone without an establishment in Selbyville who sells merchandise, provides services, rents units or serves food within town limits must hold a town business license, and businesses inside the town are licensed under the town code too. The town's page gives no fee or term, so ask Town Hall.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://selbyville.delaware.gov/?p=8367",
         "appliesTo": ["all"]
       }
@@ -1117,12 +1117,12 @@
         "category": "license",
         "authority": "Town of Smyrna Business Office",
         "description": "Any business that sells goods or services from a location in Smyrna must be licensed and registered before it opens, and licenses are for the calendar year. The 2026 fee schedule charges $125 per location for most businesses, $250 for each architect, attorney, accountant, dentist, physician, engineer and similar professional, for banks and loan agencies and for daycares over six children, and $125 for the first two barbers or beauticians. A business outside town limits that works in Smyrna needs a $125 contractor license, and a peddler or solicitor $125. The town's page does not give a renewal date.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://smyrna.delaware.gov/233/Doing-Business-in-Smyrna",
         "appliesTo": ["all"],
         "feeDetail": {
           "basis": "varies",
-          "min": 125.0
+          "min": 125
         }
       },
       {
@@ -1131,7 +1131,7 @@
         "category": "license",
         "authority": "Town of Smyrna Code Enforcement",
         "description": "A landlord who rents out property in Smyrna needs a rental license, which costs $100 in 2026, plus a $75 rental inspection and $100 for any re-inspection.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://smyrna.delaware.gov/DocumentCenter/View/3314/2026-Town-of-Smyrna-Fee-Schedule",
         "naics": ["5311", "531110", "531311"],
         "appliesTo": ["all"],
@@ -1181,7 +1181,7 @@
         "appliesTo": ["all"],
         "feeDetail": {
           "basis": "varies",
-          "min": 130.0
+          "min": 130
         }
       }
     ],
@@ -1254,7 +1254,7 @@
         "category": "license",
         "authority": "Town of Wyoming",
         "description": "A business with a physical address in Wyoming needs a town license each year, with the fee set by headcount: $108.75 for 1 to 6 employees, $181.25 for 7 to 12, $253.75 for 13 to 18, $326.25 for 19 to 24 and $398.75 for 25 or more. A non-resident contractor pays $145.00 a year, and a landlord pays $145.00 a year for the first rental unit plus $36.00 for each additional unit, with an $85.00 rental inspection before a rental certificate of occupancy. An unpaid balance accrues interest of 10% a month after the license expires.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://wyoming.delaware.gov/license-applications-permits/",
         "appliesTo": ["all"],
         "feeDetail": {

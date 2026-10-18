@@ -1,5 +1,5 @@
 import { describeFee, feeCost } from "../fee";
-import { resolveSchedule } from "../rrule";
+import { draftSchedule, resolveSchedule } from "../rrule";
 import type { ItemDraft, Presence, ResolvedProfile, Rule } from "../types";
 import { professionBoard, stateInfo as info } from "../data";
 import { DUTY_ITEMS } from "../data/duties";
@@ -85,7 +85,7 @@ function employerItems(x: Presence, p: ResolvedProfile): ItemDraft[] {
           ? "new employers pay the industry average rate"
           : `new employers pay ${s.unemployment.newEmployerRate}%`
       }, and experience-rated rates range from ${s.unemployment.minRate}% to ${s.unemployment.maxRate}%.${s.unemployment.note ? ` ${s.unemployment.note}` : ""}`,
-      frequency: "quarterly",
+      rrule: "FREQ=MONTHLY;INTERVAL=3",
       ...(s.unemployment.newEmployerRate !== null
         ? {
             cost: {
@@ -169,7 +169,7 @@ function employerItems(x: Presence, p: ResolvedProfile): ItemDraft[] {
       state: x.state,
       authority: s.paidLeave.agency,
       description: s.paidLeave.description,
-      frequency: "quarterly",
+      rrule: "FREQ=MONTHLY;INTERVAL=3",
       reason: `${s.name} has a mandatory paid leave/disability program; ${reason}`,
     });
   }
@@ -296,8 +296,7 @@ export const stateRules: Rule[] = [
             state: code,
             authority: s.filing.name,
             description: `Fee: ${describeFee(r.feeDetail)}. Required to keep the entity in good standing.`,
-            ...schedule,
-            frequency: schedule.frequency === "periodic" ? ("ongoing" as const) : schedule.frequency,
+            ...draftSchedule(r),
             ...feeCost(r),
             ...(r.lateFee ? { penalty: { ...r.lateFee, currency: "USD" as const } } : {}),
             reason: foreign
@@ -324,7 +323,7 @@ export const stateRules: Rule[] = [
           description: s.entityTaxDetail
             ? `${s.entityTax}. ${s.entityTaxDetail.summary}. ${entityTaxStatus(p, s.entityTaxDetail)}`
             : `${s.entityTax}.`,
-          frequency: "annual" as const,
+          rrule: "FREQ=YEARLY",
           reason: `${p.entityType} with ${x.home ? "its principal place of business" : "employees or property"} in ${x.state}`,
           url: s.links.entityTax,
         };
@@ -354,7 +353,7 @@ export const stateRules: Rule[] = [
           description: isCorpLike(p)
             ? "Minimum $800 franchise tax; S corporations pay the greater of $800 or 1.5% of net income."
             : "Annual $800 minimum tax for LLCs (Form 3522), plus Form 568 / 100 / 100S return.",
-          frequency: "annual",
+          rrule: "FREQ=YEARLY",
           deadline:
             "15th day of the 4th month of the tax year (estimated); return due 15th day of 3rd/4th month after year end",
           cost: { basis: "flat", amount: 800, currency: "USD" },
@@ -373,7 +372,7 @@ export const stateRules: Rule[] = [
           authority: "California Franchise Tax Board",
           description:
             "Tiered annual fee for LLCs with California-source gross receipts of $250,000 or more.",
-          frequency: "annual",
+          rrule: "FREQ=YEARLY",
           deadline: "15th day of the 6th month of the tax year",
           cost: {
             basis: "flat",
@@ -412,7 +411,7 @@ export const stateRules: Rule[] = [
             state: x.state,
             authority: l.authority,
             description: `Fee: ${describeFee(l.feeDetail)}. General state license required to operate in ${s.name}.`,
-            frequency: l.renewal,
+            ...draftSchedule(l),
             ...feeCost(l),
             reason: `${s.name} requires a general state business license`,
             url: l.url ?? s.revenue.url,
@@ -453,7 +452,7 @@ export const stateRules: Rule[] = [
                   state: x.state,
                   authority: `${s.name} cities and counties that self-administer sales tax`,
                   description: `Many ${s.name} cities and counties administer and collect their own sales and use taxes separately from the state; sellers register and file with each jurisdiction where required.`,
-                  frequency: "monthly" as const,
+                  rrule: "FREQ=MONTHLY",
                   reason,
                 },
               ]
@@ -481,7 +480,7 @@ export const stateRules: Rule[] = [
                 ? " Local sales taxes are collected and remitted on the same state return; the rate depends on the delivery location."
                 : ""
             }`,
-            frequency: "monthly" as const,
+            rrule: "FREQ=MONTHLY",
             deadline: "Monthly, quarterly or annually as assigned by the state",
             reason,
             url: s.links.salesTax ?? agency.url,
@@ -582,7 +581,7 @@ export const extraStateRules: Rule[] = [
           state: x.state,
           authority: it.authority,
           description: it.description,
-          ...resolveSchedule(it),
+          ...draftSchedule(it),
           url: it.url,
           ...extras(it, undefined),
           reason: x.home
@@ -620,7 +619,7 @@ export const extraStateRules: Rule[] = [
             state: x.state,
             authority: it.authority,
             description: it.description,
-            ...resolveSchedule(it),
+            ...draftSchedule(it),
             url: it.url,
             ...extras(it, undefined),
             reason: `${x.employeeCount} employees in ${x.state}`,
@@ -714,7 +713,7 @@ export const extraStateRules: Rule[] = [
           : `${s.name} licensing board for the profession; ${s.filing.name}`,
         description:
           "Professional entities must be owned by licensees and generally need a board-issued certificate of authorization, renewed periodically, in addition to the state filing.",
-        frequency: "biennial",
+        rrule: "FREQ=YEARLY;INTERVAL=2",
         reason: `Entity type ${p.entityType} is a professional entity`,
         url: board?.url ?? s.links.formation,
       };
@@ -733,7 +732,7 @@ export const extraStateRules: Rule[] = [
       authority: info(p.formationState).filing.name,
       description:
         "Benefit corporations deliver an annual report assessing their public benefit performance against a third-party standard to shareholders and, in many states, file it with the state.",
-      frequency: "annual",
+      rrule: "FREQ=YEARLY",
       reason: "Entity is a benefit corporation",
       url: info(p.formationState).links.formation,
     }),

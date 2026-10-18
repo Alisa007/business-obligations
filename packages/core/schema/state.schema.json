@@ -339,7 +339,8 @@
         {
           "type": "object",
           "additionalProperties": false,
-          "required": ["title", "authority", "url", "renewal", "feeDetail"],
+          "required": ["title", "authority", "url", "feeDetail"],
+          "oneOf": [{ "required": ["rrule"] }, { "required": ["frequency"] }],
           "properties": {
             "title": {
               "type": "string"
@@ -355,8 +356,12 @@
               "minLength": 1,
               "description": "Fee text; stored only when feeDetail cannot say it all, otherwise generated from feeDetail."
             },
-            "renewal": {
-              "enum": ["annual", "biennial", "once"]
+            "rrule": {
+              "$ref": "common.schema.json#/$defs/rrule"
+            },
+            "frequency": {
+              "enum": ["once"],
+              "description": "For a licence that is not renewed; anything that recurs is written as an rrule."
             },
             "feeDetail": {
               "$ref": "common.schema.json#/$defs/feeDetail"
@@ -556,7 +561,7 @@
               "$ref": "common.schema.json#/$defs/isoDate"
             },
             {
-              "enum": ["formation_year", "year_after_formation"]
+              "enum": ["formation", "formation_year", "year_after_formation"]
             }
           ],
           "description": "Start of a cycle longer than a year: an ISO date, or the entity's formation year or the year after."
@@ -580,7 +585,8 @@
           "description": "The day a filing window opens; the rule's date is the day it closes. Gives text such as \"January 1 – May 1\"."
         },
         "frequency": {
-          "enum": ["annual", "biennial", "every_five_years", "periodic"]
+          "enum": ["periodic"],
+          "description": "Only for a report with no regular schedule; anything that recurs is written as an rrule."
         },
         "deadline": {
           "type": "string",
@@ -604,7 +610,7 @@
           "$ref": "#/$defs/lateFee"
         }
       },
-      "anyOf": [
+      "oneOf": [
         {
           "required": ["rrule"]
         },

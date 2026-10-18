@@ -18,7 +18,7 @@ import { localRules, premisesRules } from "./rules/local";
 import { industryFromNaics } from "./naics";
 import { industryRules } from "./rules/industry";
 import { nextDueDate } from "./dates";
-import { dueToRRule } from "./rrule";
+import { dueToRRule, parseRRule } from "./rrule";
 import { describeProvenance, provenanceFor } from "./provenance";
 import { jurisdictionId, placeFacts, STATE_FIPS } from "./jurisdiction";
 import {
@@ -284,6 +284,24 @@ const RENEWAL_INTERVAL: Partial<Record<ComplianceItem["frequency"], string>> = {
 const FEEDBACK_URL =
   "https://github.com/Alisa007/business-obligations/issues/new?template=data-correction.yml&title=";
 
+type DraftBody = ItemDraft extends infer T ? (T extends unknown ? Omit<T, "key"> : never) : never;
+
+const RECURRING = new Set<string>(["annual", "biennial", "every_five_years", "quarterly", "monthly"]);
+
+/** A draft without its `key`, with its recurrence rule, if any, resolved to the item's `frequency` and `due`. */
+function settle(draft: DraftBody): Omit<ComplianceItem, "id" | "ruleId" | "nextDue" | "recurrence"> {
+  if (!("rrule" in draft)) {
+    if (RECURRING.has(draft.frequency))
+      throw new Error(
+        `"${draft.title}" recurs (${draft.frequency}); give it an rrule instead of a frequency`,
+      );
+    return draft;
+  }
+  const { rrule, anchor, ...rest } = draft;
+  const { frequency, due } = parseRRule(rrule, anchor);
+  return { ...rest, frequency, ...(due ? { due } : {}) };
+}
+
 /** Evaluates a profile and returns items together with the resolved profile and disclaimer. */
 export function evaluate(input: BusinessProfile, options: EvaluateOptions = {}): ComplianceResult {
   const profile = resolveProfile(input);
@@ -298,7 +316,8 @@ export function evaluate(input: BusinessProfile, options: EvaluateOptions = {}):
       if (!rule.when(profile)) continue;
       const built = rule.items(profile);
       const drafts: ItemDraft[] = Array.isArray(built) ? built : [built];
-      for (const { key, ...d } of drafts) {
+      for (const { key, ...draft } of drafts) {
+        const d = settle(draft as DraftBody);
         let id = [rule.id, d.state, key].filter(Boolean).join(":");
         const n = seen.get(id) ?? 0;
         seen.set(id, n + 1);

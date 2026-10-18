@@ -1,4 +1,5 @@
 import type { Due } from "./data/types";
+import type { Frequency, RecurringFrequency } from "./types";
 
 /**
  * Schedules are stored in the data files as one iCalendar recurrence rule (RFC 5545 `RRULE` value) and read back
@@ -8,18 +9,22 @@ import type { Due } from "./data/types";
  * - `INTERVAL=2` (biennial) and `INTERVAL=5` (every five years), anchored by an `anchor`;
  * - several months with one day, for quarterly and monthly cycles: `BYMONTH=1,4,7,10;BYMONTHDAY=-1`;
  * - no `BYMONTH`: relative to the entity's formation date (`BYMONTHDAY=1` or `-1` for the first or last day of
- *   the anniversary month), the way iCalendar anchors a rule on `DTSTART`.
+ *   the anniversary month; the anniversary itself is `anchor: "formation"`), the way iCalendar anchors a rule on
+ *   `DTSTART`;
+ * - no date at all, when the source does not fix one: `FREQ=YEARLY` (with `INTERVAL=2` or `5`), `FREQ=MONTHLY`
+ *   and `FREQ=MONTHLY;INTERVAL=3`. They give the frequency and no due date.
  *
  * A recurrence that only repeats every second year needs a starting point. The `anchor` is an ISO date (the
  * cycle starts there, e.g. an even or odd year) or, for cycles that follow the entity's own formation,
  * `formation_year` or `year_after_formation`.
  */
-export type ScheduleAnchor = "formation_year" | "year_after_formation" | (string & {});
+export type ScheduleAnchor = "formation" | "formation_year" | "year_after_formation" | (string & {});
 
 export type ScheduleFrequency = "annual" | "biennial" | "every_five_years" | "quarterly" | "monthly";
 
 export interface Schedule {
-  due: Due;
+  /** Undefined for a recurrence whose date the source does not fix. */
+  due?: Due;
   frequency: ScheduleFrequency;
 }
 
@@ -70,14 +75,27 @@ export function parseRRule(rrule: string, anchor?: ScheduleAnchor): Schedule {
   for (const k of p.keys())
     if (!["FREQ", "INTERVAL", "BYMONTH", "BYMONTHDAY"].includes(k))
       throw new Error(`Unsupported part ${k} in recurrence rule "${rrule}"`);
-  if (p.get("FREQ") !== "YEARLY") throw new Error(`Recurrence rule "${rrule}" must have FREQ=YEARLY`);
-  const interval = p.has("INTERVAL") ? int(rrule, p.get("INTERVAL"), 1, 5) : 1;
-  const frequency = INTERVAL_FREQUENCY[interval];
   const bad = () => new Error(`Invalid recurrence rule "${rrule}"`);
+  const freq = p.get("FREQ");
+  if (freq !== "YEARLY" && freq !== "MONTHLY")
+    throw new Error(`Recurrence rule "${rrule}" must have FREQ=YEARLY or FREQ=MONTHLY`);
+  const interval = p.has("INTERVAL") ? int(rrule, p.get("INTERVAL"), 1, 5) : 1;
+  if (freq === "MONTHLY") {
+    if (p.has("BYMONTH") || p.has("BYMONTHDAY") || anchor) throw bad();
+    if (interval === 1) return { frequency: "monthly" };
+    if (interval === 3) return { frequency: "quarterly" };
+    throw bad();
+  }
+  const frequency = INTERVAL_FREQUENCY[interval];
   if (!p.has("BYMONTH")) {
     if (!frequency) throw bad();
     const day = p.has("BYMONTHDAY") ? int(rrule, p.get("BYMONTHDAY"), -1, 1) : 0;
     if (day !== 0 && day !== 1 && day !== -1) throw bad();
+    if (day === 0) {
+      if (!anchor) return { frequency };
+      if (anchor !== "formation")
+        throw new Error(`Invalid anchor "${anchor}" for recurrence rule "${rrule}"`);
+    } else if (anchor) throw new Error(`Invalid anchor "${anchor}" for recurrence rule "${rrule}"`);
     const point = day === 1 ? "start_of_month" : day === -1 ? "end_of_month" : "date";
     return { due: { type: "anniversary", point }, frequency };
   }
@@ -117,14 +135,21 @@ export function parseRRule(rrule: string, anchor?: ScheduleAnchor): Schedule {
 }
 
 /** Writes a schedule as a recurrence rule and anchor; undefined for schedules the data format cannot express. */
-export function toRRule(due: Due, frequency: string): { rrule: string; anchor?: ScheduleAnchor } | undefined {
+export function toRRule(
+  due: Due | undefined,
+  frequency: string,
+): { rrule: string; anchor?: ScheduleAnchor } | undefined {
+  if (!due) {
+    if (frequency === "monthly") return { rrule: "FREQ=MONTHLY" };
+    if (frequency === "quarterly") return { rrule: "FREQ=MONTHLY;INTERVAL=3" };
+  }
   const interval = Object.entries(INTERVAL_FREQUENCY).find(([, f]) => f === frequency)?.[0];
   const every = interval && interval !== "1" ? `;INTERVAL=${interval}` : "";
+  if (!due) return interval ? { rrule: `FREQ=YEARLY${every}` } : undefined;
   if (due.type === "anniversary") {
     if (!interval) return undefined;
-    const day =
-      due.point === "start_of_month" ? ";BYMONTHDAY=1" : due.point === "end_of_month" ? ";BYMONTHDAY=-1" : "";
-    return { rrule: `FREQ=YEARLY${every}${day}` };
+    if (due.point === "date") return { rrule: `FREQ=YEARLY${every}`, anchor: "formation" };
+    return { rrule: `FREQ=YEARLY${every};BYMONTHDAY=${due.point === "start_of_month" ? 1 : -1}` };
   }
   if (due.type === "fixed") {
     if (!interval) return undefined;
@@ -169,6 +194,7 @@ const listText = (items: string[]) =>
  * `opens` is the day a filing window opens, giving "January 1 – May 1".
  */
 export function describeSchedule({ due, frequency }: Schedule, opens?: MonthDay): string | undefined {
+  if (!due) return undefined;
   if (due.type === "anniversary" && frequency === "biennial" && due.point !== "date")
     return `${describeSchedule({ due, frequency: "annual" })}, every second year`;
   if (due.type === "anniversary" && frequency === "annual")
@@ -196,9 +222,9 @@ export function describeSchedule({ due, frequency }: Schedule, opens?: MonthDay)
 }
 
 /** The recurrence rule to hand to a calendar app: only rules that stand alone, without a start date. */
-export function dueToRRule(due: Due, frequency: string): string | undefined {
+export function dueToRRule(due: Due | undefined, frequency: string): string | undefined {
   const out = toRRule(due, frequency);
-  if (!out || out.anchor || due.type === "anniversary" || /INTERVAL/.test(out.rrule)) return undefined;
+  if (!out || out.anchor || due?.type === "anniversary" || /INTERVAL/.test(out.rrule)) return undefined;
   return out.rrule;
 }
 
@@ -229,4 +255,26 @@ export function resolveSchedule<F extends string>(
   const generated = describeSchedule(s, it.opens);
   const text = generated && it.deadlineNote ? `${generated} (${it.deadlineNote})` : generated;
   return { frequency: s.frequency, due: s.due, deadline: it.deadline ?? text };
+}
+
+/** What a data entry contributes to an item draft: its rule when it recurs, otherwise its non-recurring frequency. */
+export type DraftSchedule =
+  | { rrule: string; anchor?: ScheduleAnchor; deadline?: string }
+  | { frequency: Exclude<Frequency, RecurringFrequency>; deadline?: string; due?: Due };
+
+export function draftSchedule(it: ScheduleFields): DraftSchedule {
+  if (it.rrule) {
+    const s = parseRRule(it.rrule, it.anchor);
+    const generated = describeSchedule(s, it.opens);
+    const text = generated && it.deadlineNote ? `${generated} (${it.deadlineNote})` : generated;
+    return {
+      rrule: it.rrule,
+      ...(it.anchor ? { anchor: it.anchor } : {}),
+      ...((it.deadline ?? text) ? { deadline: it.deadline ?? text } : {}),
+    };
+  }
+  const frequency = it.frequency === "periodic" ? "ongoing" : it.frequency;
+  if (frequency !== "once" && frequency !== "per_event" && frequency !== "ongoing")
+    throw new Error(`Data entry has neither an rrule nor a non-recurring frequency (${it.frequency})`);
+  return { frequency, deadline: it.deadline, due: it.due };
 }

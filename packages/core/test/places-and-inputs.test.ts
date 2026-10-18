@@ -186,7 +186,7 @@ describe("precedence authored in seed data", () => {
           category: "registration" as const,
           authority: "City of Austin",
           description: "d",
-          frequency: "annual" as const,
+          rrule: "FREQ=YEARLY",
           url: "https://www.austintexas.gov/",
           appliesTo: ["all" as const],
           appliesWhen: [{ field: "employeeCount", op: ">=" as const, value: 1 }],
