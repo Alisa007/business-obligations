@@ -4,6 +4,8 @@ All notable changes to `business-obligations-ui` are documented here.
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-10-18
+
 ### Added
 
 - `ProfileForm`: the whole business-details form, laid out by its own width. Any value passed in `values` (a choice, a
@@ -30,6 +32,10 @@ All notable changes to `business-obligations-ui` are documented here.
 - an unknown ZIP code is shown as an error; owners of 0 and dates that do not exist (`?formedOn=2020-02-30`) no longer
   make the engine refuse the profile; long text and chips wrap on phones; the empty progress bar looked like a
   scrollbar; a field inside a form no longer falls back to English in a Spanish form
+
+### Added
+
+- **ui:** ProfileForm, Select and Collapse; one source for the profile
 
 ## [0.3.0] - 2026-10-17
 
