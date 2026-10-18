@@ -1,3 +1,4 @@
+import verifiedItems from "../data/verified-items.json";
 import { describe, expect, it } from "vitest";
 import {
   STATES,
@@ -130,10 +131,11 @@ describe("provenance", () => {
     }
   });
 
-  it("marks federal items as compiled", () => {
+  it("marks federal items as checked only when data/verified-items.json lists them", () => {
     const r = evaluate(llc, { asOf });
-    const fed = r.items.find((i) => i.jurisdiction === "federal");
-    expect(fed?.provenance?.confidence).toBe("compiled");
+    for (const fed of r.items.filter((i) => i.jurisdiction === "federal")) {
+      expect(fed.provenance?.confidence, fed.id).toBe(fed.id in verifiedItems ? "checked" : "compiled");
+    }
   });
 
   it("uses the checked Tennessee LP fee", () => {
