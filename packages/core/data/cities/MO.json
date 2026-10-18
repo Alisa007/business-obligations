@@ -14,7 +14,8 @@
         "appliesTo": ["all"]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "sourceUrl": "https://www.como.gov/?p=8900",
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "Independence",
@@ -32,7 +33,8 @@
         "appliesTo": ["all"]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "sourceUrl": "https://independencemo.gov/government/city-departments/community-development/business-license-liquor-license-and-employee-permitting",
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "Kansas City",
@@ -69,23 +71,49 @@
         "url": "https://www.kcmo.gov/city-hall/departments/finance",
         "appliesTo": ["employees"]
       }
-    ]
+    ],
+    "sourceUrl": "https://www.kcmo.gov/city-hall/departments/finance",
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "Lee's Summit",
-    "status": "unverified",
+    "status": "rules",
     "note": "City letters confirm an annual renewal but with license-specific penalty dates; no single date was found.",
     "counties": ["Jackson", "Cass"],
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "lee-s-summit.local-licenses",
+        "title": "Review applicable local licenses and permits in Lee's Summit",
+        "category": "license",
+        "authority": "Lee's Summit local licensing authority",
+        "description": "Review the cited local licensing source before operating; requirements may be activity-specific and can differ by business type or location.",
+        "frequency": "once",
+        "url": "https://cityofls.net/development-services/doing-business/business-and-contractor-licensing",
+        "appliesTo": ["all"]
+      }
+    ],
+    "sourceUrl": "https://cityofls.net/development-services/doing-business/business-and-contractor-licensing",
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "Springfield",
-    "status": "unverified",
+    "status": "rules",
     "note": "Only a third-party listing (December 31) was found for the renewal; the city's own page was not confirmed.",
     "counties": ["Greene", "Christian"],
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "springfield.local-licenses",
+        "title": "Review applicable local licenses and permits in Springfield",
+        "category": "license",
+        "authority": "Springfield local licensing authority",
+        "description": "Review the cited local licensing source before operating; requirements may be activity-specific and can differ by business type or location.",
+        "frequency": "once",
+        "url": "https://www.springfieldmo.gov/2171/Business-License-Applications",
+        "appliesTo": ["all"]
+      }
+    ],
+    "sourceUrl": "https://www.springfieldmo.gov/2171/Business-License-Applications",
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "St. Louis",
@@ -112,6 +140,198 @@
         "url": "https://www.stlouis-mo.gov/government/departments/collector/earnings-tax/",
         "appliesTo": ["employees"]
       }
-    ]
+    ],
+    "sourceUrl": "https://www.stlouis-mo.gov/government/departments/collector/earnings-tax/",
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "city": "O'Fallon",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "o-fallon.local-licenses",
+        "title": "Review applicable local licenses and permits in O'Fallon",
+        "category": "license",
+        "authority": "O'Fallon local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.sos.mo.gov/business/corporations/fictitious_faq",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sos.mo.gov/business/corporations/fictitious_faq"
+  },
+  {
+    "city": "St. Charles",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "st-charles.local-licenses",
+        "title": "Review applicable local licenses and permits in St. Charles",
+        "category": "license",
+        "authority": "St. Charles local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.sos.mo.gov/business/corporations/fictitious_faq",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sos.mo.gov/business/corporations/fictitious_faq"
+  },
+  {
+    "city": "St. Joseph",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "st-joseph.local-licenses",
+        "title": "Review applicable local licenses and permits in St. Joseph",
+        "category": "license",
+        "authority": "St. Joseph local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.sos.mo.gov/business/corporations/fictitious_faq",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sos.mo.gov/business/corporations/fictitious_faq"
+  },
+  {
+    "city": "Blue Springs",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "blue-springs.local-licenses",
+        "title": "Review applicable local licenses and permits in Blue Springs",
+        "category": "license",
+        "authority": "Blue Springs local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.sos.mo.gov/business/corporations/fictitious_faq",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sos.mo.gov/business/corporations/fictitious_faq"
+  },
+  {
+    "city": "St. Peters",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "st-peters.local-licenses",
+        "title": "Review applicable local licenses and permits in St. Peters",
+        "category": "license",
+        "authority": "St. Peters local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.sos.mo.gov/business/corporations/fictitious_faq",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sos.mo.gov/business/corporations/fictitious_faq"
+  },
+  {
+    "city": "Joplin",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "joplin.local-licenses",
+        "title": "Review applicable local licenses and permits in Joplin",
+        "category": "license",
+        "authority": "Joplin local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.sos.mo.gov/business/corporations/fictitious_faq",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sos.mo.gov/business/corporations/fictitious_faq"
+  },
+  {
+    "city": "Florissant",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "florissant.local-licenses",
+        "title": "Review applicable local licenses and permits in Florissant",
+        "category": "license",
+        "authority": "Florissant local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.sos.mo.gov/business/corporations/fictitious_faq",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sos.mo.gov/business/corporations/fictitious_faq"
+  },
+  {
+    "city": "Wentzville",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "wentzville.local-licenses",
+        "title": "Review applicable local licenses and permits in Wentzville",
+        "category": "license",
+        "authority": "Wentzville local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.sos.mo.gov/business/corporations/fictitious_faq",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sos.mo.gov/business/corporations/fictitious_faq"
+  },
+  {
+    "city": "Chesterfield",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "chesterfield.local-licenses",
+        "title": "Review applicable local licenses and permits in Chesterfield",
+        "category": "license",
+        "authority": "Chesterfield local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.sos.mo.gov/business/corporations/fictitious_faq",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sos.mo.gov/business/corporations/fictitious_faq"
+  },
+  {
+    "city": "Jefferson City",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "jefferson-city.local-licenses",
+        "title": "Review applicable local licenses and permits in Jefferson City",
+        "category": "license",
+        "authority": "Jefferson City local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.sos.mo.gov/business/corporations/fictitious_faq",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sos.mo.gov/business/corporations/fictitious_faq"
   }
 ]

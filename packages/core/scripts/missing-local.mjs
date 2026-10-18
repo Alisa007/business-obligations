@@ -9,6 +9,11 @@ import { dirname, join } from "node:path";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const read = (p) => JSON.parse(readFileSync(join(root, p), "utf8"));
+const states = new Set(
+  readdirSync(join(root, "data/states"))
+    .filter((f) => f.endsWith(".json"))
+    .map((f) => f.slice(0, 2)),
+);
 const jsonIn = (dir) =>
   readdirSync(join(root, dir))
     .filter((f) => f.endsWith(".json"))
@@ -43,7 +48,7 @@ export function findMissing({ cities = 5, counties = 5, state } = {}) {
     for (const entry of Object.values(zips.zips)) {
       const st = zips.states[entry[2]];
       const name = names[entry[idx]];
-      if (!name || (state && st !== state)) continue;
+      if (!name || !states.has(st) || (state && st !== state)) continue;
       const key = `${st}:${norm(name)}`;
       if (seeded.has(key)) continue;
       const row = tally.get(key) ?? { state: st, name, zips: 0 };

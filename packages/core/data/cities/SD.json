@@ -1,10 +1,41 @@
 [
   {
     "city": "Sioux Falls",
-    "status": "unverified",
+    "status": "rules",
     "note": "No general city business license page was found; the state sales tax license applies.",
     "counties": ["Minnehaha", "Lincoln"],
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "sioux-falls.local-licenses",
+        "title": "Review applicable local licenses and permits in Sioux Falls",
+        "category": "license",
+        "authority": "Sioux Falls local licensing authority",
+        "description": "Review the cited local licensing source before operating; requirements may be activity-specific and can differ by business type or location.",
+        "frequency": "once",
+        "url": "https://www.siouxfalls.gov/business-permits/permits-licenses-inspections/licensing",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.siouxfalls.gov/business-permits/permits-licenses-inspections/licensing"
+  },
+  {
+    "city": "Rapid City",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "rapid-city.local-licenses",
+        "title": "Review applicable local licenses and permits in Rapid City",
+        "category": "license",
+        "authority": "Rapid City local licensing authority",
+        "description": "Rapid City’s Finance Office handles city business licenses for specified regulated activities, including adult-oriented businesses, central-station services, ice-cream vendors, pawn or secondhand businesses, refuse hauling, security, sidewalk vending, taxis, transportation networks, and alcohol-related businesses; other businesses are directed to the South Dakota Department of Revenue for state licensing.",
+        "url": "https://www.rcgov.org/how-to/how-to-apply-for/licenses-permits-157.html",
+        "frequency": "once",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://sdsos.gov/business-services/default.aspx"
   }
 ]

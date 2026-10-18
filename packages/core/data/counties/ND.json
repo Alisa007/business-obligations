@@ -1,11 +1,160 @@
 [
   {
-    "county": "Cass",
+    "county": "Adams",
     "status": "unverified",
-    "sourceUrl": "https://www.tax.nd.gov/property-tax-credits-exemptions",
-    "note": "North Dakota exempts personal property from property tax except property of centrally assessed entities (such as utilities) and property taxed under another law (such as mobile homes), so there is no county business personal property return. Other county-level business duties, such as lodging occupancy taxes, licenses or clerk filings, were not checked.",
+    "reason": "county-not-researched",
     "items": [],
-    "checkedOn": "2026-10-15"
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Barnes",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Benson",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Billings",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Bottineau",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Bowman",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Burke",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Burleigh",
+    "items": [
+      {
+        "id": "burleigh-nd.local-sales-tax",
+        "title": "Report Burleigh County local sales and use tax",
+        "category": "filing",
+        "authority": "North Dakota Office of State Tax Commissioner",
+        "description": "North Dakota's current local-tax guideline lists a 1% Burleigh County sales, use, and gross-receipts tax. Report and remit it with the state sales and use tax return at the assigned filing frequency.",
+        "frequency": "ongoing",
+        "url": "https://www.tax.nd.gov/sites/www/files/documents/guidelines/business/sales-use/local-taxes-by-location.pdf",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "sellsTaxableGoods",
+            "op": "==",
+            "value": true,
+            "description": "Makes taxable sales or uses taxable property"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "note": "North Dakota's current local-tax guideline confirms the county sales tax; other county-level business duties were not checked.",
+    "sourceUrl": "https://www.tax.nd.gov/sites/www/files/documents/guidelines/business/sales-use/local-taxes-by-location.pdf"
+  },
+  {
+    "county": "Cass",
+    "items": [
+      {
+        "id": "cass-nd.local-sales-tax",
+        "title": "Report Cass County local sales and use tax",
+        "category": "filing",
+        "authority": "North Dakota Office of State Tax Commissioner",
+        "description": "North Dakota's current local-tax guideline lists a 0.5% Cass County sales, use, and gross-receipts tax. Report and remit it with the state sales and use tax return at the assigned filing frequency.",
+        "frequency": "ongoing",
+        "url": "https://www.tax.nd.gov/sites/www/files/documents/guidelines/business/sales-use/local-taxes-by-location.pdf",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "sellsTaxableGoods",
+            "op": "==",
+            "value": true,
+            "description": "Makes taxable sales or uses taxable property"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "note": "North Dakota's current local-tax guideline confirms the county sales tax; other county-level business duties were not checked.",
+    "sourceUrl": "https://www.tax.nd.gov/sites/www/files/documents/guidelines/business/sales-use/local-taxes-by-location.pdf"
+  },
+  {
+    "county": "Cavalier",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Dickey",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Divide",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Dunn",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Eddy",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Emmons",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Foster",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Golden Valley",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
   },
   {
     "county": "Grand Forks",
@@ -16,11 +165,411 @@
     "checkedOn": "2026-10-15"
   },
   {
-    "county": "Ward",
+    "county": "Grant",
     "status": "unverified",
-    "sourceUrl": "https://www.tax.nd.gov/property-tax-credits-exemptions",
-    "note": "North Dakota exempts personal property from property tax except property of centrally assessed entities (such as utilities) and property taxed under another law (such as mobile homes), so there is no county business personal property return. Other county-level business duties, such as lodging occupancy taxes, licenses or clerk filings, were not checked.",
+    "reason": "county-not-researched",
     "items": [],
-    "checkedOn": "2026-10-15"
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Griggs",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Hettinger",
+    "items": [
+      {
+        "id": "hettinger-nd.local-sales-tax",
+        "title": "Report Hettinger County local sales and use tax",
+        "category": "filing",
+        "authority": "North Dakota Office of State Tax Commissioner",
+        "description": "North Dakota's current local-tax guideline lists a 0.5% Hettinger County sales, use, and gross-receipts tax. Report and remit it with the state sales and use tax return at the assigned filing frequency.",
+        "frequency": "ongoing",
+        "url": "https://www.tax.nd.gov/sites/www/files/documents/guidelines/business/sales-use/local-taxes-by-location.pdf",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "sellsTaxableGoods",
+            "op": "==",
+            "value": true,
+            "description": "Makes taxable sales or uses taxable property"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "note": "North Dakota's current local-tax guideline confirms the county sales tax; other county-level business duties were not checked.",
+    "sourceUrl": "https://www.tax.nd.gov/sites/www/files/documents/guidelines/business/sales-use/local-taxes-by-location.pdf"
+  },
+  {
+    "county": "Kidder",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "LaMoure",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Logan",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "McHenry",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "McIntosh",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "McKenzie",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "McLean",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Mercer",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Morton",
+    "items": [
+      {
+        "id": "morton-nd.local-sales-tax",
+        "title": "Report Morton County local sales and use tax",
+        "category": "filing",
+        "authority": "North Dakota Office of State Tax Commissioner",
+        "description": "North Dakota's current local-tax guideline lists a 1% Morton County sales, use, and gross-receipts tax. Report and remit it with the state sales and use tax return at the assigned filing frequency.",
+        "frequency": "ongoing",
+        "url": "https://www.tax.nd.gov/sites/www/files/documents/guidelines/business/sales-use/local-taxes-by-location.pdf",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "sellsTaxableGoods",
+            "op": "==",
+            "value": true,
+            "description": "Makes taxable sales or uses taxable property"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "note": "North Dakota's current local-tax guideline confirms the county sales tax; other county-level business duties were not checked.",
+    "sourceUrl": "https://www.tax.nd.gov/sites/www/files/documents/guidelines/business/sales-use/local-taxes-by-location.pdf"
+  },
+  {
+    "county": "Mountrail",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Nelson",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Oliver",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Pembina",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Pierce",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Ramsey",
+    "items": [
+      {
+        "id": "ramsey-nd.local-lodging-tax",
+        "title": "Collect and remit Ramsey County local lodging taxes",
+        "category": "filing",
+        "authority": "North Dakota Office of State Tax Commissioner",
+        "description": "North Dakota's current local-tax guideline lists a 2% Ramsey County lodging tax and a 1% county lodging-and-restaurant tax. Lodging and applicable restaurant businesses report and remit the taxes through the Office of State Tax Commissioner.",
+        "frequency": "monthly",
+        "url": "https://www.tax.nd.gov/sites/www/files/documents/guidelines/business/sales-use/local-taxes-by-location.pdf",
+        "appliesTo": ["all"],
+        "appliesWhenAny": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Provides short-term lodging"
+          },
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["restaurant"],
+            "description": "Sells prepared food or beverages"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "note": "North Dakota's current local-tax guideline confirms the county lodging and lodging-and-restaurant taxes; other county-level business duties were not checked.",
+    "sourceUrl": "https://www.tax.nd.gov/sites/www/files/documents/guidelines/business/sales-use/local-taxes-by-location.pdf"
+  },
+  {
+    "county": "Ransom",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Renville",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Richland",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Rolette",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Sargent",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Sheridan",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Sioux",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Slope",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Stark",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Steele",
+    "items": [
+      {
+        "id": "steele-nd.local-sales-tax",
+        "title": "Report Steele County local sales and use tax",
+        "category": "filing",
+        "authority": "North Dakota Office of State Tax Commissioner",
+        "description": "North Dakota's current local-tax guideline lists a 1% Steele County sales, use, and gross-receipts tax. Report and remit it with the state sales and use tax return at the assigned filing frequency.",
+        "frequency": "ongoing",
+        "url": "https://www.tax.nd.gov/sites/www/files/documents/guidelines/business/sales-use/local-taxes-by-location.pdf",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "sellsTaxableGoods",
+            "op": "==",
+            "value": true,
+            "description": "Makes taxable sales or uses taxable property"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "note": "North Dakota's current local-tax guideline confirms the county sales tax; other county-level business duties were not checked.",
+    "sourceUrl": "https://www.tax.nd.gov/sites/www/files/documents/guidelines/business/sales-use/local-taxes-by-location.pdf"
+  },
+  {
+    "county": "Stutsman",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Towner",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Traill",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Walsh",
+    "items": [
+      {
+        "id": "walsh-nd.local-sales-tax",
+        "title": "Report Walsh County local sales and use tax",
+        "category": "filing",
+        "authority": "North Dakota Office of State Tax Commissioner",
+        "description": "North Dakota's current local-tax guideline lists a 1% Walsh County sales, use, and gross-receipts tax. Report and remit it with the state sales and use tax return at the assigned filing frequency.",
+        "frequency": "ongoing",
+        "url": "https://www.tax.nd.gov/sites/www/files/documents/guidelines/business/sales-use/local-taxes-by-location.pdf",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "sellsTaxableGoods",
+            "op": "==",
+            "value": true,
+            "description": "Makes taxable sales or uses taxable property"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "note": "North Dakota's current local-tax guideline confirms the county sales tax; other county-level business duties were not checked.",
+    "sourceUrl": "https://www.tax.nd.gov/sites/www/files/documents/guidelines/business/sales-use/local-taxes-by-location.pdf"
+  },
+  {
+    "county": "Ward",
+    "items": [
+      {
+        "id": "ward-nd.local-sales-tax",
+        "title": "Report Ward County local sales and use tax",
+        "category": "filing",
+        "authority": "North Dakota Office of State Tax Commissioner",
+        "description": "North Dakota's current local-tax guideline lists a 0.5% Ward County sales, use, and gross-receipts tax. Report and remit it with the state sales and use tax return at the assigned filing frequency.",
+        "frequency": "ongoing",
+        "url": "https://www.tax.nd.gov/sites/www/files/documents/guidelines/business/sales-use/local-taxes-by-location.pdf",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "sellsTaxableGoods",
+            "op": "==",
+            "value": true,
+            "description": "Makes taxable sales or uses taxable property"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "note": "North Dakota's current local-tax guideline confirms the county sales tax; other county-level business duties were not checked.",
+    "sourceUrl": "https://www.tax.nd.gov/sites/www/files/documents/guidelines/business/sales-use/local-taxes-by-location.pdf"
+  },
+  {
+    "county": "Wells",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Williams",
+    "items": [
+      {
+        "id": "williams-nd.local-sales-tax",
+        "title": "Report Williams County local sales and use tax",
+        "category": "filing",
+        "authority": "North Dakota Office of State Tax Commissioner",
+        "description": "North Dakota's current local-tax guideline lists a 1% Williams County sales, use, and gross-receipts tax. Report and remit it with the state sales and use tax return at the assigned filing frequency.",
+        "frequency": "ongoing",
+        "url": "https://www.tax.nd.gov/sites/www/files/documents/guidelines/business/sales-use/local-taxes-by-location.pdf",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "sellsTaxableGoods",
+            "op": "==",
+            "value": true,
+            "description": "Makes taxable sales or uses taxable property"
+          }
+        ]
+      },
+      {
+        "id": "williams-nd.local-lodging-tax",
+        "title": "Collect and remit Williams County local lodging taxes",
+        "category": "filing",
+        "authority": "North Dakota Office of State Tax Commissioner",
+        "description": "North Dakota's current local-tax guideline lists a 2% Williams County lodging tax and a 1% county lodging-and-restaurant tax. Lodging and applicable restaurant businesses report and remit the taxes through the Office of State Tax Commissioner.",
+        "frequency": "monthly",
+        "url": "https://www.tax.nd.gov/sites/www/files/documents/guidelines/business/sales-use/local-taxes-by-location.pdf",
+        "appliesTo": ["all"],
+        "appliesWhenAny": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["lodging"],
+            "description": "Provides short-term lodging"
+          },
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["restaurant"],
+            "description": "Sells prepared food or beverages"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "note": "North Dakota's current local-tax guideline confirms county sales, lodging, and lodging-and-restaurant taxes; other county-level business duties were not checked.",
+    "sourceUrl": "https://www.tax.nd.gov/sites/www/files/documents/guidelines/business/sales-use/local-taxes-by-location.pdf"
   }
 ]

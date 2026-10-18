@@ -2,9 +2,116 @@
   {
     "city": "Jackson",
     "counties": ["Hinds", "Madison", "Rankin"],
-    "items": [],
-    "checkedOn": "2026-10-13",
-    "status": "unverified",
-    "note": "The city says anyone conducting business in Jackson needs a Business Privilege License, renewable annually; its page could not be retrieved to confirm the date."
+    "items": [
+      {
+        "id": "jackson.local-licenses",
+        "title": "Review applicable local licenses and permits in Jackson",
+        "category": "license",
+        "authority": "Jackson local licensing authority",
+        "description": "Review the cited local licensing source before operating; requirements may be activity-specific and can differ by business type or location.",
+        "frequency": "once",
+        "url": "https://jacksonms.gov/business/business-licenses/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://jacksonms.gov/business/business-licenses/",
+    "status": "rules",
+    "note": "The city states that businesses need a business license renewed annually; the obligation item has not yet been localized and entered."
+  },
+  {
+    "city": "Gulfport",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "gulfport.local-licenses",
+        "title": "Review applicable local licenses and permits in Gulfport",
+        "category": "license",
+        "authority": "Gulfport local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.sos.ms.gov/business-services-external-affairs",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sos.ms.gov/business-services-external-affairs"
+  },
+  {
+    "city": "Southaven",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "southaven.local-licenses",
+        "title": "Review applicable local licenses and permits in Southaven",
+        "category": "license",
+        "authority": "Southaven local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.sos.ms.gov/business-services-external-affairs",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sos.ms.gov/business-services-external-affairs"
+  },
+  {
+    "city": "Hattiesburg",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "hattiesburg.local-licenses",
+        "title": "Review applicable local licenses and permits in Hattiesburg",
+        "category": "license",
+        "authority": "Hattiesburg local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.sos.ms.gov/business-services-external-affairs",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sos.ms.gov/business-services-external-affairs"
+  },
+  {
+    "city": "Biloxi",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "biloxi.local-licenses",
+        "title": "Review applicable local licenses and permits in Biloxi",
+        "category": "license",
+        "authority": "Biloxi local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.sos.ms.gov/business-services-external-affairs",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sos.ms.gov/business-services-external-affairs"
+  },
+  {
+    "city": "Olive Branch",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "olive-branch.local-licenses",
+        "title": "Review applicable local licenses and permits in Olive Branch",
+        "category": "license",
+        "authority": "Olive Branch local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.sos.ms.gov/business-services-external-affairs",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sos.ms.gov/business-services-external-affairs"
   }
 ]

@@ -2,6 +2,7 @@
   {
     "city": "Birmingham",
     "counties": ["Jefferson", "Shelby"],
+    "sourceUrl": "https://www.birminghamal.gov/government/city-departments/finance/tax-license-division/information-regarding-business-licenses",
     "items": [
       {
         "id": "birmingham.business-license",
@@ -31,7 +32,8 @@
         "appliesTo": ["all"]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.huntsvilleal.gov/business/licensing-permits/business-licenses/"
   },
   {
     "city": "Mobile",
@@ -48,7 +50,8 @@
         "appliesTo": ["all"]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://workwith.cityofmobile.org/taxes-and-business-licenses"
   },
   {
     "city": "Montgomery",
@@ -66,6 +69,140 @@
         "appliesTo": ["all"]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.montgomeryal.gov/government/government-transparency/budget-and-finance/license-and-revenue"
+  },
+  {
+    "city": "Tuscaloosa",
+    "status": "rules",
+    "items": [
+      {
+        "id": "tuscaloosa.local-licenses",
+        "title": "Review applicable local licenses and permits in Tuscaloosa",
+        "category": "license",
+        "authority": "Tuscaloosa local licensing authority",
+        "description": "Tuscaloosa requires a business license for businesses operating in the city or police jurisdiction; renewals are due February 15 each year, with penalty and interest after the deadline.",
+        "url": "https://www.tuscaloosa.com/business/revenue-division/business-license/annual-business-license-",
+        "appliesTo": ["all"],
+        "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=15"
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.tuscaloosa.com/business/revenue-division/business-license/annual-business-license-",
+    "note": "Tuscaloosa city-specific licensing was confirmed from the cited official source."
+  },
+  {
+    "city": "Hoover",
+    "status": "rules",
+    "items": [
+      {
+        "id": "hoover.local-licenses",
+        "title": "Review applicable local licenses and permits in Hoover",
+        "category": "license",
+        "authority": "Hoover local licensing authority",
+        "description": "Hoover requires a city business license and renews licenses on a calendar-year basis; applicable sales, use, rental, lodging and other tax filings may have separate deadlines.",
+        "url": "https://www.hooveralabama.gov/1085/Business-License-Tax-Information",
+        "appliesTo": ["all"],
+        "frequency": "annual"
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.hooveralabama.gov/1085/Business-License-Tax-Information",
+    "note": "Hoover city-specific licensing was confirmed from the cited official source."
+  },
+  {
+    "city": "Auburn",
+    "status": "rules",
+    "items": [
+      {
+        "id": "auburn.local-licenses",
+        "title": "Review applicable local licenses and permits in Auburn",
+        "category": "license",
+        "authority": "Auburn local licensing authority",
+        "description": "Auburn requires a city business license before commencing business; licenses renew annually, with delinquent charges after February 15. The first-year general license fee is $100 plus a $5 issuance fee, subject to business classification.",
+        "url": "https://static.auburnalabama.org/media/apps/www/revenue/Business-License-%26-Tax-Info-Brochure.pdf",
+        "appliesTo": ["all"],
+        "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=15"
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://static.auburnalabama.org/media/apps/www/revenue/Business-License-%26-Tax-Info-Brochure.pdf",
+    "note": "Auburn city-specific licensing was confirmed from the cited official source."
+  },
+  {
+    "city": "Dothan",
+    "status": "rules",
+    "items": [
+      {
+        "id": "dothan.local-licenses",
+        "title": "Review applicable local licenses and permits in Dothan",
+        "category": "license",
+        "authority": "Dothan local licensing authority",
+        "description": "Dothan requires a city business license for businesses operating in the city and notes that businesses may also need food, alcohol, building or county approvals; licensing applies separately in each municipality or county where business is conducted.",
+        "url": "https://www.dothan.org/344/Business-License",
+        "appliesTo": ["all"],
+        "frequency": "annual"
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.dothan.org/344/Business-License",
+    "note": "Dothan city-specific licensing was confirmed from the cited official source."
+  },
+  {
+    "city": "Madison",
+    "status": "rules",
+    "items": [
+      {
+        "id": "madison.local-licenses",
+        "title": "Review applicable local licenses and permits in Madison",
+        "category": "license",
+        "authority": "Madison local licensing authority",
+        "description": "Madison requires commercial and residential-based businesses to renew city business licenses annually; licenses run January 1 through December 31 and the renewal deadline is January 31.",
+        "url": "https://www.madisonal.gov/CivicAlerts.aspx?AID=1508",
+        "appliesTo": ["all"],
+        "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=31"
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.madisonal.gov/CivicAlerts.aspx?AID=1508",
+    "note": "Madison city-specific licensing was confirmed from the cited official source."
+  },
+  {
+    "city": "Decatur",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "decatur.local-licenses",
+        "title": "Review applicable local licenses and permits in Decatur",
+        "category": "license",
+        "authority": "Decatur local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.sos.alabama.gov/business-entities/start-business",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sos.alabama.gov/business-entities/start-business"
+  },
+  {
+    "city": "Florence",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "florence.local-licenses",
+        "title": "Review applicable local licenses and permits in Florence",
+        "category": "license",
+        "authority": "Florence local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.sos.alabama.gov/business-entities/start-business",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sos.alabama.gov/business-entities/start-business"
   }
 ]

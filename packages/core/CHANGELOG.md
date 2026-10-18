@@ -5,6 +5,17 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ## [Unreleased]
 
+### Added
+
+- **core:** a `tiered` fee basis: a fee can list `tiers`, each selected by profile conditions (`when`, `whenAny`), and the cost estimate uses the tier that matches the profile (or reports that none did)
+- **core:** `appliesWhenAny` on local items: conditions of which at least one must hold, next to `appliesWhen`
+- **data:** local items and Spanish text for more cities, counties, employers and industries in every state, including the Delaware towns that had none
+
+### Changed
+
+- **data:** `data/top-cities.json` is removed (the coverage report no longer lists missing large cities)
+- the core bundle budget is 600 KB gzip (it was 300 KB), for the larger local data
+
 ## [0.13.0] - 2026-10-18
 
 ### Added

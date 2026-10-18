@@ -22,6 +22,7 @@
   {
     "city": "Las Vegas",
     "counties": ["Clark"],
+    "sourceUrl": "https://www.lasvegasnevada.gov/Business/Business-License/Apply-Manage",
     "items": [
       {
         "id": "lasvegas.business-license",
@@ -30,7 +31,7 @@
         "authority": "City of Las Vegas Business Licensing (with Clark County for unincorporated areas)",
         "description": "Businesses located in the City of Las Vegas need a city business license in addition to the Nevada state business license; businesses outside city limits use Clark County.",
         "frequency": "annual",
-        "url": "https://www.clarkcountynv.gov/businesslicense/regulatedlicenseguide",
+        "url": "https://www.lasvegasnevada.gov/Business/Business-License/Apply-Manage",
         "appliesTo": ["all"]
       },
       {
@@ -40,7 +41,7 @@
         "authority": "Clark County Clerk",
         "description": "Businesses operating under a name other than the owner's or entity's legal name file a fictitious firm name with the Clark County Clerk.",
         "frequency": "once",
-        "url": "https://www.clarkcountynv.gov/businesslicense/regulatedlicenseguide",
+        "url": "https://www.lasvegasnevada.gov/Business/Business-License/Forms",
         "appliesTo": ["trade_name"]
       }
     ]
@@ -62,7 +63,8 @@
         "appliesTo": ["all"]
       }
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.cityofnorthlasvegas.com/business/business-licenses"
   },
   {
     "city": "Reno",
@@ -86,10 +88,41 @@
   },
   {
     "city": "Sparks",
-    "status": "unverified",
+    "status": "rules",
     "note": "No current official renewal date was found; renewals are handled through the regional onenv.us portal and late renewals carry a 30-day grace period then penalties.",
     "counties": ["Washoe"],
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "sparks.local-licenses",
+        "title": "Review applicable local licenses and permits in Sparks",
+        "category": "license",
+        "authority": "Sparks local licensing authority",
+        "description": "Review the cited local licensing source before operating; requirements may be activity-specific and can differ by business type or location.",
+        "frequency": "once",
+        "url": "https://portal.cityofsparks.us/bids/docs/download/1479",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://portal.cityofsparks.us/bids/docs/download/1479"
+  },
+  {
+    "city": "Carson",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "carson.local-licenses",
+        "title": "Review applicable local licenses and permits in Carson",
+        "category": "license",
+        "authority": "Carson local licensing authority",
+        "description": "Carson City requires every person or company conducting business in the city, including outside businesses physically working there, to obtain and maintain a local business license before starting; applicants must first obtain the Nevada state business license, and the city states a typical 14–21 business-day approval period when a complete application is submitted.",
+        "url": "https://www.carsoncity.gov/government/departments-a-f/community-development/business-license-division",
+        "frequency": "once",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.nvsos.gov/sos-information/office-facts/faqs-all-division/service-marks-trademarks-trade-names"
   }
 ]

@@ -1,5 +1,19 @@
 [
   {
+    "county": "Aleutians East",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Aleutians West (CA)",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
     "county": "Anchorage Municipality",
     "items": [
       {
@@ -10,10 +24,359 @@
         "description": "Businesses operating in Anchorage on January 1 with assets over $20,000 file the Business Property Assessment Return by April 30 (postmarked; meter strips are not accepted); late returns carry a 10% penalty. The first $100,000 of assessed value of taxable personal property per taxpayer is exempt from municipal tax from 2026. A sold or closed business still files to say so.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=30",
         "url": "https://www.muni.org/Departments/finance/property_appraisal/Business",
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "businessPropertyValueUsd",
+            "op": ">",
+            "value": 20000,
+            "description": "Business personal property exceeds $20,000"
+          }
+        ]
       }
     ],
     "checkedOn": "2026-10-16",
     "note": "Only business personal property was checked at municipal level."
+  },
+  {
+    "county": "Bethel Census Area",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Bristol Bay",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Chugach Census Area",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "City and Borough of Wrangell",
+    "items": [
+      {
+        "id": "wrangell-ak.local-sales-tax",
+        "title": "Collect and remit City and Borough of Wrangell local sales tax",
+        "category": "filing",
+        "authority": "City and Borough of Wrangell",
+        "description": "Businesses making taxable sales in the City and Borough of Wrangell collect and remit the 7% local general-retail sales tax; local rules and filing forms control exemptions and deadlines.",
+        "frequency": "monthly",
+        "url": "https://arsstc.org/business-sellers/member-jurisdictions/",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "sellsTaxableGoods",
+            "op": "==",
+            "value": true,
+            "description": "Sells taxable goods or services"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "note": "The ARSSTC member-jurisdiction table confirms the borough's local sales tax; other county-level obligations were not checked.",
+    "sourceUrl": "https://arsstc.org/business-sellers/member-jurisdictions/"
+  },
+  {
+    "county": "Copper River Census Area",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Denali",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Dillingham (CA)",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Fairbanks North Star",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Haines",
+    "items": [
+      {
+        "id": "haines-ak.local-sales-tax",
+        "title": "Collect and remit Haines Borough local sales tax",
+        "category": "filing",
+        "authority": "Haines Borough",
+        "description": "Businesses making taxable sales in Haines Borough collect and remit the borough's local general-retail sales tax; the ARSSTC table lists seasonal rates of 7% April through September and 4.5% October through March.",
+        "frequency": "monthly",
+        "url": "https://arsstc.org/business-sellers/member-jurisdictions/",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "sellsTaxableGoods",
+            "op": "==",
+            "value": true,
+            "description": "Sells taxable goods or services"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "note": "The ARSSTC member-jurisdiction table confirms the borough's local sales tax; other county-level obligations were not checked.",
+    "sourceUrl": "https://arsstc.org/business-sellers/member-jurisdictions/"
+  },
+  {
+    "county": "Hoonah-Angoon",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Juneau City and Borough",
+    "items": [
+      {
+        "id": "juneau-ak.local-sales-tax",
+        "title": "Collect and remit Juneau City and Borough local sales tax",
+        "category": "filing",
+        "authority": "City and Borough of Juneau",
+        "description": "Businesses making taxable sales in the City and Borough of Juneau collect and remit the 5% local general-retail sales tax; local rules and filing forms control exemptions and deadlines.",
+        "frequency": "monthly",
+        "url": "https://arsstc.org/business-sellers/member-jurisdictions/",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "sellsTaxableGoods",
+            "op": "==",
+            "value": true,
+            "description": "Sells taxable goods or services"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "note": "The ARSSTC member-jurisdiction table confirms the borough's local sales tax; other county-level obligations were not checked.",
+    "sourceUrl": "https://arsstc.org/business-sellers/member-jurisdictions/"
+  },
+  {
+    "county": "Kenai Peninsula",
+    "items": [
+      {
+        "id": "kenai-peninsula-ak.local-sales-tax",
+        "title": "Collect and remit Kenai Peninsula Borough local sales tax",
+        "category": "filing",
+        "authority": "Kenai Peninsula Borough",
+        "description": "Businesses making taxable sales in Kenai Peninsula Borough collect and remit the 3% local general-retail sales tax; local rules and filing forms control exemptions and deadlines.",
+        "frequency": "monthly",
+        "url": "https://arsstc.org/business-sellers/member-jurisdictions/",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "sellsTaxableGoods",
+            "op": "==",
+            "value": true,
+            "description": "Sells taxable goods or services"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "note": "The ARSSTC member-jurisdiction table confirms the borough's local sales tax; other county-level obligations were not checked.",
+    "sourceUrl": "https://arsstc.org/business-sellers/member-jurisdictions/"
+  },
+  {
+    "county": "Ketchikan Gateway",
+    "items": [
+      {
+        "id": "ketchikan-gateway-ak.local-sales-tax",
+        "title": "Collect and remit Ketchikan Gateway Borough local sales tax",
+        "category": "filing",
+        "authority": "Ketchikan Gateway Borough",
+        "description": "Businesses making taxable sales in Ketchikan Gateway Borough collect and remit the 2.5% local general-retail sales tax; local rules and filing forms control exemptions and deadlines.",
+        "frequency": "monthly",
+        "url": "https://arsstc.org/business-sellers/member-jurisdictions/",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "sellsTaxableGoods",
+            "op": "==",
+            "value": true,
+            "description": "Sells taxable goods or services"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "note": "The ARSSTC member-jurisdiction table confirms the borough's local sales tax; other county-level obligations were not checked.",
+    "sourceUrl": "https://arsstc.org/business-sellers/member-jurisdictions/"
+  },
+  {
+    "county": "Kodiak Island",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Kusilvak",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Lake and Peninsula",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Matanuska-Susitna Borough",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Nome (CA)",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "North Slope",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Northwest Arctic",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Petersburg",
+    "items": [
+      {
+        "id": "petersburg-ak.local-sales-tax",
+        "title": "Collect and remit Petersburg Borough local sales tax",
+        "category": "filing",
+        "authority": "Petersburg Borough",
+        "description": "Businesses making taxable sales in Petersburg Borough collect and remit the 6% local general-retail sales tax; local rules and filing forms control exemptions and deadlines.",
+        "frequency": "monthly",
+        "url": "https://arsstc.org/business-sellers/member-jurisdictions/",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "sellsTaxableGoods",
+            "op": "==",
+            "value": true,
+            "description": "Sells taxable goods or services"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "note": "The ARSSTC member-jurisdiction table confirms the borough's local sales tax; other county-level obligations were not checked.",
+    "sourceUrl": "https://arsstc.org/business-sellers/member-jurisdictions/"
+  },
+  {
+    "county": "Prince of Wales-Hyder",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Sitka City and Borough",
+    "items": [
+      {
+        "id": "sitka-ak.local-sales-tax",
+        "title": "Collect and remit Sitka City and Borough local sales tax",
+        "category": "filing",
+        "authority": "City and Borough of Sitka",
+        "description": "Businesses making taxable sales in the City and Borough of Sitka collect and remit the local general-retail sales tax; the ARSSTC table lists seasonal rates of 6% April through September and 5% October through March.",
+        "frequency": "monthly",
+        "url": "https://arsstc.org/business-sellers/member-jurisdictions/",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "sellsTaxableGoods",
+            "op": "==",
+            "value": true,
+            "description": "Sells taxable goods or services"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "note": "The ARSSTC member-jurisdiction table confirms the borough's local sales tax; other county-level obligations were not checked.",
+    "sourceUrl": "https://arsstc.org/business-sellers/member-jurisdictions/"
+  },
+  {
+    "county": "Skagway",
+    "items": [
+      {
+        "id": "skagway-ak.local-sales-tax",
+        "title": "Collect and remit Skagway Borough local sales tax",
+        "category": "filing",
+        "authority": "Municipality of Skagway",
+        "description": "Businesses making taxable sales in the Municipality of Skagway collect and remit the local general-retail sales tax; the ARSSTC table lists seasonal rates of 5% April through September and 3% October through March.",
+        "frequency": "monthly",
+        "url": "https://arsstc.org/business-sellers/member-jurisdictions/",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "sellsTaxableGoods",
+            "op": "==",
+            "value": true,
+            "description": "Sells taxable goods or services"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "note": "The ARSSTC member-jurisdiction table confirms the borough's local sales tax; other county-level obligations were not checked.",
+    "sourceUrl": "https://arsstc.org/business-sellers/member-jurisdictions/"
+  },
+  {
+    "county": "Skagway-Hoonah-Angoon",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Southeast Fairbanks Census Area",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "county": "Yukon-Koyukuk (CA)",
+    "status": "unverified",
+    "reason": "county-not-researched",
+    "items": [],
+    "checkedOn": "2026-10-18"
   }
 ]

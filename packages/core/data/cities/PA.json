@@ -2,6 +2,8 @@
   {
     "city": "Allentown",
     "counties": ["Lehigh"],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.allentownpa.gov/en-us/Government/Departments/Finance/Revenue-and-Audit/Business-Licenses",
     "items": [
       {
         "id": "allentown.business-license",
@@ -24,12 +26,13 @@
         "url": "https://www.allentownpa.gov/en-us/Government/Departments/Finance/Revenue-and-Audit/Business-Privilege-Tax",
         "appliesTo": ["all"]
       }
-    ],
-    "checkedOn": "2026-10-13"
+    ]
   },
   {
     "city": "Philadelphia",
     "counties": ["Philadelphia"],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.phila.gov/departments/department-of-licenses-and-inspections/licenses/business-licenses/",
     "items": [
       {
         "id": "philly.commercial-activity-license",
@@ -38,7 +41,7 @@
         "authority": "Philadelphia Department of Revenue",
         "description": "Free license required for any business operating in Philadelphia; required before other city licenses.",
         "frequency": "annual",
-        "url": "https://www.phila.gov/revenue/",
+        "url": "https://www.phila.gov/services/business-self-employment/register-a-business/",
         "appliesTo": ["all"]
       },
       {
@@ -67,6 +70,8 @@
   {
     "city": "Pittsburgh",
     "counties": ["Allegheny"],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.pittsburghpa.gov/City-Government/Finance-Budget/New-Business-Registration",
     "items": [
       {
         "id": "pittsburgh.payroll-expense-tax",
@@ -79,5 +84,176 @@
         "appliesTo": ["employees"]
       }
     ]
+  },
+  {
+    "city": "Reading",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "reading.local-licenses",
+        "title": "Review applicable local licenses and permits in Reading",
+        "category": "license",
+        "authority": "Reading local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.pa.gov/agencies/dos/programs/business/types-of-filings-and-registrations/fictitious-names",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.pa.gov/agencies/dos/programs/business/types-of-filings-and-registrations/fictitious-names"
+  },
+  {
+    "city": "Erie",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "erie.local-licenses",
+        "title": "Review applicable local licenses and permits in Erie",
+        "category": "license",
+        "authority": "Erie local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.pa.gov/agencies/dos/programs/business/types-of-filings-and-registrations/fictitious-names",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.pa.gov/agencies/dos/programs/business/types-of-filings-and-registrations/fictitious-names"
+  },
+  {
+    "city": "Bethlehem",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "bethlehem.local-licenses",
+        "title": "Review applicable local licenses and permits in Bethlehem",
+        "category": "license",
+        "authority": "Bethlehem local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.pa.gov/agencies/dos/programs/business/types-of-filings-and-registrations/fictitious-names",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.pa.gov/agencies/dos/programs/business/types-of-filings-and-registrations/fictitious-names"
+  },
+  {
+    "city": "Scranton",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "scranton.local-licenses",
+        "title": "Review applicable local licenses and permits in Scranton",
+        "category": "license",
+        "authority": "Scranton local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.pa.gov/agencies/dos/programs/business/types-of-filings-and-registrations/fictitious-names",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.pa.gov/agencies/dos/programs/business/types-of-filings-and-registrations/fictitious-names"
+  },
+  {
+    "city": "Lancaster",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "lancaster.local-licenses",
+        "title": "Review applicable local licenses and permits in Lancaster",
+        "category": "license",
+        "authority": "Lancaster local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.pa.gov/agencies/dos/programs/business/types-of-filings-and-registrations/fictitious-names",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.pa.gov/agencies/dos/programs/business/types-of-filings-and-registrations/fictitious-names"
+  },
+  {
+    "city": "Harrisburg",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "harrisburg.local-licenses",
+        "title": "Review applicable local licenses and permits in Harrisburg",
+        "category": "license",
+        "authority": "Harrisburg local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.pa.gov/agencies/dos/programs/business/types-of-filings-and-registrations/fictitious-names",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.pa.gov/agencies/dos/programs/business/types-of-filings-and-registrations/fictitious-names"
+  },
+  {
+    "city": "York",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "york.local-licenses",
+        "title": "Review applicable local licenses and permits in York",
+        "category": "license",
+        "authority": "York local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.pa.gov/agencies/dos/programs/business/types-of-filings-and-registrations/fictitious-names",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.pa.gov/agencies/dos/programs/business/types-of-filings-and-registrations/fictitious-names"
+  },
+  {
+    "city": "Wilkes-Barre",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "wilkes-barre.local-licenses",
+        "title": "Review applicable local licenses and permits in Wilkes-Barre",
+        "category": "license",
+        "authority": "Wilkes-Barre local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.pa.gov/agencies/dos/programs/business/types-of-filings-and-registrations/fictitious-names",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.pa.gov/agencies/dos/programs/business/types-of-filings-and-registrations/fictitious-names"
+  },
+  {
+    "city": "Altoona",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "altoona.local-licenses",
+        "title": "Review applicable local licenses and permits in Altoona",
+        "category": "license",
+        "authority": "Altoona local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.pa.gov/agencies/dos/programs/business/types-of-filings-and-registrations/fictitious-names",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.pa.gov/agencies/dos/programs/business/types-of-filings-and-registrations/fictitious-names"
   }
 ]

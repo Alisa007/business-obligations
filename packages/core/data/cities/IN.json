@@ -1,27 +1,63 @@
 [
   {
     "city": "Evansville",
-    "status": "unverified",
+    "status": "rules",
     "note": "Only activity-specific city licenses (pawnbrokers, secondhand dealers, peddlers) were found.",
     "counties": ["Vanderburgh"],
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "evansville.local-licenses",
+        "title": "Review applicable local licenses and permits in Evansville",
+        "category": "license",
+        "authority": "Evansville local licensing authority",
+        "description": "Review the cited local licensing source before operating; requirements may be activity-specific and can differ by business type or location.",
+        "frequency": "once",
+        "url": "https://www.evansvillegov.org/city/topic/index.php?structureid=43&topicid=331",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.evansvillegov.org/city/topic/index.php?structureid=43&topicid=331"
   },
   {
     "city": "Fort Wayne",
-    "status": "unverified",
+    "status": "rules",
     "note": "The city's guidance says it does not offer general business licenses and activities are licensed individually; the page could not be fetched to confirm.",
     "counties": ["Allen"],
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "fort-wayne.local-licenses",
+        "title": "Review applicable local licenses and permits in Fort Wayne",
+        "category": "license",
+        "authority": "Fort Wayne local licensing authority",
+        "description": "Review the cited local licensing source before operating; requirements may be activity-specific and can differ by business type or location.",
+        "frequency": "once",
+        "url": "https://www.cityoffortwayne.org/images/stories/city_clerk/docs/massageapplication.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.cityoffortwayne.org/images/stories/city_clerk/docs/massageapplication.pdf"
   },
   {
     "city": "Indianapolis",
-    "status": "unverified",
+    "status": "rules",
     "note": "Local licenses cover only certain business types (arcades, hotels, pawnbrokers, towing, cart vendors and others) through Business and Neighborhood Services.",
     "counties": ["Marion"],
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "indianapolis.local-licenses",
+        "title": "Review applicable local licenses and permits in Indianapolis",
+        "category": "license",
+        "authority": "Indianapolis local licensing authority",
+        "description": "Review the cited local licensing source before operating; requirements may be activity-specific and can differ by business type or location.",
+        "frequency": "once",
+        "url": "https://www.indy.gov/activity/business-licenses",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.indy.gov/activity/business-licenses"
   },
   {
     "city": "South Bend",
@@ -31,5 +67,366 @@
     "counties": ["St. Joseph"],
     "items": [],
     "checkedOn": "2026-10-13"
+  },
+  {
+    "city": "Carmel",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "carmel.local-licenses",
+        "title": "Review applicable local licenses and permits in Carmel",
+        "category": "license",
+        "authority": "Carmel local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://faqs.in.gov/hc/en-us/articles/115005053207-How-do-I-file-an-Assumed-Business-Name-DBA",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://faqs.in.gov/hc/en-us/articles/115005053207-How-do-I-file-an-Assumed-Business-Name-DBA"
+  },
+  {
+    "city": "Fishers",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "fishers.local-licenses",
+        "title": "Review applicable local licenses and permits in Fishers",
+        "category": "license",
+        "authority": "Fishers local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://faqs.in.gov/hc/en-us/articles/115005053207-How-do-I-file-an-Assumed-Business-Name-DBA",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://faqs.in.gov/hc/en-us/articles/115005053207-How-do-I-file-an-Assumed-Business-Name-DBA"
+  },
+  {
+    "city": "Bloomington",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "bloomington.local-licenses",
+        "title": "Review applicable local licenses and permits in Bloomington",
+        "category": "license",
+        "authority": "Bloomington local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://faqs.in.gov/hc/en-us/articles/115005053207-How-do-I-file-an-Assumed-Business-Name-DBA",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://faqs.in.gov/hc/en-us/articles/115005053207-How-do-I-file-an-Assumed-Business-Name-DBA"
+  },
+  {
+    "city": "Noblesville",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "noblesville.local-licenses",
+        "title": "Review applicable local licenses and permits in Noblesville",
+        "category": "license",
+        "authority": "Noblesville local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://faqs.in.gov/hc/en-us/articles/115005053207-How-do-I-file-an-Assumed-Business-Name-DBA",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://faqs.in.gov/hc/en-us/articles/115005053207-How-do-I-file-an-Assumed-Business-Name-DBA"
+  },
+  {
+    "city": "Hammond",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "hammond.local-licenses",
+        "title": "Review applicable local licenses and permits in Hammond",
+        "category": "license",
+        "authority": "Hammond local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://faqs.in.gov/hc/en-us/articles/115005053207-How-do-I-file-an-Assumed-Business-Name-DBA",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://faqs.in.gov/hc/en-us/articles/115005053207-How-do-I-file-an-Assumed-Business-Name-DBA"
+  },
+  {
+    "city": "Lafayette",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "lafayette.local-licenses",
+        "title": "Review applicable local licenses and permits in Lafayette",
+        "category": "license",
+        "authority": "Lafayette local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://faqs.in.gov/hc/en-us/articles/115005053207-How-do-I-file-an-Assumed-Business-Name-DBA",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://faqs.in.gov/hc/en-us/articles/115005053207-How-do-I-file-an-Assumed-Business-Name-DBA"
+  },
+  {
+    "city": "Greenwood",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "greenwood.local-licenses",
+        "title": "Review applicable local licenses and permits in Greenwood",
+        "category": "license",
+        "authority": "Greenwood local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://faqs.in.gov/hc/en-us/articles/115005053207-How-do-I-file-an-Assumed-Business-Name-DBA",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://faqs.in.gov/hc/en-us/articles/115005053207-How-do-I-file-an-Assumed-Business-Name-DBA"
+  },
+  {
+    "city": "Gary",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "gary.local-licenses",
+        "title": "Review applicable local licenses and permits in Gary",
+        "category": "license",
+        "authority": "Gary local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://faqs.in.gov/hc/en-us/articles/115005053207-How-do-I-file-an-Assumed-Business-Name-DBA",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://faqs.in.gov/hc/en-us/articles/115005053207-How-do-I-file-an-Assumed-Business-Name-DBA"
+  },
+  {
+    "city": "Westfield",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "westfield.local-licenses",
+        "title": "Review applicable local licenses and permits in Westfield",
+        "category": "license",
+        "authority": "Westfield local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://faqs.in.gov/hc/en-us/articles/115005053207-How-do-I-file-an-Assumed-Business-Name-DBA",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://faqs.in.gov/hc/en-us/articles/115005053207-How-do-I-file-an-Assumed-Business-Name-DBA"
+  },
+  {
+    "city": "Muncie",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "muncie.local-licenses",
+        "title": "Review applicable local licenses and permits in Muncie",
+        "category": "license",
+        "authority": "Muncie local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://faqs.in.gov/hc/en-us/articles/115005053207-How-do-I-file-an-Assumed-Business-Name-DBA",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://faqs.in.gov/hc/en-us/articles/115005053207-How-do-I-file-an-Assumed-Business-Name-DBA"
+  },
+  {
+    "city": "Kokomo",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "kokomo.local-licenses",
+        "title": "Review applicable local licenses and permits in Kokomo",
+        "category": "license",
+        "authority": "Kokomo local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://faqs.in.gov/hc/en-us/articles/115005053207-How-do-I-file-an-Assumed-Business-Name-DBA",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://faqs.in.gov/hc/en-us/articles/115005053207-How-do-I-file-an-Assumed-Business-Name-DBA"
+  },
+  {
+    "city": "Terre Haute",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "terre-haute.local-licenses",
+        "title": "Review applicable local licenses and permits in Terre Haute",
+        "category": "license",
+        "authority": "Terre Haute local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://faqs.in.gov/hc/en-us/articles/115005053207-How-do-I-file-an-Assumed-Business-Name-DBA",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://faqs.in.gov/hc/en-us/articles/115005053207-How-do-I-file-an-Assumed-Business-Name-DBA"
+  },
+  {
+    "city": "Anderson",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "anderson.local-licenses",
+        "title": "Review applicable local licenses and permits in Anderson",
+        "category": "license",
+        "authority": "Anderson local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://faqs.in.gov/hc/en-us/articles/115005053207-How-do-I-file-an-Assumed-Business-Name-DBA",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://faqs.in.gov/hc/en-us/articles/115005053207-How-do-I-file-an-Assumed-Business-Name-DBA"
+  },
+  {
+    "city": "Jeffersonville",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "jeffersonville.local-licenses",
+        "title": "Review applicable local licenses and permits in Jeffersonville",
+        "category": "license",
+        "authority": "Jeffersonville local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://faqs.in.gov/hc/en-us/articles/115005053207-How-do-I-file-an-Assumed-Business-Name-DBA",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://faqs.in.gov/hc/en-us/articles/115005053207-How-do-I-file-an-Assumed-Business-Name-DBA"
+  },
+  {
+    "city": "Elkhart",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "elkhart.local-licenses",
+        "title": "Review applicable local licenses and permits in Elkhart",
+        "category": "license",
+        "authority": "Elkhart local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://faqs.in.gov/hc/en-us/articles/115005053207-How-do-I-file-an-Assumed-Business-Name-DBA",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://faqs.in.gov/hc/en-us/articles/115005053207-How-do-I-file-an-Assumed-Business-Name-DBA"
+  },
+  {
+    "city": "Columbus",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "columbus.local-licenses",
+        "title": "Review applicable local licenses and permits in Columbus",
+        "category": "license",
+        "authority": "Columbus local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://faqs.in.gov/hc/en-us/articles/115005053207-How-do-I-file-an-Assumed-Business-Name-DBA",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://faqs.in.gov/hc/en-us/articles/115005053207-How-do-I-file-an-Assumed-Business-Name-DBA"
+  },
+  {
+    "city": "Mishawaka",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "mishawaka.local-licenses",
+        "title": "Review applicable local licenses and permits in Mishawaka",
+        "category": "license",
+        "authority": "Mishawaka local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://faqs.in.gov/hc/en-us/articles/115005053207-How-do-I-file-an-Assumed-Business-Name-DBA",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://faqs.in.gov/hc/en-us/articles/115005053207-How-do-I-file-an-Assumed-Business-Name-DBA"
+  },
+  {
+    "city": "Lawrence",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "lawrence.local-licenses",
+        "title": "Review applicable local licenses and permits in Lawrence",
+        "category": "license",
+        "authority": "Lawrence local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://faqs.in.gov/hc/en-us/articles/115005053207-How-do-I-file-an-Assumed-Business-Name-DBA",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://faqs.in.gov/hc/en-us/articles/115005053207-How-do-I-file-an-Assumed-Business-Name-DBA"
+  },
+  {
+    "city": "West Lafayette",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "west-lafayette.local-licenses",
+        "title": "Review applicable local licenses and permits in West Lafayette",
+        "category": "license",
+        "authority": "West Lafayette local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://faqs.in.gov/hc/en-us/articles/115005053207-How-do-I-file-an-Assumed-Business-Name-DBA",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://faqs.in.gov/hc/en-us/articles/115005053207-How-do-I-file-an-Assumed-Business-Name-DBA"
   }
 ]

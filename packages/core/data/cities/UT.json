@@ -2,6 +2,8 @@
   {
     "city": "Provo",
     "counties": ["Utah"],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.provo.gov/196/Commercial-Business-License",
     "items": [
       {
         "id": "provo.business-license",
@@ -11,11 +13,10 @@
         "description": "Business licenses renew annually; under city code the renewal application should be submitted at least 90 days before the expiration date, and a late filing does not change the expiration.",
         "frequency": "annual",
         "deadline": "90 days before the expiration date",
-        "url": "https://provo.municipal.codes/Code/9.60.080",
+        "url": "https://www.provo.gov/196/Commercial-Business-License",
         "appliesTo": ["all"]
       }
-    ],
-    "checkedOn": "2026-10-13"
+    ]
   },
   {
     "city": "Salt Lake City",
@@ -34,11 +35,14 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://www.slc.gov/Finance/business-licensing/",
     "checkedOn": "2026-10-18"
   },
   {
     "city": "West Jordan",
     "counties": ["Salt Lake"],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://westjordan.utah.gov/business-licensing/",
     "items": [
       {
         "id": "westjordan.business-license",
@@ -51,8 +55,7 @@
         "url": "https://westjordan.utah.gov/business-licensing/",
         "appliesTo": ["all"]
       }
-    ],
-    "checkedOn": "2026-10-13"
+    ]
   },
   {
     "city": "West Valley City",
@@ -68,10 +71,404 @@
         "description": "A business with a place of business in the city limits needs a city business license, which can be renewed online. A home-based business needs a home business license unless it grosses less than $2,000 a year, and the owner of a rental dwelling unit must keep a license current too. Fees are in the city's consolidated fee schedule.",
         "frequency": "annual",
         "deadline": "Before opening, then renew each year",
-        "url": "https://www.wvc-ut.gov/83/Business-Licensing",
-        "appliesTo": ["all"]
+        "url": "https://www.wvc-ut.gov/government/department_list/finance/business_licensing/index.php",
+        "appliesTo": ["all"],
+        "appliesWhenAny": [
+          {
+            "field": "homeBased",
+            "op": "!=",
+            "value": true,
+            "description": "Operates from a non-home-based location"
+          },
+          {
+            "field": "annualRevenue",
+            "op": ">=",
+            "value": 2000,
+            "description": "Home-based business grosses at least $2,000 per year"
+          }
+        ]
       }
     ],
     "checkedOn": "2026-10-18"
+  },
+  {
+    "city": "St. George",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "st-george.local-licenses",
+        "title": "Review applicable local licenses and permits in St. George",
+        "category": "license",
+        "authority": "St. George local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://commerce.utah.gov/corporations/business-entities/dba/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://commerce.utah.gov/corporations/business-entities/dba/"
+  },
+  {
+    "city": "Lehi",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "lehi.local-licenses",
+        "title": "Review applicable local licenses and permits in Lehi",
+        "category": "license",
+        "authority": "Lehi local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://commerce.utah.gov/corporations/business-entities/dba/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://commerce.utah.gov/corporations/business-entities/dba/"
+  },
+  {
+    "city": "Orem",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "orem.local-licenses",
+        "title": "Review applicable local licenses and permits in Orem",
+        "category": "license",
+        "authority": "Orem local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://commerce.utah.gov/corporations/business-entities/dba/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://commerce.utah.gov/corporations/business-entities/dba/"
+  },
+  {
+    "city": "Sandy",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "sandy.local-licenses",
+        "title": "Review applicable local licenses and permits in Sandy",
+        "category": "license",
+        "authority": "Sandy local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://commerce.utah.gov/corporations/business-entities/dba/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://commerce.utah.gov/corporations/business-entities/dba/"
+  },
+  {
+    "city": "Ogden",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "ogden.local-licenses",
+        "title": "Review applicable local licenses and permits in Ogden",
+        "category": "license",
+        "authority": "Ogden local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://commerce.utah.gov/corporations/business-entities/dba/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://commerce.utah.gov/corporations/business-entities/dba/"
+  },
+  {
+    "city": "South Jordan",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "south-jordan.local-licenses",
+        "title": "Review applicable local licenses and permits in South Jordan",
+        "category": "license",
+        "authority": "South Jordan local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://commerce.utah.gov/corporations/business-entities/dba/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://commerce.utah.gov/corporations/business-entities/dba/"
+  },
+  {
+    "city": "Layton",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "layton.local-licenses",
+        "title": "Review applicable local licenses and permits in Layton",
+        "category": "license",
+        "authority": "Layton local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://commerce.utah.gov/corporations/business-entities/dba/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://commerce.utah.gov/corporations/business-entities/dba/"
+  },
+  {
+    "city": "Eagle Mountain",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "eagle-mountain.local-licenses",
+        "title": "Review applicable local licenses and permits in Eagle Mountain",
+        "category": "license",
+        "authority": "Eagle Mountain local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://commerce.utah.gov/corporations/business-entities/dba/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://commerce.utah.gov/corporations/business-entities/dba/"
+  },
+  {
+    "city": "Millcreek",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "millcreek.local-licenses",
+        "title": "Review applicable local licenses and permits in Millcreek",
+        "category": "license",
+        "authority": "Millcreek local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://commerce.utah.gov/corporations/business-entities/dba/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://commerce.utah.gov/corporations/business-entities/dba/"
+  },
+  {
+    "city": "Herriman",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "herriman.local-licenses",
+        "title": "Review applicable local licenses and permits in Herriman",
+        "category": "license",
+        "authority": "Herriman local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://commerce.utah.gov/corporations/business-entities/dba/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://commerce.utah.gov/corporations/business-entities/dba/"
+  },
+  {
+    "city": "Saratoga Springs",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "saratoga-springs.local-licenses",
+        "title": "Review applicable local licenses and permits in Saratoga Springs",
+        "category": "license",
+        "authority": "Saratoga Springs local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://commerce.utah.gov/corporations/business-entities/dba/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://commerce.utah.gov/corporations/business-entities/dba/"
+  },
+  {
+    "city": "Taylorsville",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "taylorsville.local-licenses",
+        "title": "Review applicable local licenses and permits in Taylorsville",
+        "category": "license",
+        "authority": "Taylorsville local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://commerce.utah.gov/corporations/business-entities/dba/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://commerce.utah.gov/corporations/business-entities/dba/"
+  },
+  {
+    "city": "Logan",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "logan.local-licenses",
+        "title": "Review applicable local licenses and permits in Logan",
+        "category": "license",
+        "authority": "Logan local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://commerce.utah.gov/corporations/business-entities/dba/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://commerce.utah.gov/corporations/business-entities/dba/"
+  },
+  {
+    "city": "Murray",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "murray.local-licenses",
+        "title": "Review applicable local licenses and permits in Murray",
+        "category": "license",
+        "authority": "Murray local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://commerce.utah.gov/corporations/business-entities/dba/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://commerce.utah.gov/corporations/business-entities/dba/"
+  },
+  {
+    "city": "Draper",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "draper.local-licenses",
+        "title": "Review applicable local licenses and permits in Draper",
+        "category": "license",
+        "authority": "Draper local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://commerce.utah.gov/corporations/business-entities/dba/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://commerce.utah.gov/corporations/business-entities/dba/"
+  },
+  {
+    "city": "Spanish Fork",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "spanish-fork.local-licenses",
+        "title": "Review applicable local licenses and permits in Spanish Fork",
+        "category": "license",
+        "authority": "Spanish Fork local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://commerce.utah.gov/corporations/business-entities/dba/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://commerce.utah.gov/corporations/business-entities/dba/"
+  },
+  {
+    "city": "Riverton",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "riverton.local-licenses",
+        "title": "Review applicable local licenses and permits in Riverton",
+        "category": "license",
+        "authority": "Riverton local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://commerce.utah.gov/corporations/business-entities/dba/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://commerce.utah.gov/corporations/business-entities/dba/"
+  },
+  {
+    "city": "Bountiful",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "bountiful.local-licenses",
+        "title": "Review applicable local licenses and permits in Bountiful",
+        "category": "license",
+        "authority": "Bountiful local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://commerce.utah.gov/corporations/business-entities/dba/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://commerce.utah.gov/corporations/business-entities/dba/"
+  },
+  {
+    "city": "Tooele",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "tooele.local-licenses",
+        "title": "Review applicable local licenses and permits in Tooele",
+        "category": "license",
+        "authority": "Tooele local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://commerce.utah.gov/corporations/business-entities/dba/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://commerce.utah.gov/corporations/business-entities/dba/"
+  },
+  {
+    "city": "Cedar City",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "cedar-city.local-licenses",
+        "title": "Review applicable local licenses and permits in Cedar City",
+        "category": "license",
+        "authority": "Cedar City local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://commerce.utah.gov/corporations/business-entities/dba/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://commerce.utah.gov/corporations/business-entities/dba/"
   }
 ]

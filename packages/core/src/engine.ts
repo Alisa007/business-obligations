@@ -138,6 +138,9 @@ export function resolveProfile(input: BusinessProfile): ResolvedProfile {
   )
     throw new InvalidProfileError("`fullTimeEmployeeCount` cannot exceed `employeeCount`");
   nonNeg("annualPayroll", input.annualPayroll);
+  nonNeg("businessPropertyValueUsd", input.businessPropertyValueUsd);
+  nonNeg("quarterlyPayrollUsd", input.quarterlyPayrollUsd);
+  nonNeg("businessAgeYears", input.businessAgeYears);
   nonNeg("annualRevenue", input.annualRevenue);
   nonNeg("annualNetIncome", input.annualNetIncome);
   nonNeg("largestContractorPaymentUsd", input.largestContractorPaymentUsd);
@@ -226,6 +229,11 @@ export function resolveProfile(input: BusinessProfile): ResolvedProfile {
     hasEmployees: employeeCount > 0,
     ownerCount: input.ownerCount ?? 1,
     annualPayroll: input.annualPayroll ?? 0,
+    businessPropertyValueUsd: input.businessPropertyValueUsd ?? 0,
+    quarterlyPayrollUsd: input.quarterlyPayrollUsd ?? 0,
+    businessAgeYears: input.businessAgeYears ?? 0,
+    hasAutomatedPayrollSystem: input.hasAutomatedPayrollSystem ?? false,
+    hasQualifiedRetirementPlan: input.hasQualifiedRetirementPlan ?? false,
     largestContractorPaymentUsd: input.largestContractorPaymentUsd ?? 0,
     annualRevenue: input.annualRevenue ?? 0,
     annualNetIncome: input.annualNetIncome ?? 0,

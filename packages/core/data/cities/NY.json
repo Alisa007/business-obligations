@@ -1,18 +1,80 @@
 [
   {
     "city": "Albany",
-    "status": "unverified",
+    "status": "rules",
     "note": "No Albany, New York page on a general business license was found.",
     "counties": ["Albany"],
-    "items": [],
+    "items": [
+      {
+        "id": "albany.building-permit",
+        "title": "Obtain an Albany building permit when required",
+        "category": "permit",
+        "authority": "City of Albany Buildings & Regulatory Compliance",
+        "description": "Albany requires a building permit before a change of use or commercial tenancy, general construction, repair, rehabilitation, gutting or other covered work.",
+        "frequency": "once",
+        "url": "https://www.albanyny.gov/DocumentCenter/View/2422/General-Building-Permit-Application",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "albany.certificate-of-occupancy",
+        "title": "Obtain an Albany certificate of occupancy",
+        "category": "permit",
+        "authority": "City of Albany Buildings & Regulatory Compliance",
+        "description": "Albany requires the permit holder to submit the required close-out materials and a $100 application fee before a certificate of occupancy is issued for a construction project.",
+        "frequency": "once",
+        "url": "https://www.albanyny.gov/2192/Applying-for-a-Certificate-of-Occupancy-",
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "flat",
+          "amount": 100
+        }
+      },
+      {
+        "id": "albany.commercial-inspection-certificate",
+        "title": "Renew an Albany commercial inspection certificate",
+        "category": "registration",
+        "authority": "City of Albany Buildings & Regulatory Compliance",
+        "description": "Albany commercial establishments not containing public-assembly areas must be inspected and certified every 24 months, with a $100 commercial certificate fee.",
+        "frequency": "biennial",
+        "url": "https://www.albanyny.gov/2194/Registry-Inspection-Programs",
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "flat",
+          "amount": 100
+        }
+      }
+    ],
+    "sourceUrl": "https://www.albanyny.gov/143/Apply-For",
     "checkedOn": "2026-10-13"
   },
   {
     "city": "Amsterdam",
-    "status": "unverified",
+    "status": "rules",
     "note": "The city code licenses peddlers, transient merchants, auctioneers and sign advertisers through the City Clerk, but no general business license was confirmed.",
     "counties": ["Montgomery"],
-    "items": [],
+    "items": [
+      {
+        "id": "amsterdam.building-permit",
+        "title": "Obtain an Amsterdam building permit",
+        "category": "permit",
+        "authority": "City of Amsterdam Code Enforcement",
+        "description": "Amsterdam requires a building permit before a building or structure is erected, altered, reconstructed or enlarged.",
+        "frequency": "once",
+        "url": "https://amsterdamny.gov/DocumentCenter/View/897",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "amsterdam.certificate-of-occupancy",
+        "title": "Obtain an Amsterdam certificate of occupancy",
+        "category": "permit",
+        "authority": "City of Amsterdam Code Enforcement",
+        "description": "Amsterdam requires a certificate of occupancy before a use is established, land or a structure is occupied, or an existing use is changed.",
+        "frequency": "once",
+        "url": "https://amsterdamny.gov/DocumentCenter/View/897",
+        "appliesTo": ["all"]
+      }
+    ],
+    "sourceUrl": "https://www.amsterdamny.gov/27/Government",
     "checkedOn": "2026-10-16"
   },
   {
@@ -26,10 +88,32 @@
   },
   {
     "city": "Batavia",
-    "status": "unverified",
+    "status": "rules",
     "note": "The city code requires a license for trades that need one, applied for at the Clerk-Treasurer's office, but no general business license was confirmed.",
     "counties": ["Genesee"],
-    "items": [],
+    "items": [
+      {
+        "id": "batavia.building-permit",
+        "title": "Obtain a Batavia building permit when required",
+        "category": "permit",
+        "authority": "City of Batavia Bureau of Inspection",
+        "description": "Batavia's building permit application requires the applicable inspections and final approval before the city issues a certificate of occupancy or certificate of compliance.",
+        "frequency": "once",
+        "url": "https://www.cityofbataviany.gov/346/Forms-Permits",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "batavia.certificate-of-occupancy",
+        "title": "Obtain a Batavia certificate of occupancy before use",
+        "category": "permit",
+        "authority": "City of Batavia Bureau of Inspection",
+        "description": "Batavia prohibits occupancy of an addition, new building, change of use or other space requiring a certificate until the Code Enforcement Officer issues the certificate after a passed final inspection.",
+        "frequency": "once",
+        "url": "https://www.cityofbataviany.gov/346/Forms-Permits",
+        "appliesTo": ["all"]
+      }
+    ],
+    "sourceUrl": "https://ecode360.com/8977147",
     "checkedOn": "2026-10-16"
   },
   {
@@ -79,50 +163,242 @@
   },
   {
     "city": "Cohoes",
-    "status": "unverified",
-    "note": "The city code has businesses register with the City Clerk, who forwards the form to the fire, police, code-enforcement and assessor offices, but no official registration page was read.",
+    "status": "rules",
+    "note": "The city code and Building & Planning office publish construction-permit and occupancy-certificate requirements; no general business license was confirmed.",
     "counties": ["Albany"],
-    "items": [],
+    "items": [
+      {
+        "id": "cohoes.building-permit",
+        "title": "Obtain a Cohoes building permit when required",
+        "category": "permit",
+        "authority": "City of Cohoes Office of Building & Planning",
+        "description": "Cohoes requires a building permit before general construction, repair, rehabilitation, gutting or other covered work begins.",
+        "frequency": "once",
+        "url": "https://www.cohoes-ny.gov/DocumentCenter/View/1597",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "cohoes.certificate-of-occupancy",
+        "title": "Obtain a Cohoes certificate of occupancy or compliance",
+        "category": "permit",
+        "authority": "City of Cohoes Code Enforcement",
+        "description": "Cohoes requires a certificate of occupancy or compliance for work subject to a building permit and for conversions between occupancy classifications before the building may be used.",
+        "frequency": "once",
+        "url": "https://ecode360.com/41138281",
+        "appliesTo": ["all"]
+      }
+    ],
+    "sourceUrl": "https://www.cohoes-ny.gov/477/Office-of-Building-Planning",
     "checkedOn": "2026-10-16"
   },
   {
     "city": "Corning",
-    "status": "unverified",
+    "status": "rules",
     "note": "The City Clerk administers licenses and permits, but no general business license page for Corning, New York was found.",
     "counties": ["Steuben"],
-    "items": [],
+    "items": [
+      {
+        "id": "corning.building-permit",
+        "title": "Obtain a Corning building permit when required",
+        "category": "permit",
+        "authority": "City of Corning Code Enforcement",
+        "description": "Corning requires a building permit before covered construction begins, and the permit application must be approved by the Code Enforcement Office before work starts.",
+        "frequency": "once",
+        "url": "https://cityofcorningny.gov/codeenforcement",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "corning.certificate-of-occupancy",
+        "title": "Obtain a Corning certificate of occupancy or compliance",
+        "category": "permit",
+        "authority": "City of Corning Code Enforcement",
+        "description": "Corning requires a certificate of compliance or certificate of occupancy after covered work is complete and required inspections have been performed.",
+        "frequency": "once",
+        "url": "https://cityofcorningny.gov/codeenforcement",
+        "appliesTo": ["all"]
+      }
+    ],
+    "sourceUrl": "https://cityofcorningny.gov/codeenforcement",
     "checkedOn": "2026-10-16"
   },
   {
     "city": "Cortland",
-    "status": "unverified",
+    "status": "rules",
     "note": "No official City of Cortland page on a general business license was found.",
     "counties": ["Cortland"],
-    "items": [],
+    "items": [
+      {
+        "id": "cortland.building-permit",
+        "title": "Obtain a Cortland building permit when required",
+        "category": "permit",
+        "authority": "City of Cortland Code Enforcement Division",
+        "description": "Cortland issues building permits through its Code Enforcement Division for regulated construction work.",
+        "frequency": "once",
+        "url": "https://cortlandny.gov/612/Permits",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "cortland.certificate-of-occupancy",
+        "title": "Obtain a Cortland certificate of occupancy or compliance",
+        "category": "permit",
+        "authority": "City of Cortland Code Enforcement Division",
+        "description": "Cortland requires a certificate of occupancy or certificate of compliance for work subject to a building permit and for conversions between use or occupancy classifications.",
+        "frequency": "once",
+        "url": "https://www.cortlandny.gov/DocumentCenter/View/1359",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "cortland.vendor-permit",
+        "title": "Obtain a Cortland vendor permit when applicable",
+        "category": "license",
+        "authority": "City of Cortland City Clerk",
+        "description": "Cortland requires a permit or license for food and mobile ice-cream vendors, door-to-door vendors and Dairy Parade vendors.",
+        "frequency": "once",
+        "url": "https://www.cortlandny.gov/161/City-Clerk",
+        "appliesTo": ["all"]
+      }
+    ],
+    "sourceUrl": "https://cortlandny.gov/612/Permits",
     "checkedOn": "2026-10-16"
   },
   {
     "city": "Dunkirk",
-    "status": "unverified",
-    "note": "No official City of Dunkirk page on a general business license was found.",
+    "status": "rules",
+    "note": "The City of Dunkirk code requires building permits and certificates of occupancy for covered construction, alteration and use changes; no general business license was confirmed.",
     "counties": ["Chautauqua"],
-    "items": [],
+    "items": [
+      {
+        "id": "dunkirk.building-permit",
+        "title": "Obtain a Dunkirk building permit when required",
+        "category": "permit",
+        "authority": "City of Dunkirk Building Inspector",
+        "description": "Dunkirk requires a building permit before covered construction, enlargement, extension, alteration or other work requiring a permit begins.",
+        "frequency": "once",
+        "url": "https://cms9files.revize.com/dunkirkny/Document%20Center/Department/Law/Dunkirk%20City%20Code.pdf",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "dunkirk.certificate-of-occupancy",
+        "title": "Obtain a Dunkirk certificate of occupancy",
+        "category": "permit",
+        "authority": "City of Dunkirk Building Inspector",
+        "description": "Dunkirk prohibits occupancy of a new, altered or changed-use building until the Building Inspector issues a certificate of occupancy.",
+        "frequency": "once",
+        "url": "https://cms9files.revize.com/dunkirkny/Document%20Center/Department/Law/Dunkirk%20City%20Code.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "sourceUrl": "https://cms9files.revize.com/dunkirkny/Document%20Center/Department/Law/Dunkirk%20City%20Code.pdf",
     "checkedOn": "2026-10-16"
   },
   {
     "city": "Elmira",
-    "status": "unverified",
-    "note": "No official City of Elmira page on a general business license was found.",
+    "status": "rules",
+    "note": "No official City of Elmira page on a general business license was found; the city does publish building, occupancy, rental-registration and special-event requirements.",
     "counties": ["Chemung"],
-    "items": [],
+    "items": [
+      {
+        "id": "elmira.building-permit",
+        "title": "Obtain an Elmira building permit when required",
+        "category": "permit",
+        "authority": "City of Elmira Inspection Services",
+        "description": "Elmira requires a building permit before covered construction, alteration, repair or other permitted work begins.",
+        "frequency": "once",
+        "url": "https://www.cityofelmira.net/DocumentCenter/View/198/Building-Permit-Application-PDF",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "elmira.certificate-of-occupancy",
+        "title": "Obtain an Elmira certificate of occupancy",
+        "category": "permit",
+        "authority": "City of Elmira Inspection Services",
+        "description": "Elmira requires a certificate of occupancy before a covered building, land or use is occupied, including business and manufacturing uses.",
+        "frequency": "once",
+        "url": "https://www.cityofelmira.net/DocumentCenter/View/210/Certificate-of-Occupancy-Application-PDF",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "elmira.rental-registration",
+        "title": "Register an Elmira rental building",
+        "category": "registration",
+        "authority": "City of Elmira Code Enforcement",
+        "description": "Elmira requires the owner of each building containing one or more rental dwelling units to register the building with Code Enforcement and update the registration after ownership or information changes.",
+        "frequency": "once",
+        "url": "https://www.cityofelmira.net/216/Rental-Ordinances",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "elmira.special-event-license",
+        "title": "Obtain an Elmira special-event license when applicable",
+        "category": "permit",
+        "authority": "City of Elmira City Clerk",
+        "description": "Elmira requires a paid event license before a person stages a covered special event on city property, sidewalks, streets or rights-of-way.",
+        "frequency": "once",
+        "url": "https://www.cityofelmira.net/DocumentCenter/View/132/Ordinance-95-73-on-Special-Events-PDF",
+        "appliesTo": ["all"]
+      }
+    ],
+    "sourceUrl": "https://www.cityofelmira.net/216/Rental-Ordinances",
     "checkedOn": "2026-10-16"
   },
   {
     "city": "Fulton",
-    "status": "unverified",
-    "note": "The City Clerk/Chamberlain issues auctioneer, peddler, solicitor and taxi licenses, but no general business license was confirmed.",
+    "status": "rules",
+    "note": "The City Clerk/Chamberlain issues auctioneer, peddler, solicitor and taxi licenses, while Code Enforcement publishes construction, rental and contractor requirements; no general business license was confirmed.",
     "counties": ["Oswego"],
-    "items": [],
+    "items": [
+      {
+        "id": "fulton.building-permit",
+        "title": "Obtain a Fulton building permit when required",
+        "category": "permit",
+        "authority": "City of Fulton Bureau of Code Enforcement",
+        "description": "Fulton requires a building permit before covered construction, alteration, repair, demolition or installation work begins.",
+        "frequency": "once",
+        "url": "https://fultonny.org/code-enforcement/",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "fulton.rental-permit",
+        "title": "Renew a Fulton rental permit",
+        "category": "permit",
+        "authority": "City of Fulton Bureau of Code Enforcement",
+        "description": "Fulton requires owners of residential rental dwellings to apply for a rental permit; the rental permit certificate is valid for three years unless revoked for violations.",
+        "frequency": "once",
+        "url": "https://fultonny.org/code-enforcement/",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "fulton.general-contractor-registration",
+        "title": "Renew Fulton general-contractor registration",
+        "category": "registration",
+        "authority": "City of Fulton Bureau of Code Enforcement",
+        "description": "General contractors doing business in Fulton must register with Code Enforcement; the city states that registrations expire on December 31 of the registration year.",
+        "frequency": "annual",
+        "url": "https://fultonny.org/code-enforcement/",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "fulton.peddler-permit",
+        "title": "Obtain a Fulton peddler permit when applicable",
+        "category": "permit",
+        "authority": "City of Fulton City Clerk/Chamberlain",
+        "description": "Fulton lists a peddler permit application among the City Clerk's permits and licenses.",
+        "frequency": "once",
+        "url": "https://fultonny.org/clerk-chamberlain/",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "fulton.solicitor-permit",
+        "title": "Obtain a Fulton solicitor permit when applicable",
+        "category": "permit",
+        "authority": "City of Fulton City Clerk/Chamberlain",
+        "description": "Fulton lists a solicitor permit application among the City Clerk's permits and licenses.",
+        "frequency": "once",
+        "url": "https://fultonny.org/clerk-chamberlain/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "sourceUrl": "https://fultonny.org/code-enforcement/",
     "checkedOn": "2026-10-16"
   },
   {
@@ -148,42 +424,172 @@
   },
   {
     "city": "Glens Falls",
-    "status": "unverified",
-    "note": "No official City of Glens Falls page on a general business license was found.",
+    "status": "rules",
+    "note": "No official City of Glens Falls page on a general business license was found; Building & Codes publishes building-permit and certificate-of-occupancy requirements.",
     "counties": ["Warren"],
-    "items": [],
+    "items": [
+      {
+        "id": "glens-falls.building-permit",
+        "title": "Obtain a Glens Falls building permit when required",
+        "category": "permit",
+        "authority": "City of Glens Falls Building & Codes",
+        "description": "Glens Falls issues building permits for covered construction and changes of occupancy or use through its Building & Codes Department.",
+        "frequency": "once",
+        "url": "https://cityofglensfalls.com/DocumentCenter/View/7256/Building-Permit-Application-PDF",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "glens-falls.certificate-of-occupancy",
+        "title": "Obtain a Glens Falls certificate of occupancy or compliance",
+        "category": "permit",
+        "authority": "City of Glens Falls Building & Codes",
+        "description": "Glens Falls publishes certificate-of-occupancy and certificate-of-compliance requirements and fees for covered projects.",
+        "frequency": "once",
+        "url": "https://cityofglensfalls.com/DocumentCenter/View/7294/2023-City-of-Glens-Falls-Permit-Fee-Schedule-PDF",
+        "appliesTo": ["all"]
+      }
+    ],
+    "sourceUrl": "https://www.cityofglensfalls.com/index.aspx?NID=65",
     "checkedOn": "2026-10-16"
   },
   {
     "city": "Gloversville",
-    "status": "unverified",
-    "note": "The city's forms, licenses and permits page lists clerk permits, but no general business license was confirmed.",
+    "status": "rules",
+    "note": "The city zoning ordinance requires a certificate of occupancy for new construction and alterations before a structure may be occupied; no general business license was confirmed.",
     "counties": ["Fulton"],
-    "items": [],
+    "items": [
+      {
+        "id": "gloversville.certificate-of-occupancy",
+        "title": "Obtain a Gloversville certificate of occupancy",
+        "category": "permit",
+        "authority": "City of Gloversville Code Enforcement",
+        "description": "Gloversville defines a certificate of occupancy as the official certification that a premises conforms to the zoning and building code; the certificate is required before a new or altered structure may be occupied.",
+        "frequency": "once",
+        "url": "https://cityofgloversville.com/wp-content/uploads/2023/12/GLOVERSVILLE-ZONING-ORDINANCE-2023-FINAL.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "sourceUrl": "https://cityofgloversville.com/wp-content/uploads/2023/12/GLOVERSVILLE-ZONING-ORDINANCE-2023-FINAL.pdf",
     "checkedOn": "2026-10-16"
   },
   {
     "city": "Hornell",
-    "status": "unverified",
-    "note": "The City Clerk issues a contractor permit under the city code, but no general business license was confirmed.",
+    "status": "rules",
+    "note": "Hornell Code Enforcement publishes building, occupancy, rental-inspection and contractor-permit requirements; no general business license was confirmed.",
     "counties": ["Steuben"],
-    "items": [],
+    "items": [
+      {
+        "id": "hornell.building-permit",
+        "title": "Obtain a Hornell building permit when required",
+        "category": "permit",
+        "authority": "City of Hornell Code Enforcement",
+        "description": "Hornell issues building permits for construction and covered work including fences, pools, signs and solid-fuel appliances.",
+        "frequency": "once",
+        "url": "https://www.cityofhornell.gov/code-of-enforcement",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "hornell.certificate-of-occupancy",
+        "title": "Obtain a Hornell certificate of occupancy",
+        "category": "permit",
+        "authority": "City of Hornell Code Enforcement",
+        "description": "Hornell prohibits use or occupancy of a building subject to a building permit until the Code Enforcement Officer issues a certificate of occupancy.",
+        "frequency": "once",
+        "url": "https://ecode360.com/8764006",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "hornell.contractor-permit",
+        "title": "Renew a Hornell contractor permit when applicable",
+        "category": "permit",
+        "authority": "City of Hornell Code Enforcement",
+        "description": "Hornell publishes contractor permit applications for permits to work in the city and opens new permit processing each January 1.",
+        "frequency": "annual",
+        "url": "https://www.cityofhornell.gov/code-of-enforcement",
+        "appliesTo": ["all"]
+      }
+    ],
+    "sourceUrl": "https://www.cityofhornell.gov/code-of-enforcement",
     "checkedOn": "2026-10-16"
   },
   {
     "city": "Hudson",
-    "status": "unverified",
-    "note": "The city code licenses transient retail, peddling and auctioneers through the City Clerk, but no general business license was confirmed.",
+    "status": "rules",
+    "note": "Hudson code requires building permits and certificates of occupancy for covered construction, alterations, use changes and occupancy; no general business license was confirmed.",
     "counties": ["Columbia"],
-    "items": [],
+    "items": [
+      {
+        "id": "hudson.building-permit",
+        "title": "Obtain a Hudson building permit when required",
+        "category": "permit",
+        "authority": "City of Hudson Building Inspector",
+        "description": "Hudson requires a building permit before erection, construction, enlargement, removal, demolition, conversion or occupancy changes involving a building or structure.",
+        "frequency": "once",
+        "url": "https://ecode360.com/5079524",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "hudson.certificate-of-occupancy",
+        "title": "Obtain a Hudson certificate of occupancy",
+        "category": "permit",
+        "authority": "City of Hudson Building Inspector",
+        "description": "Hudson prohibits occupancy or use of a new or altered building until the Building Inspector issues a certificate of occupancy after final inspection.",
+        "frequency": "once",
+        "url": "https://ecode360.com/5079531",
+        "appliesTo": ["all"]
+      }
+    ],
+    "sourceUrl": "https://ecode360.com/5079531",
     "checkedOn": "2026-10-16"
   },
   {
     "city": "Ithaca",
-    "status": "unverified",
-    "note": "The city code has a chapter on licensing of businesses and occupations, but its text could not be read, so no general license was confirmed.",
+    "status": "rules",
+    "note": "The city code has a chapter on licensing of businesses and occupations, but no general business license was confirmed; the Building Division publishes permit, occupancy and trade-registration requirements.",
     "counties": ["Tompkins"],
-    "items": [],
+    "items": [
+      {
+        "id": "ithaca.building-permit",
+        "title": "Obtain an Ithaca building permit when required",
+        "category": "permit",
+        "authority": "City of Ithaca Building Division",
+        "description": "Ithaca requires a building permit for new construction, additions, alterations, changes of use or occupancy, demolition and other covered work.",
+        "frequency": "once",
+        "url": "https://cityofithaca.org/138/General-Permit",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "ithaca.certificate-of-occupancy",
+        "title": "Obtain an Ithaca certificate of occupancy or completion",
+        "category": "permit",
+        "authority": "City of Ithaca Building Division",
+        "description": "Ithaca issues a certificate of occupancy or completion after permitted work and required inspections comply with the Uniform Code, Energy Code and city requirements.",
+        "frequency": "once",
+        "url": "https://www.cityofithaca.org/DocumentCenter/View/13096/Ithaca-Energy-Code-Supplement-Ordinance-City-Adopted-05-05-21-Authenticated",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "ithaca.tent-permit",
+        "title": "Obtain an Ithaca tent permit when applicable",
+        "category": "permit",
+        "authority": "City of Ithaca Building Division",
+        "description": "Ithaca requires a permit for a tent or canopy larger than 400 square feet, with limited exceptions, and the permit applies per event.",
+        "frequency": "per_event",
+        "url": "https://cityofithaca.org/142/Permit-Classifications",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "ithaca.trade-contractor-registration",
+        "title": "Maintain Ithaca trade-contractor licensing when applicable",
+        "category": "registration",
+        "authority": "City of Ithaca Building Division",
+        "description": "Ithaca states that plumbers and electricians must be licensed in the city and heating contractors must be registered with the city for covered permit work.",
+        "frequency": "once",
+        "url": "https://cityofithaca.org/138/General-Permit",
+        "appliesTo": ["all"]
+      }
+    ],
+    "sourceUrl": "https://cityofithaca.org/130/Building-Division",
     "checkedOn": "2026-10-16"
   },
   {
@@ -201,6 +607,7 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://www.jamestownny.gov/city-clerk/license-applications/",
     "checkedOn": "2026-10-16"
   },
   {
@@ -218,10 +625,7 @@
   {
     "city": "Kingston",
     "status": "none",
-    "sourceUrl": [
-      "https://ecode360.com/6724650",
-      "https://www.kingston-ny.gov/filestorage/8399/26361/2022_Fee_Schedule.pdf"
-    ],
+    "sourceUrl": ["https://ecode360.com/6724650", "https://kingston-ny.gov/content/8399/8469/8535/"],
     "note": "The City Clerk issues pawnbroker, peddler and solicitor, auction, bingo and games-of-chance licenses, and no general business license was found.",
     "counties": ["Ulster"],
     "items": [],
@@ -247,14 +651,37 @@
         }
       }
     ],
+    "sourceUrl": "https://lackawannany.gov/city-clerk/business/",
     "checkedOn": "2026-10-16"
   },
   {
     "city": "Little Falls",
-    "status": "unverified",
-    "note": "No official City of Little Falls, New York page on a general business license was found.",
+    "status": "rules",
+    "note": "The city Code Enforcement office publishes building-permit and certificate-of-occupancy/compliance requirements; no general business license was confirmed.",
     "counties": ["Herkimer"],
-    "items": [],
+    "items": [
+      {
+        "id": "little-falls.building-permit",
+        "title": "Obtain a Little Falls building permit when required",
+        "category": "permit",
+        "authority": "City of Little Falls Code Enforcement",
+        "description": "Little Falls Code Enforcement issues building permits and conducts periodic and final inspections for covered work.",
+        "frequency": "once",
+        "url": "https://thisislittlefalls.com/services/",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "little-falls.certificate-of-occupancy",
+        "title": "Obtain a Little Falls certificate of occupancy or compliance",
+        "category": "permit",
+        "authority": "City of Little Falls Code Enforcement",
+        "description": "Little Falls issues a certificate of compliance or certificate of occupancy when completed work meets code.",
+        "frequency": "once",
+        "url": "https://thisislittlefalls.com/services/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "sourceUrl": "https://thisislittlefalls.com/services/",
     "checkedOn": "2026-10-16"
   },
   {
@@ -282,22 +709,57 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://www.longbeachny.gov/?SEC=1EB2D018-3D17-4F17-A067-CE651DC74469",
     "checkedOn": "2026-10-16"
   },
   {
     "city": "Mechanicville",
-    "status": "unverified",
-    "note": "The City Clerk's page and 2026 fee schedule were found, but no general business license was confirmed; building permits come from the Building and Code Department.",
+    "status": "rules",
+    "note": "The Building & Code Department administers the city's building construction, permitting and housing inspections; no general business license was confirmed.",
     "counties": ["Saratoga"],
-    "items": [],
+    "items": [
+      {
+        "id": "mechanicville.building-permit",
+        "title": "Obtain a Mechanicville building permit when required",
+        "category": "permit",
+        "authority": "City of Mechanicville Department of Buildings",
+        "description": "Mechanicville's Department of Buildings administers building construction and permitting and requires complete permit applications before processing.",
+        "frequency": "once",
+        "url": "https://www.mechanicvilleny.gov/buildingcodedepartment",
+        "appliesTo": ["all"]
+      }
+    ],
+    "sourceUrl": "https://www.mechanicvilleny.gov/buildingcodedepartment",
     "checkedOn": "2026-10-16"
   },
   {
     "city": "Middletown",
-    "status": "unverified",
-    "note": "The city's zoning code requires new businesses to register for a business permit before a certificate of occupancy, but no official application page was found.",
+    "status": "rules",
+    "note": "Middletown requires business permits before certificates of occupancy and publishes building, occupancy and activity-specific license applications.",
     "counties": ["Orange"],
-    "items": [],
+    "items": [
+      {
+        "id": "middletown.business-permit",
+        "title": "Obtain a Middletown business permit when required",
+        "category": "permit",
+        "authority": "City of Middletown City Clerk",
+        "description": "Middletown requires newly opening businesses and businesses undergoing a change in ownership, management or use to register and apply for a business permit before receiving a certificate of occupancy.",
+        "frequency": "once",
+        "url": "https://www.middletownny.gov/DocumentCenter/View/3142/Business-Permit-Application",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "middletown.certificate-of-occupancy",
+        "title": "Obtain a Middletown certificate of occupancy",
+        "category": "permit",
+        "authority": "City of Middletown Department of Public Works",
+        "description": "Middletown prohibits use or occupancy of new, altered or extended buildings until a certificate of occupancy is issued.",
+        "frequency": "once",
+        "url": "https://ecode360.com/11070064",
+        "appliesTo": ["all"]
+      }
+    ],
+    "sourceUrl": "https://www.middletownny.gov/401/Licenses-Permits",
     "checkedOn": "2026-10-16"
   },
   {
@@ -329,6 +791,7 @@
         }
       }
     ],
+    "sourceUrl": "https://newrochelleny.com/1032/Retail-Business-Registration-Program",
     "checkedOn": "2026-10-16"
   },
   {
@@ -368,14 +831,72 @@
         "appliesTo": ["employees"]
       }
     ],
-    "aliases": ["Brooklyn", "Queens", "Bronx", "The Bronx", "Manhattan", "Staten Island"]
+    "aliases": ["Brooklyn", "Queens", "Bronx", "The Bronx", "Manhattan", "Staten Island"],
+    "sourceUrl": "https://www.nyc.gov/site/finance/taxes/business.page",
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "Newburgh",
-    "status": "unverified",
-    "note": "No City of Newburgh page on a general business license was found.",
+    "status": "rules",
+    "note": "No City of Newburgh page on a general business license was found; the city publishes construction, occupancy, peddler, event and room-occupancy-tax requirements.",
     "counties": ["Orange"],
-    "items": [],
+    "items": [
+      {
+        "id": "newburgh.building-permit",
+        "title": "Obtain a Newburgh building permit when required",
+        "category": "permit",
+        "authority": "City of Newburgh Code Compliance Bureau",
+        "description": "Newburgh requires a building permit for covered construction, commercial or industrial work, alterations, renovations and demolition.",
+        "frequency": "once",
+        "url": "https://www.cityofnewburgh-ny.gov/DocumentCenter/View/161/Building-Permit-Application-PDF",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "newburgh.certificate-of-occupancy",
+        "title": "Obtain a Newburgh commercial certificate of occupancy",
+        "category": "permit",
+        "authority": "City of Newburgh Code Compliance Bureau",
+        "description": "Newburgh requires a certificate of occupancy application for commercial or industrial occupancy and lists a commercial/industrial certificate fee.",
+        "frequency": "once",
+        "url": "https://www.cityofnewburgh-ny.gov/DocumentCenter/View/146/Certificate-of-Occupancy-Application-PDF",
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "flat",
+          "amount": 500
+        }
+      },
+      {
+        "id": "newburgh.peddler-license",
+        "title": "Renew a Newburgh peddler license when applicable",
+        "category": "license",
+        "authority": "City of Newburgh City Clerk",
+        "description": "Newburgh licenses peddlers; the city lists annual or seasonal peddler license fees after application approval.",
+        "frequency": "annual",
+        "url": "https://www.cityofnewburgh-ny.gov/308/License-Permit-Fees",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "newburgh.event-permit",
+        "title": "Obtain a Newburgh event permit when applicable",
+        "category": "permit",
+        "authority": "City of Newburgh City Clerk",
+        "description": "Newburgh lists event permits among the permits and licenses issued by the City Clerk.",
+        "frequency": "once",
+        "url": "https://www.cityofnewburgh-ny.gov/304/City-Clerk",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "newburgh.room-occupancy-tax",
+        "title": "Register and file Newburgh room-occupancy tax when applicable",
+        "category": "filing",
+        "authority": "City of Newburgh Comptroller",
+        "description": "Newburgh requires short-term lodging businesses and hosts to register for a certificate of authority, collect the 5% city room-occupancy tax and submit returns and payment quarterly.",
+        "frequency": "quarterly",
+        "url": "https://www.cityofnewburgh-ny.gov/617/Room-Occupancy-Tax",
+        "appliesTo": ["all"]
+      }
+    ],
+    "sourceUrl": "https://www.cityofnewburgh-ny.gov/174/Building-Code-Enforcement",
     "checkedOn": "2026-10-16"
   },
   {
@@ -398,6 +919,7 @@
         }
       }
     ],
+    "sourceUrl": "https://www.niagarafallsny.gov/government/departments/city_clerks/certificates_and_licenses/index.php",
     "checkedOn": "2026-10-16"
   },
   {
@@ -411,18 +933,62 @@
   },
   {
     "city": "Norwich",
-    "status": "unverified",
-    "note": "The City Clerk handles licensing and permits (amplified sound, garbage collection, dogs), but no general business license was confirmed.",
+    "status": "rules",
+    "note": "Norwich publishes building-permit, occupancy and master-trade-license requirements; no general business license was confirmed.",
     "counties": ["Chenango"],
-    "items": [],
+    "items": [
+      {
+        "id": "norwich.building-permit",
+        "title": "Obtain a Norwich building permit when required",
+        "category": "permit",
+        "authority": "City of Norwich Code Enforcement",
+        "description": "Norwich requires a building permit application for covered construction and requires the work to conform to the New York State Building Code and city zoning regulations.",
+        "frequency": "once",
+        "url": "https://www.norwichnewyork.gov/pdfs/code/building-permit-appl.pdf",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "norwich.certificate-of-occupancy",
+        "title": "Obtain a Norwich certificate of completion or occupancy",
+        "category": "permit",
+        "authority": "City of Norwich Code Enforcement",
+        "description": "Norwich issues a certificate of completion or occupancy after the project passes final inspection.",
+        "frequency": "once",
+        "url": "https://www.norwichnewyork.gov/pdfs/code/building-permit-appl.pdf",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "norwich.master-trade-license",
+        "title": "Maintain a Norwich master trade license when applicable",
+        "category": "license",
+        "authority": "City of Norwich Code Enforcement",
+        "description": "Norwich states that plumbers, electricians and heating contractors must have a City of Norwich master license for covered work.",
+        "frequency": "once",
+        "url": "https://www.norwichnewyork.gov/pdfs/code/building-permit-appl.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "sourceUrl": "https://www.norwichnewyork.gov/pdfs/code/building-permit-appl.pdf",
     "checkedOn": "2026-10-16"
   },
   {
     "city": "Ogdensburg",
-    "status": "unverified",
-    "note": "No official City of Ogdensburg page on a general business license was found.",
+    "status": "rules",
+    "note": "No official City of Ogdensburg page on a general business license was found; the city confirms building permits are available through its Code Enforcement portal.",
     "counties": ["St. Lawrence"],
-    "items": [],
+    "items": [
+      {
+        "id": "ogdensburg.building-permit",
+        "title": "Obtain an Ogdensburg building permit when required",
+        "category": "permit",
+        "authority": "City of Ogdensburg Code Enforcement",
+        "description": "Ogdensburg accepts building permit applications through its Building Permit Portal for covered building work.",
+        "frequency": "once",
+        "url": "https://www.ogdensburg.org/CivicAlerts.asp?AID=962&ARC=1898",
+        "appliesTo": ["all"]
+      }
+    ],
+    "sourceUrl": "https://www.ogdensburg.org/CivicAlerts.asp?AID=962&ARC=1898",
     "checkedOn": "2026-10-16"
   },
   {
@@ -448,18 +1014,62 @@
   },
   {
     "city": "Oneonta",
-    "status": "unverified",
-    "note": "No official City of Oneonta, New York page on a general business license was found.",
+    "status": "rules",
+    "note": "Oneonta code requires building permits, certificates of occupancy and rental-unit compliance certification; no general business license was confirmed.",
     "counties": ["Otsego"],
-    "items": [],
+    "items": [
+      {
+        "id": "oneonta.building-permit",
+        "title": "Obtain a Oneonta building permit when required",
+        "category": "permit",
+        "authority": "City of Oneonta City Engineer",
+        "description": "Oneonta requires a building permit for covered work and requires applications and plans to be approved before construction or remodeling begins.",
+        "frequency": "once",
+        "url": "https://ecode360.com/36014478",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "oneonta.certificate-of-occupancy",
+        "title": "Obtain a Oneonta certificate of occupancy or compliance",
+        "category": "permit",
+        "authority": "City of Oneonta City Engineer",
+        "description": "Oneonta requires a certificate of occupancy before a permitted or converted building or portion may be used or occupied and requires compliance certification for rental units.",
+        "frequency": "once",
+        "url": "https://ecode360.com/36014478",
+        "appliesTo": ["all"]
+      }
+    ],
+    "sourceUrl": "https://ecode360.com/36014478",
     "checkedOn": "2026-10-16"
   },
   {
     "city": "Oswego",
-    "status": "unverified",
-    "note": "The City Clerk handles licensing, including transient-business and peddler permits, but no general business license was confirmed.",
+    "status": "rules",
+    "note": "Oswego code requires building permits and certificates of occupancy for covered construction and use changes; no general business license was confirmed.",
     "counties": ["Oswego"],
-    "items": [],
+    "items": [
+      {
+        "id": "oswego.building-permit",
+        "title": "Obtain an Oswego building permit when required",
+        "category": "permit",
+        "authority": "City of Oswego Department of Code Enforcement",
+        "description": "Oswego requires a separate building permit before covered construction, enlargement, alteration, improvement, demolition, site preparation or occupancy changes begin.",
+        "frequency": "once",
+        "url": "https://ecode360.com/7720544",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "oswego.certificate-of-occupancy",
+        "title": "Obtain an Oswego certificate of occupancy",
+        "category": "permit",
+        "authority": "City of Oswego Department of Code Enforcement",
+        "description": "Oswego requires a certificate of occupancy before a permitted building or changed-use space may be occupied, after the required inspection.",
+        "frequency": "once",
+        "url": "https://ecode360.com/7720544",
+        "appliesTo": ["all"]
+      }
+    ],
+    "sourceUrl": "https://oswegony.gov/government/building-permit-rev2",
     "checkedOn": "2026-10-16"
   },
   {
@@ -476,34 +1086,142 @@
   },
   {
     "city": "Plattsburgh",
-    "status": "unverified",
-    "note": "The City Clerk issues food-truck permits under Chapter 254 of the city code, but no general business license was confirmed.",
+    "status": "rules",
+    "note": "The City Clerk issues food-truck and vendor permits, and the Building Inspector administers an annual vacant-building registry; no general business license was confirmed.",
     "counties": ["Clinton"],
-    "items": [],
+    "items": [
+      {
+        "id": "plattsburgh.vacant-building-registration",
+        "title": "Renew a Plattsburgh vacant-building registration when applicable",
+        "category": "registration",
+        "authority": "City of Plattsburgh Building Inspector",
+        "description": "Plattsburgh requires the owner of a qualifying vacant building to register it within 30 days; the registration is renewed annually.",
+        "frequency": "annual",
+        "url": "https://www.cityofplattsburgh-ny.gov/department/building-inspector/vacant-building-registry",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "plattsburgh.vendor-permit",
+        "title": "Obtain a Plattsburgh vendor permit when applicable",
+        "category": "permit",
+        "authority": "City of Plattsburgh City Clerk",
+        "description": "Plattsburgh lists a vendor permit application for items other than food among City Clerk permits and licenses.",
+        "frequency": "once",
+        "url": "https://www.cityofplattsburgh-ny.gov/department/city-clerk",
+        "appliesTo": ["all"]
+      }
+    ],
+    "sourceUrl": "https://www.cityofplattsburgh-ny.gov/department/city-clerk",
     "checkedOn": "2026-10-16"
   },
   {
     "city": "Port Jervis",
-    "status": "unverified",
-    "note": "The City Clerk's page says the office handles all licensing, but no general business license was confirmed.",
+    "status": "rules",
+    "note": "The Building Department publishes building, occupancy, rental-registration and sign-permit requirements; no general business license was confirmed.",
     "counties": ["Orange"],
-    "items": [],
+    "items": [
+      {
+        "id": "port-jervis.building-permit",
+        "title": "Obtain a Port Jervis building permit when required",
+        "category": "permit",
+        "authority": "City of Port Jervis Building Department",
+        "description": "Port Jervis requires a building permit for covered construction or alteration work and may issue a stop-work order when work begins without one.",
+        "frequency": "once",
+        "url": "https://www.portjervisny.gov/buildingdepartment",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "port-jervis.certificate-of-occupancy",
+        "title": "Obtain a Port Jervis certificate of occupancy",
+        "category": "permit",
+        "authority": "City of Port Jervis Building Department",
+        "description": "Port Jervis performs final inspections and issues formal certificates of occupancy for new or renovated buildings before they may be occupied.",
+        "frequency": "once",
+        "url": "https://www.portjervisny.gov/buildingdepartment",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "port-jervis.rental-registration",
+        "title": "Register a Port Jervis rental property when applicable",
+        "category": "registration",
+        "authority": "City of Port Jervis Building Department",
+        "description": "Port Jervis publishes owner-registration forms for buildings with three or more dwellings and for single-family or two-family dwellings.",
+        "frequency": "once",
+        "url": "https://www.portjervisny.gov/buildingdepartment",
+        "appliesTo": ["all"]
+      }
+    ],
+    "sourceUrl": "https://www.portjervisny.gov/buildingdepartment",
     "checkedOn": "2026-10-16"
   },
   {
     "city": "Poughkeepsie",
-    "status": "unverified",
-    "note": "No City of Poughkeepsie clerk page on a general business license was found.",
+    "status": "rules",
+    "note": "No City of Poughkeepsie clerk page on a general business license was found; the Building Department publishes building-permit and occupancy requirements.",
     "counties": ["Dutchess"],
-    "items": [],
+    "items": [
+      {
+        "id": "poughkeepsie.building-permit",
+        "title": "Obtain a Poughkeepsie building permit when required",
+        "category": "permit",
+        "authority": "City of Poughkeepsie Building Department",
+        "description": "Poughkeepsie requires a building permit for covered construction and the application identifies licensed electrical, heating, plumbing and alarm contractors where applicable.",
+        "frequency": "once",
+        "url": "https://www.cityofpoughkeepsie.com/DocumentCenter/View/3198/Building-permit-PDF",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "poughkeepsie.certificate-of-occupancy",
+        "title": "Obtain a Poughkeepsie certificate of occupancy",
+        "category": "permit",
+        "authority": "City of Poughkeepsie Building Department",
+        "description": "Poughkeepsie requires a certificate of occupancy before a permitted structure may be occupied and lists separate residential and commercial fees.",
+        "frequency": "once",
+        "url": "https://www.cityofpoughkeepsie.com/DocumentCenter/View/140/Application-for-Certificate-of-Occupancy-Form-PDF",
+        "appliesTo": ["all"]
+      }
+    ],
+    "sourceUrl": "https://www.cityofpoughkeepsie.com/DocumentCenter/View/3198/Building-permit-PDF",
     "checkedOn": "2026-10-16"
   },
   {
     "city": "Rensselaer",
-    "status": "unverified",
-    "note": "New businesses are reviewed for zoning by the Building and Planning Department before opening, but no general business license was confirmed.",
+    "status": "rules",
+    "note": "New businesses are reviewed for zoning by the Building and Planning Department before opening; the city publishes building-permit, occupancy and residential-registry requirements, but no general business license was confirmed.",
     "counties": ["Rensselaer"],
-    "items": [],
+    "items": [
+      {
+        "id": "rensselaer.building-permit",
+        "title": "Obtain a Rensselaer building permit when required",
+        "category": "permit",
+        "authority": "City of Rensselaer Building & Zoning Department",
+        "description": "Rensselaer requires permit approval before covered structural, roofing, siding, repair, alteration, demolition, addition, sign or occupancy-change work begins.",
+        "frequency": "once",
+        "url": "https://rensselaerny.gov/application/files/6717/0923/8691/Application_for_Building_Permit.pdf",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "rensselaer.certificate-of-occupancy",
+        "title": "Obtain a Rensselaer certificate of occupancy before opening",
+        "category": "permit",
+        "authority": "City of Rensselaer Building & Zoning Department",
+        "description": "Rensselaer requires a final inspection and certificate of occupancy before a new business may open, whether or not a building permit was issued.",
+        "frequency": "once",
+        "url": "https://rensselaerny.gov/application/files/5215/6356/7274/Permit_Procedures_for_New_Business.pdf",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "rensselaer.rental-dwelling-registration",
+        "title": "Register a Rensselaer rental dwelling when applicable",
+        "category": "registration",
+        "authority": "City of Rensselaer Building Department",
+        "description": "Rensselaer lists a rental dwelling registry and registration form among Building Department requirements.",
+        "frequency": "once",
+        "url": "https://rensselaerny.gov/City-Departments/planning-building-and-zoning/building-department",
+        "appliesTo": ["all"]
+      }
+    ],
+    "sourceUrl": "https://rensselaerny.gov/City-Departments/planning-building-and-zoning/building-department",
     "checkedOn": "2026-10-16"
   },
   {
@@ -537,7 +1255,7 @@
         "appliesTo": ["all"],
         "feeDetail": {
           "basis": "varies",
-          "min": 330.0
+          "min": 330
         }
       },
       {
@@ -562,7 +1280,7 @@
   {
     "city": "Rome",
     "status": "none",
-    "sourceUrl": "https://romenewyork.com/city-clerk/",
+    "sourceUrl": "https://romeny.gov/city-clerk/",
     "note": "The City Clerk issues licenses by type (taxi, pawnbroker, peddler, scrap, amusement device, going-out-of-business) and no general business license was found; building permits come from Code Enforcement.",
     "counties": ["Oneida"],
     "items": [],
@@ -570,10 +1288,32 @@
   },
   {
     "city": "Rye",
-    "status": "unverified",
-    "note": "The city lists City Clerk permits, but no general business license was confirmed.",
+    "status": "rules",
+    "note": "Rye publishes building-permit and commercial certificate-of-occupancy requirements and fees; no general business license was confirmed.",
     "counties": ["Westchester"],
-    "items": [],
+    "items": [
+      {
+        "id": "rye.building-permit",
+        "title": "Obtain a Rye building permit when required",
+        "category": "permit",
+        "authority": "City of Rye Building Department",
+        "description": "Rye publishes building permits for residential and commercial work and separate permits for covered mechanical, plumbing, electrical, sign, fence and generator work.",
+        "frequency": "once",
+        "url": "https://www.ryeny.gov/home/showpublisheddocument/11609/638766788350470000",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "rye.certificate-of-occupancy",
+        "title": "Obtain a Rye commercial certificate of occupancy",
+        "category": "permit",
+        "authority": "City of Rye Building Department",
+        "description": "Rye publishes separate residential and commercial certificate-of-occupancy fees and a change-of-commercial-occupancy fee.",
+        "frequency": "once",
+        "url": "https://www.ryeny.gov/home/showpublisheddocument/11609/638766788350470000",
+        "appliesTo": ["all"]
+      }
+    ],
+    "sourceUrl": "https://www.ryeny.gov/home/showpublisheddocument/11609/638766788350470000",
     "checkedOn": "2026-10-16"
   },
   {
@@ -587,10 +1327,42 @@
   },
   {
     "city": "Saratoga Springs",
-    "status": "unverified",
-    "note": "No official City of Saratoga Springs page on a general business license was found.",
+    "status": "rules",
+    "note": "Saratoga Springs publishes building-permit, occupancy and master-plumber certification requirements; no general business license was confirmed.",
     "counties": ["Saratoga"],
-    "items": [],
+    "items": [
+      {
+        "id": "saratoga-springs.building-permit",
+        "title": "Obtain a Saratoga Springs building permit when required",
+        "category": "permit",
+        "authority": "City of Saratoga Springs Building Department",
+        "description": "Saratoga Springs publishes building-permit applications and a permit-fee schedule for covered construction and alterations.",
+        "frequency": "once",
+        "url": "https://www.saratogaspringsny.gov/2654/Building-Planning-Zoning",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "saratoga-springs.certificate-of-occupancy",
+        "title": "Obtain a Saratoga Springs certificate of occupancy",
+        "category": "permit",
+        "authority": "City of Saratoga Springs Building Department",
+        "description": "Saratoga Springs publishes temporary and final certificate-of-occupancy fees and requires occupancy approvals for covered projects.",
+        "frequency": "once",
+        "url": "https://www.saratogaspringsny.gov/Archive/ViewFile/Item/410",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "saratoga-springs.master-plumber-certification",
+        "title": "Renew Saratoga Springs master plumber certification when applicable",
+        "category": "license",
+        "authority": "City of Saratoga Springs Building Department",
+        "description": "Saratoga Springs lists master plumber certification with annual expiration on December 31 and annual renewal by January 15.",
+        "frequency": "annual",
+        "url": "https://www.saratogaspringsny.gov/Archive/ViewFile/Item/410",
+        "appliesTo": ["all"]
+      }
+    ],
+    "sourceUrl": "https://www.saratogaspringsny.gov/2654/Building-Planning-Zoning",
     "checkedOn": "2026-10-16"
   },
   {
@@ -613,14 +1385,47 @@
         }
       }
     ],
+    "sourceUrl": "https://ecode360.com/8688661",
     "checkedOn": "2026-10-16"
   },
   {
     "city": "Sherrill",
-    "status": "unverified",
-    "note": "The Comptroller/City Clerk issues licenses including dog and marriage, but no general business license was confirmed.",
+    "status": "rules",
+    "note": "Sherrill zoning regulations require an annual business license and building/occupancy approvals; no broader general license beyond that requirement was identified.",
     "counties": ["Oneida"],
-    "items": [],
+    "items": [
+      {
+        "id": "sherrill.business-license",
+        "title": "Renew a Sherrill business license",
+        "category": "license",
+        "authority": "City of Sherrill City Clerk",
+        "description": "Sherrill requires every revenue-generating business within city limits to obtain a business license before opening or operating and renew or update it annually.",
+        "frequency": "annual",
+        "url": "https://www.sherrillny.gov/government/city-hall/",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "sherrill.building-permit",
+        "title": "Obtain a Sherrill building permit when required",
+        "category": "permit",
+        "authority": "City of Sherrill Code Enforcement",
+        "description": "Sherrill requires a building permit before covered construction and provides an application through the City Clerk.",
+        "frequency": "once",
+        "url": "https://www.sherrillny.gov/government/city-hall/",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "sherrill.certificate-of-occupancy",
+        "title": "Obtain a Sherrill certificate of occupancy",
+        "category": "permit",
+        "authority": "City of Sherrill Code Enforcement",
+        "description": "Sherrill prohibits occupancy or use of a building until the Code Enforcement Officer grants a certificate of occupancy.",
+        "frequency": "once",
+        "url": "https://www.sherrillny.gov/government/city-hall/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "sourceUrl": "https://www.sherrillny.gov/government/city-hall/",
     "checkedOn": "2026-10-16"
   },
   {
@@ -644,14 +1449,37 @@
         }
       }
     ],
+    "sourceUrl": "https://www.syr.gov/Departments/Central-Permit-Office/Self-Services/Certificate-of-Use-License",
     "checkedOn": "2026-10-18"
   },
   {
     "city": "Tonawanda",
-    "status": "unverified",
-    "note": "No official City of Tonawanda page on a general business license was found.",
+    "status": "rules",
+    "note": "The City of Tonawanda code requires zoning permits, building permits and certificates of occupancy for covered work and use changes; no general business license was confirmed.",
     "counties": ["Erie"],
-    "items": [],
+    "items": [
+      {
+        "id": "tonawanda.building-permit",
+        "title": "Obtain a Tonawanda building permit when required",
+        "category": "permit",
+        "authority": "City of Tonawanda Code Enforcement",
+        "description": "Tonawanda requires zoning and building permits before covered erection, enlargement, alteration, improvement or use changes begin.",
+        "frequency": "once",
+        "url": "https://cms4files1.revize.com/tonawandany/building/BuildingPermit.pdf",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "tonawanda.certificate-of-occupancy",
+        "title": "Obtain a Tonawanda certificate of occupancy",
+        "category": "permit",
+        "authority": "City of Tonawanda Code Enforcement",
+        "description": "Tonawanda requires a certificate of occupancy where applicable before a building or lot may be used or occupied.",
+        "frequency": "once",
+        "url": "https://cms4files1.revize.com/tonawandany/building/BuildingPermit.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "sourceUrl": "https://cms4files1.revize.com/tonawandany/building/BuildingPermit.pdf",
     "checkedOn": "2026-10-16"
   },
   {
@@ -686,10 +1514,42 @@
   },
   {
     "city": "Watervliet",
-    "status": "unverified",
-    "note": "The City Clerk issues vendor and outdoor-cafe permits and new businesses need a zoning permit, but no general business license was confirmed.",
+    "status": "rules",
+    "note": "Watervliet publishes building, zoning, rental-registry and occupancy requirements; no general business license was confirmed.",
     "counties": ["Albany"],
-    "items": [],
+    "items": [
+      {
+        "id": "watervliet.building-permit",
+        "title": "Obtain a Watervliet building or zoning permit when required",
+        "category": "permit",
+        "authority": "City of Watervliet Code Enforcement",
+        "description": "Watervliet requires permits for covered construction and zoning work before construction begins and conducts inspections through completion.",
+        "frequency": "once",
+        "url": "https://watervlietny.gov/building-code-enforcement/",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "watervliet.certificate-of-occupancy",
+        "title": "Obtain a Watervliet certificate of occupancy or compliance",
+        "category": "permit",
+        "authority": "City of Watervliet Code Enforcement",
+        "description": "Watervliet issues a certificate of occupancy or compliance after final inspection and requires it for permitted work and occupancy changes.",
+        "frequency": "once",
+        "url": "https://ecode360.com/43194174",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "watervliet.rental-dwelling-registration",
+        "title": "Register a Watervliet rental dwelling when applicable",
+        "category": "registration",
+        "authority": "City of Watervliet Code Enforcement",
+        "description": "Watervliet lists a rental dwelling registry and conducts residential occupancy and unit-clarification inspections.",
+        "frequency": "once",
+        "url": "https://watervlietny.gov/permits-forms/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "sourceUrl": "https://watervlietny.gov/permits-forms/",
     "checkedOn": "2026-10-16"
   },
   {
@@ -706,10 +1566,99 @@
   },
   {
     "city": "Yonkers",
-    "status": "unverified",
-    "note": "The Consumer Protection Bureau issues activity-specific licenses; no general license was confirmed.",
+    "status": "rules",
+    "note": "Yonkers publishes building-permit, occupancy and home-improvement-contractor licensing requirements; no general business license was confirmed.",
     "counties": ["Westchester"],
-    "items": [],
+    "items": [
+      {
+        "id": "yonkers.building-permit",
+        "title": "Obtain a Yonkers building permit when required",
+        "category": "permit",
+        "authority": "City of Yonkers Department of Housing and Buildings",
+        "description": "Yonkers reviews and approves building permit applications and inspects construction for code compliance.",
+        "frequency": "once",
+        "url": "https://www.yonkersny.gov/217/Housing-Buildings",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "yonkers.certificate-of-occupancy",
+        "title": "Obtain a Yonkers certificate of occupancy or completion",
+        "category": "permit",
+        "authority": "City of Yonkers Department of Housing and Buildings",
+        "description": "Yonkers prohibits use or occupancy of covered buildings until the Department issues a certificate of occupancy or completion after final inspection.",
+        "frequency": "once",
+        "url": "https://ecode360.com/15087266",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "yonkers.home-improvement-contractor-license",
+        "title": "Maintain a Yonkers home-improvement contractor license when applicable",
+        "category": "license",
+        "authority": "City of Yonkers Consumer Protection Bureau",
+        "description": "Yonkers requires a Home Improvement Contractor's License before obtaining a permit to renovate an existing one- to three-family dwelling.",
+        "frequency": "once",
+        "url": "https://www.yonkersny.gov/217/Housing-Buildings",
+        "appliesTo": ["all"]
+      }
+    ],
+    "sourceUrl": "https://www.yonkersny.gov/217/Housing-Buildings",
     "checkedOn": "2026-10-13"
+  },
+  {
+    "city": "Hempstead",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "hempstead.local-licenses",
+        "title": "Review applicable local licenses and permits in Hempstead",
+        "category": "license",
+        "authority": "Hempstead local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://dos.ny.gov/certificate-assumed-name",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://dos.ny.gov/certificate-assumed-name"
+  },
+  {
+    "city": "Kiryas Joel",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "kiryas-joel.local-licenses",
+        "title": "Review applicable local licenses and permits in Kiryas Joel",
+        "category": "license",
+        "authority": "Kiryas Joel local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://dos.ny.gov/certificate-assumed-name",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://dos.ny.gov/certificate-assumed-name"
+  },
+  {
+    "city": "Freeport",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "freeport.local-licenses",
+        "title": "Review applicable local licenses and permits in Freeport",
+        "category": "license",
+        "authority": "Freeport local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://dos.ny.gov/certificate-assumed-name",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://dos.ny.gov/certificate-assumed-name"
   }
 ]

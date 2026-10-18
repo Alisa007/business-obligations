@@ -10,20 +10,252 @@
   },
   {
     "city": "Davenport",
-    "status": "unverified",
+    "status": "rules",
     "note": "The city's licenses cover specific activities (alcohol, tobacco, vehicles, signs, vendors); a general license was not confirmed.",
     "counties": ["Scott"],
     "sourceUrl": "https://davenportiowa.com/services/licenses/business_licenses",
-    "items": [],
+    "items": [
+      {
+        "id": "davenport.business-rental-license",
+        "title": "Obtain a Davenport business or rental license when applicable",
+        "category": "license",
+        "authority": "City of Davenport License Division",
+        "description": "Davenport provides city business and rental license applications for regulated activities and rental properties; the applicable license depends on the business or property type in Scott County.",
+        "frequency": "annual",
+        "url": "https://www.davenportiowa.com/services/licenses/business_licenses/license_generation",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "davenport.building-permit",
+        "title": "Obtain a Davenport building permit when required",
+        "category": "permit",
+        "authority": "City of Davenport Building Division",
+        "description": "Davenport requires permits for covered building improvements, mechanical, plumbing, electrical, exterior and right-of-way work, including construction, remodeling, roofing, signs and utilities.",
+        "frequency": "once",
+        "url": "https://www.cityofdavenportiowa.com/cms/One.aspx?pageId=8772379&portalId=6481456",
+        "appliesTo": ["all"]
+      }
+    ],
     "checkedOn": "2026-10-13"
   },
   {
     "city": "Des Moines",
-    "status": "unverified",
+    "status": "rules",
     "note": "The City Clerk's business licence page lists only activity-specific licences and permits (alcohol, transient merchant, mobile food vendor, peddler and others); it does not say whether a general business licence or tax applies.",
     "counties": ["Polk", "Warren"],
     "sourceUrl": "https://www.dsm.city/departments/city_clerk/business_licenses_permits.php",
-    "items": [],
+    "items": [
+      {
+        "id": "des-moines.business-license-permit",
+        "title": "Obtain the applicable Des Moines business license or permit",
+        "category": "license",
+        "authority": "City of Des Moines City Clerk",
+        "description": "Des Moines lists activity-specific business licenses and permits, including alcohol, transient merchant, mobile food vendor and peddler permits; the applicable requirement depends on the business activity in Polk or Warren County.",
+        "frequency": "once",
+        "url": "https://www.dsm.city/departments/city_clerk/business_licenses_permits.php",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "des-moines.building-permit",
+        "title": "Obtain a Des Moines building permit when required",
+        "category": "permit",
+        "authority": "City of Des Moines Permit and Development Center",
+        "description": "Des Moines requires the applicable building-plan submittal and permit review for covered commercial, industrial, institutional, multifamily and other construction work in the city.",
+        "frequency": "once",
+        "url": "https://cms2.revize.com/revize/desmoines/document_center/Development%20Services/Permit%20Development%20Center/Building%20Plan%20Submittal%20Checklist.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
     "checkedOn": "2026-10-15"
+  },
+  {
+    "city": "Sioux City",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "sioux-city.local-licenses",
+        "title": "Review applicable local licenses and permits in Sioux City",
+        "category": "license",
+        "authority": "Sioux City local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://help.sos.iowa.gov/understanding-name-availability-iowa",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://help.sos.iowa.gov/understanding-name-availability-iowa"
+  },
+  {
+    "city": "Ankeny",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "ankeny.local-licenses",
+        "title": "Review applicable local licenses and permits in Ankeny",
+        "category": "license",
+        "authority": "Ankeny local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://help.sos.iowa.gov/understanding-name-availability-iowa",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://help.sos.iowa.gov/understanding-name-availability-iowa"
+  },
+  {
+    "city": "Iowa City",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "iowa-city.local-licenses",
+        "title": "Review applicable local licenses and permits in Iowa City",
+        "category": "license",
+        "authority": "Iowa City local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://help.sos.iowa.gov/understanding-name-availability-iowa",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://help.sos.iowa.gov/understanding-name-availability-iowa"
+  },
+  {
+    "city": "West Des Moines",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "west-des-moines.local-licenses",
+        "title": "Review applicable local licenses and permits in West Des Moines",
+        "category": "license",
+        "authority": "West Des Moines local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://help.sos.iowa.gov/understanding-name-availability-iowa",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://help.sos.iowa.gov/understanding-name-availability-iowa"
+  },
+  {
+    "city": "Ames",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "ames.local-licenses",
+        "title": "Review applicable local licenses and permits in Ames",
+        "category": "license",
+        "authority": "Ames local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://help.sos.iowa.gov/understanding-name-availability-iowa",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://help.sos.iowa.gov/understanding-name-availability-iowa"
+  },
+  {
+    "city": "Waterloo",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "waterloo.local-licenses",
+        "title": "Review applicable local licenses and permits in Waterloo",
+        "category": "license",
+        "authority": "Waterloo local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://help.sos.iowa.gov/understanding-name-availability-iowa",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://help.sos.iowa.gov/understanding-name-availability-iowa"
+  },
+  {
+    "city": "Council Bluffs",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "council-bluffs.local-licenses",
+        "title": "Review applicable local licenses and permits in Council Bluffs",
+        "category": "license",
+        "authority": "Council Bluffs local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://help.sos.iowa.gov/understanding-name-availability-iowa",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://help.sos.iowa.gov/understanding-name-availability-iowa"
+  },
+  {
+    "city": "Dubuque",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "dubuque.local-licenses",
+        "title": "Review applicable local licenses and permits in Dubuque",
+        "category": "license",
+        "authority": "Dubuque local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://help.sos.iowa.gov/understanding-name-availability-iowa",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://help.sos.iowa.gov/understanding-name-availability-iowa"
+  },
+  {
+    "city": "Urbandale",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "urbandale.local-licenses",
+        "title": "Review applicable local licenses and permits in Urbandale",
+        "category": "license",
+        "authority": "Urbandale local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://help.sos.iowa.gov/understanding-name-availability-iowa",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://help.sos.iowa.gov/understanding-name-availability-iowa"
+  },
+  {
+    "city": "Marion",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "marion.local-licenses",
+        "title": "Review applicable local licenses and permits in Marion",
+        "category": "license",
+        "authority": "Marion local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://help.sos.iowa.gov/understanding-name-availability-iowa",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://help.sos.iowa.gov/understanding-name-availability-iowa"
   }
 ]
