@@ -9,11 +9,16 @@
         "title": "Renew Birmingham business license",
         "category": "license",
         "authority": "City of Birmingham Finance Department, Tax and License Administration Division",
-        "description": "Businesses in Birmingham need a city business license. The license year runs January 1 to December 31 and licenses expire on December 31.",
-        "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=31",
-        "deadlineNote": "licenses expire",
-        "url": "https://birminghamal.gov/2024/08/09/the-city-of-birmingham-encourages-businesses-to-enroll-in-new-business-tax-and-license-system",
-        "appliesTo": ["all"]
+        "description": "Businesses in Birmingham need a city business license. The license year runs January 1 to December 31, every license expires on December 31, and a general business license is due for renewal on January 1 and becomes delinquent after February 15, with penalties and interest after that. Many fees are a percentage of gross receipts: a new business's first-year fee is estimated from its first 90 days on a sworn affidavit, and the second year's fee is based on annualized gross receipts.",
+        "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=15",
+        "deadlineNote": "delinquent after",
+        "url": "https://www.birminghamal.gov/government/city-departments/finance/tax-license-division/information-regarding-business-licenses",
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "based on gross receipts for many businesses"
+        },
+        "checkedOn": "2026-10-18"
       }
     ]
   },

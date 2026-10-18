@@ -143,7 +143,7 @@ export const federalRules: Rule[] = [
       authority: "IRS",
       description:
         p.taxTreatment === "c_corp"
-          ? "Quarterly estimated payments (Form 1120-W worksheet, deposited via EFTPS)."
+          ? "Quarterly estimated payments by corporations, deposited through EFTPS."
           : "Quarterly estimated payments by owners on business income (Form 1040-ES), including self-employment tax.",
       ...estimatedTaxSchedule(p),
       reason: `Expected net income of ${p.annualNetIncome} is expected to generate tax due during the year`,
@@ -334,9 +334,9 @@ export const federalRules: Rule[] = [
       jurisdiction: "federal",
       authority: "U.S. Equal Employment Opportunity Commission",
       description:
-        "Private employers with 100 or more employees file annually through the EEOC's online system; federal contractors with 50 or more employees and certain contracts have also filed. The EEOC sets each year's window (the 2024 report was due June 24, 2025, with no extensions), so check its data collections page.",
+        "Private employers with 100 or more employees file annually through the EEOC's online system; federal contractors with 50 or more employees and certain contracts have also filed. The EEOC sets each year's filing window, so check its data collections page.",
       rrule: "FREQ=YEARLY",
-      deadline: "Set each year by the EEOC (late spring or early summer)",
+      deadline: "Set each year by the EEOC",
       reason: `${p.employeeCount} employees, at or above the 100 that require an EEO-1 report`,
       url: "https://www.eeoc.gov/data/eeo-data-collections",
     }),

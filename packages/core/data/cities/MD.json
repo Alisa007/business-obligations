@@ -9,10 +9,17 @@
         "title": "Obtain and renew Maryland trader's license from the Baltimore City Clerk of the Circuit Court",
         "category": "license",
         "authority": "Clerk of the Circuit Court for Baltimore City",
-        "description": "Retail and wholesale sellers need a trader's license based on inventory value; the license year runs May 1 – April 30 with renewals due by May 31.",
-        "rrule": "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=31",
-        "url": "https://finance.baltimorecity.gov/bureaus/collections",
-        "appliesTo": ["sells_goods"]
+        "description": "A retail or wholesale seller in a fixed location needs a trader's license from the Clerk of the Circuit Court. The license year runs May 1 to April 30, the fee rises with the average commercial inventory (from $15, up to $2,125 in Baltimore City), and renewal requires proof that state taxes are paid or covered by a payment arrangement.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=30",
+        "url": "https://www.marylandcomptroller.gov/businesses/new-business/license-faq.html",
+        "appliesTo": ["sells_goods"],
+        "deadlineNote": "license year ends",
+        "feeDetail": {
+          "basis": "varies",
+          "min": 15,
+          "note": "by average inventory; up to $2,125 in Baltimore City"
+        },
+        "checkedOn": "2026-10-18"
       }
     ]
   },

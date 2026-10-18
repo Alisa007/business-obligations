@@ -7,9 +7,9 @@ const nextDue = (profile: Parameters<typeof evaluate>[0], idPrefix: string) =>
 describe("items whose deadline used to be text only", () => {
   const llc = { entityType: "llc", formationDate: "2024-03-01" } as const;
 
-  it("Birmingham AL licenses expire December 31", () => {
+  it("Birmingham AL licenses are delinquent after February 15", () => {
     const p = { ...llc, zip: "35203", city: "Birmingham", county: "Jefferson" };
-    expect(nextDue(p, "local.seeded-city:AL")).toBe("2026-12-31");
+    expect(nextDue(p, "local.seeded-city:AL")).toBe("2027-02-15");
   });
 
   it("Bernalillo County NM personal property returns are due the last day of February", () => {

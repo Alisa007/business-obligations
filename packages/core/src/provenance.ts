@@ -1,4 +1,5 @@
 import uiSource from "../data/ui-source.json";
+import verifiedItems from "../data/verified-items.json";
 import { stateInfo } from "./data";
 import { addDays } from "./iso";
 import { reportKey } from "./rules/state";
@@ -34,9 +35,18 @@ export function describeProvenance(p: Provenance, asOf: string, compiledOn: stri
  * Derives where an item's data comes from. Fields the project checked against official pages (entity
  * reports, workers' comp thresholds, DBA filing level, cannabis regulators) are `checked`, or
  * `unconfirmed` when the state's verification block lists the field. Everything else is `compiled`.
+ * An item listed in `data/verified-items.json` (by its id) was read against its official pages, and is `checked`.
  */
 export function provenanceFor(item: ComplianceItem, p: ResolvedProfile): Provenance {
   const url = item.url ? [item.url] : [];
+  const verified = (verifiedItems as Record<string, { checkedOn: string; sources: string[] }>)[item.id];
+  if (verified) {
+    return {
+      confidence: "checked",
+      checkedOn: verified.checkedOn,
+      sources: [...new Set([...verified.sources, ...url])],
+    };
+  }
   if (item.id.startsWith("state.employer") && item.title.includes("unemployment insurance contributions")) {
     // Wage base and rates come from the U.S. DOL's table of state UI laws (see data/ui-source.json).
     return { confidence: "checked", checkedOn: uiSource.checkedOn, sources: [uiSource.source, ...url] };
