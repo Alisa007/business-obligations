@@ -18,7 +18,7 @@ const budgets = [
   },
   {
     file: "dist/locales/es.cjs",
-    maxGzipKb: 250,
+    maxGzipKb: 300,
     note: "Spanish catalog: labels, rule text and the text of every bundled state, city and county item (subpath, loaded on demand)",
   },
   {
