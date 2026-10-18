@@ -5,10 +5,16 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ## [Unreleased]
 
+## [0.8.0] - 2026-10-18
+
 ### Fixed
 
 - `fullTimeEmployeeCount` is no longer compared with a head count that is not given; the full-time employees are then
   the employees that are known
+
+### Added
+
+- **ui:** ProfileForm, Select and Collapse; one source for the profile
 
 ## [0.7.0] - 2026-10-18
 
