@@ -76,6 +76,7 @@ const INPUTS = [
   "employeeCount",
   "sellsTaxableGoods",
   "entityType",
+  "sCorpElection",
   "usesTradeName",
   "activities",
   "annualPayroll",
