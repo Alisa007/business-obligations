@@ -154,7 +154,14 @@ export function Select({
           </svg>
         </TamaguiSelect.Trigger>
         <TamaguiSelect.Content>
-          <TamaguiSelect.Viewport borderWidth={1} borderColor="border-color" backgroundColor="background">
+          {/* As wide as the control, but never narrower than its longest option needs on a narrow control (half a row), and never wider than the screen. */}
+          <TamaguiSelect.Viewport
+            borderWidth={1}
+            borderColor="border-color"
+            backgroundColor="background"
+            minWidth={240}
+            maxWidth="calc(100vw - 24px)"
+          >
             <TamaguiSelect.Group>
               {options.map((option) => (
                 <TamaguiSelect.Item key={option.value} value={option.value}>

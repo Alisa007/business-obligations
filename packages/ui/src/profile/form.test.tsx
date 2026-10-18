@@ -191,22 +191,22 @@ describe("ProfileForm", () => {
       "Industry (NAICS code)",
       "Size",
       "Employees",
-      "Owners / members",
-      "Full-time employees (35+ hours)",
+      "Owners",
+      "Full-time staff",
       "Money (USD)",
       "Annual payroll",
       "Annual revenue",
-      "Expected annual net income",
-      "Largest payment to one contractor",
-      "Last year&#x27;s payroll tax liability",
+      "Net income",
+      "Top contractor pay",
+      "Last year&#x27;s payroll tax",
       "Tax",
-      "Fiscal year ends",
+      "Fiscal year end",
       "LLC taxed as",
       "Details",
       "Sells taxable goods",
       "Not formed yet",
       "Dates",
-      "Start / today",
+      "Start date",
       "Target opening",
     ])
       expect(html, text).toContain(text);
@@ -235,13 +235,13 @@ describe("ProfileForm", () => {
       "Industry (NAICS code)",
       "Annual payroll",
       "Annual revenue",
-      "Expected annual net income",
-      "Largest payment to one contractor",
+      "Net income",
+      "Top contractor pay",
       "Money (USD)",
     ])
       expect(html, gone).not.toContain(gone);
     // what was not passed is still asked
-    for (const kept of ["Employees", "Owners / members", "Fiscal year ends", "Sells taxable goods", "Dates"])
+    for (const kept of ["Employees", "Owners", "Fiscal year end", "Sells taxable goods", "Dates"])
       expect(html, kept).toContain(kept);
   });
 
@@ -302,12 +302,17 @@ describe("ProfileForm", () => {
     expect(render(<ProfileForm values={{ zip: "85234" }} />)).not.toContain("ZIP code");
   });
 
-  it("makes the business type and the industry half a row each when the ZIP code is not asked", () => {
-    const halves = (html: string) => html.match(/class="bo-half"/g)?.length ?? 0;
-    const withZip = render(<ProfileForm />);
-    expect(withZip).toContain("ZIP code");
-    // the type and the industry are the two extra half cells
-    expect(halves(render(<ProfileForm values={{ state: "AZ" }} />))).toBe(halves(withZip) + 2);
+  it("lays each group out as equal columns that fill the row, with no gap at any width", () => {
+    const html = render(<ProfileForm />);
+    // one fluid group each for the business, the size, the amounts, the tax and the dates
+    expect(html.match(/class="bo-fluid[ "]/g)?.length).toBe(5);
+    // the amounts line their inputs up when a label wraps
+    expect(html).toContain('class="bo-fluid bo-end"');
+    // hints sit in a tooltip next to the short labels
+    expect(html).toContain("More about Top contractor pay");
+    // the ZIP code is one of the business group's equal columns, and it goes away without leaving a gap
+    expect(html).toContain("ZIP code");
+    expect(render(<ProfileForm values={{ state: "AZ" }} />)).not.toContain("ZIP code");
   });
 
   it("useProfilePlace gives the place that was passed, and looks the ZIP up for the rest", () => {

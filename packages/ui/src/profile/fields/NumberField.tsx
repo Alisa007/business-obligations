@@ -39,6 +39,7 @@ export function NumberControl({
   placeholder,
   kind,
   prefix,
+  hint,
 }: {
   id: string;
   field: NumberField;
@@ -47,6 +48,8 @@ export function NumberControl({
   kind: NumberKind;
   /** A short mark before the number, such as "$", so that the unit is not in the label. */
   prefix?: string;
+  /** What the field is for, in a tooltip next to the label. */
+  hint?: string;
 }) {
   const { m } = useI18n();
   const [choices, set] = useProfileChoices();
@@ -70,7 +73,7 @@ export function NumberControl({
     firstError(schema, draft) ?? (exceeds ? "fullTimeExceeds" : undefined);
   const errorId = `${id}-error`;
   return (
-    <Labeled id={id} label={label}>
+    <Labeled id={id} label={label} hint={hint}>
       <div style={{ position: "relative", width: "100%" }}>
         <Input
           width="100%"
