@@ -9,6 +9,7 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ### Added
 
+- **core:** Delaware deadly weapons dealer, armored car, bail enforcement, combative sports, harness racing and DelDOT permits, with Spanish text
 - **core:** Delaware food, milk, beverage, meat, radiation, boiler, bedding, chemical inventory and camp permits, with Spanish text
 - **core:** Delaware lead, stormwater, air, waste, fishing, shellfish and wastewater licenses and permits, with Spanish text
 - **core:** Delaware auto body, child care, alarm and security agencies, tobacco, body art, pawnbroker, pool and other state licenses, with Spanish text
