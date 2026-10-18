@@ -9,6 +9,7 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ### Added
 
+- **core:** Delaware nutrient management, timber, weights and measures, tank, wildlife, aquaculture, water operator and nursing assistant items, with Spanish text
 - **core:** Rehoboth Beach (Delaware) business license, with Spanish text
 - **core:** Harrington (Delaware) business license, with Spanish text
 - **core:** Millsboro (Delaware) business license, with Spanish text
