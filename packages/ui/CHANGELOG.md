@@ -4,11 +4,17 @@ All notable changes to `business-obligations-ui` are documented here.
 
 ## [Unreleased]
 
+## [0.5.0] - 2026-10-18
+
 ### Changed
 
 - `ObligationsList` lists the city first, then the county, the state and the federal rules (it was federal first), and
   the conditionally applicable items now sit inside the group of their own level, after the items that apply, instead
   of in a section at the end. Each group's heading shows how many of them there are
+
+### Added
+
+- **ui:** city first, conditional items inside their level's group
 
 ## [0.4.1] - 2026-10-18
 
