@@ -112,11 +112,6 @@ function ProfileFormBody({ today, onFieldUsed }: Pick<ProfileFormProps, "today" 
   return (
     <div className="bo-grid">
       {(shows("zip", "entityType", "naics") || askProfession) && <SectionLabel>{f.business}</SectionLabel>}
-      {shows("zip") && (
-        <Cell>
-          <ZipField id={`${prefix}-zip`} />
-        </Cell>
-      )}
       {shows("entityType") && (
         <Cell>
           <TypeField />
@@ -125,6 +120,11 @@ function ProfileFormBody({ today, onFieldUsed }: Pick<ProfileFormProps, "today" 
       {shows("naics") && (
         <Cell>
           <IndustryField />
+        </Cell>
+      )}
+      {shows("zip") && (
+        <Cell>
+          <ZipField id={`${prefix}-zip`} />
         </Cell>
       )}
       {askProfession && (
