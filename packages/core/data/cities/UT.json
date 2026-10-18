@@ -19,11 +19,22 @@
   },
   {
     "city": "Salt Lake City",
-    "status": "unverified",
-    "note": "Only a third-party listing was found (renewal by the end of the registration anniversary month).",
+    "note": "The renewal date, late penalty and current fee amounts were not confirmed from the city's own pages.",
     "counties": ["Salt Lake"],
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "saltlakecity.business-license",
+        "title": "Obtain and renew a Salt Lake City business license",
+        "category": "license",
+        "authority": "Salt Lake City Finance, Business Licensing",
+        "description": "Anyone who does business within the city limits, permanently or temporarily, and every residential rental property must keep a valid, unexpired business license for each location, renewed each year online. Commercial licenses are reviewed for zoning, building and fire safety, and food businesses also need the Salt Lake Valley Health Department. A business run from home needs no license unless it affects the neighborhood.",
+        "frequency": "annual",
+        "deadline": "Before opening, then renew each year",
+        "url": "https://www.slc.gov/Finance/business-licensing/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "West Jordan",
@@ -45,11 +56,22 @@
   },
   {
     "city": "West Valley City",
-    "status": "unverified",
-    "note": "Renewal appears annual on the registration anniversary, per third-party listings; the city's own date was not confirmed.",
+    "note": "The renewal date and the late-renewal penalty were not confirmed from the city's own pages.",
     "counties": ["Salt Lake"],
     "sourceUrl": "https://www.wvc-ut.gov/business",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "westvalleycity.business-license",
+        "title": "Obtain and renew a West Valley City business license",
+        "category": "license",
+        "authority": "West Valley City Business Licensing",
+        "description": "A business with a place of business in the city limits needs a city business license, which can be renewed online. A home-based business needs a home business license unless it grosses less than $2,000 a year, and the owner of a rental dwelling unit must keep a license current too. Fees are in the city's consolidated fee schedule.",
+        "frequency": "annual",
+        "deadline": "Before opening, then renew each year",
+        "url": "https://www.wvc-ut.gov/83/Business-Licensing",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18"
   }
 ]

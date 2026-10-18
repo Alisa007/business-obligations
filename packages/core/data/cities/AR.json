@@ -1,11 +1,22 @@
 [
   {
     "city": "Little Rock",
-    "status": "unverified",
-    "note": "The Treasury page still shows an old renewal date (January 1, 2024); the current date was not confirmed.",
+    "note": "The current fee schedule was not confirmed; the renewal date and penalties come from the city's guide to starting a business.",
     "counties": ["Pulaski"],
     "sourceUrl": "https://www.littlerock.gov/treasury",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "littlerock.business-license",
+        "title": "Obtain and renew a Little Rock business license",
+        "category": "license",
+        "authority": "City of Little Rock Treasury Management Division",
+        "description": "Businesses in Little Rock need a city business license, applied for after zoning approval, with a fee based on the number of employees or the amount of inventory. Licenses renew each year on January 1; an account not paid by February 1 is charged a 10% penalty, another 10% if not paid by March 1, and 30% if not paid by April 1. A business that closes before July 1 may ask in writing for a refund of half the fee.",
+        "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=1",
+        "deadlineNote": "to avoid the penalty; licenses renew January 1",
+        "url": "https://www.littlerock.gov/treasury",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18"
   }
 ]

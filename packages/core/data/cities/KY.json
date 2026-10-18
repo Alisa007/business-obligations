@@ -1,11 +1,33 @@
 [
   {
     "city": "Lexington",
-    "status": "unverified",
-    "note": "Net profit and withholding returns appear in older Lexington-Fayette forms (April 15 for calendar-year filers); current-year pages were not confirmed.",
+    "note": "The due dates of the net profits return and of the employer returns were not stated on the city's pages; they are in its yearly due-dates notice.",
     "counties": ["Fayette"],
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "lexington.net-profits-license-fee-return",
+        "title": "File the Lexington net profits license fee return",
+        "category": "filing",
+        "authority": "Lexington-Fayette Urban County Government Division of Revenue",
+        "description": "Every business entity, including sole proprietors unless the IRS has issued a tax-exempt determination letter, files a net profits license fee return (Form 228) each year and pays the occupational license fee of 2.25% of net profits. The $100 annual minimum is paid with the return, except that individuals and sole proprietors with gross receipts of $4,400 or less owe no minimum for that year and the next but must still file.",
+        "frequency": "annual",
+        "deadline": "On the due date the city publishes each year for Form 228",
+        "url": "https://www.lexingtonky.gov/working/business-licensing-taxes/occupational-license-fee-minimum-license-filing-requirements",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "lexington.employer-license-fee-withholding",
+        "title": "Withhold and remit the Lexington occupational license fee on wages",
+        "category": "payment",
+        "authority": "Lexington-Fayette Urban County Government Division of Revenue",
+        "description": "Employers withhold the 2.25% occupational license fee from employees' compensation and file the Employer's Return of License Fee Withheld each quarter, or each month once the fee withheld in any quarter exceeds $300. An annual reconciliation of the fee withheld is also filed.",
+        "frequency": "quarterly",
+        "deadline": "Quarterly (monthly above $300 withheld in a quarter), plus an annual reconciliation",
+        "url": "https://www.lexingtonky.gov/working/business-licensing-taxes/occupational-license-fee-minimum-license-filing-requirements",
+        "appliesTo": ["employees"]
+      }
+    ],
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "Louisville",
