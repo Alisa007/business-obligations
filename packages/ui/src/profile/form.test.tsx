@@ -303,11 +303,11 @@ describe("ProfileForm", () => {
   });
 
   it("makes the business type and the industry half a row each when the ZIP code is not asked", () => {
+    const halves = (html: string) => html.match(/class="bo-half"/g)?.length ?? 0;
     const withZip = render(<ProfileForm />);
-    expect(withZip).not.toContain('class="bo-half"');
     expect(withZip).toContain("ZIP code");
-    const html = render(<ProfileForm values={{ state: "AZ" }} />);
-    expect(html.match(/class="bo-half"/g)?.length).toBe(2);
+    // the type and the industry are the two extra half cells
+    expect(halves(render(<ProfileForm values={{ state: "AZ" }} />))).toBe(halves(withZip) + 2);
   });
 
   it("useProfilePlace gives the place that was passed, and looks the ZIP up for the rest", () => {

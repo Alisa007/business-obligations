@@ -34,24 +34,41 @@ function SectionLabel({ children }: { children: ReactNode }) {
 }
 
 /**
- * The layout follows the width of the form itself (container queries), not of the window: two columns in a narrow
- * sidebar, four in a panel, six in a wide area. A `wide` field (text, lists, long labels, the business type and the industry) takes two columns, a `short`
- * one (a count or a date) one, or two on the widest layout; headings and the yes/no details take them all. The form is as wide as the element it is put in (the host sets that width). The first group has no heading: the form needs no title to say what it starts with.
+ * The layout follows the width of the form itself (container queries), not of the window, on a twelve-column grid so
+ * that the fields can take fractions of a row that change in small steps as the form grows. A `short` field (a
+ * count, an amount, a date) takes half a row in a narrow sidebar, a quarter from 520px; the amounts fill a row of as many columns of at least 130px as fit; a `half` field (the type
+ * and the industry when the ZIP code is not asked, the fiscal year end and the LLC tax, the dates) is a whole row in
+ * a narrow form and half of it from 420px; a `wide` field (text, lists, long labels) is a whole row, half from 420px
+ * and a third from 900px; headings and the yes/no details always take the whole row. The form is as wide as the
+ * element it is put in (the host sets that width). The first group has no heading: the form needs no title to say
+ * what it starts with.
  */
 const FORM_CSS = `
 /* container-type makes the width independent of the content, so the form takes the width it is given */
 .bo-form{container-type:inline-size;width:100%;min-width:0}
-.bo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:12px;row-gap:14px;align-items:start}
+.bo-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:12px;row-gap:14px;align-items:start}
 .bo-grid>*{min-width:0}
-.bo-wide{grid-column:span 2}
-.bo-half{grid-column:span 2}
+.bo-wide,.bo-half{grid-column:span 12}
+.bo-short{grid-column:span 6}
 .bo-full{grid-column:1/-1}
+/* amounts: as many columns as fit (at least 130px each), so five of them share a line on a wide form */
+.bo-money{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));column-gap:12px;row-gap:14px;align-items:end}
+.bo-money>*{min-width:0}
 .bo-section{display:flex;align-items:center;gap:10px;margin-top:10px}
 .bo-section:first-child{display:none}
 .bo-rule{flex:1;height:1px;background:var(--border-color)}
-@container (min-width:520px){.bo-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
-@container (min-width:800px){.bo-grid{grid-template-columns:repeat(6,minmax(0,1fr))}.bo-short{grid-column:span 2}.bo-half{grid-column:span 3}}
+@container (min-width:420px){.bo-wide,.bo-half{grid-column:span 6}}
+@container (min-width:520px){.bo-short{grid-column:span 3}}
+@container (min-width:900px){.bo-wide{grid-column:span 4}}
 `;
+
+const MONEY_FIELDS = [
+  "annualPayroll",
+  "annualRevenue",
+  "annualNetIncome",
+  "largestContractorPaymentUsd",
+  "priorYearPayrollTaxLiability",
+] as const;
 
 /** One field in the grid; see `FORM_CSS`. */
 function Cell({ size = "wide", children }: { size?: "wide" | "short" | "half"; children: ReactNode }) {
@@ -179,33 +196,38 @@ function ProfileFormBody({ today, onFieldUsed }: Pick<ProfileFormProps, "today" 
         "largestContractorPaymentUsd",
         "priorYearPayrollTaxLiability",
       ) && <SectionLabel>{f.money}</SectionLabel>}
-      {(
-        [
-          ["annualPayroll", f.payroll],
-          ["annualRevenue", f.revenue],
-          ["annualNetIncome", f.netIncome],
-          ["largestContractorPaymentUsd", f.contractor],
-          ["priorYearPayrollTaxLiability", f.priorTax],
-        ] as const
-      ).map(
-        ([field, label]) =>
-          shows(field) && (
-            <Cell key={field} size="short">
-              <NumberControl
-                id={`${prefix}-${field}`}
-                field={field}
-                label={label}
-                placeholder={f.optional}
-                kind="amount"
-                prefix="$"
-              />
-            </Cell>
-          ),
+      {/* The amounts share one fluid row: as many as fit, so all five side by side when the form is wide. */}
+      {MONEY_FIELDS.some((field) => shows(field)) && (
+        <div className="bo-full bo-money">
+          {(
+            [
+              ["annualPayroll", f.payroll],
+              ["annualRevenue", f.revenue],
+              ["annualNetIncome", f.netIncome],
+              ["largestContractorPaymentUsd", f.contractor],
+              ["priorYearPayrollTaxLiability", f.priorTax],
+            ] as const
+          ).map(
+            ([field, label]) =>
+              shows(field) && (
+                <div key={field}>
+                  <NumberControl
+                    id={`${prefix}-${field}`}
+                    field={field}
+                    label={label}
+                    placeholder={f.optional}
+                    kind="amount"
+                    prefix="$"
+                  />
+                </div>
+              ),
+          )}
+        </div>
       )}
 
       {(shows("fiscalYearEndMonth") || askLlcTax) && <SectionLabel>{f.tax}</SectionLabel>}
       {shows("fiscalYearEndMonth") && (
-        <Cell>
+        <Cell size="half">
           <ChoiceField
             id={`${prefix}-fiscalMonth`}
             label={f.fiscalMonth}
@@ -217,7 +239,7 @@ function ProfileFormBody({ today, onFieldUsed }: Pick<ProfileFormProps, "today" 
         </Cell>
       )}
       {askLlcTax && (
-        <Cell>
+        <Cell size="half">
           <ChoiceField
             id={`${prefix}-llcTax`}
             label={f.llcTax}
@@ -240,7 +262,7 @@ function ProfileFormBody({ today, onFieldUsed }: Pick<ProfileFormProps, "today" 
         <SectionLabel>{f.dates}</SectionLabel>
       )}
       {choices.isFormed && shows("formationDate") && (
-        <Cell size="short">
+        <Cell size="half">
           <DateField
             id={`${prefix}-formationDate`}
             label={f.formationDate}
@@ -251,7 +273,7 @@ function ProfileFormBody({ today, onFieldUsed }: Pick<ProfileFormProps, "today" 
         </Cell>
       )}
       {shows("asOf") && (
-        <Cell size="short">
+        <Cell size="half">
           <DateField
             id={`${prefix}-asOf`}
             label={f.startToday}
@@ -261,7 +283,7 @@ function ProfileFormBody({ today, onFieldUsed }: Pick<ProfileFormProps, "today" 
         </Cell>
       )}
       {shows("openingDate") && (
-        <Cell size="short">
+        <Cell size="half">
           <DateField
             id={`${prefix}-openingDate`}
             label={f.targetOpening}
