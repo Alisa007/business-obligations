@@ -40,21 +40,28 @@
         "title": "File Louisville Metro occupational license tax net profits return (OL-3)",
         "category": "filing",
         "authority": "Louisville Metro Revenue Commission",
-        "description": "Entities with business nexus in Louisville/Jefferson County pay the occupational license tax (2.2% resident rate) on net profits; due the 15th day of the 4th month after fiscal year end.",
+        "description": "Businesses engaged in business in Louisville Metro (all of Jefferson County) pay the occupational license tax of 2.2% on net profits and file Form OL-3. The return is due the 15th day of the fourth month after the fiscal year ends (April 15 for calendar-year filers), with an automatic six-month extension on Form OL-3EXT filed by the original due date; tax due is still payable by then. A business whose tax exceeds $5,000 pays quarterly estimates, except sole proprietors and a business in its first year.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
         "deadlineNote": "calendar-year filers",
-        "url": "https://louisvilleky.gov/government/revenue-commission",
-        "appliesTo": ["all"]
+        "url": "https://louisvilleky.gov/sites/default/files/2024-12/ol-3d_instructions_2025.pdf",
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "percent",
+          "rate": 2.2,
+          "note": "of net profits"
+        },
+        "checkedOn": "2026-10-18"
       },
       {
         "id": "louisville.occupational-license-withholding",
         "title": "Register for and withhold Louisville occupational license tax (W-1)",
         "category": "registration",
         "authority": "Louisville Metro Revenue Commission",
-        "description": "Employers register with the Revenue Commission and withhold occupational license tax from employee compensation.",
+        "description": "An employer withholds the occupational license tax (2.2% for Louisville residents, 1.45% for non-resident individuals) from wages earned in Louisville Metro and files Form W-1 by the last day of the month after each calendar quarter. An employer that withheld more than $3,000 in any of the four preceding quarters also deposits monthly, by the 15th of the following month, on Form W-1D.",
         "frequency": "quarterly",
-        "url": "https://louisvilleky.gov/government/revenue-commission",
-        "appliesTo": ["employees"]
+        "url": "https://louisvilleky.gov/sites/default/files/2026-01/W-1D_Form_2025.pdf",
+        "appliesTo": ["employees"],
+        "checkedOn": "2026-10-18"
       }
     ]
   },
