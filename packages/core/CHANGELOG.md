@@ -9,6 +9,10 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ### Added
 
+- **core:** Rehoboth Beach (Delaware) business license, with Spanish text
+- **core:** Harrington (Delaware) business license, with Spanish text
+- **core:** Millsboro (Delaware) business license, with Spanish text
+- **core:** Delmar (Delaware) business license, with Spanish text
 - **core:** Delaware deadly weapons dealer, armored car, bail enforcement, combative sports, harness racing and DelDOT permits, with Spanish text
 - **core:** Delaware food, milk, beverage, meat, radiation, boiler, bedding, chemical inventory and camp permits, with Spanish text
 - **core:** Delaware lead, stormwater, air, waste, fishing, shellfish and wastewater licenses and permits, with Spanish text
