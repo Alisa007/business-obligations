@@ -54,6 +54,8 @@ function ObligationsListBody({ items, conditional = [], asOf, filters, onFilters
   const titleById = new Map(items.map((item) => [item.id, item.title]));
   const count = (jurisdiction: string) =>
     items.filter((item) => itemMatches(item, { ...filters, jurisdiction })).length;
+  const conditionalCount = (jurisdiction: string) =>
+    shownConditional.filter(({ item }) => item.jurisdiction === jurisdiction).length;
   const categoryCount = (category: string) =>
     items.filter((item) => itemMatches(item, { ...filters, category })).length;
   const hasFilters =
@@ -125,7 +127,7 @@ function ObligationsListBody({ items, conditional = [], asOf, filters, onFilters
             key={key}
             size="sm"
             theme={filters.jurisdiction === key ? "accent" : undefined}
-            disabled={count(key) === 0 && key !== "all"}
+            disabled={count(key) + conditionalCount(key) === 0 && key !== "all"}
             onPress={() => onFilters({ ...filters, jurisdiction: key })}
             aria-pressed={filters.jurisdiction === key}
           >
@@ -133,60 +135,60 @@ function ObligationsListBody({ items, conditional = [], asOf, filters, onFilters
           </Button>
         ))}
       </XStack>
+      {shownConditional.length > 0 && (
+        <Text fontSize="sm" color="placeholder-color">
+          {m.conditionalNote}
+        </Text>
+      )}
       {filtered.length === 0 && shownConditional.length === 0 ? (
         <Text color="placeholder-color">{m.noMatch}</Text>
       ) : (
         JURISDICTIONS.map((jurisdiction) => {
-          const group = filtered
-            .filter((item) => item.jurisdiction === jurisdiction)
-            .sort((a, b) => (a.nextDue ?? "9999-12-31").localeCompare(b.nextDue ?? "9999-12-31"));
-          if (!group.length) return null;
+          const byDue = (a: ComplianceItem, b: ComplianceItem) =>
+            (a.nextDue ?? "9999-12-31").localeCompare(b.nextDue ?? "9999-12-31");
+          const group = filtered.filter((item) => item.jurisdiction === jurisdiction).sort(byDue);
+          // Items that may apply stay in the group of the level that requires them, after the ones that do apply.
+          const maybe = shownConditional
+            .filter(({ item }) => item.jurisdiction === jurisdiction)
+            .sort((a, b) => byDue(a.item, b.item));
+          if (!group.length && !maybe.length) return null;
           return (
             <YStack key={jurisdiction}>
-              <XStack gap="2" alignItems="center" paddingTop="3" paddingBottom="1">
+              <XStack gap="2" alignItems="center" paddingTop="3" paddingBottom="1" flexWrap="wrap">
                 <Text render="h2" fontSize="lg" fontWeight="600" margin={0}>
                   {m.jurisdictions[jurisdiction]}
                 </Text>
                 <Chip tone="info">{group.length}</Chip>
+                {maybe.length > 0 && (
+                  <Chip tone="warn" outline>
+                    +{maybe.length} {m.conditionalHeading.toLowerCase()}
+                  </Chip>
+                )}
               </XStack>
               <YStack gap="3">
                 {group.map((item) => (
                   <ObligationCard key={item.id} item={item} asOf={asOf} titleOf={(id) => titleById.get(id)} />
                 ))}
+                {maybe.map(({ item, when }) => (
+                  <YStack key={item.id} opacity={0.8}>
+                    <ObligationCard
+                      item={item}
+                      asOf={asOf}
+                      titleOf={(id) => titleById.get(id)}
+                      note={
+                        <XStack gap="1.5" flexWrap="wrap">
+                          <Chip tone="warn" outline>
+                            {m.appliesIf(when.map((condition) => describeWhen(m, condition)).join("; "))}
+                          </Chip>
+                        </XStack>
+                      }
+                    />
+                  </YStack>
+                ))}
               </YStack>
             </YStack>
           );
         })
-      )}
-      {shownConditional.length > 0 && (
-        <YStack>
-          <XStack gap="2" alignItems="center" paddingTop="3" paddingBottom="1">
-            <Text render="h2" fontSize="lg" fontWeight="600" margin={0}>
-              {m.conditionalHeading}
-            </Text>
-            <Chip tone="info">{shownConditional.length}</Chip>
-          </XStack>
-          <Text fontSize="sm" color="placeholder-color" paddingBottom="2">
-            {m.conditionalNote}
-          </Text>
-          <YStack gap="3">
-            {shownConditional.map(({ item, when }) => (
-              <ObligationCard
-                key={item.id}
-                item={item}
-                asOf={asOf}
-                titleOf={(id) => titleById.get(id)}
-                note={
-                  <XStack gap="1.5" flexWrap="wrap">
-                    <Chip tone="warn" outline>
-                      {m.appliesIf(when.map((condition) => describeWhen(m, condition)).join("; "))}
-                    </Chip>
-                  </XStack>
-                }
-              />
-            ))}
-          </YStack>
-        </YStack>
       )}
     </YStack>
   );
