@@ -180,7 +180,11 @@
         "frequency": "annual",
         "url": "https://www.houstonpermittingcenter.org/hhd1003",
         "naics": ["722", "445", "311", "4244", "493120"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 224.44
+        }
       },
       {
         "id": "houston.mobile-food-unit-medallion",
@@ -191,7 +195,11 @@
         "frequency": "annual",
         "url": "https://www.houstonpermittingcenter.org/hhd1008",
         "naics": ["722330", "722515"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "flat",
+          "amount": 258
+        }
       }
     ],
     "checkedOn": "2026-10-18"

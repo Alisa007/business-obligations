@@ -319,6 +319,8 @@ export interface LocalItem {
   processingTime?: string;
   /** How the item is renewed, when that is more specific than `frequency`. */
   renewal?: string;
+  /** The government fee, when the item has one with a known basis; it becomes the item's `cost` (see `FeeDetail`). */
+  feeDetail?: FeeDetail;
 }
 
 /**

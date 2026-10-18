@@ -192,7 +192,10 @@
           "maximum": 31
         }
       },
-      "description": "The day a filing window opens; the rule's date is the day it closes. Gives text such as \"January 1 \u2013 May 1\"."
+      "description": "The day a filing window opens; the rule's date is the day it closes. Gives text such as \"January 1 – May 1\"."
+    },
+    "feeDetail": {
+      "$ref": "common.schema.json#/$defs/feeDetail"
     }
   },
   "anyOf": [
