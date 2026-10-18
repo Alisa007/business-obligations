@@ -9,6 +9,7 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ### Added
 
+- **core:** Delaware fire protection licenses, fire alarm plan review, electric supplier annual report and notary commission, with Spanish text
 - **core:** Delaware adult-use cannabis licenses and health care facility licenses, with Spanish text
 - **core:** New Castle County (Delaware) contractor license, with Spanish text
 - **core:** Sussex County (Delaware) septage hauler license and Master Plumber requirement, with Spanish text

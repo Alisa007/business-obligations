@@ -777,5 +777,55 @@
     "checkedOn": "2026-10-18",
     "frequency": "annual",
     "renewal": "Renewal applications are filed with the Division"
+  },
+  {
+    "id": "de.fire-protection-company-license",
+    "title": "Renew your Delaware fire alarm, fire suppression or extinguisher license",
+    "category": "license",
+    "authority": "Delaware Office of the State Fire Marshal",
+    "description": "A company that installs or services fire alarm or fire suppression systems needs a license from the State Fire Marshal for each type, $100 each ($200 for both), and must employ a certificate holder full-time for each kind of work, $100 per certificate. A fire extinguisher license is $100 and a central or remote station license $100. Company licenses are renewed every year, with a renewal notice emailed about 60 days before expiry, and the company needs a Delaware business license and insurance of at least $250,000 per person and $500,000 per accident. Each fire protection system also needs an annual Certificate of Inspection by a licensed company with a $25 fee per system since January 1, 2026, apartment buildings included.",
+    "naics": ["561621", "238290", "238220", "811310", "561990"],
+    "appliesTo": ["all"],
+    "url": "https://statefiremarshal.delaware.gov/wp-content/uploads/sites/110/2026/07/Delaware_Fire_Protection_Licensing_Applicant_Guide.pdf",
+    "checkedOn": "2026-10-18",
+    "frequency": "annual",
+    "renewal": "Company licenses are renewed every year; a notice is emailed about 60 days before expiry"
+  },
+  {
+    "id": "de.fire-alarm-plan-review",
+    "title": "Submit fire alarm plans for State Fire Marshal review",
+    "category": "permit",
+    "authority": "Delaware Office of the State Fire Marshal",
+    "description": "Fire alarm plans go to the State Fire Marshal before installation. The plan review fee is 0.7% of the construction cost up to $1 million, or $7,000 for the first million plus 0.3% of the amount above it, with a $150 minimum for any project under $21,428.57. Payment is by check, money order or cashier's check to the State of Delaware, and a final acceptance test is required before occupancy.",
+    "naics": ["236", "237", "238", "561621"],
+    "appliesTo": ["all"],
+    "url": "https://statefiremarshal.delaware.gov/fire-alarm-plan-submittals/",
+    "checkedOn": "2026-10-18",
+    "frequency": "once"
+  },
+  {
+    "id": "de.electric-supplier-certificate",
+    "title": "File your Delaware electric supplier annual report",
+    "category": "filing",
+    "authority": "Delaware Public Service Commission",
+    "description": "An electric supplier or broker must be certified by the Public Service Commission before offering electric supply service in Delaware, with a $750 non-refundable filing fee paid through DelaFile and a notarized verification, a Certificate of Good Standing and a Delaware business license. The certificate lasts until revoked or relinquished, but the supplier must file an annual report by April 30 or risk revocation, register with Delmarva Power, and give 60 days' written notice before ceasing business in the state.",
+    "naics": ["221122", "221121", "561499"],
+    "appliesTo": ["all"],
+    "url": "https://depsc.delaware.gov/customer-electric-choice/",
+    "checkedOn": "2026-10-18",
+    "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=30"
+  },
+  {
+    "id": "de.notary-commission",
+    "title": "Renew your Delaware notary public commission",
+    "category": "license",
+    "authority": "Delaware Secretary of State, Office of the Notary Public",
+    "description": "A traditional notary public in Delaware pays a non-refundable $60 for a new two-year commission and $60 to renew for two years or $90 to renew for four. Limited governmental notaries and service organization notaries pay no application fee, and a service organization commission lasts 4 years. A Good Standing Certificate costs $30.",
+    "naics": ["541110", "561410", "541199"],
+    "appliesTo": ["all"],
+    "url": "https://notary.delaware.gov/fee-information/",
+    "checkedOn": "2026-10-18",
+    "frequency": "biennial",
+    "renewal": "A traditional notary commission is a 2-year term, or 4 years on renewal"
   }
 ]
