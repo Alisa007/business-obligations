@@ -30,16 +30,8 @@
       "pattern": "^\\S(.*\\S)?$"
     },
     "frequency": {
-      "enum": [
-        "once",
-        "annual",
-        "biennial",
-        "every_five_years",
-        "quarterly",
-        "monthly",
-        "per_event",
-        "ongoing"
-      ]
+      "enum": ["once", "per_event", "ongoing"],
+      "description": "Only for what does not recur on a schedule; anything that recurs is written as an rrule."
     },
     "deadline": {
       "type": "string",
@@ -193,7 +185,7 @@
           "$ref": "common.schema.json#/$defs/isoDate"
         },
         {
-          "enum": ["formation_year", "year_after_formation"]
+          "enum": ["formation", "formation_year", "year_after_formation"]
         }
       ],
       "description": "Start of a cycle longer than a year: an ISO date, or the entity's formation year or the year after."
@@ -220,7 +212,7 @@
       "$ref": "common.schema.json#/$defs/feeDetail"
     }
   },
-  "anyOf": [
+  "oneOf": [
     {
       "required": ["rrule"]
     },

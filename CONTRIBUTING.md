@@ -48,16 +48,17 @@ if a code is used by fewer than two entries or a note repeats a shared text.
 
 A repeating deadline is stored once, as an iCalendar (RFC 5545) recurrence rule in `rrule`. The frequency, the
 machine-readable due rule and the display text ("September 30") are all derived from it, and calendar apps accept
-the same string. Items that do not repeat on a date (`once`, `ongoing`, `per_event`) keep `frequency` and `deadline`.
+the same string. Every item that recurs has an `rrule`, with no `frequency` or `due` beside it. Only what does not recur (`once`, `ongoing`, `per_event`) keeps `frequency`, and a schema and a test reject anything else. Rules written in code (`ItemDraft`) follow the same split.
 
-| Schedule                               | `rrule`                                                                                                            |
-| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| Every September 30                     | `FREQ=YEARLY;BYMONTH=9;BYMONTHDAY=30`                                                                              |
-| Last day of February                   | `FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1`                                                                              |
-| Quarterly, last day of Jan/Apr/Jul/Oct | `FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1`                                                                       |
-| Every second year                      | `FREQ=YEARLY;INTERVAL=2;BYMONTH=4;BYMONTHDAY=1` plus `"anchor": "2026-04-01"` (even years) or `"2027-04-01"` (odd) |
-| Every second year from formation       | add `"anchor": "formation_year"` or `"year_after_formation"`                                                       |
-| Anniversary of formation               | `FREQ=YEARLY` (`;BYMONTHDAY=1` or `-1` for the first or last day of the anniversary month)                         |
+| Schedule                               | `rrule`                                                                                                                            |
+| -------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| Every September 30                     | `FREQ=YEARLY;BYMONTH=9;BYMONTHDAY=30`                                                                                              |
+| Last day of February                   | `FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1`                                                                                              |
+| Quarterly, last day of Jan/Apr/Jul/Oct | `FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1`                                                                                       |
+| Every second year                      | `FREQ=YEARLY;INTERVAL=2;BYMONTH=4;BYMONTHDAY=1` plus `"anchor": "2026-04-01"` (even years) or `"2027-04-01"` (odd)                 |
+| Every second year from formation       | add `"anchor": "formation_year"` or `"year_after_formation"`                                                                       |
+| Anniversary of formation               | `FREQ=YEARLY` plus `"anchor": "formation"` (`;BYMONTHDAY=1` or `-1` for the first or last day of the anniversary month, no anchor) |
+| Recurs, but the source gives no date   | `FREQ=YEARLY` (`;INTERVAL=2` or `5`), `FREQ=MONTHLY` or `FREQ=MONTHLY;INTERVAL=3`: a frequency and no due date                     |
 
 The date is written once, in the `rrule`; the deadline text is generated from it. Add a qualifier with `deadlineNote`
 (`"calendar-year filers"` gives "April 15 (calendar-year filers)"), and a filing window's opening day with

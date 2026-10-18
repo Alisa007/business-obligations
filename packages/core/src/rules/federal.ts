@@ -1,14 +1,13 @@
-import type { Due } from "../types";
 import type { ResolvedProfile, Rule } from "../types";
 
 const needsEin = (p: ResolvedProfile) => p.entityType !== "sole_proprietorship" || p.hasEmployees;
 
 /** 15th day of the month that is `monthsAfter` months after the fiscal year-end month. */
-function fyDue(p: ResolvedProfile, monthsAfter: number): { due: Due; label: string } {
+function fyDue(p: ResolvedProfile, monthsAfter: number): { rrule: string; label: string } {
   const month = ((p.fiscalYearEndMonth - 1 + monthsAfter) % 12) + 1;
   const calendar = p.fiscalYearEndMonth === 12;
   return {
-    due: { type: "fixed", month, day: 15 },
+    rrule: `FREQ=YEARLY;BYMONTH=${month};BYMONTHDAY=15`,
     label: calendar
       ? `${MONTHS[month - 1]} 15`
       : `${MONTHS[month - 1]} 15 (fiscal year ending ${MONTHS[p.fiscalYearEndMonth - 1]})`,
@@ -30,30 +29,34 @@ const MONTHS = [
   "December",
 ];
 
-function incomeTaxForm(p: ResolvedProfile): { form: string; due: Due; deadline: string } {
+function incomeTaxForm(p: ResolvedProfile): { form: string; rrule: string; deadline: string } {
   switch (p.taxTreatment) {
     case "sole_prop":
       // Individual returns follow the calendar year regardless of the business's fiscal year.
       return {
         form: "Form 1040 with Schedule C",
-        due: { type: "fixed", month: 4, day: 15 },
+        rrule: "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
         deadline: "April 15",
       };
     case "partnership": {
       const d = fyDue(p, 3);
-      return { form: "Form 1065 (and Schedule K-1 for each partner)", due: d.due, deadline: d.label };
+      return { form: "Form 1065 (and Schedule K-1 for each partner)", rrule: d.rrule, deadline: d.label };
     }
     case "s_corp": {
       const d = fyDue(p, 3);
-      return { form: "Form 1120-S (and Schedule K-1 for each shareholder)", due: d.due, deadline: d.label };
+      return {
+        form: "Form 1120-S (and Schedule K-1 for each shareholder)",
+        rrule: d.rrule,
+        deadline: d.label,
+      };
     }
     case "c_corp": {
       const d = fyDue(p, 4);
-      return { form: "Form 1120", due: d.due, deadline: d.label };
+      return { form: "Form 1120", rrule: d.rrule, deadline: d.label };
     }
     case "nonprofit": {
       const d = fyDue(p, 5);
-      return { form: "Form 990 / 990-EZ / 990-N", due: d.due, deadline: d.label };
+      return { form: "Form 990 / 990-EZ / 990-N", rrule: d.rrule, deadline: d.label };
     }
   }
 }
@@ -62,7 +65,7 @@ function incomeTaxForm(p: ResolvedProfile): { form: string; due: Due; deadline: 
  * Estimated-tax installments. Owners pay on the calendar year (April 15, June 15, September 15, January 15);
  * corporations pay on the 15th day of the 4th, 6th, 9th and 12th months of their own tax year (Form 1120-W).
  */
-function estimatedTaxSchedule(p: ResolvedProfile): { deadline: string; due: Due } {
+function estimatedTaxSchedule(p: ResolvedProfile): { deadline: string; rrule: string } {
   const months =
     p.taxTreatment === "c_corp"
       ? [4, 6, 9, 12].map((n) => ((p.fiscalYearEndMonth - 1 + n) % 12) + 1)
@@ -70,7 +73,7 @@ function estimatedTaxSchedule(p: ResolvedProfile): { deadline: string; due: Due 
   const names = months.map((m) => `${MONTHS[m - 1]} 15`);
   return {
     deadline: `${names.slice(0, -1).join(", ")}, ${names.at(-1)}`,
-    due: { type: "multi", dates: months.map((month) => ({ month, day: 15 })) },
+    rrule: `FREQ=YEARLY;BYMONTH=${[...months].sort((a, b) => a - b).join(",")};BYMONTHDAY=15`,
   };
 }
 
@@ -103,18 +106,17 @@ export const federalRules: Rule[] = [
     inputs: ["entityType", "llcTaxClassification", "sCorpElection", "fiscalYearEndMonth", "isFormed"],
     when: (p) => p.isFormed,
     items: (p) => {
-      const { form, due, deadline } = incomeTaxForm(p);
+      const { form, rrule, deadline } = incomeTaxForm(p);
       return {
         title: `File federal income tax return: ${form}`,
         category: "filing",
         jurisdiction: "federal",
         authority: "IRS",
         description: "Annual federal income tax return (extensions available via Form 7004 / 4868).",
-        frequency: "annual",
+        rrule,
         formId: form,
         filingMethod: ["online", "mail"],
         deadline,
-        due,
         reason: `Federal tax treatment is ${p.taxTreatment}`,
         url: "https://www.irs.gov/businesses",
       };
@@ -143,7 +145,6 @@ export const federalRules: Rule[] = [
         p.taxTreatment === "c_corp"
           ? "Quarterly estimated payments (Form 1120-W worksheet, deposited via EFTPS)."
           : "Quarterly estimated payments by owners on business income (Form 1040-ES), including self-employment tax.",
-      frequency: "quarterly",
       ...estimatedTaxSchedule(p),
       reason: `Expected net income of ${p.annualNetIncome} is expected to generate tax due during the year`,
       url: "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes",
@@ -164,7 +165,7 @@ export const federalRules: Rule[] = [
           jurisdiction: "federal",
           authority: "IRS",
           description: "Withheld income tax, Social Security and Medicare, plus employer share, via EFTPS.",
-          frequency: semiweekly ? "per_event" : "monthly",
+          ...(semiweekly ? { frequency: "per_event" as const } : { rrule: "FREQ=MONTHLY" }),
           deadline:
             lookback !== undefined && lookback > 100_000
               ? "Next business day once accumulated liability reaches $100,000"
@@ -183,19 +184,10 @@ export const federalRules: Rule[] = [
           jurisdiction: "federal",
           authority: "IRS",
           description: "Quarterly reconciliation of wages and payroll taxes.",
-          frequency: "quarterly",
+          rrule: "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
           formId: "941",
           filingMethod: ["online", "mail"],
           deadline: "April 30, July 31, October 31, January 31",
-          due: {
-            type: "multi",
-            dates: [
-              { month: 4, day: 30 },
-              { month: 7, day: 31 },
-              { month: 10, day: 31 },
-              { month: 1, day: 31 },
-            ],
-          },
           reason: "Business has employees",
           url: "https://www.irs.gov/businesses/small-businesses-self-employed/employment-tax-due-dates",
         },
@@ -205,11 +197,10 @@ export const federalRules: Rule[] = [
           jurisdiction: "federal",
           authority: "IRS",
           description: "Annual FUTA return and payment.",
-          frequency: "annual",
+          rrule: "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=31",
           formId: "940",
           filingMethod: ["online", "mail"],
           deadline: "January 31",
-          due: { type: "fixed", month: 1, day: 31 },
           reason: "Business has employees",
           url: "https://www.irs.gov/businesses/small-businesses-self-employed/employment-tax-due-dates",
         },
@@ -219,9 +210,8 @@ export const federalRules: Rule[] = [
           jurisdiction: "federal",
           authority: "IRS / SSA",
           description: "Wage statements to employees and transmittal to the SSA.",
-          frequency: "annual",
+          rrule: "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=31",
           deadline: "January 31",
-          due: { type: "fixed", month: 1, day: 31 },
           reason: "Business has employees",
           url: "https://www.irs.gov/businesses/small-businesses-self-employed/employment-tax-due-dates",
         },
@@ -268,11 +258,10 @@ export const federalRules: Rule[] = [
       authority: "IRS",
       description:
         "Required for each non-employee paid $2,000 or more in the year (payments made after 2025).",
-      frequency: "annual",
+      rrule: "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=31",
       formId: "1099-NEC",
       filingMethod: ["online", "mail"],
       deadline: "January 31",
-      due: { type: "fixed", month: 1, day: 31 },
       reason: `Largest contractor payment is ${p.largestContractorPaymentUsd}, at or above the $2,000 threshold`,
       url: "https://www.irs.gov/businesses/small-businesses-self-employed/employment-tax-due-dates",
     }),
@@ -312,10 +301,9 @@ export const federalRules: Rule[] = [
         authority: "IRS",
         description:
           "Applicable large employers (50 or more full-time employees, counting part-time hours as full-time equivalents) give each full-time employee a Form 1095-C. The January 31 deadline is extended automatically by 30 days, to March 2 in most years (March 1 for the 2026 forms).",
-        frequency: "annual",
+        rrule: "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1",
         formId: "1095-C",
         deadline: "March 1 or 2 (January 31, extended automatically by 30 days)",
-        due: { type: "fixed", month: 3, day: 1 },
         reason: `${p.fullTimeEmployeeCount} full-time employees, at or above the 50 that make an applicable large employer`,
         url: "https://www.irs.gov/affordable-care-act/employers/employer-shared-responsibility-provisions",
       },
@@ -326,11 +314,10 @@ export const federalRules: Rule[] = [
         authority: "IRS",
         description:
           "The transmittal Form 1094-C and each Form 1095-C are due to the IRS at the end of February on paper or March 31 electronically; employers filing 10 or more information returns in total must file electronically. Penalties apply per late or incorrect form.",
-        frequency: "annual",
+        rrule: "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=31",
         formId: "1094-C",
         filingMethod: ["online", "mail"],
         deadline: "March 31 electronically (end of February on paper)",
-        due: { type: "fixed", month: 3, day: 31 },
         reason: `${p.fullTimeEmployeeCount} full-time employees, at or above the 50 that make an applicable large employer`,
         url: "https://www.irs.gov/forms-pubs/about-form-1094-c",
       },
@@ -348,7 +335,7 @@ export const federalRules: Rule[] = [
       authority: "U.S. Equal Employment Opportunity Commission",
       description:
         "Private employers with 100 or more employees file annually through the EEOC's online system; federal contractors with 50 or more employees and certain contracts have also filed. The EEOC sets each year's window (the 2024 report was due June 24, 2025, with no extensions), so check its data collections page.",
-      frequency: "annual",
+      rrule: "FREQ=YEARLY",
       deadline: "Set each year by the EEOC (late spring or early summer)",
       reason: `${p.employeeCount} employees, at or above the 100 that require an EEO-1 report`,
       url: "https://www.eeoc.gov/data/eeo-data-collections",
@@ -367,10 +354,9 @@ export const federalRules: Rule[] = [
         authority: "OSHA",
         description:
           "Employers with more than 10 employees keep Forms 300 and 301 for work-related injuries and illnesses, and post the Form 300A summary for the previous year at each establishment from February 1 through April 30. Records are kept five years. Report a work-related fatality within 8 hours and an inpatient hospitalization, amputation or loss of an eye within 24 hours.",
-        frequency: "annual",
+        rrule: "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=1",
         formId: "300A",
         deadline: "Post by February 1 and leave up through April 30",
-        due: { type: "fixed", month: 2, day: 1 },
         exemptions: [
           "Employers with 10 or fewer employees (except for fatality and severe-injury reporting)",
           "Establishments in partially exempt low-hazard industries such as retail, finance, insurance, real estate and many services (29 CFR 1904 Appendix A)",
@@ -387,9 +373,8 @@ export const federalRules: Rule[] = [
               authority: "OSHA",
               description:
                 "Establishments with 250 or more employees submit their Form 300A summary through OSHA's Injury Tracking Application by March 2. Establishments with 20 to 249 employees in designated higher-hazard industries must also submit the summary, and those with 100 or more in the most hazardous industries submit Forms 300 and 301 data.",
-              frequency: "annual" as const,
+              rrule: "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=2",
               deadline: "March 2",
-              due: { type: "fixed" as const, month: 3, day: 2 },
               reason: `${p.employeeCount} employees, at or above the 250 that require electronic submission`,
               url: "https://www.osha.gov/injuryreporting",
             },

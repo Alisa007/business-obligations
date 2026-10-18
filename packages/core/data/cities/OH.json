@@ -28,7 +28,7 @@
         "category": "filing",
         "authority": "City of Cincinnati Income Tax Division",
         "description": "Businesses engaged in Cincinnati (rental property, sole proprietorships, partnerships, corporations) file the business net profit return at the city's 1.8% rate.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://www.cincinnati-oh.gov/finance/income-taxes/",
         "appliesTo": ["all"]
       },
@@ -38,7 +38,7 @@
         "category": "payment",
         "authority": "City of Cincinnati Income Tax Division",
         "description": "Employers register for and remit withholding for employees working in Cincinnati.",
-        "frequency": "quarterly",
+        "rrule": "FREQ=MONTHLY;INTERVAL=3",
         "url": "https://www.cincinnati-oh.gov/finance/income-taxes/",
         "appliesTo": ["employees"]
       }
@@ -67,7 +67,7 @@
         "category": "payment",
         "authority": "Central Collection Agency (CCA)",
         "description": "Employers withhold and remit municipal income tax through the Central Collection Agency using the employer EIN.",
-        "frequency": "quarterly",
+        "rrule": "FREQ=MONTHLY;INTERVAL=3",
         "url": "https://www.ccaohio.gov/tax-forms/business",
         "appliesTo": ["employees"]
       }
@@ -85,7 +85,7 @@
         "category": "filing",
         "authority": "City of Columbus Income Tax Division (City Auditor)",
         "description": "Businesses (sole proprietorships, partnerships, corporations) with activity in Columbus file the city's annual business net profit return; some businesses may elect to file through the Ohio Department of Taxation.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://www.columbus.gov/Government/City-Auditor/Income-Tax-Division",
         "appliesTo": ["all"]
       },
@@ -95,7 +95,7 @@
         "category": "payment",
         "authority": "City of Columbus Income Tax Division (City Auditor)",
         "description": "Employers withhold municipal income tax on wages for work performed in Columbus.",
-        "frequency": "quarterly",
+        "rrule": "FREQ=MONTHLY;INTERVAL=3",
         "url": "https://www.columbus.gov/Government/City-Auditor/Income-Tax-Division",
         "appliesTo": ["employees"]
       }

@@ -10,7 +10,7 @@
         "category": "license",
         "authority": "City of Anaheim Business License Office",
         "description": "Every business in the city needs a business license (tax certificate), which is valid for one year; the city mails a renewal notice about 30 days before it expires, but not receiving it does not excuse a late renewal. A minimum $37 processing fee applies to each initial or renewed application. Operating without a license or paying a renewal late costs a penalty of 10% or $10, whichever is greater, for each month delinquent, plus 1.5% per month.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "Before opening, then renew before the one-year certificate expires",
         "url": "https://www.anaheim.net/571/Existing-Business",
         "appliesTo": ["all"]
@@ -29,7 +29,7 @@
         "category": "license",
         "authority": "City of Antioch Finance Department",
         "description": "Licenses run one year from issuance. Payment is due 30 days after the expiration date; penalties of 10% to 50% apply for later payment, and the owner must renew even without a notice.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "30 days after the license expires",
         "url": "https://www.antiochca.gov/325/Business-License",
         "appliesTo": ["all"]
@@ -88,7 +88,7 @@
         "category": "license",
         "authority": "City of Burbank Community Development",
         "description": "All businesses located in Burbank or conducting business in Burbank must apply for a city business license or tax account; the city provides a business-license renewal process.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://www.burbankca.gov/web/community-development/business-license-tax",
         "appliesTo": ["all"]
       },
@@ -125,7 +125,7 @@
         "category": "license",
         "authority": "City of Carlsbad Finance Department, Business License Office",
         "description": "Under the municipal code the license tax is due annually in advance on the first day of the month the business was established; a 25% penalty applies 60 days after the due date and 50% after 90 days.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "First day of the anniversary month",
         "url": "https://gocodebook.com/library/us/ca/carlsbad/title-5",
         "appliesTo": ["all"]
@@ -144,7 +144,7 @@
         "category": "license",
         "authority": "City of Chico Finance Department",
         "description": "Business licenses are renewed annually through the city's online portal; some businesses pay a flat rate and others a tax.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://chicoca.gov/Business-and-Development/Business-Licenses/Apply-For-or-Renew-a-Business-License/",
         "appliesTo": ["all"]
       }
@@ -201,7 +201,7 @@
         "category": "license",
         "authority": "City of Concord Finance Department",
         "description": "Concord requires a business license to conduct business in the city, including home businesses, contractors, landlords, manufacturers, retailers and professionals, and provides application and renewal services.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://www.cityofconcord.org/378/Business-Licenses",
         "appliesTo": ["all"]
       },
@@ -228,7 +228,7 @@
         "category": "license",
         "authority": "City of Corona Finance Department, Business License Division",
         "description": "Licenses must be renewed annually on a 12-month anniversary of the date the business first operated in Corona.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "Anniversary of the business start date",
         "url": "https://coronaca.gov/departments/finance/business-license-information",
         "appliesTo": ["all"]
@@ -247,7 +247,7 @@
         "category": "license",
         "authority": "City of Costa Mesa Finance Department, Business License Desk",
         "description": "The business license tax is an annual fee; the license lasts one year and payment is due when it expires, renewed through the city's online portal.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "Date the license expires",
         "url": "https://www.costamesaca.gov/government/departments-and-divisions/finance/business-licenses/renew-my-business-license-online",
         "appliesTo": ["all"]
@@ -302,7 +302,7 @@
         "category": "license",
         "authority": "City of El Monte Business License Division",
         "description": "Business tax renewals for existing businesses are due and payable at the beginning of each calendar year; penalties for noncompliance can reach 100%.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "Beginning of each calendar year",
         "url": "https://www.elmonteca.gov/DocumentCenter/View/5611",
         "appliesTo": ["all"]
@@ -321,7 +321,7 @@
         "category": "license",
         "authority": "City of Elk Grove Business License Office",
         "description": "The business license is valid for two years and can be renewed online.",
-        "frequency": "biennial",
+        "rrule": "FREQ=YEARLY;INTERVAL=2",
         "deadline": "Two years from issuance",
         "url": "https://www.elkgrove.gov/departments-and-divisions/business-license",
         "appliesTo": ["all"]
@@ -340,7 +340,7 @@
         "category": "license",
         "authority": "City of Escondido Business License Office",
         "description": "The license is valid for one year and renewed annually online; a missed renewal adds 25% per month, up to 100%.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "Before the license's anniversary",
         "url": "https://escondido.gov/1144/Business-License",
         "appliesTo": ["all"]
@@ -362,7 +362,7 @@
         "category": "license",
         "authority": "City of Fairfield Community Development",
         "description": "Fairfield requires every person, partnership, corporation or other entity doing business within city limits to obtain a business license; licenses expire December 31 and must be renewed in January.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "Renew by January 31",
         "url": "https://www.fairfield.ca.gov/government/city-departments/community-development/building-safety/business-license",
         "appliesTo": ["all"]
@@ -408,7 +408,7 @@
         "category": "license",
         "authority": "City of Fremont Finance Department, Revenue Division",
         "description": "Renewal is due by 5:00 p.m. on the last day of the month after the certificate's expiration date; the city sends a notice about 60 days before expiration.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "Last day of the month after the expiration date",
         "url": "https://fremont.gov/government/departments/finance/revenue/business-tax/renew-your-business-tax-account",
         "appliesTo": ["all"]
@@ -427,7 +427,7 @@
         "category": "license",
         "authority": "City of Fresno Finance Department, Business Tax Division",
         "description": "Businesses in Fresno hold a business tax certificate. Most renew every six months and some annually; the tax is due within 30 days after each renewal period ends, with penalties after that.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "30 days after the end of each renewal period",
         "url": "https://www.fresno.gov/finance/business-license/",
         "appliesTo": ["all"]
@@ -446,7 +446,7 @@
         "category": "license",
         "authority": "City of Fullerton Business Registration Division",
         "description": "The certificate is issued for 12 months from the time you start business in Fullerton; renewal notices are mailed within 30 days before expiration.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "Anniversary of the start date",
         "url": "https://www.cityoffullerton.com/government/departments/administrative-services-finance/business-registration",
         "appliesTo": ["all"]
@@ -465,7 +465,7 @@
         "category": "license",
         "authority": "City of Garden Grove Finance Department",
         "description": "The license is annual and dated to the start of your business activity in the city; a renewal notice is sent about 20 days before expiration.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "Before the license's anniversary expiration",
         "url": "https://ggcity.org/finance/business-tax-application",
         "appliesTo": ["all"]
@@ -484,7 +484,7 @@
         "category": "license",
         "authority": "City of Glendale Community Development, Neighborhood Services",
         "description": "The Business Registration Certificate must be renewed annually through the GlendalePermits portal and posted in view; renewal notices are a courtesy, not a deadline.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "Before the certificate expires",
         "url": "https://www.glendaleca.gov/government/departments/community-development/licenses-permits-and-applications/license-and-permit-applications/business-registration-certificate",
         "appliesTo": ["all"]
@@ -506,7 +506,7 @@
         "category": "license",
         "authority": "City of Hayward Revenue Division",
         "description": "Hayward requires every person, firm, corporation, partnership or other business organization conducting business in the city to obtain a business license and provides renewal services.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://www.hayward-ca.gov/services/city-services/apply-business-license",
         "appliesTo": ["all"]
       },
@@ -545,7 +545,7 @@
         "category": "license",
         "authority": "City of Huntington Beach Business License Office",
         "description": "Businesses operating in the city pay an annual business license tax, with a separate license for each branch or location. A license runs one year from the business start date, and the city mails a courtesy renewal notice about 30 days before it expires, but not receiving it does not excuse the owner. Operating without a license or renewing late costs a penalty of 10% of the tax per month. Nonprofits must still get a license, with an IRS 501(c)(3) determination letter, but pay no tax or fees.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "Before opening, then renew before the one-year license expires",
         "url": "https://www.huntingtonbeachca.gov/Business/License_Permit_Codes/business_license.cfm",
         "appliesTo": ["all"]
@@ -575,7 +575,7 @@
         "category": "license",
         "authority": "City of Inglewood Finance Department",
         "description": "Businesses requiring a regulatory Inglewood business license must submit renewal applications and fees annually by November 1.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "By November 1",
         "url": "https://www.cityofinglewood.org/371/Business-Licenses",
         "appliesTo": ["all"]
@@ -594,7 +594,7 @@
         "category": "license",
         "authority": "City of Irvine Business Licensing",
         "description": "Licenses run for 12 months from the first day of the application month. The city mails a courtesy notice 45 days before expiration and assesses a penalty 60 days after.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "Within 60 days after the 12-month term ends",
         "url": "https://cityofirvine.org/business-licensing",
         "appliesTo": ["all"]
@@ -613,7 +613,7 @@
         "category": "license",
         "authority": "City of Jurupa Valley Business Registration",
         "description": "Business registration certificates are valid for 12 months from issuance and must be renewed annually to stay in effect.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "12 months from issuance",
         "url": "https://jurupavalley.org/264/Business-Registration",
         "appliesTo": ["all"]
@@ -650,7 +650,7 @@
         "category": "license",
         "authority": "City of Long Beach Financial Management, Business License Division",
         "description": "Every business operating in Long Beach needs a general business license. No renewal application is needed: the city mails an annual bill and payment by the delinquent date printed on it renews the license.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "Delinquent date printed on the annual bill",
         "url": "https://longbeach.gov/finance/business-info/business-licenses/general-business-license/",
         "appliesTo": ["all"]
@@ -669,7 +669,7 @@
         "category": "license",
         "authority": "Los Angeles Office of Finance",
         "description": "Businesses operating in the City of Los Angeles register for the business tax and renew annually; tax is based on gross receipts and business class.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://finance.lacity.gov/register-new-business",
         "appliesTo": ["all"]
       }
@@ -689,7 +689,7 @@
         "category": "license",
         "authority": "City of Menifee Finance Department",
         "description": "Menifee requires all businesses located in or operating within the city to obtain a business license and provides an annual renewal season.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://www.cityofmenifee.us/BusinessLicense",
         "appliesTo": ["all"]
       },
@@ -727,7 +727,7 @@
         "category": "license",
         "authority": "City of Murrieta Finance Department, Business License Bureau",
         "description": "The license is valid for one year and due on its expiration date, which is printed on the certificate; renewal opens 90 days before expiration and late fees accrue monthly.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "Expiration date on the certificate",
         "url": "https://www.murrietaca.gov/514/Business-License",
         "appliesTo": ["all"]
@@ -786,7 +786,7 @@
         "category": "license",
         "authority": "City of Oceanside Business License Office",
         "description": "All businesses operating in the city, including home-based ones, need a business license. The tax is based on gross receipts for the past 12 months, at 50 cents per $1,000 with a $50 minimum. The city mails a renewal form around the 15th of the month the license expires, and the form and payment are due by the 20th of the following month.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "Before opening, then renew by the 20th of the month after the license expires",
         "url": "https://www.ci.oceanside.ca.us/government/financial-services/business-license",
         "appliesTo": ["all"]
@@ -845,7 +845,7 @@
         "category": "license",
         "authority": "City of Orange Finance Department, Business License Division",
         "description": "Licenses renew annually on their 12-month anniversary; you have one month from expiration before a 25% late penalty applies, and a $50 fee is added at three months.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "One month after the anniversary expiration",
         "url": "https://www.cityoforange.org/our-city/departments/finance/business-license-information/faqs",
         "appliesTo": ["all"]
@@ -864,7 +864,7 @@
         "category": "license",
         "authority": "City of Oxnard Billing and Licensing",
         "description": "The tax is due in advance on the first day of the anniversary month and the certificate expires the last day of the month before it; penalties of 10% or $10 per month (maximum 50%) apply to late payment.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "Before the first day of the anniversary month",
         "url": "https://oxnard.gov/finance/business-licensing",
         "appliesTo": ["all"]
@@ -884,7 +884,7 @@
         "category": "license",
         "authority": "City of Palmdale Business Licensing Division",
         "description": "Anyone doing business in the city, including businesses located outside it and single-family rentals, needs a city business license. Payment is not due until the application has been reviewed and approved, and the amount due follows by email within three business days. The state's $4 accessibility training fee is added to new licenses and renewals.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "Before opening, then renew each year",
         "url": "https://www.cityofpalmdaleca.gov/156/Business-License",
         "appliesTo": ["all"]
@@ -921,7 +921,7 @@
         "category": "license",
         "authority": "City of Rancho Cucamonga Business Licensing Division",
         "description": "Renewal is annual and tied to the business's start date; the owner is responsible for renewing even without a notice.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "Anniversary of the business start date",
         "url": "https://businesslicense.cityofrc.us/Apply/GettingStarted/BusinessLicense",
         "appliesTo": ["all"]
@@ -940,7 +940,7 @@
         "category": "license",
         "authority": "City of Richmond Business Licenses Division",
         "description": "Richmond requires businesses to maintain a current business tax certificate, also called a business license; the city provides business-license application and renewal services but the official page reviewed does not state one universal renewal date.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://www.ci.richmond.ca.us/66/Business-Licenses",
         "appliesTo": ["all"]
       },
@@ -968,7 +968,7 @@
         "category": "license",
         "authority": "City of Riverside Finance Department, Business Tax Office",
         "description": "Annual business taxes are due in advance, on or before the expiration date of the current certificate.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "On or before the certificate's expiration date",
         "url": "https://riversideca.gov/finance/licensefaq.asp",
         "appliesTo": ["all"]
@@ -987,7 +987,7 @@
         "category": "license",
         "authority": "City of Roseville Finance Department",
         "description": "The license is good for the calendar year in which it is issued and must be renewed every January; late payments carry a penalty of 10% per month, capped at 60%.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "January",
         "url": "https://www.roseville.ca.gov/departments/finance/licensing/business.php",
         "appliesTo": ["all"]
@@ -1006,7 +1006,7 @@
         "category": "license",
         "authority": "City of Sacramento Department of Finance, Revenue Division",
         "description": "Businesses operating in the city of Sacramento must hold a business operations tax certificate and renew it annually; apply or renew online.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://www.cityofsacramento.gov/finance/revenue/business-operations-tax",
         "appliesTo": ["all"]
       }
@@ -1024,7 +1024,7 @@
         "category": "license",
         "authority": "City of Salinas Finance Department",
         "description": "The tax is owed whether or not a notice arrives. Per the city, June renewals are due before the last day of August and December renewals before the last day of February.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "Last day of the second month after expiration",
         "url": "https://cityofsalinas.org/Business/Business-Licenses-and-Home-Based-Business-Permits",
         "appliesTo": ["all"]
@@ -1043,7 +1043,7 @@
         "category": "license",
         "authority": "City of San Diego Office of the City Treasurer",
         "description": "Every business operating in the City of San Diego, including home-based and self-employed businesses, needs a Business Tax Certificate for each business location; the annual tax depends on headcount.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://www.sandiego.gov/treasurer/taxesfees/btax",
         "appliesTo": ["all"]
       }
@@ -1099,7 +1099,7 @@
         "category": "license",
         "authority": "City of San José Finance Department, Business Tax Registration",
         "description": "Businesses operating in San José register within 90 days of starting and renew the business tax annually, due the 15th of the month the business started.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "15th of the month the business started",
         "url": "https://www.sanjoseca.gov/your-government/departments-offices/finance/business-tax-registration",
         "appliesTo": ["all"]
@@ -1118,7 +1118,7 @@
         "category": "license",
         "authority": "City of San Mateo Finance Department",
         "description": "Everyone doing business in San Mateo pays an annual business tax (the business license) and receives a certificate covering the period shown on it.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://cityofsanmateo.org/index.aspx?NID=304",
         "appliesTo": ["all"]
       }
@@ -1137,7 +1137,7 @@
         "category": "license",
         "authority": "City of Santa Ana Business License Tax Division",
         "description": "Every business operating within the city limits pays an annual business license tax, whether or not it is run for profit, and the owner alone is responsible for renewing it by the expiration date printed on the business tax permit. Operating without a valid license may carry a penalty of 50% of the current year's fee plus unpaid fees for up to the preceding 36 months. A home-based business first needs a one-time home occupation permit.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "Before opening, then renew by the expiration date printed on the permit",
         "url": "https://www.santa-ana.org/business-license-general-info/",
         "appliesTo": ["all"]
@@ -1156,7 +1156,7 @@
         "category": "license",
         "authority": "City of Santa Clara Finance Department, Business Tax Unit",
         "description": "Businesses have 30 days after the renewal date to pay the business license tax; a certificate is treated as revoked if the tax is unpaid 90 days after it becomes due.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "30 days after the renewal date",
         "url": "https://santaclaraca.gov/our-city/departments-a-f/finance/business-tax-license/business-tax-faq",
         "appliesTo": ["all"]
@@ -1184,7 +1184,7 @@
         "category": "license",
         "authority": "City of Santa Maria Finance Division",
         "description": "A license expires at the end of the 12th month after the first day the business was scheduled to open; renewals can be paid online.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "End of the 12th month after opening",
         "url": "https://www.cityofsantamaria.org/business/business-license",
         "appliesTo": ["all"]
@@ -1203,7 +1203,7 @@
         "category": "license",
         "authority": "City of Santa Rosa Finance Department",
         "description": "All businesses operating in Santa Rosa must obtain a Business Tax Certificate; the city provides an online renewal process but the official page reviewed does not state one universal renewal date.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://www.srcity.org/4327/Where-to-Begin",
         "appliesTo": ["all"]
       },
@@ -1231,7 +1231,7 @@
         "category": "license",
         "authority": "City of Simi Valley Business Tax Division",
         "description": "Every new business must obtain a Simi Valley Business Tax Certificate before conducting business; the city provides an online renewal option but the official page reviewed does not state one universal renewal date.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://www.simivalley.org/departments/city-manager-s-office/economic-development-business-assistance/the-business-resource-center/permits-taxes-and-licenses-for-your-business",
         "appliesTo": ["all"]
       },
@@ -1269,7 +1269,7 @@
         "category": "license",
         "authority": "City of Stockton Revenue Services Division",
         "description": "Business licenses carry an annual registration tax plus a rate that depends on the activity. Renewal payment is due 30 days after the license expires; penalties accrue after that.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "30 days after license expiration",
         "url": "https://www.stocktonca.gov/business/business_licenses/faq.php",
         "appliesTo": ["all"]
@@ -1288,7 +1288,7 @@
         "category": "license",
         "authority": "City of Sunnyvale Department of Finance",
         "description": "Business licenses renew on a two-year cycle, and the tax for both years is paid together to receive the certificate.",
-        "frequency": "biennial",
+        "rrule": "FREQ=YEARLY;INTERVAL=2",
         "deadline": "Every two years",
         "url": "https://www.sunnyvale.ca.gov/business-and-development/economic-development/start-and-grow-your-business/obtain-licenses-and-permits",
         "appliesTo": ["all"]
@@ -1325,7 +1325,7 @@
         "category": "license",
         "authority": "City of Thousand Oaks Finance Department",
         "description": "Certificates expire December 31 and renew from January 1; the city says to renew by the last day of February and treats a certificate as delinquent after March 1.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "Last day of February (delinquent March 1)",
         "url": "https://toaks.gov/businesslicenses",
         "appliesTo": ["all"]
@@ -1380,7 +1380,7 @@
         "category": "license",
         "authority": "City of Vallejo Finance Department",
         "description": "Anyone conducting business in Vallejo must secure a business license certificate before beginning operations; the city provides application and renewal services but the official page reviewed does not state one universal renewal date.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://www.vallejo.gov/our_city/departments_divisions/finance_department/business_license_tax_information",
         "appliesTo": ["all"]
       },
@@ -1426,7 +1426,7 @@
         "category": "license",
         "authority": "City of Victorville Business License Division",
         "description": "Anyone conducting business within Victorville city limits must obtain a city business license; the city provides a separate renewal process, but the official page reviewed does not state one universal renewal date.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://www.victorvilleca.gov/Government/City-Departments/Business-License-Division",
         "appliesTo": ["all"]
       },
@@ -1454,7 +1454,7 @@
         "category": "license",
         "authority": "City of Visalia Business Tax Division",
         "description": "Visalia requires a Business Tax Certificate for businesses operating in the city and requires renewal by January 31 and July 31; delinquent renewals incur the city’s stated penalties and fees.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "January 31 and July 31",
         "url": "https://www.visalia.city/civicax/filebank/blobdload.aspx?BlobID=58108",
         "appliesTo": ["all"]
@@ -1465,7 +1465,7 @@
         "category": "filing",
         "authority": "City of Visalia Business Tax Division",
         "description": "Visalia mails a Declaration of Gross Receipts form each year; the city requires it by April 30 to avoid an administrative fee and maximum-tax billing on the next cycle.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "By April 30",
         "url": "https://www.visalia.city/depts/engineering_n_building___planning_n_community_preservation/faqs/default.asp",
         "appliesTo": ["all"]
@@ -1494,7 +1494,7 @@
         "category": "license",
         "authority": "City of San Bernardino Business Registration Division",
         "description": "Anyone conducting business in San Bernardino must secure a registration certificate before operating; each branch or location needs a separate certificate, zoning verification is required, and fees are based on gross receipts or a city-set flat rate.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "Within the 30-day renewal period stated on the city notice",
         "url": "https://www.sanbernardino.gov/655/Business-Registration",
         "appliesTo": ["all"]
@@ -1514,7 +1514,7 @@
         "category": "license",
         "authority": "City of Fontana Business License Division",
         "description": "Fontana requires businesses operating in the city to obtain a business license; licenses renew annually and expire one year from issuance, with a $36 application fee and $4 state CASp fee listed on the city application.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "One year from the issue date",
         "url": "https://bl.fontana.org/Apply/GettingStarted/BusinessLicense",
         "appliesTo": ["all"]
@@ -1572,7 +1572,7 @@
         "category": "license",
         "authority": "City of Pasadena Business Services Section",
         "description": "Pasadena requires all businesses operating within city limits to pay an annual business license tax; fees are generally based on a flat rate plus employees, and payment is due before operation with annual renewal.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://www.cityofpasadena.net/finance/licenses/business-licenses/",
         "appliesTo": ["all"]
       }
@@ -1591,7 +1591,7 @@
         "category": "license",
         "authority": "City of Rialto Business Licensing Division",
         "description": "Rialto requires business licensing and reviews applications or renewals before invoicing; commercial businesses pay a $47.30 new-application administration fee, $32.40 renewal administration fee and $4 state fee, while home occupations also need a $45.90 permit.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://www.rialtoca.gov/204/Business-Licensing",
         "appliesTo": ["all"]
       }
@@ -1610,7 +1610,7 @@
         "category": "license",
         "authority": "City of West Covina Business License Division",
         "description": "West Covina requires all businesses within city limits to obtain a business license and pay business license tax before commencing operations; the city provides separate application, renewal and fee-schedule processes.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://westcovina.hdlgov.com/Home/Home/",
         "appliesTo": ["all"]
       }
@@ -1629,7 +1629,7 @@
         "category": "license",
         "authority": "City of Hesperia Business License Section",
         "description": "All entities transacting business in Hesperia must obtain and maintain a valid business license; commercial or industrial locations also require a certificate of occupancy, and home businesses must complete the home-occupation requirements.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://www.hesperiaca.gov/129/Business-Center",
         "appliesTo": ["all"]
       }
@@ -1705,7 +1705,7 @@
         "category": "license",
         "authority": "City of Vista Business License Office",
         "description": "Anyone conducting business in Vista must have a business license; licenses renew annually, tax is calculated from estimated gross receipts, home businesses need a Home Occupation Permit, and a $4 state fee applies to applicants and renewals.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://www.vista.gov/business/business-licenses",
         "appliesTo": ["all"]
       }
@@ -1762,7 +1762,7 @@
         "category": "license",
         "authority": "City of San Marcos Finance Department",
         "description": "San Marcos requires businesses to complete applicable zoning, building, fire and health approvals before licensing; the 2025 fee schedule lists a $154 in-city issuance/administrative fee, $60 home-based fee, $16 out-of-city fee, $4 state fee and annual renewal fees of $6 by email or $16 manually.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://www.sanmarcosca.gov/files/assets/city/v/1/economic-development/documents/business-license-tax-and-fee-schedule.pdf",
         "appliesTo": ["all"]
       }
@@ -1781,7 +1781,7 @@
         "category": "license",
         "authority": "City of Indio Finance Department",
         "description": "Indio requires every person or entity transacting business in the city to obtain a business license; fixed locations undergo city inspections, licenses are valid one year from issue, and renewal remains the owner’s responsibility. The business-license tax is based on gross receipts.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://www.indio.org/departments/finance/licenses-permits/business-license-information",
         "appliesTo": ["all"]
       }
@@ -1800,7 +1800,7 @@
         "category": "license",
         "authority": "City of Redding City Clerk",
         "description": "Redding requires a business license application and payment; home-based businesses also submit a Home Occupation Affidavit. The city application lists an annual base rate of $50 for retail/wholesale/miscellaneous businesses plus employee-based charges, with category-specific fees.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://files.cityofredding.gov/government/departments/city_clerk/business_licenses/index.php",
         "appliesTo": ["all"]
       }

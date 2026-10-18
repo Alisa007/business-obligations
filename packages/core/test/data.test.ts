@@ -446,7 +446,7 @@ describe("local and profession data schemas", () => {
       category: "payment",
       authority: "City Hall",
       description: "Pay the annual fee to the city.",
-      frequency: "annual",
+      rrule: "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=15",
       appliesTo: ["all"],
     };
     const bad: unknown[] = [
@@ -461,6 +461,11 @@ describe("local and profession data schemas", () => {
       { ...ok, status: undefined, items: [{ ...item, id: "Bad Id" }] },
       { ...ok, status: undefined, items: [{ ...item, url: "http://insecure.example" }] },
       { ...ok, status: undefined, items: [{ ...item, frequency: "yearly" }] },
+      // A recurrence is an rrule; `frequency` is only for what does not recur, and an entry has one or the other.
+      { ...ok, status: undefined, items: [{ ...item, rrule: undefined, frequency: "annual" }] },
+      { ...ok, status: undefined, items: [{ ...item, frequency: "once" }] },
+      { ...ok, status: undefined, items: [{ ...item, rrule: undefined }] },
+      { ...ok, status: undefined, items: [{ ...item, rrule: "FREQ=MONTHLY;INTERVAL=2" }] },
       { ...ok, status: undefined, items: [{ ...item, due: { type: "fixed", month: 13, day: 1 } }] },
       { ...ok, status: undefined, items: [{ ...item, due: { type: "date", date: "2026-02-30" } }] },
     ];
@@ -837,7 +842,7 @@ describe("seed items with appliesWhen", () => {
           category: "filing" as const,
           authority: "Testland Finance",
           description: "Lodging operators remit the county occupancy tax.",
-          frequency: "quarterly" as const,
+          rrule: "FREQ=MONTHLY;INTERVAL=3",
           appliesTo: ["all" as const],
           appliesWhen: [{ field: "activities", op: "in" as const, value: ["lodging"] }],
         },
@@ -1021,7 +1026,7 @@ describe("schedules in data files", () => {
       if (o.deadlineNote) {
         expect(generated, `${where} deadlineNote needs a rule that generates text`).toBeDefined();
         // The note may not name one of the rule's own dates.
-        const dates = s.due.type === "fixed" ? [s.due] : s.due.type === "multi" ? s.due.dates : [];
+        const dates = s.due?.type === "fixed" ? [s.due] : s.due?.type === "multi" ? s.due.dates : [];
         for (const d of dates)
           expect(
             (o.deadlineNote as string).includes(`${MONTHS[d.month - 1]} ${d.day}`),
@@ -1048,7 +1053,7 @@ describe("schedules in data files", () => {
     ];
     for (const [where, o] of nodes) {
       const { due } = parseRRule(o.rrule as string, o.anchor as string | undefined);
-      if (typeof o.deadline !== "string" || due.type === "anniversary") continue;
+      if (typeof o.deadline !== "string" || !due || due.type === "anniversary") continue;
       // Text such as "15th day of the 4th month after fiscal year end" names no month.
       if (!months.some((m) => (o.deadline as string).includes(m))) continue;
       const dueMonths =
@@ -1070,9 +1075,29 @@ describe("schedules in data files", () => {
     }
   });
 
+  it("reads undated recurrences as a frequency with no due date", () => {
+    for (const [rule, frequency] of [
+      ["FREQ=YEARLY", "annual"],
+      ["FREQ=YEARLY;INTERVAL=2", "biennial"],
+      ["FREQ=YEARLY;INTERVAL=5", "every_five_years"],
+      ["FREQ=MONTHLY", "monthly"],
+      ["FREQ=MONTHLY;INTERVAL=3", "quarterly"],
+    ] as const) {
+      const s = parseRRule(rule);
+      expect(s, rule).toEqual({ frequency });
+      expect(toRRule(s.due, s.frequency), rule).toEqual({ rrule: rule });
+    }
+    // The anniversary of formation is named, so a bare rule cannot be mistaken for it.
+    expect(parseRRule("FREQ=YEARLY", "formation").due).toEqual({ type: "anniversary", point: "date" });
+    expect(() => parseRRule("FREQ=YEARLY;BYMONTHDAY=1", "formation")).toThrow();
+    expect(() => parseRRule("FREQ=MONTHLY", "formation")).toThrow();
+  });
+
   it("rejects unsupported rules", () => {
     for (const bad of [
-      "FREQ=MONTHLY",
+      "FREQ=DAILY",
+      "FREQ=MONTHLY;INTERVAL=2",
+      "FREQ=MONTHLY;BYMONTHDAY=1",
       "FREQ=YEARLY;BYDAY=MO",
       "FREQ=YEARLY;BYMONTH=13;BYMONTHDAY=1",
       "FREQ=YEARLY;BYMONTH=5",

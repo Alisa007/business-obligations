@@ -27,7 +27,7 @@
         "category": "license",
         "authority": "City of Aurora Tax and Licensing Division",
         "description": "Any business operating in Aurora or with employees there needs a city business license, one per location. The license covers two years from issuance and establishes sales, use, occupational privilege and lodger's tax filing roles.",
-        "frequency": "biennial",
+        "rrule": "FREQ=YEARLY;INTERVAL=2",
         "deadline": "Two years from issuance",
         "url": "https://www.auroragov.org/bl",
         "appliesTo": ["all"]
@@ -66,7 +66,7 @@
         "category": "license",
         "authority": "City of Centennial Finance Department",
         "description": "Every active business needs either a Retail Sales Tax License or a Business Registration (one, not both); both are biennial and expire December 31 of the second calendar year.",
-        "frequency": "biennial",
+        "rrule": "FREQ=YEARLY;INTERVAL=2",
         "deadline": "December 31 of the second calendar year",
         "url": "https://www.centennialco.gov/Online-Services/Sales-Tax-Licensing",
         "appliesTo": ["all"]
@@ -85,7 +85,7 @@
         "category": "license",
         "authority": "City of Colorado Springs Sales Tax Office",
         "description": "Businesses selling or leasing at retail in the city need a city sales tax license (no fee since September 1, 2023). Licenses expire every odd year on December 31 and are renewed online only.",
-        "frequency": "biennial",
+        "rrule": "FREQ=YEARLY;INTERVAL=2",
         "deadline": "Expires December 31 of every odd year",
         "url": "https://coloradosprings.gov/new-tax-applications",
         "appliesTo": ["all"]
@@ -114,7 +114,7 @@
         "category": "payment",
         "authority": "Denver Department of Finance, Treasury Division",
         "description": "Employers and employees pay a monthly occupational privilege tax for work performed in Denver.",
-        "frequency": "monthly",
+        "rrule": "FREQ=MONTHLY",
         "url": "https://www.denvergov.org/files/assets/public/v/2/finance/documents/treasury/tax-guides/taxguidetopic61_occupationalprivilegetaxes.pdf",
         "appliesTo": ["employees"]
       }
@@ -260,7 +260,7 @@
         "category": "license",
         "authority": "City of Westminster City Clerk and Sales Tax Division",
         "description": "Business and sales tax licenses renew annually through the online portal at no fee for commercial locations; a reminder email goes 60 days before expiration.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "Anniversary of the license",
         "url": "https://www.westminsterco.gov/513/Business-Licenses",
         "appliesTo": ["all"]
