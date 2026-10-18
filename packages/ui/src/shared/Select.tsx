@@ -1,3 +1,4 @@
+import { useSyncExternalStore } from "react";
 import { Select as TamaguiSelect, Text } from "tamagui";
 import { ClearButton } from "./ClearButton";
 import { useControlProps } from "./controls";
@@ -25,10 +26,28 @@ export interface SelectProps {
   describedBy?: string;
 }
 
+const COARSE = "(pointer: coarse)";
+const onCoarseChange = (notify: () => void) => {
+  const query = window.matchMedia(COARSE);
+  query.addEventListener("change", notify);
+  return () => query.removeEventListener("change", notify);
+};
+
+/** Whether the main pointer is a finger. False on the server and while hydrating, so the markup matches. */
+const useCoarsePointer = () =>
+  useSyncExternalStore(
+    onCoarseChange,
+    () => window.matchMedia(COARSE).matches,
+    () => false,
+  );
+
 /**
  * A dropdown that looks like the package's inputs: the field's border, a chevron at the end and an optional ✕ to put it
  * back to "none". Options are `{ value, label }`. The chosen text is rendered by the component itself, so it is also in the
  * server's HTML before the list has been opened.
+ *
+ * On a touch screen it is the browser's own `<select>` instead: the phone's picker is what people expect there, and the
+ * custom list opens under the finger that tapped it, which picks (or dismisses) an option before it can be read.
  */
 export function Select({
   id,
@@ -42,8 +61,60 @@ export function Select({
   describedBy,
 }: SelectProps) {
   const controlProps = useControlProps();
+  const touch = useCoarsePointer();
   const chosen = options.find((option) => option.value === value);
   const clearable = Boolean(onClear && chosen);
+  if (touch) {
+    return (
+      <div style={{ position: "relative", width: "100%" }}>
+        <select
+          id={id}
+          value={value}
+          onChange={(event) => onChange(event.target.value)}
+          aria-invalid={invalid || undefined}
+          aria-describedby={describedBy}
+          style={{
+            width: "100%",
+            height: controlProps.height,
+            appearance: "none",
+            WebkitAppearance: "none",
+            borderRadius: 8,
+            border: `1px solid ${invalid ? "var(--red-600, #dc2626)" : "var(--border-color)"}`,
+            backgroundColor: "var(--background)",
+            color: chosen ? "var(--color)" : "var(--placeholder-color)",
+            // 16px stops iOS zooming on focus; the end padding leaves room for the chevron and the ✕
+            fontSize: Math.max(16, controlProps.fontSize),
+            padding: `0 ${clearable ? 56 : 32}px 0 12px`,
+          }}
+        >
+          {/* "none" is a choice only when the field can be emptied; otherwise it is just the placeholder */}
+          <option value="" disabled={!onClear} hidden={!onClear}>
+            {placeholder}
+          </option>
+          {options.map((option) => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
+        <svg
+          aria-hidden
+          width="12"
+          height="12"
+          viewBox="0 0 12 12"
+          fill="none"
+          stroke="var(--placeholder-color)"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          style={{ position: "absolute", right: 12, top: "50%", marginTop: -6, pointerEvents: "none" }}
+        >
+          <path d="M2.5 4.5 6 8l3.5-3.5" />
+        </svg>
+        {clearable ? <ClearButton label={clearLabel} right={26} onClear={onClear as () => void} /> : null}
+      </div>
+    );
+  }
   return (
     <div style={{ position: "relative", width: "100%" }}>
       <TamaguiSelect value={value} onValueChange={onChange}>
