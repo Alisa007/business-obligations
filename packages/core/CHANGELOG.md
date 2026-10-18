@@ -9,6 +9,55 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ### Added
 
+- **core:** Frankford (Delaware) business license, with Spanish text
+- **core:** Newport (Delaware) business license, with Spanish text
+- **core:** Henlopen Acres (Delaware) business license, with Spanish text
+- **core:** Blades (Delaware) business license, with Spanish text
+- **core:** Ellendale (Delaware) business license, with Spanish text
+- **core:** Townsend (Delaware) business license, with Spanish text
+- **core:** Wyoming (Delaware) business license, with Spanish text
+- **core:** Dagsboro (Delaware) business license renewals, with Spanish text
+- **core:** Greenwood (Delaware) business license, with Spanish text
+- **core:** Cheswold (Delaware) business license fees, with Spanish text
+- **core:** Lewes (Delaware) business and rental licenses, with Spanish text
+- **core:** Delaware DelDOT contractor registration and public carrier certificate, with Spanish text
+- **core:** Delaware coastal, chemical reporting, plumbing, injection well, radiation and security employee items, with Spanish text
+- **core:** Delaware pesticide, CAFO, tonnage, open burning, waste, tank, constable, racing and mortgage broker items, with Spanish text
+- **core:** Delaware nutrient management, timber, weights and measures, tank, wildlife, aquaculture, water operator and nursing assistant items, with Spanish text
+- **core:** Rehoboth Beach (Delaware) business license, with Spanish text
+- **core:** Harrington (Delaware) business license, with Spanish text
+- **core:** Millsboro (Delaware) business license, with Spanish text
+- **core:** Delmar (Delaware) business license, with Spanish text
+- **core:** Delaware deadly weapons dealer, armored car, bail enforcement, combative sports, harness racing and DelDOT permits, with Spanish text
+- **core:** Delaware food, milk, beverage, meat, radiation, boiler, bedding, chemical inventory and camp permits, with Spanish text
+- **core:** Delaware lead, stormwater, air, waste, fishing, shellfish and wastewater licenses and permits, with Spanish text
+- **core:** Delaware auto body, child care, alarm and security agencies, tobacco, body art, pawnbroker, pool and other state licenses, with Spanish text
+- **core:** Delaware fire protection licenses, fire alarm plan review, electric supplier annual report and notary commission, with Spanish text
+- **core:** Delaware adult-use cannabis licenses and health care facility licenses, with Spanish text
+- **core:** New Castle County (Delaware) contractor license, with Spanish text
+- **core:** Sussex County (Delaware) septage hauler license and Master Plumber requirement, with Spanish text
+- **core:** Camden (Delaware) business license, with Spanish text
+- **core:** Clayton (Delaware) business license, with Spanish text
+- **core:** Elsmere (Delaware) business license, with Spanish text
+- **core:** City of New Castle (Delaware) business license, with Spanish text
+- **core:** Milford (Delaware) business license, with Spanish text
+- **core:** Georgetown (Delaware) business license, with Spanish text
+- **core:** Selbyville (Delaware) business license, with Spanish text
+- **core:** Laurel (Delaware) business license, with Spanish text
+- **core:** South Bethany (Delaware) mercantile license, with Spanish text
+- **core:** Dewey Beach (Delaware) business license, with Spanish text
+- **core:** Ocean View (Delaware) business and rental licenses, with Spanish text
+- **core:** Bethany Beach (Delaware) business license, with Spanish text
+- **core:** Fenwick Island (Delaware) business license, with Spanish text
+- **core:** Millville (Delaware) business license, with Spanish text
+- **core:** Newark (Delaware) rental, contractor and fire licenses, with Spanish text
+- **core:** updated Dover (Delaware) business license fees, with Spanish text
+- **core:** Smyrna (Delaware) business and rental licenses, with Spanish text
+- **core:** Middletown (Delaware) business license, with fees by industry, with Spanish text
+- **core:** Delaware DNREC permits and licenses (storage tanks, well and septic contractors, stormwater, air, wetlands and marinas) and the motor vehicle dealer license, with Spanish text
+- **core:** Delaware insurance producer and State Bank Commissioner licenses (licensed lenders, mortgage loan originators, check cashers and others), with Spanish text
+- **core:** Delaware Department of Agriculture licenses (pesticide business and dealer, beekeeper, hemp, agricultural dealer, feed and fertilizer, nursery, livestock and meat), with Spanish text
+- **core:** Delaware liquor licenses (on-premises, store, wholesaler, manufacturer and nonprofit gathering), with Spanish text
 - **core:** Delaware Division of Professional Regulation licenses (36 boards and programs, with application fees and renewal dates), with Spanish text
 - **core:** Houston Health Department food establishment permit and mobile food unit medallion, with Spanish text
 - **core:** New York State Liquor Authority on-premises and off-premises (liquor store) licenses, with Spanish text
