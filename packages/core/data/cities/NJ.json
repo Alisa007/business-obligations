@@ -17,11 +17,32 @@
   },
   {
     "city": "Jersey City",
-    "status": "unverified",
-    "note": "A 1% employer payroll tax with quarterly returns is described by third-party sources only; the city's own page was not confirmed.",
+    "note": "Penalties for late filing were not stated on the city's payroll tax page.",
     "counties": ["Hudson"],
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "jerseycity.payroll-tax-registration",
+        "title": "Register for the Jersey City payroll tax",
+        "category": "registration",
+        "authority": "City of Jersey City Payroll Tax Unit",
+        "description": "Employers with a Jersey City zip code register once, online, through the city's payment portal before they file. Employers with quarterly gross payroll under $2,500 are exempt, and so are the wages of Jersey City residents.",
+        "frequency": "once",
+        "deadline": "Before the first return is due",
+        "url": "https://www.jerseycitynj.gov/cityhall/finance/taxes/payrolltaxfaq",
+        "appliesTo": ["employees"]
+      },
+      {
+        "id": "jerseycity.payroll-tax",
+        "title": "File and pay the Jersey City payroll tax",
+        "category": "payment",
+        "authority": "City of Jersey City Payroll Tax Unit",
+        "description": "Employers located in Jersey City pay a 1% tax on gross payroll, generally the amount reported on federal Form 941, and file each quarter. The tax cannot be deducted from employees' wages, and a postmark does not count as the payment date.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
+        "url": "https://www.jerseycitynj.gov/cityhall/finance/taxes/payrolltaxfaq",
+        "appliesTo": ["employees"]
+      }
+    ],
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "Newark",
