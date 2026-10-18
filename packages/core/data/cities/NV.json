@@ -1,12 +1,23 @@
 [
   {
     "city": "Henderson",
-    "status": "unverified",
-    "note": "The city says renewals are the owner's responsibility and penalties apply after the due date; the renewal term and date were not confirmed from the city's own pages.",
+    "note": "The renewal term and due date were not confirmed from the city's own pages.",
     "counties": ["Clark"],
     "sourceUrl": "https://www.cityofhenderson.com/government/departments/business-licensing/faqs",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "henderson.business-license",
+        "title": "Obtain and renew a City of Henderson business license",
+        "category": "license",
+        "authority": "City of Henderson Business Licensing",
+        "description": "Any business activity in the city needs a city business license, even if the business is located outside the city limits or holds a license from another city, in addition to the Nevada state business license. The fee depends on the classification, of which there are nearly 100. Food businesses also need a Southern Nevada Health District permit before they start, and privileged licenses need City Council approval before issue. A renewal received after its due date carries a 10% penalty, whether or not the reminder arrived.",
+        "frequency": "ongoing",
+        "deadline": "Before operating; renew on or before the due date",
+        "url": "https://www.cityofhenderson.com/government/departments/business-licensing/faqs",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "Las Vegas",
@@ -36,20 +47,42 @@
   },
   {
     "city": "North Las Vegas",
-    "status": "unverified",
-    "note": "No current official renewal date was found; renewals open 30 days before expiration.",
+    "note": "The license term and fees were not confirmed from the city's own pages.",
     "counties": ["Clark"],
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "northlasvegas.business-license",
+        "title": "Obtain and renew a North Las Vegas business license",
+        "category": "license",
+        "authority": "City of North Las Vegas Business License Division",
+        "description": "Anyone who conducts business in the city, or runs a business based in the city, needs a city business license before operations begin, with a separate license for each branch, establishment or location. Renewal opens 30 days before the license expires and fees must be paid before the expiration date to avoid a penalty, whether or not a notice arrived. A license that stays unpaid for 60 days after it expires is revoked.",
+        "frequency": "ongoing",
+        "deadline": "Before operating; renew before the license expires (renewal opens 30 days before)",
+        "url": "https://www.cityofnorthlasvegas.com/business/business-licenses",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "Reno",
-    "status": "unverified",
-    "note": "The city says renewal is the owner's responsibility and late payment carries a 50% penalty; the renewal date was not confirmed from the city's own pages.",
+    "note": "The current fee schedule was not confirmed from the city's own pages.",
     "counties": ["Washoe"],
     "sourceUrl": "https://reno.gov/business-development/business-licensing/common-questions-business-resources.php",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "reno.business-license",
+        "title": "Obtain and renew a City of Reno business license",
+        "category": "license",
+        "authority": "City of Reno Business Licensing",
+        "description": "Businesses in the city need a city business license in addition to the Nevada state business license. A general license runs 12 months from the first day of the month the business starts and is renewed each year online through the regional onenv.us portal. A late renewal carries a 50% penalty, and so does starting before the license is issued. Liquor and gaming licenses follow a quarterly cycle.",
+        "frequency": "annual",
+        "deadline": "Renew each year, by the end of the 12-month license term",
+        "url": "https://www.reno.gov/business-development/business-licensing/index.php",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "Sparks",
