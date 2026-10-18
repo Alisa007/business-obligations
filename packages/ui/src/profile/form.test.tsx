@@ -13,6 +13,7 @@ import {
   messages,
   profileFromChoices,
   readProfileQuery,
+  useProfilePlace,
   writeProfileQuery,
   type ProfileChoices,
 } from "../index";
@@ -290,6 +291,37 @@ describe("ProfileForm", () => {
     );
     expect(html).not.toContain("ZIP code");
     expect(html).toContain("Business type");
+  });
+
+  it("hides the ZIP field when any of city, county and state is given", () => {
+    const html = render(<ProfileForm values={{ city: "Gilbert", county: "Maricopa", state: "AZ" }} />);
+    expect(html).not.toContain("ZIP code");
+    expect(html).toContain("Business type");
+    // any part of a place means the host knows where the business is, so the ZIP is not asked
+    expect(render(<ProfileForm values={{ state: "AZ" }} />)).not.toContain("ZIP code");
+    expect(render(<ProfileForm values={{ zip: "85234" }} />)).not.toContain("ZIP code");
+  });
+
+  it("useProfilePlace gives the place that was passed, and looks the ZIP up for the rest", () => {
+    const seen: unknown[] = [];
+    const Probe = () => {
+      seen.push(useProfilePlace());
+      return null;
+    };
+    render(
+      <ProfileQueryProvider values={{ city: "Gilbert", county: "Maricopa", state: "AZ" }}>
+        <Probe />
+      </ProfileQueryProvider>,
+    );
+    expect(seen.at(-1)).toEqual({ city: "Gilbert", county: "Maricopa", state: "AZ" });
+    seen.length = 0;
+    render(
+      <ProfileQueryProvider values={{ zip: "85234" }}>
+        <Probe />
+      </ProfileQueryProvider>,
+    );
+    // looked up after the first render, so there is nothing to show on the server
+    expect(seen.at(-1)).toBeUndefined();
   });
 
   it("leaves out what the engine would refuse", () => {

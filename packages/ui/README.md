@@ -34,6 +34,14 @@ returns it, and its field (and its heading, when all of its fields are gone) is 
 outside the form, give them to `ProfileQueryProvider values={...}`, which the form picks up. The single fields
 (`TypeField`, `IndustryField`, `EmployeesField`, `DetailsField`) follow the same rule.
 
+**Where the business is** can be passed as a `zip`, or as `city`, `county` and `state` (the ZIP field is then hidden too, even when only some of the three are given).
+`useProfilePlace()` gives the `Place` for the engine either way: what the host passed, with the rest looked up from the
+ZIP code (`undefined` while it is not known yet, `null` for a ZIP code that does not exist).
+
+```tsx
+<ProfileForm values={{ city: "Gilbert", county: "Maricopa", state: "AZ" }} />
+```
+
 Old links keep working: `entity=`, `goods=`, `dba=` and `industry=restaurant` are read, and not written again.
 
 ### How the package is laid out

@@ -13,7 +13,7 @@ import { EmployeesField, NumberControl } from "./fields/NumberField";
 import { TypeField } from "./fields/TypeField";
 import { ZipField } from "./fields/ZipField";
 import { needsProfession } from "./place";
-import { ProfileQueryProvider, useFixedChoices, useProfileChoices } from "./store";
+import { ProfileQueryProvider, useFixedChoices, useProfileChoices, type ProfileValues } from "./store";
 
 /** A small uppercase heading with a rule after it, which groups the fields below. It takes the full width. */
 function SectionLabel({ children }: { children: ReactNode }) {
@@ -67,11 +67,11 @@ export interface ProfileFormProps {
   /** See `LaunchListProps.messages`. */
   messages?: Messages;
   /**
-   * Answers the host already has, for example the ZIP code on a page for one city. Each replaces what the address
+   * Answers the host already has, for example the ZIP code on a page for one city, or its `city`, `county` and `state`. Each replaces what the address
    * says and its field is not shown. To read the same values outside the form, give them to `ProfileQueryProvider`,
    * which the form picks up.
    */
-  values?: Partial<ProfileChoices>;
+  values?: ProfileValues;
   /** Today's date as `YYYY-MM-DD`, for the "start" date and the limits of the calendars. Defaults to the local date. */
   today?: string;
   /** Called with the name of a choice (never its value) when the person changes it. */

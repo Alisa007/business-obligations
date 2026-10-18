@@ -39,7 +39,9 @@ export {
   setProfileQuery,
   useFixedChoices,
   useProfileChoices,
+  useProfilePlace,
 } from "./profile/store";
+export type { ProfileValues } from "./profile/store";
 export { lookupPlace, needsProfession, profileFromChoices } from "./profile/place";
 export type { Place } from "./profile/place";
 export { ProfileForm } from "./profile/ProfileForm";
