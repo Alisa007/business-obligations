@@ -2,16 +2,26 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Anchor, H1, Paragraph, ScrollView, Tabs, Text, XStack, YStack } from "tamagui";
-import { LaunchList, ObligationsList, type ObligationFilters } from "business-obligations-ui";
+import {
+  Chip,
+  LaunchList,
+  NO_OBLIGATION_FILTERS,
+  ObligationsList,
+  ProfileForm,
+  lookupPlace,
+  needsProfession,
+  profileFromChoices,
+  todayIso,
+  useProfileChoices,
+  writeProfileQuery,
+  type ObligationFilters,
+} from "business-obligations-ui";
 import { SITE_CONFIG } from "../lib/config";
-import { NO_FILTERS, analyze, buildProfile, needsProfession, today, type Analysis } from "../lib/plan";
+import { analyze, type Analysis } from "../lib/plan";
 import { useAnalytics } from "../hooks/useAnalytics";
-import { useUrlState } from "../hooks/useUrlState";
-import { isRunnable, parseQuery } from "../lib/query";
 import { useDoneSteps } from "../hooks/useDoneSteps";
-import { ProfileForm, lookupZip, type PlanRequest } from "./ProfileForm";
 import { CalendarView, CostsView, ResultSummary, WhatIfView } from "./views";
-import { Chip, Muted, Panel } from "./ui";
+import { Muted, Panel } from "./ui";
 
 const TABS = [
   ["plan", "Launch plan"],
@@ -53,18 +63,21 @@ function EmptyPlanState() {
   );
 }
 
+/** How long the details stay unchanged before the result is worked out again. */
+const RECALCULATE_DELAY_MS = 400;
+
 export function Playground() {
   const analytics = useAnalytics();
   const { done, toggle } = useDoneSteps();
   const [now, setNow] = useState("2026-01-01");
   const [data, setData] = useState<Analysis>();
   const [error, setError] = useState<string>();
-  const [busy, setBusy] = useState(false);
   const [tab, setTab] = useState<TabId>("plan");
-  const [filters, setFilters] = useState<ObligationFilters>(NO_FILTERS);
-  const [sidebar, setSidebar] = useUrlState();
+  const [filters, setFilters] = useState<ObligationFilters>(NO_OBLIGATION_FILTERS);
+  // The form is the package's `ProfileForm`; its answers live in the address, and this reads them.
+  const [choices] = useProfileChoices();
 
-  useEffect(() => setNow(today()), []);
+  useEffect(() => setNow(todayIso()), []);
 
   // Report each field once per visit, by name only.
   const usedFields = useRef(new Set<string>());
@@ -74,70 +87,69 @@ export function Playground() {
     analytics.track("field_used", { field });
   };
 
-  const submit = async ({ form, asOf, openingDate }: PlanRequest) => {
-    setBusy(true);
-    try {
-      if (!/^\d{5}$/.test(form.zip.trim())) throw new Error("Enter a 5-digit ZIP code to start");
-      const place = await lookupZip(form.zip.trim());
-      if (!place) throw new Error(`Unknown ZIP code "${form.zip}"`);
-      const result = analyze(buildProfile({ ...form, zip: form.zip.trim() }, place), {
-        asOf: asOf || undefined,
-        openingDate: openingDate || undefined,
-        isNew: form.isNew,
-      });
-      const num = (v: string) => (v.trim() !== "" && Number.isFinite(Number(v)) ? Number(v) : undefined);
-      analytics.track("plan_generated", {
-        ...form,
-        zip: form.zip.trim(),
-        profession: needsProfession(form) ? form.profession : undefined,
-        employees: num(form.employees),
-        owners: num(form.owners),
-        payroll: num(form.payroll),
-        revenue: num(form.revenue),
-        formationDate: form.isNew ? undefined : form.formationDate || undefined,
-        asOf: asOf || undefined,
-        openingDate: openingDate || undefined,
-      });
-      analytics.log("plan_generated", {
-        entityType: form.entityType,
-        naics: form.naics,
-        isNew: form.isNew,
-      });
-      setData(result);
-      setError(undefined);
-    } catch (err) {
-      const message = err instanceof Error ? err.message : String(err);
-      analytics.log("plan_generation_failed", {
-        reason: message.startsWith("Unknown ZIP")
-          ? "unknown_zip"
-          : message.startsWith("Enter a 5-digit")
-            ? "invalid_zip"
-            : "analysis_error",
-      });
-      setData(undefined);
-      setError(message);
-    } finally {
-      setBusy(false);
-    }
-  };
-
-  // A link (or Back/Forward) that carries a ZIP shows its result straight away.
-  const submitRef = useRef(submit);
-  submitRef.current = submit;
+  // The result follows the address. Whenever the details change it is worked out again, after a short pause so that
+  // typing is not a calculation per key; there is no button to press. Without a complete ZIP there is nothing to show.
+  const key = writeProfileQuery("", choices);
+  const choicesRef = useRef(choices);
+  choicesRef.current = choices;
   useEffect(() => {
-    const fromUrl = () => {
-      const state = parseQuery(window.location.search);
-      if (isRunnable(state))
-        void submitRef.current({
-          form: state.form,
-          asOf: state.asOf,
-          openingDate: state.openingDate,
+    const state = choicesRef.current;
+    if (!/^\d{5}$/.test(state.zip)) {
+      setData(undefined);
+      setError(undefined);
+      return;
+    }
+    let current = true;
+    const timer = setTimeout(async () => {
+      try {
+        const place = await lookupPlace(state.zip);
+        if (!place) throw new Error(`Unknown ZIP code "${state.zip}"`);
+        const result = analyze(profileFromChoices(state, place), {
+          asOf: state.asOf || undefined,
+          openingDate: state.openingDate || undefined,
+          isNew: !state.isFormed,
         });
+        if (!current) return;
+        analytics.track("plan_generated", {
+          zip: state.zip,
+          entityType: state.entityType,
+          naics: state.naics,
+          profession: needsProfession(state) ? state.profession : undefined,
+          employees: state.employeeCount,
+          owners: state.ownerCount,
+          payroll: state.annualPayroll,
+          revenue: state.annualRevenue,
+          sellsGoods: state.sellsTaxableGoods,
+          homeBased: state.homeBased,
+          tradeName: state.usesTradeName,
+          isNew: !state.isFormed,
+          formationDate: state.isFormed ? state.formationDate || undefined : undefined,
+          asOf: state.asOf || undefined,
+          openingDate: state.openingDate || undefined,
+        });
+        analytics.log("plan_generated", {
+          entityType: state.entityType,
+          naics: state.naics,
+          isNew: !state.isFormed,
+        });
+        setData(result);
+        setError(undefined);
+      } catch (err) {
+        if (!current) return;
+        const message = err instanceof Error ? err.message : String(err);
+        analytics.log("plan_generation_failed", {
+          reason: message.startsWith("Unknown ZIP") ? "unknown_zip" : "analysis_error",
+        });
+        setData(undefined);
+        setError(message);
+      }
+    }, RECALCULATE_DELAY_MS);
+    return () => {
+      current = false;
+      clearTimeout(timer);
     };
-    fromUrl();
-    window.addEventListener("popstate", fromUrl);
-    return () => window.removeEventListener("popstate", fromUrl);
-  }, []);
+    // `key` is the address: the effect reads the state it stands for, through the ref.
+  }, [key]);
 
   const download = () => {
     if (!data) return;
@@ -157,6 +169,7 @@ export function Playground() {
         return (
           <ObligationsList
             items={data.result.items}
+            conditional={data.conditional}
             asOf={data.result.asOf}
             filters={filters}
             onFilters={setFilters}
@@ -220,14 +233,9 @@ export function Playground() {
           position={{ default: "relative", md: "sticky" }}
           top={16}
         >
-          <ProfileForm
-            today={now}
-            busy={busy}
-            value={sidebar}
-            onChange={setSidebar}
-            onSubmit={submit}
-            onFieldUsed={fieldUsed}
-          />
+          <Panel gap="2.5" padding="3.5">
+            <ProfileForm today={now} onFieldUsed={fieldUsed} />
+          </Panel>
         </YStack>
         <YStack flex={1} minWidth={0} aria-live="polite">
           <Panel gap="4" padding="4" minHeight={220} minWidth={0}>

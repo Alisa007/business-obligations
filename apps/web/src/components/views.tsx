@@ -1,9 +1,9 @@
 "use client";
 
 import { Button, Paragraph, Text, XStack, YStack } from "tamagui";
-import { formatDate, money, relativeDays } from "../lib/format";
+import { Collapse, ExternalLink, Stat, formatDate, formatMoney, relativeDays } from "business-obligations-ui";
 import { summarize, type Analysis } from "../lib/plan";
-import { Disclosure, ExternalLink, ListRow, Muted, Stat } from "./ui";
+import { ListRow, Muted } from "./ui";
 
 // ---- Calendar, fees, what-if ----
 
@@ -65,8 +65,8 @@ export function CostsView({ data }: { data: Analysis }) {
   return (
     <YStack gap="3">
       <Paragraph>
-        Known government fees: <Text fontWeight="700">{money(data.costs.annual)}</Text> per year,{" "}
-        <Text fontWeight="700">{money(data.costs.oneTime)}</Text> one-time.
+        Known government fees: <Text fontWeight="700">{formatMoney(data.costs.annual)}</Text> per year,{" "}
+        <Text fontWeight="700">{formatMoney(data.costs.oneTime)}</Text> one-time.
       </Paragraph>
       <YStack>
         {data.costs.lines.map((l) => (
@@ -75,7 +75,7 @@ export function CostsView({ data }: { data: Analysis }) {
               <ExternalLink url={urlOf.get(l.id)}>{l.title}</ExternalLink>
               {l.estimate ? " (estimate)" : ""}
             </Text>
-            <Text fontWeight="600">{money(l.perYear || l.amount)}</Text>
+            <Text fontWeight="600">{formatMoney(l.perYear || l.amount)}</Text>
           </ListRow>
         ))}
       </YStack>
@@ -158,7 +158,8 @@ export function ResultSummary({ data }: { data: Analysis }) {
         </Muted>
       )}
       {s.changes.length > 0 && (
-        <Disclosure
+        <Collapse
+          level={3}
           summary={
             <Text fontWeight="600">
               {s.changes.length} rule {s.changes.length === 1 ? "change" : "changes"} coming that affect this
@@ -174,7 +175,7 @@ export function ResultSummary({ data }: { data: Analysis }) {
               </Paragraph>
             ))}
           </YStack>
-        </Disclosure>
+        </Collapse>
       )}
     </YStack>
   );
