@@ -5,6 +5,7 @@ import type { Catalog } from "../../i18n";
  * Official agency names that come from the data ("Texas Comptroller of Public Accounts") are not translated.
  */
 export const authorityPatterns: NonNullable<Catalog["patterns"]> = [
+  ["{1!}: {2} / {3} County", "{1}: {2} / condado de {3}"],
   ["{1!}: {2} / {3} County (ZIP {4:n})", "{1}: {2} / condado de {3} (código postal {4})"],
   ["{1} ({2} County) building department", "Departamento de edificación de {1} (condado de {2})"],
   ["{1} County health department ({2})", "Departamento de salud del condado de {1} ({2})"],

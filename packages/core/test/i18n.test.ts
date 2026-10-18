@@ -5,6 +5,7 @@ import {
   localizePlan,
   localizeText,
   planLaunch,
+  STATES,
   type BusinessProfile,
   type Catalog,
 } from "../src";
@@ -136,5 +137,28 @@ describe("es catalog", () => {
       expect(item.description).not.toMatch(/\b(the|and|must|required)\b/i);
       expect(item.reason).not.toMatch(/\b(the|and|must|required)\b/i);
     }
+  });
+
+  it("translates the explanatory text of every state, not only its rules", () => {
+    const untranslated: string[] = [];
+    for (const state of Object.values(STATES)) {
+      if (localizeText(state.entityTax, es) === state.entityTax)
+        untranslated.push(`${state.code} entityTax: ${state.entityTax}`);
+      // Permit names are translated with the state suffix item titles use.
+      const withState = `${state.salesTax.permit} (${state.name})`;
+      if (localizeText(withState, es) === withState)
+        untranslated.push(`${state.code} permit: ${state.salesTax.permit}`);
+    }
+    expect(untranslated).toEqual([]);
+  });
+
+  it("writes place names that have a Spanish name in Spanish, and leaves the rest as they are", () => {
+    expect(localizeText("New York", es)).toBe("Nueva York");
+    expect(localizeText("New Orleans", es)).toBe("Nueva Orleans");
+    expect(localizeText("St. Louis", es)).toBe("San Luis");
+    expect(localizeText("Houston", es)).toBe("Houston");
+    expect(localizeText("City licensing agency: New York / Bronx County", es)).toBe(
+      "Agencia de licencias de la ciudad: Nueva York / condado de Bronx",
+    );
   });
 });
