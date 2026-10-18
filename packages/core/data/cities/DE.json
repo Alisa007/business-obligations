@@ -91,10 +91,22 @@
   },
   {
     "city": "Bridgeville",
-    "status": "unverified",
-    "note": "The Town takes business license applications online for 2026 and keeps a list of licensed businesses, but the fee and in-town or out-of-town rules were not on a page that could be read.",
     "counties": ["Sussex"],
-    "items": [],
+    "items": [
+      {
+        "id": "bridgeville-de.business-license",
+        "title": "Renew your Bridgeville business license",
+        "category": "license",
+        "authority": "Town of Bridgeville",
+        "description": "Every business in Bridgeville fills in the town's yearly business license application, with a copy of its Delaware business license and a certificate of liability insurance. The annual fee is $100, but a business physically inside the town limits does not have to pay it. Payment is online at the town's site and the documents go to the town by email.",
+        "frequency": "annual",
+        "url": "https://bridgeville.delaware.gov/license/",
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "varies"
+        }
+      }
+    ],
     "checkedOn": "2026-10-18"
   },
   {
