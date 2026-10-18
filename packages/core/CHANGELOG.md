@@ -9,6 +9,7 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ### Added
 
+- **core:** Frankford (Delaware) business license, with Spanish text
 - **core:** Newport (Delaware) business license, with Spanish text
 - **core:** Henlopen Acres (Delaware) business license, with Spanish text
 - **core:** Blades (Delaware) business license, with Spanish text

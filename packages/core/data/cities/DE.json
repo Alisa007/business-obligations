@@ -289,10 +289,19 @@
   },
   {
     "city": "Frankford",
-    "status": "unverified",
-    "note": "The Town's forms list a business license application, and its charter lets the council fix license fees, but no fee schedule was found.",
     "counties": ["Sussex"],
-    "items": [],
+    "items": [
+      {
+        "id": "frankford-de.business-license",
+        "title": "Renew your Frankford business license",
+        "category": "license",
+        "authority": "Town of Frankford",
+        "description": "A business in Frankford needs a town license, which costs $75.00 and is valid for one year, from January 1 through December 31. Failing to get one may bring a $150.00 penalty and a stop work order, and the application asks for the Delaware state license number.",
+        "frequency": "annual",
+        "url": "https://frankford.delaware.gov/forms-and-applications/",
+        "appliesTo": ["all"]
+      }
+    ],
     "checkedOn": "2026-10-18"
   },
   {
