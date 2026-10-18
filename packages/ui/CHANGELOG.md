@@ -6,27 +6,17 @@ All notable changes to `business-obligations-ui` are documented here.
 
 ### Changed
 
-- `ProfileForm`: the layout is a twelve-column grid that changes in smaller steps with the form's width. The fiscal year
-  end and the LLC tax classification, and the start date and the target opening, are half of a row each from 420px
-  (whole rows below that); text and list fields are half a row from 420px and a third from 900px; counts are half a row
-  in a sidebar and a quarter from 520px. The money amounts share one row of as many columns as fit (at least 130px
-  each): two in a sidebar, all five side by side on a wide form
-
-### Changed
-
-- `ProfileForm`: when the ZIP code is not asked (the host gave the place), the business type and the industry are half of
-  the row each at any form width, instead of leaving a gap on the widest layout
-
-### Changed
-
-- `ProfileForm`: the industry field is no longer always a full row, so the business type and the industry share a row
-  from 520px wide (the ZIP code joins them from 800px, and now comes after them); in a narrow sidebar they still stack. The money fields are narrower too (one column, two on the widest layout), so
-  two fit on a row in a sidebar and four from 520px
-
-### Added
-
-- `LaunchList` takes an optional `conditional` list (the same `ConditionalItem[]` as `ObligationsList`) and shows those
-  items after the phases, grouped by level with city first, each with what would bring it in
+- `Select`: the list of options is at least 240px wide (and never wider than the screen), so a long option is not cut
+  off when the control is narrow
+- `ProfileForm`: every group of fields is now a grid of as many equal columns as fit, each at least a minimum width, so
+  there are no breakpoints and no gaps: the business type, the industry and the ZIP code share a row (the type and
+  the industry at 50% each when the ZIP code is not asked), the employees, owners and full-time staff share a row, the
+  fiscal year end and the LLC tax, and the start date and the target opening, are half a row each, and all five money
+  amounts sit on one line when the form is wide (two to a row in a sidebar)
+- `ProfileForm`: shorter labels ("Owners", "Full-time staff", "Net income", "Top contractor pay", "Last year's payroll
+  tax", "Fiscal year end", "Start date") with a "?" tooltip beside the label of every field that needs an explanation,
+  and example amounts as the placeholders of the money fields. `Messages` gains `profileForm.about`, `hints` and
+  `examples`, which a custom translation must provide
 
 ## [0.5.0] - 2026-10-18
 

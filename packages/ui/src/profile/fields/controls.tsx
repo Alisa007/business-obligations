@@ -1,6 +1,7 @@
-import { Label, Text, YStack } from "tamagui";
+import { Label, Text, XStack, YStack } from "tamagui";
 import { useI18n } from "../../i18n/context";
 import type { Messages } from "../../i18n/messages";
+import { InfoTip } from "../../shared/InfoTip";
 import type { FieldError } from "../validation";
 
 /** Props every business-details field takes. The value itself lives in the URL, so there is no `value` or `onChange`. */
@@ -13,12 +14,27 @@ export interface ProfileFieldProps {
   id?: string;
 }
 
-export function Labeled({ id, label, children }: { id: string; label: string; children: React.ReactNode }) {
+export function Labeled({
+  id,
+  label,
+  hint,
+  children,
+}: {
+  id: string;
+  label: string;
+  /** What the field is for, in a tooltip next to the label, for a label too short to say it. */
+  hint?: string;
+  children: React.ReactNode;
+}) {
+  const { m } = useI18n();
   return (
     <YStack gap="1" flexGrow={1}>
-      <Label htmlFor={id} fontSize="sm" fontWeight="500" color="color">
-        {label}
-      </Label>
+      <XStack alignItems="center" gap="1.5">
+        <Label htmlFor={id} fontSize="sm" fontWeight="500" color="color">
+          {label}
+        </Label>
+        {hint ? <InfoTip label={m.profileForm.about(label)}>{hint}</InfoTip> : null}
+      </XStack>
       {children}
     </YStack>
   );

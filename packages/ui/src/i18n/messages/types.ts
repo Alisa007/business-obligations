@@ -111,6 +111,8 @@ export interface Messages {
     fullTimePlaceholder: string;
     money: string;
     optional: string;
+    /** Example amounts shown as the placeholder of each amount field. */
+    examples: Record<"payroll" | "revenue" | "netIncome" | "contractor" | "priorTax", string>;
     payroll: string;
     revenue: string;
     netIncome: string;
@@ -128,6 +130,25 @@ export interface Messages {
     startToday: string;
     targetOpening: string;
     selectDate: string;
+    /** Accessible name of a "?" next to a label: `about(label)` is "More about …". */
+    about: (label: string) => string;
+    /** What a field is for, shown in a tooltip next to its (short) label. */
+    hints: Record<
+      | "industry"
+      | "owners"
+      | "fullTime"
+      | "payroll"
+      | "revenue"
+      | "netIncome"
+      | "contractor"
+      | "priorTax"
+      | "fiscalMonth"
+      | "llcTax"
+      | "formationDate"
+      | "startToday"
+      | "targetOpening",
+      string
+    >;
     clearDate: string;
     previousMonth: string;
     nextMonth: string;
