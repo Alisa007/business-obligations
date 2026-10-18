@@ -302,6 +302,14 @@ describe("ProfileForm", () => {
     expect(render(<ProfileForm values={{ zip: "85234" }} />)).not.toContain("ZIP code");
   });
 
+  it("makes the business type and the industry half a row each when the ZIP code is not asked", () => {
+    const withZip = render(<ProfileForm />);
+    expect(withZip).not.toContain('class="bo-half"');
+    expect(withZip).toContain("ZIP code");
+    const html = render(<ProfileForm values={{ state: "AZ" }} />);
+    expect(html.match(/class="bo-half"/g)?.length).toBe(2);
+  });
+
   it("useProfilePlace gives the place that was passed, and looks the ZIP up for the rest", () => {
     const seen: unknown[] = [];
     const Probe = () => {

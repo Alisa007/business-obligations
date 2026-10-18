@@ -44,17 +44,18 @@ const FORM_CSS = `
 .bo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:12px;row-gap:14px;align-items:start}
 .bo-grid>*{min-width:0}
 .bo-wide{grid-column:span 2}
+.bo-half{grid-column:span 2}
 .bo-full{grid-column:1/-1}
 .bo-section{display:flex;align-items:center;gap:10px;margin-top:10px}
 .bo-section:first-child{display:none}
 .bo-rule{flex:1;height:1px;background:var(--border-color)}
 @container (min-width:520px){.bo-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
-@container (min-width:800px){.bo-grid{grid-template-columns:repeat(6,minmax(0,1fr))}.bo-short{grid-column:span 2}}
+@container (min-width:800px){.bo-grid{grid-template-columns:repeat(6,minmax(0,1fr))}.bo-short{grid-column:span 2}.bo-half{grid-column:span 3}}
 `;
 
 /** One field in the grid; see `FORM_CSS`. */
-function Cell({ size = "wide", children }: { size?: "wide" | "short"; children: ReactNode }) {
-  return <div className={size === "wide" ? "bo-wide" : "bo-short"}>{children}</div>;
+function Cell({ size = "wide", children }: { size?: "wide" | "short" | "half"; children: ReactNode }) {
+  return <div className={`bo-${size}`}>{children}</div>;
 }
 
 /** Something that takes every column of the grid. */
@@ -105,6 +106,8 @@ function ProfileFormBody({ today, onFieldUsed }: Pick<ProfileFormProps, "today" 
     );
     return name.charAt(0).toLocaleUpperCase(tag) + name.slice(1);
   };
+  // Without the ZIP code (the host gave the place) the type and the industry are half the row each, at any width.
+  const half = shows("zip") ? "wide" : "half";
   const askProfession = shows("profession") && needsProfession(choices);
   const askLlcTax = shows("llcTaxClassification") && ["", "llc", "pllc"].includes(choices.entityType ?? "");
   const askDetails = shows("isFormed", ...DETAIL_FIELDS);
@@ -113,12 +116,12 @@ function ProfileFormBody({ today, onFieldUsed }: Pick<ProfileFormProps, "today" 
     <div className="bo-grid">
       {(shows("zip", "entityType", "naics") || askProfession) && <SectionLabel>{f.business}</SectionLabel>}
       {shows("entityType") && (
-        <Cell>
+        <Cell size={half}>
           <TypeField />
         </Cell>
       )}
       {shows("naics") && (
-        <Cell>
+        <Cell size={half}>
           <IndustryField />
         </Cell>
       )}
