@@ -5,6 +5,13 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ## [Unreleased]
 
+## [0.13.0] - 2026-10-18
+
+### Added
+
+- **data:** Dallas food establishment permit
+- **data:** more Delaware towns
+
 ## [0.12.0] - 2026-10-18
 
 ### Added
