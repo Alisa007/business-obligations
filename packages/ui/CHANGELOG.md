@@ -4,6 +4,12 @@ All notable changes to `business-obligations-ui` are documented here.
 
 ## [Unreleased]
 
+### Fixed
+
+- `Select` did not work on phones: the custom list opens under the finger that tapped it, so an option was picked or
+  the list closed before it could be read. On a touch screen (`pointer: coarse`) it is now the browser's own
+  `<select>`, with the same border and chevron
+
 ## [0.4.0] - 2026-10-18
 
 ### Added
