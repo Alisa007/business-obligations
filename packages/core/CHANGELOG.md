@@ -9,6 +9,12 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ### Added
 
+- **core:** Newport (Delaware) business license, with Spanish text
+- **core:** Henlopen Acres (Delaware) business license, with Spanish text
+- **core:** Blades (Delaware) business license, with Spanish text
+- **core:** Ellendale (Delaware) business license, with Spanish text
+- **core:** Townsend (Delaware) business license, with Spanish text
+- **core:** Wyoming (Delaware) business license, with Spanish text
 - **core:** Dagsboro (Delaware) business license renewals, with Spanish text
 - **core:** Greenwood (Delaware) business license, with Spanish text
 - **core:** Cheswold (Delaware) business license fees, with Spanish text
