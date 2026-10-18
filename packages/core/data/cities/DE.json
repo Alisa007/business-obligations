@@ -99,10 +99,19 @@
   },
   {
     "city": "Cheswold",
-    "status": "unverified",
-    "note": "The State's list of city and town licensing links no business license application for this municipality, and no page on one was found.",
     "counties": ["Kent"],
-    "items": [],
+    "items": [
+      {
+        "id": "cheswold-de.business-license",
+        "title": "Renew your Cheswold business license",
+        "category": "license",
+        "authority": "Town of Cheswold",
+        "description": "A business in Cheswold needs a town license renewed every year, with the initial fee paid with the application and renewals at the same rates. The town's schedule, revised February 3, 2025, charges $100 for a bar, restaurant, auto repair or day care of 1 to 5 children, $65 for a one-chair barber or beauty shop plus $15 per extra chair, $120 for retail and grocery up to 3,000 square feet, $150 for auto sales, $175 for accounting, $200 for a commercial contractor, $300 for each attorney and $500 for a bank or gas station, among other types. Mobile home parks of 35 or fewer homes are exempt, and some fees are not listed.",
+        "frequency": "annual",
+        "url": "https://cheswold.delaware.gov/businesslicense/",
+        "appliesTo": ["all"]
+      }
+    ],
     "checkedOn": "2026-10-18"
   },
   {
@@ -124,10 +133,19 @@
   },
   {
     "city": "Dagsboro",
-    "status": "unverified",
-    "note": "The State's list of city and town licensing links no business license application for this municipality, and no page on one was found.",
     "counties": ["Sussex"],
-    "items": [],
+    "items": [
+      {
+        "id": "dagsboro-de.business-license",
+        "title": "Renew your Dagsboro business license",
+        "category": "license",
+        "authority": "Town of Dagsboro",
+        "description": "Resident merchants, outside contractors and rentals in Dagsboro renew their town licenses by January 1, and a late payment costs $45 for each license. The town's renewal notice gives no base fee, so ask the town office at 302-732-3777.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=1",
+        "url": "https://dagsboro.delaware.gov/events/deadline-for-2026-business-license-renewals/",
+        "appliesTo": ["all"]
+      }
+    ],
     "checkedOn": "2026-10-18"
   },
   {
@@ -286,10 +304,19 @@
   },
   {
     "city": "Greenwood",
-    "status": "unverified",
-    "note": "The State's list of city and town licensing links no business license application for this municipality, and no page on one was found.",
     "counties": ["Sussex"],
-    "items": [],
+    "items": [
+      {
+        "id": "greenwood-de.business-license",
+        "title": "Renew your Greenwood business license",
+        "category": "license",
+        "authority": "Town of Greenwood",
+        "description": "A business in Greenwood needs a town license for the calendar year. The 2026 fee schedule charges $75 for a resident business and $150 for a non-resident one, $25 for a peddler or solicitor, and $100 per unit for a rental license. The schedule file is marked as proposed on December 10, 2025.",
+        "frequency": "annual",
+        "url": "https://greenwood.delaware.gov/files/2026/01/adopted-fee-schedule-2026.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
     "checkedOn": "2026-10-18"
   },
   {
@@ -368,10 +395,30 @@
   },
   {
     "city": "Lewes",
-    "status": "unverified",
-    "note": "The city code sets a calendar-year license, but no fee schedule was on a page that could be read.",
     "counties": ["Sussex"],
-    "items": [],
+    "items": [
+      {
+        "id": "lewes-de.business-license",
+        "title": "Renew your Lewes business license",
+        "category": "license",
+        "authority": "City of Lewes Building Department",
+        "description": "Anyone engaged for profit within Lewes city limits pays an annual license fee for the calendar year, and a new license obtained in October, November or December costs half. The April 2025 schedule charges $108 for a rental, commercial rental, restaurant-space or parking lot, $135 for a barber, beauty parlor or dry cleaner, $190 for an insurance agent, food service business, medical or other professional, $163 for retail up to 2,500 square feet and $300 for 2,501 to 5,000, $218 for a restaurant that does not serve alcohol and $410 for one that does, $465 for a bank, $150 for a contractor with 1 to 5 employees and $360 for 6 or more, and $245 for manufacturing.",
+        "frequency": "annual",
+        "url": "https://www.ci.lewes.de.us/DocumentCenter/View/4914/Fees-and-Charges-for-City-412025",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "lewes-de.rental-license",
+        "title": "Get a Lewes rental license",
+        "category": "license",
+        "authority": "City of Lewes Building Department",
+        "description": "Each residential rental unit in Lewes, short-term or long-term, needs a city rental license, which costs $200 a year. A second violation notice costs $250 and a third $500 with the rental license suspended for 12 months.",
+        "frequency": "annual",
+        "url": "https://www.ci.lewes.de.us/DocumentCenter/View/4914/Fees-and-Charges-for-City-412025",
+        "naics": ["5311", "531110", "531311", "721199"],
+        "appliesTo": ["all"]
+      }
+    ],
     "checkedOn": "2026-10-18"
   },
   {
