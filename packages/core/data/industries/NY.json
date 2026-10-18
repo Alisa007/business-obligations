@@ -37,7 +37,11 @@
     "checkedOn": "2026-10-16",
     "rrule": "FREQ=YEARLY;BYMONTH=6;BYMONTHDAY=30",
     "anchor": "2027-06-30",
-    "exemptions": ["Licensed dealers obtaining registrations and titles only for their own customers"]
+    "exemptions": ["Licensed dealers obtaining registrations and titles only for their own customers"],
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 25
+    }
   },
   {
     "id": "ny.liquor-bottling-permit",
@@ -63,7 +67,11 @@
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/1907",
     "checkedOn": "2026-10-16",
     "frequency": "ongoing",
-    "renewal": "Every three years"
+    "renewal": "Every three years",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 500
+    }
   },
   {
     "id": "ny.scrap-metal-processor-registration",
@@ -284,7 +292,11 @@
         "description": "Located in New York City"
       }
     ],
-    "frequency": "biennial"
+    "frequency": "biennial",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 200
+    }
   },
   {
     "id": "ny.nyc-electronic-cigarette-retail-dealer-license",
@@ -305,7 +317,11 @@
         "description": "Located in New York City"
       }
     ],
-    "frequency": "biennial"
+    "frequency": "biennial",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 200
+    }
   },
   {
     "id": "ny.nyc-self-storage-facility-license",
@@ -371,7 +387,11 @@
       }
     ],
     "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=8;BYMONTHDAY=31",
-    "anchor": "2027-08-31"
+    "anchor": "2027-08-31",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 200
+    }
   },
   {
     "id": "ny.nyc-ticket-seller-business-license",
@@ -631,7 +651,11 @@
       }
     ],
     "frequency": "annual",
-    "renewal": "Every year"
+    "renewal": "Every year",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 280
+    }
   },
   {
     "id": "ny.nyc-mobile-food-vending-permit",
@@ -696,7 +720,11 @@
         "description": "Located in New York City"
       }
     ],
-    "frequency": "ongoing"
+    "frequency": "ongoing",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 200
+    }
   },
   {
     "id": "ny.nyc-for-hire-vehicle-base-license",
@@ -740,7 +768,11 @@
       }
     ],
     "frequency": "annual",
-    "renewal": "Every year"
+    "renewal": "Every year",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 275
+    }
   },
   {
     "id": "ny.nyc-high-volume-for-hire-service-license",
@@ -763,7 +795,11 @@
     ],
     "frequency": "biennial",
     "renewal": "Every two years",
-    "exemptions": ["Dispatchers under 10,000 trips a day"]
+    "exemptions": ["Dispatchers under 10,000 trips a day"],
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 380000
+    }
   },
   {
     "id": "ny.ewaste-recycling-facility-registration",
@@ -775,7 +811,11 @@
     "appliesTo": ["all"],
     "url": "https://dec.ny.gov/environmental-protection/recycling-composting/electronic-waste-recycling/facility-requirements",
     "checkedOn": "2026-10-16",
-    "frequency": "ongoing"
+    "frequency": "ongoing",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 250
+    }
   },
   {
     "id": "ny.ewaste-manufacturer-registration",
@@ -787,7 +827,11 @@
     "appliesTo": ["all"],
     "url": "https://dec.ny.gov/environmental-protection/recycling-composting/electronic-waste-recycling/covered-electronic-equipment-manufacturer-requirements",
     "checkedOn": "2026-10-16",
-    "frequency": "ongoing"
+    "frequency": "ongoing",
+    "feeDetail": {
+      "basis": "varies",
+      "min": 5000.0
+    }
   },
   {
     "id": "ny.insurer-annual-statement",
@@ -839,7 +883,11 @@
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/2620",
     "checkedOn": "2026-10-16",
     "frequency": "annual",
-    "renewal": "Every year"
+    "renewal": "Every year",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 10
+    }
   },
   {
     "id": "ny.fishing-preserve-license",
@@ -852,7 +900,11 @@
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/2289",
     "checkedOn": "2026-10-16",
     "frequency": "annual",
-    "renewal": "Every year"
+    "renewal": "Every year",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 50
+    }
   },
   {
     "id": "ny.tax-preparer-registration",
@@ -868,7 +920,11 @@
     "renewal": "Every year",
     "exemptions": [
       "Preparers who are not paid to prepare New York returns, such as attorneys, CPAs and enrolled agents who are exempt"
-    ]
+    ],
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 100
+    }
   },
   {
     "id": "ny.atv-dealer-registration",
@@ -881,7 +937,11 @@
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/1941",
     "checkedOn": "2026-10-16",
     "frequency": "ongoing",
-    "renewal": "Every two years"
+    "renewal": "Every two years",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 50
+    }
   },
   {
     "id": "ny.professional-entity-consent",
@@ -948,7 +1008,11 @@
     "appliesTo": ["all"],
     "url": "https://www.op.nysed.gov/about/fees",
     "checkedOn": "2026-10-16",
-    "frequency": "ongoing"
+    "frequency": "ongoing",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 210
+    }
   },
   {
     "id": "ny.cd-debris-facility-registration",
@@ -1167,7 +1231,11 @@
     "url": "https://dos.ny.gov/private-investigator1",
     "checkedOn": "2026-10-16",
     "frequency": "biennial",
-    "renewal": "Every two years, filed at least six weeks before expiry"
+    "renewal": "Every two years, filed at least six weeks before expiry",
+    "feeDetail": {
+      "basis": "varies",
+      "min": 400.0
+    }
   },
   {
     "id": "ny.employment-agency-license",
@@ -1232,7 +1300,11 @@
     "url": "https://dos.ny.gov/home-inspector1",
     "checkedOn": "2026-10-16",
     "frequency": "biennial",
-    "renewal": "Every two years, with 24 hours of continuing education"
+    "renewal": "Every two years, with 24 hours of continuing education",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 100
+    }
   },
   {
     "id": "ny.mortgage-broker-registration",
@@ -1319,7 +1391,11 @@
     "url": "https://www.nycourts.gov/biennial-attorney-registration/biennial-attorney-registration",
     "checkedOn": "2026-10-16",
     "frequency": "biennial",
-    "deadline": "Within 30 days of the attorney's birthday, every two years"
+    "deadline": "Within 30 days of the attorney's birthday, every two years",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 375
+    }
   },
   {
     "id": "ny.cpa-firm-registration",
@@ -1345,7 +1421,11 @@
     "url": "https://dos.ny.gov/get-security-or-fire-alarm-installer-license",
     "checkedOn": "2026-10-16",
     "frequency": "ongoing",
-    "renewal": "Every two years"
+    "renewal": "Every two years",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 100
+    }
   },
   {
     "id": "ny.document-destruction-contractor-registration",
@@ -1358,7 +1438,11 @@
     "url": "https://dos.ny.gov/get-document-destruction-contractor-license",
     "checkedOn": "2026-10-16",
     "frequency": "ongoing",
-    "renewal": "Every two years"
+    "renewal": "Every two years",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 50
+    }
   },
   {
     "id": "ny.coin-processor-license",
@@ -1371,7 +1455,11 @@
     "url": "https://dos.ny.gov/become-coin-processor",
     "checkedOn": "2026-10-16",
     "frequency": "ongoing",
-    "renewal": "Every two years"
+    "renewal": "Every two years",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 300
+    }
   },
   {
     "id": "ny.bedding-manufacturer-registration",
@@ -1384,7 +1472,11 @@
     "url": "https://dos.ny.gov/get-bedding-manufacturers-refurbisher-license",
     "checkedOn": "2026-10-16",
     "frequency": "annual",
-    "renewal": "Every year"
+    "renewal": "Every year",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 150
+    }
   },
   {
     "id": "ny.durable-juvenile-product-manufacturer-license",
@@ -1397,7 +1489,11 @@
     "url": "https://dos.ny.gov/get-durable-juvenile-product-manufacturer-license",
     "checkedOn": "2026-10-16",
     "frequency": "ongoing",
-    "renewal": "Every two years"
+    "renewal": "Every two years",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 25
+    }
   },
   {
     "id": "ny.pet-cemetery-crematorium-license",
@@ -1409,7 +1505,11 @@
     "appliesTo": ["all"],
     "url": "https://dos.ny.gov/get-pet-cemetery-pet-crematorium-license",
     "checkedOn": "2026-10-16",
-    "frequency": "ongoing"
+    "frequency": "ongoing",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 150
+    }
   },
   {
     "id": "ny.cpa-firm-annual-update",
@@ -1435,7 +1535,11 @@
     "url": "https://www.op.nysed.gov/professions/engineering/frequently-asked-practice-questions",
     "checkedOn": "2026-10-16",
     "frequency": "ongoing",
-    "renewal": "Every three years"
+    "renewal": "Every three years",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 75
+    }
   },
   {
     "id": "ny.veterinary-registration",
@@ -1465,7 +1569,11 @@
     "exemptions": [
       "Stores that sell only prepackaged food (they need a retail food store license instead)",
       "Some Liquor Authority farm licensees and honey, maple syrup and hop processors, which must still follow good manufacturing practices"
-    ]
+    ],
+    "feeDetail": {
+      "basis": "varies",
+      "min": 175.0
+    }
   },
   {
     "id": "ny.retail-food-store-license",
@@ -1477,7 +1585,11 @@
     "appliesTo": ["all"],
     "url": "https://agriculture.ny.gov/food-safety/application-retail-food-store-license-article-28",
     "checkedOn": "2026-10-18",
-    "frequency": "biennial"
+    "frequency": "biennial",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 250
+    }
   },
   {
     "id": "ny.tobacco-retail-dealer-registration",
@@ -1493,6 +1605,10 @@
     "opens": {
       "month": 9,
       "day": 1
+    },
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 300
     }
   },
   {
@@ -1535,7 +1651,11 @@
     "url": "https://dol.ny.gov/application-asbestos-handling-license-sh430",
     "checkedOn": "2026-10-16",
     "frequency": "annual",
-    "renewal": "Every year, with a renewal notice about two months before expiry"
+    "renewal": "Every year, with a renewal notice about two months before expiry",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 300
+    }
   },
   {
     "id": "ny.controlled-substance-activity-license",
@@ -1586,7 +1706,11 @@
     "appliesTo": ["all"],
     "url": "https://dec.ny.gov/regulatory/permits-licenses/commercial-fishing-and-aquaculture-permits",
     "checkedOn": "2026-10-16",
-    "frequency": "annual"
+    "frequency": "annual",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 250
+    }
   },
   {
     "id": "ny.shellfish-shipper-processor-permit",
@@ -1610,7 +1734,11 @@
     "appliesTo": ["all"],
     "url": "https://dec.ny.gov/regulatory/permits-licenses/commercial-fishing-and-aquaculture-permits",
     "checkedOn": "2026-10-16",
-    "frequency": "annual"
+    "frequency": "annual",
+    "feeDetail": {
+      "basis": "varies",
+      "min": 50.0
+    }
   },
   {
     "id": "ny.lobster-crab-permit",
@@ -1623,7 +1751,11 @@
     "url": "https://dec.ny.gov/regulatory/permits-licenses/commercial-fishing-and-aquaculture-permits",
     "checkedOn": "2026-10-16",
     "frequency": "annual",
-    "exemptions": ["New lobster permits are under a moratorium"]
+    "exemptions": ["New lobster permits are under a moratorium"],
+    "feeDetail": {
+      "basis": "varies",
+      "min": 150.0
+    }
   },
   {
     "id": "ny.aquaculture-permits",
@@ -1648,7 +1780,11 @@
     "url": "https://dec.ny.gov/regulatory/permits-licenses/fish-wildlife-plant/special-licenses/nuisance-wildlife-control",
     "checkedOn": "2026-10-16",
     "rrule": "FREQ=YEARLY;BYMONTH=9;BYMONTHDAY=30",
-    "anchor": "2026-09-30"
+    "anchor": "2026-09-30",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 50
+    }
   },
   {
     "id": "ny.shooting-preserve-license",
@@ -1660,7 +1796,11 @@
     "appliesTo": ["all"],
     "url": "https://dec.ny.gov/regulatory/permits-licenses/fish-wildlife-plant/special-licenses/shooting-preserve-license",
     "checkedOn": "2026-10-16",
-    "frequency": "ongoing"
+    "frequency": "ongoing",
+    "feeDetail": {
+      "basis": "varies",
+      "min": 60.0
+    }
   },
   {
     "id": "ny.lng-facility-permit",
@@ -1796,7 +1936,11 @@
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/2206",
     "checkedOn": "2026-10-16",
     "frequency": "ongoing",
-    "renewal": "Every two years"
+    "renewal": "Every two years",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 50
+    }
   },
   {
     "id": "ny.fur-breeder-license",
@@ -1808,7 +1952,11 @@
     "appliesTo": ["all"],
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/2323",
     "checkedOn": "2026-10-16",
-    "frequency": "ongoing"
+    "frequency": "ongoing",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 25
+    }
   },
   {
     "id": "ny.central-dispatch-facility-registration",
@@ -1821,7 +1969,11 @@
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/2056",
     "checkedOn": "2026-10-16",
     "frequency": "annual",
-    "renewal": "Every year"
+    "renewal": "Every year",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 200
+    }
   },
   {
     "id": "ny.mass-gathering-permit",
@@ -1834,7 +1986,11 @@
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/2485",
     "checkedOn": "2026-10-16",
     "frequency": "per_event",
-    "exemptions": ["Events under 5,000 people or shorter than 24 hours"]
+    "exemptions": ["Events under 5,000 people or shorter than 24 hours"],
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 500
+    }
   },
   {
     "id": "ny.nyc-doh-barber-shop-permit",
@@ -2216,7 +2372,11 @@
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/1915",
     "checkedOn": "2026-10-16",
     "frequency": "annual",
-    "renewal": "Every year"
+    "renewal": "Every year",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 50
+    }
   },
   {
     "id": "ny.nursery-dealer-registration",
@@ -2229,7 +2389,11 @@
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/2567",
     "checkedOn": "2026-10-16",
     "frequency": "ongoing",
-    "renewal": "Every two years"
+    "renewal": "Every two years",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 100
+    }
   },
   {
     "id": "ny.farm-labor-contractor-registration",
@@ -2255,7 +2419,11 @@
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/2837",
     "checkedOn": "2026-10-16",
     "frequency": "annual",
-    "renewal": "Every year"
+    "renewal": "Every year",
+    "feeDetail": {
+      "basis": "varies",
+      "min": 25.0
+    }
   },
   {
     "id": "ny.child-performer-eligibility-certificate",
@@ -2311,7 +2479,11 @@
     "url": "https://dmv.ny.gov/business/driver-training/open-a-driving-school",
     "checkedOn": "2026-10-16",
     "frequency": "biennial",
-    "renewal": "Every two years, filed 30 to 60 days before expiry"
+    "renewal": "Every two years, filed 30 to 60 days before expiry",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 100
+    }
   },
   {
     "id": "ny.private-career-school-license",
@@ -2386,7 +2558,11 @@
     "url": "https://www.wadsworth.org/regulatory/clep/clinical-labs/re-apply-for-permit",
     "checkedOn": "2026-10-16",
     "frequency": "annual",
-    "deadline": "Reapply each spring; the permit year starts July 1"
+    "deadline": "Reapply each spring; the permit year starts July 1",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 100
+    }
   },
   {
     "id": "ny.physician-registration",
@@ -2450,7 +2626,11 @@
     "url": "https://dec.ny.gov/environmental-protection/mining-reclamation/reclamation-permit/annual-regulatory-fee",
     "checkedOn": "2026-10-16",
     "frequency": "annual",
-    "deadline": "Billed in August, due in September"
+    "deadline": "Billed in August, due in September",
+    "feeDetail": {
+      "basis": "varies",
+      "min": 400.0
+    }
   },
   {
     "id": "ny.cemetery-annual-report",
@@ -2527,7 +2707,11 @@
     "checkedOn": "2026-10-16",
     "frequency": "ongoing",
     "renewal": "Every two years",
-    "exemptions": ["Sites that hold a clinical laboratory permit"]
+    "exemptions": ["Sites that hold a clinical laboratory permit"],
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 200
+    }
   },
   {
     "id": "ny.private-school-agent-certificate",
@@ -2540,7 +2724,11 @@
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/2630",
     "checkedOn": "2026-10-16",
     "frequency": "ongoing",
-    "renewal": "Every two years"
+    "renewal": "Every two years",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 100
+    }
   },
   {
     "id": "ny.hearing-aid-business-registration",
@@ -2646,7 +2834,11 @@
     "url": "https://agriculture.ny.gov/food-safety/commercial-feed",
     "checkedOn": "2026-10-16",
     "frequency": "annual",
-    "deadline": "Each year, before the license expires at the start of the calendar year"
+    "deadline": "Each year, before the license expires at the start of the calendar year",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 100
+    }
   },
   {
     "id": "ny.fertilizer-distributor-license",
@@ -2659,7 +2851,11 @@
     "url": "https://agriculture.ny.gov/business/licensing-registration",
     "checkedOn": "2026-10-16",
     "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=12;BYMONTHDAY=31",
-    "anchor": "2026-12-31"
+    "anchor": "2026-12-31",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 150
+    }
   },
   {
     "id": "ny.milk-plant-permit",
@@ -2684,7 +2880,11 @@
     "url": "https://agriculture.ny.gov/dairy/dairy-business-licensing",
     "checkedOn": "2026-10-16",
     "frequency": "annual",
-    "exemptions": ["Dealers handling less than 3,000 pounds of milk a month"]
+    "exemptions": ["Dealers handling less than 3,000 pounds of milk a month"],
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 100
+    }
   },
   {
     "id": "ny.peo-registration",
@@ -2715,7 +2915,11 @@
     "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=31",
     "exemptions": [
       "Businesses that facilitate ticket transactions without any fee or surcharge above the established price (the application fee is waived)"
-    ]
+    ],
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 5000
+    }
   },
   {
     "id": "ny.ticket-reseller-reports",
@@ -2750,7 +2954,11 @@
       }
     ],
     "frequency": "ongoing",
-    "renewal": "Every three years"
+    "renewal": "Every three years",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 240
+    }
   },
   {
     "id": "ny.nyc-dob-master-plumber-license",
@@ -2772,7 +2980,11 @@
       }
     ],
     "frequency": "ongoing",
-    "renewal": "Every three years"
+    "renewal": "Every three years",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 150
+    }
   },
   {
     "id": "ny.nyc-dob-master-electrician-license",
@@ -2816,7 +3028,11 @@
       }
     ],
     "frequency": "ongoing",
-    "renewal": "Every three years"
+    "renewal": "Every three years",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 150
+    }
   },
   {
     "id": "ny.nyc-dob-sign-hanger-license",
@@ -2838,7 +3054,11 @@
       }
     ],
     "frequency": "ongoing",
-    "renewal": "Every three years"
+    "renewal": "Every three years",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 75
+    }
   },
   {
     "id": "ny.nyc-dob-oil-burner-installer-license",
@@ -2860,7 +3080,11 @@
       }
     ],
     "frequency": "ongoing",
-    "renewal": "Every three years"
+    "renewal": "Every three years",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 75
+    }
   },
   {
     "id": "ny.nyc-dob-hoisting-machine-operator-license",
@@ -2904,7 +3128,11 @@
       }
     ],
     "frequency": "ongoing",
-    "renewal": "Every one to three years"
+    "renewal": "Every one to three years",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 50
+    }
   },
   {
     "id": "ny.nyc-dob-filing-representative-registration",
@@ -2926,7 +3154,11 @@
       }
     ],
     "frequency": "ongoing",
-    "renewal": "Every three years"
+    "renewal": "Every three years",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 150
+    }
   },
   {
     "id": "ny.nyc-dob-concrete-testing-laboratory-license",
@@ -2948,7 +3180,11 @@
       }
     ],
     "frequency": "ongoing",
-    "renewal": "Every year"
+    "renewal": "Every year",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 75
+    }
   },
   {
     "id": "ny.nyc-dob-elevator-agency-director-license",
@@ -2992,7 +3228,11 @@
       }
     ],
     "frequency": "ongoing",
-    "renewal": "Every three years"
+    "renewal": "Every three years",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 25
+    }
   },
   {
     "id": "ny.nyc-fdny-industrial-process-permits",
@@ -3194,7 +3434,11 @@
     "url": "https://dos.ny.gov/telemarketer-business",
     "checkedOn": "2026-10-16",
     "frequency": "biennial",
-    "renewal": "Every two years"
+    "renewal": "Every two years",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 500
+    }
   },
   {
     "id": "ny.armored-car-carrier-license",
@@ -3207,7 +3451,11 @@
     "url": "https://dos.ny.gov/get-armored-car-carrier-license",
     "checkedOn": "2026-10-16",
     "frequency": "ongoing",
-    "renewal": "Every three years"
+    "renewal": "Every three years",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 300
+    }
   },
   {
     "id": "ny.armored-car-guard-registration",
@@ -3220,7 +3468,11 @@
     "url": "https://dos.ny.gov/get-armored-car-guard-license",
     "checkedOn": "2026-10-16",
     "frequency": "biennial",
-    "renewal": "Every two years"
+    "renewal": "Every two years",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 50
+    }
   },
   {
     "id": "ny.athlete-agent-registration",
@@ -3233,7 +3485,11 @@
     "url": "https://dos.ny.gov/athlete-agent",
     "checkedOn": "2026-10-16",
     "frequency": "biennial",
-    "renewal": "Every two years"
+    "renewal": "Every two years",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 50
+    }
   },
   {
     "id": "ny.nyc-tow-truck-driver-license",
@@ -3332,7 +3588,11 @@
     "url": "https://www.health.ny.gov/environmental/radiological/radon/registration.htm",
     "checkedOn": "2026-10-16",
     "frequency": "annual",
-    "exemptions": ["Practices without radiation-producing equipment"]
+    "exemptions": ["Practices without radiation-producing equipment"],
+    "feeDetail": {
+      "basis": "varies",
+      "min": 50.0
+    }
   },
   {
     "id": "ny.tanning-facility-permit",
@@ -3385,7 +3645,11 @@
     "url": "https://www.dfs.ny.gov/apps_and_licensing/agents_and_brokers/lic_app_ia_pa_inst",
     "checkedOn": "2026-10-16",
     "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=12;BYMONTHDAY=31",
-    "anchor": "2026-12-31"
+    "anchor": "2026-12-31",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 100
+    }
   },
   {
     "id": "ny.opioid-excise-tax-return",
@@ -3530,7 +3794,11 @@
         "description": "Located in New York City"
       }
     ],
-    "frequency": "ongoing"
+    "frequency": "ongoing",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 252
+    }
   },
   {
     "id": "ny.nyc-bathing-establishment-pool-permit",
@@ -3574,7 +3842,11 @@
       }
     ],
     "frequency": "ongoing",
-    "renewal": "Every three years"
+    "renewal": "Every three years",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 25
+    }
   },
   {
     "id": "ny.childrens-camp-permit",
@@ -3631,7 +3903,11 @@
     "checkedOn": "2026-10-16",
     "frequency": "ongoing",
     "renewal": "Up to every two years",
-    "exemptions": ["New York attorneys in good standing skip the course and exam"]
+    "exemptions": ["New York attorneys in good standing skip the course and exam"],
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 80
+    }
   },
   {
     "id": "ny.notary-public-commission",
@@ -3643,7 +3919,11 @@
     "appliesTo": ["all"],
     "url": "https://dos.ny.gov/become-notary-public",
     "checkedOn": "2026-10-16",
-    "frequency": "ongoing"
+    "frequency": "ongoing",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 60
+    }
   },
   {
     "id": "ny.ophthalmic-dispenser-license",
@@ -3656,7 +3936,11 @@
     "url": "https://www.op.nysed.gov/professions/ophthalmic-dispensing/license-requirements-and-requirements-certificate-contact-lens",
     "checkedOn": "2026-10-16",
     "frequency": "ongoing",
-    "renewal": "Registration every three years"
+    "renewal": "Registration every three years",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 108
+    }
   },
   {
     "id": "ny.combative-sports-promoter-license",
@@ -3707,7 +3991,11 @@
     "url": "https://dmv.ny.gov/forms/cr81.pdf",
     "checkedOn": "2026-10-16",
     "frequency": "ongoing",
-    "renewal": "Confirm the term with DMV"
+    "renewal": "Confirm the term with DMV",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 50
+    }
   },
   {
     "id": "ny.household-goods-mover-authority",
@@ -3848,7 +4136,11 @@
     "renewal": "Every two years, with the annual roster report filed first",
     "exemptions": [
       "Appraisal management companies regulated by a federal financial institution regulator, and their wholly owned subsidiaries"
-    ]
+    ],
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 250
+    }
   },
   {
     "id": "ny.inspection-station-license",
@@ -4008,7 +4300,11 @@
     "url": "https://dol.ny.gov/elevator-licensing-information",
     "checkedOn": "2026-10-16",
     "frequency": "ongoing",
-    "renewal": "Every two years"
+    "renewal": "Every two years",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 600
+    }
   },
   {
     "id": "ny.cable-franchise-confirmation",
@@ -4055,7 +4351,11 @@
     ],
     "frequency": "every_five_years",
     "renewal": "Every five years",
-    "exemptions": ["Buildings six stories or lower"]
+    "exemptions": ["Buildings six stories or lower"],
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 425
+    }
   },
   {
     "id": "ny.nyc-boiler-annual-inspection-report",
@@ -4211,7 +4511,11 @@
         "description": "Located in New York City"
       }
     ],
-    "frequency": "per_event"
+    "frequency": "per_event",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 420
+    }
   },
   {
     "id": "ny.nyc-fdny-commercial-cooking-permit",
@@ -4337,7 +4641,11 @@
         "description": "Located in New York City"
       }
     ],
-    "frequency": "ongoing"
+    "frequency": "ongoing",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 210
+    }
   },
   {
     "id": "ny.nyc-fdny-special-effects-pyrotechnics-permit",
@@ -4422,7 +4730,11 @@
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/2390",
     "checkedOn": "2026-10-16",
     "frequency": "annual",
-    "renewal": "Every year"
+    "renewal": "Every year",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 256
+    }
   },
   {
     "id": "ny.real-estate-course-approval",
@@ -4512,7 +4824,11 @@
     "url": "https://dec.ny.gov/things-to-do/saltwater-fishing/marine-permits-licenses",
     "checkedOn": "2026-10-16",
     "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=31",
-    "anchor": "2026-12-31"
+    "anchor": "2026-12-31",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 250
+    }
   },
   {
     "id": "ny.nyc-dob-site-safety-manager-registration",
@@ -4534,7 +4850,11 @@
       }
     ],
     "frequency": "ongoing",
-    "renewal": "Every three years"
+    "renewal": "Every three years",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 150
+    }
   },
   {
     "id": "ny.nyc-dob-special-inspection-agency-registration",
@@ -4556,7 +4876,11 @@
       }
     ],
     "frequency": "ongoing",
-    "renewal": "Every three years"
+    "renewal": "Every three years",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 90
+    }
   },
   {
     "id": "ny.nyc-dob-welder-license",
@@ -4578,7 +4902,11 @@
       }
     ],
     "frequency": "ongoing",
-    "renewal": "Every three years"
+    "renewal": "Every three years",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 45
+    }
   },
   {
     "id": "ny.nyc-horse-drawn-cab-driver-license",
@@ -4772,7 +5100,11 @@
     "url": "https://www.op.nysed.gov/professions/landscape-architecture/license-requirements",
     "checkedOn": "2026-10-16",
     "frequency": "ongoing",
-    "exemptions": ["Certain exempt settings listed by NYSED"]
+    "exemptions": ["Certain exempt settings listed by NYSED"],
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 294
+    }
   },
   {
     "id": "ny.slaughterhouse-license",
@@ -4858,7 +5190,11 @@
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/2840",
     "checkedOn": "2026-10-16",
     "frequency": "ongoing",
-    "renewal": "Every two years"
+    "renewal": "Every two years",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 90
+    }
   },
   {
     "id": "ny.licensed-guide-license",
@@ -4871,7 +5207,11 @@
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/2346",
     "checkedOn": "2026-10-16",
     "frequency": "ongoing",
-    "renewal": "Every five years"
+    "renewal": "Every five years",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 100
+    }
   },
   {
     "id": "ny.wine-brand-label-registration",
@@ -4884,7 +5224,11 @@
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/2022",
     "checkedOn": "2026-10-16",
     "frequency": "annual",
-    "renewal": "Every year"
+    "renewal": "Every year",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 50
+    }
   },
   {
     "id": "ny.non-beverage-manufacturer-permit",
@@ -4897,7 +5241,11 @@
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/2559",
     "checkedOn": "2026-10-16",
     "frequency": "ongoing",
-    "renewal": "Every three years"
+    "renewal": "Every three years",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 788
+    }
   },
   {
     "id": "ny.student-loan-servicer-annual-report",
@@ -4950,7 +5298,11 @@
     "url": "https://www.dfs.ny.gov/apps_and_licensing/service_contract_providers",
     "checkedOn": "2026-10-16",
     "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=2;BYMONTHDAY=28",
-    "anchor": "2027-02-28"
+    "anchor": "2027-02-28",
+    "feeDetail": {
+      "basis": "varies",
+      "min": 250.0
+    }
   },
   {
     "id": "ny.credit-reporting-agency-registration",
@@ -5041,7 +5393,11 @@
     "appliesTo": ["all"],
     "url": "https://www.op.nysed.gov/professions/chiropractic/license-requirements",
     "checkedOn": "2026-10-16",
-    "frequency": "ongoing"
+    "frequency": "ongoing",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 294
+    }
   },
   {
     "id": "ny.optometrist-license",
@@ -5053,7 +5409,11 @@
     "appliesTo": ["all"],
     "url": "https://www.op.nysed.gov/professions/optometry/license-requirements",
     "checkedOn": "2026-10-16",
-    "frequency": "ongoing"
+    "frequency": "ongoing",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 377
+    }
   },
   {
     "id": "ny.psychologist-license",
@@ -5065,7 +5425,11 @@
     "appliesTo": ["all"],
     "url": "https://www.op.nysed.gov/professions/psychology/license-requirements",
     "checkedOn": "2026-10-16",
-    "frequency": "ongoing"
+    "frequency": "ongoing",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 294
+    }
   },
   {
     "id": "ny.podiatrist-license",
@@ -5077,7 +5441,11 @@
     "appliesTo": ["all"],
     "url": "https://www.op.nysed.gov/professions/podiatry/license-requirements",
     "checkedOn": "2026-10-16",
-    "frequency": "ongoing"
+    "frequency": "ongoing",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 377
+    }
   },
   {
     "id": "ny.nursing-home-operating-certificate",
@@ -5128,7 +5496,11 @@
     "url": "https://sla.ny.gov/winery-quick-reference-1",
     "checkedOn": "2026-10-18",
     "frequency": "ongoing",
-    "renewal": "Every 36 months"
+    "renewal": "Every 36 months",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 3025
+    }
   },
   {
     "id": "ny.on-premises-liquor-license",

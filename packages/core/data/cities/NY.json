@@ -240,7 +240,11 @@
         "frequency": "ongoing",
         "renewal": "Every three years",
         "url": "https://lackawannany.gov/city-clerk/business/",
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "flat",
+          "amount": 100
+        }
       }
     ],
     "checkedOn": "2026-10-16"
@@ -318,7 +322,11 @@
         "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=31",
         "deadlineNote": "renewal window is January",
         "url": "https://newrochelleny.com/1032/Retail-Business-Registration-Program",
-        "appliesTo": ["sells_goods"]
+        "appliesTo": ["sells_goods"],
+        "feeDetail": {
+          "basis": "none",
+          "amount": 0
+        }
       }
     ],
     "checkedOn": "2026-10-16"
@@ -383,7 +391,11 @@
         "frequency": "annual",
         "deadline": "At least 45 days before the license expires",
         "url": "https://www.niagarafallsny.gov/government/departments/city_clerks/certificates_and_licenses/index.php",
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "flat",
+          "amount": 50
+        }
       }
     ],
     "checkedOn": "2026-10-16"
@@ -522,7 +534,11 @@
         "deadline": "Expires December 31",
         "url": "https://www.cityofrochester.gov/departments/neighborhood-and-business-development/business-permits",
         "naics": ["722330"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 330.0
+        }
       },
       {
         "id": "rochester.towing-license",
@@ -534,7 +550,11 @@
         "deadline": "Expires August 31",
         "url": "https://www.cityofrochester.gov/departments/neighborhood-and-business-development/business-permits",
         "naics": ["488410"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "flat",
+          "amount": 350
+        }
       }
     ],
     "checkedOn": "2026-10-18"
@@ -586,7 +606,11 @@
         "frequency": "annual",
         "deadline": "Before opening, then recertify each year",
         "url": "https://ecode360.com/8688661",
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "flat",
+          "amount": 200
+        }
       }
     ],
     "checkedOn": "2026-10-16"
@@ -613,7 +637,11 @@
         "deadline": "Apply before opening; submit the renewal application 60 days before the certificate expires",
         "url": "https://www.syr.gov/Departments/Central-Permit-Office/Self-Services/Certificate-of-Use-License",
         "naics": ["7224", "7225", "445110", "445131", "456110"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "flat",
+          "amount": 500
+        }
       }
     ],
     "checkedOn": "2026-10-18"

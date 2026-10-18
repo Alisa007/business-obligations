@@ -359,7 +359,7 @@
               "enum": ["annual", "biennial", "once"]
             },
             "feeDetail": {
-              "$ref": "#/$defs/feeDetail"
+              "$ref": "common.schema.json#/$defs/feeDetail"
             }
           }
         }
@@ -598,7 +598,7 @@
           "description": "Fee text; stored only when feeDetail cannot say it all (a waiver, an estimate, a rate), otherwise generated from feeDetail."
         },
         "feeDetail": {
-          "$ref": "#/$defs/feeDetail"
+          "$ref": "common.schema.json#/$defs/feeDetail"
         },
         "lateFee": {
           "$ref": "#/$defs/lateFee"
@@ -633,99 +633,6 @@
             "not": {
               "required": ["anchor"]
             }
-          }
-        }
-      ]
-    },
-    "feeDetail": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["basis"],
-      "properties": {
-        "basis": {
-          "enum": ["flat", "per_partner", "per_member", "percent", "varies", "none"]
-        },
-        "amount": {
-          "type": "number",
-          "minimum": 0
-        },
-        "online": {
-          "type": "number",
-          "minimum": 0
-        },
-        "paper": {
-          "type": "number",
-          "minimum": 0
-        },
-        "rate": {
-          "type": "number",
-          "minimum": 0
-        },
-        "base": {
-          "type": "number",
-          "minimum": 0
-        },
-        "perUnit": {
-          "type": "number",
-          "minimum": 0
-        },
-        "freeUnits": {
-          "type": "integer",
-          "minimum": 0
-        },
-        "min": {
-          "type": "number",
-          "minimum": 0
-        },
-        "max": {
-          "type": "number",
-          "minimum": 0
-        },
-        "waived": {
-          "type": "boolean"
-        },
-        "estimate": {
-          "type": "boolean"
-        },
-        "note": {
-          "type": "string"
-        }
-      },
-      "allOf": [
-        {
-          "if": {
-            "properties": {
-              "basis": {
-                "enum": ["flat", "none"]
-              }
-            }
-          },
-          "then": {
-            "required": ["amount"]
-          }
-        },
-        {
-          "if": {
-            "properties": {
-              "basis": {
-                "enum": ["per_partner", "per_member"]
-              }
-            }
-          },
-          "then": {
-            "required": ["perUnit"]
-          }
-        },
-        {
-          "if": {
-            "properties": {
-              "basis": {
-                "const": "percent"
-              }
-            }
-          },
-          "then": {
-            "required": ["rate"]
           }
         }
       ]
