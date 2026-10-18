@@ -496,12 +496,48 @@
   },
   {
     "city": "Rochester",
-    "status": "unverified",
-    "note": "A city business permit applies to listed business types (tobacco and vape, auto service, salons and tattoo); no general license was confirmed.",
+    "note": "The city issues activity-specific permits and licenses (listed business types, food trucks, towing); no general business license was confirmed.",
     "counties": ["Monroe"],
     "sourceUrl": "https://cityofrochester.gov/sites/default/files/2024-10/Business%20Permit%20Application.pdf",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "rochester.business-permit",
+        "title": "Get and renew a Rochester business permit",
+        "category": "permit",
+        "authority": "City of Rochester Neighborhood and Business Development",
+        "description": "Restaurants, bars, salons and barber shops, tattoo and body piercing parlors, automobile service facilities, and tobacco, hookah and vape retailers need a city business permit. Zoning approval comes first, then the city checks New York State tax liabilities and runs a criminal records check on everyone on the application. The permit is valid for one year and is not transferable, and renewal needs proof of payment of New York State sales tax.",
+        "frequency": "annual",
+        "deadline": "Before opening, then renew each year",
+        "url": "https://www.cityofrochester.gov/departments/neighborhood-and-business-development/business-permits",
+        "naics": ["7224", "7225", "8121", "812199", "8111", "459991"],
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "rochester.food-truck-license",
+        "title": "Renew your Rochester food truck license",
+        "category": "license",
+        "authority": "City of Rochester City Clerk",
+        "description": "A food truck needs a city license, applied for at the City Clerk's Office with approvals from the Police and Fire departments. The fee is $1,000 in Center City and $330 elsewhere in the city, and the license expires each December 31.",
+        "frequency": "annual",
+        "deadline": "Expires December 31",
+        "url": "https://www.cityofrochester.gov/departments/neighborhood-and-business-development/business-permits",
+        "naics": ["722330"],
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "rochester.towing-license",
+        "title": "Renew your Rochester towing license",
+        "category": "license",
+        "authority": "City of Rochester City Clerk",
+        "description": "Towing businesses need a city license, applied for at the City Clerk's Office with approvals from Zoning, Police and Fire. The fee is $350 and the license expires each August 31.",
+        "frequency": "annual",
+        "deadline": "Expires August 31",
+        "url": "https://www.cityofrochester.gov/departments/neighborhood-and-business-development/business-permits",
+        "naics": ["488410"],
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "Rome",
@@ -565,12 +601,22 @@
   },
   {
     "city": "Syracuse",
-    "status": "unverified",
-    "note": "A Certificate of Use is required only for listed business types (bars, restaurants, small markets and others) and a tobacco retail license for tobacco sellers; no general license was confirmed.",
     "counties": ["Onondaga"],
-    "sourceUrl": "https://www.syr.gov/Departments/Central-Permit-Office/Self-Services/Certificate-of-Use-License",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "syracuse.certificate-of-use",
+        "title": "Get and renew a Syracuse Certificate of Use",
+        "category": "permit",
+        "authority": "City of Syracuse Central Permit Office",
+        "description": "Bars, restaurants, neighborhood markets under 10,000 square feet, drugstores and smoking establishments need a Certificate of Use. The fee is $500 and non-refundable. Code Enforcement, Fire Prevention and Zoning review the application, which needs proof of workers' compensation insurance and a photo ID of the applicant, and the certificate is renewed every two years.",
+        "frequency": "biennial",
+        "deadline": "Apply before opening; submit the renewal application 60 days before the certificate expires",
+        "url": "https://www.syr.gov/Departments/Central-Permit-Office/Self-Services/Certificate-of-Use-License",
+        "naics": ["7224", "7225", "445110", "445131", "456110"],
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "Tonawanda",
