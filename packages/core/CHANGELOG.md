@@ -5,6 +5,8 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ## [Unreleased]
 
+## [0.10.0] - 2026-10-18
+
 ### Added
 
 - **core:** Syracuse Certificate of Use, and Rochester business permits, food truck and towing licenses, each scoped by NAICS code, with Spanish text
@@ -18,6 +20,10 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 ### Changed
 
 - **core:** the New York retail food store license now states its $250 application fee and two-year term
+
+### Added
+
+- **data:** business licenses for NY cities, SLA licenses and more cities
 
 ## [0.9.0] - 2026-10-18
 
