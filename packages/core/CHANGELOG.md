@@ -9,6 +9,11 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ### Added
 
+- **core:** Milford (Delaware) business license, with Spanish text
+- **core:** Georgetown (Delaware) business license, with Spanish text
+- **core:** Selbyville (Delaware) business license, with Spanish text
+- **core:** Laurel (Delaware) business license, with Spanish text
+- **core:** South Bethany (Delaware) mercantile license, with Spanish text
 - **core:** Dewey Beach (Delaware) business license, with Spanish text
 - **core:** Ocean View (Delaware) business and rental licenses, with Spanish text
 - **core:** Bethany Beach (Delaware) business license, with Spanish text
