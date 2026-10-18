@@ -803,32 +803,66 @@
         "title": "File NYC Business Corporation Tax return",
         "category": "filing",
         "authority": "NYC Department of Finance",
-        "description": "C and S corporations doing business in New York City file NYC-2 / NYC-4S (or NYC-3L for general corporations) and pay the tax.",
+        "description": "C corporations (and unincorporated entities that elect to be taxed as corporations) that do business, employ capital, own or lease property or keep an office in New York City file Form NYC-2 and pay the Business Corporation Tax. The return is due April 15 for calendar-year filers, or the 15th day of the fourth month after a fiscal year ends, and a six-month extension is available on Form NYC-EXT. S corporations file a General Corporation Tax return instead.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
         "deadlineNote": "calendar-year filers",
-        "url": "https://www.nyc.gov/site/finance/taxes/business.page",
-        "appliesTo": ["corporation"]
+        "url": "https://www.nyc.gov/assets/finance/downloads/pdf/24pdf/business_tax_forms/nyc-2-instr_2024.pdf",
+        "appliesTo": ["corporation"],
+        "appliesWhen": [
+          {
+            "field": "entityType",
+            "op": "in",
+            "value": ["c_corp", "pc", "benefit_corp"]
+          }
+        ],
+        "checkedOn": "2026-10-18"
+      },
+      {
+        "id": "nyc.general-corporation-tax",
+        "title": "File NYC General Corporation Tax return (S corporations)",
+        "category": "filing",
+        "authority": "NYC Department of Finance",
+        "description": "An S corporation that does business in New York City is subject to the General Corporation Tax and files Form NYC-4S-EZ, NYC-4S or NYC-3L (NYC-3L when it claims credits or does business both inside and outside the city). The return is due March 15 for calendar-year filers (March 16 in 2026), or the 15th day of the third month after a fiscal year ends, with a six-month extension on Form NYC-EXT.",
+        "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=15",
+        "deadlineNote": "calendar-year filers",
+        "url": "https://www.nyc.gov/assets/finance/downloads/pdf/25pdf/business_tax_forms/nyc-4s_instr_2025.pdf",
+        "appliesTo": ["corporation"],
+        "appliesWhenAny": [
+          {
+            "field": "entityType",
+            "op": "==",
+            "value": "s_corp"
+          },
+          {
+            "field": "sCorpElection",
+            "op": "==",
+            "value": true
+          }
+        ],
+        "checkedOn": "2026-10-18"
       },
       {
         "id": "nyc.ubt",
         "title": "File NYC Unincorporated Business Tax (UBT) return",
         "category": "filing",
         "authority": "NYC Department of Finance",
-        "description": "Sole proprietors, partnerships and LLCs taxed as such that carry on a business in New York City file NYC-202 / NYC-204 (4% rate, with credits for some owners).",
+        "description": "Individuals, partnerships, LLCs taxed as such, estates and trusts that carry on a trade, business, profession or occupation in New York City file Form NYC-202 (NYC-204 for a partnership) and pay the 4% Unincorporated Business Tax. The return is due April 15 for calendar-year filers, or the 15th day of the fourth month after a fiscal year ends, with a six-month extension on Form NYC-EXT. Employees, people who only hold property for their own account, and S corporations (which pay the General Corporation Tax) are not subject to it.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
         "deadlineNote": "calendar-year filers",
-        "url": "https://www.nyc.gov/site/finance/taxes/business.page",
-        "appliesTo": ["unincorporated"]
+        "url": "https://nyc-business.nyc.gov/nycbusiness/description/unincorporated-business-tax-ubt",
+        "appliesTo": ["unincorporated"],
+        "checkedOn": "2026-10-18"
       },
       {
         "id": "nyc.safe-sick-leave",
-        "title": "Provide NYC Earned Safe and Sick Time",
+        "title": "Provide NYC Earned Safe and Sick Time (Protected Time Off)",
         "category": "recordkeeping",
         "authority": "NYC Department of Consumer and Worker Protection",
-        "description": "Employers must provide safe and sick leave, post the required notice and give employees written policy.",
+        "description": "Employers with workers in New York City must give 32 immediately available hours of unpaid protected time off (required from February 22, 2026), plus up to 40 paid hours (56 for an employer with 100 or more employees), or up to 40 unpaid hours for an employer with four or fewer employees and net income under $1 million, and a separate 20 hours of paid prenatal leave. They must keep one written policy given to each employee at hire, within 14 days of any change and on request, give and post the Notice of Employee Rights, show the time on each pay statement, and keep records for three years.",
         "frequency": "ongoing",
-        "url": "https://www.nyc.gov/dcwp",
-        "appliesTo": ["employees"]
+        "url": "https://www.nyc.gov/site/dca/about/paid-sick-leave-FAQs.page",
+        "appliesTo": ["employees"],
+        "checkedOn": "2026-10-18"
       }
     ],
     "aliases": ["Brooklyn", "Queens", "Bronx", "The Bronx", "Manhattan", "Staten Island"],
