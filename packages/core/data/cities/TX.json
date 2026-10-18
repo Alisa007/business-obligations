@@ -102,11 +102,26 @@
   },
   {
     "city": "Dallas",
-    "status": "unverified",
     "note": "No official Dallas, Texas page on a general business license was found; a certificate of occupancy applies to premises.",
     "counties": ["Dallas", "Rockwall"],
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "dallas.food-establishment-permit",
+        "title": "Renew your Dallas food establishment permit",
+        "category": "license",
+        "authority": "Dallas Code Compliance Services, Consumer Health Division",
+        "description": "Restaurants, bars, grocery stores and other food establishments need an annual Dallas health permit. The city's page lists annual fees of $141 to $513 depending on risk level and size (under or over 2,000 square feet), plus a $121 application fee for a new permit. The annual fee is due December 31. A payment received after December 31 adds a $199 reinstatement fee, and one not paid by January 30 adds a $158 pre-closure fee. A re-inspection costs $191 if the score is below 80%. The page is not dated, so confirm the amounts with the city.",
+        "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=31",
+        "url": "https://dallascityhall.com/departments/codecompliance/consumer-health/Pages/food-establishment.aspx",
+        "naics": ["722", "445", "311", "4244", "493120"],
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 141.0
+        }
+      }
+    ],
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "Denton",
