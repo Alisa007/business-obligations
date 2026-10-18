@@ -1,4 +1,4 @@
-import { useSyncExternalStore } from "react";
+import { useState, useSyncExternalStore } from "react";
 import { Select as TamaguiSelect, Text } from "tamagui";
 import { ClearButton } from "./ClearButton";
 import { useControlProps } from "./controls";
@@ -62,6 +62,8 @@ export function Select({
 }: SelectProps) {
   const controlProps = useControlProps();
   const touch = useCoarsePointer();
+  // The list is as wide as the control at least: it would otherwise be only as wide as its longest option.
+  const [controlWidth, setControlWidth] = useState(0);
   const chosen = options.find((option) => option.value === value);
   const clearable = Boolean(onClear && chosen);
   if (touch) {
@@ -128,6 +130,7 @@ export function Select({
           aria-invalid={invalid || undefined}
           aria-describedby={describedBy}
           paddingRight={8}
+          onLayout={(event) => setControlWidth(event.nativeEvent.layout.width)}
         >
           <TamaguiSelect.Value
             fontSize={controlProps.fontSize}
@@ -154,12 +157,12 @@ export function Select({
           </svg>
         </TamaguiSelect.Trigger>
         <TamaguiSelect.Content>
-          {/* As wide as the control, but never narrower than its longest option needs on a narrow control (half a row), and never wider than the screen. */}
+          {/* At least as wide as the control (and 240px), never wider than the screen. */}
           <TamaguiSelect.Viewport
             borderWidth={1}
             borderColor="border-color"
             backgroundColor="background"
-            minWidth={240}
+            minWidth={Math.max(controlWidth, 240)}
             maxWidth="calc(100vw - 24px)"
           >
             <TamaguiSelect.Group>
