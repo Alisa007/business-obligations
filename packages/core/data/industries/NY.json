@@ -1472,12 +1472,12 @@
     "title": "Obtain a New York retail food store license",
     "category": "license",
     "authority": "NYS Department of Agriculture and Markets",
-    "description": "A store that sells only prepackaged foods needing refrigeration, such as milk, cheese or meat, needs a retail food store license under Article 28. A store that also prepares food needs the Article 20-C food processing license.",
+    "description": "A store that sells only prepackaged foods needing refrigeration, such as milk, shell eggs, meat or cheese, needs a retail food store license under Article 28-A for each location. The application fee is $250 and non-refundable, and the license expires two years after it is issued. A store that also prepares food, such as sandwiches, needs the Article 20-C food processing license instead.",
     "naics": ["4451"],
     "appliesTo": ["all"],
     "url": "https://agriculture.ny.gov/food-safety/application-retail-food-store-license-article-28",
-    "checkedOn": "2026-10-16",
-    "frequency": "ongoing"
+    "checkedOn": "2026-10-18",
+    "frequency": "biennial"
   },
   {
     "id": "ny.tobacco-retail-dealer-registration",
@@ -5090,5 +5090,44 @@
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/2727",
     "checkedOn": "2026-10-16",
     "frequency": "once"
+  },
+  {
+    "id": "ny.brewery-license",
+    "title": "Get a New York brewery license",
+    "category": "license",
+    "authority": "New York State Liquor Authority",
+    "description": "Breweries need a State Liquor Authority license before they brew, plus a federal TTB brewer's notice and brand label registration. A brewer's license has no production cap and costs $6,200 for one year or $17,800 for three years. A micro brewer's license caps output at 75,000 barrels, and a farm brewery license requires 60% New York hops and 60% other New York ingredients; each costs $884 for 12 months. A brewer's license also needs a $15,000 bond. At least 50 barrels a year must be made at the licensed facility.",
+    "naics": ["312120"],
+    "appliesTo": ["all"],
+    "url": "https://sla.ny.gov/brewery-quick-reference-0",
+    "checkedOn": "2026-10-18",
+    "frequency": "ongoing",
+    "renewal": "Brewer's license for 1 or 3 years; micro brewer and farm brewery for 12 months"
+  },
+  {
+    "id": "ny.distillery-license",
+    "title": "Get a New York distillery license",
+    "category": "license",
+    "authority": "New York State Liquor Authority",
+    "description": "Distilleries need a State Liquor Authority license before they distill, plus a federal TTB distilled spirits plant permit and brand label registration. The initial fee for a 36-month license is $50,800 for a Class A distiller with no cap, $1,450 for a micro distiller (75,000 gallons a year), $34,000 for a rectifier who cannot distill, and $937.60 for a farm distillery (75,000 gallons and 75% New York ingredients) or a fruit brandy distillery. Class A distillers and rectifiers also need a $25,000 bond. At least 50 gallons a year must be made at the licensed facility.",
+    "naics": ["312140"],
+    "appliesTo": ["all"],
+    "url": "https://sla.ny.gov/distillery-quick-reference-0",
+    "checkedOn": "2026-10-18",
+    "frequency": "ongoing",
+    "renewal": "Every 36 months"
+  },
+  {
+    "id": "ny.winery-license",
+    "title": "Get a New York winery license",
+    "category": "license",
+    "authority": "New York State Liquor Authority",
+    "description": "Wineries and cideries need a State Liquor Authority license before they make wine, plus a federal TTB winery permit and brand label registration for wine under 7%, cider, mead and wine products. A winery license has no production cap and costs $3,025 for 36 months. A farm winery license costs $525 for 36 months, must be on a farm, caps output at 250,000 gallons and requires 75% New York grapes or fruit (100% New York apples for cider and 100% New York honey for mead). A winery license also needs a $10,000 bond. At least 50 gallons a year must be made at the licensed facility.",
+    "naics": ["312130"],
+    "appliesTo": ["all"],
+    "url": "https://sla.ny.gov/winery-quick-reference-1",
+    "checkedOn": "2026-10-18",
+    "frequency": "ongoing",
+    "renewal": "Every 36 months"
   }
 ]

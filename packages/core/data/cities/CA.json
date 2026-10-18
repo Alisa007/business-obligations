@@ -1,11 +1,22 @@
 [
   {
     "city": "Anaheim",
-    "status": "unverified",
-    "note": "No official general business tax due date was found; an official short-term-rental form shows a July 31 deadline for that permit only.",
+    "note": "The business tax rate schedule and a single official renewal date were not confirmed; the certificate is valid for one year from issue.",
     "counties": ["Orange"],
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "anaheim.business-tax-certificate",
+        "title": "Obtain and renew an Anaheim business tax certificate",
+        "category": "license",
+        "authority": "City of Anaheim Business License Office",
+        "description": "Every business in the city needs a business license (tax certificate), which is valid for one year; the city mails a renewal notice about 30 days before it expires, but not receiving it does not excuse a late renewal. A minimum $37 processing fee applies to each initial or renewed application. Operating without a license or paying a renewal late costs a penalty of 10% or $10, whichever is greater, for each month delinquent, plus 1.5% per month.",
+        "frequency": "annual",
+        "deadline": "Before opening, then renew before the one-year certificate expires",
+        "url": "https://www.anaheim.net/571/Existing-Business",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "Antioch",
@@ -379,12 +390,23 @@
   },
   {
     "city": "Huntington Beach",
-    "status": "unverified",
-    "note": "Third-party sources and the city's license list show anniversary-based annual terms; the city's own renewal rule was not confirmed.",
+    "note": "The fee schedule was not confirmed from the city's own pages.",
     "counties": ["Orange"],
     "sourceUrl": "https://www.huntingtonbeachca.gov/business/business_directory.php",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "huntingtonbeach.business-license",
+        "title": "Obtain and renew a Huntington Beach business license",
+        "category": "license",
+        "authority": "City of Huntington Beach Business License Office",
+        "description": "Businesses operating in the city pay an annual business license tax, with a separate license for each branch or location. A license runs one year from the business start date, and the city mails a courtesy renewal notice about 30 days before it expires, but not receiving it does not excuse the owner. Operating without a license or renewing late costs a penalty of 10% of the tax per month. Nonprofits must still get a license, with an IRS 501(c)(3) determination letter, but pay no tax or fees.",
+        "frequency": "annual",
+        "deadline": "Before opening, then renew before the one-year license expires",
+        "url": "https://www.huntingtonbeachca.gov/Business/License_Permit_Codes/business_license.cfm",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "Inglewood",
@@ -533,11 +555,22 @@
   },
   {
     "city": "Oceanside",
-    "status": "unverified",
-    "note": "No Oceanside-specific renewal rule was found.",
+    "note": "The late-renewal penalty for the general business license was not confirmed from the city's own pages.",
     "counties": ["San Diego"],
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "oceanside.business-license",
+        "title": "Obtain and renew an Oceanside business license",
+        "category": "license",
+        "authority": "City of Oceanside Business License Office",
+        "description": "All businesses operating in the city, including home-based ones, need a business license. The tax is based on gross receipts for the past 12 months, at 50 cents per $1,000 with a $50 minimum. The city mails a renewal form around the 15th of the month the license expires, and the form and payment are due by the 20th of the following month.",
+        "frequency": "annual",
+        "deadline": "Before opening, then renew by the 20th of the month after the license expires",
+        "url": "https://www.ci.oceanside.ca.us/government/financial-services/business-license",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "Ontario",
@@ -585,11 +618,22 @@
   },
   {
     "city": "Palmdale",
-    "status": "unverified",
-    "note": "Only third-party sources described the renewal (end of the quarter of issuance); the city's own page was not confirmed.",
+    "note": "The renewal date and the current late-renewal penalty were not confirmed from the city's own pages.",
     "counties": ["Los Angeles"],
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "palmdale.business-license",
+        "title": "Obtain and renew a Palmdale business license",
+        "category": "license",
+        "authority": "City of Palmdale Business Licensing Division",
+        "description": "Anyone doing business in the city, including businesses located outside it and single-family rentals, needs a city business license. Payment is not due until the application has been reviewed and approved, and the amount due follows by email within three business days. The state's $4 accessibility training fee is added to new licenses and renewals.",
+        "frequency": "annual",
+        "deadline": "Before opening, then renew each year",
+        "url": "https://www.cityofpalmdaleca.gov/156/Business-License",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "Pomona",
@@ -792,11 +836,22 @@
   },
   {
     "city": "Santa Ana",
-    "status": "unverified",
-    "note": "No current official renewal date was found; older city documents point to a March filing period.",
+    "note": "The fee schedule and the renewal date for each license class were not confirmed from the city's own pages.",
     "counties": ["Orange"],
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "santaana.business-license",
+        "title": "Obtain and renew a Santa Ana business license",
+        "category": "license",
+        "authority": "City of Santa Ana Business License Tax Division",
+        "description": "Every business operating within the city limits pays an annual business license tax, whether or not it is run for profit, and the owner alone is responsible for renewing it by the expiration date printed on the business tax permit. Operating without a valid license may carry a penalty of 50% of the current year's fee plus unpaid fees for up to the preceding 36 months. A home-based business first needs a one-time home occupation permit.",
+        "frequency": "annual",
+        "deadline": "Before opening, then renew by the expiration date printed on the permit",
+        "url": "https://www.santa-ana.org/business-license-general-info/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "Santa Clara",
