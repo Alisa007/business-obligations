@@ -6,6 +6,14 @@ All notable changes to `business-obligations-ui` are documented here.
 
 ### Changed
 
+- `ProfileForm`: the layout is a twelve-column grid that changes in smaller steps with the form's width. The fiscal year
+  end and the LLC tax classification, and the start date and the target opening, are half of a row each from 420px
+  (whole rows below that); text and list fields are half a row from 420px and a third from 900px; counts are half a row
+  in a sidebar and a quarter from 520px. The money amounts share one row of as many columns as fit (at least 130px
+  each): two in a sidebar, all five side by side on a wide form
+
+### Changed
+
 - `ProfileForm`: when the ZIP code is not asked (the host gave the place), the business type and the industry are half of
   the row each at any form width, instead of leaving a gap on the widest layout
 
