@@ -2,6 +2,8 @@
   {
     "city": "Boston",
     "counties": ["Suffolk"],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://search.boston.gov/permitting/permits/business-certificate",
     "items": [
       {
         "id": "boston.business-certificate",
@@ -10,7 +12,7 @@
         "authority": "City of Boston City Clerk",
         "description": "Businesses operating under a trade name file a business certificate with the City Clerk and renew it every four years; corporations and LLCs must first be registered with the Secretary of the Commonwealth.",
         "frequency": "once",
-        "url": "https://www.boston.gov/departments/city-clerk/how-apply-business-certificate",
+        "url": "https://search.boston.gov/permitting/permits/business-certificate",
         "appliesTo": ["trade_name"]
       }
     ]
@@ -18,6 +20,8 @@
   {
     "city": "Cambridge",
     "counties": ["Middlesex"],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.cambridgema.gov/iwantto/applyforabusinesscertificate",
     "items": [
       {
         "id": "cambridge.business-certificate",
@@ -27,15 +31,16 @@
         "description": "Anyone conducting business in Cambridge under a name other than their own files a notarized business certificate; it runs four years and is renewed through the clerk.",
         "frequency": "once",
         "deadline": "Valid four years from filing",
-        "url": "https://www.cambridgema.gov/Services/applyforabusinesscertificate",
+        "url": "https://www.cambridgema.gov/iwantto/applyforabusinesscertificate",
         "appliesTo": ["all"]
       }
-    ],
-    "checkedOn": "2026-10-13"
+    ]
   },
   {
     "city": "Lowell",
     "counties": ["Middlesex"],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://lowellma.gov/461/File-a-Business-Certificate",
     "items": [
       {
         "id": "lowell.business-certificate",
@@ -45,15 +50,16 @@
         "description": "A business certificate is filed in person with the City Clerk, with a workers' compensation affidavit; it is valid four years and is not a business license.",
         "frequency": "once",
         "deadline": "Valid four years from filing",
-        "url": "https://lowellma.gov/859/File-a-Business-Certificate",
+        "url": "https://lowellma.gov/461/File-a-Business-Certificate",
         "appliesTo": ["all"]
       }
-    ],
-    "checkedOn": "2026-10-13"
+    ]
   },
   {
     "city": "Quincy",
     "counties": ["Norfolk"],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://ecode360.com/37658757",
     "items": [
       {
         "id": "quincy.business-certificate",
@@ -66,12 +72,13 @@
         "url": "https://ecode360.com/37658757",
         "appliesTo": ["all"]
       }
-    ],
-    "checkedOn": "2026-10-13"
+    ]
   },
   {
     "city": "Springfield",
     "counties": ["Hampden"],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.springfield-ma.gov/cos/clerk",
     "items": [
       {
         "id": "springfield-ma.business-certificate",
@@ -84,12 +91,13 @@
         "url": "https://www.springfield-ma.gov/cos/bus-certs",
         "appliesTo": ["all"]
       }
-    ],
-    "checkedOn": "2026-10-13"
+    ]
   },
   {
     "city": "Worcester",
     "counties": ["Worcester"],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.worcesterma.gov/city-clerk/certificates-licenses/business-certificates",
     "items": [
       {
         "id": "worcester.business-certificate",
@@ -99,10 +107,541 @@
         "description": "Anyone doing business in Worcester under a name other than their own files a business certificate with the City Clerk (M.G.L. c. 110); it is valid four years and renewable, and is not a business license.",
         "frequency": "once",
         "deadline": "Valid four years from filing",
-        "url": "https://worcesterma.gov/city-clerk/certificates-licenses/business-certificates",
+        "url": "https://www.worcesterma.gov/city-clerk/certificates-licenses/business-certificates",
+        "appliesTo": ["all"]
+      }
+    ]
+  },
+  {
+    "city": "Brockton",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "brockton.local-licenses",
+        "title": "Review applicable local licenses and permits in Brockton",
+        "category": "license",
+        "authority": "Brockton local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts",
         "appliesTo": ["all"]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"
+  },
+  {
+    "city": "Lynn",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "lynn.local-licenses",
+        "title": "Review applicable local licenses and permits in Lynn",
+        "category": "license",
+        "authority": "Lynn local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"
+  },
+  {
+    "city": "New Bedford",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "new-bedford.local-licenses",
+        "title": "Review applicable local licenses and permits in New Bedford",
+        "category": "license",
+        "authority": "New Bedford local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"
+  },
+  {
+    "city": "Fall River",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "fall-river.local-licenses",
+        "title": "Review applicable local licenses and permits in Fall River",
+        "category": "license",
+        "authority": "Fall River local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"
+  },
+  {
+    "city": "Newton",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "newton.local-licenses",
+        "title": "Review applicable local licenses and permits in Newton",
+        "category": "license",
+        "authority": "Newton local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"
+  },
+  {
+    "city": "Lawrence",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "lawrence.local-licenses",
+        "title": "Review applicable local licenses and permits in Lawrence",
+        "category": "license",
+        "authority": "Lawrence local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"
+  },
+  {
+    "city": "Somerville",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "somerville.local-licenses",
+        "title": "Review applicable local licenses and permits in Somerville",
+        "category": "license",
+        "authority": "Somerville local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"
+  },
+  {
+    "city": "Framingham",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "framingham.local-licenses",
+        "title": "Review applicable local licenses and permits in Framingham",
+        "category": "license",
+        "authority": "Framingham local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"
+  },
+  {
+    "city": "Haverhill",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "haverhill.local-licenses",
+        "title": "Review applicable local licenses and permits in Haverhill",
+        "category": "license",
+        "authority": "Haverhill local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"
+  },
+  {
+    "city": "Malden",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "malden.local-licenses",
+        "title": "Review applicable local licenses and permits in Malden",
+        "category": "license",
+        "authority": "Malden local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"
+  },
+  {
+    "city": "Waltham",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "waltham.local-licenses",
+        "title": "Review applicable local licenses and permits in Waltham",
+        "category": "license",
+        "authority": "Waltham local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"
+  },
+  {
+    "city": "Taunton",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "taunton.local-licenses",
+        "title": "Review applicable local licenses and permits in Taunton",
+        "category": "license",
+        "authority": "Taunton local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"
+  },
+  {
+    "city": "Revere",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "revere.local-licenses",
+        "title": "Review applicable local licenses and permits in Revere",
+        "category": "license",
+        "authority": "Revere local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"
+  },
+  {
+    "city": "Medford",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "medford.local-licenses",
+        "title": "Review applicable local licenses and permits in Medford",
+        "category": "license",
+        "authority": "Medford local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"
+  },
+  {
+    "city": "Weymouth Town",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "weymouth-town.local-licenses",
+        "title": "Review applicable local licenses and permits in Weymouth Town",
+        "category": "license",
+        "authority": "Weymouth Town local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"
+  },
+  {
+    "city": "Peabody",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "peabody.local-licenses",
+        "title": "Review applicable local licenses and permits in Peabody",
+        "category": "license",
+        "authority": "Peabody local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"
+  },
+  {
+    "city": "Chicopee",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "chicopee.local-licenses",
+        "title": "Review applicable local licenses and permits in Chicopee",
+        "category": "license",
+        "authority": "Chicopee local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"
+  },
+  {
+    "city": "Methuen",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "methuen.local-licenses",
+        "title": "Review applicable local licenses and permits in Methuen",
+        "category": "license",
+        "authority": "Methuen local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"
+  },
+  {
+    "city": "Everett",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "everett.local-licenses",
+        "title": "Review applicable local licenses and permits in Everett",
+        "category": "license",
+        "authority": "Everett local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"
+  },
+  {
+    "city": "Barnstable Town",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "barnstable-town.local-licenses",
+        "title": "Review applicable local licenses and permits in Barnstable Town",
+        "category": "license",
+        "authority": "Barnstable Town local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"
+  },
+  {
+    "city": "Attleboro",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "attleboro.local-licenses",
+        "title": "Review applicable local licenses and permits in Attleboro",
+        "category": "license",
+        "authority": "Attleboro local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"
+  },
+  {
+    "city": "Salem",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "salem.local-licenses",
+        "title": "Review applicable local licenses and permits in Salem",
+        "category": "license",
+        "authority": "Salem local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"
+  },
+  {
+    "city": "Leominster",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "leominster.local-licenses",
+        "title": "Review applicable local licenses and permits in Leominster",
+        "category": "license",
+        "authority": "Leominster local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"
+  },
+  {
+    "city": "Woburn",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "woburn.local-licenses",
+        "title": "Review applicable local licenses and permits in Woburn",
+        "category": "license",
+        "authority": "Woburn local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"
+  },
+  {
+    "city": "Beverly",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "beverly.local-licenses",
+        "title": "Review applicable local licenses and permits in Beverly",
+        "category": "license",
+        "authority": "Beverly local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"
+  },
+  {
+    "city": "Pittsfield",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "pittsfield.local-licenses",
+        "title": "Review applicable local licenses and permits in Pittsfield",
+        "category": "license",
+        "authority": "Pittsfield local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"
+  },
+  {
+    "city": "Marlborough",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "marlborough.local-licenses",
+        "title": "Review applicable local licenses and permits in Marlborough",
+        "category": "license",
+        "authority": "Marlborough local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"
+  },
+  {
+    "city": "Fitchburg",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "fitchburg.local-licenses",
+        "title": "Review applicable local licenses and permits in Fitchburg",
+        "category": "license",
+        "authority": "Fitchburg local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"
   }
 ]

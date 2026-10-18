@@ -5,6 +5,10 @@ import type { Catalog } from "../../i18n";
  * "City of {1}" is not read as a place called "City of ...".
  */
 export const localPatterns: NonNullable<Catalog["patterns"]> = [
+  [
+    "Review applicable local licenses and permits in {1}",
+    "Revisar las licencias y permisos locales aplicables en {1}",
+  ],
   // ── Counties
   [
     "File {1} County business tangible personal property return",

@@ -1,0 +1,57 @@
+[
+  {
+    "id": "ca.contractor-license",
+    "title": "Obtain a California CSLB contractor license",
+    "category": "license",
+    "authority": "California Contractors State License Board",
+    "description": "A contractor must hold a current CSLB license before bidding when the project requires a building permit, uses employee labor, or has combined labor and materials of $1,000 or more. A single-classification original application is $450 plus an initial license fee of $200 for a sole owner or $350 for a non-sole owner; active renewal is $450 for an individual owner or $700 for a business entity.",
+    "naics": ["236", "237", "238"],
+    "appliesTo": ["all"],
+    "url": "https://www.cslb.ca.gov/Contractors/Applicants/Contractors_License/Exam_Application/Before_Applying_For_License.aspx",
+    "checkedOn": "2026-10-18",
+    "frequency": "biennial",
+    "renewal": "Renew before the license expiration date; delinquent renewal fees apply after expiration.",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 450
+    }
+  },
+  {
+    "id": "ca.sellers-permit",
+    "title": "Register for a California seller's permit",
+    "category": "registration",
+    "authority": "California Department of Tax and Fee Administration",
+    "description": "A business selling or leasing tangible personal property in California may need a seller's permit and must register with CDTFA; the permit itself has no fee, although CDTFA may require a security deposit and the account may have filing obligations based on the business activity.",
+    "naics": ["31", "32", "33", "44", "45"],
+    "appliesTo": ["sells_goods"],
+    "url": "https://cdtfa.ca.gov/formspubs/pub73.pdf",
+    "checkedOn": "2026-10-18",
+    "frequency": "ongoing"
+  },
+  {
+    "id": "ca.alcohol-license",
+    "title": "Obtain and renew a California ABC alcohol license",
+    "category": "license",
+    "authority": "California Department of Alcoholic Beverage Control",
+    "description": "Businesses manufacturing, distributing or selling alcoholic beverages need the applicable ABC license. Application and annual fees depend on license type; 2026 examples include $1,135 for many non-priority general or non-general applications, plus an annual fee, and renewal is due by the expiration date. A 50% penalty applies through 60 days after expiration and a 100% penalty applies during the following 30-day reactivation period.",
+    "naics": ["3121", "4248", "4453", "7225"],
+    "appliesTo": ["all"],
+    "url": "https://www.abc.ca.gov/licensing/license-fees/",
+    "checkedOn": "2026-10-18",
+    "frequency": "annual",
+    "renewal": "Pay by the expiration date posted on the license; 50% and 100% late penalties apply in the stated post-expiration periods."
+  },
+  {
+    "id": "ca.cannabis-license",
+    "title": "Obtain and renew a California cannabis license",
+    "category": "license",
+    "authority": "California Department of Cannabis Control",
+    "description": "California cannabis businesses need the applicable Department of Cannabis Control license and must pay an application fee when applying and an annual license fee before issuance or renewal. Application fees for many annual retailer, distributor, testing laboratory, microbusiness and manufacturing licenses are $1,000; annual fees vary by license type and gross annual revenue, and inaccurate reporting can trigger a 50% fee penalty.",
+    "naics": ["1114", "424590", "459999"],
+    "appliesTo": ["all"],
+    "url": "https://www.cannabis.ca.gov/cannabis-laws/dcc-regulations/text-of-regulations/",
+    "checkedOn": "2026-10-18",
+    "frequency": "annual",
+    "renewal": "Pay the annual license fee before the license is issued or renewed."
+  }
+]

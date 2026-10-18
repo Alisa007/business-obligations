@@ -32,6 +32,28 @@
         }
       ]
     },
+    "feeConditions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["field", "op", "value"],
+        "properties": {
+          "field": { "type": "string", "minLength": 1 },
+          "op": { "enum": [">=", ">", "<=", "<", "==", "!=", "in"] },
+          "value": {
+            "oneOf": [
+              { "type": "string" },
+              { "type": "number" },
+              { "type": "boolean" },
+              { "type": "array", "items": { "type": "string" } }
+            ]
+          },
+          "description": { "type": "string" }
+        }
+      }
+    },
     "stateCode": {
       "type": "string",
       "pattern": "^[A-Z]{2}$",
@@ -137,7 +159,7 @@
       "required": ["basis"],
       "properties": {
         "basis": {
-          "enum": ["flat", "per_partner", "per_member", "percent", "varies", "none"]
+          "enum": ["flat", "per_partner", "per_member", "percent", "varies", "none", "tiered"]
         },
         "amount": {
           "type": "number",
@@ -183,9 +205,58 @@
         },
         "note": {
           "type": "string"
+        },
+        "tiers": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["label", "basis"],
+            "properties": {
+              "label": { "type": "string", "minLength": 1 },
+              "basis": {
+                "enum": ["flat", "per_partner", "per_member", "percent", "varies", "none"]
+              },
+              "when": { "$ref": "#/$defs/feeConditions" },
+              "whenAny": { "$ref": "#/$defs/feeConditions" },
+              "amount": { "type": "number", "minimum": 0 },
+              "online": { "type": "number", "minimum": 0 },
+              "paper": { "type": "number", "minimum": 0 },
+              "rate": { "type": "number", "minimum": 0 },
+              "base": { "type": "number", "minimum": 0 },
+              "perUnit": { "type": "number", "minimum": 0 },
+              "freeUnits": { "type": "integer", "minimum": 0 },
+              "min": { "type": "number", "minimum": 0 },
+              "max": { "type": "number", "minimum": 0 },
+              "waived": { "type": "boolean" },
+              "estimate": { "type": "boolean" },
+              "note": { "type": "string" }
+            },
+            "allOf": [
+              {
+                "if": { "properties": { "basis": { "enum": ["flat", "none"] } } },
+                "then": { "required": ["amount"] }
+              },
+              {
+                "if": { "properties": { "basis": { "enum": ["per_partner", "per_member"] } } },
+                "then": { "required": ["perUnit"] }
+              },
+              {
+                "if": { "properties": { "basis": { "const": "percent" } } },
+                "then": { "required": ["rate"] }
+              }
+            ]
+          }
         }
       },
       "allOf": [
+        {
+          "if": {
+            "properties": { "basis": { "const": "tiered" } }
+          },
+          "then": { "required": ["tiers"] }
+        },
         {
           "if": {
             "properties": {

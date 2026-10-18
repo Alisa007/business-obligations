@@ -3710,12 +3710,12 @@
     "title": "Collect and report the waste tire management and recycling fee",
     "category": "filing",
     "authority": "NYS Department of Taxation and Finance",
-    "description": "Tire dealers, repair shops and other tire services collect a fee of $2.50 per new tire and report it to the Tax Department. Sources conflict on the filing method, an older MT-170 quarterly return versus the sales tax return line in the 2025 ST-101 instructions, so confirm on the Tax Department's page.",
+    "description": "Tire dealers, repair shops and other tire services collect a fee of $2.50 per new tire. For filing periods beginning on or after March 1, 2023, report and remit the fee with the applicable New York sales-tax return; the Tax Department's current guidance supersedes the older standalone quarterly MT-170 instructions.",
     "naics": ["4413", "811198"],
     "appliesTo": ["all"],
     "url": "https://www.tax.ny.gov/bus/tire/wtm.htm",
-    "checkedOn": "2026-10-16",
-    "frequency": "quarterly"
+    "checkedOn": "2026-10-18",
+    "frequency": "ongoing"
   },
   {
     "id": "ny.restricted-pesticide-sales-permit",
@@ -4014,13 +4014,13 @@
     "title": "Register a securities broker-dealer with the NY Attorney General",
     "category": "registration",
     "authority": "NYS Attorney General, Investor Protection Bureau",
-    "description": "FINRA member broker-dealers renew each year at year end through CRD, and non-FINRA firms file Form M-1 (the Attorney General's pages disagree on whether that renews every year or every four years, so confirm).",
+    "description": "FINRA member broker-dealers renew annually at year end through CRD. Non-FINRA broker-dealer registrations renew four years after the effective date on the fee receipt.",
     "naics": ["523150"],
     "appliesTo": ["all"],
     "url": "https://ag.ny.gov/resources/government-organizations/investments-registration-regulation/broker-dealer-and-securities",
-    "checkedOn": "2026-10-16",
-    "frequency": "annual",
-    "deadline": "At year end, through CRD"
+    "checkedOn": "2026-10-18",
+    "frequency": "ongoing",
+    "deadline": "FINRA: at year end through CRD; non-FINRA: four years after the effective date"
   },
   {
     "id": "ny.investment-adviser-registration",
@@ -4031,8 +4031,12 @@
     "naics": ["523940"],
     "appliesTo": ["all"],
     "url": "https://ag.ny.gov/resources/organizations/investments-registration-regulation/investor-protection-filing-fee-guide",
-    "checkedOn": "2026-10-16",
+    "checkedOn": "2026-10-18",
     "frequency": "annual",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 200
+    },
     "deadline": "Annual renewal through CRD/IARD",
     "exemptions": ["Federally covered advisers, which make a notice filing"]
   },
@@ -4243,12 +4247,16 @@
     "title": "Charter a New York museum with the Board of Regents",
     "category": "registration",
     "authority": "NYS Board of Regents, State Education Department",
-    "description": "A museum with collections petitions the Regents for a provisional charter of up to five years, then an absolute charter, which also counts as registration. Registration needs at least five years of existence and sufficient resources, and the words museum and library are restricted to chartered institutions. Fee sources conflict ($60 or $100), so confirm.",
+    "description": "A museum with collections petitions the Regents for a provisional charter of up to five years, then an absolute charter, which also counts as registration. Registration needs at least five years of existence and sufficient resources, and the words museum and library are restricted to chartered institutions. The petition requires a $60 check payable to the New York State Education Department.",
     "naics": ["712110"],
     "appliesTo": ["all"],
     "url": "https://nysm.nysed.gov/charter-museum-or-historical-society",
-    "checkedOn": "2026-10-16",
-    "frequency": "once"
+    "checkedOn": "2026-10-18",
+    "frequency": "once",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 60
+    }
   },
   {
     "id": "ny.public-work-contractor-registry",
@@ -5036,13 +5044,30 @@
     "title": "Register a model management company under the Fashion Workers Act",
     "category": "registration",
     "authority": "NYS Department of Labor",
-    "description": "Model management companies working in New York register with the Department of Labor under the Fashion Workers Act. Reported fees are $500 for five or fewer employees and $700 for more, and companies with more than five employees upload a $50,000 surety bond. Registration renews every two calendar years, at least 90 days before expiry, and the number goes in advertising and contracts. Confirm fees and dates on the DOL page.",
+    "description": "Model management companies working in New York register with the Department of Labor under the Fashion Workers Act. The registration fee is $500 for five or fewer employees and $700 for more; companies with more than five employees upload a $50,000 surety bond. Registration renews every two calendar years, at least 90 days before expiry, and the number goes in advertising and contracts.",
     "naics": ["711410"],
     "appliesTo": ["all"],
     "url": "https://dol.ny.gov/fashion-workers-registry-preparing-register",
-    "checkedOn": "2026-10-16",
-    "frequency": "ongoing",
+    "checkedOn": "2026-10-18",
+    "frequency": "biennial",
     "renewal": "Every two calendar years",
+    "feeDetail": {
+      "basis": "tiered",
+      "tiers": [
+        {
+          "label": "Five or fewer employees",
+          "basis": "flat",
+          "amount": 500,
+          "when": [{ "field": "employeeCount", "op": "<=", "value": 5 }]
+        },
+        {
+          "label": "More than five employees",
+          "basis": "flat",
+          "amount": 700,
+          "when": [{ "field": "employeeCount", "op": ">", "value": 5 }]
+        }
+      ]
+    },
     "exemptions": [
       "Out-of-state companies licensed elsewhere under equal or stricter rules, with no New York office or clients, may seek an exemption"
     ]

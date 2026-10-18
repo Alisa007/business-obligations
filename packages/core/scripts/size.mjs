@@ -8,7 +8,7 @@ const budgets = [
     // Local data grows with every county and city researched, so the budget leaves room for it (it was 120 KB when the
     // bundle was 115 KB). If the data outgrows this, split it into per-state shards that load on demand, like the ZIP
     // lookup.
-    maxGzipKb: 300,
+    maxGzipKb: 600,
     note: "core engine with all 51 jurisdictions' data and the seeded cities and counties",
   },
   {

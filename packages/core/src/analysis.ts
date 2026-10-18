@@ -32,6 +32,9 @@ const DEFAULTABLE: Field[] = [
   "employeeCount",
   "fullTimeEmployeeCount",
   "annualPayroll",
+  "businessPropertyValueUsd",
+  "quarterlyPayrollUsd",
+  "businessAgeYears",
   "annualRevenue",
   "annualNetIncome",
   "largestContractorPaymentUsd",
@@ -44,6 +47,8 @@ const DEFAULTABLE: Field[] = [
   "formationDate",
   "priorYearPayrollTaxLiability",
   "sCorpElection",
+  "hasAutomatedPayrollSystem",
+  "hasQualifiedRetirementPlan",
   "llcTaxClassification",
 ];
 
@@ -54,6 +59,8 @@ const BOOLEANS = new Set<Field>([
   "hasTaxExemptStatus",
   "isFormed",
   "sCorpElection",
+  "hasAutomatedPayrollSystem",
+  "hasQualifiedRetirementPlan",
 ]);
 
 /** Candidate values tried for numeric inputs. Thresholds in the rules are crossed by one of these. */
@@ -62,6 +69,9 @@ const LADDER: Partial<Record<Field, number[]>> = {
   employeeCount: [0, 1, 2, 3, 4, 5, 10, 15, 20, 50, 100, 500],
   fullTimeEmployeeCount: [0, 1, 2, 5, 10, 50],
   annualPayroll: [0, 1000, 10000, 100000, 1000000],
+  businessPropertyValueUsd: [0, 20000, 100000, 250000, 250001],
+  quarterlyPayrollUsd: [0, 2500, 10000],
+  businessAgeYears: [0, 1, 2, 5],
   annualRevenue: [0, 1000, 25000, 100000, 500000, 1000000, 5000000],
   annualNetIncome: [0, 1000, 25000, 100000, 500000],
   largestContractorPaymentUsd: [0, 599, 600, 5000],

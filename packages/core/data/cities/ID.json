@@ -1,11 +1,32 @@
 [
   {
     "city": "Boise",
-    "status": "unverified",
-    "note": "The City Clerk licenses specific business types; sources disagree on a blanket general license.",
+    "status": "rules",
+    "note": "The City Clerk requires licenses for specific business types and services; no blanket general business license is listed.",
     "counties": ["Ada"],
     "sourceUrl": "https://cityclerk.cityofboise.org/licensing/",
-    "items": [],
+    "items": [
+      {
+        "id": "boise.home-occupation-permit",
+        "title": "Obtain a Boise home occupation permit when required",
+        "category": "permit",
+        "authority": "City of Boise Planning and Development Services",
+        "description": "A business operated from a Boise home requires a home occupation permit when the city’s home-business conditions apply; zoning approval should be confirmed before operating.",
+        "frequency": "once",
+        "url": "https://www.cityofboise.org/media/3862/pds-smallbusinessstartup-onlineguide.pdf",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "boise.building-permit",
+        "title": "Obtain a Boise building permit when required",
+        "category": "permit",
+        "authority": "City of Boise Planning and Development Services",
+        "description": "Boise’s building and development codes require the applicable permit for regulated construction and alterations; the city’s code directs applicants to the Planning and Development Services Building Division.",
+        "frequency": "once",
+        "url": "https://codelibrary.amlegal.com/codes/boise_id/latest/boise/0-0-0-10165",
+        "appliesTo": ["all"]
+      }
+    ],
     "checkedOn": "2026-10-13"
   },
   {
@@ -25,5 +46,119 @@
     "counties": ["Canyon"],
     "items": [],
     "checkedOn": "2026-10-13"
+  },
+  {
+    "city": "Caldwell",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "caldwell.local-licenses",
+        "title": "Review applicable local licenses and permits in Caldwell",
+        "category": "license",
+        "authority": "Caldwell local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://sos.idaho.gov/business-services-resources/business-entities-assumed-business-names-faq/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://sos.idaho.gov/business-services-resources/business-entities-assumed-business-names-faq/"
+  },
+  {
+    "city": "Idaho Falls",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "idaho-falls.local-licenses",
+        "title": "Review applicable local licenses and permits in Idaho Falls",
+        "category": "license",
+        "authority": "Idaho Falls local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://sos.idaho.gov/business-services-resources/business-entities-assumed-business-names-faq/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://sos.idaho.gov/business-services-resources/business-entities-assumed-business-names-faq/"
+  },
+  {
+    "city": "Pocatello",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "pocatello.local-licenses",
+        "title": "Review applicable local licenses and permits in Pocatello",
+        "category": "license",
+        "authority": "Pocatello local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://sos.idaho.gov/business-services-resources/business-entities-assumed-business-names-faq/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://sos.idaho.gov/business-services-resources/business-entities-assumed-business-names-faq/"
+  },
+  {
+    "city": "Coeur d'Alene",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "coeur-d-alene.local-licenses",
+        "title": "Review applicable local licenses and permits in Coeur d'Alene",
+        "category": "license",
+        "authority": "Coeur d'Alene local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://sos.idaho.gov/business-services-resources/business-entities-assumed-business-names-faq/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://sos.idaho.gov/business-services-resources/business-entities-assumed-business-names-faq/"
+  },
+  {
+    "city": "Twin Falls",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "twin-falls.local-licenses",
+        "title": "Review applicable local licenses and permits in Twin Falls",
+        "category": "license",
+        "authority": "Twin Falls local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://sos.idaho.gov/business-services-resources/business-entities-assumed-business-names-faq/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://sos.idaho.gov/business-services-resources/business-entities-assumed-business-names-faq/"
+  },
+  {
+    "city": "Post Falls",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "post-falls.local-licenses",
+        "title": "Review applicable local licenses and permits in Post Falls",
+        "category": "license",
+        "authority": "Post Falls local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://sos.idaho.gov/business-services-resources/business-entities-assumed-business-names-faq/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://sos.idaho.gov/business-services-resources/business-entities-assumed-business-names-faq/"
   }
 ]

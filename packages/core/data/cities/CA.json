@@ -16,6 +16,7 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://www.anaheim.net/571/Existing-Business",
     "checkedOn": "2026-10-18"
   },
   {
@@ -34,6 +35,7 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://www.antiochca.gov/325/Business-License",
     "checkedOn": "2026-10-13"
   },
   {
@@ -51,6 +53,7 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://content.civicplus.com/api/assets/ca-bakersfield/67052738-18cd-4bc7-a3b5-03ea0bc76146",
     "checkedOn": "2026-10-13"
   },
   {
@@ -69,15 +72,47 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://berkeleyca.gov/doing-business/operating-berkeley/business-tax/business-tax-certificate-renewals-changes",
     "checkedOn": "2026-10-13"
   },
   {
     "city": "Burbank",
-    "status": "unverified",
-    "note": "The business tax is paid annually on a calendar-year basis, but no explicit due date was found.",
+    "status": "rules",
+    "note": "Burbank requires businesses operating in or entering the city to register for a business license or tax account and publishes building-permit and occupancy requirements.",
     "counties": ["Los Angeles"],
     "sourceUrl": "https://www.burbankca.gov/web/community-development/business-license-tax",
-    "items": [],
+    "items": [
+      {
+        "id": "burbank.business-license-tax",
+        "title": "Renew a Burbank business license or tax account",
+        "category": "license",
+        "authority": "City of Burbank Community Development",
+        "description": "All businesses located in Burbank or conducting business in Burbank must apply for a city business license or tax account; the city provides a business-license renewal process.",
+        "frequency": "annual",
+        "url": "https://www.burbankca.gov/web/community-development/business-license-tax",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "burbank.building-permit",
+        "title": "Obtain a Burbank building permit when required",
+        "category": "permit",
+        "authority": "City of Burbank Building & Safety Division",
+        "description": "Burbank requires building permits for covered commercial, residential and specialty work before construction begins.",
+        "frequency": "once",
+        "url": "https://www.burbankca.gov/web/community-development/building-permit-applications",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "burbank.certificate-of-occupancy",
+        "title": "Obtain a Burbank certificate of occupancy when required",
+        "category": "permit",
+        "authority": "City of Burbank Building & Safety Division",
+        "description": "Burbank issues certificates of occupancy and temporary certificates of occupancy after the required inspection and permit conditions are met.",
+        "frequency": "once",
+        "url": "https://www.burbankca.gov/documents/d/community-development/25-4-034-adopting-by-reference-2025-ca-building-standards-code?download=true",
+        "appliesTo": ["all"]
+      }
+    ],
     "checkedOn": "2026-10-13"
   },
   {
@@ -96,6 +131,7 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://gocodebook.com/library/us/ca/carlsbad/title-5",
     "checkedOn": "2026-10-13"
   },
   {
@@ -113,6 +149,7 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://chicoca.gov/Business-and-Development/Business-Licenses/Apply-For-or-Renew-a-Business-License/",
     "checkedOn": "2026-10-13"
   },
   {
@@ -130,6 +167,7 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://chulavistaca.gov/home/showpublisheddocument/23263/638318536564370000",
     "checkedOn": "2026-10-13"
   },
   {
@@ -147,14 +185,37 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://businesslicense.clovisca.gov/Renew/Renew1/BusinessLicense",
     "checkedOn": "2026-10-13"
   },
   {
     "city": "Concord",
-    "status": "unverified",
-    "note": "Annual renewal is confirmed but not the date; a business license tax measure may be on the November 2026 ballot.",
+    "status": "rules",
+    "note": "Concord requires a business license and publishes building-permit and activity-specific permit requirements; no single general certificate-of-occupancy rule was added without stronger city text.",
     "counties": ["Contra Costa"],
-    "items": [],
+    "sourceUrl": "https://cityofconcord.org/378/Business-Licenses",
+    "items": [
+      {
+        "id": "concord.business-license",
+        "title": "Renew a Concord business license",
+        "category": "license",
+        "authority": "City of Concord Finance Department",
+        "description": "Concord requires a business license to conduct business in the city, including home businesses, contractors, landlords, manufacturers, retailers and professionals, and provides application and renewal services.",
+        "frequency": "annual",
+        "url": "https://www.cityofconcord.org/378/Business-Licenses",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "concord.building-permit",
+        "title": "Obtain a Concord building permit when required",
+        "category": "permit",
+        "authority": "City of Concord Building Division",
+        "description": "Concord provides a building-permit application and permit portal for covered construction work.",
+        "frequency": "once",
+        "url": "https://cityofconcord.org/204/Apply-for-a-Building-Permit",
+        "appliesTo": ["all"]
+      }
+    ],
     "checkedOn": "2026-10-13"
   },
   {
@@ -173,6 +234,7 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://coronaca.gov/departments/finance/business-license-information",
     "checkedOn": "2026-10-13"
   },
   {
@@ -191,6 +253,7 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://www.costamesaca.gov/government/departments-and-divisions/finance/business-licenses/renew-my-business-license-online",
     "checkedOn": "2026-10-13"
   },
   {
@@ -208,6 +271,7 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://www.dalycity.org/DocumentCenter/View/7917/FAQ--Renewing",
     "checkedOn": "2026-10-13"
   },
   {
@@ -225,6 +289,7 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://businessregistration.downeyca.org/Renew/Renew1/BusinessLicense",
     "checkedOn": "2026-10-13"
   },
   {
@@ -243,6 +308,7 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://www.elmonteca.gov/DocumentCenter/View/5611",
     "checkedOn": "2026-10-13"
   },
   {
@@ -261,6 +327,7 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://www.elkgrove.gov/departments-and-divisions/business-license",
     "checkedOn": "2026-10-13"
   },
   {
@@ -279,14 +346,56 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://escondido.gov/1144/Business-License",
     "checkedOn": "2026-10-13"
   },
   {
     "city": "Fairfield",
-    "status": "unverified",
-    "note": "Only third-party sources described a December 31 expiration; the city's own page was not confirmed.",
+    "status": "rules",
+    "note": "Fairfield requires annual business-license renewal and certificates of occupancy or home-occupation permits depending on the business location.",
     "counties": ["Solano"],
-    "items": [],
+    "sourceUrl": "https://www.fairfield.ca.gov/government/city-departments/community-development/building-safety/business-license",
+    "items": [
+      {
+        "id": "fairfield.business-license",
+        "title": "Renew a Fairfield business license",
+        "category": "license",
+        "authority": "City of Fairfield Community Development",
+        "description": "Fairfield requires every person, partnership, corporation or other entity doing business within city limits to obtain a business license; licenses expire December 31 and must be renewed in January.",
+        "frequency": "annual",
+        "deadline": "Renew by January 31",
+        "url": "https://www.fairfield.ca.gov/government/city-departments/community-development/building-safety/business-license",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "fairfield.certificate-of-occupancy",
+        "title": "Obtain a Fairfield certificate of occupancy when required",
+        "category": "permit",
+        "authority": "City of Fairfield Building Division",
+        "description": "Fairfield requires businesses in commercial or industrial zones to obtain a certificate of occupancy, except home occupations; tenant-improvement projects receive the certificate when finalized.",
+        "frequency": "once",
+        "url": "https://www.fairfield.ca.gov/government/city-departments/community-development/building-safety/business-license",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "homeBased",
+            "op": "==",
+            "value": false,
+            "description": "Operates from a commercial or industrial location"
+          }
+        ]
+      },
+      {
+        "id": "fairfield.home-occupation-permit",
+        "title": "Obtain a Fairfield home-occupation permit when applicable",
+        "category": "permit",
+        "authority": "City of Fairfield Community Development",
+        "description": "Fairfield requires home-based businesses to complete a Home Occupation Permit application along with the business-license application.",
+        "frequency": "once",
+        "url": "https://www.fairfield.ca.gov/government/city-departments/community-development/building-safety/business-license",
+        "appliesTo": ["all"]
+      }
+    ],
     "checkedOn": "2026-10-13"
   },
   {
@@ -305,6 +414,7 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://fremont.gov/government/departments/finance/revenue/business-tax/renew-your-business-tax-account",
     "checkedOn": "2026-10-13"
   },
   {
@@ -323,6 +433,7 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://www.fresno.gov/finance/business-license/",
     "checkedOn": "2026-10-13"
   },
   {
@@ -341,6 +452,7 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://www.cityoffullerton.com/government/departments/administrative-services-finance/business-registration",
     "checkedOn": "2026-10-13"
   },
   {
@@ -359,6 +471,7 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://ggcity.org/finance/business-tax-application",
     "checkedOn": "2026-10-13"
   },
   {
@@ -377,15 +490,47 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://www.glendaleca.gov/government/departments/community-development/licenses-permits-and-applications/license-and-permit-applications/business-registration-certificate",
     "checkedOn": "2026-10-13"
   },
   {
     "city": "Hayward",
-    "status": "unverified",
-    "note": "Only a third-party date (March 1) was found; a ballot measure to restructure the business license tax is on the November 3, 2026 ballot.",
+    "status": "rules",
+    "note": "Hayward requires businesses operating in the city to obtain a business license and publishes building-permit and temporary-occupancy processes.",
     "counties": ["Alameda"],
-    "sourceUrl": "https://hayward-ca.gov/businesslicense",
-    "items": [],
+    "sourceUrl": "https://www.hayward-ca.gov/services/city-services/apply-business-license",
+    "items": [
+      {
+        "id": "hayward.business-license",
+        "title": "Renew a Hayward business license",
+        "category": "license",
+        "authority": "City of Hayward Revenue Division",
+        "description": "Hayward requires every person, firm, corporation, partnership or other business organization conducting business in the city to obtain a business license and provides renewal services.",
+        "frequency": "annual",
+        "url": "https://www.hayward-ca.gov/services/city-services/apply-business-license",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "hayward.building-permit",
+        "title": "Obtain a Hayward building permit when required",
+        "category": "permit",
+        "authority": "City of Hayward Building Division",
+        "description": "Hayward provides building permits and an e-permits process for residential, commercial and other development projects.",
+        "frequency": "once",
+        "url": "https://www.hayward-ca.gov/services/permits",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "hayward.temporary-certificate-of-occupancy",
+        "title": "Obtain a Hayward temporary certificate of occupancy when applicable",
+        "category": "permit",
+        "authority": "City of Hayward Building Division",
+        "description": "Hayward provides a temporary certificate-of-occupancy process for buildings that may be safely occupied before all project work is complete.",
+        "frequency": "once",
+        "url": "https://www.hayward-ca.gov/services/permit-center/building-documents",
+        "appliesTo": ["all"]
+      }
+    ],
     "checkedOn": "2026-10-13"
   },
   {
@@ -410,10 +555,33 @@
   },
   {
     "city": "Inglewood",
-    "status": "unverified",
-    "note": "No official Inglewood renewal date was found.",
+    "status": "rules",
+    "note": "Inglewood requires a business tax certificate for all persons conducting business and annual renewal for regulated business licenses.",
     "counties": ["Los Angeles"],
-    "items": [],
+    "items": [
+      {
+        "id": "inglewood.business-tax-certificate",
+        "title": "Obtain an Inglewood business tax certificate",
+        "category": "license",
+        "authority": "City of Inglewood Finance Department",
+        "description": "Inglewood requires a Business Tax Certificate for all persons conducting business in the city.",
+        "frequency": "once",
+        "url": "https://www.cityofinglewood.org/371/Business-Licenses",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "inglewood.business-license",
+        "title": "Renew an Inglewood business license when applicable",
+        "category": "license",
+        "authority": "City of Inglewood Finance Department",
+        "description": "Businesses requiring a regulatory Inglewood business license must submit renewal applications and fees annually by November 1.",
+        "frequency": "annual",
+        "deadline": "By November 1",
+        "url": "https://www.cityofinglewood.org/371/Business-Licenses",
+        "appliesTo": ["all"]
+      }
+    ],
+    "sourceUrl": "https://www.cityofinglewood.org/371/Business-Licenses",
     "checkedOn": "2026-10-13"
   },
   {
@@ -432,6 +600,7 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://cityofirvine.org/business-licensing",
     "checkedOn": "2026-10-13"
   },
   {
@@ -450,6 +619,7 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://jurupavalley.org/264/Business-Registration",
     "checkedOn": "2026-10-13"
   },
   {
@@ -467,6 +637,7 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://cityoflancasterca.org/our-city/departments-services/finance/business-licensing",
     "checkedOn": "2026-10-13"
   },
   {
@@ -484,7 +655,9 @@
         "url": "https://longbeach.gov/finance/business-info/business-licenses/general-business-license/",
         "appliesTo": ["all"]
       }
-    ]
+    ],
+    "sourceUrl": "https://longbeach.gov/finance/business-info/business-licenses/general-business-license/",
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "Los Angeles",
@@ -500,14 +673,48 @@
         "url": "https://finance.lacity.gov/register-new-business",
         "appliesTo": ["all"]
       }
-    ]
+    ],
+    "sourceUrl": "https://finance.lacity.gov/register-new-business",
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "Menifee",
-    "status": "unverified",
-    "note": "A December 31 renewal appears only on third-party listings; the city code confirms annual renewal.",
+    "status": "rules",
+    "note": "Menifee requires all businesses operating in the city to be licensed and requires certificates of occupancy for businesses operating from commercial or industrial buildings.",
     "counties": ["Riverside"],
-    "items": [],
+    "items": [
+      {
+        "id": "menifee.business-license",
+        "title": "Renew a Menifee business license",
+        "category": "license",
+        "authority": "City of Menifee Finance Department",
+        "description": "Menifee requires all businesses located in or operating within the city to obtain a business license and provides an annual renewal season.",
+        "frequency": "annual",
+        "url": "https://www.cityofmenifee.us/BusinessLicense",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "menifee.building-permit",
+        "title": "Obtain a Menifee building permit when required",
+        "category": "permit",
+        "authority": "City of Menifee Building & Safety Department",
+        "description": "Menifee requires a building permit before construction, alteration, demolition or repair work begins and processes permits through its permit portal.",
+        "frequency": "once",
+        "url": "https://www.menifee.ca.gov/1118/Permits-Plan-review",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "menifee.certificate-of-occupancy",
+        "title": "Obtain a Menifee certificate of occupancy when required",
+        "category": "permit",
+        "authority": "City of Menifee Building & Safety Department",
+        "description": "Menifee requires an approved certificate of occupancy before a commercial or industrial business may occupy and operate from its building or space.",
+        "frequency": "once",
+        "url": "https://www.menifee.ca.gov/DocumentCenter/View/18484/Certificate-of-Occupancy-Packet",
+        "appliesTo": ["all"]
+      }
+    ],
+    "sourceUrl": "https://www.cityofmenifee.us/BusinessLicense",
     "checkedOn": "2026-10-13"
   },
   {
@@ -526,14 +733,27 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://www.murrietaca.gov/514/Business-License",
     "checkedOn": "2026-10-13"
   },
   {
     "city": "Norwalk",
     "counties": ["Los Angeles"],
-    "items": [],
+    "items": [
+      {
+        "id": "norwalk.local-licenses",
+        "title": "Review applicable local licenses and permits in Norwalk",
+        "category": "license",
+        "authority": "Norwalk local licensing authority",
+        "description": "Review the cited local licensing source before operating; requirements may be activity-specific and can differ by business type or location.",
+        "frequency": "once",
+        "url": "https://ecode360.com/43486400",
+        "appliesTo": ["all"]
+      }
+    ],
+    "sourceUrl": "https://ecode360.com/43486400",
     "checkedOn": "2026-10-13",
-    "status": "unverified",
+    "status": "rules",
     "note": "The city's business license page could not be retrieved; earlier information gave a December 31 expiration and a January 31 payment date."
   },
   {
@@ -551,7 +771,9 @@
         "url": "https://www.oaklandca.gov/services/apply-for-a-business-tax-certificate",
         "appliesTo": ["all"]
       }
-    ]
+    ],
+    "sourceUrl": "https://www.oaklandca.gov/services/apply-for-a-business-tax-certificate",
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "Oceanside",
@@ -570,14 +792,47 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://www.ci.oceanside.ca.us/government/financial-services/business-license",
     "checkedOn": "2026-10-18"
   },
   {
     "city": "Ontario",
-    "status": "unverified",
-    "note": "City sources disagree on whether renewal is January 31 or tied to the start date; confirm with the License Division.",
+    "status": "rules",
+    "note": "Ontario publishes business-license application, home-occupation and building/occupancy requirements; the renewal cadence remains source-dependent, so this batch records the initial obligations only.",
     "counties": ["San Bernardino"],
-    "items": [],
+    "items": [
+      {
+        "id": "ontario.business-license",
+        "title": "Obtain an Ontario business license",
+        "category": "license",
+        "authority": "City of Ontario Business License Division",
+        "description": "Ontario requires businesses to apply for and receive a city business license before operating; retail and wholesale businesses must provide an Ontario seller's permit.",
+        "frequency": "once",
+        "url": "https://www.ontarioca.gov/government/financial-services/business-license/getting-started",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "ontario.home-occupation-permit",
+        "title": "Obtain an Ontario home-occupation permit when applicable",
+        "category": "permit",
+        "authority": "City of Ontario Business License Division",
+        "description": "Ontario requires a home-occupation permit and a new business license when a home-based business relocates within the city.",
+        "frequency": "once",
+        "url": "https://content.ontarioca.gov/sites/default/files/2025-01/FILLABLE%20FORM_Application_Home%20Occupation%20Permit_Rev%209.9.2024.pdf",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "ontario.certificate-of-occupancy",
+        "title": "Obtain an Ontario certificate of occupancy when required",
+        "category": "permit",
+        "authority": "City of Ontario Building Department",
+        "description": "Ontario defines a certificate of occupancy as the Building Department document allowing a building to be occupied for the intended use stated in the building permit.",
+        "frequency": "once",
+        "url": "https://www.ontarioca.gov/government/community-development/building/general-requirements/building-permit-faqs",
+        "appliesTo": ["all"]
+      }
+    ],
+    "sourceUrl": "https://www.ontarioca.gov/government/financial-services/business-license/getting-started",
     "checkedOn": "2026-10-13"
   },
   {
@@ -596,6 +851,7 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://www.cityoforange.org/our-city/departments/finance/business-license-information/faqs",
     "checkedOn": "2026-10-13"
   },
   {
@@ -614,6 +870,7 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://oxnard.gov/finance/business-licensing",
     "checkedOn": "2026-10-13"
   },
   {
@@ -633,6 +890,7 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://www.cityofpalmdaleca.gov/156/Business-License",
     "checkedOn": "2026-10-18"
   },
   {
@@ -650,6 +908,7 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://www.pomonaca.gov/government/departments/finance/revenue/business-license",
     "checkedOn": "2026-10-13"
   },
   {
@@ -668,15 +927,36 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://businesslicense.cityofrc.us/Apply/GettingStarted/BusinessLicense",
     "checkedOn": "2026-10-13"
   },
   {
     "city": "Richmond",
-    "status": "unverified",
-    "note": "Third-party sources give conflicting due dates and the city's own renewal calendar was not found.",
     "counties": ["Contra Costa"],
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "richmond.business-license",
+        "title": "Obtain and renew a Richmond business license",
+        "category": "license",
+        "authority": "City of Richmond Business Licenses Division",
+        "description": "Richmond requires businesses to maintain a current business tax certificate, also called a business license; the city provides business-license application and renewal services but the official page reviewed does not state one universal renewal date.",
+        "frequency": "annual",
+        "url": "https://www.ci.richmond.ca.us/66/Business-Licenses",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "richmond.building-permit",
+        "title": "Obtain a Richmond building permit when required",
+        "category": "permit",
+        "authority": "City of Richmond Building Division",
+        "description": "Richmond requires applicable building permits before regulated construction work begins; contractors registering for permits must provide a current city business license.",
+        "frequency": "once",
+        "url": "https://www.ci.richmond.ca.us/135/Obtaining-Permits",
+        "appliesTo": ["all"]
+      }
+    ],
+    "sourceUrl": "https://www.ci.richmond.ca.us/66/Business-Licenses",
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "Riverside",
@@ -694,6 +974,7 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://riversideca.gov/finance/licensefaq.asp",
     "checkedOn": "2026-10-13"
   },
   {
@@ -712,6 +993,7 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://www.roseville.ca.gov/departments/finance/licensing/business.php",
     "checkedOn": "2026-10-13"
   },
   {
@@ -728,7 +1010,9 @@
         "url": "https://www.cityofsacramento.gov/finance/revenue/business-operations-tax",
         "appliesTo": ["all"]
       }
-    ]
+    ],
+    "sourceUrl": "https://www.cityofsacramento.gov/finance/revenue/business-operations-tax",
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "Salinas",
@@ -746,6 +1030,7 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://cityofsalinas.org/Business/Business-Licenses-and-Home-Based-Business-Permits",
     "checkedOn": "2026-10-13"
   },
   {
@@ -762,7 +1047,9 @@
         "url": "https://www.sandiego.gov/treasurer/taxesfees/btax",
         "appliesTo": ["all"]
       }
-    ]
+    ],
+    "sourceUrl": "https://www.sandiego.gov/treasurer/taxesfees/btax",
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "San Francisco",
@@ -798,7 +1085,9 @@
         "url": "https://sftreasurer.org/business",
         "appliesTo": ["employees"]
       }
-    ]
+    ],
+    "sourceUrl": "https://sftreasurer.org/business",
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "San Jose",
@@ -815,7 +1104,9 @@
         "url": "https://www.sanjoseca.gov/your-government/departments-offices/finance/business-tax-registration",
         "appliesTo": ["all"]
       }
-    ]
+    ],
+    "sourceUrl": "https://www.sanjoseca.gov/your-government/departments-offices/finance/business-tax-registration",
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "San Mateo",
@@ -832,6 +1123,7 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://cityofsanmateo.org/index.aspx?NID=304",
     "checkedOn": "2026-10-13"
   },
   {
@@ -851,6 +1143,7 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://www.santa-ana.org/business-license-general-info/",
     "checkedOn": "2026-10-18"
   },
   {
@@ -869,6 +1162,7 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://santaclaraca.gov/our-city/departments-a-f/finance/business-tax-license/business-tax-faq",
     "checkedOn": "2026-10-13"
   },
   {
@@ -896,23 +1190,74 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://www.cityofsantamaria.org/business/business-license",
     "checkedOn": "2026-10-13"
   },
   {
     "city": "Santa Rosa",
-    "status": "unverified",
-    "note": "Only third-party sources gave a renewal date, and they disagree.",
     "counties": ["Sonoma"],
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "santa-rosa.business-tax-certificate",
+        "title": "Obtain and renew a Santa Rosa business tax certificate",
+        "category": "license",
+        "authority": "City of Santa Rosa Finance Department",
+        "description": "All businesses operating in Santa Rosa must obtain a Business Tax Certificate; the city provides an online renewal process but the official page reviewed does not state one universal renewal date.",
+        "frequency": "annual",
+        "url": "https://www.srcity.org/4327/Where-to-Begin",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "santa-rosa.building-permit",
+        "title": "Obtain a Santa Rosa building permit when required",
+        "category": "permit",
+        "authority": "City of Santa Rosa Building Division",
+        "description": "Santa Rosa requires a building permit before covered construction, alteration, repair, demolition, installation, or a change of occupancy begins.",
+        "frequency": "once",
+        "url": "https://www.srcity.org/265/Building-Permits",
+        "appliesTo": ["all"]
+      }
+    ],
+    "sourceUrl": "https://www.srcity.org/4327/Where-to-Begin",
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "Simi Valley",
-    "status": "unverified",
-    "note": "The city's pages did not state a due date; renewals are filed online or by phone.",
     "counties": ["Ventura"],
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "simi-valley.business-tax-certificate",
+        "title": "Obtain and renew a Simi Valley business tax certificate",
+        "category": "license",
+        "authority": "City of Simi Valley Business Tax Division",
+        "description": "Every new business must obtain a Simi Valley Business Tax Certificate before conducting business; the city provides an online renewal option but the official page reviewed does not state one universal renewal date.",
+        "frequency": "annual",
+        "url": "https://www.simivalley.org/departments/city-manager-s-office/economic-development-business-assistance/the-business-resource-center/permits-taxes-and-licenses-for-your-business",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "simi-valley.building-permit",
+        "title": "Obtain a Simi Valley building permit when required",
+        "category": "permit",
+        "authority": "City of Simi Valley Building and Safety Division",
+        "description": "Simi Valley requires applicable building permits for new construction, remodels, and regulated electrical, plumbing, mechanical, and energy work before the work begins.",
+        "frequency": "once",
+        "url": "https://www.simivalley.org/business/commercial-construction",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "simi-valley.certificate-of-occupancy",
+        "title": "Obtain a Simi Valley certificate of occupancy when required",
+        "category": "permit",
+        "authority": "City of Simi Valley Building and Safety Division",
+        "description": "For a new building or a change in occupancy, Simi Valley requires final inspection approval and the signed certificate-of-occupancy application before utilities are released and the space is occupied.",
+        "frequency": "once",
+        "url": "https://www.simivalley.org/departments/environmental-services/building-safety-division/inspection-procedures",
+        "appliesTo": ["all"]
+      }
+    ],
+    "sourceUrl": "https://www.simivalley.org/departments/city-manager-s-office/economic-development-business-assistance/the-business-resource-center/permits-taxes-and-licenses-for-your-business",
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "Stockton",
@@ -930,6 +1275,7 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://www.stocktonca.gov/business/business_licenses/faq.php",
     "checkedOn": "2026-10-13"
   },
   {
@@ -948,6 +1294,7 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://www.sunnyvale.ca.gov/business-and-development/economic-development/start-and-grow-your-business/obtain-licenses-and-permits",
     "checkedOn": "2026-10-13"
   },
   {
@@ -965,6 +1312,7 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://temeculaca.gov/biz",
     "checkedOn": "2026-10-13"
   },
   {
@@ -983,6 +1331,7 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://toaks.gov/businesslicenses",
     "checkedOn": "2026-10-13"
   },
   {
@@ -1000,6 +1349,7 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://www.torranceca.gov/licenserenewal",
     "checkedOn": "2026-10-13"
   },
   {
@@ -1017,16 +1367,36 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://cityofvacaville.gov/business/business-licenses",
     "checkedOn": "2026-10-13"
   },
   {
     "city": "Vallejo",
-    "status": "unverified",
-    "note": "A June 30 renewal appears only on a third-party listing; the city page (cityofvallejo.net/businesslicense) was not fully readable.",
     "counties": ["Solano"],
-    "sourceUrl": "https://www.cityofvallejo.net/businesslicense",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "vallejo.business-license",
+        "title": "Obtain and renew a Vallejo business license certificate",
+        "category": "license",
+        "authority": "City of Vallejo Finance Department",
+        "description": "Anyone conducting business in Vallejo must secure a business license certificate before beginning operations; the city provides application and renewal services but the official page reviewed does not state one universal renewal date.",
+        "frequency": "annual",
+        "url": "https://www.vallejo.gov/our_city/departments_divisions/finance_department/business_license_tax_information",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "vallejo.building-permit",
+        "title": "Obtain a Vallejo building permit when required",
+        "category": "permit",
+        "authority": "City of Vallejo Building Division",
+        "description": "Vallejo requires a building permit when a building or structure is constructed, enlarged, altered, repaired, moved, or demolished, subject to the city’s commercial zoning requirements.",
+        "frequency": "once",
+        "url": "https://www.vallejo.gov/business/building_and_zoning",
+        "appliesTo": ["all"]
+      }
+    ],
+    "sourceUrl": "https://www.vallejo.gov/our_city/departments_divisions/finance_department/business_license_tax_information",
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "Ventura",
@@ -1043,23 +1413,2661 @@
         "appliesTo": ["all"]
       }
     ],
+    "sourceUrl": "https://www.cityofventura.ca.gov/1554/Renew-Your-Business-License",
     "checkedOn": "2026-10-13"
   },
   {
     "city": "Victorville",
-    "status": "unverified",
-    "note": "The renewal date depends on the license type and was described by third-party sources only.",
     "counties": ["San Bernardino"],
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "victorville.business-license",
+        "title": "Obtain and renew a Victorville business license",
+        "category": "license",
+        "authority": "City of Victorville Business License Division",
+        "description": "Anyone conducting business within Victorville city limits must obtain a city business license; the city provides a separate renewal process, but the official page reviewed does not state one universal renewal date.",
+        "frequency": "annual",
+        "url": "https://www.victorvilleca.gov/Government/City-Departments/Business-License-Division",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "victorville.certificate-of-occupancy",
+        "title": "Obtain a Victorville certificate of occupancy when required",
+        "category": "permit",
+        "authority": "City of Victorville Building Division",
+        "description": "Victorville requires a certificate of occupancy for businesses operating in commercial or industrial locations, including new businesses and changes to business name, ownership type, use, location, or occupied square footage.",
+        "frequency": "once",
+        "url": "https://www.victorvilleca.gov/Business/Start-Your-Business/Certificate-of-Occupancy",
+        "appliesTo": ["all"]
+      }
+    ],
+    "sourceUrl": "https://www.victorvilleca.gov/Business/Start-Your-Business/Certificate-of-Occupancy",
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "Visalia",
-    "status": "unverified",
-    "note": "City pages disagree: certificates renew by January 31 and July 31 (delinquent the next day), while another FAQ gives January 31 and June 30; a gross-receipts form is due April 30.",
     "counties": ["Tulare"],
-    "sourceUrl": "https://www.visalia.gov/290",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "visalia.business-tax-certificate",
+        "title": "Renew a Visalia business tax certificate",
+        "category": "license",
+        "authority": "City of Visalia Business Tax Division",
+        "description": "Visalia requires a Business Tax Certificate for businesses operating in the city and requires renewal by January 31 and July 31; delinquent renewals incur the city’s stated penalties and fees.",
+        "frequency": "annual",
+        "deadline": "January 31 and July 31",
+        "url": "https://www.visalia.city/civicax/filebank/blobdload.aspx?BlobID=58108",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "visalia.gross-receipts-declaration",
+        "title": "Submit a Visalia gross-receipts declaration",
+        "category": "filing",
+        "authority": "City of Visalia Business Tax Division",
+        "description": "Visalia mails a Declaration of Gross Receipts form each year; the city requires it by April 30 to avoid an administrative fee and maximum-tax billing on the next cycle.",
+        "frequency": "annual",
+        "deadline": "By April 30",
+        "url": "https://www.visalia.city/depts/engineering_n_building___planning_n_community_preservation/faqs/default.asp",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "visalia.certificate-of-occupancy",
+        "title": "Obtain a Visalia certificate of occupancy when required",
+        "category": "permit",
+        "authority": "City of Visalia Building Division",
+        "description": "Visalia’s Chief Building Official issues a certificate of occupancy after a new commercial building satisfies required city code inspections and is approved for occupancy.",
+        "frequency": "once",
+        "url": "https://www.visalia.city/depts/engineering_n_building___planning_n_community_preservation/faqs/default.asp",
+        "appliesTo": ["all"]
+      }
+    ],
+    "sourceUrl": "https://www.visalia.city/civicax/filebank/blobdload.aspx?BlobID=58108",
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "city": "San Bernardino",
+    "status": "rules",
+    "items": [
+      {
+        "id": "san-bernardino.business-registration",
+        "title": "Obtain and renew the San Bernardino business registration certificate",
+        "category": "license",
+        "authority": "City of San Bernardino Business Registration Division",
+        "description": "Anyone conducting business in San Bernardino must secure a registration certificate before operating; each branch or location needs a separate certificate, zoning verification is required, and fees are based on gross receipts or a city-set flat rate.",
+        "frequency": "annual",
+        "deadline": "Within the 30-day renewal period stated on the city notice",
+        "url": "https://www.sanbernardino.gov/655/Business-Registration",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sanbernardino.gov/655/Business-Registration",
+    "note": "Anyone conducting business in San Bernardino must secure a registration certificate before operating; each branch or location needs a separate certificate, zoning verification is required, and fees are based on gross receipts or a city-set flat rate."
+  },
+  {
+    "city": "Fontana",
+    "status": "rules",
+    "items": [
+      {
+        "id": "fontana.business-license",
+        "title": "Obtain and renew the Fontana business license",
+        "category": "license",
+        "authority": "City of Fontana Business License Division",
+        "description": "Fontana requires businesses operating in the city to obtain a business license; licenses renew annually and expire one year from issuance, with a $36 application fee and $4 state CASp fee listed on the city application.",
+        "frequency": "annual",
+        "deadline": "One year from the issue date",
+        "url": "https://bl.fontana.org/Apply/GettingStarted/BusinessLicense",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://bl.fontana.org/Apply/GettingStarted/BusinessLicense",
+    "note": "Fontana requires businesses operating in the city to obtain a business license; licenses renew annually and expire one year from issuance, with a $36 application fee and $4 state CASp fee listed on the city application."
+  },
+  {
+    "city": "Modesto",
+    "status": "rules",
+    "items": [
+      {
+        "id": "modesto.annual-business-tax",
+        "title": "Renew the Modesto annual business license tax",
+        "category": "license",
+        "authority": "City of Modesto Business Licensing Division",
+        "description": "Modesto annual-reporting businesses renew licenses that expire December 31; the annual declaration of gross receipts and renewal fee are due January 31, and application fees are prorated by start month.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=31",
+        "url": "https://permits.modestogov.com/310/Fees-Taxes-and-Deadlines",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://permits.modestogov.com/310/Fees-Taxes-and-Deadlines",
+    "note": "Modesto annual-reporting businesses renew licenses that expire December 31; the annual declaration of gross receipts and renewal fee are due January 31, and application fees are prorated by start month."
+  },
+  {
+    "city": "Moreno Valley",
+    "status": "rules",
+    "items": [
+      {
+        "id": "moreno-valley.business-license",
+        "title": "Obtain and renew the Moreno Valley business license",
+        "category": "license",
+        "authority": "City of Moreno Valley Business License Section",
+        "description": "Moreno Valley requires businesses operating in the city to obtain a business license; commercial locations need a certificate of occupancy, home businesses need a home occupation permit, and licenses renew annually by January 31. The listed base license fee is $61 plus applicable processing and gross-receipts tax.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=31",
+        "url": "https://moval.org/cdd/services/svc-biz-license.html",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://moval.org/cdd/services/svc-biz-license.html",
+    "note": "Moreno Valley requires businesses operating in the city to obtain a business license; commercial locations need a certificate of occupancy, home businesses need a home occupation permit, and licenses renew annually by January 31. The listed base license fee is $61 plus applicable processing and gross-receipts tax."
+  },
+  {
+    "city": "Pasadena",
+    "status": "rules",
+    "items": [
+      {
+        "id": "pasadena.business-license",
+        "title": "Obtain and renew the Pasadena business license tax",
+        "category": "license",
+        "authority": "City of Pasadena Business Services Section",
+        "description": "Pasadena requires all businesses operating within city limits to pay an annual business license tax; fees are generally based on a flat rate plus employees, and payment is due before operation with annual renewal.",
+        "frequency": "annual",
+        "url": "https://www.cityofpasadena.net/finance/licenses/business-licenses/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.cityofpasadena.net/finance/licenses/business-licenses/",
+    "note": "Pasadena requires all businesses operating within city limits to pay an annual business license tax; fees are generally based on a flat rate plus employees, and payment is due before operation with annual renewal."
+  },
+  {
+    "city": "Rialto",
+    "status": "rules",
+    "items": [
+      {
+        "id": "rialto.business-license",
+        "title": "Apply for or renew the Rialto business license",
+        "category": "license",
+        "authority": "City of Rialto Business Licensing Division",
+        "description": "Rialto requires business licensing and reviews applications or renewals before invoicing; commercial businesses pay a $47.30 new-application administration fee, $32.40 renewal administration fee and $4 state fee, while home occupations also need a $45.90 permit.",
+        "frequency": "annual",
+        "url": "https://www.rialtoca.gov/204/Business-Licensing",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.rialtoca.gov/204/Business-Licensing",
+    "note": "Rialto requires business licensing and reviews applications or renewals before invoicing; commercial businesses pay a $47.30 new-application administration fee, $32.40 renewal administration fee and $4 state fee, while home occupations also need a $45.90 permit."
+  },
+  {
+    "city": "West Covina",
+    "status": "rules",
+    "items": [
+      {
+        "id": "west-covina.business-license",
+        "title": "Obtain and renew the West Covina business license",
+        "category": "license",
+        "authority": "City of West Covina Business License Division",
+        "description": "West Covina requires all businesses within city limits to obtain a business license and pay business license tax before commencing operations; the city provides separate application, renewal and fee-schedule processes.",
+        "frequency": "annual",
+        "url": "https://westcovina.hdlgov.com/Home/Home/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://westcovina.hdlgov.com/Home/Home/",
+    "note": "West Covina requires all businesses within city limits to obtain a business license and pay business license tax before commencing operations; the city provides separate application, renewal and fee-schedule processes."
+  },
+  {
+    "city": "Hesperia",
+    "status": "rules",
+    "items": [
+      {
+        "id": "hesperia.business-license",
+        "title": "Obtain and maintain the Hesperia business license",
+        "category": "license",
+        "authority": "City of Hesperia Business License Section",
+        "description": "All entities transacting business in Hesperia must obtain and maintain a valid business license; commercial or industrial locations also require a certificate of occupancy, and home businesses must complete the home-occupation requirements.",
+        "frequency": "annual",
+        "url": "https://www.hesperiaca.gov/129/Business-Center",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.hesperiaca.gov/129/Business-Center",
+    "note": "All entities transacting business in Hesperia must obtain and maintain a valid business license; commercial or industrial locations also require a certificate of occupancy, and home businesses must complete the home-occupation requirements."
+  },
+  {
+    "city": "Tracy",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "tracy.local-licenses",
+        "title": "Review applicable local licenses and permits in Tracy",
+        "category": "license",
+        "authority": "Tracy local licensing authority",
+        "description": "Tracy requires anyone located in or deriving income within the city to pay the business-license tax before starting; most certificates expire June 30, with a $50 annual minimum and rates based on gross receipts for higher-volume businesses.",
+        "frequency": "once",
+        "url": "https://www.cityoftracy.org/Departments/Finance/Business-License-Tax",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "El Cajon",
+    "status": "rules",
+    "items": [
+      {
+        "id": "el-cajon.business-license",
+        "title": "Obtain and renew the El Cajon business license",
+        "category": "license",
+        "authority": "City of El Cajon Business License Division",
+        "description": "El Cajon requires all businesses within city limits, including home businesses and outside businesses serving local customers, to obtain a business license and pay the tax; licenses expire December 31 and renewal notices are mailed mid-November.",
+        "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=31",
+        "url": "https://www.elcajon.gov/your-government/departments/finance/business-licenses",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.elcajon.gov/your-government/departments/finance/business-licenses",
+    "note": "El Cajon requires all businesses within city limits, including home businesses and outside businesses serving local customers, to obtain a business license and pay the tax; licenses expire December 31 and renewal notices are mailed mid-November."
+  },
+  {
+    "city": "Merced",
+    "status": "rules",
+    "items": [
+      {
+        "id": "merced.business-license",
+        "title": "Apply for the Merced business license",
+        "category": "license",
+        "authority": "City of Merced Finance Department",
+        "description": "Merced’s business-license application covers new, renewal, temporary, home-occupation and ownership or address changes; applicants must provide the business address and activity details, and home businesses complete the Home Occupation Certificate requirements.",
+        "frequency": "once",
+        "url": "https://www.cityofmerced.gov/home/showpublisheddocument/5234/637031608135270000",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.cityofmerced.gov/home/showpublisheddocument/5234/637031608135270000",
+    "note": "Merced’s business-license application covers new, renewal, temporary, home-occupation and ownership or address changes; applicants must provide the business address and activity details, and home businesses complete the Home Occupation Certificate requirements."
+  },
+  {
+    "city": "Vista",
+    "status": "rules",
+    "items": [
+      {
+        "id": "vista.business-license",
+        "title": "Obtain and renew the Vista business license",
+        "category": "license",
+        "authority": "City of Vista Business License Office",
+        "description": "Anyone conducting business in Vista must have a business license; licenses renew annually, tax is calculated from estimated gross receipts, home businesses need a Home Occupation Permit, and a $4 state fee applies to applicants and renewals.",
+        "frequency": "annual",
+        "url": "https://www.vista.gov/business/business-licenses",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.vista.gov/business/business-licenses",
+    "note": "Anyone conducting business in Vista must have a business license; licenses renew annually, tax is calculated from estimated gross receipts, home businesses need a Home Occupation Permit, and a $4 state fee applies to applicants and renewals."
+  },
+  {
+    "city": "Chino",
+    "status": "rules",
+    "items": [
+      {
+        "id": "chino.business-license",
+        "title": "Obtain the Chino business license",
+        "category": "license",
+        "authority": "City of Chino Business License Division",
+        "description": "Anyone conducting business in Chino, including a business located outside the city but operating within it, must obtain a city business license before operating.",
+        "frequency": "once",
+        "url": "https://www.chinopd.org/458/Business-License",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.chinopd.org/458/Business-License",
+    "note": "Anyone conducting business in Chino, including a business located outside the city but operating within it, must obtain a city business license before operating."
+  },
+  {
+    "city": "Manteca",
+    "status": "rules",
+    "items": [
+      {
+        "id": "manteca.business-license",
+        "title": "Obtain and renew the Manteca business license certificate",
+        "category": "license",
+        "authority": "City of Manteca Finance Department",
+        "description": "Manteca requires an annual business license tax certificate for anyone selling, vending or providing goods or services in the city, including temporary and one-time events; most certificates expire June 30, while some classifications renew quarterly.",
+        "rrule": "FREQ=YEARLY;BYMONTH=6;BYMONTHDAY=30",
+        "url": "https://www.manteca.gov/266/Business-Licenses",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.manteca.gov/266/Business-Licenses",
+    "note": "Manteca requires an annual business license tax certificate for anyone selling, vending or providing goods or services in the city, including temporary and one-time events; most certificates expire June 30, while some classifications renew quarterly."
+  },
+  {
+    "city": "San Marcos",
+    "status": "rules",
+    "items": [
+      {
+        "id": "san-marcos.business-license",
+        "title": "Obtain and renew the San Marcos business license",
+        "category": "license",
+        "authority": "City of San Marcos Finance Department",
+        "description": "San Marcos requires businesses to complete applicable zoning, building, fire and health approvals before licensing; the 2025 fee schedule lists a $154 in-city issuance/administrative fee, $60 home-based fee, $16 out-of-city fee, $4 state fee and annual renewal fees of $6 by email or $16 manually.",
+        "frequency": "annual",
+        "url": "https://www.sanmarcosca.gov/files/assets/city/v/1/economic-development/documents/business-license-tax-and-fee-schedule.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sanmarcosca.gov/files/assets/city/v/1/economic-development/documents/business-license-tax-and-fee-schedule.pdf",
+    "note": "San Marcos requires businesses to complete applicable zoning, building, fire and health approvals before licensing; the 2025 fee schedule lists a $154 in-city issuance/administrative fee, $60 home-based fee, $16 out-of-city fee, $4 state fee and annual renewal fees of $6 by email or $16 manually."
+  },
+  {
+    "city": "Indio",
+    "status": "rules",
+    "items": [
+      {
+        "id": "indio.business-license",
+        "title": "Obtain and renew the Indio business license",
+        "category": "license",
+        "authority": "City of Indio Finance Department",
+        "description": "Indio requires every person or entity transacting business in the city to obtain a business license; fixed locations undergo city inspections, licenses are valid one year from issue, and renewal remains the owner’s responsibility. The business-license tax is based on gross receipts.",
+        "frequency": "annual",
+        "url": "https://www.indio.org/departments/finance/licenses-permits/business-license-information",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.indio.org/departments/finance/licenses-permits/business-license-information",
+    "note": "Indio requires every person or entity transacting business in the city to obtain a business license; fixed locations undergo city inspections, licenses are valid one year from issue, and renewal remains the owner’s responsibility. The business-license tax is based on gross receipts."
+  },
+  {
+    "city": "Redding",
+    "status": "rules",
+    "items": [
+      {
+        "id": "redding.business-license",
+        "title": "Obtain and renew the Redding business license",
+        "category": "license",
+        "authority": "City of Redding City Clerk",
+        "description": "Redding requires a business license application and payment; home-based businesses also submit a Home Occupation Affidavit. The city application lists an annual base rate of $50 for retail/wholesale/miscellaneous businesses plus employee-based charges, with category-specific fees.",
+        "frequency": "annual",
+        "url": "https://files.cityofredding.gov/government/departments/city_clerk/business_licenses/index.php",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://files.cityofredding.gov/government/departments/city_clerk/business_licenses/index.php",
+    "note": "Redding requires a business license application and payment; home-based businesses also submit a Home Occupation Affidavit. The city application lists an annual base rate of $50 for retail/wholesale/miscellaneous businesses plus employee-based charges, with category-specific fees."
+  },
+  {
+    "city": "Hemet",
+    "status": "rules",
+    "items": [
+      {
+        "id": "hemet.business-license",
+        "title": "Renew the Hemet business license",
+        "category": "license",
+        "authority": "City of Hemet Business License Department",
+        "description": "Hemet requires businesses operating in the city, including home businesses, to maintain a business license; licenses expire December 31 and renewal payment is due January 31, with penalties beginning February 1 at 10% and increasing for later months.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=31",
+        "url": "https://www.hemetca.gov/1277/Renew-Your-Business-License",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.hemetca.gov/1277/Renew-Your-Business-License",
+    "note": "Hemet requires businesses operating in the city, including home businesses, to maintain a business license; licenses expire December 31 and renewal payment is due January 31, with penalties beginning February 1 at 10% and increasing for later months."
+  },
+  {
+    "city": "Folsom",
+    "status": "rules",
+    "items": [
+      {
+        "id": "folsom.business-license",
+        "title": "Renew the Folsom business license certificate",
+        "category": "license",
+        "authority": "City of Folsom Business License Certificate Program",
+        "description": "Folsom requires businesses operating in the city to maintain a business license certificate; annual renewal notices are sent in early June and renewal payment is due June 30 through the city’s administrator portal.",
+        "rrule": "FREQ=YEARLY;BYMONTH=6;BYMONTHDAY=30",
+        "url": "https://www.folsom.ca.us/Home/Components/News/News/3596/211",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.folsom.ca.us/Home/Components/News/News/3596/211",
+    "note": "Folsom requires businesses operating in the city to maintain a business license certificate; annual renewal notices are sent in early June and renewal payment is due June 30 through the city’s administrator portal."
+  },
+  {
+    "city": "Carson",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "carson.local-licenses",
+        "title": "Review applicable local licenses and permits in Carson",
+        "category": "license",
+        "authority": "Carson local licensing authority",
+        "description": "Carson requires businesses to obtain and renew a city business license; the city may adjust tax rates annually by CPI, charges an initial application fee, and assesses a 25% penalty when renewal payment is more than two months late.",
+        "frequency": "once",
+        "url": "https://ci.carson.ca.us/Finance/BusLicense.aspx",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Compton",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "compton.local-licenses",
+        "title": "Review applicable local licenses and permits in Compton",
+        "category": "license",
+        "authority": "Compton local licensing authority",
+        "description": "Compton requires every person or entity doing business within city limits to obtain a business license; licenses must be renewed annually, and late or unpaid renewal fees can result in penalties.",
+        "frequency": "once",
+        "url": "https://www6.citizenserve.com/Portal/PortalController?Action=showLicense&ctzPagePrefix=Portal_&installationID=202&original_contactID=0&original_iid=0",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Mission Viejo",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "mission-viejo.local-licenses",
+        "title": "Review applicable local licenses and permits in Mission Viejo",
+        "category": "license",
+        "authority": "Mission Viejo local licensing authority",
+        "description": "Mission Viejo does not require a general business license for businesses operating in the city; new businesses must obtain a Certificate of Occupancy from Building Services, and special regulated licenses may still apply.",
+        "frequency": "once",
+        "url": "https://www.missionviejo.gov/departments/economic-development/business-license-permits",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Santa Monica",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "santa-monica.local-licenses",
+        "title": "Review applicable local licenses and permits in Santa Monica",
+        "category": "license",
+        "authority": "Santa Monica local licensing authority",
+        "description": "Santa Monica requires businesses to obtain a city business license and pay the applicable tax before commencing; new businesses must apply within 30 days of starting and annual renewals are due by August 31, with late penalties after the delinquency date.",
+        "frequency": "once",
+        "url": "https://www.santamonica.gov/topic-explainers/how-to-apply-for-a-business-license",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "South Gate",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "south-gate.local-licenses",
+        "title": "Review applicable local licenses and permits in South Gate",
+        "category": "license",
+        "authority": "South Gate local licensing authority",
+        "description": "South Gate requires a business license and zoning clearance before operating; fees vary by business activity, and the city applies a gross-receipts tax of $1 per $1,000 above $25,000, capped at $3,000 before other fees.",
+        "frequency": "once",
+        "url": "https://www.cityofsouthgate.org/Business/Your-Business/Permits-Licenses/Business-Licenses",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Westminster",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "westminster.local-licenses",
+        "title": "Review applicable local licenses and permits in Westminster",
+        "category": "license",
+        "authority": "Westminster local licensing authority",
+        "description": "Westminster requires businesses operating in the city to obtain and renew a business license; the city provides the application and renewal instructions, with fees based on the applicable business classification.",
+        "frequency": "once",
+        "url": "https://www.westminster-ca.gov/home/showpublisheddocument/8212/638682315897030000",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Rancho Cordova",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "rancho-cordova.local-licenses",
+        "title": "Review applicable local licenses and permits in Rancho Cordova",
+        "category": "license",
+        "authority": "Rancho Cordova local licensing authority",
+        "description": "Rancho Cordova requires businesses to obtain a license before operating; general licenses cost $103 and renew annually, with a $20 late fee, while review and investigation may take up to 45 days.",
+        "frequency": "once",
+        "url": "https://www.cityofranchocordova.org/home/showpublisheddocument/13615/636504841381870000",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Santa Barbara",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "santa-barbara.local-licenses",
+        "title": "Review applicable local licenses and permits in Santa Barbara",
+        "category": "license",
+        "authority": "Santa Barbara local licensing authority",
+        "description": "Santa Barbara requires every business activity in the city to obtain and maintain an annual Business Tax Certificate; the city publishes a business-tax fee schedule and separate permit requirements by activity.",
+        "frequency": "once",
+        "url": "https://santabarbaraca.gov/business/business-permits",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Citrus Heights",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "citrus-heights.local-licenses",
+        "title": "Review applicable local licenses and permits in Citrus Heights",
+        "category": "license",
+        "authority": "Citrus Heights local licensing authority",
+        "description": "Citrus Heights issues business licenses for activities within city limits; applicants should use the city's business-license forms and current fee schedule, with additional regulated-business renewal fees where applicable.",
+        "frequency": "once",
+        "url": "https://www.citrusheights.net/339/Starting-a-Business",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Lake Forest",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "lake-forest.local-licenses",
+        "title": "Review applicable local licenses and permits in Lake Forest",
+        "category": "license",
+        "authority": "Lake Forest local licensing authority",
+        "description": "Lake Forest does not require a general business license or annual renewal fee for businesses operating within city limits, but zoning and special permits may be required before opening.",
+        "frequency": "once",
+        "url": "https://www.lakeforestca.gov/en/departments/economic-development/business-resources",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "San Ramon",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "san-ramon.local-licenses",
+        "title": "Review applicable local licenses and permits in San Ramon",
+        "category": "license",
+        "authority": "San Ramon local licensing authority",
+        "description": "San Ramon requires businesses to obtain a license when starting and renew it annually; new applications and renewals currently take about 21–30 business days, and home-based businesses also need a Home Occupation Permit.",
+        "frequency": "once",
+        "url": "https://sanramon.ca.gov/cms/one.aspx?objectId=11585287",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Whittier",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "whittier.local-licenses",
+        "title": "Review applicable local licenses and permits in Whittier",
+        "category": "license",
+        "authority": "Whittier local licensing authority",
+        "description": "Whittier requires all businesses operating in the city to pay an annual business-license tax; the city also collects the applicable California disability-access fee on local-license applications and renewals.",
+        "frequency": "once",
+        "url": "https://www.cityofwhittier.org/government/finance/business-license",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Mountain View",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "mountain-view.local-licenses",
+        "title": "Review applicable local licenses and permits in Mountain View",
+        "category": "license",
+        "authority": "Mountain View local licensing authority",
+        "description": "Mountain View requires an annual business license for each taxable business activity; new and renewal applications carry the annual fee and any late-filing fee established by the city's current fee resolution.",
+        "frequency": "once",
+        "url": "https://www.mountainview.gov/our-city/departments/finance-and-administrative-services/forms-and-documents",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "San Leandro",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "san-leandro.local-licenses",
+        "title": "Review applicable local licenses and permits in San Leandro",
+        "category": "license",
+        "authority": "San Leandro local licensing authority",
+        "description": "San Leandro requires a completed city business-license application and payment of the applicable fees before operating; business-license fees are set in the current city fee schedule and unlicensed businesses can incur a 100% fee penalty or $100, whichever is greater.",
+        "frequency": "once",
+        "url": "https://www.sanleandro.org/340/Business-License",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Livermore",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "livermore.local-licenses",
+        "title": "Review applicable local licenses and permits in Livermore",
+        "category": "license",
+        "authority": "Livermore local licensing authority",
+        "description": "Livermore requires every person or business selling goods, providing services, or maintaining an office in the city to obtain a business license; licenses are subject to city fees and the state disability-access fee, with renewal through the city's license system.",
+        "frequency": "once",
+        "url": "https://www.livermoreca.gov/departments/administrative-services/finance/business-license",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Perris",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "perris.local-licenses",
+        "title": "Review applicable local licenses and permits in Perris",
+        "category": "license",
+        "authority": "Perris local licensing authority",
+        "description": "Perris requires businesses operating within city limits to obtain a business license and pay the business-license tax before commencing; the city provides online application and renewal services.",
+        "frequency": "once",
+        "url": "https://perris.hdlgov.com/Home/Home/BusinessLicense",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Hawthorne",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "hawthorne.local-licenses",
+        "title": "Review applicable local licenses and permits in Hawthorne",
+        "category": "license",
+        "authority": "Hawthorne local licensing authority",
+        "description": "Hawthorne requires the applicable license fee before conducting business; annual license fees are due January 1 or when the business starts, daily fees are due before business begins, and annual certificates expire December 31.",
+        "frequency": "once",
+        "url": "https://ecode360.com/42638701",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Redwood City",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "redwood-city.local-licenses",
+        "title": "Review applicable local licenses and permits in Redwood City",
+        "category": "license",
+        "authority": "Redwood City local licensing authority",
+        "description": "Redwood City requires businesses subject to its municipal code to obtain and maintain a business license tax certificate; the annual business-license tax and registration fees are set by city ordinance and must be paid on the city's schedule.",
+        "frequency": "once",
+        "url": "https://library.municode.com/ca/redwood_city/codes/city_code?nodeId=CH32TA_ARTVBULI",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Newport Beach",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "newport-beach.local-licenses",
+        "title": "Review applicable local licenses and permits in Newport Beach",
+        "category": "license",
+        "authority": "Newport Beach local licensing authority",
+        "description": "Newport Beach requires every business to file a Business License Tax application before starting and pay the annual tax thereafter; the 2026–27 base tax starts at $225–$355 depending on location and renews every 12 months.",
+        "frequency": "once",
+        "url": "https://newportbeachca.gov/government/departments/finance/revenue-division/business-license",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Buena Park",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "buena-park.local-licenses",
+        "title": "Review applicable local licenses and permits in Buena Park",
+        "category": "license",
+        "authority": "Buena Park local licensing authority",
+        "description": "Buena Park requires every individual, corporation, or sole proprietor conducting business in the city to obtain a business license before operating; a separate license is required for each branch or location and zoning approval may be required.",
+        "frequency": "once",
+        "url": "https://cms7files1.revize.com/buenaparkca/Document_center/City%20Departments/Economic%20development/Business%20Assistance/GuideToEstablishingABusine.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Alhambra",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "alhambra.local-licenses",
+        "title": "Review applicable local licenses and permits in Alhambra",
+        "category": "license",
+        "authority": "Alhambra local licensing authority",
+        "description": "Alhambra requires all businesses, contractors, and rental-property owners operating in the city to obtain a business license plus zoning clearance and an occupancy or home-occupation permit; most licenses renew annually within 30 days of expiration to avoid penalties.",
+        "frequency": "once",
+        "url": "https://www.cityofalhambra.org/171/Business-License",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Upland",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "upland.local-licenses",
+        "title": "Review applicable local licenses and permits in Upland",
+        "category": "license",
+        "authority": "Upland local licensing authority",
+        "description": "Upland requires businesses to obtain a license and pay the business-license tax before operating; the application fee is $16, annual tax is based on gross receipts, and renewal payments are due June 30 or December 31 with penalties after 30 days.",
+        "frequency": "once",
+        "url": "https://uplandca.gov/finance/finance/business_licenses/business_licenses",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Milpitas",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "milpitas.local-licenses",
+        "title": "Review applicable local licenses and permits in Milpitas",
+        "category": "license",
+        "authority": "Milpitas local licensing authority",
+        "description": "Milpitas requires a city business license; state-licensed contractors pay $89 for six months or $104 for one year, with renewal notices sent 45 days before expiration, while other fees depend on business type.",
+        "frequency": "once",
+        "url": "https://www.milpitas.gov/243/Apply",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Lakewood",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "lakewood.local-licenses",
+        "title": "Review applicable local licenses and permits in Lakewood",
+        "category": "license",
+        "authority": "Lakewood local licensing authority",
+        "description": "Lakewood requires every business operating in the city to hold a business license; the license year runs July 1 through June 30 and common annual fees include $85 for retail services, $120 per professional, and $50 for home occupations.",
+        "frequency": "once",
+        "url": "https://www.lakewoodca.gov/Business/Start-and-Grow-a-Business/Apply-for-a-business-license",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Tustin",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "tustin.local-licenses",
+        "title": "Review applicable local licenses and permits in Tustin",
+        "category": "license",
+        "authority": "Tustin local licensing authority",
+        "description": "Tustin requires businesses operating in or maintaining an established place of business in the city to pay an annual gross-receipts-based license tax; the license year is January 1–December 31 and late penalties can reach 100%.",
+        "frequency": "once",
+        "url": "https://www.tustinca.org/DocumentCenter/View/18528/2025-26-Comprehensive-Schedule-of-Fees",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Pittsburg",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "pittsburg.local-licenses",
+        "title": "Review applicable local licenses and permits in Pittsburg",
+        "category": "license",
+        "authority": "Pittsburg local licensing authority",
+        "description": "Pittsburg requires businesses located in the city and outside vendors conducting business in the city to obtain a business license; the Permit Center provides the business-license calculator for current fees.",
+        "frequency": "once",
+        "url": "https://www.pittsburgca.gov/services/community-development/building/business-license",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Chino Hills",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "chino-hills.local-licenses",
+        "title": "Review applicable local licenses and permits in Chino Hills",
+        "category": "license",
+        "authority": "Chino Hills local licensing authority",
+        "description": "Chino Hills requires a Land Use Clearance or Home Occupation Permit before a business-license application; the business-license fee is $17.83 plus the $4 state disability-access fee, with additional location fees of $269 commercial or $104 home occupation.",
+        "frequency": "once",
+        "url": "https://www.chinohills.org/36/Business-Licenses",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Alameda",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "alameda.local-licenses",
+        "title": "Review applicable local licenses and permits in Alameda",
+        "category": "license",
+        "authority": "Alameda local licensing authority",
+        "description": "Alameda requires all individuals and entities conducting business, including home-based and rental businesses, to obtain a business license; licenses run July 1–June 30 and renewals are due by July 31.",
+        "frequency": "once",
+        "url": "https://www.alamedaca.gov/Departments/Finance/Business-License",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Rocklin",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "rocklin.local-licenses",
+        "title": "Review applicable local licenses and permits in Rocklin",
+        "category": "license",
+        "authority": "Rocklin local licensing authority",
+        "description": "Rocklin requires a city business license and payment of the applicable license tax before operating; the city provides a business-license application and fee information for the business classification.",
+        "frequency": "once",
+        "url": "https://www.rocklin.ca.us/sites/main/files/file-attachments/business_license_application_2024.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Napa",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "napa.local-licenses",
+        "title": "Review applicable local licenses and permits in Napa",
+        "category": "license",
+        "authority": "Napa local licensing authority",
+        "description": "Napa requires applicable business licenses and permits before operating; fixed annual fees are due January 1, quarterly fees are due January 1, April 1, July 1, and October 1, and annual gross-receipts fees become delinquent February 15.",
+        "frequency": "once",
+        "url": "https://ecode360.com/43389666",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Apple Valley",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "apple-valley.local-licenses",
+        "title": "Review applicable local licenses and permits in Apple Valley",
+        "category": "license",
+        "authority": "Apple Valley local licensing authority",
+        "description": "Apple Valley requires businesses operating in town to obtain a business license; the town provides separate applications for in-town and out-of-town businesses and collects the applicable license tax and fees before operation.",
+        "frequency": "once",
+        "url": "https://applevalley.org/business/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Lake Elsinore",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "lake-elsinore.local-licenses",
+        "title": "Review applicable local licenses and permits in Lake Elsinore",
+        "category": "license",
+        "authority": "Lake Elsinore local licensing authority",
+        "description": "Lake Elsinore requires businesses operating in the city to obtain a local business license; licenses renew on a calendar-year basis, and new applications are paid after city acceptance with additional disability-access fees on new licenses and renewals.",
+        "frequency": "once",
+        "url": "https://www.lake-elsinore.org/388/Business-Licenses",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Bellflower",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "bellflower.local-licenses",
+        "title": "Review applicable local licenses and permits in Bellflower",
+        "category": "license",
+        "authority": "Bellflower local licensing authority",
+        "description": "Bellflower requires businesses to obtain a city business license; fees are calculated by business type, employees, rental units, vehicles, gross receipts, and applicable professional or contractor classifications, with zoning documentation required for the location.",
+        "frequency": "once",
+        "url": "https://businesslicense.bellflower.ca.gov/Apply/Apply1/BusinessLicense",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Pleasanton",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "pleasanton.local-licenses",
+        "title": "Review applicable local licenses and permits in Pleasanton",
+        "category": "license",
+        "authority": "Pleasanton local licensing authority",
+        "description": "Pleasanton requires every person conducting business in the city to obtain a business license and pay the business-license tax; 2026 renewals are due January 31, with tax based on gross receipts and a $25 minimum schedule, plus a $4 state disability-access fee.",
+        "frequency": "once",
+        "url": "https://www.cityofpleasantonca.gov/our-government/finance-department/business-license/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Redlands",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "redlands.local-licenses",
+        "title": "Review applicable local licenses and permits in Redlands",
+        "category": "license",
+        "authority": "Redlands local licensing authority",
+        "description": "Redlands requires all businesses operating within city limits to obtain a business license and pay the business-license tax before commencing operations; in-town commercial businesses also need zone clearance, and licenses can be renewed annually through the city's portal.",
+        "frequency": "once",
+        "url": "https://www.redlands.gov/business-licenses/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Tulare",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "tulare.local-licenses",
+        "title": "Review applicable local licenses and permits in Tulare",
+        "category": "license",
+        "authority": "Tulare local licensing authority",
+        "description": "Tulare requires businesses to obtain a Business Tax Certificate; the city's application requires business and ownership details, estimated gross receipts, and any applicable zoning, building, fire, police, health, or special-permit approvals, plus a $4 state disability-access fee.",
+        "frequency": "once",
+        "url": "https://www.tulare.ca.gov/home/showpublisheddocument/336/638592454311730000",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Turlock",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "turlock.local-licenses",
+        "title": "Review applicable local licenses and permits in Turlock",
+        "category": "license",
+        "authority": "Turlock local licensing authority",
+        "description": "Turlock requires all businesses operating in the city to have a business license; some business types require review by Development Services, Fire, Health, or Police, and renewals are sent annually with penalties possible for late payment.",
+        "frequency": "once",
+        "url": "https://www.turlockca.gov/doingbusinessinturlock/businesslicenses/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Dublin",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "dublin.local-licenses",
+        "title": "Review applicable local licenses and permits in Dublin",
+        "category": "license",
+        "authority": "Dublin local licensing authority",
+        "description": "Dublin requires all persons and entities doing business in the city, including subcontractors and home-based businesses, to maintain a current business license; new licenses cost $108, renewals $29, and the $4 CASp fee applies to new, renewal, and daily licenses, with applications taking up to two to four weeks.",
+        "frequency": "once",
+        "url": "https://www.dublin.ca.gov/433/Business-Licenses",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Eastvale",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "eastvale.local-licenses",
+        "title": "Review applicable local licenses and permits in Eastvale",
+        "category": "license",
+        "authority": "Eastvale local licensing authority",
+        "description": "Eastvale requires business registration for every business operating in the city regardless of trade or business address; registrations run for 12 months from April 1 through March 31, renew annually, and the new application fee is $114 including the $4 state CASp fee.",
+        "frequency": "once",
+        "url": "https://www.eastvaleca.gov/business/business-registration/business-registration-faq-s",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Walnut Creek",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "walnut-creek.local-licenses",
+        "title": "Review applicable local licenses and permits in Walnut Creek",
+        "category": "license",
+        "authority": "Walnut Creek local licensing authority",
+        "description": "Walnut Creek requires businesses operating or doing business within city limits, including home-based businesses, contractors, consultants, and out-of-city businesses, to obtain a business license; the license tax is due before starting and renews each fiscal year, with licenses delinquent after August 1.",
+        "frequency": "once",
+        "url": "https://www.walnutcreekconnected.com/business-support/business-license-process",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Yuba City",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "yuba-city.local-licenses",
+        "title": "Review applicable local licenses and permits in Yuba City",
+        "category": "license",
+        "authority": "Yuba City local licensing authority",
+        "description": "Yuba City requires all businesses, including home-based businesses, to obtain a business license; the standard base fee is $58 per year plus the $4 state disability-access fee, with gross-receipts tax rates and special classifications varying by business and annual renewal payments due by March 31 to avoid penalties.",
+        "frequency": "once",
+        "url": "https://yubacity.hosted.civiclive.com/city_hall/departments/finance/business_license",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Lodi",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "lodi.local-licenses",
+        "title": "Review applicable local licenses and permits in Lodi",
+        "category": "license",
+        "authority": "Lodi local licensing authority",
+        "description": "Lodi requires businesses operating in the city to register for a business certificate and renew it annually; the city administers applications, renewals, payments, and account changes through its official registration portal.",
+        "frequency": "once",
+        "url": "https://www.lodi.gov/m/newsflash/Archive/Item/399?arcId=622",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Madera",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "madera.local-licenses",
+        "title": "Review applicable local licenses and permits in Madera",
+        "category": "license",
+        "authority": "Madera local licensing authority",
+        "description": "Madera requires anyone selling a product or providing a service in the city, including home-based businesses, to obtain a business license; the application fee is $50, annual tax is generally based on gross receipts with a $40 minimum and $1,056 maximum, renewals run July 1 through June 30, and late payment adds a 10% penalty.",
+        "frequency": "once",
+        "url": "https://www.madera.gov/business-building-development/business-economic-development/business-licenses/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Baldwin Park",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "baldwin-park.local-licenses",
+        "title": "Review applicable local licenses and permits in Baldwin Park",
+        "category": "license",
+        "authority": "Baldwin Park local licensing authority",
+        "description": "Baldwin Park requires businesses to complete zoning and business-license paperwork before operating; home occupations require a $136 permit, while outside contractors pay $119.50 for state subcontractor classifications or $207 for state general contractors, with other fees varying by business type.",
+        "frequency": "once",
+        "url": "https://www.baldwinpark.com/291/Business-License",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Camarillo",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "camarillo.local-licenses",
+        "title": "Review applicable local licenses and permits in Camarillo",
+        "category": "license",
+        "authority": "Camarillo local licensing authority",
+        "description": "Camarillo requires businesses and people providing services in the city to maintain a valid business license; licenses renew annually, and businesses located in Camarillo must check Planning for zoning compliance and any additional permits before issuance.",
+        "frequency": "once",
+        "url": "https://camarillotest.hdlgov.com/Apply/GettingStarted/step0",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Palo Alto",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "palo-alto.local-licenses",
+        "title": "Review applicable local licenses and permits in Palo Alto",
+        "category": "license",
+        "authority": "Palo Alto local licensing authority",
+        "description": "Palo Alto requires fixed-place businesses to obtain an annual Business Registry Certificate and pay the separate quarterly business tax; registry renewals are due March 31, the registry amount is $54 including the $4 state fee, and late registry penalties begin after April 30.",
+        "frequency": "once",
+        "url": "https://www.paloalto.gov/Business/Business-Registry-and-Tax",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Redondo Beach",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "redondo-beach.local-licenses",
+        "title": "Review applicable local licenses and permits in Redondo Beach",
+        "category": "license",
+        "authority": "Redondo Beach local licensing authority",
+        "description": "Redondo Beach requires businesses to obtain the applicable city registration or business license before operating; the city's current process may require a permit-by-right approval, a conditional use permit, or other land-use review depending on the business, with application fees set by the current fee schedule.",
+        "frequency": "once",
+        "url": "https://redondo.legistar.com/LegislationDetail.aspx?GUID=DFC1CEFF-DA7F-47EB-B086-6BC052F665E9&ID=8201451&Options=&Search=",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Brentwood",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "brentwood.local-licenses",
+        "title": "Review applicable local licenses and permits in Brentwood",
+        "category": "license",
+        "authority": "Brentwood local licensing authority",
+        "description": "Brentwood requires all businesses operating in the city, including businesses based elsewhere, to obtain a Business Tax Certificate; new applications have a $57.80 fee, late tax payments carry a 10% penalty or $30 minimum, and home businesses need a $50 zoning review fee.",
+        "frequency": "once",
+        "url": "https://www.brentwoodca.gov/government/finance-information-systems/business-tax-certificate",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Davis",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "davis.local-licenses",
+        "title": "Review applicable local licenses and permits in Davis",
+        "category": "license",
+        "authority": "Davis local licensing authority",
+        "description": "Davis requires annual business-license renewal by January 1, with licenses delinquent after January 31 and a 10% penalty added February 1 plus another 10% for each subsequent month; fees depend on business group and estimated gross receipts, and the city offers home-occupancy, commercial, contractor, rental, and solicitation applications.",
+        "frequency": "once",
+        "url": "https://www.cityofdavis.org/city-hall/finance/business-license/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Yorba Linda",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "yorba-linda.local-licenses",
+        "title": "Review applicable local licenses and permits in Yorba Linda",
+        "category": "license",
+        "authority": "Yorba Linda local licensing authority",
+        "description": "Yorba Linda requires residents using a home office, businesses located in the city, licensed contractors, and anyone doing business in the city to obtain a business license; renewal notices are issued in the expiration month with a 30-day grace period, and additional regulatory permits may apply by activity.",
+        "frequency": "once",
+        "url": "https://www.yorbalindaca.gov/367/Business-Licenses",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Union City",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "union-city.local-licenses",
+        "title": "Review applicable local licenses and permits in Union City",
+        "category": "license",
+        "authority": "Union City local licensing authority",
+        "description": "Union City requires all businesses, trades, professions, and occupations operating or conducting transactions in the city, including home-based and out-of-town businesses, to obtain a business license; city businesses need zoning review, taxes vary by business, and review typically takes about three weeks.",
+        "frequency": "once",
+        "url": "https://www.unioncityca.gov/206/Business-License",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "South San Francisco",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "south-san-francisco.local-licenses",
+        "title": "Review applicable local licenses and permits in South San Francisco",
+        "category": "license",
+        "authority": "South San Francisco local licensing authority",
+        "description": "South San Francisco requires every person doing business in the city, including home-based businesses, to obtain a business license; 2026 renewals are extended through February 28 with penalties beginning March 1, residential rentals are assessed $50 per unit, and nonpayment penalties accrue at 10% per month up to 100%.",
+        "frequency": "once",
+        "url": "https://www.ssfca.gov/Departments/Finance/Business-License-Information",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Laguna Niguel",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "laguna-niguel.local-licenses",
+        "title": "Review applicable local licenses and permits in Laguna Niguel",
+        "category": "license",
+        "authority": "Laguna Niguel local licensing authority",
+        "description": "Laguna Niguel does not require a general business license, but new businesses, changes in ownership or operation, and changes in business name require a Certificate of Occupancy; home-based businesses need a Home Occupation Permit, and sidewalk vendors need a vending permit.",
+        "frequency": "once",
+        "url": "https://ca-lagunaniguel3.civicplus.com/1810/No-Business-License",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Lynwood",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "lynwood.local-licenses",
+        "title": "Review applicable local licenses and permits in Lynwood",
+        "category": "license",
+        "authority": "Lynwood local licensing authority",
+        "description": "Lynwood directs businesses to obtain a city business license through its licensing portal; sidewalk food vendors also need the city's compact mobile food operation permit and must follow the city's street-food vending process.",
+        "frequency": "once",
+        "url": "https://www.lynwoodca.gov/172/Economic-Development",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Porterville",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "porterville.local-licenses",
+        "title": "Review applicable local licenses and permits in Porterville",
+        "category": "license",
+        "authority": "Porterville local licensing authority",
+        "description": "Porterville requires any business conducted within city limits to obtain a business license; applicants should verify zoning before signing a lease, obtain building or occupancy approvals as applicable, and estimate gross receipts because the estimate determines the license fee, with a Home Occupation Permit required for home businesses.",
+        "frequency": "once",
+        "url": "https://www.ci.porterville.ca.us/2022%20Starting%20a%20Business%20Guide%20FINAL_COMBINED.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Woodland",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "woodland.local-licenses",
+        "title": "Review applicable local licenses and permits in Woodland",
+        "category": "license",
+        "authority": "Woodland local licensing authority",
+        "description": "Woodland requires businesses operating in the city to obtain and renew a business license through Community Development; the city's application lists $114 for a home-based business, $55 for special events, $191 for out-of-town or temporary businesses, and $500 for commercial businesses.",
+        "frequency": "once",
+        "url": "https://www.cityofwoodland.gov/DocumentCenter/View/653/Business-License-Application-PDF",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Hanford",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "hanford.local-licenses",
+        "title": "Review applicable local licenses and permits in Hanford",
+        "category": "license",
+        "authority": "Hanford local licensing authority",
+        "description": "Hanford requires an annual January–December business license; renewal notices are due by January 31, a Certificate of Occupancy or Home Permit is required for businesses located in the city, and the city lists a $40 business-license processing fee plus activity-specific taxes and late charges.",
+        "frequency": "once",
+        "url": "https://www.hanfordca.gov/194/Business-License",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "San Clemente",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "san-clemente.local-licenses",
+        "title": "Review applicable local licenses and permits in San Clemente",
+        "category": "license",
+        "authority": "San Clemente local licensing authority",
+        "description": "San Clemente requires businesses to obtain and renew an annual business license, with the license expiring one year after issuance and payment due only after application review; commercial businesses must receive required code-enforcement approvals, and sidewalk vending is separately regulated.",
+        "frequency": "once",
+        "url": "https://sanclemente.hdlgov.com/Apply/GettingStarted/BusinessLicense",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Santa Cruz",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "santa-cruz.local-licenses",
+        "title": "Review applicable local licenses and permits in Santa Cruz",
+        "category": "license",
+        "authority": "Santa Cruz local licensing authority",
+        "description": "Santa Cruz requires businesses operating within city limits to obtain a Business License Tax Certificate and submit the application on or before starting; businesses must also complete zoning clearance, and the tax is nonrefundable and nontransferable.",
+        "frequency": "once",
+        "url": "https://www.santacruzca.gov/Government/City-Departments/Finance/Licenses-Fees-and-Taxes?lang_update=639171287911644898",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "La Habra",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "la-habra.local-licenses",
+        "title": "Review applicable local licenses and permits in La Habra",
+        "category": "license",
+        "authority": "La Habra local licensing authority",
+        "description": "La Habra requires every business to maintain an active city business license before operating; renewal notices are mailed 15 days before expiration, and applications must address home-occupation, fire, alcohol, zoning, building, and public-safety requirements when applicable.",
+        "frequency": "once",
+        "url": "https://www.lhcm.org/606/Apply-or-Renew-Your-Business-License",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Beaumont",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "beaumont.local-licenses",
+        "title": "Review applicable local licenses and permits in Beaumont",
+        "category": "license",
+        "authority": "Beaumont local licensing authority",
+        "description": "Beaumont requires all persons and corporations conducting business in the city to obtain a business license; commercial applicants start with zoning verification, all licenses are due by July 1 each fiscal year, and the city adds a $4 state disability-access fee.",
+        "frequency": "once",
+        "url": "https://www.beaumontca.gov/71/Business-Licenses",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Gilroy",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "gilroy.local-licenses",
+        "title": "Review applicable local licenses and permits in Gilroy",
+        "category": "license",
+        "authority": "Gilroy local licensing authority",
+        "description": "Gilroy requires every business operating or conducting transactions in the city, whether located inside or outside city limits, to obtain a business license; fixed-location applications require department sign-offs and fire or hazardous-material permits may apply, with annual renewal.",
+        "frequency": "once",
+        "url": "https://www.cityofgilroy.org/207/Business-Licenses",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Encinitas",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "encinitas.local-licenses",
+        "title": "Review applicable local licenses and permits in Encinitas",
+        "category": "license",
+        "authority": "Encinitas local licensing authority",
+        "description": "Encinitas requires all businesses based or operating in the city, including contractors, delivery companies, home businesses, rentals, mobile businesses, and temporary businesses, to obtain a Business Registration Certificate before operating; in-city applications take about three to four weeks and certificates renew annually.",
+        "frequency": "once",
+        "url": "https://www.encinitasca.gov/business/business-registration",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Montebello",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "montebello.local-licenses",
+        "title": "Review applicable local licenses and permits in Montebello",
+        "category": "license",
+        "authority": "Montebello local licensing authority",
+        "description": "Montebello requires businesses conducting any activity in the city, including home-based, contractor, independent-contractor, nonprofit, and out-of-city businesses, to obtain a business license within 15 days of starting; licenses renew annually on the issuance anniversary and late applications incur penalties.",
+        "frequency": "once",
+        "url": "https://www.montebelloca.gov/our_community/online_business_services",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "La Mesa",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "la-mesa.local-licenses",
+        "title": "Review applicable local licenses and permits in La Mesa",
+        "category": "license",
+        "authority": "La Mesa local licensing authority",
+        "description": "La Mesa requires anyone doing business in the city, including in-city, home-occupation, out-of-city, contractor, delivery, and independent-contractor businesses, to obtain a business license; home occupations require Planning approval, licenses are nontransferable, and special activities such as massage may require additional fees or permits.",
+        "frequency": "once",
+        "url": "https://www.cityoflamesa.gov/75/Business-Licenses",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Petaluma",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "petaluma.local-licenses",
+        "title": "Review applicable local licenses and permits in Petaluma",
+        "category": "license",
+        "authority": "Petaluma local licensing authority",
+        "description": "Petaluma requires businesses to obtain a city business license and complete the applicable business requirements, permits, and zoning clearances before operating; approved licenses can be paid and renewed through the city's licensing services, with fees based on the business classification.",
+        "frequency": "once",
+        "url": "https://storage.googleapis.com/proudcity/petalumaca/2025/01/Petaluma_Toolkit_Web_Jan25.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "San Rafael",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "san-rafael.local-licenses",
+        "title": "Review applicable local licenses and permits in San Rafael",
+        "category": "license",
+        "authority": "San Rafael local licensing authority",
+        "description": "San Rafael requires businesses to complete the city business-license application with zoning review for commercial or residential locations; applications collect estimated gross receipts and business classification, and the city portal supports annual licensing and renewal.",
+        "frequency": "once",
+        "url": "https://elicense.cityofsanrafael.org/Apply/Apply1/BusinessLicense",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Pico Rivera",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "pico-rivera.local-licenses",
+        "title": "Review applicable local licenses and permits in Pico Rivera",
+        "category": "license",
+        "authority": "Pico Rivera local licensing authority",
+        "description": "Pico Rivera requires a business license whenever revenue is generated or business, trade, or professional activity occurs in the city, including by out-of-city contractors; fees vary by business type and gross receipts, and a Certificate of Occupancy with Planning, Fire, Building, and Health approvals may be required before opening.",
+        "frequency": "once",
+        "url": "https://www.pico-rivera.org/faqs/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Gardena",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "gardena.local-licenses",
+        "title": "Review applicable local licenses and permits in Gardena",
+        "category": "license",
+        "authority": "Gardena local licensing authority",
+        "description": "Gardena requires any person conducting a business, trade, profession, enterprise, or occupation in the city to obtain a license even when the physical address is outside the city; the city publishes separate applications and fee schedules for contractors, rentals, mobile vendors, and other regulated activities.",
+        "frequency": "once",
+        "url": "https://www.gardenaawaits.com/business-licensing/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Cupertino",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "cupertino.local-licenses",
+        "title": "Review applicable local licenses and permits in Cupertino",
+        "category": "license",
+        "authority": "Cupertino local licensing authority",
+        "description": "Cupertino requires persons and entities conducting business in the city to obtain a business license unless exempt; businesses earning less than $1,000 in gross receipts are exempt from filing, while qualifying businesses earning $1,000–$5,000 may obtain a $94.49 small-income license, and 2026 rates apply from February 1.",
+        "frequency": "once",
+        "url": "https://www.cupertino.gov/BLUserGuide",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Santee",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "santee.local-licenses",
+        "title": "Review applicable local licenses and permits in Santee",
+        "category": "license",
+        "authority": "Santee local licensing authority",
+        "description": "Santee requires businesses to apply for a city business license before operating; applications collect business type, location, start date, contractor or seller-permit details, and supporting documents, and the municipal code separately governs fees, renewals, delinquency, and regulatory permits.",
+        "frequency": "once",
+        "url": "https://ecode360.com/43747698",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "National City",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "national-city.local-licenses",
+        "title": "Review applicable local licenses and permits in National City",
+        "category": "license",
+        "authority": "National City local licensing authority",
+        "description": "National City requires businesses operating in the city, including home-based, contractor, nonprofit, and out-of-city businesses, to obtain a business license before operating; applications are due within 30 days of commencement, licenses renew December 31, and taxes and fees are due by the last day of February.",
+        "frequency": "once",
+        "url": "https://nationalcity.hdlgov.com/Home/Home/BusinessLicense",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Highland",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "highland.local-licenses",
+        "title": "Review applicable local licenses and permits in Highland",
+        "category": "license",
+        "authority": "Highland local licensing authority",
+        "description": "Highland requires a business license and fee before conducting business; the city lists a $629 commercial application total, a $704 home-occupation application total, and separate fees for ice-cream vendors, mobile vendors, massage establishments, and massage technicians, with permits and state licenses required where applicable.",
+        "frequency": "once",
+        "url": "https://www.highlandca.gov/185/Business-Licenses",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Monterey Park",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "monterey-park.local-licenses",
+        "title": "Review applicable local licenses and permits in Monterey Park",
+        "category": "license",
+        "authority": "Monterey Park local licensing authority",
+        "description": "Monterey Park requires businesses to complete zoning clearance and a business-license application before opening; retail and professional-service businesses must obtain Planning approval and, when applicable, building and fire permits and inspections before operating.",
+        "frequency": "once",
+        "url": "https://www.montereypark.ca.gov/DocumentCenter/View/15435/City-Business-License-Guidelines-2023---Retail-and-Professional-Services",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Lincoln",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "lincoln.local-licenses",
+        "title": "Review applicable local licenses and permits in Lincoln",
+        "category": "license",
+        "authority": "Lincoln local licensing authority",
+        "description": "Lincoln requires businesses to use the city's business-license and registration process before operating; applicants must provide state license or certificate information where applicable, and the city publishes current applications, fees, and permit requirements through its Business and Development department.",
+        "frequency": "once",
+        "url": "https://www.lincolnca.gov/business-and-development/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "West Sacramento",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "west-sacramento.local-licenses",
+        "title": "Review applicable local licenses and permits in West Sacramento",
+        "category": "license",
+        "authority": "West Sacramento local licensing authority",
+        "description": "West Sacramento requires every business operating within city limits to obtain a business license; current fees are $220.16 for local commercial or non-local applications, $96.96 for home occupations, $46.56 for renewals, and a $10 late penalty applies seven days after expiration, with county health fees added when required.",
+        "frequency": "once",
+        "url": "https://www.cityofwestsacramento.org/government/departments/community-development/business-licenses/business-license-applications/-fsiteid-1",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "San Jacinto",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "san-jacinto.local-licenses",
+        "title": "Review applicable local licenses and permits in San Jacinto",
+        "category": "license",
+        "authority": "San Jacinto local licensing authority",
+        "description": "San Jacinto requires businesses to apply for or renew a city business license through its online process; applicants must provide business, ownership, location, state-license, and permit information, and the city provides separate residential, street-vendor, and change applications.",
+        "frequency": "once",
+        "url": "https://www.sanjacintoca.gov/city_departments/finance/businesslicense",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Fountain Valley",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "fountain-valley.local-licenses",
+        "title": "Review applicable local licenses and permits in Fountain Valley",
+        "category": "license",
+        "authority": "Fountain Valley local licensing authority",
+        "description": "Fountain Valley requires businesses operating in or conducting activity within the city to obtain a business license and pay the annual business tax; new applications have a $35 processing fee, license taxes become delinquent the last day of the month after the due date, and penalties accrue at 10% per month up to 100%.",
+        "frequency": "once",
+        "url": "https://www.fountainvalley.gov/466/Business-Permits",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Yucaipa",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "yucaipa.local-licenses",
+        "title": "Review applicable local licenses and permits in Yucaipa",
+        "category": "license",
+        "authority": "Yucaipa local licensing authority",
+        "description": "Yucaipa generally does not require an annual business license after its 2024 code update, but new businesses need a one-time zoning clearance; licenses remain required for sidewalk and food-truck vendors, massage therapists, liquor stores, and rental-property owners, with special permits and renewals depending on the activity.",
+        "frequency": "once",
+        "url": "https://yucaipa.gov/business-licenses/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Placentia",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "placentia.local-licenses",
+        "title": "Review applicable local licenses and permits in Placentia",
+        "category": "license",
+        "authority": "Placentia local licensing authority",
+        "description": "Placentia requires an annual business license for each business location; in-city applicants need Building and Zoning Compliance or a Home Occupation Permit before applying, and published fees include $94 for in-city retail or services, $61 outside the city, $75 for a home-occupation permit, and $113 or $337 for minor or major building and zoning permits.",
+        "frequency": "once",
+        "url": "https://placentia.org/412/Business-Licenses",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Arcadia",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "arcadia.local-licenses",
+        "title": "Review applicable local licenses and permits in Arcadia",
+        "category": "license",
+        "authority": "Arcadia local licensing authority",
+        "description": "Arcadia requires every business operating in the city to obtain a business license unless specifically exempt; certificates must be displayed, licenses are not transferable, and home-occupation, solicitor, vending, and film permits may be required depending on the activity.",
+        "frequency": "once",
+        "url": "https://www.arcadiaca.gov/government/development_services/business_license/index.php",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Colton",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "colton.local-licenses",
+        "title": "Review applicable local licenses and permits in Colton",
+        "category": "license",
+        "authority": "Colton local licensing authority",
+        "description": "Colton requires businesses, rental-property owners, and anyone conducting business in the city to secure zoning clearance and a business license; general, out-of-city, and rental licenses are generally $104 per year, home occupations require a $220 permit, renewals have March 1 or September 1 grace dates depending on location, and applications take about two to three weeks.",
+        "frequency": "once",
+        "url": "https://www.coltonca.gov/308/Business-License",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Palm Desert",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "palm-desert.local-licenses",
+        "title": "Review applicable local licenses and permits in Palm Desert",
+        "category": "license",
+        "authority": "Palm Desert local licensing authority",
+        "description": "Palm Desert requires every business, including home-based, contractor, and out-of-city businesses, to obtain a business license; fees include $104 for general engineering, swimming-pool, or owner-builder contractors, $79 for plumbing or electrical contractors, $54 for other specialty contractors, and gross-receipts tiers for out-of-city businesses, plus a $4 state surcharge.",
+        "frequency": "once",
+        "url": "https://www.palmdesert.gov/businesses/business-licenses",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Cathedral City",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "cathedral-city.local-licenses",
+        "title": "Review applicable local licenses and permits in Cathedral City",
+        "category": "license",
+        "authority": "Cathedral City local licensing authority",
+        "description": "Cathedral City requires anyone doing business in the city, including contractors, subcontractors, home occupations, and out-of-city businesses, to obtain a business license; licenses expire one year from issue, home and out-of-city approvals generally take 7–14 business days, and other approvals usually take 7–21 business days.",
+        "frequency": "once",
+        "url": "https://www.cathedralcity.gov/departments/financial-services-department/business-license",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Delano",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "delano.local-licenses",
+        "title": "Review applicable local licenses and permits in Delano",
+        "category": "license",
+        "authority": "Delano local licensing authority",
+        "description": "Delano requires all businesses, home businesses, temporary activities, and out-of-city contractors operating within city limits to hold a business license; licenses run through December 31, certain businesses require a $100 background check, and sidewalk vending, massage establishments, and taxicabs use separate applications.",
+        "frequency": "once",
+        "url": "https://www.delanopd.org/209/Business-Licenses",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Novato",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "novato.local-licenses",
+        "title": "Review applicable local licenses and permits in Novato",
+        "category": "license",
+        "authority": "Novato local licensing authority",
+        "description": "Novato requires businesses operating in the city, including home-based, contractor, independent-contractor, nonprofit, and out-of-city businesses, to obtain a business license within 15 days of starting; licenses renew December 31, taxes and fees are due by January 31, and zoning or a Home Occupation Permit may be required.",
+        "frequency": "once",
+        "url": "https://www.novato.gov/business/business-licenses",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Diamond Bar",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "diamond-bar.local-licenses",
+        "title": "Review applicable local licenses and permits in Diamond Bar",
+        "category": "license",
+        "authority": "Diamond Bar local licensing authority",
+        "description": "Diamond Bar requires all individuals and businesses doing work within city limits, including contractors, internet businesses, and home-based businesses, to obtain a business license; in-city applicants need zoning clearance, annual renewals are available online, and NPDES/SB 205 documentation or special approvals may apply.",
+        "frequency": "once",
+        "url": "https://www.diamondbarca.gov/161/Business-License",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Huntington Park",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "huntington-park.local-licenses",
+        "title": "Review applicable local licenses and permits in Huntington Park",
+        "category": "license",
+        "authority": "Huntington Park local licensing authority",
+        "description": "Huntington Park requires every person or entity conducting business, trade, profession, enterprise, or occupation in the city to obtain a business license regardless of physical address; Planning approval, safety inspection, and final Finance documents are required, licenses run 12 months, and late starts incur a processing charge.",
+        "frequency": "once",
+        "url": "https://hpca.gov/112/Business-License",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Paramount",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "paramount.local-licenses",
+        "title": "Review applicable local licenses and permits in Paramount",
+        "category": "license",
+        "authority": "Paramount local licensing authority",
+        "description": "Paramount requires businesses to complete pre-approval zoning verification before applying for a business license; in-city commercial businesses also need Fire Department intended-use review, industrial businesses may need an AQMD form, home businesses need a Home Occupation Permit, and a Conditional Use Permit may apply.",
+        "frequency": "once",
+        "url": "https://paramount.hdlgov.com/Home/Home",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Watsonville",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "watsonville.local-licenses",
+        "title": "Review applicable local licenses and permits in Watsonville",
+        "category": "license",
+        "authority": "Watsonville local licensing authority",
+        "description": "Watsonville requires all businesses to maintain an active business license and pay the required tax; applications collect the business type, location, start date, owners, employees, state licenses, and permits, while alcohol businesses need a city Use Permit and a state ABC license.",
+        "frequency": "once",
+        "url": "https://watsonville.gov/DocumentCenter/View/19225/Zoning-Clearance-Packet-",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "San Luis Obispo",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "san-luis-obispo.local-licenses",
+        "title": "Review applicable local licenses and permits in San Luis Obispo",
+        "category": "license",
+        "authority": "San Luis Obispo local licensing authority",
+        "description": "San Luis Obispo requires any business transacting in the city, including businesses located elsewhere, to obtain a Business License and Tax Certificate; annual renewal is due July 31, and the current minimum cost as of July 1, 2026 is $133.54 including a $25 minimum tax, $104.54 application fee, and $4 CASp fee.",
+        "frequency": "once",
+        "url": "https://www.slocity.org/services/how-do-i/how-do-i-get-a-business-license",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Aliso Viejo",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "aliso-viejo.local-licenses",
+        "title": "Review applicable local licenses and permits in Aliso Viejo",
+        "category": "license",
+        "authority": "Aliso Viejo local licensing authority",
+        "description": "Aliso Viejo does not operate a general business-license program, but businesses must obtain Community Development approval before starting; commercial businesses generally need a Certificate of Occupancy, use permits must be approved before operations or building-permit applications, and home-based businesses follow separate rules.",
+        "frequency": "once",
+        "url": "https://avcity.org/442/Business-Registration",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Glendora",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "glendora.local-licenses",
+        "title": "Review applicable local licenses and permits in Glendora",
+        "category": "license",
+        "authority": "Glendora local licensing authority",
+        "description": "Glendora requires all businesses operating in the city, including businesses located elsewhere that conduct activity in the city, to obtain a business license and pay business-license tax before starting; zoning verification, home-occupation forms, health, fire, special-use, building, and signage permits may apply.",
+        "frequency": "once",
+        "url": "https://www.cityofglendora.gov/Explore/Economic-Development/Starting-a-Business-in-Glendora",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Los Banos",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "los-banos.local-licenses",
+        "title": "Review applicable local licenses and permits in Los Banos",
+        "category": "license",
+        "authority": "Los Banos local licensing authority",
+        "description": "Los Banos requires a business license before any business operation within city limits, including home businesses, out-of-city businesses, rentals of four or more units, and service providers; licenses run 12 months from issue, renew by the expiration date, and a $4 disability-access fee applies to applications and renewals.",
+        "frequency": "once",
+        "url": "https://losbanos.org/business-licenses/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Rosemead",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "rosemead.local-licenses",
+        "title": "Review applicable local licenses and permits in Rosemead",
+        "category": "license",
+        "authority": "Rosemead local licensing authority",
+        "description": "Rosemead provides Business License and Business Registration certificates; applicants must choose the correct program and documentation for the activity, complete zoning review before applying, and file online, by mail, or in person through the city's Finance Department.",
+        "frequency": "once",
+        "url": "https://rosemeadca.hosted.civiclive.com/government/city_departments/finance/business_license/apply_for_a_business_license_or_business_registry",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Covina",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "covina.local-licenses",
+        "title": "Review applicable local licenses and permits in Covina",
+        "category": "license",
+        "authority": "Covina local licensing authority",
+        "description": "Covina requires all businesses operating in the city, regardless of trade or location, to obtain and renew a business license annually by December 31; in-city businesses must complete the business-license packet and zoning review, and commercial locations must register their alarm company or security provider.",
+        "frequency": "once",
+        "url": "https://covinaca.gov/city-departments/administrative-services/finance/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Poway",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "poway.local-licenses",
+        "title": "Review applicable local licenses and permits in Poway",
+        "category": "license",
+        "authority": "Poway local licensing authority",
+        "description": "Poway uses business certificates for commercial locations in Poway and businesses located outside Poway, Home Occupation Permits for businesses conducted from a home, and separate Regulatory Licenses for specialized activities; regulatory-license review may require San Diego County Sheriff review and up to six weeks.",
+        "frequency": "once",
+        "url": "https://poway.org/205/Business-Registration",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Ceres",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "ceres.local-licenses",
+        "title": "Review applicable local licenses and permits in Ceres",
+        "category": "license",
+        "authority": "Ceres local licensing authority",
+        "description": "Ceres requires every business to obtain a business license even when located outside the city; new applicants pay a nonrefundable $30 application-review fee plus the applicable business tax, licenses are not transferable, and Police, Fire, Building, Planning, Public Works, or County Health review may apply.",
+        "frequency": "once",
+        "url": "https://www.ceres.gov/DocumentCenter/View/7913/Ceres-NEW-BUSINESS-LICENSE-Application",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Cypress",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "cypress.local-licenses",
+        "title": "Review applicable local licenses and permits in Cypress",
+        "category": "license",
+        "authority": "Cypress local licensing authority",
+        "description": "Cypress requires businesses and nonprofit entities, including out-of-city contractors and businesses, to maintain a business license or tax certificate; applications are due within 30 days of starting, licenses expire June 30, the administrative fee is $35 for new licenses and renewals, and the $4 state disability-access fee applies.",
+        "frequency": "once",
+        "url": "https://www.cypressca.org/departments/finance-administrative-services/business-licenses",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Newark",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "newark.local-licenses",
+        "title": "Review applicable local licenses and permits in Newark",
+        "category": "license",
+        "authority": "Newark local licensing authority",
+        "description": "Newark requires anyone conducting business, including internet-based businesses or businesses using a Newark address, to maintain a business license; licenses run by calendar year, renewal is due or postmarked by January 31, penalties begin February 1, and applications generally take about 10 business days to review.",
+        "frequency": "once",
+        "url": "https://www.newarkca.gov/departments/administrative-services/finance/business-license",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Oakley",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "oakley.local-licenses",
+        "title": "Review applicable local licenses and permits in Oakley",
+        "category": "license",
+        "authority": "Oakley local licensing authority",
+        "description": "Oakley requires businesses to pay a Business License Tax and comply with zoning and sign requirements; the annual tax is $100 plus $10 per full-time-equivalent employee and a $4 state fee, with the license year running July 1 through June 30, while certain licensed child-care facilities are exempt.",
+        "frequency": "once",
+        "url": "https://www.oakleyca.gov/DocumentCenter/View/104/Business-Guide-PDF",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Azusa",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "azusa.local-licenses",
+        "title": "Review applicable local licenses and permits in Azusa",
+        "category": "license",
+        "authority": "Azusa local licensing authority",
+        "description": "Azusa requires businesses located or operating in the city to obtain a business license before conducting business; licenses renew annually on the anniversary month, and rental-property registration, Planning review, and SB 205 stormwater or SIC documentation may apply.",
+        "frequency": "once",
+        "url": "https://blweb.azusaca.gov/Apply/GettingStarted/BusinessLicense",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Brea",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "brea.local-licenses",
+        "title": "Review applicable local licenses and permits in Brea",
+        "category": "license",
+        "authority": "Brea local licensing authority",
+        "description": "Brea requires a business-license tax for all businesses operating in the city, including temporary activities and out-of-city contractors; rates vary by business type, zoning and code approval remain separate, and the license must be renewed before the end of December.",
+        "frequency": "once",
+        "url": "https://ca-brea.civicplus.com/111/Business-License-Tax-Requirements",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Cerritos",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "cerritos.local-licenses",
+        "title": "Review applicable local licenses and permits in Cerritos",
+        "category": "license",
+        "authority": "Cerritos local licensing authority",
+        "description": "Cerritos requires a city business license for entities operating in the city, service providers working in the city, and contractors performing work there; commercial, home-occupation, contractor, and out-of-town service-provider applications have different supporting documents, and the city lists a typical 7–10 day business-license processing time.",
+        "url": "https://businesslicense.cerritos.gov/business-license-info",
+        "frequency": "once",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "La Mirada",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "la-mirada.local-licenses",
+        "title": "Review applicable local licenses and permits in La Mirada",
+        "category": "license",
+        "authority": "La Mirada local licensing authority",
+        "description": "La Mirada requires every business operating in the city to pay an annual business-license tax; the tax depends on business type and gross receipts, commercial businesses need zoning review, home businesses need a home-occupation permit, applications generally take one to two weeks, and licenses renew annually.",
+        "url": "https://www.cityoflamirada.org/business/business-license",
+        "frequency": "once",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Rancho Santa Margarita",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "rancho-santa-margarita.local-licenses",
+        "title": "Review applicable local licenses and permits in Rancho Santa Margarita",
+        "category": "license",
+        "authority": "Rancho Santa Margarita local licensing authority",
+        "description": "Rancho Santa Margarita does not issue a general business license, but businesses in non-residential zoning districts must obtain a Certificate of Use and Occupancy before opening; the certificate confirms compliance with building, fire, health, and zoning requirements, and additional approvals may apply by business type.",
+        "url": "https://cityofrsm.org/254/Licenses-Certification-Requirements",
+        "frequency": "once",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Hollister",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "hollister.local-licenses",
+        "title": "Review applicable local licenses and permits in Hollister",
+        "category": "license",
+        "authority": "Hollister local licensing authority",
+        "description": "Hollister requires businesses operating within city limits or delivering goods or services there to obtain a city business license; businesses should contact Finance and Planning before starting to confirm zoning and any additional permits, while home occupations and mobile food operations have separate city requirements.",
+        "url": "https://files.hollister.ca.gov/government/departments/development_services/planning/starting_a_business.php",
+        "frequency": "once",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Morgan Hill",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "morgan-hill.local-licenses",
+        "title": "Review applicable local licenses and permits in Morgan Hill",
+        "category": "license",
+        "authority": "Morgan Hill local licensing authority",
+        "description": "Morgan Hill requires every person or company conducting business within city limits to obtain a city business license before operations begin; the requirement covers retailers, service providers, professionals, contractors, home businesses, landlords with four or more units, and mobile vendors, with annual July–June renewals and additional zoning or SB 205 review where applicable.",
+        "url": "https://www.morganhill.ca.gov/577/Business-Licenses",
+        "frequency": "once",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Coachella",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "coachella.local-licenses",
+        "title": "Review applicable local licenses and permits in Coachella",
+        "category": "license",
+        "authority": "Coachella local licensing authority",
+        "description": "Coachella assesses a general business-license tax on all businesses operating in the city; tax rates depend on business classification, and the Finance Department collects the city’s business-license, transient-occupancy, and cannabis taxes, with delinquent-license penalties governed by the city’s fee rules.",
+        "url": "https://www.coachella.org/departments/finance/utility-service-providers-uut-tax-",
+        "frequency": "once",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Palm Springs",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "palm-springs.local-licenses",
+        "title": "Review applicable local licenses and permits in Palm Springs",
+        "category": "license",
+        "authority": "Palm Springs local licensing authority",
+        "description": "Palm Springs requires businesses to obtain and pay the city Business License Tax after zoning clearance; new applications carry a $36 administrative tax and renewals $24, with additional taxes based on business type, and the city recommends confirming planning, building, fire, county health, and state licensing requirements before opening.",
+        "url": "https://www.palmspringsca.gov/government/departments/finance-treasury/business-license-tax/-fsiteid-1",
+        "frequency": "once",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Rohnert Park",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "rohnert-park.local-licenses",
+        "title": "Review applicable local licenses and permits in Rohnert Park",
+        "category": "license",
+        "authority": "Rohnert Park local licensing authority",
+        "description": "Rohnert Park requires anyone doing business within city limits to obtain a Business Tax Certificate; tax classifications set the fees, certificates are issued for each calendar year, renewal bills are sent in November with payment due by January 31, and new in-city businesses also need an Occupancy and Use Certificate.",
+        "url": "https://www.rpcity.ca.gov/282/Business-License",
+        "frequency": "once",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "El Centro",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "el-centro.local-licenses",
+        "title": "Review applicable local licenses and permits in El Centro",
+        "category": "license",
+        "authority": "El Centro local licensing authority",
+        "description": "El Centro requires all businesses operating in the city to obtain a city business license; applications are reviewed for zoning, building, and safety compliance, with a stated 24-hour Community Development approval turnaround, and home-based occupations require supplemental Planning forms while in-town businesses complete Fire questionnaires.",
+        "url": "https://www.cityofelcentro.org/1227/Business-Licenses",
+        "frequency": "once",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Lompoc",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "lompoc.local-licenses",
+        "title": "Review applicable local licenses and permits in Lompoc",
+        "category": "license",
+        "authority": "Lompoc local licensing authority",
+        "description": "Lompoc requires every business, including service providers, contractors, and consultants without a physical location in the city, to obtain a Business Tax Certificate before conducting business; certificates are valid through June 30 and must be renewed before July 31 to avoid penalties.",
+        "url": "https://www.cityoflompoc.com/government/departments/city-clerk/program-areas/business-taxes-and-permits",
+        "frequency": "once",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Danville",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "danville.local-licenses",
+        "title": "Review applicable local licenses and permits in Danville",
+        "category": "license",
+        "authority": "Danville local licensing authority",
+        "description": "Danville requires any business generating revenue within Town limits, including home-based and out-of-town businesses, to obtain a business license; the annual term runs July 1 through June 30, home-based and in-town fees include a $4 state fee plus employee-based charges, renewals are due July 1, and late penalties begin August 1.",
+        "url": "https://danville.ca.gov/307/Business-License",
+        "frequency": "once",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Lathrop",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "lathrop.local-licenses",
+        "title": "Review applicable local licenses and permits in Lathrop",
+        "category": "license",
+        "authority": "Lathrop local licensing authority",
+        "description": "Lathrop requires business licenses for home-based and commercial businesses, mobile food vendors, and solicitors; new applications include a $25 first-time fee, applications generally take 5–10 business days, licenses expire December 31, and renewal payment is due by February 15 to avoid penalties.",
+        "url": "https://www.ci.lathrop.ca.us/finance/page/business-license-tax",
+        "frequency": "once",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "Campbell",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "campbell.local-licenses",
+        "title": "Review applicable local licenses and permits in Campbell",
+        "category": "license",
+        "authority": "Campbell local licensing authority",
+        "description": "Campbell requires a business license for any business conducted within city limits, businesses with a Campbell address, and home-based businesses; licenses are issued for one year and renew in the original issue month, fees vary by business type and employees, and zoning, fire, building, and home-occupation approvals may also apply.",
+        "url": "https://campbellca.gov/152/Business-Licenses",
+        "frequency": "once",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
+  },
+  {
+    "city": "San Bruno",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "san-bruno.local-licenses",
+        "title": "Review applicable local licenses and permits in San Bruno",
+        "category": "license",
+        "authority": "San Bruno local licensing authority",
+        "description": "San Bruno requires all entities operating or providing services within city limits to obtain a business tax certificate and pay the tax annually by July 1; in-town, home-based, out-of-town, apartment, and vehicle-vendor businesses have different fees, and zoning, building, inspection, and other city approvals may be required before issuance.",
+        "url": "https://www.sanbruno.ca.gov/254/Business-License",
+        "frequency": "once",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"
   }
 ]

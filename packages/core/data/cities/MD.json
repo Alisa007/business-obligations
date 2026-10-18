@@ -2,6 +2,7 @@
   {
     "city": "Baltimore",
     "counties": ["Baltimore City"],
+    "sourceUrl": "https://finance.baltimorecity.gov/bureaus/collections",
     "items": [
       {
         "id": "baltimore.traders-license",
@@ -10,9 +11,104 @@
         "authority": "Clerk of the Circuit Court for Baltimore City",
         "description": "Retail and wholesale sellers need a trader's license based on inventory value; the license year runs May 1 – April 30 with renewals due by May 31.",
         "rrule": "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=31",
-        "url": "https://www.marylandtaxes.gov/businesses/new-business/business-licenses.html",
+        "url": "https://finance.baltimorecity.gov/bureaus/collections",
         "appliesTo": ["sells_goods"]
       }
     ]
+  },
+  {
+    "city": "Frederick",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "frederick.local-licenses",
+        "title": "Review applicable local licenses and permits in Frederick",
+        "category": "license",
+        "authority": "Frederick local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://dat.maryland.gov/sdat%20forms/nameappl.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://dat.maryland.gov/sdat%20forms/nameappl.pdf"
+  },
+  {
+    "city": "Gaithersburg",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "gaithersburg.local-licenses",
+        "title": "Review applicable local licenses and permits in Gaithersburg",
+        "category": "license",
+        "authority": "Gaithersburg local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://dat.maryland.gov/sdat%20forms/nameappl.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://dat.maryland.gov/sdat%20forms/nameappl.pdf"
+  },
+  {
+    "city": "Rockville",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "rockville.local-licenses",
+        "title": "Review applicable local licenses and permits in Rockville",
+        "category": "license",
+        "authority": "Rockville local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://dat.maryland.gov/sdat%20forms/nameappl.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://dat.maryland.gov/sdat%20forms/nameappl.pdf"
+  },
+  {
+    "city": "Bowie",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "bowie.local-licenses",
+        "title": "Review applicable local licenses and permits in Bowie",
+        "category": "license",
+        "authority": "Bowie local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://dat.maryland.gov/sdat%20forms/nameappl.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://dat.maryland.gov/sdat%20forms/nameappl.pdf"
+  },
+  {
+    "city": "Hagerstown",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "hagerstown.local-licenses",
+        "title": "Review applicable local licenses and permits in Hagerstown",
+        "category": "license",
+        "authority": "Hagerstown local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://dat.maryland.gov/sdat%20forms/nameappl.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://dat.maryland.gov/sdat%20forms/nameappl.pdf"
   }
 ]

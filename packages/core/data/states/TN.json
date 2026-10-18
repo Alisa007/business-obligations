@@ -37,11 +37,8 @@
     "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
     "deadline": "First day of the 4th month after fiscal year end (April 1)",
     "feeDetail": {
-      "basis": "per_partner",
-      "perUnit": 50,
-      "min": 250,
-      "max": 2500,
-      "estimate": true
+      "basis": "flat",
+      "amount": 20
     }
   },
   "llpReport": {
@@ -111,7 +108,10 @@
   },
   "verification": {
     "checkedOn": "2026-10-13",
-    "sources": ["https://sos.tn.gov/businesses/faqs"],
-    "unconfirmed": ["lpReport.feeDetail"]
+    "sources": [
+      "https://sos.tn.gov/businesses/faqs",
+      "https://www.capitol.tn.gov/Archives/Joint/publications/TNCodeBills/2024/TNCodeBill_Volume2_2024.pdf"
+    ],
+    "unconfirmed": []
   }
 }

@@ -105,6 +105,16 @@ export interface BusinessProfile {
   fullTimeEmployeeCount?: number;
   /** Total annual gross wages paid to employees, USD. Defaults to 0. */
   annualPayroll?: number;
+  /** Taxable value of business personal property, USD. Defaults to 0. */
+  businessPropertyValueUsd?: number;
+  /** Gross payroll for the relevant quarter, USD. Defaults to 0. */
+  quarterlyPayrollUsd?: number;
+  /** Number of completed calendar years the business has operated. Defaults to 0. */
+  businessAgeYears?: number;
+  /** The business uses an automated payroll system. */
+  hasAutomatedPayrollSystem?: boolean;
+  /** The business sponsors a qualified retirement plan. */
+  hasQualifiedRetirementPlan?: boolean;
   /**
    * Federal employment tax liability reported for the lookback period, USD. Omit for
    * new employers (monthly depositors). Over $50,000 means semiweekly deposits.
@@ -153,7 +163,7 @@ export interface BusinessProfile {
 export type ItemCategory = (typeof ITEM_CATEGORIES)[number];
 
 import type { ChangeNotice, Due, FeeDetail, LateFee } from "./data/types";
-export type { ChangeNotice, Due, FeeDetail, LateFee } from "./data/types";
+export type { ChangeNotice, Due, FeeDetail, FeeTier, LateFee } from "./data/types";
 
 /** What kind of document a source is. Inferred from the URL unless a data file says otherwise. */
 export type SourceKind = "statute" | "ordinance" | "agency_page" | "pdf" | "dataset";
@@ -243,6 +253,8 @@ export interface ComplianceItem {
   url?: string;
   /** Conditions under which the item applies (all must hold), when they can be expressed as profile checks. */
   appliesWhen?: Applicability[];
+  /** Alternative conditions; at least one must hold when present. */
+  appliesWhenAny?: Applicability[];
   /** Situations in which the item does not apply even if `appliesWhen` holds. */
   exemptions?: string[];
   /** Ids of items this one replaces (for example a local requirement that replaces a state default). */
@@ -295,6 +307,11 @@ export interface ResolvedProfile extends BusinessProfile {
   ownerCount: number;
   hasEmployees: boolean;
   annualPayroll: number;
+  businessPropertyValueUsd: number;
+  quarterlyPayrollUsd: number;
+  businessAgeYears: number;
+  hasAutomatedPayrollSystem: boolean;
+  hasQualifiedRetirementPlan: boolean;
   largestContractorPaymentUsd: number;
   annualRevenue: number;
   annualNetIncome: number;

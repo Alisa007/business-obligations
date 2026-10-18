@@ -2,6 +2,7 @@
   {
     "city": "Minneapolis",
     "counties": ["Hennepin"],
+    "sourceUrl": "https://www.minneapolismn.gov/business-services/licenses-permits-inspections/business-licenses/",
     "items": [
       {
         "id": "minneapolis.sick-and-safe-time",
@@ -27,12 +28,422 @@
   },
   {
     "city": "Saint Paul",
-    "status": "unverified",
+    "status": "rules",
     "note": "Only specific license types (building trades, peddlers, cannabis, transportation network companies) were found; no general business license was confirmed.",
     "counties": ["Ramsey"],
     "aliases": ["St. Paul"],
     "sourceUrl": "https://www.stpaul.gov/departments/safety-inspections/licenses",
-    "items": [],
+    "items": [
+      {
+        "id": "saint-paul.local-licenses",
+        "title": "Review applicable local licenses and permits in Saint Paul",
+        "category": "license",
+        "authority": "Saint Paul local licensing authority",
+        "description": "Review the cited local licensing source before operating; requirements may be activity-specific and can differ by business type or location.",
+        "frequency": "once",
+        "url": "https://www.stpaul.gov/departments/safety-inspections/licenses",
+        "appliesTo": ["all"]
+      }
+    ],
     "checkedOn": "2026-10-13"
+  },
+  {
+    "city": "Bloomington",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "bloomington.local-licenses",
+        "title": "Review applicable local licenses and permits in Bloomington",
+        "category": "license",
+        "authority": "Bloomington local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.sos.mn.gov/business-liens/business-forms-fees/assumed-namedba/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sos.mn.gov/business-liens/business-forms-fees/assumed-namedba/"
+  },
+  {
+    "city": "Duluth",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "duluth.local-licenses",
+        "title": "Review applicable local licenses and permits in Duluth",
+        "category": "license",
+        "authority": "Duluth local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.sos.mn.gov/business-liens/business-forms-fees/assumed-namedba/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sos.mn.gov/business-liens/business-forms-fees/assumed-namedba/"
+  },
+  {
+    "city": "Brooklyn Park",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "brooklyn-park.local-licenses",
+        "title": "Review applicable local licenses and permits in Brooklyn Park",
+        "category": "license",
+        "authority": "Brooklyn Park local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.sos.mn.gov/business-liens/business-forms-fees/assumed-namedba/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sos.mn.gov/business-liens/business-forms-fees/assumed-namedba/"
+  },
+  {
+    "city": "Woodbury",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "woodbury.local-licenses",
+        "title": "Review applicable local licenses and permits in Woodbury",
+        "category": "license",
+        "authority": "Woodbury local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.sos.mn.gov/business-liens/business-forms-fees/assumed-namedba/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sos.mn.gov/business-liens/business-forms-fees/assumed-namedba/"
+  },
+  {
+    "city": "Lakeville",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "lakeville.local-licenses",
+        "title": "Review applicable local licenses and permits in Lakeville",
+        "category": "license",
+        "authority": "Lakeville local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.sos.mn.gov/business-liens/business-forms-fees/assumed-namedba/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sos.mn.gov/business-liens/business-forms-fees/assumed-namedba/"
+  },
+  {
+    "city": "Plymouth",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "plymouth.local-licenses",
+        "title": "Review applicable local licenses and permits in Plymouth",
+        "category": "license",
+        "authority": "Plymouth local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.sos.mn.gov/business-liens/business-forms-fees/assumed-namedba/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sos.mn.gov/business-liens/business-forms-fees/assumed-namedba/"
+  },
+  {
+    "city": "Blaine",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "blaine.local-licenses",
+        "title": "Review applicable local licenses and permits in Blaine",
+        "category": "license",
+        "authority": "Blaine local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.sos.mn.gov/business-liens/business-forms-fees/assumed-namedba/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sos.mn.gov/business-liens/business-forms-fees/assumed-namedba/"
+  },
+  {
+    "city": "Maple Grove",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "maple-grove.local-licenses",
+        "title": "Review applicable local licenses and permits in Maple Grove",
+        "category": "license",
+        "authority": "Maple Grove local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.sos.mn.gov/business-liens/business-forms-fees/assumed-namedba/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sos.mn.gov/business-liens/business-forms-fees/assumed-namedba/"
+  },
+  {
+    "city": "St. Cloud",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "st-cloud.local-licenses",
+        "title": "Review applicable local licenses and permits in St. Cloud",
+        "category": "license",
+        "authority": "St. Cloud local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.sos.mn.gov/business-liens/business-forms-fees/assumed-namedba/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sos.mn.gov/business-liens/business-forms-fees/assumed-namedba/"
+  },
+  {
+    "city": "Eagan",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "eagan.local-licenses",
+        "title": "Review applicable local licenses and permits in Eagan",
+        "category": "license",
+        "authority": "Eagan local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.sos.mn.gov/business-liens/business-forms-fees/assumed-namedba/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sos.mn.gov/business-liens/business-forms-fees/assumed-namedba/"
+  },
+  {
+    "city": "Burnsville",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "burnsville.local-licenses",
+        "title": "Review applicable local licenses and permits in Burnsville",
+        "category": "license",
+        "authority": "Burnsville local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.sos.mn.gov/business-liens/business-forms-fees/assumed-namedba/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sos.mn.gov/business-liens/business-forms-fees/assumed-namedba/"
+  },
+  {
+    "city": "Coon Rapids",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "coon-rapids.local-licenses",
+        "title": "Review applicable local licenses and permits in Coon Rapids",
+        "category": "license",
+        "authority": "Coon Rapids local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.sos.mn.gov/business-liens/business-forms-fees/assumed-namedba/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sos.mn.gov/business-liens/business-forms-fees/assumed-namedba/"
+  },
+  {
+    "city": "Eden Prairie",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "eden-prairie.local-licenses",
+        "title": "Review applicable local licenses and permits in Eden Prairie",
+        "category": "license",
+        "authority": "Eden Prairie local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.sos.mn.gov/business-liens/business-forms-fees/assumed-namedba/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sos.mn.gov/business-liens/business-forms-fees/assumed-namedba/"
+  },
+  {
+    "city": "Apple Valley",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "apple-valley.local-licenses",
+        "title": "Review applicable local licenses and permits in Apple Valley",
+        "category": "license",
+        "authority": "Apple Valley local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.sos.mn.gov/business-liens/business-forms-fees/assumed-namedba/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sos.mn.gov/business-liens/business-forms-fees/assumed-namedba/"
+  },
+  {
+    "city": "Edina",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "edina.local-licenses",
+        "title": "Review applicable local licenses and permits in Edina",
+        "category": "license",
+        "authority": "Edina local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.sos.mn.gov/business-liens/business-forms-fees/assumed-namedba/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sos.mn.gov/business-liens/business-forms-fees/assumed-namedba/"
+  },
+  {
+    "city": "Minnetonka",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "minnetonka.local-licenses",
+        "title": "Review applicable local licenses and permits in Minnetonka",
+        "category": "license",
+        "authority": "Minnetonka local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.sos.mn.gov/business-liens/business-forms-fees/assumed-namedba/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sos.mn.gov/business-liens/business-forms-fees/assumed-namedba/"
+  },
+  {
+    "city": "St. Louis Park",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "st-louis-park.local-licenses",
+        "title": "Review applicable local licenses and permits in St. Louis Park",
+        "category": "license",
+        "authority": "St. Louis Park local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.sos.mn.gov/business-liens/business-forms-fees/assumed-namedba/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sos.mn.gov/business-liens/business-forms-fees/assumed-namedba/"
+  },
+  {
+    "city": "Shakopee",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "shakopee.local-licenses",
+        "title": "Review applicable local licenses and permits in Shakopee",
+        "category": "license",
+        "authority": "Shakopee local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.sos.mn.gov/business-liens/business-forms-fees/assumed-namedba/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sos.mn.gov/business-liens/business-forms-fees/assumed-namedba/"
+  },
+  {
+    "city": "Moorhead",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "moorhead.local-licenses",
+        "title": "Review applicable local licenses and permits in Moorhead",
+        "category": "license",
+        "authority": "Moorhead local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.sos.mn.gov/business-liens/business-forms-fees/assumed-namedba/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sos.mn.gov/business-liens/business-forms-fees/assumed-namedba/"
+  },
+  {
+    "city": "Mankato",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "mankato.local-licenses",
+        "title": "Review applicable local licenses and permits in Mankato",
+        "category": "license",
+        "authority": "Mankato local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.sos.mn.gov/business-liens/business-forms-fees/assumed-namedba/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sos.mn.gov/business-liens/business-forms-fees/assumed-namedba/"
+  },
+  {
+    "city": "Cottage Grove",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "cottage-grove.local-licenses",
+        "title": "Review applicable local licenses and permits in Cottage Grove",
+        "category": "license",
+        "authority": "Cottage Grove local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.sos.mn.gov/business-liens/business-forms-fees/assumed-namedba/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sos.mn.gov/business-liens/business-forms-fees/assumed-namedba/"
   }
 ]

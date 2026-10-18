@@ -2,6 +2,8 @@
   {
     "city": "Athens",
     "counties": ["Clarke"],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.accgov.com/138/Business-Occupation-Tax",
     "items": [
       {
         "id": "athens-clarke.occupation-tax",
@@ -10,15 +12,16 @@
         "authority": "Athens-Clarke County Business Tax Office",
         "description": "Occupation tax certificates are valid for the calendar year; renewal is due on or before April 1 and later applications carry a 10% penalty.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
-        "url": "https://accgov.com/DocumentView.aspx?DID=435",
+        "url": "https://www.accgov.com/138/Business-Occupation-Tax",
         "appliesTo": ["all"]
       }
-    ],
-    "checkedOn": "2026-10-13"
+    ]
   },
   {
     "city": "Atlanta",
     "counties": ["Fulton", "DeKalb"],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.atlantaga.gov/government/departments/finance/office-of-revenue/apply-for-a-new-business-occupational-tax-certificate",
     "items": [
       {
         "id": "atlanta.occupational-tax-certificate",
@@ -28,7 +31,7 @@
         "description": "Businesses operating in Atlanta hold an occupational tax certificate, renewed annually through the city's online portal; certificates expire December 31.",
         "frequency": "annual",
         "deadline": "Expires December 31; renew annually",
-        "url": "https://www.atlantaga.gov/government/departments/finance/office-of-revenue",
+        "url": "https://www.atlantaga.gov/government/departments/finance/office-of-revenue/apply-for-a-new-business-occupational-tax-certificate",
         "appliesTo": ["all"]
       }
     ]
@@ -36,6 +39,8 @@
   {
     "city": "Augusta",
     "counties": ["Richmond"],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.augustaga.gov/203/Business-Tax-Certificate",
     "items": [
       {
         "id": "augusta-ga.occupation-tax",
@@ -47,12 +52,13 @@
         "url": "https://www.augustaga.gov/207/Occupation-Tax",
         "appliesTo": ["all"]
       }
-    ],
-    "checkedOn": "2026-10-13"
+    ]
   },
   {
     "city": "Columbus",
     "counties": ["Muscogee"],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://columbusga.gov/finance/Divisions/Revenue/Business-Alcohol-Licenses",
     "items": [
       {
         "id": "columbus-ga.occupation-tax",
@@ -64,12 +70,13 @@
         "url": "https://resources.columbusga.gov/finance/revenue/2025-2026%20OCCUPATION%20TAX%20RETURN%20INSTRUCTIONS.pdf",
         "appliesTo": ["all"]
       }
-    ],
-    "checkedOn": "2026-10-13"
+    ]
   },
   {
     "city": "Sandy Springs",
     "counties": ["Fulton"],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sandyspringsga.gov/annual-business-license-payment-and-renewal/",
     "items": [
       {
         "id": "sandysprings.business-license",
@@ -81,12 +88,13 @@
         "url": "https://www.sandyspringsga.gov/annual-business-license-payment-and-renewal/",
         "appliesTo": ["all"]
       }
-    ],
-    "checkedOn": "2026-10-13"
+    ]
   },
   {
     "city": "Savannah",
     "counties": ["Chatham"],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://savannahga.gov/1587/Business-License",
     "items": [
       {
         "id": "savannah.business-tax-certificate",
@@ -96,10 +104,389 @@
         "description": "Business tax certificates expire December 31 and renew annually. The city's pages give March 1 for renewal (the 2026 form says March 31) and a January 31 payment date, so confirm on your renewal packet.",
         "frequency": "annual",
         "deadline": "Certificates expire December 31; renewal packet date varies",
-        "url": "https://savannahga.gov/787",
+        "url": "https://savannahga.gov/1587/Business-License",
+        "appliesTo": ["all"]
+      }
+    ]
+  },
+  {
+    "city": "Macon",
+    "status": "rules",
+    "items": [
+      {
+        "id": "macon-bibb.occupation-tax",
+        "title": "Obtain the Macon-Bibb occupation tax certificate",
+        "category": "license",
+        "authority": "Macon-Bibb County Business License Office",
+        "description": "Every business, trade, profession, and occupation operating in Macon-Bibb County must obtain an occupation tax certificate (business license) unless exempt; confirm the applicable classification and fee with the county before operating.",
+        "frequency": "annual",
+        "url": "https://www.maconbibb.us/businesslicenseprocess/",
         "appliesTo": ["all"]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.maconbibb.us/businesslicenseprocess/",
+    "note": "Macon city-specific licensing was confirmed from the cited official source."
+  },
+  {
+    "city": "Athens-Clarke County",
+    "status": "rules",
+    "items": [
+      {
+        "id": "athens-clarke-county.occupation-tax",
+        "title": "Renew the Athens-Clarke occupation tax certificate",
+        "category": "license",
+        "authority": "Athens-Clarke County Business Tax Office",
+        "description": "Athens-Clarke County occupation tax certificates are valid for the calendar year; renewals are due on or before April 1 and later applications carry a 10% penalty.",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
+        "url": "https://accgov.com/138/Business-Occupation-Tax",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://accgov.com/138/Business-Occupation-Tax",
+    "note": "Athens-Clarke County occupation tax certificates are valid for the calendar year; renewals are due on or before April 1 and later applications carry a 10% penalty."
+  },
+  {
+    "city": "South Fulton",
+    "status": "rules",
+    "items": [
+      {
+        "id": "south-fulton.occupation-tax",
+        "title": "Renew the South Fulton occupational tax certificate",
+        "category": "license",
+        "authority": "City of South Fulton Business License Office",
+        "description": "Businesses operating in South Fulton must maintain an annual occupational tax certificate for the calendar year; renew by March 31, with penalties and interest beginning April 1.",
+        "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=31",
+        "url": "https://www.cityofsouthfultonga.gov/3775/Business-License",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.cityofsouthfultonga.gov/3775/Business-License",
+    "note": "South Fulton city-specific licensing was confirmed from the cited official source."
+  },
+  {
+    "city": "Roswell",
+    "status": "rules",
+    "items": [
+      {
+        "id": "roswell.occupation-tax",
+        "title": "Renew the Roswell occupation tax certificate",
+        "category": "license",
+        "authority": "City of Roswell Business Registration",
+        "description": "Businesses must obtain an occupation tax certificate before opening; the certificate expires December 31 and the occupation tax is due March 15, with a 10% penalty after the deadline.",
+        "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=15",
+        "url": "https://www.roswellgov.com/business/business-registration/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.roswellgov.com/business/business-registration/",
+    "note": "Roswell city-specific licensing was confirmed from the cited official source."
+  },
+  {
+    "city": "Warner Robins",
+    "status": "rules",
+    "items": [
+      {
+        "id": "warner-robins.occupation-tax",
+        "title": "Obtain the Warner Robins occupational tax certificate",
+        "category": "license",
+        "authority": "City of Warner Robins Business License Office",
+        "description": "Warner Robins requires an occupational tax certificate (business license) to conduct business in the city, including when sales tax is not collected; fees depend on employees or business type.",
+        "frequency": "once",
+        "url": "https://www.wrga.gov/page/business-license",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.wrga.gov/page/business-license",
+    "note": "Warner Robins requires an occupational tax certificate (business license) to conduct business in the city, including when sales tax is not collected; fees depend on employees or business type."
+  },
+  {
+    "city": "Johns Creek",
+    "status": "rules",
+    "items": [
+      {
+        "id": "johns-creek.occupation-tax",
+        "title": "Apply for or renew the Johns Creek business license",
+        "category": "license",
+        "authority": "City of Johns Creek Revenue Department",
+        "description": "Johns Creek provides a city business license and occupational tax process through its business portal; apply for or renew the license before conducting business and complete any applicable zoning, health or professional requirements.",
+        "frequency": "annual",
+        "url": "https://johnscreekga.gov/businesses/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://johnscreekga.gov/businesses/",
+    "note": "Johns Creek provides a city business license and occupational tax process through its business portal; apply for or renew the license before conducting business and complete any applicable zoning, health or professional requirements."
+  },
+  {
+    "city": "Mableton",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "mableton.local-licenses",
+        "title": "Review applicable local licenses and permits in Mableton",
+        "category": "license",
+        "authority": "Mableton local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://sos.ga.gov/page/business-division-faq",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://sos.ga.gov/page/business-division-faq"
+  },
+  {
+    "city": "Alpharetta",
+    "status": "rules",
+    "items": [
+      {
+        "id": "alpharetta.occupation-tax",
+        "title": "Obtain the Alpharetta occupational tax certificate",
+        "category": "license",
+        "authority": "City of Alpharetta Business License Office",
+        "description": "All businesses operating within Alpharetta must possess a current occupational tax certificate (business license) on the first day of business; fees and application requirements depend on the business category.",
+        "frequency": "once",
+        "url": "https://www.alpharetta.ga.us/business-licenses",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.alpharetta.ga.us/business-licenses",
+    "note": "All businesses operating within Alpharetta must possess a current occupational tax certificate (business license) on the first day of business; fees and application requirements depend on the business category."
+  },
+  {
+    "city": "Albany",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "albany.local-licenses",
+        "title": "Review applicable local licenses and permits in Albany",
+        "category": "license",
+        "authority": "Albany local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://sos.ga.gov/page/business-division-faq",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://sos.ga.gov/page/business-division-faq"
+  },
+  {
+    "city": "Marietta",
+    "status": "rules",
+    "items": [
+      {
+        "id": "marietta.business-license",
+        "title": "Obtain the Marietta business license",
+        "category": "license",
+        "authority": "City of Marietta Business License Division",
+        "description": "Every business operating within Marietta city limits must have a current city business license; most businesses complete a general application, and fees are based on annual gross receipts or employee count.",
+        "frequency": "once",
+        "url": "https://www.mariettaga.gov/1094/Applications-Forms",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.mariettaga.gov/1094/Applications-Forms",
+    "note": "Every business operating within Marietta city limits must have a current city business license; most businesses complete a general application, and fees are based on annual gross receipts or employee count."
+  },
+  {
+    "city": "Stonecrest",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "stonecrest.local-licenses",
+        "title": "Review applicable local licenses and permits in Stonecrest",
+        "category": "license",
+        "authority": "Stonecrest local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://sos.ga.gov/page/business-division-faq",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://sos.ga.gov/page/business-division-faq"
+  },
+  {
+    "city": "Brookhaven",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "brookhaven.local-licenses",
+        "title": "Review applicable local licenses and permits in Brookhaven",
+        "category": "license",
+        "authority": "Brookhaven local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://sos.ga.gov/page/business-division-faq",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://sos.ga.gov/page/business-division-faq"
+  },
+  {
+    "city": "Smyrna",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "smyrna.local-licenses",
+        "title": "Review applicable local licenses and permits in Smyrna",
+        "category": "license",
+        "authority": "Smyrna local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://sos.ga.gov/page/business-division-faq",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://sos.ga.gov/page/business-division-faq"
+  },
+  {
+    "city": "Valdosta",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "valdosta.local-licenses",
+        "title": "Review applicable local licenses and permits in Valdosta",
+        "category": "license",
+        "authority": "Valdosta local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://sos.ga.gov/page/business-division-faq",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://sos.ga.gov/page/business-division-faq"
+  },
+  {
+    "city": "Dunwoody",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "dunwoody.local-licenses",
+        "title": "Review applicable local licenses and permits in Dunwoody",
+        "category": "license",
+        "authority": "Dunwoody local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://sos.ga.gov/page/business-division-faq",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://sos.ga.gov/page/business-division-faq"
+  },
+  {
+    "city": "Gainesville",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "gainesville.local-licenses",
+        "title": "Review applicable local licenses and permits in Gainesville",
+        "category": "license",
+        "authority": "Gainesville local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://sos.ga.gov/page/business-division-faq",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://sos.ga.gov/page/business-division-faq"
+  },
+  {
+    "city": "Newnan",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "newnan.local-licenses",
+        "title": "Review applicable local licenses and permits in Newnan",
+        "category": "license",
+        "authority": "Newnan local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://sos.ga.gov/page/business-division-faq",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://sos.ga.gov/page/business-division-faq"
+  },
+  {
+    "city": "Peachtree Corners",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "peachtree-corners.local-licenses",
+        "title": "Review applicable local licenses and permits in Peachtree Corners",
+        "category": "license",
+        "authority": "Peachtree Corners local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://sos.ga.gov/page/business-division-faq",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://sos.ga.gov/page/business-division-faq"
+  },
+  {
+    "city": "Douglasville",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "douglasville.local-licenses",
+        "title": "Review applicable local licenses and permits in Douglasville",
+        "category": "license",
+        "authority": "Douglasville local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://sos.ga.gov/page/business-division-faq",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://sos.ga.gov/page/business-division-faq"
+  },
+  {
+    "city": "Mulberry",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "mulberry.local-licenses",
+        "title": "Review applicable local licenses and permits in Mulberry",
+        "category": "license",
+        "authority": "Mulberry local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://sos.ga.gov/page/business-division-faq",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://sos.ga.gov/page/business-division-faq"
   }
 ]

@@ -1,10 +1,32 @@
 [
   {
     "city": "Honolulu",
-    "status": "unverified",
+    "status": "rules",
     "note": "No City and County of Honolulu general business license was found; the state General Excise Tax license is the main registration.",
     "counties": ["Honolulu"],
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "honolulu.general-excise-tax-license",
+        "title": "Obtain a Hawaii General Excise Tax license for Honolulu business activity",
+        "category": "license",
+        "authority": "Hawaii Department of Taxation",
+        "description": "Businesses operating in Honolulu, City and County of Honolulu, generally need a Hawaii General Excise Tax license; the license is a state registration rather than a separate general city business license.",
+        "frequency": "once",
+        "url": "https://dev2-tax.hawaii.gov/geninfo/licensing/",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "honolulu.building-permit",
+        "title": "Obtain a Honolulu building permit when required",
+        "category": "permit",
+        "authority": "City and County of Honolulu Department of Planning and Permitting",
+        "description": "Building permits are required under Revised Ordinances of Honolulu Chapter 18 for covered construction in Honolulu, including additions; the city provides online and plan-review application paths.",
+        "frequency": "once",
+        "url": "https://honolulu.gov/dpp/home/faq",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://honolulu.gov/csd"
   }
 ]

@@ -4,6 +4,10 @@ All notable changes to `business-obligations-ui` are documented here.
 
 ## [Unreleased]
 
+### Changed
+
+- the fee chip of an item shows a fee that has no single amount ("From $50", "Varies", a tiered fee) instead of nothing
+
 ## [0.6.0] - 2026-10-18
 
 ### Changed

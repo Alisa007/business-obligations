@@ -1,4 +1,4 @@
-import type { ComplianceItem } from "business-obligations";
+import { describeFee, type ComplianceItem } from "business-obligations";
 import { useI18n } from "../i18n/context";
 import { Chip } from "../shared/primitives";
 
@@ -34,5 +34,7 @@ export function Confidence({ item }: { item: ComplianceItem }) {
 
 export function Fee({ item }: { item: ComplianceItem }) {
   const { m, money } = useI18n();
-  return item.cost?.amount !== undefined ? <Chip>{m.fee(money(item.cost.amount))}</Chip> : null;
+  if (!item.cost) return null;
+  const amount = item.cost.amount !== undefined ? money(item.cost.amount) : describeFee(item.cost);
+  return <Chip>{m.fee(amount)}</Chip>;
 }

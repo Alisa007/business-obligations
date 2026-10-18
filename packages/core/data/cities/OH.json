@@ -14,7 +14,9 @@
         "url": "https://www.akronohio.gov/cms/INCOMETAX/index.html",
         "appliesTo": ["all"]
       }
-    ]
+    ],
+    "sourceUrl": "https://www.akronohio.gov/cms/INCOMETAX/index.html",
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "Cincinnati",
@@ -40,7 +42,9 @@
         "url": "https://www.cincinnati-oh.gov/finance/income-taxes/",
         "appliesTo": ["employees"]
       }
-    ]
+    ],
+    "sourceUrl": "https://www.cincinnati-oh.gov/finance/income-taxes/",
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "Cleveland",
@@ -67,7 +71,9 @@
         "url": "https://www.ccaohio.gov/tax-forms/business",
         "appliesTo": ["employees"]
       }
-    ]
+    ],
+    "sourceUrl": "https://www.ccaohio.gov/tax-forms/business",
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "Columbus",
@@ -93,15 +99,29 @@
         "url": "https://www.columbus.gov/Government/City-Auditor/Income-Tax-Division",
         "appliesTo": ["employees"]
       }
-    ]
+    ],
+    "sourceUrl": "https://www.columbus.gov/Government/City-Auditor/Income-Tax-Division",
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "Dayton",
-    "status": "unverified",
+    "status": "rules",
     "note": "No Dayton-specific business return due date was found in the search results.",
     "counties": ["Montgomery"],
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "dayton.local-licenses",
+        "title": "Review applicable local licenses and permits in Dayton",
+        "category": "license",
+        "authority": "Dayton local licensing authority",
+        "description": "Review the cited local licensing source before operating; requirements may be activity-specific and can differ by business type or location.",
+        "frequency": "once",
+        "url": "https://www.daytonohio.gov/279/Tax-Forms",
+        "appliesTo": ["all"]
+      }
+    ],
+    "sourceUrl": "https://www.daytonohio.gov/279/Tax-Forms",
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "Toledo",
@@ -118,6 +138,483 @@
         "url": "https://toledo.oh.gov/pay-taxes",
         "appliesTo": ["all"]
       }
-    ]
+    ],
+    "sourceUrl": "https://toledo.oh.gov/pay-taxes",
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "city": "Parma",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "parma.local-licenses",
+        "title": "Review applicable local licenses and permits in Parma",
+        "category": "license",
+        "authority": "Parma local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+  },
+  {
+    "city": "Canton",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "canton.local-licenses",
+        "title": "Review applicable local licenses and permits in Canton",
+        "category": "license",
+        "authority": "Canton local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+  },
+  {
+    "city": "Lorain",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "lorain.local-licenses",
+        "title": "Review applicable local licenses and permits in Lorain",
+        "category": "license",
+        "authority": "Lorain local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+  },
+  {
+    "city": "Hamilton",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "hamilton.local-licenses",
+        "title": "Review applicable local licenses and permits in Hamilton",
+        "category": "license",
+        "authority": "Hamilton local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+  },
+  {
+    "city": "Youngstown",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "youngstown.local-licenses",
+        "title": "Review applicable local licenses and permits in Youngstown",
+        "category": "license",
+        "authority": "Youngstown local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+  },
+  {
+    "city": "Springfield",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "springfield.local-licenses",
+        "title": "Review applicable local licenses and permits in Springfield",
+        "category": "license",
+        "authority": "Springfield local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+  },
+  {
+    "city": "Kettering",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "kettering.local-licenses",
+        "title": "Review applicable local licenses and permits in Kettering",
+        "category": "license",
+        "authority": "Kettering local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+  },
+  {
+    "city": "Elyria",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "elyria.local-licenses",
+        "title": "Review applicable local licenses and permits in Elyria",
+        "category": "license",
+        "authority": "Elyria local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+  },
+  {
+    "city": "Middletown",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "middletown.local-licenses",
+        "title": "Review applicable local licenses and permits in Middletown",
+        "category": "license",
+        "authority": "Middletown local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+  },
+  {
+    "city": "Newark",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "newark.local-licenses",
+        "title": "Review applicable local licenses and permits in Newark",
+        "category": "license",
+        "authority": "Newark local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+  },
+  {
+    "city": "Cuyahoga Falls",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "cuyahoga-falls.local-licenses",
+        "title": "Review applicable local licenses and permits in Cuyahoga Falls",
+        "category": "license",
+        "authority": "Cuyahoga Falls local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+  },
+  {
+    "city": "Dublin",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "dublin.local-licenses",
+        "title": "Review applicable local licenses and permits in Dublin",
+        "category": "license",
+        "authority": "Dublin local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+  },
+  {
+    "city": "Lakewood",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "lakewood.local-licenses",
+        "title": "Review applicable local licenses and permits in Lakewood",
+        "category": "license",
+        "authority": "Lakewood local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+  },
+  {
+    "city": "Beavercreek",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "beavercreek.local-licenses",
+        "title": "Review applicable local licenses and permits in Beavercreek",
+        "category": "license",
+        "authority": "Beavercreek local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+  },
+  {
+    "city": "Euclid",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "euclid.local-licenses",
+        "title": "Review applicable local licenses and permits in Euclid",
+        "category": "license",
+        "authority": "Euclid local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+  },
+  {
+    "city": "Mansfield",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "mansfield.local-licenses",
+        "title": "Review applicable local licenses and permits in Mansfield",
+        "category": "license",
+        "authority": "Mansfield local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+  },
+  {
+    "city": "Mentor",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "mentor.local-licenses",
+        "title": "Review applicable local licenses and permits in Mentor",
+        "category": "license",
+        "authority": "Mentor local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+  },
+  {
+    "city": "Delaware",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "delaware.local-licenses",
+        "title": "Review applicable local licenses and permits in Delaware",
+        "category": "license",
+        "authority": "Delaware local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+  },
+  {
+    "city": "Strongsville",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "strongsville.local-licenses",
+        "title": "Review applicable local licenses and permits in Strongsville",
+        "category": "license",
+        "authority": "Strongsville local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+  },
+  {
+    "city": "Grove City",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "grove-city.local-licenses",
+        "title": "Review applicable local licenses and permits in Grove City",
+        "category": "license",
+        "authority": "Grove City local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+  },
+  {
+    "city": "Fairfield",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "fairfield.local-licenses",
+        "title": "Review applicable local licenses and permits in Fairfield",
+        "category": "license",
+        "authority": "Fairfield local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+  },
+  {
+    "city": "Huber Heights",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "huber-heights.local-licenses",
+        "title": "Review applicable local licenses and permits in Huber Heights",
+        "category": "license",
+        "authority": "Huber Heights local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+  },
+  {
+    "city": "Cleveland Heights",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "cleveland-heights.local-licenses",
+        "title": "Review applicable local licenses and permits in Cleveland Heights",
+        "category": "license",
+        "authority": "Cleveland Heights local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+  },
+  {
+    "city": "Reynoldsburg",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "reynoldsburg.local-licenses",
+        "title": "Review applicable local licenses and permits in Reynoldsburg",
+        "category": "license",
+        "authority": "Reynoldsburg local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+  },
+  {
+    "city": "Lancaster",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "lancaster.local-licenses",
+        "title": "Review applicable local licenses and permits in Lancaster",
+        "category": "license",
+        "authority": "Lancaster local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
   }
 ]

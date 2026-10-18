@@ -1,107 +1,549 @@
 [
   {
     "county": "Atlantic",
-    "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "atlantic-nj.trade-name-registration",
+        "title": "Register a trade name with the Atlantic County Clerk",
+        "category": "registration",
+        "authority": "Atlantic County Clerk",
+        "description": "A New Jersey sole proprietorship or general partnership using a trade name must register it with the county clerk in each county where it operates.",
+        "frequency": "once",
+        "url": "https://www.nj.gov/treasury/revenue/altname.shtml",
+        "appliesTo": ["unincorporated"],
+        "appliesWhen": [
+          {
+            "field": "usesTradeName",
+            "op": "==",
+            "value": true,
+            "description": "Operates under a trade name"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "note": "County-clerk trade-name registration was confirmed statewide; other county-level business duties were not checked.",
+    "sourceUrl": "https://www.nj.gov/treasury/revenue/altname.shtml"
   },
   {
     "county": "Bergen",
-    "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "bergen-nj.trade-name-registration",
+        "title": "Register a trade name with the Bergen County Clerk",
+        "category": "registration",
+        "authority": "Bergen County Clerk",
+        "description": "A New Jersey sole proprietorship or general partnership using a trade name must register it with the county clerk in each county where it operates.",
+        "frequency": "once",
+        "url": "https://www.nj.gov/treasury/revenue/altname.shtml",
+        "appliesTo": ["unincorporated"],
+        "appliesWhen": [
+          {
+            "field": "usesTradeName",
+            "op": "==",
+            "value": true,
+            "description": "Operates under a trade name"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "note": "County-clerk trade-name registration was confirmed statewide; other county-level business duties were not checked.",
+    "sourceUrl": "https://www.nj.gov/treasury/revenue/altname.shtml"
   },
   {
     "county": "Burlington",
-    "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "burlington-nj.trade-name-registration",
+        "title": "Register a trade name with the Burlington County Clerk",
+        "category": "registration",
+        "authority": "Burlington County Clerk",
+        "description": "A New Jersey sole proprietorship or general partnership using a trade name must register it with the county clerk in each county where it operates.",
+        "frequency": "once",
+        "url": "https://www.nj.gov/treasury/revenue/altname.shtml",
+        "appliesTo": ["unincorporated"],
+        "appliesWhen": [
+          {
+            "field": "usesTradeName",
+            "op": "==",
+            "value": true,
+            "description": "Operates under a trade name"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "note": "County-clerk trade-name registration was confirmed statewide; other county-level business duties were not checked.",
+    "sourceUrl": "https://www.nj.gov/treasury/revenue/altname.shtml"
   },
   {
     "county": "Camden",
-    "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "camden-nj.trade-name-registration",
+        "title": "Register a trade name with the Camden County Clerk",
+        "category": "registration",
+        "authority": "Camden County Clerk",
+        "description": "A New Jersey sole proprietorship or general partnership using a trade name must register it with the county clerk in each county where it operates.",
+        "frequency": "once",
+        "url": "https://www.nj.gov/treasury/revenue/altname.shtml",
+        "appliesTo": ["unincorporated"],
+        "appliesWhen": [
+          {
+            "field": "usesTradeName",
+            "op": "==",
+            "value": true,
+            "description": "Operates under a trade name"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "note": "County-clerk trade-name registration was confirmed statewide; other county-level business duties were not checked.",
+    "sourceUrl": "https://www.nj.gov/treasury/revenue/altname.shtml"
+  },
+  {
+    "county": "Cape May",
+    "items": [
+      {
+        "id": "cape-may-nj.tourism-sales-tax",
+        "title": "File the Cape May County tourism sales tax",
+        "category": "filing",
+        "authority": "New Jersey Division of Taxation",
+        "description": "Businesses in Wildwood, North Wildwood and Wildwood Crest collect the 2% Cape May Tourism Tax on taxable tourism-related sales, including room rentals, food and drink, admissions and cover charges, and file and pay Form ST-350. Hotel rooms are also subject to the 1.85% tourism assessment and state occupancy fee.",
+        "frequency": "ongoing",
+        "deadline": "On the assigned New Jersey sales-tax filing schedule",
+        "url": "https://www.nj.gov/treasury/taxation/capemay.shtml",
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "city",
+            "op": "in",
+            "value": ["Wildwood", "North Wildwood", "Wildwood Crest"],
+            "description": "Business operates in Wildwood, North Wildwood or Wildwood Crest"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "note": "Cape May County tourism sales tax was confirmed for Wildwood, North Wildwood and Wildwood Crest; other county-level business duties were not checked.",
+    "sourceUrl": "https://www.nj.gov/treasury/taxation/capemay.shtml"
+  },
+  {
+    "county": "Cumberland",
+    "items": [
+      {
+        "id": "cumberland-nj.trade-name-registration",
+        "title": "Register a trade name with the Cumberland County Clerk",
+        "category": "registration",
+        "authority": "Cumberland County Clerk",
+        "description": "A New Jersey sole proprietorship or general partnership using a trade name must register it with the county clerk in each county where it operates.",
+        "frequency": "once",
+        "url": "https://www.nj.gov/treasury/revenue/altname.shtml",
+        "appliesTo": ["unincorporated"],
+        "appliesWhen": [
+          {
+            "field": "usesTradeName",
+            "op": "==",
+            "value": true,
+            "description": "Operates under a trade name"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "note": "County-clerk trade-name registration was confirmed statewide; other county-level business duties were not checked.",
+    "sourceUrl": "https://www.nj.gov/treasury/revenue/altname.shtml"
   },
   {
     "county": "Essex",
-    "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "essex-nj.trade-name-registration",
+        "title": "Register a trade name with the Essex County Clerk",
+        "category": "registration",
+        "authority": "Essex County Clerk",
+        "description": "A New Jersey sole proprietorship or general partnership using a trade name must register it with the county clerk in each county where it operates.",
+        "frequency": "once",
+        "url": "https://www.nj.gov/treasury/revenue/altname.shtml",
+        "appliesTo": ["unincorporated"],
+        "appliesWhen": [
+          {
+            "field": "usesTradeName",
+            "op": "==",
+            "value": true,
+            "description": "Operates under a trade name"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "note": "County-clerk trade-name registration was confirmed statewide; other county-level business duties were not checked.",
+    "sourceUrl": "https://www.nj.gov/treasury/revenue/altname.shtml"
   },
   {
     "county": "Gloucester",
-    "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "gloucester-nj.trade-name-registration",
+        "title": "Register a trade name with the Gloucester County Clerk",
+        "category": "registration",
+        "authority": "Gloucester County Clerk",
+        "description": "A New Jersey sole proprietorship or general partnership using a trade name must register it with the county clerk in each county where it operates.",
+        "frequency": "once",
+        "url": "https://www.nj.gov/treasury/revenue/altname.shtml",
+        "appliesTo": ["unincorporated"],
+        "appliesWhen": [
+          {
+            "field": "usesTradeName",
+            "op": "==",
+            "value": true,
+            "description": "Operates under a trade name"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "note": "County-clerk trade-name registration was confirmed statewide; other county-level business duties were not checked.",
+    "sourceUrl": "https://www.nj.gov/treasury/revenue/altname.shtml"
   },
   {
     "county": "Hudson",
-    "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "hudson-nj.trade-name-registration",
+        "title": "Register a trade name with the Hudson County Clerk",
+        "category": "registration",
+        "authority": "Hudson County Clerk",
+        "description": "A New Jersey sole proprietorship or general partnership using a trade name must register it with the county clerk in each county where it operates.",
+        "frequency": "once",
+        "url": "https://www.nj.gov/treasury/revenue/altname.shtml",
+        "appliesTo": ["unincorporated"],
+        "appliesWhen": [
+          {
+            "field": "usesTradeName",
+            "op": "==",
+            "value": true,
+            "description": "Operates under a trade name"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "note": "County-clerk trade-name registration was confirmed statewide; other county-level business duties were not checked.",
+    "sourceUrl": "https://www.nj.gov/treasury/revenue/altname.shtml"
+  },
+  {
+    "county": "Hunterdon",
+    "items": [
+      {
+        "id": "hunterdon-nj.trade-name-registration",
+        "title": "Register a trade name with the Hunterdon County Clerk",
+        "category": "registration",
+        "authority": "Hunterdon County Clerk",
+        "description": "A New Jersey sole proprietorship or general partnership using a trade name must register it with the county clerk in each county where it operates.",
+        "frequency": "once",
+        "url": "https://www.nj.gov/treasury/revenue/altname.shtml",
+        "appliesTo": ["unincorporated"],
+        "appliesWhen": [
+          {
+            "field": "usesTradeName",
+            "op": "==",
+            "value": true,
+            "description": "Operates under a trade name"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "note": "County-clerk trade-name registration was confirmed statewide; other county-level business duties were not checked.",
+    "sourceUrl": "https://www.nj.gov/treasury/revenue/altname.shtml"
   },
   {
     "county": "Mercer",
-    "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "mercer-nj.trade-name-registration",
+        "title": "Register a trade name with the Mercer County Clerk",
+        "category": "registration",
+        "authority": "Mercer County Clerk",
+        "description": "A New Jersey sole proprietorship or general partnership using a trade name must register it with the county clerk in each county where it operates.",
+        "frequency": "once",
+        "url": "https://www.nj.gov/treasury/revenue/altname.shtml",
+        "appliesTo": ["unincorporated"],
+        "appliesWhen": [
+          {
+            "field": "usesTradeName",
+            "op": "==",
+            "value": true,
+            "description": "Operates under a trade name"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "note": "County-clerk trade-name registration was confirmed statewide; other county-level business duties were not checked.",
+    "sourceUrl": "https://www.nj.gov/treasury/revenue/altname.shtml"
   },
   {
     "county": "Middlesex",
-    "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "middlesex-nj.trade-name-registration",
+        "title": "Register a trade name with the Middlesex County Clerk",
+        "category": "registration",
+        "authority": "Middlesex County Clerk",
+        "description": "A New Jersey sole proprietorship or general partnership using a trade name must register it with the county clerk in each county where it operates.",
+        "frequency": "once",
+        "url": "https://www.nj.gov/treasury/revenue/altname.shtml",
+        "appliesTo": ["unincorporated"],
+        "appliesWhen": [
+          {
+            "field": "usesTradeName",
+            "op": "==",
+            "value": true,
+            "description": "Operates under a trade name"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "note": "County-clerk trade-name registration was confirmed statewide; other county-level business duties were not checked.",
+    "sourceUrl": "https://www.nj.gov/treasury/revenue/altname.shtml"
   },
   {
     "county": "Monmouth",
-    "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "monmouth-nj.trade-name-registration",
+        "title": "Register a trade name with the Monmouth County Clerk",
+        "category": "registration",
+        "authority": "Monmouth County Clerk",
+        "description": "A New Jersey sole proprietorship or general partnership using a trade name must register it with the county clerk in each county where it operates.",
+        "frequency": "once",
+        "url": "https://www.nj.gov/treasury/revenue/altname.shtml",
+        "appliesTo": ["unincorporated"],
+        "appliesWhen": [
+          {
+            "field": "usesTradeName",
+            "op": "==",
+            "value": true,
+            "description": "Operates under a trade name"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "note": "County-clerk trade-name registration was confirmed statewide; other county-level business duties were not checked.",
+    "sourceUrl": "https://www.nj.gov/treasury/revenue/altname.shtml"
   },
   {
     "county": "Morris",
-    "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "morris-nj.trade-name-registration",
+        "title": "Register a trade name with the Morris County Clerk",
+        "category": "registration",
+        "authority": "Morris County Clerk",
+        "description": "A New Jersey sole proprietorship or general partnership using a trade name must register it with the county clerk in each county where it operates.",
+        "frequency": "once",
+        "url": "https://www.nj.gov/treasury/revenue/altname.shtml",
+        "appliesTo": ["unincorporated"],
+        "appliesWhen": [
+          {
+            "field": "usesTradeName",
+            "op": "==",
+            "value": true,
+            "description": "Operates under a trade name"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "note": "County-clerk trade-name registration was confirmed statewide; other county-level business duties were not checked.",
+    "sourceUrl": "https://www.nj.gov/treasury/revenue/altname.shtml"
   },
   {
     "county": "Ocean",
-    "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "ocean-nj.trade-name-registration",
+        "title": "Register a trade name with the Ocean County Clerk",
+        "category": "registration",
+        "authority": "Ocean County Clerk",
+        "description": "A New Jersey sole proprietorship or general partnership using a trade name must register it with the county clerk in each county where it operates.",
+        "frequency": "once",
+        "url": "https://www.nj.gov/treasury/revenue/altname.shtml",
+        "appliesTo": ["unincorporated"],
+        "appliesWhen": [
+          {
+            "field": "usesTradeName",
+            "op": "==",
+            "value": true,
+            "description": "Operates under a trade name"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "note": "County-clerk trade-name registration was confirmed statewide; other county-level business duties were not checked.",
+    "sourceUrl": "https://www.nj.gov/treasury/revenue/altname.shtml"
   },
   {
     "county": "Passaic",
-    "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "passaic-nj.trade-name-registration",
+        "title": "Register a trade name with the Passaic County Clerk",
+        "category": "registration",
+        "authority": "Passaic County Clerk",
+        "description": "A New Jersey sole proprietorship or general partnership using a trade name must register it with the county clerk in each county where it operates.",
+        "frequency": "once",
+        "url": "https://www.nj.gov/treasury/revenue/altname.shtml",
+        "appliesTo": ["unincorporated"],
+        "appliesWhen": [
+          {
+            "field": "usesTradeName",
+            "op": "==",
+            "value": true,
+            "description": "Operates under a trade name"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "note": "County-clerk trade-name registration was confirmed statewide; other county-level business duties were not checked.",
+    "sourceUrl": "https://www.nj.gov/treasury/revenue/altname.shtml"
+  },
+  {
+    "county": "Salem",
+    "items": [
+      {
+        "id": "salem-nj.trade-name-registration",
+        "title": "Register a trade name with the Salem County Clerk",
+        "category": "registration",
+        "authority": "Salem County Clerk",
+        "description": "A New Jersey sole proprietorship or general partnership using a trade name must register it with the county clerk in each county where it operates.",
+        "frequency": "once",
+        "url": "https://www.nj.gov/treasury/revenue/altname.shtml",
+        "appliesTo": ["unincorporated"],
+        "appliesWhen": [
+          {
+            "field": "usesTradeName",
+            "op": "==",
+            "value": true,
+            "description": "Operates under a trade name"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "note": "County-clerk trade-name registration was confirmed statewide; other county-level business duties were not checked.",
+    "sourceUrl": "https://www.nj.gov/treasury/revenue/altname.shtml"
   },
   {
     "county": "Somerset",
-    "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "somerset-nj.trade-name-registration",
+        "title": "Register a trade name with the Somerset County Clerk",
+        "category": "registration",
+        "authority": "Somerset County Clerk",
+        "description": "A New Jersey sole proprietorship or general partnership using a trade name must register it with the county clerk in each county where it operates.",
+        "frequency": "once",
+        "url": "https://www.nj.gov/treasury/revenue/altname.shtml",
+        "appliesTo": ["unincorporated"],
+        "appliesWhen": [
+          {
+            "field": "usesTradeName",
+            "op": "==",
+            "value": true,
+            "description": "Operates under a trade name"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "note": "County-clerk trade-name registration was confirmed statewide; other county-level business duties were not checked.",
+    "sourceUrl": "https://www.nj.gov/treasury/revenue/altname.shtml"
+  },
+  {
+    "county": "Sussex",
+    "items": [
+      {
+        "id": "sussex-nj.trade-name-registration",
+        "title": "Register a trade name with the Sussex County Clerk",
+        "category": "registration",
+        "authority": "Sussex County Clerk",
+        "description": "A New Jersey sole proprietorship or general partnership using a trade name must register it with the county clerk in each county where it operates.",
+        "frequency": "once",
+        "url": "https://www.nj.gov/treasury/revenue/altname.shtml",
+        "appliesTo": ["unincorporated"],
+        "appliesWhen": [
+          {
+            "field": "usesTradeName",
+            "op": "==",
+            "value": true,
+            "description": "Operates under a trade name"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "note": "County-clerk trade-name registration was confirmed statewide; other county-level business duties were not checked.",
+    "sourceUrl": "https://www.nj.gov/treasury/revenue/altname.shtml"
   },
   {
     "county": "Union",
-    "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "union-nj.trade-name-registration",
+        "title": "Register a trade name with the Union County Clerk",
+        "category": "registration",
+        "authority": "Union County Clerk",
+        "description": "A New Jersey sole proprietorship or general partnership using a trade name must register it with the county clerk in each county where it operates.",
+        "frequency": "once",
+        "url": "https://www.nj.gov/treasury/revenue/altname.shtml",
+        "appliesTo": ["unincorporated"],
+        "appliesWhen": [
+          {
+            "field": "usesTradeName",
+            "op": "==",
+            "value": true,
+            "description": "Operates under a trade name"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "note": "County-clerk trade-name registration was confirmed statewide; other county-level business duties were not checked.",
+    "sourceUrl": "https://www.nj.gov/treasury/revenue/altname.shtml"
+  },
+  {
+    "county": "Warren",
+    "items": [
+      {
+        "id": "warren-nj.trade-name-registration",
+        "title": "Register a trade name with the Warren County Clerk",
+        "category": "registration",
+        "authority": "Warren County Clerk",
+        "description": "A New Jersey sole proprietorship or general partnership using a trade name must register it with the county clerk in each county where it operates.",
+        "frequency": "once",
+        "url": "https://www.nj.gov/treasury/revenue/altname.shtml",
+        "appliesTo": ["unincorporated"],
+        "appliesWhen": [
+          {
+            "field": "usesTradeName",
+            "op": "==",
+            "value": true,
+            "description": "Operates under a trade name"
+          }
+        ]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "note": "County-clerk trade-name registration was confirmed statewide; other county-level business duties were not checked.",
+    "sourceUrl": "https://www.nj.gov/treasury/revenue/altname.shtml"
   }
 ]

@@ -1,43 +1,284 @@
 [
   {
     "city": "Bridgeport",
-    "status": "unverified",
-    "note": "No official city page on a general business license was found; specific activities (food, secondhand dealers) are licensed.",
     "counties": ["Fairfield"],
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "bridgeport.building-permit",
+        "title": "Obtain a Bridgeport building permit when required",
+        "category": "permit",
+        "authority": "City of Bridgeport Building Department",
+        "description": "Bridgeport requires a building permit to enlarge, alter, repair, move, demolish, change occupancy, or construct a building or structure.",
+        "frequency": "once",
+        "url": "https://www.bridgeportct.gov/government/departments/building-department/building-permit",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.bridgeportct.gov/government/departments/environmental-health/fee-and-licensing-schedule"
   },
   {
     "city": "Hartford",
-    "status": "unverified",
-    "note": "The city has a starting-a-business page but no general license was confirmed from it.",
     "counties": ["Hartford"],
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "hartford.certificate-of-apartment-occupancy",
+        "title": "Obtain a Hartford certificate of apartment occupancy when required",
+        "category": "permit",
+        "authority": "City of Hartford Licenses and Inspections",
+        "description": "Hartford requires a Certificate of Apartment Occupancy before an apartment or dwelling unit is occupied, subject to the city’s rental-license exception for qualifying buildings.",
+        "frequency": "once",
+        "url": "https://www.hartfordct.gov/Government/Departments/DDS/DDS-Services/Apply-for-CAO",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.hartfordct.gov/Government/Departments/DDS/DDS-Services/Starting-a-Business"
   },
   {
     "city": "New Haven",
-    "status": "unverified",
-    "note": "Only select activities appear to be licensed; no official city page confirmed a general license.",
     "counties": ["New Haven"],
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "new-haven.certificate-of-occupancy",
+        "title": "Obtain a New Haven certificate of occupancy when required",
+        "category": "permit",
+        "authority": "City of New Haven Office of Building Inspection and Enforcement",
+        "description": "New Haven requires the applicable certificate of use and occupancy after permitted construction or alteration and before covered premises are occupied.",
+        "frequency": "once",
+        "url": "https://www.newhavenct.gov/home/showpublisheddocument/24591/638767847248170000",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.newhavenct.gov/government/departments-divisions/office-of-building-inspection-enforcement/hours-of-operation/permit-license-center-hours"
   },
   {
     "city": "Stamford",
-    "status": "unverified",
-    "note": "No general business license was found; food, vending, alcohol, salon and sign permits apply by activity.",
+    "status": "rules",
     "counties": ["Fairfield"],
+    "items": [
+      {
+        "id": "stamford.building-permit",
+        "title": "Obtain a Stamford building permit when required",
+        "category": "permit",
+        "authority": "City of Stamford Building Department",
+        "description": "Stamford requires the applicable building permit for covered construction and alterations; permit closeout requires the appropriate certificate of occupancy or certificate of approval.",
+        "frequency": "once",
+        "url": "https://www.stamfordct.gov/government/operations/building-department",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "stamford.certificate-of-occupancy",
+        "title": "Obtain a Stamford certificate of occupancy when required",
+        "category": "permit",
+        "authority": "City of Stamford Building Department",
+        "description": "Stamford requires a certificate of occupancy for new buildings and buildings undergoing a change of use before they are occupied or used.",
+        "frequency": "once",
+        "url": "https://www.stamfordct.gov/government/operations/building-department/building-faqs",
+        "appliesTo": ["all"]
+      }
+    ],
     "sourceUrl": "https://www.choosestamford.com/incentives/small-business-resource-center/opening-a-business/permits-and-licenses",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "Waterbury",
-    "status": "unverified",
-    "note": "No Waterbury-specific licensing information was found.",
     "counties": ["New Haven"],
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "waterbury.building-permit",
+        "title": "Obtain a Waterbury building permit when required",
+        "category": "permit",
+        "authority": "City of Waterbury Department of Inspections",
+        "description": "Waterbury’s Department of Inspections regulates construction, alteration, demolition, maintenance, location, and occupancy of buildings and structures through its permit process.",
+        "frequency": "once",
+        "url": "https://www.waterburyct.org/services/department-of-inspections",
+        "appliesTo": ["all"]
+      },
+      {
+        "id": "waterbury.certificate-of-occupancy",
+        "title": "Obtain a Waterbury certificate of occupancy when required",
+        "category": "permit",
+        "authority": "City of Waterbury Department of Inspections",
+        "description": "Waterbury charges and requires a certificate of occupancy or approval when required by the building-permit process.",
+        "frequency": "once",
+        "url": "https://waterburyct.org/311/knowledgebase/article/12208",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.waterburyct.org/services/department-of-inspections"
+  },
+  {
+    "city": "Norwalk",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "norwalk.local-licenses",
+        "title": "Review applicable local licenses and permits in Norwalk",
+        "category": "license",
+        "authority": "Norwalk local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://business.ct.gov/knowledge-base/articles/trade-names",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://business.ct.gov/knowledge-base/articles/trade-names"
+  },
+  {
+    "city": "Danbury",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "danbury.local-licenses",
+        "title": "Review applicable local licenses and permits in Danbury",
+        "category": "license",
+        "authority": "Danbury local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://business.ct.gov/knowledge-base/articles/trade-names",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://business.ct.gov/knowledge-base/articles/trade-names"
+  },
+  {
+    "city": "New Britain",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "new-britain.local-licenses",
+        "title": "Review applicable local licenses and permits in New Britain",
+        "category": "license",
+        "authority": "New Britain local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://business.ct.gov/knowledge-base/articles/trade-names",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://business.ct.gov/knowledge-base/articles/trade-names"
+  },
+  {
+    "city": "Bristol",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "bristol.local-licenses",
+        "title": "Review applicable local licenses and permits in Bristol",
+        "category": "license",
+        "authority": "Bristol local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://business.ct.gov/knowledge-base/articles/trade-names",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://business.ct.gov/knowledge-base/articles/trade-names"
+  },
+  {
+    "city": "Meriden",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "meriden.local-licenses",
+        "title": "Review applicable local licenses and permits in Meriden",
+        "category": "license",
+        "authority": "Meriden local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://business.ct.gov/knowledge-base/articles/trade-names",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://business.ct.gov/knowledge-base/articles/trade-names"
+  },
+  {
+    "city": "West Haven",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "west-haven.local-licenses",
+        "title": "Review applicable local licenses and permits in West Haven",
+        "category": "license",
+        "authority": "West Haven local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://business.ct.gov/knowledge-base/articles/trade-names",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://business.ct.gov/knowledge-base/articles/trade-names"
+  },
+  {
+    "city": "Milford",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "milford.local-licenses",
+        "title": "Review applicable local licenses and permits in Milford",
+        "category": "license",
+        "authority": "Milford local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://business.ct.gov/knowledge-base/articles/trade-names",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://business.ct.gov/knowledge-base/articles/trade-names"
+  },
+  {
+    "city": "Middletown",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "middletown.local-licenses",
+        "title": "Review applicable local licenses and permits in Middletown",
+        "category": "license",
+        "authority": "Middletown local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://business.ct.gov/knowledge-base/articles/trade-names",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://business.ct.gov/knowledge-base/articles/trade-names"
+  },
+  {
+    "city": "Shelton",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "shelton.local-licenses",
+        "title": "Review applicable local licenses and permits in Shelton",
+        "category": "license",
+        "authority": "Shelton local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://business.ct.gov/knowledge-base/articles/trade-names",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://business.ct.gov/knowledge-base/articles/trade-names"
   }
 ]

@@ -15,6 +15,8 @@ function headline(fd: FeeDetail, limits: string[]): string {
       if (min !== undefined) limits.push(`minimum ${money(min)}`);
       return rate !== undefined ? `${rate}%` : "Varies";
     }
+    case "tiered":
+      return "Varies";
     case "per_partner":
     case "per_member": {
       if (min !== undefined && min !== amount) limits.push(`minimum ${money(min)}`);
@@ -48,6 +50,10 @@ function headline(fd: FeeDetail, limits: string[]): string {
  * ("annual tax", "$0 for nonprofit corporations"). The fee is written once, in the data's `feeDetail`.
  */
 export function describeFee(fd: FeeDetail): string {
+  if (fd.basis === "tiered")
+    return fd.tiers?.length
+      ? fd.tiers.map((tier) => `${tier.label}: ${describeFee(tier)}`).join("; ")
+      : "Varies";
   const limits: string[] = [];
   const head = headline(fd, limits);
   const range = limits.length ? [limits.join(", ")] : [];

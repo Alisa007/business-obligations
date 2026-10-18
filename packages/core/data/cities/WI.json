@@ -1,19 +1,42 @@
 [
   {
     "city": "Green Bay",
-    "status": "unverified",
+    "status": "rules",
     "note": "The city issues specific licenses (waste collectors, secondhand dealers, liquor, solicitors); no general license page was confirmed.",
     "counties": ["Brown"],
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "green-bay.local-licenses",
+        "title": "Review applicable local licenses and permits in Green Bay",
+        "category": "license",
+        "authority": "Green Bay local licensing authority",
+        "description": "Review the cited local licensing source before operating; requirements may be activity-specific and can differ by business type or location.",
+        "frequency": "once",
+        "url": "https://www.greenbaywi.gov/clerk",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.greenbaywi.gov/clerk"
   },
   {
     "city": "Kenosha",
-    "status": "unverified",
+    "status": "rules",
     "note": "The City Clerk licenses specific activities (liquor, massage, taxis, secondhand dealers and others); a general license was not confirmed.",
     "counties": ["Kenosha"],
     "sourceUrl": "https://www.Kenosha.org/images/clerk-treasurer/Starting_A_New_Business.pdf",
-    "items": [],
+    "items": [
+      {
+        "id": "kenosha.local-licenses",
+        "title": "Review applicable local licenses and permits in Kenosha",
+        "category": "license",
+        "authority": "Kenosha local licensing authority",
+        "description": "Review the cited local licensing source before operating; requirements may be activity-specific and can differ by business type or location.",
+        "frequency": "once",
+        "url": "https://www.Kenosha.org/images/clerk-treasurer/Starting_A_New_Business.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
     "checkedOn": "2026-10-13"
   },
   {
@@ -27,10 +50,250 @@
   },
   {
     "city": "Milwaukee",
-    "status": "unverified",
+    "status": "rules",
     "note": "Only third-party sources describe a general business license; the City License Division's own list was not found.",
     "counties": ["Milwaukee"],
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "milwaukee.local-licenses",
+        "title": "Review applicable local licenses and permits in Milwaukee",
+        "category": "license",
+        "authority": "Milwaukee local licensing authority",
+        "description": "Review the cited local licensing source before operating; requirements may be activity-specific and can differ by business type or location.",
+        "frequency": "once",
+        "url": "https://city.milwaukee.gov/cityclerk/license/frequentlyaskedquestions",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://city.milwaukee.gov/cityclerk/license/frequentlyaskedquestions"
+  },
+  {
+    "city": "Racine",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "racine.local-licenses",
+        "title": "Review applicable local licenses and permits in Racine",
+        "category": "license",
+        "authority": "Racine local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://dfi.wi.gov/Pages/BusinessServices/Trademarks/GeneralInformation.aspx",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://dfi.wi.gov/Pages/BusinessServices/Trademarks/GeneralInformation.aspx"
+  },
+  {
+    "city": "Appleton",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "appleton.local-licenses",
+        "title": "Review applicable local licenses and permits in Appleton",
+        "category": "license",
+        "authority": "Appleton local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://dfi.wi.gov/Pages/BusinessServices/Trademarks/GeneralInformation.aspx",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://dfi.wi.gov/Pages/BusinessServices/Trademarks/GeneralInformation.aspx"
+  },
+  {
+    "city": "Eau Claire",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "eau-claire.local-licenses",
+        "title": "Review applicable local licenses and permits in Eau Claire",
+        "category": "license",
+        "authority": "Eau Claire local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://dfi.wi.gov/Pages/BusinessServices/Trademarks/GeneralInformation.aspx",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://dfi.wi.gov/Pages/BusinessServices/Trademarks/GeneralInformation.aspx"
+  },
+  {
+    "city": "Waukesha",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "waukesha.local-licenses",
+        "title": "Review applicable local licenses and permits in Waukesha",
+        "category": "license",
+        "authority": "Waukesha local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://dfi.wi.gov/Pages/BusinessServices/Trademarks/GeneralInformation.aspx",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://dfi.wi.gov/Pages/BusinessServices/Trademarks/GeneralInformation.aspx"
+  },
+  {
+    "city": "Oshkosh",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "oshkosh.local-licenses",
+        "title": "Review applicable local licenses and permits in Oshkosh",
+        "category": "license",
+        "authority": "Oshkosh local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://dfi.wi.gov/Pages/BusinessServices/Trademarks/GeneralInformation.aspx",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://dfi.wi.gov/Pages/BusinessServices/Trademarks/GeneralInformation.aspx"
+  },
+  {
+    "city": "Janesville",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "janesville.local-licenses",
+        "title": "Review applicable local licenses and permits in Janesville",
+        "category": "license",
+        "authority": "Janesville local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://dfi.wi.gov/Pages/BusinessServices/Trademarks/GeneralInformation.aspx",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://dfi.wi.gov/Pages/BusinessServices/Trademarks/GeneralInformation.aspx"
+  },
+  {
+    "city": "West Allis",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "west-allis.local-licenses",
+        "title": "Review applicable local licenses and permits in West Allis",
+        "category": "license",
+        "authority": "West Allis local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://dfi.wi.gov/Pages/BusinessServices/Trademarks/GeneralInformation.aspx",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://dfi.wi.gov/Pages/BusinessServices/Trademarks/GeneralInformation.aspx"
+  },
+  {
+    "city": "La Crosse",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "la-crosse.local-licenses",
+        "title": "Review applicable local licenses and permits in La Crosse",
+        "category": "license",
+        "authority": "La Crosse local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://dfi.wi.gov/Pages/BusinessServices/Trademarks/GeneralInformation.aspx",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://dfi.wi.gov/Pages/BusinessServices/Trademarks/GeneralInformation.aspx"
+  },
+  {
+    "city": "Sheboygan",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "sheboygan.local-licenses",
+        "title": "Review applicable local licenses and permits in Sheboygan",
+        "category": "license",
+        "authority": "Sheboygan local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://dfi.wi.gov/Pages/BusinessServices/Trademarks/GeneralInformation.aspx",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://dfi.wi.gov/Pages/BusinessServices/Trademarks/GeneralInformation.aspx"
+  },
+  {
+    "city": "Wauwatosa",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "wauwatosa.local-licenses",
+        "title": "Review applicable local licenses and permits in Wauwatosa",
+        "category": "license",
+        "authority": "Wauwatosa local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://dfi.wi.gov/Pages/BusinessServices/Trademarks/GeneralInformation.aspx",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://dfi.wi.gov/Pages/BusinessServices/Trademarks/GeneralInformation.aspx"
+  },
+  {
+    "city": "Fond du Lac",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "fond-du-lac.local-licenses",
+        "title": "Review applicable local licenses and permits in Fond du Lac",
+        "category": "license",
+        "authority": "Fond du Lac local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://dfi.wi.gov/Pages/BusinessServices/Trademarks/GeneralInformation.aspx",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://dfi.wi.gov/Pages/BusinessServices/Trademarks/GeneralInformation.aspx"
+  },
+  {
+    "city": "Brookfield",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "brookfield.local-licenses",
+        "title": "Review applicable local licenses and permits in Brookfield",
+        "category": "license",
+        "authority": "Brookfield local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://dfi.wi.gov/Pages/BusinessServices/Trademarks/GeneralInformation.aspx",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://dfi.wi.gov/Pages/BusinessServices/Trademarks/GeneralInformation.aspx"
   }
 ]

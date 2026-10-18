@@ -595,7 +595,13 @@ export const extraStateRules: Rule[] = [
     id: "state.employer-mandates",
     description:
       "State employer mandates that depend on headcount: retirement plan registration, E-Verify and harassment training (see data/employers/)",
-    inputs: ["employeeCount", "multistate"],
+    inputs: [
+      "employeeCount",
+      "multistate",
+      "businessAgeYears",
+      "hasAutomatedPayrollSystem",
+      "hasQualifiedRetirementPlan",
+    ],
     when: (p) => p.presence.some((x) => x.employeeCount > 0 && (EMPLOYER_ITEMS[x.state]?.length ?? 0) > 0),
     items: (p) =>
       p.presence

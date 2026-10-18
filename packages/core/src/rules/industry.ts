@@ -11,7 +11,7 @@ const auth = industryAuthorities;
 const naicsLicences: Rule = {
   id: "industry.naics-licences",
   description: "State licenses, permits and registrations that depend on the business's NAICS code",
-  inputs: ["naics", "state", "employeeCount", "entityType", "usesTradeName", "sellsTaxableGoods"],
+  inputs: ["naics", "state", "county", "employeeCount", "entityType", "usesTradeName", "sellsTaxableGoods"],
   when: (p) => !!p.naics && applicable(INDUSTRY_ITEMS[p.state] ?? [], p).length > 0,
   items: (p) =>
     applicable(INDUSTRY_ITEMS[p.state] ?? [], p).map((it) => ({
@@ -271,6 +271,7 @@ export const industryRules: Rule[] = [
             "Cannabis businesses remain subject to the federal Controlled Substances Act; while cannabis is a Schedule I or II substance, IRC §280E limits deductions for businesses trafficking in it. Banking and interstate commerce restrictions also apply.",
           frequency: "ongoing" as const,
           reason: "Industry is cannabis",
+          url: "https://www.irs.gov/newsroom/news-releases-for-june-2024",
         },
       ];
     },

@@ -9,10 +9,13 @@ import {
   buildCalendar,
   estimateCosts,
   evaluate,
+  itemAmount,
   occurrencesBetween,
   toICS,
   type BusinessProfile,
 } from "../src";
+import { describeFee } from "../src/fee";
+import type { FeeDetail } from "../src";
 
 const llc: BusinessProfile = {
   entityType: "llc",
@@ -24,6 +27,27 @@ const llc: BusinessProfile = {
 const asOf = "2026-01-01";
 
 describe("structured fees", () => {
+  it("selects and describes conditional fee tiers", () => {
+    const fee = {
+      basis: "tiered",
+      tiers: [
+        {
+          label: "Revenue at or below $100,000",
+          basis: "flat",
+          amount: 50,
+          when: [{ field: "annualRevenue", op: "<=", value: 100000 }],
+        },
+        { label: "Revenue above $100,000", basis: "flat", amount: 200 },
+      ],
+    } satisfies FeeDetail;
+    const low = evaluate({ ...llc, annualRevenue: 50000 }, { asOf }).profile;
+    const high = evaluate({ ...llc, annualRevenue: 200000 }, { asOf }).profile;
+    expect(itemAmount(fee as FeeDetail & { currency: "USD" }, { profile: low })).toBe(50);
+    expect(itemAmount(fee as FeeDetail & { currency: "USD" }, { profile: high })).toBe(200);
+    expect(itemAmount(fee as FeeDetail & { currency: "USD" })).toBeUndefined();
+    expect(describeFee(fee)).toContain("Revenue above $100,000: $200");
+  });
+
   it("every state report rule has a feeDetail", () => {
     const keys = ["llcReport", "corpReport", "lpReport", "llpReport"] as const;
     for (const [code, s] of Object.entries(STATES)) {
@@ -112,10 +136,10 @@ describe("provenance", () => {
     expect(fed?.provenance?.confidence).toBe("compiled");
   });
 
-  it("flags the unconfirmed Tennessee LP fee", () => {
+  it("uses the checked Tennessee LP fee", () => {
     const r = evaluate({ entityType: "lp", zip: "37201", city: "Nashville", county: "Davidson" }, { asOf });
     const report = r.items.find((i) => i.id.startsWith("state.annual-report"));
-    expect(report?.provenance?.confidence).toBe("unconfirmed");
+    expect(report?.provenance?.confidence).toBe("checked");
   });
 });
 

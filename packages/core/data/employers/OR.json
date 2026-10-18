@@ -8,6 +8,14 @@
     "frequency": "ongoing",
     "url": "https://www.oregonsaves.com/employers",
     "appliesTo": ["employees"],
+    "appliesWhen": [
+      {
+        "field": "hasQualifiedRetirementPlan",
+        "op": "!=",
+        "value": true,
+        "description": "Does not sponsor a qualified retirement plan"
+      }
+    ],
     "checkedOn": "2026-10-16",
     "exemptions": ["Employers that sponsor a qualified retirement plan (they still certify the exemption)"]
   }
