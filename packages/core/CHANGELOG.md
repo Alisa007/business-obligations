@@ -8,6 +8,7 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 ### Added
 
 - **core:** Syracuse Certificate of Use, and Rochester business permits, food truck and towing licenses, each scoped by NAICS code, with Spanish text
+- **core:** New York State Liquor Authority brewery, distillery and winery licenses, with Spanish text
 
 ## [0.9.0] - 2026-10-18
 
