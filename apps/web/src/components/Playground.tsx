@@ -64,6 +64,8 @@ function EmptyPlanState() {
 }
 
 /** How long the details stay unchanged before the result is worked out again. */
+/** Width of the form beside the results, in px; the form itself is as wide as this. */
+const SIDEBAR_WIDTH = 340;
 const RECALCULATE_DELAY_MS = 400;
 
 export function Playground() {
@@ -228,7 +230,7 @@ export function Playground() {
         alignItems={{ default: "stretch", md: "flex-start" }}
       >
         <YStack
-          width={{ default: "100%", md: 340 }}
+          width={{ default: "100%", md: SIDEBAR_WIDTH }}
           flexShrink={{ default: 1, md: 0 }}
           position={{ default: "relative", md: "sticky" }}
           top={16}

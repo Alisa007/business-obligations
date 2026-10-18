@@ -36,10 +36,11 @@ function SectionLabel({ children }: { children: ReactNode }) {
 /**
  * The layout follows the width of the form itself (container queries), not of the window: two columns in a narrow
  * sidebar, four in a panel, six in a wide area. A `wide` field (text, lists, long labels) takes two columns, a `short`
- * one (a count or a date) one, or two on the widest layout; headings and the yes/no details take them all. The first group has no heading: the form needs no title to say what it starts with.
+ * one (a count or a date) one, or two on the widest layout; headings and the yes/no details take them all. The form is as wide as the element it is put in (the host sets that width). The first group has no heading: the form needs no title to say what it starts with.
  */
 const FORM_CSS = `
-.bo-form{container-type:inline-size}
+/* container-type makes the width independent of the content, so the form takes the width it is given */
+.bo-form{container-type:inline-size;width:100%;min-width:0}
 .bo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:12px;row-gap:14px;align-items:start}
 .bo-grid>*{min-width:0}
 .bo-wide{grid-column:span 2}
