@@ -8,6 +8,7 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 ### Added
 
 - **core:** Syracuse Certificate of Use, and Rochester business permits, food truck and towing licenses, each scoped by NAICS code, with Spanish text
+- **core:** business licenses for Santa Ana and Huntington Beach, with Spanish text
 - **core:** business licenses for Anaheim, Little Rock and Salt Lake City, with Spanish text
 - **core:** Jersey City payroll tax and Lexington occupational license fee returns, with Spanish text
 - **core:** business licenses for Henderson, Reno and North Las Vegas (Nevada), with Spanish text

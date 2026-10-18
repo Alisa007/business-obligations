@@ -390,12 +390,23 @@
   },
   {
     "city": "Huntington Beach",
-    "status": "unverified",
-    "note": "Third-party sources and the city's license list show anniversary-based annual terms; the city's own renewal rule was not confirmed.",
+    "note": "The fee schedule was not confirmed from the city's own pages.",
     "counties": ["Orange"],
     "sourceUrl": "https://www.huntingtonbeachca.gov/business/business_directory.php",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "huntingtonbeach.business-license",
+        "title": "Obtain and renew a Huntington Beach business license",
+        "category": "license",
+        "authority": "City of Huntington Beach Business License Office",
+        "description": "Businesses operating in the city pay an annual business license tax, with a separate license for each branch or location. A license runs one year from the business start date, and the city mails a courtesy renewal notice about 30 days before it expires, but not receiving it does not excuse the owner. Operating without a license or renewing late costs a penalty of 10% of the tax per month. Nonprofits must still get a license, with an IRS 501(c)(3) determination letter, but pay no tax or fees.",
+        "frequency": "annual",
+        "deadline": "Before opening, then renew before the one-year license expires",
+        "url": "https://www.huntingtonbeachca.gov/Business/License_Permit_Codes/business_license.cfm",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "Inglewood",
@@ -803,11 +814,22 @@
   },
   {
     "city": "Santa Ana",
-    "status": "unverified",
-    "note": "No current official renewal date was found; older city documents point to a March filing period.",
+    "note": "The fee schedule and the renewal date for each license class were not confirmed from the city's own pages.",
     "counties": ["Orange"],
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "santaana.business-license",
+        "title": "Obtain and renew a Santa Ana business license",
+        "category": "license",
+        "authority": "City of Santa Ana Business License Tax Division",
+        "description": "Every business operating within the city limits pays an annual business license tax, whether or not it is run for profit, and the owner alone is responsible for renewing it by the expiration date printed on the business tax permit. Operating without a valid license may carry a penalty of 50% of the current year's fee plus unpaid fees for up to the preceding 36 months. A home-based business first needs a one-time home occupation permit.",
+        "frequency": "annual",
+        "deadline": "Before opening, then renew by the expiration date printed on the permit",
+        "url": "https://www.santa-ana.org/business-license-general-info/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18"
   },
   {
     "city": "Santa Clara",
