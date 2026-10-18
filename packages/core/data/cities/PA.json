@@ -11,7 +11,7 @@
         "category": "license",
         "authority": "City of Allentown Bureau of Revenue and Audit",
         "description": "Anyone conducting business in Allentown needs a city business license, valid for the calendar year.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "Calendar year",
         "url": "https://www.allentownpa.gov/en-us/Government/Departments/Finance/Revenue-and-Audit/Business-Licenses",
         "appliesTo": ["all"]
@@ -22,7 +22,7 @@
         "category": "filing",
         "authority": "City of Allentown Bureau of Revenue and Audit",
         "description": "The business privilege tax is an annual tax on gross receipts for the privilege of conducting business in the city, under the city's regulations and Chapter 570.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://www.allentownpa.gov/en-us/Government/Departments/Finance/Revenue-and-Audit/Business-Privilege-Tax",
         "appliesTo": ["all"]
       }
@@ -40,7 +40,7 @@
         "category": "license",
         "authority": "Philadelphia Department of Revenue",
         "description": "Free license required for any business operating in Philadelphia; required before other city licenses.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://www.phila.gov/services/business-self-employment/register-a-business/",
         "appliesTo": ["all"]
       },
@@ -61,7 +61,7 @@
         "category": "payment",
         "authority": "Philadelphia Department of Revenue",
         "description": "Employers withhold the city wage tax from employees and remit it with the quarterly reconciliation.",
-        "frequency": "quarterly",
+        "rrule": "FREQ=MONTHLY;INTERVAL=3",
         "url": "https://www.phila.gov/services/payments-assistance-taxes/business-taxes/",
         "appliesTo": ["employees"]
       }
@@ -79,7 +79,7 @@
         "category": "registration",
         "authority": "City of Pittsburgh Department of Finance",
         "description": "Employers with employees working in Pittsburgh register for the payroll expense tax and withhold the local services tax per employee.",
-        "frequency": "quarterly",
+        "rrule": "FREQ=MONTHLY;INTERVAL=3",
         "url": "https://www.pittsburghpa.gov/City-Government/Finance-Budget/Taxes/Tax-Forms",
         "appliesTo": ["employees"]
       }

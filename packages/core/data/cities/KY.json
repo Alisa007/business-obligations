@@ -10,7 +10,7 @@
         "category": "filing",
         "authority": "Lexington-Fayette Urban County Government Division of Revenue",
         "description": "Every business entity, including sole proprietors unless the IRS has issued a tax-exempt determination letter, files a net profits license fee return (Form 228) each year and pays the occupational license fee of 2.25% of net profits. The $100 annual minimum is paid with the return, except that individuals and sole proprietors with gross receipts of $4,400 or less owe no minimum for that year and the next but must still file.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "On the due date the city publishes each year for Form 228",
         "url": "https://www.lexingtonky.gov/working/business-licensing-taxes/occupational-license-fee-minimum-license-filing-requirements",
         "appliesTo": ["all"]
@@ -21,7 +21,7 @@
         "category": "payment",
         "authority": "Lexington-Fayette Urban County Government Division of Revenue",
         "description": "Employers withhold the 2.25% occupational license fee from employees' compensation and file the Employer's Return of License Fee Withheld each quarter, or each month once the fee withheld in any quarter exceeds $300. An annual reconciliation of the fee withheld is also filed.",
-        "frequency": "quarterly",
+        "rrule": "FREQ=MONTHLY;INTERVAL=3",
         "deadline": "Quarterly (monthly above $300 withheld in a quarter), plus an annual reconciliation",
         "url": "https://www.lexingtonky.gov/working/business-licensing-taxes/occupational-license-fee-minimum-license-filing-requirements",
         "appliesTo": ["employees"]
@@ -58,7 +58,7 @@
         "category": "registration",
         "authority": "Louisville Metro Revenue Commission",
         "description": "An employer withholds the occupational license tax (2.2% for Louisville residents, 1.45% for non-resident individuals) from wages earned in Louisville Metro and files Form W-1 by the last day of the month after each calendar quarter. An employer that withheld more than $3,000 in any of the four preceding quarters also deposits monthly, by the 15th of the following month, on Form W-1D.",
-        "frequency": "quarterly",
+        "rrule": "FREQ=MONTHLY;INTERVAL=3",
         "url": "https://louisvilleky.gov/sites/default/files/2026-01/W-1D_Form_2025.pdf",
         "appliesTo": ["employees"],
         "checkedOn": "2026-10-18"

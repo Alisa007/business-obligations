@@ -163,6 +163,7 @@ export interface BusinessProfile {
 export type ItemCategory = (typeof ITEM_CATEGORIES)[number];
 
 import type { ChangeNotice, Due, FeeDetail, LateFee } from "./data/types";
+import type { ScheduleAnchor } from "./rrule";
 export type { ChangeNotice, Due, FeeDetail, FeeTier, LateFee } from "./data/types";
 
 /** What kind of document a source is. Inferred from the URL unless a data file says otherwise. */
@@ -214,6 +215,9 @@ export interface Provenance {
 export type Jurisdiction = (typeof JURISDICTIONS)[number];
 
 export type Frequency = (typeof FREQUENCIES)[number];
+
+/** The frequencies a recurrence rule expresses. */
+export type RecurringFrequency = "annual" | "biennial" | "every_five_years" | "quarterly" | "monthly";
 
 export interface ComplianceItem {
   id: string;
@@ -326,10 +330,25 @@ export interface ResolvedProfile extends BusinessProfile {
 }
 
 /** A rule's output before the engine assigns an id and computes due dates. */
-export type ItemDraft = Omit<ComplianceItem, "id" | "ruleId" | "nextDue" | "recurrence"> & {
+export type ItemDraft = Omit<
+  ComplianceItem,
+  "id" | "ruleId" | "nextDue" | "recurrence" | "frequency" | "due"
+> & {
   /** Distinguishes several items from one rule in the same state; becomes part of the id. */
   key?: string;
-};
+} & (
+    | {
+        /** What does not recur on a schedule. Anything that recurs is an `rrule`. */
+        frequency: Exclude<Frequency, RecurringFrequency>;
+        /** The date of a one-off obligation. */
+        due?: Due;
+      }
+    | {
+        /** The recurrence, as an iCalendar rule (see `parseRRule`); the engine derives `frequency` and `due`. */
+        rrule: string;
+        anchor?: ScheduleAnchor;
+      }
+  );
 
 export interface Rule {
   id: string;

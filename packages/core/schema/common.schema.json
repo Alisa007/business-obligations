@@ -61,7 +61,7 @@
     },
     "rrule": {
       "type": "string",
-      "pattern": "^FREQ=YEARLY(;INTERVAL=[25])?(;BYMONTH=\\d{1,2}(,\\d{1,2})*)?(;BYMONTHDAY=-?\\d{1,2})?$",
+      "pattern": "^(FREQ=YEARLY(;INTERVAL=[25])?(;BYMONTH=\\d{1,2}(,\\d{1,2})*)?(;BYMONTHDAY=-?\\d{1,2})?|FREQ=MONTHLY(;INTERVAL=3)?)$",
       "description": "iCalendar (RFC 5545) recurrence rule. The source of truth for frequency and due date; see src/rrule.ts for the supported subset."
     },
     "month": {
@@ -105,7 +105,7 @@
           "enum": ["odd", "even"]
         },
         "cycleFrom": {
-          "enum": ["formation_year", "year_after_formation"]
+          "enum": ["formation", "formation_year", "year_after_formation"]
         }
       }
     },

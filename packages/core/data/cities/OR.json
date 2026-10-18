@@ -65,7 +65,7 @@
         "category": "license",
         "authority": "City of Hillsboro Finance Department",
         "description": "A general business license is required for any business operating in Hillsboro; it renews annually on its anniversary with a notice during the month it expires and a 30-day grace period. Renewals are not paid online.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "Anniversary date (30-day grace period)",
         "url": "https://hillsboro-oregon.gov/our-city/departments/finance/business-licenses",
         "appliesTo": ["all"]
@@ -84,7 +84,7 @@
         "category": "filing",
         "authority": "City of Portland Revenue Division",
         "description": "Businesses with Portland-source income file the City Business License Tax and Multnomah County Business Income Tax through the Revenue Division; Metro supportive housing and Preschool for All taxes apply to higher-income owners.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://www.portland.gov/revenue/business-tax",
         "appliesTo": ["all"]
       }
@@ -102,7 +102,7 @@
         "category": "license",
         "authority": "City of Salem Permit Application Center",
         "description": "Renewal must be completed within 30 days of the license's expiration date; renewal forms and invoices are mailed in November.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "Within 30 days of expiration (December 31)",
         "url": "https://cityofsalem.net/business/business-resources/licenses/apply-for-a-business-license",
         "appliesTo": ["all"]

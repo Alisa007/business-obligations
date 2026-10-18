@@ -2,7 +2,7 @@ import type { Rule } from "../types";
 import { stateName } from "../states";
 import { industryAuthorities, stateInfo } from "../data";
 import { INDUSTRY_ITEMS } from "../data/industries";
-import { resolveSchedule } from "../rrule";
+import { draftSchedule } from "../rrule";
 import { applicable, extras } from "./local";
 
 const auth = industryAuthorities;
@@ -21,7 +21,7 @@ const naicsLicences: Rule = {
       state: p.state,
       authority: it.authority,
       description: it.description,
-      ...resolveSchedule(it),
+      ...draftSchedule(it),
       url: it.url,
       ...extras(it, undefined),
       reason: `The business's NAICS code ${p.naics} falls under ${it.naics!.find((x) => p.naics!.startsWith(x))}`,
@@ -43,7 +43,7 @@ export const industryRules: Rule[] = [
         state: p.state,
         authority: `${p.county} County health department (${stateName(p.state)})`,
         description: "Plan review, inspection and operating permit for food service.",
-        frequency: "annual",
+        rrule: "FREQ=YEARLY",
         reason: "Industry is restaurant / food service",
       },
       {
@@ -77,7 +77,7 @@ export const industryRules: Rule[] = [
       description:
         "Contractors generally need a license or registration, bonding and proof of insurance; thresholds and classifications vary." +
         (p.licenseClass ? ` Classification requested: ${p.licenseClass}.` : ""),
-      frequency: "biennial",
+      rrule: "FREQ=YEARLY;INTERVAL=2",
       // Florida s. 163.211, F.S. (ch. 2021-214): occupational licensing is preempted to the state, so cities and
       // counties cannot license scopes outside the Construction Industry Licensing Board's categories.
       ...(p.state === "FL"
@@ -159,7 +159,7 @@ export const industryRules: Rule[] = [
       authority: `${p.county} County health department (${stateName(p.state)})`,
       description:
         "Businesses that prepare or serve food (cafes inside retail, caterers, bars with food) generally need a health department permit and inspection, even when food is not their main activity.",
-      frequency: "annual",
+      rrule: "FREQ=YEARLY",
       appliesWhen: [{ field: "foodService", op: "==", value: true, description: "Prepares or serves food" }],
       reason: "Business prepares or serves food",
     }),
@@ -176,7 +176,7 @@ export const industryRules: Rule[] = [
       state: p.state,
       authority: auth(p.state).realEstate,
       description: "Brokerage entities need a licensed designated broker and entity registration.",
-      frequency: "biennial",
+      rrule: "FREQ=YEARLY;INTERVAL=2",
       reason: "Industry is real estate",
     }),
   },
@@ -194,7 +194,7 @@ export const industryRules: Rule[] = [
         authority: auth(p.state).health,
         description:
           "Practitioners and facilities are licensed by state boards; some states restrict entity forms.",
-        frequency: "biennial",
+        rrule: "FREQ=YEARLY;INTERVAL=2",
         reason: "Industry is healthcare",
       },
       {
@@ -223,7 +223,7 @@ export const industryRules: Rule[] = [
       authority: auth(p.state).alcohol,
       description:
         "License class depends on activity (on-premise, off-premise, manufacturing, distribution); local approval is often required too.",
-      frequency: "annual",
+      rrule: "FREQ=YEARLY",
       reason: `Alcohol activity is ${p.alcoholActivity}`,
     }),
   },
@@ -247,7 +247,7 @@ export const industryRules: Rule[] = [
               c.status === "adult_use"
                 ? "Adult-use and medical cannabis businesses are licensed by the state regulator, usually with local approval and caps or social-equity rules."
                 : `Only the state medical program is licensed; license categories are often capped and competitive. ${c.note ?? ""}`.trim(),
-            frequency: "annual" as const,
+            rrule: "FREQ=YEARLY",
             reason: `Industry is cannabis (${p.cannabisActivity}); ${name} status is ${c.status.replace("_", " ")}`,
           }
         : {
@@ -288,7 +288,7 @@ export const industryRules: Rule[] = [
       state: p.state,
       authority: auth(p.state).childCare,
       description: "Facility licensing with background checks, staff ratios and inspections.",
-      frequency: "annual",
+      rrule: "FREQ=YEARLY",
       reason: "Industry is child care",
     }),
   },
@@ -313,7 +313,7 @@ export const industryRules: Rule[] = [
       authority: "FMCSA",
       description:
         "Interstate operators of vehicles over 10,000 lbs, passenger vehicles over the capacity limits, or placardable hazmat carriers must register, file the MCS-150 biennial update, and carry required insurance.",
-      frequency: "biennial",
+      rrule: "FREQ=YEARLY;INTERVAL=2",
       reason: "Interstate commercial vehicle operations meet the USDOT registration thresholds",
       url: "https://www.fmcsa.dot.gov/registration",
     }),

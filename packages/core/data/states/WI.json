@@ -13,7 +13,7 @@
     "url": "https://dwd.wisconsin.gov/uitax"
   },
   "llcReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "deadline": "Last day of the calendar quarter containing the anniversary month",
     "feeDetail": {
       "basis": "flat",
@@ -22,7 +22,7 @@
     }
   },
   "corpReport": {
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "deadline": "Last day of the calendar quarter containing the anniversary month",
     "feeDetail": {
       "basis": "flat",

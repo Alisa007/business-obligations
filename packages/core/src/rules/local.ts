@@ -1,6 +1,6 @@
 import { allHold, anyHold, validateApplicability } from "../applicability";
 import { feeCost } from "../fee";
-import { resolveSchedule } from "../rrule";
+import { draftSchedule } from "../rrule";
 import type { Rule } from "../types";
 import { findCity, findCounty, stateInfo, type CityLookup, type CountyLookup } from "../data";
 import type { LocalItem } from "../data/types";
@@ -76,6 +76,7 @@ const INPUTS = [
   "employeeCount",
   "sellsTaxableGoods",
   "entityType",
+  "sCorpElection",
   "usesTradeName",
   "activities",
   "annualPayroll",
@@ -110,7 +111,7 @@ export function seededCityRule(lookup: CityLookup, id = "local.seeded-city"): Ru
         state: p.state,
         authority: it.authority,
         description: it.description,
-        ...resolveSchedule(it),
+        ...draftSchedule(it),
         url: it.url,
         ...extras(it, j.checkedOn),
         reason: `Business is located in ${j.city}, ${j.state}`,
@@ -138,7 +139,7 @@ export function seededCountyRule(lookup: CountyLookup, id = "local.seeded-county
         state: p.state,
         authority: it.authority,
         description: it.description,
-        ...resolveSchedule(it),
+        ...draftSchedule(it),
         url: it.url,
         ...extras(it, j.checkedOn),
         reason: `Business is located in ${j.county} County, ${j.state}`,
@@ -162,7 +163,7 @@ export const localRules: Rule[] = [
         state: p.state,
         authority: `${s.local.authority}: ${p.city} / ${p.county} County${p.zip ? ` (ZIP ${p.zip})` : ""}`,
         description: s.local.description,
-        frequency: "annual",
+        rrule: "FREQ=YEARLY",
         reason: `Business is located in ${p.city}, ${p.state}`,
       };
     },

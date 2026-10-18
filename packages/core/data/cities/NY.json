@@ -35,7 +35,7 @@
         "category": "registration",
         "authority": "City of Albany Buildings & Regulatory Compliance",
         "description": "Albany commercial establishments not containing public-assembly areas must be inspected and certified every 24 months, with a $100 commercial certificate fee.",
-        "frequency": "biennial",
+        "rrule": "FREQ=YEARLY;INTERVAL=2",
         "url": "https://www.albanyny.gov/2194/Registry-Inspection-Programs",
         "appliesTo": ["all"],
         "feeDetail": {
@@ -373,7 +373,7 @@
         "category": "registration",
         "authority": "City of Fulton Bureau of Code Enforcement",
         "description": "General contractors doing business in Fulton must register with Code Enforcement; the city states that registrations expire on December 31 of the registration year.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://fultonny.org/code-enforcement/",
         "appliesTo": ["all"]
       },
@@ -504,7 +504,7 @@
         "category": "permit",
         "authority": "City of Hornell Code Enforcement",
         "description": "Hornell publishes contractor permit applications for permits to work in the city and opens new permit processing each January 1.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://www.cityofhornell.gov/code-of-enforcement",
         "appliesTo": ["all"]
       }
@@ -703,7 +703,7 @@
         "category": "license",
         "authority": "City of Long Beach City Clerk",
         "description": "All businesses in Long Beach need a mercantile license from the City Clerk. The application is notarized with three business references, a use permit comes first from the Building Department, and a commercial sanitation account must be paid up. The fee varies by business category and size.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "License year runs December 1 to November 30",
         "url": "https://www.longbeachny.gov/?SEC=1EB2D018-3D17-4F17-A067-CE651DC74469",
         "appliesTo": ["all"]
@@ -803,32 +803,66 @@
         "title": "File NYC Business Corporation Tax return",
         "category": "filing",
         "authority": "NYC Department of Finance",
-        "description": "C and S corporations doing business in New York City file NYC-2 / NYC-4S (or NYC-3L for general corporations) and pay the tax.",
+        "description": "C corporations (and unincorporated entities that elect to be taxed as corporations) that do business, employ capital, own or lease property or keep an office in New York City file Form NYC-2 and pay the Business Corporation Tax. The return is due April 15 for calendar-year filers, or the 15th day of the fourth month after a fiscal year ends, and a six-month extension is available on Form NYC-EXT. S corporations file a General Corporation Tax return instead.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
         "deadlineNote": "calendar-year filers",
-        "url": "https://www.nyc.gov/site/finance/taxes/business.page",
-        "appliesTo": ["corporation"]
+        "url": "https://www.nyc.gov/assets/finance/downloads/pdf/24pdf/business_tax_forms/nyc-2-instr_2024.pdf",
+        "appliesTo": ["corporation"],
+        "appliesWhen": [
+          {
+            "field": "entityType",
+            "op": "in",
+            "value": ["c_corp", "pc", "benefit_corp"]
+          }
+        ],
+        "checkedOn": "2026-10-18"
+      },
+      {
+        "id": "nyc.general-corporation-tax",
+        "title": "File NYC General Corporation Tax return (S corporations)",
+        "category": "filing",
+        "authority": "NYC Department of Finance",
+        "description": "An S corporation that does business in New York City is subject to the General Corporation Tax and files Form NYC-4S-EZ, NYC-4S or NYC-3L (NYC-3L when it claims credits or does business both inside and outside the city). The return is due March 15 for calendar-year filers (March 16 in 2026), or the 15th day of the third month after a fiscal year ends, with a six-month extension on Form NYC-EXT.",
+        "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=15",
+        "deadlineNote": "calendar-year filers",
+        "url": "https://www.nyc.gov/assets/finance/downloads/pdf/25pdf/business_tax_forms/nyc-4s_instr_2025.pdf",
+        "appliesTo": ["corporation"],
+        "appliesWhenAny": [
+          {
+            "field": "entityType",
+            "op": "==",
+            "value": "s_corp"
+          },
+          {
+            "field": "sCorpElection",
+            "op": "==",
+            "value": true
+          }
+        ],
+        "checkedOn": "2026-10-18"
       },
       {
         "id": "nyc.ubt",
         "title": "File NYC Unincorporated Business Tax (UBT) return",
         "category": "filing",
         "authority": "NYC Department of Finance",
-        "description": "Sole proprietors, partnerships and LLCs taxed as such that carry on a business in New York City file NYC-202 / NYC-204 (4% rate, with credits for some owners).",
+        "description": "Individuals, partnerships, LLCs taxed as such, estates and trusts that carry on a trade, business, profession or occupation in New York City file Form NYC-202 (NYC-204 for a partnership) and pay the 4% Unincorporated Business Tax. The return is due April 15 for calendar-year filers, or the 15th day of the fourth month after a fiscal year ends, with a six-month extension on Form NYC-EXT. Employees, people who only hold property for their own account, and S corporations (which pay the General Corporation Tax) are not subject to it.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
         "deadlineNote": "calendar-year filers",
-        "url": "https://www.nyc.gov/site/finance/taxes/business.page",
-        "appliesTo": ["unincorporated"]
+        "url": "https://nyc-business.nyc.gov/nycbusiness/description/unincorporated-business-tax-ubt",
+        "appliesTo": ["unincorporated"],
+        "checkedOn": "2026-10-18"
       },
       {
         "id": "nyc.safe-sick-leave",
-        "title": "Provide NYC Earned Safe and Sick Time",
+        "title": "Provide NYC Earned Safe and Sick Time (Protected Time Off)",
         "category": "recordkeeping",
         "authority": "NYC Department of Consumer and Worker Protection",
-        "description": "Employers must provide safe and sick leave, post the required notice and give employees written policy.",
+        "description": "Employers with workers in New York City must give 32 immediately available hours of unpaid protected time off (required from February 22, 2026), plus up to 40 paid hours (56 for an employer with 100 or more employees), or up to 40 unpaid hours for an employer with four or fewer employees and net income under $1 million, and a separate 20 hours of paid prenatal leave. They must keep one written policy given to each employee at hire, within 14 days of any change and on request, give and post the Notice of Employee Rights, show the time on each pay statement, and keep records for three years.",
         "frequency": "ongoing",
-        "url": "https://www.nyc.gov/dcwp",
-        "appliesTo": ["employees"]
+        "url": "https://www.nyc.gov/site/dca/about/paid-sick-leave-FAQs.page",
+        "appliesTo": ["employees"],
+        "checkedOn": "2026-10-18"
       }
     ],
     "aliases": ["Brooklyn", "Queens", "Bronx", "The Bronx", "Manhattan", "Staten Island"],
@@ -871,7 +905,7 @@
         "category": "license",
         "authority": "City of Newburgh City Clerk",
         "description": "Newburgh licenses peddlers; the city lists annual or seasonal peddler license fees after application approval.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://www.cityofnewburgh-ny.gov/308/License-Permit-Fees",
         "appliesTo": ["all"]
       },
@@ -891,7 +925,7 @@
         "category": "filing",
         "authority": "City of Newburgh Comptroller",
         "description": "Newburgh requires short-term lodging businesses and hosts to register for a certificate of authority, collect the 5% city room-occupancy tax and submit returns and payment quarterly.",
-        "frequency": "quarterly",
+        "rrule": "FREQ=MONTHLY;INTERVAL=3",
         "url": "https://www.cityofnewburgh-ny.gov/617/Room-Occupancy-Tax",
         "appliesTo": ["all"]
       }
@@ -909,7 +943,7 @@
         "category": "license",
         "authority": "City of Niagara Falls City Clerk",
         "description": "Every business located in the city needs a $50 annual license (or a Chapter 308.03(F) exemption). The Fire Department inspects before issuing, and the city sends no renewal notice.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "At least 45 days before the license expires",
         "url": "https://www.niagarafallsny.gov/government/departments/city_clerks/certificates_and_licenses/index.php",
         "appliesTo": ["all"],
@@ -1096,7 +1130,7 @@
         "category": "registration",
         "authority": "City of Plattsburgh Building Inspector",
         "description": "Plattsburgh requires the owner of a qualifying vacant building to register it within 30 days; the registration is renewed annually.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://www.cityofplattsburgh-ny.gov/department/building-inspector/vacant-building-registry",
         "appliesTo": ["all"]
       },
@@ -1236,7 +1270,7 @@
         "category": "permit",
         "authority": "City of Rochester Neighborhood and Business Development",
         "description": "Restaurants, bars, salons and barber shops, tattoo and body piercing parlors, automobile service facilities, and tobacco, hookah and vape retailers need a city business permit. Zoning approval comes first, then the city checks New York State tax liabilities and runs a criminal records check on everyone on the application. The permit is valid for one year and is not transferable, and renewal needs proof of payment of New York State sales tax.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "Before opening, then renew each year",
         "url": "https://www.cityofrochester.gov/departments/neighborhood-and-business-development/business-permits",
         "naics": ["7224", "7225", "8121", "812199", "8111", "459991"],
@@ -1248,7 +1282,7 @@
         "category": "license",
         "authority": "City of Rochester City Clerk",
         "description": "A food truck needs a city license, applied for at the City Clerk's Office with approvals from the Police and Fire departments. The fee is $1,000 in Center City and $330 elsewhere in the city, and the license expires each December 31.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "Expires December 31",
         "url": "https://www.cityofrochester.gov/departments/neighborhood-and-business-development/business-permits",
         "naics": ["722330"],
@@ -1264,7 +1298,7 @@
         "category": "license",
         "authority": "City of Rochester City Clerk",
         "description": "Towing businesses need a city license, applied for at the City Clerk's Office with approvals from Zoning, Police and Fire. The fee is $350 and the license expires each August 31.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "Expires August 31",
         "url": "https://www.cityofrochester.gov/departments/neighborhood-and-business-development/business-permits",
         "naics": ["488410"],
@@ -1357,7 +1391,7 @@
         "category": "license",
         "authority": "City of Saratoga Springs Building Department",
         "description": "Saratoga Springs lists master plumber certification with annual expiration on December 31 and annual renewal by January 15.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://www.saratogaspringsny.gov/Archive/ViewFile/Item/410",
         "appliesTo": ["all"]
       }
@@ -1375,7 +1409,7 @@
         "category": "permit",
         "authority": "City of Schenectady Building Inspector",
         "description": "No business may operate at a location without a certificate of use, issued within 30 days after the zoning officer confirms the site complies. City code sets a $200 fee at issuance and annual recertification on a city form, with the recertification fee set by Council resolution.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "Before opening, then recertify each year",
         "url": "https://ecode360.com/8688661",
         "appliesTo": ["all"],
@@ -1400,7 +1434,7 @@
         "category": "license",
         "authority": "City of Sherrill City Clerk",
         "description": "Sherrill requires every revenue-generating business within city limits to obtain a business license before opening or operating and renew or update it annually.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://www.sherrillny.gov/government/city-hall/",
         "appliesTo": ["all"]
       },
@@ -1438,7 +1472,7 @@
         "category": "permit",
         "authority": "City of Syracuse Central Permit Office",
         "description": "Bars, restaurants, neighborhood markets under 10,000 square feet, drugstores and smoking establishments need a Certificate of Use. The fee is $500 and non-refundable. Code Enforcement, Fire Prevention and Zoning review the application, which needs proof of workers' compensation insurance and a photo ID of the applicant, and the certificate is renewed every two years.",
-        "frequency": "biennial",
+        "rrule": "FREQ=YEARLY;INTERVAL=2",
         "deadline": "Apply before opening; submit the renewal application 60 days before the certificate expires",
         "url": "https://www.syr.gov/Departments/Central-Permit-Office/Self-Services/Certificate-of-Use-License",
         "naics": ["7224", "7225", "445110", "445131", "456110"],

@@ -1,5 +1,6 @@
 import type { APPLIES_TO } from "../enums";
 import type { Applicability, FilingMethod, Frequency, ItemCategory } from "../types";
+import type { ScheduleFields } from "../rrule";
 export interface Agency {
   name: string;
   url?: string;
@@ -229,14 +230,15 @@ export interface StateInfo {
     alternative: string | null;
   };
   /** General state-level business license, where one exists. */
-  businessLicense: {
-    title: string;
-    authority: string;
-    /** Page for the license (replaces a separate link entry). */
-    url?: string;
-    feeDetail: FeeDetail;
-    renewal: "annual" | "biennial" | "once";
-  } | null;
+  businessLicense:
+    | ({
+        title: string;
+        authority: string;
+        /** Page for the license (replaces a separate link entry). */
+        url?: string;
+        feeDetail: FeeDetail;
+      } & ScheduleFields)
+    | null;
   /** Mandatory state paid-leave / disability program with employer duties. */
   paidLeave: { title: string; agency: string; description: string; minEmployees: number } | null;
   /** Statewide paid sick leave mandate. */

@@ -15,7 +15,7 @@
   "llcReport": null,
   "corpReport": {
     "title": "File Annual Report and Corporate License Fee (with SCDOR)",
-    "frequency": "annual",
+    "rrule": "FREQ=YEARLY",
     "deadline": "With the corporate income tax return (April 15)",
     "feeDetail": {
       "basis": "percent",
@@ -27,6 +27,7 @@
   "llpReport": {
     "title": "Renew LLP certificate",
     "rrule": "FREQ=YEARLY",
+    "anchor": "formation",
     "deadline": "Anniversary of registration",
     "feeDetail": {
       "basis": "flat",

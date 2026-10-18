@@ -83,7 +83,7 @@
         "category": "license",
         "authority": "City of Renton Tax and License Division",
         "description": "Businesses in Renton hold a city license and file a B&O tax return through FileLocal; annual filers' due date aligns with the license expiration date.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "License expiration date",
         "url": "https://www.rentonwa.gov/City-Services/Tax-and-Licensing",
         "appliesTo": ["all"]
@@ -102,7 +102,7 @@
         "category": "license",
         "authority": "Seattle Department of Finance and Administrative Services",
         "description": "Seattle requires a business license tax certificate (via the state Business Licensing Service) and a Seattle B&O tax return when taxable revenue exceeds the threshold.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://www.seattle.gov/business-regulations",
         "appliesTo": ["all"]
       }
@@ -120,7 +120,7 @@
         "category": "license",
         "authority": "Washington Department of Revenue, Business Licensing Service",
         "description": "Doing business in Spokane requires a Washington business license with a Spokane endorsement (under the city code); certain limited activities can request an exemption.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "url": "https://dor.wa.gov/manage-business/city-endorsements/spokane",
         "appliesTo": ["all"]
       }
@@ -156,7 +156,7 @@
         "category": "license",
         "authority": "City of Vancouver Business Licensing",
         "description": "A city endorsement is required for businesses physically in Vancouver or working there, one per location. Renewals go through the state's Business Licensing Service and a My DOR account.",
-        "frequency": "annual",
+        "rrule": "FREQ=YEARLY",
         "deadline": "Month before the license expires",
         "url": "https://www.cityofvancouver.us/wp-content/uploads/2024/04/Overview-Quick-Guide-City-Business-License-Info.pdf",
         "appliesTo": ["all"]
