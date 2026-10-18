@@ -9,6 +9,11 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ### Added
 
+- **core:** Dewey Beach (Delaware) business license, with Spanish text
+- **core:** Ocean View (Delaware) business and rental licenses, with Spanish text
+- **core:** Bethany Beach (Delaware) business license, with Spanish text
+- **core:** Fenwick Island (Delaware) business license, with Spanish text
+- **core:** Millville (Delaware) business license, with Spanish text
 - **core:** Newark (Delaware) rental, contractor and fire licenses, with Spanish text
 - **core:** updated Dover (Delaware) business license fees, with Spanish text
 - **core:** Smyrna (Delaware) business and rental licenses, with Spanish text

@@ -1,5 +1,39 @@
 [
   {
+    "city": "Bethany Beach",
+    "counties": ["Sussex"],
+    "items": [
+      {
+        "id": "bethany-beach-de.business-license",
+        "title": "Renew your Bethany Beach business license",
+        "category": "license",
+        "authority": "Town of Bethany Beach",
+        "description": "A business in Bethany Beach needs a town license, issued from June 1 to May 31 for $250 a year, and it can be bought for one, two or three years. A license holder in good standing can renew online by card. A rental license costs $100 a year for each unit rented, and the real estate rental tax is 7% of gross rental receipts, paid twice a year. The town's fiscal 2026 schedule charges a $100 administrative fee for not getting the license by the renewal date.",
+        "rrule": "FREQ=YEARLY;BYMONTH=6;BYMONTHDAY=1",
+        "url": "https://www.townofbethanybeach.com/281/Licenses-Rental-Tax",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "city": "Dewey Beach",
+    "counties": ["Sussex"],
+    "items": [
+      {
+        "id": "dewey-beach-de.business-license",
+        "title": "Renew your Dewey Beach business license",
+        "category": "license",
+        "authority": "Town of Dewey Beach",
+        "description": "A business in Dewey Beach needs a town license for each license year, which runs May 1 to April 30; the 2026 renewals cover May 1, 2026 to April 30, 2027. Existing businesses renew through the town's online payment portal, new ones apply online or at Town Hall, and a one-day business license costs $27. The town's page does not list the annual fees.",
+        "rrule": "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=1",
+        "url": "https://www.townofdeweybeach.gov/businesslicenses2026",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18"
+  },
+  {
     "city": "Dover",
     "counties": ["Kent"],
     "items": [
@@ -21,6 +55,23 @@
     "checkedOn": "2026-10-18"
   },
   {
+    "city": "Fenwick Island",
+    "counties": ["Sussex"],
+    "items": [
+      {
+        "id": "fenwick-island-de.business-license",
+        "title": "Get your Fenwick Island business license",
+        "category": "license",
+        "authority": "Town of Fenwick Island",
+        "description": "A business or landlord in Fenwick Island needs a town license for each calendar year, obtained before opening or continuing business. The fiscal 2026-2027 fees are $185 plus $0.10 per square foot of floor space plus a $60 EMS fee for a retail merchant, $75 for a contractor earning under $1,500 in town and $200 above that, $185 for a rental landlord (plus $7.20 per sleeping unit for motels and hotels), and $25 to $250 per vending machine depending on its type. Late payment of the fee costs $100.",
+        "frequency": "annual",
+        "url": "https://fenwickisland.delaware.gov/files/2026/07/FY-2026-2027-Fee-Schedule.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18"
+  },
+  {
     "city": "Middletown",
     "counties": ["New Castle"],
     "items": [
@@ -32,6 +83,23 @@
         "description": "Every business located in Middletown, and every contractor working within the town, needs a town business license, renewed by February 15. The fee depends on the kind of business: $135 for a construction, retail-service, administrative, educational or one-or-two-person personal care business, $275 for professional, finance, health care or larger daycare businesses, and $5.50 per space for a mobile home park. Manufacturers, retailers, wholesalers and bottlers instead pay $0.00046 on gross receipts above $400,000, with a $135 minimum, or $50 if gross receipts are under $100,000 and the town gets a letter by February 15. Payments after February 15 pay a penalty of 1% a month and a $100 failure to file fee.",
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=15",
         "url": "https://www.middletown.delaware.gov/businesslicenses",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "city": "Millville",
+    "counties": ["Sussex"],
+    "items": [
+      {
+        "id": "millville-de.business-license",
+        "title": "Renew your Millville business license",
+        "category": "license",
+        "authority": "Town of Millville",
+        "description": "A business in Millville needs a town license, which runs with the town's fiscal year, May 1 to April 30. The fee is $100, renewal invoices are mailed around May 1 and are due June 1, and an invoice not paid by June 1 adds a $50 late fee. A license bought after November 1 costs $50 and a temporary license of up to 30 days $25. The application needs a copy of the Delaware state business license, and contractors also need proof of liability insurance in the business's name.",
+        "rrule": "FREQ=YEARLY;BYMONTH=6;BYMONTHDAY=1",
+        "url": "https://millville.delaware.gov/wp-content/uploads/2026/03/Business-License-3-11-2026-FILLABLE-FORM.pdf",
         "appliesTo": ["all"]
       }
     ],
@@ -71,6 +139,23 @@
         "frequency": "annual",
         "url": "https://newarkde.gov/DocumentCenter/View/18740/2024-Fee-Schedule",
         "naics": ["236", "237", "238"],
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18"
+  },
+  {
+    "city": "Ocean View",
+    "counties": ["Sussex"],
+    "items": [
+      {
+        "id": "ocean-view-de.business-license",
+        "title": "Get your Ocean View business and rental licenses",
+        "category": "license",
+        "authority": "Town of Ocean View",
+        "description": "Anyone performing a job in Ocean View needs a town business license, which follows the calendar year and costs $200 for a full year. Anyone renting property in the town also needs a $150 yearly rental license, and a gross rental receipts tax is due to the town twice a year.",
+        "frequency": "annual",
+        "url": "https://www.oceanviewde.gov/BusinessRentalLicenses",
         "appliesTo": ["all"]
       }
     ],
