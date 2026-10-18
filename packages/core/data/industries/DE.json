@@ -9,8 +9,8 @@
     "appliesTo": ["all"],
     "url": "https://dpr.delaware.gov/boards/accountancy/fees/",
     "checkedOn": "2026-10-18",
-    "frequency": "biennial",
-    "renewal": "Every two years on June 30 (odd-numbered years)"
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=6;BYMONTHDAY=30",
+    "anchor": "2027-06-30"
   },
   {
     "id": "de.architect-license",
@@ -22,8 +22,8 @@
     "appliesTo": ["all"],
     "url": "https://dpr.delaware.gov/boards/architects/fees/",
     "checkedOn": "2026-10-18",
-    "frequency": "biennial",
-    "renewal": "Every two years on January 31 (even-numbered years)"
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=1;BYMONTHDAY=31",
+    "anchor": "2026-01-31"
   },
   {
     "id": "de.chiropractor-license",
@@ -35,8 +35,8 @@
     "appliesTo": ["all"],
     "url": "https://dpr.delaware.gov/boards/chiropractic/fees/",
     "checkedOn": "2026-10-18",
-    "frequency": "biennial",
-    "renewal": "Every two years on June 30 (even-numbered years)"
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=6;BYMONTHDAY=30",
+    "anchor": "2026-06-30"
   },
   {
     "id": "de.dentist-hygienist-license",
@@ -48,8 +48,8 @@
     "appliesTo": ["all"],
     "url": "https://dpr.delaware.gov/boards/dental/fees/",
     "checkedOn": "2026-10-18",
-    "frequency": "biennial",
-    "renewal": "Every two years on May 31 (even-numbered years)"
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=5;BYMONTHDAY=31",
+    "anchor": "2026-05-31"
   },
   {
     "id": "de.dietitian-nutritionist-license",
@@ -61,8 +61,8 @@
     "appliesTo": ["all"],
     "url": "https://dpr.delaware.gov/boards/dietitians/fees/",
     "checkedOn": "2026-10-18",
-    "frequency": "biennial",
-    "renewal": "Every two years on May 31 (odd-numbered years)"
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=5;BYMONTHDAY=31",
+    "anchor": "2027-05-31"
   },
   {
     "id": "de.electrician-license",
@@ -87,8 +87,8 @@
     "appliesTo": ["all"],
     "url": "https://dpr.delaware.gov/boards/funeralservices/fees/",
     "checkedOn": "2026-10-18",
-    "frequency": "biennial",
-    "renewal": "Every two years on August 31 (even-numbered years)"
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=8;BYMONTHDAY=31",
+    "anchor": "2026-08-31"
   },
   {
     "id": "de.geologist-license",
@@ -100,8 +100,8 @@
     "appliesTo": ["all"],
     "url": "https://dpr.delaware.gov/boards/geology/fees/",
     "checkedOn": "2026-10-18",
-    "frequency": "biennial",
-    "renewal": "Every two years on September 30 (even-numbered years)"
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=9;BYMONTHDAY=30",
+    "anchor": "2026-09-30"
   },
   {
     "id": "de.home-inspector-license",
@@ -113,8 +113,8 @@
     "appliesTo": ["all"],
     "url": "https://dpr.delaware.gov/boards/homeinspector/fees/",
     "checkedOn": "2026-10-18",
-    "frequency": "biennial",
-    "renewal": "Every two years on August 31 (odd-numbered years)"
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=8;BYMONTHDAY=31",
+    "anchor": "2027-08-31"
   },
   {
     "id": "de.land-surveyor-license",
@@ -126,8 +126,8 @@
     "appliesTo": ["all"],
     "url": "https://dpr.delaware.gov/boards/landsurveyors/fees/",
     "checkedOn": "2026-10-18",
-    "frequency": "biennial",
-    "renewal": "Every two years on June 30 (odd-numbered years)"
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=6;BYMONTHDAY=30",
+    "anchor": "2027-06-30"
   },
   {
     "id": "de.landscape-architect-license",
@@ -139,8 +139,8 @@
     "appliesTo": ["all"],
     "url": "https://dpr.delaware.gov/boards/landscape/fees/",
     "checkedOn": "2026-10-18",
-    "frequency": "biennial",
-    "renewal": "Every two years on January 31 (odd-numbered years)"
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=1;BYMONTHDAY=31",
+    "anchor": "2027-01-31"
   },
   {
     "id": "de.manufactured-home-installer-license",
@@ -152,8 +152,8 @@
     "appliesTo": ["all"],
     "url": "https://dpr.delaware.gov/boards/manufactoredhomes/fees/",
     "checkedOn": "2026-10-18",
-    "frequency": "biennial",
-    "renewal": "Every two years on September 30 (even-numbered years)"
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=9;BYMONTHDAY=30",
+    "anchor": "2026-09-30"
   },
   {
     "id": "de.massage-therapist-license",
@@ -165,8 +165,8 @@
     "appliesTo": ["all"],
     "url": "https://dpr.delaware.gov/boards/massagebodyworks/fees/",
     "checkedOn": "2026-10-18",
-    "frequency": "biennial",
-    "renewal": "Every two years on August 31 (even-numbered years)"
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=8;BYMONTHDAY=31",
+    "anchor": "2026-08-31"
   },
   {
     "id": "de.physician-license",
@@ -204,8 +204,8 @@
     "appliesTo": ["all"],
     "url": "https://dpr.delaware.gov/boards/nursinghomeadmin/fees/",
     "checkedOn": "2026-10-18",
-    "frequency": "biennial",
-    "renewal": "Every two years on July 31 (odd-numbered years)"
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=7;BYMONTHDAY=31",
+    "anchor": "2027-07-31"
   },
   {
     "id": "de.occupational-therapist-license",
@@ -217,8 +217,8 @@
     "appliesTo": ["all"],
     "url": "https://dpr.delaware.gov/boards/occupationaltherapy/fees/",
     "checkedOn": "2026-10-18",
-    "frequency": "biennial",
-    "renewal": "Every two years on July 31 (even-numbered years)"
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=7;BYMONTHDAY=31",
+    "anchor": "2026-07-31"
   },
   {
     "id": "de.optometrist-license",
@@ -230,8 +230,8 @@
     "appliesTo": ["all"],
     "url": "https://dpr.delaware.gov/boards/optometry/fees/",
     "checkedOn": "2026-10-18",
-    "frequency": "biennial",
-    "renewal": "Every two years on June 30 (odd-numbered years)"
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=6;BYMONTHDAY=30",
+    "anchor": "2027-06-30"
   },
   {
     "id": "de.pharmacist-pharmacy-license",
@@ -243,8 +243,8 @@
     "appliesTo": ["all"],
     "url": "https://dpr.delaware.gov/boards/pharmacy/fees/",
     "checkedOn": "2026-10-18",
-    "frequency": "biennial",
-    "renewal": "Every two years on September 30 (even-numbered years)"
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=9;BYMONTHDAY=30",
+    "anchor": "2026-09-30"
   },
   {
     "id": "de.physical-therapist-license",
@@ -256,8 +256,8 @@
     "appliesTo": ["all"],
     "url": "https://dpr.delaware.gov/boards/physicaltherapy/fees/",
     "checkedOn": "2026-10-18",
-    "frequency": "biennial",
-    "renewal": "Every two years on January 31 (odd-numbered years)"
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=1;BYMONTHDAY=31",
+    "anchor": "2027-01-31"
   },
   {
     "id": "de.river-pilot-license",
@@ -282,8 +282,8 @@
     "appliesTo": ["all"],
     "url": "https://dpr.delaware.gov/boards/plumbers/fees/",
     "checkedOn": "2026-10-18",
-    "frequency": "biennial",
-    "renewal": "Every two years on October 31 (even-numbered years)"
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=10;BYMONTHDAY=31",
+    "anchor": "2026-10-31"
   },
   {
     "id": "de.podiatrist-license",
@@ -295,8 +295,8 @@
     "appliesTo": ["all"],
     "url": "https://dpr.delaware.gov/boards/podiatry/fees/",
     "checkedOn": "2026-10-18",
-    "frequency": "biennial",
-    "renewal": "Every two years on June 30 (even-numbered years)"
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=6;BYMONTHDAY=30",
+    "anchor": "2026-06-30"
   },
   {
     "id": "de.mental-health-counselor-license",
@@ -308,8 +308,8 @@
     "appliesTo": ["all"],
     "url": "https://dpr.delaware.gov/boards/profcounselors/fees/",
     "checkedOn": "2026-10-18",
-    "frequency": "biennial",
-    "renewal": "Every two years on September 30 (even-numbered years)"
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=9;BYMONTHDAY=30",
+    "anchor": "2026-09-30"
   },
   {
     "id": "de.psychologist-license",
@@ -321,8 +321,8 @@
     "appliesTo": ["all"],
     "url": "https://dpr.delaware.gov/boards/psychology/fees/",
     "checkedOn": "2026-10-18",
-    "frequency": "biennial",
-    "renewal": "Every two years on July 31 (odd-numbered years)"
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=7;BYMONTHDAY=31",
+    "anchor": "2027-07-31"
   },
   {
     "id": "de.social-worker-license",
@@ -334,8 +334,8 @@
     "appliesTo": ["all"],
     "url": "https://dpr.delaware.gov/boards/socialworkers/fees/",
     "checkedOn": "2026-10-18",
-    "frequency": "biennial",
-    "renewal": "Every two years on January 31 (odd-numbered years)"
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=1;BYMONTHDAY=31",
+    "anchor": "2027-01-31"
   },
   {
     "id": "de.speech-audiology-license",
@@ -347,8 +347,8 @@
     "appliesTo": ["all"],
     "url": "https://dpr.delaware.gov/boards/speechaudio/fees/",
     "checkedOn": "2026-10-18",
-    "frequency": "biennial",
-    "renewal": "Every two years on July 31 (odd-numbered years)"
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=7;BYMONTHDAY=31",
+    "anchor": "2027-07-31"
   },
   {
     "id": "de.veterinarian-license",
@@ -360,8 +360,8 @@
     "appliesTo": ["all"],
     "url": "https://dpr.delaware.gov/boards/veterinarymedicine/fees/",
     "checkedOn": "2026-10-18",
-    "frequency": "biennial",
-    "renewal": "Every two years on July 31 (even-numbered years)"
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=7;BYMONTHDAY=31",
+    "anchor": "2026-07-31"
   },
   {
     "id": "de.real-estate-agent-license",
@@ -373,8 +373,8 @@
     "appliesTo": ["all"],
     "url": "https://dpr.delaware.gov/boards/realestate/fees/",
     "checkedOn": "2026-10-18",
-    "frequency": "biennial",
-    "renewal": "Every two years on April 30 (even-numbered years)"
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=4;BYMONTHDAY=30",
+    "anchor": "2026-04-30"
   },
   {
     "id": "de.real-estate-appraiser-license",
@@ -386,8 +386,8 @@
     "appliesTo": ["all"],
     "url": "https://dpr.delaware.gov/boards/realestateappraisers/fees/",
     "checkedOn": "2026-10-18",
-    "frequency": "biennial",
-    "renewal": "Every two years on October 31 (odd-numbered years)"
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=10;BYMONTHDAY=31",
+    "anchor": "2027-10-31"
   },
   {
     "id": "de.controlled-substance-registration",
@@ -399,8 +399,8 @@
     "appliesTo": ["all"],
     "url": "https://dpr.delaware.gov/boards/controlledsubstances/fees/",
     "checkedOn": "2026-10-18",
-    "frequency": "biennial",
-    "renewal": "Every two years on June 30 (odd-numbered years)"
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=6;BYMONTHDAY=30",
+    "anchor": "2027-06-30"
   },
   {
     "id": "de.cosmetologist-barber-license",
@@ -425,8 +425,8 @@
     "appliesTo": ["all"],
     "url": "https://dpr.delaware.gov/boards/cosmetology/fees/",
     "checkedOn": "2026-10-18",
-    "frequency": "biennial",
-    "renewal": "Every two years on June 30 (odd-numbered years)"
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=6;BYMONTHDAY=30",
+    "anchor": "2027-06-30"
   },
   {
     "id": "de.cosmetology-school-license",
@@ -438,8 +438,8 @@
     "appliesTo": ["all"],
     "url": "https://dpr.delaware.gov/boards/cosmetology/fees/",
     "checkedOn": "2026-10-18",
-    "frequency": "biennial",
-    "renewal": "Every two years on June 30 (odd-numbered years)"
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=6;BYMONTHDAY=30",
+    "anchor": "2027-06-30"
   },
   {
     "id": "de.charitable-gaming-license",
@@ -670,13 +670,12 @@
     "title": "Get and renew the other Delaware State Bank Commissioner business licenses",
     "category": "license",
     "authority": "Delaware Office of the State Bank Commissioner",
-    "description": "The Office of the State Bank Commissioner licenses businesses that cash checks, drafts or money orders, sell checks or transmit money, finance motor vehicle sales, carry money and valuables, and sell preneed funeral contracts. Each has its own renewal application on the Office's license renewals page, and any outstanding invoices must be paid before a renewal can be approved. The page does not list fees or deadlines.",
+    "description": "The Office of the State Bank Commissioner licenses businesses that cash checks, drafts or money orders for a fee over ten cents an item, sell checks or transmit money, finance motor vehicle sales, transport money and valuables for hire, and sell preneed funeral contracts. Each license lasts one year after the initial period, applications are due by December 1, renewal applications are mailed in August and open online in September, and any outstanding invoices must be paid before a renewal is approved. The pages list no fees.",
     "naics": ["522390", "522320", "522220", "561613", "812210"],
     "appliesTo": ["all"],
     "url": "https://banking.delaware.gov/license-renewals/",
     "checkedOn": "2026-10-18",
-    "frequency": "annual",
-    "renewal": "Renewal applications are filed with the Office each year"
+    "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=1"
   },
   {
     "id": "de.underground-storage-tank-registration",
@@ -1500,5 +1499,138 @@
     "url": "https://firststeps.delaware.gov/certified_nursing_assistant/",
     "checkedOn": "2026-10-18",
     "frequency": "biennial"
+  },
+  {
+    "id": "de.pesticide-applicator-certification",
+    "title": "Renew your Delaware pesticide applicator certification",
+    "category": "license",
+    "authority": "Delaware Department of Agriculture, Pesticides",
+    "description": "Individuals who apply pesticides commercially, and anyone buying or using restricted-use pesticides, must be certified by the Department of Agriculture. The certification costs $30 and is good for one year, under 3 Del. C. Chapter 12 and Title 3, Section 600 of the Administrative Code.",
+    "naics": ["561710", "115112", "561730", "111", "1151"],
+    "appliesTo": ["all"],
+    "url": "https://firststeps.delaware.gov/pesticide_applicators/",
+    "checkedOn": "2026-10-18",
+    "frequency": "annual"
+  },
+  {
+    "id": "de.pesticide-product-registration",
+    "title": "Register your pesticide products with the Delaware Department of Agriculture",
+    "category": "registration",
+    "authority": "Delaware Department of Agriculture, Pesticides Section",
+    "description": "All pesticides sold or distributed in Delaware must be registered with the Pesticides Section, at $140.00 for each brand or grade. A registration lasts two years, under 3 Del. C. Chapter 12 and Title 3, Chapter 600 of the Administrative Code.",
+    "naics": ["325320", "424910", "444240"],
+    "appliesTo": ["all"],
+    "url": "https://firststeps.delaware.gov/pesticide_registration/",
+    "checkedOn": "2026-10-18",
+    "frequency": "biennial"
+  },
+  {
+    "id": "de.cafo-permit",
+    "title": "Get a Delaware concentrated animal feeding operation permit",
+    "category": "permit",
+    "authority": "Delaware Department of Agriculture and DNREC",
+    "description": "An operation that confines and feeds livestock or poultry for a total of 45 days or more in any 12 months, on areas that do not grow crops or vegetation, is a concentrated animal feeding operation. It files a Notice of Intent for a DNREC permit, with no fee and a 5-year term, and needs certification, an Animal Waste Management Plan and annual reports.",
+    "naics": ["112", "115210"],
+    "appliesTo": ["all"],
+    "url": "https://firststeps.delaware.gov/cafo/",
+    "checkedOn": "2026-10-18",
+    "frequency": "ongoing",
+    "renewal": "The permit lasts 5 years"
+  },
+  {
+    "id": "de.lime-fertilizer-tonnage-report",
+    "title": "File your Delaware lime and fertilizer tonnage reports",
+    "category": "filing",
+    "authority": "Delaware Department of Agriculture, Agriculture Compliance Section",
+    "description": "Registrants of liming materials and fertilizers report the net tons sold in the previous six months, within 30 days after June 30 and December 31. Liming materials cost $11.50 per product a year plus 5 cents a ton sold, and fertilizer registration is $40 for products under 10 pounds, with a tonnage fee of 25 cents a ton. A late fertilizer report adds a surcharge of 10% a month (minimum $10) and a lien for the amount owed.",
+    "naics": ["325314", "424910", "444240", "212312"],
+    "appliesTo": ["all"],
+    "url": "https://firststeps.delaware.gov/lime_tonnage/",
+    "checkedOn": "2026-10-18",
+    "frequency": "ongoing"
+  },
+  {
+    "id": "de.open-burning-approval",
+    "title": "Get Delaware approval before an open burn",
+    "category": "permit",
+    "authority": "DNREC Division of Air Quality, Area Source Compliance",
+    "description": "DNREC must approve residential, recreational, prescribed, demolition and agricultural open burning, with no fee, and each approval covers one burn event, usually from 8 am to 4 pm. Trash, yard waste, leaves and debris may never be burned, only items approved in Delaware, approvals cannot be requested online, and open burning is restricted in the Summer Ozone Season (section 1113 of Title 7 of the Administrative Code).",
+    "naics": ["238910", "115", "561730", "113"],
+    "appliesTo": ["all"],
+    "url": "https://firststeps.delaware.gov/open_burning/",
+    "checkedOn": "2026-10-18",
+    "frequency": "per_event"
+  },
+  {
+    "id": "de.hazardous-waste-landfill-permits",
+    "title": "Get and renew Delaware hazardous waste facility and landfill permits",
+    "category": "permit",
+    "authority": "DNREC Division of Waste and Hazardous Substances, Compliance and Permitting",
+    "description": "A facility that treats, stores, incinerates or disposes of hazardous waste must be permitted by DNREC, and a landfill that receives solid or industrial waste is also permitted and inspected by the Division. Each pays $7,000 a year, a permit term is set case by case up to 10 years, and a resource recovery facility permit for reuse and recycling operations that recover energy or materials has a variable fee and a 10-year maximum term.",
+    "naics": ["562211", "562212", "562213", "562219"],
+    "appliesTo": ["all"],
+    "url": "https://firststeps.delaware.gov/hazardous_waste_tsdf/",
+    "checkedOn": "2026-10-18",
+    "frequency": "annual"
+  },
+  {
+    "id": "de.scientific-collecting-permit",
+    "title": "Get a Delaware scientific collecting permit",
+    "category": "permit",
+    "authority": "DNREC Division of Fish and Wildlife",
+    "description": "Anyone who takes, captures, possesses or transports protected wildlife, finfish or shellfish, or their nests or eggs, for scientific, educational or propagating purposes needs a permit from the Division's Director. There is no fee, a permit expires on the date it states or at the end of the calendar year, and a report is due within 30 days after it expires. Violations are a class C environmental misdemeanor.",
+    "naics": ["541713", "541714", "611310", "712130"],
+    "appliesTo": ["all"],
+    "url": "https://firststeps.delaware.gov/scientific_collecting/",
+    "checkedOn": "2026-10-18",
+    "frequency": "per_event"
+  },
+  {
+    "id": "de.ust-installation-removal-registration",
+    "title": "Register Delaware underground storage tanks and get approval to install or remove them",
+    "category": "registration",
+    "authority": "DNREC Division of Waste and Hazardous Substances, Tanks Compliance",
+    "description": "Owners and operators who install, retrofit or remove underground storage tank systems, at gas stations and also at manufacturers, schools and hospitals, need DNREC approval and registration for as long as the tank is in the ground. Heating-fuel tanks under 1,100 gallons are exempt, installation approval letters expire after one year, and work must be done by trained, certified people or companies. Contact the UST Program early when opening a new facility.",
+    "naics": ["4571", "457110", "336", "611"],
+    "appliesTo": ["all"],
+    "url": "https://firststeps.delaware.gov/underground_storage_tank_infrastructure/",
+    "checkedOn": "2026-10-18",
+    "frequency": "ongoing"
+  },
+  {
+    "id": "de.constable-commission",
+    "title": "Renew your Delaware constable commission",
+    "category": "license",
+    "authority": "Delaware State Police, Board of Examiners of Constables",
+    "description": "A person employed by an approved constable agency who needs a constable commission must be approved by the Board of Examiners. A new commission costs $100 and a renewal $50, with $69 for fingerprinting each time, and every commission expires on May 31.",
+    "naics": ["561611", "921", "541199"],
+    "appliesTo": ["all"],
+    "url": "https://firststeps.delaware.gov/constables_individuals/",
+    "checkedOn": "2026-10-18",
+    "rrule": "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=31"
+  },
+  {
+    "id": "de.thoroughbred-racing-license",
+    "title": "Get a Delaware thoroughbred racing occupational license",
+    "category": "license",
+    "authority": "Delaware Department of Agriculture, Thoroughbred Racing Commission",
+    "description": "Horse owners, trainers, jockeys, jockey agents, exercise riders, stable employees, vendors, veterinarians, farriers, racing officials and others need a Thoroughbred Racing Commission license. Owners and trainers pay $50 for one year or $150 for three, veterinarians, farriers, jockeys, jockey agents and assistant trainers $30, vendors $15 and stable and association employees $5, plus $79 for fingerprints. Occupational licenses are valid for one calendar year.",
+    "naics": ["711212", "115210", "713990"],
+    "appliesTo": ["all"],
+    "url": "https://firststeps.delaware.gov/thoroughbred_racing/",
+    "checkedOn": "2026-10-18",
+    "frequency": "annual"
+  },
+  {
+    "id": "de.mortgage-broker-license",
+    "title": "Renew your Delaware mortgage broker license",
+    "category": "license",
+    "authority": "Delaware Office of the State Bank Commissioner",
+    "description": "Anyone who arranges, negotiates or solicits residential mortgage loans for consumers for compensation, or presents themselves as an agent for obtaining a loan, needs a mortgage broker license, and lender employees are excluded. Every application and renewal goes through NMLS, and renewals are due by December 1 each year under 5 Del. C. Chapter 21.",
+    "naics": ["522310"],
+    "appliesTo": ["all"],
+    "url": "https://firststeps.delaware.gov/mortgage_broker/",
+    "checkedOn": "2026-10-18",
+    "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=1"
   }
 ]
