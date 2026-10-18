@@ -5,6 +5,11 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ## [Unreleased]
 
+### Added
+
+- **core:** city, county and industry items can carry a structured `feeDetail` (the same shape as the fees of state reports), which becomes the item's `cost`, so its fee shows next to it and counts in the fee totals
+- **data:** `feeDetail` on 167 items whose fee the entry already stated in words: Delaware and New York licenses and permits, Delaware towns, Rochester, Syracuse, Houston and others. An item with several fee tiers shows its lowest ("From $50"); an item with no fee shows "Free"
+
 ## [0.11.0] - 2026-10-18
 
 ### Added
