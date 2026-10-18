@@ -5,6 +5,14 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ## [Unreleased]
 
+## [0.11.0] - 2026-10-18
+
+### Added
+
+- **data:** more Delaware licenses, counties and cities
+- **data:** Delaware licenses, counties and cities
+- **data:** NY liquor licenses, Houston food permits
+
 ## [0.10.0] - 2026-10-18
 
 ### Added
