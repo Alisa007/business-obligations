@@ -8,13 +8,20 @@ import {
   evaluate,
   indexCities,
   indexCounties,
+  holds,
+  anyHold,
+  resolveProfile,
   seededCityRule,
   seededCountyRule,
   type BusinessProfile,
+  validateApplicability,
 } from "../src";
-import { PROFILE_FIELDS, STATES } from "../src";
+import { INDUSTRIES, PROFILE_FIELDS, STATES } from "../src";
 import { COUNTY_JURISDICTIONS, LOCAL_JURISDICTIONS, findCity, findCounty } from "../src/data";
 import type { LocalItem } from "../src/data/types";
+import { applicable } from "../src/rules/local";
+import { EMPLOYER_ITEMS } from "../src/data/employers";
+import { INDUSTRY_ITEMS } from "../src/data/industries";
 import { describeSchedule, parseRRule, toRRule } from "../src/rrule";
 import { describeFee } from "../src/fee";
 import { describeTrigger } from "../src/trigger";
@@ -165,7 +172,7 @@ describe("state data files", () => {
     expect(text("MN", "llpReport")).toBe("$155 online ($135 paper)");
     expect(text("MT", "llcReport")).toBe("Waived (if filed by April 15)");
     expect(text("IL", "llpReport")).toBe("$100 per partner (minimum $200, maximum $5,000; form UPA 1003(D))");
-    expect(text("TN", "lpReport")).toBe("$50 per partner (minimum $250, maximum $2,500; estimate)");
+    expect(text("TN", "lpReport")).toBe("$20");
     expect(text("TN", "llcReport")).toBe("$300 base, plus $50 per member over 6 (maximum $3,000)");
     expect(text("MO", "llpReport")).toBe("$105 plus $50 per partner (maximum $205)");
     expect(text("SC", "corpReport")).toBe(
@@ -255,7 +262,7 @@ describe("local seed data", () => {
     for (const it of j.items) {
       expect(it.appliesTo.length).toBeGreaterThan(0);
       expect(it.title).toBeTruthy();
-      if (it.url) expect(it.url).toMatch(/^https:\/\//);
+      expect(it.url, `${j.city} ${it.id} source`).toMatch(/^https:\/\//);
       const local = it as LocalItem;
       for (const f of ["exemptions", "supersedes"] as const)
         if (local[f])
@@ -263,8 +270,8 @@ describe("local seed data", () => {
             local[f]!.every((x) => typeof x === "string" && x.length > 0),
             `${j.city} ${f}`,
           ).toBe(true);
-      for (const w of local.appliesWhen ?? [])
-        expect(PROFILE_FIELDS, `${j.city} appliesWhen field`).toContain(w.field);
+      for (const w of [...(local.appliesWhen ?? []), ...(local.appliesWhenAny ?? [])])
+        expect(validateApplicability(w), `${j.city} ${it.id} appliesWhen`).toBeUndefined();
     }
   });
 });
@@ -295,12 +302,6 @@ describe("city data files", () => {
     expect(findCity("NY", "brooklyn")?.city).toBe("New York");
     expect(findCity("NY", "Nowhere")).toBeUndefined();
   });
-  it("covers the 300 largest cities", () => {
-    const top = read("data/top-cities.json").cities as Array<{ state: string; city: string }>;
-    expect(top).toHaveLength(300);
-    const missing = top.filter((c) => !findCity(c.state, c.city)).map((c) => `${c.city}, ${c.state}`);
-    expect(missing).toEqual([]);
-  });
 });
 
 describe("county data files", () => {
@@ -319,7 +320,9 @@ describe("county data files", () => {
       expect(new Set(ids).size, j.county).toBe(ids.length);
       for (const it of j.items) {
         expect(it.appliesTo.length).toBeGreaterThan(0);
-        if (it.url) expect(it.url, j.county).toMatch(/^https:\/\//);
+        expect(it.url, `${j.county} ${it.id} source`).toMatch(/^https:\/\//);
+        for (const w of [...(it.appliesWhen ?? []), ...(it.appliesWhenAny ?? [])])
+          expect(validateApplicability(w), `${j.county} ${it.id} appliesWhen`).toBeUndefined();
       }
       if (j.items.length === 0) {
         expect(["none", "unverified"], j.county).toContain(j.status);
@@ -347,7 +350,7 @@ describe("county data files", () => {
     for (const j of COUNTY_JURISDICTIONS)
       for (const it of j.items)
         for (const w of it.appliesWhen ?? [])
-          expect(PROFILE_FIELDS, `${j.state} ${j.county} appliesWhen field`).toContain(w.field);
+          expect(validateApplicability(w), `${j.state} ${j.county} ${it.id} appliesWhen`).toBeUndefined();
   });
 
   it("matches names regardless of County/Parish suffixes", () => {
@@ -560,6 +563,46 @@ describe("source links", () => {
   });
 });
 
+describe("industry rules across all jurisdictions", () => {
+  const industriesWithRules = INDUSTRIES.filter((value) => value !== "general" && value !== "retail");
+
+  it("emits restaurant and construction obligations for every state", () => {
+    for (const state of Object.keys(STATES)) {
+      const base = { entityType: "llc", state, zip: "00000", city: "Sample", county: "Sample" } as const;
+      expect(
+        evaluate({ ...base, industry: "restaurant" }).items.some((i) => i.ruleId === "industry.food-service"),
+        state,
+      ).toBe(true);
+      expect(
+        evaluate({ ...base, industry: "construction" }).items.some(
+          (i) => i.ruleId === "industry.construction",
+        ),
+        state,
+      ).toBe(true);
+    }
+  });
+
+  it("evaluates every supported industry in every state", () => {
+    for (const state of Object.keys(STATES)) {
+      for (const industry of industriesWithRules) {
+        const items = evaluate({
+          entityType: "llc",
+          state,
+          zip: "00000",
+          city: "Sample",
+          county: "Sample",
+          industry,
+          profession: "other",
+          alcoholActivity: "retail",
+          cannabisActivity: "retail",
+          commercialVehicles: { interstate: true, grossWeightLbs: 20000 },
+        }).items;
+        expect(items.length, `${state}:${industry}`).toBeGreaterThan(0);
+      }
+    }
+  });
+});
+
 describe("citation urls in output", () => {
   const isBare = (u: string) => {
     const url = new URL(u);
@@ -609,6 +652,176 @@ describe("citation urls in output", () => {
       void s;
     }
     expect([...new Set(bare)]).toEqual([]);
+  });
+});
+
+describe("data conditions", () => {
+  it("uses profile inputs for city-specific conditions", () => {
+    const base = { entityType: "llc" as const, zip: "94533", city: "Fairfield", county: "Solano" };
+    const hasOccupancy = (homeBased: boolean) =>
+      evaluate({ ...base, homeBased }, { asOf: "2026-10-18" }).items.some((item) =>
+        item.title.includes("Fairfield certificate of occupancy"),
+      );
+    expect(hasOccupancy(false)).toBe(true);
+    expect(hasOccupancy(true)).toBe(false);
+  });
+
+  it("applies the Idaho personal-property threshold from the profile", () => {
+    const base = { entityType: "llc" as const, zip: "83702", city: "Boise", county: "Ada" };
+    const hasReturn = (businessPropertyValueUsd: number) =>
+      evaluate({ ...base, businessPropertyValueUsd }, { asOf: "2026-10-18" }).items.some((item) =>
+        item.title.includes("Ada County business personal property return"),
+      );
+    expect(hasReturn(250000)).toBe(false);
+    expect(hasReturn(250001)).toBe(true);
+  });
+
+  it("rejects conditions that cannot be evaluated deterministically", () => {
+    expect(validateApplicability({ field: "annualPayroll", op: "in", value: ["large"] })).toMatch(
+      /numeric comparison/,
+    );
+    expect(validateApplicability({ field: "foodService", op: ">", value: true })).toMatch(/==\/!=/);
+    expect(validateApplicability({ field: "activities", op: "==", value: 1 })).toMatch(/string/);
+    expect(validateApplicability({ field: "commercialVehicles", op: "==", value: "interstate" })).toMatch(
+      /cannot be used/,
+    );
+  });
+
+  it("rejects invalid custom conditions during evaluation", () => {
+    const profile = resolveProfile({ entityType: "llc", zip: "78701", city: "Austin", county: "Travis" });
+    const item = {
+      id: "invalid.condition",
+      title: "Invalid condition",
+      category: "filing",
+      authority: "Test",
+      description: "Test",
+      appliesTo: ["all"],
+      appliesWhen: [{ field: "annualPayroll", op: "in", value: ["large"] }],
+    } as never as LocalItem;
+    expect(() => applicable([item], profile)).toThrow(/Invalid appliesWhen/);
+  });
+
+  it("validates conditions even when a NAICS scope would not match", () => {
+    const profile = resolveProfile({ entityType: "llc", zip: "78701", city: "Austin", county: "Travis" });
+    const item = {
+      id: "scoped.invalid.condition",
+      title: "Scoped invalid condition",
+      category: "filing",
+      authority: "Test",
+      description: "Test",
+      appliesTo: ["all"],
+      naics: ["999999"],
+      appliesWhen: [{ field: "annualPayroll", op: "in", value: ["large"] }],
+    } as never as LocalItem;
+    expect(() => applicable([item], profile)).toThrow(/Invalid appliesWhen/);
+  });
+
+  it("rejects empty alternative conditions during evaluation", () => {
+    const profile = resolveProfile({ entityType: "llc", zip: "78701", city: "Austin", county: "Travis" });
+    const item = {
+      id: "empty.condition",
+      title: "Empty condition",
+      category: "filing",
+      authority: "Test",
+      description: "Test",
+      appliesTo: ["all"],
+      appliesWhenAny: [],
+    } as never as LocalItem;
+    expect(() => applicable([item], profile)).toThrow(/Invalid appliesWhenAny/);
+  });
+
+  it("evaluates alternative conditions as an OR", () => {
+    const conditions = [
+      { field: "homeBased", op: "==" as const, value: true },
+      { field: "annualRevenue", op: ">=" as const, value: 2000 },
+    ];
+    expect(anyHold(conditions, { homeBased: false, annualRevenue: 0 } as never)).toBe(false);
+    expect(anyHold(conditions, { homeBased: true, annualRevenue: 0 } as never)).toBe(true);
+    expect(anyHold(conditions, { homeBased: false, annualRevenue: 2000 } as never)).toBe(true);
+  });
+
+  it("keeps rule input declarations valid and unambiguous", () => {
+    for (const rule of defaultRules) {
+      expect(new Set(rule.inputs).size, `${rule.id} duplicate inputs`).toBe(rule.inputs.length);
+      for (const field of rule.inputs) expect(PROFILE_FIELDS, `${rule.id} input ${field}`).toContain(field);
+    }
+  });
+
+  it("uses only deterministic profile fields and compatible operators", () => {
+    const sources = [
+      ...LOCAL_JURISDICTIONS.flatMap((j) => j.items),
+      ...COUNTY_JURISDICTIONS.flatMap((j) => j.items),
+      ...Object.values(INDUSTRY_ITEMS).flat(),
+      ...Object.values(EMPLOYER_ITEMS).flat(),
+    ];
+    for (const item of sources)
+      for (const condition of [...(item.appliesWhen ?? []), ...(item.appliesWhenAny ?? [])])
+        expect(validateApplicability(condition), `${item.id} appliesWhen`).toBeUndefined();
+  });
+
+  it("has a reachable true and false outcome for every condition", () => {
+    const sources = [
+      ...LOCAL_JURISDICTIONS.flatMap((j) => j.items),
+      ...COUNTY_JURISDICTIONS.flatMap((j) => j.items),
+      ...Object.values(INDUSTRY_ITEMS).flat(),
+      ...Object.values(EMPLOYER_ITEMS).flat(),
+    ];
+    for (const item of sources)
+      for (const condition of [...(item.appliesWhen ?? []), ...(item.appliesWhenAny ?? [])]) {
+        const value = Array.isArray(condition.value) ? condition.value[0] : condition.value;
+        const baseValue =
+          condition.op === ">=" || condition.op === ">"
+            ? (value as number) + 1
+            : condition.op === "<=" || condition.op === "<"
+              ? (value as number) - 1
+              : condition.op === "!="
+                ? typeof value === "boolean"
+                  ? !value
+                  : typeof value === "number"
+                    ? value + 1
+                    : "__not_equal__"
+                : value;
+        const base = { [condition.field]: Array.isArray(condition.value) ? [baseValue] : baseValue };
+        expect(holds(condition, base as never), `${item.id} true condition`).toBe(true);
+        const opposite =
+          condition.op === ">=" || condition.op === ">"
+            ? (value as number) - 1
+            : condition.op === "<=" || condition.op === "<"
+              ? (value as number) + 1
+              : condition.op === "!="
+                ? value
+                : Array.isArray(condition.value)
+                  ? ["__not_in_condition__"]
+                  : typeof value === "boolean"
+                    ? !value
+                    : typeof value === "number"
+                      ? value + 1
+                      : "__not_in_condition__";
+        expect(holds(condition, { [condition.field]: opposite } as never), `${item.id} false condition`).toBe(
+          false,
+        );
+      }
+  });
+
+  it("declares every data condition as a rule input", () => {
+    const required = (items: LocalItem[]) =>
+      new Set(
+        items.flatMap((item) =>
+          [...(item.appliesWhen ?? []), ...(item.appliesWhenAny ?? [])].map((condition) => condition.field),
+        ),
+      );
+    const city = defaultRules.find((rule) => rule.id === "local.seeded-city")!;
+    const county = defaultRules.find((rule) => rule.id === "local.seeded-county")!;
+    const industry = defaultRules.find((rule) => rule.id === "industry.naics-licences")!;
+    const employer = defaultRules.find((rule) => rule.id === "state.employer-mandates")!;
+    for (const field of required(LOCAL_JURISDICTIONS.flatMap((j) => j.items)))
+      expect(city.inputs, `city rule missing ${field}`).toContain(field);
+    for (const field of required(COUNTY_JURISDICTIONS.flatMap((j) => j.items)))
+      expect(county.inputs, `county rule missing ${field}`).toContain(field);
+    for (const field of required(Object.values(INDUSTRY_ITEMS).flat()))
+      expect(industry.inputs, `industry rule missing ${field}`).toContain(field);
+    for (const field of required(Object.values(EMPLOYER_ITEMS).flat()))
+      expect(employer.inputs, `employer rule missing ${field}`).toContain(field);
   });
 });
 

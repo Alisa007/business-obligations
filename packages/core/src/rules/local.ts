@@ -1,4 +1,4 @@
-import { allHold } from "../applicability";
+import { allHold, anyHold, validateApplicability } from "../applicability";
 import { feeCost } from "../fee";
 import { resolveSchedule } from "../rrule";
 import type { Rule } from "../types";
@@ -13,8 +13,22 @@ import { isCorpLike, isUnincorporated } from "../entity";
  */
 export function applicable(items: LocalItem[], p: ResolvedProfile): LocalItem[] {
   return items
+    .filter((it) => {
+      if (it.appliesWhen?.length === 0) throw new Error(`Invalid appliesWhen on ${it.id}: must not be empty`);
+      if (it.appliesWhenAny?.length === 0)
+        throw new Error(`Invalid appliesWhenAny on ${it.id}: must not be empty`);
+      for (const condition of it.appliesWhen ?? []) {
+        const issue = validateApplicability(condition);
+        if (issue) throw new Error(`Invalid appliesWhen on ${it.id}: ${issue}`);
+      }
+      for (const condition of it.appliesWhenAny ?? []) {
+        const issue = validateApplicability(condition);
+        if (issue) throw new Error(`Invalid appliesWhenAny on ${it.id}: ${issue}`);
+      }
+      return true;
+    })
     .filter((it) => !it.naics || it.naics.some((prefix) => p.naics?.startsWith(prefix)))
-    .filter((it) => allHold(it.appliesWhen, p))
+    .filter((it) => allHold(it.appliesWhen, p) && anyHold(it.appliesWhenAny, p))
     .filter((it) =>
       it.appliesTo.some(
         (tag) =>
@@ -35,6 +49,7 @@ export function extras(it: LocalItem, entryCheckedOn: string | undefined) {
   const checkedOn = it.checkedOn ?? entryCheckedOn;
   return {
     ...(it.appliesWhen ? { appliesWhen: it.appliesWhen } : {}),
+    ...(it.appliesWhenAny ? { appliesWhenAny: it.appliesWhenAny } : {}),
     ...(it.exemptions ? { exemptions: it.exemptions } : {}),
     ...(it.supersedes ? { supersedes: it.supersedes } : {}),
     ...(it.preemptedBy ? { preemptedBy: it.preemptedBy } : {}),
@@ -56,7 +71,25 @@ export function extras(it: LocalItem, entryCheckedOn: string | undefined) {
   };
 }
 
-const INPUTS = ["state", "employeeCount", "sellsTaxableGoods", "entityType", "usesTradeName"] as const;
+const INPUTS = [
+  "state",
+  "employeeCount",
+  "sellsTaxableGoods",
+  "entityType",
+  "usesTradeName",
+  "activities",
+  "annualPayroll",
+  "annualRevenue",
+  "businessPropertyValueUsd",
+  "quarterlyPayrollUsd",
+  "businessAgeYears",
+  "hasAutomatedPayrollSystem",
+  "hasQualifiedRetirementPlan",
+  "foodService",
+  "homeBased",
+  "city",
+  "county",
+] as const;
 
 /**
  * A rule that emits city-specific items from city seeds. The bundled rule uses the bundled seeds; pass your own
@@ -66,7 +99,7 @@ export function seededCityRule(lookup: CityLookup, id = "local.seeded-city"): Ru
   return {
     id,
     description: "City-specific licences and taxes for seeded cities (see data/cities/)",
-    inputs: [...INPUTS, "city"],
+    inputs: [...INPUTS],
     when: (p) => (lookup(p.state, p.city, p.county)?.items.length ?? 0) > 0,
     items: (p) => {
       const j = lookup(p.state, p.city, p.county)!;
@@ -94,7 +127,7 @@ export function seededCountyRule(lookup: CountyLookup, id = "local.seeded-county
   return {
     id,
     description: "County-level filings and licences for seeded counties (see data/counties/)",
-    inputs: [...INPUTS, "county"],
+    inputs: [...INPUTS],
     when: (p) => (lookup(p.state, p.county)?.items.length ?? 0) > 0,
     items: (p) => {
       const j = lookup(p.state, p.county)!;
@@ -137,7 +170,7 @@ export const localRules: Rule[] = [
   {
     id: "local.home-occupation",
     description: "Home occupation permit",
-    inputs: ["homeBased", "city", "county"],
+    inputs: ["homeBased", "city", "county", "state"],
     when: (p) => p.homeBased,
     items: (p) => ({
       title: `Obtain home occupation permit from ${p.city} planning/zoning`,
@@ -154,7 +187,7 @@ export const localRules: Rule[] = [
   {
     id: "local.certificate-of-occupancy",
     description: "Certificate of occupancy for commercial premises",
-    inputs: ["homeBased", "industry", "city", "county", "floorAreaSqFt"],
+    inputs: ["homeBased", "industry", "city", "county", "state", "floorAreaSqFt"],
     when: (p) => !p.homeBased && p.industry !== "transportation",
     items: (p) => ({
       title: `Obtain certificate of occupancy for premises in ${p.city}`,
@@ -185,7 +218,7 @@ export const premisesRules: Rule[] = [
   {
     id: "local.sign-permit",
     description: "Sign permit for exterior signage",
-    inputs: ["hasSignage", "city", "state"],
+    inputs: ["hasSignage", "city", "county", "state"],
     when: (p) => p.hasSignage === true,
     items: (p) => ({
       title: "Obtain a sign permit before installing exterior signage",

@@ -1,11 +1,22 @@
 [
   {
     "city": "Portland",
-    "status": "unverified",
+    "status": "rules",
     "counties": ["Cumberland"],
-    "note": "The city's Business Licensing page and its Business License Administrator handle licenses for specific activities (food service, taxi and livery, valet, second-hand dealers and others). A general license for every business was not confirmed, and the fee schedule page could not be loaded.",
-    "sourceUrl": "https://www.portlandmaine.gov/business-licensing",
-    "items": [],
-    "checkedOn": "2026-10-15"
+    "note": "Portland’s Business License Administrator coordinates applications and interdepartmental approvals under licensing ordinances; requirements are activity-specific, so confirm the applicable license before operating.",
+    "sourceUrl": "https://www.portlandmaine.gov/business",
+    "items": [
+      {
+        "id": "portland.activity-license",
+        "title": "Confirm Portland activity-specific business licensing",
+        "category": "license",
+        "authority": "City of Portland Business License Administrator",
+        "description": "Portland’s Business License Administrator coordinates applications and interdepartmental approvals under licensing ordinances; requirements are activity-specific, so confirm the applicable license before operating.",
+        "frequency": "once",
+        "url": "https://www.portlandmaine.gov/business",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18"
   }
 ]

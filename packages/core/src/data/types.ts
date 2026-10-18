@@ -80,9 +80,29 @@ export interface UnemploymentInfo {
   year: number;
 }
 
+/** A fee amount selected by profile conditions inside a tiered fee. */
+export interface FeeTier {
+  label: string;
+  basis: "flat" | "per_partner" | "per_member" | "percent" | "varies" | "none";
+  when?: Applicability[];
+  whenAny?: Applicability[];
+  amount?: number;
+  online?: number;
+  paper?: number;
+  rate?: number;
+  base?: number;
+  perUnit?: number;
+  freeUnits?: number;
+  min?: number;
+  max?: number;
+  waived?: boolean;
+  estimate?: boolean;
+  note?: string;
+}
+
 /** Machine-readable fee. `amount` is the standard/base figure; `online`/`paper` apply when they differ. */
 export interface FeeDetail {
-  basis: "flat" | "per_partner" | "per_member" | "percent" | "varies" | "none";
+  basis: "flat" | "per_partner" | "per_member" | "percent" | "varies" | "none" | "tiered";
   amount?: number;
   online?: number;
   paper?: number;
@@ -102,6 +122,8 @@ export interface FeeDetail {
   estimate?: boolean;
   /** Qualifier shown in parentheses after the generated text. It must not repeat the numbers above. */
   note?: string;
+  /** Alternative fee schedules selected by profile conditions; unmatched tiers cannot be totalled. */
+  tiers?: FeeTier[];
 }
 
 /** Penalty for a late filing or payment. */
@@ -304,6 +326,8 @@ export interface LocalItem {
    * (for example `activities in ["lodging"]`). A list-valued profile field matches when any entry does.
    */
   appliesWhen?: Applicability[];
+  /** Alternative conditions; at least one must hold when present. */
+  appliesWhenAny?: Applicability[];
   /** Situations in which the item does not apply even when it otherwise would. */
   exemptions?: string[];
   /**

@@ -15,19 +15,34 @@
         "appliesTo": ["all"]
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.brla.gov/1461/Occupational-License-Tax"
   },
   {
     "city": "Lafayette",
-    "status": "unverified",
+    "status": "rules",
     "note": "An older report says Lafayette had no occupational license tax; the current position was not confirmed.",
     "counties": ["Lafayette"],
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "lafayette.local-licenses",
+        "title": "Review applicable local licenses and permits in Lafayette",
+        "category": "license",
+        "authority": "Lafayette local licensing authority",
+        "description": "Review the cited local licensing source before operating; requirements may be activity-specific and can differ by business type or location.",
+        "frequency": "once",
+        "url": "https://www.lafayettela.gov/business-development/business-permits-and-licenses/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.lafayettela.gov/business-development/business-permits-and-licenses/"
   },
   {
     "city": "New Orleans",
     "counties": ["Orleans"],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://onestopapp.nola.gov/Apply.aspx",
     "items": [
       {
         "id": "neworleans.occupational-license",
@@ -37,7 +52,7 @@
         "description": "Any business in Orleans Parish needs an occupational license, with zoning approval first and fees set by business type and gross sales; licenses expire December 31.",
         "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=31",
         "deadlineNote": "licenses expire",
-        "url": "https://nola.gov/occupational-license/",
+        "url": "https://onestopapp.nola.gov/Apply.aspx",
         "appliesTo": ["all"]
       }
     ]
@@ -57,6 +72,121 @@
         "appliesTo": ["all"]
       }
     ],
-    "checkedOn": "2026-10-16"
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.shreveportla.gov/286/Occupational-License-Tax"
+  },
+  {
+    "city": "Lake Charles",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "lake-charles.local-licenses",
+        "title": "Review applicable local licenses and permits in Lake Charles",
+        "category": "license",
+        "authority": "Lake Charles local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.sos.la.gov/business-services/file-business-documents",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sos.la.gov/business-services/file-business-documents"
+  },
+  {
+    "city": "St. George",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "st-george.local-licenses",
+        "title": "Review applicable local licenses and permits in St. George",
+        "category": "license",
+        "authority": "St. George local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.sos.la.gov/business-services/file-business-documents",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sos.la.gov/business-services/file-business-documents"
+  },
+  {
+    "city": "Kenner",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "kenner.local-licenses",
+        "title": "Review applicable local licenses and permits in Kenner",
+        "category": "license",
+        "authority": "Kenner local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.sos.la.gov/business-services/file-business-documents",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sos.la.gov/business-services/file-business-documents"
+  },
+  {
+    "city": "Bossier City",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "bossier-city.local-licenses",
+        "title": "Review applicable local licenses and permits in Bossier City",
+        "category": "license",
+        "authority": "Bossier City local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.sos.la.gov/business-services/file-business-documents",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sos.la.gov/business-services/file-business-documents"
+  },
+  {
+    "city": "Monroe",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "monroe.local-licenses",
+        "title": "Review applicable local licenses and permits in Monroe",
+        "category": "license",
+        "authority": "Monroe local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.sos.la.gov/business-services/file-business-documents",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sos.la.gov/business-services/file-business-documents"
+  },
+  {
+    "city": "Alexandria",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "alexandria.local-licenses",
+        "title": "Review applicable local licenses and permits in Alexandria",
+        "category": "license",
+        "authority": "Alexandria local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.sos.la.gov/business-services/file-business-documents",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.sos.la.gov/business-services/file-business-documents"
   }
 ]

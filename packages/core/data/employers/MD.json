@@ -8,6 +8,26 @@
     "frequency": "ongoing",
     "url": "https://www.marylandsaves.org/employers",
     "appliesTo": ["employees"],
+    "appliesWhen": [
+      {
+        "field": "businessAgeYears",
+        "op": ">=",
+        "value": 2,
+        "description": "Has been in business for at least two calendar years"
+      },
+      {
+        "field": "hasAutomatedPayrollSystem",
+        "op": "==",
+        "value": true,
+        "description": "Uses an automated payroll system"
+      },
+      {
+        "field": "hasQualifiedRetirementPlan",
+        "op": "!=",
+        "value": true,
+        "description": "Does not sponsor a qualified retirement plan"
+      }
+    ],
     "checkedOn": "2026-10-16",
     "exemptions": ["Employers that sponsor a qualified retirement plan (they still certify the exemption)"]
   }

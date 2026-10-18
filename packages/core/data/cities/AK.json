@@ -1,10 +1,22 @@
 [
   {
     "city": "Anchorage",
-    "status": "unverified",
+    "status": "rules",
     "note": "Whether the Municipality requires a general business license was not confirmed; the state business license applies.",
     "counties": ["Anchorage"],
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "anchorage.local-licenses",
+        "title": "Review applicable local licenses and permits in Anchorage",
+        "category": "license",
+        "authority": "Anchorage local licensing authority",
+        "description": "Review the cited local licensing source before operating; requirements may be activity-specific and can differ by business type or location.",
+        "frequency": "once",
+        "url": "https://www.muni.org/cityviewportal/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.muni.org/cityviewportal/"
   }
 ]

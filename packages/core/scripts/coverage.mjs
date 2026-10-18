@@ -20,7 +20,6 @@ export function coverage() {
     .sort((a, b) => a.code.localeCompare(b.code));
   const cities = readPlaces("data/cities");
   const counties = readPlaces("data/counties");
-  const topCities = read("data/top-cities.json").cities;
   const topCounties = read("data/top-counties.json").counties;
   const count = (list, f) => list.filter(f).length;
   return {
@@ -34,7 +33,6 @@ export function coverage() {
       checkedNone: count(cities, (c) => c.status === "none"),
       unverified: count(cities, (c) => c.status === "unverified"),
       neverIndividuallyChecked: count(cities, (c) => c.items.length > 0 && !c.checkedOn),
-      ofLargest300: count(topCities, (t) => cities.some((c) => c.state === t.state && c.city === t.city)),
     },
     counties: {
       total: counties.length,

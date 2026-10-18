@@ -1,3 +1,4 @@
+import { allHold, anyHold, validateApplicability } from "./applicability";
 import type { ComplianceItem, ResolvedProfile } from "./types";
 
 export interface CostOptions {
@@ -44,6 +45,20 @@ export function itemAmount(
   options: CostOptions = {},
   state?: string,
 ): number | undefined {
+  if (cost.basis === "tiered") {
+    const tier =
+      options.profile &&
+      cost.tiers?.find((t) => {
+        for (const condition of [...(t.when ?? []), ...(t.whenAny ?? [])]) {
+          const issue = validateApplicability(condition);
+          if (issue) throw new Error(`Invalid fee tier condition: ${issue}`);
+        }
+        return allHold(t.when, options.profile!) && anyHold(t.whenAny, options.profile!);
+      });
+    return tier
+      ? itemAmount(tier as unknown as NonNullable<ComplianceItem["cost"]>, options, state)
+      : undefined;
+  }
   const units = options.ownerCount ?? 1;
   if (cost.waived || cost.basis === "none") return 0;
   switch (cost.basis) {
@@ -113,7 +128,9 @@ export function estimateCosts(items: ComplianceItem[], options: CostOptions = {}
         reason:
           item.cost.basis === "percent"
             ? "Percentage-based; pass `profile` with annualPayroll and employeeCount to estimate"
-            : `Fee basis is ${item.cost.basis}`,
+            : item.cost.basis === "tiered"
+              ? "No fee tier matched the supplied profile"
+              : `Fee basis is ${item.cost.basis}`,
       });
       continue;
     }

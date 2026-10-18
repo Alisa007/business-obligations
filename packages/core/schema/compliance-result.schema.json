@@ -346,6 +346,27 @@
             }
           }
         },
+        "appliesWhenAny": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["field", "op", "value"],
+            "properties": {
+              "field": { "type": "string" },
+              "op": { "enum": [">=", ">", "<=", "<", "==", "!=", "in"] },
+              "value": {
+                "anyOf": [
+                  { "type": "string" },
+                  { "type": "number" },
+                  { "type": "boolean" },
+                  { "type": "array", "items": { "type": "string" } }
+                ]
+              },
+              "description": { "type": "string" }
+            }
+          }
+        },
         "exemptions": {
           "type": "array",
           "items": {

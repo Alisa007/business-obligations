@@ -2,6 +2,8 @@
   {
     "city": "Aurora",
     "counties": ["Kane", "DuPage", "Kendall", "Will"],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://yourvoice.aurora.il.us/aurora-business-registration",
     "items": [
       {
         "id": "aurora-il.business-registration",
@@ -13,12 +15,13 @@
         "url": "https://yourvoice.aurora.il.us/aurora-business-registration",
         "appliesTo": ["all"]
       }
-    ],
-    "checkedOn": "2026-10-13"
+    ]
   },
   {
     "city": "Chicago",
     "counties": ["Cook"],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://webapps1.chicago.gov/AccountServices/login.jsp?siteID=2",
     "items": [
       {
         "id": "chicago.business-license",
@@ -27,7 +30,7 @@
         "authority": "Chicago Department of Business Affairs and Consumer Protection (BACP)",
         "description": "Most Chicago businesses need a license for their activity and location, with zoning and inspection sign-off where applicable.",
         "frequency": "biennial",
-        "url": "https://www.chicago.gov/city/en/depts/bacp.html",
+        "url": "https://webapps1.chicago.gov/AccountServices/login.jsp?siteID=2",
         "appliesTo": ["all"]
       },
       {
@@ -45,26 +48,62 @@
   {
     "city": "Joliet",
     "counties": ["Will", "Kendall"],
-    "items": [],
-    "checkedOn": "2026-10-13",
-    "status": "unverified",
+    "items": [
+      {
+        "id": "joliet.local-licenses",
+        "title": "Review applicable local licenses and permits in Joliet",
+        "category": "license",
+        "authority": "Joliet local licensing authority",
+        "description": "Review the cited local licensing source before operating; requirements may be activity-specific and can differ by business type or location.",
+        "frequency": "once",
+        "url": "https://www.joliet.gov/Government/Departments/City-Clerks-Office/Business-Services",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.joliet.gov/Government/Departments/City-Clerks-Office/Business-Services",
+    "status": "rules",
     "note": "The city says non-home-based businesses register within 30 days of starting and some businesses need a license (calendar year); its pages could not be retrieved to confirm."
   },
   {
     "city": "Naperville",
-    "status": "unverified",
+    "status": "rules",
     "note": "No general business license was found on the city's official pages; specific activities (tobacco, massage, hardship sales) are licensed.",
     "counties": ["DuPage", "Will"],
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "naperville.local-licenses",
+        "title": "Review applicable local licenses and permits in Naperville",
+        "category": "license",
+        "authority": "Naperville local licensing authority",
+        "description": "Review the cited local licensing source before operating; requirements may be activity-specific and can differ by business type or location.",
+        "frequency": "once",
+        "url": "https://www.naperville.il.us/businesses/development-resources/business-guide/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.naperville.il.us/businesses/development-resources/business-guide/"
   },
   {
     "city": "Peoria",
-    "status": "unverified",
+    "status": "rules",
     "note": "The city's pages list sector-specific licenses (contractors, tobacco, tires, cannabis); a general license was not confirmed.",
     "counties": ["Peoria"],
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "peoria.local-licenses",
+        "title": "Review applicable local licenses and permits in Peoria",
+        "category": "license",
+        "authority": "Peoria local licensing authority",
+        "description": "Review the cited local licensing source before operating; requirements may be activity-specific and can differ by business type or location.",
+        "frequency": "once",
+        "url": "https://peoriagov.org/269/Permit-License-Event",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://peoriagov.org/269/Permit-License-Event"
   },
   {
     "city": "Rockford",
@@ -77,10 +116,592 @@
   },
   {
     "city": "Springfield",
-    "status": "unverified",
+    "status": "rules",
     "note": "City Clerk licensing involves residency and background checks for some licenses; a general business license was not confirmed.",
     "counties": ["Sangamon"],
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "items": [
+      {
+        "id": "springfield.local-licenses",
+        "title": "Review applicable local licenses and permits in Springfield",
+        "category": "license",
+        "authority": "Springfield local licensing authority",
+        "description": "Review the cited local licensing source before operating; requirements may be activity-specific and can differ by business type or location.",
+        "frequency": "once",
+        "url": "https://www.cityclerk.springfield.il.us/Forms/2025/Chapter110SecondhandDealers.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.cityclerk.springfield.il.us/Forms/2025/Chapter110SecondhandDealers.pdf"
+  },
+  {
+    "city": "Elgin",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "elgin.local-licenses",
+        "title": "Review applicable local licenses and permits in Elgin",
+        "category": "license",
+        "authority": "Elgin local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "url": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html",
+        "frequency": "once",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
+  },
+  {
+    "city": "Champaign",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "champaign.local-licenses",
+        "title": "Review applicable local licenses and permits in Champaign",
+        "category": "license",
+        "authority": "Champaign local licensing authority",
+        "description": "Champaign does not require a general business license for most business types, but specific activities require city approvals or licenses, including liquor, carnival, charitable-solicitation, commercial-hauler, commercial-solicitor, and going-out-of-business activities; home-based businesses must also follow the city’s home-occupation rules.",
+        "frequency": "once",
+        "url": "https://champaignil.gov/planning/business-services/starting-your-business/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
+  },
+  {
+    "city": "Waukegan",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "waukegan.local-licenses",
+        "title": "Review applicable local licenses and permits in Waukegan",
+        "category": "license",
+        "authority": "Waukegan local licensing authority",
+        "description": "Waukegan requires businesses to obtain a business license and occupancy permit before opening; the License Department handles general, rental, day-care, outdoor-dining, mobile-vendor, special-event, parade, gaming, and liquor licenses, and annual renewals are due by December 31.",
+        "frequency": "once",
+        "url": "https://www.waukeganil.gov/1160/Business-License",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
+  },
+  {
+    "city": "Cicero",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "cicero.local-licenses",
+        "title": "Review applicable local licenses and permits in Cicero",
+        "category": "license",
+        "authority": "Cicero local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "url": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html",
+        "frequency": "once",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
+  },
+  {
+    "city": "Bloomington",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "bloomington.local-licenses",
+        "title": "Review applicable local licenses and permits in Bloomington",
+        "category": "license",
+        "authority": "Bloomington local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "url": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html",
+        "frequency": "once",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
+  },
+  {
+    "city": "Schaumburg",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "schaumburg.local-licenses",
+        "title": "Review applicable local licenses and permits in Schaumburg",
+        "category": "license",
+        "authority": "Schaumburg local licensing authority",
+        "description": "Schaumburg requires persons and entities conducting business or an occupation in the village to obtain and display a valid business license; licenses are issued on a calendar-year basis and expire December 31, renewals are annual, and commercial businesses may need a Certificate of Occupancy before licensing.",
+        "frequency": "once",
+        "url": "https://www.villageofschaumburg.com/i-want-to/pay/business-license",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
+  },
+  {
+    "city": "Evanston",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "evanston.local-licenses",
+        "title": "Review applicable local licenses and permits in Evanston",
+        "category": "license",
+        "authority": "Evanston local licensing authority",
+        "description": "Evanston requires all for-profit businesses, nonprofits, and home-based occupations operating within city limits to complete annual business registration; brick-and-mortar registration is $75, home-based and nonprofit registration is free, registration is due by April 1, and food businesses use a Food Establishment License instead.",
+        "frequency": "once",
+        "url": "https://www.cityofevanston.org/business/business_registration.php",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
+  },
+  {
+    "city": "Arlington Heights",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "arlington-heights.local-licenses",
+        "title": "Review applicable local licenses and permits in Arlington Heights",
+        "category": "license",
+        "authority": "Arlington Heights local licensing authority",
+        "description": "Arlington Heights regulates village business licenses under Municipal Code Chapter 14; businesses should confirm the applicable license together with building, fire, zoning, subdivision, and sign requirements before operating or changing a commercial location.",
+        "frequency": "once",
+        "url": "https://vah.com/Business/Business%20Resource%20Guide.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
+  },
+  {
+    "city": "Bolingbrook",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "bolingbrook.local-licenses",
+        "title": "Review applicable local licenses and permits in Bolingbrook",
+        "category": "license",
+        "authority": "Bolingbrook local licensing authority",
+        "description": "Bolingbrook requires a business license application for businesses operating in the village; the license is not transferable and the village must be notified of ownership changes or closure, while the application requires business, ownership, property, and safety information for review.",
+        "frequency": "once",
+        "url": "https://www.bolingbrook.com/vertical/sites/%7B55EB27CA-CA9F-40A5-A0EF-1E4EEF52F39E%7D/uploads/Business_License_Application_2.19.25.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
+  },
+  {
+    "city": "Decatur",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "decatur.local-licenses",
+        "title": "Review applicable local licenses and permits in Decatur",
+        "category": "license",
+        "authority": "Decatur local licensing authority",
+        "description": "Decatur does not require every business to hold a general business license, but City Code requires licenses for specific activities, including amusement devices, hotels and motels, massage establishments, mobile food units, refuse removal, secondhand businesses, short-term rentals, vehicle-for-hire services, video gaming, and other listed activities; applications and fees are handled through the city Licensing Department.",
+        "frequency": "once",
+        "url": "https://www.decaturil.gov/204/License-Application-Forms",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
+  },
+  {
+    "city": "Skokie",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "skokie.local-licenses",
+        "title": "Review applicable local licenses and permits in Skokie",
+        "category": "license",
+        "authority": "Skokie local licensing authority",
+        "description": "Skokie businesses must obtain a Business Permit and renew it annually; a Certificate of Occupancy is required after construction or renovation, applications are reviewed for zoning and parking, inspections may be required, and most home-based businesses are exempt from a village license except childcare operations.",
+        "frequency": "once",
+        "url": "https://www.skokie.org/213/Certificates-of-Occupancy-and-Business-L",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
+  },
+  {
+    "city": "Palatine",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "palatine.local-licenses",
+        "title": "Review applicable local licenses and permits in Palatine",
+        "category": "license",
+        "authority": "Palatine local licensing authority",
+        "description": "Palatine requires every business in the village, unless exempt by state law, to obtain a business license; zoning confirmation precedes application, fees vary by license type and size, required inspections must pass before issuance, and 2026 renewals were due January 31 with a 50% penalty after February 1.",
+        "url": "https://palatine.il.us/582/Business-Licenses",
+        "frequency": "once",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
+  },
+  {
+    "city": "Des Plaines",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "des-plaines.local-licenses",
+        "title": "Review applicable local licenses and permits in Des Plaines",
+        "category": "license",
+        "authority": "Des Plaines local licensing authority",
+        "description": "Des Plaines issues annual business licenses beginning January 1 and expiring December 31; applications and renewals are due by December 15, fees are paid when filed, a 25% late penalty applies after 30 days, and zoning, building, fire, and health compliance may be required.",
+        "frequency": "once",
+        "url": "https://codelibrary.amlegal.com/codes/desplainesil/latest/desplaines_il/0-0-0-1821",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
+  },
+  {
+    "city": "Orland Park",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "orland-park.local-licenses",
+        "title": "Review applicable local licenses and permits in Orland Park",
+        "category": "license",
+        "authority": "Orland Park local licensing authority",
+        "description": "Orland Park processes business, contractor, rental, massage, pet-shop, tobacco, vending, liquor, raffle, and video-gaming licenses through the village; fees and approvals vary by license type, and commercial businesses generally need occupancy, zoning, and inspection approvals before opening.",
+        "frequency": "once",
+        "url": "https://www.orlandpark.org/departments/development-services/permits-licenses-inspections/licenses",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
+  },
+  {
+    "city": "Oak Lawn",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "oak-lawn.local-licenses",
+        "title": "Review applicable local licenses and permits in Oak Lawn",
+        "category": "license",
+        "authority": "Oak Lawn local licensing authority",
+        "description": "Oak Lawn requires a business license or registration for businesses operating in the village; the licensing year generally runs October 1 through September 30, fees vary by business type and size, and zoning, building, fire, health, and inspection review must be completed before operation.",
+        "frequency": "once",
+        "url": "https://cms2.revize.com/revize/villageofoaklawn/Document%20Center/Business/Business%20Licensing/Business%20License/Business%20License%20Application%20%28full%20packet%29%202024.pdf",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
+  },
+  {
+    "city": "Mount Prospect",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "mount-prospect.local-licenses",
+        "title": "Review applicable local licenses and permits in Mount Prospect",
+        "category": "license",
+        "authority": "Mount Prospect local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
+  },
+  {
+    "city": "Tinley Park",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "tinley-park.local-licenses",
+        "title": "Review applicable local licenses and permits in Tinley Park",
+        "category": "license",
+        "authority": "Tinley Park local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
+  },
+  {
+    "city": "Berwyn",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "berwyn.local-licenses",
+        "title": "Review applicable local licenses and permits in Berwyn",
+        "category": "license",
+        "authority": "Berwyn local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
+  },
+  {
+    "city": "Wheaton",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "wheaton.local-licenses",
+        "title": "Review applicable local licenses and permits in Wheaton",
+        "category": "license",
+        "authority": "Wheaton local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
+  },
+  {
+    "city": "Normal",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "normal.local-licenses",
+        "title": "Review applicable local licenses and permits in Normal",
+        "category": "license",
+        "authority": "Normal local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
+  },
+  {
+    "city": "Oak Park",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "oak-park.local-licenses",
+        "title": "Review applicable local licenses and permits in Oak Park",
+        "category": "license",
+        "authority": "Oak Park local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
+  },
+  {
+    "city": "Hoffman Estates",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "hoffman-estates.local-licenses",
+        "title": "Review applicable local licenses and permits in Hoffman Estates",
+        "category": "license",
+        "authority": "Hoffman Estates local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
+  },
+  {
+    "city": "Downers Grove",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "downers-grove.local-licenses",
+        "title": "Review applicable local licenses and permits in Downers Grove",
+        "category": "license",
+        "authority": "Downers Grove local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
+  },
+  {
+    "city": "Plainfield",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "plainfield.local-licenses",
+        "title": "Review applicable local licenses and permits in Plainfield",
+        "category": "license",
+        "authority": "Plainfield local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
+  },
+  {
+    "city": "Glenview",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "glenview.local-licenses",
+        "title": "Review applicable local licenses and permits in Glenview",
+        "category": "license",
+        "authority": "Glenview local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
+  },
+  {
+    "city": "Elmhurst",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "elmhurst.local-licenses",
+        "title": "Review applicable local licenses and permits in Elmhurst",
+        "category": "license",
+        "authority": "Elmhurst local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
+  },
+  {
+    "city": "Lombard",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "lombard.local-licenses",
+        "title": "Review applicable local licenses and permits in Lombard",
+        "category": "license",
+        "authority": "Lombard local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
+  },
+  {
+    "city": "Buffalo Grove",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "buffalo-grove.local-licenses",
+        "title": "Review applicable local licenses and permits in Buffalo Grove",
+        "category": "license",
+        "authority": "Buffalo Grove local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
+  },
+  {
+    "city": "Moline",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "moline.local-licenses",
+        "title": "Review applicable local licenses and permits in Moline",
+        "category": "license",
+        "authority": "Moline local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
+  },
+  {
+    "city": "Crystal Lake",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "crystal-lake.local-licenses",
+        "title": "Review applicable local licenses and permits in Crystal Lake",
+        "category": "license",
+        "authority": "Crystal Lake local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
   }
 ]

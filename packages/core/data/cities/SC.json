@@ -2,6 +2,8 @@
   {
     "city": "Charleston",
     "counties": ["Charleston", "Berkeley"],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://charleston-sc.gov/134/Business-License-Information",
     "items": [
       {
         "id": "charleston-sc.business-license",
@@ -10,7 +12,7 @@
         "authority": "City of Charleston Revenue Collections Division",
         "description": "Business licenses expire April 30 each year and are renewed on the previous year's gross income; the city's page gives the fee as payable by May 31 with penalties after June 30.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=30",
-        "url": "https://charleston-sc.gov/135",
+        "url": "https://charleston-sc.gov/134/Business-License-Information",
         "appliesTo": ["all"]
       }
     ]
@@ -18,6 +20,8 @@
   {
     "city": "Columbia",
     "counties": ["Richland", "Lexington"],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://businesslicensing.columbiasc.gov/new-business-license/",
     "items": [
       {
         "id": "columbia-sc.business-license",
@@ -26,9 +30,161 @@
         "authority": "City of Columbia Business Licenses Division",
         "description": "Business licenses expire April 30 each year; a 5% penalty accrues per month from May 1.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=30",
-        "url": "https://columbiasc.gov/city-of-columbia-business-license-division-gives-reminder-to-renew-business-license-7/",
+        "url": "https://businesslicensing.columbiasc.gov/business-license-renewal/",
         "appliesTo": ["all"]
       }
     ]
+  },
+  {
+    "city": "North Charleston",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "north-charleston.local-licenses",
+        "title": "Review applicable local licenses and permits in North Charleston",
+        "category": "license",
+        "authority": "North Charleston local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://sos.sc.gov/online-filings/business-entities",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://sos.sc.gov/online-filings/business-entities"
+  },
+  {
+    "city": "Mount Pleasant",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "mount-pleasant.local-licenses",
+        "title": "Review applicable local licenses and permits in Mount Pleasant",
+        "category": "license",
+        "authority": "Mount Pleasant local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://sos.sc.gov/online-filings/business-entities",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://sos.sc.gov/online-filings/business-entities"
+  },
+  {
+    "city": "Rock Hill",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "rock-hill.local-licenses",
+        "title": "Review applicable local licenses and permits in Rock Hill",
+        "category": "license",
+        "authority": "Rock Hill local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://sos.sc.gov/online-filings/business-entities",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://sos.sc.gov/online-filings/business-entities"
+  },
+  {
+    "city": "Greenville",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "greenville.local-licenses",
+        "title": "Review applicable local licenses and permits in Greenville",
+        "category": "license",
+        "authority": "Greenville local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://sos.sc.gov/online-filings/business-entities",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://sos.sc.gov/online-filings/business-entities"
+  },
+  {
+    "city": "Summerville",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "summerville.local-licenses",
+        "title": "Review applicable local licenses and permits in Summerville",
+        "category": "license",
+        "authority": "Summerville local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://sos.sc.gov/online-filings/business-entities",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://sos.sc.gov/online-filings/business-entities"
+  },
+  {
+    "city": "Goose Creek",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "goose-creek.local-licenses",
+        "title": "Review applicable local licenses and permits in Goose Creek",
+        "category": "license",
+        "authority": "Goose Creek local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://sos.sc.gov/online-filings/business-entities",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://sos.sc.gov/online-filings/business-entities"
+  },
+  {
+    "city": "Greer",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "greer.local-licenses",
+        "title": "Review applicable local licenses and permits in Greer",
+        "category": "license",
+        "authority": "Greer local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://sos.sc.gov/online-filings/business-entities",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://sos.sc.gov/online-filings/business-entities"
+  },
+  {
+    "city": "Sumter",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "sumter.local-licenses",
+        "title": "Review applicable local licenses and permits in Sumter",
+        "category": "license",
+        "authority": "Sumter local licensing authority",
+        "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
+        "frequency": "once",
+        "url": "https://sos.sc.gov/online-filings/business-entities",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://sos.sc.gov/online-filings/business-entities"
   }
 ]

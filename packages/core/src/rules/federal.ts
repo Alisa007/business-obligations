@@ -197,6 +197,7 @@ export const federalRules: Rule[] = [
             ],
           },
           reason: "Business has employees",
+          url: "https://www.irs.gov/businesses/small-businesses-self-employed/employment-tax-due-dates",
         },
         {
           title: "File Form 940 (Federal Unemployment Tax)",
@@ -210,6 +211,7 @@ export const federalRules: Rule[] = [
           deadline: "January 31",
           due: { type: "fixed", month: 1, day: 31 },
           reason: "Business has employees",
+          url: "https://www.irs.gov/businesses/small-businesses-self-employed/employment-tax-due-dates",
         },
         {
           title: "Issue Forms W-2 and file W-3",
@@ -221,6 +223,7 @@ export const federalRules: Rule[] = [
           deadline: "January 31",
           due: { type: "fixed", month: 1, day: 31 },
           reason: "Business has employees",
+          url: "https://www.irs.gov/businesses/small-businesses-self-employed/employment-tax-due-dates",
         },
         {
           title: "Complete Form I-9 for each new hire",
@@ -271,6 +274,7 @@ export const federalRules: Rule[] = [
       deadline: "January 31",
       due: { type: "fixed", month: 1, day: 31 },
       reason: `Largest contractor payment is ${p.largestContractorPaymentUsd}, at or above the $2,000 threshold`,
+      url: "https://www.irs.gov/businesses/small-businesses-self-employed/employment-tax-due-dates",
     }),
   },
   {
