@@ -45,7 +45,7 @@ describe("business-obligations-ui", () => {
     ).toBe(true);
   });
 
-  it("shows items that apply only under conditions in their own section, with what would bring them in", () => {
+  it("shows items that apply only under conditions inside the group of their level, with what would bring them in", () => {
     const item = items[0];
     if (!item) throw new Error("expected launch fixture to contain an obligation");
     const maybe = { ...item, id: "maybe-1", title: "Only with a payroll" };
@@ -71,15 +71,16 @@ describe("business-obligations-ui", () => {
         </TamaguiProvider>,
       );
     const html = render();
-    expect(html).toContain("Conditionally applicable");
+    expect(html).toContain("conditionally applicable");
     expect(html).toContain("Only with a payroll");
     expect(html).toContain("Applies if");
     expect(html).toContain("1, 2, 3 …");
     expect(html).toContain("yes");
-    // the section follows the others, and goes away when nothing in it matches the search
-    expect(html.indexOf("Conditionally applicable")).toBeGreaterThan(html.indexOf("Federal</"));
-    expect(render(undefined, "zzzz-no-match")).not.toContain("Conditionally applicable");
-    expect(render("es")).toContain("Aplicables según condiciones");
+    // it sits in the group of its own level, after the items there that do apply, and goes away with the search
+    const level = (item.jurisdiction[0]?.toUpperCase() ?? "") + item.jurisdiction.slice(1);
+    expect(html.indexOf("Only with a payroll")).toBeGreaterThan(html.indexOf(`${level}</`));
+    expect(render(undefined, "zzzz-no-match")).not.toContain("conditionally applicable");
+    expect(render("es")).toContain("aplicables según condiciones");
     // without the prop there is no section
     expect(
       renderToStaticMarkup(
@@ -87,7 +88,23 @@ describe("business-obligations-ui", () => {
           <ObligationsList items={items} asOf="2026-11-02" filters={filters()} onFilters={() => undefined} />
         </TamaguiProvider>,
       ),
-    ).not.toContain("Conditionally applicable");
+    ).not.toContain("conditionally applicable");
+  });
+
+  it("lists the city first, then the county, the state and the federal rules", () => {
+    const html = renderToStaticMarkup(
+      <TamaguiProvider config={tamaguiConfig} defaultTheme="light">
+        <ObligationsList items={items} asOf="2026-11-02" filters={filters()} onFilters={() => undefined} />
+      </TamaguiProvider>,
+    );
+    const headings = ["City", "County", "State", "Federal"]
+      .map(
+        (level) =>
+          html.indexOf(`<h2`, html.indexOf(`>${level}</h2>`) - 400) >= 0 && html.indexOf(`>${level}</h2>`),
+      )
+      .filter((index): index is number => typeof index === "number" && index >= 0);
+    expect(headings.length).toBeGreaterThan(1);
+    expect(headings).toEqual([...headings].sort((a, b) => a - b));
   });
 
   it("filters by category and combines category with search", () => {
