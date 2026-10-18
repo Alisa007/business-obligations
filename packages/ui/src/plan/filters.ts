@@ -1,7 +1,8 @@
 import type { ComplianceItem } from "business-obligations";
 import { isVerified } from "./items";
 
-export const JURISDICTIONS = ["federal", "state", "county", "city"] as const;
+/** Lists run from the most local level to the widest: the city, then the county, the state and federal rules. */
+export const JURISDICTIONS = ["city", "county", "state", "federal"] as const;
 
 export interface ObligationFilters {
   jurisdiction: string;

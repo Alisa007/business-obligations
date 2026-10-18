@@ -106,11 +106,12 @@ const [choices] = useProfileChoices(); // { entityType, naics, employeeCount, se
 
 ## Conditionally applicable obligations
 
-`ObligationsList` takes an optional `conditional` list and shows it in its own section after the others: items that are
+`ObligationsList` takes an optional `conditional` list and shows each of them inside the group of the level that requires it (city, county, state or federal), after the items
+that do apply, dimmed and with what would bring it in: items that are
 not in `items` now, but would be if a detail that was left blank turned out a certain way. Each is a `ConditionalItem`,
 `{ item, when: [{ field, values }] }`, and its card says what would bring it in ("Applies if number of employees: 1, 2,
 3 …"). The package does not compute them; the playground does, from `analyzeInputs` and `evaluate`
-(`conditionalItems` in `apps/web/src/lib/plan.ts`). The list's filters apply to the section too.
+(`conditionalItems` in `apps/web/src/lib/plan.ts`). The list's filters apply to them too. Groups run from the most local level to the widest: city, county, state, federal.
 
 ## Bundle size
 
