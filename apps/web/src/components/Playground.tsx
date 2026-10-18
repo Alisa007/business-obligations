@@ -166,7 +166,15 @@ export function Playground() {
     if (!data) return null;
     switch (tab) {
       case "plan":
-        return <LaunchList plan={data.plan} costs={data.costs} done={done} onToggle={toggle} />;
+        return (
+          <LaunchList
+            plan={data.plan}
+            costs={data.costs}
+            conditional={data.conditional}
+            done={done}
+            onToggle={toggle}
+          />
+        );
       case "items":
         return (
           <ObligationsList

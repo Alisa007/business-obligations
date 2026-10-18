@@ -111,7 +111,8 @@ that do apply, dimmed and with what would bring it in: items that are
 not in `items` now, but would be if a detail that was left blank turned out a certain way. Each is a `ConditionalItem`,
 `{ item, when: [{ field, values }] }`, and its card says what would bring it in ("Applies if number of employees: 1, 2,
 3 …"). The package does not compute them; the playground does, from `analyzeInputs` and `evaluate`
-(`conditionalItems` in `apps/web/src/lib/plan.ts`). The list's filters apply to them too. Groups run from the most local level to the widest: city, county, state, federal.
+(`conditionalItems` in `apps/web/src/lib/plan.ts`). `LaunchList` takes the same list as `conditional` and shows it after the phases, in a section grouped by level, each with
+what would bring it in and no checkbox. The list's filters apply to them too. Groups run from the most local level to the widest: city, county, state, federal.
 
 ## Bundle size
 

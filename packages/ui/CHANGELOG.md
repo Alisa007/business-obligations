@@ -4,6 +4,11 @@ All notable changes to `business-obligations-ui` are documented here.
 
 ## [Unreleased]
 
+### Added
+
+- `LaunchList` takes an optional `conditional` list (the same `ConditionalItem[]` as `ObligationsList`) and shows those
+  items after the phases, grouped by level with city first, each with what would bring it in
+
 ## [0.5.0] - 2026-10-18
 
 ### Changed

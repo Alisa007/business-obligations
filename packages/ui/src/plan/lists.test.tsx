@@ -30,6 +30,12 @@ const tamaguiConfig = createTamagui(defaultConfig);
 describe("business-obligations-ui", () => {
   const plan = planLaunch(profile, { startDate: "2026-11-02", openingDate: "2027-02-01" });
   const items = plan.result.items;
+  const render = (node: ReactElement) =>
+    renderToStaticMarkup(
+      <TamaguiProvider config={tamaguiConfig} defaultTheme="light">
+        {node}
+      </TamaguiProvider>,
+    );
 
   it("filters by jurisdiction, search text, and confidence", () => {
     const federal = filterObligations(items, filters({ jurisdiction: "federal" }));
@@ -89,6 +95,19 @@ describe("business-obligations-ui", () => {
         </TamaguiProvider>,
       ),
     ).not.toContain("conditionally applicable");
+  });
+
+  it("shows conditionally applicable items in the launch list too, grouped by level, without a checkbox", () => {
+    const item = items[0];
+    if (!item) throw new Error("expected launch fixture to contain an obligation");
+    const maybe = { ...item, id: "maybe-2", title: "Only with a payroll" };
+    const conditional = [{ item: maybe, when: [{ field: "employeeCount", values: [1, 2] }] }];
+    const html = render(<LaunchList plan={plan} costs={plan.costs} conditional={conditional} />);
+    expect(html).toContain("Conditionally applicable");
+    expect(html).toContain("Only with a payroll");
+    expect(html).toContain("Applies if");
+    expect(html).not.toContain("step-maybe-2");
+    expect(render(<LaunchList plan={plan} costs={plan.costs} />)).not.toContain("Conditionally applicable");
   });
 
   it("lists the city first, then the county, the state and the federal rules", () => {
