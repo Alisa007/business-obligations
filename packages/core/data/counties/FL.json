@@ -637,8 +637,8 @@
         "title": "File the Flagler County tourist development tax return",
         "category": "filing",
         "authority": "Flagler County Tax Collector",
-        "description": "Since August 2018 the tax is reported and paid directly to the Tax Collector. The page read does not give the monthly due date.",
-        "rrule": "FREQ=MONTHLY",
+        "description": "Since August 2018 the tax is reported and paid directly to the Tax Collector. Monthly returns are due the 1st of the month after the reporting period and are late if not paid or postmarked by the 20th; the late penalty is 10% of the tax per month or part of a month (minimum $50, capped at 50%), and the collection allowance is lost.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
         "url": "https://www.flaglertax.gov/tourist-development-tax/",
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -651,7 +651,7 @@
         ]
       }
     ],
-    "checkedOn": "2026-10-16"
+    "checkedOn": "2026-10-18"
   },
   {
     "county": "Franklin",
@@ -860,8 +860,8 @@
         "title": "File the Hernando County tourist development tax return",
         "category": "filing",
         "authority": "Hernando County Clerk of Circuit Court",
-        "description": "County ordinance 2008-12 has the tax remitted to the Clerk under the chapter 212 dealer rules; the Clerk may authorize quarterly returns. The monthly due date was not found.",
-        "rrule": "FREQ=MONTHLY",
+        "description": "County ordinance 2008-12 has the tax remitted to the Clerk under the chapter 212 dealer rules; the Clerk may authorize quarterly returns. Returns and payment are due the 1st of the month after the reporting period and are late if not received by the 20th; late filing loses the collection allowance and bears penalties (greater of $50 or 10% of the delinquent tax) and interest.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
         "url": "https://hernandoclerk.com/county-services/tourist-development-tax/",
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -874,7 +874,7 @@
         ]
       }
     ],
-    "checkedOn": "2026-10-16"
+    "checkedOn": "2026-10-18"
   },
   {
     "county": "Highlands",
@@ -912,8 +912,8 @@
         "title": "File the Highlands County tourist development tax return",
         "category": "filing",
         "authority": "Highlands County Tax Collector",
-        "description": "Tax collected on or after October 1, 2026 is reported and paid to the Tax Collector (Ordinance 25-26-16); before that date it went to the state with the sales tax return. The due date was not found.",
-        "rrule": "FREQ=MONTHLY",
+        "description": "Tax collected on or after October 1, 2026 is reported and paid to the Tax Collector (Ordinance 25-26-16); before that date it went to the state with the sales tax return. Returns and payment are due the 20th of the month after the rent is collected (delinquent from the 21st); the late penalty is 10% of the tax per 30 days (minimum $50, capped at 50%), plus interest.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
         "url": "https://www.hctaxcollector.com/tourist-taxes/",
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -926,7 +926,7 @@
         ]
       }
     ],
-    "checkedOn": "2026-10-16"
+    "checkedOn": "2026-10-18"
   },
   {
     "county": "Hillsborough",

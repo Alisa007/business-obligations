@@ -90,7 +90,7 @@
     "title": "Delaware business license and gross receipts tax",
     "authority": "Delaware Division of Revenue",
     "url": "https://revenue.delaware.gov/frequently-asked-questions/business-licenses-faqs/",
-    "rrule": "FREQ=YEARLY",
+    "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=31",
     "feeDetail": {
       "basis": "flat",
       "amount": 75,
@@ -129,8 +129,11 @@
     "dba": "https://revenue.delaware.gov/trade-names-faqs/"
   },
   "verification": {
-    "checkedOn": "2026-10-13",
-    "sources": ["https://corp.delaware.gov/alt-entitytaxinstructions/"],
+    "checkedOn": "2026-10-18",
+    "sources": [
+      "https://corp.delaware.gov/alt-entitytaxinstructions/",
+      "https://revenue.delaware.gov/frequently-asked-questions/business-licenses-faqs/"
+    ],
     "unconfirmed": []
   }
 }

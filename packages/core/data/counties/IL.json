@@ -673,8 +673,7 @@
         "category": "filing",
         "authority": "St. Clair County Treasurer",
         "description": "Hotels and motels with more than 35 rooms in St. Clair County collect a 2% hotel tax and file a monthly return showing the prior month's receipts; the return and payment are due by the last day of the following month.",
-        "rrule": "FREQ=MONTHLY",
-        "deadline": "By the last day of the following month",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
         "exemptions": ["Hotels or motels with 35 rooms or fewer"],
         "url": "https://www.stclaircountyil.gov/webdocuments/CountyCode/Taxation.pdf",
         "appliesTo": ["all"],
@@ -825,8 +824,7 @@
         "category": "permit",
         "authority": "Winnebago County Health Department",
         "description": "Hotels, motels, bed-and-breakfasts and rooming houses offering temporary lodging need the county hotel/motel permit and annual inspection; renewal is due by December 1 for the next calendar year.",
-        "rrule": "FREQ=YEARLY",
-        "deadline": "By December 1 for the next calendar year",
+        "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=1",
         "url": "https://publichealth.wincoil.gov/how-do-i/get-a-permit-or-license/",
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -836,7 +834,8 @@
             "value": ["lodging"],
             "description": "Operates a lodging establishment"
           }
-        ]
+        ],
+        "deadlineNote": "renews the permit for the next calendar year"
       },
       {
         "id": "winnebago-il.hotel-motel-tax-return",
@@ -844,8 +843,7 @@
         "category": "filing",
         "authority": "Winnebago County Treasurer",
         "description": "Hotels and motels collect and remit the 2% county hotel/motel sales tax on net room receipts; the monthly return is due by the last day of the following month.",
-        "rrule": "FREQ=MONTHLY",
-        "deadline": "By the last day of the following month",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
         "exemptions": ["Permanent guests occupying the same room for more than 30 consecutive days"],
         "url": "https://wincoil.gov/images/departments/treasurer/Forms/worksheet.pdf",
         "appliesTo": ["all"],

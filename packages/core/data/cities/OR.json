@@ -84,9 +84,10 @@
         "category": "filing",
         "authority": "City of Portland Revenue Division",
         "description": "Businesses with Portland-source income file the City Business License Tax and Multnomah County Business Income Tax through the Revenue Division; Metro supportive housing and Preschool for All taxes apply to higher-income owners.",
-        "rrule": "FREQ=YEARLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
         "url": "https://www.portland.gov/revenue/business-tax",
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "deadlineNote": "calendar-year filers; the extension to October 15 is to file only, not to pay"
       }
     ],
     "sourceUrl": "https://www.portland.gov/revenue/business-tax",

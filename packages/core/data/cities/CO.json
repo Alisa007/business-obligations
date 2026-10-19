@@ -69,7 +69,11 @@
         "rrule": "FREQ=YEARLY;INTERVAL=2",
         "deadline": "December 31 of the second calendar year",
         "url": "https://www.centennialco.gov/Online-Services/Sales-Tax-Licensing",
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "flat",
+          "amount": 25
+        }
       }
     ]
   },
@@ -85,10 +89,10 @@
         "category": "license",
         "authority": "City of Colorado Springs Sales Tax Office",
         "description": "Businesses selling or leasing at retail in the city need a city sales tax license (no fee since September 1, 2023). Licenses expire every odd year on December 31 and are renewed online only.",
-        "rrule": "FREQ=YEARLY;INTERVAL=2",
-        "deadline": "Expires December 31 of every odd year",
+        "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=12;BYMONTHDAY=31",
         "url": "https://coloradosprings.gov/new-tax-applications",
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "anchor": "2027-12-31"
       }
     ]
   },
@@ -114,9 +118,14 @@
         "category": "payment",
         "authority": "Denver Department of Finance, Treasury Division",
         "description": "Employers and employees pay a monthly occupational privilege tax for work performed in Denver.",
-        "rrule": "FREQ=MONTHLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
+        "deadline": "Monthly for employers with 10 or more employees; employers with fewer may file quarterly",
         "url": "https://www.denvergov.org/files/assets/public/v/2/finance/documents/treasury/tax-guides/taxguidetopic61_occupationalprivilegetaxes.pdf",
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Business OPT of $4.00 per month per taxable employee, owner or manager, plus $5.75 per month withheld from each taxable employee"
+        }
       }
     ]
   },
