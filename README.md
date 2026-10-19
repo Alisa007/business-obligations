@@ -78,6 +78,8 @@ Every item says **why** it applies (`reason`), **who** to deal with (`authority`
 - **In the browser:** the [playground](https://alisa007.github.io/business-obligations/) runs the library locally
   in your browser. If analytics is enabled on the hosted site, the details you enter are sent when you generate a
   plan (see [Analytics on the playground](#analytics-on-the-playground)).
+- **As a website:** [businessobligations.com](https://businessobligations.com) is built on this library. It has a start
+  plan and the ongoing obligations for every state and for hundreds of cities, with the source for each item.
 - **From the terminal:**
   ```sh
   npx business-obligations launch --zip 60601 --entity llc --employees 3 --start 2026-11-02 --opening 2027-02-01

@@ -5,6 +5,8 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ## [Unreleased]
 
+## [0.14.0] - 2026-10-19
+
 ### Added
 
 - **core:** `semiannual` frequency: an rrule with two months and one day (`BYMONTH=1,7;BYMONTHDAY=-1`) is read as twice a year. `anchor: "formation_quarter"` with `BYMONTH=3,6,9,12` is an annual filing due in the calendar quarter that contains the formation month; used for the Wisconsin and Hawaii reports. A monthly rule with a day gets generated deadline text ("20th of each month")
@@ -21,6 +23,24 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 - **data:** `data/top-cities.json` is removed (the coverage report no longer lists missing large cities)
 - the core bundle budget is 600 KB gzip (it was 300 KB), for the larger local data
+
+### Breaking changes
+
+- **core:** require an rrule for every recurring item
+
+### Added
+
+- **data:** due dates and fees for bare-rule items; twice-yearly and quarter-of-formation rrules
+- **data:** verify state items for all states, correct what pages contradict
+- **data:** verify New York state items
+- **core:** verified-items file, with the first federal items checked
+- **core:** tiered fees, appliesWhenAny and richer local data; update libraries
+- **data:** Felton (Delaware) contractor license
+
+### Fixed
+
+- **data:** soften state poster and sales-tax filing text
+- **data:** verify the six remaining local items
 
 ## [0.13.0] - 2026-10-18
 
