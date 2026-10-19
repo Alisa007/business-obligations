@@ -162,9 +162,9 @@ export interface BusinessProfile {
 
 export type ItemCategory = (typeof ITEM_CATEGORIES)[number];
 
-import type { ChangeNotice, Due, FeeDetail, LateFee } from "./data/types";
+import type { ChangeNotice, Due, FeeDetail, StatedPenalty } from "./data/types";
 import type { ScheduleAnchor } from "./rrule";
-export type { ChangeNotice, Due, FeeDetail, FeeTier, LateFee } from "./data/types";
+export type { ChangeNotice, Due, FeeDetail, FeeTier, LateFee, Penalty, StatedPenalty } from "./data/types";
 
 /** What kind of document a source is. Inferred from the URL unless a data file says otherwise. */
 export type SourceKind = "statute" | "ordinance" | "agency_page" | "pdf" | "dataset";
@@ -245,10 +245,10 @@ export interface ComplianceItem {
    * app's custom repeat or an `RRULE:` line. `deadline` is the same thing as display text.
    */
   recurrence?: string;
-  /** Structured fee, when the item has a government fee or tax with a known basis. */
-  cost?: FeeDetail & { currency: "USD" };
+  /** Structured fee; `unknown` means the amount still needs research. */
+  cost: FeeDetail & { currency: "USD" };
   /** Late-filing or late-payment penalty, when known. */
-  penalty?: LateFee & { currency: "USD" };
+  penalty?: StatedPenalty & { currency: "USD" };
   /** Where this item's data comes from and how well it was checked. */
   provenance?: Provenance;
   /** Changes to the rules behind this item that take effect after the evaluation date. */
@@ -334,8 +334,10 @@ export interface ResolvedProfile extends BusinessProfile {
 /** A rule's output before the engine assigns an id and computes due dates. */
 export type ItemDraft = Omit<
   ComplianceItem,
-  "id" | "ruleId" | "nextDue" | "recurrence" | "frequency" | "due"
+  "id" | "ruleId" | "nextDue" | "recurrence" | "frequency" | "due" | "cost"
 > & {
+  /** The engine supplies an unknown fee when a rule has no researched amount. */
+  cost?: ComplianceItem["cost"];
   /** Distinguishes several items from one rule in the same state; becomes part of the id. */
   key?: string;
 } & (

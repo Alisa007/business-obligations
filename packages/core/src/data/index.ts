@@ -85,7 +85,7 @@ export const industryAuthorities = (code: string): IndustryAuthorities => stateI
 
 export interface BoardRef {
   name: string;
-  url?: string[];
+  url: string[];
 }
 
 const professions = professionData as unknown as { professions: Record<string, Record<string, BoardRef>> };

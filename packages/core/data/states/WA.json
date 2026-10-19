@@ -6,11 +6,11 @@
   },
   "revenue": {
     "name": "Washington Department of Revenue",
-    "url": ["https://dor.wa.gov"]
+    "url": ["https://dor.wa.gov/taxes-rates/business-occupation-tax"]
   },
   "labor": {
     "name": "Washington Employment Security Department",
-    "url": ["https://esd.wa.gov"]
+    "url": ["https://www.lni.wa.gov/forms-publications/required-workplace-posters"]
   },
   "llcReport": {
     "rrule": "FREQ=YEARLY;BYMONTHDAY=-1",
@@ -71,17 +71,21 @@
   "businessLicense": {
     "title": "Washington state business license (Business Licensing Service)",
     "authority": "Washington Department of Revenue, Business Licensing Service",
-    "url": ["https://dor.wa.gov/open-business/apply-business-license"],
+    "url": ["https://dor.wa.gov/taxes-rates/business-occupation-tax/open-business/apply-business-license"],
     "rrule": "FREQ=YEARLY",
     "feeDetail": {
       "basis": "varies",
       "note": "the application fee varies"
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "percent",
+      "note": "Late renewal penalty is one-half of endorsement fees, capped at $150; the amount varies with the endorsements on the license.",
+      "rate": 50,
+      "max": 150
     }
   },
   "local": {
+    "url": ["https://dor.wa.gov/taxes-rates/business-occupation-tax/open-business"],
     "title": "City business license endorsement",
     "authority": "City via Business Licensing Service",
     "description": "City licenses are added as endorsements to the state business license; Seattle and others levy local B&O taxes."
@@ -89,7 +93,7 @@
   "dbaFiling": "state",
   "dbaAuthority": {
     "name": "Washington Department of Revenue, Business Licensing Service",
-    "url": ["https://dor.wa.gov/open-business/apply-business-license"]
+    "url": ["https://dor.wa.gov/taxes-rates/business-occupation-tax/open-business/apply-business-license"]
   },
   "industry": {
     "contractor": "Washington Department of Labor & Industries (contractor registration)",
@@ -105,11 +109,17 @@
   "links": {
     "formation": ["https://www.sos.wa.gov/corporations-charities"],
     "annualReport": ["https://www.sos.wa.gov/corporations-charities"],
-    "uiRegistration": ["https://esd.wa.gov/employer-requirements"],
-    "salesTax": ["https://dor.wa.gov/taxes-rates/retail-sales-tax"],
-    "entityTax": ["https://dor.wa.gov/taxes-rates/business-occupation-tax"],
+    "uiRegistration": [
+      "https://www.lni.wa.gov/forms-publications/required-workplace-posters/employer-requirements"
+    ],
+    "salesTax": ["https://dor.wa.gov/taxes-rates/business-occupation-tax/taxes-rates/retail-sales-tax"],
+    "entityTax": [
+      "https://dor.wa.gov/taxes-rates/business-occupation-tax/taxes-rates/business-occupation-tax"
+    ],
     "laborPosters": ["https://www.lni.wa.gov/forms-publications/required-workplace-posters"],
-    "dba": ["https://dor.wa.gov/manage-business/grow-business/register-trade-names"]
+    "dba": [
+      "https://dor.wa.gov/taxes-rates/business-occupation-tax/manage-business/grow-business/register-trade-names"
+    ]
   },
   "verification": {
     "checkedOn": "2026-10-13",

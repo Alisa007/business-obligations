@@ -2,15 +2,15 @@
   "name": "Iowa",
   "filing": {
     "name": "Iowa Secretary of State",
-    "url": ["https://sos.iowa.gov/"]
+    "url": ["https://sos.iowa.gov/businesses/business-entity-forms-and-fees"]
   },
   "revenue": {
     "name": "Iowa Department of Revenue",
-    "url": ["https://tax.iowa.gov"]
+    "url": ["https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/starting-business"]
   },
   "labor": {
     "name": "Iowa Workforce Development",
-    "url": ["https://workforce.iowa.gov"]
+    "url": ["https://workforce.iowa.gov/employers/resources/posters"]
   },
   "llcReport": {
     "title": "File Biennial Report",
@@ -23,7 +23,8 @@
       "paper": 45
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "none",
+      "note": "Iowa publishes delinquency notices and dissolution/revocation after continued non-filing, but no separate late monetary penalty."
     }
   },
   "corpReport": {
@@ -35,7 +36,8 @@
       "amount": 60
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "none",
+      "note": "Iowa publishes delinquency notices and dissolution/revocation after continued non-filing, but no separate late monetary penalty."
     }
   },
   "lpReport": {
@@ -49,7 +51,8 @@
       "paper": 45
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "none",
+      "note": "Iowa publishes delinquency notices and dissolution/revocation after continued non-filing, but no separate late monetary penalty."
     }
   },
   "llpReport": null,
@@ -80,6 +83,7 @@
   "paidSickLeave": null,
   "businessLicense": null,
   "local": {
+    "url": ["https://sos.iowa.gov/businesses/business-entity-forms-and-feesbusinesses/business-faqs"],
     "title": "Local permits",
     "authority": "City or county",
     "description": "Iowa has no general local business license; zoning and industry permits apply."
@@ -99,18 +103,22 @@
     "note": "Iowa's medical program caps THC content."
   },
   "links": {
-    "formation": ["https://sos.iowa.gov/businesses/business-entity-forms-and-fees"],
+    "formation": [
+      "https://sos.iowa.gov/businesses/business-entity-forms-and-feesbusinesses/business-entity-forms-and-fees"
+    ],
     "annualReport": ["https://help.sos.iowa.gov/how-do-i-file-biennial-report"],
-    "uiRegistration": ["https://workforce.iowa.gov/employers"],
+    "uiRegistration": ["https://workforce.iowa.gov/employers/resources/posters/employers"],
     "withholding": ["https://revenue.iowa.gov/taxes/tax-guidance/withholding-tax"],
     "salesTax": ["https://revenue.iowa.gov/permits-licensing/business-permit-registration"],
     "entityTax": ["https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/starting-business"],
-    "laborPosters": ["https://workforce.iowa.gov/employers/resources/posters"],
+    "laborPosters": ["https://workforce.iowa.gov/employers/resources/posters/employers/resources/posters"],
     "dba": ["https://help.sos.iowa.gov/understanding-name-availability-iowa"]
   },
   "verification": {
     "checkedOn": "2026-10-13",
-    "sources": ["https://sos.iowa.gov/businesses/business-entity-forms-and-fees"],
+    "sources": [
+      "https://sos.iowa.gov/businesses/business-entity-forms-and-feesbusinesses/business-entity-forms-and-fees"
+    ],
     "unconfirmed": []
   }
 }

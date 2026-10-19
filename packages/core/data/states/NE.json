@@ -6,11 +6,13 @@
   },
   "revenue": {
     "name": "Nebraska Department of Revenue",
-    "url": ["https://revenue.nebraska.gov"]
+    "url": [
+      "https://revenue.nebraska.gov/about/legal-information/regulations/chapter-24-corporate-income-tax"
+    ]
   },
   "labor": {
     "name": "Nebraska Department of Labor",
-    "url": ["https://dol.nebraska.gov"]
+    "url": ["https://dol.nebraska.gov/laborstandards/compliance/requiredposters"]
   },
   "llcReport": {
     "title": "File Biennial Report",
@@ -21,7 +23,7 @@
       "amount": 30
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "none"
     }
   },
   "corpReport": {
@@ -34,7 +36,7 @@
       "note": "occupation tax by paid-in capital; $40 for $10,001–$20,000, plus $20 per further $10,000"
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "none"
     }
   },
   "lpReport": null,
@@ -46,7 +48,7 @@
       "note": "$50 if engaged in the practice of law"
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "none"
     }
   },
   "llcPublication": null,
@@ -76,6 +78,7 @@
   "paidSickLeave": null,
   "businessLicense": null,
   "local": {
+    "url": ["https://www.nebraska.gov/business/"],
     "title": "City occupation tax / license",
     "authority": "City clerk",
     "description": "Omaha, Lincoln and others require occupation taxes or business licenses."
@@ -95,13 +98,19 @@
   "links": {
     "formation": ["https://sos.nebraska.gov/business-services/business-services-division"],
     "annualReport": ["https://sos.nebraska.gov/business-services/business-services-division"],
-    "uiRegistration": ["https://dol.nebraska.gov/UITax"],
-    "withholding": ["https://revenue.nebraska.gov/businesses/starting-business-nebraska"],
-    "salesTax": ["https://revenue.nebraska.gov/businesses/nebraska-sales-and-use-tax"],
-    "entityTax": [
-      "https://revenue.nebraska.gov/about/legal-information/regulations/chapter-24-corporate-income-tax"
+    "uiRegistration": ["https://dol.nebraska.gov/laborstandards/compliance/requiredposters/UITax"],
+    "withholding": [
+      "https://revenue.nebraska.gov/about/legal-information/regulations/chapter-24-corporate-income-tax/businesses/starting-business-nebraska"
     ],
-    "laborPosters": ["https://dol.nebraska.gov/laborstandards/compliance/requiredposters"]
+    "salesTax": [
+      "https://revenue.nebraska.gov/about/legal-information/regulations/chapter-24-corporate-income-tax/businesses/nebraska-sales-and-use-tax"
+    ],
+    "entityTax": [
+      "https://revenue.nebraska.gov/about/legal-information/regulations/chapter-24-corporate-income-tax/about/legal-information/regulations/chapter-24-corporate-income-tax"
+    ],
+    "laborPosters": [
+      "https://dol.nebraska.gov/laborstandards/compliance/requiredposters/laborstandards/compliance/requiredposters"
+    ]
   },
   "verification": {
     "checkedOn": "2026-10-13",

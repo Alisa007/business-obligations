@@ -6,11 +6,13 @@
   },
   "revenue": {
     "name": "Florida Department of Revenue",
-    "url": ["https://floridarevenue.com"]
+    "url": ["https://floridarevenue.com/taxes/taxesfees/Pages/corporate.aspx"]
   },
   "labor": {
     "name": "Florida Department of Revenue (Reemployment Tax)",
-    "url": ["https://floridarevenue.com/taxes/taxesfees/Pages/reemployment.aspx"]
+    "url": [
+      "https://floridarevenue.com/taxes/taxesfees/Pages/corporate.aspx/taxes/taxesfees/Pages/reemployment.aspx"
+    ]
   },
   "llcReport": {
     "title": "File Annual Report",
@@ -108,6 +110,7 @@
   "paidSickLeave": null,
   "businessLicense": null,
   "local": {
+    "url": ["https://dos.fl.gov/sunbiz/start-business/"],
     "title": "County and city Local Business Tax Receipt",
     "authority": "County tax collector and city",
     "description": "Florida counties and cities each issue a Local Business Tax Receipt (renewed annually by September 30)."
@@ -127,9 +130,15 @@
   "links": {
     "formation": ["https://dos.fl.gov/sunbiz/start-business/"],
     "annualReport": ["https://dos.fl.gov/sunbiz/manage-business/efile/annual-report/"],
-    "uiRegistration": ["https://floridarevenue.com/taxes/taxesfees/Pages/reemployment.aspx"],
-    "salesTax": ["https://floridarevenue.com/taxes/taxesfees/Pages/sales_tax.aspx"],
-    "entityTax": ["https://floridarevenue.com/taxes/taxesfees/Pages/corporate.aspx"],
+    "uiRegistration": [
+      "https://floridarevenue.com/taxes/taxesfees/Pages/corporate.aspx/taxes/taxesfees/Pages/reemployment.aspx"
+    ],
+    "salesTax": [
+      "https://floridarevenue.com/taxes/taxesfees/Pages/corporate.aspx/taxes/taxesfees/Pages/sales_tax.aspx"
+    ],
+    "entityTax": [
+      "https://floridarevenue.com/taxes/taxesfees/Pages/corporate.aspx/taxes/taxesfees/Pages/corporate.aspx"
+    ],
     "laborPosters": ["https://floridajobs.org/florida-minimum-wage"],
     "dba": ["https://dos.fl.gov/sunbiz/start-business/efile/fl-fictitious-name-registration/"]
   },

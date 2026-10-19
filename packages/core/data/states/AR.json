@@ -6,11 +6,11 @@
   },
   "revenue": {
     "name": "Arkansas Department of Finance and Administration",
-    "url": ["https://www.dfa.arkansas.gov"]
+    "url": ["https://www.dfa.arkansas.gov/office/taxes/income-tax-administration/"]
   },
   "labor": {
     "name": "Arkansas Division of Workforce Services",
-    "url": ["https://www.dws.arkansas.gov"]
+    "url": ["https://labor.arkansas.gov/resources/required-postings/"]
   },
   "llcReport": {
     "title": "File Annual Franchise Tax Report",
@@ -20,7 +20,9 @@
       "amount": 150
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 25,
+      "note": "Late franchise-tax filing penalty; Arkansas also charges daily interest on the tax and penalty."
     }
   },
   "corpReport": {
@@ -33,7 +35,9 @@
       "note": "franchise tax"
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 25,
+      "note": "Late franchise-tax filing penalty; Arkansas also charges daily interest on the tax and penalty."
     }
   },
   "lpReport": {
@@ -44,7 +48,8 @@
       "note": "no franchise tax"
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "none",
+      "note": "The Secretary of State annual-report fee page lists no separate late penalty for LP annual reports."
     }
   },
   "llpReport": {
@@ -55,7 +60,8 @@
       "note": "no franchise tax"
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "none",
+      "note": "The Secretary of State annual-report fee page lists no separate late penalty for LLP annual reports."
     }
   },
   "llcPublication": null,
@@ -85,6 +91,7 @@
   "paidSickLeave": null,
   "businessLicense": null,
   "local": {
+    "url": ["https://portal.arkansas.gov/owning-a-business/"],
     "title": "City business license",
     "authority": "City clerk",
     "description": "Many Arkansas municipalities require a local business license."
@@ -107,12 +114,14 @@
     "annualReport": ["https://www.sos.arkansas.gov/business-commercial-services-bcs"],
     "uiRegistration": ["https://dws.arkansas.gov/workforce-services/unemployment/"],
     "withholding": [
-      "https://www.dfa.arkansas.gov/office/taxes/income-tax-administration/withholding-tax-branch/"
+      "https://www.dfa.arkansas.gov/office/taxes/income-tax-administration//office/taxes/income-tax-administration/withholding-tax-branch/"
     ],
     "salesTax": [
-      "https://www.dfa.arkansas.gov/office/taxes/excise-tax-administration/sales-use-tax/sales-and-use-tax-faqs/"
+      "https://www.dfa.arkansas.gov/office/taxes/income-tax-administration//office/taxes/excise-tax-administration/sales-use-tax/sales-and-use-tax-faqs/"
     ],
-    "entityTax": ["https://www.dfa.arkansas.gov/office/taxes/income-tax-administration/"],
+    "entityTax": [
+      "https://www.dfa.arkansas.gov/office/taxes/income-tax-administration//office/taxes/income-tax-administration/"
+    ],
     "laborPosters": ["https://labor.arkansas.gov/resources/required-postings/"],
     "dba": ["https://www.sos.arkansas.gov/business-commercial-services-bcs/forms-fees/llc"]
   },

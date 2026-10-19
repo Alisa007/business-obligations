@@ -6,11 +6,11 @@
   },
   "revenue": {
     "name": "Kentucky Department of Revenue",
-    "url": ["https://revenue.ky.gov"]
+    "url": ["https://revenue.ky.gov/Business/Pages/default.aspx"]
   },
   "labor": {
     "name": "Kentucky Office of Unemployment Insurance",
-    "url": ["https://kcc.ky.gov"]
+    "url": ["https://labor.ky.gov/standards/Pages/Workplace-Standard-Documents.aspx"]
   },
   "llcReport": {
     "rrule": "FREQ=YEARLY;BYMONTH=6;BYMONTHDAY=30",
@@ -19,7 +19,9 @@
       "amount": 15
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 100,
+      "note": "Reinstatement penalty after administrative dissolution."
     }
   },
   "corpReport": {
@@ -29,7 +31,9 @@
       "amount": 15
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 100,
+      "note": "Reinstatement penalty after administrative dissolution."
     }
   },
   "llcPublication": null,
@@ -59,6 +63,7 @@
   "paidSickLeave": null,
   "businessLicense": null,
   "local": {
+    "url": ["https://onestop.ky.gov/start/pages/occupational.aspx"],
     "title": "City/county occupational license",
     "authority": "City or county occupational tax office",
     "description": "Local governments levy occupational license taxes on net profits and payroll."
@@ -80,9 +85,13 @@
     "formation": ["https://www.sos.ky.gov/bus/business-filings/Pages/default.aspx"],
     "annualReport": ["https://www.sos.ky.gov/bus/business-filings/Pages/Annual-Reports.aspx"],
     "uiRegistration": ["https://kewes.ky.gov/EmployerReg/Businesstype.aspx"],
-    "withholding": ["https://revenue.ky.gov/Business/Pages/Employer-Payroll-Withholding.aspx"],
-    "salesTax": ["https://revenue.ky.gov/Business/Sales-Use-Tax/Pages/default.aspx"],
-    "entityTax": ["https://revenue.ky.gov/Business/Pages/default.aspx"],
+    "withholding": [
+      "https://revenue.ky.gov/Business/Pages/default.aspx/Business/Pages/Employer-Payroll-Withholding.aspx"
+    ],
+    "salesTax": [
+      "https://revenue.ky.gov/Business/Pages/default.aspx/Business/Sales-Use-Tax/Pages/default.aspx"
+    ],
+    "entityTax": ["https://revenue.ky.gov/Business/Pages/default.aspx/Business/Pages/default.aspx"],
     "laborPosters": ["https://labor.ky.gov/standards/Pages/Workplace-Standard-Documents.aspx"],
     "dba": ["https://web.sos.ky.gov/forms/corp/ASN-Certificate%20of%20Assumed%20Name.pdf"]
   },

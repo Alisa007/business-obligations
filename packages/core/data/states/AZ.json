@@ -6,11 +6,11 @@
   },
   "revenue": {
     "name": "Arizona Department of Revenue",
-    "url": ["https://azdor.gov"]
+    "url": ["https://azdor.gov/transaction-privilege-tax/tpt-license/applying-tpt-license"]
   },
   "labor": {
     "name": "Arizona Department of Economic Security",
-    "url": ["https://des.az.gov"]
+    "url": ["https://www.azica.gov/posters-employers-must-display"]
   },
   "llcReport": null,
   "corpReport": {
@@ -21,7 +21,9 @@
       "amount": 45
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "per_item",
+      "note": "$9 per month for a for-profit corporation after the annual report deadline; nonprofits are not assessed this penalty.",
+      "perUnit": 9
     }
   },
   "llpReport": {
@@ -32,7 +34,9 @@
       "note": "$28 if filed after April 30"
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 25,
+      "note": "The late filing total is $28 versus the $3 timely fee."
     }
   },
   "llcPublication": "Arizona LLCs must publish a notice of formation within 60 days of filing, three consecutive times in a newspaper in the county of the statutory agent's street address (A.R.S. 29-3201); where that county has more than 800,000 people, the Corporation Commission posts the notice to its database instead.",
@@ -42,7 +46,7 @@
     "permit": "Transaction Privilege Tax (TPT) license",
     "agency": {
       "name": "Arizona Department of Revenue",
-      "url": ["https://azdor.gov"]
+      "url": ["https://azdor.gov/transaction-privilege-tax/tpt-license/applying-tpt-license"]
     },
     "alternative": null
   },
@@ -67,6 +71,7 @@
   },
   "businessLicense": null,
   "local": {
+    "url": ["https://azdor.gov/transaction-privilege-tax/tpt-license/applying-tpt-license/business"],
     "title": "City TPT license / business license",
     "authority": "City or county",
     "description": "Many Arizona cities require their own TPT licence (or program license) and local business licenses; some cities self-administer TPT."
@@ -88,10 +93,18 @@
     "annualReport": [
       "https://www.azcc.gov/docs/default-source/corps-files/how-to-file-a-corporation-annual-report.pdf"
     ],
-    "uiRegistration": ["https://des.az.gov/content/applying-unemployment-insurance-tax-account-number"],
-    "withholding": ["https://azdor.gov/business/withholding-tax"],
-    "salesTax": ["https://azdor.gov/transaction-privilege-tax/tpt-license/applying-tpt-license"],
-    "entityTax": ["https://azdor.gov/business/corporate-income-tax"],
+    "uiRegistration": [
+      "https://www.azica.gov/posters-employers-must-display/content/applying-unemployment-insurance-tax-account-number"
+    ],
+    "withholding": [
+      "https://azdor.gov/transaction-privilege-tax/tpt-license/applying-tpt-license/business/withholding-tax"
+    ],
+    "salesTax": [
+      "https://azdor.gov/transaction-privilege-tax/tpt-license/applying-tpt-license/transaction-privilege-tax/tpt-license/applying-tpt-license"
+    ],
+    "entityTax": [
+      "https://azdor.gov/transaction-privilege-tax/tpt-license/applying-tpt-license/business/corporate-income-tax"
+    ],
     "laborPosters": ["https://www.azica.gov/posters-employers-must-display"],
     "dba": ["https://azsos.gov/business/tntm"]
   },

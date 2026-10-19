@@ -74,6 +74,19 @@ describe("conditionally applicable items", () => {
     const fields = given.conditional.flatMap(({ when }) => when.map((w) => w.field));
     expect(fields).not.toContain("employeeCount");
   });
+
+  it("keeps every 10036 obligation linked and checked", () => {
+    const data = analyze(
+      profileFromChoices(
+        { ...choices, zip: "10036", naics: "", employeeCount: undefined },
+        { city: "New York", county: "New York", state: "NY" },
+      ),
+      { asOf: "2026-10-19", isNew: true },
+    );
+    const items = [...data.result.items, ...data.conditional.map(({ item }) => item)];
+    expect(items.length).toBeGreaterThan(0);
+    expect(items.every((item) => item.url?.length && item.provenance?.checkedOn)).toBe(true);
+  });
 });
 
 describe("analytics", () => {

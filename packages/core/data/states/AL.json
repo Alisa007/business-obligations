@@ -6,11 +6,11 @@
   },
   "revenue": {
     "name": "Alabama Department of Revenue",
-    "url": ["https://www.revenue.alabama.gov"]
+    "url": ["https://www.revenue.alabama.gov/business-license/business-privilege-tax/"]
   },
   "labor": {
     "name": "Alabama Department of Workforce",
-    "url": ["https://labor.alabama.gov"]
+    "url": ["https://workforce.alabama.gov/employers/posters/"]
   },
   "llcReport": null,
   "corpReport": null,
@@ -42,6 +42,9 @@
   "paidSickLeave": null,
   "businessLicense": null,
   "local": {
+    "url": [
+      "https://www.revenue.alabama.gov/business-license/business-privilege-tax//division/business-license/"
+    ],
     "title": "Municipal or county business license",
     "authority": "City or county revenue office",
     "description": "Alabama cities and counties issue general business licenses and collect local sales/use taxes."
@@ -60,16 +63,26 @@
   },
   "links": {
     "formation": ["https://www.sos.alabama.gov/business-entities/start-business"],
-    "annualReport": ["https://www.revenue.alabama.gov/business-license/business-privilege-tax/"],
-    "uiRegistration": ["https://labor.alabama.gov/uc/employer.aspx"],
-    "withholding": ["https://www.revenue.alabama.gov/help-center-tabs/withholding-tax/"],
-    "salesTax": ["https://www.revenue.alabama.gov/division/sales-use/"],
-    "entityTax": ["https://www.revenue.alabama.gov/business-license/business-privilege-tax/"],
+    "annualReport": [
+      "https://www.revenue.alabama.gov/business-license/business-privilege-tax//business-license/business-privilege-tax/"
+    ],
+    "uiRegistration": ["https://workforce.alabama.gov/employers/posters//uc/employer.aspx"],
+    "withholding": [
+      "https://www.revenue.alabama.gov/business-license/business-privilege-tax//help-center-tabs/withholding-tax/"
+    ],
+    "salesTax": [
+      "https://www.revenue.alabama.gov/business-license/business-privilege-tax//division/sales-use/"
+    ],
+    "entityTax": [
+      "https://www.revenue.alabama.gov/business-license/business-privilege-tax//business-license/business-privilege-tax/"
+    ],
     "laborPosters": ["https://workforce.alabama.gov/employers/posters/"]
   },
   "verification": {
     "checkedOn": "2026-10-13",
-    "sources": ["https://www.revenue.alabama.gov/tax-types/business-privilege-tax/"],
+    "sources": [
+      "https://www.revenue.alabama.gov/business-license/business-privilege-tax//tax-types/business-privilege-tax/"
+    ],
     "unconfirmed": []
   }
 }

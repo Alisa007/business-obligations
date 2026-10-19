@@ -86,7 +86,8 @@ describe("business-obligations-ui", () => {
               {
                 item: maybe,
                 when: [
-                  { field: "employeeCount", values: [1, 2, 3, 4] },
+                  { field: "employeeCount", values: [500] },
+                  { field: "fullTimeEmployeeCount", values: [100, 500] },
                   { field: "homeBased", values: [true] },
                 ],
               },
@@ -102,7 +103,8 @@ describe("business-obligations-ui", () => {
     expect(html).toContain("conditionally applicable");
     expect(html).toContain("Only with a payroll");
     expect(html).toContain("Applies if");
-    expect(html).toContain("1, 2, 3 …");
+    expect(html).toContain("number of employees: more than 499");
+    expect(html).toContain("number of full-time employees: more than 99");
     expect(html).toContain("yes");
     // it sits in the group of its own level, after the items there that do apply, and goes away with the search
     const level = (item.jurisdiction[0]?.toUpperCase() ?? "") + item.jurisdiction.slice(1);
@@ -120,7 +122,7 @@ describe("business-obligations-ui", () => {
   });
 
   it("shows conditionally applicable items in the launch list too, grouped by level, without a checkbox", () => {
-    const item = items[0];
+    const item = items.find((candidate) => candidate.cost.basis === "unknown");
     if (!item) throw new Error("expected launch fixture to contain an obligation");
     const maybe = { ...item, id: "maybe-2", title: "Only with a payroll" };
     const conditional = [{ item: maybe, when: [{ field: "employeeCount", values: [1, 2] }] }];
@@ -190,7 +192,7 @@ describe("business-obligations-ui", () => {
   });
 
   it("renders the obligation context, text deadlines, and category counts", () => {
-    const item = items[0];
+    const item = items.find((candidate) => candidate.cost.basis === "unknown");
     if (!item) throw new Error("expected launch fixture to contain an obligation");
     const withTextDeadline = {
       ...item,
@@ -217,6 +219,9 @@ describe("business-obligations-ui", () => {
     expect(html).toContain("Federal");
     expect(html).toContain("State");
     expect(html).toContain("Before opening");
+    expect(html).toContain("Fee");
+    expect(html).toContain("If late");
+    expect(html).toContain("Not listed");
     expect(html).toContain("Clear filters");
     expect(html).toContain('href="https://');
     expect(html).not.toContain("text-align:center");

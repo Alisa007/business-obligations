@@ -6,11 +6,11 @@
   },
   "revenue": {
     "name": "Kansas Department of Revenue",
-    "url": ["https://www.ksrevenue.gov"]
+    "url": ["https://www.ksrevenue.gov/bustaxtypescorp.html"]
   },
   "labor": {
     "name": "Kansas Department of Labor",
-    "url": ["https://www.dol.ks.gov"]
+    "url": ["https://www.dol.ks.gov/employers/workplace-laws/posters-in-the-workplace"]
   },
   "llcReport": {
     "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=4;BYMONTHDAY=15",
@@ -22,7 +22,9 @@
       "paper": 110
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 10,
+      "note": "Biennial report penalty."
     }
   },
   "corpReport": {
@@ -35,7 +37,9 @@
       "paper": 110
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 10,
+      "note": "Biennial report penalty."
     }
   },
   "lpReport": {
@@ -47,7 +51,9 @@
       "paper": 110
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 10,
+      "note": "Biennial report penalty."
     }
   },
   "llpReport": {
@@ -59,7 +65,9 @@
       "paper": 110
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 10,
+      "note": "Biennial report penalty."
     }
   },
   "llcPublication": null,
@@ -91,6 +99,7 @@
   "paidSickLeave": null,
   "businessLicense": null,
   "local": {
+    "url": ["https://ksbiz.kansas.gov/register-your-business/"],
     "title": "City occupation/business license",
     "authority": "City clerk",
     "description": "Many Kansas cities require a local occupation or business license."
@@ -110,11 +119,15 @@
   "links": {
     "formation": ["https://sos.ks.gov/business/business.html"],
     "annualReport": ["https://sos.ks.gov/businesses/information-reports.html"],
-    "uiRegistration": ["https://www.dol.ks.gov/employers/employer-services/unemployment-tax"],
-    "withholding": ["https://www.ksrevenue.gov/bustaxtypeswh.html"],
-    "salesTax": ["https://www.ksrevenue.gov/bustaxtypessales.html"],
-    "entityTax": ["https://www.ksrevenue.gov/bustaxtypescorp.html"],
-    "laborPosters": ["https://www.dol.ks.gov/employers/workplace-laws/posters-in-the-workplace"]
+    "uiRegistration": [
+      "https://www.dol.ks.gov/employers/workplace-laws/posters-in-the-workplace/employers/employer-services/unemployment-tax"
+    ],
+    "withholding": ["https://www.ksrevenue.gov/bustaxtypescorp.html/bustaxtypeswh.html"],
+    "salesTax": ["https://www.ksrevenue.gov/bustaxtypescorp.html/bustaxtypessales.html"],
+    "entityTax": ["https://www.ksrevenue.gov/bustaxtypescorp.html/bustaxtypescorp.html"],
+    "laborPosters": [
+      "https://www.dol.ks.gov/employers/workplace-laws/posters-in-the-workplace/employers/workplace-laws/posters-in-the-workplace"
+    ]
   },
   "verification": {
     "checkedOn": "2026-10-13",

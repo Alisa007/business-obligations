@@ -20,7 +20,9 @@
       "amount": 25
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 50,
+      "note": "Late LLC annual statement penalty after February 15."
     }
   },
   "corpReport": {
@@ -31,7 +33,10 @@
       "amount": 25
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "range",
+      "note": "$10 per month or part of a month after May 15, capped at $50.",
+      "min": 10,
+      "max": 50
     }
   },
   "lpReport": null,
@@ -45,7 +50,8 @@
       "amount": 100
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "none",
+      "note": "Michigan states that limited partnerships and limited liability partnerships do not file these annual reports."
     }
   },
   "llcPublication": null,
@@ -79,6 +85,7 @@
   },
   "businessLicense": null,
   "local": {
+    "url": ["https://www.michigan.gov/business"],
     "title": "City business license",
     "authority": "City clerk",
     "description": "Michigan cities may require local business licenses; several levy city income taxes (e.g., Detroit)."

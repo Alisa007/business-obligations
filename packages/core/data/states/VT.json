@@ -6,11 +6,11 @@
   },
   "revenue": {
     "name": "Vermont Department of Taxes",
-    "url": ["https://tax.vermont.gov"]
+    "url": ["https://tax.vermont.gov/business/corporate-income-tax"]
   },
   "labor": {
     "name": "Vermont Department of Labor",
-    "url": ["https://labor.vermont.gov"]
+    "url": ["https://labor.vermont.gov/mandatory-workplace-posters"]
   },
   "llcReport": {
     "rrule": "FREQ=YEARLY",
@@ -20,7 +20,9 @@
       "amount": 45
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 35,
+      "note": "Reinstatement fee after termination for failure to file an annual report."
     }
   },
   "corpReport": {
@@ -31,7 +33,9 @@
       "amount": 60
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 50,
+      "note": "Reinstatement fee after involuntary termination for failure to file an annual report."
     }
   },
   "lpReport": null,
@@ -46,7 +50,9 @@
       "amount": 45
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 35,
+      "note": "Application/reinstatement fee after loss of good standing for failure to file an annual report."
     }
   },
   "llcPublication": null,
@@ -79,6 +85,7 @@
   },
   "businessLicense": null,
   "local": {
+    "url": ["https://www.vermont.gov/business"],
     "title": "Town licenses and zoning permits",
     "authority": "Town clerk / zoning administrator",
     "description": "Vermont has no general business license; town zoning and local permits apply."
@@ -99,12 +106,12 @@
     "formation": ["https://sos.vermont.gov/business-services/business-filings/domestic-formation/llc"],
     "annualReport": ["https://sos.vermont.gov/business-services/business-filings/annualbiennial-reports"],
     "uiRegistration": [
-      "https://labor.vermont.gov/unemployment-insurance/unemployment-information-employers/employer-online-services/register-ui"
+      "https://labor.vermont.gov/mandatory-workplace-posters/unemployment-insurance/unemployment-information-employers/employer-online-services/register-ui"
     ],
-    "withholding": ["https://tax.vermont.gov/business/withholding"],
-    "salesTax": ["https://tax.vermont.gov/business/sales-and-use-tax"],
-    "entityTax": ["https://tax.vermont.gov/business/corporate-income-tax"],
-    "laborPosters": ["https://labor.vermont.gov/mandatory-workplace-posters"],
+    "withholding": ["https://tax.vermont.gov/business/corporate-income-tax/business/withholding"],
+    "salesTax": ["https://tax.vermont.gov/business/corporate-income-tax/business/sales-and-use-tax"],
+    "entityTax": ["https://tax.vermont.gov/business/corporate-income-tax/business/corporate-income-tax"],
+    "laborPosters": ["https://labor.vermont.gov/mandatory-workplace-posters/mandatory-workplace-posters"],
     "dba": ["https://sos.vermont.gov/business-services/business-filings/assumed-name"]
   },
   "verification": {

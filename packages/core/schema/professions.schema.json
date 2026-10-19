@@ -42,7 +42,7 @@
             "^[A-Z]{2}$": {
               "type": "object",
               "additionalProperties": false,
-              "required": ["name"],
+              "required": ["name", "url"],
               "properties": {
                 "name": {
                   "type": "string",

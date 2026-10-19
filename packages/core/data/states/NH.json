@@ -6,11 +6,11 @@
   },
   "revenue": {
     "name": "New Hampshire Department of Revenue Administration",
-    "url": ["https://www.revenue.nh.gov"]
+    "url": ["https://www.revenue.nh.gov/taxes-glance/business-taxes"]
   },
   "labor": {
     "name": "New Hampshire Employment Security",
-    "url": ["https://www.nhes.nh.gov"]
+    "url": ["https://www.dol.nh.gov/resource-center/mandatory-posters"]
   },
   "llcReport": {
     "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
@@ -64,6 +64,9 @@
   "paidSickLeave": null,
   "businessLicense": null,
   "local": {
+    "url": [
+      "https://www.revenue.nh.gov/taxes-glance/business-taxes/licenses-certifications/tax-licenses-permits"
+    ],
     "title": "Town/city licenses",
     "authority": "Town or city clerk",
     "description": "New Hampshire has no general local business license; local zoning and health permits apply."
@@ -83,9 +86,13 @@
   "links": {
     "formation": ["https://www.sos.nh.gov/corporations-0"],
     "annualReport": ["https://www.sos.nh.gov/corporations-0/file-annual-report"],
-    "uiRegistration": ["https://www.nhes.nh.gov/employers/register-your-company-nh"],
-    "salesTax": ["https://www.revenue.nh.gov/taxes-glance/meals-rooms-rentals-tax"],
-    "entityTax": ["https://www.revenue.nh.gov/taxes-glance/business-taxes"],
+    "uiRegistration": [
+      "https://www.dol.nh.gov/resource-center/mandatory-posters/employers/register-your-company-nh"
+    ],
+    "salesTax": [
+      "https://www.revenue.nh.gov/taxes-glance/business-taxes/taxes-glance/meals-rooms-rentals-tax"
+    ],
+    "entityTax": ["https://www.revenue.nh.gov/taxes-glance/business-taxes/taxes-glance/business-taxes"],
     "laborPosters": ["https://www.dol.nh.gov/resource-center/mandatory-posters"],
     "dba": ["https://www.sos.nh.gov/corporations-0/forms-and-fees/trade-names"]
   },

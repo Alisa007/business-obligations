@@ -2,15 +2,15 @@
   "name": "Utah",
   "filing": {
     "name": "Utah Division of Corporations and Commercial Code",
-    "url": ["https://corporations.utah.gov"]
+    "url": ["https://commerce.utah.gov/corporations/business-entities/"]
   },
   "revenue": {
     "name": "Utah State Tax Commission",
-    "url": ["https://tax.utah.gov"]
+    "url": ["https://tax.utah.gov/business/corporate-income-tax/c-corp-tax/"]
   },
   "labor": {
     "name": "Utah Department of Workforce Services",
-    "url": ["https://jobs.utah.gov"]
+    "url": ["https://jobs.utah.gov/employer/business/empposter.pdf"]
   },
   "llcReport": {
     "title": "File Annual Renewal",
@@ -20,7 +20,9 @@
       "amount": 18
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 10,
+      "note": "Late annual report/renewal fee."
     }
   },
   "corpReport": {
@@ -31,7 +33,9 @@
       "amount": 18
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 10,
+      "note": "Late annual report/renewal fee."
     }
   },
   "llcPublication": null,
@@ -61,6 +65,7 @@
   "paidSickLeave": null,
   "businessLicense": null,
   "local": {
+    "url": ["https://www.utah.gov/business/"],
     "title": "City or county business license",
     "authority": "City or county business licensing office",
     "description": "Utah cities and counties require business licenses."
@@ -80,11 +85,15 @@
   "links": {
     "formation": ["https://commerce.utah.gov/corporations/business-entities/"],
     "annualReport": ["https://commerce.utah.gov/corporations/renewal-process/"],
-    "uiRegistration": ["https://jobs.utah.gov/ui/employer.html"],
-    "withholding": ["https://tax.utah.gov/business/withholding-overview/withholding/"],
-    "salesTax": ["https://tax.utah.gov/business/sales-tax/sales/"],
-    "entityTax": ["https://tax.utah.gov/business/corporate-income-tax/c-corp-tax/"],
-    "laborPosters": ["https://jobs.utah.gov/employer/business/empposter.pdf"],
+    "uiRegistration": ["https://jobs.utah.gov/employer/business/empposter.pdf/ui/employer.html"],
+    "withholding": [
+      "https://tax.utah.gov/business/corporate-income-tax/c-corp-tax//business/withholding-overview/withholding/"
+    ],
+    "salesTax": ["https://tax.utah.gov/business/corporate-income-tax/c-corp-tax//business/sales-tax/sales/"],
+    "entityTax": [
+      "https://tax.utah.gov/business/corporate-income-tax/c-corp-tax//business/corporate-income-tax/c-corp-tax/"
+    ],
+    "laborPosters": ["https://jobs.utah.gov/employer/business/empposter.pdf/employer/business/empposter.pdf"],
     "dba": ["https://commerce.utah.gov/corporations/business-entities/dba/"]
   },
   "verification": {

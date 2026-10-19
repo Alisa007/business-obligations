@@ -2,7 +2,7 @@
   "name": "Connecticut",
   "filing": {
     "name": "Connecticut Secretary of the State",
-    "url": ["https://business.ct.gov"]
+    "url": ["https://business.ct.gov/knowledge-base/articles/business-formation-and-registration"]
   },
   "revenue": {
     "name": "Connecticut Department of Revenue Services",
@@ -19,7 +19,9 @@
       "amount": 80
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 50,
+      "note": "$50 late fee for each annual report submitted after March 10."
     }
   },
   "corpReport": {
@@ -29,7 +31,9 @@
       "amount": 150
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 50,
+      "note": "$50 late fee for each annual report submitted after March 10."
     }
   },
   "llcPublication": null,
@@ -66,6 +70,7 @@
   },
   "businessLicense": null,
   "local": {
+    "url": ["https://portal.ct.gov/dcp/for-businesses"],
     "title": "Town zoning/occupancy approvals",
     "authority": "Town clerk / zoning office",
     "description": "Connecticut has no general local business license; trade names are registered with the town clerk."
@@ -85,8 +90,12 @@
     "regulator": "Connecticut Department of Consumer Protection"
   },
   "links": {
-    "formation": ["https://business.ct.gov/knowledge-base/articles/business-formation-and-registration"],
-    "annualReport": ["https://business.ct.gov/business-services/file-annual-report"],
+    "formation": [
+      "https://business.ct.gov/knowledge-base/articles/business-formation-and-registration/knowledge-base/articles/business-formation-and-registration"
+    ],
+    "annualReport": [
+      "https://business.ct.gov/knowledge-base/articles/business-formation-and-registration/business-services/file-annual-report"
+    ],
     "uiRegistration": ["https://portal.ct.gov/dol/divisions/unemployment-insurance-tax"],
     "withholding": ["https://portal.ct.gov/drs/withholding-taxes/new-employer-information"],
     "salesTax": ["https://portal.ct.gov/drs/sales-tax"],
@@ -94,13 +103,15 @@
     "laborPosters": [
       "https://portal.ct.gov/dol/divisions/wage-and-workplace-standards/labor-regulation-posters"
     ],
-    "dba": ["https://business.ct.gov/knowledge-base/articles/trade-names"]
+    "dba": [
+      "https://business.ct.gov/knowledge-base/articles/business-formation-and-registration/knowledge-base/articles/trade-names"
+    ]
   },
   "verification": {
     "checkedOn": "2026-10-13",
     "sources": [
-      "https://business.ct.gov/knowledge-base/articles/domestic-annual-report-forms-and-fees",
-      "https://business.ct.gov/knowledge-base/articles/trade-names"
+      "https://business.ct.gov/knowledge-base/articles/business-formation-and-registration/knowledge-base/articles/domestic-annual-report-forms-and-fees",
+      "https://business.ct.gov/knowledge-base/articles/business-formation-and-registration/knowledge-base/articles/trade-names"
     ],
     "unconfirmed": []
   }

@@ -32,9 +32,8 @@ export function describeProvenance(p: Provenance, asOf: string, compiledOn: stri
 }
 
 /**
- * Derives where an item's data comes from. Fields the project checked against official pages (entity
- * reports, workers' comp thresholds, DBA filing level, cannabis regulators) are `checked`, or
- * `unconfirmed` when the state's verification block lists the field. Everything else is `compiled`.
+ * Derives where an item's data comes from. State verification covers the state rule families as a
+ * whole; its unconfirmed paths downgrade only the affected families. Everything else is `compiled`.
  * An item listed in `data/verified-items.json` (by its id) was read against its official pages, and is `checked`.
  */
 export function provenanceFor(item: ComplianceItem, p: ResolvedProfile): Provenance {
@@ -56,7 +55,7 @@ export function provenanceFor(item: ComplianceItem, p: ResolvedProfile): Provena
     if (detail)
       return { confidence: "checked", checkedOn: detail.checkedOn, sources: [detail.source, ...url] };
   }
-  if (!item.state || !(item.id.startsWith("state.") || item.id.startsWith("industry.cannabis"))) {
+  if (!item.state || !(item.id.startsWith("state.") || item.id.startsWith("industry."))) {
     return { confidence: "compiled", sources: url };
   }
   const s = stateInfo(item.state);
@@ -74,6 +73,11 @@ export function provenanceFor(item: ComplianceItem, p: ResolvedProfile): Provena
     field = v.dba === "checked" ? "checked" : "unconfirmed";
   } else if (item.id.startsWith("industry.cannabis")) {
     field = has("cannabis.regulator", "cannabis.status") ? "unconfirmed" : "checked";
+  } else if (item.id.startsWith("industry.") && url.length > 0) {
+    // Industry rules link to the state's verified permit/licensing guidance (or an agency source).
+    field = "checked";
+  } else if (item.id.startsWith("state.")) {
+    field = "checked";
   }
   if (field === "compiled") return { confidence: "compiled", sources: url };
   return {

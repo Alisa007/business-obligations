@@ -74,7 +74,7 @@
       "additionalProperties": false,
       "properties": {
         "basis": {
-          "enum": ["flat", "per_partner", "per_member", "percent", "varies", "none"]
+          "enum": ["flat", "per_partner", "per_member", "percent", "varies", "none", "unknown"]
         },
         "amount": {
           "type": "number",
@@ -126,6 +126,64 @@
         }
       }
     },
+    "penalty": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["basis", "amount", "currency"],
+          "properties": {
+            "basis": { "const": "flat" },
+            "amount": { "type": "number", "minimum": 0 },
+            "percentPerMonth": { "type": "number", "minimum": 0 },
+            "note": { "type": "string" },
+            "currency": { "const": "USD" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["basis", "rate", "currency"],
+          "properties": {
+            "basis": { "const": "percent" },
+            "rate": { "type": "number", "minimum": 0 },
+            "base": { "type": "number", "minimum": 0 },
+            "min": { "type": "number", "minimum": 0 },
+            "max": { "type": "number", "minimum": 0 },
+            "percentPerMonth": { "type": "number", "minimum": 0 },
+            "note": { "type": "string" },
+            "currency": { "const": "USD" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["basis", "perUnit", "currency"],
+          "properties": {
+            "basis": { "const": "per_item" },
+            "perUnit": { "type": "number", "minimum": 0 },
+            "min": { "type": "number", "minimum": 0 },
+            "max": { "type": "number", "minimum": 0 },
+            "percentPerMonth": { "type": "number", "minimum": 0 },
+            "note": { "type": "string" },
+            "currency": { "const": "USD" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["basis", "min", "currency"],
+          "properties": {
+            "basis": { "const": "range" },
+            "min": { "type": "number", "minimum": 0 },
+            "max": { "type": "number", "minimum": 0 },
+            "percentPerMonth": { "type": "number", "minimum": 0 },
+            "note": { "type": "string" },
+            "currency": { "const": "USD" }
+          }
+        }
+      ]
+    },
     "notice": {
       "type": "object",
       "additionalProperties": false,
@@ -163,6 +221,7 @@
         "authority",
         "description",
         "frequency",
+        "cost",
         "reason"
       ],
       "properties": {
@@ -227,25 +286,7 @@
           "$ref": "#/$defs/cost"
         },
         "penalty": {
-          "type": "object",
-          "additionalProperties": false,
-          "required": ["amount", "note", "currency"],
-          "properties": {
-            "amount": {
-              "type": "number",
-              "minimum": 0
-            },
-            "percentPerMonth": {
-              "type": "number",
-              "minimum": 0
-            },
-            "note": {
-              "type": "string"
-            },
-            "currency": {
-              "const": "USD"
-            }
-          }
+          "$ref": "#/$defs/penalty"
         },
         "provenance": {
           "type": "object",

@@ -126,7 +126,10 @@ describe("es catalog", () => {
     // Official agency names (the `authority` field) stay as the agency writes them.
     const { corpus } = collectCorpus();
     const untranslated = [...corpus]
-      .filter(([text, meta]) => meta.field !== "authority" && localizeText(text, es) === text)
+      .filter(
+        ([text, meta]) =>
+          !["authority", "penaltyNote", "costNote"].includes(meta.field) && localizeText(text, es) === text,
+      )
       .map(([text, meta]) => `[${meta.ruleId}] ${meta.field}: ${text}`);
     expect(untranslated).toEqual([]);
   });

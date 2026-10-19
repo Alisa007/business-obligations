@@ -6,11 +6,11 @@
   },
   "revenue": {
     "name": "Mississippi Department of Revenue",
-    "url": ["https://www.dor.ms.gov"]
+    "url": ["https://www.dor.ms.gov/business/corporate-income-and-franchise-tax"]
   },
   "labor": {
     "name": "Mississippi Department of Employment Security",
-    "url": ["https://mdes.ms.gov"]
+    "url": ["https://mdes.ms.gov/employers/unemployment-tax/employer-resources/required-posters/"]
   },
   "llcReport": {
     "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
@@ -20,7 +20,9 @@
       "amount": 0
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 50,
+      "note": "Reinstatement fee following administrative dissolution; Mississippi publishes no separate late annual-report fine."
     }
   },
   "corpReport": {
@@ -31,7 +33,9 @@
       "amount": 25
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 50,
+      "note": "Reinstatement fee following administrative dissolution; Mississippi publishes no separate late annual-report fine."
     }
   },
   "lpReport": null,
@@ -63,6 +67,7 @@
   "paidSickLeave": null,
   "businessLicense": null,
   "local": {
+    "url": ["https://www.sos.ms.gov/business-services-external-affairs"],
     "title": "Privilege license",
     "authority": "Municipal clerk / State privilege license (MS DOR)",
     "description": "Mississippi cities and the state issue privilege licenses for businesses and professions."
@@ -82,11 +87,19 @@
   "links": {
     "formation": ["https://www.sos.ms.gov/business-services-external-affairs"],
     "annualReport": ["https://www.sos.ms.gov/business-services/annual-reports"],
-    "uiRegistration": ["https://mdes.ms.gov/employers/"],
-    "withholding": ["https://www.dor.ms.gov/business/withholding-tax"],
-    "salesTax": ["https://www.dor.ms.gov/sales-and-use-tax"],
-    "entityTax": ["https://www.dor.ms.gov/business/corporate-income-and-franchise-tax"],
-    "laborPosters": ["https://mdes.ms.gov/employers/unemployment-tax/employer-resources/required-posters/"]
+    "uiRegistration": [
+      "https://mdes.ms.gov/employers/unemployment-tax/employer-resources/required-posters//employers/"
+    ],
+    "withholding": [
+      "https://www.dor.ms.gov/business/corporate-income-and-franchise-tax/business/withholding-tax"
+    ],
+    "salesTax": ["https://www.dor.ms.gov/business/corporate-income-and-franchise-tax/sales-and-use-tax"],
+    "entityTax": [
+      "https://www.dor.ms.gov/business/corporate-income-and-franchise-tax/business/corporate-income-and-franchise-tax"
+    ],
+    "laborPosters": [
+      "https://mdes.ms.gov/employers/unemployment-tax/employer-resources/required-posters//employers/unemployment-tax/employer-resources/required-posters/"
+    ]
   },
   "verification": {
     "checkedOn": "2026-10-13",

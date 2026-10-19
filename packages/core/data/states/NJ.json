@@ -19,7 +19,9 @@
       "amount": 75
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 75,
+      "note": "Reinstatement filing fee after revocation; delinquent annual reports and current report fees are additional."
     }
   },
   "corpReport": {
@@ -29,7 +31,9 @@
       "amount": 75
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 95,
+      "note": "Reinstatement fee for a for-profit corporation, including $75 reinstatement and $20 tax-clearance filing fee; delinquent annual reports are additional."
     }
   },
   "llcPublication": null,
@@ -66,6 +70,7 @@
   },
   "businessLicense": null,
   "local": {
+    "url": ["https://business.nj.gov/pages/starter-kits"],
     "title": "Municipal business registration",
     "authority": "Municipal clerk",
     "description": "Municipalities require certificates of occupancy and, in many towns, business registration."

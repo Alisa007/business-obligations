@@ -2,6 +2,7 @@ import { BUNDLED_CHANGES } from "./changes";
 import { addDays, isIsoDate, todayIso } from "./iso";
 import { evaluate, InvalidProfileError, type EvaluateOptions } from "./engine";
 import { occurrencesBetween } from "./dates";
+import { describePenalty } from "./fee";
 import type { BusinessProfile, ComplianceItem } from "./types";
 import type { ComplianceResult } from "./engine";
 
@@ -143,10 +144,7 @@ export function toICS(events: CalendarEvent[], options: IcsOptions = {}): string
     const parts = [e.authority];
     if (e.deadline) parts.push(`Deadline: ${e.deadline}`);
     if (e.cost?.amount !== undefined) parts.push(`Fee: $${e.cost.amount}`);
-    if (e.penalty)
-      parts.push(
-        `Late penalty: $${e.penalty.amount}${e.penalty.percentPerMonth ? ` + ${e.penalty.percentPerMonth}%/month` : ""}`,
-      );
+    if (e.penalty) parts.push(`Late penalty: ${describePenalty(e.penalty)}`);
     if (e.url) parts.push(...e.url);
     lines.push(
       "BEGIN:VEVENT",

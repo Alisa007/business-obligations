@@ -6,11 +6,11 @@
   },
   "revenue": {
     "name": "Virginia Department of Taxation",
-    "url": ["https://www.tax.virginia.gov"]
+    "url": ["https://www.tax.virginia.gov/corporation-income-tax"]
   },
   "labor": {
     "name": "Virginia Employment Commission",
-    "url": ["https://www.vec.virginia.gov"]
+    "url": ["https://doli.virginia.gov/resources/required-posters/"]
   },
   "llcReport": {
     "title": "Pay Annual Registration Fee",
@@ -33,7 +33,10 @@
       "note": "up to 5,000 authorized shares; scales above"
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "percent",
+      "note": "Late stock-corporation registration fee penalty; 10% of the annual fee or $10, whichever is higher.",
+      "rate": 10,
+      "min": 10
     }
   },
   "lpReport": {
@@ -88,6 +91,7 @@
   "paidSickLeave": null,
   "businessLicense": null,
   "local": {
+    "url": ["https://www.scc.virginia.gov/businesses/new-business-resources/"],
     "title": "City/county BPOL license",
     "authority": "Local commissioner of revenue",
     "description": "Virginia localities require a Business, Professional and Occupational License (BPOL)."
@@ -108,10 +112,10 @@
   "links": {
     "formation": ["https://www.scc.virginia.gov/businesses/"],
     "annualReport": ["https://www.scc.virginia.gov/businesses/business-faqs/annual-registration-fees/"],
-    "uiRegistration": ["https://www.vec.virginia.gov/employers"],
-    "withholding": ["https://www.tax.virginia.gov/withholding-tax"],
-    "salesTax": ["https://www.tax.virginia.gov/retail-sales-and-use-tax"],
-    "entityTax": ["https://www.tax.virginia.gov/corporation-income-tax"],
+    "uiRegistration": ["https://doli.virginia.gov/resources/required-posters//employers"],
+    "withholding": ["https://www.tax.virginia.gov/corporation-income-tax/withholding-tax"],
+    "salesTax": ["https://www.tax.virginia.gov/corporation-income-tax/retail-sales-and-use-tax"],
+    "entityTax": ["https://www.tax.virginia.gov/corporation-income-tax/corporation-income-tax"],
     "laborPosters": ["https://doli.virginia.gov/resources/required-posters/"],
     "dba": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"]
   },

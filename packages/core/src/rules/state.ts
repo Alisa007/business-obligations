@@ -158,6 +158,7 @@ function employerItems(x: Presence, p: ResolvedProfile): ItemDraft[] {
           : `Required at: ${s.workersComp.threshold}.`,
       frequency: "ongoing",
       reason: `${reason} meets the ${s.name} threshold (${s.workersComp.threshold})`,
+      url: s.links.laborPosters,
     });
   }
 
@@ -171,6 +172,7 @@ function employerItems(x: Presence, p: ResolvedProfile): ItemDraft[] {
       description: s.paidLeave.description,
       rrule: "FREQ=MONTHLY;INTERVAL=3",
       reason: `${s.name} has a mandatory paid leave/disability program; ${reason}`,
+      url: s.links.laborPosters,
     });
   }
   return items;
@@ -274,6 +276,7 @@ export const stateRules: Rule[] = [
       description: info(p.formationState).llcPublication!,
       frequency: "once",
       reason: `LLC formed in ${p.formationState}`,
+      url: info(p.formationState).links.formation,
     }),
   },
   {
@@ -456,6 +459,7 @@ export const stateRules: Rule[] = [
                   description: `Many ${s.name} cities and counties administer and collect their own sales and use taxes separately from the state; sellers register and file with each jurisdiction where required.`,
                   rrule: "FREQ=MONTHLY",
                   reason,
+                  url: s.links.salesTax ?? s.revenue.url,
                 },
               ]
             : [];
@@ -531,7 +535,7 @@ export const stateRules: Rule[] = [
           : `${s.name} registers sole proprietors' and partnerships' assumed names at the ${where} level, in each ${where} where business is conducted.`,
         frequency: "once" as const,
         reason: "Business operates under a trade name",
-        url: state ? (s.links.dba ?? agency.url) : undefined,
+        url: state ? (s.links.dba ?? agency.url) : s.local.url,
       };
     },
   },
@@ -651,6 +655,7 @@ export const extraStateRules: Rule[] = [
           description: `${info(x.state).name} requires employers with ${info(x.state).paidSickLeave!.minEmployees}+ employees to provide paid sick leave, post notice and keep records.`,
           frequency: "ongoing" as const,
           reason: `${x.employeeCount} employees in ${x.state}, at or above the state's ${info(x.state).paidSickLeave!.minEmployees}-employee threshold`,
+          url: info(x.state).links.laborPosters,
         })),
   },
   {

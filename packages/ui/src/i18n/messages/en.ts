@@ -43,6 +43,8 @@ export const en: Messages = {
   all: "All",
   noMatch: "No obligations match these filters.",
   whyItApplies: "Why it applies",
+  feeLabel: "Fee",
+  notListed: "Not listed",
   replacedBy: "Replaced by",
   appliesWhen: "Applies when",
   yes: "yes",

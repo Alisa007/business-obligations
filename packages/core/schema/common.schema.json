@@ -13,8 +13,8 @@
     "httpsUrl": {
       "type": "string",
       "format": "uri",
-      "pattern": "^https://",
-      "description": "An https URL."
+      "pattern": "^https://[^/?#]+/(?:[^?#/][^#]*|\\?[^#]+)(?:#.*)?$",
+      "description": "A specific https source page; bare domains and root URLs are not valid citations."
     },
     "httpsUrlOrList": {
       "description": "One https URL, or a list when the answer is spread over several official pages.",
@@ -171,24 +171,67 @@
       "required": ["basis"],
       "properties": {
         "basis": {
-          "enum": ["flat", "none", "unknown"],
-          "description": "flat = a stated late or non-compliance charge; none = the government states no penalty; unknown = not yet researched."
+          "enum": ["flat", "percent", "per_item", "range", "none", "unknown"],
+          "description": "flat = fixed charge; percent = percentage of a stated base; per_item = charge per filing or unit; range = a published minimum/maximum; none = no penalty; unknown = not yet researched."
         },
         "amount": { "type": "number", "minimum": 0 },
-        "percentPerMonth": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Additional interest or penalty as a percentage per month."
-        },
-        "note": {
-          "type": "string",
-          "minLength": 3,
-          "description": "When the penalty applies or what makes it special (\"cannot be waived\"). Omit when it would only say \"late fee\"."
-        }
+        "percentPerMonth": { "type": "number", "minimum": 0 },
+        "note": { "type": "string", "minLength": 3 },
+        "rate": { "type": "number", "minimum": 0 },
+        "base": { "type": "number", "minimum": 0 },
+        "perUnit": { "type": "number", "minimum": 0 },
+        "min": { "type": "number", "minimum": 0 },
+        "max": { "type": "number", "minimum": 0 }
       },
-      "if": { "properties": { "basis": { "const": "flat" } } },
-      "then": { "required": ["amount"] },
-      "else": { "not": { "anyOf": [{ "required": ["amount"] }, { "required": ["percentPerMonth"] }] } }
+      "allOf": [
+        {
+          "if": { "properties": { "basis": { "const": "flat" } } },
+          "then": {
+            "required": ["amount"],
+            "not": {
+              "anyOf": [{ "required": ["rate"] }, { "required": ["perUnit"] }, { "required": ["min"] }]
+            }
+          }
+        },
+        {
+          "if": { "properties": { "basis": { "const": "percent" } } },
+          "then": {
+            "required": ["rate"],
+            "not": { "anyOf": [{ "required": ["amount"] }, { "required": ["perUnit"] }] }
+          }
+        },
+        {
+          "if": { "properties": { "basis": { "const": "per_item" } } },
+          "then": {
+            "required": ["perUnit"],
+            "not": { "anyOf": [{ "required": ["amount"] }, { "required": ["rate"] }] }
+          }
+        },
+        {
+          "if": { "properties": { "basis": { "const": "range" } } },
+          "then": {
+            "required": ["min"],
+            "not": {
+              "anyOf": [{ "required": ["amount"] }, { "required": ["rate"] }, { "required": ["perUnit"] }]
+            }
+          }
+        },
+        {
+          "if": { "properties": { "basis": { "enum": ["none", "unknown"] } } },
+          "then": {
+            "not": {
+              "anyOf": [
+                { "required": ["amount"] },
+                { "required": ["rate"] },
+                { "required": ["perUnit"] },
+                { "required": ["min"] },
+                { "required": ["max"] },
+                { "required": ["percentPerMonth"] }
+              ]
+            }
+          }
+        }
+      ]
     },
     "feeDetail": {
       "type": "object",

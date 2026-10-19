@@ -2,15 +2,15 @@
   "name": "California",
   "filing": {
     "name": "California Secretary of State",
-    "url": ["https://bizfileonline.sos.ca.gov"]
+    "url": ["https://www.sos.ca.gov/business-programs/business-entities/forms"]
   },
   "revenue": {
     "name": "California Franchise Tax Board",
-    "url": ["https://www.ftb.ca.gov"]
+    "url": ["https://www.ftb.ca.gov/file/business/types/limited-liability-company/index.html"]
   },
   "labor": {
     "name": "California Employment Development Department",
-    "url": ["https://edd.ca.gov"]
+    "url": ["https://www.dir.ca.gov/dlse/RequiredPosters.html"]
   },
   "llcReport": {
     "title": "File Statement of Information",
@@ -21,7 +21,9 @@
       "amount": 20
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 250,
+      "note": "Franchise Tax Board penalty for failing to file the required Statement of Information."
     }
   },
   "corpReport": {
@@ -33,7 +35,9 @@
       "amount": 25
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 250,
+      "note": "Franchise Tax Board penalty for failing to file the required Statement of Information."
     }
   },
   "lpReport": null,
@@ -45,7 +49,7 @@
     "permit": "Seller's permit",
     "agency": {
       "name": "California Department of Tax and Fee Administration",
-      "url": ["https://www.cdtfa.ca.gov"]
+      "url": ["https://cdtfa.ca.gov/formspubs/pub107/applying-for-a-sellers-permit.htm"]
     },
     "alternative": null
   },
@@ -75,6 +79,7 @@
   },
   "businessLicense": null,
   "local": {
+    "url": ["https://cdn.business.ca.gov/resources/permit-and-regulatory-assistance/"],
     "title": "City business tax certificate",
     "authority": "City finance/business tax office",
     "description": "Every California city levies a business license tax; unincorporated areas use the county. Fictitious names are filed with the county clerk."
@@ -96,10 +101,12 @@
   "links": {
     "formation": ["https://www.sos.ca.gov/business-programs/business-entities/forms"],
     "annualReport": ["https://www.sos.ca.gov/business-programs/business-entities/statements"],
-    "uiRegistration": ["https://edd.ca.gov/en/payroll_taxes/"],
-    "withholding": ["https://edd.ca.gov/en/payroll_taxes/"],
+    "uiRegistration": ["https://www.dir.ca.gov/dlse/RequiredPosters.html/en/payroll_taxes/"],
+    "withholding": ["https://www.dir.ca.gov/dlse/RequiredPosters.html/en/payroll_taxes/"],
     "salesTax": ["https://cdtfa.ca.gov/formspubs/pub107/applying-for-a-sellers-permit.htm"],
-    "entityTax": ["https://www.ftb.ca.gov/file/business/types/limited-liability-company/index.html"],
+    "entityTax": [
+      "https://www.ftb.ca.gov/file/business/types/limited-liability-company/index.html/file/business/types/limited-liability-company/index.html"
+    ],
     "laborPosters": ["https://www.dir.ca.gov/dlse/RequiredPosters.html"],
     "dba": ["https://calosba.ca.gov/for-small-businesses-and-non-profits/set-up-your-business-in-california/"]
   },
