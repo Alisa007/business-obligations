@@ -5,7 +5,14 @@ import { defaultConfig } from "@tamagui/config/v6";
 import { TamaguiProvider, createTamagui } from "tamagui";
 import { localizePlan, planLaunch, type BusinessProfile } from "business-obligations";
 import { es } from "business-obligations/locales/es";
-import { filterObligations, LaunchList, messages, ObligationsList, type ObligationFilters } from "../index";
+import {
+  ExternalLink,
+  filterObligations,
+  LaunchList,
+  messages,
+  ObligationsList,
+  type ObligationFilters,
+} from "../index";
 
 const profile: BusinessProfile = {
   entityType: "llc",
@@ -167,6 +174,19 @@ describe("business-obligations-ui", () => {
     expect(html).toContain("File formation");
     expect(html).toContain("Known fees");
     expect(html).toContain('type="checkbox"');
+  });
+
+  it("opens external links in new tabs and nofollows non-government links", () => {
+    const html = render(
+      <>
+        <ExternalLink url="https://www.irs.gov/">Government</ExternalLink>
+        <ExternalLink url="https://github.com/">Other</ExternalLink>
+      </>,
+    );
+    expect(html).toContain('href="https://github.com/"');
+    expect(html).toContain('target="_blank"');
+    expect(html).toContain('rel="noopener noreferrer"');
+    expect(html).toContain('rel="nofollow noopener noreferrer"');
   });
 
   it("renders the obligation context, text deadlines, and category counts", () => {
