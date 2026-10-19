@@ -58,6 +58,7 @@ export const FREQUENCIES = [
   "annual",
   "biennial",
   "every_five_years",
+  "semiannual",
   "quarterly",
   "monthly",
   "per_event",

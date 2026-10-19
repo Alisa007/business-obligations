@@ -20,6 +20,16 @@ function firstOccurrence(
   return undefined;
 }
 
+/** The date of a quarterly set that falls in the calendar quarter containing the formation month. */
+function quarterDate(
+  due: Extract<Due, { type: "multi" }>,
+  formationDate: string | undefined,
+): { month: number; day: number } | undefined {
+  if (!formationDate) return undefined;
+  const month = Math.ceil(Number(formationDate.slice(5, 7)) / 3) * 3;
+  return due.dates.find((d) => d.month === month);
+}
+
 export interface DueContext {
   asOf: string;
   /** ISO date of formation, when known. */
@@ -47,6 +57,17 @@ export function nextDueDate(due: Due, ctx: DueContext): string | undefined {
     case "date":
       return due.date >= ctx.asOf ? due.date : undefined;
     case "multi": {
+      if (due.quarterOf) {
+        const d = quarterDate(due, ctx.formationDate);
+        if (!d) return undefined;
+        // Annual reports are first due in the year after formation.
+        const fy = Number(ctx.formationDate!.slice(0, 4));
+        for (let y = fy + 1; y <= Number(ctx.asOf.slice(0, 4)) + 2; y++) {
+          const out = iso(y, d.month, Math.min(d.day, lastDay(y, d.month)));
+          if (out >= ctx.asOf) return out;
+        }
+        return undefined;
+      }
       const all = due.dates
         .map((d) => firstOccurrence(ctx.asOf, d.month, d.day, () => true))
         .filter((d): d is string => !!d)
@@ -110,6 +131,13 @@ export function occurrencesBetween(
       push(due.date);
       break;
     case "multi":
+      if (due.quarterOf) {
+        const d = quarterDate(due, ctx.formationDate);
+        if (!d) return [];
+        for (let y = Number(ctx.formationDate!.slice(0, 4)) + 1; y <= y1; y++)
+          push(iso(y, d.month, Math.min(d.day, lastDay(y, d.month))));
+        break;
+      }
       for (let y = y0; y <= y1; y++)
         for (const d of due.dates) push(iso(y, d.month, Math.min(d.day, lastDay(y, d.month))));
       break;

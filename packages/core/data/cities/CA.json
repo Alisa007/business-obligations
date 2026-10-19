@@ -364,7 +364,8 @@
         "description": "Fairfield requires every person, partnership, corporation or other entity doing business within city limits to obtain a business license; licenses expire December 31 and must be renewed in January.",
         "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=31",
         "url": "https://www.fairfield.ca.gov/government/city-departments/community-development/building-safety/business-license",
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "checkedOn": "2026-10-19"
       },
       {
         "id": "fairfield.certificate-of-occupancy",
@@ -576,7 +577,8 @@
         "description": "Businesses requiring a regulatory Inglewood business license must submit renewal applications and fees annually by November 1.",
         "rrule": "FREQ=YEARLY;BYMONTH=11;BYMONTHDAY=1",
         "url": "https://www.cityofinglewood.org/371/Business-Licenses",
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "checkedOn": "2026-10-19"
       }
     ],
     "sourceUrl": "https://www.cityofinglewood.org/371/Business-Licenses",
@@ -668,8 +670,9 @@
         "authority": "Los Angeles Office of Finance",
         "description": "Businesses operating in the City of Los Angeles register for the business tax and renew annually; tax is based on gross receipts and business class.",
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
-        "url": "https://finance.lacity.gov/register-new-business",
-        "appliesTo": ["all"]
+        "url": "https://finance.lacity.gov/tax-education/business-tax-registration-renewal/renewal-deadlines-forms-and-online-services",
+        "appliesTo": ["all"],
+        "checkedOn": "2026-10-19"
       }
     ],
     "sourceUrl": "https://finance.lacity.gov/register-new-business",
@@ -993,7 +996,8 @@
           "min": 15,
           "max": 250,
           "note": "depends on business type and size, per year"
-        }
+        },
+        "checkedOn": "2026-10-19"
       }
     ],
     "sourceUrl": "https://www.roseville.ca.gov/departments/finance/licensing/business.php",
@@ -1330,7 +1334,8 @@
         "description": "Certificates expire December 31 and renew from January 1; the city says to renew by the last day of February and treats a certificate as delinquent after March 1.",
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
         "url": "https://toaks.gov/businesslicenses",
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "checkedOn": "2026-10-19"
       }
     ],
     "sourceUrl": "https://toaks.gov/businesslicenses",
@@ -1456,8 +1461,7 @@
         "category": "license",
         "authority": "City of Visalia Business Tax Division",
         "description": "Visalia requires a Business Tax Certificate for businesses operating in the city and requires renewal by January 31 and July 31; delinquent renewals incur the city’s stated penalties and fees.",
-        "rrule": "FREQ=YEARLY",
-        "deadline": "January 31 and July 31",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,7;BYMONTHDAY=-1",
         "url": "https://www.visalia.city/civicax/filebank/blobdload.aspx?BlobID=58108",
         "appliesTo": ["all"]
       },

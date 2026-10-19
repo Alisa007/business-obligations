@@ -13,20 +13,20 @@
     "url": "https://dwd.wisconsin.gov/uitax"
   },
   "llcReport": {
-    "rrule": "FREQ=YEARLY",
-    "deadline": "Last day of the calendar quarter containing the anniversary month",
+    "rrule": "FREQ=YEARLY;BYMONTH=3,6,9,12;BYMONTHDAY=-1",
+    "anchor": "formation_quarter",
     "feeDetail": {
       "basis": "flat",
-      "amount": 25,
+      "amount": 40,
       "online": 25
     }
   },
   "corpReport": {
-    "rrule": "FREQ=YEARLY",
-    "deadline": "Last day of the calendar quarter containing the anniversary month",
+    "rrule": "FREQ=YEARLY;BYMONTH=3,6,9,12;BYMONTHDAY=-1",
+    "anchor": "formation_quarter",
     "feeDetail": {
       "basis": "flat",
-      "amount": 25,
+      "amount": 40,
       "online": 25
     }
   },
@@ -87,7 +87,7 @@
     "dba": "https://dfi.wi.gov/Pages/BusinessServices/Trademarks/GeneralInformation.aspx"
   },
   "verification": {
-    "checkedOn": "2026-10-13",
+    "checkedOn": "2026-10-19",
     "sources": ["https://dfi.wi.gov/Pages/BusinessServices/BusinessEntities/Fees.aspx"],
     "unconfirmed": []
   }

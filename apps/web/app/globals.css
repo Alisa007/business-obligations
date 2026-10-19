@@ -11,3 +11,15 @@ body {
   -webkit-text-size-adjust: 100%;
   overflow-wrap: break-word;
 }
+
+.site-footer {
+  width: 100%;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+  .site-footer {
+    padding-bottom: max(16px, env(safe-area-inset-bottom));
+  }
+}

@@ -308,8 +308,8 @@ describe("ProfileForm", () => {
     expect(html.match(/class="bo-fluid[ "]/g)?.length).toBe(5);
     // the amounts line their inputs up when a label wraps
     expect(html).toContain('class="bo-fluid bo-end"');
-    // hints sit in a tooltip next to the short labels
-    expect(html).toContain("More about Top contractor pay");
+    // money fields stay compact without explanatory tooltips
+    expect(html).not.toContain("More about Top contractor pay");
     // the ZIP code is one of the business group's equal columns, and it goes away without leaving a gap
     expect(html).toContain("ZIP code");
     expect(render(<ProfileForm values={{ state: "AZ" }} />)).not.toContain("ZIP code");

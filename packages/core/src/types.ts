@@ -217,7 +217,8 @@ export type Jurisdiction = (typeof JURISDICTIONS)[number];
 export type Frequency = (typeof FREQUENCIES)[number];
 
 /** The frequencies a recurrence rule expresses. */
-export type RecurringFrequency = "annual" | "biennial" | "every_five_years" | "quarterly" | "monthly";
+export type RecurringFrequency =
+  "annual" | "biennial" | "every_five_years" | "semiannual" | "quarterly" | "monthly";
 
 export interface ComplianceItem {
   id: string;
