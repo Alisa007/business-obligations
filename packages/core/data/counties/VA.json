@@ -669,10 +669,11 @@
         "category": "filing",
         "authority": "Fairfax County Department of Tax Administration",
         "description": "Virginia business tangible personal property returns are filed with the locality's commissioner of the revenue for property held January 1; deadlines are set locally (commonly May 1). Filing is due May 1 (the next business day if it falls on a weekend); payment is due October 5 and no payment is due at filing.",
-        "rrule": "FREQ=YEARLY",
-        "deadline": "Set by the locality",
+        "rrule": "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=1",
         "url": "https://www.fairfaxcounty.gov/taxes/business/understanding-tangible-property-vehicles",
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "deadlineNote": "next business day if it falls on a weekend or county holiday",
+        "checkedOn": "2026-10-18"
       }
     ],
     "checkedOn": "2026-10-13"
@@ -967,10 +968,11 @@
         "title": "Renew the Henrico County business license (BPOL)",
         "category": "license",
         "authority": "Henrico County Finance Department",
-        "description": "Almost every business needs a license before it starts and renews each year. There is normally no license tax under $500,000 of gross receipts, but the license must still be filed; second-half payments after June 15 face a 10% penalty. The renewal date was not stated on the page read.",
-        "rrule": "FREQ=YEARLY",
-        "url": "https://henrico.us/services/business-license",
-        "appliesTo": ["all"]
+        "description": "Almost every business needs a license before it starts and renews each year. There is normally no license tax under $500,000 of gross receipts, but the license must still be filed; second-half payments after June 15 face a 10% penalty. Licenses expire December 31 and the filing is due March 1 to avoid a 10% filing penalty.",
+        "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1",
+        "url": "https://henrico.gov/services/business-license",
+        "appliesTo": ["all"],
+        "checkedOn": "2026-10-18"
       }
     ],
     "checkedOn": "2026-10-16"

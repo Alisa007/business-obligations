@@ -969,8 +969,7 @@
         "category": "filing",
         "authority": "Livingston County Treasurer",
         "description": "The county's 3% guest room occupancy tax is returned every quarter, even when nothing is owed, and returns are filed online (mailed paper returns are no longer accepted).",
-        "rrule": "FREQ=MONTHLY;INTERVAL=3",
-        "deadline": "Within 30 days after each quarter ends",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
         "exemptions": ["Permanent residents for the part of a stay beyond 14 days", "Exempt organizations"],
         "url": "https://livingstoncountyny.gov/168/Occupancy-Tax",
         "appliesTo": ["all"],
@@ -984,7 +983,7 @@
         ]
       }
     ],
-    "checkedOn": "2026-10-15"
+    "checkedOn": "2026-10-18"
   },
   {
     "county": "Madison",
@@ -1122,8 +1121,7 @@
         "category": "filing",
         "authority": "Montgomery County Treasurer",
         "description": "Lodging operators collect the county's 4% occupancy tax and file quarterly returns and payment for periods ending February 28, May 31, August 31 and November 30; due dates are March 20, June 20, September 20 and December 20.",
-        "rrule": "FREQ=MONTHLY;INTERVAL=3",
-        "deadline": "March 20, June 20, September 20 and December 20",
+        "rrule": "FREQ=YEARLY;BYMONTH=3,6,9,12;BYMONTHDAY=20",
         "exemptions": ["Permanent residents occupying a room for at least 30 consecutive days"],
         "url": "https://www.montgomerycountyny.gov/systems/proceedings/resprint.asp?ID=4890",
         "appliesTo": ["all"],

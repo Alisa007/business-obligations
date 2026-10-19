@@ -63,10 +63,11 @@
         "category": "filing",
         "authority": "City of Huntington Finance Division",
         "description": "Any business engaged in activity with the object of gaining economic benefit files a quarterly B&O return listing gross income for the period, including a return showing no activity when there was none. The page does not state a rate and notes that the Retail, Restaurant & Others classification was waived on September 13, 2021.",
-        "rrule": "FREQ=MONTHLY;INTERVAL=3",
-        "deadline": "30 days after each filing period ends (periods end March 31, June 30, September 30 and December 31)",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
         "url": "https://www.cityofhuntington.com/business/taxes-and-fees/b-o-tax/",
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "deadlineNote": "30 days after each calendar quarter ends",
+        "checkedOn": "2026-10-18"
       }
     ],
     "checkedOn": "2026-10-18",

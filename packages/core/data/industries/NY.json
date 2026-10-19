@@ -282,7 +282,7 @@
     "naics": ["459991"],
     "appliesTo": ["all"],
     "url": "https://nyc-business.nyc.gov/nycbusiness/description/cigarette-retail-dealer-license",
-    "checkedOn": "2026-10-16",
+    "checkedOn": "2026-10-18",
     "jurisdiction": "city",
     "appliesWhen": [
       {
@@ -307,7 +307,7 @@
     "naics": ["459991"],
     "appliesTo": ["all"],
     "url": "https://nyc-business.nyc.gov/nycbusiness/description/electronic-cigarette-retail-dealer-license",
-    "checkedOn": "2026-10-16",
+    "checkedOn": "2026-10-18",
     "jurisdiction": "city",
     "appliesWhen": [
       {
@@ -1470,7 +1470,7 @@
     "naics": ["337910", "459510"],
     "appliesTo": ["all"],
     "url": "https://dos.ny.gov/get-bedding-manufacturers-refurbisher-license",
-    "checkedOn": "2026-10-16",
+    "checkedOn": "2026-10-18",
     "rrule": "FREQ=YEARLY",
     "renewal": "Every year",
     "feeDetail": {
@@ -1705,7 +1705,7 @@
     "naics": ["424460", "311710"],
     "appliesTo": ["all"],
     "url": "https://dec.ny.gov/regulatory/permits-licenses/commercial-fishing-and-aquaculture-permits",
-    "checkedOn": "2026-10-16",
+    "checkedOn": "2026-10-18",
     "rrule": "FREQ=YEARLY",
     "feeDetail": {
       "basis": "flat",
@@ -1721,8 +1721,38 @@
     "naics": ["311710", "424460"],
     "appliesTo": ["all"],
     "url": "https://dec.ny.gov/regulatory/permits-licenses/commercial-fishing-and-aquaculture-permits",
-    "checkedOn": "2026-10-16",
-    "rrule": "FREQ=YEARLY"
+    "checkedOn": "2026-10-18",
+    "rrule": "FREQ=YEARLY",
+    "feeDetail": {
+      "basis": "tiered",
+      "tiers": [
+        {
+          "label": "Class A shipper",
+          "basis": "flat",
+          "amount": 300
+        },
+        {
+          "label": "Class B processor",
+          "basis": "flat",
+          "amount": 600
+        },
+        {
+          "label": "Class C reshipper",
+          "basis": "flat",
+          "amount": 200
+        },
+        {
+          "label": "Class D digger/shipper",
+          "basis": "flat",
+          "amount": 75
+        },
+        {
+          "label": "Class E bay scallop shucker/packer",
+          "basis": "flat",
+          "amount": 50
+        }
+      ]
+    }
   },
   {
     "id": "ny.shellfish-digger-permit",
@@ -2268,10 +2298,16 @@
     "naics": ["424480", "424590", "311"],
     "appliesTo": ["all"],
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/2278",
-    "checkedOn": "2026-10-16",
+    "checkedOn": "2026-10-18",
     "rrule": "FREQ=YEARLY",
     "renewal": "Every year",
-    "exemptions": ["Buyers of under $20,000 a year of New York farm products"]
+    "exemptions": ["Buyers of under $20,000 a year of New York farm products"],
+    "feeDetail": {
+      "basis": "varies",
+      "min": 50,
+      "max": 1250,
+      "note": "refundable security fund, by purchase volume"
+    }
   },
   {
     "id": "ny.nyc-hotel-license",
@@ -2304,7 +2340,7 @@
     "naics": ["459210", "4592"],
     "appliesTo": ["all"],
     "url": "https://www.nyc.gov/site/dca/businesses/license-checklist-newsstand.page",
-    "checkedOn": "2026-10-16",
+    "checkedOn": "2026-10-18",
     "jurisdiction": "city",
     "appliesWhen": [
       {
@@ -2315,7 +2351,13 @@
       }
     ],
     "rrule": "FREQ=YEARLY;INTERVAL=2",
-    "renewal": "Every two years"
+    "renewal": "Every two years",
+    "feeDetail": {
+      "basis": "varies",
+      "min": 269,
+      "max": 1076,
+      "note": "paid in two parts, by filing window"
+    }
   },
   {
     "id": "ny.nyc-stoop-line-stand-license",
@@ -2370,7 +2412,7 @@
     "naics": ["444240", "424910", "325311"],
     "appliesTo": ["all"],
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/1915",
-    "checkedOn": "2026-10-16",
+    "checkedOn": "2026-10-18",
     "rrule": "FREQ=YEARLY",
     "renewal": "Every year",
     "feeDetail": {
@@ -2404,9 +2446,14 @@
     "naics": ["115115"],
     "appliesTo": ["all"],
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/2276",
-    "checkedOn": "2026-10-16",
+    "checkedOn": "2026-10-18",
     "rrule": "FREQ=YEARLY",
-    "renewal": "Every year"
+    "renewal": "Every year",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 75,
+      "note": "fingerprint fee"
+    }
   },
   {
     "id": "ny.ski-tramway-registration",
@@ -2417,12 +2464,14 @@
     "naics": ["713920"],
     "appliesTo": ["all"],
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/2837",
-    "checkedOn": "2026-10-16",
+    "checkedOn": "2026-10-18",
     "rrule": "FREQ=YEARLY",
     "renewal": "Every year",
     "feeDetail": {
       "basis": "varies",
-      "min": 25
+      "min": 25,
+      "max": 50,
+      "note": "by type of lift"
     }
   },
   {
@@ -2654,8 +2703,13 @@
     "naics": ["522390", "522292"],
     "appliesTo": ["all"],
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/2531",
-    "checkedOn": "2026-10-16",
-    "rrule": "FREQ=YEARLY"
+    "checkedOn": "2026-10-18",
+    "rrule": "FREQ=YEARLY",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 3100,
+      "note": "investigation fee, paid through NMLS, plus fingerprints"
+    }
   },
   {
     "id": "ny.professional-fund-raiser-registration",
@@ -2666,9 +2720,14 @@
     "naics": ["541890", "561499"],
     "appliesTo": ["all"],
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/3025",
-    "checkedOn": "2026-10-16",
+    "checkedOn": "2026-10-18",
     "rrule": "FREQ=YEARLY",
-    "renewal": "Every year"
+    "renewal": "Every year",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 800,
+      "note": "registration, valid one year"
+    }
   },
   {
     "id": "ny.charitable-gaming-supplier-license",
@@ -2679,9 +2738,14 @@
     "naics": ["339930", "423920"],
     "appliesTo": ["all"],
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/2326",
-    "checkedOn": "2026-10-16",
+    "checkedOn": "2026-10-18",
     "rrule": "FREQ=YEARLY",
-    "renewal": "Every year"
+    "renewal": "Every year",
+    "feeDetail": {
+      "basis": "percent",
+      "rate": 2,
+      "note": "of gross sales, plus a $25 application fee"
+    }
   },
   {
     "id": "ny.racing-track-license",
@@ -2781,9 +2845,14 @@
     "naics": ["484"],
     "appliesTo": ["all"],
     "url": "https://www.dot.ny.gov/divisions/operating/osss/truck/registration-licensing",
-    "checkedOn": "2026-10-16",
+    "checkedOn": "2026-10-18",
     "rrule": "FREQ=YEARLY",
-    "deadline": "Vehicle identification renews each registration year"
+    "deadline": "Vehicle identification renews each registration year",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 10,
+      "note": "per vehicle per year; an intrastate USDOT number is free"
+    }
   },
   {
     "id": "ny.passenger-carrier-authority",
@@ -2819,9 +2888,9 @@
     "naics": ["4247"],
     "appliesTo": ["all"],
     "url": "https://www.tax.ny.gov/bus/petrol/ptidx.htm",
-    "checkedOn": "2026-10-16",
-    "rrule": "FREQ=MONTHLY",
-    "deadline": "By the 20th of the following month"
+    "checkedOn": "2026-10-18",
+    "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
+    "deadlineNote": "for the previous month"
   },
   {
     "id": "ny.commercial-feed-license",
@@ -2832,7 +2901,7 @@
     "naics": ["311119"],
     "appliesTo": ["all"],
     "url": "https://agriculture.ny.gov/food-safety/commercial-feed",
-    "checkedOn": "2026-10-16",
+    "checkedOn": "2026-10-18",
     "rrule": "FREQ=YEARLY",
     "deadline": "Each year, before the license expires at the start of the calendar year",
     "feeDetail": {
@@ -2878,12 +2947,14 @@
     "naics": ["3115", "424430"],
     "appliesTo": ["all"],
     "url": "https://agriculture.ny.gov/dairy/dairy-business-licensing",
-    "checkedOn": "2026-10-16",
+    "checkedOn": "2026-10-18",
     "rrule": "FREQ=YEARLY",
     "exemptions": ["Dealers handling less than 3,000 pounds of milk a month"],
     "feeDetail": {
-      "basis": "flat",
-      "amount": 100
+      "basis": "varies",
+      "min": 100,
+      "max": 7500,
+      "note": "by milk handled per day"
     }
   },
   {
@@ -3466,7 +3537,7 @@
     "naics": ["561613"],
     "appliesTo": ["employees"],
     "url": "https://dos.ny.gov/get-armored-car-guard-license",
-    "checkedOn": "2026-10-16",
+    "checkedOn": "2026-10-18",
     "rrule": "FREQ=YEARLY;INTERVAL=2",
     "renewal": "Every two years",
     "feeDetail": {
@@ -3483,7 +3554,7 @@
     "naics": ["711410"],
     "appliesTo": ["all"],
     "url": "https://dos.ny.gov/athlete-agent",
-    "checkedOn": "2026-10-16",
+    "checkedOn": "2026-10-18",
     "rrule": "FREQ=YEARLY;INTERVAL=2",
     "renewal": "Every two years",
     "feeDetail": {
@@ -3726,10 +3797,15 @@
     "naics": ["444240", "424910"],
     "appliesTo": ["all"],
     "url": "https://dec.ny.gov/regulatory/regulations/policy-dshm-pes-05-02-pesticide-product-registration-commercial-permits",
-    "checkedOn": "2026-10-16",
+    "checkedOn": "2026-10-18",
     "rrule": "FREQ=YEARLY;INTERVAL=2",
     "renewal": "Every two years, 45 days before expiry",
-    "exemptions": ["Stores that sell only general use pesticides"]
+    "exemptions": ["Stores that sell only general use pesticides"],
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 600,
+      "note": "two-year permit"
+    }
   },
   {
     "id": "ny.nyc-taxi-medallion-owner-license",
@@ -3740,7 +3816,7 @@
     "naics": ["485310"],
     "appliesTo": ["all"],
     "url": "https://www.nyc.gov/site/tlc/businesses/medallion-owners-and-agents.page",
-    "checkedOn": "2026-10-16",
+    "checkedOn": "2026-10-18",
     "jurisdiction": "city",
     "appliesWhen": [
       {
@@ -3751,7 +3827,12 @@
       }
     ],
     "rrule": "FREQ=YEARLY;INTERVAL=2",
-    "renewal": "Every two years"
+    "renewal": "Every two years",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 370,
+      "note": "two-year renewal"
+    }
   },
   {
     "id": "ny.nyc-medallion-agent-broker-license",
@@ -3762,7 +3843,7 @@
     "naics": ["485310", "531390"],
     "appliesTo": ["all"],
     "url": "https://www.nyc.gov/site/tlc/businesses/brokers.page",
-    "checkedOn": "2026-10-16",
+    "checkedOn": "2026-10-18",
     "jurisdiction": "city",
     "appliesWhen": [
       {
@@ -3772,8 +3853,13 @@
         "description": "Located in New York City"
       }
     ],
-    "rrule": "FREQ=YEARLY",
-    "renewal": "Every year"
+    "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=31",
+    "renewal": "Every year",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 500,
+      "note": "one-year license"
+    }
   },
   {
     "id": "ny.nyc-tlc-driver-license",
@@ -3809,7 +3895,7 @@
     "naics": ["713940", "721110", "531311"],
     "appliesTo": ["all"],
     "url": "https://nyc-business.nyc.gov/nycbusiness/description/bathing-establishment-with-pool-annual-seasonal",
-    "checkedOn": "2026-10-16",
+    "checkedOn": "2026-10-18",
     "jurisdiction": "city",
     "appliesWhen": [
       {
@@ -3820,7 +3906,22 @@
       }
     ],
     "rrule": "FREQ=YEARLY",
-    "renewal": "Annual to April 30 or seasonal to November 1"
+    "renewal": "Annual to April 30 or seasonal to November 1",
+    "feeDetail": {
+      "basis": "tiered",
+      "tiers": [
+        {
+          "label": "New permit application",
+          "basis": "flat",
+          "amount": 1980
+        },
+        {
+          "label": "Renewal",
+          "basis": "flat",
+          "amount": 245
+        }
+      ]
+    }
   },
   {
     "id": "ny.nyc-fdny-flammable-liquids-certificate-of-fitness",
@@ -3883,13 +3984,18 @@
     "naics": ["713110", "713990"],
     "appliesTo": ["all"],
     "url": "https://dol.ny.gov/amusement-device-permitting-new-york-state",
-    "checkedOn": "2026-10-16",
+    "checkedOn": "2026-10-18",
     "rrule": "FREQ=YEARLY",
     "deadline": "At least 10 days before the first use each year",
     "exemptions": [
       "Devices permitted by the NYC Department of Consumer and Worker Protection and used only within New York City",
       "Businesses with no amusement devices, viewing stands or tents"
-    ]
+    ],
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 100,
+      "note": "per device"
+    }
   },
   {
     "id": "ny.title-insurance-agent-license",
@@ -4169,10 +4275,16 @@
     "naics": ["325", "424690"],
     "appliesTo": ["all"],
     "url": "https://dec.ny.gov/environmental-protection/hazardous-substance-bulk-storage/cbs-registration-renewal-faqs",
-    "checkedOn": "2026-10-16",
+    "checkedOn": "2026-10-18",
     "rrule": "FREQ=YEARLY;INTERVAL=2",
     "renewal": "Every two years",
-    "exemptions": ["Facilities with no regulated bulk storage tanks"]
+    "exemptions": ["Facilities with no regulated bulk storage tanks"],
+    "feeDetail": {
+      "basis": "varies",
+      "min": 50,
+      "max": 50000,
+      "note": "per tank by capacity, capped per site, two-year registration"
+    }
   },
   {
     "id": "ny.hospital-establishment-approval",
@@ -4486,7 +4598,7 @@
     "naics": ["7111", "7112", "7113", "7224", "7225", "8131", "611", "712110"],
     "appliesTo": ["all"],
     "url": "https://www.nyc.gov/site/fdny/business/all-certifications/per-assemblyoccupancy2.page",
-    "checkedOn": "2026-10-16",
+    "checkedOn": "2026-10-18",
     "jurisdiction": "city",
     "appliesWhen": [
       {
@@ -4498,7 +4610,11 @@
     ],
     "rrule": "FREQ=YEARLY",
     "renewal": "Every year",
-    "exemptions": ["Premises under 75 people indoors and 200 outdoors"]
+    "exemptions": ["Premises under 75 people indoors and 200 outdoors"],
+    "feeDetail": {
+      "basis": "varies",
+      "note": "by number of occupants"
+    }
   },
   {
     "id": "ny.nyc-fdny-fire-alarm-application",
@@ -4736,7 +4852,7 @@
     "naics": ["611310", "611210", "611519"],
     "appliesTo": ["all"],
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/2390",
-    "checkedOn": "2026-10-16",
+    "checkedOn": "2026-10-18",
     "rrule": "FREQ=YEARLY",
     "renewal": "Every year",
     "feeDetail": {
@@ -4753,9 +4869,14 @@
     "naics": ["611710", "611310", "611519"],
     "appliesTo": ["all"],
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/2692",
-    "checkedOn": "2026-10-16",
+    "checkedOn": "2026-10-18",
     "rrule": "FREQ=YEARLY",
-    "renewal": "Every year"
+    "renewal": "Every year",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 300,
+      "note": "sales and broker courses, plus teacher and branch office fees"
+    }
   },
   {
     "id": "ny.small-tour-bus-park-license",
@@ -4766,9 +4887,14 @@
     "naics": ["485510", "487110", "485999"],
     "appliesTo": ["all"],
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/2574",
-    "checkedOn": "2026-10-16",
+    "checkedOn": "2026-10-18",
     "rrule": "FREQ=YEARLY",
-    "renewal": "Every year"
+    "renewal": "Every year",
+    "feeDetail": {
+      "basis": "flat",
+      "amount": 150,
+      "note": "1 to 16 passenger license"
+    }
   },
   {
     "id": "ny.sales-finance-company-license",
@@ -5259,7 +5385,7 @@
     "naics": ["312130", "4248"],
     "appliesTo": ["all"],
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/2022",
-    "checkedOn": "2026-10-16",
+    "checkedOn": "2026-10-18",
     "rrule": "FREQ=YEARLY",
     "renewal": "Every year",
     "feeDetail": {

@@ -1869,7 +1869,7 @@ exports[`snapshot DE > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:DE | Maintain a registered agent in Delaware |  | ",
   "state.annual-report:DE | File annual franchise tax report (Delaware) | March 1 | 2027-03-01",
   "state.entity-tax:DE | Register for and file Delaware entity-level taxes |  | ",
-  "state.business-license:DE | Delaware business license and gross receipts tax |  | ",
+  "state.business-license:DE | Delaware business license and gross receipts tax | December 31 | 2026-12-31",
   "state.duties:DE:de.unclaimed-property-report | File the annual unclaimed property holder report (Delaware) | March 1 | 2027-03-01",
   "state.duties:DE:de.data-breach-notification | Notify residents and regulators of a data breach within 60 days (Delaware) |  | ",
   "local.business-license:DE | County/city business license — Sampletown, Sample County, Delaware |  | ",
@@ -1977,10 +1977,10 @@ exports[`snapshot DE > llc with employees, sales and a trade name 1`] = `
   },
   {
     "authority": "Delaware Division of Revenue",
-    "deadline": undefined,
+    "deadline": "December 31",
     "frequency": "annual",
     "id": "state.business-license:DE",
-    "nextDue": undefined,
+    "nextDue": "2026-12-31",
     "title": "Delaware business license and gross receipts tax",
   },
   {
@@ -7210,7 +7210,7 @@ exports[`snapshot NV > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:NV | Maintain a registered agent in Nevada |  | ",
   "state.annual-report:NV | File Annual List of Managers/Officers and Business License Renewal (Nevada) | Last day of the anniversary month | 2027-03-31",
   "state.entity-tax:NV | Register for and file Nevada entity-level taxes |  | ",
-  "state.business-license:NV | Nevada State Business License |  | ",
+  "state.business-license:NV | Nevada State Business License | Last day of the anniversary month | 2027-03-31",
   "state.duties:NV:nv.unclaimed-property-report | File the annual unclaimed property holder report (Nevada) | October 31 | 2026-10-31",
   "local.business-license:NV | City or county business license — Sampletown, Sample County, Nevada |  | ",
   "local.certificate-of-occupancy:NV | Obtain certificate of occupancy for premises in Sampletown |  | ",
@@ -7317,10 +7317,10 @@ exports[`snapshot NV > llc with employees, sales and a trade name 1`] = `
   },
   {
     "authority": "Nevada Secretary of State",
-    "deadline": undefined,
+    "deadline": "Last day of the anniversary month",
     "frequency": "annual",
     "id": "state.business-license:NV",
-    "nextDue": undefined,
+    "nextDue": "2027-03-31",
     "title": "Nevada State Business License",
   },
   {

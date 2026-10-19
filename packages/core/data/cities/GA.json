@@ -47,9 +47,10 @@
         "title": "Renew Augusta occupation tax certificate",
         "category": "license",
         "authority": "Augusta-Richmond County Business Tax",
-        "description": "Businesses operating in Augusta pay the annual occupation tax and receive a business tax certificate; see the city's due and payable dates.",
-        "rrule": "FREQ=YEARLY",
+        "description": "Businesses operating in Augusta pay the annual occupation tax and receive a business tax certificate. The tax is payable January 1 of each year; if not paid within 30 days of the due date, a 10% penalty and interest of 1.5% per month apply.",
+        "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=1",
         "url": "https://www.augustaga.gov/207/Occupation-Tax",
+        "checkedOn": "2026-10-18",
         "appliesTo": ["all"]
       }
     ]
