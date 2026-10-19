@@ -24,6 +24,8 @@ export interface AnniversaryDue {
 export interface MultiDue {
   type: "multi";
   dates: ReadonlyArray<{ month: number; day: number }>;
+  /** Only the date in the calendar quarter that contains the formation month applies. */
+  quarterOf?: "formation";
 }
 
 /** A single absolute date, e.g. a final-return deadline derived from a dissolution date. */

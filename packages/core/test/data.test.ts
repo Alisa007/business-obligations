@@ -1093,6 +1093,31 @@ describe("schedules in data files", () => {
     expect(() => parseRRule("FREQ=MONTHLY", "formation")).toThrow();
   });
 
+  it("reads twice-yearly and quarter-of-formation schedules", () => {
+    const twice = parseRRule("FREQ=YEARLY;BYMONTH=1,7;BYMONTHDAY=-1");
+    expect(twice).toEqual({
+      frequency: "semiannual",
+      due: {
+        type: "multi",
+        dates: [
+          { month: 1, day: 31 },
+          { month: 7, day: 31 },
+        ],
+      },
+    });
+    expect(toRRule(twice.due, twice.frequency)).toEqual({ rrule: "FREQ=YEARLY;BYMONTH=1,7;BYMONTHDAY=-1" });
+    const rule = "FREQ=YEARLY;BYMONTH=3,6,9,12;BYMONTHDAY=-1";
+    const q = parseRRule(rule, "formation_quarter");
+    expect(q.frequency).toBe("annual");
+    expect(q.due).toMatchObject({ type: "multi", quarterOf: "formation" });
+    expect(toRRule(q.due, q.frequency)).toEqual({ rrule: rule, anchor: "formation_quarter" });
+    // Without the anchor the same months are a quarterly cycle.
+    expect(parseRRule(rule).frequency).toBe("quarterly");
+    expect(() => parseRRule("FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1", "formation_quarter")).toThrow();
+    expect(() => parseRRule("FREQ=YEARLY;BYMONTH=1,7;BYMONTHDAY=-1", "formation_quarter")).toThrow();
+    expect(() => parseRRule("FREQ=YEARLY;BYMONTH=1,7;BYMONTHDAY=-1", "formation")).toThrow();
+  });
+
   it("rejects unsupported rules", () => {
     for (const bad of [
       "FREQ=DAILY",

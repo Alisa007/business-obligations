@@ -286,7 +286,14 @@ const FEEDBACK_URL =
 
 type DraftBody = ItemDraft extends infer T ? (T extends unknown ? Omit<T, "key"> : never) : never;
 
-const RECURRING = new Set<string>(["annual", "biennial", "every_five_years", "quarterly", "monthly"]);
+const RECURRING = new Set<string>([
+  "annual",
+  "biennial",
+  "every_five_years",
+  "semiannual",
+  "quarterly",
+  "monthly",
+]);
 
 /** A draft without its `key`, with its recurrence rule, if any, resolved to the item's `frequency` and `due`. */
 function settle(draft: DraftBody): Omit<ComplianceItem, "id" | "ruleId" | "nextDue" | "recurrence"> {

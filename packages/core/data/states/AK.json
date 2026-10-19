@@ -58,10 +58,11 @@
     "title": "Alaska state business license",
     "authority": "Alaska Division of Corporations, Business and Professional Licensing",
     "url": "https://www.commerce.alaska.gov/web/cbpl/BusinessLicensing",
-    "rrule": "FREQ=YEARLY;INTERVAL=2",
+    "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=31",
     "feeDetail": {
       "basis": "flat",
-      "amount": 50
+      "amount": 50,
+      "note": "per year; $100 for the 2-year license"
     }
   },
   "local": {
@@ -91,8 +92,11 @@
     "dba": "https://www.commerce.alaska.gov/web/cbpl/Corporations/ReservingRegisteringBusinessName.aspx"
   },
   "verification": {
-    "checkedOn": "2026-10-13",
-    "sources": ["https://www.commerce.alaska.gov/web/cbpl/Corporations/BiennialReports"],
+    "checkedOn": "2026-10-19",
+    "sources": [
+      "https://www.commerce.alaska.gov/web/cbpl/Corporations/BiennialReports",
+      "https://www.commerce.alaska.gov/web/Portals/5/pub/bus4617.pdf"
+    ],
     "unconfirmed": []
   }
 }

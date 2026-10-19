@@ -311,7 +311,14 @@ export function Playground() {
         </YStack>
       </YStack>
 
-      <YStack gap="1" borderTopWidth={1} borderColor="border-color" paddingTop="4">
+      <YStack
+        className="site-footer"
+        role="contentinfo"
+        gap="1"
+        borderTopWidth={1}
+        borderColor="border-color"
+        paddingTop="4"
+      >
         {analytics.enabled && (
           <Muted>
             This site records usage with PostHog: page views, which tabs and fields you use, and the details
@@ -322,8 +329,8 @@ export function Playground() {
           </Muted>
         )}
         <Muted>
-          General information, not legal or tax advice. Data is compiled from public sources; see each
-          item&apos;s provenance and the{" "}
+          General information, not legal or tax advice. Data comes from public sources; see each item&apos;s
+          provenance and the{" "}
           <Anchor href={`${SITE_CONFIG.repoUrl}/blob/main/packages/core/COVERAGE.md`}>coverage report</Anchor>
           . <Anchor href={SITE_CONFIG.repoUrl}>Source on GitHub</Anchor>.
         </Muted>

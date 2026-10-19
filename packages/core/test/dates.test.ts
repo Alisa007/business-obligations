@@ -145,3 +145,25 @@ describe("last day of the month in monthly and quarterly rules", () => {
     );
   });
 });
+
+describe("quarter containing the formation month", () => {
+  const { due } = parseRRule("FREQ=YEARLY;BYMONTH=3,6,9,12;BYMONTHDAY=-1", "formation_quarter");
+  it("is due once a year, from the year after formation", () => {
+    const ctx = { biennial: false, formationDate: "2025-05-10" };
+    expect(nextDueDate(due!, { ...ctx, asOf: "2026-01-01" })).toBe("2026-06-30");
+    expect(nextDueDate(due!, { ...ctx, asOf: "2026-07-01" })).toBe("2027-06-30");
+    expect(occurrencesBetween(due!, ctx, "2025-01-01", "2028-01-01")).toEqual(["2026-06-30", "2027-06-30"]);
+  });
+
+  it("needs a formation date", () => {
+    expect(nextDueDate(due!, { asOf: "2026-01-01", biennial: false })).toBeUndefined();
+  });
+});
+
+describe("twice a year", () => {
+  it("takes the earlier of the two dates", () => {
+    const { due } = parseRRule("FREQ=YEARLY;BYMONTH=1,7;BYMONTHDAY=-1");
+    expect(nextDueDate(due!, { asOf: "2026-02-01", biennial: false })).toBe("2026-07-31");
+    expect(nextDueDate(due!, { asOf: "2026-08-01", biennial: false })).toBe("2027-01-31");
+  });
+});

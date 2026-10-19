@@ -206,21 +206,20 @@ function ProfileFormBody({ today, onFieldUsed }: Pick<ProfileFormProps, "today" 
         <Group min={130} end>
           {(
             [
-              ["annualPayroll", f.payroll, f.hints.payroll, f.examples.payroll],
-              ["annualRevenue", f.revenue, f.hints.revenue, f.examples.revenue],
-              ["annualNetIncome", f.netIncome, f.hints.netIncome, f.examples.netIncome],
-              ["largestContractorPaymentUsd", f.contractor, f.hints.contractor, f.examples.contractor],
-              ["priorYearPayrollTaxLiability", f.priorTax, f.hints.priorTax, f.examples.priorTax],
+              ["annualPayroll", f.payroll, f.examples.payroll],
+              ["annualRevenue", f.revenue, f.examples.revenue],
+              ["annualNetIncome", f.netIncome, f.examples.netIncome],
+              ["largestContractorPaymentUsd", f.contractor, f.examples.contractor],
+              ["priorYearPayrollTaxLiability", f.priorTax, f.examples.priorTax],
             ] as const
           ).map(
-            ([field, label, hint, example]) =>
+            ([field, label, example]) =>
               shows(field) && (
                 <div key={field}>
                   <NumberControl
                     id={`${prefix}-${field}`}
                     field={field}
                     label={label}
-                    hint={hint}
                     placeholder={example}
                     kind="amount"
                     prefix="$"

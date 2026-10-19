@@ -107,6 +107,7 @@ const PER_YEAR: Partial<Record<ComplianceItem["frequency"], number>> = {
   annual: 1,
   biennial: 0.5,
   every_five_years: 0.2,
+  semiannual: 2,
   quarterly: 4,
   monthly: 12,
   once: 0,

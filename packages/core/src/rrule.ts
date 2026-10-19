@@ -11,6 +11,9 @@ import type { Frequency, RecurringFrequency } from "./types";
  * - no `BYMONTH`: relative to the entity's formation date (`BYMONTHDAY=1` or `-1` for the first or last day of
  *   the anniversary month; the anniversary itself is `anchor: "formation"`), the way iCalendar anchors a rule on
  *   `DTSTART`;
+ * - two months with one day, twice a year: `BYMONTH=1,7;BYMONTHDAY=31`;
+ * - four months with `anchor: "formation_quarter"`: once a year, in the calendar quarter that contains the
+ *   formation month (`BYMONTH=3,6,9,12;BYMONTHDAY=-1`: the last day of that quarter);
  * - no date at all, when the source does not fix one: `FREQ=YEARLY` (with `INTERVAL=2` or `5`), `FREQ=MONTHLY`
  *   and `FREQ=MONTHLY;INTERVAL=3`. They give the frequency and no due date.
  *
@@ -18,9 +21,11 @@ import type { Frequency, RecurringFrequency } from "./types";
  * cycle starts there, e.g. an even or odd year) or, for cycles that follow the entity's own formation,
  * `formation_year` or `year_after_formation`.
  */
-export type ScheduleAnchor = "formation" | "formation_year" | "year_after_formation" | (string & {});
+export type ScheduleAnchor =
+  "formation" | "formation_quarter" | "formation_year" | "year_after_formation" | (string & {});
 
-export type ScheduleFrequency = "annual" | "biennial" | "every_five_years" | "quarterly" | "monthly";
+export type ScheduleFrequency =
+  "annual" | "biennial" | "every_five_years" | "semiannual" | "quarterly" | "monthly";
 
 export interface Schedule {
   /** Undefined for a recurrence whose date the source does not fix. */
@@ -108,18 +113,26 @@ export function parseRRule(rrule: string, anchor?: ScheduleAnchor): Schedule {
   if (months.length > 1) {
     if (interval !== 1 || new Set(months).size !== months.length) throw bad();
     const sorted = [...months].sort((a, b) => a - b);
-    const cycle = sorted.length === 4 ? "quarterly" : sorted.length === 12 ? "monthly" : undefined;
+    const cycle =
+      sorted.length === 2
+        ? "semiannual"
+        : sorted.length === 4
+          ? "quarterly"
+          : sorted.length === 12
+            ? "monthly"
+            : undefined;
     if (!cycle) throw bad();
-    return {
-      due: {
-        type: "multi",
-        dates: sorted.map((month) => ({
-          month,
-          day: rawDay === -1 ? (month === 2 ? 31 : lastDay(month)) : rawDay,
-        })),
-      },
-      frequency: cycle,
-    };
+    const dates = sorted.map((month) => ({
+      month,
+      day: rawDay === -1 ? (month === 2 ? 31 : lastDay(month)) : rawDay,
+    }));
+    if (anchor === "formation_quarter") {
+      // One date a year: the one in the quarter that contains the formation month.
+      if (cycle !== "quarterly" || sorted.join() !== "3,6,9,12") throw bad();
+      return { due: { type: "multi", dates, quarterOf: "formation" }, frequency: "annual" };
+    }
+    if (anchor) throw new Error(`Invalid anchor "${anchor}" for recurrence rule "${rrule}"`);
+    return { due: { type: "multi", dates }, frequency: cycle };
   }
   const month = months[0]!;
   const due: Extract<Due, { type: "fixed" }> = { type: "fixed", month, day: rawDay === -1 ? 31 : rawDay };
@@ -163,8 +176,17 @@ export function toRRule(
     return due.cycleFrom ? { rrule, anchor: due.cycleFrom } : { rrule };
   }
   if (due.type === "multi") {
-    const cycle = frequency === "quarterly" ? 4 : frequency === "monthly" ? 12 : 0;
-    if (due.dates.length !== cycle) return undefined;
+    const cycle =
+      due.quarterOf === "formation"
+        ? 4
+        : frequency === "semiannual"
+          ? 2
+          : frequency === "quarterly"
+            ? 4
+            : frequency === "monthly"
+              ? 12
+              : 0;
+    if (due.dates.length !== cycle || (due.quarterOf && frequency !== "annual")) return undefined;
     const months = due.dates.map((d) => d.month).sort((a, b) => a - b);
     const day = due.dates.every((d) => isLast(d.month, d.day))
       ? -1
@@ -173,7 +195,10 @@ export function toRRule(
         : undefined;
     return day === undefined
       ? undefined
-      : { rrule: `FREQ=YEARLY;BYMONTH=${months.join(",")};BYMONTHDAY=${day}` };
+      : {
+          rrule: `FREQ=YEARLY;BYMONTH=${months.join(",")};BYMONTHDAY=${day}`,
+          ...(due.quarterOf ? { anchor: "formation_quarter" as const } : {}),
+        };
   }
   return undefined;
 }
@@ -186,6 +211,10 @@ export interface MonthDay {
 
 const dayText = (month: number, day: number) =>
   day > lastDay(month) ? `Last day of ${MONTH_NAMES[month - 1]}` : `${MONTH_NAMES[month - 1]} ${day}`;
+const ordinal = (n: number) => {
+  const suffix = n % 100 >= 11 && n % 100 <= 13 ? "th" : (["th", "st", "nd", "rd"][n % 10] ?? "th");
+  return `${n}${n % 10 > 3 ? "th" : suffix}`;
+};
 const listText = (items: string[]) =>
   items.length < 2 ? items.join("") : `${items.slice(0, -1).join(", ")} and ${items.at(-1)}`;
 
@@ -203,8 +232,18 @@ export function describeSchedule({ due, frequency }: Schedule, opens?: MonthDay)
       : due.point === "end_of_month"
         ? "Last day of the anniversary month"
         : "First day of the anniversary month";
-  if (due.type === "multi" && (frequency === "quarterly" || frequency === "monthly") && !opens)
-    return frequency === "monthly" ? undefined : listText(due.dates.map((d) => dayText(d.month, d.day)));
+  if (due.type === "multi" && due.quarterOf)
+    return due.dates.every((d) => d.day > lastDay(d.month) || d.day === lastDay(d.month))
+      ? "Last day of the quarter that contains the anniversary month"
+      : undefined;
+  if (due.type === "multi" && (frequency === "semiannual" || frequency === "quarterly") && !opens)
+    return listText(due.dates.map((d) => dayText(d.month, d.day)));
+  if (due.type === "multi" && frequency === "monthly" && !opens) {
+    if (due.dates.every((d) => isLast(d.month, d.day))) return "Last day of each month";
+    const day = due.dates[0]!.day;
+    return due.dates.every((d) => d.day === day) ? `${ordinal(day)} of each month` : undefined;
+  }
+  if (due.type === "multi") return undefined;
   if (due.type !== "fixed") return undefined;
   const date = dayText(due.month, due.day);
   if (opens)

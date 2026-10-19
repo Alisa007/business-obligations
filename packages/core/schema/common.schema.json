@@ -105,7 +105,7 @@
           "enum": ["odd", "even"]
         },
         "cycleFrom": {
-          "enum": ["formation", "formation_year", "year_after_formation"]
+          "enum": ["formation_year", "year_after_formation"]
         }
       }
     },
@@ -129,6 +129,10 @@
       "properties": {
         "type": {
           "const": "multi"
+        },
+        "quarterOf": {
+          "const": "formation",
+          "description": "Only the date in the calendar quarter that contains the formation (or registration) month applies."
         },
         "dates": {
           "type": "array",
