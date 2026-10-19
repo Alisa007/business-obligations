@@ -56,6 +56,11 @@ function ObligationsListBody({ items, conditional = [], asOf, filters, onFilters
     items.filter((item) => itemMatches(item, { ...filters, jurisdiction })).length;
   const conditionalCount = (jurisdiction: string) =>
     shownConditional.filter(({ item }) => item.jurisdiction === jurisdiction).length;
+  const availableJurisdictions = JURISDICTIONS.filter(
+    (jurisdiction) =>
+      items.some((item) => item.jurisdiction === jurisdiction) ||
+      conditional.some(({ item }) => item.jurisdiction === jurisdiction),
+  );
   const categoryCount = (category: string) =>
     items.filter((item) => itemMatches(item, { ...filters, category })).length;
   const hasFilters =
@@ -122,7 +127,7 @@ function ObligationsListBody({ items, conditional = [], asOf, filters, onFilters
         </YStack>
       </XStack>
       <XStack gap="1.5" flexWrap="wrap">
-        {(["all", ...JURISDICTIONS] as const).map((key) => (
+        {(["all", ...availableJurisdictions] as const).map((key) => (
           <Button
             key={key}
             size="sm"

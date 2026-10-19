@@ -1,5 +1,5 @@
-import { useState, useSyncExternalStore } from "react";
-import { Select as TamaguiSelect, Text } from "tamagui";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
+import { Select as TamaguiSelect, Text, type TamaguiElement } from "tamagui";
 import { ClearButton } from "./ClearButton";
 import { useControlProps } from "./controls";
 
@@ -64,8 +64,23 @@ export function Select({
   const touch = useCoarsePointer();
   // The list is as wide as the control at least: it would otherwise be only as wide as its longest option.
   const [controlWidth, setControlWidth] = useState(0);
+  const triggerRef = useRef<TamaguiElement | null>(null);
   const chosen = options.find((option) => option.value === value);
   const clearable = Boolean(onClear && chosen);
+  useEffect(() => {
+    if (touch) return;
+    const trigger = triggerRef.current as HTMLElement | null;
+    if (!trigger) return;
+    const update = () => setControlWidth(trigger.getBoundingClientRect().width);
+    update();
+    if (typeof ResizeObserver !== "undefined") {
+      const observer = new ResizeObserver(update);
+      observer.observe(trigger);
+      return () => observer.disconnect();
+    }
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, [touch]);
   if (touch) {
     return (
       <div style={{ position: "relative", width: "100%" }}>
@@ -130,7 +145,7 @@ export function Select({
           aria-invalid={invalid || undefined}
           aria-describedby={describedBy}
           paddingRight={8}
-          onLayout={(event) => setControlWidth(event.nativeEvent.layout.width)}
+          ref={triggerRef}
         >
           <TamaguiSelect.Value
             fontSize={controlProps.fontSize}
