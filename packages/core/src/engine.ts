@@ -285,6 +285,9 @@ const FEEDBACK_URL =
   "https://github.com/Alisa007/business-obligations/issues/new?template=data-correction.yml&title=";
 
 type DraftBody = ItemDraft extends infer T ? (T extends unknown ? Omit<T, "key"> : never) : never;
+type SettledDraft = Omit<ComplianceItem, "id" | "ruleId" | "nextDue" | "recurrence" | "cost"> & {
+  cost?: ComplianceItem["cost"];
+};
 
 const RECURRING = new Set<string>([
   "annual",
@@ -296,7 +299,7 @@ const RECURRING = new Set<string>([
 ]);
 
 /** A draft without its `key`, with its recurrence rule, if any, resolved to the item's `frequency` and `due`. */
-function settle(draft: DraftBody): Omit<ComplianceItem, "id" | "ruleId" | "nextDue" | "recurrence"> {
+function settle(draft: DraftBody): SettledDraft {
   if (!("rrule" in draft)) {
     if (RECURRING.has(draft.frequency))
       throw new Error(
@@ -329,7 +332,12 @@ export function evaluate(input: BusinessProfile, options: EvaluateOptions = {}):
         const n = seen.get(id) ?? 0;
         seen.set(id, n + 1);
         if (n > 0) id = `${id}#${n}`;
-        const item: ComplianceItem = { ...d, id, ruleId: rule.id };
+        const item: ComplianceItem = {
+          ...d,
+          cost: d.cost ?? { basis: "unknown", currency: "USD" },
+          id,
+          ruleId: rule.id,
+        };
         if (d.due) {
           const next = nextDueDate(d.due, {
             asOf,

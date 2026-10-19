@@ -43,6 +43,8 @@ export const es: Messages = {
   all: "Todas",
   noMatch: "Ninguna obligación coincide con estos filtros.",
   whyItApplies: "Por qué aplica",
+  feeLabel: "Tarifa",
+  notListed: "No indicada",
   replacedBy: "Reemplazada por",
   appliesWhen: "Aplica cuando",
   yes: "sí",

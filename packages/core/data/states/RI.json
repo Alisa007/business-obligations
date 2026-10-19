@@ -2,15 +2,15 @@
   "name": "Rhode Island",
   "filing": {
     "name": "Rhode Island Secretary of State",
-    "url": ["https://business.sos.ri.gov"]
+    "url": ["https://www.sos.ri.gov/divisions/business-services"]
   },
   "revenue": {
     "name": "Rhode Island Division of Taxation",
-    "url": ["https://tax.ri.gov"]
+    "url": ["https://tax.ri.gov/resources/businesses/corporate"]
   },
   "labor": {
     "name": "Rhode Island Department of Labor and Training",
-    "url": ["https://dlt.ri.gov"]
+    "url": ["https://dlt.ri.gov/employers/required-workplace-posters"]
   },
   "llcReport": {
     "rrule": "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=1",
@@ -79,6 +79,7 @@
   },
   "businessLicense": null,
   "local": {
+    "url": ["https://www.ri.gov/business/"],
     "title": "City/town licenses",
     "authority": "City or town clerk",
     "description": "Local licensing councils issue specific business licenses; no general license."
@@ -98,11 +99,15 @@
   "links": {
     "formation": ["https://www.sos.ri.gov/divisions/business-services"],
     "annualReport": ["https://www.sos.ri.gov/divisions/business-services"],
-    "uiRegistration": ["https://dlt.ri.gov/employers"],
-    "withholding": ["https://tax.ri.gov/tax-sections/withholding-tax"],
-    "salesTax": ["https://tax.ri.gov/tax-sections/sales-excise-taxes/sales-use-tax"],
-    "entityTax": ["https://tax.ri.gov/resources/businesses/corporate"],
-    "laborPosters": ["https://dlt.ri.gov/employers/required-workplace-posters"],
+    "uiRegistration": ["https://dlt.ri.gov/employers/required-workplace-posters/employers"],
+    "withholding": ["https://tax.ri.gov/resources/businesses/corporate/tax-sections/withholding-tax"],
+    "salesTax": [
+      "https://tax.ri.gov/resources/businesses/corporate/tax-sections/sales-excise-taxes/sales-use-tax"
+    ],
+    "entityTax": ["https://tax.ri.gov/resources/businesses/corporate/resources/businesses/corporate"],
+    "laborPosters": [
+      "https://dlt.ri.gov/employers/required-workplace-posters/employers/required-workplace-posters"
+    ],
     "dba": ["https://www.sos.ri.gov/divisions/business-services/ri-trade-names"]
   },
   "verification": {

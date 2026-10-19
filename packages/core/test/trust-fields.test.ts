@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { evaluate, seededCityRule, validateProfile } from "../src";
-import { LOCAL_JURISDICTIONS, findCity } from "../src/data";
+import type { Rule } from "../src/types";
+import { LOCAL_JURISDICTIONS, STATES, findCity } from "../src/data";
 
 const austin = { entityType: "llc", zip: "78701", city: "Austin", county: "Travis" } as const;
 
@@ -105,11 +106,54 @@ describe("compiledOn and review dates for every item", () => {
   });
 
   it("ages never-checked items from compilation and flags them as stale a year on", () => {
-    const compiled = r.items.find((i) => i.provenance?.confidence === "compiled")!;
+    const compiledRule: Rule = {
+      id: "test.compiled",
+      description: "A deliberately unverified test item",
+      inputs: [],
+      when: () => true,
+      items: () => ({
+        title: "Test item",
+        category: "recordkeeping",
+        jurisdiction: "federal",
+        authority: "Test authority",
+        description: "Test description",
+        frequency: "once",
+        reason: "Test",
+      }),
+    };
+    const compiled = evaluate(austin, { rules: [compiledRule] }).items[0]!;
     expect(compiled.provenance!.checkedOn).toBeUndefined();
     expect(compiled.provenance!.stale).toBe(false);
-    const later = evaluate(austin, { asOf: "2028-01-01" }).items.find((i) => i.id === compiled.id)!;
+    const later = evaluate(austin, { asOf: "2028-01-01", rules: [compiledRule] }).items[0]!;
     expect(later.provenance!.stale).toBe(true);
+  });
+
+  it("gives every state industry item an official link and checked provenance", () => {
+    const profiles = [
+      { industry: "restaurant" },
+      { industry: "construction", disturbedAcres: 1, projectValueUsd: 1 },
+      { industry: "retail", foodService: true },
+      { industry: "real_estate" },
+      { industry: "healthcare" },
+      { industry: "alcohol", alcoholActivity: "retail" },
+      { industry: "cannabis", cannabisActivity: "retail" },
+      { industry: "transportation", commercialVehicles: { interstate: true, grossWeightLbs: 10001 } },
+    ] as const;
+    for (const state of Object.keys(STATES))
+      for (const profile of profiles) {
+        const items = evaluate({
+          entityType: "llc",
+          zip: "00000",
+          city: "Sample",
+          county: "Sample",
+          state,
+          ...profile,
+        } as never).items.filter((item) => item.ruleId.startsWith("industry."));
+        for (const item of items) {
+          expect(item.url?.length, `${state} ${item.id}`).toBeGreaterThan(0);
+          expect(item.provenance?.confidence, `${state} ${item.id}`).toBe("checked");
+        }
+      }
   });
 
   it("lets seeded city items inherit the seed's checked date", () => {

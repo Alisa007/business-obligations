@@ -6,7 +6,7 @@
   },
   "revenue": {
     "name": "Missouri Department of Revenue",
-    "url": ["https://dor.mo.gov"]
+    "url": ["https://dor.mo.gov/taxation/business/tax-types/corporation-income/"]
   },
   "labor": {
     "name": "Missouri Division of Employment Security",
@@ -24,7 +24,9 @@
       "paper": 45
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "per_item",
+      "note": "$15 for each 30-day period late.",
+      "perUnit": 15
     }
   },
   "lpReport": null,
@@ -40,7 +42,8 @@
       "max": 205
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "none",
+      "note": "Missouri publishes annual-report penalties for corporations; no separate LLP late penalty is listed."
     }
   },
   "llcPublication": null,
@@ -71,6 +74,7 @@
   "paidSickLeave": null,
   "businessLicense": null,
   "local": {
+    "url": ["https://dor.mo.gov/taxation/business/tax-types/corporation-income//taxation/business/"],
     "title": "City business license",
     "authority": "City collector / county",
     "description": "Kansas City, St. Louis and many cities require business licenses and occupational taxes."
@@ -91,9 +95,15 @@
     "formation": ["https://www.sos.mo.gov/business/start"],
     "annualReport": ["https://www.sos.mo.gov/business/corporations/annualreports"],
     "uiRegistration": ["https://labor.mo.gov/employers"],
-    "withholding": ["https://dor.mo.gov/taxation/business/tax-types/withholding/"],
-    "salesTax": ["https://dor.mo.gov/taxation/business/tax-types/sales-use/"],
-    "entityTax": ["https://dor.mo.gov/taxation/business/tax-types/corporation-income/"],
+    "withholding": [
+      "https://dor.mo.gov/taxation/business/tax-types/corporation-income//taxation/business/tax-types/withholding/"
+    ],
+    "salesTax": [
+      "https://dor.mo.gov/taxation/business/tax-types/corporation-income//taxation/business/tax-types/sales-use/"
+    ],
+    "entityTax": [
+      "https://dor.mo.gov/taxation/business/tax-types/corporation-income//taxation/business/tax-types/corporation-income/"
+    ],
     "laborPosters": ["https://labor.mo.gov/posters"],
     "dba": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"]
   },

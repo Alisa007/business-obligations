@@ -381,8 +381,11 @@
       "description": "Typical general local licensing in the state.",
       "type": "object",
       "additionalProperties": false,
-      "required": ["title", "authority", "description"],
+      "required": ["title", "authority", "description", "url"],
       "properties": {
+        "url": {
+          "$ref": "common.schema.json#/$defs/httpsUrlList"
+        },
         "title": {
           "type": "string"
         },

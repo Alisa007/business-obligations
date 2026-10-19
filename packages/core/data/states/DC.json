@@ -2,15 +2,17 @@
   "name": "District of Columbia",
   "filing": {
     "name": "DC Department of Licensing and Consumer Protection",
-    "url": ["https://dlcp.dc.gov"]
+    "url": ["https://dlcp.dc.gov/page/corporations-division-business-registration-faqs"]
   },
   "revenue": {
     "name": "DC Office of Tax and Revenue",
-    "url": ["https://otr.cfo.dc.gov"]
+    "url": [
+      "https://otr.cfo.dc.gov/sites/default/files/dc/sites/otr/publication/attachments/2025_D-20_Book_Final_wLinks_02272026.pdf"
+    ]
   },
   "labor": {
     "name": "DC Department of Employment Services",
-    "url": ["https://does.dc.gov"]
+    "url": ["https://does.dc.gov/page/office-wage-hour-employers"]
   },
   "llcReport": {
     "title": "File Biennial Report",
@@ -21,7 +23,9 @@
       "amount": 300
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 100,
+      "note": "Biennial report late fee after April 1."
     }
   },
   "corpReport": {
@@ -33,7 +37,9 @@
       "amount": 300
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 100,
+      "note": "Biennial report late fee after April 1."
     }
   },
   "llcPublication": null,
@@ -71,17 +77,23 @@
   "businessLicense": {
     "title": "DC Basic Business License (BBL)",
     "authority": "DC Department of Licensing and Consumer Protection",
-    "url": ["https://dlcp.dc.gov/node/1618236"],
+    "url": ["https://dlcp.dc.gov/page/corporations-division-business-registration-faqs/node/1618236"],
     "rrule": "FREQ=YEARLY;INTERVAL=2",
     "feeDetail": {
       "basis": "varies",
       "note": "by license category"
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "range",
+      "note": "Business-license late penalties: $75 first penalty, $75 second penalty, and $200 at enforcement.",
+      "min": 75,
+      "max": 200
     }
   },
   "local": {
+    "url": [
+      "https://dlcp.dc.gov/page/corporations-division-business-registration-faqs/page/business-licensing"
+    ],
     "title": "DC Certificate of Occupancy / Home Occupation permit",
     "authority": "DC Department of Buildings / DLCP",
     "description": "The District is both city and state; occupancy and zoning approvals are issued locally."
@@ -100,24 +112,30 @@
     "note": "Adult possession is legal but commercial adult-use sales are not licensed; the medical program is licensed."
   },
   "links": {
-    "formation": ["https://dlcp.dc.gov/page/corporations-division-business-registration-faqs"],
-    "annualReport": ["https://dlcp.dc.gov/page/corporations-division-business-registration-faqs"],
-    "uiRegistration": ["https://does.dc.gov/page/ui-tax-employers"],
+    "formation": [
+      "https://dlcp.dc.gov/page/corporations-division-business-registration-faqs/page/corporations-division-business-registration-faqs"
+    ],
+    "annualReport": [
+      "https://dlcp.dc.gov/page/corporations-division-business-registration-faqs/page/corporations-division-business-registration-faqs"
+    ],
+    "uiRegistration": ["https://does.dc.gov/page/office-wage-hour-employers/page/ui-tax-employers"],
     "withholding": [
-      "https://otr.cfo.dc.gov/sites/default/files/dc/sites/otr/publication/attachments/FR-500_314.pdf"
+      "https://otr.cfo.dc.gov/sites/default/files/dc/sites/otr/publication/attachments/2025_D-20_Book_Final_wLinks_02272026.pdf/sites/default/files/dc/sites/otr/publication/attachments/FR-500_314.pdf"
     ],
     "salesTax": [
-      "https://otr.cfo.dc.gov/sites/default/files/dc/sites/otr/publication/attachments/FR-500_314.pdf"
+      "https://otr.cfo.dc.gov/sites/default/files/dc/sites/otr/publication/attachments/2025_D-20_Book_Final_wLinks_02272026.pdf/sites/default/files/dc/sites/otr/publication/attachments/FR-500_314.pdf"
     ],
     "entityTax": [
-      "https://otr.cfo.dc.gov/sites/default/files/dc/sites/otr/publication/attachments/2025_D-20_Book_Final_wLinks_02272026.pdf"
+      "https://otr.cfo.dc.gov/sites/default/files/dc/sites/otr/publication/attachments/2025_D-20_Book_Final_wLinks_02272026.pdf/sites/default/files/dc/sites/otr/publication/attachments/2025_D-20_Book_Final_wLinks_02272026.pdf"
     ],
-    "laborPosters": ["https://does.dc.gov/page/office-wage-hour-employers"],
-    "dba": ["https://dlcp.dc.gov/node/1619191"]
+    "laborPosters": ["https://does.dc.gov/page/office-wage-hour-employers/page/office-wage-hour-employers"],
+    "dba": ["https://dlcp.dc.gov/page/corporations-division-business-registration-faqs/node/1619191"]
   },
   "verification": {
     "checkedOn": "2026-10-13",
-    "sources": ["https://dlcp.dc.gov/page/corporations-division-fees-limited-liability-company"],
+    "sources": [
+      "https://dlcp.dc.gov/page/corporations-division-business-registration-faqs/page/corporations-division-fees-limited-liability-company"
+    ],
     "unconfirmed": []
   }
 }

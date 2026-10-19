@@ -35,7 +35,7 @@ export type {
 } from "./data/types";
 export { estimateCosts, itemAmount } from "./costs";
 export type { CostOptions, CostEstimate, CostLine } from "./costs";
-export { describeFee } from "./fee";
+export { describeFee, describePenalty } from "./fee";
 export { buildCalendar, toICS } from "./calendar";
 export type { CalendarEvent, CalendarOptions, IcsOptions } from "./calendar";
 export { analyzeInputs } from "./analysis";

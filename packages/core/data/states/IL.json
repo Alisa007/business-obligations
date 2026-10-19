@@ -6,11 +6,11 @@
   },
   "revenue": {
     "name": "Illinois Department of Revenue",
-    "url": ["https://tax.illinois.gov"]
+    "url": ["https://tax.illinois.gov/businesses.html"]
   },
   "labor": {
     "name": "Illinois Department of Employment Security",
-    "url": ["https://ides.illinois.gov"]
+    "url": ["https://labor.illinois.gov/employers/posters.html"]
   },
   "llcReport": {
     "title": "File Annual Report",
@@ -35,7 +35,10 @@
       "amount": 75
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "percent",
+      "percentPerMonth": 2,
+      "note": "Late annual report penalty is 10% of Illinois franchise tax; late franchise tax also accrues 2% per month, minimum $1. No penalty or interest is computed when no franchise tax is due.",
+      "rate": 10
     }
   },
   "lpReport": {
@@ -99,6 +102,7 @@
   },
   "businessLicense": null,
   "local": {
+    "url": ["https://tax.illinois.gov/businesses.html/businesses.html"],
     "title": "Municipal business license",
     "authority": "City/village clerk",
     "description": "Chicago and many municipalities require business licenses (Chicago: BACP)."
@@ -120,11 +124,13 @@
     "formation": ["https://www.ilsos.gov/departments/business-services.html"],
     "annualReport": ["https://www.ilsos.gov/departments/business-services/annual-reports.html"],
     "uiRegistration": [
-      "https://ides.illinois.gov/employer-resources/taxes-reporting/are-you-a-new-employer-register.html"
+      "https://labor.illinois.gov/employers/posters.html/employer-resources/taxes-reporting/are-you-a-new-employer-register.html"
     ],
-    "withholding": ["https://tax.illinois.gov/research/taxinformation/withholdingincometax.html"],
-    "salesTax": ["https://tax.illinois.gov/businesses/registration.html"],
-    "entityTax": ["https://tax.illinois.gov/businesses.html"],
+    "withholding": [
+      "https://tax.illinois.gov/businesses.html/research/taxinformation/withholdingincometax.html"
+    ],
+    "salesTax": ["https://tax.illinois.gov/businesses.html/businesses/registration.html"],
+    "entityTax": ["https://tax.illinois.gov/businesses.html/businesses.html"],
     "laborPosters": ["https://labor.illinois.gov/employers/posters.html"],
     "dba": [
       "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"

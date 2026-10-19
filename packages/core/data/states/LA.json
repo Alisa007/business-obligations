@@ -6,11 +6,11 @@
   },
   "revenue": {
     "name": "Louisiana Department of Revenue",
-    "url": ["https://revenue.louisiana.gov"]
+    "url": ["https://revenue.louisiana.gov/businesses/widely-used-tax-types/corporate-income-franchise-tax/"]
   },
   "labor": {
     "name": "Louisiana Workforce Commission",
-    "url": ["https://www.louisianaworks.net"]
+    "url": ["https://www2.laworks.net/Downloads/Downloads_Posters.asp"]
   },
   "llcReport": {
     "rrule": "FREQ=YEARLY",
@@ -20,7 +20,9 @@
       "amount": 35
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 35,
+      "note": "Reinstatement requires an additional $35 for each annual report due."
     }
   },
   "corpReport": {
@@ -31,7 +33,9 @@
       "amount": 35
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 35,
+      "note": "Reinstatement requires an additional $35 for each annual report due."
     }
   },
   "llpReport": {
@@ -43,7 +47,9 @@
       "amount": 155
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 35,
+      "note": "Reinstatement requires an additional $35 for each annual report due."
     }
   },
   "llcPublication": null,
@@ -73,6 +79,7 @@
   "paidSickLeave": null,
   "businessLicense": null,
   "local": {
+    "url": ["https://www.opportunitylouisiana.gov/faqs/do-i-need-a-license-or-permit-to-start-my-business"],
     "title": "Parish/municipal occupational license",
     "authority": "Parish or city",
     "description": "Parishes and cities issue occupational licenses and many collect their own sales tax."
@@ -94,12 +101,14 @@
     "formation": ["https://www.sos.la.gov/business-services/forms-fee-schedule"],
     "annualReport": ["https://www.sos.la.gov/business-services/file-business-documents"],
     "uiRegistration": ["https://www.laworks.net/unemploymentinsurance/ui_employers.asp"],
-    "withholding": ["https://revenue.louisiana.gov/businesses/widely-used-tax-types/withholding/"],
+    "withholding": [
+      "https://revenue.louisiana.gov/businesses/widely-used-tax-types/corporate-income-franchise-tax//businesses/widely-used-tax-types/withholding/"
+    ],
     "salesTax": [
-      "https://revenue.louisiana.gov/businesses/general-sales-and-use-taxes/general-sales-use-tax/"
+      "https://revenue.louisiana.gov/businesses/widely-used-tax-types/corporate-income-franchise-tax//businesses/general-sales-and-use-taxes/general-sales-use-tax/"
     ],
     "entityTax": [
-      "https://revenue.louisiana.gov/businesses/widely-used-tax-types/corporate-income-franchise-tax/"
+      "https://revenue.louisiana.gov/businesses/widely-used-tax-types/corporate-income-franchise-tax//businesses/widely-used-tax-types/corporate-income-franchise-tax/"
     ],
     "laborPosters": ["https://www2.laworks.net/Downloads/Downloads_Posters.asp"],
     "dba": ["https://www.sos.la.gov/business-services/file-business-documents"]

@@ -1,6 +1,92 @@
-import type { ResolvedProfile, Rule } from "../types";
+import type { ItemDraft, ResolvedProfile, Rule } from "../types";
 
 const needsEin = (p: ResolvedProfile) => p.entityType !== "sole_proprietorship" || p.hasEmployees;
+
+const free = { basis: "flat" as const, amount: 0, currency: "USD" as const };
+const informationReturnPenalty = {
+  basis: "range" as const,
+  min: 60,
+  max: 680,
+  note: "Per return or statement; 2026 IRS information-return penalty schedule, including intentional disregard.",
+  currency: "USD" as const,
+};
+
+/** Adds the federal filing fee/penalty facts shared by every profile producing the rule. */
+function federalAmounts(rule: Rule): Rule {
+  const amounts: Record<string, { cost: ItemDraft["cost"]; penalty?: ItemDraft["penalty"] }> = {
+    "fed.ein": { cost: free, penalty: { basis: "flat", amount: 0, currency: "USD" } },
+    "fed.income-tax-return": {
+      cost: free,
+    },
+    "fed.payroll-deposits": {
+      cost: free,
+    },
+    "fed.1099-nec": { cost: free, penalty: informationReturnPenalty },
+    "fed.aca-reporting": { cost: free, penalty: informationReturnPenalty },
+    "fed.exempt-application": {
+      cost: {
+        basis: "varies",
+        note: "IRS user fee is $600 for Form 1023 or $275 for Form 1023-EZ.",
+        currency: "USD",
+      },
+    },
+    "fed.estimated-tax": { cost: free },
+    "fed.labor-posters": { cost: free, penalty: { basis: "flat", amount: 0, currency: "USD" } },
+    "fed.eeo1": { cost: free },
+    "fed.osha-recordkeeping": { cost: free },
+    "fed.ttb-alcohol": { cost: free },
+  };
+  const amount = amounts[rule.id];
+  if (!amount) return rule;
+  return {
+    ...rule,
+    items: (p) => {
+      const built = rule.items(p);
+      const add = (item: ItemDraft): ItemDraft => ({
+        ...item,
+        cost: item.cost ?? amount.cost,
+        ...(item.penalty ||
+        (!amount.penalty && !["fed.income-tax-return", "fed.payroll-deposits"].includes(rule.id))
+          ? {}
+          : {
+              penalty:
+                rule.id === "fed.income-tax-return" &&
+                (p.taxTreatment === "partnership" || p.taxTreatment === "s_corp")
+                  ? {
+                      basis: "per_item" as const,
+                      perUnit: 255,
+                      note: "Per partner or shareholder per month, up to 12 months, for 2026 returns.",
+                      currency: "USD" as const,
+                    }
+                  : rule.id === "fed.income-tax-return"
+                    ? {
+                        basis: "percent" as const,
+                        rate: 5,
+                        min: 525,
+                        note: "Failure-to-file penalty is generally 5% per month, up to 25%; minimum applies to returns due after December 31, 2025.",
+                        currency: "USD" as const,
+                      }
+                    : rule.id === "fed.payroll-deposits"
+                      ? item.title === "Deposit federal payroll taxes"
+                        ? {
+                            basis: "percent" as const,
+                            rate: 2,
+                            note: "Failure-to-deposit penalty is 2%, 5%, 10% or 15% of unpaid tax depending on delay and payment method.",
+                            currency: "USD" as const,
+                          }
+                        : {
+                            basis: "percent" as const,
+                            rate: 5,
+                            note: "Failure-to-file penalty is generally 5% per month, up to 25% of unpaid tax; other penalties may also apply.",
+                            currency: "USD" as const,
+                          }
+                      : amount.penalty,
+            }),
+      });
+      return Array.isArray(built) ? built.map(add) : add(built);
+    },
+  };
+}
 
 /** 15th day of the month that is `monthsAfter` months after the fiscal year-end month. */
 function fyDue(p: ResolvedProfile, monthsAfter: number): { rrule: string; label: string } {
@@ -77,7 +163,7 @@ function estimatedTaxSchedule(p: ResolvedProfile): { deadline: string; rrule: st
   };
 }
 
-export const federalRules: Rule[] = [
+const federalRuleDefinitions: Rule[] = [
   {
     id: "fed.ein",
     description: "EIN for entities and employers",
@@ -409,3 +495,5 @@ export const federalRules: Rule[] = [
     }),
   },
 ];
+
+export const federalRules: Rule[] = federalRuleDefinitions.map(federalAmounts);

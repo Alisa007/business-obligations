@@ -6,11 +6,11 @@
   },
   "revenue": {
     "name": "South Carolina Department of Revenue",
-    "url": ["https://dor.sc.gov"]
+    "url": ["https://dor.sc.gov/business-income-taxes/corporate/c-corporation"]
   },
   "labor": {
     "name": "South Carolina Department of Employment and Workforce",
-    "url": ["https://dew.sc.gov"]
+    "url": ["https://llr.sc.gov/wage/posters.aspx"]
   },
   "llcReport": null,
   "corpReport": {
@@ -24,7 +24,10 @@
       "note": "of capital stock and paid-in surplus, plus $15"
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "percent",
+      "note": "Corporate tax return late-filing penalty is 5% of unpaid tax per month, capped at 25%; late license-fee payments also have a 0.5% monthly penalty capped at 25%.",
+      "rate": 5,
+      "max": 25
     }
   },
   "llpReport": {
@@ -37,7 +40,8 @@
       "amount": 100
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "none",
+      "note": "South Carolina publishes no separate late monetary penalty for LLP renewal; failure to maintain required filings can affect authority."
     }
   },
   "llcReportAppliesWhenTaxedAsCorp": true,
@@ -70,6 +74,7 @@
   "paidSickLeave": null,
   "businessLicense": null,
   "local": {
+    "url": ["https://www.scbos.sc.gov/business-compliance/licenses/business-license"],
     "title": "Municipal or county business license",
     "authority": "City or county business license office",
     "description": "Every South Carolina business needs a local business license under the Business License Tax Standardization Act."
@@ -88,16 +93,22 @@
   },
   "links": {
     "formation": ["https://sos.sc.gov/online-filings/business-entities"],
-    "annualReport": ["https://dor.sc.gov/business-income-taxes/corporate"],
-    "uiRegistration": ["https://dew.sc.gov/employers"],
-    "withholding": ["https://dor.sc.gov/withholding"],
-    "salesTax": ["https://dor.sc.gov/sales-use-tax-index"],
-    "entityTax": ["https://dor.sc.gov/business-income-taxes/corporate/c-corporation"],
+    "annualReport": [
+      "https://dor.sc.gov/business-income-taxes/corporate/c-corporation/business-income-taxes/corporate"
+    ],
+    "uiRegistration": ["https://llr.sc.gov/wage/posters.aspx/employers"],
+    "withholding": ["https://dor.sc.gov/business-income-taxes/corporate/c-corporation/withholding"],
+    "salesTax": ["https://dor.sc.gov/business-income-taxes/corporate/c-corporation/sales-use-tax-index"],
+    "entityTax": [
+      "https://dor.sc.gov/business-income-taxes/corporate/c-corporation/business-income-taxes/corporate/c-corporation"
+    ],
     "laborPosters": ["https://llr.sc.gov/wage/posters.aspx"]
   },
   "verification": {
     "checkedOn": "2026-10-19",
-    "sources": ["https://dor.sc.gov/business-income-taxes/corporate/corporate-faqs"],
+    "sources": [
+      "https://dor.sc.gov/business-income-taxes/corporate/c-corporation/business-income-taxes/corporate/corporate-faqs"
+    ],
     "unconfirmed": []
   }
 }

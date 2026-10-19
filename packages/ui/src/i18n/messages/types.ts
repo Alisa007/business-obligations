@@ -59,6 +59,8 @@ export interface Messages {
   all: string;
   noMatch: string;
   // Details
+  feeLabel: string;
+  notListed: string;
   whyItApplies: string;
   replacedBy: string;
   appliesWhen: string;

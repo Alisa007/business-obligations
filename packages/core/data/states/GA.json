@@ -6,11 +6,11 @@
   },
   "revenue": {
     "name": "Georgia Department of Revenue",
-    "url": ["https://dor.georgia.gov"]
+    "url": ["https://dor.georgia.gov/taxes/taxes-corporations"]
   },
   "labor": {
     "name": "Georgia Department of Labor",
-    "url": ["https://dol.georgia.gov"]
+    "url": ["https://dol.georgia.gov/laws-and-rules/gdol-required-workplace-posters"]
   },
   "llcReport": {
     "title": "File Annual Registration",
@@ -75,6 +75,7 @@
   "paidSickLeave": null,
   "businessLicense": null,
   "local": {
+    "url": ["https://georgia.gov/starting-business-guide"],
     "title": "City or county occupation tax certificate",
     "authority": "City or county business license office",
     "description": "Georgia local governments issue business/occupation tax certificates."
@@ -97,11 +98,13 @@
   "links": {
     "formation": ["https://sos.ga.gov/corporations-division-georgia-secretary-states-office"],
     "annualReport": ["https://ecorp.sos.ga.gov/OneClickAR"],
-    "uiRegistration": ["https://dol.georgia.gov/employers"],
-    "withholding": ["https://dor.georgia.gov/taxes/withholding-tax-employers"],
-    "salesTax": ["https://dor.georgia.gov/taxes/sales-use-tax"],
-    "entityTax": ["https://dor.georgia.gov/taxes/taxes-corporations"],
-    "laborPosters": ["https://dol.georgia.gov/laws-and-rules/gdol-required-workplace-posters"],
+    "uiRegistration": ["https://dol.georgia.gov/laws-and-rules/gdol-required-workplace-posters/employers"],
+    "withholding": ["https://dor.georgia.gov/taxes/taxes-corporations/taxes/withholding-tax-employers"],
+    "salesTax": ["https://dor.georgia.gov/taxes/taxes-corporations/taxes/sales-use-tax"],
+    "entityTax": ["https://dor.georgia.gov/taxes/taxes-corporations/taxes/taxes-corporations"],
+    "laborPosters": [
+      "https://dol.georgia.gov/laws-and-rules/gdol-required-workplace-posters/laws-and-rules/gdol-required-workplace-posters"
+    ],
     "dba": ["https://sos.ga.gov/page/business-division-faq"]
   },
   "verification": {

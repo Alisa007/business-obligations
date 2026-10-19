@@ -129,7 +129,7 @@ export interface FeeDetail {
   tiers?: FeeTier[];
 }
 
-/** Penalty for a late filing or payment. */
+/** Legacy flat penalty fields retained for callers that only need a fixed amount. */
 export interface LateFee {
   amount: number;
   /** Additional interest or penalty as a percentage per month. */
@@ -138,17 +138,27 @@ export interface LateFee {
   note?: string;
 }
 
+interface PenaltyQualifiers {
+  /** Additional interest or penalty as a percentage per month. */
+  percentPerMonth?: number;
+  /** When the penalty applies or what makes it special. */
+  note?: string;
+}
+
 /**
  * The penalty for missing the obligation, written on every item. `none` means the government states no penalty;
  * `unknown` means it has not been researched yet (it is the only placeholder the data allows).
  */
-export type Penalty = ({ basis: "flat" } & LateFee) | { basis: "none" | "unknown" };
+export type StatedPenalty =
+  | ({ basis: "flat"; amount: number } & PenaltyQualifiers)
+  | ({ basis: "percent"; rate: number; base?: number; min?: number; max?: number } & PenaltyQualifiers)
+  | ({ basis: "per_item"; perUnit: number; min?: number; max?: number } & PenaltyQualifiers)
+  | ({ basis: "range"; min: number; max?: number } & PenaltyQualifiers);
+export type Penalty = StatedPenalty | { basis: "none" | "unknown" };
 
 /** The `penalty` of an item from its data, when there is a stated amount. */
-export function statedPenalty(p: Penalty): LateFee | undefined {
-  if (p.basis !== "flat") return undefined;
-  const { basis: _basis, ...late } = p;
-  return late;
+export function statedPenalty(p: Penalty): StatedPenalty | undefined {
+  return p.basis === "none" || p.basis === "unknown" ? undefined : (p as StatedPenalty);
 }
 
 export interface ReportRule {
@@ -259,7 +269,7 @@ export interface StateInfo {
   /** Statewide paid sick leave mandate. */
   paidSickLeave: { minEmployees: number; note?: string } | null;
   /** Typical general local licensing in the state. */
-  local: { title: string; authority: string; description: string };
+  local: { title: string; authority: string; description: string; url: string[] };
   /** Post-formation newspaper publication requirement for LLCs. */
   llcPublication: string | null;
   /** Annual sales into the state at which a remote seller must register; null = no statewide sales tax. */

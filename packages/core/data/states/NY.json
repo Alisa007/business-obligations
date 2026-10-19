@@ -6,11 +6,11 @@
   },
   "revenue": {
     "name": "New York Department of Taxation and Finance",
-    "url": ["https://www.tax.ny.gov"]
+    "url": ["https://www.tax.ny.gov/bus/ct/ctidx.htm"]
   },
   "labor": {
     "name": "New York State Department of Labor",
-    "url": ["https://dol.ny.gov"]
+    "url": ["https://dol.ny.gov/posting-requirements"]
   },
   "llcReport": {
     "title": "File Biennial Statement",
@@ -21,7 +21,7 @@
       "amount": 9
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "none"
     }
   },
   "corpReport": {
@@ -33,7 +33,7 @@
       "amount": 9
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "none"
     }
   },
   "lpReport": null,
@@ -47,7 +47,7 @@
       "amount": 20
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "none"
     }
   },
   "llcPublication": "New York LLCs must publish their articles of organization or a notice of formation in two newspapers within 120 days, then file a Certificate of Publication with the Division of Corporations ($50) or lose authority to do business.",
@@ -85,7 +85,8 @@
   },
   "businessLicense": null,
   "local": {
-    "title": "City licenses (e.g., NYC DCWP)",
+    "url": ["https://www.ny.gov/services/start-business-new-york-state"],
+    "title": "City licenses",
     "authority": "City licensing agency",
     "description": "New York has no general business license; NYC and other cities license specific industries."
   },
@@ -105,11 +106,11 @@
   "links": {
     "formation": ["https://dos.ny.gov/form-corporation-or-business"],
     "annualReport": ["https://dos.ny.gov/form-corporation-or-business"],
-    "uiRegistration": ["https://dol.ny.gov/register-unemployment-insurance-0"],
-    "withholding": ["https://www.tax.ny.gov/bus/doingbus/hire.htm"],
-    "salesTax": ["https://www.tax.ny.gov/bus/st/stidx.htm"],
-    "entityTax": ["https://www.tax.ny.gov/bus/ct/ctidx.htm"],
-    "laborPosters": ["https://dol.ny.gov/posting-requirements"],
+    "uiRegistration": ["https://dol.ny.gov/posting-requirements/register-unemployment-insurance-0"],
+    "withholding": ["https://www.tax.ny.gov/bus/ct/ctidx.htm/bus/doingbus/hire.htm"],
+    "salesTax": ["https://www.tax.ny.gov/bus/ct/ctidx.htm/bus/st/stidx.htm"],
+    "entityTax": ["https://www.tax.ny.gov/bus/ct/ctidx.htm/bus/ct/ctidx.htm"],
+    "laborPosters": ["https://dol.ny.gov/posting-requirements/posting-requirements"],
     "dba": ["https://dos.ny.gov/certificate-assumed-name"]
   },
   "verification": {

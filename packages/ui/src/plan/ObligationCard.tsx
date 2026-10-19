@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import type { ComplianceItem } from "business-obligations";
+import { describeFee, describePenalty, type ComplianceItem } from "business-obligations";
 import { Paragraph, Text, XStack, YStack } from "tamagui";
 import { useI18n } from "../i18n/context";
 import type { Messages } from "../i18n/messages";
@@ -18,6 +18,14 @@ function ObligationDetails({
 }) {
   const { m, money, date } = useI18n();
   const rows: Array<[string, ReactNode]> = [[m.whyItApplies, item.reason]];
+  rows.push([
+    m.feeLabel,
+    item.cost
+      ? item.cost.amount !== undefined
+        ? money(item.cost.amount)
+        : describeFee(item.cost)
+      : m.notListed,
+  ]);
   if (item.preemptedBy) rows.push([m.replacedBy, titleOf(item.preemptedBy) ?? item.preemptedBy]);
   if (item.appliesWhen?.length)
     rows.push([
@@ -41,11 +49,7 @@ function ObligationDetails({
   ].filter(Boolean);
   if (how.length) rows.push([m.howToFile, how.join(" · ")]);
   if (item.renewal) rows.push([m.renewal, item.renewal]);
-  if (item.penalty)
-    rows.push([
-      m.ifLate,
-      `${money(item.penalty.amount)}${item.penalty.percentPerMonth ? m.plusPerMonth(item.penalty.percentPerMonth) : ""}${item.penalty.note ? `. ${item.penalty.note}` : ""}`,
-    ]);
+  rows.push([m.ifLate, item.penalty ? describePenalty(item.penalty) : m.notListed]);
   const provenance = item.provenance;
   if (provenance?.sources.length) {
     const sources =
@@ -142,8 +146,15 @@ export function ObligationCard({
   );
 }
 
-/** "number of employees: 1, 2, 3 …" for the values of one profile field that would bring an item in. */
+/** Describes the values of one profile field that would bring an item in. */
 export function describeWhen(m: Messages, { field, values }: { field: string; values: unknown[] }): string {
+  if (
+    values.length > 0 &&
+    (field === "employeeCount" || field === "fullTimeEmployeeCount") &&
+    values.every((value): value is number => typeof value === "number") &&
+    Math.min(...values) > 0
+  )
+    return `${m.fields[field] ?? field}: ${m.operators[">"]} ${Math.min(...values) - 1}`;
   const shown = values
     .slice(0, 3)
     .map((value) => (typeof value === "boolean" ? (value ? m.yes : m.no) : String(value)));

@@ -23,7 +23,7 @@ import { applicable } from "../src/rules/local";
 import { EMPLOYER_ITEMS } from "../src/data/employers";
 import { INDUSTRY_ITEMS } from "../src/data/industries";
 import { describeSchedule, parseRRule, toRRule } from "../src/rrule";
-import { describeFee, feeCost, penaltyOf } from "../src/fee";
+import { describeFee, describePenalty, feeCost, penaltyOf } from "../src/fee";
 import { describeTrigger } from "../src/trigger";
 
 const root = path.resolve(__dirname, "..");
@@ -495,14 +495,26 @@ describe("local and profession data schemas", () => {
     ).toBe(false);
   });
 
-  it("keeps unresearched fees and penalties off the result", () => {
-    expect(feeCost({ feeDetail: { basis: "unknown" } })).toEqual({});
+  it("keeps unresearched fees visible in the result", () => {
+    expect(feeCost({ feeDetail: { basis: "unknown" } })).toEqual({
+      cost: { basis: "unknown", currency: "USD" },
+    });
     expect(feeCost({ feeDetail: { basis: "none" } })).toEqual({ cost: { basis: "none", currency: "USD" } });
     expect(penaltyOf({ penalty: { basis: "unknown" } })).toEqual({});
     expect(penaltyOf({ penalty: { basis: "none" } })).toEqual({});
     expect(penaltyOf({ penalty: { basis: "flat", amount: 50, note: "per month late" } })).toEqual({
-      penalty: { amount: 50, note: "per month late", currency: "USD" },
+      penalty: { basis: "flat", amount: 50, note: "per month late", currency: "USD" },
     });
+  });
+
+  it("describes structured penalties", () => {
+    expect(describePenalty({ basis: "percent", rate: 5, min: 25, max: 500 })).toBe(
+      "5% (minimum $25; maximum $500)",
+    );
+    expect(describePenalty({ basis: "per_item", perUnit: 10, note: "per return" })).toBe(
+      "$10 per item (per return)",
+    );
+    expect(describePenalty({ basis: "range", min: 100, max: 1000 })).toBe("$100–$1,000");
   });
 
   it("requires the numbers a fee basis needs", () => {
@@ -1198,8 +1210,9 @@ describe("sourceUrl as a list", () => {
         checkedOn: "2026-01-01",
       },
     ];
-    expect(city(none("https://a.example"))).toBe(true);
-    expect(city(none(["https://a.example", "https://b.example"]))).toBe(true);
+    expect(city(none("https://a.example/page"))).toBe(true);
+    expect(city(none(["https://a.example/page", "https://b.example/page"]))).toBe(true);
+    expect(city(none("https://a.example"))).toBe(false);
     expect(city(none([]))).toBe(false);
     expect(city(none(["http://a.example"]))).toBe(false);
   });

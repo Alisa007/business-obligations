@@ -6,11 +6,11 @@
   },
   "revenue": {
     "name": "Minnesota Department of Revenue",
-    "url": ["https://www.revenue.state.mn.us"]
+    "url": ["https://www.revenue.state.mn.us/minimum-fee"]
   },
   "labor": {
     "name": "Minnesota DEED Unemployment Insurance",
-    "url": ["https://uimn.org"]
+    "url": ["https://www.dli.mn.gov/posters"]
   },
   "llcReport": {
     "title": "File Annual Renewal",
@@ -20,7 +20,9 @@
       "amount": 0
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 65,
+      "note": "Annual renewal reinstatement fee; $85 for online or in-person expedited filing."
     }
   },
   "corpReport": {
@@ -31,7 +33,9 @@
       "amount": 0
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 25,
+      "note": "Annual renewal reinstatement fee; $45 for online or in-person expedited filing."
     }
   },
   "lpReport": {
@@ -42,7 +46,9 @@
       "amount": 0
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 25,
+      "note": "Annual renewal reinstatement fee; $45 for online or in-person expedited filing."
     }
   },
   "llpReport": {
@@ -55,7 +61,9 @@
       "paper": 135
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 160,
+      "note": "Annual LLP reinstatement fee; $180 for online or in-person expedited filing."
     }
   },
   "llcPublication": null,
@@ -92,6 +100,7 @@
   },
   "businessLicense": null,
   "local": {
+    "url": ["https://mn.gov/deed/business/"],
     "title": "City business licenses",
     "authority": "City clerk",
     "description": "Minnesota cities license specific activities; no general state-wide business license."
@@ -111,10 +120,10 @@
   "links": {
     "formation": ["https://www.sos.state.mn.us/business-liens/start-a-business/"],
     "annualReport": ["https://www.sos.mn.gov/business-liens/business-help-center/annual-renewal/"],
-    "uiRegistration": ["https://uimn.org/employers/employer-account/"],
-    "withholding": ["https://www.revenue.state.mn.us/withholding-tax"],
-    "salesTax": ["https://www.revenue.state.mn.us/sales-and-use-tax"],
-    "entityTax": ["https://www.revenue.state.mn.us/minimum-fee"],
+    "uiRegistration": ["https://www.dli.mn.gov/posters/employers/employer-account/"],
+    "withholding": ["https://www.revenue.state.mn.us/minimum-fee/withholding-tax"],
+    "salesTax": ["https://www.revenue.state.mn.us/minimum-fee/sales-and-use-tax"],
+    "entityTax": ["https://www.revenue.state.mn.us/minimum-fee/minimum-fee"],
     "laborPosters": ["https://www.dli.mn.gov/posters"],
     "dba": ["https://www.sos.mn.gov/business-liens/business-forms-fees/assumed-namedba/"]
   },

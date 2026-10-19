@@ -6,11 +6,11 @@
   },
   "revenue": {
     "name": "Alaska Department of Revenue",
-    "url": ["https://tax.alaska.gov"]
+    "url": ["https://www.tax.alaska.gov/programs/programs/other/corporate/MEF.aspx"]
   },
   "labor": {
     "name": "Alaska Department of Labor and Workforce Development",
-    "url": ["https://labor.alaska.gov"]
+    "url": ["https://labor.alaska.gov/lss/posters.htm"]
   },
   "llcReport": {
     "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=1;BYMONTHDAY=2",
@@ -20,7 +20,9 @@
       "amount": 100
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 25,
+      "note": "$25 for each year or part of a year delinquent; Alaska statutes also authorize an additional charge of 10% of the filing fee."
     }
   },
   "corpReport": {
@@ -31,7 +33,9 @@
       "amount": 100
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 5,
+      "note": "Penalty for failure to file a required biennial report."
     }
   },
   "llcPublication": null,
@@ -71,10 +75,12 @@
       "note": "per year; $100 for the 2-year license"
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "none",
+      "note": "No separate state business-license late penalty is listed; a lapsed license may be renewed during the two-year lapse window, and after two years a new license is required."
     }
   },
   "local": {
+    "url": ["https://www.commerce.alaska.gov/web/cbpl/BusinessLicensing.aspx"],
     "title": "Borough/city business license",
     "authority": "City or borough clerk",
     "description": "Local licenses and sales tax registration where the municipality has them."
@@ -94,10 +100,10 @@
   "links": {
     "formation": ["https://www.commerce.alaska.gov/web/cbpl/Corporations/CreateFileNewEntity"],
     "annualReport": ["https://www.commerce.alaska.gov/web/cbpl/Corporations/BiennialReportsFAQs"],
-    "uiRegistration": ["https://labor.alaska.gov/estax/"],
+    "uiRegistration": ["https://labor.alaska.gov/lss/posters.htm/estax/"],
     "salesTax": ["https://arsstc.org/business-sellers/"],
     "entityTax": ["https://www.tax.alaska.gov/programs/programs/other/corporate/MEF.aspx"],
-    "laborPosters": ["https://labor.alaska.gov/lss/posters.htm"],
+    "laborPosters": ["https://labor.alaska.gov/lss/posters.htm/lss/posters.htm"],
     "dba": ["https://www.commerce.alaska.gov/web/cbpl/Corporations/ReservingRegisteringBusinessName.aspx"]
   },
   "verification": {

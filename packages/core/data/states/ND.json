@@ -6,11 +6,11 @@
   },
   "revenue": {
     "name": "North Dakota Office of State Tax Commissioner",
-    "url": ["https://www.tax.nd.gov"]
+    "url": ["https://www.tax.nd.gov/corporate-income-tax"]
   },
   "labor": {
     "name": "Job Service North Dakota",
-    "url": ["https://www.jobsnd.com"]
+    "url": ["https://www.nd.gov/labor/required-employer-posters"]
   },
   "llcReport": {
     "rrule": "FREQ=YEARLY;BYMONTH=11;BYMONTHDAY=15",
@@ -19,7 +19,9 @@
       "amount": 50
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 5,
+      "note": "Late fee for an annual report received after the deadline."
     }
   },
   "corpReport": {
@@ -29,7 +31,9 @@
       "amount": 25
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 5,
+      "note": "Late fee for an annual report received after the deadline."
     }
   },
   "lpReport": {
@@ -39,7 +43,9 @@
       "amount": 25
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 5,
+      "note": "Late fee for an annual report received after the deadline."
     }
   },
   "llpReport": {
@@ -49,7 +55,9 @@
       "amount": 25
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 5,
+      "note": "Late fee for an annual report received after the deadline."
     }
   },
   "llcPublication": null,
@@ -80,6 +88,9 @@
   "paidSickLeave": null,
   "businessLicense": null,
   "local": {
+    "url": [
+      "https://www.commerce.nd.gov/economic-development-finance/finance-and-incentives/finance-and-incentive-forms"
+    ],
     "title": "City business license",
     "authority": "City auditor/clerk",
     "description": "Some North Dakota cities license specific businesses."
@@ -99,10 +110,10 @@
   "links": {
     "formation": ["https://www.sos.nd.gov/business/business-services"],
     "annualReport": ["https://www.sos.nd.gov/business"],
-    "uiRegistration": ["https://www.jobsnd.com/unemployment-business-tax"],
-    "withholding": ["https://www.tax.nd.gov/income-tax-withholding"],
-    "salesTax": ["https://www.tax.nd.gov/sales-and-use-tax"],
-    "entityTax": ["https://www.tax.nd.gov/corporate-income-tax"],
+    "uiRegistration": ["https://www.nd.gov/labor/required-employer-posters/unemployment-business-tax"],
+    "withholding": ["https://www.tax.nd.gov/corporate-income-tax/income-tax-withholding"],
+    "salesTax": ["https://www.tax.nd.gov/corporate-income-tax/sales-and-use-tax"],
+    "entityTax": ["https://www.tax.nd.gov/corporate-income-tax/corporate-income-tax"],
     "laborPosters": ["https://www.nd.gov/labor/required-employer-posters"],
     "dba": ["https://sos.nd.gov/business/business-services/trade-name-franchise-name"]
   },

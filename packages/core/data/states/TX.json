@@ -6,11 +6,11 @@
   },
   "revenue": {
     "name": "Texas Comptroller of Public Accounts",
-    "url": ["https://comptroller.texas.gov"]
+    "url": ["https://comptroller.texas.gov/taxes/franchise/"]
   },
   "labor": {
     "name": "Texas Workforce Commission",
-    "url": ["https://www.twc.texas.gov"]
+    "url": ["https://www.twc.texas.gov/programs/unemployment-tax/posters-workplace"]
   },
   "llcReport": {
     "title": "File Franchise Tax Report and Public Information Report",
@@ -21,7 +21,10 @@
       "note": "no tax due at or below $2.65 million of annualized revenue (2026 report)"
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "range",
+      "note": "$50 late-filing penalty applies to a franchise tax report; entities filing only a Public Information Report or Ownership Information Report at or below the no-tax-due threshold have no $50 penalty.",
+      "min": 0,
+      "max": 50
     }
   },
   "corpReport": {
@@ -33,7 +36,10 @@
       "note": "no tax due at or below $2.65 million of annualized revenue (2026 report)"
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "range",
+      "note": "$50 late-filing penalty applies to a franchise tax report; entities filing only a Public Information Report or Ownership Information Report at or below the no-tax-due threshold have no $50 penalty.",
+      "min": 0,
+      "max": 50
     }
   },
   "llcPublication": null,
@@ -43,7 +49,7 @@
     "thresholdUsd": 2650000,
     "rate": 0.75,
     "summary": "0.75% of taxable margin (0.375% for retail and wholesale); no tax due at or below $2.65 million of annualized total revenue, though the report is still filed",
-    "source": "https://comptroller.texas.gov/taxes/franchise/",
+    "source": "https://comptroller.texas.gov/taxes/franchise//taxes/franchise/",
     "checkedOn": "2026-10-13"
   },
   "salesTax": {
@@ -73,6 +79,7 @@
   "paidSickLeave": null,
   "businessLicense": null,
   "local": {
+    "url": ["https://gov.texas.gov/business"],
     "title": "Local permits",
     "authority": "City or county",
     "description": "Texas has no general state or city business license; occupancy, health, signage and industry permits are local, and DBAs go to the county clerk."
@@ -93,16 +100,20 @@
   },
   "links": {
     "formation": ["https://www.sos.state.tx.us/corp/forms_boc.shtml"],
-    "annualReport": ["https://comptroller.texas.gov/taxes/franchise/"],
-    "uiRegistration": ["https://www.twc.texas.gov/services/register-tax"],
-    "salesTax": ["https://comptroller.texas.gov/taxes/sales/"],
-    "entityTax": ["https://comptroller.texas.gov/taxes/franchise/"],
-    "laborPosters": ["https://www.twc.texas.gov/programs/unemployment-tax/posters-workplace"],
+    "annualReport": ["https://comptroller.texas.gov/taxes/franchise//taxes/franchise/"],
+    "uiRegistration": [
+      "https://www.twc.texas.gov/programs/unemployment-tax/posters-workplace/services/register-tax"
+    ],
+    "salesTax": ["https://comptroller.texas.gov/taxes/franchise//taxes/sales/"],
+    "entityTax": ["https://comptroller.texas.gov/taxes/franchise//taxes/franchise/"],
+    "laborPosters": [
+      "https://www.twc.texas.gov/programs/unemployment-tax/posters-workplace/programs/unemployment-tax/posters-workplace"
+    ],
     "dba": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   "verification": {
     "checkedOn": "2026-10-13",
-    "sources": ["https://comptroller.texas.gov/taxes/franchise/"],
+    "sources": ["https://comptroller.texas.gov/taxes/franchise//taxes/franchise/"],
     "unconfirmed": []
   }
 }

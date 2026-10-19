@@ -6,11 +6,13 @@
   },
   "revenue": {
     "name": "North Carolina Department of Revenue",
-    "url": ["https://www.ncdor.gov"]
+    "url": ["https://www.ncdor.gov/taxes-forms/corporate-income-and-franchise-tax"]
   },
   "labor": {
     "name": "North Carolina Division of Employment Security",
-    "url": ["https://des.nc.gov"]
+    "url": [
+      "https://www.labor.nc.gov/safety-and-health/publications/state-and-federal-workplace-poster-requirements"
+    ]
   },
   "llcReport": {
     "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
@@ -19,7 +21,8 @@
       "amount": 200
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "none",
+      "note": "North Carolina publishes administrative dissolution or revocation for missed annual reports, but no separate late monetary penalty."
     }
   },
   "corpReport": {
@@ -32,7 +35,8 @@
       "note": "plus $3 card fee"
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "none",
+      "note": "North Carolina publishes administrative dissolution or revocation for missed annual reports, but no separate late monetary penalty."
     }
   },
   "lpReport": null,
@@ -45,7 +49,8 @@
       "online": 203
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "none",
+      "note": "North Carolina publishes administrative dissolution or revocation for missed annual reports, but no separate late monetary penalty."
     }
   },
   "llcPublication": null,
@@ -75,6 +80,7 @@
   "paidSickLeave": null,
   "businessLicense": null,
   "local": {
+    "url": ["https://www.sosnc.gov/divisions/business_registration"],
     "title": "City/county business registration",
     "authority": "City or county",
     "description": "North Carolina repealed local privilege licenses; local zoning and occupancy approvals still apply."
@@ -97,9 +103,15 @@
     "formation": ["https://www.sosnc.gov/divisions/business_registration"],
     "annualReport": ["https://www.sosnc.gov/divisions/business_registration"],
     "uiRegistration": ["https://www.des.nc.gov/employers"],
-    "withholding": ["https://www.ncdor.gov/taxes-forms/withholding-tax"],
-    "salesTax": ["https://www.ncdor.gov/taxes-forms/sales-and-use-tax"],
-    "entityTax": ["https://www.ncdor.gov/taxes-forms/corporate-income-and-franchise-tax"],
+    "withholding": [
+      "https://www.ncdor.gov/taxes-forms/corporate-income-and-franchise-tax/taxes-forms/withholding-tax"
+    ],
+    "salesTax": [
+      "https://www.ncdor.gov/taxes-forms/corporate-income-and-franchise-tax/taxes-forms/sales-and-use-tax"
+    ],
+    "entityTax": [
+      "https://www.ncdor.gov/taxes-forms/corporate-income-and-franchise-tax/taxes-forms/corporate-income-and-franchise-tax"
+    ],
     "laborPosters": [
       "https://www.labor.nc.gov/safety-and-health/publications/state-and-federal-workplace-poster-requirements"
     ],

@@ -74,9 +74,7 @@ async function main() {
   const arg = process.argv[2];
   if (arg === "--data") {
     const urls = collectDataUrls();
-    // Agency home pages identify an agency and are not used as rule citations, so only citation fields must be specific.
-    const AGENCY = /\.(filing|revenue|labor|agency|dbaAuthority)\.url$|\.sources\[\d+\]$/;
-    const bare = [...urls.keys()].filter((u) => isBareDomain(u) && urls.get(u).some((w) => !AGENCY.test(w)));
+    const bare = [...urls.keys()].filter((u) => isBareDomain(u));
     const results = await pool([...urls.keys()], (u) => check(u));
     // 401/403/429 and 5xx are usually bot protection or a busy server: report them, but do not fail on them.
     const SOFT = new Set([401, 403, 429, 500, 502, 503, 504]);

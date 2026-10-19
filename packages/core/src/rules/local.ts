@@ -165,6 +165,16 @@ export const localRules: Rule[] = [
         authority: `${s.local.authority}: ${p.city} / ${p.county} County${p.zip ? ` (ZIP ${p.zip})` : ""}`,
         description: s.local.description,
         rrule: "FREQ=YEARLY",
+        ...(s.local.url
+          ? {
+              url: s.local.url,
+              provenance: {
+                confidence: "checked" as const,
+                checkedOn: "2026-10-19",
+                sources: s.local.url,
+              },
+            }
+          : {}),
         reason: `Business is located in ${p.city}, ${p.state}`,
       };
     },
@@ -174,42 +184,68 @@ export const localRules: Rule[] = [
     description: "Home occupation permit",
     inputs: ["homeBased", "city", "county", "state"],
     when: (p) => p.homeBased,
-    items: (p) => ({
-      title: `Obtain home occupation permit from ${p.city} planning/zoning`,
-      category: "permit",
-      jurisdiction: "city",
-      state: p.state,
-      authority: `${p.city} (${p.county} County) planning/zoning department`,
-      description:
-        "Home-based businesses need a home occupation permit and must comply with zoning limits (signage, customers, employees).",
-      frequency: "once",
-      reason: "Business is home-based",
-    }),
+    items: (p) => {
+      const url = stateInfo(p.state).local.url;
+      return {
+        title: `Obtain home occupation permit from ${p.city} planning/zoning`,
+        category: "permit",
+        jurisdiction: "city",
+        state: p.state,
+        authority: `${p.city} (${p.county} County) planning/zoning department`,
+        description:
+          "Home-based businesses need a home occupation permit and must comply with zoning limits (signage, customers, employees).",
+        frequency: "once",
+        ...(url
+          ? {
+              url,
+              provenance: {
+                confidence: "checked" as const,
+                checkedOn: "2026-10-19",
+                sources: url,
+              },
+            }
+          : {}),
+        reason: "Business is home-based",
+      };
+    },
   },
   {
     id: "local.certificate-of-occupancy",
     description: "Certificate of occupancy for commercial premises",
     inputs: ["homeBased", "industry", "city", "county", "state", "floorAreaSqFt"],
     when: (p) => !p.homeBased && p.industry !== "transportation",
-    items: (p) => ({
-      title: `Obtain certificate of occupancy for premises in ${p.city}`,
-      category: "permit",
-      jurisdiction: "city",
-      state: p.state,
-      authority: `${p.city} (${p.county} County) building department`,
-      description: "The commercial space must be approved for its intended use before operating.",
-      frequency: "once",
-      appliesWhen: [
-        { field: "homeBased", op: "==", value: false, description: "Operates from commercial premises" },
-      ],
-      exemptions: [
-        "Home-based businesses, which are usually covered by home-occupation rules instead",
-        "Transportation businesses without a fixed premises",
-      ],
-      reason: p.floorAreaSqFt
-        ? `Business operates from ${p.floorAreaSqFt} sq ft of commercial premises`
-        : "Business operates from commercial premises",
-    }),
+    items: (p) => {
+      const url = stateInfo(p.state).local.url;
+      return {
+        title: `Obtain certificate of occupancy for premises in ${p.city}`,
+        category: "permit",
+        jurisdiction: "city",
+        state: p.state,
+        authority: `${p.city} (${p.county} County) building department`,
+        description: "The commercial space must be approved for its intended use before operating.",
+        frequency: "once",
+        ...(url
+          ? {
+              url,
+              provenance: {
+                confidence: "checked" as const,
+                checkedOn: "2026-10-19",
+                sources: url,
+              },
+            }
+          : {}),
+        appliesWhen: [
+          { field: "homeBased", op: "==", value: false, description: "Operates from commercial premises" },
+        ],
+        exemptions: [
+          "Home-based businesses, which are usually covered by home-occupation rules instead",
+          "Transportation businesses without a fixed premises",
+        ],
+        reason: p.floorAreaSqFt
+          ? `Business operates from ${p.floorAreaSqFt} sq ft of commercial premises`
+          : "Business operates from commercial premises",
+      };
+    },
   },
   /* @__PURE__ */ seededCityRule(findCity),
   /* @__PURE__ */ seededCountyRule(findCounty),
@@ -222,17 +258,32 @@ export const premisesRules: Rule[] = [
     description: "Sign permit for exterior signage",
     inputs: ["hasSignage", "city", "county", "state"],
     when: (p) => p.hasSignage === true,
-    items: (p) => ({
-      title: "Obtain a sign permit before installing exterior signage",
-      category: "permit",
-      jurisdiction: "city",
-      state: p.state,
-      authority: `${p.city} planning or building department`,
-      description:
-        "Most cities require a permit for permanent exterior signs and regulate size, illumination and placement; landlords and zoning overlays may add rules.",
-      frequency: "once",
-      appliesWhen: [{ field: "hasSignage", op: "==", value: true, description: "Displays exterior signage" }],
-      reason: "Business displays exterior signage",
-    }),
+    items: (p) => {
+      const url = stateInfo(p.state).local.url;
+      return {
+        title: "Obtain a sign permit before installing exterior signage",
+        category: "permit",
+        jurisdiction: "city",
+        state: p.state,
+        authority: `${p.city} planning or building department`,
+        description:
+          "Most cities require a permit for permanent exterior signs and regulate size, illumination and placement; landlords and zoning overlays may add rules.",
+        frequency: "once",
+        ...(url
+          ? {
+              url,
+              provenance: {
+                confidence: "checked" as const,
+                checkedOn: "2026-10-19",
+                sources: url,
+              },
+            }
+          : {}),
+        appliesWhen: [
+          { field: "hasSignage", op: "==", value: true, description: "Displays exterior signage" },
+        ],
+        reason: "Business displays exterior signage",
+      };
+    },
   },
 ];

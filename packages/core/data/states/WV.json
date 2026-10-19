@@ -6,11 +6,11 @@
   },
   "revenue": {
     "name": "West Virginia State Tax Department",
-    "url": ["https://tax.wv.gov"]
+    "url": ["https://tax.wv.gov/Business/CorporateIncomeTax/Pages/CorporateIncomeTaxPriorYears.aspx"]
   },
   "labor": {
     "name": "WorkForce West Virginia",
-    "url": ["https://workforcewv.org"]
+    "url": ["https://labor.wv.gov/required-posters"]
   },
   "llcReport": {
     "rrule": "FREQ=YEARLY;BYMONTH=6;BYMONTHDAY=30",
@@ -82,7 +82,7 @@
     "title": "West Virginia business registration certificate",
     "authority": "West Virginia State Tax Department",
     "url": [
-      "https://tax.wv.gov/Business/BusinessRegistration/Pages/BusinessRegistrationQuestionsAndAnswers.aspx"
+      "https://tax.wv.gov/Business/CorporateIncomeTax/Pages/CorporateIncomeTaxPriorYears.aspx/Business/BusinessRegistration/Pages/BusinessRegistrationQuestionsAndAnswers.aspx"
     ],
     "frequency": "once",
     "feeDetail": {
@@ -90,10 +90,13 @@
       "amount": 30
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 50,
+      "note": "$50 per month or fraction of a month for operating after the certificate expires; operating without a certificate may also incur a $100-per-day fine."
     }
   },
   "local": {
+    "url": ["https://business4.wv.gov/Pages/default.aspx"],
     "title": "Municipal business and occupation (B&O) tax",
     "authority": "City",
     "description": "West Virginia municipalities levy B&O taxes and issue local business licenses."
@@ -114,13 +117,17 @@
     "formation": ["https://sos.wv.gov/register-new-wv-business"],
     "annualReport": ["https://sos.wv.gov/business/updates-and-changes/annual-reports"],
     "uiRegistration": [
-      "https://workforcewv.org/businesses/unemployment-tax-information/navigate-the-unemployment-process/"
+      "https://labor.wv.gov/required-posters/businesses/unemployment-tax-information/navigate-the-unemployment-process/"
     ],
     "withholding": [
-      "https://tax.wv.gov/Business/BusinessRegistration/Pages/BusinessRegistrationQuestionsAndAnswers.aspx"
+      "https://tax.wv.gov/Business/CorporateIncomeTax/Pages/CorporateIncomeTaxPriorYears.aspx/Business/BusinessRegistration/Pages/BusinessRegistrationQuestionsAndAnswers.aspx"
     ],
-    "salesTax": ["https://tax.wv.gov/Business/SalesAndUseTax/Pages/SalesAndUseTax.aspx"],
-    "entityTax": ["https://tax.wv.gov/Business/CorporateIncomeTax/Pages/CorporateIncomeTaxPriorYears.aspx"],
+    "salesTax": [
+      "https://tax.wv.gov/Business/CorporateIncomeTax/Pages/CorporateIncomeTaxPriorYears.aspx/Business/SalesAndUseTax/Pages/SalesAndUseTax.aspx"
+    ],
+    "entityTax": [
+      "https://tax.wv.gov/Business/CorporateIncomeTax/Pages/CorporateIncomeTaxPriorYears.aspx/Business/CorporateIncomeTax/Pages/CorporateIncomeTaxPriorYears.aspx"
+    ],
     "laborPosters": ["https://labor.wv.gov/required-posters"],
     "dba": ["https://sos.wv.gov/business/registration-and-waivers/register-trade-name-dba"]
   },

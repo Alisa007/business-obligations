@@ -65,6 +65,35 @@ describe("input validation", () => {
 });
 
 describe("federal", () => {
+  it("attaches researched federal filing fees to every applicable federal rule", () => {
+    const profiles = [
+      profile({ entityType: "llc", zip: "78701", employeeCount: 3, annualNetIncome: 50_000 }),
+      profile({ entityType: "nonprofit", zip: "78701", employeeCount: 3 }),
+      profile({ entityType: "llc", zip: "94105", industry: "alcohol", alcoholActivity: "wholesale" }),
+    ];
+    const items = profiles.flatMap((p) =>
+      getComplianceItems(p).filter((item) => item.jurisdiction === "federal"),
+    );
+    expect(items.length).toBeGreaterThan(0);
+    expect(items.every((item) => item.cost)).toBe(true);
+  });
+
+  it("includes a fee state on every generated item", () => {
+    const items = getComplianceItems(profile({ entityType: "llc", zip: "10036", industry: "restaurant" }));
+    expect(items.length).toBeGreaterThan(0);
+    expect(items.every((item) => item.cost)).toBe(true);
+  });
+
+  it("keeps New York city-license wording location-neutral outside NYC", () => {
+    const items = getComplianceItems(
+      profile({ entityType: "llc", zip: "12010", state: "NY", city: "Amsterdam", county: "Montgomery" }),
+    );
+    const local = items.find((item) => item.title.startsWith("City licenses"));
+    expect(local?.title).toContain("City licenses");
+    expect(local?.url).toEqual(["https://www.ny.gov/services/start-business-new-york-state"]);
+    expect(local?.title).not.toContain("NYC");
+  });
+
   it("sole proprietor without employees: Schedule C, no EIN", () => {
     const items = getComplianceItems(profile({ entityType: "sole_proprietorship", zip: "94105" }));
     expect(ids(items)).not.toContain("fed.ein");

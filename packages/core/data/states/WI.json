@@ -2,11 +2,11 @@
   "name": "Wisconsin",
   "filing": {
     "name": "Wisconsin Department of Financial Institutions",
-    "url": ["https://dfi.wi.gov"]
+    "url": ["https://dfi.wi.gov/Pages/BusinessServices/BusinessEntities/FileOnline.aspx"]
   },
   "revenue": {
     "name": "Wisconsin Department of Revenue",
-    "url": ["https://www.revenue.wi.gov"]
+    "url": ["https://www.revenue.wi.gov/Pages/FAQS/ise-crpginfo.aspx"]
   },
   "labor": {
     "name": "Wisconsin Department of Workforce Development (UI)",
@@ -21,7 +21,8 @@
       "online": 25
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "none",
+      "note": "Wisconsin DFI states there are no late fees or penalties; failure to file can lead to administrative dissolution."
     }
   },
   "corpReport": {
@@ -33,7 +34,8 @@
       "online": 25
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "none",
+      "note": "Wisconsin DFI states there are no late fees or penalties; failure to file can lead to administrative dissolution."
     }
   },
   "llcPublication": null,
@@ -65,6 +67,7 @@
   "paidSickLeave": null,
   "businessLicense": null,
   "local": {
+    "url": ["https://www.revenue.wi.gov/Pages/FAQS/ise-crpginfo.aspx/Pages/Businesses/home.aspx"],
     "title": "Local permits",
     "authority": "City, village or county",
     "description": "Wisconsin has no general business license; local permits and zoning approvals apply."
@@ -83,18 +86,26 @@
     "regulator": null
   },
   "links": {
-    "formation": ["https://dfi.wi.gov/Pages/BusinessServices/BusinessEntities/FileOnline.aspx"],
-    "annualReport": ["https://dfi.wi.gov/Documents/BusinessServices/BusinessEntities/Forms/CORP5i.pdf"],
+    "formation": [
+      "https://dfi.wi.gov/Pages/BusinessServices/BusinessEntities/FileOnline.aspx/Pages/BusinessServices/BusinessEntities/FileOnline.aspx"
+    ],
+    "annualReport": [
+      "https://dfi.wi.gov/Pages/BusinessServices/BusinessEntities/FileOnline.aspx/Documents/BusinessServices/BusinessEntities/Forms/CORP5i.pdf"
+    ],
     "uiRegistration": ["https://dwd.wisconsin.gov/uitax/"],
-    "withholding": ["https://www.revenue.wi.gov/Pages/Withholding/home.aspx"],
-    "salesTax": ["https://www.revenue.wi.gov/Pages/FAQS/pcs-seller.aspx"],
-    "entityTax": ["https://www.revenue.wi.gov/Pages/FAQS/ise-crpginfo.aspx"],
+    "withholding": ["https://www.revenue.wi.gov/Pages/FAQS/ise-crpginfo.aspx/Pages/Withholding/home.aspx"],
+    "salesTax": ["https://www.revenue.wi.gov/Pages/FAQS/ise-crpginfo.aspx/Pages/FAQS/pcs-seller.aspx"],
+    "entityTax": ["https://www.revenue.wi.gov/Pages/FAQS/ise-crpginfo.aspx/Pages/FAQS/ise-crpginfo.aspx"],
     "laborPosters": ["https://dwd.wisconsin.gov/dwd/workplace-posters/"],
-    "dba": ["https://dfi.wi.gov/Pages/BusinessServices/Trademarks/GeneralInformation.aspx"]
+    "dba": [
+      "https://dfi.wi.gov/Pages/BusinessServices/BusinessEntities/FileOnline.aspx/Pages/BusinessServices/Trademarks/GeneralInformation.aspx"
+    ]
   },
   "verification": {
     "checkedOn": "2026-10-19",
-    "sources": ["https://dfi.wi.gov/Pages/BusinessServices/BusinessEntities/Fees.aspx"],
+    "sources": [
+      "https://dfi.wi.gov/Pages/BusinessServices/BusinessEntities/FileOnline.aspx/Pages/BusinessServices/BusinessEntities/Fees.aspx"
+    ],
     "unconfirmed": []
   }
 }

@@ -6,11 +6,11 @@
   },
   "revenue": {
     "name": "Nevada Department of Taxation",
-    "url": ["https://tax.nv.gov"]
+    "url": ["https://tax.nv.gov/tax-types/commerce-tax/"]
   },
   "labor": {
     "name": "Nevada DETR Employment Security Division",
-    "url": ["https://detr.nv.gov"]
+    "url": ["https://labor.nv.gov/Employer/Employer_Posters/"]
   },
   "llcReport": {
     "title": "File Annual List of Managers/Officers and Business License Renewal",
@@ -44,7 +44,7 @@
     "kind": "gross_receipts",
     "thresholdUsd": 4000000,
     "summary": "Commerce Tax on Nevada gross revenue above $4 million; the rate depends on the industry; the return is due 45 days after the June 30 fiscal year end (August 14)",
-    "source": "https://tax.nv.gov/commerce-tax/",
+    "source": "https://tax.nv.gov/tax-types/commerce-tax//commerce-tax/",
     "checkedOn": "2026-10-13"
   },
   "salesTax": {
@@ -83,10 +83,13 @@
       "note": "$500 for corporations"
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 100,
+      "note": "Late state business-license renewal penalty, in addition to the annual license fee."
     }
   },
   "local": {
+    "url": ["https://orion.nv.gov/portal/public/"],
     "title": "City or county business license",
     "authority": "City or county business license office",
     "description": "Nevada requires a local business license in addition to the state business license."
@@ -108,9 +111,9 @@
   "links": {
     "formation": ["https://www.nvsos.gov/sos/businesses"],
     "annualReport": ["https://www.nvsos.gov/sos/licensing/state-business-license"],
-    "uiRegistration": ["https://detr.nv.gov/Page/UI_Information_for_Employers"],
-    "salesTax": ["https://tax.nv.gov/tax-types/sales-tax-use-tax/"],
-    "entityTax": ["https://tax.nv.gov/tax-types/commerce-tax/"],
+    "uiRegistration": ["https://labor.nv.gov/Employer/Employer_Posters//Page/UI_Information_for_Employers"],
+    "salesTax": ["https://tax.nv.gov/tax-types/commerce-tax//tax-types/sales-tax-use-tax/"],
+    "entityTax": ["https://tax.nv.gov/tax-types/commerce-tax//tax-types/commerce-tax/"],
     "laborPosters": ["https://labor.nv.gov/Employer/Employer_Posters/"],
     "dba": [
       "https://www.nvsos.gov/sos-information/office-facts/faqs-all-division/service-marks-trademarks-trade-names"

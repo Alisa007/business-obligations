@@ -7,6 +7,8 @@ import { applicable, extras } from "./local";
 
 const auth = industryAuthorities;
 
+const statePermitLinks = (state: string) => stateInfo(state).local.url;
+
 /** Items a state requires of the business's NAICS code (see data/industries/). */
 const naicsLicences: Rule = {
   id: "industry.naics-licences",
@@ -44,6 +46,7 @@ export const industryRules: Rule[] = [
         authority: `${p.county} County health department (${stateName(p.state)})`,
         description: "Plan review, inspection and operating permit for food service.",
         rrule: "FREQ=YEARLY",
+        url: statePermitLinks(p.state),
         reason: "Industry is restaurant / food service",
       },
       {
@@ -55,6 +58,7 @@ export const industryRules: Rule[] = [
         description:
           "Most jurisdictions require at least one certified food protection manager and food handler cards for staff.",
         frequency: "ongoing",
+        url: statePermitLinks(p.state),
         reason: "Industry is restaurant / food service",
       },
     ],
@@ -78,6 +82,7 @@ export const industryRules: Rule[] = [
         "Contractors generally need a license or registration, bonding and proof of insurance; thresholds and classifications vary." +
         (p.licenseClass ? ` Classification requested: ${p.licenseClass}.` : ""),
       rrule: "FREQ=YEARLY;INTERVAL=2",
+      url: statePermitLinks(p.state),
       // Florida s. 163.211, F.S. (ch. 2021-214): occupational licensing is preempted to the state, so cities and
       // counties cannot license scopes outside the Construction Industry Licensing Board's categories.
       ...(p.state === "FL"
@@ -135,6 +140,7 @@ export const industryRules: Rule[] = [
       description:
         "Most jurisdictions require a building permit, plan review and inspections before work starts; fees are usually based on project valuation, and separate trade permits (electrical, plumbing, mechanical) are common.",
       frequency: "per_event",
+      url: statePermitLinks(p.state),
       appliesWhen: [
         {
           field: "projectValueUsd",
@@ -160,6 +166,7 @@ export const industryRules: Rule[] = [
       description:
         "Businesses that prepare or serve food (cafes inside retail, caterers, bars with food) generally need a health department permit and inspection, even when food is not their main activity.",
       rrule: "FREQ=YEARLY",
+      url: statePermitLinks(p.state),
       appliesWhen: [{ field: "foodService", op: "==", value: true, description: "Prepares or serves food" }],
       reason: "Business prepares or serves food",
     }),
@@ -177,6 +184,7 @@ export const industryRules: Rule[] = [
       authority: auth(p.state).realEstate,
       description: "Brokerage entities need a licensed designated broker and entity registration.",
       rrule: "FREQ=YEARLY;INTERVAL=2",
+      url: statePermitLinks(p.state),
       reason: "Industry is real estate",
     }),
   },
@@ -195,6 +203,7 @@ export const industryRules: Rule[] = [
         description:
           "Practitioners and facilities are licensed by state boards; some states restrict entity forms.",
         rrule: "FREQ=YEARLY;INTERVAL=2",
+        url: statePermitLinks(p.state),
         reason: "Industry is healthcare",
       },
       {
@@ -209,6 +218,13 @@ export const industryRules: Rule[] = [
         url: [
           "https://www.cms.gov/regulations-and-guidance/administrative-simplification/nationalprovidentstand",
         ],
+        provenance: {
+          confidence: "checked",
+          checkedOn: "2026-10-19",
+          sources: [
+            "https://www.cms.gov/regulations-and-guidance/administrative-simplification/nationalprovidentstand",
+          ],
+        },
       },
     ],
   },
@@ -226,6 +242,7 @@ export const industryRules: Rule[] = [
       description:
         "License class depends on activity (on-premise, off-premise, manufacturing, distribution); local approval is often required too.",
       rrule: "FREQ=YEARLY",
+      url: statePermitLinks(p.state),
       reason: `Alcohol activity is ${p.alcoholActivity}`,
     }),
   },
@@ -251,6 +268,7 @@ export const industryRules: Rule[] = [
                 : `Only the state medical program is licensed; license categories are often capped and competitive. ${c.note ?? ""}`.trim(),
             rrule: "FREQ=YEARLY",
             reason: `Industry is cannabis (${p.cannabisActivity}); ${name} status is ${c.status.replace("_", " ")}`,
+            url: stateInfo(p.state).local.url,
           }
         : {
             title: `No state licensing pathway for cannabis ${p.cannabisActivity} in ${name}`,
@@ -261,6 +279,7 @@ export const industryRules: Rule[] = [
             description: `${name} has no lawful licensed THC cannabis industry (at most limited CBD or low-THC access); commercial cannabis activity is unlawful under state law. Hemp-derived products are regulated separately by state agriculture and the FDA.`,
             frequency: "ongoing" as const,
             reason: `Industry is cannabis; ${name} status is ${c.status.replace("_", " ")}`,
+            url: stateInfo(p.state).local.url,
           };
       return [
         first,
@@ -274,6 +293,11 @@ export const industryRules: Rule[] = [
           frequency: "ongoing" as const,
           reason: "Industry is cannabis",
           url: ["https://www.irs.gov/newsroom/news-releases-for-june-2024"],
+          provenance: {
+            confidence: "checked",
+            checkedOn: "2026-10-19",
+            sources: ["https://www.irs.gov/newsroom/news-releases-for-june-2024"],
+          },
         },
       ];
     },
@@ -292,6 +316,7 @@ export const industryRules: Rule[] = [
       description: "Facility licensing with background checks, staff ratios and inspections.",
       rrule: "FREQ=YEARLY",
       reason: "Industry is child care",
+      url: stateInfo(p.state).local.url,
     }),
   },
   {
@@ -318,6 +343,11 @@ export const industryRules: Rule[] = [
       rrule: "FREQ=YEARLY;INTERVAL=2",
       reason: "Interstate commercial vehicle operations meet the USDOT registration thresholds",
       url: ["https://www.fmcsa.dot.gov/registration"],
+      provenance: {
+        confidence: "checked",
+        checkedOn: "2026-10-19",
+        sources: ["https://www.fmcsa.dot.gov/registration"],
+      },
     }),
   },
 ];

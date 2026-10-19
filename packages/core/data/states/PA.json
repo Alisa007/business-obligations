@@ -6,11 +6,11 @@
   },
   "revenue": {
     "name": "Pennsylvania Department of Revenue",
-    "url": ["https://www.revenue.pa.gov"]
+    "url": ["https://www.pa.gov/agencies/revenue/resources/tax-types-and-information/corporation-taxes"]
   },
   "labor": {
     "name": "Pennsylvania Department of Labor & Industry (UC)",
-    "url": ["https://www.uc.pa.gov"]
+    "url": ["https://www.pa.gov/agencies/dli/resources/for-employers-and-educators/mandatory-postings"]
   },
   "llcReport": {
     "title": "File Annual Report",
@@ -21,7 +21,8 @@
       "note": "$0 for not-for-profit LLCs"
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "none",
+      "note": "Pennsylvania states there is no late fee for annual reports; failure to file can cause administrative dissolution or cancellation."
     }
   },
   "corpReport": {
@@ -33,7 +34,8 @@
       "note": "$0 for nonprofit corporations"
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "none",
+      "note": "Pennsylvania states there is no late fee for annual reports; failure to file can cause administrative dissolution or cancellation."
     }
   },
   "lpReport": {
@@ -44,7 +46,8 @@
       "note": "$0 for not-for-profit LPs"
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "none",
+      "note": "Pennsylvania states there is no late fee for annual reports; failure to file can cause administrative dissolution or cancellation."
     }
   },
   "llpReport": {
@@ -57,7 +60,9 @@
       "note": "general partners only (2026); plus $7 annual report"
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 500,
+      "note": "$500 penalty for failing to file the Certificate of Annual Registration by May 15; annual-report late fees themselves are not charged."
     }
   },
   "llcPublication": null,
@@ -87,6 +92,7 @@
   "paidSickLeave": null,
   "businessLicense": null,
   "local": {
+    "url": ["https://www.pa.gov/agencies/dos/programs/business"],
     "title": "Local earned income tax and business privilege registration",
     "authority": "Municipality / tax collector (Philadelphia: Commercial Activity License)",
     "description": "Employers withhold local Earned Income Tax and Local Services Tax; Philadelphia requires a Commercial Activity License."

@@ -1,4 +1,4 @@
-import { statedPenalty, type FeeDetail, type Penalty } from "./data/types";
+import { statedPenalty, type FeeDetail, type Penalty, type StatedPenalty } from "./data/types";
 
 const money = (n: number) => `$${Number.isInteger(n) ? n.toLocaleString("en-US") : n.toFixed(2)}`;
 
@@ -67,9 +67,38 @@ export function describeFee(fd: FeeDetail): string {
   return head.endsWith(")") ? `${head.slice(0, -1)}; ${parts.join("; ")})` : `${head} (${parts.join("; ")})`;
 }
 
-/** The `cost` of an item from a report or license; an unresearched fee gives none. */
+/** The `cost` of an item; unknown keeps the missing-research state visible to consumers. */
 export function feeCost(it: { feeDetail: FeeDetail }) {
-  return it.feeDetail.basis === "unknown" ? {} : { cost: { ...it.feeDetail, currency: "USD" as const } };
+  return { cost: { ...it.feeDetail, currency: "USD" as const } };
+}
+
+/** The display text of a stated penalty, including percentages, per-item charges and ranges. */
+export function describePenalty(p: StatedPenalty): string {
+  const min = "min" in p ? p.min : undefined;
+  const max = "max" in p ? p.max : undefined;
+  const limits =
+    p.basis === "range"
+      ? []
+      : [
+          min !== undefined ? `minimum ${money(min)}` : undefined,
+          max !== undefined ? `maximum ${money(max)}` : undefined,
+        ].filter((x): x is string => !!x);
+  const head =
+    p.basis === "flat"
+      ? money(p.amount)
+      : p.basis === "percent"
+        ? `${p.rate}%${p.base !== undefined ? ` of ${money(p.base)}` : ""}`
+        : p.basis === "per_item"
+          ? `${money(p.perUnit)} per item`
+          : max !== undefined
+            ? `${money(min!)}–${money(max)}`
+            : `from ${money(min!)}`;
+  const extras = [
+    ...limits,
+    p.percentPerMonth !== undefined ? `+ ${p.percentPerMonth}%/month` : undefined,
+    p.note,
+  ].filter((x): x is string => !!x);
+  return extras.length ? `${head} (${extras.join("; ")})` : head;
 }
 
 /** The `penalty` of an item; one that is `none` or `unknown` gives none. */

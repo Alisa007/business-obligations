@@ -6,11 +6,11 @@
   },
   "revenue": {
     "name": "Wyoming Department of Revenue",
-    "url": ["https://revenue.wyo.gov"]
+    "url": ["https://revenue.wyo.gov/divisions/"]
   },
   "labor": {
     "name": "Wyoming Department of Workforce Services",
-    "url": ["https://dws.wyo.gov"]
+    "url": ["https://dws.wyo.gov/dws-division/labor-standards/forms-and-resources/labor-law-poster/"]
   },
   "llcReport": {
     "title": "File Annual Report and pay license tax",
@@ -21,7 +21,8 @@
       "note": "or 0.0002 of Wyoming assets, if greater"
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "none",
+      "note": "Wyoming marks entities delinquent and may administratively dissolve them after 60 days; no separate annual-report late fee is listed."
     }
   },
   "corpReport": {
@@ -33,7 +34,8 @@
       "note": "or 0.0002 of Wyoming assets, if greater"
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "none",
+      "note": "Wyoming marks entities delinquent and may administratively dissolve them after 60 days; no separate annual-report late fee is listed."
     }
   },
   "llcPublication": null,
@@ -64,6 +66,7 @@
   "paidSickLeave": null,
   "businessLicense": null,
   "local": {
+    "url": ["https://wyobiz.wyo.gov/Business/Default.aspx"],
     "title": "City/town business license",
     "authority": "City or town clerk",
     "description": "Wyoming cities and towns issue local business licenses."
@@ -83,10 +86,14 @@
   "links": {
     "formation": ["https://sos.wyo.gov/Business/Default.aspx"],
     "annualReport": ["https://sos.wyo.gov/Business/Default.aspx"],
-    "uiRegistration": ["https://dws.wyo.gov/dws-division/unemployment-insurance/"],
-    "salesTax": ["https://revenue.wyo.gov/divisions/"],
-    "entityTax": ["https://revenue.wyo.gov/divisions/"],
-    "laborPosters": ["https://dws.wyo.gov/dws-division/labor-standards/forms-and-resources/labor-law-poster/"]
+    "uiRegistration": [
+      "https://dws.wyo.gov/dws-division/labor-standards/forms-and-resources/labor-law-poster//dws-division/unemployment-insurance/"
+    ],
+    "salesTax": ["https://revenue.wyo.gov/divisions//divisions/"],
+    "entityTax": ["https://revenue.wyo.gov/divisions//divisions/"],
+    "laborPosters": [
+      "https://dws.wyo.gov/dws-division/labor-standards/forms-and-resources/labor-law-poster//dws-division/labor-standards/forms-and-resources/labor-law-poster/"
+    ]
   },
   "verification": {
     "checkedOn": "2026-10-13",

@@ -6,11 +6,11 @@
   },
   "revenue": {
     "name": "Idaho State Tax Commission",
-    "url": ["https://tax.idaho.gov"]
+    "url": ["https://tax.idaho.gov/taxes/income-tax/"]
   },
   "labor": {
     "name": "Idaho Department of Labor",
-    "url": ["https://www.labor.idaho.gov"]
+    "url": ["https://www.labor.idaho.gov/businesses/labor-laws/required-posters/"]
   },
   "llcReport": {
     "rrule": "FREQ=YEARLY;BYMONTHDAY=-1",
@@ -19,7 +19,8 @@
       "amount": 0
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "none",
+      "note": "Idaho publishes annual-report filing requirements but no separate late monetary penalty; noncompliance can affect entity status."
     }
   },
   "corpReport": {
@@ -29,7 +30,8 @@
       "amount": 0
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "none",
+      "note": "Idaho publishes annual-report filing requirements but no separate late monetary penalty; noncompliance can affect entity status."
     }
   },
   "llcPublication": null,
@@ -59,6 +61,7 @@
   "paidSickLeave": null,
   "businessLicense": null,
   "local": {
+    "url": ["https://business.idaho.gov/licenses/"],
     "title": "City business license",
     "authority": "City clerk",
     "description": "Some Idaho cities require business licenses; most licensing is industry-specific."
@@ -78,11 +81,13 @@
   "links": {
     "formation": ["https://sos.idaho.gov/business-resources/"],
     "annualReport": ["https://sos.idaho.gov/business-resources/"],
-    "uiRegistration": ["https://www.labor.idaho.gov/businesses/"],
-    "withholding": ["https://tax.idaho.gov/taxes/income-tax/withholding/"],
-    "salesTax": ["https://tax.idaho.gov/taxes/sales-use/"],
-    "entityTax": ["https://tax.idaho.gov/taxes/income-tax/"],
-    "laborPosters": ["https://www.labor.idaho.gov/businesses/labor-laws/required-posters/"],
+    "uiRegistration": ["https://www.labor.idaho.gov/businesses/labor-laws/required-posters//businesses/"],
+    "withholding": ["https://tax.idaho.gov/taxes/income-tax//taxes/income-tax/withholding/"],
+    "salesTax": ["https://tax.idaho.gov/taxes/income-tax//taxes/sales-use/"],
+    "entityTax": ["https://tax.idaho.gov/taxes/income-tax//taxes/income-tax/"],
+    "laborPosters": [
+      "https://www.labor.idaho.gov/businesses/labor-laws/required-posters//businesses/labor-laws/required-posters/"
+    ],
     "dba": ["https://sos.idaho.gov/business-services-resources/business-entities-assumed-business-names-faq/"]
   },
   "verification": {

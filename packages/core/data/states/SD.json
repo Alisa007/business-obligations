@@ -6,11 +6,11 @@
   },
   "revenue": {
     "name": "South Dakota Department of Revenue",
-    "url": ["https://dor.sd.gov"]
+    "url": ["https://dor.sd.gov/businesses/taxes/"]
   },
   "labor": {
     "name": "South Dakota Department of Labor & Regulation",
-    "url": ["https://dlr.sd.gov"]
+    "url": ["https://dlr.sd.gov/employment_laws/posting_requirements.aspx"]
   },
   "llcReport": {
     "rrule": "FREQ=YEARLY;BYMONTHDAY=1",
@@ -67,6 +67,7 @@
   "paidSickLeave": null,
   "businessLicense": null,
   "local": {
+    "url": ["https://sdsos.gov/business-services/"],
     "title": "City business license",
     "authority": "City finance office",
     "description": "Some South Dakota cities require licenses for specific businesses."
@@ -86,10 +87,14 @@
   "links": {
     "formation": ["https://sdsos.gov/business-services/"],
     "annualReport": ["https://sdsos.gov/business-services/"],
-    "uiRegistration": ["https://dlr.sd.gov/ra/businesses/registration.aspx"],
-    "salesTax": ["https://dor.sd.gov/businesses/taxes/sales-use-tax/"],
-    "entityTax": ["https://dor.sd.gov/businesses/taxes/"],
-    "laborPosters": ["https://dlr.sd.gov/employment_laws/posting_requirements.aspx"],
+    "uiRegistration": [
+      "https://dlr.sd.gov/employment_laws/posting_requirements.aspx/ra/businesses/registration.aspx"
+    ],
+    "salesTax": ["https://dor.sd.gov/businesses/taxes//businesses/taxes/sales-use-tax/"],
+    "entityTax": ["https://dor.sd.gov/businesses/taxes//businesses/taxes/"],
+    "laborPosters": [
+      "https://dlr.sd.gov/employment_laws/posting_requirements.aspx/employment_laws/posting_requirements.aspx"
+    ],
     "dba": ["https://sdsos.gov/business-services/default.aspx"]
   },
   "verification": {

@@ -6,7 +6,7 @@
   },
   "revenue": {
     "name": "Comptroller of Maryland",
-    "url": ["https://www.marylandtaxes.gov"]
+    "url": ["https://www.marylandcomptroller.gov/businesses/tax-services.html"]
   },
   "labor": {
     "name": "Maryland Department of Labor, Division of Unemployment Insurance",
@@ -20,7 +20,10 @@
       "amount": 300
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "range",
+      "note": "Initial penalty is 0.1% of county assessment or the statutory base amount, whichever is greater; 2% of the initial penalty accrues per 30 days late.",
+      "min": 30,
+      "max": 500
     }
   },
   "corpReport": {
@@ -32,7 +35,10 @@
       "note": "$0 for non-stock corporations"
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "range",
+      "note": "Initial penalty is 0.1% of county assessment or the statutory base amount, whichever is greater; 2% of the initial penalty accrues per 30 days late.",
+      "min": 30,
+      "max": 500
     }
   },
   "llcPublication": null,
@@ -65,6 +71,7 @@
   },
   "businessLicense": null,
   "local": {
+    "url": ["https://businessexpress.maryland.gov/start/licenses-and-permits"],
     "title": "County trader's license",
     "authority": "Clerk of the Circuit Court",
     "description": "Retailers and others selling goods need a trader's license from the county circuit court clerk; Baltimore and counties also require occupancy permits."

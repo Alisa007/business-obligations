@@ -20,7 +20,8 @@
       "amount": 500
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "none",
+      "note": "The Massachusetts LLC fee schedule lists the $500 annual report fee but no separate late penalty."
     }
   },
   "corpReport": {
@@ -32,7 +33,9 @@
       "online": 100
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 25,
+      "note": "Additional fee for a late corporation annual report; electronic filing can use a different late filing fee."
     }
   },
   "lpReport": {
@@ -45,7 +48,8 @@
       "online": 450
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "none",
+      "note": "The Massachusetts limited partnership fee schedule lists the annual report fee but no separate late penalty."
     }
   },
   "llpReport": {
@@ -55,7 +59,8 @@
       "amount": 500
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "none",
+      "note": "The Massachusetts limited liability partnership fee schedule lists the annual report fee but no separate late penalty."
     }
   },
   "llcPublication": null,
@@ -92,6 +97,7 @@
   },
   "businessLicense": null,
   "local": {
+    "url": ["https://www.mass.gov/info-details/starting-a-business-in-massachusetts"],
     "title": "City/town clerk business certificate and local licenses",
     "authority": "City or town clerk",
     "description": "DBAs are filed with the town/city clerk; boards of health and licensing boards issue permits."
