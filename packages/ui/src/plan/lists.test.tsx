@@ -51,6 +51,16 @@ describe("business-obligations-ui", () => {
     ).toBe(true);
   });
 
+  it("hides jurisdiction filters with no items", () => {
+    const stateItems = items.filter((item) => item.jurisdiction === "state");
+    const html = render(
+      <ObligationsList items={stateItems} asOf="2026-11-02" filters={filters()} onFilters={() => undefined} />,
+    );
+    expect(html).toContain("State");
+    expect(html).not.toContain("City");
+    expect(html).not.toContain("County");
+  });
+
   it("shows items that apply only under conditions inside the group of their level, with what would bring them in", () => {
     const item = items[0];
     if (!item) throw new Error("expected launch fixture to contain an obligation");
