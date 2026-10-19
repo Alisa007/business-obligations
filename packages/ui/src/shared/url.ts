@@ -8,6 +8,13 @@ export const safeUrl = (value?: string) => {
   }
 };
 
+export const isGovernmentUrl = (value?: string) => {
+  const href = safeUrl(value);
+  if (!href) return false;
+  const hostname = new URL(href).hostname.toLowerCase().replace(/\.$/, "");
+  return hostname === "gov" || hostname.endsWith(".gov");
+};
+
 export const host = (value: string) => {
   try {
     return new URL(value).hostname.replace(/^www\./, "");
