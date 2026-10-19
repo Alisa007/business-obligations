@@ -11,7 +11,8 @@
         "description": "Businesses operating from a physical Chandler location need a city business registration for each location and entity, renewed annually, in addition to the state TPT license.",
         "rrule": "FREQ=YEARLY",
         "url": "https://www.chandleraz.gov/business/tax-and-license",
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": { "basis": "flat", "amount": 45, "note": "annual" }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -49,7 +50,8 @@
         "description": "Any business with a permanent physical location in Glendale needs a city business license, renewed every year; a late penalty can apply when an application or renewal is more than 30 days late. TPT is licensed separately through the state.",
         "rrule": "FREQ=YEARLY",
         "url": "https://www.glendaleaz.gov/Business/Licensing-Sales-Tax/Business-Licenses",
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": { "basis": "flat", "amount": 25, "note": "annual" }
       }
     ]
   },

@@ -373,9 +373,14 @@
         "category": "registration",
         "authority": "City of Fulton Bureau of Code Enforcement",
         "description": "General contractors doing business in Fulton must register with Code Enforcement; the city states that registrations expire on December 31 of the registration year.",
-        "rrule": "FREQ=YEARLY",
-        "url": "https://fultonny.org/code-enforcement/",
-        "appliesTo": ["all"]
+        "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=31",
+        "url": "https://cityoffultonny.gov/licensed-contractors/",
+        "checkedOn": "2026-10-18",
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "flat",
+          "amount": 100
+        }
       },
       {
         "id": "fulton.peddler-permit",
@@ -703,9 +708,9 @@
         "category": "license",
         "authority": "City of Long Beach City Clerk",
         "description": "All businesses in Long Beach need a mercantile license from the City Clerk. The application is notarized with three business references, a use permit comes first from the Building Department, and a commercial sanitation account must be paid up. The fee varies by business category and size.",
-        "rrule": "FREQ=YEARLY",
-        "deadline": "License year runs December 1 to November 30",
+        "rrule": "FREQ=YEARLY;BYMONTH=11;BYMONTHDAY=30",
         "url": "https://www.longbeachny.gov/?SEC=1EB2D018-3D17-4F17-A067-CE651DC74469",
+        "checkedOn": "2026-10-18",
         "appliesTo": ["all"]
       }
     ],
@@ -1282,14 +1287,16 @@
         "category": "license",
         "authority": "City of Rochester City Clerk",
         "description": "A food truck needs a city license, applied for at the City Clerk's Office with approvals from the Police and Fire departments. The fee is $1,000 in Center City and $330 elsewhere in the city, and the license expires each December 31.",
-        "rrule": "FREQ=YEARLY",
-        "deadline": "Expires December 31",
+        "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=31",
         "url": "https://www.cityofrochester.gov/departments/neighborhood-and-business-development/business-permits",
+        "checkedOn": "2026-10-18",
         "naics": ["722330"],
         "appliesTo": ["all"],
         "feeDetail": {
           "basis": "varies",
-          "min": 330
+          "min": 330,
+          "max": 1000,
+          "note": "higher in Center City, Marina and Harbortown"
         }
       },
       {
@@ -1298,9 +1305,9 @@
         "category": "license",
         "authority": "City of Rochester City Clerk",
         "description": "Towing businesses need a city license, applied for at the City Clerk's Office with approvals from Zoning, Police and Fire. The fee is $350 and the license expires each August 31.",
-        "rrule": "FREQ=YEARLY",
-        "deadline": "Expires August 31",
+        "rrule": "FREQ=YEARLY;BYMONTH=8;BYMONTHDAY=31",
         "url": "https://www.cityofrochester.gov/departments/neighborhood-and-business-development/business-permits",
+        "checkedOn": "2026-10-18",
         "naics": ["488410"],
         "appliesTo": ["all"],
         "feeDetail": {

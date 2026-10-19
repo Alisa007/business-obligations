@@ -28,8 +28,9 @@
         "category": "filing",
         "authority": "City of Cincinnati Income Tax Division",
         "description": "Businesses engaged in Cincinnati (rental property, sole proprietorships, partnerships, corporations) file the business net profit return at the city's 1.8% rate.",
-        "rrule": "FREQ=YEARLY",
-        "url": "https://www.cincinnati-oh.gov/finance/income-taxes/",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
+        "deadlineNote": "calendar-year filers",
+        "url": "https://www.cincinnati-oh.gov/finance/income-taxes/due-dates/",
         "appliesTo": ["all"]
       },
       {
@@ -38,8 +39,9 @@
         "category": "payment",
         "authority": "City of Cincinnati Income Tax Division",
         "description": "Employers register for and remit withholding for employees working in Cincinnati.",
-        "rrule": "FREQ=MONTHLY;INTERVAL=3",
-        "url": "https://www.cincinnati-oh.gov/finance/income-taxes/",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
+        "deadlineNote": "quarterly filers; larger employers deposit monthly or semi-monthly",
+        "url": "https://www.cincinnati-oh.gov/finance/income-taxes/due-dates/",
         "appliesTo": ["employees"]
       }
     ],
@@ -67,8 +69,9 @@
         "category": "payment",
         "authority": "Central Collection Agency (CCA)",
         "description": "Employers withhold and remit municipal income tax through the Central Collection Agency using the employer EIN.",
-        "rrule": "FREQ=MONTHLY;INTERVAL=3",
-        "url": "https://www.ccaohio.gov/tax-forms/business",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
+        "deadlineNote": "quarterly filers; larger employers deposit monthly or semi-monthly",
+        "url": "https://www.ccaohio.gov/due-dates/business-filing",
         "appliesTo": ["employees"]
       }
     ],
@@ -85,8 +88,9 @@
         "category": "filing",
         "authority": "City of Columbus Income Tax Division (City Auditor)",
         "description": "Businesses (sole proprietorships, partnerships, corporations) with activity in Columbus file the city's annual business net profit return; some businesses may elect to file through the Ohio Department of Taxation.",
-        "rrule": "FREQ=YEARLY",
-        "url": "https://www.columbus.gov/Government/City-Auditor/Income-Tax-Division",
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
+        "deadlineNote": "calendar-year filers",
+        "url": "https://www.columbus.gov/Government/City-Auditor/Income-Tax-Division/Filing-Payment-Information/Filing-Season-Information",
         "appliesTo": ["all"]
       },
       {
@@ -95,7 +99,8 @@
         "category": "payment",
         "authority": "City of Columbus Income Tax Division (City Auditor)",
         "description": "Employers withhold municipal income tax on wages for work performed in Columbus.",
-        "rrule": "FREQ=MONTHLY;INTERVAL=3",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
+        "deadlineNote": "quarterly filers; larger employers deposit monthly or semi-monthly",
         "url": "https://www.columbus.gov/Government/City-Auditor/Income-Tax-Division",
         "appliesTo": ["employees"]
       }

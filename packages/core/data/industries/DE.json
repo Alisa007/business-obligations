@@ -72,10 +72,11 @@
     "description": "Electricians and electrical inspection agencies must hold a license from the Delaware Board of Electrical Examiners. Application fees: master electrician $203, limited electrician $127, journeyperson $105, residential electrician $105, apprentice $100, inspection agency $90. The renewal fee is given at renewal, and a late renewal adds a fee of 50% of the renewal fee. Electricians' and inspection agencies' licenses expire June 30 of even-numbered years, and inspection agencies' also June 30 of odd-numbered years.",
     "naics": ["238210"],
     "appliesTo": ["all"],
-    "url": "https://dpr.delaware.gov/boards/electrician/fees/",
+    "url": "https://dpr.delaware.gov/boards/electrician/renewal/",
     "checkedOn": "2026-10-18",
-    "rrule": "FREQ=YEARLY;INTERVAL=2",
-    "renewal": "Every two years on June 30 (even-numbered years); inspection agencies also in odd-numbered years"
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=6;BYMONTHDAY=30",
+    "anchor": "2026-06-30",
+    "deadlineNote": "electrician licenses; inspection agency permits renew every year"
   },
   {
     "id": "de.funeral-service-license",
@@ -176,10 +177,11 @@
     "description": "Physicians, physician assistants, acupuncturists, midwives and other medical practitioners must hold a license from the Delaware Board of Medical Licensure and Discipline. Application fees: physician (MD or DO) $440, physician assistant $230, acupuncture or Eastern medicine practitioner $222, midwifery practitioner $222, genetic counselor $222, respiratory care practitioner $153, paramedic $30. The renewal fee is given at renewal, and a late renewal adds a fee of 50% of the renewal fee. Physicians, physician assistants, acupuncturists, midwives and polysomnographers expire March 31 of odd-numbered years, paramedics May 31 and respiratory care practitioners November 30 of even-numbered years.",
     "naics": ["621111", "621112", "621399"],
     "appliesTo": ["all"],
-    "url": "https://dpr.delaware.gov/boards/medicalpractice/fees/",
+    "url": "https://dpr.delaware.gov/boards/medicalpractice/renewal/",
     "checkedOn": "2026-10-18",
-    "rrule": "FREQ=YEARLY;INTERVAL=2",
-    "renewal": "Every two years: March 31 (odd-numbered years) for most, May 31 and November 30 (even-numbered years) for others"
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=3;BYMONTHDAY=31",
+    "anchor": "2027-03-31",
+    "deadlineNote": "most licenses; paramedics May 31 and respiratory care practitioners November 30 of even-numbered years"
   },
   {
     "id": "de.nurse-license",
@@ -267,10 +269,10 @@
     "description": "River and bay pilots must hold a license from the Delaware Board of Pilot Commissioners. Application fees: apprentice pilot $195. The renewal fee is given at renewal, and a late renewal adds a fee of 50% of the renewal fee. Pilots' licenses expire November 30 each year.",
     "naics": ["488330"],
     "appliesTo": ["all"],
-    "url": "https://dpr.delaware.gov/boards/riverpilots/fees/",
+    "url": "https://dpr.delaware.gov/boards/riverpilots/licensure/",
     "checkedOn": "2026-10-18",
-    "rrule": "FREQ=YEARLY",
-    "renewal": "Every year on November 30"
+    "rrule": "FREQ=YEARLY;BYMONTH=11;BYMONTHDAY=30",
+    "deadlineNote": "apprentice pilots excluded"
   },
   {
     "id": "de.plumber-hvacr-license",
@@ -410,10 +412,11 @@
     "description": "Cosmetologists, barbers, nail technicians, aestheticians, electrologists and instructors must hold a license from the Delaware Board of Cosmetology and Barbering. Application fees: cosmetologist or barber $128, nail technician $103, aesthetician $101, electrologist $103, instructor $205. The renewal fee is given at renewal, and a late renewal adds a fee of 50% of the renewal fee. Barbers, nail technicians, electrologists, aestheticians and instructors expire March 31 of even-numbered years, and cosmetologists October 31 of even-numbered years.",
     "naics": ["812112", "812111", "812113", "812199"],
     "appliesTo": ["all"],
-    "url": "https://dpr.delaware.gov/boards/cosmetology/fees/",
+    "url": "https://dpr.delaware.gov/boards/cosmetology/renewal/",
     "checkedOn": "2026-10-18",
-    "rrule": "FREQ=YEARLY;INTERVAL=2",
-    "renewal": "Every two years: March 31 (barbers, nail technicians, aestheticians) or October 31 (cosmetologists), even-numbered years"
+    "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=3;BYMONTHDAY=31",
+    "anchor": "2026-03-31",
+    "deadlineNote": "cosmetologists October 31"
   },
   {
     "id": "de.salon-shop-license",
@@ -462,10 +465,9 @@
     "description": "Adult entertainment establishments, including bookstores, shows and retail must hold a license from the Delaware Commission on Adult Entertainment Establishments. Application fees: bookstore or shows establishment $2,200, adult retail establishment $430. The renewal fee is given at renewal, and a late renewal adds a fee of 50% of the renewal fee. Licenses expire July 31 each year.",
     "naics": ["713990", "722410", "459210"],
     "appliesTo": ["all"],
-    "url": "https://dpr.delaware.gov/boards/adultentertainment/fees/",
+    "url": "https://dpr.delaware.gov/boards/adultentertainment/license-renewal",
     "checkedOn": "2026-10-18",
-    "rrule": "FREQ=YEARLY",
-    "renewal": "Every year on July 31"
+    "rrule": "FREQ=YEARLY;BYMONTH=7;BYMONTHDAY=31"
   },
   {
     "id": "de.on-premises-liquor-license",

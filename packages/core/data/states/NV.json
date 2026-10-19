@@ -74,7 +74,7 @@
     "title": "Nevada State Business License",
     "authority": "Nevada Secretary of State",
     "url": "https://www.nvsos.gov/sos/licensing/state-business-license",
-    "rrule": "FREQ=YEARLY",
+    "rrule": "FREQ=YEARLY;BYMONTHDAY=-1",
     "feeDetail": {
       "basis": "flat",
       "amount": 200,
@@ -110,10 +110,11 @@
     "dba": "https://www.nvsos.gov/sos-information/office-facts/faqs-all-division/service-marks-trademarks-trade-names"
   },
   "verification": {
-    "checkedOn": "2026-10-13",
+    "checkedOn": "2026-10-18",
     "sources": [
       "https://www.nvsos.gov/sos/licensing/state-business-license",
-      "https://www.nvsos.gov/sos-information/office-facts/faqs-all-division/service-marks-trademarks-trade-names"
+      "https://www.nvsos.gov/sos-information/office-facts/faqs-all-division/service-marks-trademarks-trade-names",
+      "https://www.nvsos.gov/licensing/state-business-license/state-business-license-faq"
     ],
     "unconfirmed": []
   }

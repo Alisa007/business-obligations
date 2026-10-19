@@ -83,10 +83,11 @@
         "category": "license",
         "authority": "City of Renton Tax and License Division",
         "description": "Businesses in Renton hold a city license and file a B&O tax return through FileLocal; annual filers' due date aligns with the license expiration date.",
-        "rrule": "FREQ=YEARLY",
-        "deadline": "License expiration date",
-        "url": "https://www.rentonwa.gov/City-Services/Tax-and-Licensing",
-        "appliesTo": ["all"]
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=30",
+        "url": "https://www.rentonwa.gov/City-Services/Business-Resources/Business-and-Occupation-Tax",
+        "appliesTo": ["all"],
+        "deadlineNote": "annual filers",
+        "checkedOn": "2026-10-18"
       }
     ],
     "sourceUrl": "https://www.rentonwa.gov/City-Services/Tax-and-Licensing",
@@ -102,9 +103,16 @@
         "category": "license",
         "authority": "Seattle Department of Finance and Administrative Services",
         "description": "Seattle requires a business license tax certificate (via the state Business Licensing Service) and a Seattle B&O tax return when taxable revenue exceeds the threshold.",
-        "rrule": "FREQ=YEARLY",
-        "url": "https://www.seattle.gov/business-regulations",
-        "appliesTo": ["all"]
+        "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=31",
+        "url": "https://www.seattle.gov/city-finance/business-taxes-and-licenses/business-licenses",
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 73,
+          "max": 3210,
+          "note": "2026 annual license fee by prior-year taxable revenue; $10 per additional branch"
+        },
+        "checkedOn": "2026-10-18"
       }
     ],
     "sourceUrl": "https://www.seattle.gov/business-regulations",

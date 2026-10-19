@@ -1,0 +1,512 @@
+[
+  {
+    "city": "Chandler",
+    "counties": ["Maricopa"],
+    "items": [
+      {
+        "id": "chandler.business-registration",
+        "title": "Renew Chandler business registration",
+        "category": "license",
+        "authority": "City of Chandler Tax and License Division",
+        "description": "Businesses operating from a physical Chandler location need a city business registration for each location and entity, renewed annually, in addition to the state TPT license.",
+        "rrule": "FREQ=YEARLY",
+        "url": "https://www.chandleraz.gov/business/tax-and-license",
+        "appliesTo": ["all"],
+        "feeDetail": { "basis": "flat", "amount": 45, "note": "annual" },
+        "feeDetail": { "basis": "flat", "amount": 45, "note": "annual" }
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.chandleraz.gov/business/tax-and-license/business-registration"
+  },
+  {
+    "city": "Gilbert",
+    "counties": ["Maricopa"],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.gilbertaz.gov/business/business-registration-and-licensing",
+    "items": [
+      {
+        "id": "gilbert.business-license",
+        "title": "Hold a Town of Gilbert business license",
+        "category": "license",
+        "authority": "Town of Gilbert Tax Compliance Division",
+        "description": "Businesses with a physical location in Gilbert need a Town business license; this is separate from the state-administered transaction privilege tax license.",
+        "frequency": "ongoing",
+        "url": "https://www.gilbertaz.gov/business/business-registration-and-licensing",
+        "appliesTo": ["all"]
+      }
+    ]
+  },
+  {
+    "city": "Glendale",
+    "counties": ["Maricopa"],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.glendaleaz.gov/Business/Licensing-Sales-Tax/Business-Licenses",
+    "items": [
+      {
+        "id": "glendale-az.business-license",
+        "title": "Renew Glendale business license",
+        "category": "license",
+        "authority": "City of Glendale Licensing and Sales Tax",
+        "description": "Any business with a permanent physical location in Glendale needs a city business license, renewed every year; a late penalty can apply when an application or renewal is more than 30 days late. TPT is licensed separately through the state.",
+        "rrule": "FREQ=YEARLY",
+        "url": "https://www.glendaleaz.gov/Business/Licensing-Sales-Tax/Business-Licenses",
+        "appliesTo": ["all"],
+        "feeDetail": { "basis": "flat", "amount": 25, "note": "annual renewal" },
+        "feeDetail": { "basis": "flat", "amount": 25, "note": "annual renewal" }
+      }
+    ]
+  },
+  {
+    "city": "Mesa",
+    "counties": ["Maricopa"],
+    "items": [
+      {
+        "id": "mesa.business-license",
+        "title": "Hold a Mesa general business license",
+        "category": "license",
+        "authority": "City of Mesa Licensing Office",
+        "description": "Most businesses operating in Mesa need a general business license (since January 3, 2022). Businesses with taxable activity also need a valid Arizona TPT license with the Mesa location added.",
+        "frequency": "ongoing",
+        "url": "https://www.mesaaz.gov/business/licensing/mesa-general-business-license",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.mesaaz.gov/Business-Development/Licensing/Mesa-General-Business-License"
+  },
+  {
+    "city": "Peoria",
+    "counties": ["Maricopa", "Yavapai"],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://peoriaed.com/home/showpublisheddocument/22424/638121474728870000",
+    "items": [
+      {
+        "id": "peoria-az.business-license",
+        "title": "Hold a Peoria business license",
+        "category": "license",
+        "authority": "City of Peoria Sales Tax and Business License",
+        "description": "The city requires a business license for anyone conducting business in Peoria, including home-based businesses; reviews can take up to 30 days and the state TPT license is separate.",
+        "frequency": "ongoing",
+        "url": "https://peoriaed.com/home/showpublisheddocument/22424/638121474728870000",
+        "appliesTo": ["all"]
+      }
+    ]
+  },
+  {
+    "city": "Phoenix",
+    "counties": ["Maricopa"],
+    "sourceUrl": "https://www.phoenix.gov/business/license-services.html",
+    "checkedOn": "2026-10-18",
+    "items": [
+      {
+        "id": "phoenix.privilege-tax-license",
+        "title": "Obtain City of Phoenix transaction privilege (sales) tax license",
+        "category": "permit",
+        "authority": "City of Phoenix Finance Department, Tax Compliance and Education",
+        "description": "Businesses making taxable sales within Phoenix hold a city privilege tax license and report city TPT in addition to the state TPT; retail tax is based on the seller's location.",
+        "frequency": "once",
+        "url": "https://www.phoenix.gov/finance/plt/licensing/privilege-tax-license",
+        "appliesTo": ["sells_goods"]
+      }
+    ]
+  },
+  {
+    "city": "Scottsdale",
+    "status": "rules",
+    "note": "Only the state-administered TPT license was confirmed from the city's pages; a separate city business registration was not.",
+    "counties": ["Maricopa"],
+    "sourceUrl": "https://www.scottsdaleaz.gov/taxes/resources",
+    "items": [
+      {
+        "id": "scottsdale.local-licenses",
+        "title": "Review applicable local licenses and permits in Scottsdale",
+        "category": "license",
+        "authority": "Scottsdale local licensing authority",
+        "description": "Review the cited local licensing source before operating; requirements may be activity-specific and can differ by business type or location.",
+        "frequency": "once",
+        "url": "https://www.scottsdaleaz.gov/taxes/resources",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-13"
+  },
+  {
+    "city": "Surprise",
+    "counties": ["Maricopa"],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://primeweb.surpriseaz.gov/Apply/GettingStarted/BusinessLicense",
+    "items": [
+      {
+        "id": "surprise.business-license",
+        "title": "Hold a City of Surprise business license",
+        "category": "license",
+        "authority": "City of Surprise Community Development",
+        "description": "Businesses operating in Surprise need a city business license, reviewed in up to 20 calendar days with payment requested after review; the state TPT license is separate.",
+        "frequency": "ongoing",
+        "url": "https://primeweb.surpriseaz.gov/Apply/GettingStarted/BusinessLicense",
+        "appliesTo": ["all"]
+      }
+    ]
+  },
+  {
+    "city": "Tempe",
+    "counties": ["Maricopa"],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://www.tempe.gov/government/financial-services/sales-tax-licensing/general-business-license",
+    "items": [
+      {
+        "id": "tempe.general-business-license",
+        "title": "Renew Tempe general business license",
+        "category": "license",
+        "authority": "City of Tempe Financial Services, Sales Tax and Licensing",
+        "description": "The general business license (effective August 1, 2025) applies to businesses with a permanent Tempe location, including those with no TPT license; the first renewal is due before January 1, 2027 and annually after that. Regulatory licenses are separate.",
+        "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=31",
+        "deadline": "Before January 1 each year (first renewal before January 1, 2027)",
+        "url": "https://www.tempe.gov/government/financial-services/sales-tax-licensing/general-business-license",
+        "appliesTo": ["all"]
+      }
+    ]
+  },
+  {
+    "city": "Tucson",
+    "counties": ["Pima"],
+    "sourceUrl": "https://www.tucsonaz.gov/Departments/Business-Services-Department/Apply-for-a-Business-License",
+    "checkedOn": "2026-10-18",
+    "items": [
+      {
+        "id": "tucson.business-license",
+        "title": "Renew Tucson business license",
+        "category": "license",
+        "authority": "City of Tucson Business Services Department",
+        "description": "Businesses in Tucson hold a city business license in addition to the state transaction privilege tax license, renewed annually.",
+        "rrule": "FREQ=YEARLY",
+        "url": "https://www.tucsonaz.gov/Departments/Business-Services-Department/Business-License-and-Tax-Information",
+        "appliesTo": ["all"]
+      }
+    ]
+  },
+  {
+    "city": "Buckeye",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "buckeye.local-licenses",
+        "title": "Review applicable local licenses and permits in Buckeye",
+        "category": "license",
+        "authority": "Buckeye local licensing authority",
+        "description": "Buckeye publishes city business-license fees by business type; common mercantile, professional, restaurant, and mobile-food licenses have a $25 application fee and $50 annual fee, with a $25 late fee.",
+        "frequency": "once",
+        "url": "https://www.buckeyeaz.gov/business/business-licenses/business-license-fee-schedule",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://azsos.gov/business/tntm"
+  },
+  {
+    "city": "Goodyear",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "goodyear.local-licenses",
+        "title": "Review applicable local licenses and permits in Goodyear",
+        "category": "license",
+        "authority": "Goodyear local licensing authority",
+        "description": "Goodyear requires every person conducting business within the city, whether or not they have a fixed location, to obtain a city business license; businesses should apply through the city's Business License Request Form.",
+        "frequency": "once",
+        "url": "https://www.goodyearaz.gov/business/business-license",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://azsos.gov/business/tntm"
+  },
+  {
+    "city": "Yuma",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "yuma.local-licenses",
+        "title": "Review applicable local licenses and permits in Yuma",
+        "category": "license",
+        "authority": "Yuma local licensing authority",
+        "description": "Yuma requires businesses to obtain the applicable city business license; the city publishes the complete fee schedule and license code through its Business License and Sales Tax Office, with tax periods due in advance under city code.",
+        "frequency": "once",
+        "url": "https://www.yumaaz.gov/business/business-license",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://azsos.gov/business/tntm"
+  },
+  {
+    "city": "Avondale",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "avondale.local-licenses",
+        "title": "Review applicable local licenses and permits in Avondale",
+        "category": "license",
+        "authority": "Avondale local licensing authority",
+        "description": "Avondale business licenses are annual; the city's fee schedule lists a $40 annual license fee, a $25 processing fee, and renewal late fees, with application-period fees varying by quarter.",
+        "frequency": "once",
+        "url": "https://www.avondaleaz.gov/home/showpublisheddocument/19725/638566332814270000",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://azsos.gov/business/tntm"
+  },
+  {
+    "city": "Queen Creek",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "queen-creek.local-licenses",
+        "title": "Review applicable local licenses and permits in Queen Creek",
+        "category": "license",
+        "authority": "Queen Creek local licensing authority",
+        "description": "Queen Creek requires all businesses located or operating in town to obtain a license before beginning; a new license costs $60, expires 12 months after issue, and renewal is annual with a $40 in-town renewal fee.",
+        "frequency": "once",
+        "url": "https://www.queencreekaz.gov/business/business-licenses",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://azsos.gov/business/tntm"
+  },
+  {
+    "city": "Maricopa",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "maricopa.local-licenses",
+        "title": "Review applicable local licenses and permits in Maricopa",
+        "category": "license",
+        "authority": "Maricopa local licensing authority",
+        "description": "Maricopa generally does not issue business licenses; regulated businesses must obtain a city regulated-business license after zoning approval, with an annual initial or renewal fee of $50.",
+        "frequency": "once",
+        "url": "https://www.maricopa-az.gov/Departments/Development-Services/Permit-Center/Regulated-Business-License",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://azsos.gov/business/tntm"
+  },
+  {
+    "city": "Flagstaff",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "flagstaff.local-licenses",
+        "title": "Review applicable local licenses and permits in Flagstaff",
+        "category": "license",
+        "authority": "Flagstaff local licensing authority",
+        "description": "Flagstaff requires a Transaction Privilege (sales) Tax License for taxable business activity; the city lists a $20 license fee and $20 annual renewal fee, filed through the Arizona Department of Revenue process.",
+        "frequency": "once",
+        "url": "https://flagstaff.az.gov/47/Sales-Tax-License",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://azsos.gov/business/tntm"
+  },
+  {
+    "city": "Casa Grande",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "casa-grande.local-licenses",
+        "title": "Review applicable local licenses and permits in Casa Grande",
+        "category": "license",
+        "authority": "Casa Grande local licensing authority",
+        "description": "Casa Grande requires a city business tax receipt after applicable approvals; home-based businesses must obtain a Home Occupation Permit, which carries a $31.50 application fee, before obtaining the city business tax receipt.",
+        "frequency": "once",
+        "url": "https://casagrandeaz.gov/697/Home-Occupation-Permit",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://azsos.gov/business/tntm"
+  },
+  {
+    "city": "Marana",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "marana.local-licenses",
+        "title": "Review applicable local licenses and permits in Marana",
+        "category": "license",
+        "authority": "Marana local licensing authority",
+        "description": "Marana requires businesses conducting business in town to obtain a license; the standard license costs $60 new, $40 annually to renew, and becomes subject to a $10 late fee 15 days after expiration.",
+        "frequency": "once",
+        "url": "https://www.maranaaz.gov/Departments/Finance/Business-Licenses/Standard-Business-License",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://azsos.gov/business/tntm"
+  },
+  {
+    "city": "Lake Havasu City",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "lake-havasu-city.local-licenses",
+        "title": "Review applicable local licenses and permits in Lake Havasu City",
+        "category": "license",
+        "authority": "Lake Havasu City local licensing authority",
+        "description": "Lake Havasu City requires a business license before operating; licenses run for one year from approval and renew annually, with city license fees of $5, $25, or $50 depending on the class.",
+        "frequency": "once",
+        "url": "https://www.lhcaz.gov/211/Licenses",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://azsos.gov/business/tntm"
+  },
+  {
+    "city": "Prescott Valley",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "prescott-valley.local-licenses",
+        "title": "Review applicable local licenses and permits in Prescott Valley",
+        "category": "license",
+        "authority": "Prescott Valley local licensing authority",
+        "description": "Prescott Valley requires applicable business registration and license fees under its municipal code; the town's published fee analysis lists a $45 business-license fee and $45 annual renewal fee, subject to late-renewal penalties.",
+        "frequency": "once",
+        "url": "https://codelibrary.amlegal.com/codes/prescottvalleyaz/latest/prescottvalley_az/0-0-0-23499",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://azsos.gov/business/tntm"
+  },
+  {
+    "city": "Prescott",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "prescott.local-licenses",
+        "title": "Review applicable local licenses and permits in Prescott",
+        "category": "license",
+        "authority": "Prescott local licensing authority",
+        "description": "Prescott businesses engaged in taxable activity must obtain an Arizona Transaction Privilege Tax license and file the applicable city tax returns; the city lists a $5 privilege-tax license application fee and $5 annual renewal fee.",
+        "frequency": "once",
+        "url": "https://prescott-az.gov/budget-and-finance/tpt-license/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://azsos.gov/business/tntm"
+  },
+  {
+    "city": "Oro Valley",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "oro-valley.local-licenses",
+        "title": "Review applicable local licenses and permits in Oro Valley",
+        "category": "license",
+        "authority": "Oro Valley local licensing authority",
+        "description": "Oro Valley requires a general business or home-occupation license; the annual fee is $80, prorated by month, and the town reports a typical processing time of 3–5 business days.",
+        "frequency": "once",
+        "url": "https://www.orovalleyaz.gov/Government/Departments/Community-and-Economic-Development/Services/Apply-for-a-Business-License",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://azsos.gov/business/tntm"
+  },
+  {
+    "city": "Apache Junction",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "apache-junction.local-licenses",
+        "title": "Review applicable local licenses and permits in Apache Junction",
+        "category": "license",
+        "authority": "Apache Junction local licensing authority",
+        "description": "Apache Junction requires approval and payment before a business may operate; the city business-license fee is $50, with separate privilege-tax or operating-license requirements possible by business type.",
+        "frequency": "once",
+        "url": "https://www.apachejunctionaz.gov/997/Business-License",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://azsos.gov/business/tntm"
+  },
+  {
+    "city": "Sierra Vista",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "sierra-vista.local-licenses",
+        "title": "Review applicable local licenses and permits in Sierra Vista",
+        "category": "license",
+        "authority": "Sierra Vista local licensing authority",
+        "description": "Sierra Vista requires businesses to use the city's business-license process before operating; separate licenses may apply by activity, and the city publishes the current application and renewal instructions through its Business Licenses office.",
+        "frequency": "once",
+        "url": "https://www.sierravistaaz.gov/business/business-licenses",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://azsos.gov/business/tntm"
+  },
+  {
+    "city": "Bullhead City",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "bullhead-city.local-licenses",
+        "title": "Review applicable local licenses and permits in Bullhead City",
+        "category": "license",
+        "authority": "Bullhead City local licensing authority",
+        "description": "Bullhead City requires a business license to operate; the typical general license costs $60 annually plus a one-time $60 application fee, with amounts varying by license type.",
+        "frequency": "once",
+        "url": "https://www.bullheadcityaz.gov/business-development/business-licenses/",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://azsos.gov/business/tntm"
+  },
+  {
+    "city": "San Luis",
+    "status": "rules",
+    "reason": "city-license-unconfirmed",
+    "items": [
+      {
+        "id": "san-luis.local-licenses",
+        "title": "Review applicable local licenses and permits in San Luis",
+        "category": "license",
+        "authority": "San Luis local licensing authority",
+        "description": "San Luis requires a business-license application to be filed and approved before lawful operation; the Arizona TPT license fee for San Luis is $2, and the city reviews applications through multiple departments.",
+        "frequency": "once",
+        "url": "https://sanluisaz.gov/departments/finance/billing_collections/licensing/business_license",
+        "appliesTo": ["all"]
+      }
+    ],
+    "checkedOn": "2026-10-18",
+    "sourceUrl": "https://azsos.gov/business/tntm"
+  }
+]
