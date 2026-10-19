@@ -80,7 +80,8 @@ function LocationSummaryBody({ state, county, city }: LocationSummaryProps) {
               <ul style={{ margin: 0, paddingLeft: 20 }}>
                 {local.items.map((item) => (
                   <li key={item.id}>
-                    {item.title} <Text color="placeholder-color">· {item.authority}</Text>
+                    <ExternalLink url={item.url}>{item.title}</ExternalLink>{" "}
+                    <Text color="placeholder-color">· {item.authority}</Text>
                   </li>
                 ))}
               </ul>
