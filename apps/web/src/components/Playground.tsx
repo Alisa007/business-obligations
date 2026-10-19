@@ -5,7 +5,6 @@ import { H1, Paragraph, ScrollView, Tabs, Text, XStack, YStack } from "tamagui";
 import { DISCLAIMER } from "business-obligations";
 import {
   Chip,
-  LocationSummary,
   ExternalLink,
   LaunchList,
   NO_OBLIGATION_FILTERS,
