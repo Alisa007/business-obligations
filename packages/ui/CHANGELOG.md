@@ -4,9 +4,20 @@ All notable changes to `business-obligations-ui` are documented here.
 
 ## [Unreleased]
 
+## [0.7.0] - 2026-10-19
+
 ### Changed
 
 - the fee chip of an item shows a fee that has no single amount ("From $50", "Varies", a tiered fee) instead of nothing
+
+### Added
+
+- **data:** due dates and fees for bare-rule items; twice-yearly and quarter-of-formation rrules
+- **core:** tiered fees, appliesWhenAny and richer local data; update libraries
+
+### Fixed
+
+- **ui:** scope jurisdiction filters to available items
 
 ## [0.6.0] - 2026-10-18
 
