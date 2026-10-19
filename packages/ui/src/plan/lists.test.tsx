@@ -183,6 +183,7 @@ describe("business-obligations-ui", () => {
         <ExternalLink url="https://github.com/">Other</ExternalLink>
       </>,
     );
+    expect(html).toContain('href="https://github.com/"');
     expect(html).toContain('target="_blank"');
     expect(html).toContain('rel="noopener noreferrer"');
     expect(html).toContain('rel="nofollow noopener noreferrer"');
