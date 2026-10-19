@@ -336,6 +336,10 @@ export function Playground() {
           </ExternalLink>
           . <ExternalLink url={SITE_CONFIG.repoUrl}>Source on GitHub</ExternalLink>.
         </Muted>
+        <Muted>
+          Suggested planning dates are allowances, not agency processing times. Statutory deadlines come from
+          the rules and are labeled as such.
+        </Muted>
       </YStack>
     </YStack>
   );

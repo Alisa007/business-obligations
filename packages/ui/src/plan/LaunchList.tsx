@@ -265,9 +265,6 @@ function LaunchListBody({ plan, costs, conditional = [], done = new Set(), onTog
           </YStack>
         </Collapse>
       )}
-      <Text fontSize="sm" color="placeholder-color">
-        {m.planNote}
-      </Text>
     </YStack>
   );
 }
