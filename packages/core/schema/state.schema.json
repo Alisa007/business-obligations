@@ -325,6 +325,10 @@
             "minEmployees": {
               "type": "integer",
               "minimum": 1
+            },
+            "note": {
+              "description": "Replaces the standard sentence when the mandate has tiers (paid or unpaid by size, or by hours worked).",
+              "type": "string"
             }
           }
         }

@@ -122,7 +122,7 @@ function employerItems(x: Presence, p: ResolvedProfile): ItemDraft[] {
       state: x.state,
       authority: s.revenue.name,
       description:
-        "Withhold state income tax from wages and remit on the assigned deposit schedule; file annual reconciliation and W-2s.",
+        "Register with the state to withhold income tax from wages; the state assigns the deposit schedule and sets the returns and wage reports to file.",
       frequency: "once",
       reason: `${s.name} levies income tax on wages; ${reason}`,
       url: s.links.withholding ?? s.revenue.url,
@@ -645,7 +645,9 @@ export const extraStateRules: Rule[] = [
           jurisdiction: "state" as const,
           state: x.state,
           authority: info(x.state).labor.name,
-          description: `${info(x.state).name} requires employers with ${info(x.state).paidSickLeave!.minEmployees}+ employees to provide paid sick leave, post notice and keep records.`,
+          description:
+            info(x.state).paidSickLeave!.note ??
+            `${info(x.state).name} requires employers with ${info(x.state).paidSickLeave!.minEmployees}+ employees to provide paid sick leave, post notice and keep records.`,
           frequency: "ongoing" as const,
           reason: `${x.employeeCount} employees in ${x.state}, at or above the state's ${info(x.state).paidSickLeave!.minEmployees}-employee threshold`,
         })),
