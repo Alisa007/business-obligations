@@ -2,328 +2,2227 @@
   {
     "county": "Beaverhead",
     "status": "rules",
-    "items": [{"id":"beaverhead-mt.food-license","title":"Obtain and renew a Beaverhead County food establishment license","category":"license","authority":"Beaverhead County Environmental Health / Montana Department of Public Health and Human Services","description":"Food establishments operating in Beaverhead County must obtain the applicable Montana food license and comply with county inspection requirements before operating.","rrule":"FREQ=YEARLY","url":["https://beaverheadcountymt.gov/environmental-health-sanitarians/","https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":85,"max":275,"note":"The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."},"lateFee":{"amount":25,"note":"Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "beaverhead-mt.food-license",
+        "title": "Obtain and renew a Beaverhead County food establishment license",
+        "category": "license",
+        "authority": "Beaverhead County Environmental Health / Montana Department of Public Health and Human Services",
+        "description": "Food establishments operating in Beaverhead County must obtain the applicable Montana food license and comply with county inspection requirements before operating.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://beaverheadcountymt.gov/environmental-health-sanitarians/",
+          "https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 85,
+          "max": 275,
+          "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Big Horn",
     "status": "rules",
-    "items": [{"id":"big-horn-mt.food-license","title":"Obtain and renew a Big Horn County food license","category":"license","authority":"Big Horn County Public Health Department / Montana DPHHS","description":"Food establishments operating in Big Horn County must obtain the applicable Montana retail-food license and comply with county environmental-health review and inspection requirements.","rrule":"FREQ=YEARLY","url":["https://www.bighorncountypublichealth.com/environmental-health/","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":150,"max":275,"note":"Montana annual retail-food license fees are $150, $225, or $275 by establishment size."},"lateFee":{"amount":25,"note":"Montana law requires a $25 late fee when a retail-food renewal is submitted after expiration and the establishment operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "big-horn-mt.food-license",
+        "title": "Obtain and renew a Big Horn County food license",
+        "category": "license",
+        "authority": "Big Horn County Public Health Department / Montana DPHHS",
+        "description": "Food establishments operating in Big Horn County must obtain the applicable Montana retail-food license and comply with county environmental-health review and inspection requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.bighorncountypublichealth.com/environmental-health/",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 275,
+          "note": "Montana annual retail-food license fees are $150, $225, or $275 by establishment size."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana law requires a $25 late fee when a retail-food renewal is submitted after expiration and the establishment operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Blaine",
     "status": "rules",
-    "items": [{"id":"blaine-mt.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Beaverhead County Environmental Health / Montana Department of Public Health and Human Services","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://beaverheadcountymt.gov/environmental-health-sanitarians/","https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":85,"max":275,"note":"The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."},"lateFee":{"amount":25,"note":"Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "blaine-mt.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Beaverhead County Environmental Health / Montana Department of Public Health and Human Services",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://beaverheadcountymt.gov/environmental-health-sanitarians/",
+          "https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 85,
+          "max": 275,
+          "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Broadwater",
     "status": "rules",
-    "items": [{"id":"broadwater-mt.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Beaverhead County Environmental Health / Montana Department of Public Health and Human Services","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://beaverheadcountymt.gov/environmental-health-sanitarians/","https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":85,"max":275,"note":"The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."},"lateFee":{"amount":25,"note":"Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "broadwater-mt.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Beaverhead County Environmental Health / Montana Department of Public Health and Human Services",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://beaverheadcountymt.gov/environmental-health-sanitarians/",
+          "https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 85,
+          "max": 275,
+          "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Carbon",
     "status": "rules",
-    "items": [{"id":"carbon-mt.food-license","title":"Obtain and renew a Carbon County food license","category":"license","authority":"Carbon County Environmental Health / Montana DPHHS","description":"Food establishments operating in Carbon County must obtain the applicable Montana retail-food license and complete county plan review and preopening inspection requirements.","rrule":"FREQ=YEARLY","url":["https://carbonmt.gov/environmental-health/","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":150,"max":275,"note":"Montana annual retail-food license fees are $150, $225, or $275 by establishment size; Carbon County separately publishes plan-review fees of $90-$250."},"lateFee":{"amount":25,"note":"Montana law requires a $25 late fee when a retail-food renewal is submitted after expiration and the establishment operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "carbon-mt.food-license",
+        "title": "Obtain and renew a Carbon County food license",
+        "category": "license",
+        "authority": "Carbon County Environmental Health / Montana DPHHS",
+        "description": "Food establishments operating in Carbon County must obtain the applicable Montana retail-food license and complete county plan review and preopening inspection requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://carbonmt.gov/environmental-health/",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 275,
+          "note": "Montana annual retail-food license fees are $150, $225, or $275 by establishment size; Carbon County separately publishes plan-review fees of $90-$250."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana law requires a $25 late fee when a retail-food renewal is submitted after expiration and the establishment operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Carter",
     "status": "rules",
-    "items": [{"id":"carter-mt.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Beaverhead County Environmental Health / Montana Department of Public Health and Human Services","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://beaverheadcountymt.gov/environmental-health-sanitarians/","https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":85,"max":275,"note":"The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."},"lateFee":{"amount":25,"note":"Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "carter-mt.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Beaverhead County Environmental Health / Montana Department of Public Health and Human Services",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://beaverheadcountymt.gov/environmental-health-sanitarians/",
+          "https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 85,
+          "max": 275,
+          "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Cascade",
     "status": "rules",
-    "sourceUrl": ["https://revenuefiles.mt.gov/files/PAD/personal-property/Montana-Personal-Property-Assessment-Fact-Sheet.pdf"],
+    "sourceUrl": [
+      "https://revenuefiles.mt.gov/files/PAD/personal-property/Montana-Personal-Property-Assessment-Fact-Sheet.pdf"
+    ],
     "note": "Montana counties take no business personal property return: taxpayers report to the state Department of Revenue through the TransAction Portal by February 15, and the first $1 million of class 8 market value is exempt.",
-    "items": [{"id":"cascade-mt.food-license","title":"Obtain and renew a Cascade County food license","category":"license","authority":"Cascade County City-County Health Department","description":"Food service establishments operating in Cascade County must obtain the applicable Montana food license; the county health department licenses and inspects retail, wholesale, temporary, mobile and cottage food operations.","rrule":"FREQ=YEARLY","url":["https://www.cascadecountymt.gov/276/Food-Service-Establishments","https://cascadecountymt.gov/DocumentCenter/View/3701/Food-Service-Fee-Schedule?bidId="],"feeDetail":{"basis":"varies"},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19","lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."}}],
+    "items": [
+      {
+        "id": "cascade-mt.food-license",
+        "title": "Obtain and renew a Cascade County food license",
+        "category": "license",
+        "authority": "Cascade County City-County Health Department",
+        "description": "Food service establishments operating in Cascade County must obtain the applicable Montana food license; the county health department licenses and inspects retail, wholesale, temporary, mobile and cottage food operations.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.cascadecountymt.gov/276/Food-Service-Establishments",
+          "https://cascadecountymt.gov/DocumentCenter/View/3701/Food-Service-Fee-Schedule?bidId="
+        ],
+        "feeDetail": { "basis": "varies" },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Chouteau",
     "status": "rules",
-    "items": [{"id":"chouteau-mt.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Beaverhead County Environmental Health / Montana Department of Public Health and Human Services","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://beaverheadcountymt.gov/environmental-health-sanitarians/","https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":85,"max":275,"note":"The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."},"lateFee":{"amount":25,"note":"Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "chouteau-mt.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Beaverhead County Environmental Health / Montana Department of Public Health and Human Services",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://beaverheadcountymt.gov/environmental-health-sanitarians/",
+          "https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 85,
+          "max": 275,
+          "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Custer",
     "status": "rules",
-    "items": [{"id":"custer-mt.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Beaverhead County Environmental Health / Montana Department of Public Health and Human Services","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://beaverheadcountymt.gov/environmental-health-sanitarians/","https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":85,"max":275,"note":"The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."},"lateFee":{"amount":25,"note":"Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "custer-mt.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Beaverhead County Environmental Health / Montana Department of Public Health and Human Services",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://beaverheadcountymt.gov/environmental-health-sanitarians/",
+          "https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 85,
+          "max": 275,
+          "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Daniels",
     "status": "rules",
-    "items": [{"id":"daniels-mt.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Beaverhead County Environmental Health / Montana Department of Public Health and Human Services","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://beaverheadcountymt.gov/environmental-health-sanitarians/","https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":85,"max":275,"note":"The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."},"lateFee":{"amount":25,"note":"Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "daniels-mt.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Beaverhead County Environmental Health / Montana Department of Public Health and Human Services",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://beaverheadcountymt.gov/environmental-health-sanitarians/",
+          "https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 85,
+          "max": 275,
+          "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Dawson",
     "status": "rules",
-    "items": [{"id":"dawson-mt.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Beaverhead County Environmental Health / Montana Department of Public Health and Human Services","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://beaverheadcountymt.gov/environmental-health-sanitarians/","https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":85,"max":275,"note":"The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."},"lateFee":{"amount":25,"note":"Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "dawson-mt.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Beaverhead County Environmental Health / Montana Department of Public Health and Human Services",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://beaverheadcountymt.gov/environmental-health-sanitarians/",
+          "https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 85,
+          "max": 275,
+          "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Deer Lodge",
     "status": "rules",
-    "items": [{"id":"deer-lodge-mt.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Beaverhead County Environmental Health / Montana Department of Public Health and Human Services","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://beaverheadcountymt.gov/environmental-health-sanitarians/","https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":85,"max":275,"note":"The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."},"lateFee":{"amount":25,"note":"Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "deer-lodge-mt.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Beaverhead County Environmental Health / Montana Department of Public Health and Human Services",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://beaverheadcountymt.gov/environmental-health-sanitarians/",
+          "https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 85,
+          "max": 275,
+          "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Fallon",
     "status": "rules",
-    "items": [{"id":"fallon-mt.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Beaverhead County Environmental Health / Montana Department of Public Health and Human Services","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://beaverheadcountymt.gov/environmental-health-sanitarians/","https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":85,"max":275,"note":"The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."},"lateFee":{"amount":25,"note":"Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "fallon-mt.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Beaverhead County Environmental Health / Montana Department of Public Health and Human Services",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://beaverheadcountymt.gov/environmental-health-sanitarians/",
+          "https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 85,
+          "max": 275,
+          "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Fergus",
     "status": "rules",
-    "items": [{"id":"fergus-mt.food-license","title":"Obtain and renew a Fergus County food license","category":"license","authority":"Fergus County Health Department / Montana DPHHS","description":"Food establishments operating in Fergus County must obtain the applicable Montana retail-food license and comply with county environmental-health review and inspection requirements.","rrule":"FREQ=YEARLY","url":["https://fergusmt.gov/health-department-environmental-health","https://dphhs.mt.gov/publichealth/EHFS/licenserenewal","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":150,"max":275,"note":"Montana annual retail-food license fees are $150, $225, or $275 by establishment size."},"lateFee":{"amount":25,"note":"Montana law requires a $25 late fee when a retail-food renewal is submitted after expiration and the establishment operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "fergus-mt.food-license",
+        "title": "Obtain and renew a Fergus County food license",
+        "category": "license",
+        "authority": "Fergus County Health Department / Montana DPHHS",
+        "description": "Food establishments operating in Fergus County must obtain the applicable Montana retail-food license and comply with county environmental-health review and inspection requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://fergusmt.gov/health-department-environmental-health",
+          "https://dphhs.mt.gov/publichealth/EHFS/licenserenewal",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 275,
+          "note": "Montana annual retail-food license fees are $150, $225, or $275 by establishment size."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana law requires a $25 late fee when a retail-food renewal is submitted after expiration and the establishment operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Flathead",
     "status": "rules",
-    "sourceUrl": ["https://revenuefiles.mt.gov/files/PAD/personal-property/Montana-Personal-Property-Assessment-Fact-Sheet.pdf"],
+    "sourceUrl": [
+      "https://revenuefiles.mt.gov/files/PAD/personal-property/Montana-Personal-Property-Assessment-Fact-Sheet.pdf"
+    ],
     "note": "Montana counties take no business personal property return: taxpayers report to the state Department of Revenue through the TransAction Portal by February 15, and the first $1 million of class 8 market value is exempt.",
-    "items": [{"id":"flathead-mt.food-license","title":"Obtain and renew a Flathead County food license","category":"license","authority":"Montana Department of Public Health and Human Services","description":"Food establishments operating in Flathead County must obtain the applicable Montana retail food license and renew it through the state licensing process; fees vary by establishment size.","rrule":"FREQ=YEARLY","url":["https://dphhs.mt.gov/assets/publichealth/FCS/SanitarianResourcePage/FCSForms/RetailFood/RFLicenseApplicationPage1.pdf","https://dphhs.mt.gov/publichealth/EHFS/licenserenewal"],"feeDetail":{"basis":"varies","min":85,"max":115},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19","lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."}}],
+    "items": [
+      {
+        "id": "flathead-mt.food-license",
+        "title": "Obtain and renew a Flathead County food license",
+        "category": "license",
+        "authority": "Montana Department of Public Health and Human Services",
+        "description": "Food establishments operating in Flathead County must obtain the applicable Montana retail food license and renew it through the state licensing process; fees vary by establishment size.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://dphhs.mt.gov/assets/publichealth/FCS/SanitarianResourcePage/FCSForms/RetailFood/RFLicenseApplicationPage1.pdf",
+          "https://dphhs.mt.gov/publichealth/EHFS/licenserenewal"
+        ],
+        "feeDetail": { "basis": "varies", "min": 85, "max": 115 },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Gallatin",
     "status": "rules",
-    "items": [{"id":"gallatin-mt.food-license","title":"Obtain and renew a Gallatin County food license","category":"license","authority":"Gallatin City-County Health Department","description":"Food establishments operating in Gallatin County must complete local plan review and obtain the applicable Montana food license before operating.","rrule":"FREQ=YEARLY","url":["https://www.gallatinmt.gov/sites/g/files/vyhlif606/f/events/chapter1_edits_v.3_reading2_clean.pdf","https://www.gallatinmt.gov/450/Health-Department","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":150,"max":420,"note":"Published county review fees are $252 for mobile or up to 750 square feet, $336 for 751-2,500 square feet, and $420 above 2,500 square feet, plus applicable state fees."},"lateFee":{"amount":25,"note":"Montana law imposes a $25 late fee for qualifying retail food license renewals operated into the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "gallatin-mt.food-license",
+        "title": "Obtain and renew a Gallatin County food license",
+        "category": "license",
+        "authority": "Gallatin City-County Health Department",
+        "description": "Food establishments operating in Gallatin County must complete local plan review and obtain the applicable Montana food license before operating.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.gallatinmt.gov/sites/g/files/vyhlif606/f/events/chapter1_edits_v.3_reading2_clean.pdf",
+          "https://www.gallatinmt.gov/450/Health-Department",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 420,
+          "note": "Published county review fees are $252 for mobile or up to 750 square feet, $336 for 751-2,500 square feet, and $420 above 2,500 square feet, plus applicable state fees."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana law imposes a $25 late fee for qualifying retail food license renewals operated into the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Garfield",
     "status": "rules",
-    "items": [{"id":"garfield-mt.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Beaverhead County Environmental Health / Montana Department of Public Health and Human Services","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://beaverheadcountymt.gov/environmental-health-sanitarians/","https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":85,"max":275,"note":"The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."},"lateFee":{"amount":25,"note":"Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "garfield-mt.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Beaverhead County Environmental Health / Montana Department of Public Health and Human Services",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://beaverheadcountymt.gov/environmental-health-sanitarians/",
+          "https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 85,
+          "max": 275,
+          "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Glacier",
     "status": "rules",
-    "items": [{"id":"glacier-mt.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Beaverhead County Environmental Health / Montana Department of Public Health and Human Services","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://beaverheadcountymt.gov/environmental-health-sanitarians/","https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":85,"max":275,"note":"The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."},"lateFee":{"amount":25,"note":"Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "glacier-mt.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Beaverhead County Environmental Health / Montana Department of Public Health and Human Services",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://beaverheadcountymt.gov/environmental-health-sanitarians/",
+          "https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 85,
+          "max": 275,
+          "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Golden Valley",
     "status": "rules",
-    "items": [{"id":"golden-valley-mt.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Beaverhead County Environmental Health / Montana Department of Public Health and Human Services","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://beaverheadcountymt.gov/environmental-health-sanitarians/","https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":85,"max":275,"note":"The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."},"lateFee":{"amount":25,"note":"Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "golden-valley-mt.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Beaverhead County Environmental Health / Montana Department of Public Health and Human Services",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://beaverheadcountymt.gov/environmental-health-sanitarians/",
+          "https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 85,
+          "max": 275,
+          "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Granite",
     "status": "rules",
-    "items": [{"id":"granite-mt.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Beaverhead County Environmental Health / Montana Department of Public Health and Human Services","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://beaverheadcountymt.gov/environmental-health-sanitarians/","https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":85,"max":275,"note":"The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."},"lateFee":{"amount":25,"note":"Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "granite-mt.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Beaverhead County Environmental Health / Montana Department of Public Health and Human Services",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://beaverheadcountymt.gov/environmental-health-sanitarians/",
+          "https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 85,
+          "max": 275,
+          "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Hill",
     "status": "rules",
-    "items": [{"id":"hill-mt.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Beaverhead County Environmental Health / Montana Department of Public Health and Human Services","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://beaverheadcountymt.gov/environmental-health-sanitarians/","https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":85,"max":275,"note":"The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."},"lateFee":{"amount":25,"note":"Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "hill-mt.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Beaverhead County Environmental Health / Montana Department of Public Health and Human Services",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://beaverheadcountymt.gov/environmental-health-sanitarians/",
+          "https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 85,
+          "max": 275,
+          "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Jefferson",
     "status": "rules",
-    "items": [{"id":"jefferson-mt.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Beaverhead County Environmental Health / Montana Department of Public Health and Human Services","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://beaverheadcountymt.gov/environmental-health-sanitarians/","https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":85,"max":275,"note":"The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."},"lateFee":{"amount":25,"note":"Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "jefferson-mt.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Beaverhead County Environmental Health / Montana Department of Public Health and Human Services",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://beaverheadcountymt.gov/environmental-health-sanitarians/",
+          "https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 85,
+          "max": 275,
+          "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Judith Basin",
     "status": "rules",
-    "items": [{"id":"judith-basin-mt.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Beaverhead County Environmental Health / Montana Department of Public Health and Human Services","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://beaverheadcountymt.gov/environmental-health-sanitarians/","https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":85,"max":275,"note":"The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."},"lateFee":{"amount":25,"note":"Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "judith-basin-mt.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Beaverhead County Environmental Health / Montana Department of Public Health and Human Services",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://beaverheadcountymt.gov/environmental-health-sanitarians/",
+          "https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 85,
+          "max": 275,
+          "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Lake",
     "status": "rules",
-    "items": [{"id":"lake-mt.food-license","title":"Obtain and renew a Lake County food license","category":"license","authority":"Lake County Environmental Health / Montana Department of Public Health and Human Services","description":"Food vendors operating in Lake County must obtain the applicable Montana food license and complete county plan review before operating.","rrule":"FREQ=YEARLY","url":["https://www.lakemt.gov/174/Food-Service","https://dphhs.mt.gov/publichealth/EHFS/licenserenewal","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":150,"max":425,"note":"Lake County states that plan review is $150 and Montana annual retail-food license fees are $150, $225, or $275 by establishment size."},"lateFee":{"amount":25,"note":"Montana adds a $25 late fee when a qualifying retail food license renewal is paid after expiration and the business operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "lake-mt.food-license",
+        "title": "Obtain and renew a Lake County food license",
+        "category": "license",
+        "authority": "Lake County Environmental Health / Montana Department of Public Health and Human Services",
+        "description": "Food vendors operating in Lake County must obtain the applicable Montana food license and complete county plan review before operating.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.lakemt.gov/174/Food-Service",
+          "https://dphhs.mt.gov/publichealth/EHFS/licenserenewal",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 425,
+          "note": "Lake County states that plan review is $150 and Montana annual retail-food license fees are $150, $225, or $275 by establishment size."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when a qualifying retail food license renewal is paid after expiration and the business operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Lewis and Clark",
     "status": "rules",
-    "items": [{"id":"lewis-and-clark-mt.food-license","title":"Obtain and renew a Lewis and Clark County food license","category":"license","authority":"Lewis and Clark City-County Health Department","description":"Food facilities operating in Lewis and Clark County must complete local plan review, inspection, and licensing requirements before operating.","rrule":"FREQ=YEARLY","url":["https://www.lccountymt.gov/Government/Public-Health/Licensing-and-Inspections/Food-Facilities","https://www.lccountymt.gov/files/assets/county/health/documents/plan-review-fees-food-facilities-fy-24.pdf","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","note":"County food-facility fees include an $80/hour base service rate and vary by risk category and plan-review work; Montana law sets retail license fees at $150-$275 and a $25 late fee for qualifying retail renewals."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19","lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."}}],
+    "items": [
+      {
+        "id": "lewis-and-clark-mt.food-license",
+        "title": "Obtain and renew a Lewis and Clark County food license",
+        "category": "license",
+        "authority": "Lewis and Clark City-County Health Department",
+        "description": "Food facilities operating in Lewis and Clark County must complete local plan review, inspection, and licensing requirements before operating.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.lccountymt.gov/Government/Public-Health/Licensing-and-Inspections/Food-Facilities",
+          "https://www.lccountymt.gov/files/assets/county/health/documents/plan-review-fees-food-facilities-fy-24.pdf",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "County food-facility fees include an $80/hour base service rate and vary by risk category and plan-review work; Montana law sets retail license fees at $150-$275 and a $25 late fee for qualifying retail renewals."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Liberty",
     "status": "rules",
-    "items": [{"id":"liberty-mt.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Beaverhead County Environmental Health / Montana Department of Public Health and Human Services","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://beaverheadcountymt.gov/environmental-health-sanitarians/","https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":85,"max":275,"note":"The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."},"lateFee":{"amount":25,"note":"Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "liberty-mt.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Beaverhead County Environmental Health / Montana Department of Public Health and Human Services",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://beaverheadcountymt.gov/environmental-health-sanitarians/",
+          "https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 85,
+          "max": 275,
+          "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Lincoln",
     "status": "rules",
-    "items": [{"id":"lincoln-mt.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Beaverhead County Environmental Health / Montana Department of Public Health and Human Services","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://beaverheadcountymt.gov/environmental-health-sanitarians/","https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":85,"max":275,"note":"The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."},"lateFee":{"amount":25,"note":"Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "lincoln-mt.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Beaverhead County Environmental Health / Montana Department of Public Health and Human Services",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://beaverheadcountymt.gov/environmental-health-sanitarians/",
+          "https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 85,
+          "max": 275,
+          "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Madison",
     "status": "rules",
-    "items": [{"id":"madison-mt.food-license","title":"Obtain and renew a Madison County food license","category":"license","authority":"Madison County Environmental Health / Montana Department of Public Health and Human Services","description":"Food establishments operating in Madison County must obtain the applicable Montana food license and comply with county environmental-health requirements.","rrule":"FREQ=YEARLY","url":["https://dphhs.mt.gov/publichealth/EHFS/countytribalhealthdepts","https://dphhs.mt.gov/publichealth/EHFS/licenserenewal","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":150,"max":275,"note":"Montana annual retail-food license fees are $150, $225, or $275 by establishment size."},"lateFee":{"amount":25,"note":"Montana adds a $25 late fee when a qualifying retail food license renewal is paid after expiration and the business operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "madison-mt.food-license",
+        "title": "Obtain and renew a Madison County food license",
+        "category": "license",
+        "authority": "Madison County Environmental Health / Montana Department of Public Health and Human Services",
+        "description": "Food establishments operating in Madison County must obtain the applicable Montana food license and comply with county environmental-health requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://dphhs.mt.gov/publichealth/EHFS/countytribalhealthdepts",
+          "https://dphhs.mt.gov/publichealth/EHFS/licenserenewal",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 275,
+          "note": "Montana annual retail-food license fees are $150, $225, or $275 by establishment size."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when a qualifying retail food license renewal is paid after expiration and the business operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "McCone",
     "status": "rules",
-    "items": [{"id":"mccone-mt.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Beaverhead County Environmental Health / Montana Department of Public Health and Human Services","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://beaverheadcountymt.gov/environmental-health-sanitarians/","https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":85,"max":275,"note":"The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."},"lateFee":{"amount":25,"note":"Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "mccone-mt.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Beaverhead County Environmental Health / Montana Department of Public Health and Human Services",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://beaverheadcountymt.gov/environmental-health-sanitarians/",
+          "https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 85,
+          "max": 275,
+          "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Meagher",
     "status": "rules",
-    "items": [{"id":"meagher-mt.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Beaverhead County Environmental Health / Montana Department of Public Health and Human Services","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://beaverheadcountymt.gov/environmental-health-sanitarians/","https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":85,"max":275,"note":"The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."},"lateFee":{"amount":25,"note":"Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "meagher-mt.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Beaverhead County Environmental Health / Montana Department of Public Health and Human Services",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://beaverheadcountymt.gov/environmental-health-sanitarians/",
+          "https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 85,
+          "max": 275,
+          "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Mineral",
     "status": "rules",
-    "items": [{"id":"mineral-mt.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Beaverhead County Environmental Health / Montana Department of Public Health and Human Services","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://beaverheadcountymt.gov/environmental-health-sanitarians/","https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":85,"max":275,"note":"The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."},"lateFee":{"amount":25,"note":"Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "mineral-mt.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Beaverhead County Environmental Health / Montana Department of Public Health and Human Services",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://beaverheadcountymt.gov/environmental-health-sanitarians/",
+          "https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 85,
+          "max": 275,
+          "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Missoula",
     "status": "rules",
-    "items": [{"id":"missoula-mt.food-license","title":"Obtain and renew a Missoula County food service license","category":"license","authority":"Missoula Public Health","description":"Food service businesses operating in Missoula County generally need a Missoula Public Health license; temporary food service requires a permit and plan review before operating.","rrule":"FREQ=YEARLY","url":["https://live.mph.missoula.co/inspections-permits/food-service/","https://missoulapublichealth.org/fees/","https://www.missoulapublichealth.org/inspections-permits/food-service/temporary-food-service/"],"feeDetail":{"basis":"varies","min":65,"max":520,"note":"Temporary plan review is $35-$105 and permit fees are $65-$115; large group function fees are $210-$520 by filing timing."},"lateFee":{"amount":215,"note":"Food safety re-inspection fee is $215."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "missoula-mt.food-license",
+        "title": "Obtain and renew a Missoula County food service license",
+        "category": "license",
+        "authority": "Missoula Public Health",
+        "description": "Food service businesses operating in Missoula County generally need a Missoula Public Health license; temporary food service requires a permit and plan review before operating.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://live.mph.missoula.co/inspections-permits/food-service/",
+          "https://missoulapublichealth.org/fees/",
+          "https://www.missoulapublichealth.org/inspections-permits/food-service/temporary-food-service/"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 65,
+          "max": 520,
+          "note": "Temporary plan review is $35-$105 and permit fees are $65-$115; large group function fees are $210-$520 by filing timing."
+        },
+        "lateFee": { "amount": 215, "note": "Food safety re-inspection fee is $215." },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Musselshell",
     "status": "rules",
-    "items": [{"id":"musselshell-mt.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Beaverhead County Environmental Health / Montana Department of Public Health and Human Services","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://beaverheadcountymt.gov/environmental-health-sanitarians/","https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":85,"max":275,"note":"The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."},"lateFee":{"amount":25,"note":"Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "musselshell-mt.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Beaverhead County Environmental Health / Montana Department of Public Health and Human Services",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://beaverheadcountymt.gov/environmental-health-sanitarians/",
+          "https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 85,
+          "max": 275,
+          "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Park",
     "status": "rules",
-    "items": [{"id":"park-mt.food-license","title":"Obtain and renew a Park County food establishment license","category":"license","authority":"Montana Department of Public Health and Human Services / Park County Health Department","description":"Retail food establishments operating in Park County must obtain the applicable Montana food license and comply with county plan-review and inspection requirements before operating.","rrule":"FREQ=YEARLY","url":["https://www.parkcountymt.gov/Government-Departments/Health-Department/Environmental-Health/","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html","https://dphhs.mt.gov/publichealth/EHFS/licenserenewal"],"feeDetail":{"basis":"varies","min":150,"max":275,"note":"Montana annual retail food licenses are $150 small, $225 medium, or $275 large; mobile licenses are $150 small or $225 large."},"lateFee":{"amount":25,"note":"Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "park-mt.food-license",
+        "title": "Obtain and renew a Park County food establishment license",
+        "category": "license",
+        "authority": "Montana Department of Public Health and Human Services / Park County Health Department",
+        "description": "Retail food establishments operating in Park County must obtain the applicable Montana food license and comply with county plan-review and inspection requirements before operating.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.parkcountymt.gov/Government-Departments/Health-Department/Environmental-Health/",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html",
+          "https://dphhs.mt.gov/publichealth/EHFS/licenserenewal"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 275,
+          "note": "Montana annual retail food licenses are $150 small, $225 medium, or $275 large; mobile licenses are $150 small or $225 large."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Petroleum",
     "status": "rules",
-    "items": [{"id":"petroleum-mt.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Beaverhead County Environmental Health / Montana Department of Public Health and Human Services","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://beaverheadcountymt.gov/environmental-health-sanitarians/","https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":85,"max":275,"note":"The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."},"lateFee":{"amount":25,"note":"Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "petroleum-mt.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Beaverhead County Environmental Health / Montana Department of Public Health and Human Services",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://beaverheadcountymt.gov/environmental-health-sanitarians/",
+          "https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 85,
+          "max": 275,
+          "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Phillips",
     "status": "rules",
-    "items": [{"id":"phillips-mt.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Beaverhead County Environmental Health / Montana Department of Public Health and Human Services","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://beaverheadcountymt.gov/environmental-health-sanitarians/","https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":85,"max":275,"note":"The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."},"lateFee":{"amount":25,"note":"Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "phillips-mt.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Beaverhead County Environmental Health / Montana Department of Public Health and Human Services",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://beaverheadcountymt.gov/environmental-health-sanitarians/",
+          "https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 85,
+          "max": 275,
+          "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Pondera",
     "status": "rules",
-    "items": [{"id":"pondera-mt.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Beaverhead County Environmental Health / Montana Department of Public Health and Human Services","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://beaverheadcountymt.gov/environmental-health-sanitarians/","https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":85,"max":275,"note":"The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."},"lateFee":{"amount":25,"note":"Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "pondera-mt.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Beaverhead County Environmental Health / Montana Department of Public Health and Human Services",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://beaverheadcountymt.gov/environmental-health-sanitarians/",
+          "https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 85,
+          "max": 275,
+          "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Powder River",
     "status": "rules",
-    "items": [{"id":"powder-river-mt.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Beaverhead County Environmental Health / Montana Department of Public Health and Human Services","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://beaverheadcountymt.gov/environmental-health-sanitarians/","https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":85,"max":275,"note":"The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."},"lateFee":{"amount":25,"note":"Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "powder-river-mt.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Beaverhead County Environmental Health / Montana Department of Public Health and Human Services",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://beaverheadcountymt.gov/environmental-health-sanitarians/",
+          "https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 85,
+          "max": 275,
+          "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Powell",
     "status": "rules",
-    "items": [{"id":"powell-mt.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Beaverhead County Environmental Health / Montana Department of Public Health and Human Services","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://beaverheadcountymt.gov/environmental-health-sanitarians/","https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":85,"max":275,"note":"The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."},"lateFee":{"amount":25,"note":"Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "powell-mt.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Beaverhead County Environmental Health / Montana Department of Public Health and Human Services",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://beaverheadcountymt.gov/environmental-health-sanitarians/",
+          "https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 85,
+          "max": 275,
+          "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Prairie",
     "status": "rules",
-    "items": [{"id":"prairie-mt.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Beaverhead County Environmental Health / Montana Department of Public Health and Human Services","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://beaverheadcountymt.gov/environmental-health-sanitarians/","https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":85,"max":275,"note":"The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."},"lateFee":{"amount":25,"note":"Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "prairie-mt.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Beaverhead County Environmental Health / Montana Department of Public Health and Human Services",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://beaverheadcountymt.gov/environmental-health-sanitarians/",
+          "https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 85,
+          "max": 275,
+          "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Ravalli",
     "status": "rules",
-    "items": [{"id":"ravalli-mt.food-license","title":"Obtain and renew a Ravalli County food license","category":"license","authority":"Ravalli County Environmental Health / Montana DPHHS","description":"Food establishments operating in Ravalli County must complete county plan review, pass a license inspection, and obtain the applicable Montana food license before operating.","rrule":"FREQ=YEARLY","url":["https://ravallicounty.gov/162/Food-Service-Licensed-Establishments","https://ravallicounty.gov/DocumentCenter/View/10568/Food-Retail-Plan-Review-App-2026","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":150,"max":275,"note":"Montana license fees are $150-$275 by establishment size; Ravalli County plan-review fees are $125-$275 by risk category."},"lateFee":{"amount":25,"note":"Montana law requires a $25 late fee for qualifying retail-food renewals submitted after expiration when the business operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "ravalli-mt.food-license",
+        "title": "Obtain and renew a Ravalli County food license",
+        "category": "license",
+        "authority": "Ravalli County Environmental Health / Montana DPHHS",
+        "description": "Food establishments operating in Ravalli County must complete county plan review, pass a license inspection, and obtain the applicable Montana food license before operating.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://ravallicounty.gov/162/Food-Service-Licensed-Establishments",
+          "https://ravallicounty.gov/DocumentCenter/View/10568/Food-Retail-Plan-Review-App-2026",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 275,
+          "note": "Montana license fees are $150-$275 by establishment size; Ravalli County plan-review fees are $125-$275 by risk category."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana law requires a $25 late fee for qualifying retail-food renewals submitted after expiration when the business operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Richland",
     "status": "rules",
-    "items": [{"id":"richland-mt.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Beaverhead County Environmental Health / Montana Department of Public Health and Human Services","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://beaverheadcountymt.gov/environmental-health-sanitarians/","https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":85,"max":275,"note":"The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."},"lateFee":{"amount":25,"note":"Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "richland-mt.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Beaverhead County Environmental Health / Montana Department of Public Health and Human Services",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://beaverheadcountymt.gov/environmental-health-sanitarians/",
+          "https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 85,
+          "max": 275,
+          "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Roosevelt",
     "status": "rules",
-    "items": [{"id":"roosevelt-mt.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Beaverhead County Environmental Health / Montana Department of Public Health and Human Services","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://beaverheadcountymt.gov/environmental-health-sanitarians/","https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":85,"max":275,"note":"The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."},"lateFee":{"amount":25,"note":"Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "roosevelt-mt.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Beaverhead County Environmental Health / Montana Department of Public Health and Human Services",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://beaverheadcountymt.gov/environmental-health-sanitarians/",
+          "https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 85,
+          "max": 275,
+          "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Rosebud",
     "status": "rules",
-    "items": [{"id":"rosebud-mt.food-license","title":"Obtain and renew a Rosebud County food license","category":"license","authority":"Rosebud County Environmental Health / Montana Department of Public Health and Human Services","description":"Food establishments operating in Rosebud County must obtain the applicable Montana food license and comply with county environmental-health requirements.","rrule":"FREQ=YEARLY","url":["https://dphhs.mt.gov/publichealth/EHFS/licenserenewal","https://dphhs.mt.gov/publichealth/EHFS/countytribalhealthdepts","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":150,"max":275,"note":"Montana annual retail-food license fees are $150, $225, or $275 by establishment size."},"lateFee":{"amount":25,"note":"Montana adds a $25 late fee when a qualifying retail food license renewal is paid after expiration and the business operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "rosebud-mt.food-license",
+        "title": "Obtain and renew a Rosebud County food license",
+        "category": "license",
+        "authority": "Rosebud County Environmental Health / Montana Department of Public Health and Human Services",
+        "description": "Food establishments operating in Rosebud County must obtain the applicable Montana food license and comply with county environmental-health requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://dphhs.mt.gov/publichealth/EHFS/licenserenewal",
+          "https://dphhs.mt.gov/publichealth/EHFS/countytribalhealthdepts",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 275,
+          "note": "Montana annual retail-food license fees are $150, $225, or $275 by establishment size."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when a qualifying retail food license renewal is paid after expiration and the business operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Sanders",
     "status": "rules",
-    "items": [{"id":"sanders-mt.food-license","title":"Obtain and renew a Sanders County food establishment license","category":"license","authority":"Sanders County Environmental Health / Montana Department of Public Health and Human Services","description":"Food establishments operating in Sanders County must complete county plan review and obtain the applicable Montana food establishment license before opening.","rrule":"FREQ=YEARLY","url":["https://co.sanders.mt.us/203/Environmental-Health","https://www.co.sanders.mt.us/DocumentCenter/View/234/Retail-Plan-Review---2023-PDF","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":85,"max":275,"note":"The county application lists $85 for establishments with one or two employees per shift and $115 for three or more; Montana's current license categories range from $150 to $275 by establishment size."},"lateFee":{"amount":25,"note":"Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "sanders-mt.food-license",
+        "title": "Obtain and renew a Sanders County food establishment license",
+        "category": "license",
+        "authority": "Sanders County Environmental Health / Montana Department of Public Health and Human Services",
+        "description": "Food establishments operating in Sanders County must complete county plan review and obtain the applicable Montana food establishment license before opening.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://co.sanders.mt.us/203/Environmental-Health",
+          "https://www.co.sanders.mt.us/DocumentCenter/View/234/Retail-Plan-Review---2023-PDF",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 85,
+          "max": 275,
+          "note": "The county application lists $85 for establishments with one or two employees per shift and $115 for three or more; Montana's current license categories range from $150 to $275 by establishment size."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Sheridan",
     "status": "rules",
-    "items": [{"id":"sheridan-mt.food-license","title":"Obtain and renew a Sheridan County food establishment license","category":"license","authority":"Montana Department of Public Health and Human Services","description":"Retail food establishments operating in Sheridan County must obtain the applicable Montana food license before operating and renew it annually.","rrule":"FREQ=YEARLY","url":["https://www.sheridancountymt.gov/","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html","https://dphhs.mt.gov/publichealth/EHFS/licenserenewal"],"feeDetail":{"basis":"varies","min":150,"max":275,"note":"Montana annual retail food licenses are $150 small, $225 medium, or $275 large; mobile licenses are $150 small or $225 large."},"lateFee":{"amount":25,"note":"Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "sheridan-mt.food-license",
+        "title": "Obtain and renew a Sheridan County food establishment license",
+        "category": "license",
+        "authority": "Montana Department of Public Health and Human Services",
+        "description": "Retail food establishments operating in Sheridan County must obtain the applicable Montana food license before operating and renew it annually.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.sheridancountymt.gov/",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html",
+          "https://dphhs.mt.gov/publichealth/EHFS/licenserenewal"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 275,
+          "note": "Montana annual retail food licenses are $150 small, $225 medium, or $275 large; mobile licenses are $150 small or $225 large."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
-  {"county":"Silver Bow","status":"rules","items":[{"id":"silver-bow-mt.food-license","title":"Obtain and renew a Silver Bow County food establishment license","category":"license","authority":"Montana Department of Public Health and Human Services","description":"Retail food establishments operating in Silver Bow County must obtain the applicable Montana retail food license and renew it through the county environmental health authority.","rrule":"FREQ=YEARLY","url":["https://dphhs.mt.gov/publichealth/EHFS/licenserenewal","https://dphhs.mt.gov/publichealth/EHFS/countytribalhealthdepts","https://revenue.mt.gov/files/Online-Services/eStop-Business-Licenses-Program/estop-master-application.pdf"],"feeDetail":{"basis":"varies","min":85,"max":115,"note":"Montana's business-license schedule lists $85 for small and $115 for large retail food establishments; county environmental-health fees may also apply."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19","lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."}}],"checkedOn":"2026-10-19"},
-  {"county":"Stillwater","status":"rules","items":[{"id":"stillwater-mt.food-license","title":"Obtain and renew a Stillwater County food establishment license","category":"license","authority":"Montana Department of Public Health and Human Services","description":"Retail food establishments operating in Stillwater County must obtain the applicable Montana retail food license and renew it through the county environmental health authority.","rrule":"FREQ=YEARLY","url":["https://dphhs.mt.gov/publichealth/EHFS/licenserenewal","https://dphhs.mt.gov/publichealth/EHFS/countytribalhealthdepts","https://revenue.mt.gov/files/Online-Services/eStop-Business-Licenses-Program/estop-master-application.pdf"],"feeDetail":{"basis":"varies","min":85,"max":115,"note":"Montana's business-license schedule lists $85 for small and $115 for large retail food establishments; county environmental-health fees may also apply."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19","lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."}}],"checkedOn":"2026-10-19"},
+  {
+    "county": "Silver Bow",
+    "status": "rules",
+    "items": [
+      {
+        "id": "silver-bow-mt.food-license",
+        "title": "Obtain and renew a Silver Bow County food establishment license",
+        "category": "license",
+        "authority": "Montana Department of Public Health and Human Services",
+        "description": "Retail food establishments operating in Silver Bow County must obtain the applicable Montana retail food license and renew it through the county environmental health authority.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://dphhs.mt.gov/publichealth/EHFS/licenserenewal",
+          "https://dphhs.mt.gov/publichealth/EHFS/countytribalhealthdepts",
+          "https://revenue.mt.gov/files/Online-Services/eStop-Business-Licenses-Program/estop-master-application.pdf"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 85,
+          "max": 115,
+          "note": "Montana's business-license schedule lists $85 for small and $115 for large retail food establishments; county environmental-health fees may also apply."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
+  },
+  {
+    "county": "Stillwater",
+    "status": "rules",
+    "items": [
+      {
+        "id": "stillwater-mt.food-license",
+        "title": "Obtain and renew a Stillwater County food establishment license",
+        "category": "license",
+        "authority": "Montana Department of Public Health and Human Services",
+        "description": "Retail food establishments operating in Stillwater County must obtain the applicable Montana retail food license and renew it through the county environmental health authority.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://dphhs.mt.gov/publichealth/EHFS/licenserenewal",
+          "https://dphhs.mt.gov/publichealth/EHFS/countytribalhealthdepts",
+          "https://revenue.mt.gov/files/Online-Services/eStop-Business-Licenses-Program/estop-master-application.pdf"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 85,
+          "max": 115,
+          "note": "Montana's business-license schedule lists $85 for small and $115 for large retail food establishments; county environmental-health fees may also apply."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
+  },
   {
     "county": "Sweet Grass",
     "status": "rules",
-    "items": [{"id":"sweet-grass-mt.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Beaverhead County Environmental Health / Montana Department of Public Health and Human Services","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://beaverheadcountymt.gov/environmental-health-sanitarians/","https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":85,"max":275,"note":"The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."},"lateFee":{"amount":25,"note":"Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "sweet-grass-mt.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Beaverhead County Environmental Health / Montana Department of Public Health and Human Services",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://beaverheadcountymt.gov/environmental-health-sanitarians/",
+          "https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 85,
+          "max": 275,
+          "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Teton",
     "status": "rules",
-    "items": [{"id":"teton-mt.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Beaverhead County Environmental Health / Montana Department of Public Health and Human Services","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://beaverheadcountymt.gov/environmental-health-sanitarians/","https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":85,"max":275,"note":"The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."},"lateFee":{"amount":25,"note":"Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "teton-mt.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Beaverhead County Environmental Health / Montana Department of Public Health and Human Services",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://beaverheadcountymt.gov/environmental-health-sanitarians/",
+          "https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 85,
+          "max": 275,
+          "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
-  {"county":"Toole","status":"rules","items":[{"id":"toole-mt.food-license","title":"Obtain and renew a Toole County food establishment license","category":"license","authority":"Montana Department of Public Health and Human Services","description":"Retail food establishments operating in Toole County must obtain the applicable Montana retail food license and renew it through the county environmental health authority.","rrule":"FREQ=YEARLY","url":["https://dphhs.mt.gov/publichealth/EHFS/licenserenewal","https://dphhs.mt.gov/publichealth/EHFS/countytribalhealthdepts","https://revenue.mt.gov/files/Online-Services/eStop-Business-Licenses-Program/estop-master-application.pdf"],"feeDetail":{"basis":"varies","min":85,"max":115,"note":"Montana's business-license schedule lists $85 for small and $115 for large retail food establishments; county environmental-health fees may also apply."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19","lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."}}],"checkedOn":"2026-10-19"},
+  {
+    "county": "Toole",
+    "status": "rules",
+    "items": [
+      {
+        "id": "toole-mt.food-license",
+        "title": "Obtain and renew a Toole County food establishment license",
+        "category": "license",
+        "authority": "Montana Department of Public Health and Human Services",
+        "description": "Retail food establishments operating in Toole County must obtain the applicable Montana retail food license and renew it through the county environmental health authority.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://dphhs.mt.gov/publichealth/EHFS/licenserenewal",
+          "https://dphhs.mt.gov/publichealth/EHFS/countytribalhealthdepts",
+          "https://revenue.mt.gov/files/Online-Services/eStop-Business-Licenses-Program/estop-master-application.pdf"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 85,
+          "max": 115,
+          "note": "Montana's business-license schedule lists $85 for small and $115 for large retail food establishments; county environmental-health fees may also apply."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
+  },
   {
     "county": "Treasure",
     "status": "rules",
-    "items": [{"id":"treasure-mt.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Beaverhead County Environmental Health / Montana Department of Public Health and Human Services","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://beaverheadcountymt.gov/environmental-health-sanitarians/","https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":85,"max":275,"note":"The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."},"lateFee":{"amount":25,"note":"Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "treasure-mt.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Beaverhead County Environmental Health / Montana Department of Public Health and Human Services",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://beaverheadcountymt.gov/environmental-health-sanitarians/",
+          "https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 85,
+          "max": 275,
+          "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Valley",
     "status": "rules",
-    "items": [{"id":"valley-mt.food-license","title":"Obtain and renew a Valley County food license","category":"license","authority":"Valley County Sanitarian / Montana DPHHS","description":"Food establishments operating in Valley County must obtain the applicable Montana retail-food license and comply with county environmental-health review and inspection requirements.","rrule":"FREQ=YEARLY","url":["https://www.valleycountymt.gov/1238/Sanitarian","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":150,"max":275,"note":"Montana annual retail-food license fees are $150, $225, or $275 by establishment size."},"lateFee":{"amount":25,"note":"Montana law requires a $25 late fee when a retail-food renewal is submitted after expiration and the establishment operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "valley-mt.food-license",
+        "title": "Obtain and renew a Valley County food license",
+        "category": "license",
+        "authority": "Valley County Sanitarian / Montana DPHHS",
+        "description": "Food establishments operating in Valley County must obtain the applicable Montana retail-food license and comply with county environmental-health review and inspection requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.valleycountymt.gov/1238/Sanitarian",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 275,
+          "note": "Montana annual retail-food license fees are $150, $225, or $275 by establishment size."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana law requires a $25 late fee when a retail-food renewal is submitted after expiration and the establishment operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Wheatland",
     "status": "rules",
-    "items": [{"id":"wheatland-mt.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Beaverhead County Environmental Health / Montana Department of Public Health and Human Services","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://beaverheadcountymt.gov/environmental-health-sanitarians/","https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":85,"max":275,"note":"The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."},"lateFee":{"amount":25,"note":"Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "wheatland-mt.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Beaverhead County Environmental Health / Montana Department of Public Health and Human Services",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://beaverheadcountymt.gov/environmental-health-sanitarians/",
+          "https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 85,
+          "max": 275,
+          "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Wibaux",
     "status": "rules",
-    "items": [{"id":"wibaux-mt.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Beaverhead County Environmental Health / Montana Department of Public Health and Human Services","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://beaverheadcountymt.gov/environmental-health-sanitarians/","https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf","https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"],"feeDetail":{"basis":"varies","min":85,"max":275,"note":"The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."},"lateFee":{"amount":25,"note":"Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "wibaux-mt.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Beaverhead County Environmental Health / Montana Department of Public Health and Human Services",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://beaverheadcountymt.gov/environmental-health-sanitarians/",
+          "https://beaverheadcountymt.gov/wp-content/uploads/2016/12/Retail-Food-License-Application.pdf",
+          "https://mca.legmt.gov/bills/mca/title_0500/chapter_0500/part_0020/section_0050/0500-0500-0020-0050.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 85,
+          "max": 275,
+          "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
+        },
+        "lateFee": {
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Yellowstone",
     "status": "rules",
-    "sourceUrl": ["https://revenuefiles.mt.gov/files/PAD/personal-property/Montana-Personal-Property-Assessment-Fact-Sheet.pdf"],
+    "sourceUrl": [
+      "https://revenuefiles.mt.gov/files/PAD/personal-property/Montana-Personal-Property-Assessment-Fact-Sheet.pdf"
+    ],
     "note": "Montana counties take no business personal property return: taxpayers report to the state Department of Revenue through the TransAction Portal by February 15, and the first $1 million of class 8 market value is exempt.",
-    "items": [{"id":"yellowstone-mt.food-license","title":"Obtain and renew a Yellowstone County food license","category":"license","authority":"Montana Department of Public Health and Human Services","description":"Food establishments operating in Yellowstone County must obtain the applicable Montana retail food license and renew it through the state licensing process; fees vary by establishment size.","rrule":"FREQ=YEARLY","url":["https://dphhs.mt.gov/assets/publichealth/FCS/SanitarianResourcePage/FCSForms/RetailFood/RFLicenseApplicationPage1.pdf","https://dphhs.mt.gov/publichealth/EHFS/licenserenewal"],"feeDetail":{"basis":"varies","min":150,"max":275},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19","lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."}}],
+    "items": [
+      {
+        "id": "yellowstone-mt.food-license",
+        "title": "Obtain and renew a Yellowstone County food license",
+        "category": "license",
+        "authority": "Montana Department of Public Health and Human Services",
+        "description": "Food establishments operating in Yellowstone County must obtain the applicable Montana retail food license and renew it through the state licensing process; fees vary by establishment size.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://dphhs.mt.gov/assets/publichealth/FCS/SanitarianResourcePage/FCSForms/RetailFood/RFLicenseApplicationPage1.pdf",
+          "https://dphhs.mt.gov/publichealth/EHFS/licenserenewal"
+        ],
+        "feeDetail": { "basis": "varies", "min": 150, "max": 275 },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
     "checkedOn": "2026-10-19"
   }
 ]

@@ -325,7 +325,7 @@ export const stateRules: Rule[] = [
             : `${s.entityTax}.`,
           rrule: "FREQ=YEARLY",
           reason: `${p.entityType} with ${x.home ? "its principal place of business" : "employees or property"} in ${x.state}`,
-            url: s.links.entityTax,
+          url: s.links.entityTax,
         };
       }),
   },
@@ -469,7 +469,7 @@ export const stateRules: Rule[] = [
             description: "Required before making taxable sales; register with the state tax agency.",
             frequency: "once" as const,
             reason,
-                  url: s.links.salesTax ?? agency.url,
+            url: s.links.salesTax ?? agency.url,
           },
           {
             title: `File sales tax returns and remit tax (${s.name})`,
@@ -486,7 +486,7 @@ export const stateRules: Rule[] = [
             deadline:
               "As assigned by the state (monthly, quarterly or yearly, by the amount of tax collected)",
             reason,
-                  url: s.links.salesTax ?? agency.url,
+            url: s.links.salesTax ?? agency.url,
           },
           ...local,
         ];
@@ -531,7 +531,7 @@ export const stateRules: Rule[] = [
           : `${s.name} registers sole proprietors' and partnerships' assumed names at the ${where} level, in each ${where} where business is conducted.`,
         frequency: "once" as const,
         reason: "Business operates under a trade name",
-        url: state ? s.links.dba ?? agency.url : undefined,
+        url: state ? (s.links.dba ?? agency.url) : undefined,
       };
     },
   },

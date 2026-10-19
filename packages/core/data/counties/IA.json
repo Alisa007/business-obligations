@@ -9,7 +9,9 @@
         "authority": "Iowa Department of Revenue",
         "description": "The Iowa Department of Revenue's current jurisdictions-and-rates workbook lists a 5% local hotel/motel tax for the Adair County jurisdiction. Report and remit the local tax with the monthly Iowa sales and use tax return; no separate permit beyond an Iowa sales and use tax permit is required.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
-        "url": ["https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"],
+        "url": [
+          "https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"
+        ],
         "checkedOn": "2026-10-18",
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -36,7 +38,9 @@
         "authority": "Iowa Department of Revenue",
         "description": "The Iowa Department of Revenue's current jurisdictions-and-rates list shows a 7% local hotel/motel tax for lodging in the Adams County unincorporated area. Report and remit the local tax with the monthly Iowa sales and use tax return; no separate permit beyond an Iowa sales and use tax permit is required. Other cities in the county may have separate local rates.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
-        "url": ["https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"],
+        "url": [
+          "https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"
+        ],
         "checkedOn": "2026-10-18",
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -63,7 +67,9 @@
         "authority": "Iowa Department of Revenue",
         "description": "The Iowa Department of Revenue's current jurisdictions-and-rates list shows a 7% local hotel/motel tax for lodging in the Allamakee County unincorporated area. Report and remit the local tax with the monthly Iowa sales and use tax return; no separate permit beyond an Iowa sales and use tax permit is required. Other cities in the county may have separate local rates.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
-        "url": ["https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"],
+        "url": [
+          "https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"
+        ],
         "checkedOn": "2026-10-18",
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -90,7 +96,9 @@
         "authority": "Iowa Department of Revenue",
         "description": "The Iowa Department of Revenue's current jurisdictions-and-rates list shows a 7% local hotel/motel tax for lodging in the Appanoose County unincorporated area. Report and remit the local tax with the monthly Iowa sales and use tax return; no separate permit beyond an Iowa sales and use tax permit is required. Other cities in the county may have separate local rates.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
-        "url": ["https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"],
+        "url": [
+          "https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"
+        ],
         "checkedOn": "2026-10-18",
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -117,7 +125,9 @@
         "authority": "Iowa Department of Revenue",
         "description": "The Iowa Department of Revenue's current jurisdictions-and-rates workbook lists a 7% local hotel/motel tax for the Audubon County jurisdiction. Report and remit the local tax with the monthly Iowa sales and use tax return; no separate permit beyond an Iowa sales and use tax permit is required.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
-        "url": ["https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"],
+        "url": [
+          "https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"
+        ],
         "checkedOn": "2026-10-18",
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -137,13 +147,82 @@
   {
     "county": "Benton",
     "status": "rules",
-    "items": [{"id":"benton-ia.food-license","title":"Obtain and renew a Benton County food establishment license","category":"license","authority":"Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing","description":"Food establishments operating in Benton County must obtain the applicable Iowa food license and comply with Black Hawk County Public Health inspection and enforcement requirements.","rrule":"FREQ=YEARLY","url":["https://www.bentoncountyia.gov/public_health/food_safety/","https://dial.iowa.gov/licenses/food-establishments-hotels","https://dial.iowa.gov/licenses/food-establishments-hotels/apply-food-license"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa annual food-service license fees are based on gross sales and range from $150 to $400."},"lateFee":{"amount":0,"percentPerMonth":100,"note":"Providing food without a license or permit is subject to a penalty equal to double the license fee."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
-    "checkedOn":"2026-10-19"
+    "items": [
+      {
+        "id": "benton-ia.food-license",
+        "title": "Obtain and renew a Benton County food establishment license",
+        "category": "license",
+        "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
+        "description": "Food establishments operating in Benton County must obtain the applicable Iowa food license and comply with Black Hawk County Public Health inspection and enforcement requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.bentoncountyia.gov/public_health/food_safety/",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/apply-food-license"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 100,
+          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Black Hawk",
     "status": "rules",
-    "items": [{"id":"black-hawk-ia.food-license","title":"Obtain and renew a Black Hawk County food establishment license","category":"license","authority":"Black Hawk County Health Department","description":"Food service and retail food establishments operating in Black Hawk County must obtain the applicable Iowa food establishment license before operating.","rrule":"FREQ=YEARLY","url":["https://www.blackhawkcounty.iowa.gov/","https://assets-global.website-files.com/6026e5c73e800440fd7b119f/6037c8780cb484ed21faebb0_Application-for-Restaurant-Grocery-or-Mobile-Food-Unit-License.pdf","https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Published Iowa food-service and retail fees are based on gross sales and range from $150 to $400; mobile food units are $250."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19","lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."}}],
+    "items": [
+      {
+        "id": "black-hawk-ia.food-license",
+        "title": "Obtain and renew a Black Hawk County food establishment license",
+        "category": "license",
+        "authority": "Black Hawk County Health Department",
+        "description": "Food service and retail food establishments operating in Black Hawk County must obtain the applicable Iowa food establishment license before operating.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.blackhawkcounty.iowa.gov/",
+          "https://assets-global.website-files.com/6026e5c73e800440fd7b119f/6037c8780cb484ed21faebb0_Application-for-Restaurant-Grocery-or-Mobile-Food-Unit-License.pdf",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Published Iowa food-service and retail fees are based on gross sales and range from $150 to $400; mobile food units are $250."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
@@ -156,7 +235,9 @@
         "authority": "Iowa Department of Revenue",
         "description": "The Iowa Department of Revenue's current jurisdictions-and-rates workbook lists a 7% local hotel/motel tax for the Boone County jurisdiction. Report and remit the local tax with the monthly Iowa sales and use tax return; no separate permit beyond an Iowa sales and use tax permit is required.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
-        "url": ["https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"],
+        "url": [
+          "https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"
+        ],
         "checkedOn": "2026-10-18",
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -176,25 +257,160 @@
   {
     "county": "Bremer",
     "status": "rules",
-    "items": [{"id":"bremer-ia.food-license","title":"Obtain and renew a Bremer County food establishment license","category":"license","authority":"Iowa Department of Inspections, Appeals, & Licensing","description":"Food establishments operating in Bremer County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.","rrule":"FREQ=YEARLY","url":["https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions","https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa annual food-service license fees are based on gross sales and range from $150 to $400."},"lateFee":{"amount":0,"percentPerMonth":10,"note":"Iowa law imposes a 10% per-month penalty on licenses renewed after expiration; operating without a license can incur a penalty equal to double the license fee."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "bremer-ia.food-license",
+        "title": "Obtain and renew a Bremer County food establishment license",
+        "category": "license",
+        "authority": "Iowa Department of Inspections, Appeals, & Licensing",
+        "description": "Food establishments operating in Bremer County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 10,
+          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration; operating without a license can incur a penalty equal to double the license fee."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Buchanan",
     "status": "rules",
-    "items": [{"id":"buchanan-ia.food-license","title":"Obtain and renew a Buchanan County food establishment license","category":"license","authority":"Iowa Department of Inspections, Appeals, and Licensing","description":"Food establishments operating in Buchanan County must obtain the applicable Iowa food establishment license before operating and renew it annually.","rrule":"FREQ=YEARLY","url":["https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments","https://www.buchanancounty.iowa.gov/"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa food establishment license fees are based on annual gross food-service sales and range from $150 to $400."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19","lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."}}],
+    "items": [
+      {
+        "id": "buchanan-ia.food-license",
+        "title": "Obtain and renew a Buchanan County food establishment license",
+        "category": "license",
+        "authority": "Iowa Department of Inspections, Appeals, and Licensing",
+        "description": "Food establishments operating in Buchanan County must obtain the applicable Iowa food establishment license before operating and renew it annually.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
+          "https://www.buchanancounty.iowa.gov/"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa food establishment license fees are based on annual gross food-service sales and range from $150 to $400."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Buena Vista",
     "status": "rules",
-    "items": [{"id":"buena-vista-ia.food-license","title":"Obtain and renew a Buena Vista County food establishment license","category":"license","authority":"Iowa Department of Inspections, Appeals, & Licensing","description":"Food establishments operating in Buena Vista County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.","rrule":"FREQ=YEARLY","url":["https://buenavistacounty.iowa.gov/departments/environmental-health/","https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments","https://legis.iowa.gov/docs/code/2019/137F.html"],"feeDetail":{"basis":"varies","min":50,"max":400,"note":"Iowa annual food-service fees are $150-$400 by gross sales; temporary, mobile, and vending fees are separately prescribed by state law."},"lateFee":{"amount":0,"percentPerMonth":10,"note":"Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "buena-vista-ia.food-license",
+        "title": "Obtain and renew a Buena Vista County food establishment license",
+        "category": "license",
+        "authority": "Iowa Department of Inspections, Appeals, & Licensing",
+        "description": "Food establishments operating in Buena Vista County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://buenavistacounty.iowa.gov/departments/environmental-health/",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
+          "https://legis.iowa.gov/docs/code/2019/137F.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 50,
+          "max": 400,
+          "note": "Iowa annual food-service fees are $150-$400 by gross sales; temporary, mobile, and vending fees are separately prescribed by state law."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 10,
+          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Butler",
     "status": "rules",
-    "items": [{"id":"butler-ia.food-license","title":"Obtain and renew a Butler County food establishment license","category":"license","authority":"Iowa Department of Inspections, Appeals, and Licensing","description":"Food establishments operating in Butler County must obtain the applicable Iowa food establishment license before operating and renew it annually.","rrule":"FREQ=YEARLY","url":["https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments","https://butlercountyiowa.com/"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa food establishment license fees are based on annual gross food-service sales and range from $150 to $400."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19","lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."}}],
+    "items": [
+      {
+        "id": "butler-ia.food-license",
+        "title": "Obtain and renew a Butler County food establishment license",
+        "category": "license",
+        "authority": "Iowa Department of Inspections, Appeals, and Licensing",
+        "description": "Food establishments operating in Butler County must obtain the applicable Iowa food establishment license before operating and renew it annually.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
+          "https://butlercountyiowa.com/"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa food establishment license fees are based on annual gross food-service sales and range from $150 to $400."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
@@ -207,7 +423,9 @@
         "authority": "Iowa Department of Revenue",
         "description": "The Iowa Department of Revenue's current jurisdictions-and-rates list shows a 7% local hotel/motel tax for lodging in the Calhoun County unincorporated area. Report and remit the local tax with the monthly Iowa sales and use tax return; no separate permit beyond an Iowa sales and use tax permit is required. Other cities in the county may have separate local rates.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
-        "url": ["https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"],
+        "url": [
+          "https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"
+        ],
         "checkedOn": "2026-10-18",
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -234,7 +452,9 @@
         "authority": "Iowa Department of Revenue",
         "description": "The Iowa Department of Revenue's current jurisdictions-and-rates workbook lists a 7% local hotel/motel tax for the Carroll County jurisdiction. Report and remit the local tax with the monthly Iowa sales and use tax return; no separate permit beyond an Iowa sales and use tax permit is required.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
-        "url": ["https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"],
+        "url": [
+          "https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"
+        ],
         "checkedOn": "2026-10-18",
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -254,13 +474,83 @@
   {
     "county": "Cass",
     "status": "rules",
-    "items": [{"id":"cass-ia.food-license","title":"Obtain and renew a Cass County food establishment license","category":"license","authority":"Iowa Department of Inspections, Appeals, & Licensing","description":"Food establishments operating in Cass County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.","rrule":"FREQ=YEARLY","url":["https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions","https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments","https://dial.iowa.gov/licenses/food-establishments-hotels/apply-food-license"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa annual food-service license fees are based on gross sales and range from $150 to $400."},"lateFee":{"amount":0,"percentPerMonth":10,"note":"Iowa law imposes a 10% per-month penalty on licenses renewed after expiration; operating without a license can incur a penalty equal to double the license fee."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "cass-ia.food-license",
+        "title": "Obtain and renew a Cass County food establishment license",
+        "category": "license",
+        "authority": "Iowa Department of Inspections, Appeals, & Licensing",
+        "description": "Food establishments operating in Cass County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/apply-food-license"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 10,
+          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration; operating without a license can incur a penalty equal to double the license fee."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Cedar",
     "status": "rules",
-    "items": [{"id":"cedar-ia.food-license","title":"Obtain and renew a Cedar County food establishment license","category":"license","authority":"Iowa Department of Inspections, Appeals, & Licensing","description":"Food establishments operating in Cedar County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.","rrule":"FREQ=YEARLY","url":["https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions","https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments","https://dial.iowa.gov/licenses/food-establishments-hotels/apply-food-license"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa annual food-service license fees are based on gross sales and range from $150 to $400."},"lateFee":{"amount":0,"percentPerMonth":10,"note":"Iowa law imposes a 10% per-month penalty on licenses renewed after expiration; operating without a license can incur a penalty equal to double the license fee."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "cedar-ia.food-license",
+        "title": "Obtain and renew a Cedar County food establishment license",
+        "category": "license",
+        "authority": "Iowa Department of Inspections, Appeals, & Licensing",
+        "description": "Food establishments operating in Cedar County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/apply-food-license"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 10,
+          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration; operating without a license can incur a penalty equal to double the license fee."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
@@ -273,7 +563,9 @@
         "authority": "Iowa Department of Revenue",
         "description": "The Iowa Department of Revenue's current jurisdictions-and-rates list shows a 7% local hotel/motel tax for lodging in the Cerro Gordo County unincorporated area. Report and remit the local tax with the monthly Iowa sales and use tax return; no separate permit beyond an Iowa sales and use tax permit is required. Other cities in the county may have separate local rates.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
-        "url": ["https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"],
+        "url": [
+          "https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"
+        ],
         "checkedOn": "2026-10-18",
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -300,7 +592,9 @@
         "authority": "Iowa Department of Revenue",
         "description": "The Iowa Department of Revenue's current jurisdictions-and-rates workbook lists a 7% local hotel/motel tax for the Cherokee County jurisdiction. Report and remit the local tax with the monthly Iowa sales and use tax return; no separate permit beyond an Iowa sales and use tax permit is required.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
-        "url": ["https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"],
+        "url": [
+          "https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"
+        ],
         "checkedOn": "2026-10-18",
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -320,19 +614,122 @@
   {
     "county": "Chickasaw",
     "status": "rules",
-    "items": [{"id":"chickasaw-ia.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.bentoncountyia.gov/public_health/food_safety/","https://dial.iowa.gov/licenses/food-establishments-hotels","https://dial.iowa.gov/licenses/food-establishments-hotels/apply-food-license"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa annual food-service license fees are based on gross sales and range from $150 to $400."},"lateFee":{"amount":0,"percentPerMonth":100,"note":"Providing food without a license or permit is subject to a penalty equal to double the license fee."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "chickasaw-ia.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.bentoncountyia.gov/public_health/food_safety/",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/apply-food-license"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 100,
+          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Clarke",
     "status": "rules",
-    "items": [{"id":"clarke-ia.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.bentoncountyia.gov/public_health/food_safety/","https://dial.iowa.gov/licenses/food-establishments-hotels","https://dial.iowa.gov/licenses/food-establishments-hotels/apply-food-license"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa annual food-service license fees are based on gross sales and range from $150 to $400."},"lateFee":{"amount":0,"percentPerMonth":100,"note":"Providing food without a license or permit is subject to a penalty equal to double the license fee."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "clarke-ia.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.bentoncountyia.gov/public_health/food_safety/",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/apply-food-license"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 100,
+          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Clay",
     "status": "rules",
-    "items": [{"id":"clay-ia.food-license","title":"Obtain and renew a Clay County food establishment license","category":"license","authority":"Clay County Food Program","description":"Food establishments operating in Clay County must obtain the applicable food permit before operating and comply with local plan-review, inspection, and renewal requirements.","rrule":"FREQ=YEARLY","url":["https://healthdept.org/wp-content/uploads/2024/04/Plan-Review-Application.pdf","https://dial.iowa.gov/licenses/food-establishments-hotels"],"feeDetail":{"basis":"varies","min":35,"max":175,"note":"Published Clay County schedule lists $50-$175 annual permits, $35 temporary permits, and $75 plan review/pre-opening inspection."},"lateFee":{"amount":20,"note":"Published schedule lists a $20 late fee after December 17 and a $15 temporary-event late penalty."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "clay-ia.food-license",
+        "title": "Obtain and renew a Clay County food establishment license",
+        "category": "license",
+        "authority": "Clay County Food Program",
+        "description": "Food establishments operating in Clay County must obtain the applicable food permit before operating and comply with local plan-review, inspection, and renewal requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://healthdept.org/wp-content/uploads/2024/04/Plan-Review-Application.pdf",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 35,
+          "max": 175,
+          "note": "Published Clay County schedule lists $50-$175 annual permits, $35 temporary permits, and $75 plan review/pre-opening inspection."
+        },
+        "lateFee": {
+          "amount": 20,
+          "note": "Published schedule lists a $20 late fee after December 17 and a $15 temporary-event late penalty."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
@@ -345,7 +742,9 @@
         "authority": "Iowa Department of Revenue",
         "description": "The Iowa Department of Revenue's current jurisdictions-and-rates list shows a 7% local hotel/motel tax for lodging in the Clayton County unincorporated area. Report and remit the local tax with the monthly Iowa sales and use tax return; no separate permit beyond an Iowa sales and use tax permit is required. Other cities in the county may have separate local rates.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
-        "url": ["https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"],
+        "url": [
+          "https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"
+        ],
         "checkedOn": "2026-10-18",
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -372,7 +771,9 @@
         "authority": "Iowa Department of Revenue",
         "description": "The Iowa Department of Revenue's current jurisdictions-and-rates workbook lists a 7% local hotel/motel tax for the Clinton County jurisdiction. Report and remit the local tax with the monthly Iowa sales and use tax return; no separate permit beyond an Iowa sales and use tax permit is required.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
-        "url": ["https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"],
+        "url": [
+          "https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"
+        ],
         "checkedOn": "2026-10-18",
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -392,19 +793,120 @@
   {
     "county": "Crawford",
     "status": "rules",
-    "items": [{"id":"crawford-ia.food-license","title":"Obtain and renew a Crawford County food establishment license","category":"license","authority":"Iowa Department of Inspections, Appeals, and Licensing","description":"Food establishments operating in Crawford County must obtain the applicable Iowa food establishment license before operating and renew it annually.","rrule":"FREQ=YEARLY","url":["https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments","https://www.crawfordcounty.iowa.gov/"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa food establishment license fees are based on annual gross food-service sales and range from $150 to $400."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19","lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."}}],
+    "items": [
+      {
+        "id": "crawford-ia.food-license",
+        "title": "Obtain and renew a Crawford County food establishment license",
+        "category": "license",
+        "authority": "Iowa Department of Inspections, Appeals, and Licensing",
+        "description": "Food establishments operating in Crawford County must obtain the applicable Iowa food establishment license before operating and renew it annually.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
+          "https://www.crawfordcounty.iowa.gov/"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa food establishment license fees are based on annual gross food-service sales and range from $150 to $400."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Dallas",
     "status": "rules",
-    "items": [{"id":"dallas-ia.food-license","title":"Obtain and renew a Dallas County food establishment license","category":"license","authority":"Iowa Department of Inspections, Appeals, & Licensing","description":"Food establishments operating in Dallas County must obtain and renew the applicable Iowa food service license before operating.","rrule":"FREQ=YEARLY","url":["https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments","https://dial.iowa.gov/licenses/food-establishments-hotels"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Annual Iowa food-service license fees are based on gross sales."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19","lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."}}],
+    "items": [
+      {
+        "id": "dallas-ia.food-license",
+        "title": "Obtain and renew a Dallas County food establishment license",
+        "category": "license",
+        "authority": "Iowa Department of Inspections, Appeals, & Licensing",
+        "description": "Food establishments operating in Dallas County must obtain and renew the applicable Iowa food service license before operating.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Annual Iowa food-service license fees are based on gross sales."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Davis",
     "status": "rules",
-    "items": [{"id":"davis-ia.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.bentoncountyia.gov/public_health/food_safety/","https://dial.iowa.gov/licenses/food-establishments-hotels","https://dial.iowa.gov/licenses/food-establishments-hotels/apply-food-license"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa annual food-service license fees are based on gross sales and range from $150 to $400."},"lateFee":{"amount":0,"percentPerMonth":100,"note":"Providing food without a license or permit is subject to a penalty equal to double the license fee."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "davis-ia.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.bentoncountyia.gov/public_health/food_safety/",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/apply-food-license"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 100,
+          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
@@ -417,7 +919,9 @@
         "authority": "Iowa Department of Revenue",
         "description": "The Iowa Department of Revenue's current jurisdictions-and-rates workbook lists a 7% local hotel/motel tax for the Decatur County jurisdiction. Report and remit the local tax with the monthly Iowa sales and use tax return; no separate permit beyond an Iowa sales and use tax permit is required.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
-        "url": ["https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"],
+        "url": [
+          "https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"
+        ],
         "checkedOn": "2026-10-18",
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -437,13 +941,79 @@
   {
     "county": "Delaware",
     "status": "rules",
-    "items": [{"id":"delaware-ia.food-license","title":"Obtain and renew a Delaware County food establishment license","category":"license","authority":"Iowa Department of Inspections, Appeals, & Licensing","description":"Food establishments operating in Delaware County must obtain the applicable Iowa food license before operating and renew it annually; Delaware County is covered by the state food inspection jurisdiction.","rrule":"FREQ=YEARLY","url":["https://dial.iowa.gov/licenses/food-establishments-hotels","https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions"],"feeDetail":{"basis":"varies","note":"Iowa food-license fees vary by establishment type, risk, and gross sales under the state schedule."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19","lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."}}],
+    "items": [
+      {
+        "id": "delaware-ia.food-license",
+        "title": "Obtain and renew a Delaware County food establishment license",
+        "category": "license",
+        "authority": "Iowa Department of Inspections, Appeals, & Licensing",
+        "description": "Food establishments operating in Delaware County must obtain the applicable Iowa food license before operating and renew it annually; Delaware County is covered by the state food inspection jurisdiction.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://dial.iowa.gov/licenses/food-establishments-hotels",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Iowa food-license fees vary by establishment type, risk, and gross sales under the state schedule."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Des Moines",
     "status": "rules",
-    "items": [{"id":"des-moines-ia.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.bentoncountyia.gov/public_health/food_safety/","https://dial.iowa.gov/licenses/food-establishments-hotels","https://dial.iowa.gov/licenses/food-establishments-hotels/apply-food-license"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa annual food-service license fees are based on gross sales and range from $150 to $400."},"lateFee":{"amount":0,"percentPerMonth":100,"note":"Providing food without a license or permit is subject to a penalty equal to double the license fee."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "des-moines-ia.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.bentoncountyia.gov/public_health/food_safety/",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/apply-food-license"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 100,
+          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
@@ -456,7 +1026,9 @@
         "authority": "Iowa Department of Revenue",
         "description": "The Iowa Department of Revenue's current jurisdictions-and-rates list shows a 5% local hotel/motel tax for lodging in the Dickinson County unincorporated area. Report and remit the local tax with the monthly Iowa sales and use tax return; no separate permit beyond an Iowa sales and use tax permit is required. Other cities in the county may have separate local rates.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
-        "url": ["https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"],
+        "url": [
+          "https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"
+        ],
         "checkedOn": "2026-10-18",
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -483,7 +1055,9 @@
         "authority": "Iowa Department of Revenue",
         "description": "The Iowa Department of Revenue's current jurisdictions-and-rates workbook lists a 7% local hotel/motel tax for the Dubuque County jurisdiction. Report and remit the local tax with the monthly Iowa sales and use tax return; no separate permit beyond an Iowa sales and use tax permit is required.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
-        "url": ["https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"],
+        "url": [
+          "https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"
+        ],
         "checkedOn": "2026-10-18",
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -503,7 +1077,42 @@
   {
     "county": "Emmet",
     "status": "rules",
-    "items": [{"id":"emmet-ia.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.bentoncountyia.gov/public_health/food_safety/","https://dial.iowa.gov/licenses/food-establishments-hotels","https://dial.iowa.gov/licenses/food-establishments-hotels/apply-food-license"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa annual food-service license fees are based on gross sales and range from $150 to $400."},"lateFee":{"amount":0,"percentPerMonth":100,"note":"Providing food without a license or permit is subject to a penalty equal to double the license fee."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "emmet-ia.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.bentoncountyia.gov/public_health/food_safety/",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/apply-food-license"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 100,
+          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
@@ -516,7 +1125,9 @@
         "authority": "Iowa Department of Revenue",
         "description": "The Iowa Department of Revenue's current jurisdictions-and-rates workbook lists a 7% local hotel/motel tax for the Fayette County jurisdiction. Report and remit the local tax with the monthly Iowa sales and use tax return; no separate permit beyond an Iowa sales and use tax permit is required.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
-        "url": ["https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"],
+        "url": [
+          "https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"
+        ],
         "checkedOn": "2026-10-18",
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -536,7 +1147,42 @@
   {
     "county": "Floyd",
     "status": "rules",
-    "items": [{"id":"floyd-ia.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.bentoncountyia.gov/public_health/food_safety/","https://dial.iowa.gov/licenses/food-establishments-hotels","https://dial.iowa.gov/licenses/food-establishments-hotels/apply-food-license"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa annual food-service license fees are based on gross sales and range from $150 to $400."},"lateFee":{"amount":0,"percentPerMonth":100,"note":"Providing food without a license or permit is subject to a penalty equal to double the license fee."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "floyd-ia.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.bentoncountyia.gov/public_health/food_safety/",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/apply-food-license"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 100,
+          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
@@ -549,7 +1195,9 @@
         "authority": "Iowa Department of Revenue",
         "description": "The Iowa Department of Revenue's current jurisdictions-and-rates list shows a 5% local hotel/motel tax for lodging in the Franklin County unincorporated area. Report and remit the local tax with the monthly Iowa sales and use tax return; no separate permit beyond an Iowa sales and use tax permit is required. Other cities in the county may have separate local rates.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
-        "url": ["https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"],
+        "url": [
+          "https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"
+        ],
         "checkedOn": "2026-10-18",
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -576,7 +1224,9 @@
         "authority": "Iowa Department of Revenue",
         "description": "The Iowa Department of Revenue's current jurisdictions-and-rates list shows a 7% local hotel/motel tax for lodging in the Fremont County unincorporated area. Report and remit the local tax with the monthly Iowa sales and use tax return; no separate permit beyond an Iowa sales and use tax permit is required. Other cities in the county may have separate local rates.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
-        "url": ["https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"],
+        "url": [
+          "https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"
+        ],
         "checkedOn": "2026-10-18",
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -596,19 +1246,123 @@
   {
     "county": "Greene",
     "status": "rules",
-    "items": [{"id":"greene-ia.food-license","title":"Obtain and renew a Greene County food establishment license","category":"license","authority":"Iowa Department of Inspections, Appeals, & Licensing","description":"Food establishments operating in Greene County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.","rrule":"FREQ=YEARLY","url":["https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions","https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa annual food-service license fees are based on gross sales and range from $150 to $400."},"lateFee":{"amount":0,"percentPerMonth":10,"note":"Iowa law imposes a 10% per-month penalty on licenses renewed after expiration; operating without a license can incur a penalty equal to double the license fee."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "greene-ia.food-license",
+        "title": "Obtain and renew a Greene County food establishment license",
+        "category": "license",
+        "authority": "Iowa Department of Inspections, Appeals, & Licensing",
+        "description": "Food establishments operating in Greene County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 10,
+          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration; operating without a license can incur a penalty equal to double the license fee."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Grundy",
     "status": "rules",
-    "items": [{"id":"grundy-ia.food-license","title":"Obtain and renew a Grundy County food establishment license","category":"license","authority":"Iowa Department of Inspections, Appeals, & Licensing","description":"Food establishments operating in Grundy County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.","rrule":"FREQ=YEARLY","url":["https://www.grundycountyiowa.gov/departments/environmental-health","https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions","https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa annual food-service license fees are based on gross sales and range from $150 to $400."},"lateFee":{"amount":0,"percentPerMonth":10,"note":"Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "grundy-ia.food-license",
+        "title": "Obtain and renew a Grundy County food establishment license",
+        "category": "license",
+        "authority": "Iowa Department of Inspections, Appeals, & Licensing",
+        "description": "Food establishments operating in Grundy County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.grundycountyiowa.gov/departments/environmental-health",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 10,
+          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Guthrie",
     "status": "rules",
-    "items": [{"id":"guthrie-ia.food-license","title":"Obtain and renew a Guthrie County food establishment license","category":"license","authority":"Iowa Department of Inspections, Appeals, & Licensing","description":"Food establishments operating in Guthrie County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.","rrule":"FREQ=YEARLY","url":["https://guthriecounty.gov/environmental_health/","https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions","https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa annual food-service license fees are based on gross sales and range from $150 to $400."},"lateFee":{"amount":0,"percentPerMonth":10,"note":"Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "guthrie-ia.food-license",
+        "title": "Obtain and renew a Guthrie County food establishment license",
+        "category": "license",
+        "authority": "Iowa Department of Inspections, Appeals, & Licensing",
+        "description": "Food establishments operating in Guthrie County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://guthriecounty.gov/environmental_health/",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 10,
+          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
@@ -621,7 +1375,9 @@
         "authority": "Iowa Department of Revenue",
         "description": "The Iowa Department of Revenue's current jurisdictions-and-rates list shows a 7% local hotel/motel tax for lodging in the Hamilton County unincorporated area. Report and remit the local tax with the monthly Iowa sales and use tax return; no separate permit beyond an Iowa sales and use tax permit is required. Other cities in the county may have separate local rates.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
-        "url": ["https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"],
+        "url": [
+          "https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"
+        ],
         "checkedOn": "2026-10-18",
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -641,7 +1397,41 @@
   {
     "county": "Hancock",
     "status": "rules",
-    "items": [{"id":"hancock-ia.food-license","title":"Obtain and renew a Hancock County food establishment license","category":"license","authority":"Iowa Department of Inspections, Appeals, & Licensing / Hancock County Health Department","description":"Food establishments operating in Hancock County must obtain a valid county permit before operating and renew it annually by December 31 under the county ordinance and Iowa food-safety program.","rrule":"FREQ=YEARLY","url":["https://www.hancockcountyhealthdepartment.org/uploads/1/4/2/5/142550397/2025_application_for_food_service_permit.pdf","https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa annual food-service license fees are based on gross sales and range from $150 to $400; Hancock County permit fees are set by the Board of Health and County Board."},"lateFee":{"amount":0,"percentPerMonth":10,"note":"Iowa law imposes a 10% per-month penalty on licenses renewed after expiration; the county ordinance adds fees for untimely renewal and requires suspension after 31 days without renewal."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "hancock-ia.food-license",
+        "title": "Obtain and renew a Hancock County food establishment license",
+        "category": "license",
+        "authority": "Iowa Department of Inspections, Appeals, & Licensing / Hancock County Health Department",
+        "description": "Food establishments operating in Hancock County must obtain a valid county permit before operating and renew it annually by December 31 under the county ordinance and Iowa food-safety program.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.hancockcountyhealthdepartment.org/uploads/1/4/2/5/142550397/2025_application_for_food_service_permit.pdf",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400; Hancock County permit fees are set by the Board of Health and County Board."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 10,
+          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration; the county ordinance adds fees for untimely renewal and requires suspension after 31 days without renewal."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
@@ -654,7 +1444,9 @@
         "authority": "Iowa Department of Revenue",
         "description": "The Iowa Department of Revenue's current jurisdictions-and-rates list shows a 7% local hotel/motel tax for lodging in the Hardin County unincorporated area. Report and remit the local tax with the monthly Iowa sales and use tax return; no separate permit beyond an Iowa sales and use tax permit is required. Other cities in the county may have separate local rates.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
-        "url": ["https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"],
+        "url": [
+          "https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"
+        ],
         "checkedOn": "2026-10-18",
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -674,19 +1466,120 @@
   {
     "county": "Harrison",
     "status": "rules",
-    "items": [{"id":"harrison-ia.food-license","title":"Obtain and renew a Harrison County food establishment license","category":"license","authority":"Iowa Department of Inspections, Appeals, & Licensing","description":"Food establishments operating in Harrison County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.","rrule":"FREQ=YEARLY","url":["https://dial.iowa.gov/licenses/food-establishments-hotels","https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa food-service license fees are based on annual gross sales and range from $150 to $400."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19","lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."}}],
+    "items": [
+      {
+        "id": "harrison-ia.food-license",
+        "title": "Obtain and renew a Harrison County food establishment license",
+        "category": "license",
+        "authority": "Iowa Department of Inspections, Appeals, & Licensing",
+        "description": "Food establishments operating in Harrison County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://dial.iowa.gov/licenses/food-establishments-hotels",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa food-service license fees are based on annual gross sales and range from $150 to $400."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Henry",
     "status": "rules",
-    "items": [{"id":"henry-ia.food-license","title":"Obtain and renew a Henry County food establishment license","category":"license","authority":"Iowa Department of Inspections, Appeals, & Licensing","description":"Food establishments operating in Henry County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.","rrule":"FREQ=YEARLY","url":["https://henrycounty.iowa.gov/environmental-health/","https://dial.iowa.gov/licenses/food-establishments-hotels"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa food-service license fees are based on annual gross sales and range from $150 to $400."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19","lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."}}],
+    "items": [
+      {
+        "id": "henry-ia.food-license",
+        "title": "Obtain and renew a Henry County food establishment license",
+        "category": "license",
+        "authority": "Iowa Department of Inspections, Appeals, & Licensing",
+        "description": "Food establishments operating in Henry County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://henrycounty.iowa.gov/environmental-health/",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa food-service license fees are based on annual gross sales and range from $150 to $400."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Howard",
     "status": "rules",
-    "items": [{"id":"howard-ia.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.bentoncountyia.gov/public_health/food_safety/","https://dial.iowa.gov/licenses/food-establishments-hotels","https://dial.iowa.gov/licenses/food-establishments-hotels/apply-food-license"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa annual food-service license fees are based on gross sales and range from $150 to $400."},"lateFee":{"amount":0,"percentPerMonth":100,"note":"Providing food without a license or permit is subject to a penalty equal to double the license fee."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "howard-ia.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.bentoncountyia.gov/public_health/food_safety/",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/apply-food-license"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 100,
+          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
@@ -699,7 +1592,9 @@
         "authority": "Iowa Department of Revenue",
         "description": "The Iowa Department of Revenue's current jurisdictions-and-rates workbook lists a 7% local hotel/motel tax for the Humboldt County jurisdiction. Report and remit the local tax with the monthly Iowa sales and use tax return; no separate permit beyond an Iowa sales and use tax permit is required.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
-        "url": ["https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"],
+        "url": [
+          "https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"
+        ],
         "checkedOn": "2026-10-18",
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -719,7 +1614,42 @@
   {
     "county": "Ida",
     "status": "rules",
-    "items": [{"id":"ida-ia.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.bentoncountyia.gov/public_health/food_safety/","https://dial.iowa.gov/licenses/food-establishments-hotels","https://dial.iowa.gov/licenses/food-establishments-hotels/apply-food-license"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa annual food-service license fees are based on gross sales and range from $150 to $400."},"lateFee":{"amount":0,"percentPerMonth":100,"note":"Providing food without a license or permit is subject to a penalty equal to double the license fee."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "ida-ia.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.bentoncountyia.gov/public_health/food_safety/",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/apply-food-license"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 100,
+          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
@@ -732,7 +1662,9 @@
         "authority": "Iowa Department of Revenue",
         "description": "The Iowa Department of Revenue's current jurisdictions-and-rates list shows a 7% local hotel/motel tax for lodging in the Iowa County unincorporated area. Report and remit the local tax with the monthly Iowa sales and use tax return; no separate permit beyond an Iowa sales and use tax permit is required. Other cities in the county may have separate local rates.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
-        "url": ["https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"],
+        "url": [
+          "https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"
+        ],
         "checkedOn": "2026-10-18",
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -752,25 +1684,160 @@
   {
     "county": "Jackson",
     "status": "rules",
-    "items": [{"id":"jackson-ia.food-license","title":"Obtain and renew a Jackson County food establishment license","category":"license","authority":"Iowa Department of Inspections, Appeals, and Licensing","description":"Food establishments operating in Jackson County must obtain the applicable Iowa food establishment license before operating and renew it annually.","rrule":"FREQ=YEARLY","url":["https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments","https://www.jacksoncountyiowa.com/"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa food establishment license fees are based on annual gross food-service sales and range from $150 to $400."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19","lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."}}],
+    "items": [
+      {
+        "id": "jackson-ia.food-license",
+        "title": "Obtain and renew a Jackson County food establishment license",
+        "category": "license",
+        "authority": "Iowa Department of Inspections, Appeals, and Licensing",
+        "description": "Food establishments operating in Jackson County must obtain the applicable Iowa food establishment license before operating and renew it annually.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
+          "https://www.jacksoncountyiowa.com/"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa food establishment license fees are based on annual gross food-service sales and range from $150 to $400."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Jasper",
     "status": "rules",
-    "items": [{"id":"jasper-ia.food-license","title":"Obtain and renew a Jasper County food establishment license","category":"license","authority":"Iowa Department of Inspections, Appeals, and Licensing","description":"Food establishments operating in Jasper County must obtain the applicable Iowa food establishment license before operating and renew it annually.","rrule":"FREQ=YEARLY","url":["https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments","https://www.jasperia.org/"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa food establishment license fees are based on annual gross food-service sales and range from $150 to $400."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19","lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."}}],
+    "items": [
+      {
+        "id": "jasper-ia.food-license",
+        "title": "Obtain and renew a Jasper County food establishment license",
+        "category": "license",
+        "authority": "Iowa Department of Inspections, Appeals, and Licensing",
+        "description": "Food establishments operating in Jasper County must obtain the applicable Iowa food establishment license before operating and renew it annually.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
+          "https://www.jasperia.org/"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa food establishment license fees are based on annual gross food-service sales and range from $150 to $400."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Jefferson",
     "status": "rules",
-    "items": [{"id":"jefferson-ia.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.bentoncountyia.gov/public_health/food_safety/","https://dial.iowa.gov/licenses/food-establishments-hotels","https://dial.iowa.gov/licenses/food-establishments-hotels/apply-food-license"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa annual food-service license fees are based on gross sales and range from $150 to $400."},"lateFee":{"amount":0,"percentPerMonth":100,"note":"Providing food without a license or permit is subject to a penalty equal to double the license fee."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "jefferson-ia.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.bentoncountyia.gov/public_health/food_safety/",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/apply-food-license"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 100,
+          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Johnson",
     "status": "rules",
-    "items": [{"id":"johnson-ia.food-license","title":"Obtain and renew a Johnson County food establishment license","category":"license","authority":"Johnson County Public Health","description":"Food service and retail food establishments operating in Johnson County must obtain the applicable Iowa food establishment license before operating.","rrule":"FREQ=YEARLY","url":["https://johnsoncountyiowa.gov/public-health/restaurant-licenses","https://johnsoncountyiowa.gov/public-health/faqs","https://www.legis.iowa.gov/docs/code/2019/137F.html"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Published food service and retail license fees are based on gross sales and range from $150 to $400; mobile food units are $250."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19","lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."}}],
+    "items": [
+      {
+        "id": "johnson-ia.food-license",
+        "title": "Obtain and renew a Johnson County food establishment license",
+        "category": "license",
+        "authority": "Johnson County Public Health",
+        "description": "Food service and retail food establishments operating in Johnson County must obtain the applicable Iowa food establishment license before operating.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://johnsoncountyiowa.gov/public-health/restaurant-licenses",
+          "https://johnsoncountyiowa.gov/public-health/faqs",
+          "https://www.legis.iowa.gov/docs/code/2019/137F.html"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Published food service and retail license fees are based on gross sales and range from $150 to $400; mobile food units are $250."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
@@ -783,7 +1850,9 @@
         "authority": "Iowa Department of Revenue",
         "description": "The Iowa Department of Revenue's current jurisdictions-and-rates list shows a 5% local hotel/motel tax for lodging in the Jones County unincorporated area. Report and remit the local tax with the monthly Iowa sales and use tax return; no separate permit beyond an Iowa sales and use tax permit is required. Other cities in the county may have separate local rates.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
-        "url": ["https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"],
+        "url": [
+          "https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"
+        ],
         "checkedOn": "2026-10-18",
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -803,13 +1872,79 @@
   {
     "county": "Keokuk",
     "status": "rules",
-    "items": [{"id":"keokuk-ia.food-license","title":"Obtain and renew a Keokuk County food establishment license","category":"license","authority":"Iowa Department of Inspections, Appeals, & Licensing","description":"Food establishments operating in Keokuk County must obtain and renew the applicable Iowa food service license before operating.","rrule":"FREQ=YEARLY","url":["https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments","https://dial.iowa.gov/licenses/food-establishments-hotels"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Annual Iowa food-service license fees are based on gross sales."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19","lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."}}],
+    "items": [
+      {
+        "id": "keokuk-ia.food-license",
+        "title": "Obtain and renew a Keokuk County food establishment license",
+        "category": "license",
+        "authority": "Iowa Department of Inspections, Appeals, & Licensing",
+        "description": "Food establishments operating in Keokuk County must obtain and renew the applicable Iowa food service license before operating.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Annual Iowa food-service license fees are based on gross sales."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Kossuth",
     "status": "rules",
-    "items": [{"id":"kossuth-ia.food-license","title":"Obtain and renew a Kossuth County food establishment license","category":"license","authority":"Iowa Department of Inspections, Appeals, and Licensing","description":"Food establishments operating in Kossuth County must obtain the applicable Iowa food establishment license before operating and renew it annually.","rrule":"FREQ=YEARLY","url":["https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments","https://www.kossuthia.com/"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa food establishment license fees are based on annual gross food-service sales and range from $150 to $400."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19","lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."}}],
+    "items": [
+      {
+        "id": "kossuth-ia.food-license",
+        "title": "Obtain and renew a Kossuth County food establishment license",
+        "category": "license",
+        "authority": "Iowa Department of Inspections, Appeals, and Licensing",
+        "description": "Food establishments operating in Kossuth County must obtain the applicable Iowa food establishment license before operating and renew it annually.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
+          "https://www.kossuthia.com/"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa food establishment license fees are based on annual gross food-service sales and range from $150 to $400."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
@@ -822,7 +1957,9 @@
         "authority": "Iowa Department of Revenue",
         "description": "The Iowa Department of Revenue's current jurisdictions-and-rates list shows a 7% local hotel/motel tax for lodging in the Lee County unincorporated area. Report and remit the local tax with the monthly Iowa sales and use tax return; no separate permit beyond an Iowa sales and use tax permit is required. Other cities in the county may have separate local rates.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
-        "url": ["https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"],
+        "url": [
+          "https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"
+        ],
         "checkedOn": "2026-10-18",
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -850,26 +1987,103 @@
         "authority": "Linn County Public Health",
         "description": "Food establishments operating in Linn County must obtain the applicable food establishment license; the county fee depends on the establishment type and sales category.",
         "rrule": "FREQ=YEARLY",
-        "url": ["https://www.linncountyiowa.gov/DocumentCenter/View/12615/Food-Establishment-License-Application-2019-New-Address"],
-        "lateFee": {"amount": 0, "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."},
+        "url": [
+          "https://www.linncountyiowa.gov/DocumentCenter/View/12615/Food-Establishment-License-Application-2019-New-Address"
+        ],
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
         "appliesTo": ["all"],
         "appliesWhen": [{ "field": "foodService", "op": "==", "value": true }],
         "feeDetail": { "basis": "varies", "note": "establishment type and sales category" }
       }
     ],
-    "sourceUrl": ["https://www.linncountyiowa.gov/DocumentCenter/View/12615/Food-Establishment-License-Application-2019-New-Address"],
+    "sourceUrl": [
+      "https://www.linncountyiowa.gov/DocumentCenter/View/12615/Food-Establishment-License-Application-2019-New-Address"
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Louisa",
     "status": "rules",
-    "items": [{"id":"louisa-ia.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.bentoncountyia.gov/public_health/food_safety/","https://dial.iowa.gov/licenses/food-establishments-hotels","https://dial.iowa.gov/licenses/food-establishments-hotels/apply-food-license"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa annual food-service license fees are based on gross sales and range from $150 to $400."},"lateFee":{"amount":0,"percentPerMonth":100,"note":"Providing food without a license or permit is subject to a penalty equal to double the license fee."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "louisa-ia.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.bentoncountyia.gov/public_health/food_safety/",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/apply-food-license"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 100,
+          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Lucas",
     "status": "rules",
-    "items": [{"id":"lucas-ia.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.bentoncountyia.gov/public_health/food_safety/","https://dial.iowa.gov/licenses/food-establishments-hotels","https://dial.iowa.gov/licenses/food-establishments-hotels/apply-food-license"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa annual food-service license fees are based on gross sales and range from $150 to $400."},"lateFee":{"amount":0,"percentPerMonth":100,"note":"Providing food without a license or permit is subject to a penalty equal to double the license fee."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "lucas-ia.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.bentoncountyia.gov/public_health/food_safety/",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/apply-food-license"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 100,
+          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
@@ -882,7 +2096,9 @@
         "authority": "Iowa Department of Revenue",
         "description": "The Iowa Department of Revenue's current jurisdictions-and-rates list shows a 7% local hotel/motel tax for lodging in the Lyon County unincorporated area. Report and remit the local tax with the monthly Iowa sales and use tax return; no separate permit beyond an Iowa sales and use tax permit is required. Other cities in the county may have separate local rates.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
-        "url": ["https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"],
+        "url": [
+          "https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"
+        ],
         "checkedOn": "2026-10-18",
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -909,7 +2125,9 @@
         "authority": "Iowa Department of Revenue",
         "description": "The Iowa Department of Revenue's current jurisdictions-and-rates list shows a 5% local hotel/motel tax for lodging in the Madison County unincorporated area. Report and remit the local tax with the monthly Iowa sales and use tax return; no separate permit beyond an Iowa sales and use tax permit is required. Other cities in the county may have separate local rates.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
-        "url": ["https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"],
+        "url": [
+          "https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"
+        ],
         "checkedOn": "2026-10-18",
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -929,19 +2147,119 @@
   {
     "county": "Mahaska",
     "status": "rules",
-    "items": [{"id":"mahaska-ia.food-license","title":"Obtain and renew a Mahaska County food establishment license","category":"license","authority":"Iowa Department of Inspections, Appeals, & Licensing","description":"Food establishments operating in Mahaska County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.","rrule":"FREQ=YEARLY","url":["https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions","https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa annual food-service license fees are based on gross sales and range from $150 to $400."},"lateFee":{"amount":0,"percentPerMonth":10,"note":"Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "mahaska-ia.food-license",
+        "title": "Obtain and renew a Mahaska County food establishment license",
+        "category": "license",
+        "authority": "Iowa Department of Inspections, Appeals, & Licensing",
+        "description": "Food establishments operating in Mahaska County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 10,
+          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Marion",
     "status": "rules",
-    "items": [{"id":"marion-ia.food-license","title":"Obtain and renew a Marion County food establishment license","category":"license","authority":"Iowa Department of Inspections, Appeals, and Licensing","description":"Food establishments operating in Marion County must obtain the applicable Iowa food establishment license before operating and renew it annually.","rrule":"FREQ=YEARLY","url":["https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments","https://www.marioncountyiowa.gov/"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa food establishment license fees are based on annual gross food-service sales and range from $150 to $400."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19","lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."}}],
+    "items": [
+      {
+        "id": "marion-ia.food-license",
+        "title": "Obtain and renew a Marion County food establishment license",
+        "category": "license",
+        "authority": "Iowa Department of Inspections, Appeals, and Licensing",
+        "description": "Food establishments operating in Marion County must obtain the applicable Iowa food establishment license before operating and renew it annually.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
+          "https://www.marioncountyiowa.gov/"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa food establishment license fees are based on annual gross food-service sales and range from $150 to $400."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Marshall",
     "status": "rules",
-    "items": [{"id":"marshall-ia.food-license","title":"Obtain and renew a Marshall County food establishment license","category":"license","authority":"Iowa Department of Inspections, Appeals, and Licensing","description":"Food establishments operating in Marshall County must obtain the applicable Iowa food establishment license before operating and renew it annually.","rrule":"FREQ=YEARLY","url":["https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments","https://www.marshallcountyia.gov/environmental_health/"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa food establishment license fees are based on gross sales and range from $150 to $400; applications without prior-year gross sales pay the maximum."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19","lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."}}],
+    "items": [
+      {
+        "id": "marshall-ia.food-license",
+        "title": "Obtain and renew a Marshall County food establishment license",
+        "category": "license",
+        "authority": "Iowa Department of Inspections, Appeals, and Licensing",
+        "description": "Food establishments operating in Marshall County must obtain the applicable Iowa food establishment license before operating and renew it annually.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
+          "https://www.marshallcountyia.gov/environmental_health/"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa food establishment license fees are based on gross sales and range from $150 to $400; applications without prior-year gross sales pay the maximum."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
@@ -954,7 +2272,9 @@
         "authority": "Iowa Department of Revenue",
         "description": "The Iowa Department of Revenue's current jurisdictions-and-rates list shows a 7% local hotel/motel tax for lodging in the Mills County unincorporated area. Report and remit the local tax with the monthly Iowa sales and use tax return; no separate permit beyond an Iowa sales and use tax permit is required. Other cities in the county may have separate local rates.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
-        "url": ["https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"],
+        "url": [
+          "https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"
+        ],
         "checkedOn": "2026-10-18",
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -981,7 +2301,9 @@
         "authority": "Iowa Department of Revenue",
         "description": "The Iowa Department of Revenue's current jurisdictions-and-rates list shows a 7% local hotel/motel tax for lodging in the Mitchell County unincorporated area. Report and remit the local tax with the monthly Iowa sales and use tax return; no separate permit beyond an Iowa sales and use tax permit is required. Other cities in the county may have separate local rates.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
-        "url": ["https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"],
+        "url": [
+          "https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"
+        ],
         "checkedOn": "2026-10-18",
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -1001,19 +2323,124 @@
   {
     "county": "Monona",
     "status": "rules",
-    "items": [{"id":"monona-ia.food-license","title":"Obtain and renew a Monona County food establishment license","category":"license","authority":"Iowa Department of Inspections, Appeals, & Licensing","description":"Food establishments operating in Monona County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.","rrule":"FREQ=YEARLY","url":["https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions","https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments","https://www.mononacountyiowa.gov/environmental_health_zoning/permit_application_fees/"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa annual food-service license fees are based on gross sales and range from $150 to $400; county environmental-health fees are published separately and may change."},"lateFee":{"amount":0,"percentPerMonth":10,"note":"Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "monona-ia.food-license",
+        "title": "Obtain and renew a Monona County food establishment license",
+        "category": "license",
+        "authority": "Iowa Department of Inspections, Appeals, & Licensing",
+        "description": "Food establishments operating in Monona County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
+          "https://www.mononacountyiowa.gov/environmental_health_zoning/permit_application_fees/"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400; county environmental-health fees are published separately and may change."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 10,
+          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Monroe",
     "status": "rules",
-    "items": [{"id":"monroe-ia.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.bentoncountyia.gov/public_health/food_safety/","https://dial.iowa.gov/licenses/food-establishments-hotels","https://dial.iowa.gov/licenses/food-establishments-hotels/apply-food-license"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa annual food-service license fees are based on gross sales and range from $150 to $400."},"lateFee":{"amount":0,"percentPerMonth":100,"note":"Providing food without a license or permit is subject to a penalty equal to double the license fee."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "monroe-ia.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.bentoncountyia.gov/public_health/food_safety/",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/apply-food-license"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 100,
+          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Montgomery",
     "status": "rules",
-    "items": [{"id":"montgomery-ia.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.bentoncountyia.gov/public_health/food_safety/","https://dial.iowa.gov/licenses/food-establishments-hotels","https://dial.iowa.gov/licenses/food-establishments-hotels/apply-food-license"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa annual food-service license fees are based on gross sales and range from $150 to $400."},"lateFee":{"amount":0,"percentPerMonth":100,"note":"Providing food without a license or permit is subject to a penalty equal to double the license fee."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "montgomery-ia.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.bentoncountyia.gov/public_health/food_safety/",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/apply-food-license"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 100,
+          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
@@ -1026,7 +2453,9 @@
         "authority": "Iowa Department of Revenue",
         "description": "The Iowa Department of Revenue's current jurisdictions-and-rates workbook lists a 7% local hotel/motel tax for the Muscatine County jurisdiction. Report and remit the local tax with the monthly Iowa sales and use tax return; no separate permit beyond an Iowa sales and use tax permit is required.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
-        "url": ["https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"],
+        "url": [
+          "https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"
+        ],
         "checkedOn": "2026-10-18",
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -1043,7 +2472,46 @@
     "note": "The Iowa Department of Revenue's workbook effective July 1, 2026 confirms a 7% local hotel/motel tax for the Muscatine County jurisdiction; other county-level obligations were not checked.",
     "sourceUrl": ["https://revenue.iowa.gov/media/90/download?inline="]
   },
-  {"county":"O'Brien","status":"rules","items":[{"id":"obrien-ia.food-license","title":"Obtain and renew an O'Brien County food establishment license","category":"license","authority":"Iowa Department of Inspections, Appeals, & Licensing","description":"Food establishments operating in O'Brien County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.","rrule":"FREQ=YEARLY","url":["https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions","https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa annual food-service license fees are based on gross sales and range from $150 to $400."},"lateFee":{"amount":0,"percentPerMonth":10,"note":"Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],"checkedOn":"2026-10-19"},
+  {
+    "county": "O'Brien",
+    "status": "rules",
+    "items": [
+      {
+        "id": "obrien-ia.food-license",
+        "title": "Obtain and renew an O'Brien County food establishment license",
+        "category": "license",
+        "authority": "Iowa Department of Inspections, Appeals, & Licensing",
+        "description": "Food establishments operating in O'Brien County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 10,
+          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
+  },
   {
     "county": "Osceola",
     "items": [
@@ -1054,7 +2522,9 @@
         "authority": "Iowa Department of Revenue",
         "description": "The Iowa Department of Revenue's current jurisdictions-and-rates list shows a 5% local hotel/motel tax for lodging in the Osceola County unincorporated area. Report and remit the local tax with the monthly Iowa sales and use tax return; no separate permit beyond an Iowa sales and use tax permit is required. Other cities in the county may have separate local rates.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
-        "url": ["https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"],
+        "url": [
+          "https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"
+        ],
         "checkedOn": "2026-10-18",
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -1074,14 +2544,120 @@
   {
     "county": "Page",
     "status": "rules",
-    "items": [{"id":"page-ia.food-license","title":"Obtain and renew a Page County food establishment license","category":"license","authority":"Iowa Department of Inspections, Appeals, and Licensing","description":"Food establishments operating in Page County must obtain the applicable Iowa food establishment license before operating and renew it annually.","rrule":"FREQ=YEARLY","url":["https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments","https://pagecounty.iowa.gov/"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa food establishment license fees are based on annual gross food-service sales and range from $150 to $400."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19","lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."}}],
+    "items": [
+      {
+        "id": "page-ia.food-license",
+        "title": "Obtain and renew a Page County food establishment license",
+        "category": "license",
+        "authority": "Iowa Department of Inspections, Appeals, and Licensing",
+        "description": "Food establishments operating in Page County must obtain the applicable Iowa food establishment license before operating and renew it annually.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
+          "https://pagecounty.iowa.gov/"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa food establishment license fees are based on annual gross food-service sales and range from $150 to $400."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
-  {"county":"Palo Alto","status":"rules","items":[{"id":"palo-alto-ia.food-license","title":"Obtain and renew a Palo Alto County food establishment license","category":"license","authority":"Iowa Department of Inspections, Appeals, & Licensing","description":"Food establishments operating in Palo Alto County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.","rrule":"FREQ=YEARLY","url":["https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions","https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa annual food-service license fees are based on gross sales and range from $150 to $400."},"lateFee":{"amount":0,"percentPerMonth":10,"note":"Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],"checkedOn":"2026-10-19"},
+  {
+    "county": "Palo Alto",
+    "status": "rules",
+    "items": [
+      {
+        "id": "palo-alto-ia.food-license",
+        "title": "Obtain and renew a Palo Alto County food establishment license",
+        "category": "license",
+        "authority": "Iowa Department of Inspections, Appeals, & Licensing",
+        "description": "Food establishments operating in Palo Alto County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 10,
+          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
+  },
   {
     "county": "Plymouth",
     "status": "rules",
-    "items": [{"id":"plymouth-ia.food-license","title":"Obtain and renew a Plymouth County food establishment license","category":"license","authority":"Iowa Department of Inspections, Appeals, & Licensing / Plymouth County Health Department","description":"Food establishments operating in Plymouth County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.","rrule":"FREQ=YEARLY","url":["https://plymouthcountyiowa.gov/contact/","https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa annual food-service license fees are based on gross sales and range from $150 to $400."},"lateFee":{"amount":0,"percentPerMonth":10,"note":"Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "plymouth-ia.food-license",
+        "title": "Obtain and renew a Plymouth County food establishment license",
+        "category": "license",
+        "authority": "Iowa Department of Inspections, Appeals, & Licensing / Plymouth County Health Department",
+        "description": "Food establishments operating in Plymouth County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://plymouthcountyiowa.gov/contact/",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 10,
+          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
@@ -1094,7 +2670,9 @@
         "authority": "Iowa Department of Revenue",
         "description": "The Iowa Department of Revenue's current jurisdictions-and-rates workbook lists a 7% local hotel/motel tax for the Pocahontas County jurisdiction. Report and remit the local tax with the monthly Iowa sales and use tax return; no separate permit beyond an Iowa sales and use tax permit is required.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
-        "url": ["https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"],
+        "url": [
+          "https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"
+        ],
         "checkedOn": "2026-10-18",
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -1121,7 +2699,9 @@
         "authority": "Iowa Department of Revenue",
         "description": "The Iowa Department of Revenue's current jurisdictions-and-rates list shows a 7% local hotel/motel tax for lodging in the Polk County unincorporated area. Report and remit the local tax with the monthly Iowa sales and use tax return; no separate permit beyond an Iowa sales and use tax permit is required. Other cities in the county may have separate local rates.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
-        "url": ["https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"],
+        "url": [
+          "https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"
+        ],
         "checkedOn": "2026-10-18",
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -1141,7 +2721,38 @@
   {
     "county": "Pottawattamie",
     "status": "rules",
-    "items": [{"id":"pottawattamie-ia.food-license","title":"Obtain and renew a Pottawattamie County food establishment license","category":"license","authority":"Iowa Department of Inspections, Appeals, and Licensing","description":"Food businesses operating in Pottawattamie County must obtain and renew the applicable Iowa food establishment license through the state licensing system.","rrule":"FREQ=YEARLY","url":["https://dial.iowa.gov/licenses/food-establishments-hotels","https://www.pottcounty-ia.gov/departments/"],"feeDetail":{"basis":"varies","note":"License fees depend on food establishment type and the applicable Iowa schedule."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19","lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."}}],
+    "items": [
+      {
+        "id": "pottawattamie-ia.food-license",
+        "title": "Obtain and renew a Pottawattamie County food establishment license",
+        "category": "license",
+        "authority": "Iowa Department of Inspections, Appeals, and Licensing",
+        "description": "Food businesses operating in Pottawattamie County must obtain and renew the applicable Iowa food establishment license through the state licensing system.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://dial.iowa.gov/licenses/food-establishments-hotels",
+          "https://www.pottcounty-ia.gov/departments/"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "License fees depend on food establishment type and the applicable Iowa schedule."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
@@ -1154,7 +2765,9 @@
         "authority": "Iowa Department of Revenue",
         "description": "The Iowa Department of Revenue's current jurisdictions-and-rates list shows a 7% local hotel/motel tax for lodging in the Poweshiek County unincorporated area. Report and remit the local tax with the monthly Iowa sales and use tax return; no separate permit beyond an Iowa sales and use tax permit is required. Other cities in the county may have separate local rates.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
-        "url": ["https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"],
+        "url": [
+          "https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"
+        ],
         "checkedOn": "2026-10-18",
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -1174,10 +2787,85 @@
   {
     "county": "Ringgold",
     "status": "rules",
-    "items": [{"id":"ringgold-ia.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.bentoncountyia.gov/public_health/food_safety/","https://dial.iowa.gov/licenses/food-establishments-hotels","https://dial.iowa.gov/licenses/food-establishments-hotels/apply-food-license"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa annual food-service license fees are based on gross sales and range from $150 to $400."},"lateFee":{"amount":0,"percentPerMonth":100,"note":"Providing food without a license or permit is subject to a penalty equal to double the license fee."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "ringgold-ia.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.bentoncountyia.gov/public_health/food_safety/",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/apply-food-license"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 100,
+          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
-  {"county":"Sac","status":"rules","items":[{"id":"sac-ia.food-license","title":"Obtain and renew a Sac County food establishment license","category":"license","authority":"Iowa Department of Inspections, Appeals, & Licensing","description":"Food establishments operating in Sac County must obtain the applicable Iowa food license before operating; Sac County confirms that food-establishment licensing and inspections are completed by the state.","rrule":"FREQ=YEARLY","url":["https://saccountyhealthservices.com/services/environmental-health-zoning/","https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions","https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa annual food-service license fees are based on gross sales and range from $150 to $400."},"lateFee":{"amount":0,"percentPerMonth":10,"note":"Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],"checkedOn":"2026-10-19"},
+  {
+    "county": "Sac",
+    "status": "rules",
+    "items": [
+      {
+        "id": "sac-ia.food-license",
+        "title": "Obtain and renew a Sac County food establishment license",
+        "category": "license",
+        "authority": "Iowa Department of Inspections, Appeals, & Licensing",
+        "description": "Food establishments operating in Sac County must obtain the applicable Iowa food license before operating; Sac County confirms that food-establishment licensing and inspections are completed by the state.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://saccountyhealthservices.com/services/environmental-health-zoning/",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 10,
+          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
+  },
   {
     "county": "Scott",
     "status": "rules",
@@ -1189,11 +2877,29 @@
         "category": "license",
         "authority": "Scott County Health Department",
         "rrule": "FREQ=YEARLY",
-        "lateFee": {"amount": 0, "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."},
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
         "appliesTo": ["all"],
-        "appliesWhen": [{"field": "activities", "op": "in", "value": ["food_service"], "description": "Operates a food establishment"}],
-        "feeDetail": {"basis": "varies", "min": 0, "max": 400, "note": "Food service and retail food fees are based on annual sales; mobile units cost $250 and a secondary license adds $150."},
-        "url": ["https://www.scottcountyiowa.gov/health/food/licensing/food-service-establishments", "https://www.scottcountyiowa.gov/sites/default/files/attachments/pages/Food%20Establishment%20License%20Application%20Fillable.pdf"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 0,
+          "max": 400,
+          "note": "Food service and retail food fees are based on annual sales; mobile units cost $250 and a secondary license adds $150."
+        },
+        "url": [
+          "https://www.scottcountyiowa.gov/health/food/licensing/food-service-establishments",
+          "https://www.scottcountyiowa.gov/sites/default/files/attachments/pages/Food%20Establishment%20License%20Application%20Fillable.pdf"
+        ],
         "checkedOn": "2026-10-19"
       }
     ],
@@ -1209,7 +2915,9 @@
         "authority": "Iowa Department of Revenue",
         "description": "The Iowa Department of Revenue's current jurisdictions-and-rates list shows a 7% local hotel/motel tax for lodging in the Shelby County unincorporated area. Report and remit the local tax with the monthly Iowa sales and use tax return; no separate permit beyond an Iowa sales and use tax permit is required. Other cities in the county may have separate local rates.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
-        "url": ["https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"],
+        "url": [
+          "https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"
+        ],
         "checkedOn": "2026-10-18",
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -1229,49 +2937,320 @@
   {
     "county": "Sioux",
     "status": "rules",
-    "items": [{"id":"sioux-ia.food-license","title":"Obtain and renew a Sioux County food establishment license","category":"license","authority":"Iowa Department of Inspections, Appeals, and Licensing","description":"Food establishments operating in Sioux County must obtain the applicable Iowa food establishment license before operating and renew it annually.","rrule":"FREQ=YEARLY","url":["https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments","https://www.siouxlanddistricthealth.org/home/showpublisheddocument/1467/638918127575830000"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa food establishment license fees are based on annual gross food-service sales and range from $150 to $400."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19","lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."}}],
+    "items": [
+      {
+        "id": "sioux-ia.food-license",
+        "title": "Obtain and renew a Sioux County food establishment license",
+        "category": "license",
+        "authority": "Iowa Department of Inspections, Appeals, and Licensing",
+        "description": "Food establishments operating in Sioux County must obtain the applicable Iowa food establishment license before operating and renew it annually.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
+          "https://www.siouxlanddistricthealth.org/home/showpublisheddocument/1467/638918127575830000"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa food establishment license fees are based on annual gross food-service sales and range from $150 to $400."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Story",
     "status": "rules",
-    "items": [{"id":"story-ia.food-license","title":"Obtain and renew a Story County food establishment license","category":"license","authority":"Iowa Department of Inspections, Appeals, and Licensing","description":"Food businesses operating in Story County must obtain the appropriate food license before operation; applications should be submitted at least 30 days before opening and renewals are due before expiration.","rrule":"FREQ=YEARLY","url":["https://storycountyiowa.gov/115/Code-of-Ordinances","https://storycountyiowa.gov/Applications-and-Permits","https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa annual food-service license fees are based on gross sales and range from $150 to $400."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19","lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."}}],
+    "items": [
+      {
+        "id": "story-ia.food-license",
+        "title": "Obtain and renew a Story County food establishment license",
+        "category": "license",
+        "authority": "Iowa Department of Inspections, Appeals, and Licensing",
+        "description": "Food businesses operating in Story County must obtain the appropriate food license before operation; applications should be submitted at least 30 days before opening and renewals are due before expiration.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://storycountyiowa.gov/115/Code-of-Ordinances",
+          "https://storycountyiowa.gov/Applications-and-Permits",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Tama",
     "status": "rules",
-    "items": [{"id":"tama-ia.food-license","title":"Obtain and renew a Tama County food establishment license","category":"license","authority":"Iowa Department of Inspections, Appeals, and Licensing","description":"Food establishments operating in Tama County must obtain the applicable Iowa food establishment license before operating and renew it annually.","rrule":"FREQ=YEARLY","url":["https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments","https://www.tamacounty.iowa.gov/departments/"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa food establishment license fees are based on annual gross food-service sales and range from $150 to $400."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19","lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."}}],
+    "items": [
+      {
+        "id": "tama-ia.food-license",
+        "title": "Obtain and renew a Tama County food establishment license",
+        "category": "license",
+        "authority": "Iowa Department of Inspections, Appeals, and Licensing",
+        "description": "Food establishments operating in Tama County must obtain the applicable Iowa food establishment license before operating and renew it annually.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
+          "https://www.tamacounty.iowa.gov/departments/"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa food establishment license fees are based on annual gross food-service sales and range from $150 to $400."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Taylor",
     "status": "rules",
-    "items": [{"id":"taylor-ia.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.bentoncountyia.gov/public_health/food_safety/","https://dial.iowa.gov/licenses/food-establishments-hotels","https://dial.iowa.gov/licenses/food-establishments-hotels/apply-food-license"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa annual food-service license fees are based on gross sales and range from $150 to $400."},"lateFee":{"amount":0,"percentPerMonth":100,"note":"Providing food without a license or permit is subject to a penalty equal to double the license fee."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "taylor-ia.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.bentoncountyia.gov/public_health/food_safety/",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/apply-food-license"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 100,
+          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Union",
     "status": "rules",
-    "items": [{"id":"union-ia.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.bentoncountyia.gov/public_health/food_safety/","https://dial.iowa.gov/licenses/food-establishments-hotels","https://dial.iowa.gov/licenses/food-establishments-hotels/apply-food-license"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa annual food-service license fees are based on gross sales and range from $150 to $400."},"lateFee":{"amount":0,"percentPerMonth":100,"note":"Providing food without a license or permit is subject to a penalty equal to double the license fee."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "union-ia.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.bentoncountyia.gov/public_health/food_safety/",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/apply-food-license"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 100,
+          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Van Buren",
     "status": "rules",
-    "items": [{"id":"van-buren-ia.food-license","title":"Obtain and renew a Van Buren County food establishment license","category":"license","authority":"Iowa Department of Inspections, Appeals, & Licensing","description":"Food establishments operating in Van Buren County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.","rrule":"FREQ=YEARLY","url":["https://dial.iowa.gov/licenses/food-establishments-hotels","https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa food-service license fees are based on annual gross sales and range from $150 to $400."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19","lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."}}],
+    "items": [
+      {
+        "id": "van-buren-ia.food-license",
+        "title": "Obtain and renew a Van Buren County food establishment license",
+        "category": "license",
+        "authority": "Iowa Department of Inspections, Appeals, & Licensing",
+        "description": "Food establishments operating in Van Buren County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://dial.iowa.gov/licenses/food-establishments-hotels",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa food-service license fees are based on annual gross sales and range from $150 to $400."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Wapello",
     "status": "rules",
-    "items": [{"id":"wapello-ia.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.bentoncountyia.gov/public_health/food_safety/","https://dial.iowa.gov/licenses/food-establishments-hotels","https://dial.iowa.gov/licenses/food-establishments-hotels/apply-food-license"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa annual food-service license fees are based on gross sales and range from $150 to $400."},"lateFee":{"amount":0,"percentPerMonth":100,"note":"Providing food without a license or permit is subject to a penalty equal to double the license fee."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "wapello-ia.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.bentoncountyia.gov/public_health/food_safety/",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/apply-food-license"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 100,
+          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Warren",
     "status": "rules",
-    "items": [{"id":"warren-ia.food-license","title":"Obtain and renew a Warren County food establishment license","category":"license","authority":"Iowa Department of Inspections, Appeals, and Licensing","description":"Food establishments operating in Warren County must obtain the applicable Iowa food establishment license before operating and renew it annually.","rrule":"FREQ=YEARLY","url":["https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments","https://www.warrencountyia.gov/government/"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa food establishment license fees are based on annual gross food-service sales and range from $150 to $400."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19","lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."}}],
+    "items": [
+      {
+        "id": "warren-ia.food-license",
+        "title": "Obtain and renew a Warren County food establishment license",
+        "category": "license",
+        "authority": "Iowa Department of Inspections, Appeals, and Licensing",
+        "description": "Food establishments operating in Warren County must obtain the applicable Iowa food establishment license before operating and renew it annually.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
+          "https://www.warrencountyia.gov/government/"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa food establishment license fees are based on annual gross food-service sales and range from $150 to $400."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
@@ -1284,7 +3263,9 @@
         "authority": "Iowa Department of Revenue",
         "description": "The Iowa Department of Revenue's current jurisdictions-and-rates workbook lists a 7% local hotel/motel tax for the Washington County jurisdiction. Report and remit the local tax with the monthly Iowa sales and use tax return; no separate permit beyond an Iowa sales and use tax permit is required.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
-        "url": ["https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"],
+        "url": [
+          "https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"
+        ],
         "checkedOn": "2026-10-18",
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -1301,25 +3282,202 @@
     "note": "The Iowa Department of Revenue's workbook effective July 1, 2026 confirms a 7% local hotel/motel tax for the Washington County jurisdiction; other county-level obligations were not checked.",
     "sourceUrl": ["https://revenue.iowa.gov/media/90/download?inline="]
   },
-  {"county":"Wayne","status":"rules","items":[{"id":"wayne-ia.food-license","title":"Obtain and renew a Wayne County food establishment license","category":"license","authority":"Iowa Department of Inspections, Appeals, & Licensing","description":"Food establishments operating in Wayne County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.","rrule":"FREQ=YEARLY","url":["https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions","https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa annual food-service license fees are based on gross sales and range from $150 to $400."},"lateFee":{"amount":0,"percentPerMonth":10,"note":"Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],"checkedOn":"2026-10-19"},
+  {
+    "county": "Wayne",
+    "status": "rules",
+    "items": [
+      {
+        "id": "wayne-ia.food-license",
+        "title": "Obtain and renew a Wayne County food establishment license",
+        "category": "license",
+        "authority": "Iowa Department of Inspections, Appeals, & Licensing",
+        "description": "Food establishments operating in Wayne County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 10,
+          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
+  },
   {
     "county": "Webster",
     "status": "rules",
-    "items": [{"id":"webster-ia.food-license","title":"Obtain and renew a Webster County food establishment license","category":"license","authority":"Iowa Department of Inspections, Appeals, & Licensing","description":"Food establishments operating in Webster County must obtain and renew the applicable Iowa food service license before operating.","rrule":"FREQ=YEARLY","url":["https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments","https://dial.iowa.gov/licenses/food-establishments-hotels"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Annual Iowa food-service license fees are based on gross sales."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19","lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."}}],
+    "items": [
+      {
+        "id": "webster-ia.food-license",
+        "title": "Obtain and renew a Webster County food establishment license",
+        "category": "license",
+        "authority": "Iowa Department of Inspections, Appeals, & Licensing",
+        "description": "Food establishments operating in Webster County must obtain and renew the applicable Iowa food service license before operating.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Annual Iowa food-service license fees are based on gross sales."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Winnebago",
     "status": "rules",
-    "items": [{"id":"winnebago-ia.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.bentoncountyia.gov/public_health/food_safety/","https://dial.iowa.gov/licenses/food-establishments-hotels","https://dial.iowa.gov/licenses/food-establishments-hotels/apply-food-license"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa annual food-service license fees are based on gross sales and range from $150 to $400."},"lateFee":{"amount":0,"percentPerMonth":100,"note":"Providing food without a license or permit is subject to a penalty equal to double the license fee."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "winnebago-ia.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.bentoncountyia.gov/public_health/food_safety/",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/apply-food-license"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 100,
+          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
-  {"county":"Winneshiek","status":"rules","items":[{"id":"winneshiek-ia.food-license","title":"Obtain and renew a Winneshiek County food establishment license","category":"license","authority":"Iowa Department of Inspections, Appeals, & Licensing","description":"Food establishments operating in Winneshiek County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.","rrule":"FREQ=YEARLY","url":["https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions","https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa annual food-service license fees are based on gross sales and range from $150 to $400."},"lateFee":{"amount":0,"percentPerMonth":10,"note":"Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],"checkedOn":"2026-10-19"},
+  {
+    "county": "Winneshiek",
+    "status": "rules",
+    "items": [
+      {
+        "id": "winneshiek-ia.food-license",
+        "title": "Obtain and renew a Winneshiek County food establishment license",
+        "category": "license",
+        "authority": "Iowa Department of Inspections, Appeals, & Licensing",
+        "description": "Food establishments operating in Winneshiek County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 10,
+          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
+  },
   {
     "county": "Woodbury",
     "status": "rules",
-    "items": [{"id":"woodbury-ia.food-license","title":"Obtain and renew a Woodbury County food establishment license","category":"license","authority":"Siouxland District Health Department","description":"Food establishments operating in Woodbury County must obtain the applicable food establishment license through the local health authority; county payment records show recurring food-establishment licensing charges and the health department administers the program.","rrule":"FREQ=YEARLY","url":["https://www.woodburycountyiowa.gov/files/ap_claims_paid/2025-08-19.pdf","https://www.woodburycountyiowa.gov/supervisors/ap_claims_paid/2026-05-26/"],"feeDetail":{"basis":"varies","note":"Fees vary by establishment and license type; official county payment records show food-establishment license charges."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19","lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."}}],
-    "checkedOn":"2026-10-19"
+    "items": [
+      {
+        "id": "woodbury-ia.food-license",
+        "title": "Obtain and renew a Woodbury County food establishment license",
+        "category": "license",
+        "authority": "Siouxland District Health Department",
+        "description": "Food establishments operating in Woodbury County must obtain the applicable food establishment license through the local health authority; county payment records show recurring food-establishment licensing charges and the health department administers the program.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.woodburycountyiowa.gov/files/ap_claims_paid/2025-08-19.pdf",
+          "https://www.woodburycountyiowa.gov/supervisors/ap_claims_paid/2026-05-26/"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees vary by establishment and license type; official county payment records show food-establishment license charges."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Worth",
@@ -1331,7 +3489,9 @@
         "authority": "Iowa Department of Revenue",
         "description": "The Iowa Department of Revenue's current jurisdictions-and-rates list shows a 7% local hotel/motel tax for lodging in the Worth County unincorporated area. Report and remit the local tax with the monthly Iowa sales and use tax return; no separate permit beyond an Iowa sales and use tax permit is required. Other cities in the county may have separate local rates.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
-        "url": ["https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"],
+        "url": [
+          "https://revenue.iowa.gov/taxes/file-my-taxes/business-taxes/filing-frequency-return-due-dates"
+        ],
         "checkedOn": "2026-10-18",
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -1351,7 +3511,41 @@
   {
     "county": "Wright",
     "status": "rules",
-    "items": [{"id":"wright-ia.food-license","title":"Obtain and renew a Wright County food establishment license","category":"license","authority":"Iowa Department of Inspections, Appeals, & Licensing","description":"Food establishments operating in Wright County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.","rrule":"FREQ=YEARLY","url":["https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions","https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"],"feeDetail":{"basis":"varies","min":150,"max":400,"note":"Iowa annual food-service license fees are based on gross sales and range from $150 to $400."},"lateFee":{"amount":0,"percentPerMonth":10,"note":"Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "wright-ia.food-license",
+        "title": "Obtain and renew a Wright County food establishment license",
+        "category": "license",
+        "authority": "Iowa Department of Inspections, Appeals, & Licensing",
+        "description": "Food establishments operating in Wright County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions",
+          "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 400,
+          "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 10,
+          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   }
 ]

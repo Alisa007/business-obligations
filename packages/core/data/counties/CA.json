@@ -20,7 +20,9 @@
         "authority": "Alameda County Treasurer-Tax Collector",
         "description": "Applies to hotels, motels and short-term rentals in the unincorporated area. The monthly remittance form is due the last day of the following month, mailed to the Business License Tax Unit in Hayward (form uploaded 2023; confirm the current version and rate).",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
-        "url": ["https://treasurer.acgov.org/wp-content/uploads/2023/02/AlacoHotelLodgingTaxRemittanceForm.pdf"],
+        "url": [
+          "https://treasurer.acgov.org/wp-content/uploads/2023/02/AlacoHotelLodgingTaxRemittanceForm.pdf"
+        ],
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -366,8 +368,14 @@
         "rrule": "FREQ=YEARLY",
         "url": ["https://publichealth.lacounty.gov/eh/inspection/retail-plan-check.htm"],
         "naics": ["722", "445"],
-        "feeDetail": {"basis": "varies", "note": "The applicable authority sets fees by license or permit type; confirm the current schedule before filing."},
-        "lateFee": {"amount": 0, "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."},
+        "feeDetail": {
+          "basis": "varies",
+          "note": "The applicable authority sets fees by license or permit type; confirm the current schedule before filing."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
         "appliesTo": ["all"]
       }
     ],
@@ -401,7 +409,9 @@
         "description": "California business property statements (Form 571-L) are due April 1 and a 10% penalty applies if not filed by May 7. This is the Business Property Statement; businesses with $100,000 or more of taxable property must file even without a request.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "deadlineNote": "penalty after May 7",
-        "url": ["https://www.arcc.marincounty.gov/property-information/property-types-and-assessment/business-property"],
+        "url": [
+          "https://www.arcc.marincounty.gov/property-information/property-types-and-assessment/business-property"
+        ],
         "appliesTo": ["all"]
       },
       {
@@ -411,7 +421,9 @@
         "authority": "Marin County Tax Collector",
         "description": "Applies to hotels, motels and short-term rentals in the unincorporated area. The rate is 10%, or 14% in West Marin. Returns are due by close of business on the last day of the month for the prior month; 10% penalty up to 30 days late and a second 10% after, plus 0.5% monthly interest.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
-        "url": ["https://www.marincounty.gov/departments/finance/central-collections/transient-occupancy-tax/tot-resources/10-percent-short-term-rental-transient-occupancy-tax-form"],
+        "url": [
+          "https://www.marincounty.gov/departments/finance/central-collections/transient-occupancy-tax/tot-resources/10-percent-short-term-rental-transient-occupancy-tax-form"
+        ],
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -531,7 +543,9 @@
         "authority": "Monterey County Treasurer-Tax Collector",
         "description": "Applies to hotels, motels and short-term rentals in the unincorporated area. Returns are quarterly, due October 31, January 31, April 30 and July 31. A postmark does not count: payment must be received by the due date. A return is required even with no tax collected.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
-        "url": ["https://countyofmonterey.gov/government/departments-i-z/treasurer-tax-collector/transient-occupancy-tax/transient-occupancy-tax-forms/tot-remittance-schedule"],
+        "url": [
+          "https://countyofmonterey.gov/government/departments-i-z/treasurer-tax-collector/transient-occupancy-tax/transient-occupancy-tax-forms/tot-remittance-schedule"
+        ],
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -712,7 +726,9 @@
         "description": "California business property statements (Form 571-L) are due April 1 and a 10% penalty applies if not filed by May 7. This is the Business Property Statement; businesses with $100,000 or more of taxable property must file even without a request.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "deadlineNote": "penalty after May 7",
-        "url": ["https://assessor.saccounty.gov/content/assessor/us/en/business-personal-property/frequently-asked-questions/statement-and-filing-requirements.html"],
+        "url": [
+          "https://assessor.saccounty.gov/content/assessor/us/en/business-personal-property/frequently-asked-questions/statement-and-filing-requirements.html"
+        ],
         "appliesTo": ["all"]
       },
       {
@@ -782,7 +798,9 @@
         "description": "California business property statements (Form 571-L) are due April 1 and a 10% penalty applies if not filed by May 7. The county e-file opens February 1; businesses with $100,000 or more of taxable property must file even without a request.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "deadline": "April 1 (penalty after May 7)",
-        "url": ["https://www.sdarcc.gov/content/arcc/home/divisions/assessor/business-vessels-aircraft/business-personal-property.html"],
+        "url": [
+          "https://www.sdarcc.gov/content/arcc/home/divisions/assessor/business-vessels-aircraft/business-personal-property.html"
+        ],
         "appliesTo": ["all"]
       },
       {
@@ -835,7 +853,9 @@
         "description": "California business property statements (Form 571-L) are due April 1 and a 10% penalty applies if not filed by May 7. This is the Business Property Statement; businesses with $100,000 or more of taxable property must file even without a request.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "deadlineNote": "penalty after May 7",
-        "url": ["https://www.sanjoaquin.gov/department/assessor/property-information/business-owners/business-property-assessment"],
+        "url": [
+          "https://www.sanjoaquin.gov/department/assessor/property-information/business-owners/business-property-assessment"
+        ],
         "appliesTo": ["all"]
       },
       {
@@ -845,7 +865,9 @@
         "authority": "San Joaquin County Treasurer-Tax Collector",
         "description": "Applies to hotels, motels and short-term rentals in the unincorporated area. Returns are quarterly: tax is due April 1, July 1, October 1 and January 1 and becomes delinquent after April 30, July 31, October 31 and January 31.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
-        "url": ["https://permits.sjgov.org/Departments/Treasurer-Tax-Collector/Transient-Occupancy-Tax/Quarterly-Return"],
+        "url": [
+          "https://permits.sjgov.org/Departments/Treasurer-Tax-Collector/Transient-Occupancy-Tax/Quarterly-Return"
+        ],
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -870,7 +892,9 @@
         "description": "California business property statements (Form 571-L) are due April 1 and a 10% penalty applies if not filed by May 7. This is the Business Property Statement; businesses with $100,000 or more of taxable property must file even without a request.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "deadlineNote": "penalty after May 7",
-        "url": ["https://www.slocounty.ca.gov/Departments/Assessor/Services/Filing-Statements-and-Claims/File-a-Business-Property-Statement.aspx"],
+        "url": [
+          "https://www.slocounty.ca.gov/Departments/Assessor/Services/Filing-Statements-and-Claims/File-a-Business-Property-Statement.aspx"
+        ],
         "appliesTo": ["all"]
       }
     ],
@@ -923,7 +947,9 @@
         "description": "California business property statements (Form 571-L) are due April 1 and a 10% penalty applies if not filed by May 7. This is the Business Property Statement; businesses with $100,000 or more of taxable property must file even without a request.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "deadlineNote": "penalty after May 7",
-        "url": ["https://www.sccassessor.org/property-information/business-owner/business-property-statement-filing"],
+        "url": [
+          "https://www.sccassessor.org/property-information/business-owner/business-property-statement-filing"
+        ],
         "appliesTo": ["all"]
       }
     ],
@@ -940,7 +966,9 @@
         "description": "California business property statements (Form 571-L) are due April 1 and a 10% penalty applies if not filed by May 7. This is the Business Property Statement; businesses with $100,000 or more of taxable property must file even without a request.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "deadlineNote": "penalty after May 7",
-        "url": ["https://santacruzcountyca.gov/Departments/AssessorsOffice/BusinessPersonalProperty/BusinessProperty.aspx"],
+        "url": [
+          "https://santacruzcountyca.gov/Departments/AssessorsOffice/BusinessPersonalProperty/BusinessProperty.aspx"
+        ],
         "appliesTo": ["all"]
       },
       {
@@ -1060,7 +1088,9 @@
         "description": "California business property statements (Form 571-L) are due April 1 and a 10% penalty applies if not filed by May 7. The Assessor no longer mails paper forms; businesses receive a Notice to File with e-filing credentials.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "deadlineNote": "penalty after May 7",
-        "url": ["https://sonomacounty.gov/administrative-support-and-fiscal-services/clerk-recorder-assessor/assessor/business-and-personal-property"],
+        "url": [
+          "https://sonomacounty.gov/administrative-support-and-fiscal-services/clerk-recorder-assessor/assessor/business-and-personal-property"
+        ],
         "appliesTo": ["all"]
       },
       {
@@ -1180,7 +1210,9 @@
         "description": "California business property statements (Form 571-L) are due April 1 and a 10% penalty applies if not filed by May 7. This is the Business Property Statement; businesses with $100,000 or more of taxable property must file even without a request.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "deadlineNote": "penalty after May 7",
-        "url": ["https://tularecounty.ca.gov/assessor/property-information/business-owners/property-statements"],
+        "url": [
+          "https://tularecounty.ca.gov/assessor/property-information/business-owners/property-statements"
+        ],
         "appliesTo": ["all"]
       },
       {
@@ -1190,7 +1222,9 @@
         "authority": "Tulare County Treasurer-Tax Collector",
         "description": "Applies to hotels, motels and short-term rentals in the unincorporated area. The tax is 10% of rent for vacation rentals. Taxes are due quarterly and the Tax Collector sends a quarterly statement to complete and return; the exact due dates were not found. File online with the certificate or agent number and business ID.",
         "rrule": "FREQ=MONTHLY;INTERVAL=3",
-        "url": ["https://tularecounty.ca.gov/treasurertaxcollector/tax-collector/faqs/what-is-a-transient-occupancy-tax-tot-"],
+        "url": [
+          "https://tularecounty.ca.gov/treasurertaxcollector/tax-collector/faqs/what-is-a-transient-occupancy-tax-tot-"
+        ],
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1232,7 +1266,9 @@
         "description": "California business property statements (Form 571-L) are due April 1 and a 10% penalty applies if not filed by May 7. This is the Business Property Statement; businesses with $100,000 or more of taxable property must file even without a request.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "deadlineNote": "penalty after May 7",
-        "url": ["https://assessor.venturacounty.gov/property-information/business-owners/property-statement-filing/"],
+        "url": [
+          "https://assessor.venturacounty.gov/property-information/business-owners/property-statement-filing/"
+        ],
         "appliesTo": ["all"]
       },
       {

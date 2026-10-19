@@ -265,7 +265,9 @@
         "authority": "King County Assessor",
         "description": "Washington personal property listings are due to the county assessor by April 30 for equipment held on January 1. Listings can be filed on paper or through eListing; late listings take a 5% monthly penalty up to 25%, and no extensions are granted.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=30",
-        "url": ["https://kingcounty.gov/en/dept/assessor/buildings-and-property/property-taxes/personal-property-taxes/how-to-report-personal-property"],
+        "url": [
+          "https://kingcounty.gov/en/dept/assessor/buildings-and-property/property-taxes/personal-property-taxes/how-to-report-personal-property"
+        ],
         "appliesTo": ["all"]
       },
       {
@@ -275,10 +277,18 @@
         "authority": "Seattle & King County Public Health",
         "description": "Submit plans for review before construction, remodeling or a change of ownership (a review can take up to 3 weeks). Permanent food business permits renew by March 31 through the Public Health Permit Center; the annual fee depends on risk level. A new owner must apply again, with no proration.",
         "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=31",
-        "url": ["https://kingcounty.gov/en/dept/dph/certificates-permits-licenses/food-business-permits/permanent-food-business-permit"],
+        "url": [
+          "https://kingcounty.gov/en/dept/dph/certificates-permits-licenses/food-business-permits/permanent-food-business-permit"
+        ],
         "naics": ["722", "445"],
-        "feeDetail": {"basis": "varies", "note": "The applicable authority sets fees by license or permit type; confirm the current schedule before filing."},
-        "lateFee": {"amount": 0, "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."},
+        "feeDetail": {
+          "basis": "varies",
+          "note": "The applicable authority sets fees by license or permit type; confirm the current schedule before filing."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
         "appliesTo": ["all"]
       }
     ],

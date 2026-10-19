@@ -206,7 +206,9 @@ export const industryRules: Rule[] = [
           "National Provider Identifier for billing and HIPAA privacy/security program for covered entities.",
         frequency: "once",
         reason: "Industry is healthcare",
-        url: ["https://www.cms.gov/regulations-and-guidance/administrative-simplification/nationalprovidentstand"],
+        url: [
+          "https://www.cms.gov/regulations-and-guidance/administrative-simplification/nationalprovidentstand",
+        ],
       },
     ],
   },

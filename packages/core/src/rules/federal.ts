@@ -97,7 +97,9 @@ export const federalRules: Rule[] = [
         p.entityType !== "sole_proprietorship"
           ? `${p.entityType} entities need an EIN`
           : "Sole proprietors with employees need an EIN",
-      url: ["https://www.irs.gov/businesses/small-businesses-self-employed/apply-for-an-employer-identification-number-ein-online"],
+      url: [
+        "https://www.irs.gov/businesses/small-businesses-self-employed/apply-for-an-employer-identification-number-ein-online",
+      ],
     }),
   },
   {
@@ -176,7 +178,9 @@ export const federalRules: Rule[] = [
             lookback === undefined
               ? "New employers deposit monthly"
               : `Lookback-period liability of ${lookback} makes the business a ${semiweekly ? "semiweekly" : "monthly"} depositor`,
-          url: ["https://www.irs.gov/businesses/small-businesses-self-employed/depositing-and-reporting-employment-taxes"],
+          url: [
+            "https://www.irs.gov/businesses/small-businesses-self-employed/depositing-and-reporting-employment-taxes",
+          ],
         },
         {
           title: "File Form 941 (Employer's Quarterly Federal Tax Return)",

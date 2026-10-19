@@ -1619,10 +1619,18 @@
         "authority": "Harris County Public Health, Environmental Public Health",
         "description": "Restaurants, bakeries, grocery and convenience stores, bars and mobile units need a Harris County Public Health food permit in its jurisdiction. Apply online with a sample menu, floor plan, equipment plan and owner ID; the plan review fee is non-refundable. Confirm Harris County is your regulator before paying (cities such as Houston run their own).",
         "rrule": "FREQ=YEARLY",
-        "url": ["https://publichealth.harriscountytx.gov/About/Divisions/Environmental-Public-Health/Food-Safety-Program/Food-Permits"],
+        "url": [
+          "https://publichealth.harriscountytx.gov/About/Divisions/Environmental-Public-Health/Food-Safety-Program/Food-Permits"
+        ],
         "naics": ["722", "445"],
-        "feeDetail": {"basis": "varies", "note": "The applicable authority sets fees by license or permit type; confirm the current schedule before filing."},
-        "lateFee": {"amount": 0, "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."},
+        "feeDetail": {
+          "basis": "varies",
+          "note": "The applicable authority sets fees by license or permit type; confirm the current schedule before filing."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
         "appliesTo": ["all"]
       }
     ],
@@ -3942,7 +3950,9 @@
         "authority": "Williamson Central Appraisal District",
         "description": "Texas business personal property renditions are due to the appraisal district by April 15 (mandatory extension to May 15 on written request); a 10% penalty applies for late renditions. Filed with the appraisal district for the county where the property is taxable.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
-        "url": ["https://support.wcad.org/portal/en/kb/articles/what-is-rendition-for-business-personal-property"],
+        "url": [
+          "https://support.wcad.org/portal/en/kb/articles/what-is-rendition-for-business-personal-property"
+        ],
         "appliesTo": ["all"]
       }
     ],

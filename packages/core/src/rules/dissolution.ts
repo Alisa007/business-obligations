@@ -98,7 +98,7 @@ export const dissolutionRules: Rule[] = [
           description: `File a certificate or application of withdrawal so ${s.name} stops expecting annual reports and fees; final returns for the state's tax accounts come first.`,
           frequency: "once" as const,
           reason: `Entity is registered in ${code} and is being dissolved`,
-        url: s.filing.url,
+          url: s.filing.url,
         };
       }),
   },
@@ -127,7 +127,7 @@ export const dissolutionRules: Rule[] = [
           description: `With ${s.revenue.name}: ${parts.join("; ")}. Closing an account before final returns are filed can leave the owners liable for later notices.`,
           frequency: "once",
           reason: `Business is being dissolved (${dissolving(p)}) and has ${x.home ? "its principal place of business" : "employees or property"} in ${x.state}`,
-        url: s.revenue.url,
+          url: s.revenue.url,
         };
       });
     },

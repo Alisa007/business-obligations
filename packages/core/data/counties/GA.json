@@ -453,8 +453,14 @@
         "description": "Any business, trade, profession or occupation in unincorporated Cherokee County must register with the county and obtain a commercial occupation tax certificate, one for each location or branch. Fees start at $30 plus per-employee charges, and the tax is payable annually from January 1. A notarized S.A.V.E. affidavit and business registration documents are required.",
         "rrule": "FREQ=YEARLY",
         "url": ["https://cherokeecountyga.gov/dsc/business-licenses/occupation-tax-certificate"],
-        "feeDetail": {"basis": "varies", "note": "The applicable authority sets fees by license or permit type; confirm the current schedule before filing."},
-        "lateFee": {"amount": 0, "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."},
+        "feeDetail": {
+          "basis": "varies",
+          "note": "The applicable authority sets fees by license or permit type; confirm the current schedule before filing."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
         "appliesTo": ["all"]
       }
     ],
@@ -739,9 +745,17 @@
         "category": "license",
         "authority": "DeKalb County Business License Division",
         "description": "DeKalb County's business occupational tax certificate is renewed through the county's online licensing portal (paper or emailed applications are not processed); the 2026 renewal window was January 1 to April 15, with penalties rising after February 1 and April 15. The fee has an administrative fee ($75 in 2024) and a minimum gross receipts tax ($50), so confirm current amounts. Transferring a business ends the license and starts a new one. Lodging operators also report hotel/motel excise tax on a separate excise account.",
-        "url": ["https://dekalbcountyga.gov/departments/planning-and-sustainability/business-and-alcohol-license"],
-        "feeDetail": {"basis": "varies", "note": "The applicable authority sets fees by license or permit type; confirm the current schedule before filing."},
-        "lateFee": {"amount": 0, "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."},
+        "url": [
+          "https://dekalbcountyga.gov/departments/planning-and-sustainability/business-and-alcohol-license"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "The applicable authority sets fees by license or permit type; confirm the current schedule before filing."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
         "appliesTo": ["all"],
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15"
       }
@@ -975,9 +989,17 @@
         "category": "license",
         "authority": "Forsyth County Business License Office",
         "description": "All businesses operating in unincorporated Forsyth County must hold a current occupational tax certificate (business license). Renewal runs December 1 to March 31 (the county emails a custom renewal form on December 1); renewals received after 5 p.m. on March 31 are late, with a 10% penalty and 1.5% interest a month. New businesses must apply within 30 days of starting and need a Business Location Verification Decision Letter from the county's CSS portal; new applications are by mail or in person, not email.",
-        "url": ["https://www.forsythco.com/Departments-Offices/Business-Licenses/Business-License-Applications"],
-        "feeDetail": {"basis": "varies", "note": "The applicable authority sets fees by license or permit type; confirm the current schedule before filing."},
-        "lateFee": {"amount": 0, "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."},
+        "url": [
+          "https://www.forsythco.com/Departments-Offices/Business-Licenses/Business-License-Applications"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "The applicable authority sets fees by license or permit type; confirm the current schedule before filing."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
         "appliesTo": ["all"],
         "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=31"
       }
@@ -1020,9 +1042,17 @@
         "authority": "Fulton County Finance Department",
         "description": "Fulton County licenses only businesses in the Fulton Industrial District (unincorporated); all other Fulton businesses are licensed by their city. The certificate is valid for a calendar year and must be renewed by March 31.",
         "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=31",
-        "url": ["https://fultoncountyga.gov/Inside-Fulton-County/Fulton-County-Departments/Finance/Business-Licenses"],
-        "feeDetail": {"basis": "varies", "note": "The applicable authority sets fees by license or permit type; confirm the current schedule before filing."},
-        "lateFee": {"amount": 0, "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."},
+        "url": [
+          "https://fultoncountyga.gov/Inside-Fulton-County/Fulton-County-Departments/Finance/Business-Licenses"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "The applicable authority sets fees by license or permit type; confirm the current schedule before filing."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
         "appliesTo": ["all"]
       }
     ],
@@ -1134,7 +1164,9 @@
         "authority": "Gwinnett County Tax Assessors Office",
         "description": "Georgia business personal property returns (Form PT-50P) are due to the county by April 1; late returns carry a 10% penalty. Returns must be postmarked by April 1; email, fax and metered mail are not accepted as proof.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
-        "url": ["https://www.gwinnettcounty.com/departments/financialservices/taxassessorsoffice/business-personal-property"],
+        "url": [
+          "https://www.gwinnettcounty.com/departments/financialservices/taxassessorsoffice/business-personal-property"
+        ],
         "appliesTo": ["all"]
       }
     ],

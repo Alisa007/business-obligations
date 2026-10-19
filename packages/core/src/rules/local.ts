@@ -64,7 +64,7 @@ export function extras(it: LocalItem, entryCheckedOn: string | undefined) {
           provenance: {
             confidence: "checked" as const,
             checkedOn,
-        sources: it.url ?? [],
+            sources: it.url ?? [],
           },
         }
       : {}),

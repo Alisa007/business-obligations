@@ -193,8 +193,8 @@ describe("state data files", () => {
       if (s.salesTax.statewide) expect(s.salesTax.alternative, `${code} alternative`).toBeNull();
       else expect(s.salesTax.alternative, `${code} alternative`).toBeTruthy();
       if (s.businessLicense)
-        expect(s.businessLicense.url, `${code} license page`).toSatisfy((urls) =>
-          Array.isArray(urls) && urls.every((url: string) => /^https:\/\//.test(url)),
+        expect(s.businessLicense.url, `${code} license page`).toSatisfy(
+          (urls) => Array.isArray(urls) && urls.every((url: string) => /^https:\/\//.test(url)),
         );
     }
   });
@@ -265,7 +265,9 @@ describe("local seed data", () => {
     for (const it of j.items) {
       expect(it.appliesTo.length).toBeGreaterThan(0);
       expect(it.title).toBeTruthy();
-      expect(it.url, `${j.city} ${it.id} source`).toSatisfy((urls) => urls?.every((url: string) => /^https:\/\//.test(url)));
+      expect(it.url, `${j.city} ${it.id} source`).toSatisfy((urls) =>
+        urls?.every((url: string) => /^https:\/\//.test(url)),
+      );
       const local = it as LocalItem;
       for (const f of ["exemptions", "supersedes"] as const)
         if (local[f])
@@ -323,7 +325,9 @@ describe("county data files", () => {
       expect(new Set(ids).size, j.county).toBe(ids.length);
       for (const it of j.items) {
         expect(it.appliesTo.length).toBeGreaterThan(0);
-        expect(it.url, `${j.county} ${it.id} source`).toSatisfy((urls) => urls?.every((url: string) => /^https:\/\//.test(url)));
+        expect(it.url, `${j.county} ${it.id} source`).toSatisfy((urls) =>
+          urls?.every((url: string) => /^https:\/\//.test(url)),
+        );
         for (const w of [...(it.appliesWhen ?? []), ...(it.appliesWhenAny ?? [])])
           expect(validateApplicability(w), `${j.county} ${it.id} appliesWhen`).toBeUndefined();
       }
@@ -560,12 +564,15 @@ describe("source links", () => {
       const links = s.links;
       expect(links, code).toBeDefined();
       for (const key of ["formation", "annualReport", "uiRegistration", "entityTax"] as const)
-        expect((links[key] as string[]).every(isBare), `${code}.links.${key} contains a bare domain: ${links[key]}`).toBe(false);
+        expect(
+          (links[key] as string[]).every(isBare),
+          `${code}.links.${key} contains a bare domain: ${links[key]}`,
+        ).toBe(false);
       if (s.wageWithholding) expect(links.withholding, `${code} withholding`).toBeDefined();
       if (s.salesTax.statewide) expect(links.salesTax, `${code} salesTax`).toBeDefined();
       for (const [key, value] of Object.entries(links)) {
-        expect(value, `${code}.links.${key}`).toSatisfy((urls) =>
-          Array.isArray(urls) && urls.every((url: string) => /^https:\/\//.test(url)),
+        expect(value, `${code}.links.${key}`).toSatisfy(
+          (urls) => Array.isArray(urls) && urls.every((url: string) => /^https:\/\//.test(url)),
         );
         expect((value as string[]).every(isBare), `${code}.links.${key}`).toBe(false);
       }

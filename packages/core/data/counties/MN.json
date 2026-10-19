@@ -2,7 +2,40 @@
   {
     "county": "Aitkin",
     "status": "rules",
-    "items": [{"id":"aitkin-mn.food-license","title":"Obtain and renew an Aitkin County food license","category":"license","authority":"Aitkin County Environmental Services / Minnesota Department of Health","description":"Food establishments operating in Aitkin County must obtain the applicable Minnesota food license and renew it annually under county and state requirements.","rrule":"FREQ=YEARLY","url":["https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf","https://www.health.state.mn.us/communities/environment/food/license"],"feeDetail":{"basis":"varies","min":180,"max":703.5,"note":"Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19","lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."}}],
+    "items": [
+      {
+        "id": "aitkin-mn.food-license",
+        "title": "Obtain and renew an Aitkin County food license",
+        "category": "license",
+        "authority": "Aitkin County Environmental Services / Minnesota Department of Health",
+        "description": "Food establishments operating in Aitkin County must obtain the applicable Minnesota food license and renew it annually under county and state requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf",
+          "https://www.health.state.mn.us/communities/environment/food/license"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 180,
+          "max": 703.5,
+          "note": "Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
@@ -84,7 +117,40 @@
   {
     "county": "Big Stone",
     "status": "rules",
-    "items": [{"id":"big-stone-mn.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Aitkin County Environmental Services / Minnesota Department of Health","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf","https://www.health.state.mn.us/communities/environment/food/license"],"feeDetail":{"basis":"varies","min":180,"max":703.5,"note":"Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."},"lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "big-stone-mn.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Aitkin County Environmental Services / Minnesota Department of Health",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf",
+          "https://www.health.state.mn.us/communities/environment/food/license"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 180,
+          "max": 703.5,
+          "note": "Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
@@ -242,7 +308,40 @@
   {
     "county": "Clearwater",
     "status": "rules",
-    "items": [{"id":"clearwater-mn.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Aitkin County Environmental Services / Minnesota Department of Health","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf","https://www.health.state.mn.us/communities/environment/food/license"],"feeDetail":{"basis":"varies","min":180,"max":703.5,"note":"Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."},"lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "clearwater-mn.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Aitkin County Environmental Services / Minnesota Department of Health",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf",
+          "https://www.health.state.mn.us/communities/environment/food/license"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 180,
+          "max": 703.5,
+          "note": "Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
@@ -267,7 +366,40 @@
   {
     "county": "Cottonwood",
     "status": "rules",
-    "items": [{"id":"cottonwood-mn.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Aitkin County Environmental Services / Minnesota Department of Health","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf","https://www.health.state.mn.us/communities/environment/food/license"],"feeDetail":{"basis":"varies","min":180,"max":703.5,"note":"Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."},"lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "cottonwood-mn.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Aitkin County Environmental Services / Minnesota Department of Health",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf",
+          "https://www.health.state.mn.us/communities/environment/food/license"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 180,
+          "max": 703.5,
+          "note": "Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
@@ -425,7 +557,40 @@
   {
     "county": "Grant",
     "status": "rules",
-    "items": [{"id":"grant-mn.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Aitkin County Environmental Services / Minnesota Department of Health","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf","https://www.health.state.mn.us/communities/environment/food/license"],"feeDetail":{"basis":"varies","min":180,"max":703.5,"note":"Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."},"lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "grant-mn.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Aitkin County Environmental Services / Minnesota Department of Health",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf",
+          "https://www.health.state.mn.us/communities/environment/food/license"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 180,
+          "max": 703.5,
+          "note": "Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
@@ -439,7 +604,9 @@
         "description": "Minnesota Revenue lists a 0.15% Hennepin County sales and use tax. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": ["https://www.revenue.state.mn.us/sites/default/files/2026-05/local-sales-and-use-tax-chart.pdf"],
+        "url": [
+          "https://www.revenue.state.mn.us/sites/default/files/2026-05/local-sales-and-use-tax-chart.pdf"
+        ],
         "appliesTo": ["all"]
       },
       {
@@ -450,7 +617,9 @@
         "description": "Minnesota Revenue lists a 0.50% Hennepin County transit sales and use tax. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": ["https://www.revenue.state.mn.us/sites/default/files/2026-05/local-sales-and-use-tax-chart.pdf"],
+        "url": [
+          "https://www.revenue.state.mn.us/sites/default/files/2026-05/local-sales-and-use-tax-chart.pdf"
+        ],
         "appliesTo": ["all"]
       }
     ],
@@ -459,7 +628,40 @@
   {
     "county": "Houston",
     "status": "rules",
-    "items": [{"id":"houston-mn.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Aitkin County Environmental Services / Minnesota Department of Health","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf","https://www.health.state.mn.us/communities/environment/food/license"],"feeDetail":{"basis":"varies","min":180,"max":703.5,"note":"Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."},"lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "houston-mn.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Aitkin County Environmental Services / Minnesota Department of Health",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf",
+          "https://www.health.state.mn.us/communities/environment/food/license"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 180,
+          "max": 703.5,
+          "note": "Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
@@ -530,13 +732,17 @@
         "description": "Minnesota Revenue lists a 1.00% Jackson County sales and use tax, effective April 1, 2025. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": ["https://www.revenue.state.mn.us/sites/default/files/2026-05/local-sales-and-use-tax-chart.pdf"],
+        "url": [
+          "https://www.revenue.state.mn.us/sites/default/files/2026-05/local-sales-and-use-tax-chart.pdf"
+        ],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Jackson County sales and use tax is confirmed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/sites/default/files/2026-05/local-sales-and-use-tax-chart.pdf"]
+    "sourceUrl": [
+      "https://www.revenue.state.mn.us/sites/default/files/2026-05/local-sales-and-use-tax-chart.pdf"
+    ]
   },
   {
     "county": "Kanabec",
@@ -579,7 +785,40 @@
   {
     "county": "Kittson",
     "status": "rules",
-    "items": [{"id":"kittson-mn.food-license","title":"Obtain and renew a Kittson County food license","category":"license","authority":"Minnesota Department of Health / local health authority","description":"Food establishments operating in Kittson County must obtain the applicable Minnesota food license before operating and renew it under the applicable state or local program.","rrule":"FREQ=YEARLY","url":["https://www.health.state.mn.us/communities/environment/food/license","https://mn.gov/elicense/a-z/?id=1083-231418"],"feeDetail":{"basis":"varies","min":150,"max":670,"note":"Minnesota food license fees vary by risk and facility type; published schedules include $150-$670 license fees plus applicable plan-review and hospitality fees."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19","lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."}}],
+    "items": [
+      {
+        "id": "kittson-mn.food-license",
+        "title": "Obtain and renew a Kittson County food license",
+        "category": "license",
+        "authority": "Minnesota Department of Health / local health authority",
+        "description": "Food establishments operating in Kittson County must obtain the applicable Minnesota food license before operating and renew it under the applicable state or local program.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.health.state.mn.us/communities/environment/food/license",
+          "https://mn.gov/elicense/a-z/?id=1083-231418"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 670,
+          "note": "Minnesota food license fees vary by risk and facility type; published schedules include $150-$670 license fees plus applicable plan-review and hospitality fees."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
@@ -604,7 +843,40 @@
   {
     "county": "Lac qui Parle",
     "status": "rules",
-    "items": [{"id":"lac-qui-parle-mn.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Aitkin County Environmental Services / Minnesota Department of Health","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf","https://www.health.state.mn.us/communities/environment/food/license"],"feeDetail":{"basis":"varies","min":180,"max":703.5,"note":"Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."},"lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "lac-qui-parle-mn.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Aitkin County Environmental Services / Minnesota Department of Health",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf",
+          "https://www.health.state.mn.us/communities/environment/food/license"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 180,
+          "max": 703.5,
+          "note": "Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
@@ -683,19 +955,116 @@
   {
     "county": "Lincoln",
     "status": "rules",
-    "items": [{"id":"lincoln-mn.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Aitkin County Environmental Services / Minnesota Department of Health","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf","https://www.health.state.mn.us/communities/environment/food/license"],"feeDetail":{"basis":"varies","min":180,"max":703.5,"note":"Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."},"lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "lincoln-mn.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Aitkin County Environmental Services / Minnesota Department of Health",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf",
+          "https://www.health.state.mn.us/communities/environment/food/license"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 180,
+          "max": 703.5,
+          "note": "Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Lyon",
     "status": "rules",
-    "items": [{"id":"lyon-mn.food-license","title":"Obtain and renew a Lyon County food license","category":"license","authority":"Lyon County Public Health / Minnesota Department of Health","description":"Food and beverage establishments operating in Lyon County must obtain the applicable county or state food license and renew it annually.","rrule":"FREQ=YEARLY","url":["https://www.lyoncountymn.gov/departments/auditor-treasurer/license-information/county-issued","https://www.health.state.mn.us/communities/environment/food/license"],"feeDetail":{"basis":"varies","note":"Lyon County requires annual renewal; the county community health board sets the applicable fee and penalty schedule."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19","lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."}}],
+    "items": [
+      {
+        "id": "lyon-mn.food-license",
+        "title": "Obtain and renew a Lyon County food license",
+        "category": "license",
+        "authority": "Lyon County Public Health / Minnesota Department of Health",
+        "description": "Food and beverage establishments operating in Lyon County must obtain the applicable county or state food license and renew it annually.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.lyoncountymn.gov/departments/auditor-treasurer/license-information/county-issued",
+          "https://www.health.state.mn.us/communities/environment/food/license"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Lyon County requires annual renewal; the county community health board sets the applicable fee and penalty schedule."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Mahnomen",
     "status": "rules",
-    "items": [{"id":"mahnomen-mn.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Aitkin County Environmental Services / Minnesota Department of Health","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf","https://www.health.state.mn.us/communities/environment/food/license"],"feeDetail":{"basis":"varies","min":180,"max":703.5,"note":"Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."},"lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "mahnomen-mn.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Aitkin County Environmental Services / Minnesota Department of Health",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf",
+          "https://www.health.state.mn.us/communities/environment/food/license"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 180,
+          "max": 703.5,
+          "note": "Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
@@ -848,7 +1217,41 @@
   {
     "county": "Murray",
     "status": "rules",
-    "items": [{"id":"murray-mn.food-license","title":"Obtain and renew a Murray County food license","category":"license","authority":"Minnesota Department of Health / Minnesota Department of Agriculture","description":"Food establishments operating in Murray County must obtain the applicable Minnesota food license from the responsible state or local agency and renew it under Minnesota requirements.","rrule":"FREQ=YEARLY","url":["https://www.health.state.mn.us/communities/environment/food/license","https://www.mda.state.mn.us/food-feed/food-licenses","https://mn.gov/elicense/a-z/?id=1083-231418"],"feeDetail":{"basis":"varies","min":75,"max":670,"note":"Minnesota published food-license fees include $75 special-event food stands, $150 carts/mobile or seasonal stands, $185 category 1, $430 category 2, and $670 category 3, plus statewide hospitality and technology fees where applicable."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19","lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."}}],
+    "items": [
+      {
+        "id": "murray-mn.food-license",
+        "title": "Obtain and renew a Murray County food license",
+        "category": "license",
+        "authority": "Minnesota Department of Health / Minnesota Department of Agriculture",
+        "description": "Food establishments operating in Murray County must obtain the applicable Minnesota food license from the responsible state or local agency and renew it under Minnesota requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.health.state.mn.us/communities/environment/food/license",
+          "https://www.mda.state.mn.us/food-feed/food-licenses",
+          "https://mn.gov/elicense/a-z/?id=1083-231418"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 75,
+          "max": 670,
+          "note": "Minnesota published food-license fees include $75 special-event food stands, $150 carts/mobile or seasonal stands, $185 category 1, $430 category 2, and $670 category 3, plus statewide hospitality and technology fees where applicable."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
@@ -949,7 +1352,40 @@
   {
     "county": "Pennington",
     "status": "rules",
-    "items": [{"id":"pennington-mn.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Aitkin County Environmental Services / Minnesota Department of Health","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf","https://www.health.state.mn.us/communities/environment/food/license"],"feeDetail":{"basis":"varies","min":180,"max":703.5,"note":"Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."},"lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "pennington-mn.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Aitkin County Environmental Services / Minnesota Department of Health",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf",
+          "https://www.health.state.mn.us/communities/environment/food/license"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 180,
+          "max": 703.5,
+          "note": "Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
@@ -974,7 +1410,40 @@
   {
     "county": "Pipestone",
     "status": "rules",
-    "items": [{"id":"pipestone-mn.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Aitkin County Environmental Services / Minnesota Department of Health","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf","https://www.health.state.mn.us/communities/environment/food/license"],"feeDetail":{"basis":"varies","min":180,"max":703.5,"note":"Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."},"lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "pipestone-mn.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Aitkin County Environmental Services / Minnesota Department of Health",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf",
+          "https://www.health.state.mn.us/communities/environment/food/license"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 180,
+          "max": 703.5,
+          "note": "Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
@@ -999,7 +1468,40 @@
   {
     "county": "Pope",
     "status": "rules",
-    "items": [{"id":"pope-mn.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Aitkin County Environmental Services / Minnesota Department of Health","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf","https://www.health.state.mn.us/communities/environment/food/license"],"feeDetail":{"basis":"varies","min":180,"max":703.5,"note":"Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."},"lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "pope-mn.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Aitkin County Environmental Services / Minnesota Department of Health",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf",
+          "https://www.health.state.mn.us/communities/environment/food/license"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 180,
+          "max": 703.5,
+          "note": "Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
@@ -1024,7 +1526,40 @@
   {
     "county": "Red Lake",
     "status": "rules",
-    "items": [{"id":"red-lake-mn.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Aitkin County Environmental Services / Minnesota Department of Health","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf","https://www.health.state.mn.us/communities/environment/food/license"],"feeDetail":{"basis":"varies","min":180,"max":703.5,"note":"Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."},"lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "red-lake-mn.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Aitkin County Environmental Services / Minnesota Department of Health",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf",
+          "https://www.health.state.mn.us/communities/environment/food/license"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 180,
+          "max": 703.5,
+          "note": "Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
@@ -1084,7 +1619,46 @@
     "note": "Rice County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
     "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
-  {"county":"Rock","status":"rules","items":[{"id":"rock-mn.food-license","title":"Obtain and renew a Rock County food license","category":"license","authority":"Rock County / Minnesota Department of Health","description":"Food and beverage establishments operating in Rock County must obtain the applicable county or state food license and renew it annually under Minnesota requirements.","rrule":"FREQ=YEARLY","url":["https://cms9files1.revize.com/rockcountymn/Document%20Center/General%20Information/County%20Ordinances/Title%20XI%20Business%20Regulations%20Chapters%20110-118%20%282025%20update%29.pdf","https://www.health.state.mn.us/communities/environment/food/license","https://mn.gov/elicense/a-z/?id=1083-231418"],"feeDetail":{"basis":"varies","min":75,"max":670,"note":"Minnesota published food-license fees range from $75 for special-event food stands to $670 for category 3 establishments, plus applicable statewide fees."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19","lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."}}],"checkedOn":"2026-10-19"},
+  {
+    "county": "Rock",
+    "status": "rules",
+    "items": [
+      {
+        "id": "rock-mn.food-license",
+        "title": "Obtain and renew a Rock County food license",
+        "category": "license",
+        "authority": "Rock County / Minnesota Department of Health",
+        "description": "Food and beverage establishments operating in Rock County must obtain the applicable county or state food license and renew it annually under Minnesota requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://cms9files1.revize.com/rockcountymn/Document%20Center/General%20Information/County%20Ordinances/Title%20XI%20Business%20Regulations%20Chapters%20110-118%20%282025%20update%29.pdf",
+          "https://www.health.state.mn.us/communities/environment/food/license",
+          "https://mn.gov/elicense/a-z/?id=1083-231418"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 75,
+          "max": 670,
+          "note": "Minnesota published food-license fees range from $75 for special-event food stands to $670 for category 3 establishments, plus applicable statewide fees."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
+  },
   {
     "county": "Roseau",
     "items": [
@@ -1221,13 +1795,79 @@
   {
     "county": "Stevens",
     "status": "rules",
-    "items": [{"id":"stevens-mn.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Aitkin County Environmental Services / Minnesota Department of Health","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf","https://www.health.state.mn.us/communities/environment/food/license"],"feeDetail":{"basis":"varies","min":180,"max":703.5,"note":"Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."},"lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "stevens-mn.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Aitkin County Environmental Services / Minnesota Department of Health",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf",
+          "https://www.health.state.mn.us/communities/environment/food/license"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 180,
+          "max": 703.5,
+          "note": "Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
     "county": "Swift",
     "status": "rules",
-    "items": [{"id":"swift-mn.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Aitkin County Environmental Services / Minnesota Department of Health","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf","https://www.health.state.mn.us/communities/environment/food/license"],"feeDetail":{"basis":"varies","min":180,"max":703.5,"note":"Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."},"lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "swift-mn.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Aitkin County Environmental Services / Minnesota Department of Health",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf",
+          "https://www.health.state.mn.us/communities/environment/food/license"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 180,
+          "max": 703.5,
+          "note": "Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
@@ -1252,7 +1892,40 @@
   {
     "county": "Traverse",
     "status": "rules",
-    "items": [{"id":"traverse-mn.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Aitkin County Environmental Services / Minnesota Department of Health","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf","https://www.health.state.mn.us/communities/environment/food/license"],"feeDetail":{"basis":"varies","min":180,"max":703.5,"note":"Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."},"lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "traverse-mn.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Aitkin County Environmental Services / Minnesota Department of Health",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf",
+          "https://www.health.state.mn.us/communities/environment/food/license"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 180,
+          "max": 703.5,
+          "note": "Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
@@ -1353,7 +2026,40 @@
   {
     "county": "Wilkin",
     "status": "rules",
-    "items": [{"id":"wilkin-mn.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Aitkin County Environmental Services / Minnesota Department of Health","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf","https://www.health.state.mn.us/communities/environment/food/license"],"feeDetail":{"basis":"varies","min":180,"max":703.5,"note":"Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."},"lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "wilkin-mn.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Aitkin County Environmental Services / Minnesota Department of Health",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf",
+          "https://www.health.state.mn.us/communities/environment/food/license"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 180,
+          "max": 703.5,
+          "note": "Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   },
   {
@@ -1397,7 +2103,40 @@
   {
     "county": "Yellow Medicine",
     "status": "rules",
-    "items": [{"id":"yellow-medicine-mn.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Aitkin County Environmental Services / Minnesota Department of Health","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf","https://www.health.state.mn.us/communities/environment/food/license"],"feeDetail":{"basis":"varies","min":180,"max":703.5,"note":"Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."},"lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "items": [
+      {
+        "id": "yellow-medicine-mn.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Aitkin County Environmental Services / Minnesota Department of Health",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf",
+          "https://www.health.state.mn.us/communities/environment/food/license"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 180,
+          "max": 703.5,
+          "note": "Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
     "checkedOn": "2026-10-19"
   }
 ]

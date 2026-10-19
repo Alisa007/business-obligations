@@ -66,7 +66,10 @@ export function describeFee(fd: FeeDetail): string {
 }
 
 /** The `cost` of an item from a report or license. */
-export function feeCost(it: { feeDetail?: FeeDetail; lateFee?: { amount: number; percentPerMonth?: number; note?: string } }) {
+export function feeCost(it: {
+  feeDetail?: FeeDetail;
+  lateFee?: { amount: number; percentPerMonth?: number; note?: string };
+}) {
   return {
     ...(it.feeDetail ? { cost: { ...it.feeDetail, currency: "USD" as const } } : {}),
     ...(it.lateFee ? { penalty: { ...it.lateFee, currency: "USD" as const } } : {}),

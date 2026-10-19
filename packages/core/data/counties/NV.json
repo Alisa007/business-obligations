@@ -51,7 +51,9 @@
         "authority": "Clark County Business License Department",
         "description": "Combined transient lodging (room tax) returns are monthly and officially due on the first of the month after the reporting month, but count as on time if received or postmarked by the 15th. Late returns bear interest and additional fees. Questions: Audit Division, (702) 455-6121.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=15",
-        "url": ["https://www.clarkcountynv.gov/business/doing_business_with_clark_county/transient-lodging-monthly-tax-returns"],
+        "url": [
+          "https://www.clarkcountynv.gov/business/doing_business_with_clark_county/transient-lodging-monthly-tax-returns"
+        ],
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -71,8 +73,14 @@
         "rrule": "FREQ=YEARLY",
         "url": ["https://www.snhd.info/permits-regulations"],
         "naics": ["722", "445"],
-        "feeDetail": {"basis": "varies", "note": "The applicable authority sets fees by license or permit type; confirm the current schedule before filing."},
-        "lateFee": {"amount": 0, "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."},
+        "feeDetail": {
+          "basis": "varies",
+          "note": "The applicable authority sets fees by license or permit type; confirm the current schedule before filing."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
         "appliesTo": ["all"]
       }
     ],
