@@ -21,10 +21,6 @@
           "max": 275,
           "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -34,7 +30,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -60,10 +61,6 @@
           "max": 275,
           "note": "Montana annual retail-food license fees are $150, $225, or $275 by establishment size."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana law requires a $25 late fee when a retail-food renewal is submitted after expiration and the establishment operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -73,7 +70,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana law requires a $25 late fee when a retail-food renewal is submitted after expiration and the establishment operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -100,10 +102,6 @@
           "max": 275,
           "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -113,7 +111,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -140,10 +143,6 @@
           "max": 275,
           "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -153,7 +152,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -179,10 +183,6 @@
           "max": 275,
           "note": "Montana annual retail-food license fees are $150, $225, or $275 by establishment size; Carbon County separately publishes plan-review fees of $90-$250."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana law requires a $25 late fee when a retail-food renewal is submitted after expiration and the establishment operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -192,7 +192,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana law requires a $25 late fee when a retail-food renewal is submitted after expiration and the establishment operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -219,10 +224,6 @@
           "max": 275,
           "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -232,7 +233,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -256,7 +262,9 @@
           "https://www.cascadecountymt.gov/276/Food-Service-Establishments",
           "https://cascadecountymt.gov/DocumentCenter/View/3701/Food-Service-Fee-Schedule?bidId="
         ],
-        "feeDetail": { "basis": "varies" },
+        "feeDetail": {
+          "basis": "varies"
+        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -267,7 +275,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -297,10 +306,6 @@
           "max": 275,
           "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -310,7 +315,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -337,10 +347,6 @@
           "max": 275,
           "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -350,7 +356,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -377,10 +388,6 @@
           "max": 275,
           "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -390,7 +397,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -417,10 +429,6 @@
           "max": 275,
           "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -430,7 +438,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -457,10 +470,6 @@
           "max": 275,
           "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -470,7 +479,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -497,10 +511,6 @@
           "max": 275,
           "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -510,7 +520,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -537,10 +552,6 @@
           "max": 275,
           "note": "Montana annual retail-food license fees are $150, $225, or $275 by establishment size."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana law requires a $25 late fee when a retail-food renewal is submitted after expiration and the establishment operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -550,7 +561,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana law requires a $25 late fee when a retail-food renewal is submitted after expiration and the establishment operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -574,7 +590,11 @@
           "https://dphhs.mt.gov/assets/publichealth/FCS/SanitarianResourcePage/FCSForms/RetailFood/RFLicenseApplicationPage1.pdf",
           "https://dphhs.mt.gov/publichealth/EHFS/licenserenewal"
         ],
-        "feeDetail": { "basis": "varies", "min": 85, "max": 115 },
+        "feeDetail": {
+          "basis": "varies",
+          "min": 85,
+          "max": 115
+        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -585,7 +605,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -615,10 +636,6 @@
           "max": 420,
           "note": "Published county review fees are $252 for mobile or up to 750 square feet, $336 for 751-2,500 square feet, and $420 above 2,500 square feet, plus applicable state fees."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana law imposes a $25 late fee for qualifying retail food license renewals operated into the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -628,7 +645,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana law imposes a $25 late fee for qualifying retail food license renewals operated into the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -655,10 +677,6 @@
           "max": 275,
           "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -668,7 +686,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -695,10 +718,6 @@
           "max": 275,
           "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -708,7 +727,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -735,10 +759,6 @@
           "max": 275,
           "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -748,7 +768,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -775,10 +800,6 @@
           "max": 275,
           "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -788,7 +809,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -815,10 +841,6 @@
           "max": 275,
           "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -828,7 +850,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -855,10 +882,6 @@
           "max": 275,
           "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -868,7 +891,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -895,10 +923,6 @@
           "max": 275,
           "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -908,7 +932,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -935,10 +964,6 @@
           "max": 425,
           "note": "Lake County states that plan review is $150 and Montana annual retail-food license fees are $150, $225, or $275 by establishment size."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana adds a $25 late fee when a qualifying retail food license renewal is paid after expiration and the business operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -948,7 +973,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when a qualifying retail food license renewal is paid after expiration and the business operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -983,7 +1013,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -1013,10 +1044,6 @@
           "max": 275,
           "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1026,7 +1053,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1053,10 +1085,6 @@
           "max": 275,
           "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1066,7 +1094,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1093,10 +1126,6 @@
           "max": 275,
           "note": "Montana annual retail-food license fees are $150, $225, or $275 by establishment size."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana adds a $25 late fee when a qualifying retail food license renewal is paid after expiration and the business operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1106,7 +1135,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when a qualifying retail food license renewal is paid after expiration and the business operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1133,10 +1167,6 @@
           "max": 275,
           "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1146,7 +1176,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1173,10 +1208,6 @@
           "max": 275,
           "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1186,7 +1217,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1213,10 +1249,6 @@
           "max": 275,
           "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1226,7 +1258,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1253,7 +1290,6 @@
           "max": 520,
           "note": "Temporary plan review is $35-$105 and permit fees are $65-$115; large group function fees are $210-$520 by filing timing."
         },
-        "lateFee": { "amount": 215, "note": "Food safety re-inspection fee is $215." },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1263,7 +1299,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 215,
+          "note": "Food safety re-inspection fee is $215."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1290,10 +1331,6 @@
           "max": 275,
           "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1303,7 +1340,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1330,10 +1372,6 @@
           "max": 275,
           "note": "Montana annual retail food licenses are $150 small, $225 medium, or $275 large; mobile licenses are $150 small or $225 large."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1343,7 +1381,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1370,10 +1413,6 @@
           "max": 275,
           "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1383,7 +1422,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1410,10 +1454,6 @@
           "max": 275,
           "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1423,7 +1463,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1450,10 +1495,6 @@
           "max": 275,
           "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1463,7 +1504,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1490,10 +1536,6 @@
           "max": 275,
           "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1503,7 +1545,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1530,10 +1577,6 @@
           "max": 275,
           "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1543,7 +1586,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1570,10 +1618,6 @@
           "max": 275,
           "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1583,7 +1627,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1610,10 +1659,6 @@
           "max": 275,
           "note": "Montana license fees are $150-$275 by establishment size; Ravalli County plan-review fees are $125-$275 by risk category."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana law requires a $25 late fee for qualifying retail-food renewals submitted after expiration when the business operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1623,7 +1668,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana law requires a $25 late fee for qualifying retail-food renewals submitted after expiration when the business operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1650,10 +1700,6 @@
           "max": 275,
           "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1663,7 +1709,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1690,10 +1741,6 @@
           "max": 275,
           "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1703,7 +1750,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1730,10 +1782,6 @@
           "max": 275,
           "note": "Montana annual retail-food license fees are $150, $225, or $275 by establishment size."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana adds a $25 late fee when a qualifying retail food license renewal is paid after expiration and the business operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1743,7 +1791,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when a qualifying retail food license renewal is paid after expiration and the business operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1770,10 +1823,6 @@
           "max": 275,
           "note": "The county application lists $85 for establishments with one or two employees per shift and $115 for three or more; Montana's current license categories range from $150 to $275 by establishment size."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1783,7 +1832,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1810,10 +1864,6 @@
           "max": 275,
           "note": "Montana annual retail food licenses are $150 small, $225 medium, or $275 large; mobile licenses are $150 small or $225 large."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1823,7 +1873,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1860,7 +1915,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -1900,7 +1956,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -1930,10 +1987,6 @@
           "max": 275,
           "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1943,7 +1996,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1970,10 +2028,6 @@
           "max": 275,
           "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1983,7 +2037,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2020,7 +2079,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -2050,10 +2110,6 @@
           "max": 275,
           "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2063,7 +2119,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2089,10 +2150,6 @@
           "max": 275,
           "note": "Montana annual retail-food license fees are $150, $225, or $275 by establishment size."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana law requires a $25 late fee when a retail-food renewal is submitted after expiration and the establishment operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2102,7 +2159,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana law requires a $25 late fee when a retail-food renewal is submitted after expiration and the establishment operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2129,10 +2191,6 @@
           "max": 275,
           "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2142,7 +2200,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2169,10 +2232,6 @@
           "max": 275,
           "note": "The county application lists $85 for establishments with one or two employees working at a time and $115 for three or more; Montana's current retail-food categories range from $150 to $275 by size."
         },
-        "lateFee": {
-          "amount": 25,
-          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2182,7 +2241,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 25,
+          "note": "Montana adds a $25 late fee when renewal is not submitted before expiration and the establishment operates in the next licensing year."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2206,7 +2270,11 @@
           "https://dphhs.mt.gov/assets/publichealth/FCS/SanitarianResourcePage/FCSForms/RetailFood/RFLicenseApplicationPage1.pdf",
           "https://dphhs.mt.gov/publichealth/EHFS/licenserenewal"
         ],
-        "feeDetail": { "basis": "varies", "min": 150, "max": 275 },
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 275
+        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2217,7 +2285,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }

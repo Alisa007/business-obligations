@@ -23,7 +23,7 @@ import { applicable } from "../src/rules/local";
 import { EMPLOYER_ITEMS } from "../src/data/employers";
 import { INDUSTRY_ITEMS } from "../src/data/industries";
 import { describeSchedule, parseRRule, toRRule } from "../src/rrule";
-import { describeFee } from "../src/fee";
+import { describeFee, feeCost, penaltyOf } from "../src/fee";
 import { describeTrigger } from "../src/trigger";
 
 const root = path.resolve(__dirname, "..");
@@ -154,7 +154,7 @@ describe("state data files", () => {
       for (const k of ["llcReport", "corpReport", "lpReport", "llpReport", "businessLicense"]) {
         const n = s[k];
         if (!n) continue;
-        for (const text of [n.feeDetail.note, n.lateFee?.note])
+        for (const text of [n.feeDetail.note, n.penalty?.note])
           if (text) expect(text, `${f} ${k}: "${text}" says nothing the amount does not`).not.toMatch(empty);
       }
     }
@@ -203,7 +203,7 @@ describe("state data files", () => {
     for (const f of files) {
       const s = read(`data/states/${f}`);
       for (const k of ["llcReport", "corpReport", "lpReport", "llpReport"]) {
-        const late = s[k]?.lateFee;
+        const late = s[k]?.penalty;
         const quoted = late?.note?.match(/(\d+(?:\.\d+)?)% per month/);
         if (quoted) expect(Number(quoted[1]), `${f} ${k}`).toBe(late.percentPerMonth);
       }
@@ -455,6 +455,8 @@ describe("local and profession data schemas", () => {
       description: "Pay the annual fee to the city.",
       rrule: "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=15",
       appliesTo: ["all"],
+      feeDetail: { basis: "unknown" },
+      penalty: { basis: "unknown" },
     };
     const bad: unknown[] = [
       { ...ok, reason: "tx-city-license-not-researched" },
@@ -475,6 +477,12 @@ describe("local and profession data schemas", () => {
       { ...ok, status: undefined, items: [{ ...item, rrule: "FREQ=MONTHLY;INTERVAL=2" }] },
       { ...ok, status: undefined, items: [{ ...item, due: { type: "fixed", month: 13, day: 1 } }] },
       { ...ok, status: undefined, items: [{ ...item, due: { type: "date", date: "2026-02-30" } }] },
+      // Every item states its fee and its penalty; "unknown" is the placeholder for one not yet researched.
+      { ...ok, status: undefined, items: [{ ...item, feeDetail: undefined }] },
+      { ...ok, status: undefined, items: [{ ...item, penalty: undefined }] },
+      { ...ok, status: undefined, items: [{ ...item, penalty: { basis: "flat" } }] },
+      { ...ok, status: undefined, items: [{ ...item, penalty: { basis: "none", amount: 50 } }] },
+      { ...ok, status: undefined, items: [{ ...item, penalty: { amount: 50 } }] },
     ];
     for (const entry of bad) expect(cityFile([entry]), JSON.stringify(entry)).toBe(false);
     // An item names its page, and a county entry says when it was checked.
@@ -485,6 +493,16 @@ describe("local and profession data schemas", () => {
     expect(
       countyFile([{ county: "Travis", status: "unverified", note: "No filing was confirmed.", items: [] }]),
     ).toBe(false);
+  });
+
+  it("keeps unresearched fees and penalties off the result", () => {
+    expect(feeCost({ feeDetail: { basis: "unknown" } })).toEqual({});
+    expect(feeCost({ feeDetail: { basis: "none" } })).toEqual({ cost: { basis: "none", currency: "USD" } });
+    expect(penaltyOf({ penalty: { basis: "unknown" } })).toEqual({});
+    expect(penaltyOf({ penalty: { basis: "none" } })).toEqual({});
+    expect(penaltyOf({ penalty: { basis: "flat", amount: 50, note: "per month late" } })).toEqual({
+      penalty: { amount: 50, note: "per month late", currency: "USD" },
+    });
   });
 
   it("requires the numbers a fee basis needs", () => {
@@ -856,6 +874,8 @@ describe("seed items with appliesWhen", () => {
           description: "Lodging operators remit the county occupancy tax.",
           rrule: "FREQ=MONTHLY;INTERVAL=3",
           appliesTo: ["all" as const],
+          feeDetail: { basis: "unknown" as const },
+          penalty: { basis: "unknown" as const },
           appliesWhen: [{ field: "activities", op: "in" as const, value: ["lodging"] }],
         },
       ],
@@ -960,6 +980,8 @@ describe("bring-your-own city data", () => {
             description: "Test.",
             frequency: "once" as const,
             appliesTo: ["all" as const],
+            feeDetail: { basis: "unknown" as const },
+            penalty: { basis: "unknown" as const },
           },
         ],
       },
@@ -1024,7 +1046,7 @@ describe("schedules in data files", () => {
         expect(o.deadlineNote, `${where} has deadline and deadlineNote`).toBeUndefined();
       }
       for (const text of [o.deadline, o.deadlineNote])
-        if (text) expect(text as string, `${where} quotes a late fee; use lateFee`).not.toMatch(/late fee/i);
+        if (text) expect(text as string, `${where} quotes a late fee; use penalty`).not.toMatch(/late fee/i);
       if (typeof o.deadlineNote === "string") {
         const open = (o.deadlineNote.match(/\(/g) ?? []).length;
         expect(open, `${where} deadlineNote has unbalanced parentheses: ${o.deadlineNote}`).toBe(

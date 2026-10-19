@@ -28,7 +28,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -47,7 +48,13 @@
         "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
         "frequency": "once",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "allegheny-pa.local-income-tax-remittance",
@@ -57,7 +64,13 @@
         "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "allegheny-pa.local-income-tax-w2r",
@@ -67,7 +80,13 @@
         "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "allegheny-pa.local-sales-tax",
@@ -80,7 +99,13 @@
         "url": [
           "https://www.pa.gov/agencies/revenue/resources/tax-types-and-information/sales-use-and-hotel-occupancy-tax/local-sales-tax"
         ],
-        "appliesTo": ["sells_goods"]
+        "appliesTo": ["sells_goods"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -116,7 +141,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -153,7 +179,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -193,7 +220,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -220,7 +248,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "berks-pa.local-income-tax-registration",
@@ -230,7 +264,13 @@
         "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
         "frequency": "once",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "berks-pa.local-income-tax-remittance",
@@ -240,7 +280,13 @@
         "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "berks-pa.local-income-tax-w2r",
@@ -250,7 +296,13 @@
         "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -285,7 +337,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -325,7 +378,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -352,7 +406,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "bucks-pa.local-income-tax-registration",
@@ -362,7 +422,13 @@
         "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
         "frequency": "once",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "bucks-pa.local-income-tax-remittance",
@@ -372,7 +438,13 @@
         "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "bucks-pa.local-income-tax-w2r",
@@ -382,7 +454,13 @@
         "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -419,7 +497,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -457,7 +536,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -484,10 +564,6 @@
           "basis": "varies",
           "note": "Fees depend on the applicable local health jurisdiction and establishment type."
         },
-        "lateFee": {
-          "amount": 0,
-          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -497,7 +573,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -531,7 +612,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -569,7 +651,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -596,7 +679,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "chester-pa.local-income-tax-registration",
@@ -606,7 +695,13 @@
         "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
         "frequency": "once",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "chester-pa.local-income-tax-remittance",
@@ -616,7 +711,13 @@
         "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "chester-pa.local-income-tax-w2r",
@@ -626,7 +727,13 @@
         "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -663,7 +770,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -701,7 +809,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -740,7 +849,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -779,7 +889,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -816,7 +927,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -843,7 +955,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "cumberland-pa.local-income-tax-registration",
@@ -853,7 +971,13 @@
         "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
         "frequency": "once",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "cumberland-pa.local-income-tax-remittance",
@@ -863,7 +987,13 @@
         "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "cumberland-pa.local-income-tax-w2r",
@@ -873,7 +1003,13 @@
         "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -900,7 +1036,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "dauphin-pa.local-income-tax-registration",
@@ -910,7 +1052,13 @@
         "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
         "frequency": "once",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "dauphin-pa.local-income-tax-remittance",
@@ -920,7 +1068,13 @@
         "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "dauphin-pa.local-income-tax-w2r",
@@ -930,7 +1084,13 @@
         "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -955,7 +1115,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "delaware-pa.local-income-tax-registration",
@@ -965,7 +1131,13 @@
         "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
         "frequency": "once",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "delaware-pa.local-income-tax-remittance",
@@ -975,7 +1147,13 @@
         "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "delaware-pa.local-income-tax-w2r",
@@ -985,7 +1163,13 @@
         "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -1022,7 +1206,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -1041,7 +1226,13 @@
         "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
         "frequency": "once",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "erie-pa.local-income-tax-remittance",
@@ -1051,7 +1242,13 @@
         "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "erie-pa.local-income-tax-w2r",
@@ -1061,7 +1258,13 @@
         "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -1079,7 +1282,13 @@
         "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
         "frequency": "once",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "fayette-pa.local-income-tax-remittance",
@@ -1089,7 +1298,13 @@
         "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "fayette-pa.local-income-tax-w2r",
@@ -1099,7 +1314,13 @@
         "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16"
@@ -1123,10 +1344,6 @@
           "basis": "varies",
           "note": "Fees depend on the applicable local health jurisdiction and establishment type."
         },
-        "lateFee": {
-          "amount": 0,
-          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1136,7 +1353,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1172,7 +1394,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -1211,7 +1434,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -1249,7 +1473,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -1287,7 +1512,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -1326,7 +1552,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -1365,7 +1592,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -1404,7 +1632,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -1442,7 +1671,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -1461,7 +1691,13 @@
         "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
         "frequency": "once",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "lancaster-pa.local-income-tax-remittance",
@@ -1471,7 +1707,13 @@
         "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "lancaster-pa.local-income-tax-w2r",
@@ -1481,7 +1723,13 @@
         "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -1516,7 +1764,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -1553,7 +1802,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -1580,7 +1830,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "lehigh-pa.local-income-tax-registration",
@@ -1590,7 +1846,13 @@
         "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
         "frequency": "once",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "lehigh-pa.local-income-tax-remittance",
@@ -1600,7 +1862,13 @@
         "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "lehigh-pa.local-income-tax-w2r",
@@ -1610,7 +1878,13 @@
         "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -1627,7 +1901,13 @@
         "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
         "frequency": "once",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "luzerne-pa.local-income-tax-remittance",
@@ -1637,7 +1917,13 @@
         "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "luzerne-pa.local-income-tax-w2r",
@@ -1647,7 +1933,13 @@
         "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -1664,10 +1956,6 @@
         "category": "license",
         "authority": "Pennsylvania Department of Agriculture",
         "rrule": "FREQ=YEARLY",
-        "lateFee": {
-          "amount": 0,
-          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1685,7 +1973,12 @@
           "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants",
           "https://lycomingcountypa.gov/government/departments/planning_community_development/zoning.php"
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1719,7 +2012,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -1756,7 +2050,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -1795,7 +2090,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -1833,7 +2129,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -1852,7 +2149,13 @@
         "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
         "frequency": "once",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "montgomery-pa.local-income-tax-remittance",
@@ -1862,7 +2165,13 @@
         "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "montgomery-pa.local-income-tax-w2r",
@@ -1872,7 +2181,13 @@
         "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -1897,10 +2212,6 @@
           "basis": "varies",
           "note": "Fees depend on the applicable local health jurisdiction and establishment type."
         },
-        "lateFee": {
-          "amount": 0,
-          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1910,7 +2221,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1926,7 +2242,13 @@
         "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
         "frequency": "once",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "northampton-pa.local-income-tax-remittance",
@@ -1936,7 +2258,13 @@
         "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "northampton-pa.local-income-tax-w2r",
@@ -1946,7 +2274,13 @@
         "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -1984,7 +2318,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -2023,7 +2358,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -2050,7 +2386,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "philadelphia-pa.wage-tax-registration",
@@ -2062,7 +2404,13 @@
         "url": [
           "https://www.phila.gov/services/payments-assistance-taxes/taxes/business-taxes/business-taxes-by-type/wage-tax-employers/"
         ],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "philadelphia-pa.wage-tax-return",
@@ -2072,7 +2420,13 @@
         "description": "How often depends on the Wage Tax withheld each month: under $350 file quarterly (2026 dates: April 30, July 31, October 31 and February 1, 2027); $350 to under $16,000 monthly, about two to three weeks after the month ends; $16,000 or more semi-monthly or weekly. The city publishes each year's schedule. The employer withholding rate was not confirmed.",
         "rrule": "FREQ=MONTHLY",
         "url": ["https://www.phila.gov/documents/wage-tax-due-dates/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "philadelphia-pa.wage-tax-w2",
@@ -2082,7 +2436,13 @@
         "description": "Employers submit W-2s to the city by the last day of February each year.",
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
         "url": ["https://www.phila.gov/documents/w-2-submission-instructions/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "philadelphia-pa.local-sales-tax",
@@ -2095,7 +2455,13 @@
         "url": [
           "https://www.pa.gov/agencies/revenue/resources/tax-types-and-information/sales-use-and-hotel-occupancy-tax/local-sales-tax"
         ],
-        "appliesTo": ["sells_goods"]
+        "appliesTo": ["sells_goods"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -2132,7 +2498,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -2171,7 +2538,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -2191,7 +2559,13 @@
         "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
         "frequency": "once",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "schuylkill-pa.local-income-tax-remittance",
@@ -2201,7 +2575,13 @@
         "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "schuylkill-pa.local-income-tax-w2r",
@@ -2211,7 +2591,13 @@
         "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16"
@@ -2247,7 +2633,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -2286,7 +2673,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -2325,7 +2713,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -2363,7 +2752,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -2400,7 +2790,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -2439,7 +2830,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -2479,7 +2871,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -2516,7 +2909,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -2537,7 +2931,13 @@
         "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
         "frequency": "once",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "washington-pa.local-income-tax-remittance",
@@ -2547,7 +2947,13 @@
         "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "washington-pa.local-income-tax-w2r",
@@ -2557,7 +2963,13 @@
         "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16"
@@ -2593,7 +3005,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -2620,7 +3033,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "westmoreland-pa.local-income-tax-registration",
@@ -2630,7 +3049,13 @@
         "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
         "frequency": "once",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "westmoreland-pa.local-income-tax-remittance",
@@ -2640,7 +3065,13 @@
         "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "westmoreland-pa.local-income-tax-w2r",
@@ -2650,7 +3081,13 @@
         "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -2686,7 +3123,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -2705,7 +3143,13 @@
         "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
         "frequency": "once",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "york-pa.local-income-tax-remittance",
@@ -2715,7 +3159,13 @@
         "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "york-pa.local-income-tax-w2r",
@@ -2725,7 +3175,13 @@
         "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
         "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
-        "appliesTo": ["employees"]
+        "appliesTo": ["employees"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",

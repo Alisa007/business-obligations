@@ -4,7 +4,17 @@
   "title": "City or county obligation",
   "type": "object",
   "additionalProperties": false,
-  "required": ["id", "title", "category", "authority", "description", "url", "appliesTo"],
+  "required": [
+    "id",
+    "title",
+    "category",
+    "authority",
+    "description",
+    "url",
+    "appliesTo",
+    "feeDetail",
+    "penalty"
+  ],
   "properties": {
     "id": {
       "type": "string",
@@ -211,15 +221,8 @@
     "feeDetail": {
       "$ref": "common.schema.json#/$defs/feeDetail"
     },
-    "lateFee": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["amount"],
-      "properties": {
-        "amount": { "type": "number", "minimum": 0 },
-        "percentPerMonth": { "type": "number", "minimum": 0 },
-        "note": { "type": "string", "minLength": 3 }
-      }
+    "penalty": {
+      "$ref": "common.schema.json#/$defs/penalty"
     }
   },
   "oneOf": [

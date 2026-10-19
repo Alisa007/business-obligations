@@ -10,7 +10,13 @@
         "description": "Alachua County Property Appraiser requires the DR-405 tangible personal property return by April 1; the county provides its own DR-405 forms, e-file portal and a $25,000 exemption when filed timely.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://www.acpafl.org/forms/"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "alachua-fl.tourist-development-tax-registration",
@@ -28,7 +34,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "alachua-fl.tourist-development-tax-return",
@@ -46,7 +58,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16"
@@ -62,7 +80,13 @@
         "description": "Baker County Property Appraiser requires businesses owning tangible personal property to file the DR-405 return by April 1; the office provides the form and filing guidance and administers the county assessment.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://www.bakerpa.com/forms.html"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -79,7 +103,13 @@
         "description": "Citrus County Property Appraiser requires the county CC-405 tangible personal property return by April 1 to claim the $25,000 exemption and avoid penalties; the county provides filing instructions and extensions.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://baypa.net/filing-tips/"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "bay-fl.tourist-development-tax-registration",
@@ -97,7 +127,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "bay-fl.tourist-development-tax-return",
@@ -115,7 +151,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16"
@@ -131,7 +173,13 @@
         "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption of up to $25,000. A separate return is needed for each business location in the county.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://bradfordappraiser.com/Tangible_Personal_Property"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -148,7 +196,13 @@
         "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://bcpao.us/tangible.aspx?t=1.2"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "brevard-fl.tourist-development-tax-registration",
@@ -166,7 +220,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "brevard-fl.tourist-development-tax-return",
@@ -184,7 +244,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "brevard-fl.business-tax-receipt",
@@ -198,11 +264,12 @@
           "basis": "varies",
           "note": "The applicable authority sets fees by license or permit type; confirm the current schedule before filing."
         },
-        "lateFee": {
+        "appliesTo": ["all"],
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "appliesTo": ["all"]
+        }
       }
     ],
     "checkedOn": "2026-10-16"
@@ -218,7 +285,13 @@
         "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption. A separate return is needed for each physical location in Broward County.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://bcpa.net/TPP.asp"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "broward-fl.tourist-development-tax-registration",
@@ -236,7 +309,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "broward-fl.tourist-development-tax-return",
@@ -254,7 +333,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "broward-fl.business-tax-receipt",
@@ -268,11 +353,12 @@
           "basis": "varies",
           "note": "The applicable authority sets fees by license or permit type; confirm the current schedule before filing."
         },
-        "lateFee": {
+        "appliesTo": ["all"],
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "appliesTo": ["all"]
+        }
       }
     ],
     "checkedOn": "2026-10-16"
@@ -290,7 +376,13 @@
         "url": [
           "https://tsc-gis-wp1.schneidercorp.com/calhoun-fl/wp-content/uploads/sites/39/2020/01/DR-405.pdf"
         ],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -307,7 +399,13 @@
         "description": "Charlotte County tangible personal property is assessed by the Property Appraiser and collected by the Tax Collector. File the Florida DR-405 return by April 1; unpaid tangible personal property taxes become delinquent April 1 and incur interest and late charges.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://taxcollector.charlottecountyfl.gov/property-tax"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "charlotte-fl.tourist-development-tax-registration",
@@ -325,7 +423,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "charlotte-fl.tourist-development-tax-return",
@@ -343,7 +447,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16"
@@ -359,7 +469,13 @@
         "description": "Citrus County Property Appraiser requires the county CC-405 tangible personal property return by April 1 to claim the $25,000 exemption and avoid penalties; the county provides filing instructions and extensions.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://www.citruspa.org/_dnn/Portals/0/pdfs/CC405%20Instructions.pdf"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -376,7 +492,13 @@
         "description": "Clay County Property Appraiser requires businesses to complete and file the DR-405 annually by April 1; online filing is available and failure to file can trigger an estimated assessment, penalties and loss of exemption.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://tpp.ccpao.com/OFS/Home/About"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "clay-fl.tourist-development-tax-registration",
@@ -394,7 +516,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "clay-fl.tourist-development-tax-return",
@@ -412,7 +540,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16"
@@ -428,7 +562,13 @@
         "description": "Collier County businesses report tangible personal property to the County Property Appraiser by filing the DR-405 before April 1. Timely filing is required to receive the $25,000 exemption, and failure to file can result in penalties.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://colliertaxcollector.com/property-taxes/tangible/"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "collier-fl.business-tax-receipt",
@@ -442,11 +582,12 @@
           "basis": "varies",
           "note": "The applicable authority sets fees by license or permit type; confirm the current schedule before filing."
         },
-        "lateFee": {
+        "appliesTo": ["all"],
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "appliesTo": ["all"]
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -463,7 +604,13 @@
         "description": "Columbia County Property Appraiser requires anyone possessing taxable assets on January 1 to file the DR-405 tangible personal property return by April 1; the county publishes April 1 as the filing deadline.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://columbia.floridapa.com/Important_Dates/"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -480,7 +627,13 @@
         "description": "Clay County Property Appraiser requires businesses to complete and file the DR-405 annually by April 1; online filing is available and failure to file can trigger an estimated assessment, penalties and loss of exemption.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://desotopa.com/Tangible_Personal_Property"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -497,7 +650,13 @@
         "description": "Dixie County requires businesses to file the DR-405 tangible personal property return with the Property Appraiser by April 1 each year; the county office assesses business equipment, furniture and fixtures.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://dixiecountypropertyappraiser.org/about-us/"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -514,7 +673,13 @@
         "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption. A 30-day extension must be requested in writing before April 1.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://www.jacksonville.gov/departments/property-appraiser/tangible-personal-property"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "duval-fl.tourist-development-tax-registration",
@@ -534,7 +699,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "duval-fl.tourist-development-tax-return",
@@ -554,7 +725,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "duval-fl.business-tax-receipt",
@@ -568,11 +745,12 @@
           "basis": "varies",
           "note": "The applicable authority sets fees by license or permit type; confirm the current schedule before filing."
         },
-        "lateFee": {
+        "appliesTo": ["all"],
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "appliesTo": ["all"]
+        }
       }
     ],
     "checkedOn": "2026-10-16"
@@ -588,7 +766,13 @@
         "description": "Escambia County Property Appraiser mails DR-405 returns in January; the 2026 filing deadline is April 1 without penalty, with an extension deadline of May 1. Online filing is available through the county TPP portal.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://escpa.org/"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "escambia-fl.tourist-development-tax-registration",
@@ -606,7 +790,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "escambia-fl.tourist-development-tax-return",
@@ -624,7 +814,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "escambia-fl.business-tax-receipt",
@@ -638,11 +834,12 @@
           "basis": "varies",
           "note": "The applicable authority sets fees by license or permit type; confirm the current schedule before filing."
         },
-        "lateFee": {
+        "appliesTo": ["all"],
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "appliesTo": ["all"]
+        }
       }
     ],
     "checkedOn": "2026-10-16"
@@ -658,7 +855,13 @@
         "description": "Flagler County requires the DR-405 tangible personal property return by April 1 each year; timely filing may qualify the business for the $25,000 exemption, and the county provides extensions and e-file support.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://flaglerpa.com/tpp-faq/"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "flagler-fl.tourist-development-tax-registration",
@@ -676,7 +879,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "flagler-fl.tourist-development-tax-return",
@@ -694,7 +903,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18"
@@ -710,7 +925,13 @@
         "description": "Franklin County Property Appraiser requires tangible personal property returns by April 1; the county lists the DR-405 deadline and provides the return form and extension request.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://franklincountypa.net/"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -727,7 +948,13 @@
         "description": "Gadsden County Property Appraiser requires businesses with tangible personal property to file the DR-405 return; the office mails returns in January and provides the form through its Forms page. Timely filing supports the $25,000 exemption.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://gadsdenpa.com/faqs/"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -744,7 +971,13 @@
         "description": "Gilchrist County businesses file the DR-405 tangible personal property return with the County Property Appraiser annually, typically by April 1; the county provides TPP filing guidance and assistance.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://gilchristcountypropertyappraiser.org/tangible-personal-property-tax-return/"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -761,7 +994,13 @@
         "description": "Glades County businesses must file the DR-405 tangible personal property return with the Property Appraiser by April 1; the county accepts online or mailed returns and warns that failure to file can result in penalties.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://gladescountypropertyappraiser.org/contact-us/"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -778,7 +1017,13 @@
         "description": "Gulf County requires any person or business owning tangible personal property on January 1 to file a return with the Property Appraiser by April 1; late filings may incur penalties and the county provides DR-405 forms.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://gulf.wordpress.gsacorp.io/personal-property-tpp/"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "gulf-fl.tourist-development-tax-registration",
@@ -796,7 +1041,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "gulf-fl.tourist-development-tax-return",
@@ -814,7 +1065,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16"
@@ -830,7 +1087,13 @@
         "description": "Hamilton County Property Appraiser assesses tangible personal property under Florida law; businesses should file the DR-405 return with the county office by April 1 each year.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://hamiltonpa.com/"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -847,7 +1110,13 @@
         "description": "Hardee County requires all business tangible personal property to be reported to the Property Appraiser by April 1. The county notes a $25,000 exemption, online filing and a 25% penalty for failure to file.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://hardeepa.com/general-info/tangible-personal-property/"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -864,7 +1133,13 @@
         "description": "Hendry County requires businesses to submit the DR-405 tangible personal property return to the Property Appraiser before April 1 each year; timely filing supports the $25,000 exemption and avoids penalties.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://hendryprop.com/downloadable-forms/"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -881,7 +1156,13 @@
         "description": "Hernando County provides the DR-405 return and online filing through the Property Appraiser. File by April 1 to avoid penalties; the county's online portal lists the late-filing penalties and extension process.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://tpponline.hernandopa-fl.us/"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "hernando-fl.tourist-development-tax-registration",
@@ -899,7 +1180,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "hernando-fl.tourist-development-tax-return",
@@ -917,7 +1204,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18"
@@ -933,7 +1226,13 @@
         "description": "Highlands County requires tangible personal property taxpayers to submit the return to the Property Appraiser annually before April 1; the county notes the $25,000 exemption and that taxes become delinquent April 1.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://www.hctaxcollector.com/tangible-personal-property-taxes/"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "highlands-fl.tourist-development-tax-registration",
@@ -951,7 +1250,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "highlands-fl.tourist-development-tax-return",
@@ -969,7 +1274,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18"
@@ -985,7 +1296,13 @@
         "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption. Late filers pay 5% per month, up to 25%.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://www.hcpafl.org/Property-Info/Tangible-Personal-Property"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "hillsborough-fl.tourist-development-tax-registration",
@@ -1003,7 +1320,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "hillsborough-fl.tourist-development-tax-return",
@@ -1021,7 +1344,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "hillsborough-fl.business-tax-receipt",
@@ -1035,11 +1364,12 @@
           "basis": "varies",
           "note": "The applicable authority sets fees by license or permit type; confirm the current schedule before filing."
         },
-        "lateFee": {
+        "appliesTo": ["all"],
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "appliesTo": ["all"]
+        }
       }
     ],
     "checkedOn": "2026-10-16"
@@ -1055,7 +1385,13 @@
         "description": "Holmes County businesses use the county's tangible personal property return (DR-405); Florida requires the return to reach the Property Appraiser by April 1 each year, with the county tax office listing tangible personal property as taxable property.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://www.qpublic.net/fl/holmes/forms/dr405a.pdf"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16"
@@ -1073,7 +1409,13 @@
         "url": [
           "https://services.irctax.com/hc/en-us/articles/41504359792787-About-Tangible-Personal-Property-Tax"
         ],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "indian-river-fl.tourist-development-tax-registration",
@@ -1091,7 +1433,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "indian-river-fl.tourist-development-tax-return",
@@ -1109,7 +1457,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16"
@@ -1125,7 +1479,13 @@
         "description": "Jackson County provides the DR-405 tangible personal property form; owners file with the County Property Appraiser by April 1, and the office assesses both real and tangible personal property for the annual tax roll.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://jacksonpa.com/downloadable-forms/"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -1142,7 +1502,13 @@
         "description": "Jefferson County requires businesses to file the DR-405 tangible personal property return with the Property Appraiser by April 1; the county warns that late filing can trigger a 25% penalty.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://jeffersonpa.net/downloadable-forms/"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -1159,7 +1525,13 @@
         "description": "Lafayette County requires owners of taxable business assets to report them annually on DR-405 to the Property Appraiser by April 1; the county applies a 25% penalty when a required return is not filed.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://lafayettepa.com/FAQ/"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -1176,7 +1548,13 @@
         "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://lakecopropappr.com/business_owners.aspx"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "lake-fl.tourist-development-tax-registration",
@@ -1194,7 +1572,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "lake-fl.tourist-development-tax-return",
@@ -1212,7 +1596,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16"
@@ -1228,7 +1618,13 @@
         "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://ftp.leepa.org/Tangible/TangibleFAQ.aspx"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -1245,7 +1641,13 @@
         "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://www.leonpa.gov/E-File/Tangible-Tax-Return"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "leon-fl.tourist-development-tax-registration",
@@ -1263,7 +1665,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "leon-fl.tourist-development-tax-return",
@@ -1281,7 +1689,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16"
@@ -1299,7 +1713,13 @@
         "url": [
           "https://levycountypropertyappraiser.org/wp-content/uploads/2025/10/Tangible-Personal-Property-Tax-Return.pdf"
         ],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -1316,7 +1736,13 @@
         "description": "Liberty County requires businesses and other owners of business-use personal property to submit the DR-405 to the Property Appraiser by April 1; online filing is mandatory and late filing can incur penalties.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://libertycountypropertyappraiser.org/tangible-personal-property-tax-return/"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -1333,7 +1759,13 @@
         "description": "Collier County businesses report tangible personal property to the County Property Appraiser by filing the DR-405 before April 1. Timely filing is required to receive the $25,000 exemption, and failure to file can result in penalties.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://madisonpa.com/?p=168"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -1350,7 +1782,13 @@
         "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://manateepao.gov/tpp"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "manatee-fl.tourist-development-tax-registration",
@@ -1370,7 +1808,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "manatee-fl.tourist-development-tax-return",
@@ -1390,7 +1834,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16"
@@ -1406,7 +1856,13 @@
         "description": "Marion County businesses use the DR-405 tangible personal property return and must file it with the Property Appraiser by April 1; the county office provides filing and exemption guidance for business assets.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://marioncountypropertyappraiser.org/contact-us/"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "marion-fl.tourist-development-tax-registration",
@@ -1424,7 +1880,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "marion-fl.tourist-development-tax-return",
@@ -1442,7 +1904,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16"
@@ -1458,7 +1926,13 @@
         "description": "Martin County provides the DR-405 tangible personal property return and requires annual reporting to the Property Appraiser by April 1; the county also identifies a $25,000 business TPP exemption.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://www.pamartinfl.gov/forms/all-forms"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -1475,7 +1949,13 @@
         "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption. The return goes to the county property appraiser.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "miami-dade-fl.tourist-development-tax-registration",
@@ -1495,7 +1975,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "miami-dade-fl.tourist-development-tax-return",
@@ -1515,7 +2001,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "miami-dade-fl.business-tax-receipt",
@@ -1529,11 +2021,12 @@
           "basis": "varies",
           "note": "The applicable authority sets fees by license or permit type; confirm the current schedule before filing."
         },
-        "lateFee": {
+        "appliesTo": ["all"],
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "appliesTo": ["all"]
+        }
       }
     ],
     "checkedOn": "2026-10-16"
@@ -1549,7 +2042,13 @@
         "description": "Monroe County provides the DR-405 tangible personal property return through the Property Appraiser; Florida requires the annual return by April 1, with timely filing needed to preserve the $25,000 exemption.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://www.mcpafl.org/downloadable-forms/"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -1566,7 +2065,13 @@
         "description": "Columbia County Property Appraiser requires anyone possessing taxable assets on January 1 to file the DR-405 tangible personal property return by April 1; the county publishes April 1 as the filing deadline.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://columbia.floridapa.com/Important_Dates/"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "nassau-fl.tourist-development-tax-registration",
@@ -1584,7 +2089,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "nassau-fl.tourist-development-tax-return",
@@ -1602,7 +2113,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16"
@@ -1618,7 +2135,13 @@
         "description": "Okaloosa County requires tangible personal property to be reported annually to the Property Appraiser on DR-405; returns and extension requests are due by April 1, and failure to file does not remove the obligation or penalties.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://www.okaloosapa.com/tpp-faqs/"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "okaloosa-fl.tourist-development-tax-registration",
@@ -1636,7 +2159,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "okaloosa-fl.tourist-development-tax-return",
@@ -1654,7 +2183,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16"
@@ -1670,7 +2205,13 @@
         "description": "Okeechobee County requires anyone with taxable business assets on January 1 to file a DR-405 with the Property Appraiser by April 1; the county warns that nonfiling can result in a 25% penalty.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://www.okeechobeepa.com/frequently-asked-questions/"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -1687,7 +2228,13 @@
         "description": "Orange County provides online, email, and mail filing for the DR-405 tangible personal property return; Florida requires the return by April 1 each year to the county Property Appraiser.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://ocpaweb.ocpafl.org/?api=1"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "orange-fl.tourist-development-tax-registration",
@@ -1705,7 +2252,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "orange-fl.tourist-development-tax-return",
@@ -1723,7 +2276,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "orange-fl.business-tax-receipt",
@@ -1737,11 +2296,12 @@
           "basis": "varies",
           "note": "The applicable authority sets fees by license or permit type; confirm the current schedule before filing."
         },
-        "lateFee": {
+        "appliesTo": ["all"],
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "appliesTo": ["all"]
+        }
       }
     ],
     "checkedOn": "2026-10-16"
@@ -1757,7 +2317,13 @@
         "description": "Osceola County directs property owners to its Property Appraiser for tangible personal property records and filing; the annual DR-405 return is due by April 1 under Florida law.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://www.osceola.org/Government/County-Administration/County-Offices/Property-Appraiser"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "osceola-fl.tourist-development-tax-registration",
@@ -1777,7 +2343,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "osceola-fl.tourist-development-tax-return",
@@ -1797,7 +2369,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "osceola-fl.business-tax-receipt",
@@ -1811,11 +2389,12 @@
           "basis": "varies",
           "note": "The applicable authority sets fees by license or permit type; confirm the current schedule before filing."
         },
-        "lateFee": {
+        "appliesTo": ["all"],
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "appliesTo": ["all"]
+        }
       }
     ],
     "checkedOn": "2026-10-16"
@@ -1831,7 +2410,13 @@
         "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption. Returns can be filed through the county's online TPP system.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://secure.pbc.gov/tangefile"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "palm-beach-fl.tourist-development-tax-registration",
@@ -1849,7 +2434,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "palm-beach-fl.tourist-development-tax-return",
@@ -1867,7 +2458,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "palm-beach-fl.business-tax-receipt",
@@ -1881,11 +2478,12 @@
           "basis": "varies",
           "note": "The applicable authority sets fees by license or permit type; confirm the current schedule before filing."
         },
-        "lateFee": {
+        "appliesTo": ["all"],
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "appliesTo": ["all"]
+        }
       }
     ],
     "checkedOn": "2026-10-16"
@@ -1901,7 +2499,13 @@
         "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption. The appraiser may grant a 30-day extension.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://pascopa.gov/information-and-tools/tangible-personal-property/"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "pasco-fl.tourist-development-tax-registration",
@@ -1919,7 +2523,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "pasco-fl.tourist-development-tax-return",
@@ -1937,7 +2547,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "pasco-fl.business-tax-receipt",
@@ -1953,11 +2569,12 @@
           "basis": "varies",
           "note": "The applicable authority sets fees by license or permit type; confirm the current schedule before filing."
         },
-        "lateFee": {
+        "appliesTo": ["all"],
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "appliesTo": ["all"]
+        }
       }
     ],
     "checkedOn": "2026-10-16"
@@ -1973,7 +2590,13 @@
         "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://legacy.pcpao.org/TPP%20Tax%20Return%20Form%20DR-405%202023.pdf"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "pinellas-fl.tourist-development-tax-registration",
@@ -1991,7 +2614,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "pinellas-fl.tourist-development-tax-return",
@@ -2009,7 +2638,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16"
@@ -2025,7 +2660,13 @@
         "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption. Late filing carries 5% per month, capped at 25%.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://polkflpa.gov/Downloads/Files/TangiblePersonalProperty.pdf"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "polk-fl.tourist-development-tax-registration",
@@ -2043,7 +2684,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "polk-fl.tourist-development-tax-return",
@@ -2061,7 +2708,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "polk-fl.business-tax-receipt",
@@ -2077,11 +2730,12 @@
           "basis": "varies",
           "note": "The applicable authority sets fees by license or permit type; confirm the current schedule before filing."
         },
-        "lateFee": {
+        "appliesTo": ["all"],
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "appliesTo": ["all"]
+        }
       }
     ],
     "checkedOn": "2026-10-16"
@@ -2097,7 +2751,13 @@
         "description": "Putnam County requires owners, lessees, or custodians of tangible personal property to file a DR-405 with the Property Appraiser; timely filing is required for the exemption and late filing can cause a penalty of up to 25%.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://pa.putnam-fl.com/tangible-personal-property"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -2114,7 +2774,13 @@
         "description": "Santa Rosa County requires owners, lessees, and renters of tangible property present on January 1 to file DR-405 with the Property Appraiser by April 1; an extension must be requested before April 1.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://tpp.srcpa.gov/general-information"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "santa-rosa-fl.tourist-development-tax-registration",
@@ -2132,7 +2798,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "santa-rosa-fl.tourist-development-tax-return",
@@ -2150,7 +2822,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16"
@@ -2166,7 +2844,13 @@
         "description": "Florida tangible personal property tax returns (Form DR-405) are due to the county property appraiser by April 1, even if the business owes nothing, to claim the exemption.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://www.sarasotapropertyappraiser.gov/appraisal-info/tangible-personal-property/"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "sarasota-fl.tourist-development-tax-registration",
@@ -2184,7 +2868,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "sarasota-fl.tourist-development-tax-return",
@@ -2202,7 +2892,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "sarasota-fl.business-tax-receipt",
@@ -2216,11 +2912,12 @@
           "basis": "varies",
           "note": "The applicable authority sets fees by license or permit type; confirm the current schedule before filing."
         },
-        "lateFee": {
+        "appliesTo": ["all"],
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "appliesTo": ["all"]
+        }
       }
     ],
     "checkedOn": "2026-10-16"
@@ -2236,7 +2933,13 @@
         "description": "Seminole County provides a Property Appraiser TPP e-file portal for the DR-405 return; Florida requires the annual return to be filed with the county Property Appraiser by April 1.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://tpp.scpafl.org/"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "seminole-fl.tourist-development-tax-registration",
@@ -2254,7 +2957,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "seminole-fl.tourist-development-tax-return",
@@ -2272,7 +2981,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "seminole-fl.business-tax-receipt",
@@ -2286,11 +3001,12 @@
           "basis": "varies",
           "note": "The applicable authority sets fees by license or permit type; confirm the current schedule before filing."
         },
-        "lateFee": {
+        "appliesTo": ["all"],
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "appliesTo": ["all"]
+        }
       }
     ],
     "checkedOn": "2026-10-16"
@@ -2306,7 +3022,13 @@
         "description": "St. Johns County requires business owners and self-employed contractors with tangible personal property on January 1 to file the DR-405 return with the Property Appraiser each year; the county assesses all TPP in the county.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://www.sjcpa.gov/tangible-personal-property/"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "st-johns-fl.tourist-development-tax-registration",
@@ -2324,7 +3046,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "st-johns-fl.tourist-development-tax-return",
@@ -2342,7 +3070,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16"
@@ -2358,7 +3092,13 @@
         "description": "St. Lucie County provides TPP forms and filing through the Property Appraiser; the county DR-405 states that the return is due by April 1 to avoid penalty and that timely filing preserves the $25,000 exemption.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://www.paslc.gov/226/Tangible-Personal-Property-TPP"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -2375,7 +3115,13 @@
         "description": "Sumter County requires owners of business tangible personal property on January 1 to report it annually to the Property Appraiser; DR-405 returns are due by April 1, and extensions must be requested before the deadline.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://www.sumterpa.com/tax-and-exemptions/tangible-personal-property/"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -2392,7 +3138,13 @@
         "description": "Suwannee County requires businesses to file the DR-405 tangible personal property return with the Property Appraiser by April 1 each year; the county provides the form and filing instructions.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://www.suwanneepa.com/Download_Forms/"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -2409,7 +3161,13 @@
         "description": "Taylor County requires businesses to file a TPP return (DR-405) with the Property Appraiser by April 1 each year unless a filing waiver applies; the county assists with completing the return.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://taylorcountypropertyappraiser.org/contact-us/"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "taylor-fl.tourist-development-tax-registration",
@@ -2427,7 +3185,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "taylor-fl.tourist-development-tax-return",
@@ -2445,7 +3209,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16"
@@ -2461,7 +3231,13 @@
         "description": "Union County requires anyone possessing taxable assets on January 1 to file a DR-405 tangible personal property return with the Property Appraiser each year; Florida law requires annual reporting.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://union.floridapa.com/FAQ/"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -2478,7 +3254,13 @@
         "description": "Volusia County requires owners of tangible personal property used in business to file the county VC-405 return with the Property Appraiser each year; timely filing supports the county's $25,000 exemption.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://vcpa.vcgov.org/info/tangible"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "volusia-fl.tourist-development-tax-registration",
@@ -2498,7 +3280,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "volusia-fl.tourist-development-tax-return",
@@ -2518,7 +3306,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -2535,7 +3329,13 @@
         "description": "Wakulla County requires anyone owning tangible personal property on January 1 to file the DR-405 return with the Property Appraiser by April 1 each year unless the county has waived the filing requirement.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://mywakullapa.com/tpp-faq/"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -2552,7 +3352,13 @@
         "description": "Walton County's Property Appraiser provides tangible property search and DR-405 forms; Florida requires business tangible personal property returns to be filed with the county by April 1.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://waltonpa.com/"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "walton-fl.tourist-development-tax-registration",
@@ -2570,7 +3376,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "walton-fl.tourist-development-tax-return",
@@ -2588,7 +3400,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16"
@@ -2604,7 +3422,13 @@
         "description": "Washington County's Tax Collector collects tangible personal property tax after the Property Appraiser assesses the roll; taxes become delinquent April 1, while property-roll changes are handled by the Property Appraiser.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
         "url": ["https://washingtoncountytaxcollector.com/About/PropertyTax"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",

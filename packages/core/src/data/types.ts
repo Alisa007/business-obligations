@@ -105,7 +105,7 @@ export interface FeeTier {
 
 /** Machine-readable fee. `amount` is the standard/base figure; `online`/`paper` apply when they differ. */
 export interface FeeDetail {
-  basis: "flat" | "per_partner" | "per_member" | "percent" | "varies" | "none" | "tiered";
+  basis: "flat" | "per_partner" | "per_member" | "percent" | "varies" | "none" | "tiered" | "unknown";
   amount?: number;
   online?: number;
   paper?: number;
@@ -138,12 +138,25 @@ export interface LateFee {
   note?: string;
 }
 
+/**
+ * The penalty for missing the obligation, written on every item. `none` means the government states no penalty;
+ * `unknown` means it has not been researched yet (it is the only placeholder the data allows).
+ */
+export type Penalty = ({ basis: "flat" } & LateFee) | { basis: "none" | "unknown" };
+
+/** The `penalty` of an item from its data, when there is a stated amount. */
+export function statedPenalty(p: Penalty): LateFee | undefined {
+  if (p.basis !== "flat") return undefined;
+  const { basis: _basis, ...late } = p;
+  return late;
+}
+
 export interface ReportRule {
   /** Derived from `rrule` when there is one. */
   frequency?: "annual" | "biennial" | "every_five_years" | "periodic";
   /** The fee. The display text ("$30 online ($45 paper)") is generated from it; see `describeFee`. */
   feeDetail: FeeDetail;
-  lateFee?: { amount: number; percentPerMonth?: number; note?: string };
+  penalty: Penalty;
   /**
    * The schedule as an iCalendar recurrence rule, e.g. `FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=15` (see `rrule.ts`). When
    * present, `frequency` and `due` are derived from it and must be left out, and `deadline` is generated unless
@@ -348,9 +361,9 @@ export interface LocalItem {
   /** How the item is renewed, when that is more specific than `frequency`. */
   renewal?: string;
   /** The government fee, when the item has one with a known basis; it becomes the item's `cost` (see `FeeDetail`). */
-  feeDetail?: FeeDetail;
-  /** Structured late fee when the official description gives a fixed amount. */
-  lateFee?: LateFee;
+  feeDetail: FeeDetail;
+  /** The penalty for missing the obligation; `{ "basis": "unknown" }` until researched (see `Penalty`). */
+  penalty: Penalty;
 }
 
 /**

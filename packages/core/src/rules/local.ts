@@ -1,5 +1,5 @@
 import { allHold, anyHold, validateApplicability } from "../applicability";
-import { feeCost } from "../fee";
+import { feeCost, penaltyOf } from "../fee";
 import { draftSchedule } from "../rrule";
 import type { Rule } from "../types";
 import { findCity, findCounty, stateInfo, type CityLookup, type CountyLookup } from "../data";
@@ -58,6 +58,7 @@ export function extras(it: LocalItem, entryCheckedOn: string | undefined) {
     ...(it.processingTime ? { processingTime: it.processingTime } : {}),
     ...(it.renewal ? { renewal: it.renewal } : {}),
     ...feeCost(it),
+    ...penaltyOf(it),
     // A seed entry carries the date it was checked against the official pages; the items inherit it.
     ...(checkedOn
       ? {

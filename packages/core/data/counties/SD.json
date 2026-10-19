@@ -21,10 +21,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -34,7 +30,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -61,10 +62,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -74,7 +71,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -101,10 +103,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -114,7 +112,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -141,10 +144,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -154,7 +153,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -181,10 +185,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -194,7 +194,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -216,7 +221,11 @@
           "https://doh.sd.gov/topics/food-lodging-safety/licensure-codes/food-service/",
           "https://sdlegislature.gov/Statutes/34-18"
         ],
-        "feeDetail": { "basis": "varies", "min": 90, "max": 225 },
+        "feeDetail": {
+          "basis": "varies",
+          "min": 90,
+          "max": 225
+        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -227,7 +236,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -257,10 +267,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -270,7 +276,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -297,10 +308,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -310,7 +317,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -337,10 +349,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -350,7 +358,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -377,10 +390,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -390,7 +399,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -417,10 +431,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -430,7 +440,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -457,10 +472,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -470,7 +481,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -497,10 +513,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -510,7 +522,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -537,10 +554,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -550,7 +563,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -586,7 +604,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -616,10 +635,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -629,7 +644,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -656,10 +676,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -669,7 +685,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -696,10 +717,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -709,7 +726,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -736,10 +758,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -749,7 +767,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -776,10 +799,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -789,7 +808,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -816,10 +840,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -829,7 +849,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -856,10 +881,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -869,7 +890,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -896,10 +922,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -909,7 +931,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -936,10 +963,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -949,7 +972,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -976,10 +1004,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -989,7 +1013,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1016,10 +1045,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1029,7 +1054,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1056,10 +1086,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1069,7 +1095,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1096,10 +1127,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1109,7 +1136,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1136,10 +1168,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1149,7 +1177,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1176,10 +1209,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1189,7 +1218,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1216,10 +1250,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1229,7 +1259,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1256,10 +1291,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1269,7 +1300,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1296,10 +1332,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1309,7 +1341,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1336,10 +1373,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1349,7 +1382,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1376,10 +1414,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1389,7 +1423,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1416,10 +1455,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1429,7 +1464,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1456,10 +1496,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1469,7 +1505,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1496,10 +1537,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1509,7 +1546,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1536,10 +1578,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1549,7 +1587,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1576,10 +1619,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1589,7 +1628,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1616,10 +1660,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1629,7 +1669,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1656,10 +1701,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1669,7 +1710,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1696,10 +1742,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1709,7 +1751,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1736,10 +1783,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1749,7 +1792,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1776,10 +1824,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1789,7 +1833,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1826,7 +1875,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -1856,10 +1906,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1869,7 +1915,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1896,10 +1947,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1909,7 +1956,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1931,7 +1983,11 @@
           "https://doh.sd.gov/topics/food-lodging-safety/licensure-codes/food-service/",
           "https://sdlegislature.gov/Statutes/34-18"
         ],
-        "feeDetail": { "basis": "varies", "min": 90, "max": 225 },
+        "feeDetail": {
+          "basis": "varies",
+          "min": 90,
+          "max": 225
+        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1942,7 +1998,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -1972,10 +2029,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1985,7 +2038,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2012,10 +2070,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2025,7 +2079,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2047,7 +2106,11 @@
           "https://doh.sd.gov/topics/food-lodging-safety/licensure-codes/food-service/",
           "https://sdlegislature.gov/Statutes/34-18"
         ],
-        "feeDetail": { "basis": "varies", "min": 90, "max": 225 },
+        "feeDetail": {
+          "basis": "varies",
+          "min": 90,
+          "max": 225
+        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2058,7 +2121,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -2074,8 +2138,16 @@
         "feeDetail": {
           "basis": "tiered",
           "tiers": [
-            { "label": "New application", "basis": "flat", "amount": 5000 },
-            { "label": "Renewal", "basis": "flat", "amount": 1000 }
+            {
+              "label": "New application",
+              "basis": "flat",
+              "amount": 5000
+            },
+            {
+              "label": "Renewal",
+              "basis": "flat",
+              "amount": 1000
+            }
           ],
           "note": "Each application also has a non-refundable $500 investigation and processing fee."
         },
@@ -2089,7 +2161,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -2119,10 +2192,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2132,7 +2201,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2159,10 +2233,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2172,7 +2242,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2199,10 +2274,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2212,7 +2283,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2239,10 +2315,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2252,7 +2324,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2289,7 +2366,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -2319,10 +2397,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2332,7 +2406,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2359,10 +2438,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2372,7 +2447,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2399,10 +2479,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2412,7 +2488,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2439,10 +2520,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2452,7 +2529,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2488,7 +2570,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -2518,10 +2601,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2531,7 +2610,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2558,10 +2642,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2571,7 +2651,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2598,10 +2683,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2611,7 +2692,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2638,10 +2724,6 @@
           "max": 325,
           "note": "South Dakota fees include $90 with no seating, $120 for 1-50 seats, $180 for 51-100 seats, $225 for 101+ seats, $38 for mobile or temporary service, and a $100 initial license fee."
         },
-        "lateFee": {
-          "amount": 50,
-          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2651,7 +2733,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50,
+          "note": "A $50 follow-up inspection fee applies when the department verifies correction after a statutory notice; nonprofit organizations are exempt from inspection fees."
+        }
       }
     ],
     "checkedOn": "2026-10-19"

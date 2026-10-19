@@ -183,7 +183,7 @@ export function collectCorpus(root = path.join(import.meta.dirname, "..", ".."),
 const profileBase = { zip: "10001", employeeCount: 4, sellsTaxableGoods: true, usesTradeName: true };
 
 const TEXT_KEYS = new Set(["title", "description", "deadline", "renewal", "processingTime", "summary"]);
-const NOTE_PARENTS = new Set(["feeDetail", "lateFee", "unemployment"]);
+const NOTE_PARENTS = new Set(["feeDetail", "penalty", "unemployment"]);
 const SKIP = new Set(["zips.json", "naics.json"]);
 
 function collectDataText(

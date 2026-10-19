@@ -189,6 +189,8 @@ describe("precedence authored in seed data", () => {
           rrule: "FREQ=YEARLY",
           url: ["https://www.austintexas.gov/"],
           appliesTo: ["all" as const],
+          feeDetail: { basis: "unknown" as const },
+          penalty: { basis: "unknown" as const },
           appliesWhen: [{ field: "employeeCount", op: ">=" as const, value: 1 }],
           exemptions: ["Sole proprietors"],
           supersedes: ["fed.ein"],

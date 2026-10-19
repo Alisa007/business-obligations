@@ -343,7 +343,7 @@
         {
           "type": "object",
           "additionalProperties": false,
-          "required": ["title", "authority", "url", "feeDetail"],
+          "required": ["title", "authority", "url", "feeDetail", "penalty"],
           "oneOf": [{ "required": ["rrule"] }, { "required": ["frequency"] }],
           "properties": {
             "title": {
@@ -369,6 +369,9 @@
             },
             "feeDetail": {
               "$ref": "common.schema.json#/$defs/feeDetail"
+            },
+            "penalty": {
+              "$ref": "common.schema.json#/$defs/penalty"
             }
           }
         }
@@ -550,7 +553,7 @@
     "report": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["feeDetail"],
+      "required": ["feeDetail", "penalty"],
       "properties": {
         "title": {
           "type": "string"
@@ -610,8 +613,8 @@
         "feeDetail": {
           "$ref": "common.schema.json#/$defs/feeDetail"
         },
-        "lateFee": {
-          "$ref": "#/$defs/lateFee"
+        "penalty": {
+          "$ref": "common.schema.json#/$defs/penalty"
         }
       },
       "oneOf": [
@@ -646,26 +649,6 @@
           }
         }
       ]
-    },
-    "lateFee": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["amount"],
-      "properties": {
-        "amount": {
-          "type": "number",
-          "minimum": 0
-        },
-        "percentPerMonth": {
-          "type": "number",
-          "minimum": 0
-        },
-        "note": {
-          "type": "string",
-          "minLength": 3,
-          "description": "When the fee applies or what makes it special (\"cannot be waived\"). Omit when it would only say \"late fee\"."
-        }
-      }
     }
   },
   "description": "One state's rule data (data/states/<XX>.json; the file name is the state code)."

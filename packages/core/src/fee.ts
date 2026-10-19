@@ -1,4 +1,4 @@
-import type { FeeDetail } from "./data/types";
+import { statedPenalty, type FeeDetail, type Penalty } from "./data/types";
 
 const money = (n: number) => `$${Number.isInteger(n) ? n.toLocaleString("en-US") : n.toFixed(2)}`;
 
@@ -17,6 +17,8 @@ function headline(fd: FeeDetail, limits: string[]): string {
     }
     case "tiered":
       return "Varies";
+    case "unknown":
+      return "Not yet confirmed";
     case "per_partner":
     case "per_member": {
       if (min !== undefined && min !== amount) limits.push(`minimum ${money(min)}`);
@@ -65,13 +67,13 @@ export function describeFee(fd: FeeDetail): string {
   return head.endsWith(")") ? `${head.slice(0, -1)}; ${parts.join("; ")})` : `${head} (${parts.join("; ")})`;
 }
 
-/** The `cost` of an item from a report or license. */
-export function feeCost(it: {
-  feeDetail?: FeeDetail;
-  lateFee?: { amount: number; percentPerMonth?: number; note?: string };
-}) {
-  return {
-    ...(it.feeDetail ? { cost: { ...it.feeDetail, currency: "USD" as const } } : {}),
-    ...(it.lateFee ? { penalty: { ...it.lateFee, currency: "USD" as const } } : {}),
-  };
+/** The `cost` of an item from a report or license; an unresearched fee gives none. */
+export function feeCost(it: { feeDetail: FeeDetail }) {
+  return it.feeDetail.basis === "unknown" ? {} : { cost: { ...it.feeDetail, currency: "USD" as const } };
+}
+
+/** The `penalty` of an item; one that is `none` or `unknown` gives none. */
+export function penaltyOf(it: { penalty: Penalty }) {
+  const late = statedPenalty(it.penalty);
+  return late ? { penalty: { ...late, currency: "USD" as const } } : {};
 }

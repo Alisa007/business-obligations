@@ -16,6 +16,9 @@
     "feeDetail": {
       "basis": "flat",
       "amount": 450
+    },
+    "penalty": {
+      "basis": "unknown"
     }
   },
   {
@@ -28,7 +31,13 @@
     "appliesTo": ["sells_goods"],
     "url": ["https://cdtfa.ca.gov/formspubs/pub73.pdf"],
     "checkedOn": "2026-10-18",
-    "frequency": "ongoing"
+    "frequency": "ongoing",
+    "feeDetail": {
+      "basis": "unknown"
+    },
+    "penalty": {
+      "basis": "unknown"
+    }
   },
   {
     "id": "ca.alcohol-license",
@@ -41,7 +50,13 @@
     "url": ["https://www.abc.ca.gov/licensing/license-fees/"],
     "checkedOn": "2026-10-18",
     "rrule": "FREQ=YEARLY",
-    "renewal": "Pay by the expiration date posted on the license; 50% and 100% late penalties apply in the stated post-expiration periods."
+    "renewal": "Pay by the expiration date posted on the license; 50% and 100% late penalties apply in the stated post-expiration periods.",
+    "feeDetail": {
+      "basis": "unknown"
+    },
+    "penalty": {
+      "basis": "unknown"
+    }
   },
   {
     "id": "ca.cannabis-license",
@@ -54,6 +69,12 @@
     "url": ["https://www.cannabis.ca.gov/cannabis-laws/dcc-regulations/text-of-regulations/"],
     "checkedOn": "2026-10-18",
     "rrule": "FREQ=YEARLY",
-    "renewal": "Pay the annual license fee before the license is issued or renewed."
+    "renewal": "Pay the annual license fee before the license is issued or renewed.",
+    "feeDetail": {
+      "basis": "unknown"
+    },
+    "penalty": {
+      "basis": "unknown"
+    }
   }
 ]

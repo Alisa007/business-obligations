@@ -18,7 +18,8 @@
       "basis": "flat",
       "amount": 70
     },
-    "lateFee": {
+    "penalty": {
+      "basis": "flat",
       "amount": 25,
       "note": "Delinquency fee after the expiration date (not for nonprofits)"
     }
@@ -29,7 +30,8 @@
       "basis": "flat",
       "amount": 70
     },
-    "lateFee": {
+    "penalty": {
+      "basis": "flat",
       "amount": 25,
       "note": "Delinquency fee after the expiration date (not for nonprofits)"
     }
@@ -74,6 +76,9 @@
     "feeDetail": {
       "basis": "varies",
       "note": "the application fee varies"
+    },
+    "penalty": {
+      "basis": "unknown"
     }
   },
   "local": {

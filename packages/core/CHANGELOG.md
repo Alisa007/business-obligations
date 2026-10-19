@@ -17,6 +17,8 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ### Changed
 
+- **core (breaking for bring-your-own data):** every local item (and every state report and business licence) must state `feeDetail` and `penalty`. `feeDetail.basis` gains `unknown` (not yet researched; `none` is a fee the government does not charge, `varies` one that depends on facts the data cannot know). `penalty` is `{ "basis": "flat", "amount": 50, ... }`, `{ "basis": "none" }` or `{ "basis": "unknown" }`; it replaces `lateFee` on state reports and local items. An item whose fee or penalty is `unknown` has no `cost` or `penalty` in the result. All existing data got `unknown` where nothing was recorded
+
 - **data:** due dates (and some fees) from official sources for items that had only a bare recurrence rule: Maryland trader's licenses, Delaware professional licenses, Oregon Metro withholding, Ohio, Pennsylvania, Florida and Iowa local taxes and more. Items tied to a licence's own expiry or issue date keep a bare rule
 
 - **core:** every recurring item is an `rrule` (annual, biennial, every five years, quarterly, monthly), in the data files and in rules written in code; `frequency` is only for `once`, `ongoing`, `per_event` and `periodic`, and a schema and the engine reject it on anything that recurs. A recurrence without a fixed date is a bare rule (`FREQ=YEARLY`, `FREQ=MONTHLY`, `FREQ=MONTHLY;INTERVAL=3`); the anniversary of formation now needs `anchor: "formation"`. A state `businessLicense` carries `rrule` or `frequency` instead of `renewal`. `ItemDraft` takes `rrule` (and `anchor`) in place of `frequency` and `due` for a recurrence
