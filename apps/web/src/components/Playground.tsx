@@ -5,6 +5,7 @@ import { H1, Paragraph, ScrollView, Tabs, Text, XStack, YStack } from "tamagui";
 import { DISCLAIMER } from "business-obligations";
 import {
   Chip,
+  LocationSummary,
   ExternalLink,
   LaunchList,
   NO_OBLIGATION_FILTERS,
@@ -14,6 +15,7 @@ import {
   needsProfession,
   profileFromChoices,
   todayIso,
+  ThemeToggle,
   useProfileChoices,
   writeProfileQuery,
   type ObligationFilters,
@@ -155,13 +157,9 @@ export function Playground() {
     // `key` is the address: the effect reads the state it stands for, through the ref.
   }, [key]);
 
-  const download = () => {
-    if (!data) return;
-    analytics.track("ics_downloaded", { events: data.events.length });
-    analytics.log("ics_downloaded", { events: data.events.length });
-    const url = URL.createObjectURL(new Blob([data.ics], { type: "text/calendar" }));
-    Object.assign(document.createElement("a"), { href: url, download: "deadlines.ics" }).click();
-    URL.revokeObjectURL(url);
+  const onCalendarDownload = (events: number) => {
+    analytics.track("ics_downloaded", { events });
+    analytics.log("ics_downloaded", { events });
   };
 
   const renderView = () => {
@@ -188,7 +186,7 @@ export function Playground() {
           />
         );
       case "calendar":
-        return <CalendarView data={data} onDownload={download} />;
+        return <CalendarView data={data} onDownload={onCalendarDownload} />;
       case "costs":
         return <CostsView data={data} />;
       case "whatif":
@@ -207,9 +205,12 @@ export function Playground() {
       gap="6"
     >
       <YStack gap="2.5" alignItems="flex-start" width="100%" maxWidth={720}>
-        <Chip tone="info" outline>
-          Compliance planning, simplified
-        </Chip>
+        <XStack width="100%" justifyContent="space-between" alignItems="center" gap="3">
+          <Chip tone="info" outline>
+            Compliance planning, simplified
+          </Chip>
+          <ThemeToggle />
+        </XStack>
         <H1
           fontSize={{ default: "2xl", md: "4xl" }}
           lineHeight={1.05}

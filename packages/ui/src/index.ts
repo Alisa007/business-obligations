@@ -22,6 +22,26 @@ export type { ObligationFilters } from "./plan/filters";
 export { isVerified } from "./plan/items";
 export type { ComplianceItem, LaunchPlan } from "business-obligations";
 
+// What is specific to the smallest place chosen
+export { LocationSummary } from "./summary/LocationSummary";
+export type { LocationSummaryProps } from "./summary/LocationSummary";
+
+// Calendar of deadlines
+export { CalendarList } from "./calendar/CalendarList";
+export type { CalendarListProps } from "./calendar/CalendarList";
+export { CalendarDownload } from "./calendar/CalendarDownload";
+export type { CalendarDownloadProps } from "./calendar/CalendarDownload";
+export type { CalendarEvent } from "business-obligations";
+
+// Light, dark and follow-the-device
+export { ThemeProvider, ThemeToggle, useThemePreference } from "./theme/ThemeProvider";
+export type {
+  ThemePreference,
+  ThemeProviderProps,
+  ThemeState,
+  ThemeToggleProps,
+} from "./theme/ThemeProvider";
+
 // The business profile: the choices, where they live (the address), and the fields that edit them
 export {
   DETAIL_FIELDS,

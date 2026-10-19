@@ -51,6 +51,9 @@ src/index.ts            the public API: everything is exported by name from here
 src/i18n/               messages (en, es), the one set of formatters (money, dates, relative days), the locale context
 src/shared/             styles of the controls, the small pieces the lists are made of, URL checks
 src/plan/               LaunchList, ObligationsList, the item cards and filters
+src/summary/            LocationSummary
+src/calendar/           CalendarList, CalendarDownload
+src/theme/              ThemeProvider, ThemeToggle
 src/profile/choices.ts  every choice of the profile, described once: its type, default, URL parameter, reading, writing
 src/profile/store.tsx   the address as state: provider, hooks, `setProfileQuery`
 src/profile/place.ts    ZIP code to place, and choices to a `BusinessProfile`
@@ -113,6 +116,29 @@ not in `items` now, but would be if a detail that was left blank turned out a ce
 3 …"). The package does not compute them; the playground does, from `analyzeInputs` and `evaluate`
 (`conditionalItems` in `apps/web/src/lib/plan.ts`). `LaunchList` takes the same list as `conditional` and shows it after the phases, in a section grouped by level, each with
 what would bring it in and no checkbox. The list's filters apply to them too. Groups run from the most local level to the widest: city, county, state, federal.
+
+## Summary, calendar and theme
+
+```tsx
+// What is specific to the smallest place given: the city if there is one, else the county, else the state.
+<LocationSummary state="CA" county="San Francisco" city="San Francisco" />
+
+// Dated deadlines (from `buildCalendar`), the undated items below them, and an .ics download.
+<CalendarList events={events} items={result.items} />
+<CalendarDownload events={events} onDownload={(count) => track("calendar", count)} />
+
+// TamaguiProvider with light, dark and "follow the device", remembered in this browser.
+<ThemeProvider config={tamaguiConfig}>
+  <ThemeToggle />
+  {children}
+</ThemeProvider>
+```
+
+`LocationSummary` and `CalendarDownload` call the engine (`findCity`, `toICS`), so an app that imports them bundles
+that part of `business-obligations`; `LaunchList` and the other lists use only its types. The text of titles and agency
+names comes from the data, in English; translate events with `localizeText` before passing them to `CalendarDownload`.
+`ThemeProvider` renders light on the server and the first client pass, then applies the saved or device setting.
+`useThemePreference()` returns the setting, the theme in use and `setPreference`.
 
 ## Bundle size
 

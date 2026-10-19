@@ -97,6 +97,41 @@ export interface Messages {
   /** Names of the profile fields that an "applies when" condition can read; unknown fields are shown as they are. */
   fields: Record<string, string>;
   confidence: Record<Confidence, string>;
+  // Location summary
+  summary: {
+    /** Heading of the summary of the smallest place chosen: `place` is its name. */
+    heading: (place: string) => string;
+    /** What the data says about a city or county's own rules. */
+    status: Record<"rules" | "none" | "unverified", string>;
+    checkedOn: (date: string) => string;
+    localItems: string;
+    noLocalItems: string;
+    salesTaxPermit: string;
+    agencies: string;
+    agencyRoles: Record<"filing" | "revenue" | "labor", string>;
+    sources: string;
+  };
+  // Calendar
+  calendar: {
+    download: string;
+    /** Shown instead of a file when there is nothing to put in it. */
+    nothingToDownload: string;
+    /** Shown in place of the list when no deadline has a date. */
+    none: string;
+    /** Heading of the items the calendar cannot place. */
+    undated: string;
+    oneTime: string;
+    seeRule: string;
+    /** Name the calendar app shows for the downloaded calendar. */
+    name: string;
+  };
+  // Theme
+  theme: {
+    label: string;
+    /** `current` is the name of the setting in use, for example "Dark". */
+    toggle: (current: string) => string;
+    preferences: Record<"system" | "light" | "dark", string>;
+  };
   // The whole form (ProfileForm)
   profileForm: {
     business: string;

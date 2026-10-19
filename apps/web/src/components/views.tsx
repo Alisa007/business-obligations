@@ -1,61 +1,27 @@
 "use client";
 
-import { Button, Paragraph, Text, XStack, YStack } from "tamagui";
-import { Collapse, ExternalLink, Stat, formatDate, formatMoney, relativeDays } from "business-obligations-ui";
+import { Paragraph, Text, XStack, YStack } from "tamagui";
+import {
+  CalendarDownload,
+  CalendarList,
+  Collapse,
+  ExternalLink,
+  LocationSummary,
+  Stat,
+  formatDate,
+  formatMoney,
+  relativeDays,
+} from "business-obligations-ui";
 import { summarize, type Analysis } from "../lib/plan";
 import { ListRow, Muted } from "./ui";
 
 // ---- Calendar, fees, what-if ----
 
-export function CalendarView({ data, onDownload }: { data: Analysis; onDownload: () => void }) {
-  // Items the calendar cannot place: no machine-readable due date (one-time setup, or rules stated only as text).
-  const undated = data.result.items.filter(
-    (i) => !i.due && i.frequency !== "ongoing" && i.frequency !== "per_event",
-  );
+export function CalendarView({ data, onDownload }: { data: Analysis; onDownload: (events: number) => void }) {
   return (
     <YStack gap="3" alignItems="flex-start">
-      <Button size="sm" onPress={onDownload}>
-        Download .ics
-      </Button>
-      {data.events.length === 0 ? (
-        <Muted>
-          No dated deadlines in the next year. Add a formation date for anniversary-based filings.
-        </Muted>
-      ) : (
-        <YStack width="100%">
-          {data.events.map((e) => (
-            <ListRow key={`${e.itemId}-${e.date}`} columnGap="4">
-              <Text fontWeight="600" width={120}>
-                {formatDate(e.date)}
-              </Text>
-              <YStack flex={1} flexBasis={220} minWidth={0}>
-                <Text>
-                  <ExternalLink url={e.url}>{e.title}</ExternalLink>
-                </Text>
-                <Muted>{e.authority}</Muted>
-              </YStack>
-            </ListRow>
-          ))}
-        </YStack>
-      )}
-      {undated.length > 0 && (
-        <YStack width="100%" gap="1">
-          <Muted>No fixed date, so not in the calendar or the .ics file:</Muted>
-          {undated.map((i) => (
-            <ListRow key={i.id} columnGap="4">
-              <Text fontWeight="600" width={120}>
-                {i.frequency === "once" ? "One time" : "See rule"}
-              </Text>
-              <YStack flex={1} flexBasis={220} minWidth={0}>
-                <Text>
-                  <ExternalLink url={i.url}>{i.title}</ExternalLink>
-                </Text>
-                {i.deadline && <Muted>{i.deadline}</Muted>}
-              </YStack>
-            </ListRow>
-          ))}
-        </YStack>
-      )}
+      <CalendarDownload events={data.events} onDownload={onDownload} />
+      <CalendarList events={data.events} items={data.result.items} />
     </YStack>
   );
 }
@@ -144,6 +110,11 @@ export function ResultSummary({ data }: { data: Analysis }) {
           note={`Data compiled ${formatDate(result.dataVersion)}`}
         />
       </XStack>
+      <LocationSummary
+        state={result.profile.state}
+        county={result.profile.county}
+        city={result.profile.city}
+      />
       {s.verified < s.total && (
         <Muted>
           {s.total - s.verified} obligations were compiled from public sources and not individually checked
