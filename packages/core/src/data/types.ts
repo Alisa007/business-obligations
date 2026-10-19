@@ -3,7 +3,7 @@ import type { Applicability, FilingMethod, Frequency, ItemCategory } from "../ty
 import type { ScheduleFields } from "../rrule";
 export interface Agency {
   name: string;
-  url?: string;
+  url?: string[];
 }
 
 export interface FixedDue {
@@ -53,21 +53,21 @@ export interface EntityTaxDetail {
 
 export interface StateLinks {
   /** How to form an entity with the filing office. */
-  formation: string;
+  formation: string[];
   /** Annual, biennial or periodic report filing or renewal. */
-  annualReport: string;
+  annualReport: string[];
   /** Employer registration for unemployment insurance. */
-  uiRegistration: string;
+  uiRegistration: string[];
   /** Employer registration for state income tax withholding. */
-  withholding?: string;
+  withholding?: string[];
   /** Sales and use tax permit or license registration. */
-  salesTax?: string;
+  salesTax?: string[];
   /** Corporate income, franchise or gross-receipts tax. */
-  entityTax: string;
+  entityTax: string[];
   /** The state's required workplace posters and notices. */
-  laborPosters: string;
+  laborPosters: string[];
   /** Trade name / DBA registration, where it is filed with the state (see `dbaFiling`). */
-  dba?: string;
+  dba?: string[];
 }
 
 export interface UnemploymentInfo {
@@ -143,7 +143,7 @@ export interface ReportRule {
   frequency?: "annual" | "biennial" | "every_five_years" | "periodic";
   /** The fee. The display text ("$30 online ($45 paper)") is generated from it; see `describeFee`. */
   feeDetail: FeeDetail;
-  lateFee?: LateFee;
+  lateFee?: { amount: number; percentPerMonth?: number; note?: string };
   /**
    * The schedule as an iCalendar recurrence rule, e.g. `FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=15` (see `rrule.ts`). When
    * present, `frequency` and `due` are derived from it and must be left out, and `deadline` is generated unless
@@ -237,7 +237,7 @@ export interface StateInfo {
         title: string;
         authority: string;
         /** Page for the license (replaces a separate link entry). */
-        url?: string;
+        url?: string[];
         feeDetail: FeeDetail;
       } & ScheduleFields)
     | null;
@@ -313,7 +313,7 @@ export interface LocalItem {
   opens?: { month: number; day: number };
   /** Machine-readable form of `deadline` for data without an `rrule`. */
   due?: Due;
-  url?: string;
+  url?: string[];
   /**
    * NAICS code prefixes (2 to 6 digits). When present, the item applies only if the business's `naics` starts with
    * one of them, so a business that gave no code does not get it.
@@ -349,6 +349,8 @@ export interface LocalItem {
   renewal?: string;
   /** The government fee, when the item has one with a known basis; it becomes the item's `cost` (see `FeeDetail`). */
   feeDetail?: FeeDetail;
+  /** Structured late fee when the official description gives a fixed amount. */
+  lateFee?: LateFee;
 }
 
 /**

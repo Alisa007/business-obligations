@@ -3,7 +3,7 @@
     "city": "Henderson",
     "note": "The renewal term and due date were not confirmed from the city's own pages.",
     "counties": ["Clark"],
-    "sourceUrl": "https://www.cityofhenderson.com/government/departments/business-licensing/faqs",
+    "sourceUrl": ["https://www.cityofhenderson.com/government/departments/business-licensing/faqs"],
     "items": [
       {
         "id": "henderson.business-license",
@@ -13,7 +13,7 @@
         "description": "Any business activity in the city needs a city business license, even if the business is located outside the city limits or holds a license from another city, in addition to the Nevada state business license. The fee depends on the classification, of which there are nearly 100. Food businesses also need a Southern Nevada Health District permit before they start, and privileged licenses need City Council approval before issue. A renewal received after its due date carries a 10% penalty, whether or not the reminder arrived.",
         "frequency": "ongoing",
         "deadline": "Before operating; renew on or before the due date",
-        "url": "https://www.cityofhenderson.com/government/departments/business-licensing/faqs",
+        "url": ["https://www.cityofhenderson.com/government/departments/business-licensing/faqs"],
         "appliesTo": ["all"]
       }
     ],
@@ -23,7 +23,7 @@
     "city": "Las Vegas",
     "checkedOn": "2026-10-19",
     "counties": ["Clark"],
-    "sourceUrl": "https://www.lasvegasnevada.gov/Business/Business-License/Apply-Manage",
+    "sourceUrl": ["https://www.lasvegasnevada.gov/Business/Business-License/Apply-Manage"],
     "items": [
       {
         "id": "lasvegas.business-license",
@@ -32,7 +32,7 @@
         "authority": "City of Las Vegas Business Licensing (with Clark County for unincorporated areas)",
         "description": "A business with its address inside the City of Las Vegas needs a city business license, after the state business license and zoning and certificate-of-occupancy checks. General licenses are applied for online; privilege licenses need an appointment. A business outside city limits is licensed by Clark County, North Las Vegas or Henderson.",
         "rrule": "FREQ=YEARLY",
-        "url": "https://www.lasvegasnevada.gov/Business/Business-License/Apply-For-A-Business-License",
+        "url": ["https://www.lasvegasnevada.gov/Business/Business-License/Apply-For-A-Business-License"],
         "appliesTo": ["all"],
         "feeDetail": {
           "basis": "varies",
@@ -47,7 +47,9 @@
         "authority": "Clark County Clerk",
         "description": "A business that operates under a name that does not show the real name of each owner files a fictitious firm name certificate with the County Clerk of each county where it operates. The $25 filing fee includes one copy, the form needs no notary, and the name is renewed every five years.",
         "rrule": "FREQ=YEARLY;INTERVAL=5",
-        "url": "https://www.clarkcountynv.gov/government/elected_officials/county_clerk/fictitious-firm-name",
+        "url": [
+          "https://www.clarkcountynv.gov/government/elected_officials/county_clerk/fictitious-firm-name"
+        ],
         "appliesTo": ["trade_name"],
         "feeDetail": {
           "basis": "flat",
@@ -70,18 +72,20 @@
         "description": "Anyone who conducts business in the city, or runs a business based in the city, needs a city business license before operations begin, with a separate license for each branch, establishment or location. Renewal opens 30 days before the license expires and fees must be paid before the expiration date to avoid a penalty, whether or not a notice arrived. A license that stays unpaid for 60 days after it expires is revoked.",
         "frequency": "ongoing",
         "deadline": "Before operating; renew before the license expires (renewal opens 30 days before)",
-        "url": "https://www.cityofnorthlasvegas.com/business/business-licenses",
+        "url": ["https://www.cityofnorthlasvegas.com/business/business-licenses"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.cityofnorthlasvegas.com/business/business-licenses"
+    "sourceUrl": ["https://www.cityofnorthlasvegas.com/business/business-licenses"]
   },
   {
     "city": "Reno",
     "note": "The current fee schedule was not confirmed from the city's own pages.",
     "counties": ["Washoe"],
-    "sourceUrl": "https://reno.gov/business-development/business-licensing/common-questions-business-resources.php",
+    "sourceUrl": [
+      "https://reno.gov/business-development/business-licensing/common-questions-business-resources.php"
+    ],
     "items": [
       {
         "id": "reno.business-license",
@@ -91,7 +95,7 @@
         "description": "Businesses in the city need a city business license in addition to the Nevada state business license. A general license runs 12 months from the first day of the month the business starts and is renewed each year online through the regional onenv.us portal. A late renewal carries a 50% penalty, and so does starting before the license is issued. Liquor and gaming licenses follow a quarterly cycle.",
         "rrule": "FREQ=YEARLY",
         "deadline": "Renew each year, by the end of the 12-month license term",
-        "url": "https://www.reno.gov/business-development/business-licensing/index.php",
+        "url": ["https://www.reno.gov/business-development/business-licensing/index.php"],
         "appliesTo": ["all"]
       }
     ],
@@ -110,12 +114,12 @@
         "authority": "Sparks local licensing authority",
         "description": "Review the cited local licensing source before operating; requirements may be activity-specific and can differ by business type or location.",
         "frequency": "once",
-        "url": "https://portal.cityofsparks.us/bids/docs/download/1479",
+        "url": ["https://portal.cityofsparks.us/bids/docs/download/1479"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://portal.cityofsparks.us/bids/docs/download/1479"
+    "sourceUrl": ["https://portal.cityofsparks.us/bids/docs/download/1479"]
   },
   {
     "city": "Carson",
@@ -128,12 +132,16 @@
         "category": "license",
         "authority": "Carson local licensing authority",
         "description": "Carson City requires every person or company conducting business in the city, including outside businesses physically working there, to obtain and maintain a local business license before starting; applicants must first obtain the Nevada state business license, and the city states a typical 14–21 business-day approval period when a complete application is submitted.",
-        "url": "https://www.carsoncity.gov/government/departments-a-f/community-development/business-license-division",
+        "url": [
+          "https://www.carsoncity.gov/government/departments-a-f/community-development/business-license-division"
+        ],
         "frequency": "once",
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.nvsos.gov/sos-information/office-facts/faqs-all-division/service-marks-trademarks-trade-names"
+    "sourceUrl": [
+      "https://www.nvsos.gov/sos-information/office-facts/faqs-all-division/service-marks-trademarks-trade-names"
+    ]
   }
 ]

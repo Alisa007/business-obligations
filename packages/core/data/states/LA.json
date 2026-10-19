@@ -2,15 +2,15 @@
   "name": "Louisiana",
   "filing": {
     "name": "Louisiana Secretary of State",
-    "url": "https://www.sos.la.gov/business-services"
+    "url": ["https://www.sos.la.gov/business-services"]
   },
   "revenue": {
     "name": "Louisiana Department of Revenue",
-    "url": "https://revenue.louisiana.gov"
+    "url": ["https://revenue.louisiana.gov"]
   },
   "labor": {
     "name": "Louisiana Workforce Commission",
-    "url": "https://www.louisianaworks.net"
+    "url": ["https://www.louisianaworks.net"]
   },
   "llcReport": {
     "rrule": "FREQ=YEARLY",
@@ -82,14 +82,18 @@
     "regulator": "Louisiana Department of Agriculture and Forestry (production) and Louisiana Board of Pharmacy (dispensing)"
   },
   "links": {
-    "formation": "https://www.sos.la.gov/business-services/forms-fee-schedule",
-    "annualReport": "https://www.sos.la.gov/business-services/file-business-documents",
-    "uiRegistration": "https://www.laworks.net/unemploymentinsurance/ui_employers.asp",
-    "withholding": "https://revenue.louisiana.gov/businesses/widely-used-tax-types/withholding/",
-    "salesTax": "https://revenue.louisiana.gov/businesses/general-sales-and-use-taxes/general-sales-use-tax/",
-    "entityTax": "https://revenue.louisiana.gov/businesses/widely-used-tax-types/corporate-income-franchise-tax/",
-    "laborPosters": "https://www2.laworks.net/Downloads/Downloads_Posters.asp",
-    "dba": "https://www.sos.la.gov/business-services/file-business-documents"
+    "formation": ["https://www.sos.la.gov/business-services/forms-fee-schedule"],
+    "annualReport": ["https://www.sos.la.gov/business-services/file-business-documents"],
+    "uiRegistration": ["https://www.laworks.net/unemploymentinsurance/ui_employers.asp"],
+    "withholding": ["https://revenue.louisiana.gov/businesses/widely-used-tax-types/withholding/"],
+    "salesTax": [
+      "https://revenue.louisiana.gov/businesses/general-sales-and-use-taxes/general-sales-use-tax/"
+    ],
+    "entityTax": [
+      "https://revenue.louisiana.gov/businesses/widely-used-tax-types/corporate-income-franchise-tax/"
+    ],
+    "laborPosters": ["https://www2.laworks.net/Downloads/Downloads_Posters.asp"],
+    "dba": ["https://www.sos.la.gov/business-services/file-business-documents"]
   },
   "verification": {
     "checkedOn": "2026-10-13",

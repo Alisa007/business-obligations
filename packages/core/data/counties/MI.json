@@ -1,346 +1,1824 @@
 [
   {
     "county": "Alcona",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "alcona-mi.food-license",
+        "title": "Obtain and renew an Alcona County food service license",
+        "category": "license",
+        "authority": "Michigan local health department",
+        "description": "Food establishments operating in Alcona County must obtain the applicable local food service license and comply with Michigan inspection and renewal requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.michigan.gov/mdard/licensing/food/service",
+          "https://www.michigan.gov/mdard/licensing/food"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Food service fees are set by the local health department; Michigan distinguishes local food service licenses from MDARD food establishment licenses."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Alger",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "alger-mi.food-license",
+        "title": "Obtain and renew an Alger County food service license",
+        "category": "license",
+        "authority": "Luce-Mackinac-Alger-Schoolcraft District Health Department",
+        "description": "Food establishments operating in Alger County must obtain the applicable local food service license and comply with inspection and renewal requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.malph.org/directory/luce-mackinac-alger-schoolcraft-district-health-dept",
+          "https://cms2.revize.com/revize/algercounty/document_center/Dashboard/Ordinances/02%20Food%20Establishment.pdf",
+          "https://www.michigan.gov/mdard/licensing/food/service"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Food service fees are set by the local health department; the Alger ordinance requires an annual license and the license year generally ends April 30."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Allegan",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "allegan-mi.food-license",
+        "title": "Obtain and renew an Allegan County food service license",
+        "category": "license",
+        "authority": "Allegan County Health Department",
+        "description": "Food service establishments operating in Allegan County must obtain the applicable Michigan food service license and comply with local plan-review, inspection, and renewal requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.allegancounty.org/health/environmental-health/food",
+          "https://www.allegancounty.org/home/showpublisheddocument/15770/638906109559430000"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 110,
+          "max": 460,
+          "note": "Fixed food fees are $355-$460, mobile $165, STFU $116-$155, and temporary licenses $110-$254 depending on timing and status."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Annual food licenses are due April 30; late fees are $75 during the first half of May and $165 after that period."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Alpena",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "alpena-mi.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Michigan local health department",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.michigan.gov/mdard/licensing/food/service",
+          "https://www.michigan.gov/mdard/licensing/food"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Food service fees are set by the local health department; Michigan distinguishes local food service licenses from MDARD food establishment licenses."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Antrim",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "antrim-mi.food-license",
+        "title": "Obtain and renew an Antrim County food service license",
+        "category": "license",
+        "authority": "Health Department of Northwest Michigan",
+        "description": "Food establishments operating in Antrim County must obtain the applicable local food service license and comply with inspection, plan-review, and renewal requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": ["https://nwhealth.org/food-safety/", "https://www.michigan.gov/mdard/licensing/food/service"],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "The Health Department of Northwest Michigan publishes a combined Antrim, Charlevoix, and Emmet fee schedule; fees vary by operation type and risk."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Arenac",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "arenac-mi.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Michigan local health department",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.michigan.gov/mdard/licensing/food/service",
+          "https://www.michigan.gov/mdard/licensing/food"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Food service fees are set by the local health department; Michigan distinguishes local food service licenses from MDARD food establishment licenses."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Baraga",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "baraga-mi.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Michigan local health department",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.michigan.gov/mdard/licensing/food/service",
+          "https://www.michigan.gov/mdard/licensing/food"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Food service fees are set by the local health department; Michigan distinguishes local food service licenses from MDARD food establishment licenses."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Barry",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "barry-mi.food-license",
+        "title": "Obtain and renew a Barry County food service license",
+        "category": "license",
+        "authority": "Barry County Health Department",
+        "description": "Food establishments operating in Barry County must obtain the applicable local food service license and comply with inspection and renewal requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.barrycountyhealth.com/_files/ugd/7d9780_196aee5705f84384b89b5541302568a4.pdf",
+          "https://www.michigan.gov/mdard/licensing/food/service"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 1,
+          "max": 250,
+          "note": "Published fees are $100-$250 for permanent and mobile food establishments, $50 for a for-profit temporary event, and $1 for a nonprofit temporary event."
+        },
+        "lateFee": { "amount": 20, "note": "Published schedule assesses a $20 late fee per week." },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Bay",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "bay-mi.food-license",
+        "title": "Obtain and renew a Bay County food service license",
+        "category": "license",
+        "authority": "Bay County Health Department",
+        "description": "Food service establishments operating in Bay County must obtain the applicable local health department license and comply with inspection and plan-review requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://builder1.revize.com/revize/baycountymi/health_community/health_department/environmental_health/food_service_information.php",
+          "https://www.baycountymi.gov/health_community/health_department/environmental_health/index.php",
+          "https://www.michigan.gov/mdard/licensing/food/service"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 107,
+          "max": 640.5,
+          "note": "Published Bay County schedules vary by food-service type, occupancy, nonprofit status, and notice timing; current county schedule is linked from the food-service page."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Bay County schedules apply increased fees after the license deadline; confirm the current percentage with the health department."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Benzie",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "benzie-mi.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Michigan local health department",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.michigan.gov/mdard/licensing/food/service",
+          "https://www.michigan.gov/mdard/licensing/food"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Food service fees are set by the local health department; Michigan distinguishes local food service licenses from MDARD food establishment licenses."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Berrien",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "berrien-mi.assumed-name-certificate",
+        "title": "File a Berrien County assumed name or co-partnership certificate",
+        "category": "registration",
+        "authority": "Berrien County Clerk",
+        "description": "Businesses conducting business under an assumed name or as a co-partnership in Berrien County must file the applicable certificate; the filing fee is $10 and certificates expire after five years.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.berriencounty.org/153/Business-Names",
+          "https://www.berriencounty.org/DocumentCenter/View/101/DBA-and-Co-Partnership-Information-form-PDF?bidId="
+        ],
+        "feeDetail": { "basis": "flat", "amount": 10, "note": "Certificate expires five years from filing." },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["all"],
+            "description": "Uses an assumed name or operates as a co-partnership"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      },
+      {
+        "id": "berrien-mi.food-license",
+        "title": "Obtain and renew a Berrien County food service license",
+        "category": "license",
+        "authority": "Berrien County Health Department",
+        "description": "Food service establishments operating in Berrien County must obtain and renew the applicable local food license; the county fee schedule sets fees by seating and operation type.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.berriencountymi.gov/768/Restaurants",
+          "https://www.berriencountymi.gov/DocumentCenter/View/10482/EH-Fee-Schedule-2024"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 100,
+          "max": 590,
+          "note": "Fixed food service licenses range from $490 to $590 by seating; other operation types have separate fees."
+        },
+        "lateFee": { "amount": 20, "note": "Late application fee of $20 per week after April 30." },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food service establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Branch",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "branch-mi.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Michigan local health department",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.michigan.gov/mdard/licensing/food/service",
+          "https://www.michigan.gov/mdard/licensing/food"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Food service fees are set by the local health department; Michigan distinguishes local food service licenses from MDARD food establishment licenses."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Calhoun",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "calhoun-mi.food-license",
+        "title": "Obtain and renew a Calhoun County food service license",
+        "category": "license",
+        "authority": "Calhoun County Public Health Department",
+        "description": "Food service establishments operating in Calhoun County must obtain the applicable Michigan food service license and comply with local plan-review, inspection, and renewal requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://cms5.revize.com/revize/calhouncountymi/public%20health/Documents/2024%20-2025%20Fee%20Schedule.pdf",
+          "https://www.michigan.gov/mdard/licensing/food/service"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 95,
+          "max": 1020,
+          "note": "Published fees include temporary licenses $95-$151, mobile $281, and fixed licenses $798-$1,020 plus state fees."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 100,
+          "note": "Food establishment late fee is double the local fee; temporary applications received fewer than four days before events are also doubled."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Cass",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "cass-mi.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Michigan local health department",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.michigan.gov/mdard/licensing/food/service",
+          "https://www.michigan.gov/mdard/licensing/food"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Food service fees are set by the local health department; Michigan distinguishes local food service licenses from MDARD food establishment licenses."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Charlevoix",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "charlevoix-mi.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Michigan local health department",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.michigan.gov/mdard/licensing/food/service",
+          "https://www.michigan.gov/mdard/licensing/food"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Food service fees are set by the local health department; Michigan distinguishes local food service licenses from MDARD food establishment licenses."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Cheboygan",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "cheboygan-mi.food-license",
+        "title": "Obtain and renew a Cheboygan County food service license",
+        "category": "license",
+        "authority": "Cheboygan County Health Department / Michigan local health department",
+        "description": "Food service establishments operating in Cheboygan County must obtain the applicable local food service license and comply with Michigan inspection and renewal requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.michigan.gov/mdhhs/inside-mdhhs/county-offices/up-and-northern-michigan/cheboygan-county",
+          "https://www.michigan.gov/mdard/licensing/food/service"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Food service fees are set by the local health department; Michigan distinguishes local food service licenses from MDARD food establishment licenses."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Chippewa",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "chippewa-mi.food-license",
+        "title": "Obtain and renew a Chippewa County food service license",
+        "category": "license",
+        "authority": "Chippewa County Health Department",
+        "description": "Food establishments operating in Chippewa County must complete the local application, pre-opening inspection, and obtain the applicable food service license before operating.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://b19e8482-9275-4294-a1df-032b2b063b18.filesusr.com/ugd/178959_93f697bf3081401aa04ad33ef1209521.pdf",
+          "https://www.michigan.gov/mdard/licensing/food"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 155,
+          "max": 830,
+          "note": "Published fees include $830 fixed annual, $430 seasonal, $155 transitory, and $193 mobile food licenses."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Clare",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "clare-mi.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Michigan local health department",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.michigan.gov/mdard/licensing/food/service",
+          "https://www.michigan.gov/mdard/licensing/food"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Food service fees are set by the local health department; Michigan distinguishes local food service licenses from MDARD food establishment licenses."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Clinton",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "clinton-mi.food-license",
+        "title": "Obtain and renew a Clinton County food service license",
+        "category": "license",
+        "authority": "Clinton County Health Department",
+        "description": "Food establishments operating in Clinton County must obtain the applicable county food permit and comply with local inspection and renewal requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://clintoncountyhealth.com/wp-content/uploads/Fee-Schedule-for-Environmental-Health.pdf",
+          "https://clintoncountyhealth.com/wp-content/uploads/2019ApplicationFoodPermit.pdf",
+          "https://www.michigan.gov/mdard/licensing/food/service"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 30,
+          "max": 225,
+          "note": "Published food permit categories are $75-$150 for annual permits, $75 initial new-permit fee, and $125-$225 for initial permits; permits issued January-June are half price."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 50,
+          "note": "The county application states that renewals after May 30 incur a 50% late fee."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Crawford",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "crawford-mi.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Michigan local health department",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.michigan.gov/mdard/licensing/food/service",
+          "https://www.michigan.gov/mdard/licensing/food"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Food service fees are set by the local health department; Michigan distinguishes local food service licenses from MDARD food establishment licenses."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Delta",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "delta-mi.food-license",
+        "title": "Obtain and renew a Delta County food service license",
+        "category": "license",
+        "authority": "Public Health, Delta & Menominee Counties",
+        "description": "Food service establishments operating in Delta County must obtain the applicable local food service license and comply with inspection, plan-review, and annual renewal requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://cms3.revize.com/revize/deltapublichealth/Documents/Forms%20and%20Documents/Environmental%20Health/2025%20Food.pdf",
+          "https://www.michigan.gov/mdard/licensing/food/service"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 30,
+          "max": 779,
+          "note": "Published 2025 fees range from $280 to $709 for food service establishments; temporary, mobile, transitory, plan-review, and inspection fees vary by type."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 50,
+          "note": "Applications received after April 30 incur a 50% late filing fee."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Dickinson",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "dickinson-mi.food-license",
+        "title": "Obtain and renew a Dickinson County food service license",
+        "category": "license",
+        "authority": "Dickinson-Iron District Health Department / Michigan Department of Agriculture and Rural Development",
+        "description": "Food service establishments operating in Dickinson County must obtain the applicable local health department license before operating.",
+        "rrule": "FREQ=YEARLY",
+        "url": ["https://www.didhd.org/", "https://www.michigan.gov/mdard/licensing/food/service"],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Michigan food service license fees are set by the local health department; contact Dickinson-Iron District Health Department for the current schedule."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Eaton",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "eaton-mi.food-license",
+        "title": "Obtain and renew an Eaton County food service license",
+        "category": "license",
+        "authority": "Eaton County Health Department / Michigan Department of Agriculture and Rural Development",
+        "description": "Food service establishments operating in Eaton County must obtain the applicable local health department license; retail food establishments regulated by the state must obtain the Michigan food establishment license.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://eatoncounty.org/health",
+          "https://www.michigan.gov/mdard/licensing/food/service",
+          "https://www.michigan.gov/mdard/licensing/food/food-establishment-license/fees-and-schedule"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 186,
+          "max": 471,
+          "note": "Michigan state food-establishment fees are $186-$471 by license type; food service license fees are set by the local health department."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Emmet",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "emmet-mi.food-license",
+        "title": "Obtain and renew an Emmet County food service license",
+        "category": "license",
+        "authority": "Health Department of Northwest Michigan",
+        "description": "Food establishments operating in Emmet County must obtain the applicable local food service license and comply with inspection, plan-review, and renewal requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": ["https://nwhealth.org/food-safety/", "https://www.michigan.gov/mdard/licensing/food/service"],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "The Health Department of Northwest Michigan publishes a combined Antrim, Charlevoix, and Emmet fee schedule; fees vary by operation type and risk."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Temporary food license applications submitted fewer than five business days before an event incur a late fee under the local program."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Genesee",
-    "status": "unverified",
-    "reason": "bpp-reported-to-city-assessor",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "status": "rules",
+    "items": [
+      {
+        "id": "genesee-mi.environmental-health-license",
+        "title": "Obtain and renew a Genesee County environmental health license",
+        "category": "permit",
+        "authority": "Genesee County Health Department",
+        "description": "Businesses covered by Genesee County environmental-health regulations must obtain the applicable annual license and pay the fee set by the county schedule.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.geneseecountymi.gov/Document_Center/Department/Health%207-18-22/EH/Environmental%20Health%20Regulations.pdf?t=202508291034090"
+        ],
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [{ "field": "foodService", "op": "==", "value": true }],
+        "feeDetail": { "basis": "varies", "note": "county fee schedule" }
+      }
+    ],
+    "sourceUrl": [
+      "https://www.geneseecountymi.gov/Document_Center/Department/Health%207-18-22/EH/Environmental%20Health%20Regulations.pdf?t=202508291034090"
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Gladwin",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "gladwin-mi.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Michigan local health department",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.michigan.gov/mdard/licensing/food/service",
+          "https://www.michigan.gov/mdard/licensing/food"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Food service fees are set by the local health department; Michigan distinguishes local food service licenses from MDARD food establishment licenses."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Gogebic",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "gogebic-mi.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Michigan local health department",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.michigan.gov/mdard/licensing/food/service",
+          "https://www.michigan.gov/mdard/licensing/food"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Food service fees are set by the local health department; Michigan distinguishes local food service licenses from MDARD food establishment licenses."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Grand Traverse",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "grand-traverse-mi.food-license",
+        "title": "Obtain and renew a Grand Traverse County food service license",
+        "category": "license",
+        "authority": "Grand Traverse County Health Department",
+        "description": "Food service establishments operating in Grand Traverse County must obtain the applicable health department license and renew it for the annual licensing period.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.gtcountymi.gov/1627/Food-Safety",
+          "https://www.gtcountymi.gov/DocumentCenter/View/24037"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 300,
+          "max": 650,
+          "note": "The published county schedule lists annual food-service fees from $300 for schools and churches to $650 for full kitchens with 151 or more seats."
+        },
+        "lateFee": {
+          "amount": 100,
+          "note": "Late renewals incur a $100 per month late fee starting May 15, 2026."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Gratiot",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "gratiot-mi.food-license",
+        "title": "Obtain and renew a Gratiot County food service license",
+        "category": "license",
+        "authority": "Michigan Department of Agriculture & Rural Development",
+        "description": "Food service establishments operating in Gratiot County must obtain the applicable local health department food service license and meet Michigan licensing requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.michigan.gov/mdard/licensing/food/service",
+          "https://www.michigan.gov/mdard/licensing/food/food-establishment-license",
+          "https://www.michigan.gov/mdard/licensing/food/countyfairs/fair-inspections-transition"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Food service license fees are determined by the local health department."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Hillsdale",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "hillsdale-mi.food-license",
+        "title": "Obtain and renew a Hillsdale County food service license",
+        "category": "license",
+        "authority": "Branch-Hillsdale-St. Joseph Community Health Agency",
+        "description": "Food service establishments operating in Hillsdale County must obtain and maintain the applicable Michigan food service license through the local health agency.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://bhsj.org/food-service/",
+          "https://bhsj.org/environmental-health/",
+          "https://www.michigan.gov/mdard/licensing/food/service"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Food service fees are set by the local health agency and vary by operation type."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Houghton",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "houghton-mi.food-license",
+        "title": "Obtain and renew a Houghton County food service license",
+        "category": "license",
+        "authority": "Houghton County Health Department",
+        "description": "Food service establishments operating in Houghton County must obtain the applicable Michigan food service license through the local health department and comply with Michigan Food Law requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://houghtoncounty.gov/contact.php",
+          "https://www.michigan.gov/mdard/licensing/food/service"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Food service fees are determined by the local health department and vary by operation type."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Huron",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "huron-mi.food-license",
+        "title": "Obtain and renew a Huron County food service license",
+        "category": "license",
+        "authority": "Huron County Health Department",
+        "description": "Food service establishments operating in Huron County must obtain the applicable Michigan local health department food service license and comply with inspection and renewal requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.hchd.us/",
+          "https://www.hchd.us/eh",
+          "https://www.michigan.gov/mdard/licensing/food/service"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Huron County publishes food-service and environmental-health fee schedules; fees vary by license and service type."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Ingham",
-    "status": "unverified",
-    "reason": "bpp-reported-to-city-assessor",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "status": "rules",
+    "items": [
+      {
+        "id": "ingham-mi.business-filings",
+        "title": "Register an assumed name or co-partnership in Ingham County",
+        "category": "registration",
+        "authority": "Ingham County Clerk",
+        "description": "Businesses using an assumed name or operating as a co-partnership in Ingham County must file the applicable certificate with the County Clerk; the county publishes separate new-filing and renewal fees.",
+        "rrule": "FREQ=YEARLY;INTERVAL=5",
+        "url": ["https://docs.ingham.org/departments_and_officials/county_clerk/dba_doing_business_as.php"],
+        "appliesTo": ["trade_name"],
+        "feeDetail": { "basis": "varies", "note": "DBA and co-partnership schedules differ" }
+      }
+    ],
+    "sourceUrl": ["https://docs.ingham.org/departments_and_officials/county_clerk/dba_doing_business_as.php"],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Ionia",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "ionia-mi.food-license",
+        "title": "Obtain and renew an Ionia County food service license",
+        "category": "license",
+        "authority": "Ionia County Health Department",
+        "description": "Fixed, mobile, special transitory, temporary, and vending food establishments operating in Ionia County must obtain the applicable annual or event food license.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://ioniacounty.org/health/environmental-health/food-service-program/",
+          "https://ioniacounty.org/health/environmental-health/food-service-program/starting/",
+          "https://www.michigan.gov/mdard/licensing/food/service"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees must be paid before review or the event and vary by facility class and license type; contact the Ionia County Health Department for the current schedule."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Temporary food applications submitted fewer than five days before the event may incur a late application fee."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Iosco",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "iosco-mi.food-license",
+        "title": "Obtain and renew an Iosco County food service license",
+        "category": "license",
+        "authority": "Michigan Department of Agriculture & Rural Development / local health department",
+        "description": "Food service and food establishment operations in Iosco County must obtain the applicable Michigan license from the responsible state or local health authority before operating.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.michigan.gov/mdard/licensing/food",
+          "https://www.michigan.gov/mdard/licensing/food/service",
+          "https://www.michigan.gov/mdard/licensing/food/food-establishment-license/fees-and-schedule",
+          "https://iosco.net/online-services/"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 73,
+          "max": 471,
+          "note": "Michigan state food-establishment fees include $73 temporary, $159 transitory, $186 retail, $192 mobile, and $471 extended-retail/wholesale categories; food-service fees are set by the local health department."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Iron",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "iron-mi.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Michigan local health department",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.michigan.gov/mdard/licensing/food/service",
+          "https://www.michigan.gov/mdard/licensing/food"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Food service fees are set by the local health department; Michigan distinguishes local food service licenses from MDARD food establishment licenses."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Isabella",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "isabella-mi.food-license",
+        "title": "Obtain and renew an Isabella County food service license",
+        "category": "license",
+        "authority": "Central Michigan District Health Department / Michigan Department of Agriculture & Rural Development",
+        "description": "Food service and food establishment operations in Isabella County must obtain the applicable Michigan license from the responsible health authority before operating; mobile vendors must also provide the county health license to the City of Mount Pleasant when applicable.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.michigan.gov/mdard/licensing/food",
+          "https://www.michigan.gov/mdard/licensing/food/service",
+          "https://www.isabellacounty.org/contacts/",
+          "https://cms2.revize.com/revize/mtpleasant/Agendas_Minues/City%20Commission/2023/E-Packet%20for%203-27-2023_reduced.pdf"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 73,
+          "max": 471,
+          "note": "Michigan state food-establishment fees include $73 temporary, $159 transitory, $186 retail, $192 mobile, and $471 extended-retail/wholesale categories; food-service fees are set by the local health department."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Jackson",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "jackson-mi.food-license",
+        "title": "Obtain and renew a Jackson County food service license",
+        "category": "license",
+        "authority": "Jackson County Health Department",
+        "description": "Food service establishments, special transitory food units, and mobile food establishments operating in Jackson County must obtain the applicable license; annual licenses run May 1 through April 30 and late renewals incur a 25% monthly increase after June 1.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.co.jackson.mi.us/1112/Food-Program",
+          "https://www.co.jackson.mi.us/DocumentCenter/View/22207/FY2026-Fee-Schedule-EH-Clinics-and-other"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 148,
+          "max": 990,
+          "note": "FY2026 fees vary by facility type, temporary timing, mobile status, and nonprofit status."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Late applications after April 30 increase by 25%; after June 1 the local fee doubles."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Kalamazoo",
-    "status": "unverified",
-    "reason": "bpp-reported-to-city-assessor",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "status": "rules",
+    "items": [
+      {
+        "id": "kalamazoo-mi.assumed-name-certificate",
+        "title": "File a Kalamazoo County assumed name certificate",
+        "category": "registration",
+        "authority": "Kalamazoo County Clerk",
+        "description": "Businesses conducting business under an assumed name in Kalamazoo County must file an assumed name certificate; the county fee schedule lists a $22 filing fee.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.kalcounty.gov/1265/Clerk-Fee-Schedule",
+          "https://www.kalcounty.gov/DocumentCenter/View/5315/Assumed-Name-Registration?bidId="
+        ],
+        "feeDetail": { "basis": "flat", "amount": 22 },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["all"],
+            "description": "Conducts business under an assumed name"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Kalkaska",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "kalkaska-mi.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Michigan local health department",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.michigan.gov/mdard/licensing/food/service",
+          "https://www.michigan.gov/mdard/licensing/food"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Food service fees are set by the local health department; Michigan distinguishes local food service licenses from MDARD food establishment licenses."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Kent",
-    "status": "unverified",
-    "reason": "bpp-reported-to-city-assessor",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "status": "rules",
+    "items": [
+      {
+        "id": "kent-mi.business-registration",
+        "title": "Register an assumed name or co-partnership in Kent County",
+        "category": "registration",
+        "authority": "Kent County Clerk",
+        "description": "Businesses operating in Kent County using an assumed name or co-partnership must register with the County Clerk; registration is valid for five years and may be renewed 30 to 90 days before expiration.",
+        "rrule": "FREQ=YEARLY;INTERVAL=5",
+        "url": ["https://www.kentcountymi.gov/794/Business-Registration"],
+        "appliesTo": ["trade_name"],
+        "feeDetail": { "basis": "flat", "amount": 10 }
+      }
+    ],
+    "sourceUrl": ["https://www.kentcountymi.gov/794/Business-Registration"],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Keweenaw",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "keweenaw-mi.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Michigan local health department",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.michigan.gov/mdard/licensing/food/service",
+          "https://www.michigan.gov/mdard/licensing/food"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Food service fees are set by the local health department; Michigan distinguishes local food service licenses from MDARD food establishment licenses."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Lake",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "lake-mi.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Michigan local health department",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.michigan.gov/mdard/licensing/food/service",
+          "https://www.michigan.gov/mdard/licensing/food"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Food service fees are set by the local health department; Michigan distinguishes local food service licenses from MDARD food establishment licenses."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Lapeer",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "lapeer-mi.food-license",
+        "title": "Obtain and renew a Lapeer County food service license",
+        "category": "license",
+        "authority": "Lapeer County Health Department / Michigan Department of Agriculture and Rural Development",
+        "description": "Food service establishments operating in Lapeer County must obtain the applicable local health department license and complete plan review for new or remodeled facilities.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.lapeercounty.org/",
+          "https://www.michigan.gov/mdard/licensing/food/service",
+          "https://cms5.revize.com/revize/lapeer/08.08.24%20COW%20Agenda%20Packet%20Revised.pdf"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Lapeer County materials identify separate food-service plan-review and ownership-change fees; contact the health department for the current annual license schedule."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Leelanau",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "leelanau-mi.food-license",
+        "title": "Obtain and renew a Leelanau County food license",
+        "category": "license",
+        "authority": "Benzie-Leelanau District Health Department",
+        "description": "Food establishments operating in Leelanau County must obtain the applicable Michigan food license and renew it under the district health department schedule.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.bldhd.org/media/uploads/Environmental%20Health%20Form/25-26_food_license_fees_.pdf",
+          "https://www.michigan.gov/mdard/licensing/food/service"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 41,
+          "max": 1361,
+          "note": "Published annual food-license fees range from $240 for exempt/nonprofit operations to $1,361 for a convention and conference center; mobile units are $209 and temporary licenses are $148."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 50,
+          "note": "The district schedule adds 50% of the permit fee as a late fee and doubles the permit fee after June 1; temporary applications submitted fewer than five days before an event are 1.5 times the fee and same-day applications are double."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Lenawee",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "lenawee-mi.food-license",
+        "title": "Obtain and renew a Lenawee County food service license",
+        "category": "license",
+        "authority": "Lenawee County Health Department",
+        "description": "Food establishments operating in Lenawee County must complete plan review and obtain the applicable Michigan food service license; temporary food operations generally require an application at least five business days before operation.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.lenawee.mi.us/192/Food-Service",
+          "https://www.lenawee.mi.us/DocumentCenter/View/1371"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 105,
+          "max": 10680,
+          "note": "Fixed, mobile, transitory, temporary, and large-venue fees vary by operation type; temporary fees range from $105 to $169."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Livingston",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "livingston-mi.food-license",
+        "title": "Obtain and renew a Livingston County food service license",
+        "category": "license",
+        "authority": "Livingston County Environmental Health",
+        "description": "Food service establishments operating in Livingston County must obtain the applicable county license before operating and renew it annually.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://milivcounty.gov/environmental-health/food-safety/",
+          "https://milivcounty.gov/environmental-health/fee-schedule/",
+          "https://milivcounty.gov/environmental-health/food-safety/temporary/"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 269,
+          "max": 1070,
+          "note": "Published fees include fixed establishment licenses of $650-$1,040 plus state fees, mobile licenses of $260 plus state fees, and temporary permits of $269 or $399 depending on notice."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 75,
+          "note": "Annual renewal penalties increase from 10% through 75% after April 30; operating without a license or on the event day is charged $520."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Luce",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "luce-mi.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Michigan local health department",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.michigan.gov/mdard/licensing/food/service",
+          "https://www.michigan.gov/mdard/licensing/food"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Food service fees are set by the local health department; Michigan distinguishes local food service licenses from MDARD food establishment licenses."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Mackinac",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "mackinac-mi.food-license",
+        "title": "Obtain and renew a Mackinac County food service license",
+        "category": "license",
+        "authority": "Luce-Mackinac-Alger-Schoolcraft District Health Department",
+        "description": "Food establishments operating in Mackinac County must obtain the applicable local food service license and comply with Michigan inspection and renewal requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.lmasdhd.org/wp-content/uploads/2025/09/Complete-Temporary-Food-Application-Packet-Rev-6.2025.pdf",
+          "https://www.michigan.gov/mdard/licensing/food/service"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Local food service fees vary by operation type; temporary food licenses are administered through the LMAS district health department."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Macomb",
@@ -352,7 +1830,9 @@
         "authority": "Michigan Department of Treasury",
         "description": "Hotels and motels with more than 80 rooms in Macomb County must file the monthly state convention facility development tax return; the rate depends on room count and the current official instructions.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
-        "url": "https://www.michigan.gov/taxes/-/media/Project/Websites/taxes/Forms/Misc/Convention-Facility-Development/406.pdf",
+        "url": [
+          "https://www.michigan.gov/taxes/-/media/Project/Websites/taxes/Forms/Misc/Convention-Facility-Development/406.pdf"
+        ],
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -368,87 +1848,459 @@
   },
   {
     "county": "Manistee",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "manistee-mi.food-license",
+        "title": "Obtain and renew a Manistee County food service license",
+        "category": "license",
+        "authority": "District Health Department #10",
+        "description": "Food establishments operating in Manistee County must obtain the applicable local food service license and comply with inspection, plan-review, and renewal requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.dhd10.org/locations/manistee-county/",
+          "https://www.michigan.gov/mdard/licensing/food/service"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "District Health Department #10 publishes local food service licensing information; fees vary by operation type and current schedule."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Marquette",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "marquette-mi.food-license",
+        "title": "Obtain and renew a Marquette County food service license",
+        "category": "license",
+        "authority": "Marquette County Health Department",
+        "description": "Food service establishments operating in Marquette County must obtain the applicable license from the local health department before operating and renew it for the annual licensing period.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.mqtco.org/health-department/",
+          "https://www.michigan.gov/mdard/licensing/food/service"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Michigan food service licensing is administered by local health departments; contact Marquette County for the current fee schedule."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Mason",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "mason-mi.food-license",
+        "title": "Obtain and renew a Mason County food service license",
+        "category": "license",
+        "authority": "Michigan Department of Agriculture & Rural Development / local health department",
+        "description": "Food service and food establishment operations in Mason County must obtain the applicable Michigan license from the responsible state or local health authority before operating.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.michigan.gov/mdard/licensing/food",
+          "https://www.michigan.gov/mdard/licensing/food/service",
+          "https://www.michigan.gov/mdard/licensing/food/food-establishment-license/fees-and-schedule"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 73,
+          "max": 471,
+          "note": "Michigan state food-establishment fees include $73 temporary, $159 transitory, $186 retail, $192 mobile, and $471 extended-retail/wholesale categories; food-service fees are set by the local health department."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Mecosta",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "mecosta-mi.food-license",
+        "title": "Obtain and renew a Mecosta County food service license",
+        "category": "license",
+        "authority": "Michigan Department of Agriculture & Rural Development / local health department",
+        "description": "Food service and food establishment operations in Mecosta County must obtain the applicable Michigan license from the responsible state or local health authority before operating.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.michigan.gov/mdard/licensing/food",
+          "https://www.michigan.gov/mdard/licensing/food/service",
+          "https://www.michigan.gov/mdard/licensing/food/food-establishment-license/fees-and-schedule"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 73,
+          "max": 471,
+          "note": "Michigan state food-establishment fees include $73 temporary, $159 transitory, $186 retail, $192 mobile, and $471 extended-retail/wholesale categories; food-service fees are set by the local health department."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Menominee",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "menominee-mi.food-license",
+        "title": "Obtain and renew a Menominee County food service license",
+        "category": "license",
+        "authority": "Public Health, Delta & Menominee Counties",
+        "description": "Food service establishments operating in Menominee County must obtain the applicable Michigan food service license before operating and renew it annually.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://cms3.revize.com/revize/deltapublichealth/Documents/Forms%20and%20Documents/Environmental%20Health/2025%20Food.pdf",
+          "https://www.michigan.gov/mdard/licensing/food/service"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 30,
+          "max": 709,
+          "note": "The published 2025 schedule lists food service fees by facility type, including $280-$709 for regular facilities and $30-$248 for temporary low-risk operations."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Temporary food fees increase when applications are submitted fewer than seven days before the event, with same-day applications charged the highest published fee."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Midland",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "midland-mi.food-license",
+        "title": "Obtain and renew a Midland County food service license",
+        "category": "license",
+        "authority": "Midland County Environmental Health",
+        "description": "Food service establishments operating in Midland County must obtain the applicable county license before operating and renew it annually.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://midlandcountymi.gov/index.php?section=EH-Restaurants",
+          "https://midlandcountymi.gov/corecode/uploads/document6/uploaded_pdfs/corecode/EH%20FEES%202025_565.pdf",
+          "https://www.michigan.gov/mdard/licensing/food/service"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 71,
+          "max": 580,
+          "note": "The published schedule lists fixed annual fees of $355-$580 by risk type, mobile fees of $230, and temporary fees of $75 when timely."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Operating without a license incurs double the license fee; applications with fewer than five business days' notice add $20."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Missaukee",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "missaukee-mi.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Michigan local health department",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.michigan.gov/mdard/licensing/food/service",
+          "https://www.michigan.gov/mdard/licensing/food"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Food service fees are set by the local health department; Michigan distinguishes local food service licenses from MDARD food establishment licenses."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Monroe",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "monroe-mi.food-license",
+        "title": "Obtain and renew a Monroe County food service license",
+        "category": "license",
+        "authority": "Monroe County Health Department",
+        "description": "Food service establishments operating in Monroe County must obtain the applicable Michigan food service license and renew it annually; late applications and unlicensed operation can double the local fee.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.co.monroe.mi.us/456/Restaurant-Owners",
+          "https://www.co.monroe.mi.us/DocumentCenter/View/4182"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 49,
+          "max": 550,
+          "note": "Published local food fees vary by seats, operation type, temporary status, and plan review."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 100,
+          "note": "Annual fixed license late fee doubles the local health-department fee after May 1; temporary late applications also double the local fee."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Montcalm",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "montcalm-mi.food-license",
+        "title": "Obtain and renew a Montcalm County food service license",
+        "category": "license",
+        "authority": "Montcalm County Health Department",
+        "description": "Food service establishments operating in Montcalm County must obtain the applicable Michigan food service license through the local health department and comply with state food-law requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": ["https://www.montcalmcountymi.gov/", "https://www.michigan.gov/mdard/licensing/food/service"],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Food service fees are set by the local health department and vary by license type."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Montmorency",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "montmorency-mi.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Michigan local health department",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.michigan.gov/mdard/licensing/food/service",
+          "https://www.michigan.gov/mdard/licensing/food"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Food service fees are set by the local health department; Michigan distinguishes local food service licenses from MDARD food establishment licenses."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Muskegon",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "muskegon-mi.food-license",
+        "title": "Obtain and renew a Muskegon County food service license",
+        "category": "license",
+        "authority": "Muskegon County Public Health",
+        "description": "Food service establishments operating in Muskegon County must obtain the applicable Michigan food service license and comply with county plan-review, inspection, and renewal requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://co.muskegon.mi.us/996/Food-Service-Licensing",
+          "https://co.muskegon.mi.us/DocumentCenter/View/3616/Food-Service-License-New-Application-2026?bidId=",
+          "https://www.michigan.gov/mdard/licensing/food/service"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Muskegon County publishes a current Food Service Sanitation Program fee schedule; fees vary by license type and operation."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Newaygo",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "newaygo-mi.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Michigan local health department",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.michigan.gov/mdard/licensing/food/service",
+          "https://www.michigan.gov/mdard/licensing/food"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Food service fees are set by the local health department; Michigan distinguishes local food service licenses from MDARD food establishment licenses."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Oakland",
@@ -460,7 +2312,9 @@
         "authority": "Michigan Department of Treasury",
         "description": "Hotels and motels with more than 80 rooms in Oakland County must file the monthly state convention facility development tax return; the rate depends on room count and the current official instructions.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
-        "url": "https://www.michigan.gov/taxes/-/media/Project/Websites/taxes/Forms/Misc/Convention-Facility-Development/406.pdf",
+        "url": [
+          "https://www.michigan.gov/taxes/-/media/Project/Websites/taxes/Forms/Misc/Convention-Facility-Development/406.pdf"
+        ],
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -476,129 +2330,684 @@
   },
   {
     "county": "Oceana",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "oceana-mi.food-license",
+        "title": "Obtain and renew an Oceana County food service license",
+        "category": "license",
+        "authority": "Michigan Department of Agriculture and Rural Development / District Health Department #10",
+        "description": "Food establishments operating in Oceana County must obtain the applicable Michigan food establishment license; temporary fair vendors are licensed through the local health department where applicable.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.michigan.gov/mdard/licensing/food/food-establishment-license",
+          "https://www.michigan.gov/mdard/licensing/food/countyfairs/fair-inspections-transition",
+          "https://www.michigan.gov/mdard/licensing/food/food-establishment-license/fees-and-schedule"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 73,
+          "max": 471,
+          "note": "Michigan food-establishment license fees vary by establishment type and risk category; local temporary-event fees may also apply."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Ogemaw",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "ogemaw-mi.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Michigan local health department",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.michigan.gov/mdard/licensing/food/service",
+          "https://www.michigan.gov/mdard/licensing/food"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Food service fees are set by the local health department; Michigan distinguishes local food service licenses from MDARD food establishment licenses."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Ontonagon",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "ontonagon-mi.food-license",
+        "title": "Obtain and renew an Ontonagon County food service license",
+        "category": "license",
+        "authority": "Western Upper Peninsula Health Department / Michigan Department of Agriculture & Rural Development",
+        "description": "Food service and food establishment operations in Ontonagon County must obtain the applicable Michigan license from the responsible health authority before operating.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.michigan.gov/mdard/licensing/food",
+          "https://www.michigan.gov/mdard/licensing/food/service",
+          "https://www.michigan.gov/mdard/licensing/food/countyfairs/fair-inspections-transition"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 73,
+          "max": 471,
+          "note": "Michigan state food-establishment fees include $73 temporary, $159 transitory, $186 retail, $192 mobile, and $471 extended-retail/wholesale categories; food-service fees are set by the local health department."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Osceola",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "osceola-mi.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Michigan local health department",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.michigan.gov/mdard/licensing/food/service",
+          "https://www.michigan.gov/mdard/licensing/food"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Food service fees are set by the local health department; Michigan distinguishes local food service licenses from MDARD food establishment licenses."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Oscoda",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "oscoda-mi.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Michigan local health department",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.michigan.gov/mdard/licensing/food/service",
+          "https://www.michigan.gov/mdard/licensing/food"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Food service fees are set by the local health department; Michigan distinguishes local food service licenses from MDARD food establishment licenses."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Otsego",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "otsego-mi.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Michigan local health department",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.michigan.gov/mdard/licensing/food/service",
+          "https://www.michigan.gov/mdard/licensing/food"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Food service fees are set by the local health department; Michigan distinguishes local food service licenses from MDARD food establishment licenses."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Ottawa",
-    "status": "unverified",
-    "reason": "bpp-reported-to-city-assessor",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "status": "rules",
+    "items": [
+      {
+        "id": "ottawa-mi.food-service-license",
+        "title": "Obtain and renew an Ottawa County food service license",
+        "category": "license",
+        "authority": "Ottawa County Department of Public Health",
+        "description": "Food and drink establishments serving the public in Ottawa County need the applicable environmental-health license; the county publishes risk-based fees, late fees, and a civil penalty for operating without a license.",
+        "rrule": "FREQ=YEARLY",
+        "url": ["https://miottawa.org/health/environmental/fees/"],
+        "appliesTo": ["all"],
+        "appliesWhen": [{ "field": "foodService", "op": "==", "value": true }],
+        "feeDetail": { "basis": "varies", "min": 724, "max": 1001 },
+        "lateFee": { "amount": 50 }
+      }
+    ],
+    "sourceUrl": ["https://miottawa.org/health/environmental/fees/"],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Presque Isle",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "presque-isle-mi.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Michigan local health department",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.michigan.gov/mdard/licensing/food/service",
+          "https://www.michigan.gov/mdard/licensing/food"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Food service fees are set by the local health department; Michigan distinguishes local food service licenses from MDARD food establishment licenses."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Roscommon",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "roscommon-mi.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Michigan local health department",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.michigan.gov/mdard/licensing/food/service",
+          "https://www.michigan.gov/mdard/licensing/food"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Food service fees are set by the local health department; Michigan distinguishes local food service licenses from MDARD food establishment licenses."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Saginaw",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "saginaw-mi.assumed-name-certificate",
+        "title": "File a Saginaw County assumed name or co-partnership certificate",
+        "category": "registration",
+        "authority": "Saginaw County Clerk",
+        "description": "Sole proprietors and co-partners doing business under an assumed name in Saginaw County must file with the County Clerk; new or expired registrations cost $16 and timely renewals cost $14, and registration is valid for five years.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.saginawcountymi.gov/departments/county-clerk/vital-records-division/business-registrationassumed-names/",
+          "https://www.saginawcountymi.gov/departments/county-clerk/fees/"
+        ],
+        "feeDetail": {
+          "basis": "tiered",
+          "tiers": [
+            { "label": "New or expired registration", "basis": "flat", "amount": 16 },
+            { "label": "Renewal before expiration", "basis": "flat", "amount": 14 }
+          ],
+          "note": "Registration is valid for five years."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["all"],
+            "description": "Uses an assumed name or operates as a co-partnership"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      },
+      {
+        "id": "saginaw-mi.food-license",
+        "title": "Obtain and renew a Saginaw County food service license",
+        "category": "license",
+        "authority": "Saginaw County Public Health",
+        "description": "Food service establishments operating in Saginaw County must obtain the applicable food service license and comply with county inspection and permit requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://saginawcountypublichealth.gov/programs-services/environmental-health/food-service-sanitation/inspection-licensing-and-or-permits/",
+          "https://www.michigan.gov/mdard/licensing/food/food-establishment-license/fees-and-schedule"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Food license fees vary by operation type under Michigan’s food-establishment schedule."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food service establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "St. Clair",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "st-clair-mi.food-license",
+        "title": "Obtain and renew a St. Clair County food service license",
+        "description": "Food establishments operating in St. Clair County must obtain the applicable Michigan food service license and comply with county health-department inspection and permit requirements.",
+        "category": "license",
+        "authority": "St. Clair County Health Department",
+        "rrule": "FREQ=YEARLY",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food service establishment"
+          }
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 35,
+          "max": 159,
+          "note": "Temporary food service fees range from $35 to $159 depending on risk, nonprofit status, and filing timing; fixed-operation fees vary by license type."
+        },
+        "url": [
+          "https://stclaircounty.org/PageBuilder/scchd/Offices/760?pageparent=552",
+          "https://stclaircounty.org/PageBuilder/scchd/Uploads/005%20%28Combined%29%20Temporary%20Food%20Service%20License%20Application%20-%20Copy%203.pdf"
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "St. Joseph",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "st-joseph-mi.food-license",
+        "title": "Obtain and renew a St. Joseph County food service license",
+        "category": "license",
+        "authority": "St. Joseph County Health Department / Michigan local health department",
+        "description": "Food service establishments operating in St. Joseph County must obtain the applicable local food service license and comply with Michigan inspection and renewal requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.michigan.gov/mdard/licensing/food/service",
+          "https://www.michigan.gov/mdard/licensing/food"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Food service fees are set by the local health department; Michigan distinguishes local food service licenses from MDARD food establishment licenses."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Sanilac",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "sanilac-mi.food-license",
+        "title": "Obtain and renew a Sanilac County food service license",
+        "category": "license",
+        "authority": "Sanilac County Health Department",
+        "description": "Food service establishments operating in Sanilac County must obtain the applicable Michigan food service license through the local health department and comply with state food-law requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://cms2.revize.com/revize/sanilac/Document%20Center/Environmental%20Health/New%20Food%20Service%20Licesnse%20Application.pdf",
+          "https://www.michigan.gov/mdard/licensing/food/service"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees are determined by the local health department and operation type."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Schoolcraft",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "schoolcraft-mi.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Michigan local health department",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.michigan.gov/mdard/licensing/food/service",
+          "https://www.michigan.gov/mdard/licensing/food"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Food service fees are set by the local health department; Michigan distinguishes local food service licenses from MDARD food establishment licenses."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Shiawassee",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "shiawassee-mi.food-license",
+        "title": "Obtain and renew a Shiawassee County food service license",
+        "category": "license",
+        "authority": "Shiawassee County Health Department",
+        "description": "Food service establishments operating in Shiawassee County must obtain the applicable Michigan food service license and complete plan review for new or remodeled facilities.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://shiawasseechd.net/food-safety-program/",
+          "https://shiawasseechd.net/wp-content/uploads/Fee-Schedule.pdf",
+          "https://www.michigan.gov/mdard/licensing/food/service"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 155,
+          "max": 932,
+          "note": "The 2026 county schedule lists food establishment license fees by class, including $155 for STFU licenses and $932 for Class IV establishments, plus applicable state fees."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Annual licensing applications incur a late fee after April 30; the schedule also doubles fees when construction begins before plan approval."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Tuscola",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "tuscola-mi.food-license",
+        "title": "Obtain and renew a Tuscola County food service license",
+        "category": "license",
+        "authority": "Tuscola County Health Department",
+        "description": "Food service establishments operating in Tuscola County must obtain the applicable Michigan food service license before operating and comply with county inspection requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.tchd.us/forms-resources",
+          "https://www.tuscolacounty.org/boc/doc/fullagenda/2020-12-10.pdf",
+          "https://www.michigan.gov/mdard/licensing/food/service"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 68,
+          "max": 476,
+          "note": "Published county fees are $476 fixed new license, $412 fixed renewal, $242 mobile, $68 temporary, and $111 special transitory, plus state fees."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Van Buren",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "van-buren-mi.food-license",
+        "title": "Obtain and renew a Van Buren County food service license",
+        "category": "license",
+        "authority": "Van Buren / Cass District Health Department",
+        "description": "Restaurants, mobile food units, and special transitory food units operating in Van Buren County must obtain the applicable Michigan food service license before operating.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://vbcassdhd.org/environmental-health/food-service-licensing/",
+          "https://www.michigan.gov/mdard/licensing/food/service"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Van Buren / Cass District Health Department fees vary by fixed, mobile, special transitory, or temporary food license type."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Washtenaw",
-    "status": "unverified",
-    "reason": "bpp-reported-to-city-assessor",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "status": "rules",
+    "items": [
+      {
+        "id": "washtenaw-mi.food-service-license",
+        "title": "Obtain a Washtenaw County food service license",
+        "category": "license",
+        "authority": "Washtenaw County Environmental Health Division",
+        "description": "The Washtenaw County Environmental Health Division licenses and inspects food service establishments; use the county permit process and current fee schedule before operating.",
+        "rrule": "FREQ=YEARLY",
+        "url": ["https://www.washtenaw.org/food-safety-food-licensing"],
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [{ "field": "foodService", "op": "==", "value": true }],
+        "feeDetail": { "basis": "varies" }
+      }
+    ],
+    "sourceUrl": ["https://www.washtenaw.org/food-safety-food-licensing"],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Wayne",
@@ -610,7 +3019,9 @@
         "authority": "Michigan Department of Treasury",
         "description": "Hotels and motels with more than 80 rooms in Wayne County outside Detroit must file the monthly state convention facility development tax return; Detroit has separate rates and the current official instructions control.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
-        "url": "https://www.michigan.gov/taxes/-/media/Project/Websites/taxes/Forms/Misc/Convention-Facility-Development/406.pdf",
+        "url": [
+          "https://www.michigan.gov/taxes/-/media/Project/Websites/taxes/Forms/Misc/Convention-Facility-Development/406.pdf"
+        ],
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -626,9 +3037,39 @@
   },
   {
     "county": "Wexford",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "wexford-mi.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Michigan local health department",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.michigan.gov/mdard/licensing/food/service",
+          "https://www.michigan.gov/mdard/licensing/food"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Food service fees are set by the local health department; Michigan distinguishes local food service licenses from MDARD food establishment licenses."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   }
 ]

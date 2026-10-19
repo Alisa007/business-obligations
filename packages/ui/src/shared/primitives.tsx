@@ -2,8 +2,8 @@ import type { ReactNode } from "react";
 import { Anchor, Text, XStack, YStack } from "tamagui";
 import { safeUrl } from "./url";
 
-export function ExternalLink({ url, children }: { url?: string; children: ReactNode }) {
-  const href = safeUrl(url);
+export function ExternalLink({ url, children }: { url?: string | string[]; children: ReactNode }) {
+  const href = safeUrl(Array.isArray(url) ? url[0] : url);
   return href ? (
     <Anchor
       href={href}

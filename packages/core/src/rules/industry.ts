@@ -22,7 +22,7 @@ const naicsLicences: Rule = {
       authority: it.authority,
       description: it.description,
       ...draftSchedule(it),
-      url: it.url,
+      url: it.url ? [...it.url] : undefined,
       ...extras(it, undefined),
       reason: `The business's NAICS code ${p.naics} falls under ${it.naics!.find((x) => p.naics!.startsWith(x))}`,
     })),
@@ -118,7 +118,7 @@ export const industryRules: Rule[] = [
       formId: "Notice of Intent (NOI)",
       filingMethod: ["online"],
       reason: `Construction site disturbs ${p.disturbedAcres} acres (one acre or more triggers coverage)`,
-      url: "https://www.epa.gov/npdes/stormwater-discharges-construction-activities",
+      url: ["https://www.epa.gov/npdes/stormwater-discharges-construction-activities"],
     }),
   },
   {
@@ -206,7 +206,9 @@ export const industryRules: Rule[] = [
           "National Provider Identifier for billing and HIPAA privacy/security program for covered entities.",
         frequency: "once",
         reason: "Industry is healthcare",
-        url: "https://www.cms.gov/regulations-and-guidance/administrative-simplification/nationalprovidentstand",
+        url: [
+          "https://www.cms.gov/regulations-and-guidance/administrative-simplification/nationalprovidentstand",
+        ],
       },
     ],
   },
@@ -271,7 +273,7 @@ export const industryRules: Rule[] = [
             "Cannabis businesses remain subject to the federal Controlled Substances Act; while cannabis is a Schedule I or II substance, IRC §280E limits deductions for businesses trafficking in it. Banking and interstate commerce restrictions also apply.",
           frequency: "ongoing" as const,
           reason: "Industry is cannabis",
-          url: "https://www.irs.gov/newsroom/news-releases-for-june-2024",
+          url: ["https://www.irs.gov/newsroom/news-releases-for-june-2024"],
         },
       ];
     },
@@ -315,7 +317,7 @@ export const industryRules: Rule[] = [
         "Interstate operators of vehicles over 10,000 lbs, passenger vehicles over the capacity limits, or placardable hazmat carriers must register, file the MCS-150 biennial update, and carry required insurance.",
       rrule: "FREQ=YEARLY;INTERVAL=2",
       reason: "Interstate commercial vehicle operations meet the USDOT registration thresholds",
-      url: "https://www.fmcsa.dot.gov/registration",
+      url: ["https://www.fmcsa.dot.gov/registration"],
     }),
   },
 ];

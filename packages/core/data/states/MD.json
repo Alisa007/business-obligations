@@ -2,15 +2,15 @@
   "name": "Maryland",
   "filing": {
     "name": "Maryland Department of Assessments and Taxation",
-    "url": "https://dat.maryland.gov/businesses"
+    "url": ["https://dat.maryland.gov/businesses"]
   },
   "revenue": {
     "name": "Comptroller of Maryland",
-    "url": "https://www.marylandtaxes.gov"
+    "url": ["https://www.marylandtaxes.gov"]
   },
   "labor": {
     "name": "Maryland Department of Labor, Division of Unemployment Insurance",
-    "url": "https://labor.maryland.gov/employment"
+    "url": ["https://labor.maryland.gov/employment"]
   },
   "llcReport": {
     "title": "File Annual Report and Personal Property Return",
@@ -76,14 +76,18 @@
     "regulator": "Maryland Cannabis Administration"
   },
   "links": {
-    "formation": "https://dat.maryland.gov/businesses/Pages/default.aspx",
-    "annualReport": "https://dat.maryland.gov/Pages/sdatforms.aspx",
-    "uiRegistration": "https://labor.maryland.gov/unemployment-insurance/employer-agent/tax-rate.shtml",
-    "withholding": "https://services.marylandcomptroller.gov/taxes?id=kb_article_view&sysparm_article=KB0010017",
-    "salesTax": "https://services.marylandcomptroller.gov/taxes/en/sales-and-use-tax?id=kb_article_view&sysparm_article=KB0010107",
-    "entityTax": "https://www.marylandcomptroller.gov/businesses/tax-services.html",
-    "laborPosters": "https://labor.maryland.gov/oeope/posters.shtml",
-    "dba": "https://dat.maryland.gov/sdat%20forms/nameappl.pdf"
+    "formation": ["https://dat.maryland.gov/businesses/Pages/default.aspx"],
+    "annualReport": ["https://dat.maryland.gov/Pages/sdatforms.aspx"],
+    "uiRegistration": ["https://labor.maryland.gov/unemployment-insurance/employer-agent/tax-rate.shtml"],
+    "withholding": [
+      "https://services.marylandcomptroller.gov/taxes?id=kb_article_view&sysparm_article=KB0010017"
+    ],
+    "salesTax": [
+      "https://services.marylandcomptroller.gov/taxes/en/sales-and-use-tax?id=kb_article_view&sysparm_article=KB0010107"
+    ],
+    "entityTax": ["https://www.marylandcomptroller.gov/businesses/tax-services.html"],
+    "laborPosters": ["https://labor.maryland.gov/oeope/posters.shtml"],
+    "dba": ["https://dat.maryland.gov/sdat%20forms/nameappl.pdf"]
   },
   "verification": {
     "checkedOn": "2026-10-13",

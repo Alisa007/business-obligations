@@ -32,6 +32,14 @@
         }
       ]
     },
+    "httpsUrlList": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "common.schema.json#/$defs/httpsUrl"
+      }
+    },
     "feeConditions": {
       "type": "array",
       "minItems": 1,

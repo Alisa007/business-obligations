@@ -19,7 +19,7 @@ export interface CalendarEvent {
   deadline?: string;
   cost?: ComplianceItem["cost"];
   penalty?: ComplianceItem["penalty"];
-  url?: string;
+  url?: string[];
 }
 
 export interface CalendarOptions extends Omit<EvaluateOptions, "asOf"> {
@@ -147,7 +147,7 @@ export function toICS(events: CalendarEvent[], options: IcsOptions = {}): string
       parts.push(
         `Late penalty: $${e.penalty.amount}${e.penalty.percentPerMonth ? ` + ${e.penalty.percentPerMonth}%/month` : ""}`,
       );
-    if (e.url) parts.push(e.url);
+    if (e.url) parts.push(...e.url);
     lines.push(
       "BEGIN:VEVENT",
       `UID:${e.itemId}-${e.date}@business-obligations`,
@@ -156,7 +156,7 @@ export function toICS(events: CalendarEvent[], options: IcsOptions = {}): string
       `DTEND;VALUE=DATE:${compact(addDays(e.date, 1))}`,
       `SUMMARY:${esc(e.title)}`,
       `DESCRIPTION:${esc(parts.join("\n"))}`,
-      ...(e.url ? [`URL:${e.url}`] : []),
+      ...(e.url?.[0] ? [`URL:${e.url[0]}`] : []),
       `CATEGORIES:${esc(e.category)}`,
       "END:VEVENT",
     );

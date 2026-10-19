@@ -45,7 +45,7 @@
       "description": "Qualifier shown in parentheses after the generated deadline (\"calendar-year filers\"). Must not repeat the rule's own date."
     },
     "url": {
-      "$ref": "common.schema.json#/$defs/httpsUrl"
+      "$ref": "common.schema.json#/$defs/httpsUrlOrList"
     },
     "appliesTo": {
       "type": "array",
@@ -210,6 +210,16 @@
     },
     "feeDetail": {
       "$ref": "common.schema.json#/$defs/feeDetail"
+    },
+    "lateFee": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["amount"],
+      "properties": {
+        "amount": { "type": "number", "minimum": 0 },
+        "percentPerMonth": { "type": "number", "minimum": 0 },
+        "note": { "type": "string", "minLength": 3 }
+      }
     }
   },
   "oneOf": [

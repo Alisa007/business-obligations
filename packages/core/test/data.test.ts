@@ -192,7 +192,10 @@ describe("state data files", () => {
       } else if (code !== "AK") expect(s.economicNexusUsd, `${code} economicNexusUsd`).toBeNull();
       if (s.salesTax.statewide) expect(s.salesTax.alternative, `${code} alternative`).toBeNull();
       else expect(s.salesTax.alternative, `${code} alternative`).toBeTruthy();
-      if (s.businessLicense) expect(s.businessLicense.url, `${code} license page`).toMatch(/^https:\/\//);
+      if (s.businessLicense)
+        expect(s.businessLicense.url, `${code} license page`).toSatisfy(
+          (urls) => Array.isArray(urls) && urls.every((url: string) => /^https:\/\//.test(url)),
+        );
     }
   });
 
@@ -262,7 +265,9 @@ describe("local seed data", () => {
     for (const it of j.items) {
       expect(it.appliesTo.length).toBeGreaterThan(0);
       expect(it.title).toBeTruthy();
-      expect(it.url, `${j.city} ${it.id} source`).toMatch(/^https:\/\//);
+      expect(it.url, `${j.city} ${it.id} source`).toSatisfy((urls) =>
+        urls?.every((url: string) => /^https:\/\//.test(url)),
+      );
       const local = it as LocalItem;
       for (const f of ["exemptions", "supersedes"] as const)
         if (local[f])
@@ -320,7 +325,9 @@ describe("county data files", () => {
       expect(new Set(ids).size, j.county).toBe(ids.length);
       for (const it of j.items) {
         expect(it.appliesTo.length).toBeGreaterThan(0);
-        expect(it.url, `${j.county} ${it.id} source`).toMatch(/^https:\/\//);
+        expect(it.url, `${j.county} ${it.id} source`).toSatisfy((urls) =>
+          urls?.every((url: string) => /^https:\/\//.test(url)),
+        );
         for (const w of [...(it.appliesWhen ?? []), ...(it.appliesWhenAny ?? [])])
           expect(validateApplicability(w), `${j.county} ${it.id} appliesWhen`).toBeUndefined();
       }
@@ -371,7 +378,7 @@ describe("county data files", () => {
     const item = r.items.find(
       (i) => i.jurisdiction === "county" && /business personal property/i.test(i.title),
     );
-    expect(item?.url).toMatch(/^https:\/\//);
+    expect(item?.url?.every((url) => /^https:\/\//.test(url))).toBe(true);
     expect(item?.nextDue).toBe("2027-04-01");
   });
 });
@@ -379,13 +386,13 @@ describe("county data files", () => {
 describe("profession directory", () => {
   const prof = read("data/professions.json").professions as Record<
     string,
-    Record<string, { name: string; url?: string }>
+    Record<string, { name: string; url?: string[] }>
   >;
   it.each(Object.keys(prof))("%s has a board for all 51 jurisdictions", (p) => {
     expect(Object.keys(prof[p]!).sort()).toEqual(Object.keys(STATES).sort());
     for (const b of Object.values(prof[p]!)) {
       expect(b.name.length).toBeGreaterThan(5);
-      if (b.url) expect(b.url).toMatch(/^https?:\/\//);
+      if (b.url) expect(b.url.every((url) => /^https?:\/\//.test(url))).toBe(true);
     }
   });
 });
@@ -557,12 +564,17 @@ describe("source links", () => {
       const links = s.links;
       expect(links, code).toBeDefined();
       for (const key of ["formation", "annualReport", "uiRegistration", "entityTax"] as const)
-        expect(isBare(links[key]), `${code}.links.${key} is a bare domain: ${links[key]}`).toBe(false);
+        expect(
+          (links[key] as string[]).every(isBare),
+          `${code}.links.${key} contains a bare domain: ${links[key]}`,
+        ).toBe(false);
       if (s.wageWithholding) expect(links.withholding, `${code} withholding`).toBeDefined();
       if (s.salesTax.statewide) expect(links.salesTax, `${code} salesTax`).toBeDefined();
       for (const [key, value] of Object.entries(links)) {
-        expect(value, `${code}.links.${key}`).toMatch(/^https:\/\//);
-        expect(isBare(value as string), `${code}.links.${key}`).toBe(false);
+        expect(value, `${code}.links.${key}`).toSatisfy(
+          (urls) => Array.isArray(urls) && urls.every((url: string) => /^https:\/\//.test(url)),
+        );
+        expect((value as string[]).every(isBare), `${code}.links.${key}`).toBe(false);
       }
     }
   });
@@ -651,7 +663,7 @@ describe("citation urls in output", () => {
           continue;
         }
         for (const item of result.items) {
-          if (item.url && isBare(item.url)) bare.push(`${code} ${item.id}: ${item.url}`);
+          if (item.url?.some(isBare)) bare.push(`${code} ${item.id}: ${item.url.join(", ")}`);
         }
       }
       void s;

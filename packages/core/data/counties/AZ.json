@@ -9,7 +9,7 @@
         "authority": "Apache County Assessor",
         "description": "Arizona business personal property statements are due to the county assessor by April 1 (A.R.S. 42-15053); late statements can carry a 10% penalty. Extensions may be granted for good cause if requested in writing before April 1.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
-        "url": "https://mcassessor.maricopa.gov/file/business_property/Important-Notice.pdf",
+        "url": ["https://mcassessor.maricopa.gov/file/business_property/Important-Notice.pdf"],
         "appliesTo": ["all"]
       }
     ],
@@ -25,7 +25,7 @@
         "authority": "Cochise County Assessor",
         "description": "Arizona business personal property statements are due to the county assessor by April 1 (A.R.S. 42-15053); late statements can carry a 10% penalty. Extensions may be granted for good cause if requested in writing before April 1.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
-        "url": "https://mcassessor.maricopa.gov/file/business_property/Important-Notice.pdf",
+        "url": ["https://mcassessor.maricopa.gov/file/business_property/Important-Notice.pdf"],
         "appliesTo": ["all"]
       }
     ],
@@ -41,7 +41,7 @@
         "authority": "Coconino County Assessor",
         "description": "Arizona business personal property statements are due to the county assessor by April 1 (A.R.S. 42-15053); late statements can carry a 10% penalty. Extensions may be granted for good cause if requested in writing before April 1.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
-        "url": "https://mcassessor.maricopa.gov/file/business_property/Important-Notice.pdf",
+        "url": ["https://mcassessor.maricopa.gov/file/business_property/Important-Notice.pdf"],
         "appliesTo": ["all"]
       }
     ],
@@ -57,7 +57,7 @@
         "authority": "Gila County Assessor",
         "description": "Arizona business personal property statements are due to the county assessor by April 1 (A.R.S. 42-15053); late statements can carry a 10% penalty. Extensions may be granted for good cause if requested in writing before April 1.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
-        "url": "https://mcassessor.maricopa.gov/file/business_property/Important-Notice.pdf",
+        "url": ["https://mcassessor.maricopa.gov/file/business_property/Important-Notice.pdf"],
         "appliesTo": ["all"]
       }
     ],
@@ -73,7 +73,7 @@
         "authority": "Graham County Assessor",
         "description": "Arizona business personal property statements are due to the county assessor by April 1 (A.R.S. 42-15053); late statements can carry a 10% penalty. Extensions may be granted for good cause if requested in writing before April 1.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
-        "url": "https://mcassessor.maricopa.gov/file/business_property/Important-Notice.pdf",
+        "url": ["https://mcassessor.maricopa.gov/file/business_property/Important-Notice.pdf"],
         "appliesTo": ["all"]
       }
     ],
@@ -89,7 +89,7 @@
         "authority": "Greenlee County Assessor",
         "description": "Arizona business personal property statements are due to the county assessor by April 1 (A.R.S. 42-15053); late statements can carry a 10% penalty. Extensions may be granted for good cause if requested in writing before April 1.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
-        "url": "https://mcassessor.maricopa.gov/file/business_property/Important-Notice.pdf",
+        "url": ["https://mcassessor.maricopa.gov/file/business_property/Important-Notice.pdf"],
         "appliesTo": ["all"]
       }
     ],
@@ -105,7 +105,7 @@
         "authority": "La Paz County Assessor",
         "description": "Arizona business personal property statements are due to the county assessor by April 1 (A.R.S. 42-15053); late statements can carry a 10% penalty. Extensions may be granted for good cause if requested in writing before April 1.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
-        "url": "https://mcassessor.maricopa.gov/file/business_property/Important-Notice.pdf",
+        "url": ["https://mcassessor.maricopa.gov/file/business_property/Important-Notice.pdf"],
         "appliesTo": ["all"]
       }
     ],
@@ -121,7 +121,7 @@
         "authority": "Maricopa County Assessor",
         "description": "Arizona business personal property statements are due to the county assessor by April 1 (A.R.S. 42-15053); late statements can carry a 10% penalty. Extensions may be granted for good cause if requested in writing before April 1.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
-        "url": "https://mcassessor.maricopa.gov/file/business_property/Important-Notice.pdf",
+        "url": ["https://mcassessor.maricopa.gov/file/business_property/Important-Notice.pdf"],
         "appliesTo": ["all"]
       },
       {
@@ -131,8 +131,16 @@
         "authority": "Maricopa County Environmental Services Department",
         "description": "Food establishments need a county permit and plan review (minimum requirements document; Plan Review 602-506-6824). A fee increase was approved August 19, 2026: new applications pay the new fees immediately and renewals at their next renewal, so check the current schedule.",
         "rrule": "FREQ=YEARLY",
-        "url": "https://www.maricopa.gov/4996/New-Application-Guidance",
+        "url": ["https://www.maricopa.gov/4996/New-Application-Guidance"],
         "naics": ["722", "445"],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "The applicable authority sets fees by license or permit type; confirm the current schedule before filing."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
         "appliesTo": ["all"]
       }
     ],
@@ -148,7 +156,7 @@
         "authority": "Mohave County Assessor",
         "description": "Arizona business personal property statements are due to the county assessor by April 1 (A.R.S. 42-15053); late statements can carry a 10% penalty. Extensions may be granted for good cause if requested in writing before April 1.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
-        "url": "https://mcassessor.maricopa.gov/file/business_property/Important-Notice.pdf",
+        "url": ["https://mcassessor.maricopa.gov/file/business_property/Important-Notice.pdf"],
         "appliesTo": ["all"]
       }
     ],
@@ -164,7 +172,7 @@
         "authority": "Navajo County Assessor",
         "description": "Arizona business personal property statements are due to the county assessor by April 1 (A.R.S. 42-15053); late statements can carry a 10% penalty. Extensions may be granted for good cause if requested in writing before April 1.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
-        "url": "https://mcassessor.maricopa.gov/file/business_property/Important-Notice.pdf",
+        "url": ["https://mcassessor.maricopa.gov/file/business_property/Important-Notice.pdf"],
         "appliesTo": ["all"]
       }
     ],
@@ -180,7 +188,7 @@
         "authority": "Pima County County Assessor",
         "description": "Arizona business personal property statements are due to the county assessor by April 1 (A.R.S. 42-15053); late statements can carry a 10% penalty. The county's own page was not individually confirmed; the state's guidance applies and the return goes to the county.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
-        "url": "https://www.azdor.gov/sites/default/files/2023-03/PUBLICATION_2014_545.pdf",
+        "url": ["https://www.azdor.gov/sites/default/files/2023-03/PUBLICATION_2014_545.pdf"],
         "appliesTo": ["all"]
       }
     ],
@@ -196,7 +204,7 @@
         "authority": "Pinal County Assessor",
         "description": "Arizona business personal property statements are due to the county assessor by April 1 (A.R.S. 42-15053); late statements can carry a 10% penalty. Statements are mailed around February 1 (ADOR form 82520).",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
-        "url": "https://www.pinal.gov/m/faq?cat=67",
+        "url": ["https://www.pinal.gov/m/faq?cat=67"],
         "appliesTo": ["all"]
       }
     ],
@@ -212,7 +220,7 @@
         "authority": "Santa Cruz County Assessor",
         "description": "Arizona business personal property statements are due to the county assessor by April 1 (A.R.S. 42-15053); late statements can carry a 10% penalty. Extensions may be granted for good cause if requested in writing before April 1.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
-        "url": "https://mcassessor.maricopa.gov/file/business_property/Important-Notice.pdf",
+        "url": ["https://mcassessor.maricopa.gov/file/business_property/Important-Notice.pdf"],
         "appliesTo": ["all"]
       }
     ],
@@ -228,7 +236,7 @@
         "authority": "Yavapai County County Assessor",
         "description": "Arizona business personal property statements are due to the county assessor by April 1 (A.R.S. 42-15053); late statements can carry a 10% penalty. The county's own page was not individually confirmed; the state's guidance applies and the return goes to the county.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
-        "url": "https://www.azdor.gov/sites/default/files/2023-03/PUBLICATION_2014_545.pdf",
+        "url": ["https://www.azdor.gov/sites/default/files/2023-03/PUBLICATION_2014_545.pdf"],
         "appliesTo": ["all"]
       }
     ],
@@ -244,7 +252,7 @@
         "authority": "Yuma County Assessor",
         "description": "Arizona business personal property statements are due to the county assessor by April 1 (A.R.S. 42-15053); late statements can carry a 10% penalty. Extensions may be granted for good cause if requested in writing before April 1.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
-        "url": "https://mcassessor.maricopa.gov/file/business_property/Important-Notice.pdf",
+        "url": ["https://mcassessor.maricopa.gov/file/business_property/Important-Notice.pdf"],
         "appliesTo": ["all"]
       }
     ],

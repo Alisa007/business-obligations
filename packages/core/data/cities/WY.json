@@ -4,7 +4,7 @@
     "status": "rules",
     "counties": ["Laramie"],
     "note": "Cheyenne directs businesses to its licensing applications and city departments; the city licensing guide says to confirm with the City Clerk whether a license or permit is required before operating.",
-    "sourceUrl": "https://www.cheyennecity.org/Business",
+    "sourceUrl": ["https://www.cheyennecity.org/Business"],
     "items": [
       {
         "id": "cheyenne.business-license",
@@ -13,7 +13,7 @@
         "authority": "City of Cheyenne City Clerk",
         "description": "Cheyenne directs businesses to its licensing applications and city departments; the city licensing guide says to confirm with the City Clerk whether a license or permit is required before operating.",
         "frequency": "once",
-        "url": "https://www.cheyennecity.org/Business",
+        "url": ["https://www.cheyennecity.org/Business"],
         "appliesTo": ["all"]
       }
     ],
@@ -30,12 +30,14 @@
         "category": "license",
         "authority": "Casper local licensing authority",
         "description": "Casper licenses several city-regulated business and professional activities through Community Development and the City Clerk, including contractors, mechanical and plumbing trades, utility contractors and installers, mobile-home work, water treatment, and health-related businesses; application and renewal fees vary by license class and qualification review is required before permits.",
-        "url": "https://www.casperwy.gov/UserFiles/Servers/Server_62983/File/Government/Departments/Community%20Development/Building%20%26%20Inspection/Individual%20Contractor%20License%20PDF.pdf",
+        "url": [
+          "https://www.casperwy.gov/UserFiles/Servers/Server_62983/File/Government/Departments/Community%20Development/Building%20%26%20Inspection/Individual%20Contractor%20License%20PDF.pdf"
+        ],
         "frequency": "once",
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://sos.wyo.gov/Business/Default.aspx"
+    "sourceUrl": ["https://sos.wyo.gov/Business/Default.aspx"]
   }
 ]

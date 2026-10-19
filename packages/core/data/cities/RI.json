@@ -4,7 +4,7 @@
     "status": "rules",
     "note": "Providence's Board of Licenses confirms city business-license applications and renewals; individual license classes have their own requirements.",
     "counties": ["Providence"],
-    "sourceUrl": "https://www.providenceri.gov/board-of-licenses/",
+    "sourceUrl": ["https://www.providenceri.gov/board-of-licenses/"],
     "items": [
       {
         "id": "providence.local-licenses",
@@ -13,7 +13,7 @@
         "authority": "City of Providence Board of Licenses",
         "description": "Providence's Board of Licenses processes business-license applications and renewals online, reviews supplemental documents for completeness, and may schedule a hearing before the Board of License Commissioners. Requirements and fees depend on the license class.",
         "frequency": "once",
-        "url": "https://www.providenceri.gov/board-of-licenses/",
+        "url": ["https://www.providenceri.gov/board-of-licenses/"],
         "appliesTo": ["all"]
       }
     ],
@@ -30,12 +30,12 @@
         "authority": "City of Cranston City Clerk, Records & Licenses",
         "description": "Cranston issues business licenses through the City Clerk's Office. Business-license applications must be submitted through the city's online portal when the applicable license is listed; fees and supplemental approvals depend on the license type.",
         "frequency": "once",
-        "url": "https://www.cranstonri.gov/departments/city-clerk-records-and-licenses/",
+        "url": ["https://www.cranstonri.gov/departments/city-clerk-records-and-licenses/"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.cranstonri.gov/departments/city-clerk-records-and-licenses/"
+    "sourceUrl": ["https://www.cranstonri.gov/departments/city-clerk-records-and-licenses/"]
   },
   {
     "city": "Warwick",
@@ -48,12 +48,12 @@
         "authority": "City of Warwick Licensing Division",
         "description": "Warwick's Small Business Support checklist directs businesses to obtain applicable state permits, building permits and city licenses before opening. The Licensing Division processes license and permit applications by appointment, and many go to the Board of Public Safety for review; fees and deadlines depend on the application.",
         "frequency": "once",
-        "url": "https://www.warwickri.gov/265/Small-Business-Support",
+        "url": ["https://www.warwickri.gov/265/Small-Business-Support"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.warwickri.gov/265/Small-Business-Support"
+    "sourceUrl": ["https://www.warwickri.gov/265/Small-Business-Support"]
   },
   {
     "city": "Pawtucket",
@@ -66,12 +66,12 @@
         "authority": "City of Pawtucket City Clerk's Office",
         "description": "Pawtucket's City Clerk processes license applications online for presentation to the City Council acting as the Board of License Commissioners. Published examples include liquor, auto repair, mobile food truck, peddler and tattoo-parlor licenses; fees depend on the license class.",
         "frequency": "once",
-        "url": "https://pawtucketri.gov/city-clerks-office/business-licences/",
+        "url": ["https://pawtucketri.gov/city-clerks-office/business-licences/"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://pawtucketri.gov/city-clerks-office/business-licences/"
+    "sourceUrl": ["https://pawtucketri.gov/city-clerks-office/business-licences/"]
   },
   {
     "city": "East Providence",
@@ -84,13 +84,13 @@
         "authority": "City of East Providence City Clerk and Board of Licensing Commissioners",
         "description": "East Providence requires businesses to receive city approval before opening and operating. The business-license year runs December 1 through November 30; renewal requires the form, fee, current tangible taxes and any applicable state licenses. Restaurants may also need victualing, liquor, entertainment or holiday-sales licenses.",
         "rrule": "FREQ=YEARLY;BYMONTH=11;BYMONTHDAY=30",
-        "url": "https://eastprovidenceri.gov/node/2314",
+        "url": ["https://eastprovidenceri.gov/node/2314"],
         "checkedOn": "2026-10-18",
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://eastprovidenceri.gov/node/2314"
+    "sourceUrl": ["https://eastprovidenceri.gov/node/2314"]
   },
   {
     "city": "Woonsocket",
@@ -103,11 +103,15 @@
         "authority": "City of Woonsocket City Clerk's Office",
         "description": "Woonsocket's business-start guide directs applicants to complete the occupancy or change-of-tenancy process and contact the City Clerk to determine whether a license is required for the proposed activity. License fees and renewal dates depend on the license type.",
         "frequency": "once",
-        "url": "https://www.woonsocketri.org/sites/g/files/vyhlif5231/f/uploads/starting_a_business._5-24-22.pdf",
+        "url": [
+          "https://www.woonsocketri.org/sites/g/files/vyhlif5231/f/uploads/starting_a_business._5-24-22.pdf"
+        ],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.woonsocketri.org/sites/g/files/vyhlif5231/f/uploads/starting_a_business._5-24-22.pdf"
+    "sourceUrl": [
+      "https://www.woonsocketri.org/sites/g/files/vyhlif5231/f/uploads/starting_a_business._5-24-22.pdf"
+    ]
   }
 ]

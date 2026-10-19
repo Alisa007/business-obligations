@@ -2,15 +2,15 @@
   "name": "West Virginia",
   "filing": {
     "name": "West Virginia Secretary of State",
-    "url": "https://sos.wv.gov/business"
+    "url": ["https://sos.wv.gov/business"]
   },
   "revenue": {
     "name": "West Virginia State Tax Department",
-    "url": "https://tax.wv.gov"
+    "url": ["https://tax.wv.gov"]
   },
   "labor": {
     "name": "WorkForce West Virginia",
-    "url": "https://workforcewv.org"
+    "url": ["https://workforcewv.org"]
   },
   "llcReport": {
     "rrule": "FREQ=YEARLY;BYMONTH=6;BYMONTHDAY=30",
@@ -78,7 +78,9 @@
   "businessLicense": {
     "title": "West Virginia business registration certificate",
     "authority": "West Virginia State Tax Department",
-    "url": "https://tax.wv.gov/Business/BusinessRegistration/Pages/BusinessRegistrationQuestionsAndAnswers.aspx",
+    "url": [
+      "https://tax.wv.gov/Business/BusinessRegistration/Pages/BusinessRegistrationQuestionsAndAnswers.aspx"
+    ],
     "frequency": "once",
     "feeDetail": {
       "basis": "flat",
@@ -103,14 +105,18 @@
     "regulator": "West Virginia Department of Health, Office of Medical Cannabis"
   },
   "links": {
-    "formation": "https://sos.wv.gov/register-new-wv-business",
-    "annualReport": "https://sos.wv.gov/business/updates-and-changes/annual-reports",
-    "uiRegistration": "https://workforcewv.org/businesses/unemployment-tax-information/navigate-the-unemployment-process/",
-    "withholding": "https://tax.wv.gov/Business/BusinessRegistration/Pages/BusinessRegistrationQuestionsAndAnswers.aspx",
-    "salesTax": "https://tax.wv.gov/Business/SalesAndUseTax/Pages/SalesAndUseTax.aspx",
-    "entityTax": "https://tax.wv.gov/Business/CorporateIncomeTax/Pages/CorporateIncomeTaxPriorYears.aspx",
-    "laborPosters": "https://labor.wv.gov/required-posters",
-    "dba": "https://sos.wv.gov/business/registration-and-waivers/register-trade-name-dba"
+    "formation": ["https://sos.wv.gov/register-new-wv-business"],
+    "annualReport": ["https://sos.wv.gov/business/updates-and-changes/annual-reports"],
+    "uiRegistration": [
+      "https://workforcewv.org/businesses/unemployment-tax-information/navigate-the-unemployment-process/"
+    ],
+    "withholding": [
+      "https://tax.wv.gov/Business/BusinessRegistration/Pages/BusinessRegistrationQuestionsAndAnswers.aspx"
+    ],
+    "salesTax": ["https://tax.wv.gov/Business/SalesAndUseTax/Pages/SalesAndUseTax.aspx"],
+    "entityTax": ["https://tax.wv.gov/Business/CorporateIncomeTax/Pages/CorporateIncomeTaxPriorYears.aspx"],
+    "laborPosters": ["https://labor.wv.gov/required-posters"],
+    "dba": ["https://sos.wv.gov/business/registration-and-waivers/register-trade-name-dba"]
   },
   "verification": {
     "checkedOn": "2026-10-13",

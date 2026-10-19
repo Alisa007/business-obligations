@@ -1,122 +1,717 @@
 [
   {
     "county": "Adams",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "adams-oh.food-license",
+        "title": "Obtain and renew an Adams County food license",
+        "category": "license",
+        "authority": "Adams County Health Department",
+        "description": "Food service operations and retail food establishments operating in Adams County must obtain the applicable Ohio food license and comply with plan-review, inspection, and annual renewal requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.adamscountyhealth.org/environmental-health",
+          "https://adamscountyhealth.org/sites/default/files/2022-12/S-379-Guide%20to%20Starting%20a%20Food%20Business.pdf",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 195,
+          "max": 855,
+          "note": "The county guide states license fees range from $195-$855; plan review begins at $100 plus hourly review and inspection time."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "The county application states a mandatory 25% penalty of the renewal fee for operating after the deadline."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Allen",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "allen-oh.food-license",
+        "title": "Obtain and renew an Allen County food license",
+        "category": "license",
+        "authority": "Allen County Public Health",
+        "description": "Food service operations and retail food establishments operating in Allen County must obtain the applicable Ohio food license before operating and comply with county plan-review requirements for new operations.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.allencountypublichealth.org/environmental-health/%C2%B7food-safety/",
+          "https://www.allencountypublichealth.org/wp-content/uploads/2020/02/Plan-Review-Guide.pdf",
+          "https://www.allencountypublichealth.org/wp-content/uploads/2019/01/SKMC308_I9718122715480.pdf"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 155,
+          "max": 689,
+          "note": "Published Allen County license fees range from $155 to $689 by risk level and facility size; plan review is $100-$175 for new operations."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "A mandatory penalty of 25% of the renewal fee applies when operating after the deadline."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Ashland",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "ashland-oh.food-license",
+        "title": "Obtain and renew an Ashland County food license",
+        "category": "license",
+        "authority": "Ashland County Health Department",
+        "description": "Food service operations and retail food establishments operating in Ashland County must obtain the applicable Ohio food license before operating and comply with county inspection and renewal requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.health-ashlandcounty-oh.gov/",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees vary by operation category and risk level under Ohio and local health-department schedules."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio food-license renewal penalties are 25% of the applicable fee when late."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Ashtabula",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "ashtabula-oh.food-license",
+        "title": "Obtain and renew an Ashtabula County food license",
+        "category": "license",
+        "authority": "Ashtabula County Health Department",
+        "description": "Food service operations and retail food establishments operating in Ashtabula County must obtain the applicable Ohio food license before operating and comply with county inspection and renewal requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://ashtabulacountyhealth.com/food-service-operations/",
+          "https://ashtabulacountyhealth.com/applications-and-forms/",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees vary by operation category and risk level under the Ohio and local health-department schedules."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio food-license renewal penalties are 25% of the applicable fee when late."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Athens",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "athens-oh.food-license",
+        "title": "Obtain and renew an Athens County food license",
+        "category": "license",
+        "authority": "Athens City-County Health Department",
+        "description": "Food service operations and retail food establishments operating in Athens County must obtain the applicable Ohio food license before operating and comply with local inspection and renewal requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.athenscountyauditor.org/Posts",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees vary by operation category and the local health department schedule."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Auglaize",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "auglaize-oh.food-license",
+        "title": "Obtain and renew an Auglaize County food license",
+        "category": "license",
+        "authority": "Auglaize County Health Department",
+        "description": "Food service operations, retail food establishments, mobile units, vending locations, and temporary food services operating in Auglaize County must obtain the applicable Ohio license before operating.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.auglaizehealth.org/food-safety/licensing",
+          "https://www.auglaizehealth.org/resources",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "The county publishes an environmental fee list and sets fees by operation type and risk category."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Belmont",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "belmont-oh.vendor-license",
+        "title": "Obtain a Belmont County vendor license",
+        "category": "license",
+        "authority": "Belmont County Auditor",
+        "description": "Businesses making taxable retail sales in Belmont County must obtain an Ohio vendor license; the current application fee is $50.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://belmontcountyauditor.org/vendor-s-license",
+          "https://tax.ohio.gov/business/sales-and-use-tax"
+        ],
+        "feeDetail": { "basis": "flat", "amount": 50 },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["retail"],
+            "description": "Makes taxable retail sales"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      },
+      {
+        "id": "belmont-oh.food-license",
+        "title": "Obtain and renew a Belmont County food license",
+        "category": "license",
+        "authority": "Belmont County Health Department",
+        "description": "Food service operations and retail food establishments in Belmont County must obtain the applicable Ohio food license before operating; the county health department requires plan review and a pre-license inspection.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://belmontcountyhealth.com/Forms/EnvironmentalHealth/Food-Service-Operation-facility-start-up-guide.pdf",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "The local health department sets fees by food operation and risk category."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Brown",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "brown-oh.food-license",
+        "title": "Obtain and renew a Brown County food license",
+        "category": "license",
+        "authority": "Brown County Health Department",
+        "description": "Food service operations and retail food establishments operating in Brown County must obtain the applicable Ohio food license before operating.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://browncountyohio.gov/index.php/health-department",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "The Brown County Health Department administers food licensing; Ohio fees vary by operation type and risk category under the local schedule."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Butler",
-    "status": "unverified",
-    "items": [],
-    "checkedOn": "2026-10-16",
+    "status": "rules",
+    "items": [
+      {
+        "id": "butler-oh.vendor-license",
+        "title": "Obtain a Butler County vendor license",
+        "category": "license",
+        "authority": "Butler County Auditor",
+        "description": "Businesses selling taxable goods or services in Butler County must obtain an Ohio vendor license; the current one-time application fee is $50.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://cms3.revize.com/revize/butlercountyauditor/Documents/Licensing/Vendor%20License%20Fee%20Increase%20Apr%202025.pdf",
+          "https://tax.ohio.gov/business/sales-and-use-tax"
+        ],
+        "feeDetail": { "basis": "flat", "amount": 50 },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["retail"],
+            "description": "Sells taxable goods or services"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      },
+      {
+        "id": "butler-oh.food-license",
+        "title": "Obtain and renew a Butler County food license",
+        "category": "license",
+        "authority": "Butler County General Health District",
+        "description": "Food service operations and retail food establishments in Butler County must obtain the applicable annual license; the 2026 schedule sets risk-based fees and a mandatory 25% penalty fee after the renewal deadline.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://cms5.revize.com/revize/butlercountyboardofhealth/Documents/Environmental%20Health%20and%20Plumbing%20Services/2026%20Fee%20Schedule%20-%20Approved%20by%20BOH%209%2018%202025.pdf"
+        ],
+        "feeDetail": { "basis": "varies", "min": 27.75, "max": 1180 },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Mandatory 25% of the renewal fee for operating after the deadline."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food service operation or retail food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19",
     "note": "Ohio has no general business personal property tax. Butler County levies a 3% lodging tax (to its Convention and Visitors Bureau), but its return due date was not found."
   },
   {
     "county": "Carroll",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "carroll-oh.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Adams County Health Department",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.adamscountyhealth.org/environmental-health",
+          "https://adamscountyhealth.org/sites/default/files/2022-12/S-379-Guide%20to%20Starting%20a%20Food%20Business.pdf",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 195,
+          "max": 855,
+          "note": "The county guide states license fees range from $195-$855; plan review begins at $100 plus hourly review and inspection time."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "The county application states a mandatory 25% penalty of the renewal fee for operating after the deadline."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Champaign",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "champaign-oh.food-license",
+        "title": "Obtain and renew a Champaign County food license",
+        "category": "license",
+        "authority": "Champaign Health District",
+        "description": "Food service operations and retail food establishments operating in Champaign County must obtain the applicable Ohio food license before operating and comply with county inspection and renewal requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.champaignhd.com/divisions-programs-1",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees vary by operation category and risk level under Ohio and local health-district schedules."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio food-license renewal penalties are 25% of the applicable fee when late."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Clark",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "clark-oh.food-license",
+        "title": "Obtain and renew a Clark County food license",
+        "category": "license",
+        "authority": "Clark County Combined Health District",
+        "description": "Retail food establishments, mobile and farmers-market vendors, temporary food establishments, and vending machines operating in Clark County must obtain the applicable food permit before operating.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.clarkhealth.net/images/pdf/CCHD-Fee-Schedule.pdf",
+          "https://ccchd.com/environmental-health/food-program/",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 20,
+          "max": 100,
+          "note": "Published fees are $50-$100 for retail/mobile menu types, $20-$40 for temporary permits, and $10 per vending machine."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 50,
+          "note": "Retail permit late fee is 50% of the permit; temporary late fee is $10."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Clermont",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "clermont-oh.food-license",
+        "title": "Obtain and renew a Clermont County food license",
+        "category": "license",
+        "authority": "Clermont County Public Health",
+        "description": "Food service operations, retail food establishments, temporary vendors, mobile units, and vending locations operating in Clermont County must obtain the applicable license and comply with county inspection requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://clermonthealthohio.gov/services/permits_and_inspections/food_safety.php",
+          "https://clermonthealthohio.gov/Documents/Services/Permits%20and%20Inspections/Food%20Safety/Applications/Temporary%20Food%20License%20Application.pdf",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees vary by FSO/RFE, temporary, mobile, and vending license type under the county schedule."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio food-license renewal penalties are 25% of the applicable fee when late."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Clinton",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "clinton-oh.food-license",
+        "title": "Obtain and renew a Clinton County food license",
+        "category": "license",
+        "authority": "Clinton County Health District",
+        "description": "Food service operations and retail food establishments operating in Clinton County must obtain the applicable Ohio food license before operating and comply with county licensing and inspection requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://co.clinton.oh.us/FoodSafety",
+          "https://co.clinton.oh.us/media/Health%20District/Environmental/Food/Mobile%20Food%20License%20Application%20Packet%20-%20CCHD%20EH%20-%20UPDATED%202023.pdf",
+          "https://codes.ohio.gov/ohio-administrative-code/rule-3701-21-02"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees vary by operation category; the county packet shows a $200 mobile license plus a $28 state amount."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio law requires a 25% penalty of the renewal fee when operating after the deadline."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Columbiana",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "columbiana-oh.food-license",
+        "title": "Obtain and renew a Columbiana County food license",
+        "description": "Food facilities operating in Columbiana County must obtain the applicable food service or retail food establishment license from the county health district before operating and comply with plan-review and inspection requirements.",
+        "category": "license",
+        "authority": "Columbiana County General Health District",
+        "rrule": "FREQ=YEARLY",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 221,
+          "max": 922,
+          "note": "Food service program fees vary by classification and establishment size; the county publishes the current 2026 fee schedule."
+        },
+        "url": [
+          "https://www.columbiana-health.org/food/",
+          "https://www.columbiana-health.org/",
+          "https://www.columbiana-health.org/wp-content/uploads/Food-Facility-Planning-Application-2022.pdf"
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Coshocton",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "coshocton-oh.food-license",
+        "title": "Obtain and renew a Coshocton County food license",
+        "category": "license",
+        "authority": "Coshocton Public Health District",
+        "description": "Food service operations and retail food establishments operating in Coshocton County must obtain the applicable Ohio food license before operating and comply with county inspection and renewal requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.coshoctoncounty.net/health/food/",
+          "https://www.coshoctoncounty.net/health/wp-content/uploads/sites/16/2026/01/2026-Food-Fees.pdf",
+          "https://codes.ohio.gov/ohio-administrative-code/rule-3701-21-02"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 29,
+          "max": 1357,
+          "note": "The 2026 schedule lists totals of $257-$661 for commercial facilities under 25,000 square feet, $361-$1,357 for larger commercial facilities, $118-$208 for mobiles, and $85 for temporary events."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio law requires a 25% penalty of the renewal fee when the fee is late or the operation continues after the deadline."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Crawford",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "crawford-oh.food-license",
+        "title": "Obtain and renew a Crawford County food license",
+        "category": "license",
+        "authority": "Crawford County Public Health",
+        "description": "Food service operations and retail food establishments operating in Crawford County must obtain the applicable Ohio food license and comply with county inspection and renewal requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://crawfordhealth.org/wp-content/uploads/2023/04/Mobile-Food-Application-2023.pdf",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 86.78,
+          "note": "The county mobile application shows an $86.78 local mobile fee plus a $28 state amount; other categories vary."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio law requires a 25% penalty of the renewal fee when the fee is late."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Cuyahoga",
@@ -128,7 +723,7 @@
         "authority": "Cuyahoga County Fiscal Office, Lodging Occupancy Tax Office",
         "description": "The county tax is 6.5% of gross short-term rent, including non-optional fees. Register and get approved first, then file monthly online through the county's GovOS portal by the 21st of the month after the period; a form is required even for months with no rentals. Late: 10% penalty plus 3% monthly interest. Phone 216-443-7140.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=21",
-        "url": "https://it.cuyahogacounty.gov/fiscal-officer/departments/lodging-occupancy-tax",
+        "url": ["https://it.cuyahogacounty.gov/fiscal-officer/departments/lodging-occupancy-tax"],
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -145,87 +740,502 @@
   },
   {
     "county": "Darke",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "darke-oh.food-license",
+        "title": "Obtain and renew a Darke County food license",
+        "category": "license",
+        "authority": "Darke County General Health District",
+        "description": "Food service operations and retail food establishments operating in Darke County must obtain the applicable county food license before operating and complete required plan review when applicable.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://darkecountyhealth.org/services/environmental-health/food-service/food-service-operation-retail-food/",
+          "https://darkecountyhealth.org/about/plans-reports/",
+          "https://darkecountyhealth.org/wp-content/uploads/2022/12/Final_2023_Fee_Schedule.pdf"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Food license fees vary by Ohio risk classification and operation type; the county schedule lists local and state components separately. A mandatory penalty of 25% of renewal fees applies when operating without a license after the deadline."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Defiance",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "defiance-oh.food-license",
+        "title": "Obtain and renew a Defiance County food license",
+        "category": "license",
+        "authority": "Defiance County General Health District",
+        "description": "Food service operations and retail food establishments operating in Defiance County must obtain the applicable Ohio food license before operating; temporary and mobile operations must follow county and state requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.defiancecohealth.org/",
+          "https://www.cityofdefiance.com/262/Permits",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "License fees vary by operation category and risk level; the City of Defiance separately requires food-truck registration and directs operators to county health guidelines."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio food-license renewals incur a 25% penalty of the applicable renewal fee when late."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Delaware",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "delaware-oh.food-license",
+        "title": "Obtain and renew a Delaware County food license",
+        "category": "license",
+        "authority": "Delaware Public Health District",
+        "description": "Food service operations and retail food establishments operating in Delaware County must obtain the applicable Ohio food license and complete plan review before opening or remodeling.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.delawarehealth.org/food-safety/",
+          "https://codes.ohio.gov/ohio-administrative-code/rule-3701-21-02"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 300,
+          "max": 1000,
+          "note": "Published plan-review fees are $300-$900; expedited review adds $1,000 plus the applicable plan-review fee, while license fees vary by operation type."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio law requires a 25% penalty of the renewal fee when the fee is late."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Erie",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "erie-oh.food-license",
+        "title": "Obtain and renew an Erie County food license",
+        "category": "license",
+        "authority": "Erie County Health Department",
+        "description": "Food service operations and retail food establishments operating in Erie County must obtain the applicable Ohio food license before operating and comply with county inspection and renewal requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://eriehealthohio.com/food-safety/",
+          "https://eriecohealthohio.com/wp-content/uploads/2023/12/ECHD-Food-Fees.pdf",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 23.64,
+          "max": 1275,
+          "note": "Published county and state totals range from $23.64 for vending to $1,275 for a level-4 facility over 25,000 square feet; temporary licenses are $90 and mobile licenses are $218."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio food-license renewals incur a 25% penalty of the applicable renewal fee when late."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Fairfield",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "fairfield-oh.food-license",
+        "title": "Obtain and renew a Fairfield County food license",
+        "category": "license",
+        "authority": "Fairfield County Health Department",
+        "description": "Food service operations and retail food establishments operating in Fairfield County must obtain the applicable Ohio food license and renew it by March 1 each year.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.fairfieldhealth.org/Fee-Schedule.html",
+          "https://www.fairfieldhealth.org/Environmental-Division/FDH-Food-Protection-Education.html",
+          "https://www.fairfieldhealth.org/pdf/Mobile-Food-License-APP.pdf"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 30,
+          "max": 1207,
+          "note": "Current county and state totals range from $30 temporary per day to $1,207 for a level-4 facility at least 25,000 square feet; a 25% late fee applies after the renewal deadline."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Fayette",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "fayette-oh.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Adams County Health Department",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.adamscountyhealth.org/environmental-health",
+          "https://adamscountyhealth.org/sites/default/files/2022-12/S-379-Guide%20to%20Starting%20a%20Food%20Business.pdf",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 195,
+          "max": 855,
+          "note": "The county guide states license fees range from $195-$855; plan review begins at $100 plus hourly review and inspection time."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "The county application states a mandatory 25% penalty of the renewal fee for operating after the deadline."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Franklin",
-    "status": "unverified",
-    "items": [],
-    "checkedOn": "2026-10-16",
+    "status": "rules",
+    "items": [
+      {
+        "id": "franklin-oh.vendor-license",
+        "title": "Obtain a Franklin County vendor license",
+        "category": "license",
+        "authority": "Ohio Department of Taxation",
+        "description": "Businesses making taxable retail sales in Franklin County must obtain an Ohio vendor license; the current state fee is $50 for each fixed place of business.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.franklincountyohio.gov/Business-Development/Development-Planning/Food-Action-Plan/Food-Business-Portal/Business-Location-Compliance",
+          "https://tax.ohio.gov/business/sales-and-use-tax"
+        ],
+        "feeDetail": { "basis": "flat", "amount": 50 },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["retail"],
+            "description": "Makes taxable retail sales"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      },
+      {
+        "id": "franklin-oh.food-license",
+        "title": "Obtain and renew a Franklin County food license",
+        "category": "license",
+        "authority": "Franklin County Public Health",
+        "description": "Food businesses operating outside Columbus and Worthington in Franklin County must obtain and renew the applicable food license; licenses expire March 1 and renewals on or after March 1 incur a 20% late fee.",
+        "rrule": "FREQ=YEARLY",
+        "url": ["https://myfcph.org/food-safety/", "https://myfcph.org/fiscal-services/"],
+        "feeDetail": { "basis": "varies" },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 20,
+          "note": "20% late fee for renewal on or after March 1."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food business"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19",
     "note": "Ohio has no general business personal property tax. Franklin County levies a 4% lodging excise tax (plus 0.9% in Columbus), but its return due date was not found."
   },
   {
     "county": "Fulton",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "fulton-oh.food-license",
+        "title": "Obtain and renew a Fulton County food license",
+        "category": "license",
+        "authority": "Fulton County Health Department",
+        "description": "Food service operations and retail food establishments operating in Fulton County must obtain the applicable Ohio food license before operating and comply with plan-review, inspection, and renewal requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://fultoncountyhealthdept.com/environmental/food-protection",
+          "https://fultoncountyhealth.com/wp-content/uploads/2013/12/2018-Food-Permit-Application-Food-Hub-Operator.pdf",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 220,
+          "note": "Published Fulton County application fees are $150 category III, $190 category II, and $220 category I, with a $50 plan-review fee; fees are prorated after June 30."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio food-license renewals incur a 25% penalty of the applicable renewal fee when late."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Gallia",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "gallia-oh.food-license",
+        "title": "Obtain and renew a Gallia County food license",
+        "category": "license",
+        "authority": "Gallia County Health Department",
+        "description": "Food service operations and retail food establishments operating in Gallia County must obtain the applicable Ohio food license before operating and comply with county inspection and renewal requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://galliacohealth.gov/environmental-health/",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 12.42,
+          "max": 1441,
+          "note": "Published county and state totals range from $12.42 for vending to $1,441 for a level-4 facility over 25,000 square feet; temporary licenses are $32 and mobile licenses are $85-$142."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio food-license renewals incur a 25% penalty of the applicable renewal fee when late."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Geauga",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "geauga-oh.food-license",
+        "title": "Obtain and renew a Geauga County food license",
+        "category": "license",
+        "authority": "Geauga Public Health",
+        "description": "Food service operations and retail food establishments operating in Geauga County must obtain the applicable Ohio food license before operating.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://gphohio.org/food-protection-and-safety/",
+          "https://gphohio.org/wp-content/uploads/sites/17/2025/06/EH-Fee-Changes-Letter-Eff-12-2025.pdf",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 75,
+          "max": 1508,
+          "note": "Geauga's published food fees vary by operation type, risk category, facility size, and commercial status; state certification fees may be added."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Late fees are an additional 25% of the established local license fee."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Greene",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "greene-oh.food-license",
+        "title": "Obtain and renew a Greene County food license",
+        "category": "license",
+        "authority": "Greene County Public Health",
+        "description": "Food service operations and retail food establishments operating in Greene County must obtain the applicable Ohio food license before operating and complete required plan review where applicable.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.greenecophoh.gov/environmental-health/food-safety/food-services-inspection",
+          "https://www.greenecophoh.gov/platform/cms/EH%20Gen%20Svcs/FSO-RFEs/Starting%20a%20Food%20Business.pdf",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 253,
+          "max": 1334,
+          "note": "The published Greene County schedule lists risk- and facility-size-based license fees of $253-$1,334, plus a $350 commercial plan-review fee where applicable."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Guernsey",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "guernsey-oh.food-license",
+        "title": "Obtain and renew a Guernsey County food license",
+        "category": "license",
+        "authority": "Guernsey County Board of Health",
+        "description": "Food service operations and retail food establishments operating in Guernsey County must obtain the applicable Ohio food license before operating.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://guernseycounty.gov/",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21",
+          "https://codes.ohio.gov/ohio-revised-code/section-3717.45"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Ohio food license fees are set by the local licensor by risk classification and operation type, with state fees added under Chapter 3701-21."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Hamilton",
@@ -237,7 +1247,9 @@
         "authority": "Hamilton County Board of Commissioners",
         "description": "Hotel operators remit the 7.5% Hamilton County hotel lodging excise tax quarterly. File the return and payment by the last day of the month following the end of each calendar quarter; non-transient lodging and specified government lodging are exempt.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
-        "url": "https://cms2.revize.com/revize/hamiltoncountyoh/Documents/Government/Departments/Budget/Hotel%20Lodging%20Tax/Lodging_Excise_Tax_Return.pdf",
+        "url": [
+          "https://cms2.revize.com/revize/hamiltoncountyoh/Documents/Government/Departments/Budget/Hotel%20Lodging%20Tax/Lodging_Excise_Tax_Return.pdf"
+        ],
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -251,84 +1263,445 @@
     ],
     "checkedOn": "2026-10-18",
     "note": "Hamilton County lodging-tax obligations were confirmed from county materials; other county-level business duties were not checked.",
-    "sourceUrl": "https://cms2.revize.com/revize/hamiltoncountyoh/Documents/Government/Departments/Budget/Hotel%20Lodging%20Tax/Lodging_Excise_Tax_Return.pdf"
+    "sourceUrl": [
+      "https://cms2.revize.com/revize/hamiltoncountyoh/Documents/Government/Departments/Budget/Hotel%20Lodging%20Tax/Lodging_Excise_Tax_Return.pdf"
+    ]
   },
   {
     "county": "Hancock",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "hancock-oh.food-license",
+        "title": "Obtain and renew a Hancock County food license",
+        "category": "license",
+        "authority": "Hancock Public Health",
+        "description": "Retail food stores operating in Hancock County must obtain and renew the county health department permit before operating.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.hancockph.com/",
+          "https://www.hancockph.com/forms-and-permits",
+          "https://codelibrary.amlegal.com/codes/hancockcounty/latest/hancockco_in/0-0-0-1356",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "The county health department maintains the approved annual fee schedule for retail food permits."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Fees due between November 1 and December 31 become delinquent; the delinquent fee equals the original permit fee."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Hardin",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "hardin-oh.food-license",
+        "title": "Obtain and renew a Hardin County food license",
+        "category": "license",
+        "authority": "Kenton-Hardin County Health Department",
+        "description": "Food service operations and retail food establishments operating in Hardin County must obtain the applicable Ohio food license before operating and comply with county licensing and inspection requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://hardinhealth.org/wp-content/uploads/2018/06/Mobile-Food-Online-Packet-1.pdf",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees vary by operation category under the Kenton-Hardin County schedule."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "The county packet states a mandatory penalty of $50 or 25% of the renewal fee, whichever is lesser, for operating after the deadline."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Harrison",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "harrison-oh.food-license",
+        "title": "Obtain and renew a Harrison County food license",
+        "category": "license",
+        "authority": "Harrison County General Health District",
+        "description": "Food service operations and retail food establishments operating in Harrison County must obtain the applicable Ohio food license before operating and renew it by March 1.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.harrisonpublichealth.org/181/Food-Program",
+          "https://www.harrisoncountyohio.gov/food-safety",
+          "https://www.harrisoncountyohio.gov/media/Health%20Department/REQUIRMENTS%20FOR%20NEW%20FOOD%20SERVICE%20OPERATIONS.pdf",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Harrison County fees vary by operation type and risk category; plan review is charged at 30% of the license fee."
+        },
+        "lateFee": { "amount": 0, "note": "Payments after March 1 incur the required state late fee." },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Henry",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "henry-oh.food-license",
+        "title": "Obtain and renew a Henry County food license",
+        "category": "license",
+        "authority": "Henry County Health Department",
+        "description": "Food service operations and retail food establishments operating in Henry County must obtain the applicable Ohio food license before operating.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://henrycohd.org/food-safety-2/",
+          "https://henrycohd.org/wp-content/uploads/2024/02/EH-Fees_Lic_Facilities_Feb_2024-1.pdf",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 24.89,
+          "max": 803.36,
+          "note": "The published schedule lists food license totals from $24.89 for vending to $803.36 for risk level 4 facilities of at least 25,000 square feet."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Local license fees are subject to a mandatory 25% late-fee penalty."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Highland",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "highland-oh.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Adams County Health Department",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.adamscountyhealth.org/environmental-health",
+          "https://adamscountyhealth.org/sites/default/files/2022-12/S-379-Guide%20to%20Starting%20a%20Food%20Business.pdf",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 195,
+          "max": 855,
+          "note": "The county guide states license fees range from $195-$855; plan review begins at $100 plus hourly review and inspection time."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "The county application states a mandatory 25% penalty of the renewal fee for operating after the deadline."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Hocking",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "hocking-oh.food-license",
+        "title": "Obtain and renew a Hocking County food license",
+        "category": "license",
+        "authority": "Hocking County Health Department",
+        "description": "Food service operations and retail food establishments operating in Hocking County must obtain the applicable Ohio food license and comply with county plan-review, inspection, and renewal requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.hockingcohd.org/",
+          "https://www.hockingcountyhealthdepartment.com/pdf/2024-Health-Department-Fees.pdf",
+          "https://www.hockingcountyhealthdepartment.com/pdf/temp-food-event.pdf",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 29.58,
+          "max": 1313,
+          "note": "Published 2024 fees range from $29.58 vending to $1,313 for level 4 over 25,000 square feet; temporary commercial events are $70 and non-commercial events $35."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "The county schedule applies a 25% penalty of the local license fee for late license renewal."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Holmes",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "holmes-oh.food-license",
+        "title": "Obtain and renew a Holmes County food license",
+        "category": "license",
+        "authority": "Holmes County General Health District",
+        "description": "Food service operations and retail food establishments operating in Holmes County must obtain the applicable Ohio food license before operating and submit the annual application and fee by March 1.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.holmeshealth.org/food-program/",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "The Holmes County General Health District establishes fees by operation and risk category; the current public page does not list the amounts."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Huron",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "huron-oh.food-license",
+        "title": "Obtain and renew a Huron County food license",
+        "category": "license",
+        "authority": "Huron County Public Health",
+        "description": "Food service operations and retail food establishments operating in Huron County must obtain the applicable Ohio food license before operating.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.huroncohealth.com/environmental-health-fees-1",
+          "https://www.huroncohealth.com/environmental-health-fees",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 41.21,
+          "max": 899.69,
+          "note": "Published Huron County food fees vary by risk level and facility size; the schedule includes state fees and late-fee amounts."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Published local food fees include late-fee amounts tied to the applicable license fee."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Jackson",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "jackson-oh.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Adams County Health Department",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.adamscountyhealth.org/environmental-health",
+          "https://adamscountyhealth.org/sites/default/files/2022-12/S-379-Guide%20to%20Starting%20a%20Food%20Business.pdf",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 195,
+          "max": 855,
+          "note": "The county guide states license fees range from $195-$855; plan review begins at $100 plus hourly review and inspection time."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "The county application states a mandatory 25% penalty of the renewal fee for operating after the deadline."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Jefferson",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "jefferson-oh.food-license",
+        "title": "Obtain and renew a Jefferson County food license",
+        "category": "license",
+        "authority": "Jefferson County Public Health",
+        "description": "Food businesses operating in Jefferson County, Ohio must obtain the applicable food service or retail food establishment license; the county fee schedule sets fees by operation type and size.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.jeffco.us/DocumentCenter/View/41848/2024-Fee-Schedule",
+          "https://jeffcohealth.org/food-permits/"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 195,
+          "max": 715,
+          "note": "The county schedule lists retail food fees by establishment type, including restaurants, grocery stores, and mobile units."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food business"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Knox",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "knox-oh.food-license",
+        "title": "Obtain and renew a Knox County food license",
+        "category": "license",
+        "authority": "Knox Public Health",
+        "description": "Food service operations and retail food establishments operating in Knox County must obtain the applicable Ohio food license and complete plan review for new or remodeled facilities.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.knoxhealth.com/images/pdf/fiscal/Fee_Schedule_-_Public_Health_Services.pdf",
+          "https://www.knoxhealth.com/images/2023_PlanReviewSubmittalPacket_Knox_1.pdf",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 26,
+          "max": 1419,
+          "note": "Published totals range from $26 for vending to $1,419 for large commercial level 4; new construction or newly licensed facilities also have a $250 plan-review fee."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio law requires a 25% penalty of the renewal fee when the fee is late."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Lake",
@@ -340,7 +1713,7 @@
         "authority": "Lake County Hotel/Motel Tax Department",
         "description": "Lodging businesses must apply for a Lake County certificate of registration for the 5% county lodging tax; registration is free. Notify the county and surrender the certificate when the business closes or changes to long-term lodging.",
         "frequency": "once",
-        "url": "https://www.lakecountyohio.gov/LodgingTax/",
+        "url": ["https://www.lakecountyohio.gov/LodgingTax/"],
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -354,35 +1727,189 @@
     ],
     "checkedOn": "2026-10-18",
     "note": "Lake County lodging-tax registration was confirmed; the county return due date and other county-level duties were not checked.",
-    "sourceUrl": "https://www.lakecountyohio.gov/LodgingTax/"
+    "sourceUrl": ["https://www.lakecountyohio.gov/LodgingTax/"]
   },
   {
     "county": "Lawrence",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "lawrence-oh.food-license",
+        "title": "Obtain and renew a Lawrence County food license",
+        "category": "license",
+        "authority": "Lawrence County Health Department",
+        "description": "Food service operations and retail food establishments operating in Lawrence County must obtain the applicable Ohio food license after facility and menu review and comply with inspection requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.lawcohd.org/food-safety",
+          "https://c8338141-28c7-461d-ad32-3af282733d8b.filesusr.com/ugd/788b15_d998f360dc3c49cd8cafbd554db3d0bd.pdf",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 82,
+          "note": "The 2025 county schedule lists an $82 temporary license and separate risk-based license and plan-review fees; confirm the current schedule before filing."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "The county schedule publishes late fees by category; Ohio law applies a 25% penalty framework."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Licking",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "licking-oh.food-license",
+        "title": "Obtain and renew a Licking County food license",
+        "category": "license",
+        "authority": "Licking County Health Department",
+        "description": "Food service operations and retail food establishments operating in Licking County must obtain the applicable annual license before operating; the health department publishes operation-specific fees and Ohio imposes a 25% late penalty when renewal fees are late.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://lickingcohealth.org/food-safety-program/",
+          "https://www.lickingcohealth.org/documents/admin/2019-8Fees.pdf",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 27.47,
+          "max": 965.5,
+          "note": "Fees vary by operation category, size, and risk level; plan review is 30% of the license fee."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "25% penalty of the local fee when renewal is late."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Logan",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "logan-oh.food-license",
+        "title": "Obtain and renew a Logan County food license",
+        "category": "license",
+        "authority": "Logan County Health District",
+        "description": "Food service operations and retail food establishments operating in Logan County must be inspected and licensed by the Logan County Health District before operating.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.loganhealthohio.gov/food-safety",
+          "https://www.loganhealthohio.gov/blog?offset=1680523200076",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 39,
+          "max": 853,
+          "note": "Published Logan County fee materials list food license fees from $144-$853 by risk level and size, with temporary licenses at $39 per event; fees are subject to annual cost-methodology updates."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Lorain",
-    "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "status": "rules",
+    "items": [
+      {
+        "id": "lorain-oh.vendor-license",
+        "title": "Obtain a Lorain County vendor license",
+        "category": "license",
+        "authority": "Lorain County Auditor",
+        "description": "Businesses making taxable retail sales or providing taxable services in Ohio must obtain the applicable vendor license; Lorain County's current notice states the new-license application fee is $50.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://loraincountyauditor.gov/Forms/GetFile?fileId=7489",
+          "https://tax.ohio.gov/business/sales-and-use-tax"
+        ],
+        "feeDetail": { "basis": "flat", "amount": 50 },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["retail"],
+            "description": "Makes taxable retail sales or provides taxable services"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      },
+      {
+        "id": "lorain-oh.food-license",
+        "title": "Obtain and renew a Lorain County food license",
+        "category": "license",
+        "authority": "Lorain County Public Health",
+        "description": "Food service operations and retail food establishments in Lorain County must obtain the applicable annual license; the 2025 schedule sets risk-based fees and a late fee of 25% of the local fee.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.loraincountyhealth.com/files/Environmental%20Health/Food%20Program/Food%20Fees%202025.pdf"
+        ],
+        "feeDetail": { "basis": "varies", "min": 13.75, "max": 942 },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "25% of the local fee; does not apply to mobile and seasonal operations."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food service or retail food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Lucas",
@@ -394,7 +1921,7 @@
         "authority": "Lucas County Office of Management and Budget",
         "description": "Hotels, motels and bed-and-breakfast establishments register with Lucas County for a transient occupancy certificate before filing county lodging-tax returns.",
         "frequency": "once",
-        "url": "https://www.co.lucas.oh.us/DocumentCenter/View/1681/Hotel-Motel-Occupancy-Form?bidId=",
+        "url": ["https://www.co.lucas.oh.us/DocumentCenter/View/1681/Hotel-Motel-Occupancy-Form?bidId="],
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -412,7 +1939,7 @@
         "authority": "Lucas County Office of Management and Budget",
         "description": "File the applicable Lucas County hotel/motel transient occupancy tax return monthly, with the return and payment due no later than the 20th day of the month after the tax was collected. The county publishes separate 7% and 10% remittance forms.",
         "rrule": "FREQ=MONTHLY",
-        "url": "https://www.lucascountyoh.gov/737/Hotel-Motel-Occupancy-Tax",
+        "url": ["https://www.lucascountyoh.gov/737/Hotel-Motel-Occupancy-Tax"],
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -426,63 +1953,305 @@
     ],
     "checkedOn": "2026-10-18",
     "note": "Lucas County lodging-tax obligations were confirmed from county materials; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.lucascountyoh.gov/737/Hotel-Motel-Occupancy-Tax"
+    "sourceUrl": ["https://www.lucascountyoh.gov/737/Hotel-Motel-Occupancy-Tax"]
   },
   {
     "county": "Madison",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "madison-oh.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Adams County Health Department",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.adamscountyhealth.org/environmental-health",
+          "https://adamscountyhealth.org/sites/default/files/2022-12/S-379-Guide%20to%20Starting%20a%20Food%20Business.pdf",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 195,
+          "max": 855,
+          "note": "The county guide states license fees range from $195-$855; plan review begins at $100 plus hourly review and inspection time."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "The county application states a mandatory 25% penalty of the renewal fee for operating after the deadline."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Mahoning",
-    "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "status": "rules",
+    "items": [
+      {
+        "id": "mahoning-oh.vendor-license",
+        "title": "Obtain a Mahoning County vendor license",
+        "category": "license",
+        "authority": "Mahoning County Auditor",
+        "description": "A business making retail sales of tangible personal property or taxable services must obtain the applicable vendor license; a regular county vendor license costs $50 and has no annual renewal fee.",
+        "frequency": "once",
+        "url": ["https://auditor.mahoningcountyoh.gov/Posts"],
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["sells_goods"],
+        "feeDetail": { "basis": "flat", "amount": 50 }
+      }
+    ],
+    "sourceUrl": ["https://auditor.mahoningcountyoh.gov/Posts"],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Marion",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "marion-oh.food-license",
+        "title": "Obtain and renew a Marion County food license",
+        "category": "license",
+        "authority": "Marion Public Health",
+        "description": "Food service operations and retail food establishments operating in Marion County must obtain the applicable Ohio food license and comply with local inspection and renewal requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://marionpublichealth.org/food-safety/",
+          "https://marionpublichealth.org/wp-content/uploads/2023/02/2023-Food-Full-Application-2.pdf",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees vary by operation category and risk level under the Marion Public Health schedule."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "The county application states a mandatory 25% penalty of the renewal fee for operating after the deadline."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Medina",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "medina-oh.food-license",
+        "title": "Obtain and renew a Medina County food license",
+        "category": "license",
+        "authority": "Medina County Health Department",
+        "description": "Food service operations and retail food establishments operating in Medina County must obtain the applicable Ohio food license before operating; temporary food vendors must apply at least ten days before the event.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://medinahealth.org/wp-content/uploads/Fillable-Temporary-Food-Service-Application-2026.pdf",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 40,
+          "max": 80,
+          "note": "Temporary food licenses cost $80 per event, or $40 for qualifying nonprofits; other operation fees vary by license category."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Meigs",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "meigs-oh.food-license",
+        "title": "Obtain and renew a Meigs County food license",
+        "category": "license",
+        "authority": "Meigs County Health Department",
+        "description": "Food service operations and retail food establishments operating in Meigs County must obtain the applicable Ohio food license before operating.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://meigs-health.com/environmental-health/",
+          "https://meigs-health.com/wp-content/uploads/2021/09/2021-Environmental-Health-Fees.pdf",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 193,
+          "max": 1000,
+          "note": "Meigs County published food license fees by risk classification; mobile food license applications are $208 in the county's current packet."
+        },
+        "lateFee": { "amount": 0, "note": "Late fees and penalties apply under Ohio law or local rules." },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Mercer",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "mercer-oh.food-license",
+        "title": "Obtain and renew a Mercer County food license",
+        "category": "license",
+        "authority": "Mercer County Health District",
+        "description": "Food service operations and retail food establishments operating in Mercer County must obtain the applicable Ohio food license and complete plan review before opening or remodeling.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://mchdohio.org/environmental-health/food-safety/",
+          "https://mchdohio.org/environmental-health/fee-schedule/",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 21,
+          "max": 778,
+          "note": "The 2026 schedule lists total food license fees of $93.50-$778 by risk, size, and operation type; plan review is 30% of the local license fee."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "The 2026 schedule applies a late fee of 25% of the food license fee."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Miami",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "miami-oh.food-license",
+        "title": "Obtain and renew a Miami County food license",
+        "category": "license",
+        "authority": "Miami County Health District",
+        "description": "Food service operations and retail food establishments operating in Miami County must obtain the applicable Ohio food license before operating and renew it annually.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.miamicountyhealth.net/pdf/food-safety/0ae78b_ba49ef36a1664db0a3f5b7fa3e350c42.pdf",
+          "https://www.miamicountyhealth.net/pdf/food-safety/0ae78b_922eb82c27af4003a897dbcafce78c65.pdf",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Miami County license fees vary by Ohio risk category and operation type; plan review is 50% of the county license fee. A mandatory 25% penalty applies to renewal fees after the deadline."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Monroe",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "monroe-oh.food-license",
+        "title": "Obtain and renew a Monroe County food license",
+        "category": "license",
+        "authority": "Monroe County Health Department",
+        "description": "Food service operations and retail food establishments operating in Monroe County must obtain the applicable Ohio food license before operating.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.monroecountyohio.com/departments/health_department/environmental_services.php",
+          "https://www.monroecountyohio.net/departments/health_department/index.php",
+          "https://www.monroecountymuseum.com/DocumentCenter/View/721/2022-Fee-Schedule-PDF"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 55,
+          "max": 518,
+          "note": "Published Monroe County food fees range from $55 for a non-profit temporary license to $518 for a fixed food service license with 51 or more seats."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late fees are double the local fee under the published county schedule."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Montgomery",
@@ -494,7 +2263,7 @@
         "authority": "Montgomery County Office of Management and Budget",
         "description": "The 3% tax applies to hotels and motels with five or more sleeping rooms. Returns are filed electronically on the county website by the last day of the month after the stay (February stays due March 31); register for an account number first. Late filing or payment brings interest, fines and penalties.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
-        "url": "https://www.mcohio.org/1218/HotelMotel-Tax",
+        "url": ["https://www.mcohio.org/1218/HotelMotel-Tax"],
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -511,136 +2280,735 @@
   },
   {
     "county": "Morgan",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "morgan-oh.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Adams County Health Department",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.adamscountyhealth.org/environmental-health",
+          "https://adamscountyhealth.org/sites/default/files/2022-12/S-379-Guide%20to%20Starting%20a%20Food%20Business.pdf",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 195,
+          "max": 855,
+          "note": "The county guide states license fees range from $195-$855; plan review begins at $100 plus hourly review and inspection time."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "The county application states a mandatory 25% penalty of the renewal fee for operating after the deadline."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Morrow",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "morrow-oh.food-license",
+        "title": "Obtain and renew a Morrow County food license",
+        "category": "license",
+        "authority": "Morrow County Health District",
+        "description": "Food service operations and retail food establishments operating in Morrow County must obtain the applicable Ohio food license and comply with county plan-review, inspection, and renewal requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://cms5.revize.com/revize/morrowhealth/2025%20EH%20Fees_01.25.pdf",
+          "https://cms5.revize.com/revize/morrowhealth/Document%20Center/Forms/Environmental%20Health/Food/FSO-RFE-application.pdf",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 254.83,
+          "max": 662.36,
+          "note": "Published 2025 fees for risk levels 1-4 under 25,000 square feet are $254.83-$662.36 including the $28 state amount; other categories vary."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio food-license renewals incur a 25% penalty of the applicable renewal fee when late."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Muskingum",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "muskingum-oh.food-license",
+        "title": "Obtain and renew a Muskingum County food license",
+        "category": "license",
+        "authority": "Zanesville-Muskingum County Health Department",
+        "description": "Food service operations and retail food establishments operating in Muskingum County must obtain the applicable Ohio food license before operating; plan review fees are 40% of the license fee under the local application materials.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.zmchd.org/Media/Food-License-Application.pdf",
+          "https://www.zmchd.org/Media/Food-Establishment-Plan-Review-Application.pdf",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees vary by operation category and risk level; plan review is 40% of the license fee."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio food-license renewal penalties are 25% of the applicable fee when late."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Noble",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "noble-oh.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Adams County Health Department",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.adamscountyhealth.org/environmental-health",
+          "https://adamscountyhealth.org/sites/default/files/2022-12/S-379-Guide%20to%20Starting%20a%20Food%20Business.pdf",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 195,
+          "max": 855,
+          "note": "The county guide states license fees range from $195-$855; plan review begins at $100 plus hourly review and inspection time."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "The county application states a mandatory 25% penalty of the renewal fee for operating after the deadline."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Ottawa",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "ottawa-oh.food-license",
+        "title": "Obtain and renew an Ottawa County food license",
+        "category": "license",
+        "authority": "Ottawa County Health Department",
+        "description": "Food service operations and retail food establishments operating in Ottawa County must obtain the applicable Ohio food license and comply with county plan-review, inspection, and renewal requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.ottawahealth.org/240/Food-Protection-Program",
+          "https://www.co.ottawa.oh.us/DocumentCenter/View/897/Complete-Food-Service-Plan-Submission-Application-Packet-2021-PDF",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 200,
+          "max": 1000,
+          "note": "Published plan-review fees are $200-$300 by class, with expedited review at $1,000; license fees are separate."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Paulding",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "paulding-oh.food-license",
+        "title": "Obtain and renew a Paulding County food license",
+        "category": "license",
+        "authority": "Paulding County Health Department",
+        "description": "Food service operations and retail food establishments operating in Paulding County must obtain the applicable Ohio food license and complete plan review before opening where required; temporary events require a separate license.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pauldingcountyhealth.com/environmental-health/food-safety/",
+          "https://www.pauldingcountyhealth.com/wp-content/uploads/FSO-RFE-Plan-Review-NEW.pdf",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 55,
+          "max": 200,
+          "note": "Published fees include $55 per temporary event and $200 for new-facility or ownership-change plan review; remodel plan review is $150 and license fees vary by risk level."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio food-license renewals incur a 25% penalty of the applicable renewal fee when late."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Perry",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "perry-oh.food-license",
+        "title": "Obtain and renew a Perry County food license",
+        "category": "license",
+        "authority": "Perry County Health Department",
+        "description": "Food service operations and retail food establishments operating in Perry County must obtain the applicable Ohio food license before operating and renew it annually.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://health.perrycountyohio.gov/food-service-operations/",
+          "https://health.perrycountyohio.gov/",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Perry County has 21 food-license fee categories; the health department requires fee confirmation before filing."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "A 25% late penalty applies after the March 1 renewal deadline."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Pickaway",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "pickaway-oh.food-license",
+        "title": "Obtain and renew a Pickaway County food license",
+        "category": "license",
+        "authority": "Pickaway County Public Health",
+        "description": "Food service operations and retail food establishments operating in Pickaway County must obtain the applicable Ohio food license and submit the required fee before operating.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://pickawaycountypublichealth.org/site/wp-content/uploads/2021/10/FSO-and-RFE-Plan-Review.pdf",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "License fees are completed by the licensor based on the operation category and risk level; the county application requires the applicable fee and state amount."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "The county application states a mandatory 25% penalty of the renewal fee for operating after the deadline."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Pike",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "pike-oh.food-license",
+        "title": "Obtain and renew a Pike County food license",
+        "category": "license",
+        "authority": "Pike County General Health District",
+        "description": "Food service operations and retail food establishments operating in Pike County must obtain the applicable Ohio food license and comply with local inspection and renewal requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://pike-health.com/",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees vary by operation category and risk level under the Pike County General Health District schedule."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio law requires a 25% penalty of the renewal fee when the fee is late."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Portage",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "portage-oh.food-license",
+        "title": "Obtain and renew a Portage County food license",
+        "category": "license",
+        "authority": "Portage County Health District",
+        "description": "Food service operations and retail food establishments operating in Portage County must obtain the applicable Ohio food license before operating and comply with local health district inspection and renewal requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.portagehealth.net/",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees vary by operation category and local health district schedule."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio food-license renewal penalties are 25% of the applicable fee when late."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Preble",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "preble-oh.food-license",
+        "title": "Obtain and renew a Preble County food license",
+        "category": "license",
+        "authority": "Preble County Public Health",
+        "description": "Food service operations and retail food establishments operating in Preble County must obtain the applicable Ohio food license and comply with plan-review, inspection, and renewal requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.preblecountyhealth.org/food-safety-program",
+          "https://www.preblecountyhealth.org/environmental-health",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees vary by operation category and risk level under the Preble County Public Health schedule."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio law requires a 25% penalty of the renewal fee when the fee is late."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Putnam",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "putnam-oh.food-license",
+        "title": "Obtain and renew a Putnam County food license",
+        "category": "license",
+        "authority": "Putnam County Health Department",
+        "description": "Food service operations and retail food establishments operating in Putnam County must be inspected and licensed by the county health department before operating.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://putnamhealth.com/services/food-safety/",
+          "https://putnamhealth.com/wp-content/uploads/2023/07/Temporary-Food-License-Packet-7.10.2023.pdf",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 50,
+          "note": "Temporary food licenses cost $50 per event; other license fees vary by risk level and operation type."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Richland",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "richland-oh.food-license",
+        "title": "Obtain and renew a Richland County food license",
+        "category": "license",
+        "authority": "Richland Public Health",
+        "description": "Food service operations and retail food establishments operating in Richland County must obtain the applicable Ohio food license and comply with county licensing and inspection requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://richlandhealth.org/business-health-services/food-services/",
+          "https://richlandhealth.org/wp-content/uploads/2024/06/2024-Application-for-a-License-PDF-1.pdf",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Richland Public Health licensing fees vary by food operation risk level, facility type, and applicable Ohio state fee."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Ross",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "ross-oh.food-license",
+        "title": "Obtain and renew a Ross County food license",
+        "category": "license",
+        "authority": "Ross County Health District",
+        "description": "Food service operations and retail food establishments operating in Ross County must obtain the applicable Ohio food license before operating.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://rosscountyhealth.org/food-inspections/",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Ross County food-license fees vary by operation type and risk classification; contact the health district for the current schedule."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Sandusky",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "sandusky-oh.food-license",
+        "title": "Obtain and renew a Sandusky County food license",
+        "category": "license",
+        "authority": "Sandusky County Health Department",
+        "description": "Food service operations and retail food establishments operating in Sandusky County must obtain the applicable Ohio food license and comply with local inspection and renewal requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://sanduskycountyhealthdepartment.com/",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees vary by operation category and risk level under the Sandusky County Health Department schedule."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio law requires a 25% penalty of the renewal fee when the fee is late."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Scioto",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "scioto-oh.food-license",
+        "title": "Obtain and renew a Scioto County food license",
+        "category": "license",
+        "authority": "Scioto County Health Department",
+        "description": "Food service operations and retail food establishments operating in Scioto County must obtain the applicable Ohio food license before operating.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://webgen1files.revize.com/sciotocountyhealthoh/2025%20Retail%20Food%20Program%20Proposed%20Fees%20Chart%20%20attach%20to%20p%3Bublic%20hearing%20%281%29.pdf",
+          "https://webgen1files.revize.com/sciotocountyhealthoh/2025%20Mobile%20Food%20License%20Application.pdf",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 65.5,
+          "max": 1000,
+          "note": "Published 2025 local license fees range from $65.50 mobile low-risk to $1,000 for large risk-level-4 commercial facilities; fees vary by risk category and size."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Seneca",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "seneca-oh.food-license",
+        "title": "Obtain and renew a Seneca County food license",
+        "category": "license",
+        "authority": "Seneca County General Health District",
+        "description": "Food service operations and retail food establishments operating in Seneca County must obtain the applicable Ohio food license; temporary operations require a separate temporary food license.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://senecahealthdept.org/business-environment/food-safety/",
+          "https://senecahealthdept.org/wp-content/uploads/2022/02/Temporary-application-2022.pdf",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 80,
+          "note": "The county’s current temporary food license fee is $80; other license fees vary by operation and risk classification."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Shelby",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "shelby-oh.food-license",
+        "title": "Obtain and renew a Shelby County food license",
+        "category": "license",
+        "authority": "Shelby County Health Department",
+        "description": "Food service operations and retail food establishments operating in Shelby County must obtain the applicable Ohio food license before operating.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://codelibrary.amlegal.com/codes/shelby/latest/shelby_oh/0-0-0-41611",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 120,
+          "max": 415,
+          "note": "Shelby City's published schedule lists local food fees of $120-$415 by risk class and facility size, plus current state fees."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Stark",
-    "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "status": "rules",
+    "items": [
+      {
+        "id": "stark-oh.vendor-license",
+        "title": "Obtain a Stark County vendor license",
+        "category": "license",
+        "authority": "Stark County Auditor",
+        "description": "A business selling products from a fixed place of business in Stark County must obtain the regular county vendor license; the application fee is $50 and there is no annual renewal fee.",
+        "frequency": "once",
+        "url": [
+          "https://www.starkcountyohio.gov/government/offices/auditor/licensing_and_business/vendor_licenses.php"
+        ],
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["sells_goods"],
+        "feeDetail": { "basis": "flat", "amount": 50 }
+      }
+    ],
+    "sourceUrl": [
+      "https://www.starkcountyohio.gov/government/offices/auditor/licensing_and_business/vendor_licenses.php"
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Summit",
@@ -652,7 +3020,7 @@
         "authority": "Summit County Fiscal Office, Lodging Excise Tax Department",
         "description": "The tax is 5.5%. Lodging establishments mail each month's return with payment to the Lodging Excise Tax Department in Akron; the page read does not state the day of the month. The lodging registration form is due by January 31 each year. Phone 330-643-2437.",
         "rrule": "FREQ=MONTHLY",
-        "url": "https://fiscaloffice.summitoh.net/lodging-excise-tax",
+        "url": ["https://fiscaloffice.summitoh.net/lodging-excise-tax"],
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -669,79 +3037,488 @@
   },
   {
     "county": "Trumbull",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "trumbull-oh.vendor-license",
+        "title": "Obtain a Trumbull County vendor license",
+        "category": "license",
+        "authority": "Trumbull County Auditor",
+        "description": "Every Ohio retailer making taxable retail sales in Trumbull County must obtain a vendor license; the current application fee is $50.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.co.trumbull.oh.us/Auditor/Licenses/Vendor",
+          "https://tax.ohio.gov/business/sales-and-use-tax"
+        ],
+        "feeDetail": { "basis": "flat", "amount": 50 },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["retail"],
+            "description": "Makes taxable retail sales"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      },
+      {
+        "id": "trumbull-oh.food-license",
+        "title": "Obtain and renew a Trumbull County food license",
+        "category": "license",
+        "authority": "Trumbull County Combined Health District",
+        "description": "Food businesses operating in Trumbull County must obtain the applicable food service or retail food establishment license before operating; the local health district issues the license under Ohio food-safety rules.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://tcchd.org/Forms/Food%20Plan%20Review.pdf",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": { "basis": "varies", "note": "Fees depend on the food operation and risk category." },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food business"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Tuscarawas",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "tuscarawas-oh.food-license",
+        "title": "Obtain and renew a Tuscarawas County food license",
+        "category": "license",
+        "authority": "Tuscarawas County Health Department",
+        "description": "Food service operations and retail food establishments operating in Tuscarawas County must obtain the applicable annual license before operating and renew it by March 1 or before seasonal/mobile operations begin.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.tchdnow.org/uploads/4/2/8/6/42860741/environmental_health_fees_2026.pdf",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 26.58,
+          "max": 1543,
+          "note": "2026 fees vary by risk level, square footage, mobile/temporary status, and plan review."
+        },
+        "lateFee": { "amount": 0, "percentPerMonth": 25, "note": "25% of the local fee for late renewal." },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Union",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "union-oh.food-license",
+        "title": "Obtain and renew a Union County food license",
+        "category": "license",
+        "authority": "Union County Health Department",
+        "description": "Food service operations and retail food establishments operating in Union County must obtain the applicable Ohio food license before operating and renew it by March 1 each year.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://uchd.net/food-licensing-fees/",
+          "https://uchd.net/fees/",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 11.82,
+          "max": 2248,
+          "note": "Published fees range from $11.82 plus state fee for vending to $1,248 plus state fee for level-4 commercial operations over 25,000 square feet; expedited plan review adds $1,000."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio food-license renewals incur a 25% penalty of the applicable renewal fee when late."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Van Wert",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "van-wert-oh.food-license",
+        "title": "Obtain and renew a Van Wert County food license",
+        "category": "license",
+        "authority": "Van Wert County General Health District",
+        "description": "Food service operations and retail food establishments operating in Van Wert County must obtain the applicable Ohio food license and comply with county inspection and renewal requirements; temporary events require an application at least seven days in advance.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://vanwertcountyhealth.org/",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "License fees vary by operation category and risk level; the county requires the applicable fee with the food-license application."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio food-license renewals incur a 25% penalty of the applicable renewal fee when late."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Vinton",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "vinton-oh.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Adams County Health Department",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.adamscountyhealth.org/environmental-health",
+          "https://adamscountyhealth.org/sites/default/files/2022-12/S-379-Guide%20to%20Starting%20a%20Food%20Business.pdf",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 195,
+          "max": 855,
+          "note": "The county guide states license fees range from $195-$855; plan review begins at $100 plus hourly review and inspection time."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "The county application states a mandatory 25% penalty of the renewal fee for operating after the deadline."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Warren",
-    "status": "unverified",
-    "reason": "no-bpp-tax-secondary-source",
-    "items": [],
-    "checkedOn": "2026-10-13"
+    "status": "rules",
+    "items": [
+      {
+        "id": "warren-oh.vendor-license",
+        "title": "Obtain a Warren County vendor license",
+        "category": "license",
+        "authority": "Warren County Auditor",
+        "description": "Businesses making taxable retail sales or providing taxable services in Warren County must obtain the applicable vendor license; a regular license has a $50 application fee.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://auditor.warrencountyohio.gov/Licensing/VendorGenInfo/Index",
+          "https://auditor.warrencountyohio.gov/Licensing/VendorRegLic/Index"
+        ],
+        "feeDetail": { "basis": "flat", "amount": 50 },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["retail"],
+            "description": "Makes taxable retail sales or provides taxable services"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      },
+      {
+        "id": "warren-oh.food-license",
+        "title": "Obtain and renew a Warren County food license",
+        "category": "license",
+        "authority": "Warren County Health District",
+        "description": "Food service operations in Warren County must obtain the applicable annual license; the county publishes risk-based fees and assesses a late fee of 25% of the local fee after March 1.",
+        "rrule": "FREQ=YEARLY",
+        "url": ["https://warrencohealthoh.gov/environmental/environmental-health-fees"],
+        "feeDetail": { "basis": "varies", "min": 17.65, "max": 1203 },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "25% of the local fee for applications and payment postmarked after March 1."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food service operation or retail food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Washington",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "washington-oh.food-license",
+        "title": "Obtain and renew a Washington County food license",
+        "category": "license",
+        "authority": "Washington County Health Department",
+        "description": "Food service operations and retail food establishments operating in Washington County must obtain the applicable Ohio food license and comply with county health department application, inspection, and fee requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.washingtongov.org/677/Forms",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees vary by operation category and are published in the county environmental fee schedule."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Wayne",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "wayne-oh.food-license",
+        "title": "Obtain and renew a Wayne County food license",
+        "category": "license",
+        "authority": "Wayne County Health Department",
+        "description": "Food service operations, retail food establishments, mobile operations, temporary operations, and vending locations operating in Wayne County must obtain the applicable Ohio food license and renew it annually by March 1.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://wayne-health.org/food-safety",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees vary by Ohio risk classification and operation type."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 100,
+          "note": "Annual applications after February 1 are subject to a delinquency fee equal to double the regular fee."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Williams",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "williams-oh.food-license",
+        "title": "Obtain and renew a Williams County food license",
+        "category": "license",
+        "authority": "Williams County Health Department",
+        "description": "Food service operations and retail food establishments operating in Williams County must obtain the applicable Ohio food license and comply with local inspection and renewal requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.williamscountyhealth.org/",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees vary by operation category and risk level under the Williams County Health Department schedule."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio law requires a 25% penalty of the renewal fee when the fee is late."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Wood",
-    "status": "unverified",
     "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "wood-oh.vendor-license",
+        "title": "Obtain a Wood County vendor license",
+        "category": "license",
+        "authority": "Wood County Auditor",
+        "description": "Businesses making taxable retail sales in Wood County must obtain an Ohio vendor license; the county auditor lists a $50 application fee and no annual renewal fee for a transient license.",
+        "rrule": "FREQ=YEARLY",
+        "url": ["https://auditor.co.wood.oh.us/faq/", "https://tax.ohio.gov/business/sales-and-use-tax"],
+        "feeDetail": { "basis": "flat", "amount": 50 },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["retail"],
+            "description": "Makes taxable retail sales"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      },
+      {
+        "id": "wood-oh.food-license",
+        "title": "Obtain and renew a Wood County food license",
+        "category": "license",
+        "authority": "Wood County Health Department",
+        "description": "Food businesses serving or selling food to the public in Wood County must obtain the applicable local food license; the risk level determines the license fee.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://woodcountyhealth.org/environmental-health/food-safety/",
+          "https://woodcountyhealth.org/environmental-health/inspection-process/"
+        ],
+        "feeDetail": { "basis": "varies", "note": "The health department sets fees by risk level." },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Serves or sells food to the public"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Wyandot",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "wyandot-oh.food-license",
+        "title": "Obtain and renew a Wyandot County food license",
+        "category": "license",
+        "authority": "Wyandot County Public Health",
+        "description": "Food service operations and retail food establishments operating in Wyandot County must obtain the applicable Ohio food license and comply with local inspection and renewal requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.wyandothealth.com/",
+          "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees vary by operation category and risk level under the Wyandot County Public Health schedule."
+        },
+        "lateFee": {
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio law requires a 25% penalty of the renewal fee when the fee is late."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   }
 ]

@@ -2,15 +2,15 @@
   "name": "New Jersey",
   "filing": {
     "name": "New Jersey Division of Revenue and Enterprise Services",
-    "url": "https://www.nj.gov/treasury/revenue"
+    "url": ["https://www.nj.gov/treasury/revenue"]
   },
   "revenue": {
     "name": "New Jersey Division of Taxation",
-    "url": "https://www.nj.gov/treasury/taxation"
+    "url": ["https://www.nj.gov/treasury/taxation"]
   },
   "labor": {
     "name": "New Jersey Department of Labor and Workforce Development",
-    "url": "https://www.nj.gov/labor"
+    "url": ["https://www.nj.gov/labor"]
   },
   "llcReport": {
     "rrule": "FREQ=YEARLY;BYMONTHDAY=-1",
@@ -78,14 +78,16 @@
     "regulator": "New Jersey Cannabis Regulatory Commission"
   },
   "links": {
-    "formation": "https://www.nj.gov/treasury/revenue/",
-    "annualReport": "https://www.nj.gov/treasury/revenue/",
-    "uiRegistration": "https://www.nj.gov/labor/employer-services/",
-    "withholding": "https://www.nj.gov/treasury/revenue/gettingregistered.shtml",
-    "salesTax": "https://www.nj.gov/treasury/taxation/salestax.shtml",
-    "entityTax": "https://www.nj.gov/treasury/taxation/prntcbt.shtml",
-    "laborPosters": "https://www.nj.gov/labor/wageandhour/tools-resources/forms-publications/employer-poster-packet/",
-    "dba": "https://www.nj.gov/state/bac/assets/pdf/how/regsiter-a-trade-name.pdf"
+    "formation": ["https://www.nj.gov/treasury/revenue/"],
+    "annualReport": ["https://www.nj.gov/treasury/revenue/"],
+    "uiRegistration": ["https://www.nj.gov/labor/employer-services/"],
+    "withholding": ["https://www.nj.gov/treasury/revenue/gettingregistered.shtml"],
+    "salesTax": ["https://www.nj.gov/treasury/taxation/salestax.shtml"],
+    "entityTax": ["https://www.nj.gov/treasury/taxation/prntcbt.shtml"],
+    "laborPosters": [
+      "https://www.nj.gov/labor/wageandhour/tools-resources/forms-publications/employer-poster-packet/"
+    ],
+    "dba": ["https://www.nj.gov/state/bac/assets/pdf/how/regsiter-a-trade-name.pdf"]
   },
   "verification": {
     "checkedOn": "2026-10-13",

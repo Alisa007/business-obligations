@@ -3,7 +3,7 @@
     "city": "Chattanooga",
     "counties": ["Hamilton"],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://register.chattanooga.gov/business/license",
+    "sourceUrl": ["https://register.chattanooga.gov/business/license"],
     "items": [
       {
         "id": "chattanooga.business-license",
@@ -12,7 +12,7 @@
         "authority": "City of Chattanooga Treasury Division",
         "description": "Businesses need a city license and a Hamilton County license; business tax returns are filed with the Tennessee Department of Revenue, and renewals may not be mailed as a notice.",
         "frequency": "once",
-        "url": "https://register.chattanooga.gov/business/license",
+        "url": ["https://register.chattanooga.gov/business/license"],
         "appliesTo": ["all"]
       }
     ]
@@ -22,7 +22,7 @@
     "status": "rules",
     "note": "Licensing runs mainly through the Montgomery County Clerk; no official city page confirmed a separate city license.",
     "counties": ["Montgomery"],
-    "sourceUrl": "https://montgomerytn.gov/clerk/business-licensetaxes",
+    "sourceUrl": ["https://montgomerytn.gov/clerk/business-licensetaxes"],
     "items": [
       {
         "id": "clarksville.local-licenses",
@@ -31,7 +31,7 @@
         "authority": "Clarksville local licensing authority",
         "description": "Review the cited local licensing source before operating; requirements may be activity-specific and can differ by business type or location.",
         "frequency": "once",
-        "url": "https://montgomerytn.gov/clerk/business-licensetaxes",
+        "url": ["https://montgomerytn.gov/clerk/business-licensetaxes"],
         "appliesTo": ["all"]
       }
     ],
@@ -41,7 +41,7 @@
     "city": "Knoxville",
     "counties": ["Knox"],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.knoxvilletn.gov/470/Business-License-Tax-Office",
+    "sourceUrl": ["https://www.knoxvilletn.gov/470/Business-License-Tax-Office"],
     "items": [
       {
         "id": "knoxville.business-license",
@@ -50,7 +50,7 @@
         "authority": "City of Knoxville Business License/Tax Office",
         "description": "A business in Knoxville needs a city license and a county license from the Knox County Clerk, and pays annual business tax to the Tennessee Department of Revenue.",
         "frequency": "once",
-        "url": "https://www.knoxvilletn.gov/470/Business-License-Tax-Office",
+        "url": ["https://www.knoxvilletn.gov/470/Business-License-Tax-Office"],
         "appliesTo": ["all"]
       }
     ]
@@ -59,7 +59,7 @@
     "city": "Memphis",
     "counties": ["Shelby"],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://memphistn.gov/licenses-and-permits/",
+    "sourceUrl": ["https://memphistn.gov/licenses-and-permits/"],
     "items": [
       {
         "id": "memphis.business-license",
@@ -69,7 +69,7 @@
         "description": "Register with the County Clerk within 20 days after the business starts to receive a business license, and report gross receipts annually to the Tennessee Department of Revenue. A final return is due within 15 days of closing.",
         "frequency": "once",
         "deadline": "Within 20 days after commencing business",
-        "url": "https://memphistn.gov/licenses-and-permits/",
+        "url": ["https://memphistn.gov/licenses-and-permits/"],
         "appliesTo": ["all"]
       }
     ]
@@ -78,7 +78,7 @@
     "city": "Murfreesboro",
     "counties": ["Rutherford"],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.murfreesborotn.gov/1330/Business-Licenses",
+    "sourceUrl": ["https://www.murfreesborotn.gov/1330/Business-Licenses"],
     "items": [
       {
         "id": "murfreesboro.business-license",
@@ -87,7 +87,7 @@
         "authority": "City of Murfreesboro Finance Department",
         "description": "Businesses in Murfreesboro need both a city license and a Rutherford County license, with an initial fee for each; businesses at $100,000 or more in gross receipts file with the Tennessee Department of Revenue.",
         "frequency": "once",
-        "url": "https://www.murfreesborotn.gov/1330/Business-Licenses",
+        "url": ["https://www.murfreesborotn.gov/1330/Business-Licenses"],
         "appliesTo": ["all"]
       }
     ]
@@ -96,7 +96,9 @@
     "city": "Nashville",
     "counties": ["Davidson"],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.nashville.gov/departments/county-clerk/business-services/apply-business-license",
+    "sourceUrl": [
+      "https://www.nashville.gov/departments/county-clerk/business-services/apply-business-license"
+    ],
     "items": [
       {
         "id": "nashville.business-license",
@@ -105,7 +107,9 @@
         "authority": "Davidson County Clerk, Business Tax Division",
         "description": "Businesses in Nashville-Davidson County obtain a business tax license or a minimal activity license from the County Clerk. The license fee is $30 for a business inside Nashville city limits (Urban Service District) and $15 outside city limits but within Davidson County. Report gross receipts to the Tennessee Department of Revenue with the annual business tax return.",
         "frequency": "once",
-        "url": "https://www.nashville.gov/departments/county-clerk/business-services/apply-business-license",
+        "url": [
+          "https://www.nashville.gov/departments/county-clerk/business-services/apply-business-license"
+        ],
         "appliesTo": ["all"],
         "feeDetail": {
           "basis": "varies",
@@ -127,12 +131,12 @@
         "authority": "Franklin local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://sos.tn.gov/businesses/services/business-forms-fees",
+        "url": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://sos.tn.gov/businesses/services/business-forms-fees"
+    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"]
   },
   {
     "city": "Johnson City",
@@ -146,12 +150,12 @@
         "authority": "Johnson City local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://sos.tn.gov/businesses/services/business-forms-fees",
+        "url": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://sos.tn.gov/businesses/services/business-forms-fees"
+    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"]
   },
   {
     "city": "Jackson",
@@ -165,12 +169,12 @@
         "authority": "Jackson local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://sos.tn.gov/businesses/services/business-forms-fees",
+        "url": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://sos.tn.gov/businesses/services/business-forms-fees"
+    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"]
   },
   {
     "city": "Hendersonville",
@@ -184,12 +188,12 @@
         "authority": "Hendersonville local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://sos.tn.gov/businesses/services/business-forms-fees",
+        "url": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://sos.tn.gov/businesses/services/business-forms-fees"
+    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"]
   },
   {
     "city": "Smyrna",
@@ -203,12 +207,12 @@
         "authority": "Smyrna local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://sos.tn.gov/businesses/services/business-forms-fees",
+        "url": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://sos.tn.gov/businesses/services/business-forms-fees"
+    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"]
   },
   {
     "city": "Spring Hill",
@@ -222,12 +226,12 @@
         "authority": "Spring Hill local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://sos.tn.gov/businesses/services/business-forms-fees",
+        "url": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://sos.tn.gov/businesses/services/business-forms-fees"
+    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"]
   },
   {
     "city": "Kingsport",
@@ -241,12 +245,12 @@
         "authority": "Kingsport local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://sos.tn.gov/businesses/services/business-forms-fees",
+        "url": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://sos.tn.gov/businesses/services/business-forms-fees"
+    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"]
   },
   {
     "city": "Bartlett",
@@ -260,12 +264,12 @@
         "authority": "Bartlett local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://sos.tn.gov/businesses/services/business-forms-fees",
+        "url": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://sos.tn.gov/businesses/services/business-forms-fees"
+    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"]
   },
   {
     "city": "Gallatin",
@@ -279,12 +283,12 @@
         "authority": "Gallatin local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://sos.tn.gov/businesses/services/business-forms-fees",
+        "url": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://sos.tn.gov/businesses/services/business-forms-fees"
+    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"]
   },
   {
     "city": "Lebanon",
@@ -298,12 +302,12 @@
         "authority": "Lebanon local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://sos.tn.gov/businesses/services/business-forms-fees",
+        "url": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://sos.tn.gov/businesses/services/business-forms-fees"
+    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"]
   },
   {
     "city": "Collierville",
@@ -317,12 +321,12 @@
         "authority": "Collierville local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://sos.tn.gov/businesses/services/business-forms-fees",
+        "url": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://sos.tn.gov/businesses/services/business-forms-fees"
+    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"]
   },
   {
     "city": "Cleveland",
@@ -336,12 +340,12 @@
         "authority": "Cleveland local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://sos.tn.gov/businesses/services/business-forms-fees",
+        "url": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://sos.tn.gov/businesses/services/business-forms-fees"
+    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"]
   },
   {
     "city": "Columbia",
@@ -355,12 +359,12 @@
         "authority": "Columbia local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://sos.tn.gov/businesses/services/business-forms-fees",
+        "url": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://sos.tn.gov/businesses/services/business-forms-fees"
+    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"]
   },
   {
     "city": "Brentwood",
@@ -374,12 +378,12 @@
         "authority": "Brentwood local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://sos.tn.gov/businesses/services/business-forms-fees",
+        "url": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://sos.tn.gov/businesses/services/business-forms-fees"
+    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"]
   },
   {
     "city": "Mount Juliet",
@@ -393,12 +397,12 @@
         "authority": "Mount Juliet local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://sos.tn.gov/businesses/services/business-forms-fees",
+        "url": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://sos.tn.gov/businesses/services/business-forms-fees"
+    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"]
   },
   {
     "city": "La Vergne",
@@ -412,11 +416,11 @@
         "authority": "La Vergne local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://sos.tn.gov/businesses/services/business-forms-fees",
+        "url": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://sos.tn.gov/businesses/services/business-forms-fees"
+    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"]
   }
 ]

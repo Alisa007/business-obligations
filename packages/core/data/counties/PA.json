@@ -1,10 +1,40 @@
 [
   {
     "county": "Adams",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "adams-pa.food-license",
+        "title": "Obtain and renew an Adams County retail food facility license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Restaurants, grocery stores, and other food vendors operating in Adams County must obtain the required Pennsylvania retail food facility license before serving food and renew it annually; Pennsylvania identifies the applicable local health jurisdiction for licensing.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants",
+          "https://www.adamscountypa.gov/countyservices"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees depend on the applicable local health jurisdiction and establishment type."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a restaurant, grocery store, or other food vendor"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Allegheny",
@@ -16,7 +46,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
         "frequency": "once",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       },
       {
@@ -26,7 +56,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       },
       {
@@ -36,7 +66,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       },
       {
@@ -47,7 +77,9 @@
         "description": "Vendors already required to collect Pennsylvania sales tax must collect and remit Allegheny County's 1% local sales and use tax on taxable sales and uses in the county with the state return; apply the current sourcing and exemption rules.",
         "frequency": "ongoing",
         "deadline": "On the assigned Pennsylvania sales and use tax filing schedule",
-        "url": "https://www.pa.gov/agencies/revenue/resources/tax-types-and-information/sales-use-and-hotel-occupancy-tax/local-sales-tax",
+        "url": [
+          "https://www.pa.gov/agencies/revenue/resources/tax-types-and-information/sales-use-and-hotel-occupancy-tax/local-sales-tax"
+        ],
         "appliesTo": ["sells_goods"]
       }
     ],
@@ -56,24 +88,118 @@
   },
   {
     "county": "Armstrong",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "armstrong-pa.retail-food-license",
+        "title": "Obtain and renew an Armstrong County retail food facility license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Restaurants, grocery stores, and other food vendors operating in Armstrong County must obtain the required Pennsylvania retail food facility license before serving food and renew it annually; the licensing contact depends on the applicable health jurisdiction.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 82,
+          "max": 241,
+          "note": "Pennsylvania lists $241 for a new facility, $103 for a new owner-operated facility under 50 seats, and $82 for annual renewal."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a restaurant, grocery store, or other food vendor"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Beaver",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "beaver-pa.food-license",
+        "title": "Obtain and renew a Beaver County retail food facility license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Restaurants, grocery stores, and other food vendors operating in Beaver County must obtain the required Pennsylvania retail food facility license before serving food and renew it annually; Pennsylvania identifies the applicable local health jurisdiction for licensing.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants",
+          "https://www.beavercountypa.gov/"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees depend on the applicable local health jurisdiction and establishment type."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a restaurant, grocery store, or other food vendor"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Bedford",
-    "status": "unverified",
     "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "bedford-pa.retail-food-license",
+        "title": "Obtain and renew a Bedford County retail food facility license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Restaurants, grocery stores, and other food vendors operating in Bedford County must obtain the required Pennsylvania retail food facility license before serving food and renew it annually; Pennsylvania identifies the applicable local health jurisdiction for licensing.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants",
+          "https://www.pa.gov/content/dam/copapwp-pagov/en/pda/documents/consumer_protection/foodsafety/retail-food/retail-food/documents/Local%20Health%20Departments.pdf"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 82,
+          "max": 241,
+          "note": "Pennsylvania lists $241 for a new facility, $103 for a new owner-operated facility under 50 seats, and $82 for annual renewal."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a restaurant, grocery store, or other food vendor"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Berks",
@@ -85,7 +211,7 @@
         "authority": "Berks County Treasurer",
         "description": "All hotel operators send the monthly remittance report to the Treasurer on or before the 25th for the prior month's room sales, even when no tax is due. Late filings more than 5 days past due cost $100 plus 1.5% monthly interest under the county's 2016 rules.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=25",
-        "url": "https://www.berkspa.gov/Departments/Treasurer/Hotel-Tax",
+        "url": ["https://www.berkspa.gov/Departments/Treasurer/Hotel-Tax"],
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -103,7 +229,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
         "frequency": "once",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       },
       {
@@ -113,7 +239,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       },
       {
@@ -123,7 +249,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       }
     ],
@@ -132,17 +258,80 @@
   },
   {
     "county": "Blair",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "blair-pa.food-license",
+        "title": "Obtain and renew a Blair County retail food facility license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Restaurants, grocery stores, and other food vendors operating in Blair County must obtain the required Pennsylvania retail food facility license before serving food and renew it annually; Pennsylvania identifies the applicable local health jurisdiction for licensing.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food",
+          "https://www.pa.gov/content/dam/copapwp-pagov/en/pda/documents/consumer_protection/foodsafety/retail-food/retail-food/documents/Local%20Health%20Departments.pdf"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees depend on the applicable local health jurisdiction and establishment type."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a restaurant, grocery store, or other food vendor"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Bradford",
-    "status": "unverified",
     "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "bradford-pa.retail-food-license",
+        "title": "Obtain and renew a Bradford County retail food facility license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Restaurants, grocery stores, and other food vendors operating in Bradford County must obtain the required Pennsylvania retail food facility license before serving food and renew it annually; Pennsylvania identifies the applicable local health jurisdiction for licensing.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants",
+          "https://www.pa.gov/content/dam/copapwp-pagov/en/pda/documents/consumer_protection/foodsafety/retail-food/retail-food/documents/Local%20Health%20Departments.pdf"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 82,
+          "max": 241,
+          "note": "Pennsylvania lists $241 for a new facility, $103 for a new owner-operated facility under 50 seats, and $82 for annual renewal."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a restaurant, grocery store, or other food vendor"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Bucks",
@@ -154,7 +343,7 @@
         "authority": "Bucks County Treasurer",
         "description": "The tax is 5% of the gross room rental. Establishments with fewer than 100 rooms, including short-term rentals, file quarterly: April 30, July 31, October 31 and January 31. Establishments with 100 or more rooms file monthly, due at the end of the following month.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
-        "url": "https://buckscounty.gov/1064/Filing-Due-Dates",
+        "url": ["https://buckscounty.gov/1064/Filing-Due-Dates"],
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -172,7 +361,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
         "frequency": "once",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       },
       {
@@ -182,7 +371,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       },
       {
@@ -192,7 +381,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       }
     ],
@@ -201,38 +390,192 @@
   },
   {
     "county": "Butler",
-    "status": "unverified",
     "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "butler-pa.retail-food-license",
+        "title": "Obtain and renew a Butler County retail food facility license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Restaurants, grocery stores, and other food vendors operating in Butler County must obtain the required Pennsylvania retail food facility license before serving food and renew it annually; the licensing contact depends on the applicable health jurisdiction.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 82,
+          "max": 241,
+          "note": "Pennsylvania lists $241 for a new facility, $103 for a new owner-operated facility under 50 seats, and $82 for annual renewal."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a restaurant, grocery store, or other food vendor"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Cambria",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "cambria-pa.retail-food-license",
+        "title": "Obtain and renew a Cambria County retail food facility license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Restaurants, grocery stores, and other food vendors operating in Cambria County must obtain the required Pennsylvania retail food facility license before serving food and renew it annually; county health jurisdiction may determine the licensing contact.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 82,
+          "max": 241,
+          "note": "Pennsylvania lists $241 for a new facility, $103 for a new owner-operated facility under 50 seats, and $82 for annual renewal."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a restaurant, grocery store, or other food vendor"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Cameron",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "cameron-pa.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants",
+          "https://www.adamscountypa.gov/countyservices"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees depend on the applicable local health jurisdiction and establishment type."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Carbon",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "carbon-pa.food-license",
+        "title": "Obtain and renew a Carbon County retail food facility license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Restaurants, grocery stores, and other food vendors operating in Carbon County must obtain the required Pennsylvania retail food facility license before serving food and renew it annually; Pennsylvania identifies the applicable local health jurisdiction for licensing.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food",
+          "https://www.carboncountypa.gov/"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees depend on the applicable local health jurisdiction and establishment type."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a restaurant, grocery store, or other food vendor"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Centre",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "centre-pa.retail-food-license",
+        "title": "Obtain and renew a Centre County retail food facility license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Restaurants, grocery stores, and other food vendors operating in Centre County must obtain the required Pennsylvania retail food facility license before serving food and renew it annually; the licensing contact depends on the applicable health jurisdiction.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 82,
+          "max": 241,
+          "note": "Pennsylvania lists $241 for a new facility, $103 for a new owner-operated facility under 50 seats, and $82 for annual renewal."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a restaurant, grocery store, or other food vendor"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Chester",
@@ -244,7 +587,7 @@
         "authority": "Chester County",
         "description": "The tax is 5% of the gross room charge (4.65% when breakfast is included). Hotels submit a monthly tax report by midnight on the 25th after the close of each calendar month.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=25",
-        "url": "https://www.chesco.org/1104/Hotel-Tax",
+        "url": ["https://www.chesco.org/1104/Hotel-Tax"],
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -262,7 +605,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
         "frequency": "once",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       },
       {
@@ -272,7 +615,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       },
       {
@@ -282,7 +625,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       }
     ],
@@ -291,38 +634,195 @@
   },
   {
     "county": "Clarion",
-    "status": "unverified",
     "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "clarion-pa.retail-food-license",
+        "title": "Obtain and renew a Clarion County retail food facility license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Restaurants, grocery stores, and other food vendors operating in Clarion County must obtain the required Pennsylvania retail food facility license before serving food and renew it annually; the licensing contact depends on the applicable health jurisdiction.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 82,
+          "max": 241,
+          "note": "Pennsylvania lists $241 for a new facility, $103 for a new owner-operated facility under 50 seats, and $82 for annual renewal."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a restaurant, grocery store, or other food vendor"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Clearfield",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "clearfield-pa.retail-food-license",
+        "title": "Obtain and renew a Clearfield County retail food facility license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Restaurants, grocery stores, and other food vendors operating in Clearfield County must obtain the required Pennsylvania retail food facility license before serving food and renew it annually; county health jurisdiction may determine the licensing contact.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 82,
+          "max": 241,
+          "note": "Pennsylvania lists $241 for a new facility, $103 for a new owner-operated facility under 50 seats, and $82 for annual renewal."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a restaurant, grocery store, or other food vendor"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Clinton",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "clinton-pa.food-license",
+        "title": "Obtain and renew a Clinton County retail food facility license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Retail food facilities operating in Clinton County must obtain the Pennsylvania retail food facility license before operating and renew it annually.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants",
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 82,
+          "max": 241,
+          "note": "Pennsylvania fees are $241 for a new retail food facility, $103 for a new owner-operated facility under 50 seats, and $82 for annual renewals."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Columbia",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "columbia-pa.food-license",
+        "title": "Obtain and renew a Columbia County retail food facility license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Retail food facilities operating in Columbia County must obtain the applicable Pennsylvania retail food facility license before operating and renew it annually.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants",
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants/retail-food-facility-licensing"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 82,
+          "max": 241,
+          "note": "Pennsylvania's published retail food fees include $241 for a new facility, $103 for qualifying owner-operated facilities, and $82 for annual renewal; local review may also apply."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Crawford",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "crawford-pa.food-license",
+        "title": "Obtain and renew a Crawford County retail food facility license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Restaurants, grocery stores, and other food vendors operating in Crawford County must obtain the required Pennsylvania retail food facility license before serving food and renew it annually; Pennsylvania identifies the applicable local health jurisdiction for licensing.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants",
+          "https://crawfordcountypa.net/"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees depend on the applicable local health jurisdiction and establishment type."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a restaurant, grocery store, or other food vendor"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Cumberland",
@@ -334,7 +834,7 @@
         "authority": "Cumberland County Treasurer",
         "description": "The tax is 5% since April 1, 2024. Online reports and payments are due by the 20th of the following month (mailed ones postmarked by then), and a report is required even with no bookings. Booking-platform hosts must still register and file; a 1.5% late fee is added each month unpaid.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
-        "url": "https://cumberlandcountypa.munirevs.com/faq/",
+        "url": ["https://cumberlandcountypa.munirevs.com/faq/"],
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -352,7 +852,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
         "frequency": "once",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       },
       {
@@ -362,7 +862,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       },
       {
@@ -372,7 +872,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       }
     ],
@@ -389,7 +889,9 @@
         "authority": "Dauphin County Treasurer",
         "description": "The tax is 5% of revenue, due on the last day of the month after the period collected. Late remittances and reports cost $100 plus 9% annual interest, with no provision for waiver.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
-        "url": "https://www.dauphincounty.gov/government/publicly-elected-officials/treasurer/hotel-tax-forms",
+        "url": [
+          "https://www.dauphincounty.gov/government/publicly-elected-officials/treasurer/hotel-tax-forms"
+        ],
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -407,7 +909,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
         "frequency": "once",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       },
       {
@@ -417,7 +919,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       },
       {
@@ -427,7 +929,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       }
     ],
@@ -444,7 +946,7 @@
         "authority": "Delaware County Treasurer",
         "description": "The tax is 3% of each room rental. Operators file and pay on or before the 10th of the month after collection, with interest and penalties of 1.5% a month. Since February 1, 2026 hotel and short-term rental operators register and report online in the county's GovOS portal.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=10",
-        "url": "https://delcopa.gov/sites/default/files/2026-01/GovOsFlyer.pdf",
+        "url": ["https://delcopa.gov/sites/default/files/2026-01/GovOsFlyer.pdf"],
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -462,7 +964,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
         "frequency": "once",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       },
       {
@@ -472,7 +974,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       },
       {
@@ -482,7 +984,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       }
     ],
@@ -491,10 +993,42 @@
   },
   {
     "county": "Elk",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "elk-pa.food-license",
+        "title": "Obtain and renew an Elk County retail food facility license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Retail food facilities operating in Elk County must obtain the Pennsylvania retail food facility license before operating and renew it annually.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants",
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 82,
+          "max": 241,
+          "note": "Pennsylvania fees are $241 for a new retail food facility, $103 for a new owner-operated facility under 50 seats, and $82 for annual renewals."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Erie",
@@ -506,7 +1040,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
         "frequency": "once",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       },
       {
@@ -516,7 +1050,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       },
       {
@@ -526,7 +1060,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       }
     ],
@@ -544,7 +1078,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
         "frequency": "once",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       },
       {
@@ -554,7 +1088,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       },
       {
@@ -564,7 +1098,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       }
     ],
@@ -572,66 +1106,349 @@
   },
   {
     "county": "Forest",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "forest-pa.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants",
+          "https://www.adamscountypa.gov/countyservices"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees depend on the applicable local health jurisdiction and establishment type."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Franklin",
-    "status": "unverified",
     "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "franklin-pa.retail-food-license",
+        "title": "Obtain and renew a Franklin County retail food facility license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Restaurants, grocery stores, and other food vendors operating in Franklin County must obtain the required Pennsylvania retail food facility license before serving food and renew it annually; the licensing contact depends on the applicable health jurisdiction.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 82,
+          "max": 241,
+          "note": "Pennsylvania lists $241 for a new facility, $103 for a new owner-operated facility under 50 seats, and $82 for annual renewal."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a restaurant, grocery store, or other food vendor"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Fulton",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "fulton-pa.food-license",
+        "title": "Obtain and renew a Fulton County retail food facility license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Retail food facilities operating in Fulton County must obtain the applicable Pennsylvania retail food facility license before operating and renew it annually.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants",
+          "https://www.pa.gov/agencies/pda/food/retail-food"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 82,
+          "max": 241,
+          "note": "Pennsylvania published retail food fees include $241 for a new facility, $103 for qualifying owner-operated facilities, and $82 for annual renewal."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Greene",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "greene-pa.retail-food-license",
+        "title": "Obtain and renew a Greene County retail food facility license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Restaurants, grocery stores, and other food vendors operating in Greene County must obtain the required Pennsylvania retail food facility license before serving food and renew it annually; Pennsylvania identifies the applicable local health jurisdiction for licensing.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 82,
+          "max": 241,
+          "note": "Pennsylvania lists $241 for a new facility, $103 for a new owner-operated facility under 50 seats, and $82 for annual renewal."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a restaurant, grocery store, or other food vendor"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Huntingdon",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "huntingdon-pa.retail-food-license",
+        "title": "Obtain and renew a Huntingdon County retail food facility license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Restaurants, grocery stores, and other food vendors operating in Huntingdon County must obtain the required Pennsylvania retail food facility license before serving food and renew it annually; the licensing contact depends on the applicable health jurisdiction.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 82,
+          "max": 241,
+          "note": "Pennsylvania lists $241 for a new facility, $103 for a new owner-operated facility under 50 seats, and $82 for annual renewal."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a restaurant, grocery store, or other food vendor"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Indiana",
-    "status": "unverified",
     "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "indiana-pa.retail-food-license",
+        "title": "Obtain and renew an Indiana County retail food facility license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Restaurants, grocery stores, and other food vendors operating in Indiana County must obtain the required Pennsylvania retail food facility license before serving food and renew it annually; the licensing contact depends on the applicable health jurisdiction.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 82,
+          "max": 241,
+          "note": "Pennsylvania lists $241 for a new facility, $103 for a new owner-operated facility under 50 seats, and $82 for annual renewal."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a restaurant, grocery store, or other food vendor"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Jefferson",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "jefferson-pa.retail-food-license",
+        "title": "Obtain and renew a Jefferson County retail food facility license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Restaurants, grocery stores, and other food vendors operating in Jefferson County must obtain the required Pennsylvania retail food facility license before serving food and renew it annually; Pennsylvania identifies the applicable local health jurisdiction for licensing.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants",
+          "https://www.jeffersoncountypa.gov/feeschedule/"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 82,
+          "max": 241,
+          "note": "Pennsylvania lists $241 for a new facility, $103 for a new owner-operated facility under 50 seats, and $82 for annual renewal."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a restaurant, grocery store, or other food vendor"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Juniata",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "juniata-pa.food-license",
+        "title": "Obtain and renew a Juniata County retail food facility license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Retail food facilities operating in Juniata County must obtain the applicable Pennsylvania retail food facility license before operating and renew it annually.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants",
+          "https://www.pa.gov/agencies/pda/food/retail-food"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 82,
+          "max": 241,
+          "note": "Pennsylvania published retail food fees include $241 for a new facility, $103 for qualifying owner-operated facilities, and $82 for annual renewal."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Lackawanna",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "lackawanna-pa.retail-food-license",
+        "title": "Obtain and renew a Lackawanna County retail food facility license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Restaurants, grocery stores, and other food vendors operating in Lackawanna County must obtain the required Pennsylvania retail food facility license before serving food and renew it annually; the licensing contact depends on the applicable health jurisdiction.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 82,
+          "max": 241,
+          "note": "Pennsylvania lists $241 for a new facility, $103 for a new owner-operated facility under 50 seats, and $82 for annual renewal."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a restaurant, grocery store, or other food vendor"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Lancaster",
@@ -643,7 +1460,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
         "frequency": "once",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       },
       {
@@ -653,7 +1470,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       },
       {
@@ -663,7 +1480,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       }
     ],
@@ -672,17 +1489,77 @@
   },
   {
     "county": "Lawrence",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "lawrence-pa.food-license",
+        "title": "Obtain and renew a Lawrence County food license",
+        "category": "license",
+        "authority": "Lawrence County Health Department",
+        "description": "Food service operations and retail food establishments operating in Lawrence County must complete plan review, obtain the applicable license, and pass a pre-licensing inspection before opening.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.lawcohd.org/food-licensing-procedure",
+          "https://www.lawcohd.org/environmental-health"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Plan review and license fees depend on the operation type and are listed in the county’s current application materials."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Lebanon",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "lebanon-pa.food-license",
+        "title": "Obtain and renew a Lebanon County retail food facility license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Restaurants, grocery stores, and other food vendors operating in Lebanon County must obtain the required Pennsylvania retail food facility license before serving food and renew it annually; Pennsylvania identifies the applicable local health jurisdiction for licensing.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants",
+          "https://www.lebanoncountypa.gov/"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees depend on the applicable local health jurisdiction and establishment type."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a restaurant, grocery store, or other food vendor"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Lehigh",
@@ -694,7 +1571,7 @@
         "authority": "Lehigh County Fiscal Office",
         "description": "The tax is 4%. Operators remit on or before the 20th of the month after the tax was levied, with 1.5% a month penalty on unpaid tax (forms read are from 2020; confirm they are current).",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
-        "url": "https://lehighcounty.org/Portals/0/PDF/Fiscal/Hotel_Tax_Return.pdf",
+        "url": ["https://lehighcounty.org/Portals/0/PDF/Fiscal/Hotel_Tax_Return.pdf"],
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -712,7 +1589,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
         "frequency": "once",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       },
       {
@@ -722,7 +1599,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       },
       {
@@ -732,7 +1609,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       }
     ],
@@ -749,7 +1626,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
         "frequency": "once",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       },
       {
@@ -759,7 +1636,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       },
       {
@@ -769,7 +1646,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       }
     ],
@@ -778,38 +1655,191 @@
   },
   {
     "county": "Lycoming",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "lycoming-pa.food-license",
+        "title": "Obtain and renew a Lycoming County retail food facility license",
+        "description": "Restaurants, grocery stores, and other food vendors operating in Lycoming County must obtain the required Pennsylvania retail food facility license before serving food and renew it annually; Pennsylvania identifies the applicable local health jurisdiction for licensing.",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "rrule": "FREQ=YEARLY",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a restaurant, grocery store, or other food vendor"
+          }
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees depend on the applicable local health jurisdiction and establishment type."
+        },
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants",
+          "https://lycomingcountypa.gov/government/departments/planning_community_development/zoning.php"
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "McKean",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "mckean-pa.food-license",
+        "title": "Obtain and renew a McKean County retail food facility license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Restaurants, grocery stores, and other food vendors operating in McKean County must obtain the required Pennsylvania retail food facility license before serving food and renew it annually; Pennsylvania identifies the applicable local health jurisdiction for licensing.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants",
+          "https://www.mckeancountypa.org/"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees depend on the applicable local health jurisdiction and establishment type."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a restaurant, grocery store, or other food vendor"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Mercer",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "mercer-pa.food-license",
+        "title": "Obtain and renew a Mercer County retail food facility license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Restaurants, grocery stores, and other food vendors operating in Mercer County must obtain the required Pennsylvania retail food facility license before serving food and renew it annually; Pennsylvania identifies the applicable local health jurisdiction for licensing.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants",
+          "https://www.mercercountypa.gov/"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees depend on the applicable local health jurisdiction and establishment type."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a restaurant, grocery store, or other food vendor"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Mifflin",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "mifflin-pa.food-license",
+        "title": "Obtain and renew a Mifflin County retail food facility license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Retail food facilities operating in Mifflin County must obtain the applicable Pennsylvania retail food facility license before operating and renew it annually.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants",
+          "https://www.pa.gov/agencies/pda/food/retail-food"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 82,
+          "max": 241,
+          "note": "Pennsylvania published retail food fees include $241 for a new facility, $103 for qualifying owner-operated facilities, and $82 for annual renewal."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Monroe",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "monroe-pa.retail-food-license",
+        "title": "Obtain and renew a Monroe County retail food facility license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Restaurants, grocery stores, and other food vendors operating in Monroe County must obtain the required Pennsylvania retail food facility license before serving food and renew it annually; the licensing contact depends on the applicable health jurisdiction.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 82,
+          "max": 241,
+          "note": "Pennsylvania lists $241 for a new facility, $103 for a new owner-operated facility under 50 seats, and $82 for annual renewal."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a restaurant, grocery store, or other food vendor"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Montgomery",
@@ -821,7 +1851,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
         "frequency": "once",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       },
       {
@@ -831,7 +1861,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       },
       {
@@ -841,7 +1871,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       }
     ],
@@ -850,10 +1880,40 @@
   },
   {
     "county": "Montour",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "montour-pa.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants",
+          "https://www.adamscountypa.gov/countyservices"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees depend on the applicable local health jurisdiction and establishment type."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Northampton",
@@ -865,7 +1925,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
         "frequency": "once",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       },
       {
@@ -875,7 +1935,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       },
       {
@@ -885,7 +1945,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       }
     ],
@@ -894,17 +1954,82 @@
   },
   {
     "county": "Northumberland",
-    "status": "unverified",
     "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "northumberland-pa.retail-food-license",
+        "title": "Obtain and renew a Northumberland County retail food facility license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Restaurants, grocery stores, and other food vendors operating in Northumberland County must obtain the required Pennsylvania retail food facility license before serving food and renew it annually; Pennsylvania identifies the applicable local health jurisdiction for licensing.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants",
+          "https://www.pa.gov/content/dam/copapwp-pagov/en/pda/documents/consumer_protection/foodsafety/retail-food/retail-food/documents/Local%20Health%20Departments.pdf"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 82,
+          "max": 241,
+          "note": "Pennsylvania lists $241 for a new facility, $103 for a new owner-operated facility under 50 seats, and $82 for annual renewal."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a restaurant, grocery store, or other food vendor"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Perry",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "perry-pa.food-license",
+        "title": "Obtain and renew a Perry County retail food facility license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Retail food facilities operating in Perry County must obtain the Pennsylvania retail food facility license before operating and renew it annually.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants",
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 82,
+          "max": 241,
+          "note": "Pennsylvania fees are $241 for a new retail food facility, $103 for a new owner-operated facility under 50 seats, and $82 for annual renewals."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Philadelphia",
@@ -916,7 +2041,7 @@
         "authority": "Philadelphia Department of Revenue",
         "description": "The city's hotel tax is 8.5% of the amount the guest pays; returns and payments are due by the 15th of the month after the rental month, filed on the Philadelphia Tax Center.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=15",
-        "url": "https://www.phila.gov/services/payments-assistance-taxes/business-taxes/hotel-tax/",
+        "url": ["https://www.phila.gov/services/payments-assistance-taxes/business-taxes/hotel-tax/"],
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -934,7 +2059,9 @@
         "authority": "Philadelphia Department of Revenue",
         "description": "Employers with employees working in or residing in Philadelphia withhold the city's Wage Tax and register through the Philadelphia Tax Center; all Wage Tax filings are made there.",
         "frequency": "once",
-        "url": "https://www.phila.gov/services/payments-assistance-taxes/taxes/business-taxes/business-taxes-by-type/wage-tax-employers/",
+        "url": [
+          "https://www.phila.gov/services/payments-assistance-taxes/taxes/business-taxes/business-taxes-by-type/wage-tax-employers/"
+        ],
         "appliesTo": ["employees"]
       },
       {
@@ -944,7 +2071,7 @@
         "authority": "Philadelphia Department of Revenue",
         "description": "How often depends on the Wage Tax withheld each month: under $350 file quarterly (2026 dates: April 30, July 31, October 31 and February 1, 2027); $350 to under $16,000 monthly, about two to three weeks after the month ends; $16,000 or more semi-monthly or weekly. The city publishes each year's schedule. The employer withholding rate was not confirmed.",
         "rrule": "FREQ=MONTHLY",
-        "url": "https://www.phila.gov/documents/wage-tax-due-dates/",
+        "url": ["https://www.phila.gov/documents/wage-tax-due-dates/"],
         "appliesTo": ["employees"]
       },
       {
@@ -954,7 +2081,7 @@
         "authority": "Philadelphia Department of Revenue",
         "description": "Employers submit W-2s to the city by the last day of February each year.",
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
-        "url": "https://www.phila.gov/documents/w-2-submission-instructions/",
+        "url": ["https://www.phila.gov/documents/w-2-submission-instructions/"],
         "appliesTo": ["employees"]
       },
       {
@@ -965,7 +2092,9 @@
         "description": "Vendors already required to collect Pennsylvania sales tax must collect and remit Philadelphia's 2% local sales and use tax on taxable sales and uses in the county with the state return; apply the current sourcing and exemption rules.",
         "frequency": "ongoing",
         "deadline": "On the assigned Pennsylvania sales and use tax filing schedule",
-        "url": "https://www.pa.gov/agencies/revenue/resources/tax-types-and-information/sales-use-and-hotel-occupancy-tax/local-sales-tax",
+        "url": [
+          "https://www.pa.gov/agencies/revenue/resources/tax-types-and-information/sales-use-and-hotel-occupancy-tax/local-sales-tax"
+        ],
         "appliesTo": ["sells_goods"]
       }
     ],
@@ -974,17 +2103,81 @@
   },
   {
     "county": "Pike",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "pike-pa.food-license",
+        "title": "Obtain and renew a Pike County retail food facility license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Retail food facilities operating in Pike County must obtain the Pennsylvania retail food facility license before operating and renew it annually.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants",
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 82,
+          "max": 241,
+          "note": "Pennsylvania fees are $241 for a new retail food facility, $103 for a new owner-operated facility under 50 seats, and $82 for annual renewals."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Potter",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "potter-pa.food-license",
+        "title": "Obtain and renew a Potter County retail food facility license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Retail food facilities operating in Potter County must obtain the applicable Pennsylvania retail food facility license before operating and renew it annually.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants",
+          "https://www.pa.gov/agencies/pda/food/retail-food"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 82,
+          "max": 241,
+          "note": "Pennsylvania published retail food fees include $241 for a new facility, $103 for qualifying owner-operated facilities, and $82 for annual renewal."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Schuylkill",
@@ -997,7 +2190,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
         "frequency": "once",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       },
       {
@@ -1007,7 +2200,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       },
       {
@@ -1017,7 +2210,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       }
     ],
@@ -1025,64 +2218,316 @@
   },
   {
     "county": "Snyder",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "snyder-pa.food-license",
+        "title": "Obtain and renew a Snyder County retail food facility license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Retail food facilities operating in Snyder County must obtain the Pennsylvania retail food facility license before operating and renew it annually.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants",
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 82,
+          "max": 241,
+          "note": "Pennsylvania fees are $241 for a new retail food facility, $103 for a new owner-operated facility under 50 seats, and $82 for annual renewals."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Somerset",
-    "status": "unverified",
     "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "somerset-pa.retail-food-license",
+        "title": "Obtain and renew a Somerset County retail food facility license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Restaurants, grocery stores, and other food vendors operating in Somerset County must obtain the required Pennsylvania retail food facility license before serving food and renew it annually; the licensing contact depends on the applicable health jurisdiction.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 82,
+          "max": 241,
+          "note": "Pennsylvania lists $241 for a new facility, $103 for a new owner-operated facility under 50 seats, and $82 for annual renewal."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a restaurant, grocery store, or other food vendor"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Sullivan",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "sullivan-pa.food-license",
+        "title": "Obtain and renew a Sullivan County food facility license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Retail food facilities operating in Sullivan County must obtain a Pennsylvania Retail Food Facility License before serving food and comply with plan-review and inspection requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants",
+          "https://www.pa.gov/content/dam/copapwp-pagov/en/pda/documents/consumer_protection/foodsafety/documents/local%20health%20department%20list_2024.pdf"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 82,
+          "max": 541,
+          "note": "Pennsylvania's published retail-food fees include $241 for a new facility, $103 for qualifying owner-operated facilities, $82 for renewal, and follow-up fees of $150 or $300; Sullivan County is in PDA territory rather than a county-health jurisdiction."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Susquehanna",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "susquehanna-pa.retail-food-license",
+        "title": "Obtain and renew a Susquehanna County retail food facility license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Restaurants, grocery stores, and other food vendors operating in Susquehanna County must obtain the required Pennsylvania retail food facility license before serving food and renew it annually; the licensing contact depends on the applicable health jurisdiction.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 82,
+          "max": 241,
+          "note": "Pennsylvania lists $241 for a new facility, $103 for a new owner-operated facility under 50 seats, and $82 for annual renewal."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a restaurant, grocery store, or other food vendor"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Tioga",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "tioga-pa.food-license",
+        "title": "Obtain and renew a Tioga County retail food facility license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Restaurants, grocery stores, and other food vendors operating in Tioga County must obtain the required Pennsylvania retail food facility license before serving food and renew it annually; Pennsylvania identifies the applicable local health jurisdiction for licensing.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants",
+          "https://tiogacountypa.us/"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees depend on the applicable local health jurisdiction and establishment type."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a restaurant, grocery store, or other food vendor"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Union",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "union-pa.food-license",
+        "title": "Obtain and renew a Union County retail food facility license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Retail food facilities operating in Union County must obtain the Pennsylvania retail food facility license before operating and renew it annually.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants",
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 82,
+          "max": 241,
+          "note": "Pennsylvania fees are $241 for a new retail food facility, $103 for a new owner-operated facility under 50 seats, and $82 for annual renewals."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Venango",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "venango-pa.food-license",
+        "title": "Obtain and renew a Venango County retail food facility license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Retail food facilities operating in Venango County must obtain the Pennsylvania retail food facility license before operating and renew it annually.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants",
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food",
+          "https://www.venangocountypa.gov/680/Fee-Schedule"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 82,
+          "max": 241,
+          "note": "Pennsylvania fees are $241 for a new retail food facility, $103 for a new owner-operated facility under 50 seats, and $82 for annual renewals."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Warren",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "warren-pa.food-license",
+        "title": "Obtain and renew a Warren County retail food facility license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Restaurants, grocery stores, and other food vendors operating in Warren County must obtain the required Pennsylvania retail food facility license before serving food and renew it annually; Pennsylvania identifies the applicable local health jurisdiction for licensing.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants",
+          "https://warrencountypa.gov/"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees depend on the applicable local health jurisdiction and establishment type."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a restaurant, grocery store, or other food vendor"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Washington",
     "note": "Pennsylvania has no general business personal property tax. Washington County's hotel tax rules were not checked.",
-    "sourceUrl": "https://www.washcopa.gov/treasurer",
+    "sourceUrl": ["https://www.washcopa.gov/treasurer"],
     "items": [
       {
         "id": "washington-pa.local-income-tax-registration",
@@ -1091,7 +2536,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
         "frequency": "once",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       },
       {
@@ -1101,7 +2546,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       },
       {
@@ -1111,7 +2556,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       }
     ],
@@ -1119,10 +2564,42 @@
   },
   {
     "county": "Wayne",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "wayne-pa.retail-food-license",
+        "title": "Obtain and renew a Wayne County retail food facility license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Restaurants, grocery stores, and other food vendors operating in Wayne County must obtain the required Pennsylvania retail food facility license before serving food and renew it annually; the county records show annual retail food licensing and Pennsylvania publishes the applicable fee schedule.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants",
+          "https://www.waynecountypa.gov/AgendaCenter/ViewFile/Minutes/_02122026-894"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 82,
+          "max": 241,
+          "note": "Pennsylvania lists $241 for a new facility, $103 for a new owner-operated facility under 50 seats, and $82 for annual renewal."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a restaurant, grocery store, or other food vendor"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Westmoreland",
@@ -1134,7 +2611,7 @@
         "authority": "Westmoreland County Treasurer",
         "description": "Operators file the Hotel Room Rental Tax Return on or before the 25th of each month for the prior month, with payment, and attach exemption certificates for any exempt guests.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=25",
-        "url": "https://www.westmorelandcountypa.gov/1455/Hotel-Tax-Forms",
+        "url": ["https://www.westmorelandcountypa.gov/1455/Hotel-Tax-Forms"],
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1152,7 +2629,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
         "frequency": "once",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       },
       {
@@ -1162,7 +2639,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       },
       {
@@ -1172,7 +2649,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       }
     ],
@@ -1181,10 +2658,41 @@
   },
   {
     "county": "Wyoming",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "wyoming-pa.food-license",
+        "title": "Obtain and renew a Wyoming County food facility license",
+        "category": "license",
+        "authority": "Pennsylvania Department of Agriculture",
+        "description": "Retail food facilities operating in Wyoming County must obtain a Pennsylvania Retail Food Facility License before serving food and comply with plan-review and inspection requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.pa.gov/agencies/pda/food/food-safety/retail-food/retail-food-facilities-and-restaurants"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 82,
+          "max": 541,
+          "note": "Pennsylvania's published retail-food fees include $241 for a new facility, $103 for qualifying owner-operated facilities, $82 for renewal, and follow-up fees of $150 or $300."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "York",
@@ -1196,7 +2704,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "Employers register with the collector shown on the DCED address search (it gives the PSD code, earned income tax rate and local services tax rate for each worksite) to get a local tax ID, and keep a residency certification form for each employee. Register for every Pennsylvania worksite, including remote employees' home offices.",
         "frequency": "once",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       },
       {
@@ -1206,7 +2714,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "Withhold the local earned income tax (and the local services tax where levied) and file and pay quarterly within 30 days after each calendar quarter ends, usually on the collector's website. Employers that combine worksites with one collector file monthly; the combined option does not apply to the local services tax. Rates differ by municipality and school district.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       },
       {
@@ -1216,7 +2724,7 @@
         "authority": "Local tax collector for the worksite's tax collection district",
         "description": "File the W-2R annual reconciliation of earned income tax withheld with each local tax collector by the last day of February after the calendar year.",
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=-1",
-        "url": "https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/",
+        "url": ["https://dced.pa.gov/local-government/local-income-tax-information/instructions-employers/"],
         "appliesTo": ["employees"]
       }
     ],

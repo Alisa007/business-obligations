@@ -196,7 +196,7 @@ export const dissolutionRules: Rule[] = [
         frequency: "once",
         ...dated(date),
         reason: `Business is being dissolved (${end})`,
-        url: "https://www.irs.gov/businesses/small-businesses-self-employed/closing-a-business",
+        url: ["https://www.irs.gov/businesses/small-businesses-self-employed/closing-a-business"],
       };
     },
   },
@@ -216,7 +216,7 @@ export const dissolutionRules: Rule[] = [
       frequency: "once",
       ...dated(plusDays(dissolving(p), 30)),
       reason: `Business taxed as a corporation is being dissolved (${dissolving(p)})`,
-      url: "https://www.irs.gov/forms-pubs/about-form-966",
+      url: ["https://www.irs.gov/forms-pubs/about-form-966"],
     }),
   },
   {
@@ -239,7 +239,7 @@ export const dissolutionRules: Rule[] = [
           frequency: "once" as const,
           ...dated(plusMonths(quarterEnd, 1, "end")),
           reason,
-          url: "https://www.irs.gov/businesses/small-businesses-self-employed/employment-tax-due-dates",
+          url: ["https://www.irs.gov/businesses/small-businesses-self-employed/employment-tax-due-dates"],
         },
         {
           title: "File final Form 940 (federal unemployment tax)",
@@ -250,7 +250,7 @@ export const dissolutionRules: Rule[] = [
           frequency: "once" as const,
           ...dated(plusMonths(end, 1, "end")),
           reason,
-          url: "https://www.irs.gov/forms-pubs/about-form-940",
+          url: ["https://www.irs.gov/forms-pubs/about-form-940"],
         },
         {
           title: "Give employees final W-2s and file Forms W-2 and W-3",
@@ -262,7 +262,7 @@ export const dissolutionRules: Rule[] = [
           frequency: "once" as const,
           ...dated(plusDays(end, 30)),
           reason,
-          url: "https://www.irs.gov/forms-pubs/about-form-w-2",
+          url: ["https://www.irs.gov/forms-pubs/about-form-w-2"],
         },
       ];
     },
@@ -282,7 +282,7 @@ export const dissolutionRules: Rule[] = [
           "After the final returns are filed and taxes paid, send the IRS a letter with the legal name, EIN and address asking to close the business account. The EIN itself is never reused.",
         frequency: "once" as const,
         reason: `Business is being dissolved (${dissolving(p)})`,
-        url: "https://www.irs.gov/businesses/small-businesses-self-employed/closing-a-business",
+        url: ["https://www.irs.gov/businesses/small-businesses-self-employed/closing-a-business"],
       },
       {
         title: "Keep business and employment tax records after closing",
@@ -293,7 +293,7 @@ export const dissolutionRules: Rule[] = [
           "Keep employment tax records at least 4 years after the tax is due or paid, and other business tax records for at least 3 years after the final return (7 years where losses or bad debt were claimed).",
         frequency: "ongoing" as const,
         reason: `Business is being dissolved (${dissolving(p)})`,
-        url: "https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records",
+        url: ["https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records"],
       },
     ],
   },

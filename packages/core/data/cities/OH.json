@@ -11,11 +11,11 @@
         "description": "Businesses with income in Akron file the municipal net profit tax return (2.5% rate).",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
         "deadlineNote": "calendar-year filers",
-        "url": "https://www.akronohio.gov/cms/INCOMETAX/index.html",
+        "url": ["https://www.akronohio.gov/cms/INCOMETAX/index.html"],
         "appliesTo": ["all"]
       }
     ],
-    "sourceUrl": "https://www.akronohio.gov/cms/INCOMETAX/index.html",
+    "sourceUrl": ["https://www.akronohio.gov/cms/INCOMETAX/index.html"],
     "checkedOn": "2026-10-18"
   },
   {
@@ -30,7 +30,7 @@
         "description": "Businesses engaged in Cincinnati (rental property, sole proprietorships, partnerships, corporations) file the business net profit return at the city's 1.8% rate.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
         "deadlineNote": "calendar-year filers",
-        "url": "https://www.cincinnati-oh.gov/finance/income-taxes/due-dates/",
+        "url": ["https://www.cincinnati-oh.gov/finance/income-taxes/due-dates/"],
         "appliesTo": ["all"]
       },
       {
@@ -41,11 +41,11 @@
         "description": "Employers register for and remit withholding for employees working in Cincinnati.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
         "deadlineNote": "quarterly filers; larger employers deposit monthly or semi-monthly",
-        "url": "https://www.cincinnati-oh.gov/finance/income-taxes/due-dates/",
+        "url": ["https://www.cincinnati-oh.gov/finance/income-taxes/due-dates/"],
         "appliesTo": ["employees"]
       }
     ],
-    "sourceUrl": "https://www.cincinnati-oh.gov/finance/income-taxes/",
+    "sourceUrl": ["https://www.cincinnati-oh.gov/finance/income-taxes/"],
     "checkedOn": "2026-10-19"
   },
   {
@@ -60,7 +60,7 @@
         "description": "C and S corporations, partnerships and LLCs doing business in Cleveland file the net profit return with the Central Collection Agency; due the 15th day of the fourth month after fiscal year end.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
         "deadlineNote": "calendar-year filers",
-        "url": "https://www.ccaohio.gov/due-dates/business-filing",
+        "url": ["https://www.ccaohio.gov/due-dates/business-filing"],
         "appliesTo": ["all"]
       },
       {
@@ -71,11 +71,11 @@
         "description": "Employers withhold and remit municipal income tax through the Central Collection Agency using the employer EIN.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
         "deadlineNote": "quarterly filers; larger employers deposit monthly or semi-monthly",
-        "url": "https://www.ccaohio.gov/due-dates/business-filing",
+        "url": ["https://www.ccaohio.gov/due-dates/business-filing"],
         "appliesTo": ["employees"]
       }
     ],
-    "sourceUrl": "https://www.ccaohio.gov/tax-forms/business",
+    "sourceUrl": ["https://www.ccaohio.gov/tax-forms/business"],
     "checkedOn": "2026-10-19"
   },
   {
@@ -90,7 +90,9 @@
         "description": "Businesses (sole proprietorships, partnerships, corporations) with activity in Columbus file the city's annual business net profit return; some businesses may elect to file through the Ohio Department of Taxation.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
         "deadlineNote": "calendar-year filers",
-        "url": "https://www.columbus.gov/Government/City-Auditor/Income-Tax-Division/Filing-Payment-Information/Filing-Season-Information",
+        "url": [
+          "https://www.columbus.gov/Government/City-Auditor/Income-Tax-Division/Filing-Payment-Information/Filing-Season-Information"
+        ],
         "appliesTo": ["all"]
       },
       {
@@ -101,11 +103,13 @@
         "description": "Employers withhold municipal income tax on wages for work performed in Columbus.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
         "deadlineNote": "quarterly filers; larger employers deposit monthly or semi-monthly",
-        "url": "https://www.columbus.gov/Government/City-Auditor/Income-Tax-Division/General-Income-Tax-Information",
+        "url": [
+          "https://www.columbus.gov/Government/City-Auditor/Income-Tax-Division/General-Income-Tax-Information"
+        ],
         "appliesTo": ["employees"]
       }
     ],
-    "sourceUrl": "https://www.columbus.gov/Government/City-Auditor/Income-Tax-Division",
+    "sourceUrl": ["https://www.columbus.gov/Government/City-Auditor/Income-Tax-Division"],
     "checkedOn": "2026-10-19"
   },
   {
@@ -121,11 +125,11 @@
         "authority": "Dayton local licensing authority",
         "description": "Review the cited local licensing source before operating; requirements may be activity-specific and can differ by business type or location.",
         "frequency": "once",
-        "url": "https://www.daytonohio.gov/279/Tax-Forms",
+        "url": ["https://www.daytonohio.gov/279/Tax-Forms"],
         "appliesTo": ["all"]
       }
     ],
-    "sourceUrl": "https://www.daytonohio.gov/279/Tax-Forms",
+    "sourceUrl": ["https://www.daytonohio.gov/279/Tax-Forms"],
     "checkedOn": "2026-10-18"
   },
   {
@@ -140,11 +144,11 @@
         "description": "Businesses with income in Toledo file the net profit tax return (2.5% rate); partnerships and corporations must have 90% of the tax paid by December 15. A federal extension does not extend the time to pay.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
         "deadlineNote": "calendar-year filers",
-        "url": "https://toledo.oh.gov/pay-taxes",
+        "url": ["https://toledo.oh.gov/pay-taxes"],
         "appliesTo": ["all"]
       }
     ],
-    "sourceUrl": "https://toledo.oh.gov/pay-taxes",
+    "sourceUrl": ["https://toledo.oh.gov/pay-taxes"],
     "checkedOn": "2026-10-18"
   },
   {
@@ -159,12 +163,12 @@
         "authority": "Parma local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
   },
   {
     "city": "Canton",
@@ -178,12 +182,12 @@
         "authority": "Canton local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
   },
   {
     "city": "Lorain",
@@ -197,12 +201,12 @@
         "authority": "Lorain local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
   },
   {
     "city": "Hamilton",
@@ -216,12 +220,12 @@
         "authority": "Hamilton local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
   },
   {
     "city": "Youngstown",
@@ -235,12 +239,12 @@
         "authority": "Youngstown local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
   },
   {
     "city": "Springfield",
@@ -254,12 +258,12 @@
         "authority": "Springfield local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
   },
   {
     "city": "Kettering",
@@ -273,12 +277,12 @@
         "authority": "Kettering local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
   },
   {
     "city": "Elyria",
@@ -292,12 +296,12 @@
         "authority": "Elyria local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
   },
   {
     "city": "Middletown",
@@ -311,12 +315,12 @@
         "authority": "Middletown local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
   },
   {
     "city": "Newark",
@@ -330,12 +334,12 @@
         "authority": "Newark local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
   },
   {
     "city": "Cuyahoga Falls",
@@ -349,12 +353,12 @@
         "authority": "Cuyahoga Falls local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
   },
   {
     "city": "Dublin",
@@ -368,12 +372,12 @@
         "authority": "Dublin local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
   },
   {
     "city": "Lakewood",
@@ -387,12 +391,12 @@
         "authority": "Lakewood local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
   },
   {
     "city": "Beavercreek",
@@ -406,12 +410,12 @@
         "authority": "Beavercreek local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
   },
   {
     "city": "Euclid",
@@ -425,12 +429,12 @@
         "authority": "Euclid local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
   },
   {
     "city": "Mansfield",
@@ -444,12 +448,12 @@
         "authority": "Mansfield local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
   },
   {
     "city": "Mentor",
@@ -463,12 +467,12 @@
         "authority": "Mentor local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
   },
   {
     "city": "Delaware",
@@ -482,12 +486,12 @@
         "authority": "Delaware local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
   },
   {
     "city": "Strongsville",
@@ -501,12 +505,12 @@
         "authority": "Strongsville local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
   },
   {
     "city": "Grove City",
@@ -520,12 +524,12 @@
         "authority": "Grove City local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
   },
   {
     "city": "Fairfield",
@@ -539,12 +543,12 @@
         "authority": "Fairfield local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
   },
   {
     "city": "Huber Heights",
@@ -558,12 +562,12 @@
         "authority": "Huber Heights local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
   },
   {
     "city": "Cleveland Heights",
@@ -577,12 +581,12 @@
         "authority": "Cleveland Heights local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
   },
   {
     "city": "Reynoldsburg",
@@ -596,12 +600,12 @@
         "authority": "Reynoldsburg local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
   },
   {
     "city": "Lancaster",
@@ -615,11 +619,11 @@
         "authority": "Lancaster local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf",
+        "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
   }
 ]

@@ -2,15 +2,15 @@
   "name": "Vermont",
   "filing": {
     "name": "Vermont Secretary of State",
-    "url": "https://sos.vermont.gov/business-services/business-filings"
+    "url": ["https://sos.vermont.gov/business-services/business-filings"]
   },
   "revenue": {
     "name": "Vermont Department of Taxes",
-    "url": "https://tax.vermont.gov"
+    "url": ["https://tax.vermont.gov"]
   },
   "labor": {
     "name": "Vermont Department of Labor",
-    "url": "https://labor.vermont.gov"
+    "url": ["https://labor.vermont.gov"]
   },
   "llcReport": {
     "rrule": "FREQ=YEARLY",
@@ -87,14 +87,16 @@
     "regulator": "Vermont Cannabis Control Board"
   },
   "links": {
-    "formation": "https://sos.vermont.gov/business-services/business-filings/domestic-formation/llc",
-    "annualReport": "https://sos.vermont.gov/business-services/business-filings/annualbiennial-reports",
-    "uiRegistration": "https://labor.vermont.gov/unemployment-insurance/unemployment-information-employers/employer-online-services/register-ui",
-    "withholding": "https://tax.vermont.gov/business/withholding",
-    "salesTax": "https://tax.vermont.gov/business/sales-and-use-tax",
-    "entityTax": "https://tax.vermont.gov/business/corporate-income-tax",
-    "laborPosters": "https://labor.vermont.gov/mandatory-workplace-posters",
-    "dba": "https://sos.vermont.gov/business-services/business-filings/assumed-name"
+    "formation": ["https://sos.vermont.gov/business-services/business-filings/domestic-formation/llc"],
+    "annualReport": ["https://sos.vermont.gov/business-services/business-filings/annualbiennial-reports"],
+    "uiRegistration": [
+      "https://labor.vermont.gov/unemployment-insurance/unemployment-information-employers/employer-online-services/register-ui"
+    ],
+    "withholding": ["https://tax.vermont.gov/business/withholding"],
+    "salesTax": ["https://tax.vermont.gov/business/sales-and-use-tax"],
+    "entityTax": ["https://tax.vermont.gov/business/corporate-income-tax"],
+    "laborPosters": ["https://labor.vermont.gov/mandatory-workplace-posters"],
+    "dba": ["https://sos.vermont.gov/business-services/business-filings/assumed-name"]
   },
   "verification": {
     "checkedOn": "2026-10-19",

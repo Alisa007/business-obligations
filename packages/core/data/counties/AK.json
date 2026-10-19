@@ -1,17 +1,71 @@
 [
   {
     "county": "Aleutians East",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "aleutians-east-ak.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Alaska food safety authority",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": ["https://dec.alaska.gov/eh/fss/"],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees vary by establishment type and jurisdiction; confirm the current fee schedule before filing."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Aleutians West (CA)",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "aleutians-west-ca-ak.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Alaska food safety authority",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": ["https://dec.alaska.gov/eh/fss/"],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees vary by establishment type and jurisdiction; confirm the current fee schedule before filing."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Anchorage Municipality",
@@ -23,7 +77,7 @@
         "authority": "Municipality of Anchorage Property Appraisal",
         "description": "Businesses operating in Anchorage on January 1 with assets over $20,000 file the Business Property Assessment Return by April 30 (postmarked; meter strips are not accepted); late returns carry a 10% penalty. The first $100,000 of assessed value of taxable personal property per taxpayer is exempt from municipal tax from 2026. A sold or closed business still files to say so.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=30",
-        "url": "https://www.muni.org/Departments/finance/property_appraisal/Business",
+        "url": ["https://www.muni.org/Departments/finance/property_appraisal/Business"],
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -40,24 +94,136 @@
   },
   {
     "county": "Bethel Census Area",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "bethel-census-area-ak.business-license",
+        "title": "Obtain and renew an Alaska business license for Bethel Census Area operations",
+        "category": "license",
+        "authority": "Alaska Division of Corporations, Business and Professional Licensing",
+        "description": "Businesses operating in the Bethel Census Area must obtain and renew the applicable Alaska business license; local Bethel businesses also need a city sales-tax certificate, while the state license applies throughout the census area.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.commerce.alaska.gov/web/cbpl/BusinessLicensing/",
+          "https://www.commerce.alaska.gov/web/cbpl/BusinessLicensing/BusinessLicensingFormsFees.aspx",
+          "https://www.cityofbethel.org/185/Business-Registration"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Alaska business-license and endorsement fees depend on the license type."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["all"],
+            "description": "Operates a business in the census area"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      },
+      {
+        "id": "bethel-census-area-ak.food-permit",
+        "title": "Obtain an Alaska food establishment permit",
+        "category": "license",
+        "authority": "Alaska Department of Environmental Conservation",
+        "description": "Food establishments operating in the Bethel Census Area must obtain the applicable Alaska food-safety permit; the state publishes annual permit and plan-review fees by establishment type.",
+        "rrule": "FREQ=YEARLY",
+        "url": ["https://dec.alaska.gov/eh/fss/fees/"],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Annual permit and plan-review fees depend on the food establishment type."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Bristol Bay",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "bristol-bay-ak.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Alaska food safety authority",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": ["https://dec.alaska.gov/eh/fss/"],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees vary by establishment type and jurisdiction; confirm the current fee schedule before filing."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Chugach Census Area",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "chugach-census-area-ak.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Alaska food safety authority",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": ["https://dec.alaska.gov/eh/fss/"],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees vary by establishment type and jurisdiction; confirm the current fee schedule before filing."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "City and Borough of Wrangell",
@@ -69,7 +235,7 @@
         "authority": "City and Borough of Wrangell",
         "description": "Businesses making taxable sales in the City and Borough of Wrangell collect and remit the 7% local general-retail sales tax; local rules and filing forms control exemptions and deadlines.",
         "rrule": "FREQ=MONTHLY",
-        "url": "https://arsstc.org/business-sellers/member-jurisdictions/",
+        "url": ["https://arsstc.org/business-sellers/member-jurisdictions/"],
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -83,35 +249,148 @@
     ],
     "checkedOn": "2026-10-18",
     "note": "The ARSSTC member-jurisdiction table confirms the borough's local sales tax; other county-level obligations were not checked.",
-    "sourceUrl": "https://arsstc.org/business-sellers/member-jurisdictions/"
+    "sourceUrl": ["https://arsstc.org/business-sellers/member-jurisdictions/"]
   },
   {
     "county": "Copper River Census Area",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "copper-river-census-area-ak.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Alaska food safety authority",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": ["https://dec.alaska.gov/eh/fss/"],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees vary by establishment type and jurisdiction; confirm the current fee schedule before filing."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Denali",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "denali-ak.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Alaska food safety authority",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": ["https://dec.alaska.gov/eh/fss/"],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees vary by establishment type and jurisdiction; confirm the current fee schedule before filing."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Dillingham (CA)",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "dillingham-ca-ak.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Alaska food safety authority",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": ["https://dec.alaska.gov/eh/fss/"],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees vary by establishment type and jurisdiction; confirm the current fee schedule before filing."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Fairbanks North Star",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "fairbanks-north-star-ak.business-license",
+        "title": "Obtain and renew an Alaska business license for Fairbanks North Star operations",
+        "category": "license",
+        "authority": "Alaska Division of Corporations, Business and Professional Licensing",
+        "description": "Businesses operating in the Fairbanks North Star Borough must obtain and renew the applicable Alaska business license; city-level licensing may also apply inside Fairbanks city limits.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.commerce.alaska.gov/web/cbpl/BusinessLicensing/",
+          "https://www.fairbanks.gov/faqs/item/how-do-i-calculate-the-cost-of-my-city-business-license",
+          "https://fnsb.gov/389/Documents"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "amount": 50,
+          "note": "The City of Fairbanks standard new business license fee is $50; renewal fees are based on gross receipts."
+        },
+        "lateFee": {
+          "amount": 50,
+          "note": "City of Fairbanks renewals received on or after March 1 incur a $50 penalty."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["all"],
+            "description": "Operates a business in the borough"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Haines",
@@ -123,7 +402,7 @@
         "authority": "Haines Borough",
         "description": "Businesses making taxable sales in Haines Borough collect and remit the borough's local general-retail sales tax; the ARSSTC table lists seasonal rates of 7% April through September and 4.5% October through March.",
         "rrule": "FREQ=MONTHLY",
-        "url": "https://arsstc.org/business-sellers/member-jurisdictions/",
+        "url": ["https://arsstc.org/business-sellers/member-jurisdictions/"],
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -137,14 +416,41 @@
     ],
     "checkedOn": "2026-10-18",
     "note": "The ARSSTC member-jurisdiction table confirms the borough's local sales tax; other county-level obligations were not checked.",
-    "sourceUrl": "https://arsstc.org/business-sellers/member-jurisdictions/"
+    "sourceUrl": ["https://arsstc.org/business-sellers/member-jurisdictions/"]
   },
   {
     "county": "Hoonah-Angoon",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "hoonah-angoon-ak.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Alaska food safety authority",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": ["https://dec.alaska.gov/eh/fss/"],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees vary by establishment type and jurisdiction; confirm the current fee schedule before filing."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Juneau City and Borough",
@@ -156,7 +462,7 @@
         "authority": "City and Borough of Juneau",
         "description": "Businesses making taxable sales in the City and Borough of Juneau collect and remit the 5% local general-retail sales tax; local rules and filing forms control exemptions and deadlines.",
         "rrule": "FREQ=MONTHLY",
-        "url": "https://arsstc.org/business-sellers/member-jurisdictions/",
+        "url": ["https://arsstc.org/business-sellers/member-jurisdictions/"],
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -170,7 +476,7 @@
     ],
     "checkedOn": "2026-10-18",
     "note": "The ARSSTC member-jurisdiction table confirms the borough's local sales tax; other county-level obligations were not checked.",
-    "sourceUrl": "https://arsstc.org/business-sellers/member-jurisdictions/"
+    "sourceUrl": ["https://arsstc.org/business-sellers/member-jurisdictions/"]
   },
   {
     "county": "Kenai Peninsula",
@@ -182,7 +488,7 @@
         "authority": "Kenai Peninsula Borough",
         "description": "Businesses making taxable sales in Kenai Peninsula Borough collect and remit the 3% local general-retail sales tax; local rules and filing forms control exemptions and deadlines.",
         "rrule": "FREQ=MONTHLY",
-        "url": "https://arsstc.org/business-sellers/member-jurisdictions/",
+        "url": ["https://arsstc.org/business-sellers/member-jurisdictions/"],
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -196,7 +502,7 @@
     ],
     "checkedOn": "2026-10-18",
     "note": "The ARSSTC member-jurisdiction table confirms the borough's local sales tax; other county-level obligations were not checked.",
-    "sourceUrl": "https://arsstc.org/business-sellers/member-jurisdictions/"
+    "sourceUrl": ["https://arsstc.org/business-sellers/member-jurisdictions/"]
   },
   {
     "county": "Ketchikan Gateway",
@@ -208,7 +514,7 @@
         "authority": "Ketchikan Gateway Borough",
         "description": "Businesses making taxable sales in Ketchikan Gateway Borough collect and remit the 2.5% local general-retail sales tax; local rules and filing forms control exemptions and deadlines.",
         "rrule": "FREQ=MONTHLY",
-        "url": "https://arsstc.org/business-sellers/member-jurisdictions/",
+        "url": ["https://arsstc.org/business-sellers/member-jurisdictions/"],
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -222,56 +528,288 @@
     ],
     "checkedOn": "2026-10-18",
     "note": "The ARSSTC member-jurisdiction table confirms the borough's local sales tax; other county-level obligations were not checked.",
-    "sourceUrl": "https://arsstc.org/business-sellers/member-jurisdictions/"
+    "sourceUrl": ["https://arsstc.org/business-sellers/member-jurisdictions/"]
   },
   {
     "county": "Kodiak Island",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "kodiak-island-ak.food-permit",
+        "title": "Obtain and renew an Alaska food establishment permit in Kodiak Island Borough",
+        "category": "license",
+        "authority": "Alaska Department of Environmental Conservation / Kodiak Island Borough",
+        "description": "Food establishments operating in Kodiak Island Borough must obtain the applicable Alaska food establishment permit before operating; mobile food services also require applicable city or borough permits and state licenses.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://dec.alaska.gov/eh/fss/Food/Opening.html",
+          "https://www.kodiakak.us/247/Borough-Code",
+          "https://ecode360.com/47976600",
+          "https://www.kodiakak.us/DocumentCenter/View/1529"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 35,
+          "max": 500,
+          "note": "Alaska temporary food permits vary by duration; Kodiak mobile-food applications default to a $500 fee when no fee is set by the city schedule, and borough business-license fees vary by activity."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Kusilvak",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "kusilvak-ak.food-permit",
+        "title": "Obtain and renew an Alaska food establishment permit in Kusilvak Census Area",
+        "category": "license",
+        "authority": "Alaska Department of Environmental Conservation",
+        "description": "Food establishments operating in the Kusilvak Census Area must obtain the applicable Alaska food establishment permit from the state department because the area is within the unorganized borough.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://health.alaska.gov/dhcs/Documents/hflc/PDF/files/18%20AAC%2031.pdf",
+          "https://health.alaska.gov/en/services/report-food-poisoning/",
+          "https://alaskastateauthority.com/government/wade-hampton-census-area/"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 580,
+          "note": "Alaska's published food permit schedule varies by operation type, including limited, mobile, catering, and seat-count categories."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Lake and Peninsula",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "lake-and-peninsula-ak.food-permit",
+        "title": "Obtain and renew an Alaska food establishment permit in Lake and Peninsula Borough",
+        "category": "license",
+        "authority": "Alaska Department of Environmental Conservation",
+        "description": "Food establishments operating in Lake and Peninsula Borough must obtain the applicable Alaska food establishment permit from the state department; borough business licensing separately covers specified lodging, guiding, campground, and fish businesses.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://health.alaska.gov/dhcs/Documents/hflc/PDF/files/18%20AAC%2031.pdf",
+          "https://lakeandpen.com/forbusiness",
+          "https://lakeandpen.com/documents-permits"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 580,
+          "note": "Alaska food permit fees vary by operation type and seat count; borough business-license requirements depend on business type."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Matanuska-Susitna Borough",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "matanuska-susitna-ak.food-permit",
+        "title": "Obtain and renew an Alaska food establishment permit in Matanuska-Susitna Borough",
+        "category": "license",
+        "authority": "Alaska Department of Environmental Conservation / Matanuska-Susitna Borough",
+        "description": "Food establishments operating in Matanuska-Susitna Borough must obtain the applicable Alaska food establishment permit; borough development and business permits may also apply by activity and location.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://health.alaska.gov/dhcs/Documents/hflc/PDF/files/18%20AAC%2031.pdf",
+          "https://matsugov.us/71-documents/permit/17196-permit-application-fee-schedule",
+          "https://matsugov.us/departments/development-services"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 580,
+          "note": "Alaska food permit fees vary by operation type and seat count; borough permit fees vary by land-use or development activity."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Nome (CA)",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "nome-ca-ak.food-permit",
+        "title": "Obtain and renew a Nome Census Area food establishment permit",
+        "category": "license",
+        "authority": "Alaska Department of Environmental Conservation",
+        "description": "Food establishments operating in the Nome Census Area must obtain the applicable Alaska food establishment permit before operating and comply with state food safety requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://dec.alaska.gov/eh/fss/Food/Opening.html",
+          "https://dec.alaska.gov/media/9816/forms-food-food-establishment-permit-application.pdf",
+          "https://akrules.elaws.us/aac/18.31.050"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 35,
+          "max": 325,
+          "note": "Alaska annual food permit fees vary by establishment type; temporary food permits are $35 for one day and $65 for two to three days, with an additional equal fee for applications submitted fewer than seven days before the event."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "North Slope",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "north-slope-ak.food-permit",
+        "title": "Obtain and renew an Alaska food establishment permit in North Slope Borough",
+        "category": "license",
+        "authority": "Alaska Department of Environmental Conservation / North Slope Borough",
+        "description": "Food establishments operating in North Slope Borough must obtain the applicable Alaska food establishment permit before operating; borough permits may also apply by activity and location.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://dec.alaska.gov/eh/fss/Food/Opening.html",
+          "https://health.alaska.gov/dhcs/Documents/hflc/PDF/files/18%20AAC%2031.pdf",
+          "https://www.north-slope.org/departments/planning-community-services/land-management-regulation/applications-forms/"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 35,
+          "max": 325,
+          "note": "Alaska annual food permit fees vary by establishment type; temporary food permits are $35 for one day and $65 for two to three days, with an additional equal fee for applications submitted fewer than seven days before the event."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Northwest Arctic",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "northwest-arctic-ak.food-permit",
+        "title": "Obtain and renew an Alaska food establishment permit in Northwest Arctic Borough",
+        "category": "license",
+        "authority": "Alaska Department of Environmental Conservation / Northwest Arctic Borough",
+        "description": "Food establishments operating in Northwest Arctic Borough must obtain the applicable Alaska food establishment permit; borough permits may also apply to specified commercial activities.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://health.alaska.gov/dhcs/Documents/hflc/PDF/files/18%20AAC%2031.pdf",
+          "https://www.nwabor.org/wp-content/uploads/Title-9-Fee-Schedule.pdf",
+          "https://www.commerce.alaska.gov/web/dcra/LocalGovernmentResourceDesk/MunicipalCodeLibrary"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "min": 150,
+          "max": 580,
+          "note": "Alaska food permit fees vary by operation type and seat count; borough permit fees vary by activity and timing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Petersburg",
@@ -283,7 +821,7 @@
         "authority": "Petersburg Borough",
         "description": "Businesses making taxable sales in Petersburg Borough collect and remit the 6% local general-retail sales tax; local rules and filing forms control exemptions and deadlines.",
         "rrule": "FREQ=MONTHLY",
-        "url": "https://arsstc.org/business-sellers/member-jurisdictions/",
+        "url": ["https://arsstc.org/business-sellers/member-jurisdictions/"],
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -297,14 +835,41 @@
     ],
     "checkedOn": "2026-10-18",
     "note": "The ARSSTC member-jurisdiction table confirms the borough's local sales tax; other county-level obligations were not checked.",
-    "sourceUrl": "https://arsstc.org/business-sellers/member-jurisdictions/"
+    "sourceUrl": ["https://arsstc.org/business-sellers/member-jurisdictions/"]
   },
   {
     "county": "Prince of Wales-Hyder",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "prince-of-wales-hyder-ak.food-permit",
+        "title": "Obtain and renew a Prince of Wales-Hyder Borough food permit",
+        "category": "permit",
+        "authority": "Alaska Department of Environmental Conservation",
+        "description": "Food establishments operating in the Prince of Wales-Hyder Census Area must obtain the applicable Alaska food permit and comply with plan-review and inspection requirements.",
+        "rrule": "FREQ=YEARLY",
+        "url": ["https://dec.alaska.gov/eh/fss/food/", "https://dec.alaska.gov/eh/fss/food/permits/"],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Alaska food permit fees vary by facility type, risk classification, and plan-review needs."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Sitka City and Borough",
@@ -316,7 +881,7 @@
         "authority": "City and Borough of Sitka",
         "description": "Businesses making taxable sales in the City and Borough of Sitka collect and remit the local general-retail sales tax; the ARSSTC table lists seasonal rates of 6% April through September and 5% October through March.",
         "rrule": "FREQ=MONTHLY",
-        "url": "https://arsstc.org/business-sellers/member-jurisdictions/",
+        "url": ["https://arsstc.org/business-sellers/member-jurisdictions/"],
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -330,7 +895,7 @@
     ],
     "checkedOn": "2026-10-18",
     "note": "The ARSSTC member-jurisdiction table confirms the borough's local sales tax; other county-level obligations were not checked.",
-    "sourceUrl": "https://arsstc.org/business-sellers/member-jurisdictions/"
+    "sourceUrl": ["https://arsstc.org/business-sellers/member-jurisdictions/"]
   },
   {
     "county": "Skagway",
@@ -342,7 +907,7 @@
         "authority": "Municipality of Skagway",
         "description": "Businesses making taxable sales in the Municipality of Skagway collect and remit the local general-retail sales tax; the ARSSTC table lists seasonal rates of 5% April through September and 3% October through March.",
         "rrule": "FREQ=MONTHLY",
-        "url": "https://arsstc.org/business-sellers/member-jurisdictions/",
+        "url": ["https://arsstc.org/business-sellers/member-jurisdictions/"],
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -356,27 +921,111 @@
     ],
     "checkedOn": "2026-10-18",
     "note": "The ARSSTC member-jurisdiction table confirms the borough's local sales tax; other county-level obligations were not checked.",
-    "sourceUrl": "https://arsstc.org/business-sellers/member-jurisdictions/"
+    "sourceUrl": ["https://arsstc.org/business-sellers/member-jurisdictions/"]
   },
   {
     "county": "Skagway-Hoonah-Angoon",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "skagway-hoonah-angoon-ak.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Alaska food safety authority",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": ["https://dec.alaska.gov/eh/fss/"],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees vary by establishment type and jurisdiction; confirm the current fee schedule before filing."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Southeast Fairbanks Census Area",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "southeast-fairbanks-census-area-ak.food-license",
+        "title": "Obtain and renew the applicable food establishment license",
+        "category": "license",
+        "authority": "Alaska food safety authority",
+        "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
+        "rrule": "FREQ=YEARLY",
+        "url": ["https://dec.alaska.gov/eh/fss/"],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees vary by establishment type and jurisdiction; confirm the current fee schedule before filing."
+        },
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["food_service"],
+            "description": "Operates a food establishment"
+          }
+        ],
+        "checkedOn": "2026-10-19"
+      }
+    ],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Yukon-Koyukuk (CA)",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [
+      {
+        "id": "yukon-koyukuk-ak.business-license",
+        "title": "Obtain and renew an Alaska business license for Yukon-Koyukuk operations",
+        "category": "license",
+        "authority": "Alaska Division of Corporations, Business and Professional Licensing",
+        "description": "Businesses operating in the Yukon-Koyukuk Census Area must obtain and renew the applicable Alaska business license; the state provides the official filing and fee process because the census area has no organized borough government.",
+        "rrule": "FREQ=YEARLY",
+        "url": [
+          "https://www.commerce.alaska.gov/web/cbpl/BusinessLicensing/",
+          "https://www.commerce.alaska.gov/web/cbpl/BusinessLicensing/BusinessLicensingFormsFees.aspx"
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Alaska business-license and endorsement fees depend on the license type."
+        },
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "activities",
+            "op": "in",
+            "value": ["all"],
+            "description": "Operates a business in the census area"
+          }
+        ],
+        "checkedOn": "2026-10-19",
+        "lateFee": {
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
+      }
+    ],
+    "checkedOn": "2026-10-19"
   }
 ]

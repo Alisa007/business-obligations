@@ -10,7 +10,7 @@
         "authority": "City of Charleston Office of the City Collector",
         "description": "Every business or individual doing business in Charleston must complete the Business Registration Application, whether or not it has a permanent location in the city. Inspection approval from the Planning/Zoning, Building and Fire departments comes first.",
         "frequency": "once",
-        "url": "https://charlestonwv.gov/node/143",
+        "url": ["https://charlestonwv.gov/node/143"],
         "appliesTo": ["all"]
       },
       {
@@ -20,7 +20,7 @@
         "authority": "City of Charleston Office of the City Collector",
         "description": "The city levies a Business and Occupation privilege tax on business activity within city limits. Returns and rates are set out in the city's B&O Tax Overview.",
         "frequency": "ongoing",
-        "url": "https://charlestonwv.gov/node/143",
+        "url": ["https://charlestonwv.gov/node/143"],
         "appliesTo": ["all"]
       },
       {
@@ -31,12 +31,12 @@
         "description": "Employers withhold a $3.00 per week City Service Fee from covered employees and remit it quarterly. Self-employed individuals pay it themselves.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
         "deadline": "Within one month after each calendar quarter ends",
-        "url": "https://charlestonwv.gov/node/143",
+        "url": ["https://charlestonwv.gov/node/143"],
         "appliesTo": ["employees", "unincorporated"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.charlestonwv.gov/node/143"
+    "sourceUrl": ["https://www.charlestonwv.gov/node/143"]
   },
   {
     "city": "Huntington",
@@ -50,7 +50,7 @@
         "description": "Anyone conducting business in the City of Huntington must obtain a Huntington Business License. The page gives a $20 fee, notes that fees vary by license type and are not prorated, and says the license term runs July 1 to June 30 with a renewal notice sent around the first of June.",
         "rrule": "FREQ=YEARLY",
         "deadline": "License term July 1 to June 30",
-        "url": "https://www.cityofhuntington.com/business/new-business/license/",
+        "url": ["https://www.cityofhuntington.com/business/new-business/license/"],
         "appliesTo": ["all"],
         "feeDetail": {
           "basis": "varies",
@@ -64,13 +64,13 @@
         "authority": "City of Huntington Finance Division",
         "description": "Any business engaged in activity with the object of gaining economic benefit files a quarterly B&O return listing gross income for the period, including a return showing no activity when there was none. The page does not state a rate and notes that the Retail, Restaurant & Others classification was waived on September 13, 2021.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
-        "url": "https://www.cityofhuntington.com/business/taxes-and-fees/b-o-tax/",
+        "url": ["https://www.cityofhuntington.com/business/taxes-and-fees/b-o-tax/"],
         "appliesTo": ["all"],
         "deadlineNote": "30 days after each calendar quarter ends",
         "checkedOn": "2026-10-18"
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.cityofhuntington.com/business/new-business/license/"
+    "sourceUrl": ["https://www.cityofhuntington.com/business/new-business/license/"]
   }
 ]

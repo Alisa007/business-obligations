@@ -297,7 +297,7 @@ describe("state coverage", () => {
     const s = STATES[code]!;
     for (const a of [s.filing, s.revenue, s.labor]) {
       expect(a.name.length).toBeGreaterThan(3);
-      expect(a.url).toMatch(/^https:\/\//);
+      expect(a.url.every((url) => /^https:\/\//.test(url))).toBe(true);
     }
     expect(s.workersComp.agency).toBeTruthy();
     expect(s.entityTax).toBeTruthy();

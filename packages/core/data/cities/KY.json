@@ -12,7 +12,9 @@
         "description": "Every business entity, including sole proprietors unless the IRS has issued a tax-exempt determination letter, files a net profits license fee return (Form 228) each year and pays the occupational license fee of 2.25% of net profits. The $100 annual minimum is paid with the return, except that individuals and sole proprietors with gross receipts of $4,400 or less owe no minimum for that year and the next but must still file.",
         "rrule": "FREQ=YEARLY",
         "deadline": "On the due date the city publishes each year for Form 228",
-        "url": "https://www.lexingtonky.gov/working/business-licensing-taxes/occupational-license-fee-minimum-license-filing-requirements",
+        "url": [
+          "https://www.lexingtonky.gov/working/business-licensing-taxes/occupational-license-fee-minimum-license-filing-requirements"
+        ],
         "appliesTo": ["all"]
       },
       {
@@ -23,18 +25,20 @@
         "description": "Employers withhold the 2.25% occupational license fee from employees' compensation and file the Employer's Return of License Fee Withheld each quarter, or each month once the fee withheld in any quarter exceeds $300. An annual reconciliation of the fee withheld is also filed.",
         "rrule": "FREQ=MONTHLY;INTERVAL=3",
         "deadline": "Quarterly (monthly above $300 withheld in a quarter), plus an annual reconciliation",
-        "url": "https://www.lexingtonky.gov/working/business-licensing-taxes/occupational-license-fee-minimum-license-filing-requirements",
+        "url": [
+          "https://www.lexingtonky.gov/working/business-licensing-taxes/occupational-license-fee-minimum-license-filing-requirements"
+        ],
         "appliesTo": ["employees"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.lexingtonky.gov/working/business-licensing-taxes/how-start-business-lexington"
+    "sourceUrl": ["https://www.lexingtonky.gov/working/business-licensing-taxes/how-start-business-lexington"]
   },
   {
     "city": "Louisville",
     "counties": ["Jefferson"],
     "checkedOn": "2026-10-19",
-    "sourceUrl": "https://louisvilleky.gov/government/landing-page/get-license",
+    "sourceUrl": ["https://louisvilleky.gov/government/landing-page/get-license"],
     "items": [
       {
         "id": "louisville.occupational-license-net-profits",
@@ -44,7 +48,7 @@
         "description": "Businesses engaged in business in Louisville Metro (all of Jefferson County) pay the occupational license tax of 2.2% on net profits and file Form OL-3. The return is due the 15th day of the fourth month after the fiscal year ends (April 15 for calendar-year filers), with an automatic six-month extension on Form OL-3EXT filed by the original due date; tax due is still payable by then. A business whose tax exceeds $5,000 pays quarterly estimates, except sole proprietors and a business in its first year.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
         "deadlineNote": "calendar-year filers",
-        "url": "https://louisvilleky.gov/sites/default/files/2024-12/ol-3d_instructions_2025.pdf",
+        "url": ["https://louisvilleky.gov/sites/default/files/2024-12/ol-3d_instructions_2025.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
           "basis": "percent",
@@ -60,7 +64,7 @@
         "authority": "Louisville Metro Revenue Commission",
         "description": "An employer withholds the occupational license tax (2.2% for Louisville residents, 1.45% for non-resident individuals) from wages earned in Louisville Metro and files Form W-1 by the last day of the month after each calendar quarter. An employer that withheld more than $3,000 in any of the four preceding quarters also deposits monthly, by the 15th of the following month, on Form W-1D.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
-        "url": "https://louisvilleky.gov/sites/default/files/2022-12/W-1_instructions_20221201.pdf",
+        "url": ["https://louisvilleky.gov/sites/default/files/2022-12/W-1_instructions_20221201.pdf"],
         "appliesTo": ["employees"],
         "checkedOn": "2026-10-19"
       }
@@ -78,12 +82,12 @@
         "authority": "Lexington-Fayette local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://web.sos.ky.gov/forms/corp/ASN-Certificate%20of%20Assumed%20Name.pdf",
+        "url": ["https://web.sos.ky.gov/forms/corp/ASN-Certificate%20of%20Assumed%20Name.pdf"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://web.sos.ky.gov/forms/corp/ASN-Certificate%20of%20Assumed%20Name.pdf"
+    "sourceUrl": ["https://web.sos.ky.gov/forms/corp/ASN-Certificate%20of%20Assumed%20Name.pdf"]
   },
   {
     "city": "Bowling Green",
@@ -97,12 +101,12 @@
         "authority": "Bowling Green local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://web.sos.ky.gov/forms/corp/ASN-Certificate%20of%20Assumed%20Name.pdf",
+        "url": ["https://web.sos.ky.gov/forms/corp/ASN-Certificate%20of%20Assumed%20Name.pdf"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://web.sos.ky.gov/forms/corp/ASN-Certificate%20of%20Assumed%20Name.pdf"
+    "sourceUrl": ["https://web.sos.ky.gov/forms/corp/ASN-Certificate%20of%20Assumed%20Name.pdf"]
   },
   {
     "city": "Owensboro",
@@ -116,12 +120,12 @@
         "authority": "Owensboro local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://web.sos.ky.gov/forms/corp/ASN-Certificate%20of%20Assumed%20Name.pdf",
+        "url": ["https://web.sos.ky.gov/forms/corp/ASN-Certificate%20of%20Assumed%20Name.pdf"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://web.sos.ky.gov/forms/corp/ASN-Certificate%20of%20Assumed%20Name.pdf"
+    "sourceUrl": ["https://web.sos.ky.gov/forms/corp/ASN-Certificate%20of%20Assumed%20Name.pdf"]
   },
   {
     "city": "Covington",
@@ -135,11 +139,11 @@
         "authority": "Covington local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://web.sos.ky.gov/forms/corp/ASN-Certificate%20of%20Assumed%20Name.pdf",
+        "url": ["https://web.sos.ky.gov/forms/corp/ASN-Certificate%20of%20Assumed%20Name.pdf"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://web.sos.ky.gov/forms/corp/ASN-Certificate%20of%20Assumed%20Name.pdf"
+    "sourceUrl": ["https://web.sos.ky.gov/forms/corp/ASN-Certificate%20of%20Assumed%20Name.pdf"]
   }
 ]
