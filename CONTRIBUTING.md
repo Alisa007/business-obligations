@@ -19,7 +19,8 @@ npm run test:update  # accept intentional snapshot changes, then review the diff
 1. Edit `data/states/<XX>.json`. Validate with `npm test` (the schema in `schema/state.schema.json` is enforced).
 2. Use an **official** source (the state agency's own page or statute). Add its URL to `verification.sources`, set
    `verification.checkedOn` to today's date, and remove the field from `verification.unconfirmed` if you confirmed it.
-3. Write the fee once, in `feeDetail`: the numbers (`amount`, `online`/`paper`, `perUnit`, `min`/`max`, `rate`) and, for
+3. Every item states its fee and its penalty. Use `{ "basis": "unknown" }` for either one only while it is unresearched; `none` means the government states no fee or penalty. A penalty with an amount is `{ "basis": "flat", "amount": 50 }`.
+   Write the fee once, in `feeDetail`: the numbers (`amount`, `online`/`paper`, `perUnit`, `min`/`max`, `rate`) and, for
    what numbers cannot say, a short `note` such as `annual tax` or `$0 for nonprofit corporations`. There is no separate fee
    text: it is generated ("$30 online ($45 paper)"), and a test fails if a `note` repeats one of the fee's own numbers.
    `flat` and `none` need an `amount`, `per_partner`/`per_member` a `perUnit`, `percent` a `rate`.
@@ -68,7 +69,7 @@ The date is written once, in the `rrule`; the deadline text is generated from it
 `opens: { "month": 1, "day": 1 }` ("January 1 – May 1"). Write a full `deadline` only for what the rule cannot say
 ("Before the first day of the anniversary month", "15th day of the 4th month after fiscal year end"). Tests fail if a
 `deadline` or `deadlineNote` repeats the rule's date, if both are given, or if a late fee is quoted in the text instead
-of `lateFee`. Other `RRULE` parts are rejected.
+of `penalty`. Other `RRULE` parts are rejected.
 
 Dates: use ISO `YYYY-MM-DD` in every date field (`checkedOn`, `effective`, ...) and spell months out in text
 ("April 15", not "Apr 15", "4/15" or "April 15th"); a test fails otherwise.

@@ -14,6 +14,9 @@
     "feeDetail": {
       "basis": "flat",
       "amount": 105
+    },
+    "penalty": {
+      "basis": "unknown"
     }
   },
   {
@@ -31,6 +34,9 @@
     "feeDetail": {
       "basis": "flat",
       "amount": 50
+    },
+    "penalty": {
+      "basis": "unknown"
     }
   },
   {
@@ -44,7 +50,13 @@
     "url": ["https://www2.myfloridalicense.com/abt/rules_statutes/fee_chart.pdf"],
     "checkedOn": "2026-10-18",
     "rrule": "FREQ=YEARLY",
-    "renewal": "Renew the annual license by the expiration date shown by the Division of Alcoholic Beverages and Tobacco."
+    "renewal": "Renew the annual license by the expiration date shown by the Division of Alcoholic Beverages and Tobacco.",
+    "feeDetail": {
+      "basis": "unknown"
+    },
+    "penalty": {
+      "basis": "unknown"
+    }
   },
   {
     "id": "fl.real-estate-license",
@@ -57,6 +69,12 @@
     "url": ["https://www2.myfloridalicense.com/real-estate-commission/"],
     "checkedOn": "2026-10-18",
     "rrule": "FREQ=YEARLY;INTERVAL=2",
-    "renewal": "Renew by the expiration date shown by DBPR; delinquent renewal and reactivation requirements may apply."
+    "renewal": "Renew by the expiration date shown by DBPR; delinquent renewal and reactivation requirements may apply.",
+    "feeDetail": {
+      "basis": "unknown"
+    },
+    "penalty": {
+      "basis": "unknown"
+    }
   }
 ]

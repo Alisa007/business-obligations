@@ -20,7 +20,8 @@
       "amount": 400,
       "note": "annual tax"
     },
-    "lateFee": {
+    "penalty": {
+      "basis": "flat",
       "amount": 200,
       "percentPerMonth": 1.5,
       "note": "Plus 1.5% per month interest on the tax and penalty"
@@ -34,7 +35,8 @@
       "min": 175,
       "note": "franchise tax, plus a $50 report fee"
     },
-    "lateFee": {
+    "penalty": {
+      "basis": "flat",
       "amount": 200,
       "percentPerMonth": 1.5,
       "note": "Plus 1.5% per month interest on the tax and penalty"
@@ -48,7 +50,8 @@
       "perUnit": 300,
       "max": 180000
     },
-    "lateFee": {
+    "penalty": {
+      "basis": "flat",
       "amount": 200,
       "percentPerMonth": 1.5,
       "note": "Plus 1.5% per month interest on the tax and penalty"
@@ -95,6 +98,9 @@
       "basis": "flat",
       "amount": 75,
       "note": "plus gross receipts tax"
+    },
+    "penalty": {
+      "basis": "unknown"
     }
   },
   "local": {

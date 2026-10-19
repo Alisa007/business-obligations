@@ -165,13 +165,39 @@
       "pattern": "^\\d{4}-\\d{2}-\\d{2}\\.\\d+$",
       "description": "Ruleset version, YYYY-MM-DD.n."
     },
+    "penalty": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["basis"],
+      "properties": {
+        "basis": {
+          "enum": ["flat", "none", "unknown"],
+          "description": "flat = a stated late or non-compliance charge; none = the government states no penalty; unknown = not yet researched."
+        },
+        "amount": { "type": "number", "minimum": 0 },
+        "percentPerMonth": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Additional interest or penalty as a percentage per month."
+        },
+        "note": {
+          "type": "string",
+          "minLength": 3,
+          "description": "When the penalty applies or what makes it special (\"cannot be waived\"). Omit when it would only say \"late fee\"."
+        }
+      },
+      "if": { "properties": { "basis": { "const": "flat" } } },
+      "then": { "required": ["amount"] },
+      "else": { "not": { "anyOf": [{ "required": ["amount"] }, { "required": ["percentPerMonth"] }] } }
+    },
     "feeDetail": {
       "type": "object",
       "additionalProperties": false,
       "required": ["basis"],
       "properties": {
         "basis": {
-          "enum": ["flat", "per_partner", "per_member", "percent", "varies", "none", "tiered"]
+          "enum": ["flat", "per_partner", "per_member", "percent", "varies", "none", "tiered", "unknown"],
+          "description": "none = the government charges nothing; varies = the fee depends on facts the data cannot know; unknown = not yet researched."
         },
         "amount": {
           "type": "number",

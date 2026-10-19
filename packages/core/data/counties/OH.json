@@ -21,11 +21,6 @@
           "max": 855,
           "note": "The county guide states license fees range from $195-$855; plan review begins at $100 plus hourly review and inspection time."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "The county application states a mandatory 25% penalty of the renewal fee for operating after the deadline."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -35,7 +30,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "The county application states a mandatory 25% penalty of the renewal fee for operating after the deadline."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -62,10 +63,6 @@
           "max": 689,
           "note": "Published Allen County license fees range from $155 to $689 by risk level and facility size; plan review is $100-$175 for new operations."
         },
-        "lateFee": {
-          "amount": 0,
-          "note": "A mandatory penalty of 25% of the renewal fee applies when operating after the deadline."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -75,7 +72,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "note": "A mandatory penalty of 25% of the renewal fee applies when operating after the deadline."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -99,11 +101,6 @@
           "basis": "varies",
           "note": "Fees vary by operation category and risk level under Ohio and local health-department schedules."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "Ohio food-license renewal penalties are 25% of the applicable fee when late."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -113,7 +110,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio food-license renewal penalties are 25% of the applicable fee when late."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -138,11 +141,6 @@
           "basis": "varies",
           "note": "Fees vary by operation category and risk level under the Ohio and local health-department schedules."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "Ohio food-license renewal penalties are 25% of the applicable fee when late."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -152,7 +150,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio food-license renewal penalties are 25% of the applicable fee when late."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -186,7 +190,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -224,7 +229,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -247,7 +253,10 @@
           "https://belmontcountyauditor.org/vendor-s-license",
           "https://tax.ohio.gov/business/sales-and-use-tax"
         ],
-        "feeDetail": { "basis": "flat", "amount": 50 },
+        "feeDetail": {
+          "basis": "flat",
+          "amount": 50
+        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -258,7 +267,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -288,7 +298,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -325,7 +336,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -348,7 +360,10 @@
           "https://cms3.revize.com/revize/butlercountyauditor/Documents/Licensing/Vendor%20License%20Fee%20Increase%20Apr%202025.pdf",
           "https://tax.ohio.gov/business/sales-and-use-tax"
         ],
-        "feeDetail": { "basis": "flat", "amount": 50 },
+        "feeDetail": {
+          "basis": "flat",
+          "amount": 50
+        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -359,7 +374,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -374,11 +390,10 @@
         "url": [
           "https://cms5.revize.com/revize/butlercountyboardofhealth/Documents/Environmental%20Health%20and%20Plumbing%20Services/2026%20Fee%20Schedule%20-%20Approved%20by%20BOH%209%2018%202025.pdf"
         ],
-        "feeDetail": { "basis": "varies", "min": 27.75, "max": 1180 },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "Mandatory 25% of the renewal fee for operating after the deadline."
+        "feeDetail": {
+          "basis": "varies",
+          "min": 27.75,
+          "max": 1180
         },
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -389,7 +404,13 @@
             "description": "Operates a food service operation or retail food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Mandatory 25% of the renewal fee for operating after the deadline."
+        }
       }
     ],
     "checkedOn": "2026-10-19",
@@ -417,11 +438,6 @@
           "max": 855,
           "note": "The county guide states license fees range from $195-$855; plan review begins at $100 plus hourly review and inspection time."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "The county application states a mandatory 25% penalty of the renewal fee for operating after the deadline."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -431,7 +447,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "The county application states a mandatory 25% penalty of the renewal fee for operating after the deadline."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -455,11 +477,6 @@
           "basis": "varies",
           "note": "Fees vary by operation category and risk level under Ohio and local health-district schedules."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "Ohio food-license renewal penalties are 25% of the applicable fee when late."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -469,7 +486,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio food-license renewal penalties are 25% of the applicable fee when late."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -496,11 +519,6 @@
           "max": 100,
           "note": "Published fees are $50-$100 for retail/mobile menu types, $20-$40 for temporary permits, and $10 per vending machine."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 50,
-          "note": "Retail permit late fee is 50% of the permit; temporary late fee is $10."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -510,7 +528,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 50,
+          "note": "Retail permit late fee is 50% of the permit; temporary late fee is $10."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -535,11 +559,6 @@
           "basis": "varies",
           "note": "Fees vary by FSO/RFE, temporary, mobile, and vending license type under the county schedule."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "Ohio food-license renewal penalties are 25% of the applicable fee when late."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -549,7 +568,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio food-license renewal penalties are 25% of the applicable fee when late."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -574,11 +599,6 @@
           "basis": "varies",
           "note": "Fees vary by operation category; the county packet shows a $200 mobile license plus a $28 state amount."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "Ohio law requires a 25% penalty of the renewal fee when operating after the deadline."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -588,7 +608,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio law requires a 25% penalty of the renewal fee when operating after the deadline."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -604,10 +630,6 @@
         "category": "license",
         "authority": "Columbiana County General Health District",
         "rrule": "FREQ=YEARLY",
-        "lateFee": {
-          "amount": 0,
-          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -628,7 +650,12 @@
           "https://www.columbiana-health.org/",
           "https://www.columbiana-health.org/wp-content/uploads/Food-Facility-Planning-Application-2022.pdf"
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -655,11 +682,6 @@
           "max": 1357,
           "note": "The 2026 schedule lists totals of $257-$661 for commercial facilities under 25,000 square feet, $361-$1,357 for larger commercial facilities, $118-$208 for mobiles, and $85 for temporary events."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "Ohio law requires a 25% penalty of the renewal fee when the fee is late or the operation continues after the deadline."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -669,7 +691,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio law requires a 25% penalty of the renewal fee when the fee is late or the operation continues after the deadline."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -694,11 +722,6 @@
           "min": 86.78,
           "note": "The county mobile application shows an $86.78 local mobile fee plus a $28 state amount; other categories vary."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "Ohio law requires a 25% penalty of the renewal fee when the fee is late."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -708,7 +731,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio law requires a 25% penalty of the renewal fee when the fee is late."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -732,7 +761,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -768,7 +803,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -796,11 +832,6 @@
           "basis": "varies",
           "note": "License fees vary by operation category and risk level; the City of Defiance separately requires food-truck registration and directs operators to county health guidelines."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "Ohio food-license renewals incur a 25% penalty of the applicable renewal fee when late."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -810,7 +841,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio food-license renewals incur a 25% penalty of the applicable renewal fee when late."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -836,11 +873,6 @@
           "max": 1000,
           "note": "Published plan-review fees are $300-$900; expedited review adds $1,000 plus the applicable plan-review fee, while license fees vary by operation type."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "Ohio law requires a 25% penalty of the renewal fee when the fee is late."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -850,7 +882,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio law requires a 25% penalty of the renewal fee when the fee is late."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -877,11 +915,6 @@
           "max": 1275,
           "note": "Published county and state totals range from $23.64 for vending to $1,275 for a level-4 facility over 25,000 square feet; temporary licenses are $90 and mobile licenses are $218."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "Ohio food-license renewals incur a 25% penalty of the applicable renewal fee when late."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -891,7 +924,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio food-license renewals incur a 25% penalty of the applicable renewal fee when late."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -928,7 +967,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -958,11 +998,6 @@
           "max": 855,
           "note": "The county guide states license fees range from $195-$855; plan review begins at $100 plus hourly review and inspection time."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "The county application states a mandatory 25% penalty of the renewal fee for operating after the deadline."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -972,7 +1007,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "The county application states a mandatory 25% penalty of the renewal fee for operating after the deadline."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -992,7 +1033,10 @@
           "https://www.franklincountyohio.gov/Business-Development/Development-Planning/Food-Action-Plan/Food-Business-Portal/Business-Location-Compliance",
           "https://tax.ohio.gov/business/sales-and-use-tax"
         ],
-        "feeDetail": { "basis": "flat", "amount": 50 },
+        "feeDetail": {
+          "basis": "flat",
+          "amount": 50
+        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1003,7 +1047,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -1016,11 +1061,8 @@
         "description": "Food businesses operating outside Columbus and Worthington in Franklin County must obtain and renew the applicable food license; licenses expire March 1 and renewals on or after March 1 incur a 20% late fee.",
         "rrule": "FREQ=YEARLY",
         "url": ["https://myfcph.org/food-safety/", "https://myfcph.org/fiscal-services/"],
-        "feeDetail": { "basis": "varies" },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 20,
-          "note": "20% late fee for renewal on or after March 1."
+        "feeDetail": {
+          "basis": "varies"
         },
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -1031,7 +1073,13 @@
             "description": "Operates a food business"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 20,
+          "note": "20% late fee for renewal on or after March 1."
+        }
       }
     ],
     "checkedOn": "2026-10-19",
@@ -1059,11 +1107,6 @@
           "max": 220,
           "note": "Published Fulton County application fees are $150 category III, $190 category II, and $220 category I, with a $50 plan-review fee; fees are prorated after June 30."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "Ohio food-license renewals incur a 25% penalty of the applicable renewal fee when late."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1073,7 +1116,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio food-license renewals incur a 25% penalty of the applicable renewal fee when late."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1099,11 +1148,6 @@
           "max": 1441,
           "note": "Published county and state totals range from $12.42 for vending to $1,441 for a level-4 facility over 25,000 square feet; temporary licenses are $32 and mobile licenses are $85-$142."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "Ohio food-license renewals incur a 25% penalty of the applicable renewal fee when late."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1113,7 +1157,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio food-license renewals incur a 25% penalty of the applicable renewal fee when late."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1140,11 +1190,6 @@
           "max": 1508,
           "note": "Geauga's published food fees vary by operation type, risk category, facility size, and commercial status; state certification fees may be added."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "Late fees are an additional 25% of the established local license fee."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1154,7 +1199,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Late fees are an additional 25% of the established local license fee."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1191,7 +1242,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -1229,7 +1281,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -1258,7 +1311,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel or other lodging business"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -1288,10 +1347,6 @@
           "basis": "varies",
           "note": "The county health department maintains the approved annual fee schedule for retail food permits."
         },
-        "lateFee": {
-          "amount": 0,
-          "note": "Fees due between November 1 and December 31 become delinquent; the delinquent fee equals the original permit fee."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1301,7 +1356,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "note": "Fees due between November 1 and December 31 become delinquent; the delinquent fee equals the original permit fee."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1325,11 +1385,6 @@
           "basis": "varies",
           "note": "Fees vary by operation category under the Kenton-Hardin County schedule."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "The county packet states a mandatory penalty of $50 or 25% of the renewal fee, whichever is lesser, for operating after the deadline."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1339,7 +1394,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "The county packet states a mandatory penalty of $50 or 25% of the renewal fee, whichever is lesser, for operating after the deadline."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1365,7 +1426,6 @@
           "basis": "varies",
           "note": "Harrison County fees vary by operation type and risk category; plan review is charged at 30% of the license fee."
         },
-        "lateFee": { "amount": 0, "note": "Payments after March 1 incur the required state late fee." },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1375,7 +1435,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "note": "Payments after March 1 incur the required state late fee."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1402,11 +1467,6 @@
           "max": 803.36,
           "note": "The published schedule lists food license totals from $24.89 for vending to $803.36 for risk level 4 facilities of at least 25,000 square feet."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "Local license fees are subject to a mandatory 25% late-fee penalty."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1416,7 +1476,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Local license fees are subject to a mandatory 25% late-fee penalty."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1443,11 +1509,6 @@
           "max": 855,
           "note": "The county guide states license fees range from $195-$855; plan review begins at $100 plus hourly review and inspection time."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "The county application states a mandatory 25% penalty of the renewal fee for operating after the deadline."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1457,7 +1518,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "The county application states a mandatory 25% penalty of the renewal fee for operating after the deadline."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1485,11 +1552,6 @@
           "max": 1313,
           "note": "Published 2024 fees range from $29.58 vending to $1,313 for level 4 over 25,000 square feet; temporary commercial events are $70 and non-commercial events $35."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "The county schedule applies a 25% penalty of the local license fee for late license renewal."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1499,7 +1561,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "The county schedule applies a 25% penalty of the local license fee for late license renewal."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1533,7 +1601,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -1563,11 +1632,6 @@
           "max": 899.69,
           "note": "Published Huron County food fees vary by risk level and facility size; the schedule includes state fees and late-fee amounts."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "Published local food fees include late-fee amounts tied to the applicable license fee."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1577,7 +1641,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Published local food fees include late-fee amounts tied to the applicable license fee."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1604,11 +1674,6 @@
           "max": 855,
           "note": "The county guide states license fees range from $195-$855; plan review begins at $100 plus hourly review and inspection time."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "The county application states a mandatory 25% penalty of the renewal fee for operating after the deadline."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1618,7 +1683,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "The county application states a mandatory 25% penalty of the renewal fee for operating after the deadline."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1654,7 +1725,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -1684,11 +1756,6 @@
           "max": 1419,
           "note": "Published totals range from $26 for vending to $1,419 for large commercial level 4; new construction or newly licensed facilities also have a $250 plan-review fee."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "Ohio law requires a 25% penalty of the renewal fee when the fee is late."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1698,7 +1765,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio law requires a 25% penalty of the renewal fee when the fee is late."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1722,7 +1795,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or other lodging business"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -1750,11 +1829,6 @@
           "min": 82,
           "note": "The 2025 county schedule lists an $82 temporary license and separate risk-based license and plan-review fees; confirm the current schedule before filing."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "The county schedule publishes late fees by category; Ohio law applies a 25% penalty framework."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1764,7 +1838,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "The county schedule publishes late fees by category; Ohio law applies a 25% penalty framework."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1791,11 +1871,6 @@
           "max": 965.5,
           "note": "Fees vary by operation category, size, and risk level; plan review is 30% of the license fee."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "25% penalty of the local fee when renewal is late."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1805,7 +1880,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "25% penalty of the local fee when renewal is late."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1842,7 +1923,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -1865,10 +1947,9 @@
           "https://loraincountyauditor.gov/Forms/GetFile?fileId=7489",
           "https://tax.ohio.gov/business/sales-and-use-tax"
         ],
-        "feeDetail": { "basis": "flat", "amount": 50 },
-        "lateFee": {
-          "amount": 0,
-          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        "feeDetail": {
+          "basis": "flat",
+          "amount": 50
         },
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -1879,7 +1960,12 @@
             "description": "Makes taxable retail sales or provides taxable services"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
       },
       {
         "id": "lorain-oh.food-license",
@@ -1891,11 +1977,10 @@
         "url": [
           "https://www.loraincountyhealth.com/files/Environmental%20Health/Food%20Program/Food%20Fees%202025.pdf"
         ],
-        "feeDetail": { "basis": "varies", "min": 13.75, "max": 942 },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "25% of the local fee; does not apply to mobile and seasonal operations."
+        "feeDetail": {
+          "basis": "varies",
+          "min": 13.75,
+          "max": 942
         },
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -1906,7 +1991,13 @@
             "description": "Operates a food service or retail food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "25% of the local fee; does not apply to mobile and seasonal operations."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1930,7 +2021,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or bed-and-breakfast"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       },
       {
         "id": "lucas-oh.lodging-tax-return",
@@ -1948,7 +2045,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or bed-and-breakfast"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -1977,11 +2080,6 @@
           "max": 855,
           "note": "The county guide states license fees range from $195-$855; plan review begins at $100 plus hourly review and inspection time."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "The county application states a mandatory 25% penalty of the renewal fee for operating after the deadline."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1991,7 +2089,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "The county application states a mandatory 25% penalty of the renewal fee for operating after the deadline."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2008,12 +2112,16 @@
         "description": "A business making retail sales of tangible personal property or taxable services must obtain the applicable vendor license; a regular county vendor license costs $50 and has no annual renewal fee.",
         "frequency": "once",
         "url": ["https://auditor.mahoningcountyoh.gov/Posts"],
-        "lateFee": {
+        "appliesTo": ["sells_goods"],
+        "feeDetail": {
+          "basis": "flat",
+          "amount": 50
+        },
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "appliesTo": ["sells_goods"],
-        "feeDetail": { "basis": "flat", "amount": 50 }
+        }
       }
     ],
     "sourceUrl": ["https://auditor.mahoningcountyoh.gov/Posts"],
@@ -2039,11 +2147,6 @@
           "basis": "varies",
           "note": "Fees vary by operation category and risk level under the Marion Public Health schedule."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "The county application states a mandatory 25% penalty of the renewal fee for operating after the deadline."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2053,7 +2156,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "The county application states a mandatory 25% penalty of the renewal fee for operating after the deadline."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2089,7 +2198,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -2119,7 +2229,6 @@
           "max": 1000,
           "note": "Meigs County published food license fees by risk classification; mobile food license applications are $208 in the county's current packet."
         },
-        "lateFee": { "amount": 0, "note": "Late fees and penalties apply under Ohio law or local rules." },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2129,7 +2238,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "note": "Late fees and penalties apply under Ohio law or local rules."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2156,11 +2270,6 @@
           "max": 778,
           "note": "The 2026 schedule lists total food license fees of $93.50-$778 by risk, size, and operation type; plan review is 30% of the local license fee."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "The 2026 schedule applies a late fee of 25% of the food license fee."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2170,7 +2279,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "The 2026 schedule applies a late fee of 25% of the food license fee."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2205,7 +2320,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -2235,10 +2351,6 @@
           "max": 518,
           "note": "Published Monroe County food fees range from $55 for a non-profit temporary license to $518 for a fixed food service license with 51 or more seats."
         },
-        "lateFee": {
-          "amount": 0,
-          "note": "Late fees are double the local fee under the published county schedule."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2248,7 +2360,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "note": "Late fees are double the local fee under the published county schedule."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2272,7 +2389,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -2300,11 +2423,6 @@
           "max": 855,
           "note": "The county guide states license fees range from $195-$855; plan review begins at $100 plus hourly review and inspection time."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "The county application states a mandatory 25% penalty of the renewal fee for operating after the deadline."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2314,7 +2432,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "The county application states a mandatory 25% penalty of the renewal fee for operating after the deadline."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2341,11 +2465,6 @@
           "max": 662.36,
           "note": "Published 2025 fees for risk levels 1-4 under 25,000 square feet are $254.83-$662.36 including the $28 state amount; other categories vary."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "Ohio food-license renewals incur a 25% penalty of the applicable renewal fee when late."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2355,7 +2474,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio food-license renewals incur a 25% penalty of the applicable renewal fee when late."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2380,11 +2505,6 @@
           "basis": "varies",
           "note": "Fees vary by operation category and risk level; plan review is 40% of the license fee."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "Ohio food-license renewal penalties are 25% of the applicable fee when late."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2394,7 +2514,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio food-license renewal penalties are 25% of the applicable fee when late."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2421,11 +2547,6 @@
           "max": 855,
           "note": "The county guide states license fees range from $195-$855; plan review begins at $100 plus hourly review and inspection time."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "The county application states a mandatory 25% penalty of the renewal fee for operating after the deadline."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2435,7 +2556,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "The county application states a mandatory 25% penalty of the renewal fee for operating after the deadline."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2472,7 +2599,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -2502,11 +2630,6 @@
           "max": 200,
           "note": "Published fees include $55 per temporary event and $200 for new-facility or ownership-change plan review; remodel plan review is $150 and license fees vary by risk level."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "Ohio food-license renewals incur a 25% penalty of the applicable renewal fee when late."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2516,7 +2639,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio food-license renewals incur a 25% penalty of the applicable renewal fee when late."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2541,11 +2670,6 @@
           "basis": "varies",
           "note": "Perry County has 21 food-license fee categories; the health department requires fee confirmation before filing."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "A 25% late penalty applies after the March 1 renewal deadline."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2555,7 +2679,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "A 25% late penalty applies after the March 1 renewal deadline."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2579,11 +2709,6 @@
           "basis": "varies",
           "note": "License fees are completed by the licensor based on the operation category and risk level; the county application requires the applicable fee and state amount."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "The county application states a mandatory 25% penalty of the renewal fee for operating after the deadline."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2593,7 +2718,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "The county application states a mandatory 25% penalty of the renewal fee for operating after the deadline."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2617,11 +2748,6 @@
           "basis": "varies",
           "note": "Fees vary by operation category and risk level under the Pike County General Health District schedule."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "Ohio law requires a 25% penalty of the renewal fee when the fee is late."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2631,7 +2757,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio law requires a 25% penalty of the renewal fee when the fee is late."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2655,11 +2787,6 @@
           "basis": "varies",
           "note": "Fees vary by operation category and local health district schedule."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "Ohio food-license renewal penalties are 25% of the applicable fee when late."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2669,7 +2796,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio food-license renewal penalties are 25% of the applicable fee when late."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2694,11 +2827,6 @@
           "basis": "varies",
           "note": "Fees vary by operation category and risk level under the Preble County Public Health schedule."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "Ohio law requires a 25% penalty of the renewal fee when the fee is late."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2708,7 +2836,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio law requires a 25% penalty of the renewal fee when the fee is late."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2744,7 +2878,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -2782,7 +2917,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -2819,7 +2955,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -2846,11 +2983,6 @@
           "basis": "varies",
           "note": "Fees vary by operation category and risk level under the Sandusky County Health Department schedule."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "Ohio law requires a 25% penalty of the renewal fee when the fee is late."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2860,7 +2992,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio law requires a 25% penalty of the renewal fee when the fee is late."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2897,7 +3035,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -2936,7 +3075,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -2975,7 +3115,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -2997,12 +3138,16 @@
         "url": [
           "https://www.starkcountyohio.gov/government/offices/auditor/licensing_and_business/vendor_licenses.php"
         ],
-        "lateFee": {
+        "appliesTo": ["sells_goods"],
+        "feeDetail": {
+          "basis": "flat",
+          "amount": 50
+        },
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "appliesTo": ["sells_goods"],
-        "feeDetail": { "basis": "flat", "amount": 50 }
+        }
       }
     ],
     "sourceUrl": [
@@ -3029,7 +3174,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -3050,7 +3201,10 @@
           "https://www.co.trumbull.oh.us/Auditor/Licenses/Vendor",
           "https://tax.ohio.gov/business/sales-and-use-tax"
         ],
-        "feeDetail": { "basis": "flat", "amount": 50 },
+        "feeDetail": {
+          "basis": "flat",
+          "amount": 50
+        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -3061,7 +3215,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -3077,7 +3232,10 @@
           "https://tcchd.org/Forms/Food%20Plan%20Review.pdf",
           "https://codes.ohio.gov/ohio-administrative-code/chapter-3701-21"
         ],
-        "feeDetail": { "basis": "varies", "note": "Fees depend on the food operation and risk category." },
+        "feeDetail": {
+          "basis": "varies",
+          "note": "Fees depend on the food operation and risk category."
+        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -3088,7 +3246,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -3117,7 +3276,6 @@
           "max": 1543,
           "note": "2026 fees vary by risk level, square footage, mobile/temporary status, and plan review."
         },
-        "lateFee": { "amount": 0, "percentPerMonth": 25, "note": "25% of the local fee for late renewal." },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -3127,7 +3285,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "25% of the local fee for late renewal."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -3154,11 +3318,6 @@
           "max": 2248,
           "note": "Published fees range from $11.82 plus state fee for vending to $1,248 plus state fee for level-4 commercial operations over 25,000 square feet; expedited plan review adds $1,000."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "Ohio food-license renewals incur a 25% penalty of the applicable renewal fee when late."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -3168,7 +3327,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio food-license renewals incur a 25% penalty of the applicable renewal fee when late."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -3192,11 +3357,6 @@
           "basis": "varies",
           "note": "License fees vary by operation category and risk level; the county requires the applicable fee with the food-license application."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "Ohio food-license renewals incur a 25% penalty of the applicable renewal fee when late."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -3206,7 +3366,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio food-license renewals incur a 25% penalty of the applicable renewal fee when late."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -3233,11 +3399,6 @@
           "max": 855,
           "note": "The county guide states license fees range from $195-$855; plan review begins at $100 plus hourly review and inspection time."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "The county application states a mandatory 25% penalty of the renewal fee for operating after the deadline."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -3247,7 +3408,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "The county application states a mandatory 25% penalty of the renewal fee for operating after the deadline."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -3267,10 +3434,9 @@
           "https://auditor.warrencountyohio.gov/Licensing/VendorGenInfo/Index",
           "https://auditor.warrencountyohio.gov/Licensing/VendorRegLic/Index"
         ],
-        "feeDetail": { "basis": "flat", "amount": 50 },
-        "lateFee": {
-          "amount": 0,
-          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        "feeDetail": {
+          "basis": "flat",
+          "amount": 50
         },
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -3281,7 +3447,12 @@
             "description": "Makes taxable retail sales or provides taxable services"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
       },
       {
         "id": "warren-oh.food-license",
@@ -3291,11 +3462,10 @@
         "description": "Food service operations in Warren County must obtain the applicable annual license; the county publishes risk-based fees and assesses a late fee of 25% of the local fee after March 1.",
         "rrule": "FREQ=YEARLY",
         "url": ["https://warrencohealthoh.gov/environmental/environmental-health-fees"],
-        "feeDetail": { "basis": "varies", "min": 17.65, "max": 1203 },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "25% of the local fee for applications and payment postmarked after March 1."
+        "feeDetail": {
+          "basis": "varies",
+          "min": 17.65,
+          "max": 1203
         },
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -3306,7 +3476,13 @@
             "description": "Operates a food service operation or retail food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "25% of the local fee for applications and payment postmarked after March 1."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -3340,7 +3516,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -3367,11 +3544,6 @@
           "basis": "varies",
           "note": "Fees vary by Ohio risk classification and operation type."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 100,
-          "note": "Annual applications after February 1 are subject to a delinquency fee equal to double the regular fee."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -3381,7 +3553,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 100,
+          "note": "Annual applications after February 1 are subject to a delinquency fee equal to double the regular fee."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -3405,11 +3583,6 @@
           "basis": "varies",
           "note": "Fees vary by operation category and risk level under the Williams County Health Department schedule."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "Ohio law requires a 25% penalty of the renewal fee when the fee is late."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -3419,7 +3592,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio law requires a 25% penalty of the renewal fee when the fee is late."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -3437,7 +3616,10 @@
         "description": "Businesses making taxable retail sales in Wood County must obtain an Ohio vendor license; the county auditor lists a $50 application fee and no annual renewal fee for a transient license.",
         "rrule": "FREQ=YEARLY",
         "url": ["https://auditor.co.wood.oh.us/faq/", "https://tax.ohio.gov/business/sales-and-use-tax"],
-        "feeDetail": { "basis": "flat", "amount": 50 },
+        "feeDetail": {
+          "basis": "flat",
+          "amount": 50
+        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -3448,7 +3630,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -3464,7 +3647,10 @@
           "https://woodcountyhealth.org/environmental-health/food-safety/",
           "https://woodcountyhealth.org/environmental-health/inspection-process/"
         ],
-        "feeDetail": { "basis": "varies", "note": "The health department sets fees by risk level." },
+        "feeDetail": {
+          "basis": "varies",
+          "note": "The health department sets fees by risk level."
+        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -3475,7 +3661,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -3502,11 +3689,6 @@
           "basis": "varies",
           "note": "Fees vary by operation category and risk level under the Wyandot County Public Health schedule."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 25,
-          "note": "Ohio law requires a 25% penalty of the renewal fee when the fee is late."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -3516,7 +3698,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 25,
+          "note": "Ohio law requires a 25% penalty of the renewal fee when the fee is late."
+        }
       }
     ],
     "checkedOn": "2026-10-19"

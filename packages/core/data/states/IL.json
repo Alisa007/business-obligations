@@ -20,7 +20,8 @@
       "basis": "flat",
       "amount": 75
     },
-    "lateFee": {
+    "penalty": {
+      "basis": "flat",
       "amount": 100,
       "note": "When filed more than 60 days after the due date"
     }
@@ -32,6 +33,9 @@
     "feeDetail": {
       "basis": "flat",
       "amount": 75
+    },
+    "penalty": {
+      "basis": "unknown"
     }
   },
   "lpReport": {
@@ -41,7 +45,8 @@
       "basis": "flat",
       "amount": 100
     },
-    "lateFee": {
+    "penalty": {
+      "basis": "flat",
       "amount": 100,
       "note": "When filed more than 60 days after the due date"
     }
@@ -58,7 +63,8 @@
       "max": 5000,
       "note": "form UPA 1003(D)"
     },
-    "lateFee": {
+    "penalty": {
+      "basis": "flat",
       "amount": 100,
       "note": "When filed more than 60 days after the due date"
     }

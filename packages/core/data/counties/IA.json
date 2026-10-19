@@ -21,7 +21,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -50,7 +56,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -79,7 +91,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -108,7 +126,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -137,7 +161,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -166,11 +196,6 @@
           "max": 400,
           "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 100,
-          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -180,7 +205,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 100,
+          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -217,7 +248,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -247,7 +279,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -275,11 +313,6 @@
           "max": 400,
           "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 10,
-          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration; operating without a license can incur a penalty equal to double the license fee."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -289,7 +322,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 10,
+          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration; operating without a license can incur a penalty equal to double the license fee."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -325,7 +364,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -355,11 +395,6 @@
           "max": 400,
           "note": "Iowa annual food-service fees are $150-$400 by gross sales; temporary, mobile, and vending fees are separately prescribed by state law."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 10,
-          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -369,7 +404,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 10,
+          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -405,7 +446,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -435,7 +477,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -464,7 +512,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -493,11 +547,6 @@
           "max": 400,
           "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 10,
-          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration; operating without a license can incur a penalty equal to double the license fee."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -507,7 +556,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 10,
+          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration; operating without a license can incur a penalty equal to double the license fee."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -534,11 +589,6 @@
           "max": 400,
           "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 10,
-          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration; operating without a license can incur a penalty equal to double the license fee."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -548,7 +598,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 10,
+          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration; operating without a license can incur a penalty equal to double the license fee."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -575,7 +631,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -604,7 +666,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -633,11 +701,6 @@
           "max": 400,
           "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 100,
-          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -647,7 +710,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 100,
+          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -674,11 +743,6 @@
           "max": 400,
           "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 100,
-          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -688,7 +752,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 100,
+          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -714,10 +784,6 @@
           "max": 175,
           "note": "Published Clay County schedule lists $50-$175 annual permits, $35 temporary permits, and $75 plan review/pre-opening inspection."
         },
-        "lateFee": {
-          "amount": 20,
-          "note": "Published schedule lists a $20 late fee after December 17 and a $15 temporary-event late penalty."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -727,7 +793,12 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 20,
+          "note": "Published schedule lists a $20 late fee after December 17 and a $15 temporary-event late penalty."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -754,7 +825,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -783,7 +860,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -821,7 +904,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -860,7 +944,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -890,11 +975,6 @@
           "max": 400,
           "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 100,
-          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -904,7 +984,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 100,
+          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -931,7 +1017,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -967,7 +1059,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -997,11 +1090,6 @@
           "max": 400,
           "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 100,
-          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1011,7 +1099,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 100,
+          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1038,7 +1132,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -1067,7 +1167,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -1096,11 +1202,6 @@
           "max": 400,
           "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 100,
-          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1110,7 +1211,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 100,
+          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1137,7 +1244,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -1166,11 +1279,6 @@
           "max": 400,
           "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 100,
-          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1180,7 +1288,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 100,
+          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1207,7 +1321,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -1236,7 +1356,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -1264,11 +1390,6 @@
           "max": 400,
           "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 10,
-          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration; operating without a license can incur a penalty equal to double the license fee."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1278,7 +1399,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 10,
+          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration; operating without a license can incur a penalty equal to double the license fee."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1305,11 +1432,6 @@
           "max": 400,
           "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 10,
-          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1319,7 +1441,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 10,
+          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1346,11 +1474,6 @@
           "max": 400,
           "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 10,
-          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1360,7 +1483,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 10,
+          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1387,7 +1516,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -1415,11 +1550,6 @@
           "max": 400,
           "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400; Hancock County permit fees are set by the Board of Health and County Board."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 10,
-          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration; the county ordinance adds fees for untimely renewal and requires suspension after 31 days without renewal."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1429,7 +1559,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 10,
+          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration; the county ordinance adds fees for untimely renewal and requires suspension after 31 days without renewal."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1456,7 +1592,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -1494,7 +1636,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -1533,7 +1676,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -1563,11 +1707,6 @@
           "max": 400,
           "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 100,
-          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1577,7 +1716,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 100,
+          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1604,7 +1749,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -1633,11 +1784,6 @@
           "max": 400,
           "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 100,
-          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1647,7 +1793,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 100,
+          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1674,7 +1826,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -1712,7 +1870,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -1751,7 +1910,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -1781,11 +1941,6 @@
           "max": 400,
           "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 100,
-          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -1795,7 +1950,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 100,
+          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1832,7 +1993,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -1862,7 +2024,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -1900,7 +2068,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -1939,7 +2108,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -1969,7 +2139,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -1990,13 +2166,23 @@
         "url": [
           "https://www.linncountyiowa.gov/DocumentCenter/View/12615/Food-Establishment-License-Application-2019-New-Address"
         ],
-        "lateFee": {
+        "appliesTo": ["all"],
+        "appliesWhen": [
+          {
+            "field": "foodService",
+            "op": "==",
+            "value": true
+          }
+        ],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "establishment type and sales category"
+        },
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "appliesTo": ["all"],
-        "appliesWhen": [{ "field": "foodService", "op": "==", "value": true }],
-        "feeDetail": { "basis": "varies", "note": "establishment type and sales category" }
+        }
       }
     ],
     "sourceUrl": [
@@ -2026,11 +2212,6 @@
           "max": 400,
           "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 100,
-          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2040,7 +2221,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 100,
+          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2067,11 +2254,6 @@
           "max": 400,
           "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 100,
-          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2081,7 +2263,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 100,
+          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2108,7 +2296,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -2137,7 +2331,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -2165,11 +2365,6 @@
           "max": 400,
           "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 10,
-          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2179,7 +2374,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 10,
+          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2215,7 +2416,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -2254,7 +2456,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -2284,7 +2487,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -2313,7 +2522,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -2342,11 +2557,6 @@
           "max": 400,
           "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400; county environmental-health fees are published separately and may change."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 10,
-          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2356,7 +2566,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 10,
+          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2383,11 +2599,6 @@
           "max": 400,
           "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 100,
-          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2397,7 +2608,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 100,
+          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2424,11 +2641,6 @@
           "max": 400,
           "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 100,
-          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2438,7 +2650,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 100,
+          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2465,7 +2683,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -2493,11 +2717,6 @@
           "max": 400,
           "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 10,
-          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2507,7 +2726,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 10,
+          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2534,7 +2759,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -2572,7 +2803,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -2601,11 +2833,6 @@
           "max": 400,
           "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 10,
-          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2615,7 +2842,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 10,
+          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2641,11 +2874,6 @@
           "max": 400,
           "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 10,
-          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2655,7 +2883,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 10,
+          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2682,7 +2916,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -2711,7 +2951,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -2747,7 +2993,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -2777,7 +3024,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -2806,11 +3059,6 @@
           "max": 400,
           "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 100,
-          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2820,7 +3068,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 100,
+          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2847,11 +3101,6 @@
           "max": 400,
           "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 10,
-          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2861,7 +3110,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 10,
+          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2877,10 +3132,6 @@
         "category": "license",
         "authority": "Scott County Health Department",
         "rrule": "FREQ=YEARLY",
-        "lateFee": {
-          "amount": 0,
-          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -2900,7 +3151,12 @@
           "https://www.scottcountyiowa.gov/health/food/licensing/food-service-establishments",
           "https://www.scottcountyiowa.gov/sites/default/files/attachments/pages/Food%20Establishment%20License%20Application%20Fillable.pdf"
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2927,7 +3183,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -2965,7 +3227,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -3005,7 +3268,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -3044,7 +3308,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -3074,11 +3339,6 @@
           "max": 400,
           "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 100,
-          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -3088,7 +3348,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 100,
+          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -3115,11 +3381,6 @@
           "max": 400,
           "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 100,
-          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -3129,7 +3390,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 100,
+          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -3165,7 +3432,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -3195,11 +3463,6 @@
           "max": 400,
           "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 100,
-          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -3209,7 +3472,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 100,
+          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -3245,7 +3514,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -3275,7 +3545,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -3303,11 +3579,6 @@
           "max": 400,
           "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 10,
-          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -3317,7 +3588,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 10,
+          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -3353,7 +3630,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -3383,11 +3661,6 @@
           "max": 400,
           "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 100,
-          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -3397,7 +3670,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 100,
+          "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -3423,11 +3702,6 @@
           "max": 400,
           "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 10,
-          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -3437,7 +3711,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 10,
+          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -3471,7 +3751,8 @@
           }
         ],
         "checkedOn": "2026-10-19",
-        "lateFee": {
+        "penalty": {
+          "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
         }
@@ -3501,7 +3782,13 @@
             "value": ["lodging"],
             "description": "Operates a hotel, motel or short-term rental"
           }
-        ]
+        ],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -3529,11 +3816,6 @@
           "max": 400,
           "note": "Iowa annual food-service license fees are based on gross sales and range from $150 to $400."
         },
-        "lateFee": {
-          "amount": 0,
-          "percentPerMonth": 10,
-          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
-        },
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -3543,7 +3825,13 @@
             "description": "Operates a food establishment"
           }
         ],
-        "checkedOn": "2026-10-19"
+        "checkedOn": "2026-10-19",
+        "penalty": {
+          "basis": "flat",
+          "amount": 0,
+          "percentPerMonth": 10,
+          "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
+        }
       }
     ],
     "checkedOn": "2026-10-19"

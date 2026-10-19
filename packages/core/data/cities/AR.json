@@ -14,7 +14,13 @@
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=1",
         "deadlineNote": "to avoid the penalty; licenses renew January 1",
         "url": ["https://www.littlerock.gov/treasury"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18"
@@ -31,7 +37,13 @@
         "description": "Fayetteville requires businesses in the incorporated city limits to obtain a business license within 60 days of opening; licenses expire October 31 and renewals open September 1.",
         "url": ["https://www.fayetteville-ar.gov/297/Business-License"],
         "appliesTo": ["all"],
-        "rrule": "FREQ=YEARLY;BYMONTH=10;BYMONTHDAY=31"
+        "rrule": "FREQ=YEARLY;BYMONTH=10;BYMONTHDAY=31",
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -48,12 +60,18 @@
         "category": "license",
         "authority": "Fort Smith local licensing authority",
         "description": "Fort Smith requires businesses within city limits to obtain a business license; renewal notices are mailed before expiration, and late renewals incur $50 after 30 days and $100 after 60 days.",
-        "lateFee": { "amount": 50 },
         "url": [
           "https://www.fortsmithar.gov/building-business/business-license-and-guidance/apply-for-a-business-license/-folder-393"
         ],
         "appliesTo": ["all"],
-        "rrule": "FREQ=YEARLY"
+        "rrule": "FREQ=YEARLY",
+        "penalty": {
+          "basis": "flat",
+          "amount": 50
+        },
+        "feeDetail": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -75,7 +93,13 @@
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
         "url": ["https://www.sos.arkansas.gov/business-commercial-services-bcs/forms-fees/llc"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -93,7 +117,13 @@
         "description": "Jonesboro requires a privilege license for businesses operating in the city; applicants must obtain planning approval and a certificate-of-occupancy inspection before paying the license fee, which varies by business type.",
         "url": ["https://www.jonesboro.org/DocumentCenter/View/9101/Home-Occupation-Permit-PDF"],
         "appliesTo": ["all"],
-        "rrule": "FREQ=YEARLY"
+        "rrule": "FREQ=YEARLY",
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -112,7 +142,13 @@
         "description": "Rogers requires a business license and certificate of occupancy process for businesses in city limits; the certificate of occupancy fee is $25, and business-license penalties are 10% on March 1, 20% on April 1, and 50% on May 1.",
         "url": ["https://www.rogersar.gov/1503/Permit-Fee-Schedules"],
         "appliesTo": ["all"],
-        "rrule": "FREQ=YEARLY"
+        "rrule": "FREQ=YEARLY",
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -131,7 +167,13 @@
         "description": "Conway does not require a general business license, but prepared-food businesses need an A&P permit for each location with no permit fee; commercial and residential construction still requires city building-permit review.",
         "url": ["https://conwayarkansas.gov/business/"],
         "appliesTo": ["all"],
-        "frequency": "once"
+        "frequency": "once",
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -151,7 +193,13 @@
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
         "url": ["https://www.sos.arkansas.gov/business-commercial-services-bcs/forms-fees/llc"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -170,7 +218,13 @@
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
         "url": ["https://www.sos.arkansas.gov/business-commercial-services-bcs/forms-fees/llc"],
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "unknown"
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
       }
     ],
     "checkedOn": "2026-10-18",

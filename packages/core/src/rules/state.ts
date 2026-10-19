@@ -1,4 +1,4 @@
-import { describeFee, feeCost } from "../fee";
+import { describeFee, feeCost, penaltyOf } from "../fee";
 import { draftSchedule, resolveSchedule } from "../rrule";
 import type { ItemDraft, Presence, ResolvedProfile, Rule } from "../types";
 import { professionBoard, stateInfo as info } from "../data";
@@ -298,7 +298,7 @@ export const stateRules: Rule[] = [
             description: `Fee: ${describeFee(r.feeDetail)}. Required to keep the entity in good standing.`,
             ...draftSchedule(r),
             ...feeCost(r),
-            ...(r.lateFee ? { penalty: { ...r.lateFee, currency: "USD" as const } } : {}),
+            ...penaltyOf(r),
             reason: foreign
               ? `Registered as a foreign ${p.entityType} in ${code}`
               : `${p.entityType} formed in ${code}`,
