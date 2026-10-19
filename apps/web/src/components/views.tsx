@@ -30,10 +30,14 @@ export function CostsView({ data }: { data: Analysis }) {
   const urlOf = new Map(data.result.items.map((i) => [i.id, i.url]));
   return (
     <YStack gap="3">
-      <Paragraph>
-        Known government fees: <Text fontWeight="700">{formatMoney(data.costs.annual)}</Text> per year,{" "}
-        <Text fontWeight="700">{formatMoney(data.costs.oneTime)}</Text> one-time.
-      </Paragraph>
+      {data.costs.lines.length === 0 ? (
+        <Paragraph>No known government fees.</Paragraph>
+      ) : (
+        <Paragraph>
+          Known government fees: <Text fontWeight="700">{formatMoney(data.costs.annual)}</Text> per year,{" "}
+          <Text fontWeight="700">{formatMoney(data.costs.oneTime)}</Text> one-time.
+        </Paragraph>
+      )}
       <YStack>
         {data.costs.lines.map((l) => (
           <ListRow key={l.id} flexWrap="nowrap" justifyContent="space-between">
@@ -114,6 +118,7 @@ export function ResultSummary({ data }: { data: Analysis }) {
         state={result.profile.state}
         county={result.profile.county}
         city={result.profile.city}
+        compact
       />
       {s.verified < s.total && (
         <Muted>

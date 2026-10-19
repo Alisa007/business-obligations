@@ -11,6 +11,8 @@ export interface LocationSummaryProps {
   county?: string;
   /** City name. */
   city?: string;
+  /** Use a compact summary when detailed local requirements are shown elsewhere. */
+  compact?: boolean;
   /** See `LaunchListProps.locale`. */
   locale?: string;
   /** See `LaunchListProps.messages`. */
@@ -43,7 +45,7 @@ export function LocationSummary(props: LocationSummaryProps) {
   );
 }
 
-function LocationSummaryBody({ state, county, city }: LocationSummaryProps) {
+function LocationSummaryBody({ state, county, city, compact = false }: LocationSummaryProps) {
   const { m, date } = useI18n();
   const stateData = STATES[state];
   const local = city ? findCity(state, city, county) : county ? findCounty(state, county) : undefined;
@@ -59,11 +61,18 @@ function LocationSummaryBody({ state, county, city }: LocationSummaryProps) {
     : [];
 
   return (
-    <YStack gap="3" render="section" padding="4" borderWidth={1} borderColor="border-color" borderRadius="lg">
-      <Text fontSize="xl" fontWeight="700" role="heading" aria-level={2}>
-        {m.summary.heading(name)}
+    <YStack
+      gap={compact ? "1.5" : "3"}
+      render="section"
+      padding={compact ? "3" : "4"}
+      borderWidth={1}
+      borderColor="border-color"
+      borderRadius="lg"
+    >
+      <Text fontSize={compact ? "lg" : "xl"} fontWeight="700" role="heading" aria-level={2}>
+        {compact ? name : m.summary.heading(name)}
       </Text>
-      {!city && !county && stateData?.salesTax.permit ? (
+      {!compact && !city && !county && stateData?.salesTax.permit ? (
         <XStack gap="4" flexWrap="wrap">
           <Row label={m.summary.salesTaxPermit}>{stateData.salesTax.permit}</Row>
         </XStack>
@@ -74,7 +83,7 @@ function LocationSummaryBody({ state, county, city }: LocationSummaryProps) {
             {m.summary.status[status]}
             {local?.checkedOn ? ` · ${m.summary.checkedOn(date(local.checkedOn))}` : ""}
           </Text>
-          {local && local.items.length ? (
+          {!compact && local && local.items.length ? (
             <YStack gap="1">
               <Text fontWeight="600">{m.summary.localItems}</Text>
               <ul style={{ margin: 0, paddingLeft: 20 }}>
@@ -93,7 +102,7 @@ function LocationSummaryBody({ state, county, city }: LocationSummaryProps) {
           )}
         </YStack>
       ) : null}
-      {!city && !county && agencies.length ? (
+      {!compact && !city && !county && agencies.length ? (
         <YStack gap="1">
           <Text fontWeight="600">{m.summary.agencies}</Text>
           <ul style={{ margin: 0, paddingLeft: 20 }}>
