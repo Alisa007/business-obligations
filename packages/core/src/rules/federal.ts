@@ -97,7 +97,7 @@ export const federalRules: Rule[] = [
         p.entityType !== "sole_proprietorship"
           ? `${p.entityType} entities need an EIN`
           : "Sole proprietors with employees need an EIN",
-      url: "https://www.irs.gov/businesses/small-businesses-self-employed/apply-for-an-employer-identification-number-ein-online",
+      url: ["https://www.irs.gov/businesses/small-businesses-self-employed/apply-for-an-employer-identification-number-ein-online"],
     }),
   },
   {
@@ -118,7 +118,7 @@ export const federalRules: Rule[] = [
         filingMethod: ["online", "mail"],
         deadline,
         reason: `Federal tax treatment is ${p.taxTreatment}`,
-        url: "https://www.irs.gov/businesses",
+        url: ["https://www.irs.gov/businesses"],
       };
     },
   },
@@ -147,7 +147,7 @@ export const federalRules: Rule[] = [
           : "Quarterly estimated payments by owners on business income (Form 1040-ES), including self-employment tax.",
       ...estimatedTaxSchedule(p),
       reason: `Expected net income of ${p.annualNetIncome} is expected to generate tax due during the year`,
-      url: "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes",
+      url: ["https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes"],
     }),
   },
   {
@@ -176,7 +176,7 @@ export const federalRules: Rule[] = [
             lookback === undefined
               ? "New employers deposit monthly"
               : `Lookback-period liability of ${lookback} makes the business a ${semiweekly ? "semiweekly" : "monthly"} depositor`,
-          url: "https://www.irs.gov/businesses/small-businesses-self-employed/depositing-and-reporting-employment-taxes",
+          url: ["https://www.irs.gov/businesses/small-businesses-self-employed/depositing-and-reporting-employment-taxes"],
         },
         {
           title: "File Form 941 (Employer's Quarterly Federal Tax Return)",
@@ -189,7 +189,7 @@ export const federalRules: Rule[] = [
           filingMethod: ["online", "mail"],
           deadline: "April 30, July 31, October 31, January 31",
           reason: "Business has employees",
-          url: "https://www.irs.gov/businesses/small-businesses-self-employed/employment-tax-due-dates",
+          url: ["https://www.irs.gov/businesses/small-businesses-self-employed/employment-tax-due-dates"],
         },
         {
           title: "File Form 940 (Federal Unemployment Tax)",
@@ -202,7 +202,7 @@ export const federalRules: Rule[] = [
           filingMethod: ["online", "mail"],
           deadline: "January 31",
           reason: "Business has employees",
-          url: "https://www.irs.gov/businesses/small-businesses-self-employed/employment-tax-due-dates",
+          url: ["https://www.irs.gov/businesses/small-businesses-self-employed/employment-tax-due-dates"],
         },
         {
           title: "Issue Forms W-2 and file W-3",
@@ -213,7 +213,7 @@ export const federalRules: Rule[] = [
           rrule: "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=31",
           deadline: "January 31",
           reason: "Business has employees",
-          url: "https://www.irs.gov/businesses/small-businesses-self-employed/employment-tax-due-dates",
+          url: ["https://www.irs.gov/businesses/small-businesses-self-employed/employment-tax-due-dates"],
         },
         {
           title: "Complete Form I-9 for each new hire",
@@ -224,7 +224,7 @@ export const federalRules: Rule[] = [
             "Employment eligibility verification, retained for 3 years after hire or 1 year after termination.",
           frequency: "per_event",
           reason: "Business has employees",
-          url: "https://www.uscis.gov/i-9",
+          url: ["https://www.uscis.gov/i-9"],
         },
       ];
     },
@@ -243,7 +243,7 @@ export const federalRules: Rule[] = [
         "Employers must post the FLSA minimum wage, FMLA (50+ employees), EEO, OSHA, USERRA and related notices in a conspicuous place.",
       frequency: "ongoing",
       reason: "Business has employees",
-      url: "https://www.dol.gov/agencies/whd/posters",
+      url: ["https://www.dol.gov/agencies/whd/posters"],
     }),
   },
   {
@@ -263,7 +263,7 @@ export const federalRules: Rule[] = [
       filingMethod: ["online", "mail"],
       deadline: "January 31",
       reason: `Largest contractor payment is ${p.largestContractorPaymentUsd}, at or above the $2,000 threshold`,
-      url: "https://www.irs.gov/businesses/small-businesses-self-employed/employment-tax-due-dates",
+      url: ["https://www.irs.gov/businesses/small-businesses-self-employed/employment-tax-due-dates"],
     }),
   },
   {
@@ -284,7 +284,7 @@ export const federalRules: Rule[] = [
       processingTime:
         "IRS issues 80% of Form 1023-EZ determinations within 22 days and 80% of Form 1023 determinations within 191 days (IRS status page, reviewed June 2026; queue times change)",
       reason: "Nonprofit without recognized exempt status",
-      url: "https://www.irs.gov/charities-non-profits/application-for-recognition-of-exemption",
+      url: ["https://www.irs.gov/charities-non-profits/application-for-recognition-of-exemption"],
     }),
   },
   {
@@ -305,7 +305,7 @@ export const federalRules: Rule[] = [
         formId: "1095-C",
         deadline: "March 1 or 2 (January 31, extended automatically by 30 days)",
         reason: `${p.fullTimeEmployeeCount} full-time employees, at or above the 50 that make an applicable large employer`,
-        url: "https://www.irs.gov/affordable-care-act/employers/employer-shared-responsibility-provisions",
+        url: ["https://www.irs.gov/affordable-care-act/employers/employer-shared-responsibility-provisions"],
       },
       {
         title: "File Forms 1094-C and 1095-C with the IRS",
@@ -319,7 +319,7 @@ export const federalRules: Rule[] = [
         filingMethod: ["online", "mail"],
         deadline: "March 31 electronically (end of February on paper)",
         reason: `${p.fullTimeEmployeeCount} full-time employees, at or above the 50 that make an applicable large employer`,
-        url: "https://www.irs.gov/forms-pubs/about-form-1094-c",
+        url: ["https://www.irs.gov/forms-pubs/about-form-1094-c"],
       },
     ],
   },
@@ -338,7 +338,7 @@ export const federalRules: Rule[] = [
       rrule: "FREQ=YEARLY",
       deadline: "Set each year by the EEOC",
       reason: `${p.employeeCount} employees, at or above the 100 that require an EEO-1 report`,
-      url: "https://www.eeoc.gov/data/eeo-data-collections",
+      url: ["https://www.eeoc.gov/data/eeo-data-collections"],
     }),
   },
   {
@@ -362,7 +362,7 @@ export const federalRules: Rule[] = [
           "Establishments in partially exempt low-hazard industries such as retail, finance, insurance, real estate and many services (29 CFR 1904 Appendix A)",
         ],
         reason: `${p.employeeCount} employees, above the 10-employee threshold`,
-        url: "https://www.osha.gov/recordkeeping",
+        url: ["https://www.osha.gov/recordkeeping"],
       },
       ...(p.employeeCount >= 250
         ? [
@@ -376,7 +376,7 @@ export const federalRules: Rule[] = [
               rrule: "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=2",
               deadline: "March 2",
               reason: `${p.employeeCount} employees, at or above the 250 that require electronic submission`,
-              url: "https://www.osha.gov/injuryreporting",
+              url: ["https://www.osha.gov/injuryreporting"],
             },
           ]
         : []),
@@ -401,7 +401,7 @@ export const federalRules: Rule[] = [
           : "Importers and wholesalers need a federal basic permit under the Federal Alcohol Administration Act before engaging in business.",
       frequency: "once",
       reason: `Alcohol activity is ${p.alcoholActivity}`,
-      url: "https://www.ttb.gov/regulated-commodities/beverage-alcohol",
+      url: ["https://www.ttb.gov/regulated-commodities/beverage-alcohol"],
     }),
   },
 ];

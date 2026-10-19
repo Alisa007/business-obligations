@@ -1,10 +1,9 @@
 [
   {
     "county": "Aitkin",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [{"id":"aitkin-mn.food-license","title":"Obtain and renew an Aitkin County food license","category":"license","authority":"Aitkin County Environmental Services / Minnesota Department of Health","description":"Food establishments operating in Aitkin County must obtain the applicable Minnesota food license and renew it annually under county and state requirements.","rrule":"FREQ=YEARLY","url":["https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf","https://www.health.state.mn.us/communities/environment/food/license"],"feeDetail":{"basis":"varies","min":180,"max":703.5,"note":"Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19","lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."}}],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Anoka",
@@ -17,13 +16,13 @@
         "description": "Minnesota Revenue lists a Anoka County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Anoka County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Becker",
@@ -36,13 +35,13 @@
         "description": "Minnesota Revenue lists a Becker County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Becker County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Beltrami",
@@ -55,13 +54,13 @@
         "description": "Minnesota Revenue lists a Beltrami County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Beltrami County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Benton",
@@ -74,20 +73,19 @@
         "description": "Minnesota Revenue lists a Benton County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Benton County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Big Stone",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [{"id":"big-stone-mn.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Aitkin County Environmental Services / Minnesota Department of Health","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf","https://www.health.state.mn.us/communities/environment/food/license"],"feeDetail":{"basis":"varies","min":180,"max":703.5,"note":"Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."},"lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Blue Earth",
@@ -100,13 +98,13 @@
         "description": "Minnesota Revenue lists a Blue Earth County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Blue Earth County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Brown",
@@ -119,13 +117,13 @@
         "description": "Minnesota Revenue lists a Brown County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Brown County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Carlton",
@@ -138,13 +136,13 @@
         "description": "Minnesota Revenue lists a Carlton County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Carlton County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Carver",
@@ -157,13 +155,13 @@
         "description": "Minnesota Revenue lists a Carver County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Carver County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Cass",
@@ -176,13 +174,13 @@
         "description": "Minnesota Revenue lists a Cass County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Cass County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Chippewa",
@@ -195,13 +193,13 @@
         "description": "Minnesota Revenue lists a Chippewa County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Chippewa County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Chisago",
@@ -214,13 +212,13 @@
         "description": "Minnesota Revenue lists a Chisago County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Chisago County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Clay",
@@ -233,20 +231,19 @@
         "description": "Minnesota Revenue lists a Clay County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Clay County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Clearwater",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [{"id":"clearwater-mn.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Aitkin County Environmental Services / Minnesota Department of Health","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf","https://www.health.state.mn.us/communities/environment/food/license"],"feeDetail":{"basis":"varies","min":180,"max":703.5,"note":"Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."},"lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Cook",
@@ -259,20 +256,19 @@
         "description": "Minnesota Revenue lists a Cook County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Cook County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Cottonwood",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [{"id":"cottonwood-mn.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Aitkin County Environmental Services / Minnesota Department of Health","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf","https://www.health.state.mn.us/communities/environment/food/license"],"feeDetail":{"basis":"varies","min":180,"max":703.5,"note":"Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."},"lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Crow Wing",
@@ -285,13 +281,13 @@
         "description": "Minnesota Revenue lists a Crow Wing County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Crow Wing County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Dakota",
@@ -304,13 +300,13 @@
         "description": "Minnesota Revenue lists a Dakota County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Dakota County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Dodge",
@@ -323,13 +319,13 @@
         "description": "Minnesota Revenue lists a Dodge County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Dodge County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Douglas",
@@ -342,13 +338,13 @@
         "description": "Minnesota Revenue lists a Douglas County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Douglas County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Faribault",
@@ -361,13 +357,13 @@
         "description": "Minnesota Revenue lists a Faribault County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Faribault County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Fillmore",
@@ -380,13 +376,13 @@
         "description": "Minnesota Revenue lists a Fillmore County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Fillmore County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Freeborn",
@@ -399,13 +395,13 @@
         "description": "Minnesota Revenue lists a Freeborn County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Freeborn County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Goodhue",
@@ -418,20 +414,19 @@
         "description": "Minnesota Revenue lists a Goodhue County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Goodhue County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Grant",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [{"id":"grant-mn.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Aitkin County Environmental Services / Minnesota Department of Health","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf","https://www.health.state.mn.us/communities/environment/food/license"],"feeDetail":{"basis":"varies","min":180,"max":703.5,"note":"Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."},"lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Hennepin",
@@ -444,7 +439,7 @@
         "description": "Minnesota Revenue lists a 0.15% Hennepin County sales and use tax. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/sites/default/files/2026-05/local-sales-and-use-tax-chart.pdf",
+        "url": ["https://www.revenue.state.mn.us/sites/default/files/2026-05/local-sales-and-use-tax-chart.pdf"],
         "appliesTo": ["all"]
       },
       {
@@ -455,7 +450,7 @@
         "description": "Minnesota Revenue lists a 0.50% Hennepin County transit sales and use tax. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/sites/default/files/2026-05/local-sales-and-use-tax-chart.pdf",
+        "url": ["https://www.revenue.state.mn.us/sites/default/files/2026-05/local-sales-and-use-tax-chart.pdf"],
         "appliesTo": ["all"]
       }
     ],
@@ -463,10 +458,9 @@
   },
   {
     "county": "Houston",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [{"id":"houston-mn.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Aitkin County Environmental Services / Minnesota Department of Health","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf","https://www.health.state.mn.us/communities/environment/food/license"],"feeDetail":{"basis":"varies","min":180,"max":703.5,"note":"Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."},"lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Hubbard",
@@ -479,13 +473,13 @@
         "description": "Minnesota Revenue lists a Hubbard County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Hubbard County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Isanti",
@@ -498,13 +492,13 @@
         "description": "Minnesota Revenue lists a Isanti County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Isanti County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Itasca",
@@ -517,13 +511,13 @@
         "description": "Minnesota Revenue lists a Itasca County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Itasca County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Jackson",
@@ -536,13 +530,13 @@
         "description": "Minnesota Revenue lists a 1.00% Jackson County sales and use tax, effective April 1, 2025. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/sites/default/files/2026-05/local-sales-and-use-tax-chart.pdf",
+        "url": ["https://www.revenue.state.mn.us/sites/default/files/2026-05/local-sales-and-use-tax-chart.pdf"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Jackson County sales and use tax is confirmed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/sites/default/files/2026-05/local-sales-and-use-tax-chart.pdf"
+    "sourceUrl": ["https://www.revenue.state.mn.us/sites/default/files/2026-05/local-sales-and-use-tax-chart.pdf"]
   },
   {
     "county": "Kanabec",
@@ -555,13 +549,13 @@
         "description": "Minnesota Revenue lists a Kanabec County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Kanabec County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Kandiyohi",
@@ -574,20 +568,19 @@
         "description": "Minnesota Revenue lists a Kandiyohi County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Kandiyohi County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Kittson",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [{"id":"kittson-mn.food-license","title":"Obtain and renew a Kittson County food license","category":"license","authority":"Minnesota Department of Health / local health authority","description":"Food establishments operating in Kittson County must obtain the applicable Minnesota food license before operating and renew it under the applicable state or local program.","rrule":"FREQ=YEARLY","url":["https://www.health.state.mn.us/communities/environment/food/license","https://mn.gov/elicense/a-z/?id=1083-231418"],"feeDetail":{"basis":"varies","min":150,"max":670,"note":"Minnesota food license fees vary by risk and facility type; published schedules include $150-$670 license fees plus applicable plan-review and hospitality fees."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19","lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."}}],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Koochiching",
@@ -600,20 +593,19 @@
         "description": "Minnesota Revenue lists a Koochiching County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Koochiching County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Lac qui Parle",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [{"id":"lac-qui-parle-mn.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Aitkin County Environmental Services / Minnesota Department of Health","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf","https://www.health.state.mn.us/communities/environment/food/license"],"feeDetail":{"basis":"varies","min":180,"max":703.5,"note":"Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."},"lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Lake",
@@ -626,7 +618,7 @@
         "description": "Minnesota Revenue lists a special local lodging tax administered for Lake County. Report the tax on the Minnesota Sales and Use Tax return; the filing schedule follows the business's assigned Minnesota sales-tax filing frequency, and a zero return is required when applicable.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/guide/special-local-taxes",
+        "url": ["https://www.revenue.state.mn.us/guide/special-local-taxes"],
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -640,7 +632,7 @@
     ],
     "checkedOn": "2026-10-18",
     "note": "Only the state-administered special lodging tax was checked; other county-level obligations were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/guide/special-local-taxes"
+    "sourceUrl": ["https://www.revenue.state.mn.us/guide/special-local-taxes"]
   },
   {
     "county": "Lake of the Woods",
@@ -653,7 +645,7 @@
         "description": "Minnesota Revenue lists a special local lodging tax administered for Lake of the Woods County. Report the tax on the Minnesota Sales and Use Tax return; the filing schedule follows the business's assigned Minnesota sales-tax filing frequency, and a zero return is required when applicable.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/guide/special-local-taxes",
+        "url": ["https://www.revenue.state.mn.us/guide/special-local-taxes"],
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -667,7 +659,7 @@
     ],
     "checkedOn": "2026-10-18",
     "note": "Only the state-administered special lodging tax was checked; other county-level obligations were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/guide/special-local-taxes"
+    "sourceUrl": ["https://www.revenue.state.mn.us/guide/special-local-taxes"]
   },
   {
     "county": "Le Sueur",
@@ -680,34 +672,31 @@
         "description": "Minnesota Revenue lists a Le Sueur County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Le Sueur County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Lincoln",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [{"id":"lincoln-mn.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Aitkin County Environmental Services / Minnesota Department of Health","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf","https://www.health.state.mn.us/communities/environment/food/license"],"feeDetail":{"basis":"varies","min":180,"max":703.5,"note":"Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."},"lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Lyon",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [{"id":"lyon-mn.food-license","title":"Obtain and renew a Lyon County food license","category":"license","authority":"Lyon County Public Health / Minnesota Department of Health","description":"Food and beverage establishments operating in Lyon County must obtain the applicable county or state food license and renew it annually.","rrule":"FREQ=YEARLY","url":["https://www.lyoncountymn.gov/departments/auditor-treasurer/license-information/county-issued","https://www.health.state.mn.us/communities/environment/food/license"],"feeDetail":{"basis":"varies","note":"Lyon County requires annual renewal; the county community health board sets the applicable fee and penalty schedule."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19","lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."}}],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Mahnomen",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [{"id":"mahnomen-mn.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Aitkin County Environmental Services / Minnesota Department of Health","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf","https://www.health.state.mn.us/communities/environment/food/license"],"feeDetail":{"basis":"varies","min":180,"max":703.5,"note":"Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."},"lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Marshall",
@@ -720,7 +709,7 @@
         "description": "Minnesota Revenue lists a Marshall County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       },
       {
@@ -731,7 +720,7 @@
         "description": "Minnesota Revenue lists a Marshall County lodging tax. Lodging businesses report and remit the county tax on the Minnesota sales and use tax return at the assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "appliesWhen": [
           { "field": "activities", "op": "in", "value": ["lodging"], "description": "Operates lodging" }
@@ -740,7 +729,7 @@
     ],
     "checkedOn": "2026-10-18",
     "note": "Minnesota Revenue lists Marshall County transit and lodging taxes; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Martin",
@@ -753,13 +742,13 @@
         "description": "Minnesota Revenue lists a Martin County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Martin County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "McLeod",
@@ -772,13 +761,13 @@
         "description": "Minnesota Revenue lists a McLeod County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "McLeod County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Meeker",
@@ -791,13 +780,13 @@
         "description": "Minnesota Revenue lists a Meeker County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Meeker County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Mille Lacs",
@@ -810,13 +799,13 @@
         "description": "Minnesota Revenue lists a Mille Lacs County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Mille Lacs County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Morrison",
@@ -829,13 +818,13 @@
         "description": "Minnesota Revenue lists a Morrison County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Morrison County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Mower",
@@ -848,20 +837,19 @@
         "description": "Minnesota Revenue lists a Mower County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Mower County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Murray",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [{"id":"murray-mn.food-license","title":"Obtain and renew a Murray County food license","category":"license","authority":"Minnesota Department of Health / Minnesota Department of Agriculture","description":"Food establishments operating in Murray County must obtain the applicable Minnesota food license from the responsible state or local agency and renew it under Minnesota requirements.","rrule":"FREQ=YEARLY","url":["https://www.health.state.mn.us/communities/environment/food/license","https://www.mda.state.mn.us/food-feed/food-licenses","https://mn.gov/elicense/a-z/?id=1083-231418"],"feeDetail":{"basis":"varies","min":75,"max":670,"note":"Minnesota published food-license fees include $75 special-event food stands, $150 carts/mobile or seasonal stands, $185 category 1, $430 category 2, and $670 category 3, plus statewide hospitality and technology fees where applicable."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19","lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."}}],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Nicollet",
@@ -874,13 +862,13 @@
         "description": "Minnesota Revenue lists a Nicollet County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Nicollet County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Nobles",
@@ -893,13 +881,13 @@
         "description": "Minnesota Revenue lists a Nobles County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Nobles County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Norman",
@@ -912,13 +900,13 @@
         "description": "Minnesota Revenue lists a Norman County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Norman County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Olmsted",
@@ -931,13 +919,13 @@
         "description": "Minnesota Revenue lists a Olmsted County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Olmsted County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Otter Tail",
@@ -950,20 +938,19 @@
         "description": "Minnesota Revenue lists a Otter Tail County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Otter Tail County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Pennington",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [{"id":"pennington-mn.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Aitkin County Environmental Services / Minnesota Department of Health","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf","https://www.health.state.mn.us/communities/environment/food/license"],"feeDetail":{"basis":"varies","min":180,"max":703.5,"note":"Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."},"lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Pine",
@@ -976,20 +963,19 @@
         "description": "Minnesota Revenue lists a Pine County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Pine County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Pipestone",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [{"id":"pipestone-mn.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Aitkin County Environmental Services / Minnesota Department of Health","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf","https://www.health.state.mn.us/communities/environment/food/license"],"feeDetail":{"basis":"varies","min":180,"max":703.5,"note":"Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."},"lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Polk",
@@ -1002,20 +988,19 @@
         "description": "Minnesota Revenue lists a Polk County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Polk County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Pope",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [{"id":"pope-mn.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Aitkin County Environmental Services / Minnesota Department of Health","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf","https://www.health.state.mn.us/communities/environment/food/license"],"feeDetail":{"basis":"varies","min":180,"max":703.5,"note":"Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."},"lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Ramsey",
@@ -1028,20 +1013,19 @@
         "description": "Minnesota Revenue lists a Ramsey County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Ramsey County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Red Lake",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [{"id":"red-lake-mn.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Aitkin County Environmental Services / Minnesota Department of Health","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf","https://www.health.state.mn.us/communities/environment/food/license"],"feeDetail":{"basis":"varies","min":180,"max":703.5,"note":"Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."},"lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Redwood",
@@ -1054,13 +1038,13 @@
         "description": "Minnesota Revenue lists a Redwood County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Redwood County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Renville",
@@ -1073,13 +1057,13 @@
         "description": "Minnesota Revenue lists a Renville County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Renville County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Rice",
@@ -1092,21 +1076,15 @@
         "description": "Minnesota Revenue lists a Rice County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Rice County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
-  {
-    "county": "Rock",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
-  },
+  {"county":"Rock","status":"rules","items":[{"id":"rock-mn.food-license","title":"Obtain and renew a Rock County food license","category":"license","authority":"Rock County / Minnesota Department of Health","description":"Food and beverage establishments operating in Rock County must obtain the applicable county or state food license and renew it annually under Minnesota requirements.","rrule":"FREQ=YEARLY","url":["https://cms9files1.revize.com/rockcountymn/Document%20Center/General%20Information/County%20Ordinances/Title%20XI%20Business%20Regulations%20Chapters%20110-118%20%282025%20update%29.pdf","https://www.health.state.mn.us/communities/environment/food/license","https://mn.gov/elicense/a-z/?id=1083-231418"],"feeDetail":{"basis":"varies","min":75,"max":670,"note":"Minnesota published food-license fees range from $75 for special-event food stands to $670 for category 3 establishments, plus applicable statewide fees."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19","lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."}}],"checkedOn":"2026-10-19"},
   {
     "county": "Roseau",
     "items": [
@@ -1118,13 +1096,13 @@
         "description": "Minnesota Revenue lists a Roseau County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Roseau County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "St. Louis",
@@ -1137,13 +1115,13 @@
         "description": "Minnesota Revenue lists a St. Louis County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "St. Louis County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Scott",
@@ -1156,13 +1134,13 @@
         "description": "Minnesota Revenue lists a Scott County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Scott County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Sherburne",
@@ -1175,13 +1153,13 @@
         "description": "Minnesota Revenue lists a Sherburne County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Sherburne County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Sibley",
@@ -1194,13 +1172,13 @@
         "description": "Minnesota Revenue lists a Sibley County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Sibley County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Stearns",
@@ -1213,13 +1191,13 @@
         "description": "Minnesota Revenue lists a Stearns County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Stearns County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Steele",
@@ -1232,27 +1210,25 @@
         "description": "Minnesota Revenue lists a Steele County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Steele County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Stevens",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [{"id":"stevens-mn.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Aitkin County Environmental Services / Minnesota Department of Health","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf","https://www.health.state.mn.us/communities/environment/food/license"],"feeDetail":{"basis":"varies","min":180,"max":703.5,"note":"Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."},"lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Swift",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [{"id":"swift-mn.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Aitkin County Environmental Services / Minnesota Department of Health","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf","https://www.health.state.mn.us/communities/environment/food/license"],"feeDetail":{"basis":"varies","min":180,"max":703.5,"note":"Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."},"lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Todd",
@@ -1265,20 +1241,19 @@
         "description": "Minnesota Revenue lists a Todd County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Todd County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Traverse",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [{"id":"traverse-mn.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Aitkin County Environmental Services / Minnesota Department of Health","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf","https://www.health.state.mn.us/communities/environment/food/license"],"feeDetail":{"basis":"varies","min":180,"max":703.5,"note":"Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."},"lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Wabasha",
@@ -1291,13 +1266,13 @@
         "description": "Minnesota Revenue lists a Wabasha County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Wabasha County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Wadena",
@@ -1310,13 +1285,13 @@
         "description": "Minnesota Revenue lists a Wadena County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Wadena County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Waseca",
@@ -1329,13 +1304,13 @@
         "description": "Minnesota Revenue lists a Waseca County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Waseca County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Washington",
@@ -1348,13 +1323,13 @@
         "description": "Minnesota Revenue lists a Washington County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Washington County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Watonwan",
@@ -1367,20 +1342,19 @@
         "description": "Minnesota Revenue lists a Watonwan County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Watonwan County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Wilkin",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [{"id":"wilkin-mn.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Aitkin County Environmental Services / Minnesota Department of Health","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf","https://www.health.state.mn.us/communities/environment/food/license"],"feeDetail":{"basis":"varies","min":180,"max":703.5,"note":"Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."},"lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "checkedOn": "2026-10-19"
   },
   {
     "county": "Winona",
@@ -1393,13 +1367,13 @@
         "description": "Minnesota Revenue lists a Winona County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Winona County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Wright",
@@ -1412,19 +1386,18 @@
         "description": "Minnesota Revenue lists a Wright County transit sales tax administered by the Department of Revenue. Report and remit the county tax on the Minnesota sales and use tax return at the business's assigned filing frequency; confirm the current rate and effective date in the Department's current local-tax rate guide.",
         "frequency": "ongoing",
         "deadline": "On the assigned Minnesota sales and use tax filing schedule",
-        "url": "https://www.revenue.state.mn.us/local-sales-tax-notices",
+        "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Wright County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": "https://www.revenue.state.mn.us/local-sales-tax-notices"
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
   },
   {
     "county": "Yellow Medicine",
-    "status": "unverified",
-    "reason": "county-not-researched",
-    "items": [],
-    "checkedOn": "2026-10-18"
+    "status": "rules",
+    "items": [{"id":"yellow-medicine-mn.food-license","title":"Obtain and renew the applicable food establishment license","category":"license","authority":"Aitkin County Environmental Services / Minnesota Department of Health","description":"Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.","rrule":"FREQ=YEARLY","url":["https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf","https://www.health.state.mn.us/communities/environment/food/license"],"feeDetail":{"basis":"varies","min":180,"max":703.5,"note":"Published Aitkin fees include a $180 base plus $28.50 limited, $171.50 small, $228.50 medium, or $343.50 large establishment fees; mobile units add $10 per unit and temporary service is $35 per three events."},"lateFee":{"amount":0,"note":"Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."},"appliesTo":["all"],"appliesWhen":[{"field":"activities","op":"in","value":["food_service"],"description":"Operates a food establishment"}],"checkedOn":"2026-10-19"}],
+    "checkedOn": "2026-10-19"
   }
 ]

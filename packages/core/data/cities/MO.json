@@ -10,11 +10,11 @@
         "authority": "City of Columbia Business Licenses",
         "description": "Businesses in Columbia hold an annual business license, renewed online with the license number from the renewal postcard.",
         "rrule": "FREQ=YEARLY",
-        "url": "https://www.como.gov/?p=8900",
+        "url": ["https://www.como.gov/?p=8900"],
         "appliesTo": ["all"]
       }
     ],
-    "sourceUrl": "https://www.como.gov/?p=8900",
+    "sourceUrl": ["https://www.como.gov/?p=8900"],
     "checkedOn": "2026-10-18"
   },
   {
@@ -29,11 +29,11 @@
         "description": "Business licenses are effective for one year from the month issued and renewed each year; the fee scales with projected gross receipts.",
         "rrule": "FREQ=YEARLY",
         "deadline": "Anniversary of the month issued",
-        "url": "https://independencemo.gov/government/city-departments/community-development/business-license-liquor-license-and-employee-permitting",
+        "url": ["https://independencemo.gov/government/city-departments/community-development/business-license-liquor-license-and-employee-permitting"],
         "appliesTo": ["all"]
       }
     ],
-    "sourceUrl": "https://independencemo.gov/government/city-departments/community-development/business-license-liquor-license-and-employee-permitting",
+    "sourceUrl": ["https://independencemo.gov/government/city-departments/community-development/business-license-liquor-license-and-employee-permitting"],
     "checkedOn": "2026-10-18"
   },
   {
@@ -47,7 +47,7 @@
         "authority": "City of Kansas City, Missouri Finance Department",
         "description": "New businesses register (Form RD-100) and file the business license (Form RD-105) within 60 days of opening, renewing by March 1 each year; the fee depends on prior-year gross receipts.",
         "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1",
-        "url": "https://www.kcmo.gov/city-hall/departments/finance",
+        "url": ["https://www.kcmo.gov/city-hall/departments/finance"],
         "appliesTo": ["all"]
       },
       {
@@ -58,7 +58,7 @@
         "description": "Businesses pay the 1% tax on net profits (return due April 15, even in a loss year) while the earnings tax remains in effect.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
         "deadlineNote": "calendar-year filers",
-        "url": "https://www.kcmo.gov/city-hall/departments/finance",
+        "url": ["https://www.kcmo.gov/city-hall/departments/finance"],
         "appliesTo": ["all"]
       },
       {
@@ -68,11 +68,11 @@
         "authority": "City of Kansas City, Missouri Finance Department",
         "description": "Employers withhold the 1% earnings tax for employees who live or work in the city and file the quarterly return.",
         "rrule": "FREQ=MONTHLY;INTERVAL=3",
-        "url": "https://www.kcmo.gov/city-hall/departments/finance",
+        "url": ["https://www.kcmo.gov/city-hall/departments/finance"],
         "appliesTo": ["employees"]
       }
     ],
-    "sourceUrl": "https://www.kcmo.gov/city-hall/departments/finance",
+    "sourceUrl": ["https://www.kcmo.gov/city-hall/departments/finance"],
     "checkedOn": "2026-10-18"
   },
   {
@@ -88,11 +88,11 @@
         "authority": "Lee's Summit local licensing authority",
         "description": "Review the cited local licensing source before operating; requirements may be activity-specific and can differ by business type or location.",
         "frequency": "once",
-        "url": "https://cityofls.net/development-services/doing-business/business-and-contractor-licensing",
+        "url": ["https://cityofls.net/development-services/doing-business/business-and-contractor-licensing"],
         "appliesTo": ["all"]
       }
     ],
-    "sourceUrl": "https://cityofls.net/development-services/doing-business/business-and-contractor-licensing",
+    "sourceUrl": ["https://cityofls.net/development-services/doing-business/business-and-contractor-licensing"],
     "checkedOn": "2026-10-18"
   },
   {
@@ -108,11 +108,11 @@
         "authority": "Springfield local licensing authority",
         "description": "Review the cited local licensing source before operating; requirements may be activity-specific and can differ by business type or location.",
         "frequency": "once",
-        "url": "https://www.springfieldmo.gov/2171/Business-License-Applications",
+        "url": ["https://www.springfieldmo.gov/2171/Business-License-Applications"],
         "appliesTo": ["all"]
       }
     ],
-    "sourceUrl": "https://www.springfieldmo.gov/2171/Business-License-Applications",
+    "sourceUrl": ["https://www.springfieldmo.gov/2171/Business-License-Applications"],
     "checkedOn": "2026-10-18"
   },
   {
@@ -127,7 +127,7 @@
         "description": "Businesses located in or working in the City of St. Louis pay a 1% tax on business earnings; account application Form E-9; return due April 15 (calendar year).",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
         "deadlineNote": "calendar-year filers",
-        "url": "https://www.stlouis-mo.gov/government/departments/collector/earnings-tax/",
+        "url": ["https://www.stlouis-mo.gov/government/departments/collector/earnings-tax/"],
         "appliesTo": ["all"]
       },
       {
@@ -137,11 +137,11 @@
         "authority": "City of St. Louis Collector of Revenue, Earnings Tax Department",
         "description": "Employers pay the 0.5% payroll expense tax and withhold earnings tax for employees working in the city, filing quarterly.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
-        "url": "https://www.stlouis-mo.gov/government/departments/collector/earnings-tax/",
+        "url": ["https://www.stlouis-mo.gov/government/departments/collector/earnings-tax/"],
         "appliesTo": ["employees"]
       }
     ],
-    "sourceUrl": "https://www.stlouis-mo.gov/government/departments/collector/earnings-tax/",
+    "sourceUrl": ["https://www.stlouis-mo.gov/government/departments/collector/earnings-tax/"],
     "checkedOn": "2026-10-18"
   },
   {
@@ -156,12 +156,12 @@
         "authority": "O'Fallon local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.mo.gov/business/corporations/fictitious_faq",
+        "url": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.mo.gov/business/corporations/fictitious_faq"
+    "sourceUrl": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"]
   },
   {
     "city": "St. Charles",
@@ -175,12 +175,12 @@
         "authority": "St. Charles local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.mo.gov/business/corporations/fictitious_faq",
+        "url": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.mo.gov/business/corporations/fictitious_faq"
+    "sourceUrl": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"]
   },
   {
     "city": "St. Joseph",
@@ -194,12 +194,12 @@
         "authority": "St. Joseph local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.mo.gov/business/corporations/fictitious_faq",
+        "url": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.mo.gov/business/corporations/fictitious_faq"
+    "sourceUrl": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"]
   },
   {
     "city": "Blue Springs",
@@ -213,12 +213,12 @@
         "authority": "Blue Springs local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.mo.gov/business/corporations/fictitious_faq",
+        "url": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.mo.gov/business/corporations/fictitious_faq"
+    "sourceUrl": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"]
   },
   {
     "city": "St. Peters",
@@ -232,12 +232,12 @@
         "authority": "St. Peters local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.mo.gov/business/corporations/fictitious_faq",
+        "url": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.mo.gov/business/corporations/fictitious_faq"
+    "sourceUrl": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"]
   },
   {
     "city": "Joplin",
@@ -251,12 +251,12 @@
         "authority": "Joplin local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.mo.gov/business/corporations/fictitious_faq",
+        "url": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.mo.gov/business/corporations/fictitious_faq"
+    "sourceUrl": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"]
   },
   {
     "city": "Florissant",
@@ -270,12 +270,12 @@
         "authority": "Florissant local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.mo.gov/business/corporations/fictitious_faq",
+        "url": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.mo.gov/business/corporations/fictitious_faq"
+    "sourceUrl": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"]
   },
   {
     "city": "Wentzville",
@@ -289,12 +289,12 @@
         "authority": "Wentzville local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.mo.gov/business/corporations/fictitious_faq",
+        "url": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.mo.gov/business/corporations/fictitious_faq"
+    "sourceUrl": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"]
   },
   {
     "city": "Chesterfield",
@@ -308,12 +308,12 @@
         "authority": "Chesterfield local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.mo.gov/business/corporations/fictitious_faq",
+        "url": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.mo.gov/business/corporations/fictitious_faq"
+    "sourceUrl": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"]
   },
   {
     "city": "Jefferson City",
@@ -327,11 +327,11 @@
         "authority": "Jefferson City local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.mo.gov/business/corporations/fictitious_faq",
+        "url": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.mo.gov/business/corporations/fictitious_faq"
+    "sourceUrl": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"]
   }
 ]

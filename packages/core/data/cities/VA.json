@@ -2,7 +2,7 @@
   {
     "city": "Alexandria",
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://alexandriava.gov/taxes/business-license-tax",
+    "sourceUrl": ["https://alexandriava.gov/taxes/business-license-tax"],
     "items": [
       {
         "id": "alexandria.business-license",
@@ -11,7 +11,7 @@
         "authority": "City of Alexandria Finance Department",
         "description": "Business licenses must be renewed annually by March 1 of each license year; existing businesses file the renewal and pay the tax by that date.",
         "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1",
-        "url": "https://alexandriava.gov/taxes/business-license-tax",
+        "url": ["https://alexandriava.gov/taxes/business-license-tax"],
         "appliesTo": ["all"]
       }
     ]
@@ -29,17 +29,17 @@
         "authority": "Chesapeake local licensing authority",
         "description": "Review the cited local licensing source before operating; requirements may be activity-specific and can differ by business type or location.",
         "frequency": "once",
-        "url": "https://www.cityofchesapeake.net/211/Opening-Operating-a-Business---Tax-Licen",
+        "url": ["https://www.cityofchesapeake.net/211/Opening-Operating-a-Business---Tax-Licen"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.cityofchesapeake.net/211/Opening-Operating-a-Business---Tax-Licen"
+    "sourceUrl": ["https://www.cityofchesapeake.net/211/Opening-Operating-a-Business---Tax-Licen"]
   },
   {
     "city": "Hampton",
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.hampton.gov/563/Business-Licenses",
+    "sourceUrl": ["https://www.hampton.gov/563/Business-Licenses"],
     "items": [
       {
         "id": "hampton-va.business-license",
@@ -48,7 +48,7 @@
         "authority": "City of Hampton Commissioner of the Revenue",
         "description": "Licenses expire December 31 each year and must be renewed by March 1 of the following year.",
         "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1",
-        "url": "https://www.hampton.gov/563/Business-Licenses",
+        "url": ["https://www.hampton.gov/563/Business-Licenses"],
         "appliesTo": ["all"]
       }
     ]
@@ -56,7 +56,7 @@
   {
     "city": "Newport News",
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.nnva.gov/579/Business-License-Tax",
+    "sourceUrl": ["https://www.nnva.gov/579/Business-License-Tax"],
     "items": [
       {
         "id": "newportnews.business-license",
@@ -65,7 +65,7 @@
         "authority": "City of Newport News Commissioner of the Revenue",
         "description": "Licenses expire at the end of each calendar year and must be renewed by March 1; auto dealers pay quarterly.",
         "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1",
-        "url": "https://www.nnva.gov/579/Business-License-Tax",
+        "url": ["https://www.nnva.gov/579/Business-License-Tax"],
         "appliesTo": ["all"]
       }
     ]
@@ -73,7 +73,7 @@
   {
     "city": "Norfolk",
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.norfolk.gov/4169/Business-License-Renewals",
+    "sourceUrl": ["https://www.norfolk.gov/4169/Business-License-Renewals"],
     "items": [
       {
         "id": "norfolk.business-license",
@@ -82,7 +82,7 @@
         "authority": "City of Norfolk Commissioner of the Revenue",
         "description": "Business licenses run January 1 to December 31 and are based on the prior year's gross receipts. Renewal is due March 1; late payment carries a penalty and interest.",
         "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1",
-        "url": "https://norfolk.gov/4169/Business-License-Renewals",
+        "url": ["https://norfolk.gov/4169/Business-License-Renewals"],
         "appliesTo": ["all"]
       }
     ]
@@ -91,7 +91,7 @@
     "city": "Richmond",
     "counties": ["Richmond"],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://rva.gov/finance/bpol-tax",
+    "sourceUrl": ["https://rva.gov/finance/bpol-tax"],
     "items": [
       {
         "id": "richmond-va.business-license",
@@ -100,7 +100,7 @@
         "authority": "City of Richmond Department of Finance",
         "description": "Business licenses expire December 31. Renewal application and payment are due March 1 (the next workday if it falls on a weekend); the late penalty is 10% or $10, whichever is greater, plus interest.",
         "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1",
-        "url": "https://rva.gov/finance/bpol-tax",
+        "url": ["https://rva.gov/finance/bpol-tax"],
         "appliesTo": ["all"]
       }
     ]
@@ -108,7 +108,7 @@
   {
     "city": "Roanoke",
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.roanokeva.gov/3170/Business-License-Information",
+    "sourceUrl": ["https://www.roanokeva.gov/3170/Business-License-Information"],
     "items": [
       {
         "id": "roanoke-va.business-license",
@@ -117,7 +117,7 @@
         "authority": "City of Roanoke Commissioner of the Revenue and Treasurer",
         "description": "Renewal applications and payment are due March 1 (the next business day if it falls on a weekend), online at the city's tax portal, by mail or in person.",
         "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1",
-        "url": "https://www.roanokeva.gov/3170/Business-License-Information",
+        "url": ["https://www.roanokeva.gov/3170/Business-License-Information"],
         "appliesTo": ["all"]
       }
     ]
@@ -125,7 +125,7 @@
   {
     "city": "Virginia Beach",
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://cor.virginiabeach.gov/businesses",
+    "sourceUrl": ["https://cor.virginiabeach.gov/businesses"],
     "items": [
       {
         "id": "virginiabeach.business-license",
@@ -134,7 +134,7 @@
         "authority": "City of Virginia Beach Commissioner of the Revenue",
         "description": "Business licenses are based on the prior calendar year's gross receipts; renewal payment is due on or before March 1, after which penalty and interest may apply.",
         "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1",
-        "url": "https://cor.virginiabeach.gov/businesses",
+        "url": ["https://cor.virginiabeach.gov/businesses"],
         "appliesTo": ["all"]
       }
     ]
@@ -151,12 +151,12 @@
         "authority": "Suffolk local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/",
+        "url": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"
+    "sourceUrl": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"]
   },
   {
     "city": "Portsmouth",
@@ -170,12 +170,12 @@
         "authority": "Portsmouth local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/",
+        "url": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"
+    "sourceUrl": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"]
   },
   {
     "city": "Lynchburg",
@@ -189,12 +189,12 @@
         "authority": "Lynchburg local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/",
+        "url": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"
+    "sourceUrl": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"]
   },
   {
     "city": "Harrisonburg",
@@ -208,12 +208,12 @@
         "authority": "Harrisonburg local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/",
+        "url": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"
+    "sourceUrl": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"]
   },
   {
     "city": "Leesburg",
@@ -227,12 +227,12 @@
         "authority": "Leesburg local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/",
+        "url": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"
+    "sourceUrl": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"]
   },
   {
     "city": "Blacksburg",
@@ -246,12 +246,12 @@
         "authority": "Blacksburg local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/",
+        "url": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"
+    "sourceUrl": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"]
   },
   {
     "city": "Charlottesville",
@@ -265,12 +265,12 @@
         "authority": "Charlottesville local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/",
+        "url": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"
+    "sourceUrl": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"]
   },
   {
     "city": "Manassas",
@@ -284,12 +284,12 @@
         "authority": "Manassas local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/",
+        "url": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"
+    "sourceUrl": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"]
   },
   {
     "city": "Danville",
@@ -303,11 +303,11 @@
         "authority": "Danville local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/",
+        "url": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"
+    "sourceUrl": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"]
   }
 ]

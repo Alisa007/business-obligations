@@ -307,7 +307,7 @@
           "type": "string"
         },
         "url": {
-          "type": "string"
+          "$ref": "common.schema.json#/$defs/httpsUrlOrList"
         },
         "appliesWhen": {
           "type": "array",

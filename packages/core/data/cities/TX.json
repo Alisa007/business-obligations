@@ -12,7 +12,7 @@
         "frequency": "once",
         "authority": "City of Abilene",
         "description": "Businesses operating as itinerant businesses in Abilene must obtain the applicable city permit; the current city fee schedule lists an itinerant business permit fee of $150.",
-        "url": "https://abilenetx.gov/563/Fee-Schedule",
+        "url": ["https://abilenetx.gov/563/Fee-Schedule"],
         "appliesTo": ["all"],
         "feeDetail": {
           "basis": "flat",
@@ -20,7 +20,7 @@
         }
       }
     ],
-    "sourceUrl": "https://abilenetx.gov/606/Permits",
+    "sourceUrl": ["https://abilenetx.gov/606/Permits"],
     "checkedOn": "2026-10-18"
   },
   {
@@ -36,12 +36,16 @@
         "authority": "Allen local licensing authority",
         "description": "Review the cited local licensing source before operating; requirements may be activity-specific and can differ by business type or location.",
         "frequency": "once",
-        "url": "https://cms3.revize.com/revize/allentx/Documents/Departments/Community%20Development/Building%20and%20Permitting/Contractor%20and%20Commercial%20Services/Forms/General%20Forms/Commercial%20Permit%20and%20Construction%20Packet.pdf",
+        "url": [
+          "https://cms3.revize.com/revize/allentx/Documents/Departments/Community%20Development/Building%20and%20Permitting/Contractor%20and%20Commercial%20Services/Forms/General%20Forms/Commercial%20Permit%20and%20Construction%20Packet.pdf"
+        ],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://cms3.revize.com/revize/allentx/Documents/Departments/Community%20Development/Building%20and%20Permitting/Contractor%20and%20Commercial%20Services/Forms/General%20Forms/Commercial%20Permit%20and%20Construction%20Packet.pdf"
+    "sourceUrl": [
+      "https://cms3.revize.com/revize/allentx/Documents/Departments/Community%20Development/Building%20and%20Permitting/Contractor%20and%20Commercial%20Services/Forms/General%20Forms/Commercial%20Permit%20and%20Construction%20Packet.pdf"
+    ]
   },
   {
     "city": "Amarillo",
@@ -55,7 +59,7 @@
         "authority": "City of Amarillo Finance Department",
         "description": "Lodging providers register with the city each year through Localgov, at no fee, by January 1.",
         "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=1",
-        "url": "https://amarillo.gov/finance/hotel-motel-taxes",
+        "url": ["https://amarillo.gov/finance/hotel-motel-taxes"],
         "appliesTo": ["all"]
       },
       {
@@ -65,12 +69,12 @@
         "authority": "City of Amarillo Finance Department",
         "description": "Lodging providers file a monthly hotel occupancy tax report and payment through Localgov, including a zero return when there was no revenue. The city rate is 7%, plus 2% for the Amarillo-Potter Events Venue District.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=10",
-        "url": "https://amarillo.gov/finance/hotel-motel-taxes",
+        "url": ["https://amarillo.gov/finance/hotel-motel-taxes"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.amarillo.gov/building-safety/"
+    "sourceUrl": ["https://www.amarillo.gov/building-safety/"]
   },
   {
     "city": "Arlington",
@@ -85,7 +89,7 @@
         "frequency": "once",
         "authority": "City of Arlington City Secretary",
         "description": "Businesses seeking local alcohol authorization in Arlington apply through the city's permit portal, obtain city approval, and complete the related Texas Alcoholic Beverage Commission application.",
-        "url": "https://www.arlingtontx.gov/Government/City-Government/City-Secretary/Alcohol-Permits",
+        "url": ["https://www.arlingtontx.gov/Government/City-Government/City-Secretary/Alcohol-Permits"],
         "appliesTo": ["all"]
       },
       {
@@ -95,7 +99,7 @@
         "authority": "City of Arlington Health Services",
         "description": "Food establishments in Arlington need the applicable operating permit; the city's current fee schedule lists high-, medium- and low-priority permits as valid for one year from issuance.",
         "rrule": "FREQ=YEARLY",
-        "url": "https://www.arlingtontx.gov/Business/Health-Services/Health-Services/Health-Permits-Fees",
+        "url": ["https://www.arlingtontx.gov/Business/Health-Services/Health-Services/Health-Permits-Fees"],
         "appliesTo": ["all"]
       },
       {
@@ -105,7 +109,9 @@
         "authority": "City of Arlington Planning and Development Services",
         "description": "Contractors performing regulated work in Arlington must meet the city's registration requirements; the city offers one-year and two-year registrations with listed fees.",
         "rrule": "FREQ=YEARLY",
-        "url": "https://www.arlingtontx.gov/files/assets/city/v/1/planning-and-development-services/documents/permitting-amp-inspections/technical-bulletins/registration_requirements_for_contractors.pdf",
+        "url": [
+          "https://www.arlingtontx.gov/files/assets/city/v/1/planning-and-development-services/documents/permitting-amp-inspections/technical-bulletins/registration_requirements_for_contractors.pdf"
+        ],
         "appliesTo": ["all"],
         "feeDetail": {
           "basis": "flat",
@@ -114,14 +120,14 @@
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.arlingtontx.gov/City-Services/Permits"
+    "sourceUrl": ["https://www.arlingtontx.gov/City-Services/Permits"]
   },
   {
     "city": "Austin",
     "status": "rules",
     "note": "The city's start-a-business page says Texas has no general business license, that most Austin businesses need permits or licenses depending on type, location and activity (issued through Austin Development Services), and lists no general city business license. Business personal property tax is administered by the Travis County Appraisal District, not the city.",
     "counties": ["Travis", "Williamson"],
-    "sourceUrl": "https://www.austintexas.gov/economic-development/start-business",
+    "sourceUrl": ["https://www.austintexas.gov/economic-development/start-business"],
     "items": [
       {
         "id": "austin.certificate-of-occupancy",
@@ -130,7 +136,7 @@
         "authority": "City of Austin Development Services",
         "description": "Austin issues a certificate of occupancy after successful final inspection for new construction or significant renovations; a change of use may require an updated certificate for a business space.",
         "frequency": "once",
-        "url": "https://www.austintexas.gov/development-services/certificate-occupancy",
+        "url": ["https://www.austintexas.gov/development-services/certificate-occupancy"],
         "appliesTo": ["all"]
       },
       {
@@ -140,7 +146,7 @@
         "authority": "Austin Public Health",
         "description": "A food business operating in Austin or Travis County must obtain a Food Enterprise Operating Permit; the facility must pass the required pre-opening inspection before the permit is issued and the business operates.",
         "rrule": "FREQ=YEARLY",
-        "url": "https://www.austintexas.gov/health/programs/fixed-food-establishments",
+        "url": ["https://www.austintexas.gov/health/programs/fixed-food-establishments"],
         "appliesTo": ["all"]
       }
     ],
@@ -159,7 +165,7 @@
         "frequency": "once",
         "authority": "City of Beaumont Building Codes",
         "description": "A new building or a change in occupancy in Beaumont cannot be occupied until the city issues a certificate of occupancy; the application requires the business name, address, proposed use and related inspection approvals.",
-        "url": "https://www.beaumonttexas.gov/246/New-Business-Requirements",
+        "url": ["https://www.beaumonttexas.gov/246/New-Business-Requirements"],
         "appliesTo": ["all"],
         "feeDetail": {
           "basis": "flat",
@@ -167,7 +173,7 @@
         }
       }
     ],
-    "sourceUrl": "https://www.beaumonttexas.gov/246/New-Business-Requirements",
+    "sourceUrl": ["https://www.beaumonttexas.gov/246/New-Business-Requirements"],
     "checkedOn": "2026-10-18"
   },
   {
@@ -183,7 +189,7 @@
         "authority": "City of Brownsville Planning and Development Services",
         "description": "Brownsville requires a certificate of occupancy before a space or building is used or occupied and for changes in use or occupancy, major repairs, alterations or additions; the city lists a $100 CO fee plus a fire-inspection fee.",
         "frequency": "once",
-        "url": "https://www.brownsvilletx.gov/1919/Certificate-of-Occupancy",
+        "url": ["https://www.brownsvilletx.gov/1919/Certificate-of-Occupancy"],
         "appliesTo": ["all"],
         "feeDetail": {
           "basis": "flat",
@@ -197,11 +203,11 @@
         "authority": "City of Brownsville Health Department",
         "description": "Brownsville states that businesses handling or serving food must contact the health department for a health license before operating.",
         "rrule": "FREQ=YEARLY",
-        "url": "https://www.brownsvilletx.gov/1919/Certificate-of-Occupancy",
+        "url": ["https://www.brownsvilletx.gov/1919/Certificate-of-Occupancy"],
         "appliesTo": ["all"]
       }
     ],
-    "sourceUrl": "https://www.brownsvilletx.gov/666/Permits-Licenses",
+    "sourceUrl": ["https://www.brownsvilletx.gov/666/Permits-Licenses"],
     "checkedOn": "2026-10-18"
   },
   {
@@ -217,7 +223,7 @@
         "authority": "City of Carrollton Building Inspection",
         "description": "Carrollton requires a certificate of occupancy for all commercial buildings or suites that are occupied or used; the city lists a $100 certificate fee.",
         "frequency": "once",
-        "url": "https://www.cityofcarrollton.com/departments/departments-a-f/building-inspection/faqs",
+        "url": ["https://www.cityofcarrollton.com/departments/departments-a-f/building-inspection/faqs"],
         "appliesTo": ["all"],
         "feeDetail": {
           "basis": "flat",
@@ -231,11 +237,13 @@
         "authority": "City of Carrollton Fire Prevention",
         "description": "Carrollton requires a fire permit when a building or business installs, modifies or replaces covered fire alarm, access-control, gate, sprinkler, kitchen-hood, spray-booth or flammable-liquid systems.",
         "frequency": "once",
-        "url": "https://www.cityofcarrollton.com/departments/departments-a-f/fire/i-want-to/frequently-asked-questions",
+        "url": [
+          "https://www.cityofcarrollton.com/departments/departments-a-f/fire/i-want-to/frequently-asked-questions"
+        ],
         "appliesTo": ["all"]
       }
     ],
-    "sourceUrl": "https://cityserve.cityofcarrollton.com/cityviewportal",
+    "sourceUrl": ["https://cityserve.cityofcarrollton.com/cityviewportal"],
     "checkedOn": "2026-10-18"
   },
   {
@@ -251,11 +259,11 @@
         "authority": "City of College Station Planning & Development Services",
         "description": "College Station requires a certificate of occupancy for occupancy or use of a newly erected or enlarged building, a change to a different use category, or other cases required by the adopted building code.",
         "frequency": "once",
-        "url": "https://www.cstx.gov/living-here/building-and-renovating/certificate-of-occupancy/",
+        "url": ["https://www.cstx.gov/living-here/building-and-renovating/certificate-of-occupancy/"],
         "appliesTo": ["all"]
       }
     ],
-    "sourceUrl": "https://www.cstx.gov/living-here/building-and-renovating/certificate-of-occupancy/",
+    "sourceUrl": ["https://www.cstx.gov/living-here/building-and-renovating/certificate-of-occupancy/"],
     "checkedOn": "2026-10-18"
   },
   {
@@ -271,7 +279,9 @@
         "authority": "City of Corpus Christi Development Services",
         "description": "All development in Corpus Christi requires a permit through Development Services.",
         "frequency": "once",
-        "url": "https://www.corpuschristitx.gov/department-directory/development-services/flood-information/development-requirements/",
+        "url": [
+          "https://www.corpuschristitx.gov/department-directory/development-services/flood-information/development-requirements/"
+        ],
         "appliesTo": ["all"]
       },
       {
@@ -281,12 +291,14 @@
         "authority": "City of Corpus Christi Development Services",
         "description": "A building or structure in Corpus Christi may not be used or occupied until the building official issues a certificate of occupancy; commercial construction, remodels, additions and qualifying business-name changes use the applicable certificate process.",
         "frequency": "once",
-        "url": "https://www.corpuschristitx.gov/media/eu1apumv/ibs-017-co_tco_com.pdf",
+        "url": ["https://www.corpuschristitx.gov/media/eu1apumv/ibs-017-co_tco_com.pdf"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.corpuschristitx.gov/department-directory/development-services/applications-permits-and-guidance/"
+    "sourceUrl": [
+      "https://www.corpuschristitx.gov/department-directory/development-services/applications-permits-and-guidance/"
+    ]
   },
   {
     "city": "Dallas",
@@ -300,7 +312,9 @@
         "authority": "Dallas Code Compliance Services, Consumer Health Division",
         "description": "Restaurants, bars, grocery stores and other food establishments need an annual Dallas health permit. The city's page lists annual fees of $141 to $513 depending on risk level and size (under or over 2,000 square feet), plus a $121 application fee for a new permit. The annual fee is due December 31. A payment received after December 31 adds a $199 reinstatement fee, and one not paid by January 30 adds a $158 pre-closure fee. A re-inspection costs $191 if the score is below 80%. The page is not dated, so confirm the amounts with the city.",
         "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=31",
-        "url": "https://dallascityhall.com/departments/codecompliance/consumer-health/Pages/food-establishment.aspx",
+        "url": [
+          "https://dallascityhall.com/departments/codecompliance/consumer-health/Pages/food-establishment.aspx"
+        ],
         "naics": ["722", "445", "311", "4244", "493120"],
         "appliesTo": ["all"],
         "feeDetail": {
@@ -310,7 +324,9 @@
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://dallascityhall.com/departments/codecompliance/consumer-health/Pages/food-establishment.aspx"
+    "sourceUrl": [
+      "https://dallascityhall.com/departments/codecompliance/consumer-health/Pages/food-establishment.aspx"
+    ]
   },
   {
     "city": "Denton",
@@ -325,7 +341,7 @@
         "authority": "City of Denton Development Services",
         "description": "Denton requires a certificate of occupancy for all new businesses and for changes in use, business name or ownership; the current fee schedule lists a $75 certificate fee.",
         "frequency": "once",
-        "url": "https://www.cityofdenton.com/660/Certificate-of-Occupancy",
+        "url": ["https://www.cityofdenton.com/660/Certificate-of-Occupancy"],
         "appliesTo": ["all"],
         "feeDetail": {
           "basis": "flat",
@@ -339,7 +355,7 @@
         "authority": "City of Denton Development Services",
         "description": "Denton requires an individual permit for each new sign and requires a certificate of occupancy or building-permit approval before approving a sign permit.",
         "frequency": "once",
-        "url": "https://www.cityofdenton.com/708/Signs",
+        "url": ["https://www.cityofdenton.com/708/Signs"],
         "appliesTo": ["all"]
       },
       {
@@ -349,11 +365,11 @@
         "authority": "City of Denton Police Department",
         "description": "Solicitors, handbill distributors and itinerant merchants must obtain the applicable Denton permit before conducting that business within the city limits.",
         "frequency": "once",
-        "url": "https://www.cityofdenton.com/376/Permits",
+        "url": ["https://www.cityofdenton.com/376/Permits"],
         "appliesTo": ["all"]
       }
     ],
-    "sourceUrl": "https://www.cityofdenton.com/DocumentCenter/View/427/Denton-Development-Code-PDF",
+    "sourceUrl": ["https://www.cityofdenton.com/DocumentCenter/View/427/Denton-Development-Code-PDF"],
     "checkedOn": "2026-10-18"
   },
   {
@@ -369,11 +385,11 @@
         "authority": "City of Edinburg Building Safety",
         "description": "Edinburg's Building Safety Department issues permits and conducts inspections for new construction, alterations, repairs, demolitions and other building operations; commercial applicants use the city's commercial permit process.",
         "frequency": "once",
-        "url": "https://www.cityofedinburg.com/departments/building_safety/permit_center.php",
+        "url": ["https://www.cityofedinburg.com/departments/building_safety/permit_center.php"],
         "appliesTo": ["all"]
       }
     ],
-    "sourceUrl": "https://www.cityofedinburg.com/business/index.php",
+    "sourceUrl": ["https://www.cityofedinburg.com/business/index.php"],
     "checkedOn": "2026-10-18"
   },
   {
@@ -381,7 +397,7 @@
     "status": "rules",
     "note": "The Business Licensing Center issues activity-specific licenses (alarm, alcohol and others); a general license was not confirmed.",
     "counties": ["El Paso"],
-    "sourceUrl": "https://www.elpasotexas.gov/planning-and-inspections/business-licensing",
+    "sourceUrl": ["https://www.elpasotexas.gov/planning-and-inspections/business-licensing"],
     "items": [
       {
         "id": "el-paso.credit-access-business-registration",
@@ -390,7 +406,9 @@
         "authority": "City of El Paso Planning and Inspections",
         "description": "El Paso's credit-access-business application requires a current certificate of occupancy for the business address and a valid state license before the city registration can be processed.",
         "frequency": "once",
-        "url": "https://www.elpasotexas.gov/assets/Documents/CoEP/Planning-and-Inspections/Applications/License-Applications/Credit-Access-Business-Application.pdf",
+        "url": [
+          "https://www.elpasotexas.gov/assets/Documents/CoEP/Planning-and-Inspections/Applications/License-Applications/Credit-Access-Business-Application.pdf"
+        ],
         "appliesTo": ["all"]
       }
     ],
@@ -409,7 +427,7 @@
         "frequency": "once",
         "authority": "City of Fort Worth Development Services",
         "description": "Every Fort Worth business with a physical location requires a certificate-of-occupancy permit before operating from that location.",
-        "url": "https://www.fortworthtexas.gov/business/starting-business",
+        "url": ["https://www.fortworthtexas.gov/business/starting-business"],
         "appliesTo": ["all"]
       },
       {
@@ -419,11 +437,11 @@
         "frequency": "once",
         "authority": "City of Fort Worth Development Services",
         "description": "New commercial construction, additions, remodels, accessory structures and changes of use require the applicable commercial building permits before work proceeds.",
-        "url": "https://www.fortworthtexas.gov/departments/development-services/permits/commercial",
+        "url": ["https://www.fortworthtexas.gov/departments/development-services/permits/commercial"],
         "appliesTo": ["all"]
       }
     ],
-    "sourceUrl": "https://www.fortworthtexas.gov/business",
+    "sourceUrl": ["https://www.fortworthtexas.gov/business"],
     "checkedOn": "2026-10-18"
   },
   {
@@ -439,7 +457,7 @@
         "authority": "City of Frisco Building Inspections",
         "description": "Frisco requires permits for commercial structures and related work including construction, enlargement, alteration, repair, movement, improvement, removal, conversion or demolition.",
         "frequency": "once",
-        "url": "https://www.friscotexas.gov/401/Permit-Applications-Plan-Review-Forms",
+        "url": ["https://www.friscotexas.gov/401/Permit-Applications-Plan-Review-Forms"],
         "appliesTo": ["all"]
       },
       {
@@ -449,11 +467,13 @@
         "authority": "City of Frisco Building Inspections",
         "description": "Frisco provides a certificate-of-occupancy process for new tenants or owners, business-name changes and changes in building use.",
         "frequency": "once",
-        "url": "https://www.friscotexas.gov/DocumentCenter/View/873/Certificate-of-Occupancy-Application-Information-PDF?bidId=",
+        "url": [
+          "https://www.friscotexas.gov/DocumentCenter/View/873/Certificate-of-Occupancy-Application-Information-PDF?bidId="
+        ],
         "appliesTo": ["all"]
       }
     ],
-    "sourceUrl": "https://www.friscotexas.gov/401/Permit-Applications-Plan-Review-Forms",
+    "sourceUrl": ["https://www.friscotexas.gov/401/Permit-Applications-Plan-Review-Forms"],
     "checkedOn": "2026-10-18"
   },
   {
@@ -469,7 +489,7 @@
         "authority": "City of Garland Building Inspection",
         "description": "Garland requires a certificate of occupancy for businesses within the city limits; a new certificate is required when ownership, business use or occupied space changes.",
         "frequency": "once",
-        "url": "https://www.garlandtx.gov/3263/Certificate-of-Occupancy-Documents",
+        "url": ["https://www.garlandtx.gov/3263/Certificate-of-Occupancy-Documents"],
         "appliesTo": ["all"],
         "feeDetail": {
           "basis": "flat",
@@ -483,11 +503,11 @@
         "frequency": "once",
         "authority": "Texas Comptroller of Public Accounts",
         "description": "Garland's business occupancy guidance states that businesses must be registered with the State Comptroller and obtain a sales tax permit when applicable.",
-        "url": "https://www.garlandtx.gov/3263/Certificate-of-Occupancy-Documents",
+        "url": ["https://www.garlandtx.gov/3263/Certificate-of-Occupancy-Documents"],
         "appliesTo": ["all"]
       }
     ],
-    "sourceUrl": "https://www.garlandtx.gov/3263/Certificate-of-Occupancy-Documents",
+    "sourceUrl": ["https://www.garlandtx.gov/3263/Certificate-of-Occupancy-Documents"],
     "checkedOn": "2026-10-18"
   },
   {
@@ -503,7 +523,7 @@
         "authority": "City of Grand Prairie Building Inspections",
         "description": "Grand Prairie requires a certificate of occupancy before a commercial building, suite or structure is used or occupied and for changes in use or occupancy; the city states that it does not require a general business license.",
         "frequency": "once",
-        "url": "https://www.gptx.org/Departments/Building-Inspections/Certificate-of-Occupancy",
+        "url": ["https://www.gptx.org/Departments/Building-Inspections/Certificate-of-Occupancy"],
         "appliesTo": ["all"]
       },
       {
@@ -513,16 +533,16 @@
         "authority": "City of Grand Prairie Public Health & Environmental Quality",
         "description": "Grand Prairie requires a health permit when applicable for food service, sales, storage or preparation, day care, chemical storage and similar covered uses.",
         "rrule": "FREQ=YEARLY",
-        "url": "https://www.gptx.org/Departments/Building-Inspections/Certificate-of-Occupancy",
+        "url": ["https://www.gptx.org/Departments/Building-Inspections/Certificate-of-Occupancy"],
         "appliesTo": ["all"]
       }
     ],
-    "sourceUrl": "https://www.gptx.org/Business/Apply-for-Permits",
+    "sourceUrl": ["https://www.gptx.org/Business/Apply-for-Permits"],
     "checkedOn": "2026-10-18"
   },
   {
     "city": "Houston",
-    "sourceUrl": "https://cohips.houstontx.gov/ara/business-licensing.html",
+    "sourceUrl": ["https://cohips.houstontx.gov/ara/business-licensing.html"],
     "note": "The city issues no general business license; permits are activity-specific (alcohol, coin-operated machines, dealers, game rooms, noise, street vendors). Physical businesses need a certificate of occupancy.",
     "counties": ["Harris"],
     "items": [
@@ -532,8 +552,9 @@
         "category": "license",
         "authority": "Houston Health Department",
         "description": "Any operation that stores, prepares, packages, serves or sells food, such as a restaurant, food warehouse, packaged-food store or commissary, needs a Houston Health Department permit. The permit fee runs from $224.44 to $739.44 depending on risk level, and the permit is valid for one year. Renewal invoices are mailed 30 to 45 days before it expires, and the late fee is $66.21. New construction or a remodel also needs plan review and a preoperational inspection first.",
+        "lateFee": { "amount": 66.21 },
         "rrule": "FREQ=YEARLY",
-        "url": "https://www.houstonpermittingcenter.org/hhd1003",
+        "url": ["https://www.houstonpermittingcenter.org/hhd1003"],
         "naics": ["722", "445", "311", "4244", "493120"],
         "appliesTo": ["all"],
         "feeDetail": {
@@ -548,7 +569,7 @@
         "authority": "Houston Health Department",
         "description": "A food truck, food trailer, ice cream truck or cart needs a mobile food unit medallion from the Houston Health Department. The fee is $258.00 plus a $112.57 inspection fee, and the medallion is valid for one year. A new unit needs plan review and an inspection first. Renewal invoices are mailed 30 to 45 days before it expires.",
         "rrule": "FREQ=YEARLY",
-        "url": "https://www.houstonpermittingcenter.org/hhd1008",
+        "url": ["https://www.houstonpermittingcenter.org/hhd1008"],
         "naics": ["722330", "722515"],
         "appliesTo": ["all"],
         "feeDetail": {
@@ -565,7 +586,7 @@
     "note": "The City of Irving states that it does not issue business permits; businesses may still need activity-specific permits and a certificate of occupancy.",
     "counties": ["Dallas"],
     "items": [],
-    "sourceUrl": "https://irvingtx.gov/servicefinder",
+    "sourceUrl": ["https://irvingtx.gov/servicefinder"],
     "checkedOn": "2026-10-18"
   },
   {
@@ -581,7 +602,7 @@
         "authority": "City of Killeen Building Inspections",
         "description": "Killeen prohibits opening a place of business without a certificate of occupancy; a new CO is required for a change of owner, business name, tenant or use, with a $90 application fee plus a $10 technology fee.",
         "frequency": "once",
-        "url": "https://www.killeentexas.gov/204/Building-Inspections",
+        "url": ["https://www.killeentexas.gov/204/Building-Inspections"],
         "appliesTo": ["all"],
         "feeDetail": {
           "basis": "flat",
@@ -589,7 +610,7 @@
         }
       }
     ],
-    "sourceUrl": "https://www.killeentexas.gov/204/Building-Inspections",
+    "sourceUrl": ["https://www.killeentexas.gov/204/Building-Inspections"],
     "checkedOn": "2026-10-18"
   },
   {
@@ -605,7 +626,7 @@
         "authority": "City of Laredo Building Development Services",
         "description": "New Laredo businesses must register with the city and obtain a certificate of occupancy, plus a sign permit when applicable, before opening to the public.",
         "frequency": "once",
-        "url": "https://www.cityoflaredo.com/departments/building-development-services",
+        "url": ["https://www.cityoflaredo.com/departments/building-development-services"],
         "appliesTo": ["all"]
       },
       {
@@ -615,7 +636,9 @@
         "frequency": "once",
         "authority": "City of Laredo Building Development Services",
         "description": "Food trucks operating in Laredo apply for the city food truck permit; the city lists a $200 permit fee plus a fire fee determined during review.",
-        "url": "https://www.cityoflaredo.com/departments/building-development-services/permit-applications-requirements",
+        "url": [
+          "https://www.cityoflaredo.com/departments/building-development-services/permit-applications-requirements"
+        ],
         "appliesTo": ["all"],
         "feeDetail": {
           "basis": "flat",
@@ -623,7 +646,7 @@
         }
       }
     ],
-    "sourceUrl": "https://www.cityoflaredo.com/departments/building-development-services",
+    "sourceUrl": ["https://www.cityoflaredo.com/departments/building-development-services"],
     "checkedOn": "2026-10-18"
   },
   {
@@ -639,11 +662,11 @@
         "authority": "City of Lewisville Building Services",
         "description": "Lewisville requires a certificate of occupancy for commercial projects when ownership, tenant, business name or use changes, for new construction, and for enlarged or altered existing buildings; each applicable suite and building requires a separate application.",
         "frequency": "once",
-        "url": "https://www.cityoflewisville.com/for-business/building-services/certificate-of-occupancy",
+        "url": ["https://www.cityoflewisville.com/for-business/building-services/certificate-of-occupancy"],
         "appliesTo": ["all"]
       }
     ],
-    "sourceUrl": "https://www.cityoflewisville.com/for-business/building-services/building-permits",
+    "sourceUrl": ["https://www.cityoflewisville.com/for-business/building-services/building-permits"],
     "checkedOn": "2026-10-18"
   },
   {
@@ -652,7 +675,7 @@
     "note": "The City of Lubbock states that it does not have a business-licensing process; businesses still need applicable activity, zoning, building, health, and other permits.",
     "counties": ["Lubbock"],
     "items": [],
-    "sourceUrl": "https://www.mylubbock.us/227/Business-Development",
+    "sourceUrl": ["https://www.mylubbock.us/227/Business-Development"],
     "checkedOn": "2026-10-18"
   },
   {
@@ -668,7 +691,9 @@
         "authority": "City of McAllen Building Permits & Inspections",
         "description": "McAllen requires commercial construction work to be submitted through its commercial permit process, and the commercial application states that improvements may not be occupied until a certificate of occupancy is issued.",
         "frequency": "once",
-        "url": "https://www.mcallen.net/docs/default-source/permits-inspections-files/permit-application-commercial.pdf?sfvrsn=2",
+        "url": [
+          "https://www.mcallen.net/docs/default-source/permits-inspections-files/permit-application-commercial.pdf?sfvrsn=2"
+        ],
         "appliesTo": ["all"]
       },
       {
@@ -678,11 +703,11 @@
         "authority": "City of McAllen Permits Department",
         "description": "McAllen requires a sign permit and applicable sign-license registration before erecting, constructing, installing, replacing, renting, leasing or servicing a sign covered by the city code.",
         "frequency": "once",
-        "url": "https://mcallen.net/departments/permits/permits",
+        "url": ["https://mcallen.net/departments/permits/permits"],
         "appliesTo": ["all"]
       }
     ],
-    "sourceUrl": "https://www.mcallen.net/departments/permits/home",
+    "sourceUrl": ["https://www.mcallen.net/departments/permits/home"],
     "checkedOn": "2026-10-18"
   },
   {
@@ -698,7 +723,7 @@
         "authority": "City of McKinney Building Inspections",
         "description": "McKinney provides a commercial certificate-of-occupancy process for new businesses and commercial occupancy, with the certificate allowing the business to operate and be occupied by employees and the public.",
         "frequency": "once",
-        "url": "https://www.mckinneytexas.org/243/Building-Inspections",
+        "url": ["https://www.mckinneytexas.org/243/Building-Inspections"],
         "appliesTo": ["all"]
       },
       {
@@ -708,11 +733,11 @@
         "authority": "City of McKinney Fire Marshal's Office",
         "description": "McKinney requires operational fire permits for covered businesses or operations such as hazardous materials, high-piled storage, fuel dispensing, propane cylinder exchange and repair garages; permits must be obtained and inspected before the operation begins.",
         "rrule": "FREQ=YEARLY",
-        "url": "https://www.mckinneytexas.org/1163/Permit-and-Inspection-Fee-Schedule",
+        "url": ["https://www.mckinneytexas.org/1163/Permit-and-Inspection-Fee-Schedule"],
         "appliesTo": ["all"]
       }
     ],
-    "sourceUrl": "https://www.mckinneytexas.org/165/Permits",
+    "sourceUrl": ["https://www.mckinneytexas.org/165/Permits"],
     "checkedOn": "2026-10-18"
   },
   {
@@ -728,7 +753,7 @@
         "authority": "City of Mesquite Building Inspection",
         "description": "Mesquite requires a certificate of occupancy for commercial properties and before occupancy, use or utility connection; the standard fee is $125 unless the CO is included with a building permit.",
         "frequency": "once",
-        "url": "https://www.cityofmesquite.com/4227/Certificate-of-Occupancy",
+        "url": ["https://www.cityofmesquite.com/4227/Certificate-of-Occupancy"],
         "appliesTo": ["all"],
         "feeDetail": {
           "basis": "flat",
@@ -742,11 +767,11 @@
         "authority": "Mesquite Fire Marshal's Office",
         "description": "Mesquite Fire Marshal services include permits and inspections for covered systems and activities such as alarms, access control, storage tanks, food trucks, hood suppression, sprinklers and special events.",
         "frequency": "once",
-        "url": "https://www.cityofmesquite.com/4041/Requesting-A-Fire-Inspection",
+        "url": ["https://www.cityofmesquite.com/4041/Requesting-A-Fire-Inspection"],
         "appliesTo": ["all"]
       }
     ],
-    "sourceUrl": "https://cityofmesquite.com/924/Business-Services",
+    "sourceUrl": ["https://cityofmesquite.com/924/Business-Services"],
     "checkedOn": "2026-10-18"
   },
   {
@@ -762,7 +787,7 @@
         "authority": "City of Midland Development Services",
         "description": "Midland requires a commercial permit for all work performed on commercial structures, and work may begin only after the permit is issued by the city.",
         "frequency": "once",
-        "url": "https://midlandtexas.gov/1269/Building-Permits",
+        "url": ["https://midlandtexas.gov/1269/Building-Permits"],
         "appliesTo": ["all"]
       },
       {
@@ -772,11 +797,11 @@
         "authority": "City of Midland Development Services",
         "description": "Midland issues a certificate of occupancy after final inspection and completion of required paperwork; the certificate allows the completed space to be used or occupied.",
         "frequency": "once",
-        "url": "https://midlandtexas.gov/1269/Building-Permits",
+        "url": ["https://midlandtexas.gov/1269/Building-Permits"],
         "appliesTo": ["all"]
       }
     ],
-    "sourceUrl": "https://midlandtexas.gov/1424/PermitMidland",
+    "sourceUrl": ["https://midlandtexas.gov/1424/PermitMidland"],
     "checkedOn": "2026-10-18"
   },
   {
@@ -792,7 +817,9 @@
         "frequency": "once",
         "authority": "City of Mission Planning Department",
         "description": "Mission states that a business permit must be issued before a business officially operates, after all applicable requirements are met.",
-        "url": "https://www.missiontexas.us/DocumentCenter/View/539/Business-License-Application-English-PDF",
+        "url": [
+          "https://www.missiontexas.us/DocumentCenter/View/539/Business-License-Application-English-PDF"
+        ],
         "appliesTo": ["all"],
         "feeDetail": {
           "basis": "flat",
@@ -806,7 +833,7 @@
         "authority": "City of Mission Inspections Division",
         "description": "Mission's commercial building application states that the improvements may not be used until a certificate of occupancy has been issued; the listed issuance fee is $50.",
         "frequency": "once",
-        "url": "https://missiontexas.us/DocumentCenter/View/1553/Commercial-Building-Permit-Applicationpdf",
+        "url": ["https://missiontexas.us/DocumentCenter/View/1553/Commercial-Building-Permit-Applicationpdf"],
         "appliesTo": ["all"],
         "feeDetail": {
           "basis": "flat",
@@ -814,7 +841,7 @@
         }
       }
     ],
-    "sourceUrl": "https://missiontexas.us/169/Planning-Department",
+    "sourceUrl": ["https://missiontexas.us/169/Planning-Department"],
     "checkedOn": "2026-10-18"
   },
   {
@@ -830,7 +857,7 @@
         "authority": "City of Odessa Building Inspection",
         "description": "Odessa requires a certificate-of-occupancy permit for existing structures and requires the applicable inspections before the space can be occupied or utilities reconnected.",
         "frequency": "once",
-        "url": "https://www.odessa-tx.gov/1222/Building-Inspection-Permits",
+        "url": ["https://www.odessa-tx.gov/1222/Building-Inspection-Permits"],
         "appliesTo": ["all"]
       },
       {
@@ -840,11 +867,11 @@
         "authority": "City of Odessa Building Inspection",
         "description": "Odessa lists contractor registration for building, remodeling, electrical, plumbing, mechanical and water-well contractors among its municipal permits and licenses.",
         "rrule": "FREQ=YEARLY",
-        "url": "https://www.odessa-tx.gov/1249/PermitsLicenses",
+        "url": ["https://www.odessa-tx.gov/1249/PermitsLicenses"],
         "appliesTo": ["all"]
       }
     ],
-    "sourceUrl": "https://www.odessa-tx.gov/1249/PermitsLicenses",
+    "sourceUrl": ["https://www.odessa-tx.gov/1249/PermitsLicenses"],
     "checkedOn": "2026-10-18"
   },
   {
@@ -860,11 +887,11 @@
         "authority": "City of Pasadena Permit Department",
         "description": "Pasadena requires a certificate of occupancy before a commercial change in use or occupancy and before utilities are released for the property.",
         "frequency": "once",
-        "url": "https://www.pasadenatx.gov/2002/Fee-Schedule",
+        "url": ["https://www.pasadenatx.gov/2002/Fee-Schedule"],
         "appliesTo": ["all"]
       }
     ],
-    "sourceUrl": "https://pasadenatx.gov/399/Permits-Licenses",
+    "sourceUrl": ["https://pasadenatx.gov/399/Permits-Licenses"],
     "checkedOn": "2026-10-18"
   },
   {
@@ -880,7 +907,7 @@
         "authority": "City of Pearland Community Development",
         "description": "Pearland requires a sign permit before erecting, installing or modifying a sign; new tenants and business-name changes must have an approved operating certificate or certificate of occupancy before applying.",
         "frequency": "once",
-        "url": "https://www.pearlandtx.gov/departments/community-development/permits",
+        "url": ["https://www.pearlandtx.gov/departments/community-development/permits"],
         "appliesTo": ["all"]
       },
       {
@@ -890,11 +917,11 @@
         "authority": "City of Pearland Community Development",
         "description": "Pearland requires a certificate of occupancy before a structure is occupied or used and before a change to a different use occurs.",
         "frequency": "once",
-        "url": "https://www.pearlandtx.gov/departments/community-development/permits",
+        "url": ["https://www.pearlandtx.gov/departments/community-development/permits"],
         "appliesTo": ["all"]
       }
     ],
-    "sourceUrl": "https://www.pearlandtx.gov/departments/community-development/permits",
+    "sourceUrl": ["https://www.pearlandtx.gov/departments/community-development/permits"],
     "checkedOn": "2026-10-18"
   },
   {
@@ -910,7 +937,7 @@
         "frequency": "once",
         "authority": "City of Plano Building Inspections",
         "description": "Plano provides commercial permitting and certificate-of-occupancy applications through Building Inspections for commercial construction and occupancy work.",
-        "url": "https://www.plano.gov/commercial-permits",
+        "url": ["https://www.plano.gov/commercial-permits"],
         "appliesTo": ["all"]
       },
       {
@@ -920,11 +947,11 @@
         "frequency": "once",
         "authority": "City of Plano Environmental Health",
         "description": "Food facilities in Plano must submit the food permit application and cannot open until the city's certificate of occupancy has been issued.",
-        "url": "https://www.plano.gov/food-permits",
+        "url": ["https://www.plano.gov/food-permits"],
         "appliesTo": ["all"]
       }
     ],
-    "sourceUrl": "https://www.plano.gov/city-services",
+    "sourceUrl": ["https://www.plano.gov/city-services"],
     "checkedOn": "2026-10-18"
   },
   {
@@ -940,7 +967,9 @@
         "authority": "City of Richardson Building Inspection",
         "description": "Richardson prohibits use or occupancy, occupancy-classification changes, and tenancy or ownership changes for an existing building or lease space until a certificate of occupancy is issued; the filing fee is $100 unless included with a building permit.",
         "frequency": "once",
-        "url": "https://www.cor.net/departments/building-inspection/commercial/permit-types/certificate-of-occupancy",
+        "url": [
+          "https://www.cor.net/departments/building-inspection/commercial/permit-types/certificate-of-occupancy"
+        ],
         "appliesTo": ["all"],
         "feeDetail": {
           "basis": "flat",
@@ -948,7 +977,9 @@
         }
       }
     ],
-    "sourceUrl": "https://www.cor.net/departments/building-inspection/commercial/permit-types/certificate-of-occupancy",
+    "sourceUrl": [
+      "https://www.cor.net/departments/building-inspection/commercial/permit-types/certificate-of-occupancy"
+    ],
     "checkedOn": "2026-10-18"
   },
   {
@@ -957,7 +988,7 @@
     "note": "The City of Round Rock states that it does not require a general business license; activity-specific permits, contractor registration, alcohol permits, and solicitor permits may still apply.",
     "counties": ["Williamson", "Travis"],
     "items": [],
-    "sourceUrl": "https://www.roundrocktexas.gov/city-businesses/locating-a-buisness-in-round-rock/",
+    "sourceUrl": ["https://www.roundrocktexas.gov/city-businesses/locating-a-buisness-in-round-rock/"],
     "checkedOn": "2026-10-18"
   },
   {
@@ -973,17 +1004,17 @@
         "authority": "City of San Angelo Permits & Inspections",
         "description": "San Angelo requires a change-of-occupancy permit when moving into an existing commercial structure if the building use changes; building permits may also be required for alterations or additions.",
         "frequency": "once",
-        "url": "https://www.sanangelo.gov/DocumentCenter/View/191",
+        "url": ["https://www.sanangelo.gov/DocumentCenter/View/191"],
         "appliesTo": ["all"]
       }
     ],
-    "sourceUrl": "https://www.sanangelo.gov/185/Building-Permits-Inspections",
+    "sourceUrl": ["https://www.sanangelo.gov/185/Building-Permits-Inspections"],
     "checkedOn": "2026-10-18"
   },
   {
     "city": "San Antonio",
     "status": "none",
-    "sourceUrl": "https://311.sanantonio.gov/kb/docs/articles/business-and-licensing/business-license",
+    "sourceUrl": ["https://311.sanantonio.gov/kb/docs/articles/business-and-licensing/business-license"],
     "note": "The city has no general business license; the license or permit needed depends on the product or service.",
     "counties": ["Bexar"],
     "items": [],
@@ -1002,7 +1033,7 @@
         "authority": "City of Sugar Land Permits and Inspections",
         "description": "Sugar Land requires a permit before a person, firm or corporation erects, constructs, enlarges, alters, repairs, replaces, improves, removes, installs, converts, equips, uses, occupies or maintains a regulated structure or building service equipment.",
         "frequency": "once",
-        "url": "https://www.sugarlandtx.gov/2541/Frequently-Asked-Questions",
+        "url": ["https://www.sugarlandtx.gov/2541/Frequently-Asked-Questions"],
         "appliesTo": ["all"]
       },
       {
@@ -1012,11 +1043,11 @@
         "authority": "City of Sugar Land Food Inspection Program",
         "description": "Sugar Land's Food Inspection Program permits and inspects temporary, mobile and fixed food establishments operating in the city.",
         "rrule": "FREQ=YEARLY",
-        "url": "https://www.sugarlandtx.gov/340/Business",
+        "url": ["https://www.sugarlandtx.gov/340/Business"],
         "appliesTo": ["all"]
       }
     ],
-    "sourceUrl": "https://www.sugarlandtx.gov/340/Business",
+    "sourceUrl": ["https://www.sugarlandtx.gov/340/Business"],
     "checkedOn": "2026-10-18"
   },
   {
@@ -1032,12 +1063,16 @@
         "authority": "City of Tyler Building Services",
         "description": "Tyler requires a certificate of occupancy for a same-use business space and reviews new business uses through its occupancy process, including floor plans, restroom, exit and parking details.",
         "frequency": "once",
-        "url": "https://www.cityoftyler.org/City-Government/Development-Planning/Property-Owners/Development-Planning-FAQs",
+        "url": [
+          "https://www.cityoftyler.org/City-Government/Development-Planning/Property-Owners/Development-Planning-FAQs"
+        ],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.cityoftyler.org/City-Government/Development-Planning/Property-Owners/Forms-and-Applications"
+    "sourceUrl": [
+      "https://www.cityoftyler.org/City-Government/Development-Planning/Property-Owners/Forms-and-Applications"
+    ]
   },
   {
     "city": "Waco",
@@ -1052,7 +1087,9 @@
         "authority": "City of Waco Inspection Services",
         "description": "Waco requires a certificate of occupancy before initial occupancy and when the occupancy classification, tenancy, ownership, business name or business type changes.",
         "frequency": "once",
-        "url": "https://www.waco-texas.com/Departments/Development-Services/Inspection-Services/Commercial-Construction-Permits/Certificate-of-Occupancy",
+        "url": [
+          "https://www.waco-texas.com/Departments/Development-Services/Inspection-Services/Commercial-Construction-Permits/Certificate-of-Occupancy"
+        ],
         "appliesTo": ["all"]
       },
       {
@@ -1062,12 +1099,16 @@
         "authority": "City of Waco Inspection Services",
         "description": "Waco requires approved permits before commercial construction, alteration or renovation work begins; contractors must register before plumbing, electrical or mechanical permits can be issued.",
         "frequency": "once",
-        "url": "https://www.waco-texas.com/Departments/Development-Services/Inspection-Services/Commercial-Construction-Permits",
+        "url": [
+          "https://www.waco-texas.com/Departments/Development-Services/Inspection-Services/Commercial-Construction-Permits"
+        ],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.waco-texas.com/Departments/Development-Services/Inspection-Services/Commercial-Construction-Permits/Start-Business-New-Space"
+    "sourceUrl": [
+      "https://www.waco-texas.com/Departments/Development-Services/Inspection-Services/Commercial-Construction-Permits/Start-Business-New-Space"
+    ]
   },
   {
     "city": "Wichita Falls",
@@ -1082,7 +1123,7 @@
         "authority": "City of Wichita Falls Building and Code Administration",
         "description": "Wichita Falls requires certain permits and licenses for city operations, including itinerant-merchant permits, solicitor permits, transient-show permits and dealer registration for crafted precious metals.",
         "frequency": "once",
-        "url": "https://www.wichitafallstx.gov/1404/Permit-Applications",
+        "url": ["https://www.wichitafallstx.gov/1404/Permit-Applications"],
         "appliesTo": ["all"]
       },
       {
@@ -1092,12 +1133,12 @@
         "authority": "City of Wichita Falls Building and Code Administration",
         "description": "Wichita Falls contractor registration expires one year from issuance; the application warns that work requiring a permit may not begin before permit issuance or occupancy before the required certificate of occupancy.",
         "rrule": "FREQ=YEARLY",
-        "url": "https://www.wichitafallstx.gov/DocumentCenter/View/20292",
+        "url": ["https://www.wichitafallstx.gov/DocumentCenter/View/20292"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.wichitafallstx.gov/2256/33696/Checklists-Applications"
+    "sourceUrl": ["https://www.wichitafallstx.gov/2256/33696/Checklists-Applications"]
   },
   {
     "city": "New Braunfels",
@@ -1111,12 +1152,12 @@
         "authority": "New Braunfels local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "League City",
@@ -1130,12 +1171,12 @@
         "authority": "League City local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Conroe",
@@ -1149,12 +1190,12 @@
         "authority": "Conroe local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Georgetown",
@@ -1168,12 +1209,12 @@
         "authority": "Georgetown local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Temple",
@@ -1187,12 +1228,12 @@
         "authority": "Temple local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Bryan",
@@ -1206,12 +1247,12 @@
         "authority": "Bryan local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Leander",
@@ -1225,12 +1266,12 @@
         "authority": "Leander local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Baytown",
@@ -1244,12 +1285,12 @@
         "authority": "Baytown local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Mansfield",
@@ -1263,12 +1304,12 @@
         "authority": "Mansfield local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Longview",
@@ -1282,12 +1323,12 @@
         "authority": "Longview local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Pharr",
@@ -1301,12 +1342,12 @@
         "authority": "Pharr local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Flower Mound",
@@ -1320,12 +1361,12 @@
         "authority": "Flower Mound local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Cedar Park",
@@ -1339,12 +1380,12 @@
         "authority": "Cedar Park local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "San Marcos",
@@ -1358,12 +1399,12 @@
         "authority": "San Marcos local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Missouri City",
@@ -1377,12 +1418,12 @@
         "authority": "Missouri City local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Harlingen",
@@ -1396,12 +1437,12 @@
         "authority": "Harlingen local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "North Richland Hills",
@@ -1415,12 +1456,12 @@
         "authority": "North Richland Hills local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Kyle",
@@ -1434,12 +1475,12 @@
         "authority": "Kyle local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Pflugerville",
@@ -1453,12 +1494,12 @@
         "authority": "Pflugerville local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Rowlett",
@@ -1472,12 +1513,12 @@
         "authority": "Rowlett local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Victoria",
@@ -1491,12 +1532,12 @@
         "authority": "Victoria local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Fulshear",
@@ -1510,12 +1551,12 @@
         "authority": "Fulshear local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Celina",
@@ -1529,12 +1570,12 @@
         "authority": "Celina local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Wylie",
@@ -1548,12 +1589,12 @@
         "authority": "Wylie local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Little Elm",
@@ -1567,12 +1608,12 @@
         "authority": "Little Elm local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Euless",
@@ -1586,12 +1627,12 @@
         "authority": "Euless local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Texas City",
@@ -1605,12 +1646,12 @@
         "authority": "Texas City local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Burleson",
@@ -1624,12 +1665,12 @@
         "authority": "Burleson local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "DeSoto",
@@ -1643,12 +1684,12 @@
         "authority": "DeSoto local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Port Arthur",
@@ -1662,12 +1703,12 @@
         "authority": "Port Arthur local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Rockwall",
@@ -1681,12 +1722,12 @@
         "authority": "Rockwall local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Galveston",
@@ -1700,12 +1741,12 @@
         "authority": "Galveston local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Sherman",
@@ -1719,12 +1760,12 @@
         "authority": "Sherman local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Grapevine",
@@ -1738,12 +1779,12 @@
         "authority": "Grapevine local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Waxahachie",
@@ -1757,12 +1798,12 @@
         "authority": "Waxahachie local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Cedar Hill",
@@ -1776,12 +1817,12 @@
         "authority": "Cedar Hill local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Huntsville",
@@ -1795,12 +1836,12 @@
         "authority": "Huntsville local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Bedford",
@@ -1814,12 +1855,12 @@
         "authority": "Bedford local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Midlothian",
@@ -1833,12 +1874,12 @@
         "authority": "Midlothian local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "The Colony",
@@ -1852,12 +1893,12 @@
         "authority": "The Colony local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Keller",
@@ -1871,12 +1912,12 @@
         "authority": "Keller local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Hutto",
@@ -1890,12 +1931,12 @@
         "authority": "Hutto local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Schertz",
@@ -1909,12 +1950,12 @@
         "authority": "Schertz local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Prosper",
@@ -1928,12 +1969,12 @@
         "authority": "Prosper local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Haltom City",
@@ -1947,12 +1988,12 @@
         "authority": "Haltom City local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Weslaco",
@@ -1966,12 +2007,12 @@
         "authority": "Weslaco local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Princeton",
@@ -1985,12 +2026,12 @@
         "authority": "Princeton local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Rosenberg",
@@ -2004,12 +2045,12 @@
         "authority": "Rosenberg local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Forney",
@@ -2023,12 +2064,12 @@
         "authority": "Forney local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Coppell",
@@ -2042,12 +2083,12 @@
         "authority": "Coppell local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   },
   {
     "city": "Friendswood",
@@ -2061,11 +2102,11 @@
         "authority": "Friendswood local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml",
+        "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
   }
 ]

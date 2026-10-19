@@ -255,7 +255,8 @@ export interface ComplianceItem {
   upcomingChanges?: ChangeNotice[];
   /** Why the engine returned this item. */
   reason: string;
-  url?: string;
+  /** Official sources for this obligation. */
+  url?: string[];
   /** Conditions under which the item applies (all must hold), when they can be expressed as profile checks. */
   appliesWhen?: Applicability[];
   /** Alternative conditions; at least one must hold when present. */

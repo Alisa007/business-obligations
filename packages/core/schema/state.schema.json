@@ -353,7 +353,7 @@
               "type": "string"
             },
             "url": {
-              "$ref": "common.schema.json#/$defs/httpsUrl"
+              "$ref": "common.schema.json#/$defs/httpsUrlList"
             },
             "fee": {
               "type": "string",
@@ -458,28 +458,28 @@
       "required": ["formation", "annualReport", "uiRegistration", "entityTax", "laborPosters"],
       "properties": {
         "formation": {
-          "$ref": "common.schema.json#/$defs/httpsUrl"
+          "$ref": "common.schema.json#/$defs/httpsUrlList"
         },
         "annualReport": {
-          "$ref": "common.schema.json#/$defs/httpsUrl"
+          "$ref": "common.schema.json#/$defs/httpsUrlList"
         },
         "uiRegistration": {
-          "$ref": "common.schema.json#/$defs/httpsUrl"
+          "$ref": "common.schema.json#/$defs/httpsUrlList"
         },
         "withholding": {
-          "$ref": "common.schema.json#/$defs/httpsUrl"
+          "$ref": "common.schema.json#/$defs/httpsUrlList"
         },
         "salesTax": {
-          "$ref": "common.schema.json#/$defs/httpsUrl"
+          "$ref": "common.schema.json#/$defs/httpsUrlList"
         },
         "entityTax": {
-          "$ref": "common.schema.json#/$defs/httpsUrl"
+          "$ref": "common.schema.json#/$defs/httpsUrlList"
         },
         "laborPosters": {
-          "$ref": "common.schema.json#/$defs/httpsUrl"
+          "$ref": "common.schema.json#/$defs/httpsUrlList"
         },
         "dba": {
-          "$ref": "common.schema.json#/$defs/httpsUrl"
+          "$ref": "common.schema.json#/$defs/httpsUrlList"
         }
       }
     },
@@ -530,7 +530,7 @@
           "minLength": 3
         },
         "url": {
-          "$ref": "common.schema.json#/$defs/httpsUrl"
+          "$ref": "common.schema.json#/$defs/httpsUrlList"
         }
       }
     },

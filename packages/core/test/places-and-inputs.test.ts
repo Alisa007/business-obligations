@@ -187,7 +187,7 @@ describe("precedence authored in seed data", () => {
           authority: "City of Austin",
           description: "d",
           rrule: "FREQ=YEARLY",
-          url: "https://www.austintexas.gov/",
+          url: ["https://www.austintexas.gov/"],
           appliesTo: ["all" as const],
           appliesWhen: [{ field: "employeeCount", op: ">=" as const, value: 1 }],
           exemptions: ["Sole proprietors"],

@@ -38,7 +38,7 @@ export function describeProvenance(p: Provenance, asOf: string, compiledOn: stri
  * An item listed in `data/verified-items.json` (by its id) was read against its official pages, and is `checked`.
  */
 export function provenanceFor(item: ComplianceItem, p: ResolvedProfile): Provenance {
-  const url = item.url ? [item.url] : [];
+  const url = item.url ?? [];
   const verified = (verifiedItems as Record<string, { checkedOn: string; sources: string[] }>)[item.id];
   if (verified) {
     return {

@@ -64,7 +64,7 @@ export function extras(it: LocalItem, entryCheckedOn: string | undefined) {
           provenance: {
             confidence: "checked" as const,
             checkedOn,
-            sources: it.url ? [it.url] : [],
+        sources: it.url ?? [],
           },
         }
       : {}),
@@ -112,7 +112,7 @@ export function seededCityRule(lookup: CityLookup, id = "local.seeded-city"): Ru
         authority: it.authority,
         description: it.description,
         ...draftSchedule(it),
-        url: it.url,
+        url: it.url ? [...it.url] : undefined,
         ...extras(it, j.checkedOn),
         reason: `Business is located in ${j.city}, ${j.state}`,
       }));
@@ -140,7 +140,7 @@ export function seededCountyRule(lookup: CountyLookup, id = "local.seeded-county
         authority: it.authority,
         description: it.description,
         ...draftSchedule(it),
-        url: it.url,
+        url: it.url ? [...it.url] : undefined,
         ...extras(it, j.checkedOn),
         reason: `Business is located in ${j.county} County, ${j.state}`,
       }));

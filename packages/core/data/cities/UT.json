@@ -3,7 +3,7 @@
     "city": "Provo",
     "counties": ["Utah"],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.provo.gov/196/Commercial-Business-License",
+    "sourceUrl": ["https://www.provo.gov/196/Commercial-Business-License"],
     "items": [
       {
         "id": "provo.business-license",
@@ -13,7 +13,7 @@
         "description": "Business licenses renew annually; under city code the renewal application should be submitted at least 90 days before the expiration date, and a late filing does not change the expiration.",
         "rrule": "FREQ=YEARLY",
         "deadline": "90 days before the expiration date",
-        "url": "https://www.provo.gov/196/Commercial-Business-License",
+        "url": ["https://www.provo.gov/196/Commercial-Business-License"],
         "appliesTo": ["all"]
       }
     ]
@@ -31,18 +31,18 @@
         "description": "Anyone who does business within the city limits, permanently or temporarily, and every residential rental property must keep a valid, unexpired business license for each location, renewed each year online. Commercial licenses are reviewed for zoning, building and fire safety, and food businesses also need the Salt Lake Valley Health Department. A business run from home needs no license unless it affects the neighborhood.",
         "rrule": "FREQ=YEARLY",
         "deadline": "Before opening, then renew each year",
-        "url": "https://www.slc.gov/Finance/business-licensing/",
+        "url": ["https://www.slc.gov/Finance/business-licensing/"],
         "appliesTo": ["all"]
       }
     ],
-    "sourceUrl": "https://www.slc.gov/Finance/business-licensing/",
+    "sourceUrl": ["https://www.slc.gov/Finance/business-licensing/"],
     "checkedOn": "2026-10-18"
   },
   {
     "city": "West Jordan",
     "counties": ["Salt Lake"],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://westjordan.utah.gov/business-licensing/",
+    "sourceUrl": ["https://westjordan.utah.gov/business-licensing/"],
     "items": [
       {
         "id": "westjordan.business-license",
@@ -52,7 +52,7 @@
         "description": "Business licenses renew annually; the city emails the renewal invoice 45 days before the license expires.",
         "rrule": "FREQ=YEARLY",
         "deadline": "License expiration date",
-        "url": "https://westjordan.utah.gov/business-licensing/",
+        "url": ["https://westjordan.utah.gov/business-licensing/"],
         "appliesTo": ["all"]
       }
     ]
@@ -61,7 +61,7 @@
     "city": "West Valley City",
     "note": "The renewal date and the late-renewal penalty were not confirmed from the city's own pages.",
     "counties": ["Salt Lake"],
-    "sourceUrl": "https://www.wvc-ut.gov/business",
+    "sourceUrl": ["https://www.wvc-ut.gov/business"],
     "items": [
       {
         "id": "westvalleycity.business-license",
@@ -71,7 +71,7 @@
         "description": "A business with a place of business in the city limits needs a city business license, which can be renewed online. A home-based business needs a home business license unless it grosses less than $2,000 a year, and the owner of a rental dwelling unit must keep a license current too. Fees are in the city's consolidated fee schedule.",
         "rrule": "FREQ=YEARLY",
         "deadline": "Before opening, then renew each year",
-        "url": "https://www.wvc-ut.gov/government/department_list/finance/business_licensing/index.php",
+        "url": ["https://www.wvc-ut.gov/government/department_list/finance/business_licensing/index.php"],
         "appliesTo": ["all"],
         "appliesWhenAny": [
           {
@@ -103,12 +103,12 @@
         "authority": "St. George local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://commerce.utah.gov/corporations/business-entities/dba/",
+        "url": ["https://commerce.utah.gov/corporations/business-entities/dba/"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://commerce.utah.gov/corporations/business-entities/dba/"
+    "sourceUrl": ["https://commerce.utah.gov/corporations/business-entities/dba/"]
   },
   {
     "city": "Lehi",
@@ -122,12 +122,12 @@
         "authority": "Lehi local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://commerce.utah.gov/corporations/business-entities/dba/",
+        "url": ["https://commerce.utah.gov/corporations/business-entities/dba/"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://commerce.utah.gov/corporations/business-entities/dba/"
+    "sourceUrl": ["https://commerce.utah.gov/corporations/business-entities/dba/"]
   },
   {
     "city": "Orem",
@@ -141,12 +141,12 @@
         "authority": "Orem local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://commerce.utah.gov/corporations/business-entities/dba/",
+        "url": ["https://commerce.utah.gov/corporations/business-entities/dba/"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://commerce.utah.gov/corporations/business-entities/dba/"
+    "sourceUrl": ["https://commerce.utah.gov/corporations/business-entities/dba/"]
   },
   {
     "city": "Sandy",
@@ -160,12 +160,12 @@
         "authority": "Sandy local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://commerce.utah.gov/corporations/business-entities/dba/",
+        "url": ["https://commerce.utah.gov/corporations/business-entities/dba/"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://commerce.utah.gov/corporations/business-entities/dba/"
+    "sourceUrl": ["https://commerce.utah.gov/corporations/business-entities/dba/"]
   },
   {
     "city": "Ogden",
@@ -179,12 +179,12 @@
         "authority": "Ogden local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://commerce.utah.gov/corporations/business-entities/dba/",
+        "url": ["https://commerce.utah.gov/corporations/business-entities/dba/"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://commerce.utah.gov/corporations/business-entities/dba/"
+    "sourceUrl": ["https://commerce.utah.gov/corporations/business-entities/dba/"]
   },
   {
     "city": "South Jordan",
@@ -198,12 +198,12 @@
         "authority": "South Jordan local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://commerce.utah.gov/corporations/business-entities/dba/",
+        "url": ["https://commerce.utah.gov/corporations/business-entities/dba/"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://commerce.utah.gov/corporations/business-entities/dba/"
+    "sourceUrl": ["https://commerce.utah.gov/corporations/business-entities/dba/"]
   },
   {
     "city": "Layton",
@@ -217,12 +217,12 @@
         "authority": "Layton local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://commerce.utah.gov/corporations/business-entities/dba/",
+        "url": ["https://commerce.utah.gov/corporations/business-entities/dba/"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://commerce.utah.gov/corporations/business-entities/dba/"
+    "sourceUrl": ["https://commerce.utah.gov/corporations/business-entities/dba/"]
   },
   {
     "city": "Eagle Mountain",
@@ -236,12 +236,12 @@
         "authority": "Eagle Mountain local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://commerce.utah.gov/corporations/business-entities/dba/",
+        "url": ["https://commerce.utah.gov/corporations/business-entities/dba/"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://commerce.utah.gov/corporations/business-entities/dba/"
+    "sourceUrl": ["https://commerce.utah.gov/corporations/business-entities/dba/"]
   },
   {
     "city": "Millcreek",
@@ -255,12 +255,12 @@
         "authority": "Millcreek local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://commerce.utah.gov/corporations/business-entities/dba/",
+        "url": ["https://commerce.utah.gov/corporations/business-entities/dba/"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://commerce.utah.gov/corporations/business-entities/dba/"
+    "sourceUrl": ["https://commerce.utah.gov/corporations/business-entities/dba/"]
   },
   {
     "city": "Herriman",
@@ -274,12 +274,12 @@
         "authority": "Herriman local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://commerce.utah.gov/corporations/business-entities/dba/",
+        "url": ["https://commerce.utah.gov/corporations/business-entities/dba/"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://commerce.utah.gov/corporations/business-entities/dba/"
+    "sourceUrl": ["https://commerce.utah.gov/corporations/business-entities/dba/"]
   },
   {
     "city": "Saratoga Springs",
@@ -293,12 +293,12 @@
         "authority": "Saratoga Springs local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://commerce.utah.gov/corporations/business-entities/dba/",
+        "url": ["https://commerce.utah.gov/corporations/business-entities/dba/"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://commerce.utah.gov/corporations/business-entities/dba/"
+    "sourceUrl": ["https://commerce.utah.gov/corporations/business-entities/dba/"]
   },
   {
     "city": "Taylorsville",
@@ -312,12 +312,12 @@
         "authority": "Taylorsville local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://commerce.utah.gov/corporations/business-entities/dba/",
+        "url": ["https://commerce.utah.gov/corporations/business-entities/dba/"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://commerce.utah.gov/corporations/business-entities/dba/"
+    "sourceUrl": ["https://commerce.utah.gov/corporations/business-entities/dba/"]
   },
   {
     "city": "Logan",
@@ -331,12 +331,12 @@
         "authority": "Logan local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://commerce.utah.gov/corporations/business-entities/dba/",
+        "url": ["https://commerce.utah.gov/corporations/business-entities/dba/"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://commerce.utah.gov/corporations/business-entities/dba/"
+    "sourceUrl": ["https://commerce.utah.gov/corporations/business-entities/dba/"]
   },
   {
     "city": "Murray",
@@ -350,12 +350,12 @@
         "authority": "Murray local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://commerce.utah.gov/corporations/business-entities/dba/",
+        "url": ["https://commerce.utah.gov/corporations/business-entities/dba/"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://commerce.utah.gov/corporations/business-entities/dba/"
+    "sourceUrl": ["https://commerce.utah.gov/corporations/business-entities/dba/"]
   },
   {
     "city": "Draper",
@@ -369,12 +369,12 @@
         "authority": "Draper local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://commerce.utah.gov/corporations/business-entities/dba/",
+        "url": ["https://commerce.utah.gov/corporations/business-entities/dba/"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://commerce.utah.gov/corporations/business-entities/dba/"
+    "sourceUrl": ["https://commerce.utah.gov/corporations/business-entities/dba/"]
   },
   {
     "city": "Spanish Fork",
@@ -388,12 +388,12 @@
         "authority": "Spanish Fork local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://commerce.utah.gov/corporations/business-entities/dba/",
+        "url": ["https://commerce.utah.gov/corporations/business-entities/dba/"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://commerce.utah.gov/corporations/business-entities/dba/"
+    "sourceUrl": ["https://commerce.utah.gov/corporations/business-entities/dba/"]
   },
   {
     "city": "Riverton",
@@ -407,12 +407,12 @@
         "authority": "Riverton local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://commerce.utah.gov/corporations/business-entities/dba/",
+        "url": ["https://commerce.utah.gov/corporations/business-entities/dba/"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://commerce.utah.gov/corporations/business-entities/dba/"
+    "sourceUrl": ["https://commerce.utah.gov/corporations/business-entities/dba/"]
   },
   {
     "city": "Bountiful",
@@ -426,12 +426,12 @@
         "authority": "Bountiful local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://commerce.utah.gov/corporations/business-entities/dba/",
+        "url": ["https://commerce.utah.gov/corporations/business-entities/dba/"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://commerce.utah.gov/corporations/business-entities/dba/"
+    "sourceUrl": ["https://commerce.utah.gov/corporations/business-entities/dba/"]
   },
   {
     "city": "Tooele",
@@ -445,12 +445,12 @@
         "authority": "Tooele local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://commerce.utah.gov/corporations/business-entities/dba/",
+        "url": ["https://commerce.utah.gov/corporations/business-entities/dba/"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://commerce.utah.gov/corporations/business-entities/dba/"
+    "sourceUrl": ["https://commerce.utah.gov/corporations/business-entities/dba/"]
   },
   {
     "city": "Cedar City",
@@ -464,11 +464,11 @@
         "authority": "Cedar City local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://commerce.utah.gov/corporations/business-entities/dba/",
+        "url": ["https://commerce.utah.gov/corporations/business-entities/dba/"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://commerce.utah.gov/corporations/business-entities/dba/"
+    "sourceUrl": ["https://commerce.utah.gov/corporations/business-entities/dba/"]
   }
 ]

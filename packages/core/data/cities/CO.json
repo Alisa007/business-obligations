@@ -3,7 +3,7 @@
     "city": "Arvada",
     "counties": ["Jefferson", "Adams"],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.arvadaco.gov/253/Business-Licenses",
+    "sourceUrl": ["https://www.arvadaco.gov/253/Business-Licenses"],
     "items": [
       {
         "id": "arvada.business-license",
@@ -12,7 +12,7 @@
         "authority": "City of Arvada Revenue",
         "description": "Business licenses are free and do not expire (food trucks and short-term rentals renew annually); you keep the license active by filing the assigned sales and use tax returns.",
         "frequency": "once",
-        "url": "https://www.arvadaco.gov/253/Business-Licenses",
+        "url": ["https://www.arvadaco.gov/253/Business-Licenses"],
         "appliesTo": ["all"]
       }
     ]
@@ -29,12 +29,12 @@
         "description": "Any business operating in Aurora or with employees there needs a city business license, one per location. The license covers two years from issuance and establishes sales, use, occupational privilege and lodger's tax filing roles.",
         "rrule": "FREQ=YEARLY;INTERVAL=2",
         "deadline": "Two years from issuance",
-        "url": "https://www.auroragov.org/bl",
+        "url": ["https://www.auroragov.org/bl"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.auroragov.org/business_services/licenses___permits/business_licensing"
+    "sourceUrl": ["https://www.auroragov.org/business_services/licenses___permits/business_licensing"]
   },
   {
     "city": "Boulder",
@@ -47,18 +47,18 @@
         "authority": "City of Boulder Tax and Licensing",
         "description": "Business licenses are issued site by site, applied for and renewed through the Boulder Online Tax System; businesses also hold a sales tax account in good standing.",
         "frequency": "ongoing",
-        "url": "https://bouldercolorado.gov/services/business-licenses",
+        "url": ["https://bouldercolorado.gov/services/business-licenses"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://bouldercolorado.gov/services/business-licenses"
+    "sourceUrl": ["https://bouldercolorado.gov/services/business-licenses"]
   },
   {
     "city": "Centennial",
     "counties": ["Arapahoe"],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.centennialco.gov/Online-Services/Sales-Tax-Licensing",
+    "sourceUrl": ["https://www.centennialco.gov/Online-Services/Sales-Tax-Licensing"],
     "items": [
       {
         "id": "centennial.business-license",
@@ -68,7 +68,7 @@
         "description": "Every active business needs either a Retail Sales Tax License or a Business Registration (one, not both); both are biennial and expire December 31 of the second calendar year.",
         "rrule": "FREQ=YEARLY;INTERVAL=2",
         "deadline": "December 31 of the second calendar year",
-        "url": "https://www.centennialco.gov/Online-Services/Sales-Tax-Licensing",
+        "url": ["https://www.centennialco.gov/Online-Services/Sales-Tax-Licensing"],
         "appliesTo": ["all"],
         "feeDetail": {
           "basis": "flat",
@@ -80,7 +80,7 @@
   {
     "city": "Colorado Springs",
     "counties": ["El Paso"],
-    "sourceUrl": "https://coloradosprings.gov/businesslicensing",
+    "sourceUrl": ["https://coloradosprings.gov/businesslicensing"],
     "checkedOn": "2026-10-18",
     "items": [
       {
@@ -90,7 +90,7 @@
         "authority": "City of Colorado Springs Sales Tax Office",
         "description": "Businesses selling or leasing at retail in the city need a city sales tax license (no fee since September 1, 2023). Licenses expire every odd year on December 31 and are renewed online only.",
         "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=12;BYMONTHDAY=31",
-        "url": "https://coloradosprings.gov/new-tax-applications",
+        "url": ["https://coloradosprings.gov/new-tax-applications"],
         "appliesTo": ["all"],
         "anchor": "2027-12-31"
       }
@@ -99,7 +99,7 @@
   {
     "city": "Denver",
     "counties": ["Denver"],
-    "sourceUrl": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Business-Licensing/Resource-center/Frequently-Asked-Questions",
+    "sourceUrl": ["https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Business-Licensing/Resource-center/Frequently-Asked-Questions"],
     "checkedOn": "2026-10-18",
     "items": [
       {
@@ -109,7 +109,7 @@
         "authority": "Denver Department of Finance, Treasury Division",
         "description": "Denver is a home-rule city and administers its own sales and use tax separately from the state.",
         "frequency": "once",
-        "url": "https://denvergov.org/Government/Departments/Department-of-Finance",
+        "url": ["https://denvergov.org/Government/Departments/Department-of-Finance"],
         "appliesTo": ["sells_goods"]
       },
       {
@@ -120,7 +120,7 @@
         "description": "Employers and employees pay a monthly occupational privilege tax for work performed in Denver.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=-1",
         "deadline": "Monthly for employers with 10 or more employees; employers with fewer may file quarterly",
-        "url": "https://www.denvergov.org/files/assets/public/v/2/finance/documents/treasury/tax-guides/taxguidetopic61_occupationalprivilegetaxes.pdf",
+        "url": ["https://www.denvergov.org/files/assets/public/v/2/finance/documents/treasury/tax-guides/taxguidetopic61_occupationalprivilegetaxes.pdf"],
         "appliesTo": ["employees"],
         "feeDetail": {
           "basis": "varies",
@@ -140,17 +140,17 @@
         "authority": "City of Fort Collins Sales Tax Office",
         "description": "The city's sales and use tax license serves as its business license, with no fee; each location needs its own, and a home occupation license is separate.",
         "frequency": "once",
-        "url": "https://www.fortcollins.gov/Business/Sales-Tax",
+        "url": ["https://www.fortcollins.gov/Business/Sales-Tax"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.fortcollins.gov/Business/Sales-Tax/Sales-Tax-FAQs"
+    "sourceUrl": ["https://www.fortcollins.gov/Business/Sales-Tax/Sales-Tax-FAQs"]
   },
   {
     "city": "Greeley",
     "counties": ["Weld"],
-    "sourceUrl": "https://greeleyco.gov/business/business-operations/business-licenses-and-resources/",
+    "sourceUrl": ["https://greeleyco.gov/business/business-operations/business-licenses-and-resources/"],
     "checkedOn": "2026-10-18",
     "items": [
       {
@@ -160,7 +160,7 @@
         "authority": "City of Greeley Sales Tax Division",
         "description": "Any company or individual conducting business in Greeley must obtain a city business license; the official page lists license resources but does not state one universal renewal date.",
         "frequency": "once",
-        "url": "https://greeleyco.gov/business/business-operations/business-licenses-and-resources/",
+        "url": ["https://greeleyco.gov/business/business-operations/business-licenses-and-resources/"],
         "appliesTo": ["all"]
       },
       {
@@ -170,7 +170,7 @@
         "authority": "City of Greeley Building Inspection",
         "description": "Greeley requires a building permit before covered construction, alteration, repair, demolition, or a change of occupancy begins.",
         "frequency": "once",
-        "url": "https://greeleyco.gov/business/permits-licenses-and-inspections/",
+        "url": ["https://greeleyco.gov/business/permits-licenses-and-inspections/"],
         "appliesTo": ["all"]
       },
       {
@@ -180,7 +180,7 @@
         "authority": "City of Greeley Community Development",
         "description": "Greeley requires completion of construction and required inspections before releasing permits or certificates of occupancy; a new certificate is issued when existing-building work changes the use.",
         "frequency": "once",
-        "url": "https://greeleyco.gov/business/permits-licenses-and-inspections/",
+        "url": ["https://greeleyco.gov/business/permits-licenses-and-inspections/"],
         "appliesTo": ["all"]
       }
     ]
@@ -188,7 +188,7 @@
   {
     "city": "Lakewood",
     "counties": ["Jefferson"],
-    "sourceUrl": "https://www.lakewoodco.gov/Local-Government/Departments/Economic-Development/How-to-Start-a-Business",
+    "sourceUrl": ["https://www.lakewoodco.gov/Local-Government/Departments/Economic-Development/How-to-Start-a-Business"],
     "checkedOn": "2026-10-18",
     "items": [
       {
@@ -198,7 +198,7 @@
         "authority": "City of Lakewood Finance Department",
         "description": "Every business with a physical presence in Lakewood must have a city business license; the city also requires applicable business tax filings at the frequency assigned to the business.",
         "frequency": "once",
-        "url": "https://www.lakewoodco.gov/Local-Government/Departments/Economic-Development/How-to-Start-a-Business",
+        "url": ["https://www.lakewoodco.gov/Local-Government/Departments/Economic-Development/How-to-Start-a-Business"],
         "appliesTo": ["all"]
       },
       {
@@ -208,7 +208,7 @@
         "authority": "City of Lakewood Public Works Department",
         "description": "Lakewood requires applicable building and construction permits before regulated work begins and processes permit fees and inspections through its permit system.",
         "frequency": "once",
-        "url": "https://www.lakewood.org/files/assets/public/v/4/public-works/pdfs/engineering/2023-permit-for-contractors.pdf",
+        "url": ["https://www.lakewood.org/files/assets/public/v/4/public-works/pdfs/engineering/2023-permit-for-contractors.pdf"],
         "appliesTo": ["all"]
       },
       {
@@ -218,7 +218,7 @@
         "authority": "City of Lakewood Building Division",
         "description": "Lakewood issues a certificate of occupancy for new buildings and remodels involving a change in occupancy after required inspections; an active building permit is required for existing buildings.",
         "frequency": "once",
-        "url": "https://www.lakewood.org/files/assets/public/v/4/public-works/pdfs/engineering/2023-permit-for-contractors.pdf",
+        "url": ["https://www.lakewood.org/files/assets/public/v/4/public-works/pdfs/engineering/2023-permit-for-contractors.pdf"],
         "appliesTo": ["all"]
       }
     ]
@@ -234,12 +234,12 @@
         "authority": "City of Pueblo Finance Department, Sales Tax Division",
         "description": "Businesses with a Pueblo location start routing through the city portal, then pay fees and apply for the sales and use tax license; returns are due the 20th of the month after the period.",
         "frequency": "once",
-        "url": "https://www.pueblo.us/180",
+        "url": ["https://www.pueblo.us/180"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.pueblo.us/516/Business-Licenses"
+    "sourceUrl": ["https://www.pueblo.us/516/Business-Licenses"]
   },
   {
     "city": "Thornton",
@@ -252,12 +252,12 @@
         "authority": "City of Thornton Sales Tax Division",
         "description": "All businesses in Thornton need a city sales and use tax business license, free of charge and with no annual renewal; a certificate of occupancy is also required for locations.",
         "frequency": "once",
-        "url": "https://www.thorntonco.gov/node/232",
+        "url": ["https://www.thorntonco.gov/node/232"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.thorntonco.gov/business-development/business-licenses"
+    "sourceUrl": ["https://www.thorntonco.gov/business-development/business-licenses"]
   },
   {
     "city": "Westminster",
@@ -271,12 +271,12 @@
         "description": "Business and sales tax licenses renew annually through the online portal at no fee for commercial locations; a reminder email goes 60 days before expiration.",
         "rrule": "FREQ=YEARLY",
         "deadline": "Anniversary of the license",
-        "url": "https://www.westminsterco.gov/513/Business-Licenses",
+        "url": ["https://www.westminsterco.gov/513/Business-Licenses"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.westminsterco.gov/513/Business-Licenses"
+    "sourceUrl": ["https://www.westminsterco.gov/513/Business-Licenses"]
   },
   {
     "city": "Longmont",
@@ -294,12 +294,12 @@
           "basis": "flat",
           "amount": 25
         },
-        "url": "https://longmontcolorado.gov/finance/sales-and-use-tax/forms-for-doing-business-in-longmont/",
+        "url": ["https://longmontcolorado.gov/finance/sales-and-use-tax/forms-for-doing-business-in-longmont/"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.co.us/pubs/business/FAQs/tradeNames.html"
+    "sourceUrl": ["https://www.sos.state.co.us/pubs/business/FAQs/tradeNames.html"]
   },
   {
     "city": "Castle Rock",
@@ -317,12 +317,12 @@
           "basis": "flat",
           "amount": 10
         },
-        "url": "https://www.crgov.com/1677/Business-and-Tax-Licensing",
+        "url": ["https://www.crgov.com/1677/Business-and-Tax-Licensing"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.co.us/pubs/business/FAQs/tradeNames.html"
+    "sourceUrl": ["https://www.sos.state.co.us/pubs/business/FAQs/tradeNames.html"]
   },
   {
     "city": "Loveland",
@@ -336,12 +336,12 @@
         "authority": "Loveland local licensing authority",
         "description": "Loveland does not issue a general business license; businesses selling taxable goods or services need a City sales tax license, and the city's application lists a $20 application fee.",
         "frequency": "once",
-        "url": "https://www.lovgov.org/city-government/city-clerk/general-licensing-information",
+        "url": ["https://www.lovgov.org/city-government/city-clerk/general-licensing-information"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.co.us/pubs/business/FAQs/tradeNames.html"
+    "sourceUrl": ["https://www.sos.state.co.us/pubs/business/FAQs/tradeNames.html"]
   },
   {
     "city": "Broomfield",
@@ -355,12 +355,12 @@
         "authority": "Broomfield local licensing authority",
         "description": "Broomfield does not require a separate general business license to operate, but businesses must register with the State of Colorado and may need city-issued liquor, tobacco, or solicitor licenses.",
         "frequency": "once",
-        "url": "https://www.broomfield.org/3792/Prospective-Owners-Operators",
+        "url": ["https://www.broomfield.org/3792/Prospective-Owners-Operators"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.co.us/pubs/business/FAQs/tradeNames.html"
+    "sourceUrl": ["https://www.sos.state.co.us/pubs/business/FAQs/tradeNames.html"]
   },
   {
     "city": "Commerce City",
@@ -374,12 +374,12 @@
         "authority": "Commerce City local licensing authority",
         "description": "Commerce City requires every business, including service-only businesses, to obtain a general business license; the license does not require annual renewal, and additional specialty licenses may apply.",
         "frequency": "once",
-        "url": "https://www.c3gov.com/Business-Development/Business-Licenses",
+        "url": ["https://www.c3gov.com/Business-Development/Business-Licenses"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.co.us/pubs/business/FAQs/tradeNames.html"
+    "sourceUrl": ["https://www.sos.state.co.us/pubs/business/FAQs/tradeNames.html"]
   },
   {
     "city": "Grand Junction",
@@ -393,12 +393,12 @@
         "authority": "Grand Junction local licensing authority",
         "description": "Grand Junction requires businesses covered by city code to obtain the applicable license or permit and pay the specified license fee in advance of issuance; sales and use tax licenses require an application to Finance.",
         "frequency": "once",
-        "url": "https://ecode360.com/44686652",
+        "url": ["https://ecode360.com/44686652"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.co.us/pubs/business/FAQs/tradeNames.html"
+    "sourceUrl": ["https://www.sos.state.co.us/pubs/business/FAQs/tradeNames.html"]
   },
   {
     "city": "Parker",
@@ -412,12 +412,12 @@
         "authority": "Parker local licensing authority",
         "description": "Parker requires businesses subject to its licensing rules to use the Town's business license application; the Town publishes current business-license fees and renewal information through its official forms and policies.",
         "frequency": "once",
-        "url": "https://parkerco.gov/DocumentCenter/View/49/Parker-Business-License---Updated-January-2026",
+        "url": ["https://parkerco.gov/DocumentCenter/View/49/Parker-Business-License---Updated-January-2026"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.co.us/pubs/business/FAQs/tradeNames.html"
+    "sourceUrl": ["https://www.sos.state.co.us/pubs/business/FAQs/tradeNames.html"]
   },
   {
     "city": "Littleton",
@@ -431,12 +431,12 @@
         "authority": "Littleton local licensing authority",
         "description": "Littleton requires businesses engaged in commerce within the city to register for a Business and Sales/Use Tax License; the application has no fee, and sales/use tax returns are due by the 20th of the following month.",
         "frequency": "once",
-        "url": "https://www.littletonco.gov/Government/Departments/Finance/Business-SalesUse-Tax-License",
+        "url": ["https://www.littletonco.gov/Government/Departments/Finance/Business-SalesUse-Tax-License"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.co.us/pubs/business/FAQs/tradeNames.html"
+    "sourceUrl": ["https://www.sos.state.co.us/pubs/business/FAQs/tradeNames.html"]
   },
   {
     "city": "Brighton",
@@ -450,12 +450,12 @@
         "authority": "Brighton local licensing authority",
         "description": "Brighton requires businesses with a physical presence in the city, including home-based businesses, to hold an active city business license; the general business and sales tax license has no application fee and renewals are reviewed by the city.",
         "frequency": "once",
-        "url": "https://www.brightonco.gov/1481/Business-Licensing",
+        "url": ["https://www.brightonco.gov/1481/Business-Licensing"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.co.us/pubs/business/FAQs/tradeNames.html"
+    "sourceUrl": ["https://www.sos.state.co.us/pubs/business/FAQs/tradeNames.html"]
   },
   {
     "city": "Windsor",
@@ -469,11 +469,11 @@
         "authority": "Windsor local licensing authority",
         "description": "Windsor requires businesses with a physical presence in town to obtain and renew a local business license; retailers without physical presence may qualify for Colorado's streamlined no-fee local-license process.",
         "frequency": "once",
-        "url": "https://register.windsorgov.com/104/Business-Licensing",
+        "url": ["https://register.windsorgov.com/104/Business-Licensing"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.sos.state.co.us/pubs/business/FAQs/tradeNames.html"
+    "sourceUrl": ["https://www.sos.state.co.us/pubs/business/FAQs/tradeNames.html"]
   }
 ]

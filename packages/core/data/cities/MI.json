@@ -12,11 +12,11 @@
         "authority": "Ann Arbor local licensing authority",
         "description": "Review the cited local licensing source before operating; requirements may be activity-specific and can differ by business type or location.",
         "frequency": "once",
-        "url": "https://www.a2gov.org/city-clerk/licenses-and-permits/",
+        "url": ["https://www.a2gov.org/city-clerk/licenses-and-permits/"],
         "appliesTo": ["all"]
       }
     ],
-    "sourceUrl": "https://www.a2gov.org/city-clerk/licenses-and-permits/",
+    "sourceUrl": ["https://www.a2gov.org/city-clerk/licenses-and-permits/"],
     "checkedOn": "2026-10-18"
   },
   {
@@ -30,7 +30,7 @@
         "authority": "City of Detroit Income Tax Division / Michigan Department of Treasury",
         "description": "Employers with a location in Detroit or doing business there register with the city, withhold city income tax monthly or quarterly, and file the annual reconciliation.",
         "rrule": "FREQ=MONTHLY;INTERVAL=3",
-        "url": "https://detroitmi.gov/incometax",
+        "url": ["https://detroitmi.gov/incometax"],
         "appliesTo": ["employees"]
       },
       {
@@ -40,11 +40,11 @@
         "authority": "Michigan Department of Treasury (for the City of Detroit)",
         "description": "Corporations and partnerships doing business in Detroit file the city return, which the Michigan Department of Treasury has processed since 2017.",
         "rrule": "FREQ=YEARLY",
-        "url": "https://www.michigan.gov/taxes/citytax/detroit",
+        "url": ["https://www.michigan.gov/taxes/citytax/detroit"],
         "appliesTo": ["corporation"]
       }
     ],
-    "sourceUrl": "https://detroitmi.gov/incometax",
+    "sourceUrl": ["https://detroitmi.gov/incometax"],
     "checkedOn": "2026-10-18"
   },
   {
@@ -58,11 +58,11 @@
         "authority": "City of Flint Income Tax Division",
         "description": "Employers withhold city income tax, file quarterly returns and reconcile annually on Form FW-3 by February 28. From January 1, 2027, business returns move to the Michigan Department of Treasury and withholding becomes monthly.",
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=28",
-        "url": "https://www.michigan.gov/taxes/citytax/flint/business",
+        "url": ["https://www.michigan.gov/taxes/citytax/flint/business"],
         "appliesTo": ["employees"]
       }
     ],
-    "sourceUrl": "https://www.michigan.gov/taxes/citytax/flint/business",
+    "sourceUrl": ["https://www.michigan.gov/taxes/citytax/flint/business"],
     "checkedOn": "2026-10-18"
   },
   {
@@ -77,11 +77,11 @@
         "description": "Corporations (GR-1120) and partnerships (GR-1065) file the city income tax return; calendar-year filers are due April 30 and fiscal-year filers four months after year end.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=30",
         "deadlineNote": "calendar-year filers",
-        "url": "https://www.grandrapidsmi.gov/media/ptdntgg5/2025-1120-website.pdf",
+        "url": ["https://www.grandrapidsmi.gov/media/ptdntgg5/2025-1120-website.pdf"],
         "appliesTo": ["corporation", "unincorporated"]
       }
     ],
-    "sourceUrl": "https://www.grandrapidsmi.gov/media/ptdntgg5/2025-1120-website.pdf",
+    "sourceUrl": ["https://www.grandrapidsmi.gov/media/ptdntgg5/2025-1120-website.pdf"],
     "checkedOn": "2026-10-18"
   },
   {
@@ -97,11 +97,11 @@
         "authority": "Lansing local licensing authority",
         "description": "Review the cited local licensing source before operating; requirements may be activity-specific and can differ by business type or location.",
         "frequency": "once",
-        "url": "https://www.lansingmi.gov/income-tax-forms",
+        "url": ["https://www.lansingmi.gov/income-tax-forms"],
         "appliesTo": ["all"]
       }
     ],
-    "sourceUrl": "https://www.lansingmi.gov/income-tax-forms",
+    "sourceUrl": ["https://www.lansingmi.gov/income-tax-forms"],
     "checkedOn": "2026-10-18"
   },
   {
@@ -117,11 +117,11 @@
         "authority": "Sterling Heights local licensing authority",
         "description": "Review the cited local licensing source before operating; requirements may be activity-specific and can differ by business type or location.",
         "frequency": "once",
-        "url": "https://www.sterlingheights.gov/1293/Business-Licensing",
+        "url": ["https://www.sterlingheights.gov/1293/Business-Licensing"],
         "appliesTo": ["all"]
       }
     ],
-    "sourceUrl": "https://www.sterlingheights.gov/1293/Business-Licensing",
+    "sourceUrl": ["https://www.sterlingheights.gov/1293/Business-Licensing"],
     "checkedOn": "2026-10-18"
   },
   {
@@ -137,11 +137,11 @@
         "authority": "Warren local licensing authority",
         "description": "Review the cited local licensing source before operating; requirements may be activity-specific and can differ by business type or location.",
         "frequency": "once",
-        "url": "https://www.cityofwarren.org/business-licenses",
+        "url": ["https://www.cityofwarren.org/business-licenses"],
         "appliesTo": ["all"]
       }
     ],
-    "sourceUrl": "https://www.cityofwarren.org/business-licenses",
+    "sourceUrl": ["https://www.cityofwarren.org/business-licenses"],
     "checkedOn": "2026-10-18"
   },
   {
@@ -156,12 +156,12 @@
         "authority": "Dearborn local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms",
+        "url": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
+    "sourceUrl": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"]
   },
   {
     "city": "Livonia",
@@ -175,12 +175,12 @@
         "authority": "Livonia local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms",
+        "url": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
+    "sourceUrl": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"]
   },
   {
     "city": "Troy",
@@ -194,12 +194,12 @@
         "authority": "Troy local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms",
+        "url": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
+    "sourceUrl": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"]
   },
   {
     "city": "Farmington Hills",
@@ -213,12 +213,12 @@
         "authority": "Farmington Hills local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms",
+        "url": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
+    "sourceUrl": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"]
   },
   {
     "city": "Westland",
@@ -232,12 +232,12 @@
         "authority": "Westland local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms",
+        "url": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
+    "sourceUrl": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"]
   },
   {
     "city": "Wyoming",
@@ -251,12 +251,12 @@
         "authority": "Wyoming local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms",
+        "url": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
+    "sourceUrl": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"]
   },
   {
     "city": "Rochester Hills",
@@ -270,12 +270,12 @@
         "authority": "Rochester Hills local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms",
+        "url": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
+    "sourceUrl": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"]
   },
   {
     "city": "Southfield",
@@ -289,12 +289,12 @@
         "authority": "Southfield local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms",
+        "url": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
+    "sourceUrl": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"]
   },
   {
     "city": "Kalamazoo",
@@ -308,12 +308,12 @@
         "authority": "Kalamazoo local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms",
+        "url": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
+    "sourceUrl": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"]
   },
   {
     "city": "Novi",
@@ -327,12 +327,12 @@
         "authority": "Novi local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms",
+        "url": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
+    "sourceUrl": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"]
   },
   {
     "city": "Pontiac",
@@ -346,12 +346,12 @@
         "authority": "Pontiac local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms",
+        "url": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
+    "sourceUrl": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"]
   },
   {
     "city": "Taylor",
@@ -365,12 +365,12 @@
         "authority": "Taylor local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms",
+        "url": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
+    "sourceUrl": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"]
   },
   {
     "city": "Dearborn Heights",
@@ -384,12 +384,12 @@
         "authority": "Dearborn Heights local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms",
+        "url": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
+    "sourceUrl": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"]
   },
   {
     "city": "St. Clair Shores",
@@ -403,12 +403,12 @@
         "authority": "St. Clair Shores local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms",
+        "url": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
+    "sourceUrl": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"]
   },
   {
     "city": "Royal Oak",
@@ -422,12 +422,12 @@
         "authority": "Royal Oak local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms",
+        "url": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
+    "sourceUrl": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"]
   },
   {
     "city": "Kentwood",
@@ -441,12 +441,12 @@
         "authority": "Kentwood local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms",
+        "url": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
+    "sourceUrl": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"]
   },
   {
     "city": "Battle Creek",
@@ -460,12 +460,12 @@
         "authority": "Battle Creek local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms",
+        "url": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
+    "sourceUrl": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"]
   },
   {
     "city": "Portage",
@@ -479,12 +479,12 @@
         "authority": "Portage local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms",
+        "url": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
+    "sourceUrl": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"]
   },
   {
     "city": "East Lansing",
@@ -498,12 +498,12 @@
         "authority": "East Lansing local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms",
+        "url": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
+    "sourceUrl": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"]
   },
   {
     "city": "Roseville",
@@ -517,12 +517,12 @@
         "authority": "Roseville local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms",
+        "url": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
+    "sourceUrl": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"]
   },
   {
     "city": "Saginaw",
@@ -536,12 +536,12 @@
         "authority": "Saginaw local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms",
+        "url": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
+    "sourceUrl": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"]
   },
   {
     "city": "Midland",
@@ -555,11 +555,11 @@
         "authority": "Midland local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms",
+        "url": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"],
         "appliesTo": ["all"]
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
+    "sourceUrl": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"]
   }
 ]

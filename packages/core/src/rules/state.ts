@@ -111,7 +111,7 @@ function employerItems(x: Presence, p: ResolvedProfile): ItemDraft[] {
         "Federal law requires reporting each new hire within 20 days of hire (some states require sooner).",
       frequency: "per_event",
       reason,
-      url: "https://www.acf.hhs.gov/css/employers",
+      url: ["https://www.acf.hhs.gov/css/employers"],
     },
   ];
   if (s.wageWithholding) {
@@ -325,7 +325,7 @@ export const stateRules: Rule[] = [
             : `${s.entityTax}.`,
           rrule: "FREQ=YEARLY",
           reason: `${p.entityType} with ${x.home ? "its principal place of business" : "employees or property"} in ${x.state}`,
-          url: s.links.entityTax,
+            url: s.links.entityTax,
         };
       }),
   },
@@ -358,9 +358,11 @@ export const stateRules: Rule[] = [
             "15th day of the 4th month of the tax year (estimated); return due 15th day of 3rd/4th month after year end",
           cost: { basis: "flat", amount: 800, currency: "USD" },
           reason: "Entity is doing business in California",
-          url: isCorpLike(p)
-            ? "https://www.ftb.ca.gov/file/business/types/corporations/index.html"
-            : "https://www.ftb.ca.gov/file/business/types/limited-liability-company/index.html",
+          url: [
+            isCorpLike(p)
+              ? "https://www.ftb.ca.gov/file/business/types/corporations/index.html"
+              : "https://www.ftb.ca.gov/file/business/types/limited-liability-company/index.html",
+          ],
         },
       ];
       if (isLlcSubtype(p) && p.annualRevenue >= 250_000) {
@@ -387,7 +389,7 @@ export const stateRules: Rule[] = [
             currency: "USD",
           },
           reason: `Annual revenue is ${p.annualRevenue}`,
-          url: "https://www.ftb.ca.gov/file/business/types/limited-liability-company/index.html",
+          url: ["https://www.ftb.ca.gov/file/business/types/limited-liability-company/index.html"],
         });
       }
       return out;
@@ -467,7 +469,7 @@ export const stateRules: Rule[] = [
             description: "Required before making taxable sales; register with the state tax agency.",
             frequency: "once" as const,
             reason,
-            url: s.links.salesTax ?? agency.url,
+                  url: s.links.salesTax ?? agency.url,
           },
           {
             title: `File sales tax returns and remit tax (${s.name})`,
@@ -484,7 +486,7 @@ export const stateRules: Rule[] = [
             deadline:
               "As assigned by the state (monthly, quarterly or yearly, by the amount of tax collected)",
             reason,
-            url: s.links.salesTax ?? agency.url,
+                  url: s.links.salesTax ?? agency.url,
           },
           ...local,
         ];
@@ -529,7 +531,7 @@ export const stateRules: Rule[] = [
           : `${s.name} registers sole proprietors' and partnerships' assumed names at the ${where} level, in each ${where} where business is conducted.`,
         frequency: "once" as const,
         reason: "Business operates under a trade name",
-        url: s.links.dba ?? (state ? agency.url : undefined),
+        url: state ? s.links.dba ?? agency.url : undefined,
       };
     },
   },
@@ -583,7 +585,7 @@ export const extraStateRules: Rule[] = [
           authority: it.authority,
           description: it.description,
           ...draftSchedule(it),
-          url: it.url,
+          url: it.url ? [...it.url] : undefined,
           ...extras(it, undefined),
           reason: x.home
             ? `Business operates in ${x.state}`
@@ -621,7 +623,7 @@ export const extraStateRules: Rule[] = [
             authority: it.authority,
             description: it.description,
             ...draftSchedule(it),
-            url: it.url,
+            url: it.url ? [...it.url] : undefined,
             ...extras(it, undefined),
             reason: `${x.employeeCount} employees in ${x.state}`,
           })),
