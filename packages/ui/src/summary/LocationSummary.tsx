@@ -64,6 +64,7 @@ function LocationSummaryBody({ state, county, city, compact = false }: LocationS
     <YStack
       gap={compact ? "1.5" : "3"}
       render="section"
+      width="100%"
       padding={compact ? "3" : "4"}
       borderWidth={1}
       borderColor="border-color"
