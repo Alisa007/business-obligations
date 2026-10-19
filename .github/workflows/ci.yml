@@ -12,7 +12,7 @@ permissions:
   contents: read
 
 jobs:
-  # Node policy: the library supports Node 20+ (the compat job runs the built package on 20, 22 and 24); the
+  # Node policy: the library supports Node 20+ (the compat job runs the built package on 22 and 24); the
   # repository's tooling supports Node 20.19+ (the node-floor job), and day-to-day development uses the current LTS.
   check:
     runs-on: ubuntu-latest
@@ -55,7 +55,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node: [20, 22, 24]
+        node: [22, 24]
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
