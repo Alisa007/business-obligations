@@ -54,7 +54,12 @@ describe("business-obligations-ui", () => {
   it("hides jurisdiction filters with no items", () => {
     const stateItems = items.filter((item) => item.jurisdiction === "state");
     const html = render(
-      <ObligationsList items={stateItems} asOf="2026-11-02" filters={filters()} onFilters={() => undefined} />,
+      <ObligationsList
+        items={stateItems}
+        asOf="2026-11-02"
+        filters={filters()}
+        onFilters={() => undefined}
+      />,
     );
     expect(html).toContain("State");
     expect(html).not.toContain("City");
