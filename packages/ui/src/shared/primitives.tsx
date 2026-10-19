@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { Anchor, Text, XStack, YStack } from "tamagui";
-import { safeUrl } from "./url";
+import { isGovernmentUrl, safeUrl } from "./url";
 
 export function ExternalLink({ url, children }: { url?: string | string[]; children: ReactNode }) {
   const href = safeUrl(Array.isArray(url) ? url[0] : url);
@@ -8,7 +8,7 @@ export function ExternalLink({ url, children }: { url?: string | string[]; child
     <Anchor
       href={href}
       target="_blank"
-      rel="noopener noreferrer"
+      rel={isGovernmentUrl(href) ? "noopener noreferrer" : "nofollow noopener noreferrer"}
       color="accent-background"
       textDecorationLine="underline"
       textAlign="left"

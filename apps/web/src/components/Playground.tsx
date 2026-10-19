@@ -1,9 +1,10 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Anchor, H1, Paragraph, ScrollView, Tabs, Text, XStack, YStack } from "tamagui";
+import { H1, Paragraph, ScrollView, Tabs, Text, XStack, YStack } from "tamagui";
 import {
   Chip,
+  ExternalLink,
   LaunchList,
   NO_OBLIGATION_FILTERS,
   ObligationsList,
@@ -331,8 +332,10 @@ export function Playground() {
         <Muted>
           General information, not legal or tax advice. Data comes from public sources; see each item&apos;s
           provenance and the{" "}
-          <Anchor href={`${SITE_CONFIG.repoUrl}/blob/main/packages/core/COVERAGE.md`}>coverage report</Anchor>
-          . <Anchor href={SITE_CONFIG.repoUrl}>Source on GitHub</Anchor>.
+          <ExternalLink url={`${SITE_CONFIG.repoUrl}/blob/main/packages/core/COVERAGE.md`}>
+            coverage report
+          </ExternalLink>
+          . <ExternalLink url={SITE_CONFIG.repoUrl}>Source on GitHub</ExternalLink>.
         </Muted>
       </YStack>
     </YStack>
