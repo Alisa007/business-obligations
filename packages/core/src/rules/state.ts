@@ -481,7 +481,8 @@ export const stateRules: Rule[] = [
                 : ""
             }`,
             rrule: "FREQ=MONTHLY",
-            deadline: "Monthly, quarterly or annually as assigned by the state",
+            deadline:
+              "As assigned by the state (monthly, quarterly or yearly, by the amount of tax collected)",
             reason,
             url: s.links.salesTax ?? agency.url,
           },
@@ -667,7 +668,7 @@ export const extraStateRules: Rule[] = [
           state: x.state,
           authority: info(x.state).labor.name,
           description:
-            "State minimum wage, unemployment insurance, workers' compensation and anti-discrimination notices must be posted where employees can see them.",
+            "Post the state's required workplace notices where employees can see them. They usually cover unemployment insurance and workers' compensation, and in some states minimum wage and anti-discrimination; which apply varies by state and employer.",
           frequency: "ongoing" as const,
           reason: `${x.employeeCount} employees in ${x.state}`,
           url: info(x.state).links.laborPosters,
