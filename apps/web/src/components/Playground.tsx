@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { H1, Paragraph, ScrollView, Tabs, Text, XStack, YStack } from "tamagui";
+import { DISCLAIMER } from "business-obligations";
 import {
   Chip,
   ExternalLink,
@@ -305,7 +306,6 @@ export function Playground() {
                   </ScrollView>
                   <Tabs.Content value={tab}>{renderView()}</Tabs.Content>
                 </Tabs>
-                <Muted>{data.result.disclaimer}</Muted>
               </>
             )}
           </Panel>
@@ -330,8 +330,7 @@ export function Playground() {
           </Muted>
         )}
         <Muted>
-          General information, not legal or tax advice. Data comes from public sources; see each item&apos;s
-          provenance and the{" "}
+          {DISCLAIMER} See each item&apos;s provenance and the{" "}
           <ExternalLink url={`${SITE_CONFIG.repoUrl}/blob/main/packages/core/COVERAGE.md`}>
             coverage report
           </ExternalLink>
