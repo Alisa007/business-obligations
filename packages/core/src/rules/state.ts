@@ -481,7 +481,8 @@ export const stateRules: Rule[] = [
                 : ""
             }`,
             rrule: "FREQ=MONTHLY",
-            deadline: "Monthly, quarterly or annually as assigned by the state",
+            deadline:
+              "As assigned by the state (monthly, quarterly or yearly, by the amount of tax collected)",
             reason,
             url: s.links.salesTax ?? agency.url,
           },

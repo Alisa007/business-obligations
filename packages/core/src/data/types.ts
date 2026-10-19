@@ -242,7 +242,7 @@ export interface StateInfo {
   /** Mandatory state paid-leave / disability program with employer duties. */
   paidLeave: { title: string; agency: string; description: string; minEmployees: number } | null;
   /** Statewide paid sick leave mandate. */
-  paidSickLeave: { minEmployees: number } | null;
+  paidSickLeave: { minEmployees: number; note?: string } | null;
   /** Typical general local licensing in the state. */
   local: { title: string; authority: string; description: string };
   /** Post-formation newspaper publication requirement for LLCs. */
