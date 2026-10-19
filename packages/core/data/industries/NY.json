@@ -640,7 +640,7 @@
     "naics": ["7225", "7224"],
     "appliesTo": ["all"],
     "url": "https://nyc-business.nyc.gov/nycbusiness/description/food-service-establishment-permit",
-    "checkedOn": "2026-10-16",
+    "checkedOn": "2026-10-19",
     "jurisdiction": "city",
     "appliesWhen": [
       {
@@ -881,7 +881,7 @@
     "naics": ["112990", "424590"],
     "appliesTo": ["all"],
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/2620",
-    "checkedOn": "2026-10-16",
+    "checkedOn": "2026-10-19",
     "rrule": "FREQ=YEARLY",
     "renewal": "Every year",
     "feeDetail": {
@@ -898,8 +898,8 @@
     "naics": ["713990"],
     "appliesTo": ["all"],
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/2289",
-    "checkedOn": "2026-10-16",
-    "rrule": "FREQ=YEARLY",
+    "checkedOn": "2026-10-19",
+    "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=31",
     "renewal": "Every year",
     "feeDetail": {
       "basis": "flat",
@@ -1160,7 +1160,7 @@
     "naics": ["812320"],
     "appliesTo": ["all"],
     "url": "https://dec.ny.gov/environmental-protection/air-quality/controlling-pollution-from-facilities/dry-cleaner-regulation",
-    "checkedOn": "2026-10-16",
+    "checkedOn": "2026-10-19",
     "rrule": "FREQ=YEARLY",
     "deadline": "Once a year"
   },
@@ -1997,7 +1997,7 @@
     "naics": ["485310", "485999"],
     "appliesTo": ["all"],
     "url": "https://www.businessexpress.ny.gov/app/answers/cms/a_id/2056",
-    "checkedOn": "2026-10-16",
+    "checkedOn": "2026-10-19",
     "rrule": "FREQ=YEARLY",
     "renewal": "Every year",
     "feeDetail": {
@@ -2027,11 +2027,11 @@
     "title": "Get a NYC barber shop permit",
     "category": "permit",
     "authority": "NYC Department of Health and Mental Hygiene",
-    "description": "The owner of a barber shop in New York City files for a DOHMH permit, valid one year. A separate state licence is needed for the appearance enhancement business. The DOHMH page states no fee, so confirm it on the permit page.",
+    "description": "The owner of a barber shop in New York City files for a DOHMH permit, valid one year. A separate state licence is needed for the appearance enhancement business.",
     "naics": ["812111"],
     "appliesTo": ["all"],
     "url": "https://www1.nyc.gov/nycbusiness/description/barber-shop-permit",
-    "checkedOn": "2026-10-16",
+    "checkedOn": "2026-10-19",
     "jurisdiction": "city",
     "appliesWhen": [
       {
@@ -2042,7 +2042,13 @@
       }
     ],
     "rrule": "FREQ=YEARLY",
-    "renewal": "Every year"
+    "renewal": "Every year",
+    "feeDetail": {
+      "basis": "varies",
+      "min": 7.5,
+      "max": 15,
+      "note": "new permit, by issue date"
+    }
   },
   {
     "id": "ny.nyc-doh-beekeeper-registration",
@@ -2526,7 +2532,7 @@
     "naics": ["611692"],
     "appliesTo": ["all"],
     "url": "https://dmv.ny.gov/business/driver-training/open-a-driving-school",
-    "checkedOn": "2026-10-16",
+    "checkedOn": "2026-10-19",
     "rrule": "FREQ=YEARLY;INTERVAL=2",
     "renewal": "Every two years, filed 30 to 60 days before expiry",
     "feeDetail": {
@@ -3733,7 +3739,6 @@
     "url": "https://www.tax.ny.gov/bus/oet/oetidx.htm",
     "checkedOn": "2026-10-16",
     "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=20",
-    "anchor": "2026-10-20",
     "exemptions": ["Businesses that are not registrants for the first sale of opioid units"]
   },
   {
@@ -3747,7 +3752,6 @@
     "url": "https://www.tax.ny.gov/bus/bev/abt.htm",
     "checkedOn": "2026-10-16",
     "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
-    "anchor": "2026-10-20",
     "exemptions": ["Approved annual filers file once a year by January 20"]
   },
   {
@@ -3773,8 +3777,7 @@
     "appliesTo": ["all"],
     "url": "https://www.tax.ny.gov/bus/tnc/assessment.htm",
     "checkedOn": "2026-10-16",
-    "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
-    "anchor": "2026-10-30"
+    "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30"
   },
   {
     "id": "ny.waste-tire-management-fee",

@@ -565,7 +565,7 @@
               "$ref": "common.schema.json#/$defs/isoDate"
             },
             {
-              "enum": ["formation", "formation_year", "year_after_formation"]
+              "enum": ["formation", "formation_quarter", "formation_year", "year_after_formation"]
             }
           ],
           "description": "Start of a cycle longer than a year: an ISO date, or the entity's formation year or the year after."

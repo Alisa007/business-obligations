@@ -18,6 +18,7 @@ export const labels: Omit<Catalog, "locale"> = {
     annual: "Anual",
     biennial: "Cada dos años",
     every_five_years: "Cada cinco años",
+    semiannual: "Dos veces al año",
     quarterly: "Trimestral",
     monthly: "Mensual",
     per_event: "Por evento",

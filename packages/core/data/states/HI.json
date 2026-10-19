@@ -14,8 +14,8 @@
   },
   "llcReport": {
     "title": "File Annual Return",
-    "rrule": "FREQ=YEARLY",
-    "deadline": "Last day of the quarter containing the registration anniversary",
+    "rrule": "FREQ=YEARLY;BYMONTH=3,6,9,12;BYMONTHDAY=-1",
+    "anchor": "formation_quarter",
     "feeDetail": {
       "basis": "flat",
       "amount": 15
@@ -27,8 +27,8 @@
   },
   "corpReport": {
     "title": "File Annual Return",
-    "rrule": "FREQ=YEARLY",
-    "deadline": "Last day of the quarter containing the registration anniversary",
+    "rrule": "FREQ=YEARLY;BYMONTH=3,6,9,12;BYMONTHDAY=-1",
+    "anchor": "formation_quarter",
     "feeDetail": {
       "basis": "flat",
       "amount": 15,

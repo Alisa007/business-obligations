@@ -28,7 +28,8 @@
         "description": "The business privilege tax is an annual tax on gross receipts for the privilege of conducting business in the city, under the city's regulations and Chapter 570.",
         "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
         "url": "https://www.allentownpa.gov/Portals/0/adam/Content/ZbVw9jFxvEW93nQF87-3wA/Url/Business_Privilege_Tax_Regulations.pdf",
-        "appliesTo": ["all"]
+        "appliesTo": ["all"],
+        "checkedOn": "2026-10-19"
       }
     ]
   },
@@ -64,11 +65,12 @@
         "title": "Withhold and remit Philadelphia Wage Tax",
         "category": "payment",
         "authority": "Philadelphia Department of Revenue",
-        "description": "Employers withhold the city wage tax from employees and remit it with the quarterly reconciliation.",
+        "description": "Employers withhold the city wage tax from employees and remit it on the schedule set by the amount withheld; no separate annual reconciliation is required, because the fourth-quarter return is the final reconciliation.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
-        "url": "https://www.phila.gov/services/payments-assistance-taxes/business-taxes/",
+        "url": "https://www.phila.gov/services/payments-assistance-taxes/taxes/business-taxes/business-taxes-by-type/wage-tax-employers/",
         "appliesTo": ["employees"],
-        "deadlineNote": "quarterly filers under $350 withheld per month; larger employers deposit monthly, semi-monthly or weekly"
+        "deadlineNote": "quarterly filers under $350 withheld per month; larger employers deposit monthly, semi-monthly or weekly",
+        "checkedOn": "2026-10-19"
       }
     ]
   },
@@ -85,9 +87,10 @@
         "authority": "City of Pittsburgh Department of Finance",
         "description": "Employers with employees working in Pittsburgh register for the payroll expense tax and withhold the local services tax per employee.",
         "rrule": "FREQ=YEARLY;BYMONTH=2,5,8,11;BYMONTHDAY=-1",
-        "url": "https://www.pittsburghpa.gov/City-Government/Finance-Budget/Taxes/Tax-Forms",
+        "url": "https://www.pittsburghpa.gov/files/assets/city/v/1/finance/documents/tax-faqs/et-2025-fillable.pdf",
         "appliesTo": ["employees"],
-        "deadlineNote": "payroll expense tax, quarterly; the local services tax is due 30 days after quarter end"
+        "deadlineNote": "payroll expense tax, quarterly; the local services tax is due the last day of the month after each quarter",
+        "checkedOn": "2026-10-19"
       }
     ]
   },

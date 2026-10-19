@@ -7,6 +7,8 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ### Added
 
+- **core:** `semiannual` frequency: an rrule with two months and one day (`BYMONTH=1,7;BYMONTHDAY=-1`) is read as twice a year. `anchor: "formation_quarter"` with `BYMONTH=3,6,9,12` is an annual filing due in the calendar quarter that contains the formation month; used for the Wisconsin and Hawaii reports. A monthly rule with a day gets generated deadline text ("20th of each month")
+
 - **core:** a `tiered` fee basis: a fee can list `tiers`, each selected by profile conditions (`when`, `whenAny`), and the cost estimate uses the tier that matches the profile (or reports that none did)
 - **core:** `appliesWhenAny` on local items: conditions of which at least one must hold, next to `appliesWhen`
 - **data:** local items and Spanish text for more cities, counties, employers and industries in every state, including the Delaware towns that had none
