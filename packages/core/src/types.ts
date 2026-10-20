@@ -218,7 +218,7 @@ export type Frequency = (typeof FREQUENCIES)[number];
 
 /** The frequencies a recurrence rule expresses. */
 export type RecurringFrequency =
-  "annual" | "biennial" | "every_five_years" | "semiannual" | "quarterly" | "monthly";
+  "annual" | "biennial" | "every_three_years" | "every_five_years" | "semiannual" | "quarterly" | "monthly";
 
 export interface ComplianceItem {
   id: string;

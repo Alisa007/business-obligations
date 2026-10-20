@@ -2719,7 +2719,6 @@
         "category": "registration",
         "authority": "Sullivan County Treasurer, Room Tax Division",
         "description": "Any facility rented for 90 consecutive days or less to an occupant who does not own it applies to the County Treasurer for a Certificate of Authority. Registration is renewed every two years (the current period runs to December 31, 2026).",
-        "frequency": "once",
         "url": ["https://www.sullivanny.gov/node/151"],
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -2735,7 +2734,9 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=12;BYMONTHDAY=31",
+        "anchor": "2026-12-31"
       },
       {
         "id": "sullivan-ny.occupancy-tax-return",

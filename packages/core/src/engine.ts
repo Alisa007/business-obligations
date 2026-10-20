@@ -18,7 +18,7 @@ import { localRules, premisesRules } from "./rules/local";
 import { industryFromNaics } from "./naics";
 import { industryRules } from "./rules/industry";
 import { nextDueDate } from "./dates";
-import { dueToRRule, parseRRule } from "./rrule";
+import { dueToRRule, intervalYearsOf, parseRRule } from "./rrule";
 import { describeProvenance, provenanceFor } from "./provenance";
 import { jurisdictionId, placeFacts, STATE_FIPS } from "./jurisdiction";
 import {
@@ -279,6 +279,7 @@ export interface ComplianceResult {
 const RENEWAL_INTERVAL: Partial<Record<ComplianceItem["frequency"], string>> = {
   annual: "year",
   biennial: "two years",
+  every_three_years: "three years",
   every_five_years: "five years",
 };
 const FEEDBACK_URL =
@@ -294,6 +295,7 @@ type SettledDraft = Omit<ComplianceItem, "id" | "ruleId" | "nextDue" | "recurren
 const RECURRING = new Set<string>([
   "annual",
   "biennial",
+  "every_three_years",
   "every_five_years",
   "semiannual",
   "quarterly",
@@ -348,7 +350,8 @@ export function evaluate(input: BusinessProfile, options: EvaluateOptions = {}):
             asOf,
             formationDate: profile.formationDate,
             biennial: d.frequency === "biennial",
-            intervalYears: d.frequency === "every_five_years" ? 5 : undefined,
+            intervalYears: intervalYearsOf(d.frequency),
+            fiscalYearEndMonth: profile.fiscalYearEndMonth,
           });
           if (next) item.nextDue = next;
           const recurrence = dueToRRule(d.due, d.frequency);

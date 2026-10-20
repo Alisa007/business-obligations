@@ -247,7 +247,6 @@
         "category": "license",
         "authority": "Waukegan local licensing authority",
         "description": "Waukegan requires businesses to obtain a business license and occupancy permit before opening; the License Department handles general, rental, day-care, outdoor-dining, mobile-vendor, special-event, parade, gaming, and liquor licenses, and annual renewals are due by December 31.",
-        "frequency": "once",
         "url": ["https://www.waukeganil.gov/1160/Business-License"],
         "appliesTo": ["all"],
         "feeDetail": {
@@ -255,7 +254,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=31"
       }
     ],
     "checkedOn": "2026-10-18",
@@ -335,7 +335,6 @@
         "category": "license",
         "authority": "Schaumburg local licensing authority",
         "description": "Schaumburg requires persons and entities conducting business or an occupation in the village to obtain and display a valid business license; licenses are issued on a calendar-year basis and expire December 31, renewals are annual, and commercial businesses may need a Certificate of Occupancy before licensing.",
-        "frequency": "once",
         "url": ["https://www.villageofschaumburg.com/i-want-to/pay/business-license"],
         "appliesTo": ["all"],
         "feeDetail": {
@@ -343,7 +342,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=31"
       }
     ],
     "checkedOn": "2026-10-18",
@@ -363,7 +363,6 @@
         "category": "license",
         "authority": "Evanston local licensing authority",
         "description": "Evanston requires all for-profit businesses, nonprofits, and home-based occupations operating within city limits to complete annual business registration; brick-and-mortar registration is $75, home-based and nonprofit registration is free, registration is due by April 1, and food businesses use a Food Establishment License instead.",
-        "frequency": "once",
         "url": ["https://www.cityofevanston.org/business/business_registration.php"],
         "appliesTo": ["all"],
         "feeDetail": {
@@ -371,7 +370,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1"
       }
     ],
     "checkedOn": "2026-10-18",
@@ -506,14 +506,14 @@
         "authority": "Palatine local licensing authority",
         "description": "Palatine requires every business in the village, unless exempt by state law, to obtain a business license; zoning confirmation precedes application, fees vary by license type and size, required inspections must pass before issuance, and 2026 renewals were due January 31 with a 50% penalty after February 1.",
         "url": ["https://palatine.il.us/582/Business-Licenses"],
-        "frequency": "once",
         "appliesTo": ["all"],
         "feeDetail": {
           "basis": "unknown"
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=31"
       }
     ],
     "checkedOn": "2026-10-18",
@@ -533,7 +533,6 @@
         "category": "license",
         "authority": "Des Plaines local licensing authority",
         "description": "Des Plaines issues annual business licenses beginning January 1 and expiring December 31; applications and renewals are due by December 15, fees are paid when filed, a 25% late penalty applies after 30 days, and zoning, building, fire, and health compliance may be required.",
-        "frequency": "once",
         "url": ["https://codelibrary.amlegal.com/codes/desplainesil/latest/desplaines_il/0-0-0-1821"],
         "appliesTo": ["all"],
         "feeDetail": {
@@ -541,7 +540,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=15"
       }
     ],
     "checkedOn": "2026-10-18",

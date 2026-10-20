@@ -2,6 +2,7 @@ import { BUNDLED_CHANGES } from "./changes";
 import { addDays, isIsoDate, todayIso } from "./iso";
 import { evaluate, InvalidProfileError, type EvaluateOptions } from "./engine";
 import { occurrencesBetween } from "./dates";
+import { intervalYearsOf } from "./rrule";
 import { describePenalty } from "./fee";
 import type { BusinessProfile, ComplianceItem } from "./types";
 import type { ComplianceResult } from "./engine";
@@ -86,7 +87,8 @@ export function buildCalendar(
         {
           formationDate: snap.result.profile.formationDate,
           biennial: item.frequency === "biennial",
-          intervalYears: item.frequency === "every_five_years" ? 5 : undefined,
+          intervalYears: intervalYearsOf(item.frequency),
+          fiscalYearEndMonth: snap.result.profile.fiscalYearEndMonth,
         },
         snap.start,
         end,

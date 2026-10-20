@@ -455,7 +455,6 @@
         "category": "license",
         "authority": "Newark local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
-        "frequency": "once",
         "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
@@ -463,7 +462,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=31"
       }
     ],
     "checkedOn": "2026-10-18",

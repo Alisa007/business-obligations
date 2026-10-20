@@ -1654,14 +1654,14 @@
       "https://dec.ny.gov/environmental-protection/pesticides/pesticide-applicator-technician-certification/certified-commercial-pesticide-applicator-recertification"
     ],
     "checkedOn": "2026-10-16",
-    "frequency": "ongoing",
     "renewal": "Every three years",
     "feeDetail": {
       "basis": "unknown"
     },
     "penalty": {
       "basis": "unknown"
-    }
+    },
+    "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=1"
   },
   {
     "id": "ny.real-estate-broker-license",
@@ -3928,14 +3928,13 @@
     "appliesTo": ["all"],
     "url": ["https://dos.ny.gov/frequently-asked-questions-ticket-reseller"],
     "checkedOn": "2026-10-16",
-    "frequency": "ongoing",
-    "deadline": "June 30 and December 31 each year",
     "feeDetail": {
       "basis": "unknown"
     },
     "penalty": {
       "basis": "unknown"
-    }
+    },
+    "rrule": "FREQ=YEARLY;BYMONTH=6,12;BYMONTHDAY=-1"
   },
   {
     "id": "ny.nyc-dob-general-contractor-registration",

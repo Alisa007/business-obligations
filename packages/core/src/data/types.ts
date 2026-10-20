@@ -35,7 +35,30 @@ export interface DateDue {
   date: string;
 }
 
-export type Due = FixedDue | AnniversaryDue | MultiDue | DateDue;
+/**
+ * A due date counted from a reference date instead of fixed on the calendar: the anniversary of a license (a renewal is
+ * due when the license expires, one year after it was issued), the last day of the month after it, thirty days after it,
+ * the 15th day of the 4th month of the tax year, and so on. It is exact: given the reference date the rule says which
+ * day. The reference date comes from the business, not from the data, so without it there is no date to show yet.
+ */
+export interface RelativeDue {
+  type: "relative";
+  /**
+   * What the date is counted from. `formation`, `license_issued` (the date the license or permit was issued, or last
+   * renewed), `fiscal_year_start` and `fiscal_year_end` are dates of the business. `announced` is a date the agency
+   * publishes each year (the EEOC's filing window) and `assigned` one it sets for each taxpayer (a sales tax filing
+   * frequency and its due dates): they have no rule to write, and the item says whose they are.
+   */
+  from: "formation" | "license_issued" | "fiscal_year_start" | "fiscal_year_end" | "announced" | "assigned";
+  /** Months after the reference date's month; 0 or omitted is the same month. */
+  monthsAfter?: number;
+  /** Day of that month, 1 to 31, or -1 for its last day. Omitted: the reference date's own day (its anniversary). */
+  day?: number;
+  /** Days after the day that results, for "within 30 days of expiry". */
+  daysAfter?: number;
+}
+
+export type Due = FixedDue | AnniversaryDue | MultiDue | DateDue | RelativeDue;
 
 /** Structured threshold and rate for a gross-receipts, margin or franchise-style entity tax. */
 export interface EntityTaxDetail {
@@ -163,7 +186,7 @@ export function statedPenalty(p: Penalty): StatedPenalty | undefined {
 
 export interface ReportRule {
   /** Derived from `rrule` when there is one. */
-  frequency?: "annual" | "biennial" | "every_five_years" | "periodic";
+  frequency?: "annual" | "biennial" | "every_three_years" | "every_five_years" | "periodic";
   /** The fee. The display text ("$30 online ($45 paper)") is generated from it; see `describeFee`. */
   feeDetail: FeeDetail;
   penalty: Penalty;
@@ -323,7 +346,7 @@ export interface LocalItem {
   description: string;
   /** Derived from `rrule` when there is one. */
   frequency?:
-    "once" | "annual" | "biennial" | "every_five_years" | "quarterly" | "monthly" | "per_event" | "ongoing";
+    "once" | "annual" | "biennial" | "every_three_years" | "every_five_years" | "quarterly" | "monthly" | "per_event" | "ongoing";
   /** The schedule as an iCalendar recurrence rule (see `ReportRule.rrule`). */
   rrule?: string;
   /** Start of a cycle longer than a year (see `ReportRule.anchor`). */

@@ -461,6 +461,12 @@ describe("local and profession data schemas", () => {
       penalty: { basis: "unknown" },
     };
     const bad: unknown[] = [
+      // A city lies in at least one county, each named once.
+      { ...ok, counties: undefined },
+      { ...ok, counties: [] },
+      { ...ok, counties: "Travis" },
+      { ...ok, counties: ["Travis", "Travis"] },
+      { ...ok, counties: [""] },
       { ...ok, reason: "tx-city-license-not-researched" },
       { ...ok, note: undefined, reason: "Not A Code" },
       { ...ok, checkedOn: "2026-02-30" },

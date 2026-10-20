@@ -358,6 +358,7 @@
           "type": "object",
           "additionalProperties": false,
           "required": ["title", "authority", "url", "feeDetail", "penalty"],
+          "allOf": [{ "$ref": "common.schema.json#/$defs/exactSchedule" }],
           "oneOf": [
             {
               "required": ["rrule"]
@@ -383,6 +384,9 @@
             },
             "rrule": {
               "$ref": "common.schema.json#/$defs/rrule"
+            },
+            "anchor": {
+              "$ref": "common.schema.json#/$defs/scheduleAnchor"
             },
             "frequency": {
               "enum": ["once"],
@@ -595,15 +599,7 @@
           "description": "iCalendar (RFC 5545) recurrence rule. The source of truth for frequency and due date; see src/rrule.ts for the supported subset."
         },
         "anchor": {
-          "anyOf": [
-            {
-              "$ref": "common.schema.json#/$defs/isoDate"
-            },
-            {
-              "enum": ["formation", "formation_quarter", "formation_year", "year_after_formation"]
-            }
-          ],
-          "description": "Start of a cycle longer than a year: an ISO date, or the entity's formation year or the year after."
+          "$ref": "common.schema.json#/$defs/scheduleAnchor"
         },
         "opens": {
           "type": "object",
@@ -679,7 +675,8 @@
               "required": ["anchor"]
             }
           }
-        }
+        },
+        { "$ref": "common.schema.json#/$defs/exactSchedule" }
       ]
     }
   },

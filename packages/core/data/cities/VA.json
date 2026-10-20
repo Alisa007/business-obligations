@@ -28,7 +28,7 @@
     "city": "Chesapeake",
     "status": "rules",
     "note": "A March 1 BPOL renewal is described by third-party sources only; the city's own page was not confirmed.",
-    "counties": ["Chesapeake"],
+    "counties": ["Chesapeake (city)"],
     "items": [
       {
         "id": "chesapeake.local-licenses",
@@ -127,7 +127,7 @@
   },
   {
     "city": "Richmond",
-    "counties": ["Richmond"],
+    "counties": ["City of Richmond"],
     "checkedOn": "2026-10-18",
     "sourceUrl": ["https://rva.gov/finance/bpol-tax"],
     "items": [
@@ -419,7 +419,6 @@
         "category": "license",
         "authority": "Danville local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
-        "frequency": "once",
         "url": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"],
         "appliesTo": ["all"],
         "feeDetail": {
@@ -427,7 +426,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "rrule": "FREQ=YEARLY;BYMONTH=7;BYMONTHDAY=1"
       }
     ],
     "checkedOn": "2026-10-18",

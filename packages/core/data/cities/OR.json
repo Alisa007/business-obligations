@@ -137,8 +137,7 @@
         "category": "license",
         "authority": "City of Salem Permit Application Center",
         "description": "Renewal must be completed within 30 days of the license's expiration date; renewal forms and invoices are mailed in November.",
-        "rrule": "FREQ=YEARLY",
-        "deadline": "Within 30 days of expiration (December 31)",
+        "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=30",
         "url": ["https://cityofsalem.net/business/business-resources/licenses/apply-for-a-business-license"],
         "appliesTo": ["all"],
         "feeDetail": {

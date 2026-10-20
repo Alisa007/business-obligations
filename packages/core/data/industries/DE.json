@@ -658,14 +658,14 @@
     "appliesTo": ["all"],
     "url": ["https://dpr.delaware.gov/boards/gaming/fees/"],
     "checkedOn": "2026-10-18",
-    "frequency": "ongoing",
     "renewal": "Instant or sealed games licenses on June 30 each year; event licenses per event date",
     "feeDetail": {
       "basis": "unknown"
     },
     "penalty": {
       "basis": "unknown"
-    }
+    },
+    "rrule": "FREQ=YEARLY;BYMONTH=6;BYMONTHDAY=30"
   },
   {
     "id": "de.adult-entertainment-license",

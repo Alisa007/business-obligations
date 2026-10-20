@@ -575,7 +575,7 @@
         }
       }
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-19"
   },
   {
     "city": "Fremont",
@@ -845,7 +845,7 @@
       }
     ],
     "sourceUrl": ["https://www.cityofinglewood.org/371/Business-Licenses"],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-19"
   },
   {
     "city": "Irvine",
@@ -975,7 +975,7 @@
       }
     ],
     "sourceUrl": ["https://finance.lacity.gov/register-new-business"],
-    "checkedOn": "2026-10-18",
+    "checkedOn": "2026-10-19",
     "status": "rules"
   },
   {
@@ -1430,7 +1430,7 @@
       }
     ],
     "sourceUrl": ["https://www.roseville.ca.gov/departments/finance/licensing/business.php"],
-    "checkedOn": "2026-10-18",
+    "checkedOn": "2026-10-19",
     "status": "rules"
   },
   {
@@ -1921,7 +1921,7 @@
       }
     ],
     "sourceUrl": ["https://toaks.gov/businesslicenses"],
-    "checkedOn": "2026-10-18",
+    "checkedOn": "2026-10-19",
     "status": "rules"
   },
   {
@@ -2367,7 +2367,6 @@
         "category": "license",
         "authority": "Tracy local licensing authority",
         "description": "Tracy requires anyone located in or deriving income within the city to pay the business-license tax before starting; most certificates expire June 30, with a $50 annual minimum and rates based on gross receipts for higher-volume businesses.",
-        "frequency": "once",
         "url": ["https://www.cityoftracy.org/Departments/Finance/Business-License-Tax"],
         "appliesTo": ["all"],
         "feeDetail": {
@@ -2375,7 +2374,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "rrule": "FREQ=YEARLY;BYMONTH=6;BYMONTHDAY=30"
       }
     ],
     "checkedOn": "2026-10-18",
@@ -2749,7 +2749,6 @@
         "category": "license",
         "authority": "Santa Monica local licensing authority",
         "description": "Santa Monica requires businesses to obtain a city business license and pay the applicable tax before commencing; new businesses must apply within 30 days of starting and annual renewals are due by August 31, with late penalties after the delinquency date.",
-        "frequency": "once",
         "url": ["https://www.santamonica.gov/topic-explainers/how-to-apply-for-a-business-license"],
         "appliesTo": ["all"],
         "feeDetail": {
@@ -2757,7 +2756,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "rrule": "FREQ=YEARLY;BYMONTH=8;BYMONTHDAY=31"
       }
     ],
     "checkedOn": "2026-10-18",
@@ -3115,7 +3115,6 @@
         "category": "license",
         "authority": "Hawthorne local licensing authority",
         "description": "Hawthorne requires the applicable license fee before conducting business; annual license fees are due January 1 or when the business starts, daily fees are due before business begins, and annual certificates expire December 31.",
-        "frequency": "once",
         "url": ["https://ecode360.com/42638701"],
         "appliesTo": ["all"],
         "feeDetail": {
@@ -3123,7 +3122,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=1"
       }
     ],
     "checkedOn": "2026-10-18",
@@ -3427,7 +3427,6 @@
         "category": "license",
         "authority": "Alameda local licensing authority",
         "description": "Alameda requires all individuals and entities conducting business, including home-based and rental businesses, to obtain a business license; licenses run July 1–June 30 and renewals are due by July 31.",
-        "frequency": "once",
         "url": ["https://www.alamedaca.gov/Departments/Finance/Business-License"],
         "appliesTo": ["all"],
         "feeDetail": {
@@ -3435,7 +3434,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "rrule": "FREQ=YEARLY;BYMONTH=7;BYMONTHDAY=31"
       }
     ],
     "checkedOn": "2026-10-18",
@@ -3597,7 +3597,6 @@
         "category": "license",
         "authority": "Pleasanton local licensing authority",
         "description": "Pleasanton requires every person conducting business in the city to obtain a business license and pay the business-license tax; 2026 renewals are due January 31, with tax based on gross receipts and a $25 minimum schedule, plus a $4 state disability-access fee.",
-        "frequency": "once",
         "url": ["https://www.cityofpleasantonca.gov/our-government/finance-department/business-license/"],
         "appliesTo": ["all"],
         "feeDetail": {
@@ -3605,7 +3604,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=31"
       }
     ],
     "checkedOn": "2026-10-18",
@@ -3765,7 +3765,6 @@
         "category": "license",
         "authority": "Walnut Creek local licensing authority",
         "description": "Walnut Creek requires businesses operating or doing business within city limits, including home-based businesses, contractors, consultants, and out-of-city businesses, to obtain a business license; the license tax is due before starting and renews each fiscal year, with licenses delinquent after August 1.",
-        "frequency": "once",
         "url": ["https://www.walnutcreekconnected.com/business-support/business-license-process"],
         "appliesTo": ["all"],
         "feeDetail": {
@@ -3773,7 +3772,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "rrule": "FREQ=YEARLY;BYMONTH=8;BYMONTHDAY=1"
       }
     ],
     "checkedOn": "2026-10-18",
@@ -3793,7 +3793,6 @@
         "category": "license",
         "authority": "Yuba City local licensing authority",
         "description": "Yuba City requires all businesses, including home-based businesses, to obtain a business license; the standard base fee is $58 per year plus the $4 state disability-access fee, with gross-receipts tax rates and special classifications varying by business and annual renewal payments due by March 31 to avoid penalties.",
-        "frequency": "once",
         "url": ["https://yubacity.hosted.civiclive.com/city_hall/departments/finance/business_license"],
         "appliesTo": ["all"],
         "feeDetail": {
@@ -3801,7 +3800,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=31"
       }
     ],
     "checkedOn": "2026-10-18",
@@ -3935,7 +3935,6 @@
         "category": "license",
         "authority": "Palo Alto local licensing authority",
         "description": "Palo Alto requires fixed-place businesses to obtain an annual Business Registry Certificate and pay the separate quarterly business tax; registry renewals are due March 31, the registry amount is $54 including the $4 state fee, and late registry penalties begin after April 30.",
-        "frequency": "once",
         "url": ["https://www.paloalto.gov/Business/Business-Registry-and-Tax"],
         "appliesTo": ["all"],
         "feeDetail": {
@@ -3943,7 +3942,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=31"
       }
     ],
     "checkedOn": "2026-10-18",
@@ -4023,7 +4023,6 @@
         "category": "license",
         "authority": "Davis local licensing authority",
         "description": "Davis requires annual business-license renewal by January 1, with licenses delinquent after January 31 and a 10% penalty added February 1 plus another 10% for each subsequent month; fees depend on business group and estimated gross receipts, and the city offers home-occupancy, commercial, contractor, rental, and solicitation applications.",
-        "frequency": "once",
         "url": ["https://www.cityofdavis.org/city-hall/finance/business-license/"],
         "appliesTo": ["all"],
         "feeDetail": {
@@ -4031,7 +4030,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=1"
       }
     ],
     "checkedOn": "2026-10-18",
@@ -4249,7 +4249,6 @@
         "category": "license",
         "authority": "Hanford local licensing authority",
         "description": "Hanford requires an annual January–December business license; renewal notices are due by January 31, a Certificate of Occupancy or Home Permit is required for businesses located in the city, and the city lists a $40 business-license processing fee plus activity-specific taxes and late charges.",
-        "frequency": "once",
         "url": ["https://www.hanfordca.gov/194/Business-License"],
         "appliesTo": ["all"],
         "feeDetail": {
@@ -4257,7 +4256,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=31"
       }
     ],
     "checkedOn": "2026-10-18",
@@ -4363,7 +4363,6 @@
         "category": "license",
         "authority": "Beaumont local licensing authority",
         "description": "Beaumont requires all persons and corporations conducting business in the city to obtain a business license; commercial applicants start with zoning verification, all licenses are due by July 1 each fiscal year, and the city adds a $4 state disability-access fee.",
-        "frequency": "once",
         "url": ["https://www.beaumontca.gov/71/Business-Licenses"],
         "appliesTo": ["all"],
         "feeDetail": {
@@ -4371,7 +4370,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "rrule": "FREQ=YEARLY;BYMONTH=7;BYMONTHDAY=1"
       }
     ],
     "checkedOn": "2026-10-18",
@@ -4671,7 +4671,6 @@
         "category": "license",
         "authority": "National City local licensing authority",
         "description": "National City requires businesses operating in the city, including home-based, contractor, nonprofit, and out-of-city businesses, to obtain a business license before operating; applications are due within 30 days of commencement, licenses renew December 31, and taxes and fees are due by the last day of February.",
-        "frequency": "once",
         "url": ["https://nationalcity.hdlgov.com/Home/Home/BusinessLicense"],
         "appliesTo": ["all"],
         "feeDetail": {
@@ -4679,7 +4678,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=31"
       }
     ],
     "checkedOn": "2026-10-18",
@@ -5067,7 +5067,6 @@
         "category": "license",
         "authority": "Novato local licensing authority",
         "description": "Novato requires businesses operating in the city, including home-based, contractor, independent-contractor, nonprofit, and out-of-city businesses, to obtain a business license within 15 days of starting; licenses renew December 31, taxes and fees are due by January 31, and zoning or a Home Occupation Permit may be required.",
-        "frequency": "once",
         "url": ["https://www.novato.gov/business/business-licenses"],
         "appliesTo": ["all"],
         "feeDetail": {
@@ -5075,7 +5074,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=31"
       }
     ],
     "checkedOn": "2026-10-18",
@@ -5207,7 +5207,6 @@
         "category": "license",
         "authority": "San Luis Obispo local licensing authority",
         "description": "San Luis Obispo requires any business transacting in the city, including businesses located elsewhere, to obtain a Business License and Tax Certificate; annual renewal is due July 31, and the current minimum cost as of July 1, 2026 is $133.54 including a $25 minimum tax, $104.54 application fee, and $4 CASp fee.",
-        "frequency": "once",
         "url": ["https://www.slocity.org/services/how-do-i/how-do-i-get-a-business-license"],
         "appliesTo": ["all"],
         "feeDetail": {
@@ -5215,7 +5214,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "rrule": "FREQ=YEARLY;BYMONTH=7;BYMONTHDAY=31"
       }
     ],
     "checkedOn": "2026-10-18",
@@ -5351,7 +5351,6 @@
         "category": "license",
         "authority": "Covina local licensing authority",
         "description": "Covina requires all businesses operating in the city, regardless of trade or location, to obtain and renew a business license annually by December 31; in-city businesses must complete the business-license packet and zoning review, and commercial locations must register their alarm company or security provider.",
-        "frequency": "once",
         "url": ["https://covinaca.gov/city-departments/administrative-services/finance/"],
         "appliesTo": ["all"],
         "feeDetail": {
@@ -5359,7 +5358,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=31"
       }
     ],
     "checkedOn": "2026-10-18",
@@ -5435,7 +5435,6 @@
         "category": "license",
         "authority": "Cypress local licensing authority",
         "description": "Cypress requires businesses and nonprofit entities, including out-of-city contractors and businesses, to maintain a business license or tax certificate; applications are due within 30 days of starting, licenses expire June 30, the administrative fee is $35 for new licenses and renewals, and the $4 state disability-access fee applies.",
-        "frequency": "once",
         "url": ["https://www.cypressca.org/departments/finance-administrative-services/business-licenses"],
         "appliesTo": ["all"],
         "feeDetail": {
@@ -5443,7 +5442,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "rrule": "FREQ=YEARLY;BYMONTH=6;BYMONTHDAY=30"
       }
     ],
     "checkedOn": "2026-10-18",
@@ -5463,7 +5463,6 @@
         "category": "license",
         "authority": "Newark local licensing authority",
         "description": "Newark requires anyone conducting business, including internet-based businesses or businesses using a Newark address, to maintain a business license; licenses run by calendar year, renewal is due or postmarked by January 31, penalties begin February 1, and applications generally take about 10 business days to review.",
-        "frequency": "once",
         "url": ["https://www.newarkca.gov/departments/administrative-services/finance/business-license"],
         "appliesTo": ["all"],
         "feeDetail": {
@@ -5471,7 +5470,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=31"
       }
     ],
     "checkedOn": "2026-10-18",
@@ -5776,14 +5776,14 @@
         "authority": "Rohnert Park local licensing authority",
         "description": "Rohnert Park requires anyone doing business within city limits to obtain a Business Tax Certificate; tax classifications set the fees, certificates are issued for each calendar year, renewal bills are sent in November with payment due by January 31, and new in-city businesses also need an Occupancy and Use Certificate.",
         "url": ["https://www.rpcity.ca.gov/282/Business-License"],
-        "frequency": "once",
         "appliesTo": ["all"],
         "feeDetail": {
           "basis": "unknown"
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=31"
       }
     ],
     "checkedOn": "2026-10-18",
@@ -5834,14 +5834,14 @@
         "url": [
           "https://www.cityoflompoc.com/government/departments/city-clerk/program-areas/business-taxes-and-permits"
         ],
-        "frequency": "once",
         "appliesTo": ["all"],
         "feeDetail": {
           "basis": "unknown"
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "rrule": "FREQ=YEARLY;BYMONTH=7;BYMONTHDAY=31"
       }
     ],
     "checkedOn": "2026-10-18",
@@ -5862,14 +5862,14 @@
         "authority": "Danville local licensing authority",
         "description": "Danville requires any business generating revenue within Town limits, including home-based and out-of-town businesses, to obtain a business license; the annual term runs July 1 through June 30, home-based and in-town fees include a $4 state fee plus employee-based charges, renewals are due July 1, and late penalties begin August 1.",
         "url": ["https://danville.ca.gov/307/Business-License"],
-        "frequency": "once",
         "appliesTo": ["all"],
         "feeDetail": {
           "basis": "unknown"
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "rrule": "FREQ=YEARLY;BYMONTH=7;BYMONTHDAY=1"
       }
     ],
     "checkedOn": "2026-10-18",
@@ -5890,14 +5890,14 @@
         "authority": "Lathrop local licensing authority",
         "description": "Lathrop requires business licenses for home-based and commercial businesses, mobile food vendors, and solicitors; new applications include a $25 first-time fee, applications generally take 5–10 business days, licenses expire December 31, and renewal payment is due by February 15 to avoid penalties.",
         "url": ["https://www.ci.lathrop.ca.us/finance/page/business-license-tax"],
-        "frequency": "once",
         "appliesTo": ["all"],
         "feeDetail": {
           "basis": "unknown"
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=15"
       }
     ],
     "checkedOn": "2026-10-18",
@@ -5946,14 +5946,14 @@
         "authority": "San Bruno local licensing authority",
         "description": "San Bruno requires all entities operating or providing services within city limits to obtain a business tax certificate and pay the tax annually by July 1; in-town, home-based, out-of-town, apartment, and vehicle-vendor businesses have different fees, and zoning, building, inspection, and other city approvals may be required before issuance.",
         "url": ["https://www.sanbruno.ca.gov/254/Business-License"],
-        "frequency": "once",
         "appliesTo": ["all"],
         "feeDetail": {
           "basis": "unknown"
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "rrule": "FREQ=YEARLY;BYMONTH=7;BYMONTHDAY=1"
       }
     ],
     "checkedOn": "2026-10-18",

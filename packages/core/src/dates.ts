@@ -1,4 +1,4 @@
-import type { Due } from "./data/types";
+import type { Due, RelativeDue } from "./data/types";
 
 const pad = (n: number) => String(n).padStart(2, "0");
 const iso = (y: number, m: number, d: number) => `${y}-${pad(m)}-${pad(d)}`;
@@ -34,6 +34,10 @@ export interface DueContext {
   asOf: string;
   /** ISO date of formation, when known. */
   formationDate?: string;
+  /** ISO date the license or permit was issued (or last renewed), when known; the data cannot know it. */
+  licenseIssuedOn?: string;
+  /** The month the fiscal year ends, 1 to 12; the calendar year (12) when omitted. */
+  fiscalYearEndMonth?: number;
   biennial: boolean;
   /** Repeat interval in years for cycles longer than two (e.g. five-year statements). */
   intervalYears?: number;
@@ -74,6 +78,13 @@ export function nextDueDate(due: Due, ctx: DueContext): string | undefined {
         .sort();
       return all[0];
     }
+    case "relative": {
+      const year = Number(ctx.asOf.slice(0, 4));
+      const reach = (ctx.intervalYears ?? (ctx.biennial ? 2 : 1)) + 3;
+      return relativeDates(due, ctx, year, year + reach)
+        .filter((d) => d >= ctx.asOf)
+        .sort()[0];
+    }
     case "anniversary": {
       if (!ctx.formationDate) return undefined;
       const fm = Number(ctx.formationDate.slice(5, 7));
@@ -93,6 +104,45 @@ export function nextDueDate(due: Due, ctx: DueContext): string | undefined {
       return undefined;
     }
   }
+}
+
+const addDays = (date: string, days: number) => {
+  const d = new Date(`${date}T00:00:00Z`);
+  d.setUTCDate(d.getUTCDate() + days);
+  return d.toISOString().slice(0, 10);
+};
+
+/**
+ * The dates of a due date counted from a reference date, for the years `from` to `to`; empty when the reference is
+ * not known (a license date, a date the agency has not set) or the cycle cannot be placed. The occurrences of the
+ * business's own anniversaries start the year after the reference date, like the formation anniversary.
+ */
+function relativeDates(due: RelativeDue, ctx: Partial<DueContext>, from: number, to: number): string[] {
+  if (due.from === "announced" || due.from === "assigned") return [];
+  const monthsAfter = due.monthsAfter ?? 0;
+  const out: string[] = [];
+  const emit = (year: number, month: number, dayOfReference: number) => {
+    const total = month - 1 + monthsAfter;
+    const y = year + Math.floor(total / 12);
+    const m = (total % 12) + 1;
+    const day = due.day === -1 ? lastDay(y, m) : Math.min(due.day ?? dayOfReference, lastDay(y, m));
+    const date = iso(y, m, day);
+    out.push(due.daysAfter ? addDays(date, due.daysAfter) : date);
+  };
+  if (due.from === "fiscal_year_start" || due.from === "fiscal_year_end") {
+    if (ctx.biennial || (ctx.intervalYears ?? 0) > 2) return [];
+    const end = ctx.fiscalYearEndMonth ?? 12;
+    const month = due.from === "fiscal_year_end" ? end : (end % 12) + 1;
+    for (let y = from - 2; y <= to; y++) emit(y, month, 1);
+    return out;
+  }
+  const reference = due.from === "formation" ? ctx.formationDate : ctx.licenseIssuedOn;
+  if (!reference) return [];
+  const step = (ctx.intervalYears ?? 0) > 2 ? ctx.intervalYears! : ctx.biennial ? 2 : 1;
+  const month = Number(reference.slice(5, 7));
+  const dayOfReference = Number(reference.slice(8, 10));
+  for (let y = Number(reference.slice(0, 4)) + step; y <= to; y += step) emit(y, month, dayOfReference);
+  return out;
 }
 
 /**
@@ -140,6 +190,9 @@ export function occurrencesBetween(
       }
       for (let y = y0; y <= y1; y++)
         for (const d of due.dates) push(iso(y, d.month, Math.min(d.day, lastDay(y, d.month))));
+      break;
+    case "relative":
+      for (const date of relativeDates(due, ctx, y0, y1)) push(date);
       break;
     case "anniversary": {
       if (!ctx.formationDate) return [];

@@ -22,7 +22,8 @@
         }
       }
     ],
-    "status": "rules"
+    "status": "rules",
+    "aliases": ["Athens-Clarke County"]
   },
   {
     "city": "Atlanta",
@@ -38,8 +39,7 @@
         "category": "license",
         "authority": "City of Atlanta Office of Revenue",
         "description": "Businesses operating in Atlanta hold an occupational tax certificate, renewed annually through the city's online portal; certificates expire December 31.",
-        "rrule": "FREQ=YEARLY",
-        "deadline": "Expires December 31; renew annually",
+        "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=31",
         "url": [
           "https://www.atlantaga.gov/government/departments/finance/office-of-revenue/apply-for-a-new-business-occupational-tax-certificate"
         ],
@@ -183,32 +183,6 @@
     "sourceUrl": ["https://www.maconbibb.us/businesslicenseprocess/"],
     "note": "Macon city-specific licensing was confirmed from the cited official source.",
     "counties": ["Bibb"]
-  },
-  {
-    "city": "Athens-Clarke County",
-    "status": "rules",
-    "items": [
-      {
-        "id": "athens-clarke-county.occupation-tax",
-        "title": "Renew the Athens-Clarke occupation tax certificate",
-        "category": "license",
-        "authority": "Athens-Clarke County Business Tax Office",
-        "description": "Athens-Clarke County occupation tax certificates are valid for the calendar year; renewals are due on or before April 1 and later applications carry a 10% penalty.",
-        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
-        "url": ["https://accgov.com/138/Business-Occupation-Tax"],
-        "appliesTo": ["all"],
-        "feeDetail": {
-          "basis": "unknown"
-        },
-        "penalty": {
-          "basis": "unknown"
-        }
-      }
-    ],
-    "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://accgov.com/138/Business-Occupation-Tax"],
-    "note": "Athens-Clarke County occupation tax certificates are valid for the calendar year; renewals are due on or before April 1 and later applications carry a 10% penalty.",
-    "counties": ["Athens-Clarke"]
   },
   {
     "city": "South Fulton",
