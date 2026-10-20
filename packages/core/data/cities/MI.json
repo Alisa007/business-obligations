@@ -35,7 +35,7 @@
         "category": "registration",
         "authority": "City of Detroit Income Tax Division / Michigan Department of Treasury",
         "description": "Employers with a location in Detroit or doing business there register with the city, withhold city income tax monthly or quarterly, and file the annual reconciliation.",
-        "rrule": "FREQ=MONTHLY;INTERVAL=3",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10",
         "url": ["https://detroitmi.gov/incometax"],
         "appliesTo": ["employees"],
         "feeDetail": {
@@ -43,7 +43,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "anchor": "assigned"
       },
       {
         "id": "detroit.corporate-income-tax",
@@ -59,7 +60,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "anchor": "license_issued"
       }
     ],
     "sourceUrl": ["https://detroitmi.gov/incometax"],

@@ -13,7 +13,7 @@
         "category": "license",
         "authority": "City of Allentown Bureau of Revenue and Audit",
         "description": "Anyone conducting business in Allentown needs a city business license, valid for the calendar year.",
-        "rrule": "FREQ=YEARLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=1",
         "deadline": "Calendar year",
         "url": [
           "https://www.allentownpa.gov/en-us/Government/Departments/Finance/Revenue-and-Audit/Business-Licenses"
@@ -71,7 +71,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "anchor": "license_issued"
       },
       {
         "id": "philly.birt",

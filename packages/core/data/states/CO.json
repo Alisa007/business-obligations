@@ -14,7 +14,7 @@
   },
   "llcReport": {
     "title": "File Periodic Report",
-    "rrule": "FREQ=YEARLY",
+    "rrule": "FREQ=YEARLY;BYMONTHDAY=-1",
     "deadline": "From 2 months before to 2 months after the periodic report month",
     "feeDetail": {
       "basis": "flat",
@@ -23,11 +23,12 @@
     "penalty": {
       "basis": "flat",
       "amount": 50
-    }
+    },
+    "anchor": "formation"
   },
   "corpReport": {
     "title": "File Periodic Report",
-    "rrule": "FREQ=YEARLY",
+    "rrule": "FREQ=YEARLY;BYMONTHDAY=-1",
     "deadline": "From 2 months before to 2 months after the periodic report month",
     "feeDetail": {
       "basis": "flat",
@@ -36,7 +37,8 @@
     "penalty": {
       "basis": "flat",
       "amount": 50
-    }
+    },
+    "anchor": "formation"
   },
   "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,

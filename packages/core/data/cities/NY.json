@@ -53,7 +53,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "anchor": "license_issued"
       }
     ],
     "sourceUrl": ["https://www.albanyny.gov/143/Apply-For"],
@@ -694,7 +695,7 @@
         "category": "permit",
         "authority": "City of Hornell Code Enforcement",
         "description": "Hornell publishes contractor permit applications for permits to work in the city and opens new permit processing each January 1.",
-        "rrule": "FREQ=YEARLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=1",
         "url": ["https://www.cityofhornell.gov/code-of-enforcement"],
         "appliesTo": ["all"],
         "feeDetail": {
@@ -1239,7 +1240,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "anchor": "license_issued"
       },
       {
         "id": "newburgh.event-permit",
@@ -1263,7 +1265,7 @@
         "category": "filing",
         "authority": "City of Newburgh Comptroller",
         "description": "Newburgh requires short-term lodging businesses and hosts to register for a certificate of authority, collect the 5% city room-occupancy tax and submit returns and payment quarterly.",
-        "rrule": "FREQ=MONTHLY;INTERVAL=3",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10",
         "url": ["https://www.cityofnewburgh-ny.gov/617/Room-Occupancy-Tax"],
         "appliesTo": ["all"],
         "feeDetail": {
@@ -1271,7 +1273,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "anchor": "assigned"
       }
     ],
     "sourceUrl": ["https://www.cityofnewburgh-ny.gov/174/Building-Code-Enforcement"],
@@ -1299,7 +1302,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "anchor": "license_issued"
       }
     ],
     "sourceUrl": [
@@ -1540,7 +1544,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "anchor": "license_issued"
       },
       {
         "id": "plattsburgh.vendor-permit",
@@ -1754,7 +1759,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "anchor": "license_issued"
       },
       {
         "id": "rochester.food-truck-license",
@@ -1942,7 +1948,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "anchor": "license_issued"
       }
     ],
     "sourceUrl": ["https://ecode360.com/8688661"],
@@ -1969,7 +1976,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "anchor": "license_issued"
       },
       {
         "id": "sherrill.building-permit",
@@ -2030,7 +2038,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "anchor": "license_issued"
       }
     ],
     "sourceUrl": [

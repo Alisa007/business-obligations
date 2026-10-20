@@ -50,7 +50,7 @@
         "category": "filing",
         "authority": "Alachua County Tax Collector",
         "description": "Hosts file monthly returns through the Tax Collector's TouristExpress portal. The pages read do not state the day of the month.",
-        "rrule": "FREQ=MONTHLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12",
         "url": ["https://alachuacounty.us/News/Article/Pages/Short-Term-Vacation-Rental-Tax-Compliance.aspx"],
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -66,7 +66,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "anchor": "assigned"
       }
     ],
     "checkedOn": "2026-10-16",
@@ -1788,7 +1789,7 @@
         "category": "filing",
         "authority": "Leon County Tax Collector",
         "description": "Report and pay online through the Tourist Development login; electronic filing is needed to keep the collection allowance. The page does not give return due dates (call 850-606-4700).",
-        "rrule": "FREQ=MONTHLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12",
         "url": ["https://leontaxcollector.net/Services/Tourist-Development"],
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -1804,7 +1805,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "anchor": "assigned"
       }
     ],
     "checkedOn": "2026-10-16",
@@ -2692,7 +2694,7 @@
         "category": "filing",
         "authority": "Pasco County Tax Collector",
         "description": "Register and file online through Tourist Express (pasco.county-taxes.com/tourist). The page does not give return due dates (call 352-518-5097).",
-        "rrule": "FREQ=MONTHLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12",
         "url": ["https://pascotaxes.com/taxes/tdt/"],
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -2708,7 +2710,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "anchor": "assigned"
       },
       {
         "id": "pasco-fl.business-tax-receipt",

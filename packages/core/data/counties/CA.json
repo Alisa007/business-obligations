@@ -559,7 +559,8 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        }
+        },
+        "anchor": "license_issued"
       }
     ],
     "checkedOn": "2026-10-16",
@@ -1791,7 +1792,7 @@
         "category": "filing",
         "authority": "Tulare County Treasurer-Tax Collector",
         "description": "Applies to hotels, motels and short-term rentals in the unincorporated area. The tax is 10% of rent for vacation rentals. Taxes are due quarterly and the Tax Collector sends a quarterly statement to complete and return; the exact due dates were not found. File online with the certificate or agent number and business ID.",
-        "rrule": "FREQ=MONTHLY;INTERVAL=3",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10",
         "url": [
           "https://tularecounty.ca.gov/treasurertaxcollector/tax-collector/faqs/what-is-a-transient-occupancy-tax-tot-"
         ],
@@ -1809,7 +1810,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "anchor": "assigned"
       }
     ],
     "checkedOn": "2026-10-16",

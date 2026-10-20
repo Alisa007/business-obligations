@@ -2205,7 +2205,7 @@
         "category": "filing",
         "authority": "Shelby County Clerk",
         "description": "The County Clerk collects a 5% room occupancy privilege tax on hotel, motel and bed-and-breakfast stays (Private Acts of 1969, chapter 131). The page read does not give the return due date; call the Clerk at (901) 222-3059.",
-        "rrule": "FREQ=MONTHLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12",
         "url": ["https://shelbycountytn.gov/570/Room-Occupancy-Taxes"],
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -2221,7 +2221,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "anchor": "assigned"
       }
     ],
     "checkedOn": "2026-10-16",

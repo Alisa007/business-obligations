@@ -144,7 +144,7 @@
         "category": "license",
         "authority": "City of Savannah Revenue Department",
         "description": "Business tax certificates expire December 31 and renew annually. The city's pages give March 1 for renewal (the 2026 form says March 31) and a January 31 payment date, so confirm on your renewal packet.",
-        "rrule": "FREQ=YEARLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=31",
         "deadline": "Certificates expire December 31; renewal packet date varies",
         "url": ["https://savannahga.gov/1587/Business-License"],
         "appliesTo": ["all"],
@@ -176,7 +176,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "anchor": "license_issued"
       }
     ],
     "checkedOn": "2026-10-18",
@@ -280,7 +281,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "anchor": "license_issued"
       }
     ],
     "checkedOn": "2026-10-18",

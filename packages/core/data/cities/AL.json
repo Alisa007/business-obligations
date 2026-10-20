@@ -100,7 +100,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "anchor": "announced"
       }
     ],
     "checkedOn": "2026-10-18",
@@ -151,7 +152,7 @@
         "description": "Hoover requires a city business license and renews licenses on a calendar-year basis; applicable sales, use, rental, lodging and other tax filings may have separate deadlines.",
         "url": ["https://www.hooveralabama.gov/1085/Business-License-Tax-Information"],
         "appliesTo": ["all"],
-        "rrule": "FREQ=YEARLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=1",
         "feeDetail": {
           "basis": "unknown"
         },
@@ -213,7 +214,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "anchor": "license_issued"
       }
     ],
     "checkedOn": "2026-10-18",

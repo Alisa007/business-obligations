@@ -851,7 +851,7 @@
         "category": "filing",
         "authority": "Lexington-Fayette Urban County Government, Division of Revenue",
         "description": "Employers withhold the 2.25% license fee from wages for work performed in Fayette County. Withholding of $300 or more a quarter is filed monthly; under $300 quarterly. The exact due days were not in the pages read; Form 222 is the annual employee reconciliation.",
-        "rrule": "FREQ=MONTHLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12",
         "url": ["https://www.lexingtonky.gov/occupational-license"],
         "appliesTo": ["employees"],
         "feeDetail": {
@@ -859,7 +859,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "anchor": "assigned"
       },
       {
         "id": "fayette-ky.net-profit-license-return",

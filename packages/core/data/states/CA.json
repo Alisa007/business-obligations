@@ -28,7 +28,7 @@
   },
   "corpReport": {
     "title": "File Statement of Information",
-    "rrule": "FREQ=YEARLY",
+    "rrule": "FREQ=YEARLY;BYMONTHDAY=-1",
     "deadline": "Within the anniversary month and the 5 months before it",
     "feeDetail": {
       "basis": "flat",
@@ -38,7 +38,8 @@
       "basis": "flat",
       "amount": 250,
       "note": "Franchise Tax Board penalty for failing to file the required Statement of Information."
-    }
+    },
+    "anchor": "formation"
   },
   "lpReport": null,
   "llpReport": null,

@@ -13,7 +13,7 @@
     "url": ["https://labor.vermont.gov/mandatory-workplace-posters"]
   },
   "llcReport": {
-    "rrule": "FREQ=YEARLY",
+    "rrule": "FREQ=YEARLY;BYMONTHDAY=-1;X-MONTHS=3",
     "deadline": "3 months after fiscal year end",
     "feeDetail": {
       "basis": "flat",
@@ -23,10 +23,11 @@
       "basis": "flat",
       "amount": 35,
       "note": "Reinstatement fee after termination for failure to file an annual report."
-    }
+    },
+    "anchor": "fiscal_year_end"
   },
   "corpReport": {
-    "rrule": "FREQ=YEARLY",
+    "rrule": "FREQ=YEARLY;BYMONTHDAY=15;X-MONTHS=3",
     "deadline": "2.5 months after fiscal year end",
     "feeDetail": {
       "basis": "flat",
@@ -36,7 +37,8 @@
       "basis": "flat",
       "amount": 50,
       "note": "Reinstatement fee after involuntary termination for failure to file an annual report."
-    }
+    },
+    "anchor": "fiscal_year_end"
   },
   "lpReport": null,
   "llpReport": {

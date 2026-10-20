@@ -21,7 +21,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "anchor": "license_issued"
       },
       {
         "id": "lexington.employer-license-fee-withholding",
@@ -29,7 +30,7 @@
         "category": "payment",
         "authority": "Lexington-Fayette Urban County Government Division of Revenue",
         "description": "Employers withhold the 2.25% occupational license fee from employees' compensation and file the Employer's Return of License Fee Withheld each quarter, or each month once the fee withheld in any quarter exceeds $300. An annual reconciliation of the fee withheld is also filed.",
-        "rrule": "FREQ=MONTHLY;INTERVAL=3",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10",
         "deadline": "Quarterly (monthly above $300 withheld in a quarter), plus an annual reconciliation",
         "url": [
           "https://www.lexingtonky.gov/working/business-licensing-taxes/occupational-license-fee-minimum-license-filing-requirements"
@@ -40,7 +41,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "anchor": "assigned"
       }
     ],
     "checkedOn": "2026-10-18",

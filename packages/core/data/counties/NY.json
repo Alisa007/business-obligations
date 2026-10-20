@@ -360,7 +360,7 @@
         "category": "filing",
         "authority": "Chemung County Treasurer",
         "description": "Operators file the county's Occupancy Tax Return (PDF on the Treasurer's page) quarterly. The return's exact due dates could not be read.",
-        "rrule": "FREQ=MONTHLY;INTERVAL=3",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10",
         "exemptions": ["Permanent residents (stays of 30 or more consecutive days)"],
         "url": ["https://www.chemungcountyny.gov/180"],
         "appliesTo": ["all"],
@@ -377,7 +377,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "anchor": "assigned"
       }
     ],
     "checkedOn": "2026-10-16",
@@ -998,7 +999,7 @@
         "category": "filing",
         "authority": "Genesee County Treasurer",
         "description": "Operators file the county bed tax return with payment and remit 3% of taxable room rentals. A late return adds a 5% monthly penalty and 1% monthly interest. The forms read are the 2022 and 2023 versions, so confirm the current ones.",
-        "rrule": "FREQ=MONTHLY;INTERVAL=3",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10",
         "deadline": "Within 20 days after each return period ends",
         "exemptions": ["Permanent residents (stays of 30 or more consecutive days)"],
         "url": ["https://www.geneseeny.gov/Department-Content/Treasurer-and-Real-Property/Bed-Tax"],
@@ -1016,7 +1017,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "anchor": "assigned"
       }
     ],
     "checkedOn": "2026-10-15",
@@ -1310,7 +1312,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "anchor": "license_issued"
       },
       {
         "id": "madison-ny.occupancy-tax-return",
@@ -1364,7 +1367,8 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        }
+        },
+        "anchor": "license_issued"
       }
     ],
     "checkedOn": "2026-10-18",
@@ -1569,7 +1573,8 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        }
+        },
+        "anchor": "license_issued"
       }
     ],
     "checkedOn": "2026-10-15",
@@ -1642,7 +1647,8 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        }
+        },
+        "anchor": "license_issued"
       }
     ],
     "sourceUrl": [
@@ -2704,7 +2710,8 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        }
+        },
+        "anchor": "license_issued"
       }
     ],
     "checkedOn": "2026-10-15",
@@ -2799,7 +2806,7 @@
         "category": "filing",
         "authority": "Tioga County Treasurer",
         "description": "Returns and payment go to the Treasurer quarterly. The return form and exact due dates were not found.",
-        "rrule": "FREQ=MONTHLY;INTERVAL=3",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10",
         "exemptions": ["Permanent residents (stays of 30 or more consecutive days)"],
         "url": ["https://www.tiogacountyny.com/departments/treasurer/"],
         "appliesTo": ["all"],
@@ -2816,7 +2823,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "anchor": "assigned"
       }
     ],
     "checkedOn": "2026-10-16",
@@ -3185,7 +3193,8 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        }
+        },
+        "anchor": "license_issued"
       }
     ],
     "checkedOn": "2026-10-15",

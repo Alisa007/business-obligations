@@ -43,7 +43,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "anchor": "license_issued"
       }
     ],
     "checkedOn": "2026-10-18",
@@ -87,7 +88,7 @@
         "category": "license",
         "authority": "City of Centennial Finance Department",
         "description": "Every active business needs either a Retail Sales Tax License or a Business Registration (one, not both); both are biennial and expire December 31 of the second calendar year.",
-        "rrule": "FREQ=YEARLY;INTERVAL=2",
+        "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=12;BYMONTHDAY=31",
         "deadline": "December 31 of the second calendar year",
         "url": ["https://www.centennialco.gov/Online-Services/Sales-Tax-Licensing"],
         "appliesTo": ["all"],
@@ -97,7 +98,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "anchor": "2026-12-31"
       }
     ],
     "status": "rules"
@@ -391,7 +393,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "anchor": "license_issued"
       }
     ],
     "checkedOn": "2026-10-18",

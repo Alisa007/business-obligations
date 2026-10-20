@@ -73,7 +73,8 @@
         },
         "feeDetail": {
           "basis": "unknown"
-        }
+        },
+        "anchor": "license_issued"
       }
     ],
     "checkedOn": "2026-10-18",
@@ -127,7 +128,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "anchor": "license_issued"
       }
     ],
     "checkedOn": "2026-10-18",
@@ -147,7 +149,7 @@
         "description": "Rogers requires a business license and certificate of occupancy process for businesses in city limits; the certificate of occupancy fee is $25, and business-license penalties are 10% on March 1, 20% on April 1, and 50% on May 1.",
         "url": ["https://www.rogersar.gov/1503/Permit-Fee-Schedules"],
         "appliesTo": ["all"],
-        "rrule": "FREQ=YEARLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1",
         "feeDetail": {
           "basis": "unknown"
         },

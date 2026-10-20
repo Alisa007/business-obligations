@@ -17,7 +17,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "anchor": "license_issued"
       }
     ],
     "sourceUrl": ["https://www.como.gov/?p=8900"],
@@ -45,7 +46,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "anchor": "license_issued"
       }
     ],
     "sourceUrl": [
@@ -97,7 +99,7 @@
         "category": "payment",
         "authority": "City of Kansas City, Missouri Finance Department",
         "description": "Employers withhold the 1% earnings tax for employees who live or work in the city and file the quarterly return.",
-        "rrule": "FREQ=MONTHLY;INTERVAL=3",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10",
         "url": ["https://www.kcmo.gov/city-hall/departments/finance"],
         "appliesTo": ["employees"],
         "feeDetail": {
@@ -105,7 +107,8 @@
         },
         "penalty": {
           "basis": "unknown"
-        }
+        },
+        "anchor": "assigned"
       }
     ],
     "sourceUrl": ["https://www.kcmo.gov/city-hall/departments/finance"],
