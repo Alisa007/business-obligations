@@ -6,7 +6,7 @@
   "items": {
     "type": "object",
     "additionalProperties": false,
-    "required": ["county", "checkedOn", "items"],
+    "required": ["county", "status", "checkedOn", "items"],
     "properties": {
       "county": {
         "type": "string",
@@ -30,7 +30,7 @@
         "description": "Date (YYYY-MM-DD) the entry was checked against official pages. Absent = never individually checked."
       },
       "sourceUrl": {
-        "$ref": "common.schema.json#/$defs/httpsUrlOrList"
+        "$ref": "common.schema.json#/$defs/httpsUrlList"
       },
       "reason": {
         "type": "string",

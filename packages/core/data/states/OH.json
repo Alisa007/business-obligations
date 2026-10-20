@@ -28,8 +28,10 @@
       "note": "Ohio states that failure to file cancels an LLP, but publishes no separate late monetary penalty."
     }
   },
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "Commercial Activity Tax (CAT) on gross receipts; no corporate income tax",
+  "wageWithholding": true,
   "entityTaxDetail": {
     "kind": "gross_receipts",
     "thresholdUsd": 6000000,
@@ -41,8 +43,19 @@
   "salesTax": {
     "statewide": true,
     "permit": "Ohio vendor's license",
+    "permitFee": {
+      "basis": "flat",
+      "amount": 50,
+      "note": "County vendor's license fee, raised from $25 on April 9, 2025; each location needs its own license."
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "note": "Up to the greater of $50 or 10% of the tax for each return not filed on time or tax not paid in full (ORC 5739.12).",
+      "rate": 10,
+      "min": 50
+    }
   },
   "localSalesTax": "state_administered",
   "economicNexusUsd": 100000,
@@ -60,6 +73,25 @@
       "minEmployees": 1
     }
   },
+  "penalties": {
+    "unemployment": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late wage report was found in the state agency's published sources."
+    },
+    "newHire": {
+      "basis": "flat",
+      "amount": 25,
+      "note": "$25 per failure to report, or $500 if the failure results from a conspiracy (Ohio Adm. Code 5101:12-10-90.1)."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for lacking required coverage was found; secondary sources conflict."
+    }
+  },
   "paidLeave": null,
   "paidSickLeave": null,
   "businessLicense": null,
@@ -70,6 +102,7 @@
     "description": "Ohio municipalities levy net profits and payroll income taxes; register via the Ohio Business Gateway or the city."
   },
   "dbaFiling": "state",
+  "dbaEntitiesFileLocally": false,
   "industry": {
     "contractor": "Ohio Construction Industry Licensing Board (commercial trades)",
     "realEstate": "Ohio Division of Real Estate and Professional Licensing",

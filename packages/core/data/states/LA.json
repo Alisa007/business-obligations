@@ -52,13 +52,27 @@
       "note": "Reinstatement requires an additional $35 for each annual report due."
     }
   },
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "Corporate income tax; the corporate franchise tax is repealed for periods beginning on or after January 1, 2026",
+  "wageWithholding": true,
+  "entityTaxDetail": null,
   "salesTax": {
     "statewide": true,
     "permit": "Louisiana sales tax account (LaTAP)",
+    "permitFee": {
+      "basis": "none",
+      "amount": 0,
+      "note": "Compliance guides report no registration fee; the state's own fee page was not read."
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "percentPerMonth": 5,
+      "note": "5% of the tax owed, rising by 5% every 30 days, up to 25% (R.S. 47:1602).",
+      "rate": 25
+    }
   },
   "localSalesTax": "locally_administered",
   "economicNexusUsd": 100000,
@@ -75,6 +89,27 @@
       "minEmployees": 1
     }
   },
+  "penalties": {
+    "unemployment": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late wage report was found in the state agency's published sources."
+    },
+    "newHire": {
+      "basis": "flat",
+      "amount": 25,
+      "note": "$25 civil fine per unreported employee, or up to $500 per employee for a conspiracy."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "per_item",
+      "note": "Civil penalty of up to $250 per employee for a first offense and $500 for later offenses, capped at $10,000 for a related series of violations (R.S. 23:1170).",
+      "perUnit": 250,
+      "max": 10000
+    }
+  },
   "paidLeave": null,
   "paidSickLeave": null,
   "businessLicense": null,
@@ -85,6 +120,7 @@
     "description": "Parishes and cities issue occupational licenses and many collect their own sales tax."
   },
   "dbaFiling": "county",
+  "dbaEntitiesFileLocally": false,
   "dbaOffice": "Parish clerk of court",
   "industry": {
     "contractor": "Louisiana State Licensing Board for Contractors",

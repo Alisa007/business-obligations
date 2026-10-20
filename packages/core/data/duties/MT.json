@@ -10,10 +10,15 @@
     "appliesTo": ["all"],
     "checkedOn": "2026-10-16",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "none",
+      "amount": 0,
+      "note": "There is no fee to file or register."
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "per_item",
+      "note": "Civil penalty of $100 a day up to $2,500, plus 12% annual interest; willful failures carry $1,000 a day up to $25,000 plus 25% (MCA 70-9-824).",
+      "perUnit": 100,
+      "max": 2500
     }
   }
 ]

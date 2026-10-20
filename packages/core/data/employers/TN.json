@@ -18,10 +18,14 @@
       }
     ],
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "none",
+      "amount": 0,
+      "note": "There is no fee to file or register."
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "per_item",
+      "note": "First knowing violation: a $500 company penalty plus $500 for each unverified employee; repeat violations up to $2,500 plus $2,500 per employee (state Department of Labor page).",
+      "perUnit": 500
     }
   }
 ]

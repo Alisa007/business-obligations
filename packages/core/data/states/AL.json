@@ -15,13 +15,27 @@
   "llcReport": null,
   "corpReport": null,
   "llpReport": null,
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "Corporate income tax and Business Privilege Tax (an entity that would owe only the minimum Business Privilege Tax is exempt from it for tax years from 2024; the Secretary of State corporate annual report is no longer required)",
+  "wageWithholding": true,
+  "entityTaxDetail": null,
   "salesTax": {
     "statewide": true,
     "permit": "Sales tax account (My Alabama Taxes)",
+    "permitFee": {
+      "basis": "none",
+      "amount": 0,
+      "note": "Online registration through My Alabama Taxes is free; a sales tax license is mailed later."
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "note": "Greater of 10% of the tax due or $50 for a late return.",
+      "rate": 10,
+      "min": 50
+    }
   },
   "localSalesTax": "locally_administered",
   "economicNexusUsd": 250000,
@@ -38,6 +52,28 @@
       "minEmployees": 5
     }
   },
+  "penalties": {
+    "unemployment": {
+      "basis": "percent",
+      "note": "10% penalty plus interest when contributions are not paid on time without good cause (Ala. Code 25-4-133).",
+      "rate": 10
+    },
+    "newHire": {
+      "basis": "flat",
+      "amount": 25,
+      "note": "$25 per occurrence for failing to report a new hire."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "range",
+      "note": "Misdemeanor fine of $100 to $1,000, double the compensation otherwise payable, and civil penalties up to $100 a day (Ala. Code 25-5-8).",
+      "min": 100,
+      "max": 1000
+    }
+  },
   "paidLeave": null,
   "paidSickLeave": null,
   "businessLicense": null,
@@ -50,6 +86,7 @@
     "description": "Alabama cities and counties issue general business licenses and collect local sales/use taxes."
   },
   "dbaFiling": "none",
+  "dbaEntitiesFileLocally": false,
   "industry": {
     "contractor": "Alabama Licensing Board for General Contractors",
     "realEstate": "Alabama Real Estate Commission",
@@ -76,7 +113,8 @@
     "entityTax": [
       "https://www.revenue.alabama.gov/business-license/business-privilege-tax//business-license/business-privilege-tax/"
     ],
-    "laborPosters": ["https://workforce.alabama.gov/employers/posters/"]
+    "laborPosters": ["https://workforce.alabama.gov/employers/posters/"],
+    "dba": ["https://www.sos.alabama.gov/administrative-services/trademarks"]
   },
   "verification": {
     "checkedOn": "2026-10-13",

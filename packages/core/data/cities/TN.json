@@ -15,13 +15,20 @@
         "url": ["https://register.chattanooga.gov/business/license"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The tax depends on the business classification and gross receipts; the minimum for classifications 1 through 4 is $22 per license."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "percentPerMonth": 5,
+          "min": 15,
+          "max": 25,
+          "note": "A city renewal notice describes the state rule: 5% per month or part of a month, up to 25% of the tax, with a $15 minimum, plus interest."
         }
       }
-    ]
+    ],
+    "status": "rules"
   },
   {
     "city": "Clarksville",
@@ -40,10 +47,12 @@
         "url": ["https://montgomerytn.gov/clerk/business-licensetaxes"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "This entry covers the city's local licenses and taxes generally, each of which carries its own late charge in the municipal code; no single amount is stated."
         }
       }
     ],
@@ -65,13 +74,16 @@
         "url": ["https://www.knoxvilletn.gov/470/Business-License-Tax-Office"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The business tax depends on the classification and gross receipts, so no single amount applies."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
-    ]
+    ],
+    "status": "rules"
   },
   {
     "city": "Memphis",
@@ -90,13 +102,16 @@
         "url": ["https://memphistn.gov/licenses-and-permits/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The business tax depends on the classification and gross receipts, so no single amount applies."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
-    ]
+    ],
+    "status": "rules"
   },
   {
     "city": "Murfreesboro",
@@ -114,13 +129,16 @@
         "url": ["https://www.murfreesborotn.gov/1330/Business-Licenses"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "An initial fee applies for each of the city and county licenses; the amounts depend on the business."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
-    ]
+    ],
+    "status": "rules"
   },
   {
     "city": "Nashville",
@@ -146,11 +164,13 @@
           "min": 15
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
     ],
-    "aliases": ["Nashville-Davidson", "Metro Nashville"]
+    "aliases": ["Nashville-Davidson", "Metro Nashville"],
+    "status": "rules"
   },
   {
     "city": "Franklin",
@@ -167,15 +187,18 @@
         "url": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"]
+    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
+    "counties": ["Williamson"]
   },
   {
     "city": "Johnson City",
@@ -192,15 +215,18 @@
         "url": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"]
+    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
+    "counties": ["Washington"]
   },
   {
     "city": "Jackson",
@@ -208,7 +234,7 @@
     "reason": "city-license-unconfirmed",
     "items": [
       {
-        "id": "jackson.local-licenses",
+        "id": "jackson-tn.local-licenses",
         "title": "Review applicable local licenses and permits in Jackson",
         "category": "license",
         "authority": "Jackson local licensing authority",
@@ -217,15 +243,18 @@
         "url": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"]
+    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
+    "counties": ["Madison"]
   },
   {
     "city": "Hendersonville",
@@ -242,15 +271,18 @@
         "url": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"]
+    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
+    "counties": ["Sumner"]
   },
   {
     "city": "Smyrna",
@@ -258,7 +290,7 @@
     "reason": "city-license-unconfirmed",
     "items": [
       {
-        "id": "smyrna.local-licenses",
+        "id": "smyrna-tn.local-licenses",
         "title": "Review applicable local licenses and permits in Smyrna",
         "category": "license",
         "authority": "Smyrna local licensing authority",
@@ -267,15 +299,18 @@
         "url": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"]
+    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
+    "counties": ["Rutherford"]
   },
   {
     "city": "Spring Hill",
@@ -292,15 +327,18 @@
         "url": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"]
+    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
+    "counties": ["Maury"]
   },
   {
     "city": "Kingsport",
@@ -317,15 +355,18 @@
         "url": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"]
+    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
+    "counties": ["Sullivan"]
   },
   {
     "city": "Bartlett",
@@ -342,15 +383,18 @@
         "url": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"]
+    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
+    "counties": ["Shelby"]
   },
   {
     "city": "Gallatin",
@@ -367,15 +411,18 @@
         "url": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"]
+    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
+    "counties": ["Sumner"]
   },
   {
     "city": "Lebanon",
@@ -392,15 +439,18 @@
         "url": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"]
+    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
+    "counties": ["Wilson"]
   },
   {
     "city": "Collierville",
@@ -417,15 +467,18 @@
         "url": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"]
+    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
+    "counties": ["Shelby"]
   },
   {
     "city": "Cleveland",
@@ -442,15 +495,18 @@
         "url": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"]
+    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
+    "counties": ["Bradley"]
   },
   {
     "city": "Columbia",
@@ -467,15 +523,18 @@
         "url": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"]
+    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
+    "counties": ["Maury"]
   },
   {
     "city": "Brentwood",
@@ -483,7 +542,7 @@
     "reason": "city-license-unconfirmed",
     "items": [
       {
-        "id": "brentwood.local-licenses",
+        "id": "brentwood-tn.local-licenses",
         "title": "Review applicable local licenses and permits in Brentwood",
         "category": "license",
         "authority": "Brentwood local licensing authority",
@@ -492,15 +551,18 @@
         "url": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"]
+    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
+    "counties": ["Williamson"]
   },
   {
     "city": "Mount Juliet",
@@ -517,15 +579,18 @@
         "url": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"]
+    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
+    "counties": ["Wilson"]
   },
   {
     "city": "La Vergne",
@@ -542,14 +607,17 @@
         "url": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"]
+    "sourceUrl": ["https://sos.tn.gov/businesses/services/business-forms-fees"],
+    "counties": ["Rutherford"]
   }
 ]

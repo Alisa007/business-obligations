@@ -10,6 +10,7 @@
         "authority": "City of Chandler Tax and License Division",
         "description": "Businesses operating from a physical Chandler location need a city business registration for each location and entity, renewed annually, in addition to the state TPT license.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://www.chandleraz.gov/business/tax-and-license"],
         "appliesTo": ["all"],
         "feeDetail": {
@@ -18,12 +19,14 @@
           "note": "annual"
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's page gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.chandleraz.gov/business/tax-and-license/business-registration"]
+    "sourceUrl": ["https://www.chandleraz.gov/business/tax-and-license/business-registration"],
+    "status": "rules"
   },
   {
     "city": "Gilbert",
@@ -41,13 +44,18 @@
         "url": ["https://www.gilbertaz.gov/business/business-registration-and-licensing"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 25,
+          "note": "New license application fee; the renewal fee is also $25 per year."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 10,
+          "note": "Late fee for operating without a license or renewing late."
         }
       }
-    ]
+    ],
+    "status": "rules"
   },
   {
     "city": "Glendale",
@@ -62,6 +70,7 @@
         "authority": "City of Glendale Licensing and Sales Tax",
         "description": "Any business with a permanent physical location in Glendale needs a city business license, renewed every year; a late penalty can apply when an application or renewal is more than 30 days late. TPT is licensed separately through the state.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://www.glendaleaz.gov/Business/Licensing-Sales-Tax/Business-Licenses"],
         "appliesTo": ["all"],
         "feeDetail": {
@@ -70,10 +79,12 @@
           "note": "annual"
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's page says penalties apply but gives no amount: a late penalty may be assessed when an application or renewal is more than 30 days late."
         }
       }
-    ]
+    ],
+    "status": "rules"
   },
   {
     "city": "Mesa",
@@ -89,15 +100,20 @@
         "url": ["https://www.mesaaz.gov/business/licensing/mesa-general-business-license"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 25,
+          "note": "Application or renewal fee; card payments add a 2.37% service fee."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 10,
+          "note": "Late fee for renewing less than 30 days before expiration or for operating without a license."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.mesaaz.gov/Business-Development/Licensing/Mesa-General-Business-License"]
+    "sourceUrl": ["https://www.mesaaz.gov/Business-Development/Licensing/Mesa-General-Business-License"],
+    "status": "rules"
   },
   {
     "city": "Peoria",
@@ -115,13 +131,17 @@
         "url": ["https://peoriaed.com/home/showpublisheddocument/22424/638121474728870000"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The city's page does not publish fee amounts: the fee depends on business activity and is in the city's fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "note": "50% late fee if the license fee is paid more than 30 days after starting business."
         }
       }
-    ]
+    ],
+    "status": "rules"
   },
   {
     "city": "Phoenix",
@@ -139,13 +159,18 @@
         "url": ["https://www.phoenix.gov/finance/plt/licensing/privilege-tax-license"],
         "appliesTo": ["sells_goods"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 50,
+          "note": "First-year and annual renewal fee per license."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 25,
+          "note": "A 50% late fee on the $50 license fee when it is not paid on time (the last business day of January for renewals)."
         }
       }
-    ]
+    ],
+    "status": "rules"
   },
   {
     "city": "Scottsdale",
@@ -164,10 +189,12 @@
         "url": ["https://www.scottsdaleaz.gov/taxes/resources"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's page gives no penalty amount."
         }
       }
     ],
@@ -189,13 +216,16 @@
         "url": ["https://primeweb.surpriseaz.gov/Apply/GettingStarted/BusinessLicense"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The city's page does not publish fee amounts; see its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's page gives no penalty amount."
         }
       }
-    ]
+    ],
+    "status": "rules"
   },
   {
     "city": "Tempe",
@@ -218,13 +248,17 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 25,
+          "note": "Annual fee from January 1, 2026; businesses that applied by December 31, 2025 had fees waived until January 1, 2027."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's page gives no penalty amount."
         }
       }
-    ]
+    ],
+    "status": "rules"
   },
   {
     "city": "Tucson",
@@ -241,18 +275,22 @@
         "authority": "City of Tucson Business Services Department",
         "description": "Businesses in Tucson hold a city business license in addition to the state transaction privilege tax license, renewed annually.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.tucsonaz.gov/Departments/Business-Services-Department/Business-License-and-Tax-Information"
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The city's page does not publish fee amounts; see its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's page gives no penalty amount."
         }
       }
-    ]
+    ],
+    "status": "rules"
   },
   {
     "city": "Buckeye",
@@ -269,15 +307,20 @@
         "url": ["https://www.buckeyeaz.gov/business/business-licenses/business-license-fee-schedule"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 50,
+          "note": "Annual fee, plus a $25 application fee."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 25,
+          "note": "Late fee."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://azsos.gov/business/tntm"]
+    "sourceUrl": ["https://azsos.gov/business/tntm"],
+    "counties": ["Maricopa"]
   },
   {
     "city": "Goodyear",
@@ -294,15 +337,18 @@
         "url": ["https://www.goodyearaz.gov/business/business-license"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's page gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://azsos.gov/business/tntm"]
+    "sourceUrl": ["https://azsos.gov/business/tntm"],
+    "counties": ["Maricopa"]
   },
   {
     "city": "Yuma",
@@ -319,15 +365,18 @@
         "url": ["https://www.yumaaz.gov/business/business-license"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's page says penalties apply but gives no amount: fees run $40 to $120 per calendar year under the city code."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://azsos.gov/business/tntm"]
+    "sourceUrl": ["https://azsos.gov/business/tntm"],
+    "counties": ["Yuma"]
   },
   {
     "city": "Avondale",
@@ -344,15 +393,20 @@
         "url": ["https://www.avondaleaz.gov/home/showpublisheddocument/19725/638566332814270000"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 40,
+          "note": "Annual license fee, plus a $25 processing fee; application-period fees vary by quarter."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 20,
+          "note": "Late payment fee per renewal (FY 2026 fee schedule)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://azsos.gov/business/tntm"]
+    "sourceUrl": ["https://azsos.gov/business/tntm"],
+    "counties": ["Maricopa"]
   },
   {
     "city": "Queen Creek",
@@ -369,15 +423,19 @@
         "url": ["https://www.queencreekaz.gov/business/business-licenses"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 60,
+          "note": "New license; the in-town annual renewal fee is $40."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's page says penalties apply but gives no amount: a renewal must be made within 30 days of expiration to avoid a late fee."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://azsos.gov/business/tntm"]
+    "sourceUrl": ["https://azsos.gov/business/tntm"],
+    "counties": ["Maricopa"]
   },
   {
     "city": "Maricopa",
@@ -396,15 +454,19 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 50,
+          "note": "Annual initial or renewal fee for the regulated-business license."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's page gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://azsos.gov/business/tntm"]
+    "sourceUrl": ["https://azsos.gov/business/tntm"],
+    "counties": ["Pinal"]
   },
   {
     "city": "Flagstaff",
@@ -421,15 +483,19 @@
         "url": ["https://flagstaff.az.gov/47/Sales-Tax-License"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 20,
+          "note": "License fee; the annual renewal fee is $20."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's page gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://azsos.gov/business/tntm"]
+    "sourceUrl": ["https://azsos.gov/business/tntm"],
+    "counties": ["Coconino"]
   },
   {
     "city": "Casa Grande",
@@ -446,15 +512,18 @@
         "url": ["https://casagrandeaz.gov/697/Home-Occupation-Permit"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "A home occupation permit carries a $31.50 application fee; the business tax receipt fee depends on the business."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's page gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://azsos.gov/business/tntm"]
+    "sourceUrl": ["https://azsos.gov/business/tntm"],
+    "counties": ["Pinal"]
   },
   {
     "city": "Marana",
@@ -481,7 +550,8 @@
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://azsos.gov/business/tntm"]
+    "sourceUrl": ["https://azsos.gov/business/tntm"],
+    "counties": ["Pima", "Pinal"]
   },
   {
     "city": "Lake Havasu City",
@@ -498,15 +568,18 @@
         "url": ["https://www.lhcaz.gov/211/Licenses"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "City license fees are $5, $25 or $50 depending on the class."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's page gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://azsos.gov/business/tntm"]
+    "sourceUrl": ["https://azsos.gov/business/tntm"],
+    "counties": ["Mohave"]
   },
   {
     "city": "Prescott Valley",
@@ -525,15 +598,19 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 45,
+          "note": "Business-license fee; the annual renewal fee is also $45."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's page gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://azsos.gov/business/tntm"]
+    "sourceUrl": ["https://azsos.gov/business/tntm"],
+    "counties": ["Yavapai"]
   },
   {
     "city": "Prescott",
@@ -550,15 +627,19 @@
         "url": ["https://prescott-az.gov/budget-and-finance/tpt-license/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 5,
+          "note": "Privilege-tax license application fee; the annual renewal fee is $5."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's page gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://azsos.gov/business/tntm"]
+    "sourceUrl": ["https://azsos.gov/business/tntm"],
+    "counties": ["Yavapai"]
   },
   {
     "city": "Oro Valley",
@@ -577,15 +658,19 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 80,
+          "note": "Annual fee, prorated by month."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's page gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://azsos.gov/business/tntm"]
+    "sourceUrl": ["https://azsos.gov/business/tntm"],
+    "counties": ["Pima"]
   },
   {
     "city": "Apache Junction",
@@ -602,15 +687,19 @@
         "url": ["https://www.apachejunctionaz.gov/997/Business-License"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 50,
+          "note": "City business-license fee."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's page gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://azsos.gov/business/tntm"]
+    "sourceUrl": ["https://azsos.gov/business/tntm"],
+    "counties": ["Pinal"]
   },
   {
     "city": "Sierra Vista",
@@ -627,15 +716,18 @@
         "url": ["https://www.sierravistaaz.gov/business/business-licenses"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's page gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://azsos.gov/business/tntm"]
+    "sourceUrl": ["https://azsos.gov/business/tntm"],
+    "counties": ["Cochise"]
   },
   {
     "city": "Bullhead City",
@@ -652,15 +744,19 @@
         "url": ["https://www.bullheadcityaz.gov/business-development/business-licenses/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 60,
+          "note": "Typical annual general license, plus a one-time $60 application fee; amounts vary by license type."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's page gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://azsos.gov/business/tntm"]
+    "sourceUrl": ["https://azsos.gov/business/tntm"],
+    "counties": ["Mohave"]
   },
   {
     "city": "San Luis",
@@ -677,14 +773,18 @@
         "url": ["https://sanluisaz.gov/departments/finance/billing_collections/licensing/business_license"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 2,
+          "note": "Arizona TPT license fee for San Luis."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's page gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://azsos.gov/business/tntm"]
+    "sourceUrl": ["https://azsos.gov/business/tntm"],
+    "counties": ["Yuma"]
   }
 ]

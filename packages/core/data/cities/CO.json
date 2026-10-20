@@ -15,13 +15,17 @@
         "url": ["https://www.arvadaco.gov/253/Business-Licenses"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "The city's FAQ says the business license is free."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages give no late penalty for the license itself."
         }
       }
-    ]
+    ],
+    "status": "rules"
   },
   {
     "city": "Aurora",
@@ -34,6 +38,7 @@
         "authority": "City of Aurora Tax and Licensing Division",
         "description": "Any business operating in Aurora or with employees there needs a city business license, one per location. The license covers two years from issuance and establishes sales, use, occupational privilege and lodger's tax filing roles.",
         "rrule": "FREQ=YEARLY;INTERVAL=2",
+        "anchor": "license_issued",
         "deadline": "Two years from issuance",
         "url": ["https://www.auroragov.org/bl"],
         "appliesTo": ["all"],
@@ -41,12 +46,15 @@
           "basis": "unknown"
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 50,
+          "note": "Aurora Municipal Code: a $50 late charge if the license application is filed more than 30 days after the business starts; it can be waived for good cause."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.auroragov.org/business_services/licenses___permits/business_licensing"]
+    "sourceUrl": ["https://www.auroragov.org/business_services/licenses___permits/business_licensing"],
+    "status": "rules"
   },
   {
     "city": "Boulder",
@@ -65,12 +73,14 @@
           "basis": "unknown"
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages give no late penalty for the license itself."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://bouldercolorado.gov/services/business-licenses"]
+    "sourceUrl": ["https://bouldercolorado.gov/services/business-licenses"],
+    "status": "rules"
   },
   {
     "city": "Centennial",
@@ -84,7 +94,8 @@
         "category": "license",
         "authority": "City of Centennial Finance Department",
         "description": "Every active business needs either a Retail Sales Tax License or a Business Registration (one, not both); both are biennial and expire December 31 of the second calendar year.",
-        "rrule": "FREQ=YEARLY;INTERVAL=2",
+        "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=12;BYMONTHDAY=31",
+        "anchor": "2026-12-31",
         "deadline": "December 31 of the second calendar year",
         "url": ["https://www.centennialco.gov/Online-Services/Sales-Tax-Licensing"],
         "appliesTo": ["all"],
@@ -93,10 +104,12 @@
           "amount": 25
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages give no late penalty for the license itself."
         }
       }
-    ]
+    ],
+    "status": "rules"
   },
   {
     "city": "Colorado Springs",
@@ -111,17 +124,20 @@
         "authority": "City of Colorado Springs Sales Tax Office",
         "description": "Businesses selling or leasing at retail in the city need a city sales tax license (no fee since September 1, 2023). Licenses expire every odd year on December 31 and are renewed online only.",
         "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=12;BYMONTHDAY=31",
+        "anchor": "2027-12-31",
         "url": ["https://coloradosprings.gov/new-tax-applications"],
         "appliesTo": ["all"],
-        "anchor": "2027-12-31",
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "The city's FAQ says it stopped charging a license or renewal fee in September 2023."
         },
         "penalty": {
           "basis": "unknown"
         }
       }
-    ]
+    ],
+    "status": "rules"
   },
   {
     "city": "Denver",
@@ -164,10 +180,12 @@
           "note": "Business OPT of $4.00 per month per taxable employee, owner or manager, plus $5.75 per month withheld from each taxable employee"
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
-    ]
+    ],
+    "status": "rules"
   },
   {
     "city": "Fort Collins",
@@ -183,15 +201,20 @@
         "url": ["https://www.fortcollins.gov/Business/Sales-Tax"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "The city's Sales Tax FAQ says there is no fee for the city license."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10,
+          "note": "A city tax guide (2019): 10% of the tax due plus 1% monthly interest once a Failure to File notice has been sent; confirm the current schedule."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.fortcollins.gov/Business/Sales-Tax/Sales-Tax-FAQs"]
+    "sourceUrl": ["https://www.fortcollins.gov/Business/Sales-Tax/Sales-Tax-FAQs"],
+    "status": "rules"
   },
   {
     "city": "Greeley",
@@ -212,7 +235,8 @@
           "basis": "unknown"
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages give no late penalty for the license itself."
         }
       },
       {
@@ -225,10 +249,12 @@
         "url": ["https://greeleyco.gov/business/permits-licenses-and-inspections/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       },
       {
@@ -241,13 +267,16 @@
         "url": ["https://greeleyco.gov/business/permits-licenses-and-inspections/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for occupying without a certificate was found in the city's published building pages."
         }
       }
-    ]
+    ],
+    "status": "rules"
   },
   {
     "city": "Lakewood",
@@ -269,10 +298,14 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 20,
+          "note": "The city's page lists a nonrefundable $20 fee for a sales and use tax license."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 30,
+          "note": "The city's page: a $30 late charge if the license application is not made within 30 days of the start date."
         }
       },
       {
@@ -287,10 +320,12 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       },
       {
@@ -305,13 +340,16 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for occupying without a certificate was found in the city's published building pages."
         }
       }
-    ]
+    ],
+    "status": "rules"
   },
   {
     "city": "Pueblo",
@@ -330,12 +368,16 @@
           "basis": "unknown"
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10,
+          "min": 15,
+          "note": "An undated city return form: the greater of $15 or 10% of the tax, plus 1% monthly interest; confirm with the Sales Tax Division."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.pueblo.us/516/Business-Licenses"]
+    "sourceUrl": ["https://www.pueblo.us/516/Business-Licenses"],
+    "status": "rules"
   },
   {
     "city": "Thornton",
@@ -354,12 +396,14 @@
           "basis": "unknown"
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages give no late penalty for the license itself."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.thorntonco.gov/business-development/business-licenses"]
+    "sourceUrl": ["https://www.thorntonco.gov/business-development/business-licenses"],
+    "status": "rules"
   },
   {
     "city": "Westminster",
@@ -372,19 +416,24 @@
         "authority": "City of Westminster City Clerk and Sales Tax Division",
         "description": "Business and sales tax licenses renew annually through the online portal at no fee for commercial locations; a reminder email goes 60 days before expiration.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "deadline": "Anniversary of the license",
         "url": ["https://www.westminsterco.gov/513/Business-Licenses"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "The city's FAQ says there is no cost or renewal fee for business and sales tax licenses."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages give no late penalty for the license itself; late sales tax returns carry a separate penalty."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.westminsterco.gov/513/Business-Licenses"]
+    "sourceUrl": ["https://www.westminsterco.gov/513/Business-Licenses"],
+    "status": "rules"
   },
   {
     "city": "Longmont",
@@ -407,12 +456,14 @@
         ],
         "appliesTo": ["all"],
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "This entry covers the city's local licenses and taxes generally, each of which carries its own late charge in the municipal code; no single amount is stated."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.co.us/pubs/business/FAQs/tradeNames.html"]
+    "sourceUrl": ["https://www.sos.state.co.us/pubs/business/FAQs/tradeNames.html"],
+    "counties": ["Boulder", "Weld"]
   },
   {
     "city": "Castle Rock",
@@ -433,12 +484,14 @@
         "url": ["https://www.crgov.com/1677/Business-and-Tax-Licensing"],
         "appliesTo": ["all"],
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "This entry covers the city's local licenses and taxes generally, each of which carries its own late charge in the municipal code; no single amount is stated."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.co.us/pubs/business/FAQs/tradeNames.html"]
+    "sourceUrl": ["https://www.sos.state.co.us/pubs/business/FAQs/tradeNames.html"],
+    "counties": ["Douglas"]
   },
   {
     "city": "Loveland",
@@ -455,15 +508,19 @@
         "url": ["https://www.lovgov.org/city-government/city-clerk/general-licensing-information"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 20,
+          "note": "Application fee for the city sales tax license."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "This entry covers the city's local licenses and taxes generally, each of which carries its own late charge in the municipal code; no single amount is stated."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.co.us/pubs/business/FAQs/tradeNames.html"]
+    "sourceUrl": ["https://www.sos.state.co.us/pubs/business/FAQs/tradeNames.html"],
+    "counties": ["Larimer"]
   },
   {
     "city": "Broomfield",
@@ -480,15 +537,18 @@
         "url": ["https://www.broomfield.org/3792/Prospective-Owners-Operators"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "This entry covers the city's local licenses and taxes generally, each of which carries its own late charge in the municipal code; no single amount is stated."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.co.us/pubs/business/FAQs/tradeNames.html"]
+    "sourceUrl": ["https://www.sos.state.co.us/pubs/business/FAQs/tradeNames.html"],
+    "counties": ["Boulder", "Jefferson", "Broomfield"]
   },
   {
     "city": "Commerce City",
@@ -505,15 +565,18 @@
         "url": ["https://www.c3gov.com/Business-Development/Business-Licenses"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "This entry covers the city's local licenses and taxes generally, each of which carries its own late charge in the municipal code; no single amount is stated."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.co.us/pubs/business/FAQs/tradeNames.html"]
+    "sourceUrl": ["https://www.sos.state.co.us/pubs/business/FAQs/tradeNames.html"],
+    "counties": ["Adams"]
   },
   {
     "city": "Grand Junction",
@@ -530,15 +593,18 @@
         "url": ["https://ecode360.com/44686652"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "This entry covers the city's local licenses and taxes generally, each of which carries its own late charge in the municipal code; no single amount is stated."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.co.us/pubs/business/FAQs/tradeNames.html"]
+    "sourceUrl": ["https://www.sos.state.co.us/pubs/business/FAQs/tradeNames.html"],
+    "counties": ["Mesa"]
   },
   {
     "city": "Parker",
@@ -555,15 +621,18 @@
         "url": ["https://parkerco.gov/DocumentCenter/View/49/Parker-Business-License---Updated-January-2026"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "This entry covers the city's local licenses and taxes generally, each of which carries its own late charge in the municipal code; no single amount is stated."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.co.us/pubs/business/FAQs/tradeNames.html"]
+    "sourceUrl": ["https://www.sos.state.co.us/pubs/business/FAQs/tradeNames.html"],
+    "counties": ["Douglas"]
   },
   {
     "city": "Littleton",
@@ -580,15 +649,18 @@
         "url": ["https://www.littletonco.gov/Government/Departments/Finance/Business-SalesUse-Tax-License"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "This entry covers the city's local licenses and taxes generally, each of which carries its own late charge in the municipal code; no single amount is stated."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.co.us/pubs/business/FAQs/tradeNames.html"]
+    "sourceUrl": ["https://www.sos.state.co.us/pubs/business/FAQs/tradeNames.html"],
+    "counties": ["Arapahoe", "Jefferson", "Douglas"]
   },
   {
     "city": "Brighton",
@@ -605,15 +677,18 @@
         "url": ["https://www.brightonco.gov/1481/Business-Licensing"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "This entry covers the city's local licenses and taxes generally, each of which carries its own late charge in the municipal code; no single amount is stated."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.co.us/pubs/business/FAQs/tradeNames.html"]
+    "sourceUrl": ["https://www.sos.state.co.us/pubs/business/FAQs/tradeNames.html"],
+    "counties": ["Adams"]
   },
   {
     "city": "Windsor",
@@ -630,14 +705,17 @@
         "url": ["https://register.windsorgov.com/104/Business-Licensing"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "This entry covers the city's local licenses and taxes generally, each of which carries its own late charge in the municipal code; no single amount is stated."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.co.us/pubs/business/FAQs/tradeNames.html"]
+    "sourceUrl": ["https://www.sos.state.co.us/pubs/business/FAQs/tradeNames.html"],
+    "counties": ["Weld"]
   }
 ]

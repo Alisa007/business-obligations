@@ -19,10 +19,14 @@
     ],
     "exemptions": ["Employers that sponsor a qualified retirement plan (they still certify the exemption)"],
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "none",
+      "amount": 0,
+      "note": "There is no fee to file or register."
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "per_item",
+      "note": "$250 per employee the first year of noncompliance and $500 each year after.",
+      "perUnit": 250
     }
   },
   {
@@ -36,7 +40,8 @@
     "appliesTo": ["employees"],
     "checkedOn": "2026-10-16",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "varies",
+      "note": "The cost depends on the training provider and the number of employees."
     },
     "penalty": {
       "basis": "unknown"

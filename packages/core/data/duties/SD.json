@@ -10,7 +10,9 @@
     "appliesTo": ["all"],
     "checkedOn": "2026-10-16",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "none",
+      "amount": 0,
+      "note": "There is no fee to file or register."
     },
     "penalty": {
       "basis": "unknown"
@@ -27,10 +29,14 @@
     "appliesTo": ["all"],
     "checkedOn": "2026-10-16",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "none",
+      "amount": 0,
+      "note": "There is no fee to file or register."
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "per_item",
+      "note": "The attorney general may fine up to $10,000 per day per violation (2018 breach notification law).",
+      "perUnit": 10000
     }
   }
 ]

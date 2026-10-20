@@ -2,7 +2,7 @@
   {
     "city": "Allentown",
     "counties": ["Lehigh"],
-    "checkedOn": "2026-10-18",
+    "checkedOn": "2026-10-19",
     "sourceUrl": [
       "https://www.allentownpa.gov/en-us/Government/Departments/Finance/Revenue-and-Audit/Business-Licenses"
     ],
@@ -13,7 +13,7 @@
         "category": "license",
         "authority": "City of Allentown Bureau of Revenue and Audit",
         "description": "Anyone conducting business in Allentown needs a city business license, valid for the calendar year.",
-        "rrule": "FREQ=YEARLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=1",
         "deadline": "Calendar year",
         "url": [
           "https://www.allentownpa.gov/en-us/Government/Departments/Finance/Revenue-and-Audit/Business-Licenses"
@@ -40,18 +40,22 @@
         "appliesTo": ["all"],
         "checkedOn": "2026-10-19",
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
-    ]
+    ],
+    "status": "rules"
   },
   {
     "city": "Philadelphia",
     "counties": ["Philadelphia"],
-    "checkedOn": "2026-10-18",
+    "checkedOn": "2026-10-19",
     "sourceUrl": [
       "https://www.phila.gov/departments/department-of-licenses-and-inspections/licenses/business-licenses/"
     ],
@@ -63,13 +67,18 @@
         "authority": "Philadelphia Department of Revenue",
         "description": "Free license required for any business operating in Philadelphia; required before other city licenses.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://www.phila.gov/services/business-self-employment/register-a-business/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "The city says it does not charge a fee for a Commercial Activity License."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 300,
+          "note": "City notices: a $300 fine for each day a business operates without a valid license, including after revocation for unpaid city taxes."
         }
       },
       {
@@ -83,10 +92,13 @@
         "url": ["https://www.phila.gov/services/payments-assistance-taxes/business-taxes/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       },
       {
@@ -103,18 +115,22 @@
         "deadlineNote": "quarterly filers under $350 withheld per month; larger employers deposit monthly, semi-monthly or weekly",
         "checkedOn": "2026-10-19",
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
-    ]
+    ],
+    "status": "rules"
   },
   {
     "city": "Pittsburgh",
     "counties": ["Allegheny"],
-    "checkedOn": "2026-10-18",
+    "checkedOn": "2026-10-19",
     "sourceUrl": ["https://www.pittsburghpa.gov/City-Government/Finance-Budget/New-Business-Registration"],
     "items": [
       {
@@ -131,13 +147,19 @@
         "deadlineNote": "payroll expense tax, quarterly; the local services tax is due the last day of the month after each quarter",
         "checkedOn": "2026-10-19",
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 1,
+          "percentPerMonth": 1,
+          "note": "The city's ET-1 forms list a penalty of 1% per month on late payments, plus interest of 0.5% per month."
         }
       }
-    ]
+    ],
+    "status": "rules"
   },
   {
     "city": "Reading",
@@ -156,17 +178,20 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.pa.gov/agencies/dos/programs/business/types-of-filings-and-registrations/fictitious-names"
-    ]
+    ],
+    "counties": ["Berks"]
   },
   {
     "city": "Erie",
@@ -185,17 +210,20 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.pa.gov/agencies/dos/programs/business/types-of-filings-and-registrations/fictitious-names"
-    ]
+    ],
+    "counties": ["Erie"]
   },
   {
     "city": "Bethlehem",
@@ -214,17 +242,20 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.pa.gov/agencies/dos/programs/business/types-of-filings-and-registrations/fictitious-names"
-    ]
+    ],
+    "counties": ["Northampton", "Lehigh"]
   },
   {
     "city": "Scranton",
@@ -243,17 +274,20 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.pa.gov/agencies/dos/programs/business/types-of-filings-and-registrations/fictitious-names"
-    ]
+    ],
+    "counties": ["Lackawanna"]
   },
   {
     "city": "Lancaster",
@@ -261,7 +295,7 @@
     "reason": "city-license-unconfirmed",
     "items": [
       {
-        "id": "lancaster.local-licenses",
+        "id": "lancaster-pa.local-licenses",
         "title": "Review applicable local licenses and permits in Lancaster",
         "category": "license",
         "authority": "Lancaster local licensing authority",
@@ -272,17 +306,20 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.pa.gov/agencies/dos/programs/business/types-of-filings-and-registrations/fictitious-names"
-    ]
+    ],
+    "counties": ["Lancaster"]
   },
   {
     "city": "Harrisburg",
@@ -301,17 +338,20 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.pa.gov/agencies/dos/programs/business/types-of-filings-and-registrations/fictitious-names"
-    ]
+    ],
+    "counties": ["Dauphin"]
   },
   {
     "city": "York",
@@ -330,17 +370,20 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.pa.gov/agencies/dos/programs/business/types-of-filings-and-registrations/fictitious-names"
-    ]
+    ],
+    "counties": ["York"]
   },
   {
     "city": "Wilkes-Barre",
@@ -359,17 +402,20 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.pa.gov/agencies/dos/programs/business/types-of-filings-and-registrations/fictitious-names"
-    ]
+    ],
+    "counties": ["Luzerne"]
   },
   {
     "city": "Altoona",
@@ -388,16 +434,19 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.pa.gov/agencies/dos/programs/business/types-of-filings-and-registrations/fictitious-names"
-    ]
+    ],
+    "counties": ["Blair"]
   }
 ]

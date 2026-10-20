@@ -69,8 +69,85 @@
     },
     "rrule": {
       "type": "string",
-      "pattern": "^(FREQ=YEARLY(;INTERVAL=[25])?(;BYMONTH=\\d{1,2}(,\\d{1,2})*)?(;BYMONTHDAY=-?\\d{1,2})?|FREQ=MONTHLY(;INTERVAL=3)?)$",
-      "description": "iCalendar (RFC 5545) recurrence rule. The source of truth for frequency and due date; see src/rrule.ts for the supported subset."
+      "pattern": "^FREQ=YEARLY(;INTERVAL=[235])?(;BYMONTH=\\d{1,2}(,\\d{1,2})*)?(;BYMONTHDAY=-?\\d{1,2})?(;X-MONTHS=\\d{1,2})?(;X-DAYS=\\d{1,2})?$",
+      "description": "iCalendar (RFC 5545) recurrence rule, FREQ=YEARLY only (a monthly or quarterly deadline lists its months and its day). The source of truth for frequency and due date; see src/rrule.ts for the supported subset. A rule always gives its exact due date: see exactSchedule."
+    },
+    "scheduleAnchor": {
+      "description": "What a recurrence starts from or is counted from: an ISO date (the start of a cycle longer than a year), the entity's formation or the year of it, the date a license was issued, the start or end of the fiscal year, or a date the agency announces each year or assigns to each taxpayer.",
+      "anyOf": [
+        { "$ref": "#/$defs/isoDate" },
+        {
+          "enum": [
+            "formation",
+            "formation_quarter",
+            "formation_year",
+            "year_after_formation",
+            "license_issued",
+            "fiscal_year_start",
+            "fiscal_year_end",
+            "announced",
+            "assigned"
+          ]
+        }
+      ]
+    },
+    "exactSchedule": {
+      "description": "What makes a recurrence exact. A rule with no month (no BYMONTH) is counted from a reference date, so it names it in `anchor`, except the first or last day of the formation anniversary month (BYMONTHDAY=1 or -1, no anchor). A cycle of more than a year with fixed dates names the date it starts from. `announced` and `assigned` stand for a date the agency publishes or sets, and carry no other part.",
+      "allOf": [
+        {
+          "if": {
+            "required": ["rrule"],
+            "properties": {
+              "rrule": {
+                "allOf": [
+                  { "not": { "pattern": "BYMONTH=" } },
+                  { "not": { "pattern": "^FREQ=YEARLY(;INTERVAL=[235])?;BYMONTHDAY=(1|-1)$" } }
+                ]
+              }
+            }
+          },
+          "then": {
+            "required": ["anchor"],
+            "properties": {
+              "anchor": {
+                "enum": [
+                  "formation",
+                  "license_issued",
+                  "fiscal_year_start",
+                  "fiscal_year_end",
+                  "announced",
+                  "assigned"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "required": ["rrule"],
+            "properties": { "rrule": { "pattern": "INTERVAL=[235].*BYMONTH=" } }
+          },
+          "then": { "required": ["anchor"] }
+        },
+        {
+          "if": {
+            "required": ["rrule"],
+            "properties": { "rrule": { "pattern": "BYMONTH=", "not": { "pattern": "BYMONTHDAY=" } } }
+          },
+          "then": {
+            "required": ["anchor"],
+            "properties": { "anchor": { "enum": ["announced", "assigned"] } }
+          }
+        },
+        {
+          "if": { "required": ["anchor"], "properties": { "anchor": { "enum": ["announced", "assigned"] } } },
+          "then": {
+            "properties": {
+              "rrule": { "pattern": "^FREQ=YEARLY(;INTERVAL=[235])?(;BYMONTH=\\d{1,2}(,\\d{1,2})*)?$" }
+            }
+          }
+        }
+      ]
     },
     "month": {
       "type": "integer",
@@ -130,6 +207,27 @@
         }
       }
     },
+    "dueRelative": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "from"],
+      "properties": {
+        "type": { "const": "relative" },
+        "from": {
+          "enum": [
+            "formation",
+            "license_issued",
+            "fiscal_year_start",
+            "fiscal_year_end",
+            "announced",
+            "assigned"
+          ]
+        },
+        "monthsAfter": { "type": "integer", "minimum": 1, "maximum": 11 },
+        "day": { "type": "integer", "minimum": -1, "maximum": 31 },
+        "daysAfter": { "type": "integer", "minimum": 1, "maximum": 90 }
+      }
+    },
     "dueMulti": {
       "type": "object",
       "additionalProperties": false,
@@ -171,8 +269,8 @@
       "required": ["basis"],
       "properties": {
         "basis": {
-          "enum": ["flat", "percent", "per_item", "range", "none", "unknown"],
-          "description": "flat = fixed charge; percent = percentage of a stated base; per_item = charge per filing or unit; range = a published minimum/maximum; none = no penalty; unknown = not yet researched."
+          "enum": ["flat", "percent", "per_item", "range", "none", "not_stated", "unknown"],
+          "description": "flat = fixed charge; percent = percentage of a stated base; per_item = charge per filing or unit; range = a published minimum/maximum; none = no penalty; not_stated = a penalty applies but the published sources give no amount; unknown = not yet researched."
         },
         "amount": { "type": "number", "minimum": 0 },
         "percentPerMonth": { "type": "number", "minimum": 0 },
@@ -217,7 +315,7 @@
           }
         },
         {
-          "if": { "properties": { "basis": { "enum": ["none", "unknown"] } } },
+          "if": { "properties": { "basis": { "enum": ["none", "not_stated", "unknown"] } } },
           "then": {
             "not": {
               "anyOf": [

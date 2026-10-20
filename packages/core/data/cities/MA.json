@@ -15,13 +15,18 @@
         "url": ["https://search.boston.gov/permitting/permits/business-certificate"],
         "appliesTo": ["trade_name"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 65,
+          "note": "The City Clerk charges $65, plus $35 for non-residents; the certificate is renewed every four years."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 100,
+          "note": "The City Clerk's late renewal penalty is up to $100 per month, up to $300 in total."
         }
       }
-    ]
+    ],
+    "status": "rules"
   },
   {
     "city": "Cambridge",
@@ -40,13 +45,17 @@
         "url": ["https://www.cambridgema.gov/iwantto/applyforabusinesscertificate"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 50,
+          "note": "The City Clerk's filing fee; the certificate is valid for four years."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The City Clerk's published pages for this item give no late-penalty amount."
         }
       }
-    ]
+    ],
+    "status": "rules"
   },
   {
     "city": "Lowell",
@@ -65,13 +74,17 @@
         "url": ["https://lowellma.gov/461/File-a-Business-Certificate"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 50,
+          "note": "The City Clerk's filing fee; the certificate is valid for four years."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The City Clerk's published pages for this item give no late-penalty amount."
         }
       }
-    ]
+    ],
+    "status": "rules"
   },
   {
     "city": "Quincy",
@@ -90,13 +103,17 @@
         "url": ["https://ecode360.com/37658757"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 40,
+          "note": "The city code sets $40 including each renewal; the certificate is valid for four years."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The City Clerk's published pages for this item give no late-penalty amount."
         }
       }
-    ]
+    ],
+    "status": "rules"
   },
   {
     "city": "Springfield",
@@ -115,13 +132,17 @@
         "url": ["https://www.springfield-ma.gov/cos/bus-certs"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 50,
+          "note": "The City Clerk's filing fee; the certificate is valid for four years."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The City Clerk's published pages for this item give no late-penalty amount."
         }
       }
-    ]
+    ],
+    "status": "rules"
   },
   {
     "city": "Worcester",
@@ -140,13 +161,17 @@
         "url": ["https://www.worcesterma.gov/city-clerk/certificates-licenses/business-certificates"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 50,
+          "note": "The City Clerk's filing fee; the certificate is valid for four years."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The City Clerk's published pages for this item give no late-penalty amount."
         }
       }
-    ]
+    ],
+    "status": "rules"
   },
   {
     "city": "Brockton",
@@ -163,15 +188,18 @@
         "url": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"]
+    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
+    "counties": ["Plymouth"]
   },
   {
     "city": "Lynn",
@@ -188,15 +216,18 @@
         "url": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"]
+    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
+    "counties": ["Essex"]
   },
   {
     "city": "New Bedford",
@@ -213,15 +244,18 @@
         "url": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"]
+    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
+    "counties": ["Bristol"]
   },
   {
     "city": "Fall River",
@@ -238,15 +272,18 @@
         "url": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"]
+    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
+    "counties": ["Bristol"]
   },
   {
     "city": "Newton",
@@ -263,15 +300,18 @@
         "url": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"]
+    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
+    "counties": ["Middlesex"]
   },
   {
     "city": "Lawrence",
@@ -279,7 +319,7 @@
     "reason": "city-license-unconfirmed",
     "items": [
       {
-        "id": "lawrence.local-licenses",
+        "id": "lawrence-ma.local-licenses",
         "title": "Review applicable local licenses and permits in Lawrence",
         "category": "license",
         "authority": "Lawrence local licensing authority",
@@ -288,15 +328,18 @@
         "url": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"]
+    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
+    "counties": ["Essex"]
   },
   {
     "city": "Somerville",
@@ -313,15 +356,18 @@
         "url": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"]
+    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
+    "counties": ["Middlesex"]
   },
   {
     "city": "Framingham",
@@ -338,15 +384,18 @@
         "url": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"]
+    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
+    "counties": ["Middlesex"]
   },
   {
     "city": "Haverhill",
@@ -363,15 +412,18 @@
         "url": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"]
+    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
+    "counties": ["Essex"]
   },
   {
     "city": "Malden",
@@ -388,15 +440,18 @@
         "url": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"]
+    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
+    "counties": ["Middlesex"]
   },
   {
     "city": "Waltham",
@@ -413,15 +468,18 @@
         "url": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"]
+    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
+    "counties": ["Middlesex"]
   },
   {
     "city": "Taunton",
@@ -438,15 +496,18 @@
         "url": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"]
+    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
+    "counties": ["Bristol"]
   },
   {
     "city": "Revere",
@@ -463,15 +524,18 @@
         "url": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"]
+    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
+    "counties": ["Suffolk"]
   },
   {
     "city": "Medford",
@@ -479,7 +543,7 @@
     "reason": "city-license-unconfirmed",
     "items": [
       {
-        "id": "medford.local-licenses",
+        "id": "medford-ma.local-licenses",
         "title": "Review applicable local licenses and permits in Medford",
         "category": "license",
         "authority": "Medford local licensing authority",
@@ -488,15 +552,18 @@
         "url": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"]
+    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
+    "counties": ["Middlesex"]
   },
   {
     "city": "Weymouth Town",
@@ -513,15 +580,18 @@
         "url": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"]
+    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
+    "counties": ["Norfolk"]
   },
   {
     "city": "Peabody",
@@ -538,15 +608,18 @@
         "url": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"]
+    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
+    "counties": ["Essex"]
   },
   {
     "city": "Chicopee",
@@ -563,15 +636,18 @@
         "url": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"]
+    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
+    "counties": ["Hampden"]
   },
   {
     "city": "Methuen",
@@ -588,15 +664,18 @@
         "url": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"]
+    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
+    "counties": ["Essex"]
   },
   {
     "city": "Everett",
@@ -613,15 +692,18 @@
         "url": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"]
+    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
+    "counties": ["Middlesex"]
   },
   {
     "city": "Barnstable Town",
@@ -638,15 +720,18 @@
         "url": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"]
+    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
+    "counties": ["Barnstable"]
   },
   {
     "city": "Attleboro",
@@ -663,15 +748,18 @@
         "url": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"]
+    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
+    "counties": ["Bristol"]
   },
   {
     "city": "Salem",
@@ -688,15 +776,18 @@
         "url": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"]
+    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
+    "counties": ["Essex"]
   },
   {
     "city": "Leominster",
@@ -713,15 +804,18 @@
         "url": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"]
+    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
+    "counties": ["Worcester"]
   },
   {
     "city": "Woburn",
@@ -738,15 +832,18 @@
         "url": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"]
+    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
+    "counties": ["Middlesex"]
   },
   {
     "city": "Beverly",
@@ -763,15 +860,18 @@
         "url": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"]
+    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
+    "counties": ["Essex"]
   },
   {
     "city": "Pittsfield",
@@ -788,15 +888,18 @@
         "url": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"]
+    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
+    "counties": ["Berkshire"]
   },
   {
     "city": "Marlborough",
@@ -813,15 +916,18 @@
         "url": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"]
+    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
+    "counties": ["Middlesex"]
   },
   {
     "city": "Fitchburg",
@@ -838,14 +944,17 @@
         "url": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"]
+    "sourceUrl": ["https://www.mass.gov/info-details/business-certificates-dba-in-massachusetts"],
+    "counties": ["Worcester"]
   }
 ]

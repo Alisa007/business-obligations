@@ -10,6 +10,7 @@
         "authority": "Adams County Health Department",
         "description": "Retail food establishments operating in Adams County must obtain and renew the applicable annual license; temporary food stands require a separate permit before an event.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.adamscountyil.gov/government/departments/health-department/food-service-fees",
           "https://www.adamscountyil.gov/government/departments/health-department/environmental-health-links"
@@ -50,6 +51,7 @@
         "authority": "Adams County Health Department",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.adamscountyil.gov/government/departments/health-department/food-service-fees",
           "https://www.adamscountyil.gov/government/departments/health-department/environmental-health-links"
@@ -90,6 +92,7 @@
         "authority": "Adams County Health Department",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.adamscountyil.gov/government/departments/health-department/food-service-fees",
           "https://www.adamscountyil.gov/government/departments/health-department/environmental-health-links"
@@ -130,6 +133,7 @@
         "authority": "Adams County Health Department",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.adamscountyil.gov/government/departments/health-department/food-service-fees",
           "https://www.adamscountyil.gov/government/departments/health-department/environmental-health-links"
@@ -170,6 +174,7 @@
         "authority": "Adams County Health Department",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.adamscountyil.gov/government/departments/health-department/food-service-fees",
           "https://www.adamscountyil.gov/government/departments/health-department/environmental-health-links"
@@ -211,6 +216,7 @@
         "authority": "Bureau County Health Department",
         "description": "Food facilities operating in Bureau County must obtain the applicable county food permit; the county health department permits and inspects food facilities and publishes the local environmental-health process.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://bureaucounty-il.gov/directory/health-department/",
           "https://www.ilga.gov/legislation/ILCS/details?ActID=750&ActName=Counties+Code.&ChapAct=55+ILCS+5%2F&Chapter=COUNTIES&ChapterID=12&MajorTopic=GOVERNMENT&Print=True&SeqEnd=78121875&SeqStart=59100000"
@@ -249,6 +255,7 @@
         "authority": "Calhoun County Health Department",
         "description": "Food establishments operating in Calhoun County must obtain the applicable county food permit before operating and comply with Illinois food-safety requirements.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.calhouncountyil.gov/departments/health-department/",
           "https://dph.illinois.gov/topics-services/food-safety.html"
@@ -287,6 +294,7 @@
         "authority": "Adams County Health Department",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.adamscountyil.gov/government/departments/health-department/food-service-fees",
           "https://www.adamscountyil.gov/government/departments/health-department/environmental-health-links"
@@ -327,6 +335,7 @@
         "authority": "Adams County Health Department",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.adamscountyil.gov/government/departments/health-department/food-service-fees",
           "https://www.adamscountyil.gov/government/departments/health-department/environmental-health-links"
@@ -365,7 +374,7 @@
         "category": "registration",
         "authority": "Champaign County Environment and Land Use Committee",
         "description": "Hotels and motels in Champaign County need the county's annual hotel/motel license; the county approved a 2026 license for a lodging operator for the January 1 through December 31 license year.",
-        "rrule": "FREQ=YEARLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=1",
         "url": ["https://www.co.champaign.il.us/CountyBoard/ELUC/2026/260108_Meeting/260108AgendaFull.pdf"],
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -389,7 +398,8 @@
         "category": "filing",
         "authority": "Champaign County Treasurer",
         "description": "Hotel and motel operators must maintain the county's monthly hotel/motel tax return computation and submit the return and payment according to the Treasurer's current instructions.",
-        "rrule": "FREQ=MONTHLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12",
+        "anchor": "assigned",
         "url": ["https://www.co.champaign.il.us/FOIA/TREAS/availabledocstreas.pdf"],
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -401,14 +411,18 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The county's published pages for this item give no late-penalty amount."
         }
       }
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "county": "Christian",
@@ -421,6 +435,7 @@
         "authority": "Christian County Health Department",
         "description": "Food establishments operating in Christian County must obtain the applicable Illinois food permit before operating and comply with local food and sanitation requirements.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://cchdil.org/cottage-food",
           "https://dph.illinois.gov/topics-services/food-safety/retail-food.html",
@@ -460,6 +475,7 @@
         "authority": "Adams County Health Department",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.adamscountyil.gov/government/departments/health-department/food-service-fees",
           "https://www.adamscountyil.gov/government/departments/health-department/environmental-health-links"
@@ -500,6 +516,7 @@
         "authority": "Adams County Health Department",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.adamscountyil.gov/government/departments/health-department/food-service-fees",
           "https://www.adamscountyil.gov/government/departments/health-department/environmental-health-links"
@@ -540,6 +557,7 @@
         "authority": "Clinton County Health Department",
         "description": "Food service establishments operating in Clinton County must possess a valid county food service permit and renew it by the annual deadline.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://clintoncountyhealth.com/environmental-health/food-sanitation/",
           "https://clintoncountyhealth.com/wp-content/uploads/Application-for-Food-Service-Permit-1.pdf",
@@ -581,6 +599,7 @@
         "authority": "Adams County Health Department",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.adamscountyil.gov/government/departments/health-department/food-service-fees",
           "https://www.adamscountyil.gov/government/departments/health-department/environmental-health-links"
@@ -622,6 +641,7 @@
         "authority": "Cook County Department of Public Health",
         "description": "The department issues retail food establishment licenses and inspects food businesses in unincorporated Cook County and a few municipalities; elsewhere in the county the local health official does. The page lists an annual license fee that includes inspection; no cash is accepted.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://cookcountypublichealth.org/contact-us/permits-and-licenses/retail-food-establishment-application/"
         ],
@@ -638,7 +658,8 @@
         }
       }
     ],
-    "checkedOn": "2026-10-16"
+    "checkedOn": "2026-10-16",
+    "status": "rules"
   },
   {
     "county": "Crawford",
@@ -651,6 +672,7 @@
         "authority": "Crawford County Health Department",
         "description": "Food establishments operating in Crawford County must obtain the applicable county food permit before operating and comply with Illinois food-safety requirements.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://crawfordcounty.illinois.gov/department/health-department/",
           "https://cchd.net/food-safety",
@@ -693,6 +715,7 @@
         "authority": "Adams County Health Department",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.adamscountyil.gov/government/departments/health-department/food-service-fees",
           "https://www.adamscountyil.gov/government/departments/health-department/environmental-health-links"
@@ -733,6 +756,7 @@
         "authority": "DeWitt-Piatt Bi-County Health Department",
         "description": "Food establishments, retail food stores, vending operations, seasonal food operations, and mobile food units operating in De Witt County must obtain a valid county permit before operating.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dewittpiatthealth.com/environmental-services/food-establishments",
           "https://dewittpiatthealth.com/file/163",
@@ -774,6 +798,7 @@
         "authority": "DeKalb County Health Department",
         "description": "Food establishments operating in DeKalb County must obtain the applicable annual food permit and comply with county inspection requirements.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://health.dekalbcounty.org/services/food-safety/",
           "https://dekalbcounty.org/wp-content/uploads/2018/12/fn-misc-revenue.pdf",
@@ -815,6 +840,7 @@
         "authority": "Douglas County Health Department",
         "description": "Food establishments operating in Douglas County must obtain an operating permit before opening and renew it annually under the county food sanitation ordinance.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.dchealthil.org/food-services",
           "https://www.dchealthil.org/establishment-plan-review",
@@ -853,6 +879,7 @@
         "authority": "DuPage County Liquor Commission",
         "description": "A hotel or motel serving alcoholic beverages in DuPage County needs the county Class C hotel-or-motel liquor license; the county code lists a $1,000 application fee and $2,400 initial and renewal fees, subject to the current code and fee schedule.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://aca-prod.accela.com/DUPAGE/Welcome.aspx"],
         "feeDetail": {
           "basis": "varies",
@@ -874,7 +901,8 @@
         }
       }
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "county": "Edgar",
@@ -887,6 +915,7 @@
         "authority": "Edgar County Public Health Department",
         "description": "Food establishments operating in Edgar County must obtain the applicable county food permit before operating and comply with county inspection and Illinois food-safety requirements.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://ecphd.org/departments/environmental-health/",
           "https://dph.illinois.gov/topics-services/food-safety.html"
@@ -927,6 +956,7 @@
         "authority": "Adams County Health Department",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.adamscountyil.gov/government/departments/health-department/food-service-fees",
           "https://www.adamscountyil.gov/government/departments/health-department/environmental-health-links"
@@ -967,6 +997,7 @@
         "authority": "Effingham County Health Department",
         "description": "Food establishments operating in Effingham County must complete plan review, obtain an operating permit, and pass a pre-opening inspection before operating.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://effcohealth.org/environmental-health/food-safety/",
           "https://codelibrary.amlegal.com/codes/effinghamcoil/latest/effingham_il/0-0-0-4896"
@@ -1006,6 +1037,7 @@
         "authority": "Fayette County Health Department",
         "description": "Food establishments operating in Fayette County must pass the pre-opening inspection and obtain the county operating permit before beginning operations; temporary establishments require the applicable temporary permit.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.fayettehealthdept.org/programs/environmental-health/food-permits-inspections",
           "https://www.fayettehealthdept.org/sites/default/files/food-permit-application-03232021v1.pdf",
@@ -1046,7 +1078,7 @@
         "category": "permit",
         "authority": "Ford County Public Health Department",
         "description": "Food establishments operating in Ford County must obtain the applicable annual, seasonal, or temporary permit before operating and renew annual permits by December 31.",
-        "rrule": "FREQ=YEARLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=31",
         "url": [
           "https://fordcountyphd.org/services/category/3/profile/food-sanitation-program",
           "https://fordcountyphd.org/file/56",
@@ -1088,6 +1120,7 @@
         "authority": "Franklin County Health Department",
         "description": "Food service establishments and retail food stores operating in Franklin County must possess a valid county permit; permanent permits expire one year after issuance and temporary permits may last no more than 14 days.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://codelibrary.amlegal.com/codes/franklincounty/latest/franklinco_il/0-0-0-1942",
           "https://www2.illinois.gov/sites/agr/Animals/AnimalHealth/Pages/Food-Safety.aspx"
@@ -1127,7 +1160,7 @@
         "category": "license",
         "authority": "Fulton County Health Department",
         "description": "Food service establishments, retail food stores, and mobile food establishments operating in Fulton County must obtain the applicable annual or temporary food permit before operating; annual permits expire December 31 and fees depend on risk category.",
-        "rrule": "FREQ=YEARLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=31",
         "url": [
           "https://fultoncountyhealth.com/services/environmental-health-services/",
           "https://fultoncountyhealth.com/wp-content/uploads/2013/12/Fulton-County-Food-Permit-Application-and-Plan-Review-Packet.pdf"
@@ -1166,6 +1199,7 @@
         "authority": "Adams County Health Department",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.adamscountyil.gov/government/departments/health-department/food-service-fees",
           "https://www.adamscountyil.gov/government/departments/health-department/environmental-health-links"
@@ -1206,6 +1240,7 @@
         "authority": "Greene County Health Department",
         "description": "Food establishments operating in Greene County must obtain the applicable county food permit before operating and comply with local and Illinois food-safety requirements.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://greenecountyil.org/health-department/",
           "https://dph.illinois.gov/topics-services/food-safety.html"
@@ -1243,7 +1278,7 @@
         "category": "permit",
         "authority": "Grundy County Health Department",
         "description": "Food establishments operating in Grundy County must obtain a valid county permit before operating; annual permits expire March 1 and renewal fees are due January 31.",
-        "rrule": "FREQ=YEARLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=31",
         "url": [
           "https://codelibrary.amlegal.com/codes/grundycountyil/latest/grundycounty_il/0-0-0-1171",
           "https://cms3.revize.com/revize/grundycounty/Temporary%20Event%20Application%20Form.pdf"
@@ -1284,6 +1319,7 @@
         "authority": "Adams County Health Department",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.adamscountyil.gov/government/departments/health-department/food-service-fees",
           "https://www.adamscountyil.gov/government/departments/health-department/environmental-health-links"
@@ -1324,6 +1360,7 @@
         "authority": "Hancock County Health Department",
         "description": "All food establishments and operations operating in Hancock County must apply for food service and pay the annual permit fee; temporary events require a separate application.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.hancockcountyhealthdepartment.org/food-safety.html",
           "https://www.hancockcountyhealthdepartment.org/uploads/1/4/2/5/142550397/2025_application_for_food_service_permit.pdf",
@@ -1365,6 +1402,7 @@
         "authority": "Adams County Health Department",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.adamscountyil.gov/government/departments/health-department/food-service-fees",
           "https://www.adamscountyil.gov/government/departments/health-department/environmental-health-links"
@@ -1405,6 +1443,7 @@
         "authority": "Henderson County Health Department",
         "description": "Food establishments operating in Henderson County must obtain the applicable county food permit before operating and comply with Illinois food-safety requirements.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dph.illinois.gov/topics-services/food-safety.html",
           "https://www2.illinois.gov/sites/agr/Animals/AnimalHealth/Pages/Food-Safety.aspx"
@@ -1443,6 +1482,7 @@
         "authority": "Henry County Health Department",
         "description": "Food establishments operating in Henry County must obtain the applicable Illinois food permit and comply with local inspection and renewal requirements.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www2.illinois.gov/sites/agr/Animals/AnimalHealth/Pages/Food-Safety.aspx",
           "https://dph.illinois.gov/topics-services/food-safety/retail-food.html"
@@ -1481,6 +1521,7 @@
         "authority": "Iroquois County Public Health Department",
         "description": "Food service establishments and retail food stores operating in Iroquois County must obtain and renew the applicable county food permit; temporary events require a permit and may incur a $250 late fee when payment is not made on site.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://iroquoiscountyil.gov/offices/health-department/environmental-health/documents-and-forms",
           "https://iroquoiscountyil.gov/wp-content/uploads/2020/01/Temporary-Food-Permits_PR_010220.pdf",
@@ -1522,6 +1563,7 @@
         "authority": "Jackson County Health Department",
         "description": "Food service facilities operating in Jackson County must obtain the applicable annual or temporary food permit and comply with county inspection and sanitation requirements.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://jchdonline.org/food/",
           "https://www.jacksoncounty-il.gov/ArchiveCenter/ViewFile/Item/118"
@@ -1562,6 +1604,7 @@
         "authority": "Adams County Health Department",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.adamscountyil.gov/government/departments/health-department/food-service-fees",
           "https://www.adamscountyil.gov/government/departments/health-department/environmental-health-links"
@@ -1602,6 +1645,7 @@
         "authority": "Jefferson County Health Department",
         "description": "Food businesses operating in Jefferson County must obtain the annual county food permit before operating; new establishments require plan review and a pre-opening inspection.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://jeffersoncountyhealthdept.org/food-sanitation/",
           "https://jeffcohealth.org/food-permits/"
@@ -1643,6 +1687,7 @@
         "authority": "Jersey County Health Department",
         "description": "Food establishments, retail food stores, mobile food establishments, and temporary food establishments operating in Jersey County must obtain a permit before operating and submit plans for review where required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://jerseycounty-il.gov/code-administrator/building-permits/",
           "https://codelibrary.amlegal.com/codes/jerseycoil/latest/jerseyco_il/0-0-0-2113",
@@ -1684,6 +1729,7 @@
         "authority": "Jo Daviess County Health Department",
         "description": "Food establishments, retail food establishments, and food-service facilities operating in Jo Daviess County must obtain the applicable county permit before opening and renew it annually before the end of November.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.jodaviesscountyil.gov/1235/Food-Protection",
           "https://www.jodaviesscountyil.gov/DocumentCenter/View/734/Food-Plan-Review-PDF",
@@ -1725,6 +1771,7 @@
         "authority": "Johnson County Health Department",
         "description": "Food establishments operating in Johnson County must obtain the applicable county food permit before operating and comply with local and Illinois food-safety requirements.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.johnsoncountyil.gov/health-department/",
           "https://dph.illinois.gov/topics-services/food-safety.html"
@@ -1770,7 +1817,8 @@
           "amount": 10
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The county clerk's pages state no late fee; operating under an unfiled assumed name is a misdemeanor under state law."
         }
       }
     ],
@@ -1787,7 +1835,7 @@
         "category": "license",
         "authority": "Kankakee County Health Department",
         "description": "All food establishments operating in Kankakee County must obtain a county license annually; applications are due January 1 and late renewals incur additional fees.",
-        "rrule": "FREQ=YEARLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=1",
         "url": [
           "https://www.kankakeehealth.org/food-sanitation-program/establishment-licensing/",
           "https://www.kankakeehealth.org/documents/services-3/environmental-health-1/food-sanitation-program/692-2026-eh-fee-schedule/file"
@@ -1828,6 +1876,7 @@
         "authority": "Kendall County Health Department",
         "description": "Food establishments operating in Kendall County must obtain the applicable annual, mobile, or temporary food permit and comply with county inspection requirements.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.kendallhealth.org/departments/environmental-health-services/environmental-health-fee-schedule",
           "https://www.kendallhealth.org/wp-content/uploads/2018/03/fillableFood_Handling_Permit_App_01_22.pdf",
@@ -1870,6 +1919,7 @@
         "authority": "Knox County Health Department",
         "description": "Food establishments operating in Knox County must obtain the applicable Illinois food permit and comply with local inspection and renewal requirements.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://co.knox.il.us/health-department/",
           "https://dph.illinois.gov/topics-services/food-safety/retail-food.html"
@@ -1906,7 +1956,8 @@
         "category": "filing",
         "authority": "Lake County Finance Department",
         "description": "Hotel and motel operators in Lake County must account for and remit the county hotel-motel tax; the county's FY2026 budget confirms the tax and its Finance Department administers the related filing process. Confirm the current return form, rate and due date with the department.",
-        "rrule": "FREQ=MONTHLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12",
+        "anchor": "assigned",
         "url": ["https://www.lakecountyil.gov/DocumentCenter/View/89123/FY26-Approved-Budget"],
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -1918,14 +1969,18 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The county's published pages for this item give no late-penalty amount."
         }
       }
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "county": "LaSalle",
@@ -1938,6 +1993,7 @@
         "authority": "LaSalle County Health Department",
         "description": "Food establishments operating in LaSalle County must obtain the county health permit; permit fees are based on priority assessment and establishments changing ownership after July 1 pay 50% of the appropriate remaining-year fee.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://www.lasallecountyil.gov/DocumentCenter/View/663/Food-Permit-and-Application-PDF"],
         "feeDetail": {
           "basis": "varies",
@@ -1975,6 +2031,7 @@
         "authority": "Adams County Health Department",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.adamscountyil.gov/government/departments/health-department/food-service-fees",
           "https://www.adamscountyil.gov/government/departments/health-department/environmental-health-links"
@@ -2015,6 +2072,7 @@
         "authority": "Lee County Health Department",
         "description": "Food service establishments operating in Lee County must obtain the applicable annual food permit before operating and renew it by the county deadline.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://codelibrary.amlegal.com/codes/leecountyil/latest/leecounty_il/0-0-0-2244",
           "https://codelibrary.amlegal.com/codes/leecountyil/latest/leecounty_il/0-0-0-2235",
@@ -2056,6 +2114,7 @@
         "authority": "Livingston County Public Health Department",
         "description": "Food establishments operating in Livingston County must obtain the applicable permanent, temporary, or cottage-food permit; the health department issues permits, reviews plans, and inspects facilities.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://lchd.us/167/Food-Information", "https://www.lchd.us/FormCenter"],
         "feeDetail": {
           "basis": "varies",
@@ -2094,6 +2153,7 @@
         "authority": "Logan County Department of Public Health",
         "description": "Food establishments operating in Logan County must obtain the applicable county food permit and comply with temporary-food application and inspection requirements.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.lcdph.org/sites/default/files/temporaryfood_permit.pdf",
           "https://dph.illinois.gov/topics-services/food-safety/retail-food.html"
@@ -2132,6 +2192,7 @@
         "authority": "Macon County Health Department",
         "description": "Food establishments operating in Macon County must obtain and renew the applicable annual, temporary, or mobile food permit; the county enforces food sanitation requirements and publishes permit applications.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.maconchd.org/environmental-health",
           "https://irp.cdn-website.com/5582d297/files/uploaded/2024_Food_Permit_Application_%28Annual%29.pdf",
@@ -2173,6 +2234,7 @@
         "authority": "Macoupin County Public Health Department",
         "description": "All food establishments and temporary food events operating in Macoupin County must obtain a health department permit before operating.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://macoupincountyil.gov/whats-happening-now/licenses-permits-zoning-information/",
           "https://mcphd.net/environmental-services/food-service-and-retail-food-sanitation/"
@@ -2213,6 +2275,7 @@
         "authority": "Madison County Health Department",
         "description": "Food establishments in Madison County must hold the applicable annual permit; the county schedule sets category-based permit fees and a late-payment fee.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.madisoncountyil.gov/document_center/CountyClerk/County%20Board/6-15-2022%20county%20board%20agenda%20packet.pdf"
         ],
@@ -2251,6 +2314,7 @@
         "authority": "Marion County Health Department",
         "description": "Food establishments operating in Marion County must obtain the applicable county food permit before operating and comply with the Illinois Food Code and county ordinance.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://marioncountyhealthdept.org/environmental-health/",
           "https://marioncountyhealthdept.org/wp-content/uploads/FoodPermitApp.pdf"
@@ -2290,7 +2354,7 @@
         "category": "permit",
         "authority": "Bureau, Putnam & Marshall Health Department",
         "description": "Food establishments operating in Marshall County must obtain the applicable annual, seasonal, prepackaged, or temporary food permit and renew it by December 31.",
-        "rrule": "FREQ=YEARLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=31",
         "url": [
           "https://bpmhd.org/food-program/",
           "https://www.in.gov/localhealth/marshallcounty/food-services/",
@@ -2332,6 +2396,7 @@
         "authority": "Mason County Health Department",
         "description": "Food establishments operating in Mason County must obtain an annual county food and drink permit before opening and comply with county inspection and Illinois food-safety requirements.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.masoncohealth.com/environmental-health/food/",
           "https://www.masoncohealth.com/application-food-permit/",
@@ -2371,6 +2436,7 @@
         "authority": "Adams County Health Department",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.adamscountyil.gov/government/departments/health-department/food-service-fees",
           "https://www.adamscountyil.gov/government/departments/health-department/environmental-health-links"
@@ -2411,6 +2477,7 @@
         "authority": "McDonough County Health Department",
         "description": "Food establishments operating in McDonough County must obtain the applicable county food permit before operating and comply with local and Illinois food-safety requirements.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.mcdonoughcountyhealth.com/food-safety",
           "https://www.mcdonoughcountyhealth.com/food-safetyenvironmental-health"
@@ -2469,7 +2536,8 @@
         }
       }
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "county": "McLean",
@@ -2482,6 +2550,7 @@
         "authority": "McLean County Health Department",
         "description": "Food establishments operating in McLean County must obtain the applicable annual or seasonal food permit; the county publishes permit applications, current fee schedules, and penalties for late renewal or operating without a valid permit.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://health.mcleancountyil.gov/1723/Statutes-Rules-Ordinances",
           "https://mcleancountyil.gov/DocumentCenter/View/23317/Application-for-a-McLean-County-Food-Permit",
@@ -2523,6 +2592,7 @@
         "authority": "Adams County Health Department",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.adamscountyil.gov/government/departments/health-department/food-service-fees",
           "https://www.adamscountyil.gov/government/departments/health-department/environmental-health-links"
@@ -2563,6 +2633,7 @@
         "authority": "Mercer County Health Department",
         "description": "Food service establishments operating in Mercer County must obtain and renew the county food service permit before operating.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://www.mchdil.com/food-safetyabout-5", "https://www.mchdil.com/food-safety"],
         "feeDetail": {
           "basis": "varies",
@@ -2598,6 +2669,7 @@
         "authority": "Adams County Health Department",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.adamscountyil.gov/government/departments/health-department/food-service-fees",
           "https://www.adamscountyil.gov/government/departments/health-department/environmental-health-links"
@@ -2638,6 +2710,7 @@
         "authority": "Montgomery County Health Department",
         "description": "Food establishments and temporary food vendors operating in Montgomery County must obtain the applicable permit; temporary vendors must apply at least three working days before events.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://montgomerycountyil.gov/health-department/",
           "https://montgomerycountyil.gov/wp-content/uploads/ResBook13.pdf"
@@ -2676,6 +2749,7 @@
         "authority": "Morgan County Health Department",
         "description": "Food establishments operating in Morgan County must obtain the applicable county food permit before operating and comply with local and Illinois food-safety requirements.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.morgancountyil.org/food-safety",
           "https://dph.illinois.gov/topics-services/food-safety.html"
@@ -2714,6 +2788,7 @@
         "authority": "Adams County Health Department",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.adamscountyil.gov/government/departments/health-department/food-service-fees",
           "https://www.adamscountyil.gov/government/departments/health-department/environmental-health-links"
@@ -2754,6 +2829,7 @@
         "authority": "Ogle County Health Department",
         "description": "Food service establishments, retail food stores, mobile units, and temporary events operating in Ogle County must obtain a valid county license or permit before operating.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://codelibrary.amlegal.com/codes/oglecountyil/latest/oglecounty_il/0-0-0-2455",
           "https://codelibrary.amlegal.com/codes/oglecountyil/latest/oglecounty_il/0-0-0-2488"
@@ -2793,6 +2869,7 @@
         "authority": "Peoria County Clerk",
         "description": "Persons conducting business under an assumed name in Peoria County must register with the County Clerk; corporations and certain other entities generally file with the Illinois Secretary of State instead.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://www.peoriacounty.gov/241/Business-Under-An-Assumed-Name"],
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -2818,6 +2895,7 @@
         "authority": "Peoria City/County Health Department",
         "description": "Food establishments operating in Peoria County must obtain a license before operating and pay annual license fees; the health department publishes current fees and inspection-related charges.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.pcchd.org/314/How-to-Open-a-New-Food-Establishment",
           "https://www.pcchd.org/AgendaCenter/ViewFile/Agenda/_05182026-288"
@@ -2856,6 +2934,7 @@
         "authority": "Adams County Health Department",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.adamscountyil.gov/government/departments/health-department/food-service-fees",
           "https://www.adamscountyil.gov/government/departments/health-department/environmental-health-links"
@@ -2896,6 +2975,7 @@
         "authority": "DeWitt-Piatt Bi-County Health Department",
         "description": "Food establishments operating in Piatt County must obtain the applicable county food permit before operating and comply with local and Illinois food-safety requirements.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dewittpiatthealth.com/file/101",
           "https://dph.illinois.gov/topics-services/food-safety.html"
@@ -2936,6 +3016,7 @@
         "authority": "Pike County Health Department",
         "description": "Food establishments operating in Pike County must comply with the county food sanitation inspection and permitting program.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.pikecountyil.org/health-department/programs-services/environmental-health/food-sanitation/",
           "https://dph.illinois.gov/topics-services/food-safety/retail-food.html"
@@ -2974,6 +3055,7 @@
         "authority": "Adams County Health Department",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.adamscountyil.gov/government/departments/health-department/food-service-fees",
           "https://www.adamscountyil.gov/government/departments/health-department/environmental-health-links"
@@ -3014,6 +3096,7 @@
         "authority": "Pulaski County Health Department",
         "description": "Food establishments operating in Pulaski County must obtain the applicable county food permit before operating and comply with Illinois and local food-safety requirements.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dph.illinois.gov/topics-services/food-safety.html",
           "https://www2.illinois.gov/sites/agr/Animals/AnimalHealth/Pages/Food-Safety.aspx"
@@ -3052,6 +3135,7 @@
         "authority": "Adams County Health Department",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.adamscountyil.gov/government/departments/health-department/food-service-fees",
           "https://www.adamscountyil.gov/government/departments/health-department/environmental-health-links"
@@ -3092,6 +3176,7 @@
         "authority": "Randolph County Health Department",
         "description": "Food establishments operating in Randolph County must obtain the applicable county food permit and comply with risk-based inspection requirements.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://randolphcountyil.gov/health-department/environmental-health/",
           "https://randolphcountyil.gov/wp-content/uploads/RCHD-Temporary-Food-Permit-Application.pdf",
@@ -3133,6 +3218,7 @@
         "authority": "Adams County Health Department",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.adamscountyil.gov/government/departments/health-department/food-service-fees",
           "https://www.adamscountyil.gov/government/departments/health-department/environmental-health-links"
@@ -3173,6 +3259,7 @@
         "authority": "Rock Island County Health Department",
         "description": "Food service establishments and retail food stores operating in Rock Island County must obtain and renew the applicable annual food license; temporary operations require a temporary permit and pre-event application.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.richd.org/temporary-cottage-food.php",
           "https://codelibrary.amlegal.com/codes/rockislandcountyil/latest/rockislandcounty_il/0-0-0-3276"
@@ -3224,14 +3311,18 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The county's published pages for this item give no late-penalty amount."
         }
       }
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "county": "Saline",
@@ -3244,6 +3335,7 @@
         "authority": "Adams County Health Department",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.adamscountyil.gov/government/departments/health-department/food-service-fees",
           "https://www.adamscountyil.gov/government/departments/health-department/environmental-health-links"
@@ -3284,6 +3376,7 @@
         "authority": "Sangamon County Clerk",
         "description": "Businesses operating in Sangamon County under an assumed business name must register with the County Clerk; filing and publication fees are $27 or $71 depending on the newspaper selected.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://sangamonil.gov/departments/a-c/county-clerk/vital-records/registration-of-assumed-names-dba-s",
           "https://dba.co.sangamon.il.us/dba/newBusiness/newBusinessIntro.action"
@@ -3315,7 +3408,8 @@
         ],
         "checkedOn": "2026-10-19",
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The county clerk's pages state no late fee; operating under an unfiled assumed name is a misdemeanor under state law."
         }
       },
       {
@@ -3325,6 +3419,7 @@
         "authority": "Sangamon County Department of Public Health",
         "description": "Food service establishments operating in Sangamon County must obtain the applicable annual or seasonal food permit; the county application identifies reinspection fees and requires outstanding late fees to be paid before issuance.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://sangamonil.gov/departments/m-r/public-health/food-service",
           "https://sangamondepartments.blob.core.windows.net/dnnfiles/Health/pdf/Sangamon-Annual-app-revised-0622.pdf"
@@ -3363,6 +3458,7 @@
         "authority": "Adams County Health Department",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.adamscountyil.gov/government/departments/health-department/food-service-fees",
           "https://www.adamscountyil.gov/government/departments/health-department/environmental-health-links"
@@ -3403,6 +3499,7 @@
         "authority": "Adams County Health Department",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.adamscountyil.gov/government/departments/health-department/food-service-fees",
           "https://www.adamscountyil.gov/government/departments/health-department/environmental-health-links"
@@ -3443,6 +3540,7 @@
         "authority": "Shelby County Health Department",
         "description": "Food service establishments operating in Shelby County must hold the county health department permit before operating and comply with the county food and sanitation ordinance.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.shelbyhealth.net/FOOD%20AND%20SANITATION%20ORDINANCE.pdf",
           "https://www.shelbycounty-il.gov/health-department"
@@ -3481,6 +3579,7 @@
         "authority": "Adams County Health Department",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.adamscountyil.gov/government/departments/health-department/food-service-fees",
           "https://www.adamscountyil.gov/government/departments/health-department/environmental-health-links"
@@ -3521,6 +3620,7 @@
         "authority": "Illinois Department of Public Health",
         "description": "Food establishments operating in Stephenson County must obtain the applicable Illinois food permit and comply with county health department inspection requirements.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dph.illinois.gov/topics-services/food-safety/retail-food.html",
           "https://ecode360.com/45379043"
@@ -3559,6 +3659,7 @@
         "authority": "Tazewell County Health Department",
         "description": "Food establishments operating in Tazewell County must obtain the applicable annual, seasonal, or temporary food permit and comply with county inspection requirements.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.tazewellhealth.org/220/Food-Service-Sanitation",
           "https://codelibrary.amlegal.com/codes/tazewellcounty/latest/tazewell_il/0-0-0-2020"
@@ -3599,6 +3700,7 @@
         "authority": "Adams County Health Department",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.adamscountyil.gov/government/departments/health-department/food-service-fees",
           "https://www.adamscountyil.gov/government/departments/health-department/environmental-health-links"
@@ -3639,6 +3741,7 @@
         "authority": "Vermilion County Health Department",
         "description": "Restaurants, retail food stores, mobile food services, and other food operations in Vermilion County must obtain the applicable annual, seasonal, temporary, or farmers-market food permit; fees depend on risk category and establishment type.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.vercounty.org/health-department/food-sanitation/",
           "https://www.vercounty.org/health-department/food-sanitation/home-to-market-act/"
@@ -3677,6 +3780,7 @@
         "authority": "Adams County Health Department",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.adamscountyil.gov/government/departments/health-department/food-service-fees",
           "https://www.adamscountyil.gov/government/departments/health-department/environmental-health-links"
@@ -3717,6 +3821,7 @@
         "authority": "Adams County Health Department",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.adamscountyil.gov/government/departments/health-department/food-service-fees",
           "https://www.adamscountyil.gov/government/departments/health-department/environmental-health-links"
@@ -3757,6 +3862,7 @@
         "authority": "Washington County Health Department",
         "description": "Food establishments operating in Washington County must obtain the applicable county food permit before operating and comply with local and Illinois food-safety requirements.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.washingtoncountyil.gov/health-department/",
           "https://dph.illinois.gov/topics-services/food-safety.html"
@@ -3795,6 +3901,7 @@
         "authority": "Wayne County Health Department",
         "description": "Food establishments operating in Wayne County must obtain the applicable county food permit before operating and comply with Illinois and local food-safety requirements.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://wchdil.com/food-sanitation/",
           "https://dph.illinois.gov/topics-services/food-safety.html"
@@ -3833,6 +3940,7 @@
         "authority": "White County Health Department",
         "description": "Food establishments operating in White County must obtain the applicable county food permit before operating and comply with local and Illinois food-safety requirements.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.whitecountyil.gov/health-department/",
           "https://dph.illinois.gov/topics-services/food-safety.html"
@@ -3871,6 +3979,7 @@
         "authority": "Whiteside County Health Department",
         "description": "Food establishments operating in Whiteside County must obtain the applicable county food permit before operating and comply with plan-review and inspection requirements.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://cms5.revize.com/revize/whiteside/Documents_Files/Environmental%20Documents/Food%20Program/Food%20Establishment%20Plan%20Review%20and%20Application%202023.pdf",
           "https://www.whitesidecountyil.gov/315/County-Offices"
@@ -3910,7 +4019,7 @@
         "category": "license",
         "authority": "Will County Health Department",
         "description": "Food establishments operating in Will County must obtain an annual permit from the Health Authority; permits run from January 1 through December 31 and require the applicable annual fee.",
-        "rrule": "FREQ=YEARLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=1",
         "url": ["https://codelibrary.amlegal.com/codes/willcounty/latest/willcounty_il/0-0-0-45090"],
         "feeDetail": {
           "basis": "varies",
@@ -3946,6 +4055,7 @@
         "authority": "Williamson County Health Department",
         "description": "Food establishments operating in Williamson County must obtain the applicable county food permit before operating and comply with Illinois and local food-safety requirements.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.williamsoncountyhealth.org/food-safety",
           "https://dph.illinois.gov/topics-services/food-safety.html"
@@ -4023,14 +4133,18 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The county's published pages for this item give no late-penalty amount."
         }
       }
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "county": "Woodford",
@@ -4043,6 +4157,7 @@
         "authority": "Woodford County Health Department",
         "description": "Food establishments operating in Woodford County must obtain the applicable county food permit before operating and comply with Illinois and county food-sanitation requirements.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.woodford-county.org/184/Food-Sanitation",
           "https://www.woodfordcountyil.gov/DocumentCenter/View/3213/Food-Establishment-Plan-Review-Application-"

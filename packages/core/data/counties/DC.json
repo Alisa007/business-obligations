@@ -12,13 +12,19 @@
         "url": ["https://otr.cfo.dc.gov/am/node/1794941"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the unpaid tax for each month the return is late, up to 25%."
         }
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-13",
+    "status": "rules"
   }
 ]

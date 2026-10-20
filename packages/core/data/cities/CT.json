@@ -13,21 +13,24 @@
         "url": ["https://www.bridgeportct.gov/government/departments/building-department/building-permit"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.bridgeportct.gov/government/departments/environmental-health/fee-and-licensing-schedule"
-    ]
+    ],
+    "status": "rules"
   },
   {
     "city": "Hartford",
-    "counties": ["Hartford"],
+    "counties": ["Capitol Region"],
     "items": [
       {
         "id": "hartford.certificate-of-apartment-occupancy",
@@ -47,11 +50,12 @@
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.hartfordct.gov/Government/Departments/DDS/DDS-Services/Starting-a-Business"]
+    "sourceUrl": ["https://www.hartfordct.gov/Government/Departments/DDS/DDS-Services/Starting-a-Business"],
+    "status": "rules"
   },
   {
     "city": "New Haven",
-    "counties": ["New Haven"],
+    "counties": ["South Central Regional"],
     "items": [
       {
         "id": "new-haven.certificate-of-occupancy",
@@ -63,17 +67,20 @@
         "url": ["https://www.newhavenct.gov/home/showpublisheddocument/24591/638767847248170000"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for occupying without a certificate was found in the city's published building pages."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.newhavenct.gov/government/departments-divisions/office-of-building-inspection-enforcement/hours-of-operation/permit-license-center-hours"
-    ]
+    ],
+    "status": "rules"
   },
   {
     "city": "Stamford",
@@ -90,10 +97,12 @@
         "url": ["https://www.stamfordct.gov/government/operations/building-department"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       },
       {
@@ -106,10 +115,12 @@
         "url": ["https://www.stamfordct.gov/government/operations/building-department/building-faqs"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for occupying without a certificate was found in the city's published building pages."
         }
       }
     ],
@@ -120,7 +131,7 @@
   },
   {
     "city": "Waterbury",
-    "counties": ["New Haven"],
+    "counties": ["Naugatuck Valley"],
     "items": [
       {
         "id": "waterbury.building-permit",
@@ -132,10 +143,12 @@
         "url": ["https://www.waterburyct.org/services/department-of-inspections"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       },
       {
@@ -148,15 +161,18 @@
         "url": ["https://waterburyct.org/311/knowledgebase/article/12208"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for occupying without a certificate was found in the city's published building pages."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.waterburyct.org/services/department-of-inspections"]
+    "sourceUrl": ["https://www.waterburyct.org/services/department-of-inspections"],
+    "status": "rules"
   },
   {
     "city": "Norwalk",
@@ -164,7 +180,7 @@
     "reason": "city-license-unconfirmed",
     "items": [
       {
-        "id": "norwalk.local-licenses",
+        "id": "norwalk-ct.local-licenses",
         "title": "Review applicable local licenses and permits in Norwalk",
         "category": "license",
         "authority": "Norwalk local licensing authority",
@@ -173,15 +189,18 @@
         "url": ["https://business.ct.gov/knowledge-base/articles/trade-names"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://business.ct.gov/knowledge-base/articles/trade-names"]
+    "sourceUrl": ["https://business.ct.gov/knowledge-base/articles/trade-names"],
+    "counties": ["Western Connecticut"]
   },
   {
     "city": "Danbury",
@@ -198,15 +217,18 @@
         "url": ["https://business.ct.gov/knowledge-base/articles/trade-names"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://business.ct.gov/knowledge-base/articles/trade-names"]
+    "sourceUrl": ["https://business.ct.gov/knowledge-base/articles/trade-names"],
+    "counties": ["Western Connecticut"]
   },
   {
     "city": "New Britain",
@@ -223,15 +245,18 @@
         "url": ["https://business.ct.gov/knowledge-base/articles/trade-names"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://business.ct.gov/knowledge-base/articles/trade-names"]
+    "sourceUrl": ["https://business.ct.gov/knowledge-base/articles/trade-names"],
+    "counties": ["Capitol Region"]
   },
   {
     "city": "Bristol",
@@ -248,15 +273,18 @@
         "url": ["https://business.ct.gov/knowledge-base/articles/trade-names"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://business.ct.gov/knowledge-base/articles/trade-names"]
+    "sourceUrl": ["https://business.ct.gov/knowledge-base/articles/trade-names"],
+    "counties": ["Naugatuck Valley"]
   },
   {
     "city": "Meriden",
@@ -273,15 +301,18 @@
         "url": ["https://business.ct.gov/knowledge-base/articles/trade-names"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://business.ct.gov/knowledge-base/articles/trade-names"]
+    "sourceUrl": ["https://business.ct.gov/knowledge-base/articles/trade-names"],
+    "counties": ["South Central Regional"]
   },
   {
     "city": "West Haven",
@@ -298,15 +329,18 @@
         "url": ["https://business.ct.gov/knowledge-base/articles/trade-names"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://business.ct.gov/knowledge-base/articles/trade-names"]
+    "sourceUrl": ["https://business.ct.gov/knowledge-base/articles/trade-names"],
+    "counties": ["South Central Regional"]
   },
   {
     "city": "Milford",
@@ -323,15 +357,18 @@
         "url": ["https://business.ct.gov/knowledge-base/articles/trade-names"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://business.ct.gov/knowledge-base/articles/trade-names"]
+    "sourceUrl": ["https://business.ct.gov/knowledge-base/articles/trade-names"],
+    "counties": ["South Central Regional"]
   },
   {
     "city": "Middletown",
@@ -339,7 +376,7 @@
     "reason": "city-license-unconfirmed",
     "items": [
       {
-        "id": "middletown.local-licenses",
+        "id": "middletown-ct.local-licenses",
         "title": "Review applicable local licenses and permits in Middletown",
         "category": "license",
         "authority": "Middletown local licensing authority",
@@ -348,15 +385,18 @@
         "url": ["https://business.ct.gov/knowledge-base/articles/trade-names"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://business.ct.gov/knowledge-base/articles/trade-names"]
+    "sourceUrl": ["https://business.ct.gov/knowledge-base/articles/trade-names"],
+    "counties": ["Lower Connecticut River Valley"]
   },
   {
     "city": "Shelton",
@@ -373,14 +413,17 @@
         "url": ["https://business.ct.gov/knowledge-base/articles/trade-names"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://business.ct.gov/knowledge-base/articles/trade-names"]
+    "sourceUrl": ["https://business.ct.gov/knowledge-base/articles/trade-names"],
+    "counties": ["Naugatuck Valley"]
   }
 ]

@@ -16,14 +16,17 @@
         "url": ["https://www.cityofhenderson.com/government/departments/business-licensing/faqs"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The city sets the fee by business classification; it advises confirming the amount for a specific classification."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10
         }
       }
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "city": "Las Vegas",
@@ -38,6 +41,7 @@
         "authority": "City of Las Vegas Business Licensing (with Clark County for unincorporated areas)",
         "description": "A business with its address inside the City of Las Vegas needs a city business license, after the state business license and zoning and certificate-of-occupancy checks. General licenses are applied for online; privilege licenses need an appointment. A business outside city limits is licensed by Clark County, North Las Vegas or Henderson.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://www.lasvegasnevada.gov/Business/Business-License/Apply-For-A-Business-License"],
         "appliesTo": ["all"],
         "feeDetail": {
@@ -46,7 +50,8 @@
         },
         "checkedOn": "2026-10-18",
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       },
       {
@@ -56,6 +61,7 @@
         "authority": "Clark County Clerk",
         "description": "A business that operates under a name that does not show the real name of each owner files a fictitious firm name certificate with the County Clerk of each county where it operates. The $25 filing fee includes one copy, the form needs no notary, and the name is renewed every five years.",
         "rrule": "FREQ=YEARLY;INTERVAL=5",
+        "anchor": "license_issued",
         "url": [
           "https://www.clarkcountynv.gov/government/elected_officials/county_clerk/fictitious-firm-name"
         ],
@@ -69,7 +75,8 @@
           "basis": "unknown"
         }
       }
-    ]
+    ],
+    "status": "rules"
   },
   {
     "city": "North Las Vegas",
@@ -90,12 +97,14 @@
           "basis": "unknown"
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.cityofnorthlasvegas.com/business/business-licenses"]
+    "sourceUrl": ["https://www.cityofnorthlasvegas.com/business/business-licenses"],
+    "status": "rules"
   },
   {
     "city": "Reno",
@@ -112,18 +121,23 @@
         "authority": "City of Reno Business Licensing",
         "description": "Businesses in the city need a city business license in addition to the Nevada state business license. A general license runs 12 months from the first day of the month the business starts and is renewed each year online through the regional onenv.us portal. A late renewal carries a 50% penalty, and so does starting before the license is issued. Liquor and gaming licenses follow a quarterly cycle.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "deadline": "Renew each year, by the end of the 12-month license term",
         "url": ["https://www.reno.gov/business-development/business-licensing/index.php"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The city says the fee is based on the license classification, of which there are over 100."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "note": "50% for a late renewal or for starting before the license is issued."
         }
       }
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "city": "Sparks",
@@ -141,10 +155,12 @@
         "url": ["https://portal.cityofsparks.us/bids/docs/download/1479"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "This entry covers the city's local licenses and taxes generally, each of which carries its own late charge in the municipal code; no single amount is stated."
         }
       }
     ],
@@ -157,7 +173,7 @@
     "reason": "city-license-unconfirmed",
     "items": [
       {
-        "id": "carson.local-licenses",
+        "id": "carson-nv.local-licenses",
         "title": "Review applicable local licenses and permits in Carson",
         "category": "license",
         "authority": "Carson local licensing authority",
@@ -168,16 +184,20 @@
         "frequency": "once",
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "This entry covers the city's local licenses and taxes generally, each of which carries its own late charge in the municipal code; no single amount is stated."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.nvsos.gov/sos-information/office-facts/faqs-all-division/service-marks-trademarks-trade-names"
-    ]
+    ],
+    "counties": ["Carson City (city)"],
+    "aliases": ["Carson City"]
   }
 ]

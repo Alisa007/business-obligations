@@ -66,13 +66,27 @@
       "note": "Annual LLP reinstatement fee; $180 for online or in-person expedited filing."
     }
   },
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "Corporate franchise tax; fixed-dollar minimum fee on pass-through entities",
+  "wageWithholding": true,
+  "entityTaxDetail": null,
   "salesTax": {
     "statewide": true,
     "permit": "Minnesota sales tax permit (Minnesota Tax ID)",
+    "permitFee": {
+      "basis": "none",
+      "amount": 0,
+      "note": "Minnesota charges no fee to register for a Tax ID and sales tax account."
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "percentPerMonth": 5,
+      "note": "5% of the tax not paid by the due date, plus another 5% for each additional 30 days, up to 15%.",
+      "rate": 15
+    }
   },
   "localSalesTax": "state_administered",
   "economicNexusUsd": 100000,
@@ -87,6 +101,30 @@
     "stateFund": false,
     "trigger": {
       "minEmployees": 1
+    }
+  },
+  "penalties": {
+    "unemployment": {
+      "basis": "per_item",
+      "note": "$10 per employee for a missing wage detail report, never less than $250, doubling if still unfiled 30 days after demand.",
+      "perUnit": 10,
+      "min": 250
+    },
+    "newHire": {
+      "basis": "flat",
+      "amount": 25,
+      "note": "Up to $25 per newly hired employee, or up to $500 per employee for a conspiracy."
+    },
+    "laborPosters": {
+      "basis": "flat",
+      "amount": 500,
+      "note": "The commissioner may assess $500 for violating the workers' compensation posting requirement after notice (Minn. Stat. 176.139)."
+    },
+    "workersComp": {
+      "basis": "range",
+      "note": "$200 to $1,000 per uninsured employee per week, based on the avoided premium (Minn. R. 5220.2865).",
+      "min": 200,
+      "max": 1000
     }
   },
   "paidLeave": {
@@ -106,6 +144,7 @@
     "description": "Minnesota cities license specific activities; no general state-wide business license."
   },
   "dbaFiling": "state",
+  "dbaEntitiesFileLocally": false,
   "industry": {
     "contractor": "Minnesota Department of Labor and Industry (residential building contractor license)",
     "realEstate": "Minnesota Department of Commerce",

@@ -41,16 +41,30 @@
       "note": "Per year delinquent"
     }
   },
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "Corporate income tax and General Excise Tax",
+  "wageWithholding": true,
+  "entityTaxDetail": null,
   "salesTax": {
     "statewide": true,
     "permit": "General Excise Tax (GET) license",
+    "permitFee": {
+      "basis": "flat",
+      "amount": 20,
+      "note": "One-time General Excise Tax license registration fee; a branch license has no additional charge."
+    },
     "agency": {
       "name": "Hawaii Department of Taxation",
       "url": ["https://tax.hawaii.gov/get/FAQ/"]
     },
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "percentPerMonth": 5,
+      "note": "5% of the unpaid tax for each month or part of a month the return is late, up to 25%; a separate 20% penalty can apply if tax on a timely return stays unpaid 60 days.",
+      "rate": 25
+    }
   },
   "localSalesTax": "state_administered",
   "economicNexusUsd": 100000,
@@ -65,6 +79,28 @@
     "stateFund": false,
     "trigger": {
       "minEmployees": 1
+    }
+  },
+  "penalties": {
+    "unemployment": {
+      "basis": "flat",
+      "amount": 30,
+      "note": "$30 for a quarterly wage report that is skipped, late or incomplete (Haw. Admin. Rules 12-5-17); the maximum contribution rate may also apply."
+    },
+    "newHire": {
+      "basis": "flat",
+      "amount": 25,
+      "note": "$25 late filing penalty, or $500 if the failure results from a conspiracy (per the Child Support Enforcement Agency FAQ)."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "per_item",
+      "note": "$100 for each employee for every day without coverage, with a $500 minimum.",
+      "perUnit": 100,
+      "min": 500
     }
   },
   "paidLeave": {
@@ -82,6 +118,7 @@
     "description": "Hawaii has no general local business license; counties issue zoning, building and industry permits."
   },
   "dbaFiling": "none",
+  "dbaEntitiesFileLocally": false,
   "industry": {
     "contractor": "Hawaii Contractors License Board",
     "realEstate": "Hawaii Real Estate Commission",
@@ -101,7 +138,8 @@
     "withholding": ["https://tax.hawaii.gov/get/FAQ//geninfo/a2_b2_4empl_whhold/"],
     "salesTax": ["https://tax.hawaii.gov/get/FAQ//get/FAQ/"],
     "entityTax": ["https://tax.hawaii.gov/get/FAQ//forms/a1_2taxforms/"],
-    "laborPosters": ["https://labor.hawaii.gov/labor-law-poster/"]
+    "laborPosters": ["https://labor.hawaii.gov/labor-law-poster/"],
+    "dba": ["https://cca.hawaii.gov/breg/registration/"]
   },
   "verification": {
     "checkedOn": "2026-10-13",

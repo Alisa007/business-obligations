@@ -72,13 +72,26 @@
       "note": "When filed more than 60 days after the due date"
     }
   },
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "Corporate income tax; Personal Property Replacement Tax on partnerships and S corporations",
+  "wageWithholding": true,
+  "entityTaxDetail": null,
   "salesTax": {
     "statewide": true,
     "permit": "Illinois Certificate of Registration (Retailers' Occupation Tax)",
+    "permitFee": {
+      "basis": "none",
+      "amount": 0,
+      "note": "Illinois charges no registration fee for a sales and use tax Certificate of Registration."
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "note": "2% of the tax for a payment 1 to 30 days late and 10% after that; the late-filing penalty is the lesser of $250 or 2% of the tax due.",
+      "rate": 10
+    }
   },
   "localSalesTax": "state_administered",
   "economicNexusUsd": 100000,
@@ -96,6 +109,26 @@
       "minEmployees": 1
     }
   },
+  "penalties": {
+    "unemployment": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late wage report was found in the state agency's published sources."
+    },
+    "newHire": {
+      "basis": "flat",
+      "amount": 15,
+      "note": "$15 for each new hire the employer knowingly fails to report."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "per_item",
+      "note": "Civil penalty of up to $500 per day of noncompliance for a knowing and willful failure to obtain coverage (820 ILCS 305/4).",
+      "perUnit": 500
+    }
+  },
   "paidLeave": null,
   "paidSickLeave": {
     "minEmployees": 1
@@ -108,6 +141,7 @@
     "description": "Chicago and many municipalities require business licenses (Chicago: BACP)."
   },
   "dbaFiling": "county",
+  "dbaEntitiesFileLocally": false,
   "dbaOffice": "County clerk",
   "industry": {
     "contractor": null,

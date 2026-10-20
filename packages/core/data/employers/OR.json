@@ -19,10 +19,15 @@
     "checkedOn": "2026-10-16",
     "exemptions": ["Employers that sponsor a qualified retirement plan (they still certify the exemption)"],
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "none",
+      "amount": 0,
+      "note": "There is no fee to file or register."
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "per_item",
+      "note": "Up to $100 per eligible employee, capped at $5,000 a year.",
+      "perUnit": 100,
+      "max": 5000
     }
   }
 ]

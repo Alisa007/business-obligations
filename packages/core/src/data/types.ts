@@ -3,7 +3,7 @@ import type { Applicability, FilingMethod, Frequency, ItemCategory } from "../ty
 import type { ScheduleFields } from "../rrule";
 export interface Agency {
   name: string;
-  url?: string[];
+  url: string[];
 }
 
 export interface FixedDue {
@@ -35,7 +35,30 @@ export interface DateDue {
   date: string;
 }
 
-export type Due = FixedDue | AnniversaryDue | MultiDue | DateDue;
+/**
+ * A due date counted from a reference date instead of fixed on the calendar: the anniversary of a license (a renewal is
+ * due when the license expires, one year after it was issued), the last day of the month after it, thirty days after it,
+ * the 15th day of the 4th month of the tax year, and so on. It is exact: given the reference date the rule says which
+ * day. The reference date comes from the business, not from the data, so without it there is no date to show yet.
+ */
+export interface RelativeDue {
+  type: "relative";
+  /**
+   * What the date is counted from. `formation`, `license_issued` (the date the license or permit was issued, or last
+   * renewed), `fiscal_year_start` and `fiscal_year_end` are dates of the business. `announced` is a date the agency
+   * publishes each year (the EEOC's filing window) and `assigned` one it sets for each taxpayer (a sales tax filing
+   * frequency and its due dates): they have no rule to write, and the item says whose they are.
+   */
+  from: "formation" | "license_issued" | "fiscal_year_start" | "fiscal_year_end" | "announced" | "assigned";
+  /** Months after the reference date's month; 0 or omitted is the same month. */
+  monthsAfter?: number;
+  /** Day of that month, 1 to 31, or -1 for its last day. Omitted: the reference date's own day (its anniversary). */
+  day?: number;
+  /** Days after the day that results, for "within 30 days of expiry". */
+  daysAfter?: number;
+}
+
+export type Due = FixedDue | AnniversaryDue | MultiDue | DateDue | RelativeDue;
 
 /** Structured threshold and rate for a gross-receipts, margin or franchise-style entity tax. */
 export interface EntityTaxDetail {
@@ -59,15 +82,15 @@ export interface StateLinks {
   /** Employer registration for unemployment insurance. */
   uiRegistration: string[];
   /** Employer registration for state income tax withholding. */
-  withholding?: string[];
+  withholding: string[];
   /** Sales and use tax permit or license registration. */
-  salesTax?: string[];
+  salesTax: string[];
   /** Corporate income, franchise or gross-receipts tax. */
   entityTax: string[];
   /** The state's required workplace posters and notices. */
   laborPosters: string[];
   /** Trade name / DBA registration, where it is filed with the state (see `dbaFiling`). */
-  dba?: string[];
+  dba: string[];
 }
 
 export interface UnemploymentInfo {
@@ -147,23 +170,26 @@ interface PenaltyQualifiers {
 
 /**
  * The penalty for missing the obligation, written on every item. `none` means the government states no penalty;
- * `unknown` means it has not been researched yet (it is the only placeholder the data allows).
+ * `unknown` means it has not been researched yet; `not_stated` means the government says a penalty applies but its
+ * published sources give no amount (a `note` says where this was checked).
  */
 export type StatedPenalty =
   | ({ basis: "flat"; amount: number } & PenaltyQualifiers)
   | ({ basis: "percent"; rate: number; base?: number; min?: number; max?: number } & PenaltyQualifiers)
   | ({ basis: "per_item"; perUnit: number; min?: number; max?: number } & PenaltyQualifiers)
   | ({ basis: "range"; min: number; max?: number } & PenaltyQualifiers);
-export type Penalty = StatedPenalty | { basis: "none" | "unknown" };
+export type Penalty = StatedPenalty | { basis: "none" | "unknown" } | { basis: "not_stated"; note?: string };
 
 /** The `penalty` of an item from its data, when there is a stated amount. */
 export function statedPenalty(p: Penalty): StatedPenalty | undefined {
-  return p.basis === "none" || p.basis === "unknown" ? undefined : (p as StatedPenalty);
+  return p.basis === "none" || p.basis === "unknown" || p.basis === "not_stated"
+    ? undefined
+    : (p as StatedPenalty);
 }
 
 export interface ReportRule {
   /** Derived from `rrule` when there is one. */
-  frequency?: "annual" | "biennial" | "every_five_years" | "periodic";
+  frequency?: "annual" | "biennial" | "every_three_years" | "every_five_years" | "periodic";
   /** The fee. The display text ("$30 online ($45 paper)") is generated from it; see `describeFee`. */
   feeDetail: FeeDetail;
   penalty: Penalty;
@@ -232,6 +258,17 @@ export interface StateInfo {
     stateFund: boolean;
     trigger: WcTrigger;
   };
+  /** Penalties for missing common state employer duties; `{ "basis": "unknown" }` until researched. */
+  penalties: {
+    /** Late unemployment insurance wage report or contribution payment. */
+    unemployment: Penalty;
+    /** Failing to report a new hire. */
+    newHire: Penalty;
+    /** Failing to display required workplace notices. */
+    laborPosters: Penalty;
+    /** Failing to carry required workers' compensation coverage. */
+    workersComp: Penalty;
+  };
   /** Periodic report required of LLCs formed in the state; null = none. */
   llcReport: ReportRule | null;
   /** Periodic report required of corporations and nonprofits formed in the state; null = none. */
@@ -241,7 +278,7 @@ export interface StateInfo {
   /** Report for limited liability partnerships when it differs from the LLC report; null = none, absent = same as LLC. */
   llpReport?: ReportRule | null;
   /** LLCs taxed as corporations must file the corporate report even though plain LLCs do not (SC). */
-  llcReportAppliesWhenTaxedAsCorp?: boolean;
+  llcReportAppliesWhenTaxedAsCorp: boolean;
   /** Entity-level income / franchise / gross-receipts taxes. */
   entityTax: string;
   /** State levies wage withholding (individual income tax on wages). */
@@ -250,9 +287,13 @@ export interface StateInfo {
     statewide: boolean;
     /** Name of the permit/registration (statewide) or of the nearest equivalent. */
     permit: string;
+    /** The fee for the permit or registration; `{ "basis": "unknown" }` until researched. */
+    permitFee: FeeDetail;
     agency: Required<Agency> | null;
     /** For states without a statewide sales tax: what applies instead. */
     alternative: string | null;
+    /** The penalty for a late sales tax return; `{ "basis": "unknown" }` until researched. */
+    penalty: Penalty;
   };
   /** General state-level business license, where one exists. */
   businessLicense:
@@ -286,7 +327,7 @@ export interface StateInfo {
    */
   links: StateLinks;
   /** Threshold and rate of the state's gross-receipts or margin tax, where it has one. */
-  entityTaxDetail?: EntityTaxDetail;
+  entityTaxDetail: EntityTaxDetail | null;
   /** State unemployment insurance (SUI) employer tax parameters. */
   unemployment: UnemploymentInfo;
   /** Who administers local (city/county) sales taxes. */
@@ -297,7 +338,7 @@ export interface StateInfo {
    * True when registered entities (LLCs, corporations) also file assumed names at the county or town level
    * (California, Connecticut, Georgia, Massachusetts, Nevada, North Carolina) instead of with the state.
    */
-  dbaEntitiesFileLocally?: boolean;
+  dbaEntitiesFileLocally: boolean;
   /** Name of the county/town office when `dbaFiling` is county or town. */
   dbaOffice?: string;
   /** State agency taking trade names when it is not the entity filing agency. */
@@ -323,7 +364,15 @@ export interface LocalItem {
   description: string;
   /** Derived from `rrule` when there is one. */
   frequency?:
-    "once" | "annual" | "biennial" | "every_five_years" | "quarterly" | "monthly" | "per_event" | "ongoing";
+    | "once"
+    | "annual"
+    | "biennial"
+    | "every_three_years"
+    | "every_five_years"
+    | "quarterly"
+    | "monthly"
+    | "per_event"
+    | "ongoing";
   /** The schedule as an iCalendar recurrence rule (see `ReportRule.rrule`). */
   rrule?: string;
   /** Start of a cycle longer than a year (see `ReportRule.anchor`). */
@@ -390,11 +439,11 @@ export interface CountyJurisdiction {
    * `rules` (default), `none` (every kind of county-level obligation was checked and there is none) or `unverified`
    * (nothing confirmed, or only some kinds checked; the note says which).
    */
-  status?: "rules" | "none" | "unverified";
+  status: "rules" | "none" | "unverified";
   /** Date (YYYY-MM-DD) the entry was last checked against the county's official pages. */
   checkedOn?: string;
   /** Official page, or pages, backing a `none` status. */
-  sourceUrl?: string | string[];
+  sourceUrl?: string[];
   /** Code of a shared explanation in `data/local-notes.json`; resolved into `note` on load. Not together with `note`. */
   reason?: string;
   note?: string;
@@ -406,7 +455,7 @@ export interface LocalJurisdiction {
   state: string;
   city: string;
   /** Counties the city lies in (informational). */
-  counties?: string[];
+  counties: string[];
   /** Other names that resolve to this jurisdiction (e.g. NYC boroughs). */
   aliases?: string[];
   /**
@@ -415,11 +464,11 @@ export interface LocalJurisdiction {
    * the state's regime and the generic local rules still apply.
    * `unverified`: researched, but no official city page confirmed either way (`items` is empty).
    */
-  status?: "rules" | "none" | "unverified";
+  status: "rules" | "none" | "unverified";
   /** Date (YYYY-MM-DD) the entry was last checked against the city's official pages. */
-  checkedOn?: string;
+  checkedOn: string;
   /** Official page, or pages, backing a `none` status. */
-  sourceUrl?: string | string[];
+  sourceUrl?: string[];
   /** Code of a shared explanation in `data/local-notes.json`; resolved into `note` on load. Not together with `note`. */
   reason?: string;
   /** Short explanation shown to maintainers (for example what the city does require instead). */

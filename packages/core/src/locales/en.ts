@@ -19,6 +19,7 @@ export const en: Catalog = {
     once: "One-time",
     annual: "Annual",
     biennial: "Every two years",
+    every_three_years: "Every three years",
     every_five_years: "Every five years",
     semiannual: "Twice a year",
     quarterly: "Quarterly",

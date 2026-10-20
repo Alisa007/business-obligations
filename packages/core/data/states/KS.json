@@ -44,6 +44,7 @@
   },
   "lpReport": {
     "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=4;BYMONTHDAY=15",
+    "anchor": "year_after_formation",
     "feeDetail": {
       "basis": "flat",
       "amount": 90,
@@ -58,6 +59,7 @@
   },
   "llpReport": {
     "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=4;BYMONTHDAY=15",
+    "anchor": "year_after_formation",
     "feeDetail": {
       "basis": "flat",
       "amount": 90,
@@ -70,13 +72,27 @@
       "note": "Biennial report penalty."
     }
   },
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "Corporate income tax and privilege tax",
+  "wageWithholding": true,
+  "entityTaxDetail": null,
   "salesTax": {
     "statewide": true,
     "permit": "Kansas retailers' sales tax registration",
+    "permitFee": {
+      "basis": "none",
+      "amount": 0,
+      "note": "Kansas charges no fee for a sales tax registration number; a bond may be required later."
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "percentPerMonth": 1,
+      "note": "1% of the tax for each month or part of a month the payment is late, up to 24%.",
+      "rate": 24
+    }
   },
   "localSalesTax": "state_administered",
   "economicNexusUsd": 100000,
@@ -95,6 +111,25 @@
       "andAnnualPayrollOver": 20000
     }
   },
+  "penalties": {
+    "unemployment": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late wage report was found in the state agency's published sources."
+    },
+    "newHire": {
+      "basis": "none",
+      "note": "Kansas imposes no penalty for failing to report new hires (per a payroll reference; confirm with the Department of Labor)."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "flat",
+      "amount": 25000,
+      "note": "If a civil penalty is imposed, twice the annual premium the employer would have paid or $25,000, whichever is greater (K.S.A. 44-532)."
+    }
+  },
   "paidLeave": null,
   "paidSickLeave": null,
   "businessLicense": null,
@@ -105,6 +140,7 @@
     "description": "Many Kansas cities require a local occupation or business license."
   },
   "dbaFiling": "none",
+  "dbaEntitiesFileLocally": false,
   "industry": {
     "contractor": null,
     "realEstate": "Kansas Real Estate Commission",
@@ -127,7 +163,8 @@
     "entityTax": ["https://www.ksrevenue.gov/bustaxtypescorp.html/bustaxtypescorp.html"],
     "laborPosters": [
       "https://www.dol.ks.gov/employers/workplace-laws/posters-in-the-workplace/employers/workplace-laws/posters-in-the-workplace"
-    ]
+    ],
+    "dba": ["https://www.sos.ks.gov/businesses/register-a-business.html"]
   },
   "verification": {
     "checkedOn": "2026-10-13",

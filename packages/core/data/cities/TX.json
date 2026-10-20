@@ -19,7 +19,8 @@
           "amount": 150
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this permit give no late-penalty amount."
         }
       }
     ],
@@ -44,10 +45,12 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "This entry covers the city's local licenses and taxes generally, each of which carries its own late charge in the municipal code; no single amount is stated."
         }
       }
     ],
@@ -71,10 +74,13 @@
         "url": ["https://amarillo.gov/finance/hotel-motel-taxes"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       },
       {
@@ -87,15 +93,19 @@
         "url": ["https://amarillo.gov/finance/hotel-motel-taxes"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.amarillo.gov/building-safety/"]
+    "sourceUrl": ["https://www.amarillo.gov/building-safety/"],
+    "status": "rules"
   },
   {
     "city": "Arlington",
@@ -113,10 +123,12 @@
         "url": ["https://www.arlingtontx.gov/Government/City-Government/City-Secretary/Alcohol-Permits"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The city fee is capped at half the state permit fee, which depends on the permit type."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this permit give no late-penalty amount."
         }
       },
       {
@@ -126,13 +138,17 @@
         "authority": "City of Arlington Health Services",
         "description": "Food establishments in Arlington need the applicable operating permit; the city's current fee schedule lists high-, medium- and low-priority permits as valid for one year from issuance.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://www.arlingtontx.gov/Business/Health-Services/Health-Services/Health-Permits-Fees"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "Operating permits are $425 high priority, $325 medium priority and $300 low priority; new permit and plan review $500, catering $225, commissary kitchen $325 (effective October 1, 2026)."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 125,
+          "note": "Reinstatement fee assessed when the annual renewal fee is not paid by the due date."
         }
       },
       {
@@ -142,6 +158,7 @@
         "authority": "City of Arlington Planning and Development Services",
         "description": "Contractors performing regulated work in Arlington must meet the city's registration requirements; the city offers one-year and two-year registrations with listed fees.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.arlingtontx.gov/files/assets/city/v/1/planning-and-development-services/documents/permitting-amp-inspections/technical-bulletins/registration_requirements_for_contractors.pdf"
         ],
@@ -151,7 +168,8 @@
           "amount": 100
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this permit give no late-penalty amount."
         }
       }
     ],
@@ -175,10 +193,12 @@
         "url": ["https://www.austintexas.gov/development-services/certificate-occupancy"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for occupying without a certificate was found in the city's published building pages."
         }
       },
       {
@@ -188,13 +208,17 @@
         "authority": "Austin Public Health",
         "description": "A food business operating in Austin or Travis County must obtain a Food Enterprise Operating Permit; the facility must pass the required pre-opening inspection before the permit is issued and the business operates.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://www.austintexas.gov/health/programs/fixed-food-establishments"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The permit fee depends on the type and size of the food establishment in the city's fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 120,
+          "note": "Austin Public Health lists a $120 late fee on retail food permits; collection was suspended for a period in 2025."
         }
       }
     ],
@@ -220,7 +244,8 @@
           "amount": 125
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for occupying without a certificate was found in the city's published building pages."
         }
       }
     ],
@@ -247,7 +272,8 @@
           "amount": 100
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for occupying without a certificate was found in the city's published building pages."
         }
       },
       {
@@ -257,13 +283,15 @@
         "authority": "City of Brownsville Health Department",
         "description": "Brownsville states that businesses handling or serving food must contact the health department for a health license before operating.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://www.brownsvilletx.gov/1919/Certificate-of-Occupancy"],
         "appliesTo": ["all"],
         "feeDetail": {
           "basis": "unknown"
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this permit give no late-penalty amount."
         }
       }
     ],
@@ -290,7 +318,8 @@
           "amount": 100
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for occupying without a certificate was found in the city's published building pages."
         }
       },
       {
@@ -305,10 +334,12 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       }
     ],
@@ -331,10 +362,12 @@
         "url": ["https://www.cstx.gov/living-here/building-and-renovating/certificate-of-occupancy/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for occupying without a certificate was found in the city's published building pages."
         }
       }
     ],
@@ -359,10 +392,12 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       },
       {
@@ -375,10 +410,12 @@
         "url": ["https://www.corpuschristitx.gov/media/eu1apumv/ibs-017-co_tco_com.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for occupying without a certificate was found in the city's published building pages."
         }
       }
     ],
@@ -409,14 +446,17 @@
           "min": 141
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 199,
+          "note": "Late reinstatement fee when payment is received after December 31, plus a $158 pre-closure fee if not paid by January 30."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://dallascityhall.com/departments/codecompliance/consumer-health/Pages/food-establishment.aspx"
-    ]
+    ],
+    "status": "rules"
   },
   {
     "city": "Denton",
@@ -438,7 +478,8 @@
           "amount": 75
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for occupying without a certificate was found in the city's published building pages."
         }
       },
       {
@@ -451,10 +492,12 @@
         "url": ["https://www.cityofdenton.com/708/Signs"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       },
       {
@@ -470,7 +513,8 @@
           "basis": "unknown"
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this permit give no late-penalty amount."
         }
       }
     ],
@@ -493,10 +537,12 @@
         "url": ["https://www.cityofedinburg.com/departments/building_safety/permit_center.php"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       }
     ],
@@ -525,7 +571,8 @@
           "basis": "unknown"
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this permit give no late-penalty amount."
         }
       }
     ],
@@ -547,10 +594,12 @@
         "url": ["https://www.fortworthtexas.gov/business/starting-business"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for occupying without a certificate was found in the city's published building pages."
         }
       },
       {
@@ -563,10 +612,12 @@
         "url": ["https://www.fortworthtexas.gov/departments/development-services/permits/commercial"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       }
     ],
@@ -589,10 +640,12 @@
         "url": ["https://www.friscotexas.gov/401/Permit-Applications-Plan-Review-Forms"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       },
       {
@@ -607,10 +660,12 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for occupying without a certificate was found in the city's published building pages."
         }
       }
     ],
@@ -637,7 +692,8 @@
           "amount": 232
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for occupying without a certificate was found in the city's published building pages."
         }
       },
       {
@@ -676,10 +732,12 @@
         "url": ["https://www.gptx.org/Departments/Building-Inspections/Certificate-of-Occupancy"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for occupying without a certificate was found in the city's published building pages."
         }
       },
       {
@@ -689,13 +747,15 @@
         "authority": "City of Grand Prairie Public Health & Environmental Quality",
         "description": "Grand Prairie requires a health permit when applicable for food service, sales, storage or preparation, day care, chemical storage and similar covered uses.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://www.gptx.org/Departments/Building-Inspections/Certificate-of-Occupancy"],
         "appliesTo": ["all"],
         "feeDetail": {
           "basis": "unknown"
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this permit give no late-penalty amount."
         }
       }
     ],
@@ -715,6 +775,7 @@
         "authority": "Houston Health Department",
         "description": "Any operation that stores, prepares, packages, serves or sells food, such as a restaurant, food warehouse, packaged-food store or commissary, needs a Houston Health Department permit. The permit fee runs from $224.44 to $739.44 depending on risk level, and the permit is valid for one year. Renewal invoices are mailed 30 to 45 days before it expires, and the late fee is $66.21. New construction or a remodel also needs plan review and a preoperational inspection first.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://www.houstonpermittingcenter.org/hhd1003"],
         "naics": ["722", "445", "311", "4244", "493120"],
         "appliesTo": ["all"],
@@ -734,6 +795,7 @@
         "authority": "Houston Health Department",
         "description": "A food truck, food trailer, ice cream truck or cart needs a mobile food unit medallion from the Houston Health Department. The fee is $258.00 plus a $112.57 inspection fee, and the medallion is valid for one year. A new unit needs plan review and an inspection first. Renewal invoices are mailed 30 to 45 days before it expires.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://www.houstonpermittingcenter.org/hhd1008"],
         "naics": ["722330", "722515"],
         "appliesTo": ["all"],
@@ -742,11 +804,13 @@
           "amount": 258
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "city": "Irving",
@@ -777,7 +841,8 @@
           "amount": 100
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for occupying without a certificate was found in the city's published building pages."
         }
       }
     ],
@@ -800,10 +865,12 @@
         "url": ["https://www.cityoflaredo.com/departments/building-development-services"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for occupying without a certificate was found in the city's published building pages."
         }
       },
       {
@@ -822,7 +889,8 @@
           "amount": 200
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this permit give no late-penalty amount."
         }
       }
     ],
@@ -845,10 +913,12 @@
         "url": ["https://www.cityoflewisville.com/for-business/building-services/certificate-of-occupancy"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for occupying without a certificate was found in the city's published building pages."
         }
       }
     ],
@@ -882,10 +952,12 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       },
       {
@@ -898,10 +970,12 @@
         "url": ["https://mcallen.net/departments/permits/permits"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       }
     ],
@@ -924,10 +998,12 @@
         "url": ["https://www.mckinneytexas.org/243/Building-Inspections"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for occupying without a certificate was found in the city's published building pages."
         }
       },
       {
@@ -937,13 +1013,16 @@
         "authority": "City of McKinney Fire Marshal's Office",
         "description": "McKinney requires operational fire permits for covered businesses or operations such as hazardous materials, high-piled storage, fuel dispensing, propane cylinder exchange and repair garages; permits must be obtained and inspected before the operation begins.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://www.mckinneytexas.org/1163/Permit-and-Inspection-Fee-Schedule"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       }
     ],
@@ -970,7 +1049,8 @@
           "amount": 125
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for occupying without a certificate was found in the city's published building pages."
         }
       },
       {
@@ -983,10 +1063,12 @@
         "url": ["https://www.cityofmesquite.com/4041/Requesting-A-Fire-Inspection"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       }
     ],
@@ -1009,10 +1091,12 @@
         "url": ["https://midlandtexas.gov/1269/Building-Permits"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       },
       {
@@ -1025,10 +1109,12 @@
         "url": ["https://midlandtexas.gov/1269/Building-Permits"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for occupying without a certificate was found in the city's published building pages."
         }
       }
     ],
@@ -1057,7 +1143,8 @@
           "amount": 50
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this permit give no late-penalty amount."
         }
       },
       {
@@ -1074,7 +1161,8 @@
           "amount": 50
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for occupying without a certificate was found in the city's published building pages."
         }
       }
     ],
@@ -1097,10 +1185,12 @@
         "url": ["https://www.odessa-tx.gov/1222/Building-Inspection-Permits"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for occupying without a certificate was found in the city's published building pages."
         }
       },
       {
@@ -1110,13 +1200,15 @@
         "authority": "City of Odessa Building Inspection",
         "description": "Odessa lists contractor registration for building, remodeling, electrical, plumbing, mechanical and water-well contractors among its municipal permits and licenses.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://www.odessa-tx.gov/1249/PermitsLicenses"],
         "appliesTo": ["all"],
         "feeDetail": {
           "basis": "unknown"
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this permit give no late-penalty amount."
         }
       }
     ],
@@ -1139,10 +1231,12 @@
         "url": ["https://www.pasadenatx.gov/2002/Fee-Schedule"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for occupying without a certificate was found in the city's published building pages."
         }
       }
     ],
@@ -1165,10 +1259,12 @@
         "url": ["https://www.pearlandtx.gov/departments/community-development/permits"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       },
       {
@@ -1181,10 +1277,12 @@
         "url": ["https://www.pearlandtx.gov/departments/community-development/permits"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for occupying without a certificate was found in the city's published building pages."
         }
       }
     ],
@@ -1207,10 +1305,12 @@
         "url": ["https://www.plano.gov/commercial-permits"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       },
       {
@@ -1223,10 +1323,13 @@
         "url": ["https://www.plano.gov/food-permits"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The permit fee depends on the establishment type, from $240 for Type I to $640 for Type IV."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10,
+          "note": "The city fee schedule: 10% of the permit fee for renewals 1 to 30 days past expiration and 20% of the fee, up to $100, for 31 to 60 days."
         }
       }
     ],
@@ -1255,7 +1358,8 @@
           "amount": 100
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for occupying without a certificate was found in the city's published building pages."
         }
       }
     ],
@@ -1289,10 +1393,12 @@
         "url": ["https://www.sanangelo.gov/DocumentCenter/View/191"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       }
     ],
@@ -1324,10 +1430,12 @@
         "url": ["https://www.sugarlandtx.gov/2541/Frequently-Asked-Questions"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       },
       {
@@ -1337,13 +1445,17 @@
         "authority": "City of Sugar Land Food Inspection Program",
         "description": "Sugar Land's Food Inspection Program permits and inspects temporary, mobile and fixed food establishments operating in the city.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://www.sugarlandtx.gov/340/Business"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The permit fee depends on risk level: $258, $515 or $773 in the city's FY 2026 schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 100,
+          "note": "The city's FY 2026 food establishment fee schedule lists a $100 permit late fee."
         }
       }
     ],
@@ -1368,10 +1480,12 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for occupying without a certificate was found in the city's published building pages."
         }
       }
     ],
@@ -1398,10 +1512,12 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for occupying without a certificate was found in the city's published building pages."
         }
       },
       {
@@ -1416,10 +1532,12 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       }
     ],
@@ -1444,10 +1562,13 @@
         "url": ["https://www.wichitafallstx.gov/1404/Permit-Applications"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 30,
+          "note": "The City Clerk's application sheet lists $30 per permit and $30 for each additional location."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this permit give no late-penalty amount."
         }
       },
       {
@@ -1457,13 +1578,15 @@
         "authority": "City of Wichita Falls Building and Code Administration",
         "description": "Wichita Falls contractor registration expires one year from issuance; the application warns that work requiring a permit may not begin before permit issuance or occupancy before the required certificate of occupancy.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://www.wichitafallstx.gov/DocumentCenter/View/20292"],
         "appliesTo": ["all"],
         "feeDetail": {
           "basis": "unknown"
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this permit give no late-penalty amount."
         }
       }
     ],
@@ -1485,15 +1608,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Comal"]
   },
   {
     "city": "League City",
@@ -1510,15 +1636,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Galveston"]
   },
   {
     "city": "Conroe",
@@ -1535,15 +1664,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Montgomery"]
   },
   {
     "city": "Georgetown",
@@ -1560,15 +1692,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Williamson"]
   },
   {
     "city": "Temple",
@@ -1585,15 +1720,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Bell"]
   },
   {
     "city": "Bryan",
@@ -1610,15 +1748,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Brazos"]
   },
   {
     "city": "Leander",
@@ -1635,15 +1776,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Williamson", "Travis"]
   },
   {
     "city": "Baytown",
@@ -1660,15 +1804,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Harris", "Chambers"]
   },
   {
     "city": "Mansfield",
@@ -1676,7 +1823,7 @@
     "reason": "city-license-unconfirmed",
     "items": [
       {
-        "id": "mansfield.local-licenses",
+        "id": "mansfield-tx.local-licenses",
         "title": "Review applicable local licenses and permits in Mansfield",
         "category": "license",
         "authority": "Mansfield local licensing authority",
@@ -1685,15 +1832,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Tarrant"]
   },
   {
     "city": "Longview",
@@ -1710,15 +1860,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Gregg"]
   },
   {
     "city": "Pharr",
@@ -1735,15 +1888,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Hidalgo"]
   },
   {
     "city": "Flower Mound",
@@ -1760,15 +1916,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Denton"]
   },
   {
     "city": "Cedar Park",
@@ -1785,15 +1944,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Williamson"]
   },
   {
     "city": "San Marcos",
@@ -1810,15 +1972,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Hays"]
   },
   {
     "city": "Missouri City",
@@ -1835,15 +2000,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Fort Bend"]
   },
   {
     "city": "Harlingen",
@@ -1860,15 +2028,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Cameron"]
   },
   {
     "city": "North Richland Hills",
@@ -1885,15 +2056,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Tarrant"]
   },
   {
     "city": "Kyle",
@@ -1910,15 +2084,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Hays"]
   },
   {
     "city": "Pflugerville",
@@ -1935,15 +2112,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Travis"]
   },
   {
     "city": "Rowlett",
@@ -1960,15 +2140,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Dallas"]
   },
   {
     "city": "Victoria",
@@ -1985,15 +2168,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Victoria"]
   },
   {
     "city": "Fulshear",
@@ -2010,15 +2196,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Fort Bend"]
   },
   {
     "city": "Celina",
@@ -2035,15 +2224,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Collin"]
   },
   {
     "city": "Wylie",
@@ -2060,15 +2252,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Dallas"]
   },
   {
     "city": "Little Elm",
@@ -2085,15 +2280,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Denton"]
   },
   {
     "city": "Euless",
@@ -2110,15 +2308,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Tarrant"]
   },
   {
     "city": "Texas City",
@@ -2135,15 +2336,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Galveston"]
   },
   {
     "city": "Burleson",
@@ -2160,15 +2364,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Johnson"]
   },
   {
     "city": "DeSoto",
@@ -2185,15 +2392,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Dallas"]
   },
   {
     "city": "Port Arthur",
@@ -2210,15 +2420,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Jefferson"]
   },
   {
     "city": "Rockwall",
@@ -2235,15 +2448,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Rockwall"]
   },
   {
     "city": "Galveston",
@@ -2260,15 +2476,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Galveston"]
   },
   {
     "city": "Sherman",
@@ -2285,15 +2504,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Grayson"]
   },
   {
     "city": "Grapevine",
@@ -2310,15 +2532,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Tarrant"]
   },
   {
     "city": "Waxahachie",
@@ -2335,15 +2560,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Ellis"]
   },
   {
     "city": "Cedar Hill",
@@ -2360,15 +2588,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Dallas"]
   },
   {
     "city": "Huntsville",
@@ -2385,15 +2616,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Walker"]
   },
   {
     "city": "Bedford",
@@ -2410,15 +2644,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Tarrant"]
   },
   {
     "city": "Midlothian",
@@ -2435,15 +2672,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Ellis"]
   },
   {
     "city": "The Colony",
@@ -2460,15 +2700,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Denton"]
   },
   {
     "city": "Keller",
@@ -2485,15 +2728,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Tarrant"]
   },
   {
     "city": "Hutto",
@@ -2510,15 +2756,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Williamson"]
   },
   {
     "city": "Schertz",
@@ -2535,15 +2784,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Guadalupe"]
   },
   {
     "city": "Prosper",
@@ -2560,15 +2812,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Collin"]
   },
   {
     "city": "Haltom City",
@@ -2585,15 +2840,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Tarrant"]
   },
   {
     "city": "Weslaco",
@@ -2610,15 +2868,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Hidalgo"]
   },
   {
     "city": "Princeton",
@@ -2635,15 +2896,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Collin"]
   },
   {
     "city": "Rosenberg",
@@ -2660,15 +2924,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Fort Bend"]
   },
   {
     "city": "Forney",
@@ -2685,15 +2952,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Kaufman"]
   },
   {
     "city": "Coppell",
@@ -2710,15 +2980,18 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Dallas"]
   },
   {
     "city": "Friendswood",
@@ -2735,14 +3008,17 @@
         "url": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"]
+    "sourceUrl": ["https://www.sos.state.tx.us/corp/namefilingsfaqs.shtml"],
+    "counties": ["Galveston"]
   }
 ]

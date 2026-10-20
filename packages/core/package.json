@@ -20,16 +20,17 @@
     "COVERAGE.md"
   ],
   "scripts": {
-    "build": "tsup",
+    "build": "npm run check:json-keys && tsup",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:update": "vitest run -u",
-    "check": "npm run typecheck && npm test",
+    "check": "npm run check:json-keys && npm run typecheck && npm test",
     "prepack": "node scripts/prepack.mjs",
     "prepublishOnly": "npm run check && npm run build && npm run size",
     "coverage": "node scripts/coverage.mjs",
     "size": "node scripts/size.mjs",
     "check:links": "node scripts/check-urls.mjs --data",
+    "check:json-keys": "node scripts/check-json-keys.mjs",
     "report:stale": "node scripts/stale-report.mjs"
   },
   "devDependencies": {

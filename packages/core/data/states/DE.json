@@ -57,13 +57,25 @@
       "note": "Plus 1.5% per month interest on the tax and penalty"
     }
   },
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "Corporate income tax and franchise tax",
+  "wageWithholding": true,
+  "entityTaxDetail": null,
   "salesTax": {
     "statewide": false,
     "permit": "Delaware business license (gross receipts tax)",
+    "permitFee": {
+      "basis": "none",
+      "amount": 0,
+      "note": "The state has no statewide sales tax, so there is no sales tax permit fee."
+    },
     "agency": null,
-    "alternative": "Delaware has no sales tax; businesses pay a gross receipts tax through the state business license."
+    "alternative": "Delaware has no sales tax; businesses pay a gross receipts tax through the state business license.",
+    "penalty": {
+      "basis": "none",
+      "note": "The state has no statewide sales tax, so there is no late sales tax return penalty."
+    }
   },
   "localSalesTax": "none",
   "economicNexusUsd": null,
@@ -78,6 +90,24 @@
     "stateFund": false,
     "trigger": {
       "minEmployees": 1
+    }
+  },
+  "penalties": {
+    "unemployment": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late wage report was found in the state agency's published sources."
+    },
+    "newHire": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late new hire report was found; secondary sources conflict or give only the federal $25 and $500 ceilings."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for lacking required coverage was found; secondary sources conflict."
     }
   },
   "paidLeave": {
@@ -115,6 +145,7 @@
     "description": "Counties and some municipalities require licenses in addition to the state license."
   },
   "dbaFiling": "state",
+  "dbaEntitiesFileLocally": false,
   "dbaAuthority": {
     "name": "Delaware Division of Revenue",
     "url": [

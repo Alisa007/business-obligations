@@ -53,13 +53,27 @@
       "note": "Statutory late fee that the office cannot waive"
     }
   },
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "Corporation net income tax",
+  "wageWithholding": true,
+  "entityTaxDetail": null,
   "salesTax": {
     "statewide": true,
     "permit": "West Virginia business registration certificate (includes sales tax)",
+    "permitFee": {
+      "basis": "flat",
+      "amount": 30,
+      "note": "Business registration fee for each business location; qualifying nonprofits and government bodies are exempt."
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "percentPerMonth": 5,
+      "note": "5% of the tax per month or part of a month the return is late, up to 25%; late payment adds 0.5% a month.",
+      "rate": 25
+    }
   },
   "localSalesTax": "state_administered",
   "economicNexusUsd": 100000,
@@ -74,6 +88,30 @@
     "stateFund": false,
     "trigger": {
       "minEmployees": 1
+    }
+  },
+  "penalties": {
+    "unemployment": {
+      "basis": "percent",
+      "note": "Greater of $50 or 10% of the contribution due, up to $500, for late payment, plus 1% monthly interest (W. Va. Code 21A-5-17).",
+      "rate": 10,
+      "min": 50,
+      "max": 500
+    },
+    "newHire": {
+      "basis": "flat",
+      "amount": 25,
+      "note": "Up to $25 per failure to report, or up to $500 for a conspiracy (W. Va. Code 48-18-125)."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "range",
+      "note": "Administrative fine of up to $10,000 from the Insurance Commissioner for an uninsured employer.",
+      "min": 0,
+      "max": 10000
     }
   },
   "paidLeave": null,
@@ -102,6 +140,7 @@
     "description": "West Virginia municipalities levy B&O taxes and issue local business licenses."
   },
   "dbaFiling": "state",
+  "dbaEntitiesFileLocally": false,
   "industry": {
     "contractor": "West Virginia Contractor Licensing Board",
     "realEstate": "West Virginia Real Estate Commission",

@@ -10,10 +10,15 @@
     "appliesTo": ["all"],
     "checkedOn": "2026-10-16",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "none",
+      "amount": 0,
+      "note": "There is no fee to file or register."
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "per_item",
+      "note": "Willful failure to report: $100 a day up to $5,000, plus 10% annual interest on property delivered late; willful failure to deliver adds 25% of the value (Okla. Stat. title 60, section 680).",
+      "perUnit": 100,
+      "max": 5000
     }
   }
 ]

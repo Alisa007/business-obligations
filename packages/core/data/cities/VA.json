@@ -14,19 +14,25 @@
         "url": ["https://alexandriava.gov/taxes/business-license-tax"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The license tax is based on the business's gross receipts and classification, so no single amount applies."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10,
+          "min": 10,
+          "note": "The city's Business Tax page: the greater of $10 or 10% of the tax for late payment, plus interest."
         }
       }
-    ]
+    ],
+    "status": "rules",
+    "counties": ["City of Alexandria", "Fairfax"]
   },
   {
     "city": "Chesapeake",
     "status": "rules",
     "note": "A March 1 BPOL renewal is described by third-party sources only; the city's own page was not confirmed.",
-    "counties": ["Chesapeake"],
+    "counties": ["Chesapeake (city)"],
     "items": [
       {
         "id": "chesapeake.local-licenses",
@@ -38,10 +44,12 @@
         "url": ["https://www.cityofchesapeake.net/211/Opening-Operating-a-Business---Tax-Licen"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "This entry covers the city's local licenses and taxes generally, each of which carries its own late charge in the municipal code; no single amount is stated."
         }
       }
     ],
@@ -63,13 +71,18 @@
         "url": ["https://www.hampton.gov/563/Business-Licenses"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The license tax is based on the business's gross receipts and classification, so no single amount applies."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10,
+          "note": "Virginia rules let a locality impose a 10% penalty for late filing or payment of the license tax; the city's own pages were not read for a different rate."
         }
       }
-    ]
+    ],
+    "status": "rules",
+    "counties": ["Hampton (city)"]
   },
   {
     "city": "Newport News",
@@ -86,13 +99,18 @@
         "url": ["https://www.nnva.gov/579/Business-License-Tax"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The license tax is based on the business's gross receipts and classification, so no single amount applies."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10,
+          "note": "Virginia rules let a locality impose a 10% penalty for late filing or payment of the license tax; the city's own pages were not read for a different rate."
         }
       }
-    ]
+    ],
+    "status": "rules",
+    "counties": ["Newport News (city)"]
   },
   {
     "city": "Norfolk",
@@ -109,17 +127,23 @@
         "url": ["https://norfolk.gov/4169/Business-License-Renewals"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The license tax is based on the business's gross receipts and classification, so no single amount applies."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10,
+          "min": 10,
+          "note": "The city's renewal page: the greater of $10 or 10% of the tax if not renewed by the March 1 due date, plus interest."
         }
       }
-    ]
+    ],
+    "status": "rules",
+    "counties": ["Norfolk (city)"]
   },
   {
     "city": "Richmond",
-    "counties": ["Richmond"],
+    "counties": ["City of Richmond"],
     "checkedOn": "2026-10-18",
     "sourceUrl": ["https://rva.gov/finance/bpol-tax"],
     "items": [
@@ -133,13 +157,18 @@
         "url": ["https://rva.gov/finance/bpol-tax"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "Based on the business's gross receipts."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10,
+          "min": 10,
+          "note": "10% or $10, whichever is greater, plus interest."
         }
       }
-    ]
+    ],
+    "status": "rules"
   },
   {
     "city": "Roanoke",
@@ -156,13 +185,18 @@
         "url": ["https://www.roanokeva.gov/3170/Business-License-Information"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The license tax is based on the business's gross receipts and classification, so no single amount applies."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10,
+          "note": "Virginia rules let a locality impose a 10% penalty for late filing or payment of the license tax; the city's own pages were not read for a different rate."
         }
       }
-    ]
+    ],
+    "status": "rules",
+    "counties": ["Roanoke (city)", "Roanoke", "Botetourt", "Montgomery"]
   },
   {
     "city": "Virginia Beach",
@@ -179,13 +213,18 @@
         "url": ["https://cor.virginiabeach.gov/businesses"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The license tax is based on the business's gross receipts and classification, so no single amount applies."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10,
+          "note": "The Commissioner of the Revenue says penalty and interest may be applied after the March 1 due date without stating a rate; Virginia rules allow a 10% penalty."
         }
       }
-    ]
+    ],
+    "status": "rules",
+    "counties": ["Virginia Beach (city)", "City of Suffolk"]
   },
   {
     "city": "Suffolk",
@@ -202,15 +241,18 @@
         "url": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"]
+    "sourceUrl": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"],
+    "counties": ["City of Suffolk"]
   },
   {
     "city": "Portsmouth",
@@ -227,15 +269,18 @@
         "url": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"]
+    "sourceUrl": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"],
+    "counties": ["Portsmouth (city)"]
   },
   {
     "city": "Lynchburg",
@@ -252,15 +297,18 @@
         "url": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"]
+    "sourceUrl": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"],
+    "counties": ["Lynchburg (city)", "Campbell"]
   },
   {
     "city": "Harrisonburg",
@@ -277,15 +325,18 @@
         "url": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"]
+    "sourceUrl": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"],
+    "counties": ["City of Harrisonburg", "Rockingham"]
   },
   {
     "city": "Leesburg",
@@ -302,15 +353,18 @@
         "url": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"]
+    "sourceUrl": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"],
+    "counties": ["Loudoun"]
   },
   {
     "city": "Blacksburg",
@@ -327,15 +381,18 @@
         "url": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"]
+    "sourceUrl": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"],
+    "counties": ["Montgomery"]
   },
   {
     "city": "Charlottesville",
@@ -352,15 +409,18 @@
         "url": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"]
+    "sourceUrl": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"],
+    "counties": ["Albemarle", "Charlottesville (city)"]
   },
   {
     "city": "Manassas",
@@ -377,15 +437,18 @@
         "url": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"]
+    "sourceUrl": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"],
+    "counties": ["Manassas (city)", "Manassas Park (city)"]
   },
   {
     "city": "Danville",
@@ -393,23 +456,26 @@
     "reason": "city-license-unconfirmed",
     "items": [
       {
-        "id": "danville.local-licenses",
+        "id": "danville-va.local-licenses",
         "title": "Review applicable local licenses and permits in Danville",
         "category": "license",
         "authority": "Danville local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
-        "frequency": "once",
         "url": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
-        }
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
+        },
+        "rrule": "FREQ=YEARLY;BYMONTH=7;BYMONTHDAY=1"
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"]
+    "sourceUrl": ["https://www.scc.virginia.gov/businesses/business-faqs/fictitious-names/"],
+    "counties": ["Danville (city)"]
   }
 ]

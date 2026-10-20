@@ -10,10 +10,14 @@
     "appliesTo": ["all"],
     "checkedOn": "2026-10-16",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "none",
+      "amount": 0,
+      "note": "There is no fee to file or register."
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "per_item",
+      "note": "Civil penalty of $100 a day for knowingly failing to report by the deadline, and another $100 a day for failing to file on request within four months (Revised Code section 169.12).",
+      "perUnit": 100
     }
   },
   {
@@ -27,10 +31,14 @@
     "appliesTo": ["all"],
     "checkedOn": "2026-10-16",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "none",
+      "amount": 0,
+      "note": "There is no fee to file or register."
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "per_item",
+      "note": "For intentional or reckless violations: up to $1,000 a day for the first 60 days, $5,000 a day for days 61 to 90 and $10,000 a day after that (Revised Code section 1349.192).",
+      "perUnit": 1000
     }
   }
 ]

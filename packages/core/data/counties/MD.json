@@ -22,7 +22,8 @@
         }
       }
     ],
-    "checkedOn": "2026-10-19"
+    "checkedOn": "2026-10-19",
+    "status": "rules"
   },
   {
     "county": "Anne Arundel",
@@ -48,22 +49,27 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10,
+          "note": "10% penalty plus 0.5% interest for each month or part of a month."
         }
       }
     ],
     "checkedOn": "2026-10-16",
-    "note": "Only the lodging tax was checked for Anne Arundel; its personal property return is filed with the State Department of Assessments and Taxation (Form 1, due April 15) and trader's licenses come from the circuit court clerk."
+    "note": "Only the lodging tax was checked for Anne Arundel; its personal property return is filed with the State Department of Assessments and Taxation (Form 1, due April 15) and trader's licenses come from the circuit court clerk.",
+    "status": "rules"
   },
   {
     "county": "Baltimore",
     "sourceUrl": ["https://dat.maryland.gov/SDAT%20Forms/PPR_Forms/2024_Form_1_Manual.pdf"],
     "items": [
       {
-        "id": "baltimore.traders-license",
+        "id": "baltimore-county-md.traders-license",
         "title": "Obtain and renew Baltimore County trader's license from the Baltimore County Clerk of the Circuit Court",
         "category": "license",
         "authority": "Baltimore County Clerk of the Circuit Court",
@@ -82,7 +88,8 @@
         }
       }
     ],
-    "checkedOn": "2026-10-19"
+    "checkedOn": "2026-10-19",
+    "status": "rules"
   },
   {
     "county": "Baltimore (city)",
@@ -106,7 +113,9 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
           "basis": "unknown"
@@ -114,7 +123,8 @@
       }
     ],
     "checkedOn": "2026-10-16",
-    "note": "Only the lodging tax was checked for Baltimore (city); its personal property return is filed with the State Department of Assessments and Taxation (Form 1, due April 15) and trader's licenses come from the circuit court clerk."
+    "note": "Only the lodging tax was checked for Baltimore (city); its personal property return is filed with the State Department of Assessments and Taxation (Form 1, due April 15) and trader's licenses come from the circuit court clerk.",
+    "status": "rules"
   },
   {
     "county": "Calvert",
@@ -139,7 +149,8 @@
         }
       }
     ],
-    "checkedOn": "2026-10-19"
+    "checkedOn": "2026-10-19",
+    "status": "rules"
   },
   {
     "county": "Caroline",
@@ -164,7 +175,8 @@
         }
       }
     ],
-    "checkedOn": "2026-10-19"
+    "checkedOn": "2026-10-19",
+    "status": "rules"
   },
   {
     "county": "Carroll",
@@ -189,7 +201,8 @@
         }
       }
     ],
-    "checkedOn": "2026-10-19"
+    "checkedOn": "2026-10-19",
+    "status": "rules"
   },
   {
     "county": "Cecil",
@@ -214,7 +227,8 @@
         }
       }
     ],
-    "checkedOn": "2026-10-19"
+    "checkedOn": "2026-10-19",
+    "status": "rules"
   },
   {
     "county": "Charles",
@@ -239,7 +253,8 @@
         }
       }
     ],
-    "checkedOn": "2026-10-19"
+    "checkedOn": "2026-10-19",
+    "status": "rules"
   },
   {
     "county": "Dorchester",
@@ -264,7 +279,8 @@
         }
       }
     ],
-    "checkedOn": "2026-10-19"
+    "checkedOn": "2026-10-19",
+    "status": "rules"
   },
   {
     "county": "Frederick",
@@ -288,15 +304,20 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10,
+          "note": "10% penalty after a month plus 0.5% monthly interest."
         }
       }
     ],
     "checkedOn": "2026-10-16",
-    "note": "Only the lodging tax was checked for Frederick; its personal property return is filed with the State Department of Assessments and Taxation (Form 1, due April 15) and trader's licenses come from the circuit court clerk."
+    "note": "Only the lodging tax was checked for Frederick; its personal property return is filed with the State Department of Assessments and Taxation (Form 1, due April 15) and trader's licenses come from the circuit court clerk.",
+    "status": "rules"
   },
   {
     "county": "Garrett",
@@ -321,7 +342,8 @@
         }
       }
     ],
-    "checkedOn": "2026-10-19"
+    "checkedOn": "2026-10-19",
+    "status": "rules"
   },
   {
     "county": "Harford",
@@ -345,15 +367,20 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10,
+          "note": "10% penalty plus 0.5% monthly interest (County Code 123-67C)."
         }
       }
     ],
     "checkedOn": "2026-10-16",
-    "note": "Only the lodging tax was checked for Harford; its personal property return is filed with the State Department of Assessments and Taxation (Form 1, due April 15) and trader's licenses come from the circuit court clerk."
+    "note": "Only the lodging tax was checked for Harford; its personal property return is filed with the State Department of Assessments and Taxation (Form 1, due April 15) and trader's licenses come from the circuit court clerk.",
+    "status": "rules"
   },
   {
     "county": "Howard",
@@ -379,7 +406,8 @@
         }
       }
     ],
-    "checkedOn": "2026-10-19"
+    "checkedOn": "2026-10-19",
+    "status": "rules"
   },
   {
     "county": "Kent",
@@ -404,7 +432,8 @@
         }
       }
     ],
-    "checkedOn": "2026-10-19"
+    "checkedOn": "2026-10-19",
+    "status": "rules"
   },
   {
     "county": "Montgomery",
@@ -430,15 +459,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% a month up to 25%, plus 1% monthly interest."
         }
       }
     ],
     "checkedOn": "2026-10-19",
-    "note": "Only the lodging tax was checked for Montgomery; its personal property return is filed with the State Department of Assessments and Taxation (Form 1, due April 15) and trader's licenses come from the circuit court clerk."
+    "note": "Only the lodging tax was checked for Montgomery; its personal property return is filed with the State Department of Assessments and Taxation (Form 1, due April 15) and trader's licenses come from the circuit court clerk.",
+    "status": "rules"
   },
   {
     "county": "Prince George's",
@@ -464,7 +499,8 @@
         }
       }
     ],
-    "checkedOn": "2026-10-19"
+    "checkedOn": "2026-10-19",
+    "status": "rules"
   },
   {
     "county": "Queen Anne's",
@@ -489,7 +525,8 @@
         }
       }
     ],
-    "checkedOn": "2026-10-19"
+    "checkedOn": "2026-10-19",
+    "status": "rules"
   },
   {
     "county": "Somerset",
@@ -514,7 +551,8 @@
         }
       }
     ],
-    "checkedOn": "2026-10-19"
+    "checkedOn": "2026-10-19",
+    "status": "rules"
   },
   {
     "county": "St. Mary's",
@@ -539,7 +577,8 @@
         }
       }
     ],
-    "checkedOn": "2026-10-19"
+    "checkedOn": "2026-10-19",
+    "status": "rules"
   },
   {
     "county": "Talbot",
@@ -564,7 +603,8 @@
         }
       }
     ],
-    "checkedOn": "2026-10-19"
+    "checkedOn": "2026-10-19",
+    "status": "rules"
   },
   {
     "county": "Washington",
@@ -589,7 +629,8 @@
         }
       }
     ],
-    "checkedOn": "2026-10-19"
+    "checkedOn": "2026-10-19",
+    "status": "rules"
   },
   {
     "county": "Wicomico",
@@ -614,7 +655,8 @@
         }
       }
     ],
-    "checkedOn": "2026-10-19"
+    "checkedOn": "2026-10-19",
+    "status": "rules"
   },
   {
     "county": "Worcester",
@@ -639,6 +681,7 @@
         }
       }
     ],
-    "checkedOn": "2026-10-19"
+    "checkedOn": "2026-10-19",
+    "status": "rules"
   }
 ]

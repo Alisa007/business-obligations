@@ -15,13 +15,17 @@
         "url": ["https://yourvoice.aurora.il.us/aurora-business-registration"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "The city's page says there is no cost to register a business."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
-    ]
+    ],
+    "status": "rules"
   },
   {
     "city": "Chicago",
@@ -36,13 +40,16 @@
         "authority": "Chicago Department of Business Affairs and Consumer Protection (BACP)",
         "description": "Most Chicago businesses need a license for their activity and location, with zoning and inspection sign-off where applicable.",
         "rrule": "FREQ=YEARLY;INTERVAL=2",
+        "anchor": "license_issued",
         "url": ["https://webapps1.chicago.gov/AccountServices/login.jsp?siteID=2"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the license type; the city sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       },
       {
@@ -55,13 +62,19 @@
         "url": ["https://www.chicago.gov/city/en/depts/bacp.html"],
         "appliesTo": ["employees"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "This is a compliance duty with no filing fee."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "range",
+          "min": 1000,
+          "max": 3000,
+          "note": "Law-firm summaries of the 2023 ordinance: fines of $1,000 to $3,000 per offense for most violations and $500 to $1,000 for notice violations, with each day counted separately."
         }
       }
-    ]
+    ],
+    "status": "rules"
   },
   {
     "city": "Joliet",
@@ -77,10 +90,12 @@
         "url": ["https://www.joliet.gov/Government/Departments/City-Clerks-Office/Business-Services"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "This entry covers the city's local licenses and taxes generally, each of which carries its own late charge in the municipal code; no single amount is stated."
         }
       }
     ],
@@ -105,10 +120,12 @@
         "url": ["https://www.naperville.il.us/businesses/development-resources/business-guide/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "This entry covers the city's local licenses and taxes generally, each of which carries its own late charge in the municipal code; no single amount is stated."
         }
       }
     ],
@@ -131,10 +148,12 @@
         "url": ["https://peoriagov.org/269/Permit-License-Event"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "This entry covers the city's local licenses and taxes generally, each of which carries its own late charge in the municipal code; no single amount is stated."
         }
       }
     ],
@@ -157,7 +176,7 @@
     "counties": ["Sangamon"],
     "items": [
       {
-        "id": "springfield.local-licenses",
+        "id": "springfield-il.local-licenses",
         "title": "Review applicable local licenses and permits in Springfield",
         "category": "license",
         "authority": "Springfield local licensing authority",
@@ -166,10 +185,12 @@
         "url": ["https://www.cityclerk.springfield.il.us/Forms/2025/Chapter110SecondhandDealers.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "This entry covers the city's local licenses and taxes generally, each of which carries its own late charge in the municipal code; no single amount is stated."
         }
       }
     ],
@@ -193,17 +214,20 @@
         "frequency": "once",
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
-    ]
+    ],
+    "counties": ["Kane"]
   },
   {
     "city": "Champaign",
@@ -220,17 +244,20 @@
         "url": ["https://champaignil.gov/planning/business-services/starting-your-business/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "This entry covers the city's local licenses and taxes generally, each of which carries its own late charge in the municipal code; no single amount is stated."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
-    ]
+    ],
+    "counties": ["Champaign"]
   },
   {
     "city": "Waukegan",
@@ -243,21 +270,24 @@
         "category": "license",
         "authority": "Waukegan local licensing authority",
         "description": "Waukegan requires businesses to obtain a business license and occupancy permit before opening; the License Department handles general, rental, day-care, outdoor-dining, mobile-vendor, special-event, parade, gaming, and liquor licenses, and annual renewals are due by December 31.",
-        "frequency": "once",
         "url": ["https://www.waukeganil.gov/1160/Business-License"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
-        }
+          "basis": "not_stated",
+          "note": "This entry covers the city's local licenses and taxes generally, each of which carries its own late charge in the municipal code; no single amount is stated."
+        },
+        "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=31"
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
-    ]
+    ],
+    "counties": ["Lake"]
   },
   {
     "city": "Cicero",
@@ -276,17 +306,20 @@
         "frequency": "once",
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
-    ]
+    ],
+    "counties": ["Cook"]
   },
   {
     "city": "Bloomington",
@@ -294,7 +327,7 @@
     "reason": "city-license-unconfirmed",
     "items": [
       {
-        "id": "bloomington.local-licenses",
+        "id": "bloomington-il.local-licenses",
         "title": "Review applicable local licenses and permits in Bloomington",
         "category": "license",
         "authority": "Bloomington local licensing authority",
@@ -305,17 +338,20 @@
         "frequency": "once",
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
-    ]
+    ],
+    "counties": ["McLean"]
   },
   {
     "city": "Schaumburg",
@@ -328,21 +364,24 @@
         "category": "license",
         "authority": "Schaumburg local licensing authority",
         "description": "Schaumburg requires persons and entities conducting business or an occupation in the village to obtain and display a valid business license; licenses are issued on a calendar-year basis and expire December 31, renewals are annual, and commercial businesses may need a Certificate of Occupancy before licensing.",
-        "frequency": "once",
         "url": ["https://www.villageofschaumburg.com/i-want-to/pay/business-license"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
-        }
+          "basis": "not_stated",
+          "note": "This entry covers the city's local licenses and taxes generally, each of which carries its own late charge in the municipal code; no single amount is stated."
+        },
+        "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=31"
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
-    ]
+    ],
+    "counties": ["Cook"]
   },
   {
     "city": "Evanston",
@@ -355,21 +394,25 @@
         "category": "license",
         "authority": "Evanston local licensing authority",
         "description": "Evanston requires all for-profit businesses, nonprofits, and home-based occupations operating within city limits to complete annual business registration; brick-and-mortar registration is $75, home-based and nonprofit registration is free, registration is due by April 1, and food businesses use a Food Establishment License instead.",
-        "frequency": "once",
         "url": ["https://www.cityofevanston.org/business/business_registration.php"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 75,
+          "note": "Brick-and-mortar registration; home-based and nonprofit registration is free."
         },
         "penalty": {
-          "basis": "unknown"
-        }
+          "basis": "not_stated",
+          "note": "This entry covers the city's local licenses and taxes generally, each of which carries its own late charge in the municipal code; no single amount is stated."
+        },
+        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1"
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
-    ]
+    ],
+    "counties": ["Cook"]
   },
   {
     "city": "Arlington Heights",
@@ -386,17 +429,20 @@
         "url": ["https://vah.com/Business/Business%20Resource%20Guide.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "This entry covers the city's local licenses and taxes generally, each of which carries its own late charge in the municipal code; no single amount is stated."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
-    ]
+    ],
+    "counties": ["Cook"]
   },
   {
     "city": "Bolingbrook",
@@ -415,17 +461,20 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "This entry covers the city's local licenses and taxes generally, each of which carries its own late charge in the municipal code; no single amount is stated."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
-    ]
+    ],
+    "counties": ["Will"]
   },
   {
     "city": "Decatur",
@@ -433,7 +482,7 @@
     "reason": "city-license-unconfirmed",
     "items": [
       {
-        "id": "decatur.local-licenses",
+        "id": "decatur-il.local-licenses",
         "title": "Review applicable local licenses and permits in Decatur",
         "category": "license",
         "authority": "Decatur local licensing authority",
@@ -442,17 +491,20 @@
         "url": ["https://www.decaturil.gov/204/License-Application-Forms"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "This entry covers the city's local licenses and taxes generally, each of which carries its own late charge in the municipal code; no single amount is stated."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
-    ]
+    ],
+    "counties": ["Macon"]
   },
   {
     "city": "Skokie",
@@ -469,17 +521,20 @@
         "url": ["https://www.skokie.org/213/Certificates-of-Occupancy-and-Business-L"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "This entry covers the city's local licenses and taxes generally, each of which carries its own late charge in the municipal code; no single amount is stated."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
-    ]
+    ],
+    "counties": ["Cook"]
   },
   {
     "city": "Palatine",
@@ -493,20 +548,24 @@
         "authority": "Palatine local licensing authority",
         "description": "Palatine requires every business in the village, unless exempt by state law, to obtain a business license; zoning confirmation precedes application, fees vary by license type and size, required inspections must pass before issuance, and 2026 renewals were due January 31 with a 50% penalty after February 1.",
         "url": ["https://palatine.il.us/582/Business-Licenses"],
-        "frequency": "once",
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
-        }
+          "basis": "percent",
+          "rate": 50,
+          "note": "50% after February 1."
+        },
+        "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=31"
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
-    ]
+    ],
+    "counties": ["Cook"]
   },
   {
     "city": "Des Plaines",
@@ -519,21 +578,25 @@
         "category": "license",
         "authority": "Des Plaines local licensing authority",
         "description": "Des Plaines issues annual business licenses beginning January 1 and expiring December 31; applications and renewals are due by December 15, fees are paid when filed, a 25% late penalty applies after 30 days, and zoning, building, fire, and health compliance may be required.",
-        "frequency": "once",
         "url": ["https://codelibrary.amlegal.com/codes/desplainesil/latest/desplaines_il/0-0-0-1821"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
-        }
+          "basis": "percent",
+          "rate": 25,
+          "note": "25% late penalty after 30 days."
+        },
+        "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=15"
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
-    ]
+    ],
+    "counties": ["Cook"]
   },
   {
     "city": "Orland Park",
@@ -552,17 +615,20 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "This entry covers the city's local licenses and taxes generally, each of which carries its own late charge in the municipal code; no single amount is stated."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
-    ]
+    ],
+    "counties": ["Cook"]
   },
   {
     "city": "Oak Lawn",
@@ -581,17 +647,20 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "This entry covers the city's local licenses and taxes generally, each of which carries its own late charge in the municipal code; no single amount is stated."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
-    ]
+    ],
+    "counties": ["Cook"]
   },
   {
     "city": "Mount Prospect",
@@ -610,17 +679,20 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
-    ]
+    ],
+    "counties": ["Cook"]
   },
   {
     "city": "Tinley Park",
@@ -639,17 +711,20 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
-    ]
+    ],
+    "counties": ["Cook", "Will"]
   },
   {
     "city": "Berwyn",
@@ -668,17 +743,20 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
-    ]
+    ],
+    "counties": ["Cook"]
   },
   {
     "city": "Wheaton",
@@ -697,17 +775,20 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
-    ]
+    ],
+    "counties": ["DuPage"]
   },
   {
     "city": "Normal",
@@ -726,17 +807,20 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
-    ]
+    ],
+    "counties": ["McLean"]
   },
   {
     "city": "Oak Park",
@@ -755,17 +839,20 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
-    ]
+    ],
+    "counties": ["Cook"]
   },
   {
     "city": "Hoffman Estates",
@@ -784,17 +871,20 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
-    ]
+    ],
+    "counties": ["Cook"]
   },
   {
     "city": "Downers Grove",
@@ -813,17 +903,20 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
-    ]
+    ],
+    "counties": ["DuPage"]
   },
   {
     "city": "Plainfield",
@@ -831,7 +924,7 @@
     "reason": "city-license-unconfirmed",
     "items": [
       {
-        "id": "plainfield.local-licenses",
+        "id": "plainfield-il.local-licenses",
         "title": "Review applicable local licenses and permits in Plainfield",
         "category": "license",
         "authority": "Plainfield local licensing authority",
@@ -842,17 +935,20 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
-    ]
+    ],
+    "counties": ["Will"]
   },
   {
     "city": "Glenview",
@@ -871,17 +967,20 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
-    ]
+    ],
+    "counties": ["Cook"]
   },
   {
     "city": "Elmhurst",
@@ -900,17 +999,20 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
-    ]
+    ],
+    "counties": ["DuPage"]
   },
   {
     "city": "Lombard",
@@ -929,17 +1031,20 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
-    ]
+    ],
+    "counties": ["DuPage"]
   },
   {
     "city": "Buffalo Grove",
@@ -958,17 +1063,20 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
-    ]
+    ],
+    "counties": ["Lake"]
   },
   {
     "city": "Moline",
@@ -987,17 +1095,20 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
-    ]
+    ],
+    "counties": ["Rock Island"]
   },
   {
     "city": "Crystal Lake",
@@ -1016,16 +1127,19 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.ilsos.gov/departments/business-services/assumed-name-adoptions/corpinstructions.html"
-    ]
+    ],
+    "counties": ["McHenry"]
   }
 ]

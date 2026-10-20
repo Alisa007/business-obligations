@@ -11,16 +11,22 @@
         "authority": "Lexington-Fayette Urban County Government Division of Revenue",
         "description": "Every business entity, including sole proprietors unless the IRS has issued a tax-exempt determination letter, files a net profits license fee return (Form 228) each year and pays the occupational license fee of 2.25% of net profits. The $100 annual minimum is paid with the return, except that individuals and sole proprietors with gross receipts of $4,400 or less owe no minimum for that year and the next but must still file.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "deadline": "On the due date the city publishes each year for Form 228",
         "url": [
           "https://www.lexingtonky.gov/working/business-licensing-taxes/occupational-license-fee-minimum-license-filing-requirements"
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "percentPerMonth": 5,
+          "note": "A Lexington-Fayette license notice (2015) states 5% per month or part of a month, plus 1% monthly interest; confirm against the current code."
         }
       },
       {
@@ -29,22 +35,31 @@
         "category": "payment",
         "authority": "Lexington-Fayette Urban County Government Division of Revenue",
         "description": "Employers withhold the 2.25% occupational license fee from employees' compensation and file the Employer's Return of License Fee Withheld each quarter, or each month once the fee withheld in any quarter exceeds $300. An annual reconciliation of the fee withheld is also filed.",
-        "rrule": "FREQ=MONTHLY;INTERVAL=3",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10",
+        "anchor": "assigned",
         "deadline": "Quarterly (monthly above $300 withheld in a quarter), plus an annual reconciliation",
         "url": [
           "https://www.lexingtonky.gov/working/business-licensing-taxes/occupational-license-fee-minimum-license-filing-requirements"
         ],
         "appliesTo": ["employees"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "percentPerMonth": 5,
+          "note": "A Lexington-Fayette license notice (2015) states 5% per month or part of a month, plus 1% monthly interest; confirm against the current code."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.lexingtonky.gov/working/business-licensing-taxes/how-start-business-lexington"]
+    "sourceUrl": [
+      "https://www.lexingtonky.gov/working/business-licensing-taxes/how-start-business-lexington"
+    ],
+    "status": "rules"
   },
   {
     "city": "Louisville",
@@ -69,7 +84,11 @@
         },
         "checkedOn": "2026-10-18",
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "percentPerMonth": 5,
+          "max": 25,
+          "note": "The Louisville Revenue Commission's instructions: 5% per month or fraction, up to 25% of the unpaid license tax, plus 12% annual interest."
         }
       },
       {
@@ -83,13 +102,20 @@
         "appliesTo": ["employees"],
         "checkedOn": "2026-10-19",
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "percentPerMonth": 5,
+          "max": 25,
+          "note": "The Louisville Revenue Commission's instructions: 5% per month or fraction, up to 25% of the unpaid license tax, plus 12% annual interest."
         }
       }
-    ]
+    ],
+    "status": "rules"
   },
   {
     "city": "Lexington-Fayette",
@@ -106,15 +132,18 @@
         "url": ["https://web.sos.ky.gov/forms/corp/ASN-Certificate%20of%20Assumed%20Name.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://web.sos.ky.gov/forms/corp/ASN-Certificate%20of%20Assumed%20Name.pdf"]
+    "sourceUrl": ["https://web.sos.ky.gov/forms/corp/ASN-Certificate%20of%20Assumed%20Name.pdf"],
+    "counties": ["Fayette"]
   },
   {
     "city": "Bowling Green",
@@ -131,15 +160,18 @@
         "url": ["https://web.sos.ky.gov/forms/corp/ASN-Certificate%20of%20Assumed%20Name.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://web.sos.ky.gov/forms/corp/ASN-Certificate%20of%20Assumed%20Name.pdf"]
+    "sourceUrl": ["https://web.sos.ky.gov/forms/corp/ASN-Certificate%20of%20Assumed%20Name.pdf"],
+    "counties": ["Warren"]
   },
   {
     "city": "Owensboro",
@@ -156,15 +188,18 @@
         "url": ["https://web.sos.ky.gov/forms/corp/ASN-Certificate%20of%20Assumed%20Name.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://web.sos.ky.gov/forms/corp/ASN-Certificate%20of%20Assumed%20Name.pdf"]
+    "sourceUrl": ["https://web.sos.ky.gov/forms/corp/ASN-Certificate%20of%20Assumed%20Name.pdf"],
+    "counties": ["Daviess"]
   },
   {
     "city": "Covington",
@@ -181,14 +216,17 @@
         "url": ["https://web.sos.ky.gov/forms/corp/ASN-Certificate%20of%20Assumed%20Name.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://web.sos.ky.gov/forms/corp/ASN-Certificate%20of%20Assumed%20Name.pdf"]
+    "sourceUrl": ["https://web.sos.ky.gov/forms/corp/ASN-Certificate%20of%20Assumed%20Name.pdf"],
+    "counties": ["Kenton"]
   }
 ]

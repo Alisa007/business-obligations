@@ -38,13 +38,27 @@
       "note": "Wisconsin DFI states there are no late fees or penalties; failure to file can lead to administrative dissolution."
     }
   },
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "Corporate income/franchise tax; pass-through entity tax (optional election)",
+  "wageWithholding": true,
+  "entityTaxDetail": null,
   "salesTax": {
     "statewide": true,
     "permit": "Wisconsin seller's permit",
+    "permitFee": {
+      "basis": "flat",
+      "amount": 20,
+      "note": "Business tax registration fee for the first seller's permit, covering two years; renewal is $10 every two years."
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "percentPerMonth": 5,
+      "note": "5% of the tax for each month or part of a month the return is late, up to 25%, plus a $20 late-filing fee.",
+      "rate": 25
+    }
   },
   "localSalesTax": "state_administered",
   "economicNexusUsd": 100000,
@@ -63,6 +77,26 @@
       "orAnnualPayroll": 2000
     }
   },
+  "penalties": {
+    "unemployment": {
+      "basis": "range",
+      "note": "$50 for a quarterly wage report filed within 30 days after the due date, and the greater of $100 or $20 per employee when filed later.",
+      "min": 50
+    },
+    "newHire": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late new hire report was found; secondary sources conflict or give only the federal $25 and $500 ceilings."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "range",
+      "note": "Twice the premium not paid during the uninsured period or $750, whichever is greater (Wis. Stat. 102.82).",
+      "min": 750
+    }
+  },
   "paidLeave": null,
   "paidSickLeave": null,
   "businessLicense": null,
@@ -73,6 +107,7 @@
     "description": "Wisconsin has no general business license; local permits and zoning approvals apply."
   },
   "dbaFiling": "county",
+  "dbaEntitiesFileLocally": false,
   "dbaOffice": "County register of deeds",
   "industry": {
     "contractor": "Wisconsin Department of Safety and Professional Services (dwelling contractor qualifier)",

@@ -10,10 +10,15 @@
     "appliesTo": ["employees"],
     "checkedOn": "2026-10-16",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "none",
+      "amount": 0,
+      "note": "There is no fee to file or register."
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "range",
+      "note": "Older sources list a civil penalty of $100 to $1,000 per employee not verified, plus license suspension for knowing violations.",
+      "min": 100,
+      "max": 1000
     }
   }
 ]

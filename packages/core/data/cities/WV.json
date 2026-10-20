@@ -29,10 +29,13 @@
         "url": ["https://charlestonwv.gov/node/143"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       },
       {
@@ -46,7 +49,9 @@
         "url": ["https://charlestonwv.gov/node/143"],
         "appliesTo": ["employees", "unincorporated"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 3,
+          "note": "Per employee per week, withheld from covered employees and remitted quarterly."
         },
         "penalty": {
           "basis": "unknown"
@@ -54,7 +59,8 @@
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.charlestonwv.gov/node/143"]
+    "sourceUrl": ["https://www.charlestonwv.gov/node/143"],
+    "status": "rules"
   },
   {
     "city": "Huntington",
@@ -66,7 +72,7 @@
         "category": "license",
         "authority": "City of Huntington Finance Division",
         "description": "Anyone conducting business in the City of Huntington must obtain a Huntington Business License. The page gives a $20 fee, notes that fees vary by license type and are not prorated, and says the license term runs July 1 to June 30 with a renewal notice sent around the first of June.",
-        "rrule": "FREQ=YEARLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=7;BYMONTHDAY=1",
         "deadline": "License term July 1 to June 30",
         "url": ["https://www.cityofhuntington.com/business/new-business/license/"],
         "appliesTo": ["all"],
@@ -75,7 +81,8 @@
           "min": 20
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       },
       {
@@ -90,14 +97,18 @@
         "deadlineNote": "30 days after each calendar quarter ends",
         "checkedOn": "2026-10-18",
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.cityofhuntington.com/business/new-business/license/"]
+    "sourceUrl": ["https://www.cityofhuntington.com/business/new-business/license/"],
+    "status": "rules"
   }
 ]

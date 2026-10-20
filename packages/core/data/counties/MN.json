@@ -10,6 +10,7 @@
         "authority": "Aitkin County Environmental Services / Minnesota Department of Health",
         "description": "Food establishments operating in Aitkin County must obtain the applicable Minnesota food license and renew it annually under county and state requirements.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf",
           "https://www.health.state.mn.us/communities/environment/food/license"
@@ -53,16 +54,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Anoka County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Becker",
@@ -78,16 +84,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Becker County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Beltrami",
@@ -103,16 +114,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Beltrami County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Benton",
@@ -128,16 +144,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Benton County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Big Stone",
@@ -150,6 +171,7 @@
         "authority": "Aitkin County Environmental Services / Minnesota Department of Health",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf",
           "https://www.health.state.mn.us/communities/environment/food/license"
@@ -193,16 +215,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Blue Earth County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Brown",
@@ -218,16 +245,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Brown County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Carlton",
@@ -243,16 +275,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Carlton County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Carver",
@@ -268,16 +305,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Carver County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Cass",
@@ -293,16 +335,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Cass County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Chippewa",
@@ -318,16 +365,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Chippewa County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Chisago",
@@ -343,16 +395,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Chisago County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Clay",
@@ -368,16 +425,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Clay County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Clearwater",
@@ -390,6 +452,7 @@
         "authority": "Aitkin County Environmental Services / Minnesota Department of Health",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf",
           "https://www.health.state.mn.us/communities/environment/food/license"
@@ -433,16 +496,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Cook County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Cottonwood",
@@ -455,6 +523,7 @@
         "authority": "Aitkin County Environmental Services / Minnesota Department of Health",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf",
           "https://www.health.state.mn.us/communities/environment/food/license"
@@ -498,16 +567,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Crow Wing County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Dakota",
@@ -523,16 +597,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Dakota County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Dodge",
@@ -548,16 +627,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Dodge County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Douglas",
@@ -573,16 +657,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Douglas County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Faribault",
@@ -598,16 +687,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Faribault County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Fillmore",
@@ -623,16 +717,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Fillmore County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Freeborn",
@@ -648,16 +747,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Freeborn County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Goodhue",
@@ -673,16 +777,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Goodhue County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Grant",
@@ -695,6 +804,7 @@
         "authority": "Aitkin County Environmental Services / Minnesota Department of Health",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf",
           "https://www.health.state.mn.us/communities/environment/food/license"
@@ -740,10 +850,16 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "percentPerMonth": 5,
+          "max": 15,
+          "note": "The state Department of Revenue collects this tax; Minnesota's late-payment penalty is 5% of the unpaid tax, plus 5% for each further 30 days, up to 15% (a 2021 statute text was the source)."
         }
       },
       {
@@ -759,14 +875,19 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "county": "Houston",
@@ -779,6 +900,7 @@
         "authority": "Aitkin County Environmental Services / Minnesota Department of Health",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf",
           "https://www.health.state.mn.us/communities/environment/food/license"
@@ -822,16 +944,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Hubbard County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Isanti",
@@ -847,16 +974,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Isanti County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Itasca",
@@ -872,16 +1004,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Itasca County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Jackson",
@@ -899,10 +1036,16 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "percentPerMonth": 5,
+          "max": 15,
+          "note": "The state Department of Revenue collects this tax; Minnesota's late-payment penalty is 5% of the unpaid tax, plus 5% for each further 30 days, up to 15% (a 2021 statute text was the source)."
         }
       }
     ],
@@ -910,7 +1053,8 @@
     "note": "Jackson County sales and use tax is confirmed by Minnesota Revenue; other county-level business duties were not checked.",
     "sourceUrl": [
       "https://www.revenue.state.mn.us/sites/default/files/2026-05/local-sales-and-use-tax-chart.pdf"
-    ]
+    ],
+    "status": "rules"
   },
   {
     "county": "Kanabec",
@@ -926,16 +1070,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Kanabec County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Kandiyohi",
@@ -951,16 +1100,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Kandiyohi County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Kittson",
@@ -973,6 +1127,7 @@
         "authority": "Minnesota Department of Health / local health authority",
         "description": "Food establishments operating in Kittson County must obtain the applicable Minnesota food license before operating and renew it under the applicable state or local program.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.health.state.mn.us/communities/environment/food/license",
           "https://mn.gov/elicense/a-z/?id=1083-231418"
@@ -1016,16 +1171,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Koochiching County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Lac qui Parle",
@@ -1038,6 +1198,7 @@
         "authority": "Aitkin County Environmental Services / Minnesota Department of Health",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf",
           "https://www.health.state.mn.us/communities/environment/food/license"
@@ -1089,16 +1250,20 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The county's published pages for this item give no late-penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Only the state-administered special lodging tax was checked; other county-level obligations were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/guide/special-local-taxes"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/guide/special-local-taxes"],
+    "status": "rules"
   },
   {
     "county": "Lake of the Woods",
@@ -1122,16 +1287,20 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The county's published pages for this item give no late-penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Only the state-administered special lodging tax was checked; other county-level obligations were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/guide/special-local-taxes"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/guide/special-local-taxes"],
+    "status": "rules"
   },
   {
     "county": "Le Sueur",
@@ -1147,16 +1316,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Le Sueur County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Lincoln",
@@ -1169,6 +1343,7 @@
         "authority": "Aitkin County Environmental Services / Minnesota Department of Health",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf",
           "https://www.health.state.mn.us/communities/environment/food/license"
@@ -1209,6 +1384,7 @@
         "authority": "Lyon County Public Health / Minnesota Department of Health",
         "description": "Food and beverage establishments operating in Lyon County must obtain the applicable county or state food license and renew it annually.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.lyoncountymn.gov/departments/auditor-treasurer/license-information/county-issued",
           "https://www.health.state.mn.us/communities/environment/food/license"
@@ -1247,6 +1423,7 @@
         "authority": "Aitkin County Environmental Services / Minnesota Department of Health",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf",
           "https://www.health.state.mn.us/communities/environment/food/license"
@@ -1290,10 +1467,14 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       },
       {
@@ -1315,16 +1496,20 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The county's published pages for this item give no late-penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Minnesota Revenue lists Marshall County transit and lodging taxes; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Martin",
@@ -1340,16 +1525,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Martin County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "McLeod",
@@ -1365,16 +1555,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "McLeod County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Meeker",
@@ -1390,16 +1585,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Meeker County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Mille Lacs",
@@ -1415,16 +1615,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Mille Lacs County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Morrison",
@@ -1440,16 +1645,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Morrison County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Mower",
@@ -1465,16 +1675,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Mower County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Murray",
@@ -1487,6 +1702,7 @@
         "authority": "Minnesota Department of Health / Minnesota Department of Agriculture",
         "description": "Food establishments operating in Murray County must obtain the applicable Minnesota food license from the responsible state or local agency and renew it under Minnesota requirements.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.health.state.mn.us/communities/environment/food/license",
           "https://www.mda.state.mn.us/food-feed/food-licenses",
@@ -1531,16 +1747,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Nicollet County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Nobles",
@@ -1556,16 +1777,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Nobles County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Norman",
@@ -1581,16 +1807,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Norman County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Olmsted",
@@ -1606,16 +1837,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Olmsted County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Otter Tail",
@@ -1631,16 +1867,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Otter Tail County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Pennington",
@@ -1653,6 +1894,7 @@
         "authority": "Aitkin County Environmental Services / Minnesota Department of Health",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf",
           "https://www.health.state.mn.us/communities/environment/food/license"
@@ -1696,16 +1938,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Pine County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Pipestone",
@@ -1718,6 +1965,7 @@
         "authority": "Aitkin County Environmental Services / Minnesota Department of Health",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf",
           "https://www.health.state.mn.us/communities/environment/food/license"
@@ -1761,16 +2009,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Polk County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Pope",
@@ -1783,6 +2036,7 @@
         "authority": "Aitkin County Environmental Services / Minnesota Department of Health",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf",
           "https://www.health.state.mn.us/communities/environment/food/license"
@@ -1826,16 +2080,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Ramsey County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Red Lake",
@@ -1848,6 +2107,7 @@
         "authority": "Aitkin County Environmental Services / Minnesota Department of Health",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf",
           "https://www.health.state.mn.us/communities/environment/food/license"
@@ -1891,16 +2151,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Redwood County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Renville",
@@ -1916,16 +2181,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Renville County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Rice",
@@ -1941,16 +2211,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Rice County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Rock",
@@ -1963,6 +2238,7 @@
         "authority": "Rock County / Minnesota Department of Health",
         "description": "Food and beverage establishments operating in Rock County must obtain the applicable county or state food license and renew it annually under Minnesota requirements.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://cms9files1.revize.com/rockcountymn/Document%20Center/General%20Information/County%20Ordinances/Title%20XI%20Business%20Regulations%20Chapters%20110-118%20%282025%20update%29.pdf",
           "https://www.health.state.mn.us/communities/environment/food/license",
@@ -2007,16 +2283,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Roseau County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "St. Louis",
@@ -2032,16 +2313,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "St. Louis County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Scott",
@@ -2057,16 +2343,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Scott County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Sherburne",
@@ -2082,16 +2373,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Sherburne County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Sibley",
@@ -2107,16 +2403,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Sibley County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Stearns",
@@ -2132,16 +2433,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Stearns County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Steele",
@@ -2157,16 +2463,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Steele County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Stevens",
@@ -2179,6 +2490,7 @@
         "authority": "Aitkin County Environmental Services / Minnesota Department of Health",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf",
           "https://www.health.state.mn.us/communities/environment/food/license"
@@ -2219,6 +2531,7 @@
         "authority": "Aitkin County Environmental Services / Minnesota Department of Health",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf",
           "https://www.health.state.mn.us/communities/environment/food/license"
@@ -2262,16 +2575,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Todd County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Traverse",
@@ -2284,6 +2602,7 @@
         "authority": "Aitkin County Environmental Services / Minnesota Department of Health",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf",
           "https://www.health.state.mn.us/communities/environment/food/license"
@@ -2327,16 +2646,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Wabasha County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Wadena",
@@ -2352,16 +2676,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Wadena County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Waseca",
@@ -2377,16 +2706,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Waseca County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Washington",
@@ -2402,16 +2736,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Washington County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Watonwan",
@@ -2427,16 +2766,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Watonwan County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Wilkin",
@@ -2449,6 +2793,7 @@
         "authority": "Aitkin County Environmental Services / Minnesota Department of Health",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf",
           "https://www.health.state.mn.us/communities/environment/food/license"
@@ -2492,16 +2837,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Winona County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Wright",
@@ -2517,16 +2867,21 @@
         "url": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "5% of the tax not paid by the due date, plus another 5% for each further 30 days, up to 15% (Minn. Stat. 289A.60)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "Wright County transit sales tax is listed by Minnesota Revenue; other county-level business duties were not checked.",
-    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"]
+    "sourceUrl": ["https://www.revenue.state.mn.us/local-sales-tax-notices"],
+    "status": "rules"
   },
   {
     "county": "Yellow Medicine",
@@ -2539,6 +2894,7 @@
         "authority": "Aitkin County Environmental Services / Minnesota Department of Health",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.co.aitkin.mn.us/board/2018/01-23-2018/5A-012318.pdf",
           "https://www.health.state.mn.us/communities/environment/food/license"

@@ -62,13 +62,27 @@
       "note": "Indiana describes administrative dissolution or revocation for non-filing, but no separate late monetary penalty."
     }
   },
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "Corporate adjusted gross income tax",
+  "wageWithholding": true,
+  "entityTaxDetail": null,
   "salesTax": {
     "statewide": true,
     "permit": "Registered Retail Merchant Certificate",
+    "permitFee": {
+      "basis": "flat",
+      "amount": 25,
+      "note": "Nonrefundable fee for each place of business on the Registered Retail Merchant Certificate, which renews every two years at no charge."
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "note": "Greater of 10% of the tax due or $5; up to 20% for a return not filed after notice.",
+      "rate": 10,
+      "min": 5
+    }
   },
   "localSalesTax": "none",
   "economicNexusUsd": 100000,
@@ -85,6 +99,26 @@
       "minEmployees": 1
     }
   },
+  "penalties": {
+    "unemployment": {
+      "basis": "flat",
+      "amount": 25,
+      "note": "$25 for each missing or inadequate quarterly report not filed by the deadline in the department's notice."
+    },
+    "newHire": {
+      "basis": "flat",
+      "amount": 25,
+      "note": "$25, or $500 if the failure results from a conspiracy between employer and employee (IC 22-4-10-8)."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for lacking required coverage was found; secondary sources conflict."
+    }
+  },
   "paidLeave": null,
   "paidSickLeave": null,
   "businessLicense": null,
@@ -95,6 +129,7 @@
     "description": "Indiana has no general local business license; local zoning/occupancy and industry permits apply."
   },
   "dbaFiling": "county",
+  "dbaEntitiesFileLocally": false,
   "dbaOffice": "County recorder",
   "industry": {
     "contractor": null,

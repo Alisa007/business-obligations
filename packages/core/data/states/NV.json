@@ -38,8 +38,10 @@
       "note": "$75 list penalty plus $100 business license penalty"
     }
   },
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "Commerce Tax (gross receipts over $4 million) and Modified Business Tax on payroll; no corporate income tax",
+  "wageWithholding": false,
   "entityTaxDetail": {
     "kind": "gross_receipts",
     "thresholdUsd": 4000000,
@@ -50,8 +52,18 @@
   "salesTax": {
     "statewide": true,
     "permit": "Nevada seller's permit",
+    "permitFee": {
+      "basis": "flat",
+      "amount": 15,
+      "note": "Sales tax permit fee for each in-state business location; adding or updating a location also costs $15."
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "note": "2% of the tax for 1 to 10 days late, 4% for 11 to 15, 6% for 16 to 20, 8% for 21 to 30 and 10% for 31 or more days (NAC 360.395).",
+      "rate": 10
+    }
   },
   "localSalesTax": "state_administered",
   "economicNexusUsd": 100000,
@@ -66,6 +78,29 @@
     "stateFund": false,
     "trigger": {
       "minEmployees": 1
+    }
+  },
+  "penalties": {
+    "unemployment": {
+      "basis": "flat",
+      "amount": 5,
+      "note": "$5 for a report even one day late, plus 0.1% of taxable wages for each month or part of a month beyond the first 10 days."
+    },
+    "newHire": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late new hire report was found; secondary sources conflict or give only the federal $25 and $500 ceilings."
+    },
+    "laborPosters": {
+      "basis": "range",
+      "note": "Administrative penalty of up to $5,000 per violation for required wage and labor postings (NRS 608.195).",
+      "min": 0,
+      "max": 5000
+    },
+    "workersComp": {
+      "basis": "range",
+      "note": "Administrative fine of up to $15,000, premium penalties and possible closure for an uninsured employer (NRS 616D.200).",
+      "min": 0,
+      "max": 15000
     }
   },
   "paidLeave": null,
@@ -112,6 +147,7 @@
     "formation": ["https://www.nvsos.gov/sos/businesses"],
     "annualReport": ["https://www.nvsos.gov/sos/licensing/state-business-license"],
     "uiRegistration": ["https://labor.nv.gov/Employer/Employer_Posters//Page/UI_Information_for_Employers"],
+    "withholding": ["https://tax.nv.gov/tax-types/commerce-tax/"],
     "salesTax": ["https://tax.nv.gov/tax-types/commerce-tax//tax-types/sales-tax-use-tax/"],
     "entityTax": ["https://tax.nv.gov/tax-types/commerce-tax//tax-types/commerce-tax/"],
     "laborPosters": ["https://labor.nv.gov/Employer/Employer_Posters/"],

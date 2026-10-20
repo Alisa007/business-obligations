@@ -51,13 +51,27 @@
       "basis": "none"
     }
   },
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "Corporate income tax",
+  "wageWithholding": true,
+  "entityTaxDetail": null,
   "salesTax": {
     "statewide": true,
     "permit": "Nebraska sales tax permit",
+    "permitFee": {
+      "basis": "none",
+      "amount": 0,
+      "note": "Nebraska charges no fee for a sales and use tax permit."
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "note": "Greater of $25 or 10% of the tax for a late return or payment.",
+      "rate": 10,
+      "min": 25
+    }
   },
   "localSalesTax": "state_administered",
   "economicNexusUsd": 100000,
@@ -74,6 +88,25 @@
       "minEmployees": 1
     }
   },
+  "penalties": {
+    "unemployment": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late wage report was found in the state agency's published sources."
+    },
+    "newHire": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late new hire report was found; secondary sources conflict or give only the federal $25 and $500 ceilings."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "per_item",
+      "note": "Civil fine of up to $1,000 for each violation, each day without coverage counting separately.",
+      "perUnit": 1000
+    }
+  },
   "paidLeave": null,
   "paidSickLeave": null,
   "businessLicense": null,
@@ -84,6 +117,7 @@
     "description": "Omaha, Lincoln and others require occupation taxes or business licenses."
   },
   "dbaFiling": "none",
+  "dbaEntitiesFileLocally": false,
   "industry": {
     "contractor": "Nebraska Department of Labor (contractor registration)",
     "realEstate": "Nebraska Real Estate Commission",
@@ -110,7 +144,8 @@
     ],
     "laborPosters": [
       "https://dol.nebraska.gov/laborstandards/compliance/requiredposters/laborstandards/compliance/requiredposters"
-    ]
+    ],
+    "dba": ["https://sos.nebraska.gov/business-services/forms-and-fee-information"]
   },
   "verification": {
     "checkedOn": "2026-10-13",

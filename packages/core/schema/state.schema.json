@@ -9,24 +9,29 @@
     "filing",
     "revenue",
     "labor",
-    "workersComp",
     "llcReport",
     "corpReport",
+    "llcReportAppliesWhenTaxedAsCorp",
+    "llcPublication",
     "entityTax",
+    "wageWithholding",
+    "entityTaxDetail",
     "salesTax",
-    "businessLicense",
+    "localSalesTax",
+    "economicNexusUsd",
+    "unemployment",
+    "workersComp",
+    "penalties",
     "paidLeave",
     "paidSickLeave",
+    "businessLicense",
     "local",
-    "llcPublication",
-    "economicNexusUsd",
     "dbaFiling",
+    "dbaEntitiesFileLocally",
     "industry",
-    "verification",
     "cannabis",
-    "localSalesTax",
-    "unemployment",
-    "links"
+    "links",
+    "verification"
   ],
   "allOf": [
     {
@@ -117,43 +122,53 @@
       "type": "string",
       "minLength": 3
     },
+    "wageWithholding": {
+      "description": "Whether the state levies individual income tax withholding on wages.",
+      "type": "boolean"
+    },
     "entityTaxDetail": {
-      "description": "Threshold and rate of the state's gross-receipts or margin tax, where it is modelled.",
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["kind", "thresholdUsd", "summary", "source", "checkedOn"],
-      "properties": {
-        "kind": {
-          "enum": ["gross_receipts", "margin"]
+      "oneOf": [
+        {
+          "type": "null"
         },
-        "thresholdUsd": {
-          "type": "number",
-          "minimum": 0
-        },
-        "rate": {
-          "type": "number",
-          "minimum": 0
-        },
-        "baseUsd": {
-          "type": "number",
-          "minimum": 0
-        },
-        "summary": {
-          "type": "string"
-        },
-        "source": {
-          "$ref": "common.schema.json#/$defs/httpsUrl"
-        },
-        "checkedOn": {
-          "$ref": "common.schema.json#/$defs/isoDate"
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "thresholdUsd", "summary", "source", "checkedOn"],
+          "properties": {
+            "kind": {
+              "enum": ["gross_receipts", "margin"]
+            },
+            "thresholdUsd": {
+              "type": "number",
+              "minimum": 0
+            },
+            "rate": {
+              "type": "number",
+              "minimum": 0
+            },
+            "baseUsd": {
+              "type": "number",
+              "minimum": 0
+            },
+            "summary": {
+              "type": "string"
+            },
+            "source": {
+              "$ref": "common.schema.json#/$defs/httpsUrl"
+            },
+            "checkedOn": {
+              "$ref": "common.schema.json#/$defs/isoDate"
+            }
+          }
         }
-      }
+      ]
     },
     "salesTax": {
       "description": "Statewide sales and use tax regime.",
       "type": "object",
       "additionalProperties": false,
-      "required": ["statewide", "permit", "agency", "alternative"],
+      "required": ["statewide", "permit", "permitFee", "agency", "alternative", "penalty"],
       "properties": {
         "statewide": {
           "type": "boolean"
@@ -161,6 +176,10 @@
         "permit": {
           "type": "string",
           "minLength": 3
+        },
+        "permitFee": {
+          "$ref": "common.schema.json#/$defs/feeDetail",
+          "description": "The fee for the sales tax permit or registration; unknown until researched."
         },
         "agency": {
           "oneOf": [
@@ -174,6 +193,10 @@
         },
         "alternative": {
           "type": ["string", "null"]
+        },
+        "penalty": {
+          "$ref": "common.schema.json#/$defs/penalty",
+          "description": "The penalty for a late sales tax return; unknown until researched."
         }
       }
     },
@@ -283,6 +306,30 @@
         }
       }
     },
+    "penalties": {
+      "description": "Penalties for missing common state employer duties; unknown until researched.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["unemployment", "newHire", "laborPosters", "workersComp"],
+      "properties": {
+        "unemployment": {
+          "$ref": "common.schema.json#/$defs/penalty",
+          "description": "Late unemployment insurance wage report or contribution payment."
+        },
+        "newHire": {
+          "$ref": "common.schema.json#/$defs/penalty",
+          "description": "Failing to report a new hire."
+        },
+        "laborPosters": {
+          "$ref": "common.schema.json#/$defs/penalty",
+          "description": "Failing to display required workplace notices."
+        },
+        "workersComp": {
+          "$ref": "common.schema.json#/$defs/penalty",
+          "description": "Failing to carry required workers' compensation coverage."
+        }
+      }
+    },
     "paidLeave": {
       "description": "Mandatory state paid-leave or disability program with employer duties; null = none.",
       "oneOf": [
@@ -344,7 +391,15 @@
           "type": "object",
           "additionalProperties": false,
           "required": ["title", "authority", "url", "feeDetail", "penalty"],
-          "oneOf": [{ "required": ["rrule"] }, { "required": ["frequency"] }],
+          "allOf": [{ "$ref": "common.schema.json#/$defs/exactSchedule" }],
+          "oneOf": [
+            {
+              "required": ["rrule"]
+            },
+            {
+              "required": ["frequency"]
+            }
+          ],
           "properties": {
             "title": {
               "type": "string"
@@ -362,6 +417,9 @@
             },
             "rrule": {
               "$ref": "common.schema.json#/$defs/rrule"
+            },
+            "anchor": {
+              "$ref": "common.schema.json#/$defs/scheduleAnchor"
             },
             "frequency": {
               "enum": ["once"],
@@ -402,7 +460,6 @@
       "enum": ["state", "county", "town", "none"]
     },
     "dbaEntitiesFileLocally": {
-      "description": "Registered entities also file assumed names at the county or town level.",
       "type": "boolean"
     },
     "dbaOffice": {
@@ -461,7 +518,16 @@
       "description": "Specific agency pages (not home pages) for the obligations the rules cite.",
       "type": "object",
       "additionalProperties": false,
-      "required": ["formation", "annualReport", "uiRegistration", "entityTax", "laborPosters"],
+      "required": [
+        "formation",
+        "annualReport",
+        "uiRegistration",
+        "withholding",
+        "salesTax",
+        "entityTax",
+        "laborPosters",
+        "dba"
+      ],
       "properties": {
         "formation": {
           "$ref": "common.schema.json#/$defs/httpsUrlList"
@@ -566,15 +632,7 @@
           "description": "iCalendar (RFC 5545) recurrence rule. The source of truth for frequency and due date; see src/rrule.ts for the supported subset."
         },
         "anchor": {
-          "anyOf": [
-            {
-              "$ref": "common.schema.json#/$defs/isoDate"
-            },
-            {
-              "enum": ["formation", "formation_quarter", "formation_year", "year_after_formation"]
-            }
-          ],
-          "description": "Start of a cycle longer than a year: an ISO date, or the entity's formation year or the year after."
+          "$ref": "common.schema.json#/$defs/scheduleAnchor"
         },
         "opens": {
           "type": "object",
@@ -650,7 +708,8 @@
               "required": ["anchor"]
             }
           }
-        }
+        },
+        { "$ref": "common.schema.json#/$defs/exactSchedule" }
       ]
     }
   },

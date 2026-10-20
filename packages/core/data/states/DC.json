@@ -42,13 +42,27 @@
       "note": "Biennial report late fee after April 1."
     }
   },
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "Franchise tax (corporations) and Unincorporated Business Franchise Tax",
+  "wageWithholding": true,
+  "entityTaxDetail": null,
   "salesTax": {
     "statewide": true,
     "permit": "Sales and use tax registration (FR-500)",
+    "permitFee": {
+      "basis": "none",
+      "amount": 0,
+      "note": "There is no charge to register for sales tax with the Office of Tax and Revenue; business license fees are separate."
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "percentPerMonth": 5,
+      "note": "5% of the unpaid tax for each month or fraction of a month, up to 25%, plus interest of 10% a year.",
+      "rate": 25
+    }
   },
   "localSalesTax": "none",
   "economicNexusUsd": 100000,
@@ -65,6 +79,29 @@
       "minEmployees": 1
     }
   },
+  "penalties": {
+    "unemployment": {
+      "basis": "percent",
+      "note": "Greater of 10% of the amount due or $100 for a late quarterly wage report or payment, plus 1.5% monthly interest.",
+      "rate": 10,
+      "min": 100
+    },
+    "newHire": {
+      "basis": "flat",
+      "amount": 25,
+      "note": "$25 for each unreported employee, or $500 per employee for a conspiracy, assessed each calendar month until compliance (D.C. Code 46-226.06)."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "range",
+      "note": "Civil fine of $1,000 to $10,000 for an uninsured employer, with a possible stop-work order.",
+      "min": 1000,
+      "max": 10000
+    }
+  },
   "paidLeave": {
     "title": "DC Paid Family Leave tax",
     "agency": "DC Office of Paid Family Leave",
@@ -79,6 +116,7 @@
     "authority": "DC Department of Licensing and Consumer Protection",
     "url": ["https://dlcp.dc.gov/page/corporations-division-business-registration-faqs/node/1618236"],
     "rrule": "FREQ=YEARLY;INTERVAL=2",
+    "anchor": "license_issued",
     "feeDetail": {
       "basis": "varies",
       "note": "by license category"
@@ -99,6 +137,7 @@
     "description": "The District is both city and state; occupancy and zoning approvals are issued locally."
   },
   "dbaFiling": "state",
+  "dbaEntitiesFileLocally": false,
   "industry": {
     "contractor": "DC Department of Licensing and Consumer Protection",
     "realEstate": "DC Real Estate Commission",

@@ -29,13 +29,26 @@
     }
   },
   "llpReport": null,
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "Corporate income tax",
+  "wageWithholding": true,
+  "entityTaxDetail": null,
   "salesTax": {
     "statewide": true,
     "permit": "Oklahoma sales tax permit",
+    "permitFee": {
+      "basis": "flat",
+      "amount": 20,
+      "note": "Sales tax permit fee plus a handling fee, renewable every three years."
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "note": "10% when the return and payment are not postmarked within 15 days of the due date, plus 1.25% monthly interest.",
+      "rate": 10
+    }
   },
   "localSalesTax": "state_administered",
   "economicNexusUsd": 100000,
@@ -52,6 +65,26 @@
       "minEmployees": 1
     }
   },
+  "penalties": {
+    "unemployment": {
+      "basis": "percent",
+      "note": "$200 plus 10% of the contributions due when an experience-rated employer's report is not filed within 15 days of the notice of non-receipt, plus 1% monthly interest.",
+      "rate": 10,
+      "min": 200
+    },
+    "newHire": {
+      "basis": "none",
+      "note": "Oklahoma charges no penalty for late new hire reports."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for lacking required coverage was found; secondary sources conflict."
+    }
+  },
   "paidLeave": null,
   "paidSickLeave": null,
   "businessLicense": null,
@@ -62,6 +95,7 @@
     "description": "Some Oklahoma cities require business licenses and local sales tax registration."
   },
   "dbaFiling": "state",
+  "dbaEntitiesFileLocally": false,
   "industry": {
     "contractor": "Oklahoma Construction Industries Board (trade licenses)",
     "realEstate": "Oklahoma Real Estate Commission",

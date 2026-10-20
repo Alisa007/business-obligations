@@ -18,10 +18,14 @@
       }
     ],
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "none",
+      "amount": 0,
+      "note": "There is no fee to file or register."
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "per_item",
+      "note": "After three failures to use E-Verify in 24 months, the state fines $1,000 a day until the employer cures the noncompliance.",
+      "perUnit": 1000
     }
   }
 ]

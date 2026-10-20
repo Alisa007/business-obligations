@@ -12,14 +12,19 @@
         "url": ["https://www.clarkcountynv.gov/government/assessor/personal_property.php"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 20,
+          "note": "20% of the tax for each year the property went unassessed because no statement or an incorrect one was filed (NRS 361.767); the assessor may waive it."
         }
       }
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "county": "Churchill",
@@ -34,14 +39,19 @@
         "url": ["https://www.clarkcountynv.gov/government/assessor/personal_property.php"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 20,
+          "note": "20% of the tax for each year the property went unassessed because no statement or an incorrect one was filed (NRS 361.767); the assessor may waive it."
         }
       }
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "county": "Clark",
@@ -56,10 +66,14 @@
         "url": ["https://www.clarkcountynv.gov/government/assessor/personal_property.php"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 20,
+          "note": "20% of the tax for each year the property went unassessed because no statement or an incorrect one was filed (NRS 361.767); the assessor may waive it."
         }
       },
       {
@@ -82,10 +96,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The county's published pages for this return give no late-penalty amount."
         }
       },
       {
@@ -95,6 +112,7 @@
         "authority": "Southern Nevada Health District",
         "description": "Plan review is required before construction or remodeling; apply at least 30 days before opening to avoid late fees, and applying after a change of ownership by more than 30 days also costs extra. Plan review fees are non-refundable and cover up to two site visits; a final inspection must pass before stocking food or opening.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://www.snhd.info/permits-regulations"],
         "naics": ["722", "445"],
         "feeDetail": {
@@ -109,13 +127,14 @@
         }
       }
     ],
-    "checkedOn": "2026-10-16"
+    "checkedOn": "2026-10-16",
+    "status": "rules"
   },
   {
     "county": "Douglas",
     "items": [
       {
-        "id": "douglas.business-personal-property",
+        "id": "douglas-nv.business-personal-property",
         "title": "File Douglas County business personal property return",
         "category": "filing",
         "authority": "Douglas County Assessor",
@@ -124,14 +143,19 @@
         "url": ["https://www.clarkcountynv.gov/government/assessor/personal_property.php"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 20,
+          "note": "20% of the tax for each year the property went unassessed because no statement or an incorrect one was filed (NRS 361.767); the assessor may waive it."
         }
       }
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "county": "Elko",
@@ -146,14 +170,19 @@
         "url": ["https://www.clarkcountynv.gov/government/assessor/personal_property.php"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 20,
+          "note": "20% of the tax for each year the property went unassessed because no statement or an incorrect one was filed (NRS 361.767); the assessor may waive it."
         }
       }
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "county": "Esmeralda",
@@ -168,14 +197,19 @@
         "url": ["https://www.clarkcountynv.gov/government/assessor/personal_property.php"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 20,
+          "note": "20% of the tax for each year the property went unassessed because no statement or an incorrect one was filed (NRS 361.767); the assessor may waive it."
         }
       }
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "county": "Eureka",
@@ -190,20 +224,25 @@
         "url": ["https://www.clarkcountynv.gov/government/assessor/personal_property.php"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 20,
+          "note": "20% of the tax for each year the property went unassessed because no statement or an incorrect one was filed (NRS 361.767); the assessor may waive it."
         }
       }
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "county": "Humboldt",
     "items": [
       {
-        "id": "humboldt.business-personal-property",
+        "id": "humboldt-nv.business-personal-property",
         "title": "File Humboldt County business personal property return",
         "category": "filing",
         "authority": "Humboldt County Assessor",
@@ -212,14 +251,19 @@
         "url": ["https://www.clarkcountynv.gov/government/assessor/personal_property.php"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 20,
+          "note": "20% of the tax for each year the property went unassessed because no statement or an incorrect one was filed (NRS 361.767); the assessor may waive it."
         }
       }
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "county": "Lander",
@@ -234,20 +278,25 @@
         "url": ["https://www.clarkcountynv.gov/government/assessor/personal_property.php"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 20,
+          "note": "20% of the tax for each year the property went unassessed because no statement or an incorrect one was filed (NRS 361.767); the assessor may waive it."
         }
       }
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "county": "Lincoln",
     "items": [
       {
-        "id": "lincoln.business-personal-property",
+        "id": "lincoln-nv.business-personal-property",
         "title": "File Lincoln County business personal property return",
         "category": "filing",
         "authority": "Lincoln County Assessor",
@@ -256,20 +305,25 @@
         "url": ["https://www.clarkcountynv.gov/government/assessor/personal_property.php"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 20,
+          "note": "20% of the tax for each year the property went unassessed because no statement or an incorrect one was filed (NRS 361.767); the assessor may waive it."
         }
       }
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "county": "Lyon",
     "items": [
       {
-        "id": "lyon.business-personal-property",
+        "id": "lyon-nv.business-personal-property",
         "title": "File Lyon County business personal property return",
         "category": "filing",
         "authority": "Lyon County Assessor",
@@ -278,20 +332,25 @@
         "url": ["https://www.clarkcountynv.gov/government/assessor/personal_property.php"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 20,
+          "note": "20% of the tax for each year the property went unassessed because no statement or an incorrect one was filed (NRS 361.767); the assessor may waive it."
         }
       }
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "county": "Mineral",
     "items": [
       {
-        "id": "mineral.business-personal-property",
+        "id": "mineral-nv.business-personal-property",
         "title": "File Mineral County business personal property return",
         "category": "filing",
         "authority": "Mineral County Assessor",
@@ -300,14 +359,19 @@
         "url": ["https://www.clarkcountynv.gov/government/assessor/personal_property.php"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 20,
+          "note": "20% of the tax for each year the property went unassessed because no statement or an incorrect one was filed (NRS 361.767); the assessor may waive it."
         }
       }
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "county": "Nye",
@@ -322,14 +386,19 @@
         "url": ["https://www.clarkcountynv.gov/government/assessor/personal_property.php"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 20,
+          "note": "20% of the tax for each year the property went unassessed because no statement or an incorrect one was filed (NRS 361.767); the assessor may waive it."
         }
       }
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "county": "Pershing",
@@ -344,14 +413,19 @@
         "url": ["https://www.clarkcountynv.gov/government/assessor/personal_property.php"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 20,
+          "note": "20% of the tax for each year the property went unassessed because no statement or an incorrect one was filed (NRS 361.767); the assessor may waive it."
         }
       }
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "county": "Storey",
@@ -366,14 +440,19 @@
         "url": ["https://www.clarkcountynv.gov/government/assessor/personal_property.php"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 20,
+          "note": "20% of the tax for each year the property went unassessed because no statement or an incorrect one was filed (NRS 361.767); the assessor may waive it."
         }
       }
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "county": "Washoe",
@@ -388,15 +467,20 @@
         "url": ["https://www.washoecounty.gov/assessor/BusinessPersonalProperty/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 20,
+          "note": "20% of the tax for each year the property went unassessed because no statement or an incorrect one was filed (NRS 361.767); the assessor may waive it."
         }
       }
     ],
     "checkedOn": "2026-10-16",
-    "note": "Washoe County's transient lodging tax is 3% of gross receipts under a 1999 act of the legislature, but its return due date and registration steps were not found."
+    "note": "Washoe County's transient lodging tax is 3% of gross receipts under a 1999 act of the legislature, but its return due date and registration steps were not found.",
+    "status": "rules"
   },
   {
     "county": "White Pine",
@@ -411,13 +495,18 @@
         "url": ["https://www.clarkcountynv.gov/government/assessor/personal_property.php"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 20,
+          "note": "20% of the tax for each year the property went unassessed because no statement or an incorrect one was filed (NRS 361.767); the assessor may waive it."
         }
       }
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   }
 ]

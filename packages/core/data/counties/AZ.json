@@ -12,14 +12,18 @@
         "url": ["https://mcassessor.maricopa.gov/file/business_property/Important-Notice.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10
         }
       }
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "county": "Cochise",
@@ -34,14 +38,18 @@
         "url": ["https://mcassessor.maricopa.gov/file/business_property/Important-Notice.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10
         }
       }
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "county": "Coconino",
@@ -56,14 +64,18 @@
         "url": ["https://mcassessor.maricopa.gov/file/business_property/Important-Notice.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10
         }
       }
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "county": "Gila",
@@ -78,20 +90,24 @@
         "url": ["https://mcassessor.maricopa.gov/file/business_property/Important-Notice.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10
         }
       }
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "county": "Graham",
     "items": [
       {
-        "id": "graham.business-personal-property",
+        "id": "graham-az.business-personal-property",
         "title": "File Graham County business personal property return",
         "category": "filing",
         "authority": "Graham County Assessor",
@@ -100,14 +116,18 @@
         "url": ["https://mcassessor.maricopa.gov/file/business_property/Important-Notice.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10
         }
       }
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "county": "Greenlee",
@@ -122,14 +142,18 @@
         "url": ["https://mcassessor.maricopa.gov/file/business_property/Important-Notice.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10
         }
       }
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "county": "La Paz",
@@ -144,14 +168,18 @@
         "url": ["https://mcassessor.maricopa.gov/file/business_property/Important-Notice.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10
         }
       }
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "county": "Maricopa",
@@ -166,10 +194,13 @@
         "url": ["https://mcassessor.maricopa.gov/file/business_property/Important-Notice.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10
         }
       },
       {
@@ -179,6 +210,7 @@
         "authority": "Maricopa County Environmental Services Department",
         "description": "Food establishments need a county permit and plan review (minimum requirements document; Plan Review 602-506-6824). A fee increase was approved August 19, 2026: new applications pay the new fees immediately and renewals at their next renewal, so check the current schedule.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://www.maricopa.gov/4996/New-Application-Guidance"],
         "naics": ["722", "445"],
         "feeDetail": {
@@ -193,7 +225,8 @@
         }
       }
     ],
-    "checkedOn": "2026-10-16"
+    "checkedOn": "2026-10-16",
+    "status": "rules"
   },
   {
     "county": "Mohave",
@@ -208,14 +241,18 @@
         "url": ["https://mcassessor.maricopa.gov/file/business_property/Important-Notice.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10
         }
       }
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "county": "Navajo",
@@ -230,14 +267,18 @@
         "url": ["https://mcassessor.maricopa.gov/file/business_property/Important-Notice.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10
         }
       }
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "county": "Pima",
@@ -252,14 +293,18 @@
         "url": ["https://www.azdor.gov/sites/default/files/2023-03/PUBLICATION_2014_545.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10
         }
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-13",
+    "status": "rules"
   },
   {
     "county": "Pinal",
@@ -274,14 +319,18 @@
         "url": ["https://www.pinal.gov/m/faq?cat=67"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10
         }
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-13",
+    "status": "rules"
   },
   {
     "county": "Santa Cruz",
@@ -296,14 +345,18 @@
         "url": ["https://mcassessor.maricopa.gov/file/business_property/Important-Notice.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10
         }
       }
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "county": "Yavapai",
@@ -318,20 +371,24 @@
         "url": ["https://www.azdor.gov/sites/default/files/2023-03/PUBLICATION_2014_545.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10
         }
       }
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-13",
+    "status": "rules"
   },
   {
     "county": "Yuma",
     "items": [
       {
-        "id": "yuma.business-personal-property",
+        "id": "yuma-az.business-personal-property",
         "title": "File Yuma County business personal property return",
         "category": "filing",
         "authority": "Yuma County Assessor",
@@ -340,13 +397,17 @@
         "url": ["https://mcassessor.maricopa.gov/file/business_property/Important-Notice.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10
         }
       }
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   }
 ]

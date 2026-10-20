@@ -50,13 +50,28 @@
       "basis": "none"
     }
   },
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": "New York LLCs must publish their articles of organization or a notice of formation in two newspapers within 120 days, then file a Certificate of Publication with the Division of Corporations ($50) or lose authority to do business.",
   "entityTax": "Corporate franchise tax (fixed-dollar minimum, MTA surcharge); LLC filing fee; optional Pass-Through Entity Tax",
+  "wageWithholding": true,
+  "entityTaxDetail": null,
   "salesTax": {
     "statewide": true,
     "permit": "New York Certificate of Authority",
+    "permitFee": {
+      "basis": "none",
+      "amount": 0,
+      "note": "Compliance guides report no registration fee; the state's own fee page was not read."
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "percentPerMonth": 1,
+      "note": "10% of the tax for the first month plus 1% for each additional month, up to 30%, with a $50 minimum.",
+      "rate": 30,
+      "min": 50
+    }
   },
   "localSalesTax": "state_administered",
   "economicNexusUsd": 500000,
@@ -71,6 +86,27 @@
     "stateFund": false,
     "trigger": {
       "minEmployees": 1
+    }
+  },
+  "penalties": {
+    "unemployment": {
+      "basis": "range",
+      "note": "Greater of $1,000 or $50 times the employees on the last quarterly return, up to $10,000 a quarter, for a late or incomplete NYS-45.",
+      "min": 1000,
+      "max": 10000
+    },
+    "newHire": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late new hire report was found; secondary sources conflict or give only the federal $25 and $500 ceilings."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "flat",
+      "amount": 2000,
+      "note": "$2,000 for every 10 days out of compliance (Workers' Compensation Board)."
     }
   },
   "paidLeave": {
@@ -91,6 +127,7 @@
     "description": "New York has no general business license; NYC and other cities license specific industries."
   },
   "dbaFiling": "county",
+  "dbaEntitiesFileLocally": false,
   "dbaOffice": "County clerk",
   "industry": {
     "contractor": null,

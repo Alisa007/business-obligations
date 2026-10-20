@@ -10,10 +10,15 @@
     "appliesTo": ["all"],
     "checkedOn": "2026-10-16",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "none",
+      "amount": 0,
+      "note": "There is no fee to file or register."
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "per_item",
+      "note": "A 2022 law sets a penalty of 15% of the property's value for failing to pay or deliver, and $100 a day up to $5,000 for willful failure to report; the Comptroller can waive penalties.",
+      "perUnit": 100,
+      "max": 5000
     }
   }
 ]

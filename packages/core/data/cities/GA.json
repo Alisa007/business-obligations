@@ -15,13 +15,18 @@
         "url": ["https://www.accgov.com/138/Business-Occupation-Tax"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set by business classification in the local business tax schedule, so no single amount applies."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10,
+          "note": "10% on applications after April 1."
         }
       }
-    ]
+    ],
+    "status": "rules",
+    "aliases": ["Athens-Clarke County"]
   },
   {
     "city": "Atlanta",
@@ -37,20 +42,23 @@
         "category": "license",
         "authority": "City of Atlanta Office of Revenue",
         "description": "Businesses operating in Atlanta hold an occupational tax certificate, renewed annually through the city's online portal; certificates expire December 31.",
-        "rrule": "FREQ=YEARLY",
-        "deadline": "Expires December 31; renew annually",
+        "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=31",
         "url": [
           "https://www.atlantaga.gov/government/departments/finance/office-of-revenue/apply-for-a-new-business-occupational-tax-certificate"
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The tax is set by the business's gross receipts or number of employees under the city's schedule, so no single amount applies."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10,
+          "note": "The city's 2025 renewal notice: a 10% failure-to-pay fee after the April 1 deadline and a $500 failure-to-file fee after February 15, plus 1.5% monthly interest."
         }
       }
-    ]
+    ],
+    "status": "rules"
   },
   {
     "city": "Augusta",
@@ -69,13 +77,17 @@
         "checkedOn": "2026-10-18",
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set by business classification in the local business tax schedule, so no single amount applies."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10,
+          "note": "10% penalty plus 1.5% monthly interest when unpaid 30 days after the due date."
         }
       }
-    ]
+    ],
+    "status": "rules"
   },
   {
     "city": "Columbus",
@@ -95,13 +107,17 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set by business classification in the local business tax schedule, so no single amount applies."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10,
+          "note": "10% penalty plus 1.5% monthly interest."
         }
       }
-    ]
+    ],
+    "status": "rules"
   },
   {
     "city": "Sandy Springs",
@@ -119,13 +135,17 @@
         "url": ["https://www.sandyspringsga.gov/annual-business-license-payment-and-renewal/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The city says there is no standard amount; the tax is based on estimated gross receipts, number of employees and similar factors."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10,
+          "note": "10% penalty and 1.5% monthly interest after March 31."
         }
       }
-    ]
+    ],
+    "status": "rules"
   },
   {
     "city": "Savannah",
@@ -139,18 +159,24 @@
         "category": "license",
         "authority": "City of Savannah Revenue Department",
         "description": "Business tax certificates expire December 31 and renew annually. The city's pages give March 1 for renewal (the 2026 form says March 31) and a January 31 payment date, so confirm on your renewal packet.",
-        "rrule": "FREQ=YEARLY",
-        "deadline": "Certificates expire December 31; renewal packet date varies",
+        "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=31",
+        "deadlineNote": "certificates expire December 31; the renewal packet date varies",
         "url": ["https://savannahga.gov/1587/Business-License"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The tax is set by the business's gross receipts or number of employees under the city's schedule, so no single amount applies."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10,
+          "percentPerMonth": 1.5,
+          "max": 17.5,
+          "note": "The city's Revenue Enforcement page: 10% in April, rising 1.5 points each month to 17.5% in September, plus interest."
         }
       }
-    ]
+    ],
+    "status": "rules"
   },
   {
     "city": "Macon",
@@ -163,44 +189,23 @@
         "authority": "Macon-Bibb County Business License Office",
         "description": "Every business, trade, profession, and occupation operating in Macon-Bibb County must obtain an occupation tax certificate (business license) unless exempt; confirm the applicable classification and fee with the county before operating.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://www.maconbibb.us/businesslicenseprocess/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set by business classification in the local business tax schedule, so no single amount applies."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": ["https://www.maconbibb.us/businesslicenseprocess/"],
-    "note": "Macon city-specific licensing was confirmed from the cited official source."
-  },
-  {
-    "city": "Athens-Clarke County",
-    "status": "rules",
-    "items": [
-      {
-        "id": "athens-clarke-county.occupation-tax",
-        "title": "Renew the Athens-Clarke occupation tax certificate",
-        "category": "license",
-        "authority": "Athens-Clarke County Business Tax Office",
-        "description": "Athens-Clarke County occupation tax certificates are valid for the calendar year; renewals are due on or before April 1 and later applications carry a 10% penalty.",
-        "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
-        "url": ["https://accgov.com/138/Business-Occupation-Tax"],
-        "appliesTo": ["all"],
-        "feeDetail": {
-          "basis": "unknown"
-        },
-        "penalty": {
-          "basis": "unknown"
-        }
-      }
-    ],
-    "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://accgov.com/138/Business-Occupation-Tax"],
-    "note": "Athens-Clarke County occupation tax certificates are valid for the calendar year; renewals are due on or before April 1 and later applications carry a 10% penalty."
+    "note": "Macon city-specific licensing was confirmed from the cited official source.",
+    "counties": ["Bibb"]
   },
   {
     "city": "South Fulton",
@@ -216,16 +221,19 @@
         "url": ["https://www.cityofsouthfultonga.gov/3775/Business-License"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set by business classification in the local business tax schedule, so no single amount applies."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": ["https://www.cityofsouthfultonga.gov/3775/Business-License"],
-    "note": "South Fulton city-specific licensing was confirmed from the cited official source."
+    "note": "South Fulton city-specific licensing was confirmed from the cited official source.",
+    "counties": ["Fulton"]
   },
   {
     "city": "Roswell",
@@ -241,16 +249,20 @@
         "url": ["https://www.roswellgov.com/business/business-registration/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "Rates are in the city's Schedule of Rates; professional businesses may pay a flat $400 per practitioner."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10,
+          "note": "10% after the March 15 deadline."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": ["https://www.roswellgov.com/business/business-registration/"],
-    "note": "Roswell city-specific licensing was confirmed from the cited official source."
+    "note": "Roswell city-specific licensing was confirmed from the cited official source.",
+    "counties": ["Fulton"]
   },
   {
     "city": "Warner Robins",
@@ -266,16 +278,19 @@
         "url": ["https://www.wrga.gov/page/business-license"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set by business classification in the local business tax schedule, so no single amount applies."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": ["https://www.wrga.gov/page/business-license"],
-    "note": "Warner Robins requires an occupational tax certificate (business license) to conduct business in the city, including when sales tax is not collected; fees depend on employees or business type."
+    "note": "Warner Robins requires an occupational tax certificate (business license) to conduct business in the city, including when sales tax is not collected; fees depend on employees or business type.",
+    "counties": ["Houston"]
   },
   {
     "city": "Johns Creek",
@@ -288,19 +303,24 @@
         "authority": "City of Johns Creek Revenue Department",
         "description": "Johns Creek provides a city business license and occupational tax process through its business portal; apply for or renew the license before conducting business and complete any applicable zoning, health or professional requirements.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://johnscreekga.gov/businesses/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set by business classification in the local business tax schedule, so no single amount applies."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10,
+          "note": "The city's business license page: a 10% late filing penalty plus interest if not renewed by March 31."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": ["https://johnscreekga.gov/businesses/"],
-    "note": "Johns Creek provides a city business license and occupational tax process through its business portal; apply for or renew the license before conducting business and complete any applicable zoning, health or professional requirements."
+    "note": "Johns Creek provides a city business license and occupational tax process through its business portal; apply for or renew the license before conducting business and complete any applicable zoning, health or professional requirements.",
+    "counties": ["Fulton"]
   },
   {
     "city": "Mableton",
@@ -317,15 +337,18 @@
         "url": ["https://sos.ga.gov/page/business-division-faq"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://sos.ga.gov/page/business-division-faq"]
+    "sourceUrl": ["https://sos.ga.gov/page/business-division-faq"],
+    "counties": ["Cobb"]
   },
   {
     "city": "Alpharetta",
@@ -341,16 +364,19 @@
         "url": ["https://www.alpharetta.ga.us/business-licenses"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set by business classification in the local business tax schedule, so no single amount applies."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": ["https://www.alpharetta.ga.us/business-licenses"],
-    "note": "All businesses operating within Alpharetta must possess a current occupational tax certificate (business license) on the first day of business; fees and application requirements depend on the business category."
+    "note": "All businesses operating within Alpharetta must possess a current occupational tax certificate (business license) on the first day of business; fees and application requirements depend on the business category.",
+    "counties": ["Fulton"]
   },
   {
     "city": "Albany",
@@ -358,7 +384,7 @@
     "reason": "city-license-unconfirmed",
     "items": [
       {
-        "id": "albany.local-licenses",
+        "id": "albany-ga.local-licenses",
         "title": "Review applicable local licenses and permits in Albany",
         "category": "license",
         "authority": "Albany local licensing authority",
@@ -367,15 +393,18 @@
         "url": ["https://sos.ga.gov/page/business-division-faq"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://sos.ga.gov/page/business-division-faq"]
+    "sourceUrl": ["https://sos.ga.gov/page/business-division-faq"],
+    "counties": ["Dougherty", "Baker"]
   },
   {
     "city": "Marietta",
@@ -391,16 +420,19 @@
         "url": ["https://www.mariettaga.gov/1094/Applications-Forms"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The tax is set by the business's gross receipts or number of employees under the city's schedule, so no single amount applies."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": ["https://www.mariettaga.gov/1094/Applications-Forms"],
-    "note": "Every business operating within Marietta city limits must have a current city business license; most businesses complete a general application, and fees are based on annual gross receipts or employee count."
+    "note": "Every business operating within Marietta city limits must have a current city business license; most businesses complete a general application, and fees are based on annual gross receipts or employee count.",
+    "counties": ["Cobb"]
   },
   {
     "city": "Stonecrest",
@@ -417,15 +449,18 @@
         "url": ["https://sos.ga.gov/page/business-division-faq"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://sos.ga.gov/page/business-division-faq"]
+    "sourceUrl": ["https://sos.ga.gov/page/business-division-faq"],
+    "counties": ["DeKalb"]
   },
   {
     "city": "Brookhaven",
@@ -442,15 +477,18 @@
         "url": ["https://sos.ga.gov/page/business-division-faq"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://sos.ga.gov/page/business-division-faq"]
+    "sourceUrl": ["https://sos.ga.gov/page/business-division-faq"],
+    "counties": ["DeKalb"]
   },
   {
     "city": "Smyrna",
@@ -458,7 +496,7 @@
     "reason": "city-license-unconfirmed",
     "items": [
       {
-        "id": "smyrna.local-licenses",
+        "id": "smyrna-ga.local-licenses",
         "title": "Review applicable local licenses and permits in Smyrna",
         "category": "license",
         "authority": "Smyrna local licensing authority",
@@ -467,15 +505,18 @@
         "url": ["https://sos.ga.gov/page/business-division-faq"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://sos.ga.gov/page/business-division-faq"]
+    "sourceUrl": ["https://sos.ga.gov/page/business-division-faq"],
+    "counties": ["Cobb"]
   },
   {
     "city": "Valdosta",
@@ -492,15 +533,18 @@
         "url": ["https://sos.ga.gov/page/business-division-faq"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://sos.ga.gov/page/business-division-faq"]
+    "sourceUrl": ["https://sos.ga.gov/page/business-division-faq"],
+    "counties": ["Lowndes"]
   },
   {
     "city": "Dunwoody",
@@ -517,15 +561,18 @@
         "url": ["https://sos.ga.gov/page/business-division-faq"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://sos.ga.gov/page/business-division-faq"]
+    "sourceUrl": ["https://sos.ga.gov/page/business-division-faq"],
+    "counties": ["DeKalb"]
   },
   {
     "city": "Gainesville",
@@ -542,15 +589,18 @@
         "url": ["https://sos.ga.gov/page/business-division-faq"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://sos.ga.gov/page/business-division-faq"]
+    "sourceUrl": ["https://sos.ga.gov/page/business-division-faq"],
+    "counties": ["Hall"]
   },
   {
     "city": "Newnan",
@@ -567,15 +617,18 @@
         "url": ["https://sos.ga.gov/page/business-division-faq"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://sos.ga.gov/page/business-division-faq"]
+    "sourceUrl": ["https://sos.ga.gov/page/business-division-faq"],
+    "counties": ["Coweta"]
   },
   {
     "city": "Peachtree Corners",
@@ -592,15 +645,18 @@
         "url": ["https://sos.ga.gov/page/business-division-faq"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://sos.ga.gov/page/business-division-faq"]
+    "sourceUrl": ["https://sos.ga.gov/page/business-division-faq"],
+    "counties": ["Gwinnett"]
   },
   {
     "city": "Douglasville",
@@ -617,15 +673,18 @@
         "url": ["https://sos.ga.gov/page/business-division-faq"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://sos.ga.gov/page/business-division-faq"]
+    "sourceUrl": ["https://sos.ga.gov/page/business-division-faq"],
+    "counties": ["Douglas"]
   },
   {
     "city": "Mulberry",
@@ -642,14 +701,17 @@
         "url": ["https://sos.ga.gov/page/business-division-faq"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://sos.ga.gov/page/business-division-faq"]
+    "sourceUrl": ["https://sos.ga.gov/page/business-division-faq"],
+    "counties": ["Gwinnett"]
   }
 ]

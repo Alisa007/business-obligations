@@ -10,10 +10,15 @@
     "appliesTo": ["all"],
     "checkedOn": "2026-10-16",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "none",
+      "amount": 0,
+      "note": "There is no fee to file or register."
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "per_item",
+      "note": "Civil penalty of $200 a day up to $5,000, plus interest (D.C. Code section 41-162.04).",
+      "perUnit": 200,
+      "max": 5000
     }
   }
 ]

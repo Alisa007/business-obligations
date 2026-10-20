@@ -14,15 +14,19 @@
         "url": ["https://www.akronohio.gov/cms/INCOMETAX/index.html"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
     ],
     "sourceUrl": ["https://www.akronohio.gov/cms/INCOMETAX/index.html"],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "city": "Cincinnati",
@@ -39,10 +43,13 @@
         "url": ["https://www.cincinnati-oh.gov/finance/income-taxes/due-dates/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       },
       {
@@ -56,15 +63,19 @@
         "url": ["https://www.cincinnati-oh.gov/finance/income-taxes/due-dates/"],
         "appliesTo": ["employees"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
     ],
     "sourceUrl": ["https://www.cincinnati-oh.gov/finance/income-taxes/"],
-    "checkedOn": "2026-10-19"
+    "checkedOn": "2026-10-19",
+    "status": "rules"
   },
   {
     "city": "Cleveland",
@@ -81,10 +92,13 @@
         "url": ["https://www.ccaohio.gov/due-dates/business-filing"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The Central Collection Agency's pages give no net profit late-penalty amount; state law also allows a $25 monthly charge for an unfiled return."
         }
       },
       {
@@ -98,15 +112,20 @@
         "url": ["https://www.ccaohio.gov/due-dates/business-filing"],
         "appliesTo": ["employees"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "note": "The Central Collection Agency's 2026 withholding form states a 50% penalty on each late return or payment, plus interest."
         }
       }
     ],
     "sourceUrl": ["https://www.ccaohio.gov/tax-forms/business"],
-    "checkedOn": "2026-10-19"
+    "checkedOn": "2026-10-19",
+    "status": "rules"
   },
   {
     "city": "Columbus",
@@ -125,10 +144,14 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "The city's 2026 filing-season page sets a 15% penalty for late payment of tax, plus 9% interest for 2026."
         }
       },
       {
@@ -144,15 +167,20 @@
         ],
         "appliesTo": ["employees"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "note": "The city's 2026 filing-season page sets a 50% penalty on employer withholding not received on time, plus 9% interest for 2026."
         }
       }
     ],
     "sourceUrl": ["https://www.columbus.gov/Government/City-Auditor/Income-Tax-Division"],
-    "checkedOn": "2026-10-19"
+    "checkedOn": "2026-10-19",
+    "status": "rules"
   },
   {
     "city": "Dayton",
@@ -170,10 +198,12 @@
         "url": ["https://www.daytonohio.gov/279/Tax-Forms"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "This entry covers the city's local licenses and taxes generally, each of which carries its own late charge in the municipal code; no single amount is stated."
         }
       }
     ],
@@ -195,15 +225,20 @@
         "url": ["https://toledo.oh.gov/pay-taxes"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "note": "The city's estimate worksheets state a 15% penalty plus interest when quarterly estimated payments fall short of the required amount."
         }
       }
     ],
     "sourceUrl": ["https://toledo.oh.gov/pay-taxes"],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "city": "Parma",
@@ -220,15 +255,18 @@
         "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
+    "counties": ["Cuyahoga"]
   },
   {
     "city": "Canton",
@@ -245,15 +283,18 @@
         "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
+    "counties": ["Stark"]
   },
   {
     "city": "Lorain",
@@ -270,15 +311,18 @@
         "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
+    "counties": ["Lorain"]
   },
   {
     "city": "Hamilton",
@@ -295,15 +339,18 @@
         "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
+    "counties": ["Butler"]
   },
   {
     "city": "Youngstown",
@@ -320,15 +367,18 @@
         "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
+    "counties": ["Mahoning"]
   },
   {
     "city": "Springfield",
@@ -336,7 +386,7 @@
     "reason": "city-license-unconfirmed",
     "items": [
       {
-        "id": "springfield.local-licenses",
+        "id": "springfield-oh.local-licenses",
         "title": "Review applicable local licenses and permits in Springfield",
         "category": "license",
         "authority": "Springfield local licensing authority",
@@ -345,15 +395,18 @@
         "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
+    "counties": ["Clark"]
   },
   {
     "city": "Kettering",
@@ -370,15 +423,18 @@
         "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
+    "counties": ["Montgomery"]
   },
   {
     "city": "Elyria",
@@ -395,15 +451,18 @@
         "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
+    "counties": ["Lorain"]
   },
   {
     "city": "Middletown",
@@ -411,7 +470,7 @@
     "reason": "city-license-unconfirmed",
     "items": [
       {
-        "id": "middletown.local-licenses",
+        "id": "middletown-oh.local-licenses",
         "title": "Review applicable local licenses and permits in Middletown",
         "category": "license",
         "authority": "Middletown local licensing authority",
@@ -420,15 +479,18 @@
         "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
+    "counties": ["Butler"]
   },
   {
     "city": "Newark",
@@ -436,24 +498,27 @@
     "reason": "city-license-unconfirmed",
     "items": [
       {
-        "id": "newark.local-licenses",
+        "id": "newark-oh.local-licenses",
         "title": "Review applicable local licenses and permits in Newark",
         "category": "license",
         "authority": "Newark local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
-        "frequency": "once",
         "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
-        }
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
+        },
+        "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=31"
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
+    "counties": ["Licking"]
   },
   {
     "city": "Cuyahoga Falls",
@@ -470,15 +535,18 @@
         "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
+    "counties": ["Summit"]
   },
   {
     "city": "Dublin",
@@ -486,7 +554,7 @@
     "reason": "city-license-unconfirmed",
     "items": [
       {
-        "id": "dublin.local-licenses",
+        "id": "dublin-oh.local-licenses",
         "title": "Review applicable local licenses and permits in Dublin",
         "category": "license",
         "authority": "Dublin local licensing authority",
@@ -495,15 +563,18 @@
         "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
+    "counties": ["Franklin"]
   },
   {
     "city": "Lakewood",
@@ -511,7 +582,7 @@
     "reason": "city-license-unconfirmed",
     "items": [
       {
-        "id": "lakewood.local-licenses",
+        "id": "lakewood-oh.local-licenses",
         "title": "Review applicable local licenses and permits in Lakewood",
         "category": "license",
         "authority": "Lakewood local licensing authority",
@@ -520,15 +591,18 @@
         "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
+    "counties": ["Cuyahoga"]
   },
   {
     "city": "Beavercreek",
@@ -545,15 +619,18 @@
         "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
+    "counties": ["Greene"]
   },
   {
     "city": "Euclid",
@@ -570,15 +647,18 @@
         "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
+    "counties": ["Cuyahoga"]
   },
   {
     "city": "Mansfield",
@@ -586,7 +666,7 @@
     "reason": "city-license-unconfirmed",
     "items": [
       {
-        "id": "mansfield.local-licenses",
+        "id": "mansfield-oh.local-licenses",
         "title": "Review applicable local licenses and permits in Mansfield",
         "category": "license",
         "authority": "Mansfield local licensing authority",
@@ -595,15 +675,18 @@
         "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
+    "counties": ["Richland"]
   },
   {
     "city": "Mentor",
@@ -620,15 +703,18 @@
         "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
+    "counties": ["Lake"]
   },
   {
     "city": "Delaware",
@@ -645,15 +731,18 @@
         "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
+    "counties": ["Delaware"]
   },
   {
     "city": "Strongsville",
@@ -670,15 +759,18 @@
         "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
+    "counties": ["Cuyahoga", "Medina"]
   },
   {
     "city": "Grove City",
@@ -695,15 +787,18 @@
         "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
+    "counties": ["Franklin"]
   },
   {
     "city": "Fairfield",
@@ -720,15 +815,18 @@
         "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
+    "counties": ["Butler"]
   },
   {
     "city": "Huber Heights",
@@ -745,15 +843,18 @@
         "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
+    "counties": ["Montgomery"]
   },
   {
     "city": "Cleveland Heights",
@@ -770,15 +871,18 @@
         "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
+    "counties": ["Cuyahoga"]
   },
   {
     "city": "Reynoldsburg",
@@ -795,15 +899,18 @@
         "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
+    "counties": ["Franklin"]
   },
   {
     "city": "Lancaster",
@@ -811,7 +918,7 @@
     "reason": "city-license-unconfirmed",
     "items": [
       {
-        "id": "lancaster.local-licenses",
+        "id": "lancaster-oh.local-licenses",
         "title": "Review applicable local licenses and permits in Lancaster",
         "category": "license",
         "authority": "Lancaster local licensing authority",
@@ -820,14 +927,17 @@
         "url": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"]
+    "sourceUrl": ["https://www.ohiosos.gov/globalassets/business/forms/534A_instructions.pdf"],
+    "counties": ["Fairfield"]
   }
 ]

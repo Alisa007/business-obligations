@@ -23,16 +23,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "The Iowa Department of Revenue's workbook effective July 1, 2026 confirms a 5% local hotel/motel tax for the Adair County jurisdiction; other county-level obligations were not checked.",
-    "sourceUrl": ["https://revenue.iowa.gov/media/90/download?inline="]
+    "sourceUrl": ["https://revenue.iowa.gov/media/90/download?inline="],
+    "status": "rules"
   },
   {
     "county": "Adams",
@@ -58,16 +63,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "The Iowa Department of Revenue's current local hotel/motel tax list confirms a 7% local tax in the Adams County unincorporated area; other county-level obligations were not checked.",
-    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"]
+    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"],
+    "status": "rules"
   },
   {
     "county": "Allamakee",
@@ -93,16 +103,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "The Iowa Department of Revenue's current local hotel/motel tax list confirms a 7% local tax in the Allamakee County unincorporated area; other county-level obligations were not checked.",
-    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"]
+    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"],
+    "status": "rules"
   },
   {
     "county": "Appanoose",
@@ -128,16 +143,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "The Iowa Department of Revenue's current local hotel/motel tax list confirms a 7% local tax in the Appanoose County unincorporated area; other county-level obligations were not checked.",
-    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"]
+    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"],
+    "status": "rules"
   },
   {
     "county": "Audubon",
@@ -163,16 +183,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "The Iowa Department of Revenue's workbook effective July 1, 2026 confirms a 7% local hotel/motel tax for the Audubon County jurisdiction; other county-level obligations were not checked.",
-    "sourceUrl": ["https://revenue.iowa.gov/media/90/download?inline="]
+    "sourceUrl": ["https://revenue.iowa.gov/media/90/download?inline="],
+    "status": "rules"
   },
   {
     "county": "Benton",
@@ -185,6 +210,7 @@
         "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in Benton County must obtain the applicable Iowa food license and comply with Black Hawk County Public Health inspection and enforcement requirements.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.bentoncountyia.gov/public_health/food_safety/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
@@ -227,6 +253,7 @@
         "authority": "Black Hawk County Health Department",
         "description": "Food service and retail food establishments operating in Black Hawk County must obtain the applicable Iowa food establishment license before operating.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.blackhawkcounty.iowa.gov/food-safety",
           "https://assets-global.website-files.com/6026e5c73e800440fd7b119f/6037c8780cb484ed21faebb0_Application-for-Restaurant-Grocery-or-Mobile-Food-Unit-License.pdf",
@@ -281,16 +308,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "The Iowa Department of Revenue's workbook effective July 1, 2026 confirms a 7% local hotel/motel tax for the Boone County jurisdiction; other county-level obligations were not checked.",
-    "sourceUrl": ["https://revenue.iowa.gov/media/90/download?inline="]
+    "sourceUrl": ["https://revenue.iowa.gov/media/90/download?inline="],
+    "status": "rules"
   },
   {
     "county": "Bremer",
@@ -303,6 +335,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing",
         "description": "Food establishments operating in Bremer County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions",
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"
@@ -344,6 +377,7 @@
         "authority": "Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in Buchanan County must obtain the applicable Iowa food establishment license before operating and renew it annually.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
           "https://www.buchanancounty.iowa.gov/food-safety"
@@ -384,6 +418,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing",
         "description": "Food establishments operating in Buena Vista County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://buenavistacounty.iowa.gov/departments/environmental-health/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
@@ -426,6 +461,7 @@
         "authority": "Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in Butler County must obtain the applicable Iowa food establishment license before operating and renew it annually.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
           "https://butlercountyiowa.com/food-safety"
@@ -479,16 +515,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "The Iowa Department of Revenue's current local hotel/motel tax list confirms a 7% local tax in the Calhoun County unincorporated area; other county-level obligations were not checked.",
-    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"]
+    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"],
+    "status": "rules"
   },
   {
     "county": "Carroll",
@@ -514,16 +555,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "The Iowa Department of Revenue's workbook effective July 1, 2026 confirms a 7% local hotel/motel tax for the Carroll County jurisdiction; other county-level obligations were not checked.",
-    "sourceUrl": ["https://revenue.iowa.gov/media/90/download?inline="]
+    "sourceUrl": ["https://revenue.iowa.gov/media/90/download?inline="],
+    "status": "rules"
   },
   {
     "county": "Cass",
@@ -536,6 +582,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing",
         "description": "Food establishments operating in Cass County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions",
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
@@ -578,6 +625,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing",
         "description": "Food establishments operating in Cedar County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions",
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
@@ -633,16 +681,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "The Iowa Department of Revenue's current local hotel/motel tax list confirms a 7% local tax in the Cerro Gordo County unincorporated area; other county-level obligations were not checked.",
-    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"]
+    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"],
+    "status": "rules"
   },
   {
     "county": "Cherokee",
@@ -668,16 +721,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "The Iowa Department of Revenue's workbook effective July 1, 2026 confirms a 7% local hotel/motel tax for the Cherokee County jurisdiction; other county-level obligations were not checked.",
-    "sourceUrl": ["https://revenue.iowa.gov/media/90/download?inline="]
+    "sourceUrl": ["https://revenue.iowa.gov/media/90/download?inline="],
+    "status": "rules"
   },
   {
     "county": "Chickasaw",
@@ -690,6 +748,7 @@
         "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.bentoncountyia.gov/public_health/food_safety/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
@@ -732,6 +791,7 @@
         "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.bentoncountyia.gov/public_health/food_safety/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
@@ -774,6 +834,7 @@
         "authority": "Clay County Food Program",
         "description": "Food establishments operating in Clay County must obtain the applicable food permit before operating and comply with local plan-review, inspection, and renewal requirements.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://healthdept.org/wp-content/uploads/2024/04/Plan-Review-Application.pdf",
           "https://dial.iowa.gov/licenses/food-establishments-hotels"
@@ -827,16 +888,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "The Iowa Department of Revenue's current local hotel/motel tax list confirms a 7% local tax in the Clayton County unincorporated area; other county-level obligations were not checked.",
-    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"]
+    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"],
+    "status": "rules"
   },
   {
     "county": "Clinton",
@@ -862,16 +928,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "The Iowa Department of Revenue's workbook effective July 1, 2026 confirms a 7% local hotel/motel tax for the Clinton County jurisdiction; other county-level obligations were not checked.",
-    "sourceUrl": ["https://revenue.iowa.gov/media/90/download?inline="]
+    "sourceUrl": ["https://revenue.iowa.gov/media/90/download?inline="],
+    "status": "rules"
   },
   {
     "county": "Crawford",
@@ -884,6 +955,7 @@
         "authority": "Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in Crawford County must obtain the applicable Iowa food establishment license before operating and renew it annually.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
           "https://www.crawfordcounty.iowa.gov/food-safety"
@@ -924,6 +996,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing",
         "description": "Food establishments operating in Dallas County must obtain and renew the applicable Iowa food service license before operating.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
           "https://dial.iowa.gov/licenses/food-establishments-hotels"
@@ -964,6 +1037,7 @@
         "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.bentoncountyia.gov/public_health/food_safety/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
@@ -1019,16 +1093,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "The Iowa Department of Revenue's workbook effective July 1, 2026 confirms a 7% local hotel/motel tax for the Decatur County jurisdiction; other county-level obligations were not checked.",
-    "sourceUrl": ["https://revenue.iowa.gov/media/90/download?inline="]
+    "sourceUrl": ["https://revenue.iowa.gov/media/90/download?inline="],
+    "status": "rules"
   },
   {
     "county": "Delaware",
@@ -1041,6 +1120,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing",
         "description": "Food establishments operating in Delaware County must obtain the applicable Iowa food license before operating and renew it annually; Delaware County is covered by the state food inspection jurisdiction.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions"
@@ -1079,6 +1159,7 @@
         "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.bentoncountyia.gov/public_health/food_safety/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
@@ -1134,16 +1215,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "The Iowa Department of Revenue's current local hotel/motel tax list confirms a 5% local tax in the Dickinson County unincorporated area; other county-level obligations were not checked.",
-    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"]
+    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"],
+    "status": "rules"
   },
   {
     "county": "Dubuque",
@@ -1169,16 +1255,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "The Iowa Department of Revenue's workbook effective July 1, 2026 confirms a 7% local hotel/motel tax for the Dubuque County jurisdiction; other county-level obligations were not checked.",
-    "sourceUrl": ["https://revenue.iowa.gov/media/90/download?inline="]
+    "sourceUrl": ["https://revenue.iowa.gov/media/90/download?inline="],
+    "status": "rules"
   },
   {
     "county": "Emmet",
@@ -1191,6 +1282,7 @@
         "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.bentoncountyia.gov/public_health/food_safety/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
@@ -1246,16 +1338,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "The Iowa Department of Revenue's workbook effective July 1, 2026 confirms a 7% local hotel/motel tax for the Fayette County jurisdiction; other county-level obligations were not checked.",
-    "sourceUrl": ["https://revenue.iowa.gov/media/90/download?inline="]
+    "sourceUrl": ["https://revenue.iowa.gov/media/90/download?inline="],
+    "status": "rules"
   },
   {
     "county": "Floyd",
@@ -1268,6 +1365,7 @@
         "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.bentoncountyia.gov/public_health/food_safety/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
@@ -1323,16 +1421,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "The Iowa Department of Revenue's current local hotel/motel tax list confirms a 5% local tax in the Franklin County unincorporated area; other county-level obligations were not checked.",
-    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"]
+    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"],
+    "status": "rules"
   },
   {
     "county": "Fremont",
@@ -1358,16 +1461,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "The Iowa Department of Revenue's current local hotel/motel tax list confirms a 7% local tax in the Fremont County unincorporated area; other county-level obligations were not checked.",
-    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"]
+    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"],
+    "status": "rules"
   },
   {
     "county": "Greene",
@@ -1380,6 +1488,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing",
         "description": "Food establishments operating in Greene County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions",
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"
@@ -1421,6 +1530,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing",
         "description": "Food establishments operating in Grundy County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.grundycountyiowa.gov/departments/environmental-health",
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions",
@@ -1463,6 +1573,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing",
         "description": "Food establishments operating in Guthrie County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://guthriecounty.gov/environmental_health/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions",
@@ -1518,16 +1629,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "The Iowa Department of Revenue's current local hotel/motel tax list confirms a 7% local tax in the Hamilton County unincorporated area; other county-level obligations were not checked.",
-    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"]
+    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"],
+    "status": "rules"
   },
   {
     "county": "Hancock",
@@ -1539,7 +1655,7 @@
         "category": "license",
         "authority": "Iowa Department of Inspections, Appeals, & Licensing / Hancock County Health Department",
         "description": "Food establishments operating in Hancock County must obtain a valid county permit before operating and renew it annually by December 31 under the county ordinance and Iowa food-safety program.",
-        "rrule": "FREQ=YEARLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=31",
         "url": [
           "https://www.hancockcountyhealthdepartment.org/uploads/1/4/2/5/142550397/2025_application_for_food_service_permit.pdf",
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"
@@ -1594,16 +1710,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "The Iowa Department of Revenue's current local hotel/motel tax list confirms a 7% local tax in the Hardin County unincorporated area; other county-level obligations were not checked.",
-    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"]
+    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"],
+    "status": "rules"
   },
   {
     "county": "Harrison",
@@ -1616,6 +1737,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing",
         "description": "Food establishments operating in Harrison County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions"
@@ -1656,6 +1778,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing",
         "description": "Food establishments operating in Henry County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://henrycounty.iowa.gov/environmental-health/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels"
@@ -1696,6 +1819,7 @@
         "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.bentoncountyia.gov/public_health/food_safety/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
@@ -1751,16 +1875,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "The Iowa Department of Revenue's workbook effective July 1, 2026 confirms a 7% local hotel/motel tax for the Humboldt County jurisdiction; other county-level obligations were not checked.",
-    "sourceUrl": ["https://revenue.iowa.gov/media/90/download?inline="]
+    "sourceUrl": ["https://revenue.iowa.gov/media/90/download?inline="],
+    "status": "rules"
   },
   {
     "county": "Ida",
@@ -1773,6 +1902,7 @@
         "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.bentoncountyia.gov/public_health/food_safety/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
@@ -1828,16 +1958,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "The Iowa Department of Revenue's current local hotel/motel tax list confirms a 7% local tax in the Iowa County unincorporated area; other county-level obligations were not checked.",
-    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"]
+    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"],
+    "status": "rules"
   },
   {
     "county": "Jackson",
@@ -1850,6 +1985,7 @@
         "authority": "Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in Jackson County must obtain the applicable Iowa food establishment license before operating and renew it annually.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
           "https://www.jacksoncountyiowa.com/food-safety"
@@ -1890,6 +2026,7 @@
         "authority": "Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in Jasper County must obtain the applicable Iowa food establishment license before operating and renew it annually.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
           "https://www.jasperia.org/food-safety"
@@ -1930,6 +2067,7 @@
         "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.bentoncountyia.gov/public_health/food_safety/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
@@ -1972,6 +2110,7 @@
         "authority": "Johnson County Public Health",
         "description": "Food service and retail food establishments operating in Johnson County must obtain the applicable Iowa food establishment license before operating.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://johnsoncountyiowa.gov/public-health/restaurant-licenses",
           "https://johnsoncountyiowa.gov/public-health/faqs",
@@ -2026,16 +2165,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "The Iowa Department of Revenue's current local hotel/motel tax list confirms a 5% local tax in the Jones County unincorporated area; other county-level obligations were not checked.",
-    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"]
+    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"],
+    "status": "rules"
   },
   {
     "county": "Keokuk",
@@ -2048,6 +2192,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing",
         "description": "Food establishments operating in Keokuk County must obtain and renew the applicable Iowa food service license before operating.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
           "https://dial.iowa.gov/licenses/food-establishments-hotels"
@@ -2088,6 +2233,7 @@
         "authority": "Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in Kossuth County must obtain the applicable Iowa food establishment license before operating and renew it annually.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
           "https://www.kossuthia.com/food-safety"
@@ -2141,16 +2287,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "The Iowa Department of Revenue's current local hotel/motel tax list confirms a 7% local tax in the Lee County unincorporated area; other county-level obligations were not checked.",
-    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"]
+    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"],
+    "status": "rules"
   },
   {
     "county": "Linn",
@@ -2163,6 +2314,7 @@
         "authority": "Linn County Public Health",
         "description": "Food establishments operating in Linn County must obtain the applicable food establishment license; the county fee depends on the establishment type and sales category.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.linncountyiowa.gov/DocumentCenter/View/12615/Food-Establishment-License-Application-2019-New-Address"
         ],
@@ -2201,6 +2353,7 @@
         "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.bentoncountyia.gov/public_health/food_safety/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
@@ -2243,6 +2396,7 @@
         "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.bentoncountyia.gov/public_health/food_safety/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
@@ -2298,16 +2452,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "The Iowa Department of Revenue's current local hotel/motel tax list confirms a 7% local tax in the Lyon County unincorporated area; other county-level obligations were not checked.",
-    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"]
+    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"],
+    "status": "rules"
   },
   {
     "county": "Madison",
@@ -2333,16 +2492,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "The Iowa Department of Revenue's current local hotel/motel tax list confirms a 5% local tax in the Madison County unincorporated area; other county-level obligations were not checked.",
-    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"]
+    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"],
+    "status": "rules"
   },
   {
     "county": "Mahaska",
@@ -2355,6 +2519,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing",
         "description": "Food establishments operating in Mahaska County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions",
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"
@@ -2396,6 +2561,7 @@
         "authority": "Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in Marion County must obtain the applicable Iowa food establishment license before operating and renew it annually.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
           "https://www.marioncountyiowa.gov/food-safety"
@@ -2436,6 +2602,7 @@
         "authority": "Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in Marshall County must obtain the applicable Iowa food establishment license before operating and renew it annually.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
           "https://www.marshallcountyia.gov/environmental_health/"
@@ -2489,16 +2656,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "The Iowa Department of Revenue's current local hotel/motel tax list confirms a 7% local tax in the Mills County unincorporated area; other county-level obligations were not checked.",
-    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"]
+    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"],
+    "status": "rules"
   },
   {
     "county": "Mitchell",
@@ -2524,16 +2696,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "The Iowa Department of Revenue's current local hotel/motel tax list confirms a 7% local tax in the Mitchell County unincorporated area; other county-level obligations were not checked.",
-    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"]
+    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"],
+    "status": "rules"
   },
   {
     "county": "Monona",
@@ -2546,6 +2723,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing",
         "description": "Food establishments operating in Monona County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions",
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
@@ -2588,6 +2766,7 @@
         "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.bentoncountyia.gov/public_health/food_safety/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
@@ -2630,6 +2809,7 @@
         "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.bentoncountyia.gov/public_health/food_safety/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
@@ -2685,16 +2865,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "The Iowa Department of Revenue's workbook effective July 1, 2026 confirms a 7% local hotel/motel tax for the Muscatine County jurisdiction; other county-level obligations were not checked.",
-    "sourceUrl": ["https://revenue.iowa.gov/media/90/download?inline="]
+    "sourceUrl": ["https://revenue.iowa.gov/media/90/download?inline="],
+    "status": "rules"
   },
   {
     "county": "O'Brien",
@@ -2707,6 +2892,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing",
         "description": "Food establishments operating in O'Brien County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions",
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"
@@ -2761,16 +2947,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "The Iowa Department of Revenue's current local hotel/motel tax list confirms a 5% local tax in the Osceola County unincorporated area; other county-level obligations were not checked.",
-    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"]
+    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"],
+    "status": "rules"
   },
   {
     "county": "Page",
@@ -2783,6 +2974,7 @@
         "authority": "Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in Page County must obtain the applicable Iowa food establishment license before operating and renew it annually.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
           "https://pagecounty.iowa.gov/food-safety"
@@ -2823,6 +3015,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing",
         "description": "Food establishments operating in Palo Alto County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions",
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"
@@ -2864,6 +3057,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing / Plymouth County Health Department",
         "description": "Food establishments operating in Plymouth County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://plymouthcountyiowa.gov/contact/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"
@@ -2918,16 +3112,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "The Iowa Department of Revenue's workbook effective July 1, 2026 confirms a 7% local hotel/motel tax for the Pocahontas County jurisdiction; other county-level obligations were not checked.",
-    "sourceUrl": ["https://revenue.iowa.gov/media/90/download?inline="]
+    "sourceUrl": ["https://revenue.iowa.gov/media/90/download?inline="],
+    "status": "rules"
   },
   {
     "county": "Polk",
@@ -2953,16 +3152,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "The Iowa Department of Revenue's current local hotel/motel tax list confirms a 7% local tax in the Polk County unincorporated area; other county-level obligations were not checked.",
-    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"]
+    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"],
+    "status": "rules"
   },
   {
     "county": "Pottawattamie",
@@ -2975,6 +3179,7 @@
         "authority": "Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food businesses operating in Pottawattamie County must obtain and renew the applicable Iowa food establishment license through the state licensing system.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
           "https://www.pottcounty-ia.gov/departments/"
@@ -3026,16 +3231,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "The Iowa Department of Revenue's current local hotel/motel tax list confirms a 7% local tax in the Poweshiek County unincorporated area; other county-level obligations were not checked.",
-    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"]
+    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"],
+    "status": "rules"
   },
   {
     "county": "Ringgold",
@@ -3048,6 +3258,7 @@
         "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.bentoncountyia.gov/public_health/food_safety/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
@@ -3090,6 +3301,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing",
         "description": "Food establishments operating in Sac County must obtain the applicable Iowa food license before operating; Sac County confirms that food-establishment licensing and inspections are completed by the state.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://saccountyhealthservices.com/services/environmental-health-zoning/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions",
@@ -3132,6 +3344,7 @@
         "category": "license",
         "authority": "Scott County Health Department",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -3185,16 +3398,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "The Iowa Department of Revenue's current local hotel/motel tax list confirms a 7% local tax in the Shelby County unincorporated area; other county-level obligations were not checked.",
-    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"]
+    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"],
+    "status": "rules"
   },
   {
     "county": "Sioux",
@@ -3207,6 +3425,7 @@
         "authority": "Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in Sioux County must obtain the applicable Iowa food establishment license before operating and renew it annually.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
           "https://www.siouxlanddistricthealth.org/home/showpublisheddocument/1467/638918127575830000"
@@ -3247,6 +3466,7 @@
         "authority": "Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food businesses operating in Story County must obtain the appropriate food license before operation; applications should be submitted at least 30 days before opening and renewals are due before expiration.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://storycountyiowa.gov/115/Code-of-Ordinances",
           "https://storycountyiowa.gov/Applications-and-Permits",
@@ -3288,6 +3508,7 @@
         "authority": "Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in Tama County must obtain the applicable Iowa food establishment license before operating and renew it annually.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
           "https://www.tamacounty.iowa.gov/departments/"
@@ -3328,6 +3549,7 @@
         "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.bentoncountyia.gov/public_health/food_safety/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
@@ -3370,6 +3592,7 @@
         "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.bentoncountyia.gov/public_health/food_safety/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
@@ -3412,6 +3635,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing",
         "description": "Food establishments operating in Van Buren County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions"
@@ -3452,6 +3676,7 @@
         "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.bentoncountyia.gov/public_health/food_safety/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
@@ -3494,6 +3719,7 @@
         "authority": "Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in Warren County must obtain the applicable Iowa food establishment license before operating and renew it annually.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
           "https://www.warrencountyia.gov/government/"
@@ -3547,16 +3773,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "The Iowa Department of Revenue's workbook effective July 1, 2026 confirms a 7% local hotel/motel tax for the Washington County jurisdiction; other county-level obligations were not checked.",
-    "sourceUrl": ["https://revenue.iowa.gov/media/90/download?inline="]
+    "sourceUrl": ["https://revenue.iowa.gov/media/90/download?inline="],
+    "status": "rules"
   },
   {
     "county": "Wayne",
@@ -3569,6 +3800,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing",
         "description": "Food establishments operating in Wayne County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions",
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"
@@ -3610,6 +3842,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing",
         "description": "Food establishments operating in Webster County must obtain and renew the applicable Iowa food service license before operating.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
           "https://dial.iowa.gov/licenses/food-establishments-hotels"
@@ -3650,6 +3883,7 @@
         "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.bentoncountyia.gov/public_health/food_safety/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
@@ -3692,6 +3926,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing",
         "description": "Food establishments operating in Winneshiek County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions",
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"
@@ -3733,6 +3968,7 @@
         "authority": "Siouxland District Health Department",
         "description": "Food establishments operating in Woodbury County must obtain the applicable food establishment license through the local health authority; county payment records show recurring food-establishment licensing charges and the health department administers the program.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.woodburycountyiowa.gov/files/ap_claims_paid/2025-08-19.pdf",
           "https://www.woodburycountyiowa.gov/supervisors/ap_claims_paid/2026-05-26/"
@@ -3784,16 +4020,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "The Iowa Department of Revenue's current local hotel/motel tax list confirms a 7% local tax in the Worth County unincorporated area; other county-level obligations were not checked.",
-    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"]
+    "sourceUrl": ["https://revenue.iowa.gov/taxes/tax-guidance/sales-use-excise-tax/sales-use-tax-guide"],
+    "status": "rules"
   },
   {
     "county": "Wright",
@@ -3806,6 +4047,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing",
         "description": "Food establishments operating in Wright County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions",
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"

@@ -49,7 +49,7 @@ describe("state data files", () => {
     expect(validate.errors ?? []).toEqual([]);
     expect(ok).toBe(true);
     expect(data.code, "the file name is the state code").toBeUndefined();
-    expect(data.wageWithholding, "withholding follows links.withholding").toBeUndefined();
+    expect(typeof data.wageWithholding, "withholding is explicit").toBe("boolean");
   });
 
   it("the loader adds the code and the fields that follow from other fields", () => {
@@ -59,7 +59,7 @@ describe("state data files", () => {
       expect(STATES[code]).toEqual({
         code,
         ...raw,
-        wageWithholding: !!raw.links.withholding,
+        wageWithholding: raw.wageWithholding,
         unemployment: { ...raw.unemployment, year: read("data/ui-source.json").year },
         workersComp: {
           ...raw.workersComp,
@@ -88,7 +88,10 @@ describe("state data files", () => {
     const common = read("schema/common.schema.json") as SchemaNode;
     const resolve = (n: SchemaNode): SchemaNode =>
       n.$ref
-        ? resolve((n.$ref.startsWith("common.") ? common : schema).$defs![n.$ref.split("/").pop()!]!)
+        ? resolve(
+            (n.$ref.startsWith("common.") ? common : schema).$defs![n.$ref.split("/").pop()!] ??
+              common.$defs![n.$ref.split("/").pop()!]!,
+          )
         : n;
     const pick = (n: SchemaNode, v: unknown): SchemaNode => {
       n = resolve(n);
@@ -442,6 +445,8 @@ describe("local and profession data schemas", () => {
   it("rejects malformed local entries", () => {
     const ok = {
       city: "Austin",
+      counties: ["Travis"],
+      checkedOn: "2026-10-13",
       status: "unverified",
       note: "No general license was confirmed.",
       items: [],
@@ -459,6 +464,12 @@ describe("local and profession data schemas", () => {
       penalty: { basis: "unknown" },
     };
     const bad: unknown[] = [
+      // A city lies in at least one county, each named once.
+      { ...ok, counties: undefined },
+      { ...ok, counties: [] },
+      { ...ok, counties: "Travis" },
+      { ...ok, counties: ["Travis", "Travis"] },
+      { ...ok, counties: [""] },
       { ...ok, reason: "tx-city-license-not-researched" },
       { ...ok, note: undefined, reason: "Not A Code" },
       { ...ok, checkedOn: "2026-02-30" },
@@ -487,7 +498,7 @@ describe("local and profession data schemas", () => {
     for (const entry of bad) expect(cityFile([entry]), JSON.stringify(entry)).toBe(false);
     // An item names its page, and a county entry says when it was checked.
     expect(cityFile([{ ...ok, status: undefined, items: [item] }])).toBe(false);
-    expect(cityFile([{ ...ok, status: undefined, items: [{ ...item, url: "https://example.gov/x" }] }])).toBe(
+    expect(cityFile([{ ...ok, status: "rules", items: [{ ...item, url: "https://example.gov/x" }] }])).toBe(
       true,
     );
     expect(
@@ -604,7 +615,8 @@ describe("source links", () => {
         expect(value, `${code}.links.${key}`).toSatisfy(
           (urls) => Array.isArray(urls) && urls.every((url: string) => /^https:\/\//.test(url)),
         );
-        expect((value as string[]).every(isBare), `${code}.links.${key}`).toBe(false);
+        if ((value as string[]).length > 0)
+          expect((value as string[]).every(isBare), `${code}.links.${key}`).toBe(false);
       }
     }
   });
@@ -877,6 +889,7 @@ describe("seed items with appliesWhen", () => {
     {
       state: "NY",
       county: "Testland",
+      status: "rules" as const,
       items: [
         {
           id: "testland.occupancy-tax",
@@ -884,7 +897,7 @@ describe("seed items with appliesWhen", () => {
           category: "filing" as const,
           authority: "Testland Finance",
           description: "Lodging operators remit the county occupancy tax.",
-          rrule: "FREQ=MONTHLY;INTERVAL=3",
+          rrule: "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
           appliesTo: ["all" as const],
           feeDetail: { basis: "unknown" as const },
           penalty: { basis: "unknown" as const },
@@ -983,6 +996,9 @@ describe("bring-your-own city data", () => {
       {
         state: "TX",
         city: "Smallville",
+        counties: ["Testland"],
+        status: "rules" as const,
+        checkedOn: "2026-10-13",
         items: [
           {
             id: "smallville.permit",
@@ -1099,7 +1115,8 @@ describe("schedules in data files", () => {
     ];
     for (const [where, o] of nodes) {
       const { due } = parseRRule(o.rrule as string, o.anchor as string | undefined);
-      if (typeof o.deadline !== "string" || !due || due.type === "anniversary") continue;
+      if (typeof o.deadline !== "string" || !due || due.type === "anniversary" || due.type === "relative")
+        continue;
       // Text such as "15th day of the 4th month after fiscal year end" names no month.
       if (!months.some((m) => (o.deadline as string).includes(m))) continue;
       const dueMonths =
@@ -1121,21 +1138,22 @@ describe("schedules in data files", () => {
     }
   });
 
-  it("reads undated recurrences as a frequency with no due date", () => {
+  it("never reads a recurrence without a date", () => {
+    // A rule gives its exact due date, or the reference it is counted from.
+    for (const rule of ["FREQ=YEARLY", "FREQ=YEARLY;INTERVAL=2", "FREQ=YEARLY;INTERVAL=5", "FREQ=MONTHLY"])
+      expect(() => parseRRule(rule), rule).toThrow();
     for (const [rule, frequency] of [
       ["FREQ=YEARLY", "annual"],
       ["FREQ=YEARLY;INTERVAL=2", "biennial"],
       ["FREQ=YEARLY;INTERVAL=5", "every_five_years"],
-      ["FREQ=MONTHLY", "monthly"],
-      ["FREQ=MONTHLY;INTERVAL=3", "quarterly"],
     ] as const) {
-      const s = parseRRule(rule);
-      expect(s, rule).toEqual({ frequency });
-      expect(toRRule(s.due, s.frequency), rule).toEqual({ rrule: rule });
+      const s = parseRRule(rule, "license_issued");
+      expect(s, rule).toEqual({ due: { type: "relative", from: "license_issued" }, frequency });
+      expect(toRRule(s.due, s.frequency), rule).toEqual({ rrule: rule, anchor: "license_issued" });
     }
     // The anniversary of formation is named, so a bare rule cannot be mistaken for it.
     expect(parseRRule("FREQ=YEARLY", "formation").due).toEqual({ type: "anniversary", point: "date" });
-    expect(() => parseRRule("FREQ=YEARLY;BYMONTHDAY=1", "formation")).toThrow();
+    expect(() => parseRRule("FREQ=YEARLY;BYMONTHDAY=1", "formation_quarter")).toThrow();
     expect(() => parseRRule("FREQ=MONTHLY", "formation")).toThrow();
   });
 
@@ -1172,7 +1190,9 @@ describe("schedules in data files", () => {
       "FREQ=YEARLY;BYDAY=MO",
       "FREQ=YEARLY;BYMONTH=13;BYMONTHDAY=1",
       "FREQ=YEARLY;BYMONTH=5",
-      "FREQ=YEARLY;INTERVAL=3;BYMONTH=5;BYMONTHDAY=1",
+      "FREQ=YEARLY;INTERVAL=4;BYMONTH=5;BYMONTHDAY=1",
+      "FREQ=YEARLY",
+      "FREQ=YEARLY;BYMONTH=1,4,7,10",
       "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=15;BYMONTH=6",
     ])
       expect(() => parseRRule(bad), bad).toThrow();
@@ -1195,7 +1215,7 @@ describe("schema reuse", () => {
 });
 
 describe("sourceUrl as a list", () => {
-  it("accepts one https URL or a non-empty list of them", () => {
+  it("accepts a non-empty list of https URLs", () => {
     const local = newAjv();
     local.addSchema(read("schema/local-item.schema.json"));
     const city = local.compile(read("schema/cities.schema.json"));
@@ -1210,7 +1230,7 @@ describe("sourceUrl as a list", () => {
         checkedOn: "2026-01-01",
       },
     ];
-    expect(city(none("https://a.example/page"))).toBe(true);
+    expect(city(none("https://a.example/page"))).toBe(false);
     expect(city(none(["https://a.example/page", "https://b.example/page"]))).toBe(true);
     expect(city(none("https://a.example"))).toBe(false);
     expect(city(none([]))).toBe(false);

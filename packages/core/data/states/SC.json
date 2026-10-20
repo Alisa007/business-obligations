@@ -15,7 +15,7 @@
   "llcReport": null,
   "corpReport": {
     "title": "File Annual Report and Corporate License Fee (with SCDOR)",
-    "rrule": "FREQ=YEARLY",
+    "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=15",
     "deadline": "With the corporate income tax return (April 15)",
     "feeDetail": {
       "basis": "percent",
@@ -47,11 +47,24 @@
   "llcReportAppliesWhenTaxedAsCorp": true,
   "llcPublication": null,
   "entityTax": "Corporate income tax and corporate license fee",
+  "wageWithholding": true,
+  "entityTaxDetail": null,
   "salesTax": {
     "statewide": true,
     "permit": "South Carolina retail license",
+    "permitFee": {
+      "basis": "flat",
+      "amount": 50,
+      "note": "Non-refundable retail license fee for each business location."
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "percentPerMonth": 5,
+      "note": "5% of the tax for each month or fraction the return is late, up to 25%; late payment adds 0.5% a month, also up to 25%.",
+      "rate": 25
+    }
   },
   "localSalesTax": "state_administered",
   "economicNexusUsd": 100000,
@@ -70,6 +83,29 @@
       "andAnnualPayrollAtLeast": 3000
     }
   },
+  "penalties": {
+    "unemployment": {
+      "basis": "percent",
+      "note": "10% of the unemployment tax owed for a late wage report, with a $25 minimum and a $1,000 maximum, plus interest from the day after the due date.",
+      "rate": 10,
+      "min": 25,
+      "max": 1000
+    },
+    "newHire": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late new hire report was found; secondary sources conflict or give only the federal $25 and $500 ceilings."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "range",
+      "note": "$1 per employee but not less than $10 nor more than $100 for each day of refusal or neglect (S.C. Code 42-5-40).",
+      "min": 10,
+      "max": 100
+    }
+  },
   "paidLeave": null,
   "paidSickLeave": null,
   "businessLicense": null,
@@ -80,6 +116,7 @@
     "description": "Every South Carolina business needs a local business license under the Business License Tax Standardization Act."
   },
   "dbaFiling": "none",
+  "dbaEntitiesFileLocally": false,
   "industry": {
     "contractor": "South Carolina Contractors' Licensing Board",
     "realEstate": "South Carolina Real Estate Commission",
@@ -102,7 +139,8 @@
     "entityTax": [
       "https://dor.sc.gov/business-income-taxes/corporate/c-corporation/business-income-taxes/corporate/c-corporation"
     ],
-    "laborPosters": ["https://llr.sc.gov/wage/posters.aspx"]
+    "laborPosters": ["https://llr.sc.gov/wage/posters.aspx"],
+    "dba": ["https://sos.sc.gov/faqs-about-business-entities"]
   },
   "verification": {
     "checkedOn": "2026-10-19",

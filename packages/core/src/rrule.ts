@@ -1,4 +1,4 @@
-import type { Due } from "./data/types";
+import type { Due, RelativeDue } from "./data/types";
 import type { Frequency, RecurringFrequency } from "./types";
 
 /**
@@ -14,18 +14,41 @@ import type { Frequency, RecurringFrequency } from "./types";
  * - two months with one day, twice a year: `BYMONTH=1,7;BYMONTHDAY=31`;
  * - four months with `anchor: "formation_quarter"`: once a year, in the calendar quarter that contains the
  *   formation month (`BYMONTH=3,6,9,12;BYMONTHDAY=-1`: the last day of that quarter);
- * - no date at all, when the source does not fix one: `FREQ=YEARLY` (with `INTERVAL=2` or `5`), `FREQ=MONTHLY`
- *   and `FREQ=MONTHLY;INTERVAL=3`. They give the frequency and no due date.
+ * - counted from a reference date instead of fixed on the calendar, with `anchor` naming it: `license_issued` (renew
+ *   when the license anniversary comes round), `formation`, `fiscal_year_start` or `fiscal_year_end`; the day of the
+ *   month in `BYMONTHDAY` (`-1` is the last day), whole months after the reference month in `X-MONTHS`, days after
+ *   the resulting date in `X-DAYS` ("the last day of the month after the license expires" is `BYMONTHDAY=-1;X-MONTHS=1`
+ *   with `license_issued`; "15th day of the 4th month of the tax year" is `BYMONTHDAY=15;X-MONTHS=3` with
+ *   `fiscal_year_start`). A fiscal year reference needs its day, and an offset needs the day it counts to;
+ * - a date the agency publishes or sets, which no rule can say: `announced` (the same for everyone, each year: the
+ *   EEOC's filing window) or `assigned` (set for each taxpayer: a sales tax filing frequency). No other part is allowed.
+ *
+ * Every rule gives its exact due date, or the exact way to find it. There is no rule without a date: "annual, date
+ * unknown" is not a schedule, so a recurrence whose date the data does not know is not written as one.
  *
  * A recurrence that only repeats every second year needs a starting point. The `anchor` is an ISO date (the
  * cycle starts there, e.g. an even or odd year) or, for cycles that follow the entity's own formation,
  * `formation_year` or `year_after_formation`.
  */
 export type ScheduleAnchor =
-  "formation" | "formation_quarter" | "formation_year" | "year_after_formation" | (string & {});
+  | "formation"
+  | "formation_quarter"
+  | "formation_year"
+  | "year_after_formation"
+  | RelativeDue["from"]
+  | (string & {});
+
+/** The anchors that name what a due date is counted from (see `RelativeDue`). */
+const REFERENCES: readonly string[] = [
+  "license_issued",
+  "fiscal_year_start",
+  "fiscal_year_end",
+  "announced",
+  "assigned",
+];
 
 export type ScheduleFrequency =
-  "annual" | "biennial" | "every_five_years" | "semiannual" | "quarterly" | "monthly";
+  "annual" | "biennial" | "every_three_years" | "every_five_years" | "semiannual" | "quarterly" | "monthly";
 
 export interface Schedule {
   /** Undefined for a recurrence whose date the source does not fix. */
@@ -51,8 +74,13 @@ const ISO = /^\d{4}-\d{2}-\d{2}$/;
 const INTERVAL_FREQUENCY: Record<number, ScheduleFrequency> = {
   1: "annual",
   2: "biennial",
+  3: "every_three_years",
   5: "every_five_years",
 };
+
+/** The length in years of a cycle longer than two (three or five); undefined for the others. */
+export const intervalYearsOf = (frequency: string): 3 | 5 | undefined =>
+  frequency === "every_three_years" ? 3 : frequency === "every_five_years" ? 5 : undefined;
 const lastDay = (m: number) => [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][m - 1]!;
 /** A due day that falls on the last day of its month in every year (Feb 28 is a literal day, not "the last"). */
 const isLast = (m: number, d: number) => d >= lastDay(m) && !(m === 2 && d === 28);
@@ -78,36 +106,81 @@ const int = (rrule: string, v: string | undefined, min: number, max: number): nu
 export function parseRRule(rrule: string, anchor?: ScheduleAnchor): Schedule {
   const p = parts(rrule);
   for (const k of p.keys())
-    if (!["FREQ", "INTERVAL", "BYMONTH", "BYMONTHDAY"].includes(k))
+    if (!["FREQ", "INTERVAL", "BYMONTH", "BYMONTHDAY", "X-MONTHS", "X-DAYS"].includes(k))
       throw new Error(`Unsupported part ${k} in recurrence rule "${rrule}"`);
   const bad = () => new Error(`Invalid recurrence rule "${rrule}"`);
   const freq = p.get("FREQ");
-  if (freq !== "YEARLY" && freq !== "MONTHLY")
-    throw new Error(`Recurrence rule "${rrule}" must have FREQ=YEARLY or FREQ=MONTHLY`);
+  if (freq === "MONTHLY")
+    throw new Error(
+      `Recurrence rule "${rrule}": a monthly or quarterly deadline gives its day, as FREQ=YEARLY with all twelve or four months in BYMONTH`,
+    );
+  if (freq !== "YEARLY") throw new Error(`Recurrence rule "${rrule}" must have FREQ=YEARLY`);
   const interval = p.has("INTERVAL") ? int(rrule, p.get("INTERVAL"), 1, 5) : 1;
-  if (freq === "MONTHLY") {
-    if (p.has("BYMONTH") || p.has("BYMONTHDAY") || anchor) throw bad();
-    if (interval === 1) return { frequency: "monthly" };
-    if (interval === 3) return { frequency: "quarterly" };
-    throw bad();
-  }
   const frequency = INTERVAL_FREQUENCY[interval];
+  const offsets = p.has("X-MONTHS") || p.has("X-DAYS");
   if (!p.has("BYMONTH")) {
     if (!frequency) throw bad();
-    const day = p.has("BYMONTHDAY") ? int(rrule, p.get("BYMONTHDAY"), -1, 1) : 0;
-    if (day !== 0 && day !== 1 && day !== -1) throw bad();
-    if (day === 0) {
-      if (!anchor) return { frequency };
-      if (anchor !== "formation")
-        throw new Error(`Invalid anchor "${anchor}" for recurrence rule "${rrule}"`);
-    } else if (anchor) throw new Error(`Invalid anchor "${anchor}" for recurrence rule "${rrule}"`);
+    const day = p.has("BYMONTHDAY") ? int(rrule, p.get("BYMONTHDAY"), -1, 31) : undefined;
+    if (day === 0) throw bad();
+    const reference = anchor !== undefined && (REFERENCES.includes(anchor) || anchor === "formation");
+    if (anchor !== undefined && !reference)
+      throw new Error(`Invalid anchor "${anchor}" for recurrence rule "${rrule}"`);
+    if (reference && !(anchor === "formation" && day === undefined && !offsets)) {
+      // Counted from a reference date: the anniversary itself, or a day of a month counted from it.
+      const from = anchor as RelativeDue["from"];
+      if (from === "announced" || from === "assigned") {
+        if (day !== undefined || offsets) throw bad();
+        return { due: { type: "relative", from }, frequency };
+      }
+      const monthsAfter = p.has("X-MONTHS") ? int(rrule, p.get("X-MONTHS"), 1, 11) : undefined;
+      const daysAfter = p.has("X-DAYS") ? int(rrule, p.get("X-DAYS"), 1, 90) : undefined;
+      // A fiscal year is a span of months: its date needs the day. Months after anything need the day they count to.
+      if (
+        (from === "fiscal_year_start" || from === "fiscal_year_end" || monthsAfter !== undefined) &&
+        day === undefined
+      )
+        throw bad();
+      if (
+        from === "fiscal_year_end" &&
+        monthsAfter === undefined &&
+        daysAfter === undefined &&
+        day === undefined
+      )
+        throw bad();
+      if (interval > 1 && (from === "fiscal_year_start" || from === "fiscal_year_end")) throw bad();
+      return {
+        due: {
+          type: "relative",
+          from,
+          ...(monthsAfter !== undefined ? { monthsAfter } : {}),
+          ...(day !== undefined ? { day } : {}),
+          ...(daysAfter !== undefined ? { daysAfter } : {}),
+        },
+        frequency,
+      };
+    }
+    // The formation anniversary itself (anchor "formation"), or the first or last day of its month.
+    if (offsets) throw bad();
+    if (day !== undefined && day !== 1 && day !== -1) throw bad();
+    if (day === undefined && !anchor) throw bad();
     const point = day === 1 ? "start_of_month" : day === -1 ? "end_of_month" : "date";
     return { due: { type: "anniversary", point }, frequency };
   }
+  if (offsets) throw bad();
   const months = p
     .get("BYMONTH")!
     .split(",")
     .map((m) => int(rrule, m, 1, 12));
+  if (!p.has("BYMONTHDAY")) {
+    // The months of a cycle whose day the agency sets: monthly or quarterly returns on a due date it assigns.
+    const from = anchor === "assigned" ? "assigned" : anchor === "announced" ? "announced" : undefined;
+    if (!from) throw bad();
+    const cycle = ({ 2: "semiannual", 4: "quarterly", 12: "monthly" } as Record<number, ScheduleFrequency>)[
+      months.length
+    ];
+    if (!cycle || interval !== 1 || new Set(months).size !== months.length) throw bad();
+    return { due: { type: "relative", from }, frequency: cycle };
+  }
   const rawDay = int(rrule, p.get("BYMONTHDAY"), -1, 31);
   if (rawDay === 0) throw bad();
   if (months.length > 1) {
@@ -152,13 +225,24 @@ export function toRRule(
   due: Due | undefined,
   frequency: string,
 ): { rrule: string; anchor?: ScheduleAnchor } | undefined {
-  if (!due) {
-    if (frequency === "monthly") return { rrule: "FREQ=MONTHLY" };
-    if (frequency === "quarterly") return { rrule: "FREQ=MONTHLY;INTERVAL=3" };
-  }
+  // A schedule without a due date has no rule: a rule always says when.
+  if (!due) return undefined;
   const interval = Object.entries(INTERVAL_FREQUENCY).find(([, f]) => f === frequency)?.[0];
   const every = interval && interval !== "1" ? `;INTERVAL=${interval}` : "";
-  if (!due) return interval ? { rrule: `FREQ=YEARLY${every}` } : undefined;
+  if (due.type === "relative") {
+    if (due.from === "assigned" || due.from === "announced") {
+      // A cycle shorter than a year names its months (the usual ones); a longer one is the interval.
+      const months = { semiannual: "1,7", quarterly: "1,4,7,10", monthly: "1,2,3,4,5,6,7,8,9,10,11,12" }[
+        frequency as "semiannual" | "quarterly" | "monthly"
+      ];
+      if (months) return { rrule: `FREQ=YEARLY;BYMONTH=${months}`, anchor: due.from };
+    }
+    if (!interval) return undefined;
+    const day = due.day !== undefined ? `;BYMONTHDAY=${due.day}` : "";
+    const months = due.monthsAfter ? `;X-MONTHS=${due.monthsAfter}` : "";
+    const days = due.daysAfter ? `;X-DAYS=${due.daysAfter}` : "";
+    return { rrule: `FREQ=YEARLY${every}${day}${months}${days}`, anchor: due.from };
+  }
   if (due.type === "anniversary") {
     if (!interval) return undefined;
     if (due.point === "date") return { rrule: `FREQ=YEARLY${every}`, anchor: "formation" };
@@ -203,6 +287,39 @@ export function toRRule(
   return undefined;
 }
 
+/** What a due date counted from a reference date says, in words: the same words in every item that has it. */
+function describeRelative(due: RelativeDue): string {
+  if (due.from === "announced") return "Date the agency announces each year";
+  if (due.from === "assigned") return "Date the agency sets for you";
+  const months = due.monthsAfter ?? 0;
+  const day = due.day === undefined ? undefined : due.day === -1 ? "Last day" : `Day ${due.day}`;
+  let text: string;
+  if (due.from === "fiscal_year_start") text = `${day} of month ${months + 1} of the tax year`;
+  else if (due.from === "fiscal_year_end")
+    text =
+      months === 0
+        ? `${day} of the month the fiscal year ends`
+        : months === 1
+          ? `${day} of the month after the fiscal year ends`
+          : `${day} of month ${months} after the fiscal year ends`;
+  else {
+    const reference = due.from === "formation" ? "anniversary" : "license anniversary";
+    text =
+      day === undefined
+        ? due.from === "formation"
+          ? "On the anniversary of formation"
+          : "On the anniversary of the license date"
+        : months === 0
+          ? `${day} of the ${reference} month`
+          : months === 1
+            ? `${day} of the month after the ${reference} month`
+            : `${day} of month ${months} after the ${reference} month`;
+  }
+  return due.daysAfter
+    ? `${due.daysAfter} days after: ${text.charAt(0).toLowerCase()}${text.slice(1)}`
+    : text;
+}
+
 /** A month and day, for a date without a year. */
 export interface MonthDay {
   month: number;
@@ -224,6 +341,13 @@ const listText = (items: string[]) =>
  */
 export function describeSchedule({ due, frequency }: Schedule, opens?: MonthDay): string | undefined {
   if (!due) return undefined;
+  if (due.type === "relative") {
+    const base = describeRelative(due);
+    const every = { biennial: "second", every_three_years: "third", every_five_years: "fifth" }[
+      frequency as "biennial" | "every_three_years" | "every_five_years"
+    ];
+    return every ? `${base}, every ${every} year` : base;
+  }
   if (due.type === "anniversary" && frequency === "biennial" && due.point !== "date")
     return `${describeSchedule({ due, frequency: "annual" })}, every second year`;
   if (due.type === "anniversary" && frequency === "annual")

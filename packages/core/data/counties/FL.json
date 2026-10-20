@@ -12,10 +12,15 @@
         "url": ["https://www.acpafl.org/forms/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -36,10 +41,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -48,7 +56,8 @@
         "category": "filing",
         "authority": "Alachua County Tax Collector",
         "description": "Hosts file monthly returns through the Tax Collector's TouristExpress portal. The pages read do not state the day of the month.",
-        "rrule": "FREQ=MONTHLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12",
+        "anchor": "assigned",
         "url": ["https://alachuacounty.us/News/Article/Pages/Short-Term-Vacation-Rental-Tax-Compliance.aspx"],
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -60,14 +69,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       }
     ],
-    "checkedOn": "2026-10-16"
+    "checkedOn": "2026-10-16",
+    "status": "rules"
   },
   {
     "county": "Baker",
@@ -82,15 +98,21 @@
         "url": ["https://www.bakerpa.com/forms.html"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
     "checkedOn": "2026-10-16",
-    "note": "Baker County collects its own tourist development tax (3%, per Florida's DR-15TDT), but no official county page with the registration steps and due date could be read."
+    "note": "Baker County collects its own tourist development tax (3%, per Florida's DR-15TDT), but no official county page with the registration steps and due date could be read.",
+    "status": "rules"
   },
   {
     "county": "Bay",
@@ -105,10 +127,15 @@
         "url": ["https://baypa.net/filing-tips/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -129,10 +156,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -153,14 +183,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       }
     ],
-    "checkedOn": "2026-10-16"
+    "checkedOn": "2026-10-16",
+    "status": "rules"
   },
   {
     "county": "Bradford",
@@ -175,15 +212,21 @@
         "url": ["https://bradfordappraiser.com/Tangible_Personal_Property"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
     "checkedOn": "2026-10-16",
-    "note": "Florida's DR-15TDT lists Bradford County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county."
+    "note": "Florida's DR-15TDT lists Bradford County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county.",
+    "status": "rules"
   },
   {
     "county": "Brevard",
@@ -198,10 +241,15 @@
         "url": ["https://bcpao.us/tangible.aspx?t=1.2"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -222,10 +270,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -246,10 +297,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       },
       {
@@ -272,7 +329,8 @@
         }
       }
     ],
-    "checkedOn": "2026-10-16"
+    "checkedOn": "2026-10-16",
+    "status": "rules"
   },
   {
     "county": "Broward",
@@ -287,10 +345,15 @@
         "url": ["https://bcpa.net/TPP.asp"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -311,10 +374,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -335,10 +401,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       },
       {
@@ -361,7 +433,8 @@
         }
       }
     ],
-    "checkedOn": "2026-10-16"
+    "checkedOn": "2026-10-16",
+    "status": "rules"
   },
   {
     "county": "Calhoun",
@@ -378,15 +451,21 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
     "checkedOn": "2026-10-16",
-    "note": "Florida's DR-15TDT lists no tourist development tax for Calhoun County (0%)."
+    "note": "Florida's DR-15TDT lists no tourist development tax for Calhoun County (0%).",
+    "status": "rules"
   },
   {
     "county": "Charlotte",
@@ -401,10 +480,15 @@
         "url": ["https://taxcollector.charlottecountyfl.gov/property-tax"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -425,10 +509,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -449,14 +536,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       }
     ],
-    "checkedOn": "2026-10-16"
+    "checkedOn": "2026-10-16",
+    "status": "rules"
   },
   {
     "county": "Citrus",
@@ -471,15 +565,21 @@
         "url": ["https://www.citruspa.org/_dnn/Portals/0/pdfs/CC405%20Instructions.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
     "checkedOn": "2026-10-16",
-    "note": "Florida's DR-15TDT lists Citrus County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county."
+    "note": "Florida's DR-15TDT lists Citrus County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county.",
+    "status": "rules"
   },
   {
     "county": "Clay",
@@ -494,10 +594,15 @@
         "url": ["https://tpp.ccpao.com/OFS/Home/About"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -518,10 +623,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -542,14 +650,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       }
     ],
-    "checkedOn": "2026-10-16"
+    "checkedOn": "2026-10-16",
+    "status": "rules"
   },
   {
     "county": "Collier",
@@ -564,10 +679,15 @@
         "url": ["https://colliertaxcollector.com/property-taxes/tangible/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -591,7 +711,8 @@
       }
     ],
     "checkedOn": "2026-10-16",
-    "note": "Collier County collects its own tourist development tax (5%, per Florida's DR-15TDT), but no official county page with the registration steps and due date could be read."
+    "note": "Collier County collects its own tourist development tax (5%, per Florida's DR-15TDT), but no official county page with the registration steps and due date could be read.",
+    "status": "rules"
   },
   {
     "county": "Columbia",
@@ -606,15 +727,21 @@
         "url": ["https://columbia.floridapa.com/Important_Dates/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
     "checkedOn": "2026-10-16",
-    "note": "Florida's DR-15TDT lists Columbia County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county."
+    "note": "Florida's DR-15TDT lists Columbia County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county.",
+    "status": "rules"
   },
   {
     "county": "DeSoto",
@@ -629,15 +756,21 @@
         "url": ["https://desotopa.com/Tangible_Personal_Property"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
     "checkedOn": "2026-10-16",
-    "note": "Florida's DR-15TDT lists DeSoto County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county."
+    "note": "Florida's DR-15TDT lists DeSoto County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county.",
+    "status": "rules"
   },
   {
     "county": "Dixie",
@@ -652,15 +785,21 @@
         "url": ["https://dixiecountypropertyappraiser.org/about-us/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
     "checkedOn": "2026-10-16",
-    "note": "Florida's DR-15TDT lists Dixie County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county."
+    "note": "Florida's DR-15TDT lists Dixie County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county.",
+    "status": "rules"
   },
   {
     "county": "Duval",
@@ -675,10 +814,15 @@
         "url": ["https://www.jacksonville.gov/departments/property-appraiser/tangible-personal-property"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -701,10 +845,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -727,10 +874,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       },
       {
@@ -753,7 +906,8 @@
         }
       }
     ],
-    "checkedOn": "2026-10-16"
+    "checkedOn": "2026-10-16",
+    "status": "rules"
   },
   {
     "county": "Escambia",
@@ -768,10 +922,15 @@
         "url": ["https://escpa.org/tangible-personal-property"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -792,10 +951,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -816,10 +978,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       },
       {
@@ -842,7 +1010,8 @@
         }
       }
     ],
-    "checkedOn": "2026-10-16"
+    "checkedOn": "2026-10-16",
+    "status": "rules"
   },
   {
     "county": "Flagler",
@@ -857,10 +1026,15 @@
         "url": ["https://flaglerpa.com/tpp-faq/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -881,10 +1055,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -905,14 +1082,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       }
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "county": "Franklin",
@@ -927,15 +1111,21 @@
         "url": ["https://franklincountypa.net/tangible-personal-property"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
     "checkedOn": "2026-10-16",
-    "note": "Florida's DR-15TDT lists Franklin County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county."
+    "note": "Florida's DR-15TDT lists Franklin County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county.",
+    "status": "rules"
   },
   {
     "county": "Gadsden",
@@ -950,15 +1140,21 @@
         "url": ["https://gadsdenpa.com/faqs/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
     "checkedOn": "2026-10-16",
-    "note": "Florida's DR-15TDT lists Gadsden County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county."
+    "note": "Florida's DR-15TDT lists Gadsden County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county.",
+    "status": "rules"
   },
   {
     "county": "Gilchrist",
@@ -973,15 +1169,21 @@
         "url": ["https://gilchristcountypropertyappraiser.org/tangible-personal-property-tax-return/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
     "checkedOn": "2026-10-16",
-    "note": "Florida's DR-15TDT lists Gilchrist County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county."
+    "note": "Florida's DR-15TDT lists Gilchrist County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county.",
+    "status": "rules"
   },
   {
     "county": "Glades",
@@ -996,15 +1198,21 @@
         "url": ["https://gladescountypropertyappraiser.org/contact-us/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
     "checkedOn": "2026-10-16",
-    "note": "Florida's DR-15TDT lists Glades County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county."
+    "note": "Florida's DR-15TDT lists Glades County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county.",
+    "status": "rules"
   },
   {
     "county": "Gulf",
@@ -1019,10 +1227,15 @@
         "url": ["https://gulf.wordpress.gsacorp.io/personal-property-tpp/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -1043,10 +1256,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -1067,14 +1283,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       }
     ],
-    "checkedOn": "2026-10-16"
+    "checkedOn": "2026-10-16",
+    "status": "rules"
   },
   {
     "county": "Hamilton",
@@ -1089,15 +1312,21 @@
         "url": ["https://hamiltonpa.com/tangible-personal-property"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
     "checkedOn": "2026-10-16",
-    "note": "Florida's DR-15TDT lists Hamilton County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county."
+    "note": "Florida's DR-15TDT lists Hamilton County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county.",
+    "status": "rules"
   },
   {
     "county": "Hardee",
@@ -1112,15 +1341,21 @@
         "url": ["https://hardeepa.com/general-info/tangible-personal-property/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
     "checkedOn": "2026-10-16",
-    "note": "Florida's DR-15TDT lists Hardee County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county."
+    "note": "Florida's DR-15TDT lists Hardee County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county.",
+    "status": "rules"
   },
   {
     "county": "Hendry",
@@ -1135,15 +1370,21 @@
         "url": ["https://hendryprop.com/downloadable-forms/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
     "checkedOn": "2026-10-16",
-    "note": "Florida's DR-15TDT lists Hendry County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county."
+    "note": "Florida's DR-15TDT lists Hendry County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county.",
+    "status": "rules"
   },
   {
     "county": "Hernando",
@@ -1158,10 +1399,15 @@
         "url": ["https://tpponline.hernandopa-fl.us/tangible-personal-property"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -1182,10 +1428,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -1206,14 +1455,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       }
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "county": "Highlands",
@@ -1228,10 +1484,15 @@
         "url": ["https://www.hctaxcollector.com/tangible-personal-property-taxes/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -1252,10 +1513,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -1276,14 +1540,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       }
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "county": "Hillsborough",
@@ -1298,10 +1569,15 @@
         "url": ["https://www.hcpafl.org/Property-Info/Tangible-Personal-Property"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -1322,10 +1598,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -1346,10 +1625,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       },
       {
@@ -1372,7 +1657,8 @@
         }
       }
     ],
-    "checkedOn": "2026-10-16"
+    "checkedOn": "2026-10-16",
+    "status": "rules"
   },
   {
     "county": "Holmes",
@@ -1387,14 +1673,20 @@
         "url": ["https://www.qpublic.net/fl/holmes/forms/dr405a.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
-    "checkedOn": "2026-10-16"
+    "checkedOn": "2026-10-16",
+    "status": "rules"
   },
   {
     "county": "Indian River",
@@ -1411,10 +1703,15 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -1435,10 +1732,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -1459,14 +1759,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       }
     ],
-    "checkedOn": "2026-10-16"
+    "checkedOn": "2026-10-16",
+    "status": "rules"
   },
   {
     "county": "Jackson",
@@ -1481,15 +1788,21 @@
         "url": ["https://jacksonpa.com/downloadable-forms/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
     "checkedOn": "2026-10-16",
-    "note": "Florida's DR-15TDT lists Jackson County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county."
+    "note": "Florida's DR-15TDT lists Jackson County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county.",
+    "status": "rules"
   },
   {
     "county": "Jefferson",
@@ -1504,15 +1817,19 @@
         "url": ["https://jeffersonpa.net/downloadable-forms/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25
         }
       }
     ],
     "checkedOn": "2026-10-16",
-    "note": "Florida's DR-15TDT lists Jefferson County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county."
+    "note": "Florida's DR-15TDT lists Jefferson County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county.",
+    "status": "rules"
   },
   {
     "county": "Lafayette",
@@ -1527,15 +1844,19 @@
         "url": ["https://lafayettepa.com/FAQ/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25
         }
       }
     ],
     "checkedOn": "2026-10-16",
-    "note": "Florida's DR-15TDT lists no tourist development tax for Lafayette County (0%)."
+    "note": "Florida's DR-15TDT lists no tourist development tax for Lafayette County (0%).",
+    "status": "rules"
   },
   {
     "county": "Lake",
@@ -1550,10 +1871,15 @@
         "url": ["https://lakecopropappr.com/business_owners.aspx"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -1574,10 +1900,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -1598,14 +1927,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       }
     ],
-    "checkedOn": "2026-10-16"
+    "checkedOn": "2026-10-16",
+    "status": "rules"
   },
   {
     "county": "Lee",
@@ -1620,15 +1956,21 @@
         "url": ["https://ftp.leepa.org/Tangible/TangibleFAQ.aspx"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
     "checkedOn": "2026-10-16",
-    "note": "Lee County collects its own tourist development tax (5%, per Florida's DR-15TDT), apparently through the Clerk of Court, but no official county page with the registration steps and due date could be read."
+    "note": "Lee County collects its own tourist development tax (5%, per Florida's DR-15TDT), apparently through the Clerk of Court, but no official county page with the registration steps and due date could be read.",
+    "status": "rules"
   },
   {
     "county": "Leon",
@@ -1643,10 +1985,15 @@
         "url": ["https://www.leonpa.gov/E-File/Tangible-Tax-Return"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -1667,10 +2014,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -1679,7 +2029,8 @@
         "category": "filing",
         "authority": "Leon County Tax Collector",
         "description": "Report and pay online through the Tourist Development login; electronic filing is needed to keep the collection allowance. The page does not give return due dates (call 850-606-4700).",
-        "rrule": "FREQ=MONTHLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12",
+        "anchor": "assigned",
         "url": ["https://leontaxcollector.net/Services/Tourist-Development"],
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -1691,14 +2042,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       }
     ],
-    "checkedOn": "2026-10-16"
+    "checkedOn": "2026-10-16",
+    "status": "rules"
   },
   {
     "county": "Levy",
@@ -1715,15 +2073,21 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
     "checkedOn": "2026-10-16",
-    "note": "Florida's DR-15TDT lists Levy County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county."
+    "note": "Florida's DR-15TDT lists Levy County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county.",
+    "status": "rules"
   },
   {
     "county": "Liberty",
@@ -1738,15 +2102,21 @@
         "url": ["https://libertycountypropertyappraiser.org/tangible-personal-property-tax-return/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
     "checkedOn": "2026-10-16",
-    "note": "Florida's DR-15TDT lists no tourist development tax for Liberty County (0%)."
+    "note": "Florida's DR-15TDT lists no tourist development tax for Liberty County (0%).",
+    "status": "rules"
   },
   {
     "county": "Madison",
@@ -1761,15 +2131,21 @@
         "url": ["https://madisonpa.com/?p=168"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
     "checkedOn": "2026-10-16",
-    "note": "Florida's DR-15TDT lists Madison County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county."
+    "note": "Florida's DR-15TDT lists Madison County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county.",
+    "status": "rules"
   },
   {
     "county": "Manatee",
@@ -1784,10 +2160,15 @@
         "url": ["https://manateepao.gov/tpp"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -1810,10 +2191,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -1836,14 +2220,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       }
     ],
-    "checkedOn": "2026-10-16"
+    "checkedOn": "2026-10-16",
+    "status": "rules"
   },
   {
     "county": "Marion",
@@ -1858,10 +2249,15 @@
         "url": ["https://marioncountypropertyappraiser.org/contact-us/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -1882,10 +2278,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -1906,14 +2305,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       }
     ],
-    "checkedOn": "2026-10-16"
+    "checkedOn": "2026-10-16",
+    "status": "rules"
   },
   {
     "county": "Martin",
@@ -1928,15 +2334,21 @@
         "url": ["https://www.pamartinfl.gov/forms/all-forms"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
     "checkedOn": "2026-10-16",
-    "note": "Martin County collects its own tourist development tax (5%, per Florida's DR-15TDT), but no official county page with the registration steps and due date could be read."
+    "note": "Martin County collects its own tourist development tax (5%, per Florida's DR-15TDT), but no official county page with the registration steps and due date could be read.",
+    "status": "rules"
   },
   {
     "county": "Miami-Dade",
@@ -1951,10 +2363,15 @@
         "url": ["https://floridarevenue.com/property/Pages/Taxpayers_TangiblePersonalProperty.aspx"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -1977,10 +2394,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -2003,10 +2423,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       },
       {
@@ -2029,7 +2455,8 @@
         }
       }
     ],
-    "checkedOn": "2026-10-16"
+    "checkedOn": "2026-10-16",
+    "status": "rules"
   },
   {
     "county": "Monroe",
@@ -2044,15 +2471,21 @@
         "url": ["https://www.mcpafl.org/downloadable-forms/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
     "checkedOn": "2026-10-16",
-    "note": "Monroe County collects its own tourist development tax (5%, per Florida's DR-15TDT), but no official county page with the registration steps and due date could be read."
+    "note": "Monroe County collects its own tourist development tax (5%, per Florida's DR-15TDT), but no official county page with the registration steps and due date could be read.",
+    "status": "rules"
   },
   {
     "county": "Nassau",
@@ -2067,10 +2500,15 @@
         "url": ["https://columbia.floridapa.com/Important_Dates/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -2091,10 +2529,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -2115,14 +2556,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       }
     ],
-    "checkedOn": "2026-10-16"
+    "checkedOn": "2026-10-16",
+    "status": "rules"
   },
   {
     "county": "Okaloosa",
@@ -2137,10 +2585,15 @@
         "url": ["https://www.okaloosapa.com/tpp-faqs/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -2161,10 +2614,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -2185,14 +2641,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       }
     ],
-    "checkedOn": "2026-10-16"
+    "checkedOn": "2026-10-16",
+    "status": "rules"
   },
   {
     "county": "Okeechobee",
@@ -2207,15 +2670,19 @@
         "url": ["https://www.okeechobeepa.com/frequently-asked-questions/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25
         }
       }
     ],
     "checkedOn": "2026-10-16",
-    "note": "Florida's DR-15TDT lists Okeechobee County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county."
+    "note": "Florida's DR-15TDT lists Okeechobee County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county.",
+    "status": "rules"
   },
   {
     "county": "Orange",
@@ -2230,10 +2697,15 @@
         "url": ["https://ocpaweb.ocpafl.org/?api=1"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -2254,10 +2726,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -2278,10 +2753,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       },
       {
@@ -2304,7 +2785,8 @@
         }
       }
     ],
-    "checkedOn": "2026-10-16"
+    "checkedOn": "2026-10-16",
+    "status": "rules"
   },
   {
     "county": "Osceola",
@@ -2319,10 +2801,15 @@
         "url": ["https://www.osceola.org/Government/County-Administration/County-Offices/Property-Appraiser"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -2345,10 +2832,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -2371,10 +2861,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       },
       {
@@ -2397,7 +2893,8 @@
         }
       }
     ],
-    "checkedOn": "2026-10-16"
+    "checkedOn": "2026-10-16",
+    "status": "rules"
   },
   {
     "county": "Palm Beach",
@@ -2412,10 +2909,15 @@
         "url": ["https://secure.pbc.gov/tangefile"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -2436,10 +2938,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -2460,10 +2965,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       },
       {
@@ -2486,7 +2997,8 @@
         }
       }
     ],
-    "checkedOn": "2026-10-16"
+    "checkedOn": "2026-10-16",
+    "status": "rules"
   },
   {
     "county": "Pasco",
@@ -2501,10 +3013,15 @@
         "url": ["https://pascopa.gov/information-and-tools/tangible-personal-property/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -2525,10 +3042,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -2537,7 +3057,8 @@
         "category": "filing",
         "authority": "Pasco County Tax Collector",
         "description": "Register and file online through Tourist Express (pasco.county-taxes.com/tourist). The page does not give return due dates (call 352-518-5097).",
-        "rrule": "FREQ=MONTHLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12",
+        "anchor": "assigned",
         "url": ["https://pascotaxes.com/taxes/tdt/"],
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -2549,10 +3070,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       },
       {
@@ -2577,7 +3104,8 @@
         }
       }
     ],
-    "checkedOn": "2026-10-16"
+    "checkedOn": "2026-10-16",
+    "status": "rules"
   },
   {
     "county": "Pinellas",
@@ -2592,10 +3120,15 @@
         "url": ["https://legacy.pcpao.org/TPP%20Tax%20Return%20Form%20DR-405%202023.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -2616,10 +3149,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -2640,14 +3176,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       }
     ],
-    "checkedOn": "2026-10-16"
+    "checkedOn": "2026-10-16",
+    "status": "rules"
   },
   {
     "county": "Polk",
@@ -2662,10 +3205,15 @@
         "url": ["https://polkflpa.gov/Downloads/Files/TangiblePersonalProperty.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -2686,10 +3234,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -2710,10 +3261,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       },
       {
@@ -2738,7 +3295,8 @@
         }
       }
     ],
-    "checkedOn": "2026-10-16"
+    "checkedOn": "2026-10-16",
+    "status": "rules"
   },
   {
     "county": "Putnam",
@@ -2753,15 +3311,21 @@
         "url": ["https://pa.putnam-fl.com/tangible-personal-property"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
     "checkedOn": "2026-10-16",
-    "note": "Putnam County collects its own tourist development tax (4%, per Florida's DR-15TDT), but no official county page with the registration steps and due date could be read."
+    "note": "Putnam County collects its own tourist development tax (4%, per Florida's DR-15TDT), but no official county page with the registration steps and due date could be read.",
+    "status": "rules"
   },
   {
     "county": "Santa Rosa",
@@ -2776,10 +3340,15 @@
         "url": ["https://tpp.srcpa.gov/general-information"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -2800,10 +3369,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -2824,14 +3396,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       }
     ],
-    "checkedOn": "2026-10-16"
+    "checkedOn": "2026-10-16",
+    "status": "rules"
   },
   {
     "county": "Sarasota",
@@ -2846,10 +3425,15 @@
         "url": ["https://www.sarasotapropertyappraiser.gov/appraisal-info/tangible-personal-property/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -2870,10 +3454,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -2894,10 +3481,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       },
       {
@@ -2920,7 +3513,8 @@
         }
       }
     ],
-    "checkedOn": "2026-10-16"
+    "checkedOn": "2026-10-16",
+    "status": "rules"
   },
   {
     "county": "Seminole",
@@ -2935,10 +3529,15 @@
         "url": ["https://tpp.scpafl.org/tangible-personal-property"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -2959,10 +3558,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -2983,10 +3585,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       },
       {
@@ -3009,7 +3617,8 @@
         }
       }
     ],
-    "checkedOn": "2026-10-16"
+    "checkedOn": "2026-10-16",
+    "status": "rules"
   },
   {
     "county": "St. Johns",
@@ -3024,10 +3633,15 @@
         "url": ["https://www.sjcpa.gov/tangible-personal-property/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -3048,10 +3662,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -3072,14 +3689,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       }
     ],
-    "checkedOn": "2026-10-16"
+    "checkedOn": "2026-10-16",
+    "status": "rules"
   },
   {
     "county": "St. Lucie",
@@ -3094,15 +3718,21 @@
         "url": ["https://www.paslc.gov/226/Tangible-Personal-Property-TPP"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
     "checkedOn": "2026-10-16",
-    "note": "St. Lucie County collects its own tourist development tax (5%, per Florida's DR-15TDT), but no official county page with the registration steps and due date could be read."
+    "note": "St. Lucie County collects its own tourist development tax (5%, per Florida's DR-15TDT), but no official county page with the registration steps and due date could be read.",
+    "status": "rules"
   },
   {
     "county": "Sumter",
@@ -3117,15 +3747,21 @@
         "url": ["https://www.sumterpa.com/tax-and-exemptions/tangible-personal-property/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
     "checkedOn": "2026-10-16",
-    "note": "Florida's DR-15TDT lists no tourist development tax for Sumter County (0%)."
+    "note": "Florida's DR-15TDT lists no tourist development tax for Sumter County (0%).",
+    "status": "rules"
   },
   {
     "county": "Suwannee",
@@ -3140,15 +3776,21 @@
         "url": ["https://www.suwanneepa.com/Download_Forms/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
     "checkedOn": "2026-10-16",
-    "note": "Suwannee County collects its own tourist development tax (3%, per Florida's DR-15TDT), but no official county page with the registration steps and due date could be read."
+    "note": "Suwannee County collects its own tourist development tax (3%, per Florida's DR-15TDT), but no official county page with the registration steps and due date could be read.",
+    "status": "rules"
   },
   {
     "county": "Taylor",
@@ -3163,10 +3805,15 @@
         "url": ["https://taylorcountypropertyappraiser.org/contact-us/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -3187,10 +3834,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -3211,14 +3861,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       }
     ],
-    "checkedOn": "2026-10-16"
+    "checkedOn": "2026-10-16",
+    "status": "rules"
   },
   {
     "county": "Union",
@@ -3233,15 +3890,21 @@
         "url": ["https://union.floridapa.com/FAQ/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
     "checkedOn": "2026-10-16",
-    "note": "Florida's DR-15TDT lists no tourist development tax for Union County (0%)."
+    "note": "Florida's DR-15TDT lists no tourist development tax for Union County (0%).",
+    "status": "rules"
   },
   {
     "county": "Volusia",
@@ -3256,10 +3919,15 @@
         "url": ["https://vcpa.vcgov.org/info/tangible"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -3282,10 +3950,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -3308,15 +3979,22 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       }
     ],
     "checkedOn": "2026-10-16",
-    "note": "Volusia County repealed its business tax receipt ordinance effective January 1, 2024 (county Treasury and Billing page), so the county issues no receipt; cities may still require their own."
+    "note": "Volusia County repealed its business tax receipt ordinance effective January 1, 2024 (county Treasury and Billing page), so the county issues no receipt; cities may still require their own.",
+    "status": "rules"
   },
   {
     "county": "Wakulla",
@@ -3331,15 +4009,21 @@
         "url": ["https://mywakullapa.com/tpp-faq/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
     "checkedOn": "2026-10-16",
-    "note": "Florida's DR-15TDT lists Wakulla County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county."
+    "note": "Florida's DR-15TDT lists Wakulla County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county.",
+    "status": "rules"
   },
   {
     "county": "Walton",
@@ -3354,10 +4038,15 @@
         "url": ["https://waltonpa.com/tangible-personal-property"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -3378,10 +4067,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -3402,14 +4094,21 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       }
     ],
-    "checkedOn": "2026-10-16"
+    "checkedOn": "2026-10-16",
+    "status": "rules"
   },
   {
     "county": "Washington",
@@ -3424,14 +4123,20 @@
         "url": ["https://washingtoncountytaxcollector.com/About/PropertyTax"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
     "checkedOn": "2026-10-16",
-    "note": "Florida's DR-15TDT lists Washington County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county."
+    "note": "Florida's DR-15TDT lists Washington County's tourist development tax as collected by the Department of Revenue, so lodging operators report it on the state sales tax return (DR-15), not to the county.",
+    "status": "rules"
   }
 ]

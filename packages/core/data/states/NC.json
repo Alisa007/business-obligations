@@ -53,13 +53,27 @@
       "note": "North Carolina publishes administrative dissolution or revocation for missed annual reports, but no separate late monetary penalty."
     }
   },
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "Corporate income tax and franchise tax",
+  "wageWithholding": true,
+  "entityTaxDetail": null,
   "salesTax": {
     "statewide": true,
     "permit": "North Carolina sales and use tax registration",
+    "permitFee": {
+      "basis": "none",
+      "amount": 0,
+      "note": "North Carolina charges no fee to apply for a sales and use tax certificate of registration."
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "percentPerMonth": 5,
+      "note": "5% of the tax for each month or part of a month the return is late, up to 25%; a 5% failure-to-pay penalty also applies.",
+      "rate": 25
+    }
   },
   "localSalesTax": "state_administered",
   "economicNexusUsd": 100000,
@@ -74,6 +88,29 @@
     "stateFund": false,
     "trigger": {
       "minEmployees": 3
+    }
+  },
+  "penalties": {
+    "unemployment": {
+      "basis": "percent",
+      "percentPerMonth": 5,
+      "note": "5% of the contributions due for each month or fraction a report is late, up to 25% or $5, whichever is greater.",
+      "rate": 25,
+      "min": 5
+    },
+    "newHire": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late new hire report was found; secondary sources conflict or give only the federal $25 and $500 ceilings."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "range",
+      "note": "Administrative penalty of $20 to $100 per day of noncompliance (N.C.G.S. 97-94).",
+      "min": 20,
+      "max": 100
     }
   },
   "paidLeave": null,

@@ -10,6 +10,7 @@
         "authority": "Alaska food safety authority",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://dec.alaska.gov/eh/fss/"],
         "feeDetail": {
           "basis": "varies",
@@ -45,6 +46,7 @@
         "authority": "Alaska food safety authority",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://dec.alaska.gov/eh/fss/"],
         "feeDetail": {
           "basis": "varies",
@@ -90,15 +92,19 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10
         }
       }
     ],
     "checkedOn": "2026-10-16",
-    "note": "Only business personal property was checked at municipal level."
+    "note": "Only business personal property was checked at municipal level.",
+    "status": "rules"
   },
   {
     "county": "Bethel Census Area",
@@ -111,6 +117,7 @@
         "authority": "Alaska Division of Corporations, Business and Professional Licensing",
         "description": "Businesses operating in the Bethel Census Area must obtain and renew the applicable Alaska business license; local Bethel businesses also need a city sales-tax certificate, while the state license applies throughout the census area.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.commerce.alaska.gov/web/cbpl/BusinessLicensing/",
           "https://www.commerce.alaska.gov/web/cbpl/BusinessLicensing/BusinessLicensingFormsFees.aspx",
@@ -143,6 +150,7 @@
         "authority": "Alaska Department of Environmental Conservation",
         "description": "Food establishments operating in the Bethel Census Area must obtain the applicable Alaska food-safety permit; the state publishes annual permit and plan-review fees by establishment type.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://dec.alaska.gov/eh/fss/fees/"],
         "feeDetail": {
           "basis": "varies",
@@ -178,6 +186,7 @@
         "authority": "Alaska food safety authority",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://dec.alaska.gov/eh/fss/"],
         "feeDetail": {
           "basis": "varies",
@@ -213,6 +222,7 @@
         "authority": "Alaska food safety authority",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://dec.alaska.gov/eh/fss/"],
         "feeDetail": {
           "basis": "varies",
@@ -246,7 +256,8 @@
         "category": "filing",
         "authority": "City and Borough of Wrangell",
         "description": "Businesses making taxable sales in the City and Borough of Wrangell collect and remit the 7% local general-retail sales tax; local rules and filing forms control exemptions and deadlines.",
-        "rrule": "FREQ=MONTHLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12",
+        "anchor": "assigned",
         "url": ["https://arsstc.org/business-sellers/member-jurisdictions/"],
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -258,16 +269,20 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "The ARSSTC member-jurisdiction table confirms the borough's local sales tax; other county-level obligations were not checked.",
-    "sourceUrl": ["https://arsstc.org/business-sellers/member-jurisdictions/"]
+    "sourceUrl": ["https://arsstc.org/business-sellers/member-jurisdictions/"],
+    "status": "rules"
   },
   {
     "county": "Copper River Census Area",
@@ -280,6 +295,7 @@
         "authority": "Alaska food safety authority",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://dec.alaska.gov/eh/fss/"],
         "feeDetail": {
           "basis": "varies",
@@ -315,6 +331,7 @@
         "authority": "Alaska food safety authority",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://dec.alaska.gov/eh/fss/"],
         "feeDetail": {
           "basis": "varies",
@@ -350,6 +367,7 @@
         "authority": "Alaska food safety authority",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://dec.alaska.gov/eh/fss/"],
         "feeDetail": {
           "basis": "varies",
@@ -385,6 +403,7 @@
         "authority": "Alaska Division of Corporations, Business and Professional Licensing",
         "description": "Businesses operating in the Fairbanks North Star Borough must obtain and renew the applicable Alaska business license; city-level licensing may also apply inside Fairbanks city limits.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.commerce.alaska.gov/web/cbpl/BusinessLicensing/",
           "https://www.fairbanks.gov/faqs/item/how-do-i-calculate-the-cost-of-my-city-business-license",
@@ -423,7 +442,8 @@
         "category": "filing",
         "authority": "Haines Borough",
         "description": "Businesses making taxable sales in Haines Borough collect and remit the borough's local general-retail sales tax; the ARSSTC table lists seasonal rates of 7% April through September and 4.5% October through March.",
-        "rrule": "FREQ=MONTHLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12",
+        "anchor": "assigned",
         "url": ["https://arsstc.org/business-sellers/member-jurisdictions/"],
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -435,16 +455,20 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "The ARSSTC member-jurisdiction table confirms the borough's local sales tax; other county-level obligations were not checked.",
-    "sourceUrl": ["https://arsstc.org/business-sellers/member-jurisdictions/"]
+    "sourceUrl": ["https://arsstc.org/business-sellers/member-jurisdictions/"],
+    "status": "rules"
   },
   {
     "county": "Hoonah-Angoon",
@@ -457,6 +481,7 @@
         "authority": "Alaska food safety authority",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://dec.alaska.gov/eh/fss/"],
         "feeDetail": {
           "basis": "varies",
@@ -490,7 +515,8 @@
         "category": "filing",
         "authority": "City and Borough of Juneau",
         "description": "Businesses making taxable sales in the City and Borough of Juneau collect and remit the 5% local general-retail sales tax; local rules and filing forms control exemptions and deadlines.",
-        "rrule": "FREQ=MONTHLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12",
+        "anchor": "assigned",
         "url": ["https://arsstc.org/business-sellers/member-jurisdictions/"],
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -502,16 +528,20 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "The ARSSTC member-jurisdiction table confirms the borough's local sales tax; other county-level obligations were not checked.",
-    "sourceUrl": ["https://arsstc.org/business-sellers/member-jurisdictions/"]
+    "sourceUrl": ["https://arsstc.org/business-sellers/member-jurisdictions/"],
+    "status": "rules"
   },
   {
     "county": "Kenai Peninsula",
@@ -522,7 +552,8 @@
         "category": "filing",
         "authority": "Kenai Peninsula Borough",
         "description": "Businesses making taxable sales in Kenai Peninsula Borough collect and remit the 3% local general-retail sales tax; local rules and filing forms control exemptions and deadlines.",
-        "rrule": "FREQ=MONTHLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12",
+        "anchor": "assigned",
         "url": ["https://arsstc.org/business-sellers/member-jurisdictions/"],
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -534,16 +565,20 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "The ARSSTC member-jurisdiction table confirms the borough's local sales tax; other county-level obligations were not checked.",
-    "sourceUrl": ["https://arsstc.org/business-sellers/member-jurisdictions/"]
+    "sourceUrl": ["https://arsstc.org/business-sellers/member-jurisdictions/"],
+    "status": "rules"
   },
   {
     "county": "Ketchikan Gateway",
@@ -554,7 +589,8 @@
         "category": "filing",
         "authority": "Ketchikan Gateway Borough",
         "description": "Businesses making taxable sales in Ketchikan Gateway Borough collect and remit the 2.5% local general-retail sales tax; local rules and filing forms control exemptions and deadlines.",
-        "rrule": "FREQ=MONTHLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12",
+        "anchor": "assigned",
         "url": ["https://arsstc.org/business-sellers/member-jurisdictions/"],
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -566,16 +602,20 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "The ARSSTC member-jurisdiction table confirms the borough's local sales tax; other county-level obligations were not checked.",
-    "sourceUrl": ["https://arsstc.org/business-sellers/member-jurisdictions/"]
+    "sourceUrl": ["https://arsstc.org/business-sellers/member-jurisdictions/"],
+    "status": "rules"
   },
   {
     "county": "Kodiak Island",
@@ -588,6 +628,7 @@
         "authority": "Alaska Department of Environmental Conservation / Kodiak Island Borough",
         "description": "Food establishments operating in Kodiak Island Borough must obtain the applicable Alaska food establishment permit before operating; mobile food services also require applicable city or borough permits and state licenses.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dec.alaska.gov/eh/fss/Food/Opening.html",
           "https://www.kodiakak.us/247/Borough-Code",
@@ -630,6 +671,7 @@
         "authority": "Alaska Department of Environmental Conservation",
         "description": "Food establishments operating in the Kusilvak Census Area must obtain the applicable Alaska food establishment permit from the state department because the area is within the unorganized borough.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://health.alaska.gov/dhcs/Documents/hflc/PDF/files/18%20AAC%2031.pdf",
           "https://health.alaska.gov/en/services/report-food-poisoning/",
@@ -671,6 +713,7 @@
         "authority": "Alaska Department of Environmental Conservation",
         "description": "Food establishments operating in Lake and Peninsula Borough must obtain the applicable Alaska food establishment permit from the state department; borough business licensing separately covers specified lodging, guiding, campground, and fish businesses.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://health.alaska.gov/dhcs/Documents/hflc/PDF/files/18%20AAC%2031.pdf",
           "https://lakeandpen.com/forbusiness",
@@ -712,6 +755,7 @@
         "authority": "Alaska Department of Environmental Conservation / Matanuska-Susitna Borough",
         "description": "Food establishments operating in Matanuska-Susitna Borough must obtain the applicable Alaska food establishment permit; borough development and business permits may also apply by activity and location.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://health.alaska.gov/dhcs/Documents/hflc/PDF/files/18%20AAC%2031.pdf",
           "https://matsugov.us/71-documents/permit/17196-permit-application-fee-schedule",
@@ -753,6 +797,7 @@
         "authority": "Alaska Department of Environmental Conservation",
         "description": "Food establishments operating in the Nome Census Area must obtain the applicable Alaska food establishment permit before operating and comply with state food safety requirements.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dec.alaska.gov/eh/fss/Food/Opening.html",
           "https://dec.alaska.gov/media/9816/forms-food-food-establishment-permit-application.pdf",
@@ -794,6 +839,7 @@
         "authority": "Alaska Department of Environmental Conservation / North Slope Borough",
         "description": "Food establishments operating in North Slope Borough must obtain the applicable Alaska food establishment permit before operating; borough permits may also apply by activity and location.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dec.alaska.gov/eh/fss/Food/Opening.html",
           "https://health.alaska.gov/dhcs/Documents/hflc/PDF/files/18%20AAC%2031.pdf",
@@ -835,6 +881,7 @@
         "authority": "Alaska Department of Environmental Conservation / Northwest Arctic Borough",
         "description": "Food establishments operating in Northwest Arctic Borough must obtain the applicable Alaska food establishment permit; borough permits may also apply to specified commercial activities.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://health.alaska.gov/dhcs/Documents/hflc/PDF/files/18%20AAC%2031.pdf",
           "https://www.nwabor.org/wp-content/uploads/Title-9-Fee-Schedule.pdf",
@@ -874,7 +921,8 @@
         "category": "filing",
         "authority": "Petersburg Borough",
         "description": "Businesses making taxable sales in Petersburg Borough collect and remit the 6% local general-retail sales tax; local rules and filing forms control exemptions and deadlines.",
-        "rrule": "FREQ=MONTHLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12",
+        "anchor": "assigned",
         "url": ["https://arsstc.org/business-sellers/member-jurisdictions/"],
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -886,16 +934,20 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "The ARSSTC member-jurisdiction table confirms the borough's local sales tax; other county-level obligations were not checked.",
-    "sourceUrl": ["https://arsstc.org/business-sellers/member-jurisdictions/"]
+    "sourceUrl": ["https://arsstc.org/business-sellers/member-jurisdictions/"],
+    "status": "rules"
   },
   {
     "county": "Prince of Wales-Hyder",
@@ -908,6 +960,7 @@
         "authority": "Alaska Department of Environmental Conservation",
         "description": "Food establishments operating in the Prince of Wales-Hyder Census Area must obtain the applicable Alaska food permit and comply with plan-review and inspection requirements.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://dec.alaska.gov/eh/fss/food/", "https://dec.alaska.gov/eh/fss/food/permits/"],
         "feeDetail": {
           "basis": "varies",
@@ -941,7 +994,8 @@
         "category": "filing",
         "authority": "City and Borough of Sitka",
         "description": "Businesses making taxable sales in the City and Borough of Sitka collect and remit the local general-retail sales tax; the ARSSTC table lists seasonal rates of 6% April through September and 5% October through March.",
-        "rrule": "FREQ=MONTHLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12",
+        "anchor": "assigned",
         "url": ["https://arsstc.org/business-sellers/member-jurisdictions/"],
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -953,16 +1007,20 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "The ARSSTC member-jurisdiction table confirms the borough's local sales tax; other county-level obligations were not checked.",
-    "sourceUrl": ["https://arsstc.org/business-sellers/member-jurisdictions/"]
+    "sourceUrl": ["https://arsstc.org/business-sellers/member-jurisdictions/"],
+    "status": "rules"
   },
   {
     "county": "Skagway",
@@ -973,7 +1031,8 @@
         "category": "filing",
         "authority": "Municipality of Skagway",
         "description": "Businesses making taxable sales in the Municipality of Skagway collect and remit the local general-retail sales tax; the ARSSTC table lists seasonal rates of 5% April through September and 3% October through March.",
-        "rrule": "FREQ=MONTHLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12",
+        "anchor": "assigned",
         "url": ["https://arsstc.org/business-sellers/member-jurisdictions/"],
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -985,16 +1044,20 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "note": "The ARSSTC member-jurisdiction table confirms the borough's local sales tax; other county-level obligations were not checked.",
-    "sourceUrl": ["https://arsstc.org/business-sellers/member-jurisdictions/"]
+    "sourceUrl": ["https://arsstc.org/business-sellers/member-jurisdictions/"],
+    "status": "rules"
   },
   {
     "county": "Skagway-Hoonah-Angoon",
@@ -1007,6 +1070,7 @@
         "authority": "Alaska food safety authority",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://dec.alaska.gov/eh/fss/"],
         "feeDetail": {
           "basis": "varies",
@@ -1042,6 +1106,7 @@
         "authority": "Alaska food safety authority",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://dec.alaska.gov/eh/fss/"],
         "feeDetail": {
           "basis": "varies",
@@ -1077,6 +1142,7 @@
         "authority": "Alaska Division of Corporations, Business and Professional Licensing",
         "description": "Businesses operating in the Yukon-Koyukuk Census Area must obtain and renew the applicable Alaska business license; the state provides the official filing and fee process because the census area has no organized borough government.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.commerce.alaska.gov/web/cbpl/BusinessLicensing/",
           "https://www.commerce.alaska.gov/web/cbpl/BusinessLicensing/BusinessLicensingFormsFees.aspx"

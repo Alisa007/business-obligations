@@ -45,7 +45,13 @@ export const industryRules: Rule[] = [
         state: p.state,
         authority: `${p.county} County health department (${stateName(p.state)})`,
         description: "Plan review, inspection and operating permit for food service.",
+        cost: {
+          basis: "varies",
+          currency: "USD",
+          note: "The health department sets plan-review and permit fees by facility type and size.",
+        },
         rrule: "FREQ=YEARLY",
+        anchor: "license_issued",
         url: statePermitLinks(p.state),
         reason: "Industry is restaurant / food service",
       },
@@ -58,6 +64,11 @@ export const industryRules: Rule[] = [
         description:
           "Most jurisdictions require at least one certified food protection manager and food handler cards for staff.",
         frequency: "ongoing",
+        cost: {
+          basis: "varies",
+          currency: "USD",
+          note: "Course and exam prices are set by the training provider.",
+        },
         url: statePermitLinks(p.state),
         reason: "Industry is restaurant / food service",
       },
@@ -82,6 +93,12 @@ export const industryRules: Rule[] = [
         "Contractors generally need a license or registration, bonding and proof of insurance; thresholds and classifications vary." +
         (p.licenseClass ? ` Classification requested: ${p.licenseClass}.` : ""),
       rrule: "FREQ=YEARLY;INTERVAL=2",
+      anchor: "license_issued",
+      cost: {
+        basis: "varies",
+        currency: "USD",
+        note: "License, exam, bond and insurance costs depend on the classification and the licensing board.",
+      },
       url: statePermitLinks(p.state),
       // Florida s. 163.211, F.S. (ch. 2021-214): occupational licensing is preempted to the state, so cities and
       // counties cannot license scopes outside the Construction Industry Licensing Board's categories.
@@ -166,6 +183,7 @@ export const industryRules: Rule[] = [
       description:
         "Businesses that prepare or serve food (cafes inside retail, caterers, bars with food) generally need a health department permit and inspection, even when food is not their main activity.",
       rrule: "FREQ=YEARLY",
+      anchor: "license_issued",
       url: statePermitLinks(p.state),
       appliesWhen: [{ field: "foodService", op: "==", value: true, description: "Prepares or serves food" }],
       reason: "Business prepares or serves food",
@@ -184,6 +202,7 @@ export const industryRules: Rule[] = [
       authority: auth(p.state).realEstate,
       description: "Brokerage entities need a licensed designated broker and entity registration.",
       rrule: "FREQ=YEARLY;INTERVAL=2",
+      anchor: "license_issued",
       url: statePermitLinks(p.state),
       reason: "Industry is real estate",
     }),
@@ -203,6 +222,7 @@ export const industryRules: Rule[] = [
         description:
           "Practitioners and facilities are licensed by state boards; some states restrict entity forms.",
         rrule: "FREQ=YEARLY;INTERVAL=2",
+        anchor: "license_issued",
         url: statePermitLinks(p.state),
         reason: "Industry is healthcare",
       },
@@ -242,6 +262,7 @@ export const industryRules: Rule[] = [
       description:
         "License class depends on activity (on-premise, off-premise, manufacturing, distribution); local approval is often required too.",
       rrule: "FREQ=YEARLY",
+      anchor: "license_issued",
       url: statePermitLinks(p.state),
       reason: `Alcohol activity is ${p.alcoholActivity}`,
     }),
@@ -267,6 +288,7 @@ export const industryRules: Rule[] = [
                 ? "Adult-use and medical cannabis businesses are licensed by the state regulator, usually with local approval and caps or social-equity rules."
                 : `Only the state medical program is licensed; license categories are often capped and competitive. ${c.note ?? ""}`.trim(),
             rrule: "FREQ=YEARLY",
+            anchor: "license_issued",
             reason: `Industry is cannabis (${p.cannabisActivity}); ${name} status is ${c.status.replace("_", " ")}`,
             url: stateInfo(p.state).local.url,
           }
@@ -315,6 +337,7 @@ export const industryRules: Rule[] = [
       authority: auth(p.state).childCare,
       description: "Facility licensing with background checks, staff ratios and inspections.",
       rrule: "FREQ=YEARLY",
+      anchor: "license_issued",
       reason: "Industry is child care",
       url: stateInfo(p.state).local.url,
     }),
@@ -341,6 +364,7 @@ export const industryRules: Rule[] = [
       description:
         "Interstate operators of vehicles over 10,000 lbs, passenger vehicles over the capacity limits, or placardable hazmat carriers must register, file the MCS-150 biennial update, and carry required insurance.",
       rrule: "FREQ=YEARLY;INTERVAL=2",
+      anchor: "assigned",
       reason: "Interstate commercial vehicle operations meet the USDOT registration thresholds",
       url: ["https://www.fmcsa.dot.gov/registration"],
       provenance: {

@@ -71,6 +71,7 @@ export const en: Messages = {
     once: "One-time",
     annual: "Annual",
     biennial: "Every 2 years",
+    every_three_years: "Every 3 years",
     every_five_years: "Every 5 years",
     semiannual: "Twice a year",
     quarterly: "Quarterly",

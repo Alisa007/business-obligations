@@ -10,10 +10,15 @@
     "appliesTo": ["all"],
     "checkedOn": "2026-10-16",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "none",
+      "amount": 0,
+      "note": "There is no fee to file or register."
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "per_item",
+      "note": "Willful failures: $1,000 a day up to $25,000 plus 25% of the property's value (G.S. 116B-59).",
+      "perUnit": 1000,
+      "max": 25000
     }
   }
 ]

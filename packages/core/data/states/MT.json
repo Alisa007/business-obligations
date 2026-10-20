@@ -68,13 +68,25 @@
       "note": "Fee after April 15 (fee is waived before then)"
     }
   },
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "Corporate income tax (C corporations file Form CIT; federal S corporations file Form PTE)",
+  "wageWithholding": true,
+  "entityTaxDetail": null,
   "salesTax": {
     "statewide": false,
     "permit": "Local option resort tax registration",
+    "permitFee": {
+      "basis": "none",
+      "amount": 0,
+      "note": "The state has no statewide sales tax, so there is no sales tax permit fee."
+    },
     "agency": null,
-    "alternative": "Montana has no statewide sales tax; designated resort communities levy a local resort tax and require registration."
+    "alternative": "Montana has no statewide sales tax; designated resort communities levy a local resort tax and require registration.",
+    "penalty": {
+      "basis": "none",
+      "note": "The state has no statewide sales tax, so there is no late sales tax return penalty."
+    }
   },
   "localSalesTax": "locally_administered",
   "economicNexusUsd": null,
@@ -91,6 +103,25 @@
       "minEmployees": 1
     }
   },
+  "penalties": {
+    "unemployment": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late wage report was found in the state agency's published sources."
+    },
+    "newHire": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late new hire report was found; secondary sources conflict or give only the federal $25 and $500 ceilings."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "range",
+      "note": "Double the premium amount or $200, whichever is greater, assessed by the Uninsured Employers' Fund.",
+      "min": 200
+    }
+  },
   "paidLeave": null,
   "paidSickLeave": null,
   "businessLicense": null,
@@ -101,6 +132,7 @@
     "description": "Some Montana cities and counties require a local business license."
   },
   "dbaFiling": "state",
+  "dbaEntitiesFileLocally": false,
   "industry": {
     "contractor": "Montana Department of Labor & Industry (contractor registration)",
     "realEstate": "Montana Board of Realty Regulation",

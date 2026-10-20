@@ -10,10 +10,15 @@
     "appliesTo": ["all"],
     "checkedOn": "2026-10-16",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "none",
+      "amount": 0,
+      "note": "There is no fee to file or register."
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "per_item",
+      "note": "Civil penalty of $200 for each day the report is withheld, up to $100,000, plus interest set at 10 points above the 52-week Treasury bill rate (state holder guidelines).",
+      "perUnit": 200,
+      "max": 100000
     }
   },
   {
@@ -35,7 +40,9 @@
       }
     ],
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "none",
+      "amount": 0,
+      "note": "There is no fee; this is a contracting requirement."
     },
     "penalty": {
       "basis": "unknown"

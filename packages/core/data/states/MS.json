@@ -40,13 +40,26 @@
   },
   "lpReport": null,
   "llpReport": null,
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "Corporate income tax and franchise tax (franchise tax being phased out)",
+  "wageWithholding": true,
+  "entityTaxDetail": null,
   "salesTax": {
     "statewide": true,
     "permit": "Mississippi sales tax permit",
+    "permitFee": {
+      "basis": "none",
+      "amount": 0,
+      "note": "Mississippi charges no fee for a sales tax permit."
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "note": "10% penalty on late payment, plus interest.",
+      "rate": 10
+    }
   },
   "localSalesTax": "none",
   "economicNexusUsd": 250000,
@@ -63,6 +76,28 @@
       "minEmployees": 5
     }
   },
+  "penalties": {
+    "unemployment": {
+      "basis": "percent",
+      "note": "10% of the tax due starting 30 days after the due date and a second 10% after 60 days, up to 20% a quarter, plus 1% monthly interest.",
+      "rate": 20
+    },
+    "newHire": {
+      "basis": "flat",
+      "amount": 25,
+      "note": "Up to $25 per newly hired employee, or up to $500 for a conspiracy."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "range",
+      "note": "Misdemeanor fine of up to $1,000, jail up to one year, or both (Miss. Code 71-3-83).",
+      "min": 0,
+      "max": 1000
+    }
+  },
   "paidLeave": null,
   "paidSickLeave": null,
   "businessLicense": null,
@@ -73,6 +108,7 @@
     "description": "Mississippi cities and the state issue privilege licenses for businesses and professions."
   },
   "dbaFiling": "none",
+  "dbaEntitiesFileLocally": false,
   "industry": {
     "contractor": "Mississippi State Board of Contractors",
     "realEstate": "Mississippi Real Estate Commission",
@@ -99,6 +135,9 @@
     ],
     "laborPosters": [
       "https://mdes.ms.gov/employers/unemployment-tax/employer-resources/required-posters//employers/unemployment-tax/employer-resources/required-posters/"
+    ],
+    "dba": [
+      "https://www.sos.ms.gov/content/documents/pol_res/trade_name_registration/1trade-names-summary.pdf"
     ]
   },
   "verification": {

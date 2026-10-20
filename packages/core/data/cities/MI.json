@@ -15,10 +15,12 @@
         "url": ["https://www.a2gov.org/city-clerk/licenses-and-permits/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "This entry covers the city's local licenses and taxes generally, each of which carries its own late charge in the municipal code; no single amount is stated."
         }
       }
     ],
@@ -35,14 +37,18 @@
         "category": "registration",
         "authority": "City of Detroit Income Tax Division / Michigan Department of Treasury",
         "description": "Employers with a location in Detroit or doing business there register with the city, withhold city income tax monthly or quarterly, and file the annual reconciliation.",
-        "rrule": "FREQ=MONTHLY;INTERVAL=3",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10",
+        "anchor": "assigned",
         "url": ["https://detroitmi.gov/incometax"],
         "appliesTo": ["employees"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       },
       {
@@ -52,18 +58,22 @@
         "authority": "Michigan Department of Treasury (for the City of Detroit)",
         "description": "Corporations and partnerships doing business in Detroit file the city return, which the Michigan Department of Treasury has processed since 2017.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://www.michigan.gov/taxes/citytax/detroit"],
         "appliesTo": ["corporation"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The state page this entry cites does not publish a fee for this local requirement; the local government sets it."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "sourceUrl": ["https://detroitmi.gov/incometax"],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "city": "Flint",
@@ -79,15 +89,19 @@
         "url": ["https://www.michigan.gov/taxes/citytax/flint/business"],
         "appliesTo": ["employees"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "sourceUrl": ["https://www.michigan.gov/taxes/citytax/flint/business"],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "city": "Grand Rapids",
@@ -104,15 +118,22 @@
         "url": ["https://www.grandrapidsmi.gov/media/ptdntgg5/2025-1120-website.pdf"],
         "appliesTo": ["corporation", "unincorporated"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 1,
+          "percentPerMonth": 1,
+          "max": 25,
+          "note": "The city's instructions for individuals: 1% per month on unpaid tax, up to 25% of the tax, with a $2 minimum charge; its corporate form gives no percentage."
         }
       }
     ],
     "sourceUrl": ["https://www.grandrapidsmi.gov/media/ptdntgg5/2025-1120-website.pdf"],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "city": "Lansing",
@@ -130,10 +151,12 @@
         "url": ["https://www.lansingmi.gov/income-tax-forms"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "This entry covers the city's local licenses and taxes generally, each of which carries its own late charge in the municipal code; no single amount is stated."
         }
       }
     ],
@@ -156,10 +179,12 @@
         "url": ["https://www.sterlingheights.gov/1293/Business-Licensing"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "This entry covers the city's local licenses and taxes generally, each of which carries its own late charge in the municipal code; no single amount is stated."
         }
       }
     ],
@@ -182,10 +207,12 @@
         "url": ["https://www.cityofwarren.org/business-licenses"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "This entry covers the city's local licenses and taxes generally, each of which carries its own late charge in the municipal code; no single amount is stated."
         }
       }
     ],
@@ -207,17 +234,20 @@
         "url": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
-    ]
+    ],
+    "counties": ["Wayne"]
   },
   {
     "city": "Livonia",
@@ -234,17 +264,20 @@
         "url": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
-    ]
+    ],
+    "counties": ["Wayne"]
   },
   {
     "city": "Troy",
@@ -261,17 +294,20 @@
         "url": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
-    ]
+    ],
+    "counties": ["Oakland"]
   },
   {
     "city": "Farmington Hills",
@@ -288,17 +324,20 @@
         "url": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
-    ]
+    ],
+    "counties": ["Oakland"]
   },
   {
     "city": "Westland",
@@ -315,17 +354,20 @@
         "url": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
-    ]
+    ],
+    "counties": ["Wayne"]
   },
   {
     "city": "Wyoming",
@@ -342,17 +384,20 @@
         "url": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
-    ]
+    ],
+    "counties": ["Kent"]
   },
   {
     "city": "Rochester Hills",
@@ -369,17 +414,20 @@
         "url": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
-    ]
+    ],
+    "counties": ["Oakland"]
   },
   {
     "city": "Southfield",
@@ -396,17 +444,20 @@
         "url": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
-    ]
+    ],
+    "counties": ["Oakland"]
   },
   {
     "city": "Kalamazoo",
@@ -423,17 +474,20 @@
         "url": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
-    ]
+    ],
+    "counties": ["Kalamazoo"]
   },
   {
     "city": "Novi",
@@ -450,17 +504,20 @@
         "url": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
-    ]
+    ],
+    "counties": ["Oakland"]
   },
   {
     "city": "Pontiac",
@@ -477,17 +534,20 @@
         "url": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
-    ]
+    ],
+    "counties": ["Oakland"]
   },
   {
     "city": "Taylor",
@@ -504,17 +564,20 @@
         "url": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
-    ]
+    ],
+    "counties": ["Wayne"]
   },
   {
     "city": "Dearborn Heights",
@@ -531,17 +594,20 @@
         "url": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
-    ]
+    ],
+    "counties": ["Wayne"]
   },
   {
     "city": "St. Clair Shores",
@@ -558,17 +624,20 @@
         "url": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
-    ]
+    ],
+    "counties": ["Macomb"]
   },
   {
     "city": "Royal Oak",
@@ -585,17 +654,20 @@
         "url": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
-    ]
+    ],
+    "counties": ["Oakland"]
   },
   {
     "city": "Kentwood",
@@ -612,17 +684,20 @@
         "url": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
-    ]
+    ],
+    "counties": ["Kent"]
   },
   {
     "city": "Battle Creek",
@@ -639,17 +714,20 @@
         "url": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
-    ]
+    ],
+    "counties": ["Calhoun"]
   },
   {
     "city": "Portage",
@@ -666,17 +744,20 @@
         "url": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
-    ]
+    ],
+    "counties": ["Kalamazoo"]
   },
   {
     "city": "East Lansing",
@@ -693,17 +774,20 @@
         "url": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
-    ]
+    ],
+    "counties": ["Ingham"]
   },
   {
     "city": "Roseville",
@@ -720,17 +804,20 @@
         "url": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
-    ]
+    ],
+    "counties": ["Macomb"]
   },
   {
     "city": "Saginaw",
@@ -747,17 +834,20 @@
         "url": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
-    ]
+    ],
+    "counties": ["Saginaw", "Gladwin"]
   },
   {
     "city": "Midland",
@@ -774,16 +864,19 @@
         "url": ["https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.michigan.gov/lara/bureau-list/cscl/corps/forms/limited-liability-company-forms"
-    ]
+    ],
+    "counties": ["Midland"]
   }
 ]

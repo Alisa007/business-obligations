@@ -34,8 +34,10 @@
       "basis": "none"
     }
   },
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "Corporate excise tax and Corporate Activity Tax (CAT, gross receipts over $1 million); minimum excise tax by sales",
+  "wageWithholding": true,
   "entityTaxDetail": {
     "kind": "gross_receipts",
     "thresholdUsd": 1000000,
@@ -48,8 +50,17 @@
   "salesTax": {
     "statewide": false,
     "permit": "None",
+    "permitFee": {
+      "basis": "none",
+      "amount": 0,
+      "note": "The state has no statewide sales tax, so there is no sales tax permit fee."
+    },
     "agency": null,
-    "alternative": "Oregon has no sales tax; see the Corporate Activity Tax under entity taxes."
+    "alternative": "Oregon has no sales tax; see the Corporate Activity Tax under entity taxes.",
+    "penalty": {
+      "basis": "none",
+      "note": "The state has no statewide sales tax, so there is no late sales tax return penalty."
+    }
   },
   "localSalesTax": "none",
   "economicNexusUsd": null,
@@ -64,6 +75,25 @@
     "stateFund": false,
     "trigger": {
       "minEmployees": 1
+    }
+  },
+  "penalties": {
+    "unemployment": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late wage report was found in the state agency's published sources."
+    },
+    "newHire": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late new hire report was found; secondary sources conflict or give only the federal $25 and $500 ceilings."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "range",
+      "note": "Twice the premium that should have been paid, with a $1,000 minimum, and up to $250 a day for each further day of noncompliance after an order.",
+      "min": 1000
     }
   },
   "paidLeave": {
@@ -84,6 +114,7 @@
     "description": "Portland and Multnomah County levy business income taxes; many cities require business licenses."
   },
   "dbaFiling": "state",
+  "dbaEntitiesFileLocally": false,
   "industry": {
     "contractor": "Oregon Construction Contractors Board",
     "realEstate": "Oregon Real Estate Agency",
@@ -100,6 +131,7 @@
     "annualReport": ["https://sos.oregon.gov/business/Pages/default.aspx"],
     "uiRegistration": ["https://www.oregon.gov/employ/Businesses/Pages/default.aspx"],
     "withholding": ["https://www.oregon.gov/dor/programs/businesses/pages/withholding-and-payroll-tax.aspx"],
+    "salesTax": ["https://www.oregon.gov/dor/programs/businesses/Pages/Sales-tax.aspx"],
     "entityTax": ["https://www.oregon.gov/dor/programs/businesses/Pages/Corporate-Activity-Tax.aspx"],
     "laborPosters": ["https://www.oregon.gov/boli/employers/pages/required-worksite-postings.aspx"],
     "dba": ["https://sos.oregon.gov/business/Pages/obr-assumed-business-name-registration.aspx"]

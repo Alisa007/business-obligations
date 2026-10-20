@@ -10,10 +10,15 @@
     "appliesTo": ["all"],
     "checkedOn": "2026-10-16",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "none",
+      "amount": 0,
+      "note": "There is no fee to file or register."
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "per_item",
+      "note": "Willful failures to report: $500 a day up to $5,000 plus 25% of the unreported property's value; waived for good faith (Florida unclaimed property act).",
+      "perUnit": 500,
+      "max": 5000
     }
   },
   {
@@ -27,10 +32,15 @@
     "appliesTo": ["all"],
     "checkedOn": "2026-10-16",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "none",
+      "amount": 0,
+      "note": "There is no fee to file or register."
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "per_item",
+      "note": "Under the Florida Information Protection Act: $1,000 a day for the first 30 days, then $50,000 for each further 30-day period up to 180 days, capped at $500,000 per breach; law-firm and Senate analyses were the source.",
+      "perUnit": 1000,
+      "max": 500000
     }
   }
 ]

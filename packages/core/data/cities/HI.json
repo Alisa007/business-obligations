@@ -15,10 +15,16 @@
         "url": ["https://dev2-tax.hawaii.gov/geninfo/licensing/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 20,
+          "note": "The state Department of Taxation charges a one-time $20 registration fee on the Basic Business Application."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "percentPerMonth": 5,
+          "max": 25,
+          "note": "The state Department of Taxation: 5% of the unpaid tax for each month or part of a month for late filing, up to 25%, plus interest of two-thirds of one percent a month."
         }
       },
       {
@@ -31,10 +37,12 @@
         "url": ["https://honolulu.gov/dpp/home/faq"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       }
     ],

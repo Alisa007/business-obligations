@@ -56,6 +56,7 @@
   "llpReport": {
     "title": "Pay LLP annual fee",
     "rrule": "FREQ=YEARLY",
+    "anchor": "announced",
     "deadline": "Date set by the Secretary of State",
     "feeDetail": {
       "basis": "per_partner",
@@ -68,13 +69,28 @@
       "note": "Tennessee publishes administrative dissolution or revocation for missed annual reports, but no separate late monetary penalty."
     }
   },
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "Franchise and Excise taxes (apply to LLCs, corporations and limited partnerships)",
+  "wageWithholding": false,
+  "entityTaxDetail": null,
   "salesTax": {
     "statewide": true,
     "permit": "Tennessee sales and use tax registration",
+    "permitFee": {
+      "basis": "none",
+      "amount": 0,
+      "note": "Registering for a sales and use tax account with the Department of Revenue is free; a separate $15 business license fee is paid to the local clerk."
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "percentPerMonth": 5,
+      "note": "5% of the tax for each month or portion of a month the tax is delinquent, up to 25%, with a $15 minimum.",
+      "rate": 25,
+      "min": 15
+    }
   },
   "localSalesTax": "state_administered",
   "economicNexusUsd": 100000,
@@ -92,6 +108,24 @@
       "constructionMinEmployees": 1
     }
   },
+  "penalties": {
+    "unemployment": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late wage report was found in the state agency's published sources."
+    },
+    "newHire": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late new hire report was found; secondary sources conflict or give only the federal $25 and $500 ceilings."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "not_stated",
+      "note": "The penalty is a multiple of the average yearly premium (two and a half times when coverage was never obtained, one and a half times after the fact), not a stated dollar amount (Tenn. Code 50-6-118)."
+    }
+  },
   "paidLeave": null,
   "paidSickLeave": null,
   "businessLicense": null,
@@ -102,6 +136,7 @@
     "description": "Tennessee businesses obtain a local business license and file state-local Business Tax returns."
   },
   "dbaFiling": "county",
+  "dbaEntitiesFileLocally": false,
   "dbaOffice": "County clerk",
   "industry": {
     "contractor": "Tennessee Board for Licensing Contractors",
@@ -118,6 +153,7 @@
     "formation": ["https://sos.tn.gov/businesses/services"],
     "annualReport": ["https://sos.tn.gov/products/business-services/how-file-annual-report-%E2%80%93-llc"],
     "uiRegistration": ["https://www.tn.gov/workforce/employers.html"],
+    "withholding": ["https://www.tn.gov/revenue"],
     "salesTax": ["https://www.tn.gov/revenue/taxes/sales-and-use-tax.html"],
     "entityTax": ["https://www.tn.gov/revenue/taxes/franchise---excise-tax.html"],
     "laborPosters": [

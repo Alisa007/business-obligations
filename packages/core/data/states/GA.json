@@ -48,13 +48,27 @@
       "amount": 25
     }
   },
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "Corporate income tax and net worth tax",
+  "wageWithholding": true,
+  "entityTaxDetail": null,
   "salesTax": {
     "statewide": true,
     "permit": "Georgia sales tax number (Georgia Tax Center)",
+    "permitFee": {
+      "basis": "none",
+      "amount": 0,
+      "note": "No fee was found for registering a sales and use tax number through the Georgia Tax Center."
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "percentPerMonth": 5,
+      "note": "5% of the tax for each month or fraction the return is late, up to 25%.",
+      "rate": 25
+    }
   },
   "localSalesTax": "state_administered",
   "economicNexusUsd": 100000,
@@ -69,6 +83,29 @@
     "stateFund": false,
     "trigger": {
       "minEmployees": 3
+    }
+  },
+  "penalties": {
+    "unemployment": {
+      "basis": "percent",
+      "note": "Greater of 0.05% of the period's total wages or $20 for each month or part of a month a report is late, plus 1.5% monthly interest.",
+      "rate": 0.05,
+      "min": 20
+    },
+    "newHire": {
+      "basis": "flat",
+      "amount": 25,
+      "note": "Up to $25 per unreported new hire, rising to $500 where employer and employee conspire (per payroll-vendor summaries; confirm O.C.G.A. 19-11-9.2)."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "range",
+      "note": "Board fine of $500 to $5,000 per violation when coverage is intentionally not purchased.",
+      "min": 500,
+      "max": 5000
     }
   },
   "paidLeave": null,

@@ -10,7 +10,9 @@
     "appliesTo": ["all"],
     "checkedOn": "2026-10-16",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "none",
+      "amount": 0,
+      "note": "There is no fee to file or register."
     },
     "penalty": {
       "basis": "unknown"
@@ -27,10 +29,15 @@
     "appliesTo": ["all"],
     "checkedOn": "2026-10-16",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "none",
+      "amount": 0,
+      "note": "There is no fee to file or register."
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "per_item",
+      "note": "A civil violation with a penalty of up to $100 per occurrence, capped at $25,000 against a defendant (R.I. Gen. Laws 11-49.2-6).",
+      "perUnit": 100,
+      "max": 25000
     }
   }
 ]

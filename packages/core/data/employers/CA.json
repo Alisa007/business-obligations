@@ -19,10 +19,14 @@
     "checkedOn": "2026-10-16",
     "exemptions": ["Employers that sponsor a qualified retirement plan (they still certify the exemption)"],
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "none",
+      "amount": 0,
+      "note": "There is no fee to file or register."
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "per_item",
+      "note": "$250 per eligible employee after 90 days of noncompliance, and another $500 after 180 days.",
+      "perUnit": 250
     }
   },
   {
@@ -44,10 +48,12 @@
       }
     ],
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "varies",
+      "note": "The cost depends on the training provider and the number of employees."
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "not_stated",
+      "note": "The Civil Rights Department can seek a court order against an employer that has not trained its staff; summaries give no dollar penalty."
     }
   }
 ]

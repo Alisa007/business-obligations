@@ -13,15 +13,19 @@
         "url": ["https://www.capecoral.gov/department/clerk/business_tax_receipts.php"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set by business classification in the local business tax schedule, so no single amount applies."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "sourceUrl": ["https://www.capecoral.gov/department/clerk/business_tax_receipts.php"],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-13",
+    "status": "rules"
   },
   {
     "city": "Clearwater",
@@ -39,17 +43,21 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set by business classification in the local business tax schedule, so no single amount applies."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "sourceUrl": [
       "https://www.myclearwater.com/Business-Development/Clearwater-Business-Resources/Business-Tax-Receipts-BTR"
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-13",
+    "status": "rules"
   },
   {
     "city": "Coral Springs",
@@ -65,15 +73,19 @@
         "url": ["https://www.coralsprings.gov/Business/Business-Tax-Office"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 250,
+          "note": "Penalty, along with possible civil action, when tax is unpaid after 150 days."
         }
       }
     ],
     "sourceUrl": ["https://www.coralsprings.gov/Business/Business-Tax-Office"],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-13",
+    "status": "rules"
   },
   {
     "city": "Davie",
@@ -87,13 +99,17 @@
         "authority": "Town of Davie Business Tax Receipt Division",
         "description": "Davie issues local business tax receipts for commercial, home-based, and peddler/solicitor/seasonal businesses; the town provides a receipt application and renewal portal, but the official page reviewed does not state one universal renewal date.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://www.davie-fl.gov/194/Business-Tax-Receipt"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set by business classification in the local business tax schedule, so no single amount applies."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       },
       {
@@ -106,10 +122,12 @@
         "url": ["https://www.davie-fl.gov/1224/General-Information"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       },
       {
@@ -122,14 +140,17 @@
         "url": ["https://www.davie-fl.gov/DocumentCenter/View/14729/Private-Provider-Application"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for occupying without a certificate was found in the city's published building pages."
         }
       }
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "city": "Fort Lauderdale",
@@ -145,15 +166,19 @@
         "url": ["https://www.fortlauderdale.gov/Government/Departments/Community-Services/Business-Tax"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set by business classification in the local business tax schedule, so no single amount applies."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "sourceUrl": ["https://www.fortlauderdale.gov/Government/Departments/Community-Services/Business-Tax"],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-13",
+    "status": "rules"
   },
   {
     "city": "Gainesville",
@@ -169,15 +194,19 @@
         "url": ["https://www.gainesvillefl.gov/News-articles/Business-Tax-Renewal-Portal-Now-Available"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set by business classification in the local business tax schedule, so no single amount applies."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "sourceUrl": ["https://www.gainesvillefl.gov/News-articles/Business-Tax-Renewal-Portal-Now-Available"],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-13",
+    "status": "rules"
   },
   {
     "city": "Hialeah",
@@ -193,15 +222,19 @@
         "url": ["https://www.hialeahfl.gov/153/Finance"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set by business classification in the local business tax schedule, so no single amount applies."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "sourceUrl": ["https://www.hialeahfl.gov/153/Finance"],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-13",
+    "status": "rules"
   },
   {
     "city": "Hollywood",
@@ -217,15 +250,19 @@
         "url": ["https://apps.hollywoodfl.org/LbtrOnline"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set by business classification in the local business tax schedule, so no single amount applies."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "sourceUrl": ["https://apps.hollywoodfl.org/LbtrOnline"],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-13",
+    "status": "rules"
   },
   {
     "city": "Jacksonville",
@@ -241,15 +278,19 @@
         "url": ["https://taxcollector.jacksonville.gov/Taxes/Local-Business-Tax"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set by business classification in the local business tax schedule, so no single amount applies."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "sourceUrl": ["https://taxcollector.jacksonville.gov/Taxes/Local-Business-Tax"],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "city": "Lakeland",
@@ -267,17 +308,21 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set by business classification in the local business tax schedule, so no single amount applies."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "sourceUrl": [
       "https://www.lakelandgov.net/departments/community-economic-development/economic-development/business-tax/"
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-13",
+    "status": "rules"
   },
   {
     "city": "Miami",
@@ -293,10 +338,13 @@
         "url": ["https://www.miami.gov/Business-Licenses/Business-Licensing/Get-a-Business-Tax-Receipt-BTR"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set by business classification in the local business tax schedule, so no single amount applies."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       },
       {
@@ -309,17 +357,21 @@
         "url": ["https://www.mdctaxcollector.gov/services/local-business-tax-receipt"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set by business classification in the local business tax schedule, so no single amount applies."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "sourceUrl": [
       "https://www.miami.gov/Business-Licenses/Business-Licensing/Get-a-Business-Tax-Receipt-BTR"
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "city": "Miramar",
@@ -337,17 +389,21 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set by business classification in the local business tax schedule, so no single amount applies."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "sourceUrl": [
       "https://www.miramarfl.gov/Departments/Financial-Services/Business-Tax-Occupational-Licenses"
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-13",
+    "status": "rules"
   },
   {
     "city": "Orlando",
@@ -364,15 +420,19 @@
         "url": ["https://www.orlando.gov/btr"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set by business classification in the local business tax schedule, so no single amount applies."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "10% in October, rising monthly to 25% in January."
         }
       }
     ],
     "sourceUrl": ["https://www.orlando.gov/btr"],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-13",
+    "status": "rules"
   },
   {
     "city": "Palm Bay",
@@ -390,17 +450,21 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set by business classification in the local business tax schedule, so no single amount applies."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "sourceUrl": [
       "https://www.palmbayfl.gov/government/city-departments-a-to-e/community-economic-development/business-tax-receipts-btr/business-tax-receipts"
     ],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-13",
+    "status": "rules"
   },
   {
     "city": "Pembroke Pines",
@@ -416,15 +480,19 @@
         "url": ["https://fl-pembrokepines2.civicplus.com/144/Local-Business-Tax-Receipt"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set by business classification in the local business tax schedule, so no single amount applies."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "sourceUrl": ["https://fl-pembrokepines2.civicplus.com/144/Local-Business-Tax-Receipt"],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-13",
+    "status": "rules"
   },
   {
     "city": "Pompano Beach",
@@ -440,15 +508,19 @@
         "url": ["https://www.pompanobeachfl.gov/government/code-compliance/business-tax-receipt-division"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set by business classification in the local business tax schedule, so no single amount applies."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "sourceUrl": ["https://www.pompanobeachfl.gov/government/code-compliance/business-tax-receipt-division"],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-13",
+    "status": "rules"
   },
   {
     "city": "St. Petersburg",
@@ -466,15 +538,19 @@
         "appliesTo": ["all"],
         "checkedOn": "2026-10-19",
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set by business classification in the local business tax schedule, so no single amount applies."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "sourceUrl": ["https://www.stpete.org/businesstax"],
-    "checkedOn": "2026-10-13"
+    "checkedOn": "2026-10-19",
+    "status": "rules"
   },
   {
     "city": "Tallahassee",
@@ -490,10 +566,12 @@
         "url": ["https://www.talgov.com/growth/gm_permits_lues/Building_Inspection_Start_Here_5"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       },
       {
@@ -506,15 +584,18 @@
         "url": ["https://www.talgov.com/growth/gm_permits_lues/Building_Inspection_Start_Here_5"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for occupying without a certificate was found in the city's published building pages."
         }
       }
     ],
     "sourceUrl": ["https://www.talgov.com/growth/gm_permits_lues/Building_Inspection_Start_Here_5"],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "city": "Tampa",
@@ -530,15 +611,19 @@
         "url": ["https://www.tampa.gov/service/business-tax-records-inquiries"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The city's page does not publish fee amounts; see its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "sourceUrl": ["https://www.tampa.gov/service/business-tax-records-inquiries"],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "city": "West Palm Beach",
@@ -554,15 +639,19 @@
         "url": ["https://www.wpb.org/Business/Business-Tax-redirect"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set by business classification in the local business tax schedule, so no single amount applies."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Penalties up to 25% on taxes delinquent from October 1."
         }
       }
     ],
     "sourceUrl": ["https://www.wpb.org/Business/Business-Tax-redirect"],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "city": "Port St. Lucie",
@@ -578,10 +667,13 @@
         "appliesTo": ["all"],
         "rrule": "FREQ=YEARLY;BYMONTH=9;BYMONTHDAY=30",
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -589,7 +681,8 @@
     "sourceUrl": [
       "https://www.cityofpsl.com/Government/Your-City-Government/Departments/Finance/Business-Tax"
     ],
-    "note": "Port St. Lucie city-specific licensing was confirmed from the cited official source."
+    "note": "Port St. Lucie city-specific licensing was confirmed from the cited official source.",
+    "counties": ["St. Lucie"]
   },
   {
     "city": "Miami Gardens",
@@ -603,18 +696,22 @@
         "description": "Miami Gardens administers a local business license tax under Florida Statutes Chapter 205; the city revenue manual and receipt application determine the applicable classification and tax.",
         "url": ["https://www.miamigardens-fl.gov/DocumentCenter/View/7733/FY-2025-Revenue-Manual"],
         "appliesTo": ["all"],
-        "rrule": "FREQ=YEARLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=9;BYMONTHDAY=30",
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": ["https://www.miamigardens-fl.gov/DocumentCenter/View/7733/FY-2025-Revenue-Manual"],
-    "note": "Miami Gardens city-specific licensing was confirmed from the cited official source."
+    "note": "Miami Gardens city-specific licensing was confirmed from the cited official source.",
+    "counties": ["Miami-Dade"]
   },
   {
     "city": "Palm Coast",
@@ -628,18 +725,22 @@
         "description": "Palm Coast issues local business tax receipts for businesses operating in the city; new commercial locations must provide a certificate of occupancy, and fees are established by city council resolution.",
         "url": ["https://www.palmcoast.gov/business-tax"],
         "appliesTo": ["all"],
-        "rrule": "FREQ=YEARLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=9;BYMONTHDAY=30",
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": ["https://www.palmcoast.gov/business-tax"],
-    "note": "Palm Coast city-specific licensing was confirmed from the cited official source."
+    "note": "Palm Coast city-specific licensing was confirmed from the cited official source.",
+    "counties": ["Flagler"]
   },
   {
     "city": "Boca Raton",
@@ -655,16 +756,20 @@
         "appliesTo": ["all"],
         "rrule": "FREQ=YEARLY;BYMONTH=9;BYMONTHDAY=30",
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": ["https://www.myboca.us/273/Business-Tax-Receipts"],
-    "note": "Boca Raton city-specific licensing was confirmed from the cited official source."
+    "note": "Boca Raton city-specific licensing was confirmed from the cited official source.",
+    "counties": ["Palm Beach"]
   },
   {
     "city": "Fort Myers",
@@ -680,16 +785,20 @@
         "appliesTo": ["all"],
         "rrule": "FREQ=YEARLY;BYMONTH=9;BYMONTHDAY=30",
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": ["https://www.fortmyers.gov/2367/Business-Tax"],
-    "note": "Fort Myers city-specific licensing was confirmed from the cited official source."
+    "note": "Fort Myers city-specific licensing was confirmed from the cited official source.",
+    "counties": ["Lee", "Polk"]
   },
   {
     "city": "Deltona",
@@ -705,16 +814,20 @@
         "appliesTo": ["all"],
         "rrule": "FREQ=YEARLY;BYMONTH=9;BYMONTHDAY=30",
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "25% penalty plus a $250 surcharge starting October 1."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": ["https://www.deltonafl.gov/188/Business-Tax-Office"],
-    "note": "Deltona city-specific licensing was confirmed from the cited official source."
+    "note": "Deltona city-specific licensing was confirmed from the cited official source.",
+    "counties": ["Volusia"]
   },
   {
     "city": "Plantation",
@@ -732,10 +845,13 @@
         "appliesTo": ["all"],
         "rrule": "FREQ=YEARLY;BYMONTH=9;BYMONTHDAY=30",
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -743,7 +859,8 @@
     "sourceUrl": [
       "https://www.plantation.org/government/departments/planning-zoning-economic-development/local-business-tax-receipt"
     ],
-    "note": "Plantation city-specific licensing was confirmed from the cited official source."
+    "note": "Plantation city-specific licensing was confirmed from the cited official source.",
+    "counties": ["Broward"]
   },
   {
     "city": "Sunrise",
@@ -757,18 +874,22 @@
         "description": "Sunrise requires a local business tax receipt for businesses operating in the city; activity-specific approvals, including food, alcohol and county business tax requirements, may also apply.",
         "url": ["https://www.sunrisefl.gov/home/showpublisheddocument/2767/636739879149830000"],
         "appliesTo": ["all"],
-        "rrule": "FREQ=YEARLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=9;BYMONTHDAY=30",
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": ["https://www.sunrisefl.gov/home/showpublisheddocument/2767/636739879149830000"],
-    "note": "Sunrise city-specific licensing was confirmed from the cited official source."
+    "note": "Sunrise city-specific licensing was confirmed from the cited official source.",
+    "counties": ["Broward"]
   },
   {
     "city": "North Port",
@@ -785,15 +906,19 @@
         "url": ["https://developnorthportfl.gov/business-support/business-licensing/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://developnorthportfl.gov/business-support/business-licensing/"]
+    "sourceUrl": ["https://developnorthportfl.gov/business-support/business-licensing/"],
+    "counties": ["Sarasota"]
   },
   {
     "city": "Deerfield Beach",
@@ -811,15 +936,19 @@
         "appliesTo": ["all"],
         "checkedOn": "2026-10-19",
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
-    "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://deerfield-beach.com/1234/Business-Tax-Receipts"]
+    "checkedOn": "2026-10-19",
+    "sourceUrl": ["https://deerfield-beach.com/1234/Business-Tax-Receipts"],
+    "counties": ["Broward"]
   },
   {
     "city": "Daytona Beach",
@@ -836,15 +965,19 @@
         "url": ["https://www.daytonabeach.gov/345/Business-Licensing"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.daytonabeach.gov/345/Business-Licensing"]
+    "sourceUrl": ["https://www.daytonabeach.gov/345/Business-Licensing"],
+    "counties": ["Volusia"]
   },
   {
     "city": "Melbourne",
@@ -863,17 +996,22 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 25,
+          "note": "Initial application fee; the tax varies by business type and employees."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.melbourneflorida.org/Government/Departments/Financial-Services/Business-Tax-Receipts"
-    ]
+    ],
+    "counties": ["Brevard"]
   },
   {
     "city": "Homestead",
@@ -889,15 +1027,19 @@
         "url": ["https://www.homesteadfl.gov/96/Business-Services"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.homesteadfl.gov/96/Business-Services"]
+    "sourceUrl": ["https://www.homesteadfl.gov/96/Business-Services"],
+    "counties": ["Miami-Dade"]
   },
   {
     "city": "Kissimmee",
@@ -915,17 +1057,21 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.kissimmee.gov/Business-Development/Doing-Business-in-Kissimmee/Business-Tax-Receipts-BTR"
-    ]
+    ],
+    "counties": ["Osceola", "Polk"]
   },
   {
     "city": "Boynton Beach",
@@ -941,15 +1087,19 @@
         "url": ["https://www.boynton-beach.org/269/BTR-Business-Tax-Receipts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.boynton-beach.org/269/BTR-Business-Tax-Receipts"]
+    "sourceUrl": ["https://www.boynton-beach.org/269/BTR-Business-Tax-Receipts"],
+    "counties": ["Palm Beach"]
   },
   {
     "city": "Doral",
@@ -965,15 +1115,19 @@
         "url": ["https://www.cityofdoral.com/Online-Services/Renew-Business-Tax-Receipt"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.cityofdoral.com/Online-Services/Renew-Business-Tax-Receipt"]
+    "sourceUrl": ["https://www.cityofdoral.com/Online-Services/Renew-Business-Tax-Receipt"],
+    "counties": ["Miami-Dade"]
   },
   {
     "city": "Miami Beach",
@@ -989,15 +1143,19 @@
         "url": ["https://www.miamibeachfl.gov/city-hall/finance/business-tax-receipts-btr/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.miamibeachfl.gov/city-hall/finance/business-tax-receipts-btr/"]
+    "sourceUrl": ["https://www.miamibeachfl.gov/city-hall/finance/business-tax-receipts-btr/"],
+    "counties": ["Miami-Dade"]
   },
   {
     "city": "Largo",
@@ -1013,15 +1171,19 @@
         "url": ["https://www.largo.com/services/business/business_tax_receipt/index.php"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.largo.com/services/business/business_tax_receipt/index.php"]
+    "sourceUrl": ["https://www.largo.com/services/business/business_tax_receipt/index.php"],
+    "counties": ["Pinellas"]
   },
   {
     "city": "Lauderhill",
@@ -1037,22 +1199,27 @@
         "url": ["https://www.lauderhill-fl.gov/departments/finance-department/business-tax/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 55.13,
+          "note": "Certificate of Use application processing fee; the receipt tax is separate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Penalties begin September 30 and increase monthly to 25% by January 1."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.lauderhill-fl.gov/departments/finance-department/business-tax/"]
+    "sourceUrl": ["https://www.lauderhill-fl.gov/departments/finance-department/business-tax/"],
+    "counties": ["Broward"]
   },
   {
     "city": "St. Cloud",
     "status": "rules",
     "items": [
       {
-        "id": "st-cloud.local-licenses",
+        "id": "st-cloud-fl.local-licenses",
         "title": "Renew St. Cloud business tax receipt",
         "category": "license",
         "authority": "City of St. Cloud Community Development",
@@ -1061,15 +1228,19 @@
         "url": ["https://www.stcloudfl.gov/816/Frequently-Asked-Questions"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The tax depends on the type of business."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "10% in the first month, 5% for each additional month up to 25%, plus a $250 final penalty after January 1."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.stcloudfl.gov/816/Frequently-Asked-Questions"]
+    "sourceUrl": ["https://www.stcloudfl.gov/816/Frequently-Asked-Questions"],
+    "counties": ["Osceola"]
   },
   {
     "city": "Tamarac",
@@ -1081,19 +1252,23 @@
         "category": "license",
         "authority": "City of Tamarac Business Revenue Division",
         "description": "Tamarac requires a business revenue receipt for commercial and residential businesses. Commercial applicants need zoning approval, a Certificate of Use or safety permit/certificate of occupancy and inspections before issuance; a Broward County receipt follows the city receipt, and the city provides separate online renewal for each receipt.",
-        "rrule": "FREQ=YEARLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=9;BYMONTHDAY=30",
         "url": ["https://www.tamarac.gov/551/Business-Revenue-Receipt"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.tamarac.gov/551/Business-Revenue-Receipt"]
+    "sourceUrl": ["https://www.tamarac.gov/551/Business-Revenue-Receipt"],
+    "counties": ["Broward"]
   },
   {
     "city": "Ocala",
@@ -1111,17 +1286,21 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.ocalafl.gov/government/city-departments-a-h/growth-management/building/business-licensing"
-    ]
+    ],
+    "counties": ["Marion"]
   },
   {
     "city": "Delray Beach",
@@ -1139,17 +1318,22 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 190.3,
+          "note": "Business tax per type."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "10%, 15%, 20% and 25% from October through January."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.delraybeachfl.gov/government/city-departments/neighborhood-community-services/business-tax-receipts/business-tax-receipt-fees"
-    ]
+    ],
+    "counties": ["Palm Beach"]
   },
   {
     "city": "Weston",
@@ -1165,15 +1349,19 @@
         "url": ["https://www.westonfl.org/government/finance/local-business-tax-receipt"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "Fees vary by business type."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Up to 25% plus an additional $250 or annual-tax penalty after 150 days."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.westonfl.org/government/finance/local-business-tax-receipt"]
+    "sourceUrl": ["https://www.westonfl.org/government/finance/local-business-tax-receipt"],
+    "counties": ["Broward"]
   },
   {
     "city": "Sanford",
@@ -1185,19 +1373,23 @@
         "category": "license",
         "authority": "City of Sanford Business Tax Receipts Division",
         "description": "Sanford issues Business Tax Receipts for home occupations, commercial businesses and certain mobile businesses such as taxis, mobile food vendors, mobile sales and solicitors. A permit is required before a business, restaurant or commercial establishment opens, and the city verifies applicable state-agency licensing before issuance.",
-        "rrule": "FREQ=YEARLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=9;BYMONTHDAY=30",
         "url": ["https://sanfordfl.gov/business/business-tax/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://sanfordfl.gov/business/business-tax/"]
+    "sourceUrl": ["https://sanfordfl.gov/business/business-tax/"],
+    "counties": ["Seminole"]
   },
   {
     "city": "Port Orange",
@@ -1213,15 +1405,19 @@
         "url": ["https://www.port-orange.org/267/Business-Tax"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.port-orange.org/267/Business-Tax"]
+    "sourceUrl": ["https://www.port-orange.org/267/Business-Tax"],
+    "counties": ["Volusia"]
   },
   {
     "city": "Apopka",
@@ -1237,15 +1433,20 @@
         "url": ["https://www.apopka.gov/1092/Apply-or-Renew"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 10,
+          "note": "Non-refundable application fee, plus classification-based fees."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "10%, 15%, 20% and 25%, then an additional $250 plus legal fees after January 31."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.apopka.gov/1092/Apply-or-Renew"]
+    "sourceUrl": ["https://www.apopka.gov/1092/Apply-or-Renew"],
+    "counties": ["Orange"]
   },
   {
     "city": "Palm Beach Gardens",
@@ -1261,15 +1462,19 @@
         "url": ["https://www.pbgfl.gov/221/Business-Tax"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "Common application totals range from $100 for home-based businesses to $185 for a general office."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.pbgfl.gov/221/Business-Tax"]
+    "sourceUrl": ["https://www.pbgfl.gov/221/Business-Tax"],
+    "counties": ["Palm Beach"]
   },
   {
     "city": "Wellington",
@@ -1281,19 +1486,23 @@
         "category": "license",
         "authority": "Village of Wellington Business Tax Receipt Office",
         "description": "A Wellington Business Tax Receipt is required before any business, home-based business, or rental operates. Planning and zoning approval is required; Palm Beach County also requires its own receipt. Renew annually, with online renewal beginning July 1; a $250 penalty applies after 150 days delinquent.",
-        "rrule": "FREQ=YEARLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=9;BYMONTHDAY=30",
         "url": ["https://www.wellingtonfl.gov/396/Business-Tax-Receipts-Licenses"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 250,
+          "note": "Penalty after 150 days delinquent."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.wellingtonfl.gov/396/Business-Tax-Receipts-Licenses"]
+    "sourceUrl": ["https://www.wellingtonfl.gov/396/Business-Tax-Receipts-Licenses"],
+    "counties": ["Palm Beach"]
   },
   {
     "city": "Jupiter",
@@ -1310,15 +1519,19 @@
         "appliesTo": ["all"],
         "checkedOn": "2026-10-18",
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.jupiter.fl.us/113/Business-Tax-License"]
+    "sourceUrl": ["https://www.jupiter.fl.us/113/Business-Tax-License"],
+    "counties": ["Palm Beach"]
   },
   {
     "city": "Winter Haven",
@@ -1334,15 +1547,19 @@
         "url": ["https://www.mywinterhaven.com/342/Building-Permits-Licenses"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.mywinterhaven.com/342/Building-Permits-Licenses"]
+    "sourceUrl": ["https://www.mywinterhaven.com/342/Building-Permits-Licenses"],
+    "counties": ["Polk"]
   },
   {
     "city": "North Miami",
@@ -1354,19 +1571,23 @@
         "category": "license",
         "authority": "City of North Miami Office of Land Use Services",
         "description": "North Miami requires a Business Tax Receipt for businesses, online businesses with registered addresses, home-based businesses and independent contractors, along with a Certificate of Use where applicable. Independent contractors also need Miami-Dade County's receipt; completed applications are generally processed within 24–48 hours.",
-        "rrule": "FREQ=YEARLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=9;BYMONTHDAY=30",
         "url": ["https://www.northmiamifl.gov/1398/Doing-Business"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.northmiamifl.gov/1398/Doing-Business"]
+    "sourceUrl": ["https://www.northmiamifl.gov/1398/Doing-Business"],
+    "counties": ["Miami-Dade"]
   },
   {
     "city": "Margate",
@@ -1382,15 +1603,19 @@
         "url": ["https://www.margatefl.com/205/Local-Business-Tax-Receipts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.margatefl.com/205/Local-Business-Tax-Receipts"]
+    "sourceUrl": ["https://www.margatefl.com/205/Local-Business-Tax-Receipts"],
+    "counties": ["Broward"]
   },
   {
     "city": "Coconut Creek",
@@ -1408,17 +1633,22 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 25,
+          "note": "Non-refundable fee on each new application."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://library.municode.com/FL/Coconut_Creek/codes/Code_of_Ordinances?nodeId=PTIICOOR_CH18TA"
-    ]
+    ],
+    "counties": ["Broward"]
   },
   {
     "city": "Sarasota",
@@ -1436,17 +1666,22 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 50,
+          "note": "Zoning-review charge for new applicants; the receipt tax is separate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://ftgportal.sarasotafl.gov/Common/ApplicationLinks.aspx?from=www.sarasotafl.gov&jid=226bbfbe-fffa-44c8-9b76-d95042bd3923&step=1"
-    ]
+    ],
+    "counties": ["Sarasota", "Manatee"]
   },
   {
     "city": "Bradenton",
@@ -1462,15 +1697,19 @@
         "url": ["https://cityofbradenton.com/localbiztax"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://cityofbradenton.com/localbiztax"]
+    "sourceUrl": ["https://cityofbradenton.com/localbiztax"],
+    "counties": ["Manatee"]
   },
   {
     "city": "Bonita Springs",
@@ -1486,15 +1725,19 @@
         "url": ["https://www.cityofbonitaspringscd.org/forms/business_USE_permit_procedures.html"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.cityofbonitaspringscd.org/forms/business_USE_permit_procedures.html"]
+    "sourceUrl": ["https://www.cityofbonitaspringscd.org/forms/business_USE_permit_procedures.html"],
+    "counties": ["Lee"]
   },
   {
     "city": "Pensacola",
@@ -1510,15 +1753,19 @@
         "url": ["https://www.cityofpensacola.com/658/Business-Tax-Receipts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.cityofpensacola.com/658/Business-Tax-Receipts"]
+    "sourceUrl": ["https://www.cityofpensacola.com/658/Business-Tax-Receipts"],
+    "counties": ["Escambia"]
   },
   {
     "city": "Clermont",
@@ -1534,15 +1781,19 @@
         "url": ["https://clermontfl.gov/DocumentCenter/View/164/Starting-a-New-Business-PDF"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The city repealed its Business Tax Receipt; commercial businesses still pay a published minimum of $152, rising with unit square footage."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://clermontfl.gov/DocumentCenter/View/164/Starting-a-New-Business-PDF"]
+    "sourceUrl": ["https://clermontfl.gov/DocumentCenter/View/164/Starting-a-New-Business-PDF"],
+    "counties": ["Lake", "Polk"]
   },
   {
     "city": "Pinellas Park",
@@ -1558,15 +1809,19 @@
         "url": ["https://pinellaspark.gov/656/Business-Tax-Receipt"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://pinellaspark.gov/656/Business-Tax-Receipt"]
+    "sourceUrl": ["https://pinellaspark.gov/656/Business-Tax-Receipt"],
+    "counties": ["Pinellas"]
   },
   {
     "city": "Ocoee",
@@ -1582,15 +1837,20 @@
         "url": ["https://fl-ocoee.civicplus.com/168/Local-Business-RegistrationTaxes"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "10% in October plus 5% per month, capped at 25%."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://fl-ocoee.civicplus.com/168/Local-Business-RegistrationTaxes"]
+    "sourceUrl": ["https://fl-ocoee.civicplus.com/168/Local-Business-RegistrationTaxes"],
+    "counties": ["Orange"]
   },
   {
     "city": "Fort Pierce",
@@ -1602,19 +1862,23 @@
         "category": "permit",
         "authority": "City of Fort Pierce City Clerk",
         "description": "Fort Pierce discontinued city Business Tax Receipts on July 1, 2024 and requires a Certificate of Use for all businesses instead. One certificate is required per business location, it is valid for one year and renews annually on the anniversary of the initial application.",
-        "rrule": "FREQ=YEARLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=9;BYMONTHDAY=30",
         "url": ["https://www.cityoffortpierce.com/141/Applications-and-Forms"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.cityoffortpierce.com/141/Applications-and-Forms"]
+    "sourceUrl": ["https://www.cityoffortpierce.com/141/Applications-and-Forms"],
+    "counties": ["St. Lucie"]
   },
   {
     "city": "Titusville",
@@ -1626,19 +1890,24 @@
         "category": "license",
         "authority": "City of Titusville Development Services",
         "description": "Titusville requires a city Business Tax Receipt after zoning compatibility and any required state license or registration are confirmed; a Brevard County receipt is required afterward. The application fee is $15 non-refundable, or $25 for a solicitors permit, and the total tax varies by business type, seats, units and square footage.",
-        "rrule": "FREQ=YEARLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=9;BYMONTHDAY=30",
         "url": ["https://titusville.com/207/Business-Tax-Receipts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 15,
+          "note": "Non-refundable application fee ($25 for a solicitors permit); the total tax varies by business type, seats, units and square footage."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://titusville.com/207/Business-Tax-Receipts"]
+    "sourceUrl": ["https://titusville.com/207/Business-Tax-Receipts"],
+    "counties": ["Brevard"]
   },
   {
     "city": "Coral Gables",
@@ -1656,17 +1925,22 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 120,
+          "note": "Certificate of Use fee; the local tax varies by classification."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.coralgables.com/department/development-services/planning-and-zoning-division/services/starting-business-coral"
-    ]
+    ],
+    "counties": ["Miami-Dade"]
   },
   {
     "city": "Winter Garden",
@@ -1682,15 +1956,18 @@
         "url": ["https://wgfl.gov/354/Business-Tax"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://wgfl.gov/354/Business-Tax"]
+    "sourceUrl": ["https://wgfl.gov/354/Business-Tax"],
+    "counties": ["Orange"]
   },
   {
     "city": "Altamonte Springs",
@@ -1702,19 +1979,23 @@
         "category": "license",
         "authority": "City of Altamonte Springs City Clerk",
         "description": "Altamonte Springs businesses must pay both city and county business taxes; the City Clerk can collect both. State licenses must be shown before issuance, zoning review is required before approval, and new applications and annual renewals use the Civic Access system.",
-        "rrule": "FREQ=YEARLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=9;BYMONTHDAY=30",
         "url": ["https://www.altamonte.org/395/Business-Tax-Receipts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.altamonte.org/395/Business-Tax-Receipts"]
+    "sourceUrl": ["https://www.altamonte.org/395/Business-Tax-Receipts"],
+    "counties": ["Seminole"]
   },
   {
     "city": "DeLand",
@@ -1726,19 +2007,23 @@
         "category": "license",
         "authority": "City of DeLand Business Tax Receipts Office",
         "description": "All businesses located in DeLand must obtain a Business Tax Receipt and renew it annually. Renewal notices are sent by email in July, and businesses must complete an annual declaration in April when business contacts, employees, seats or stations change.",
-        "rrule": "FREQ=YEARLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=9;BYMONTHDAY=30",
         "url": ["https://deland.org/204/Business-Tax-Receipts-Food-Truck-Garage-"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://deland.org/204/Business-Tax-Receipts-Food-Truck-Garage-"]
+    "sourceUrl": ["https://deland.org/204/Business-Tax-Receipts-Food-Truck-Garage-"],
+    "counties": ["Volusia"]
   },
   {
     "city": "North Miami Beach",
@@ -1754,15 +2039,19 @@
         "url": ["https://www.citynmb.com/186/Business-Tax-Receipts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.citynmb.com/186/Business-Tax-Receipts"]
+    "sourceUrl": ["https://www.citynmb.com/186/Business-Tax-Receipts"],
+    "counties": ["Miami-Dade"]
   },
   {
     "city": "Haines City",
@@ -1778,15 +2067,19 @@
         "url": ["https://hainescityfl.gov/158/Business-Tax-Receipts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://hainescityfl.gov/158/Business-Tax-Receipts"]
+    "sourceUrl": ["https://hainescityfl.gov/158/Business-Tax-Receipts"],
+    "counties": ["Polk"]
   },
   {
     "city": "North Lauderdale",
@@ -1804,17 +2097,22 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 65,
+          "note": "Initial application fee; the renewal fee is $20 and the business-use inspection is $340."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "10%, 15%, 20% and 25%, followed after 150 days by a $250 penalty."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://cms7files1.revize.com/northlauderdale/document_center/forms%20%26%20applications/REVISED%20LOCAL%20BUSINESS%20TAX%20RECEIPT%20APPLICATION-2018.pdf"
-    ]
+    ],
+    "counties": ["Broward"]
   },
   {
     "city": "Oakland Park",
@@ -1826,19 +2124,23 @@
         "category": "license",
         "authority": "City of Oakland Park Business Regulatory Unit",
         "description": "Oakland Park requires every business to obtain a Business Tax Receipt and, for businesses other than home-based operations, a Certificate of Use before occupying or opening. Receipts renew annually online; short-term-rental and community-residence permits are valid for 365 days, and special permits may apply to massage, health spas and late alcohol service.",
-        "rrule": "FREQ=YEARLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=9;BYMONTHDAY=30",
         "url": ["https://oaklandparkfl.gov/612/Business-Regulatory-Unit"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://oaklandparkfl.gov/612/Business-Regulatory-Unit"]
+    "sourceUrl": ["https://oaklandparkfl.gov/612/Business-Regulatory-Unit"],
+    "counties": ["Broward"]
   },
   {
     "city": "Cutler Bay",
@@ -1854,15 +2156,20 @@
         "url": ["https://www.cutlerbay-fl.gov/faqs"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 35,
+          "note": "Certificate of Use fee; local tax fees vary by business type."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.cutlerbay-fl.gov/faqs"]
+    "sourceUrl": ["https://www.cutlerbay-fl.gov/faqs"],
+    "counties": ["Miami-Dade"]
   },
   {
     "city": "Greenacres",
@@ -1878,15 +2185,19 @@
         "url": ["https://www.greenacresfl.gov/367/Business-Tax-Receipts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "New commercial businesses pay a $75 safety-inspection fee; the receipt tax depends on the business."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "10%, 15%, 20% and 25%, then a $25 collection fee plus a $100 delinquent fee after 150 days."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.greenacresfl.gov/367/Business-Tax-Receipts"]
+    "sourceUrl": ["https://www.greenacresfl.gov/367/Business-Tax-Receipts"],
+    "counties": ["Palm Beach"]
   },
   {
     "city": "Ormond Beach",
@@ -1902,15 +2213,20 @@
         "url": ["https://www.ormondbeach.org/330/Business-Tax-Receipts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 30,
+          "note": "Initial application fee for all business categories; commercial locations pay a $45 fire-inspection fee."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.ormondbeach.org/330/Business-Tax-Receipts"]
+    "sourceUrl": ["https://www.ormondbeach.org/330/Business-Tax-Receipts"],
+    "counties": ["Volusia"]
   },
   {
     "city": "Plant City",
@@ -1928,17 +2244,21 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": [
       "https://www.plantcitygov.com/sites/default/files/fileattachments/finance/page/1611/business_tax_application-for_ada.pdf"
-    ]
+    ],
+    "counties": ["Hillsborough"]
   },
   {
     "city": "Lake Worth Beach",
@@ -1954,15 +2274,19 @@
         "url": ["https://lakeworthbeachfl.gov/community-sustainability/business-license/faq"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://lakeworthbeachfl.gov/community-sustainability/business-license/faq"]
+    "sourceUrl": ["https://lakeworthbeachfl.gov/community-sustainability/business-license/faq"],
+    "counties": ["Palm Beach"]
   },
   {
     "city": "Hallandale Beach",
@@ -1978,15 +2302,19 @@
         "url": ["https://hallandalebeachfl.gov/1256/Starting-Your-New-Business"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://hallandalebeachfl.gov/1256/Starting-Your-New-Business"]
+    "sourceUrl": ["https://hallandalebeachfl.gov/1256/Starting-Your-New-Business"],
+    "counties": ["Broward"]
   },
   {
     "city": "Royal Palm Beach",
@@ -2002,14 +2330,18 @@
         "url": ["https://www.royalpalmbeachfl.gov/245/Business-Tax-Receipts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.royalpalmbeachfl.gov/245/Business-Tax-Receipts"]
+    "sourceUrl": ["https://www.royalpalmbeachfl.gov/245/Business-Tax-Receipts"],
+    "counties": ["Palm Beach"]
   }
 ]

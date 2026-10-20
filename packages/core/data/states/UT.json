@@ -38,13 +38,27 @@
       "note": "Late annual report/renewal fee."
     }
   },
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "Corporate franchise and income tax ($100 minimum)",
+  "wageWithholding": true,
+  "entityTaxDetail": null,
   "salesTax": {
     "statewide": true,
     "permit": "Utah sales tax license",
+    "permitFee": {
+      "basis": "none",
+      "amount": 0,
+      "note": "Compliance guides report no registration fee; the state's own fee page was not read."
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "note": "Greater of $20 or 2% of the unpaid tax for a return 1 to 5 days late, 5% for 6 to 15 days and 10% for 16 or more days (Utah Code 59-1-401).",
+      "rate": 10,
+      "min": 20
+    }
   },
   "localSalesTax": "state_administered",
   "economicNexusUsd": 100000,
@@ -61,6 +75,25 @@
       "minEmployees": 1
     }
   },
+  "penalties": {
+    "unemployment": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late wage report was found in the state agency's published sources."
+    },
+    "newHire": {
+      "basis": "flat",
+      "amount": 25,
+      "note": "$25 per late report, or $500 if the employer intentionally conspires with the employee to withhold or falsify the report; the $25 may be waived for good cause."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for lacking required coverage was found; secondary sources conflict."
+    }
+  },
   "paidLeave": null,
   "paidSickLeave": null,
   "businessLicense": null,
@@ -71,6 +104,7 @@
     "description": "Utah cities and counties require business licenses."
   },
   "dbaFiling": "state",
+  "dbaEntitiesFileLocally": false,
   "industry": {
     "contractor": "Utah Division of Professional Licensing (DOPL)",
     "realEstate": "Utah Division of Real Estate",

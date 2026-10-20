@@ -38,13 +38,25 @@
       "note": "Wyoming marks entities delinquent and may administratively dissolve them after 60 days; no separate annual-report late fee is listed."
     }
   },
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "No corporate or individual income tax",
+  "wageWithholding": false,
+  "entityTaxDetail": null,
   "salesTax": {
     "statewide": true,
     "permit": "Wyoming sales tax license",
+    "permitFee": {
+      "basis": "flat",
+      "amount": 60,
+      "note": "A Wyoming legislative committee presentation and compliance guides list a one-time $60 fee; other sources differ."
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "not_stated",
+      "note": "No late sales tax return penalty amount was found in the Department of Revenue's published sources."
+    }
   },
   "localSalesTax": "state_administered",
   "economicNexusUsd": 100000,
@@ -62,6 +74,26 @@
       "minEmployees": 1
     }
   },
+  "penalties": {
+    "unemployment": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late wage report was found in the state agency's published sources."
+    },
+    "newHire": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late new hire report was found; secondary sources conflict or give only the federal $25 and $500 ceilings."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "range",
+      "note": "Fine of up to $750 for a first conviction and up to $10,000 for later convictions, plus interest on unpaid balances.",
+      "min": 0,
+      "max": 10000
+    }
+  },
   "paidLeave": null,
   "paidSickLeave": null,
   "businessLicense": null,
@@ -72,6 +104,7 @@
     "description": "Wyoming cities and towns issue local business licenses."
   },
   "dbaFiling": "none",
+  "dbaEntitiesFileLocally": false,
   "industry": {
     "contractor": null,
     "realEstate": "Wyoming Real Estate Commission",
@@ -89,11 +122,13 @@
     "uiRegistration": [
       "https://dws.wyo.gov/dws-division/labor-standards/forms-and-resources/labor-law-poster//dws-division/unemployment-insurance/"
     ],
+    "withholding": ["https://revenue.wyo.gov/divisions/"],
     "salesTax": ["https://revenue.wyo.gov/divisions//divisions/"],
     "entityTax": ["https://revenue.wyo.gov/divisions//divisions/"],
     "laborPosters": [
       "https://dws.wyo.gov/dws-division/labor-standards/forms-and-resources/labor-law-poster//dws-division/labor-standards/forms-and-resources/labor-law-poster/"
-    ]
+    ],
+    "dba": ["https://sos.wyo.gov/FAQS.aspx?root=BUS"]
   },
   "verification": {
     "checkedOn": "2026-10-13",

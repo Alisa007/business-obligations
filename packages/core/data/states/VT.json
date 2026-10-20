@@ -13,7 +13,8 @@
     "url": ["https://labor.vermont.gov/mandatory-workplace-posters"]
   },
   "llcReport": {
-    "rrule": "FREQ=YEARLY",
+    "rrule": "FREQ=YEARLY;BYMONTHDAY=-1;X-MONTHS=3",
+    "anchor": "fiscal_year_end",
     "deadline": "3 months after fiscal year end",
     "feeDetail": {
       "basis": "flat",
@@ -26,7 +27,8 @@
     }
   },
   "corpReport": {
-    "rrule": "FREQ=YEARLY",
+    "rrule": "FREQ=YEARLY;BYMONTHDAY=15;X-MONTHS=3",
+    "anchor": "fiscal_year_end",
     "deadline": "2.5 months after fiscal year end",
     "feeDetail": {
       "basis": "flat",
@@ -55,13 +57,27 @@
       "note": "Application/reinstatement fee after loss of good standing for failure to file an annual report."
     }
   },
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "Corporate income tax (minimum tax of $100 to $6,000 by Vermont gross receipts, $75 for small farm corporations)",
+  "wageWithholding": true,
+  "entityTaxDetail": null,
   "salesTax": {
     "statewide": true,
     "permit": "Vermont sales tax license",
+    "permitFee": {
+      "basis": "none",
+      "amount": 0,
+      "note": "Registration for a Vermont business tax account and sales and use tax license is free."
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "percentPerMonth": 5,
+      "note": "5% of the tax for each month the return is unfiled, up to 25%, plus a flat $50 when filed more than 60 days late.",
+      "rate": 25
+    }
   },
   "localSalesTax": "state_administered",
   "economicNexusUsd": 100000,
@@ -78,6 +94,26 @@
       "minEmployees": 1
     }
   },
+  "penalties": {
+    "unemployment": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late wage report was found in the state agency's published sources."
+    },
+    "newHire": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late new hire report was found; secondary sources conflict or give only the federal $25 and $500 ceilings."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "range",
+      "note": "Administrative penalty of up to $100 a day for the first seven days without coverage, up to $150 a day after, and up to $250 a day after an order (21 V.S.A. 692).",
+      "min": 0,
+      "max": 250
+    }
+  },
   "paidLeave": null,
   "paidSickLeave": {
     "minEmployees": 1,
@@ -91,6 +127,7 @@
     "description": "Vermont has no general business license; town zoning and local permits apply."
   },
   "dbaFiling": "state",
+  "dbaEntitiesFileLocally": false,
   "industry": {
     "contractor": null,
     "realEstate": "Vermont Office of Professional Regulation",

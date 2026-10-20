@@ -10,10 +10,15 @@
     "appliesTo": ["all"],
     "checkedOn": "2026-10-16",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "none",
+      "amount": 0,
+      "note": "There is no fee to file or register."
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "per_item",
+      "note": "Civil penalty of $200 a day up to $5,000, plus interest of 1% a month; willful failures carry $1,000 a day up to $25,000 plus 25% of the property's value.",
+      "perUnit": 200,
+      "max": 5000
     }
   },
   {
@@ -35,10 +40,14 @@
       }
     ],
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "none",
+      "amount": 0,
+      "note": "There is no fee; this is a contracting requirement."
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 500,
+      "note": "Statutory damages of the greater of $500 or the contract value for a missing contract; the Attorney General can seek up to $5,000 per violation."
     }
   },
   {
@@ -60,7 +69,9 @@
       }
     ],
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "none",
+      "amount": 0,
+      "note": "There is no fee; this is a contracting requirement."
     },
     "penalty": {
       "basis": "unknown"

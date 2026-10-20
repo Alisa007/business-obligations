@@ -5,7 +5,7 @@ exports[`snapshot AK > c corp formed in the state with no employees 1`] = `
   "fed.ein | Obtain an Employer Identification Number (EIN) |  | ",
   "fed.income-tax-return | File federal income tax return: Form 1120 | April 15 | 2027-04-15",
   "state.registered-agent:AK | Maintain a registered agent in Alaska |  | ",
-  "state.annual-report:AK | File Biennial Report (Alaska) | January 2 of every second year after formation | ",
+  "state.annual-report:AK | File Biennial Report (Alaska) | January 2 of every second year after formation | 2027-01-02",
   "state.entity-tax:AK | Register for and file Alaska entity-level taxes |  | ",
   "state.business-license:AK | Alaska state business license | December 31 | 2026-12-31",
   "state.duties:AK:ak.unclaimed-property-report | File the annual unclaimed property holder report (Alaska) | November 1 | 2026-11-01",
@@ -45,7 +45,7 @@ exports[`snapshot AK > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -101,7 +101,7 @@ exports[`snapshot AK > llc with employees, sales and a trade name 1`] = `
     "deadline": "January 2 of every second year after formation",
     "frequency": "biennial",
     "id": "state.annual-report:AK",
-    "nextDue": undefined,
+    "nextDue": "2027-01-02",
     "title": "File Biennial Report (Alaska)",
   },
   {
@@ -141,7 +141,7 @@ exports[`snapshot AK > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:AK#1",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (Alaska)",
   },
   {
@@ -246,7 +246,7 @@ exports[`snapshot AL > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -350,7 +350,7 @@ exports[`snapshot AL > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:AL#2",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (Alabama)",
   },
   {
@@ -456,7 +456,7 @@ exports[`snapshot AR > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -560,7 +560,7 @@ exports[`snapshot AR > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:AR#2",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (Arkansas)",
   },
   {
@@ -627,7 +627,7 @@ exports[`snapshot AZ > c corp formed in the state with no employees 1`] = `
   "fed.ein | Obtain an Employer Identification Number (EIN) |  | ",
   "fed.income-tax-return | File federal income tax return: Form 1120 | April 15 | 2027-04-15",
   "state.registered-agent:AZ | Maintain a registered agent in Arizona |  | ",
-  "state.annual-report:AZ | File Annual Report (Arizona) | On or before the anniversary of incorporation | ",
+  "state.annual-report:AZ | File Annual Report (Arizona) | On or before the anniversary of incorporation | 2027-03-10",
   "state.entity-tax:AZ | Register for and file Arizona entity-level taxes |  | ",
   "state.duties:AZ:az.unclaimed-property-report | File the annual unclaimed property holder report (Arizona) | November 1 | 2026-11-01",
   "state.duties:AZ:az.data-breach-notification | Notify residents and regulators of a data breach within 45 days (Arizona) |  | ",
@@ -667,7 +667,7 @@ exports[`snapshot AZ > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -779,7 +779,7 @@ exports[`snapshot AZ > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:AZ#2",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (Arizona)",
   },
   {
@@ -870,9 +870,9 @@ exports[`snapshot CA > c corp formed in the state with no employees 1`] = `
   "fed.ein | Obtain an Employer Identification Number (EIN) |  | ",
   "fed.income-tax-return | File federal income tax return: Form 1120 | April 15 | 2027-04-15",
   "state.registered-agent:CA | Maintain a registered agent in California |  | ",
-  "state.annual-report:CA | File Statement of Information (California) | Within the anniversary month and the 5 months before it | ",
+  "state.annual-report:CA | File Statement of Information (California) | Within the anniversary month and the 5 months before it | 2027-03-31",
   "state.entity-tax:CA | Register for and file California entity-level taxes |  | ",
-  "state.ca-franchise-tax:CA | Pay California minimum franchise tax ($800) | 15th day of the 4th month of the tax year (estimated); return due 15th day of 3rd/4th month after year end | ",
+  "state.ca-franchise-tax:CA | Pay California minimum franchise tax ($800) | 15th day of the 4th month of the tax year (estimated); return due 15th day of 3rd/4th month after year end | 2027-04-15",
   "state.duties:CA:ca.unclaimed-property-report | File the annual unclaimed property holder report (California) | October 31 | 2026-10-31",
   "state.duties:CA:ca.data-breach-notification | Notify residents and regulators of a data breach within 30 days (California) |  | ",
   "local.business-license:CA | City business tax certificate — Sampletown, Sample County, California |  | ",
@@ -911,7 +911,7 @@ exports[`snapshot CA > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -983,7 +983,7 @@ exports[`snapshot CA > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the 4th month of the tax year (estimated); return due 15th day of 3rd/4th month after year end",
     "frequency": "annual",
     "id": "state.ca-franchise-tax:CA",
-    "nextDue": undefined,
+    "nextDue": "2027-04-15",
     "title": "Pay California minimum franchise tax ($800)",
   },
   {
@@ -991,7 +991,7 @@ exports[`snapshot CA > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the 6th month of the tax year",
     "frequency": "annual",
     "id": "state.ca-franchise-tax:CA#1",
-    "nextDue": undefined,
+    "nextDue": "2027-06-15",
     "title": "Pay California LLC fee on gross receipts (Form 3536)",
   },
   {
@@ -1031,7 +1031,7 @@ exports[`snapshot CA > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:CA#2",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (California)",
   },
   {
@@ -1055,7 +1055,7 @@ exports[`snapshot CA > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:CA#5",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "State Disability Insurance and Paid Family Leave (employee-funded)",
   },
   {
@@ -1138,7 +1138,7 @@ exports[`snapshot CO > c corp formed in the state with no employees 1`] = `
   "fed.ein | Obtain an Employer Identification Number (EIN) |  | ",
   "fed.income-tax-return | File federal income tax return: Form 1120 | April 15 | 2027-04-15",
   "state.registered-agent:CO | Maintain a registered agent in Colorado |  | ",
-  "state.annual-report:CO | File Periodic Report (Colorado) | From 2 months before to 2 months after the periodic report month | ",
+  "state.annual-report:CO | File Periodic Report (Colorado) | From 2 months before to 2 months after the periodic report month | 2027-03-31",
   "state.entity-tax:CO | Register for and file Colorado entity-level taxes |  | ",
   "state.duties:CO:co.unclaimed-property-report | File the annual unclaimed property holder report (Colorado) | November 1 | 2026-11-01",
   "state.duties:CO:co.data-breach-notification | Notify residents and regulators of a data breach within 30 days (Colorado) |  | ",
@@ -1178,7 +1178,7 @@ exports[`snapshot CO > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -1234,7 +1234,7 @@ exports[`snapshot CO > llc with employees, sales and a trade name 1`] = `
     "deadline": "From 2 months before to 2 months after the periodic report month",
     "frequency": "annual",
     "id": "state.annual-report:CO",
-    "nextDue": undefined,
+    "nextDue": "2027-03-31",
     "title": "File Periodic Report (Colorado)",
   },
   {
@@ -1290,7 +1290,7 @@ exports[`snapshot CO > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:CO#2",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (Colorado)",
   },
   {
@@ -1314,7 +1314,7 @@ exports[`snapshot CO > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:CO#5",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "Colorado FAMLI premiums",
   },
   {
@@ -1429,7 +1429,7 @@ exports[`snapshot CT > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -1533,7 +1533,7 @@ exports[`snapshot CT > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:CT#2",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (Connecticut)",
   },
   {
@@ -1557,7 +1557,7 @@ exports[`snapshot CT > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:CT#5",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "CT Paid Leave contributions",
   },
   {
@@ -1634,7 +1634,7 @@ exports[`snapshot DC > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:DC | Maintain a registered agent in District of Columbia |  | ",
   "state.annual-report:DC | File Biennial Report (District of Columbia) | April 1 of every second year after formation | 2027-04-01",
   "state.entity-tax:DC | Register for and file District of Columbia entity-level taxes |  | ",
-  "state.business-license:DC | DC Basic Business License (BBL) |  | ",
+  "state.business-license:DC | DC Basic Business License (BBL) | On the anniversary of the license date, every second year | ",
   "state.duties:DC:dc.unclaimed-property-report | File the annual unclaimed property holder report (District of Columbia) | November 1 | 2026-11-01",
   "local.business-license:DC | DC Certificate of Occupancy / Home Occupation permit — Sampletown, Sample County, District of Columbia |  | ",
   "local.certificate-of-occupancy:DC | Obtain certificate of occupancy for premises in Sampletown |  | ",
@@ -1672,7 +1672,7 @@ exports[`snapshot DC > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -1741,7 +1741,7 @@ exports[`snapshot DC > llc with employees, sales and a trade name 1`] = `
   },
   {
     "authority": "DC Department of Licensing and Consumer Protection",
-    "deadline": undefined,
+    "deadline": "On the anniversary of the license date, every second year",
     "frequency": "biennial",
     "id": "state.business-license:DC",
     "nextDue": undefined,
@@ -1784,7 +1784,7 @@ exports[`snapshot DC > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:DC#2",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (District of Columbia)",
   },
   {
@@ -1808,7 +1808,7 @@ exports[`snapshot DC > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:DC#5",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "DC Paid Family Leave tax",
   },
   {
@@ -1908,7 +1908,7 @@ exports[`snapshot DE > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -2012,7 +2012,7 @@ exports[`snapshot DE > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:DE#2",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (Delaware)",
   },
   {
@@ -2135,7 +2135,7 @@ exports[`snapshot FL > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -2231,7 +2231,7 @@ exports[`snapshot FL > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:FL#1",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (Florida)",
   },
   {
@@ -2345,7 +2345,7 @@ exports[`snapshot GA > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -2449,7 +2449,7 @@ exports[`snapshot GA > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:GA#2",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (Georgia)",
   },
   {
@@ -2555,7 +2555,7 @@ exports[`snapshot HI > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -2659,7 +2659,7 @@ exports[`snapshot HI > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:HI#2",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (Hawaii)",
   },
   {
@@ -2683,7 +2683,7 @@ exports[`snapshot HI > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:HI#5",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "Temporary Disability Insurance (TDI) coverage",
   },
   {
@@ -2765,7 +2765,7 @@ exports[`snapshot IA > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -2869,7 +2869,7 @@ exports[`snapshot IA > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:IA#2",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (Iowa)",
   },
   {
@@ -2975,7 +2975,7 @@ exports[`snapshot ID > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -3079,7 +3079,7 @@ exports[`snapshot ID > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:ID#2",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (Idaho)",
   },
   {
@@ -3185,7 +3185,7 @@ exports[`snapshot IL > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -3289,7 +3289,7 @@ exports[`snapshot IL > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:IL#2",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (Illinois)",
   },
   {
@@ -3419,7 +3419,7 @@ exports[`snapshot IN > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -3523,7 +3523,7 @@ exports[`snapshot IN > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:IN#2",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (Indiana)",
   },
   {
@@ -3629,7 +3629,7 @@ exports[`snapshot KS > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -3733,7 +3733,7 @@ exports[`snapshot KS > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:KS#2",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (Kansas)",
   },
   {
@@ -3831,7 +3831,7 @@ exports[`snapshot KY > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -3935,7 +3935,7 @@ exports[`snapshot KY > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:KY#2",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (Kentucky)",
   },
   {
@@ -4041,7 +4041,7 @@ exports[`snapshot LA > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -4153,7 +4153,7 @@ exports[`snapshot LA > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:LA#2",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (Louisiana)",
   },
   {
@@ -4267,7 +4267,7 @@ exports[`snapshot MA > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -4371,7 +4371,7 @@ exports[`snapshot MA > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:MA#2",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (Massachusetts)",
   },
   {
@@ -4395,7 +4395,7 @@ exports[`snapshot MA > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:MA#5",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "Massachusetts Paid Family and Medical Leave contributions",
   },
   {
@@ -4493,7 +4493,7 @@ exports[`snapshot MD > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -4597,7 +4597,7 @@ exports[`snapshot MD > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:MD#2",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (Maryland)",
   },
   {
@@ -4711,7 +4711,7 @@ exports[`snapshot ME > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -4815,7 +4815,7 @@ exports[`snapshot ME > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:ME#2",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (Maine)",
   },
   {
@@ -4839,7 +4839,7 @@ exports[`snapshot ME > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:ME#5",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "Maine Paid Family and Medical Leave contributions",
   },
   {
@@ -4937,7 +4937,7 @@ exports[`snapshot MI > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -5041,7 +5041,7 @@ exports[`snapshot MI > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:MI#2",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (Michigan)",
   },
   {
@@ -5155,7 +5155,7 @@ exports[`snapshot MN > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -5259,7 +5259,7 @@ exports[`snapshot MN > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:MN#2",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (Minnesota)",
   },
   {
@@ -5283,7 +5283,7 @@ exports[`snapshot MN > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:MN#5",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "Minnesota Paid Leave premiums",
   },
   {
@@ -5389,7 +5389,7 @@ exports[`snapshot MO > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -5485,7 +5485,7 @@ exports[`snapshot MO > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:MO#2",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (Missouri)",
   },
   {
@@ -5591,7 +5591,7 @@ exports[`snapshot MS > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -5695,7 +5695,7 @@ exports[`snapshot MS > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:MS#2",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (Mississippi)",
   },
   {
@@ -5801,7 +5801,7 @@ exports[`snapshot MT > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -5897,7 +5897,7 @@ exports[`snapshot MT > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:MT#2",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (Montana)",
   },
   {
@@ -6003,7 +6003,7 @@ exports[`snapshot NC > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -6107,7 +6107,7 @@ exports[`snapshot NC > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:NC#2",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (North Carolina)",
   },
   {
@@ -6213,7 +6213,7 @@ exports[`snapshot ND > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -6317,7 +6317,7 @@ exports[`snapshot ND > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:ND#2",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (North Dakota)",
   },
   {
@@ -6423,7 +6423,7 @@ exports[`snapshot NE > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -6527,7 +6527,7 @@ exports[`snapshot NE > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:NE#2",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (Nebraska)",
   },
   {
@@ -6625,7 +6625,7 @@ exports[`snapshot NH > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -6713,7 +6713,7 @@ exports[`snapshot NH > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:NH#1",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (New Hampshire)",
   },
   {
@@ -6819,7 +6819,7 @@ exports[`snapshot NJ > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -6923,7 +6923,7 @@ exports[`snapshot NJ > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:NJ#2",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (New Jersey)",
   },
   {
@@ -6947,7 +6947,7 @@ exports[`snapshot NJ > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:NJ#5",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "NJ Temporary Disability and Family Leave Insurance contributions",
   },
   {
@@ -7006,7 +7006,7 @@ exports[`snapshot NM > c corp formed in the state with no employees 1`] = `
   "fed.ein | Obtain an Employer Identification Number (EIN) |  | ",
   "fed.income-tax-return | File federal income tax return: Form 1120 | April 15 | 2027-04-15",
   "state.registered-agent:NM | Maintain a registered agent in New Mexico |  | ",
-  "state.annual-report:NM | File Biennial Report (New Mexico) | April 15, every 2 years (aligned with the federal corporate return) | ",
+  "state.annual-report:NM | File Biennial Report (New Mexico) | April 15, every 2 years (aligned with the federal corporate return) | 2027-04-15",
   "state.entity-tax:NM | Register for and file New Mexico entity-level taxes |  | ",
   "state.duties:NM:nm.unclaimed-property-report | File the annual unclaimed property holder report (New Mexico) | November 1 | 2026-11-01",
   "local.business-license:NM | City/county business registration — Sampletown, Sample County, New Mexico |  | ",
@@ -7045,7 +7045,7 @@ exports[`snapshot NM > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -7141,7 +7141,7 @@ exports[`snapshot NM > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:NM#2",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (New Mexico)",
   },
   {
@@ -7248,7 +7248,7 @@ exports[`snapshot NV > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -7352,7 +7352,7 @@ exports[`snapshot NV > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:NV#1",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (Nevada)",
   },
   {
@@ -7466,7 +7466,7 @@ exports[`snapshot NY > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -7578,7 +7578,7 @@ exports[`snapshot NY > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:NY#2",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (New York)",
   },
   {
@@ -7602,7 +7602,7 @@ exports[`snapshot NY > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:NY#5",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "NY Disability Benefits and Paid Family Leave coverage",
   },
   {
@@ -7708,7 +7708,7 @@ exports[`snapshot OH > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -7804,7 +7804,7 @@ exports[`snapshot OH > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:OH#2",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (Ohio)",
   },
   {
@@ -7917,7 +7917,7 @@ exports[`snapshot OK > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -8013,7 +8013,7 @@ exports[`snapshot OK > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:OK#2",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (Oklahoma)",
   },
   {
@@ -8119,7 +8119,7 @@ exports[`snapshot OR > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -8215,7 +8215,7 @@ exports[`snapshot OR > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:OR#2",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (Oregon)",
   },
   {
@@ -8239,7 +8239,7 @@ exports[`snapshot OR > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:OR#5",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "Paid Leave Oregon contributions",
   },
   {
@@ -8345,7 +8345,7 @@ exports[`snapshot PA > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -8449,7 +8449,7 @@ exports[`snapshot PA > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:PA#2",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (Pennsylvania)",
   },
   {
@@ -8556,7 +8556,7 @@ exports[`snapshot RI > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -8660,7 +8660,7 @@ exports[`snapshot RI > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:RI#2",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (Rhode Island)",
   },
   {
@@ -8684,7 +8684,7 @@ exports[`snapshot RI > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:RI#5",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "Rhode Island TDI/TCI payroll tax",
   },
   {
@@ -8743,7 +8743,7 @@ exports[`snapshot SC > c corp formed in the state with no employees 1`] = `
   "fed.ein | Obtain an Employer Identification Number (EIN) |  | ",
   "fed.income-tax-return | File federal income tax return: Form 1120 | April 15 | 2027-04-15",
   "state.registered-agent:SC | Maintain a registered agent in South Carolina |  | ",
-  "state.annual-report:SC | File Annual Report and Corporate License Fee (with SCDOR) (South Carolina) | With the corporate income tax return (April 15) | ",
+  "state.annual-report:SC | File Annual Report and Corporate License Fee (with SCDOR) (South Carolina) | With the corporate income tax return (April 15) | 2027-04-15",
   "state.entity-tax:SC | Register for and file South Carolina entity-level taxes |  | ",
   "state.duties:SC:sc.unclaimed-property-report | File the annual unclaimed property holder report (South Carolina) | November 1 | 2026-11-01",
   "local.business-license:SC | Municipal or county business license — Sampletown, Sample County, South Carolina |  | ",
@@ -8782,7 +8782,7 @@ exports[`snapshot SC > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -8878,7 +8878,7 @@ exports[`snapshot SC > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:SC#2",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (South Carolina)",
   },
   {
@@ -8985,7 +8985,7 @@ exports[`snapshot SD > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -9081,7 +9081,7 @@ exports[`snapshot SD > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:SD#1",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (South Dakota)",
   },
   {
@@ -9195,7 +9195,7 @@ exports[`snapshot TN > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -9291,7 +9291,7 @@ exports[`snapshot TN > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:TN#1",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (Tennessee)",
   },
   {
@@ -9398,7 +9398,7 @@ exports[`snapshot TX > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -9494,7 +9494,7 @@ exports[`snapshot TX > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:TX#1",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (Texas)",
   },
   {
@@ -9608,7 +9608,7 @@ exports[`snapshot UT > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -9712,7 +9712,7 @@ exports[`snapshot UT > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:UT#2",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (Utah)",
   },
   {
@@ -9818,7 +9818,7 @@ exports[`snapshot VA > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -9922,7 +9922,7 @@ exports[`snapshot VA > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:VA#2",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (Virginia)",
   },
   {
@@ -9989,7 +9989,7 @@ exports[`snapshot VT > c corp formed in the state with no employees 1`] = `
   "fed.ein | Obtain an Employer Identification Number (EIN) |  | ",
   "fed.income-tax-return | File federal income tax return: Form 1120 | April 15 | 2027-04-15",
   "state.registered-agent:VT | Maintain a registered agent in Vermont |  | ",
-  "state.annual-report:VT | File Annual Report (Vermont) | 2.5 months after fiscal year end | ",
+  "state.annual-report:VT | File Annual Report (Vermont) | 2.5 months after fiscal year end | 2027-03-15",
   "state.entity-tax:VT | Register for and file Vermont entity-level taxes |  | ",
   "state.duties:VT:vt.unclaimed-property-report | File the annual unclaimed property holder report (Vermont) | May 1 | 2027-05-01",
   "local.business-license:VT | Town licenses and zoning permits — Sampletown, Sample County, Vermont |  | ",
@@ -10028,7 +10028,7 @@ exports[`snapshot VT > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -10084,7 +10084,7 @@ exports[`snapshot VT > llc with employees, sales and a trade name 1`] = `
     "deadline": "3 months after fiscal year end",
     "frequency": "annual",
     "id": "state.annual-report:VT",
-    "nextDue": undefined,
+    "nextDue": "2027-03-31",
     "title": "File Annual Report (Vermont)",
   },
   {
@@ -10132,7 +10132,7 @@ exports[`snapshot VT > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:VT#2",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (Vermont)",
   },
   {
@@ -10217,7 +10217,7 @@ exports[`snapshot WA > c corp formed in the state with no employees 1`] = `
   "state.registered-agent:WA | Maintain a registered agent in Washington |  | ",
   "state.annual-report:WA | File Annual Report (Washington) | Last day of the anniversary month | 2027-03-31",
   "state.entity-tax:WA | Register for and file Washington entity-level taxes |  | ",
-  "state.business-license:WA | Washington state business license (Business Licensing Service) |  | ",
+  "state.business-license:WA | Washington state business license (Business Licensing Service) | On the anniversary of the license date | ",
   "state.duties:WA:wa.unclaimed-property-report | File the annual unclaimed property holder report (Washington) | October 31 | 2026-10-31",
   "state.duties:WA:wa.data-breach-notification | Notify residents and regulators of a data breach within 30 days (Washington) |  | ",
   "local.business-license:WA | City business license endorsement — Sampletown, Sample County, Washington |  | ",
@@ -10256,7 +10256,7 @@ exports[`snapshot WA > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -10325,7 +10325,7 @@ exports[`snapshot WA > llc with employees, sales and a trade name 1`] = `
   },
   {
     "authority": "Washington Department of Revenue, Business Licensing Service",
-    "deadline": undefined,
+    "deadline": "On the anniversary of the license date",
     "frequency": "annual",
     "id": "state.business-license:WA",
     "nextDue": undefined,
@@ -10360,7 +10360,7 @@ exports[`snapshot WA > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:WA#1",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (Washington)",
   },
   {
@@ -10384,7 +10384,7 @@ exports[`snapshot WA > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:WA#4",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "Washington Paid Family and Medical Leave and WA Cares premiums",
   },
   {
@@ -10491,7 +10491,7 @@ exports[`snapshot WI > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -10595,7 +10595,7 @@ exports[`snapshot WI > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:WI#2",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (Wisconsin)",
   },
   {
@@ -10710,7 +10710,7 @@ exports[`snapshot WV > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -10822,7 +10822,7 @@ exports[`snapshot WV > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:WV#2",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (West Virginia)",
   },
   {
@@ -10928,7 +10928,7 @@ exports[`snapshot WY > llc with employees, sales and a trade name 1`] = `
     "deadline": "15th day of the following month",
     "frequency": "monthly",
     "id": "fed.payroll-deposits",
-    "nextDue": undefined,
+    "nextDue": "2026-10-15",
     "title": "Deposit federal payroll taxes",
   },
   {
@@ -11024,7 +11024,7 @@ exports[`snapshot WY > llc with employees, sales and a trade name 1`] = `
     "deadline": undefined,
     "frequency": "quarterly",
     "id": "state.employer:WY#1",
-    "nextDue": undefined,
+    "nextDue": "2026-10-31",
     "title": "File wage reports and pay unemployment insurance contributions (Wyoming)",
   },
   {

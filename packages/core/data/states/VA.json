@@ -63,13 +63,28 @@
       "amount": 25
     }
   },
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "Corporate income tax",
+  "wageWithholding": true,
+  "entityTaxDetail": null,
   "salesTax": {
     "statewide": true,
     "permit": "Virginia Certificate of Registration (sales and use tax)",
+    "permitFee": {
+      "basis": "none",
+      "amount": 0,
+      "note": "Compliance guides report no registration fee; the state's own fee page was not read."
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "percentPerMonth": 6,
+      "note": "6% of the tax for each month or part of a month the return or payment is late, up to 30%, with a $10 minimum.",
+      "rate": 30,
+      "min": 10
+    }
   },
   "localSalesTax": "state_administered",
   "economicNexusUsd": 100000,
@@ -87,6 +102,27 @@
       "minEmployees": 3
     }
   },
+  "penalties": {
+    "unemployment": {
+      "basis": "flat",
+      "amount": 100,
+      "note": "$100 for each late quarterly report; none when no wages were paid (Va. Code 60.2-513)."
+    },
+    "newHire": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late new hire report was found; secondary sources conflict or give only the federal $25 and $500 ceilings."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "per_item",
+      "note": "Civil penalty of up to $250 per day of noncompliance, up to $50,000 (Va. Code 65.2-805).",
+      "perUnit": 250,
+      "max": 50000
+    }
+  },
   "paidLeave": null,
   "paidSickLeave": null,
   "businessLicense": null,
@@ -97,6 +133,7 @@
     "description": "Virginia localities require a Business, Professional and Occupational License (BPOL)."
   },
   "dbaFiling": "state",
+  "dbaEntitiesFileLocally": false,
   "industry": {
     "contractor": "Virginia Board for Contractors (DPOR)",
     "realEstate": "Virginia Real Estate Board (DPOR)",

@@ -24,13 +24,17 @@
         "authority": "City of Davenport License Division",
         "description": "Davenport provides city business and rental license applications for regulated activities and rental properties; the applicable license depends on the business or property type in Scott County.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://www.davenportiowa.com/services/licenses/business_licenses/license_generation"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The city's rental license page lists an annual fee of $30 to $60 depending on the property's inspection cycle."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 500,
+          "note": "The city's page: a $500 fine and a citation for an unregistered rental."
         }
       },
       {
@@ -43,10 +47,12 @@
         "url": ["https://www.cityofdavenportiowa.com/cms/One.aspx?pageId=8772379&portalId=6481456"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       }
     ],
@@ -69,10 +75,12 @@
         "url": ["https://www.dsm.city/departments/city_clerk/business_licenses_permits.php"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The city's published pages do not give the fee amount; it is set in the city's Schedule of Fees."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       },
       {
@@ -87,10 +95,12 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       }
     ],
@@ -111,15 +121,18 @@
         "url": ["https://help.sos.iowa.gov/understanding-name-availability-iowa"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://help.sos.iowa.gov/understanding-name-availability-iowa"]
+    "sourceUrl": ["https://help.sos.iowa.gov/understanding-name-availability-iowa"],
+    "counties": ["Woodbury"]
   },
   {
     "city": "Ankeny",
@@ -136,15 +149,18 @@
         "url": ["https://help.sos.iowa.gov/understanding-name-availability-iowa"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://help.sos.iowa.gov/understanding-name-availability-iowa"]
+    "sourceUrl": ["https://help.sos.iowa.gov/understanding-name-availability-iowa"],
+    "counties": ["Polk"]
   },
   {
     "city": "Iowa City",
@@ -161,15 +177,18 @@
         "url": ["https://help.sos.iowa.gov/understanding-name-availability-iowa"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://help.sos.iowa.gov/understanding-name-availability-iowa"]
+    "sourceUrl": ["https://help.sos.iowa.gov/understanding-name-availability-iowa"],
+    "counties": ["Johnson"]
   },
   {
     "city": "West Des Moines",
@@ -186,15 +205,18 @@
         "url": ["https://help.sos.iowa.gov/understanding-name-availability-iowa"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://help.sos.iowa.gov/understanding-name-availability-iowa"]
+    "sourceUrl": ["https://help.sos.iowa.gov/understanding-name-availability-iowa"],
+    "counties": ["Polk"]
   },
   {
     "city": "Ames",
@@ -211,15 +233,18 @@
         "url": ["https://help.sos.iowa.gov/understanding-name-availability-iowa"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://help.sos.iowa.gov/understanding-name-availability-iowa"]
+    "sourceUrl": ["https://help.sos.iowa.gov/understanding-name-availability-iowa"],
+    "counties": ["Story"]
   },
   {
     "city": "Waterloo",
@@ -236,15 +261,18 @@
         "url": ["https://help.sos.iowa.gov/understanding-name-availability-iowa"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://help.sos.iowa.gov/understanding-name-availability-iowa"]
+    "sourceUrl": ["https://help.sos.iowa.gov/understanding-name-availability-iowa"],
+    "counties": ["Black Hawk"]
   },
   {
     "city": "Council Bluffs",
@@ -261,15 +289,18 @@
         "url": ["https://help.sos.iowa.gov/understanding-name-availability-iowa"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://help.sos.iowa.gov/understanding-name-availability-iowa"]
+    "sourceUrl": ["https://help.sos.iowa.gov/understanding-name-availability-iowa"],
+    "counties": ["Pottawattamie"]
   },
   {
     "city": "Dubuque",
@@ -286,15 +317,18 @@
         "url": ["https://help.sos.iowa.gov/understanding-name-availability-iowa"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://help.sos.iowa.gov/understanding-name-availability-iowa"]
+    "sourceUrl": ["https://help.sos.iowa.gov/understanding-name-availability-iowa"],
+    "counties": ["Dubuque"]
   },
   {
     "city": "Urbandale",
@@ -311,15 +345,18 @@
         "url": ["https://help.sos.iowa.gov/understanding-name-availability-iowa"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://help.sos.iowa.gov/understanding-name-availability-iowa"]
+    "sourceUrl": ["https://help.sos.iowa.gov/understanding-name-availability-iowa"],
+    "counties": ["Polk"]
   },
   {
     "city": "Marion",
@@ -336,14 +373,17 @@
         "url": ["https://help.sos.iowa.gov/understanding-name-availability-iowa"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://help.sos.iowa.gov/understanding-name-availability-iowa"]
+    "sourceUrl": ["https://help.sos.iowa.gov/understanding-name-availability-iowa"],
+    "counties": ["Linn"]
   }
 ]

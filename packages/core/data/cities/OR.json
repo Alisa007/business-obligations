@@ -21,7 +21,8 @@
       }
     ],
     "sourceUrl": ["https://bendoregon.gov/home/showpublisheddocument/41753/637434745992170000"],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "city": "Eugene",
@@ -39,10 +40,12 @@
         "url": ["https://www.eugene-or.gov/820/Business-Licenses"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "This entry covers the city's local licenses and taxes generally, each of which carries its own late charge in the municipal code; no single amount is stated."
         }
       }
     ],
@@ -63,15 +66,19 @@
         "url": ["https://www.greshamoregon.gov/business-licenses"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 80,
+          "note": "The city's business license application lists an $80 fee; third-party listings show different base amounts."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
     ],
     "sourceUrl": ["https://www.greshamoregon.gov/business-licenses"],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "city": "Hillsboro",
@@ -84,19 +91,23 @@
         "authority": "City of Hillsboro Finance Department",
         "description": "A general business license is required for any business operating in Hillsboro; it renews annually on its anniversary with a notice during the month it expires and a 30-day grace period. Renewals are not paid online.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "deadline": "Anniversary date (30-day grace period)",
         "url": ["https://hillsboro-oregon.gov/our-city/departments/finance/business-licenses"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee has a base amount plus charges by location and employee count."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
     ],
     "sourceUrl": ["https://hillsboro-oregon.gov/our-city/departments/finance/business-licenses"],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "city": "Portland",
@@ -113,15 +124,18 @@
         "appliesTo": ["all"],
         "deadlineNote": "calendar-year filers; the extension to October 15 is to file only, not to pay",
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The state page this entry cites does not publish a fee for this local requirement; the local government sets it."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "sourceUrl": ["https://www.portland.gov/revenue/business-tax"],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "city": "Salem",
@@ -133,22 +147,24 @@
         "category": "license",
         "authority": "City of Salem Permit Application Center",
         "description": "Renewal must be completed within 30 days of the license's expiration date; renewal forms and invoices are mailed in November.",
-        "rrule": "FREQ=YEARLY",
-        "deadline": "Within 30 days of expiration (December 31)",
+        "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=30",
         "url": ["https://cityofsalem.net/business/business-resources/licenses/apply-for-a-business-license"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set by the City Council and depends on the license type."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
     ],
     "sourceUrl": [
       "https://cityofsalem.net/business/business-resources/licenses/apply-for-a-business-license"
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "city": "Beaverton",
@@ -165,15 +181,18 @@
         "url": ["https://sos.oregon.gov/business/Pages/obr-assumed-business-name-registration.aspx"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://sos.oregon.gov/business/Pages/obr-assumed-business-name-registration.aspx"]
+    "sourceUrl": ["https://sos.oregon.gov/business/Pages/obr-assumed-business-name-registration.aspx"],
+    "counties": ["Washington"]
   },
   {
     "city": "Medford",
@@ -181,7 +200,7 @@
     "reason": "city-license-unconfirmed",
     "items": [
       {
-        "id": "medford.local-licenses",
+        "id": "medford-or.local-licenses",
         "title": "Review applicable local licenses and permits in Medford",
         "category": "license",
         "authority": "Medford local licensing authority",
@@ -190,15 +209,18 @@
         "url": ["https://sos.oregon.gov/business/Pages/obr-assumed-business-name-registration.aspx"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://sos.oregon.gov/business/Pages/obr-assumed-business-name-registration.aspx"]
+    "sourceUrl": ["https://sos.oregon.gov/business/Pages/obr-assumed-business-name-registration.aspx"],
+    "counties": ["Jackson"]
   },
   {
     "city": "Corvallis",
@@ -215,15 +237,18 @@
         "url": ["https://sos.oregon.gov/business/Pages/obr-assumed-business-name-registration.aspx"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://sos.oregon.gov/business/Pages/obr-assumed-business-name-registration.aspx"]
+    "sourceUrl": ["https://sos.oregon.gov/business/Pages/obr-assumed-business-name-registration.aspx"],
+    "counties": ["Benton"]
   },
   {
     "city": "Springfield",
@@ -231,7 +256,7 @@
     "reason": "city-license-unconfirmed",
     "items": [
       {
-        "id": "springfield.local-licenses",
+        "id": "springfield-or.local-licenses",
         "title": "Review applicable local licenses and permits in Springfield",
         "category": "license",
         "authority": "Springfield local licensing authority",
@@ -240,15 +265,18 @@
         "url": ["https://sos.oregon.gov/business/Pages/obr-assumed-business-name-registration.aspx"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://sos.oregon.gov/business/Pages/obr-assumed-business-name-registration.aspx"]
+    "sourceUrl": ["https://sos.oregon.gov/business/Pages/obr-assumed-business-name-registration.aspx"],
+    "counties": ["Lane"]
   },
   {
     "city": "Tigard",
@@ -265,15 +293,18 @@
         "url": ["https://sos.oregon.gov/business/Pages/obr-assumed-business-name-registration.aspx"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://sos.oregon.gov/business/Pages/obr-assumed-business-name-registration.aspx"]
+    "sourceUrl": ["https://sos.oregon.gov/business/Pages/obr-assumed-business-name-registration.aspx"],
+    "counties": ["Washington"]
   },
   {
     "city": "Albany",
@@ -281,7 +312,7 @@
     "reason": "city-license-unconfirmed",
     "items": [
       {
-        "id": "albany.local-licenses",
+        "id": "albany-or.local-licenses",
         "title": "Review applicable local licenses and permits in Albany",
         "category": "license",
         "authority": "Albany local licensing authority",
@@ -290,14 +321,17 @@
         "url": ["https://sos.oregon.gov/business/Pages/obr-assumed-business-name-registration.aspx"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://sos.oregon.gov/business/Pages/obr-assumed-business-name-registration.aspx"]
+    "sourceUrl": ["https://sos.oregon.gov/business/Pages/obr-assumed-business-name-registration.aspx"],
+    "counties": ["Linn"]
   }
 ]

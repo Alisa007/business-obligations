@@ -16,14 +16,18 @@
         "url": ["https://www.littlerock.gov/treasury"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The city's page does not publish fee amounts: a business license fee schedule is linked."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 30,
+          "note": "10% if not paid by February 1, another 10% by March 1, and 30% if not paid by April 1."
         }
       }
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "city": "Fayetteville",
@@ -39,16 +43,19 @@
         "appliesTo": ["all"],
         "rrule": "FREQ=YEARLY;BYMONTH=10;BYMONTHDAY=31",
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's page gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": ["https://www.fayetteville-ar.gov/297/Business-License"],
-    "note": "Fayetteville city-specific licensing was confirmed from the cited official source."
+    "note": "Fayetteville city-specific licensing was confirmed from the cited official source.",
+    "counties": ["Washington"]
   },
   {
     "city": "Fort Smith",
@@ -65,12 +72,14 @@
         ],
         "appliesTo": ["all"],
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "penalty": {
           "basis": "flat",
           "amount": 50
         },
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the business; late renewals cost $50 after 30 days and $100 after 60 days."
         }
       }
     ],
@@ -78,7 +87,8 @@
     "sourceUrl": [
       "https://www.fortsmithar.gov/building-business/business-license-and-guidance/apply-for-a-business-license/-folder-393"
     ],
-    "note": "Fort Smith city-specific licensing was confirmed from the cited official source."
+    "note": "Fort Smith city-specific licensing was confirmed from the cited official source.",
+    "counties": ["Sebastian"]
   },
   {
     "city": "Springdale",
@@ -95,15 +105,18 @@
         "url": ["https://www.sos.arkansas.gov/business-commercial-services-bcs/forms-fees/llc"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.arkansas.gov/business-commercial-services-bcs/forms-fees/llc"]
+    "sourceUrl": ["https://www.sos.arkansas.gov/business-commercial-services-bcs/forms-fees/llc"],
+    "counties": ["Washington"]
   },
   {
     "city": "Jonesboro",
@@ -118,17 +131,22 @@
         "url": ["https://www.jonesboro.org/DocumentCenter/View/9101/Home-Occupation-Permit-PDF"],
         "appliesTo": ["all"],
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10,
+          "note": "10% of the tax or fee due when it stays unpaid 90 days past the due date, plus 1.5% interest."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": ["https://www.jonesboro.org/DocumentCenter/View/9101/Home-Occupation-Permit-PDF"],
-    "note": "Jonesboro city-specific licensing was confirmed from the cited official source."
+    "note": "Jonesboro city-specific licensing was confirmed from the cited official source.",
+    "counties": ["Craighead"]
   },
   {
     "city": "Rogers",
@@ -142,18 +160,22 @@
         "description": "Rogers requires a business license and certificate of occupancy process for businesses in city limits; the certificate of occupancy fee is $25, and business-license penalties are 10% on March 1, 20% on April 1, and 50% on May 1.",
         "url": ["https://www.rogersar.gov/1503/Permit-Fee-Schedules"],
         "appliesTo": ["all"],
-        "rrule": "FREQ=YEARLY",
+        "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1",
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The business-license fee depends on the business; the certificate of occupancy fee is $25."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "note": "10% on March 1, 20% on April 1 and 50% on May 1."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": ["https://www.rogersar.gov/1503/Permit-Fee-Schedules"],
-    "note": "Rogers city-specific licensing was confirmed from the cited official source."
+    "note": "Rogers city-specific licensing was confirmed from the cited official source.",
+    "counties": ["Benton"]
   },
   {
     "city": "Conway",
@@ -169,16 +191,19 @@
         "appliesTo": ["all"],
         "frequency": "once",
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "none",
+          "note": "The city does not require a general business license."
         }
       }
     ],
     "checkedOn": "2026-10-18",
     "sourceUrl": ["https://conwayarkansas.gov/business/"],
-    "note": "Conway city-specific licensing was confirmed from the cited official source."
+    "note": "Conway city-specific licensing was confirmed from the cited official source.",
+    "counties": ["Faulkner"]
   },
   {
     "city": "North Little Rock",
@@ -195,15 +220,18 @@
         "url": ["https://www.sos.arkansas.gov/business-commercial-services-bcs/forms-fees/llc"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.arkansas.gov/business-commercial-services-bcs/forms-fees/llc"]
+    "sourceUrl": ["https://www.sos.arkansas.gov/business-commercial-services-bcs/forms-fees/llc"],
+    "counties": ["Pulaski"]
   },
   {
     "city": "Bentonville",
@@ -220,14 +248,17 @@
         "url": ["https://www.sos.arkansas.gov/business-commercial-services-bcs/forms-fees/llc"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.arkansas.gov/business-commercial-services-bcs/forms-fees/llc"]
+    "sourceUrl": ["https://www.sos.arkansas.gov/business-commercial-services-bcs/forms-fees/llc"],
+    "counties": ["Benton"]
   }
 ]

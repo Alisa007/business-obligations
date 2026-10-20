@@ -10,18 +10,22 @@
         "authority": "City of Columbia Business Licenses",
         "description": "Businesses in Columbia hold an annual business license, renewed online with the license number from the renewal postcard.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://www.como.gov/?p=8900"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "A local business publication reports the fee is based on gross receipts at 25 cents per $1,000, with a $75 minimum and a $25 renewal processing fee."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
     ],
     "sourceUrl": ["https://www.como.gov/?p=8900"],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "city": "Independence",
@@ -34,23 +38,27 @@
         "authority": "City of Independence Regulated Industries Division",
         "description": "Business licenses are effective for one year from the month issued and renewed each year; the fee scales with projected gross receipts.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "deadline": "Anniversary of the month issued",
         "url": [
           "https://independencemo.gov/government/city-departments/community-development/business-license-liquor-license-and-employee-permitting"
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The city's guide charges $75 for gross receipts up to $25,000 and $75 plus $0.31 per $1,000 over that."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
     ],
     "sourceUrl": [
       "https://independencemo.gov/government/city-departments/community-development/business-license-liquor-license-and-employee-permitting"
     ],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "city": "Kansas City",
@@ -66,10 +74,15 @@
         "url": ["https://www.kcmo.gov/city-hall/departments/finance"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The license tax depends on the business's classification and receipts under the city's schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "percentPerMonth": 5,
+          "max": 25,
+          "note": "The city's annual license form RD-105: 5% of the tax per month for late filing, up to 25%, plus a separate 5% for failure to pay."
         }
       },
       {
@@ -83,10 +96,16 @@
         "url": ["https://www.kcmo.gov/city-hall/departments/finance"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "percentPerMonth": 5,
+          "max": 25,
+          "note": "The city's tax FAQ: 5% per month, up to 25%, plus 12% annual interest."
         }
       },
       {
@@ -95,19 +114,27 @@
         "category": "payment",
         "authority": "City of Kansas City, Missouri Finance Department",
         "description": "Employers withhold the 1% earnings tax for employees who live or work in the city and file the quarterly return.",
-        "rrule": "FREQ=MONTHLY;INTERVAL=3",
+        "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10",
+        "anchor": "assigned",
         "url": ["https://www.kcmo.gov/city-hall/departments/finance"],
         "appliesTo": ["employees"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "percentPerMonth": 5,
+          "max": 25,
+          "note": "The city's RD-110 instructions: 5% of the withheld amount per month, up to 25%, plus interest."
         }
       }
     ],
     "sourceUrl": ["https://www.kcmo.gov/city-hall/departments/finance"],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "city": "Lee's Summit",
@@ -125,10 +152,12 @@
         "url": ["https://cityofls.net/development-services/doing-business/business-and-contractor-licensing"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "This entry covers the city's local licenses and taxes generally, each of which carries its own late charge in the municipal code; no single amount is stated."
         }
       }
     ],
@@ -144,7 +173,7 @@
     "counties": ["Greene", "Christian"],
     "items": [
       {
-        "id": "springfield.local-licenses",
+        "id": "springfield-mo.local-licenses",
         "title": "Review applicable local licenses and permits in Springfield",
         "category": "license",
         "authority": "Springfield local licensing authority",
@@ -153,10 +182,12 @@
         "url": ["https://www.springfieldmo.gov/2171/Business-License-Applications"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "This entry covers the city's local licenses and taxes generally, each of which carries its own late charge in the municipal code; no single amount is stated."
         }
       }
     ],
@@ -178,10 +209,13 @@
         "url": ["https://www.stlouis-mo.gov/government/departments/collector/earnings-tax/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       },
       {
@@ -194,15 +228,19 @@
         "url": ["https://www.stlouis-mo.gov/government/departments/collector/earnings-tax/"],
         "appliesTo": ["employees"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
     ],
     "sourceUrl": ["https://www.stlouis-mo.gov/government/departments/collector/earnings-tax/"],
-    "checkedOn": "2026-10-18"
+    "checkedOn": "2026-10-18",
+    "status": "rules"
   },
   {
     "city": "O'Fallon",
@@ -219,15 +257,18 @@
         "url": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"]
+    "sourceUrl": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"],
+    "counties": ["Saint Charles"]
   },
   {
     "city": "St. Charles",
@@ -244,15 +285,18 @@
         "url": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"]
+    "sourceUrl": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"],
+    "counties": ["Saint Charles"]
   },
   {
     "city": "St. Joseph",
@@ -269,15 +313,18 @@
         "url": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"]
+    "sourceUrl": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"],
+    "counties": ["Buchanan", "Andrew"]
   },
   {
     "city": "Blue Springs",
@@ -294,15 +341,18 @@
         "url": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"]
+    "sourceUrl": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"],
+    "counties": ["Jackson"]
   },
   {
     "city": "St. Peters",
@@ -319,15 +369,18 @@
         "url": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"]
+    "sourceUrl": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"],
+    "counties": ["Saint Charles"]
   },
   {
     "city": "Joplin",
@@ -344,15 +397,18 @@
         "url": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"]
+    "sourceUrl": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"],
+    "counties": ["Jasper"]
   },
   {
     "city": "Florissant",
@@ -369,15 +425,18 @@
         "url": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"]
+    "sourceUrl": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"],
+    "counties": ["St. Louis"]
   },
   {
     "city": "Wentzville",
@@ -394,15 +453,18 @@
         "url": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"]
+    "sourceUrl": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"],
+    "counties": ["Saint Charles"]
   },
   {
     "city": "Chesterfield",
@@ -419,15 +481,18 @@
         "url": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"]
+    "sourceUrl": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"],
+    "counties": ["St. Louis"]
   },
   {
     "city": "Jefferson City",
@@ -444,14 +509,17 @@
         "url": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"]
+    "sourceUrl": ["https://www.sos.mo.gov/business/corporations/fictitious_faq"],
+    "counties": ["Cole"]
   }
 ]
