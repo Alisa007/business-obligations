@@ -4,6 +4,8 @@ All notable changes to `business-obligations-ui` are documented here.
 
 ## [Unreleased]
 
+## [0.9.0] - 2026-10-20
+
 ### Added
 
 - **ui:** `profileFromChoices` accepts no place (for the core `federal` scope); `ObligationsSummary` `state` is optional.
@@ -16,6 +18,16 @@ All notable changes to `business-obligations-ui` are documented here.
 
 - `LaunchList` without `onToggle`: a step's box now checks and unchecks when it is pressed (the list keeps the steps done itself). Before, it looked like a working box but did nothing. The progress figure no longer says "Saved in this browser" then, because nothing is saved; pass `onToggle` and `done` to keep the steps
 - checkboxes (the plan's steps and the yes/no details) are drawn in the page's colors: the accent color when checked, like the inputs otherwise, in light and dark. Tamagui's `Checkbox` put them in an inverse sub-theme, so a checked box was dark on a light page (light on a dark one) with a mark that hardly showed
+
+### Added
+
+- **core:** federal scope; fix industry list and mobile spacing
+- **core:** require complete jurisdiction sources
+
+### Fixed
+
+- **ui:** make launch-step checkboxes respond without onToggle
+- **ui:** draw checkboxes in the page's colors
 
 ## [0.8.0] - 2026-10-20
 
