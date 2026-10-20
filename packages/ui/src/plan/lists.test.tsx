@@ -243,7 +243,7 @@ describe("business-obligations-ui in Spanish", () => {
     );
 
   it("shows the launch list in Spanish, with Spanish dates and relative times", () => {
-    const html = render(<LaunchList plan={spanish} costs={spanish.costs} locale="es" />);
+    const html = render(<LaunchList plan={spanish} costs={spanish.costs} locale="es" onToggle={() => {}} />);
     expect(html).toContain("Presentar la constitución");
     expect(html).toContain("Listo para operar");
     expect(html).toContain("Tarifas conocidas");

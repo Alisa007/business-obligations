@@ -5,10 +5,11 @@ import { createRoot, type Root } from "react-dom/client";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { defaultConfig } from "@tamagui/config/v6";
 import { TamaguiProvider, createTamagui } from "tamagui";
-import { evaluate, type BusinessProfile } from "business-obligations";
+import { evaluate, planLaunch, type BusinessProfile } from "business-obligations";
 import {
   Collapse,
   DetailsField,
+  LaunchList,
   NO_OBLIGATION_FILTERS,
   ObligationsList,
   ProfileForm,
@@ -189,6 +190,51 @@ describe("the yes/no details", () => {
     expect(boxOf(/taxable goods/i).box.textContent).toBe("✓");
     expect(boxOf(/home/i).box.textContent).toBe("✕");
     expect(boxOf(/trade name/i).box.textContent).toBe("–");
+  });
+});
+
+describe("the steps of a launch plan", () => {
+  const plan = planLaunch(
+    {
+      entityType: "llc",
+      zip: "60601",
+      city: "Chicago",
+      county: "Cook",
+      industry: "restaurant",
+      employeeCount: 3,
+    },
+    { startDate: "2026-11-02" },
+  );
+  const firstBox = () => host.querySelector('[role="checkbox"][id^="step-"]')!;
+
+  it("check and uncheck when the host does not keep them, and do not claim to be saved", async () => {
+    await mount(<LaunchList plan={plan} />);
+    const box = firstBox();
+    expect(box.getAttribute("aria-checked")).toBe("false");
+    expect(host.textContent).not.toContain("Saved in this browser");
+
+    await press(box);
+    expect(box.getAttribute("aria-checked")).toBe("true");
+    expect(host.textContent).toContain(`1 / ${plan.steps.length}`);
+
+    await press(box);
+    expect(box.getAttribute("aria-checked")).toBe("false");
+  });
+
+  it("start from `done` when the host does not keep them", async () => {
+    const id = plan.steps[0]!.item.id;
+    await mount(<LaunchList plan={plan} done={new Set([id])} />);
+    expect(document.getElementById(`step-${id}`)!.getAttribute("aria-checked")).toBe("true");
+  });
+
+  it("follow `done` and report each press to the host that keeps them", async () => {
+    const onToggle = vi.fn();
+    await mount(<LaunchList plan={plan} done={new Set()} onToggle={onToggle} />);
+    const box = firstBox();
+    await press(box);
+    expect(onToggle).toHaveBeenCalledWith(box.id.slice("step-".length), true);
+    expect(box.getAttribute("aria-checked")).toBe("false");
+    expect(host.textContent).toContain("Saved in this browser");
   });
 });
 
