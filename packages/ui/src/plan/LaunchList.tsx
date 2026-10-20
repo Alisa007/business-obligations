@@ -91,8 +91,7 @@ function LaunchListBody({
   onEditField,
 }: LaunchListProps) {
   const { m, money, date, relativeDays } = useI18n();
-  // A host that does not pass `onToggle` does not keep the steps done, so the list keeps them: a box that looks
-  // pressable has to change when it is pressed.
+  // A box that looks pressable has to change when it is pressed, even if the host keeps nothing.
   const [own, setOwn] = useState<ReadonlySet<string>>(() => doneProp ?? new Set());
   const done = onToggle ? (doneProp ?? own) : own;
   const toggle =
