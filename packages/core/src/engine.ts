@@ -63,8 +63,20 @@ export class InvalidProfileError extends Error {
   }
 }
 
-export function resolveProfile(input: BusinessProfile): ResolvedProfile {
-  const issues = validateProfile(input);
+/** Which rules run: `"federal"` is the ones that apply wherever the business is, so no place is needed. */
+export type Scope = "federal";
+
+/** Rule ids of the federal pack start with this. */
+const FEDERAL_PREFIX = "fed.";
+
+/** `rules`, or only the federal ones for the `"federal"` scope. */
+export function scopedRules<R extends Pick<Rule, "id">>(rules: R[], scope?: Scope): R[] {
+  return scope === "federal" ? rules.filter((rule) => rule.id.startsWith(FEDERAL_PREFIX)) : rules;
+}
+
+export function resolveProfile(input: BusinessProfile, options: { scope?: Scope } = {}): ResolvedProfile {
+  const federal = options.scope === "federal";
+  const issues = validateProfile(input, { scope: options.scope });
   if (issues.length)
     throw new InvalidProfileError(
       issues
@@ -83,18 +95,22 @@ export function resolveProfile(input: BusinessProfile): ResolvedProfile {
 
   const zipState = input.zip ? stateFromZip(input.zip) : undefined;
   const state = (input.state ?? zipState)?.toUpperCase();
-  if (!state || !isState(state)) {
+  // The federal scope needs no place; one that is given is still checked and used.
+  const placeless = federal && !input.state && !input.zip;
+  if (placeless) {
+    // nothing to check
+  } else if (!state || !isState(state)) {
     throw new InvalidProfileError(
       input.state
         ? `Unknown state "${input.state}"`
         : `Cannot determine state from ZIP "${input.zip}"; pass \`state\` explicitly`,
     );
   }
-  const formationState = (input.formationState ?? state).toUpperCase();
-  if (!isState(formationState))
+  const formationState = (input.formationState ?? state ?? "").toUpperCase();
+  if (formationState && !isState(formationState))
     throw new InvalidProfileError(`Unknown formation state "${input.formationState}"`);
-  if (!input.city?.trim()) throw new InvalidProfileError("`city` is required");
-  if (!input.county?.trim()) throw new InvalidProfileError("`county` is required");
+  if (!federal && !input.city?.trim()) throw new InvalidProfileError("`city` is required");
+  if (!federal && !input.county?.trim()) throw new InvalidProfileError("`county` is required");
   // An explicit `industry` wins; otherwise the NAICS code decides, and may also say the activity or profession.
   const fromNaics = input.industry ? undefined : industryFromNaics(input.naics);
   const industry = input.industry ?? fromNaics?.industry ?? "general";
@@ -151,7 +167,9 @@ export function resolveProfile(input: BusinessProfile): ResolvedProfile {
   nonNeg("floorAreaSqFt", input.floorAreaSqFt);
 
   const employeeCount = input.employeeCount ?? input.fullTimeEmployeeCount ?? 0;
-  const presence: Presence[] = [{ state, home: true, employeeCount, hasProperty: true }];
+  const presence: Presence[] = placeless
+    ? []
+    : [{ state: state as string, home: true, employeeCount, hasProperty: true }];
   for (const m of input.multistate ?? []) {
     const code = m.state.toUpperCase();
     if (!isState(code)) throw new InvalidProfileError(`Unknown state "${m.state}"`);
@@ -218,7 +236,9 @@ export function resolveProfile(input: BusinessProfile): ResolvedProfile {
     ...input,
     country,
     fiscalYearEndMonth: fye,
-    state,
+    city: input.city?.trim() ? input.city : "",
+    county: input.county?.trim() ? input.county : "",
+    state: state ?? "",
     formationState,
     isFormed: input.isFormed ?? true,
     industry,
@@ -258,6 +278,11 @@ export interface EvaluateOptions {
   changes?: RuleChange[];
   /** How far back `recentChanges` looks, in days. Defaults to 365. */
   recentDays?: number;
+  /**
+   * `"federal"` runs only the federal rules, so a profile needs no `zip`, `state`, `city` or `county` (a place that
+   * is given is still used). The result's `profile.state` is then "" when none was given.
+   */
+  scope?: Scope;
 }
 
 export interface ComplianceResult {
@@ -321,10 +346,10 @@ function settle(draft: DraftBody): SettledDraft {
 
 /** Evaluates a profile and returns items together with the resolved profile and disclaimer. */
 export function evaluate(input: BusinessProfile, options: EvaluateOptions = {}): ComplianceResult {
-  const profile = resolveProfile(input);
+  const profile = resolveProfile(input, { scope: options.scope });
   const asOf = options.asOf ?? todayIso();
   if (!isIsoDate(asOf)) throw new InvalidProfileError("`asOf` must be YYYY-MM-DD");
-  const rules = options.rules ?? RULE_PACKS[profile.country];
+  const rules = scopedRules(options.rules ?? RULE_PACKS[profile.country], options.scope);
   const changes = [...BUNDLED_CHANGES, ...(options.changes ?? [])];
   return withContext(asOf, changes, () => {
     const items: ComplianceItem[] = [];

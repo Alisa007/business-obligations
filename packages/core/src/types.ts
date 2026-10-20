@@ -61,10 +61,10 @@ export interface BusinessProfile {
    * `city`, `county` and `state`, and the local authority names leave the ZIP out.
    */
   zip?: string;
-  /** City / town of the principal place of business (names the local licensing authority). */
-  city: string;
-  /** County of the principal place of business (names the county clerk / health department). */
-  county: string;
+  /** City / town of the principal place of business (names the local licensing authority). Required except for the `"federal"` scope. */
+  city?: string;
+  /** County of the principal place of business (names the county clerk / health department). Required except for the `"federal"` scope. */
+  county?: string;
   /** Two-letter code. Optional when `zip` is given (derived from it); required without a ZIP. */
   state?: string;
   /** State of formation if different from the operating state (e.g. a Delaware LLC operating in TX). */
@@ -304,7 +304,13 @@ export interface Presence {
 export interface ResolvedProfile extends BusinessProfile {
   country: Country;
   fiscalYearEndMonth: number;
+  /** "" only for the federal scope when no place was given. */
+  city: string;
+  /** "" under the same condition as `city`. */
+  county: string;
+  /** Two-letter code; "" under the same condition as `city`. */
   state: string;
+  /** "" under the same condition as `state`. */
   formationState: string;
   isFormed: boolean;
   industry: Industry;

@@ -6,6 +6,7 @@ import {
   planLaunch,
   toICS,
   type BusinessProfile,
+  type Scope,
 } from "business-obligations";
 import { isVerified, todayIso, type ConditionalItem } from "business-obligations-ui";
 
@@ -19,6 +20,8 @@ interface AnalyzeOptions {
   asOf?: string;
   openingDate?: string;
   isNew?: boolean;
+  /** Only the federal rules, which need no place: for when none is known. */
+  federalOnly?: boolean;
 }
 
 /**
@@ -30,6 +33,7 @@ export function conditionalItems(
   result: ReturnType<typeof evaluate>,
   analysis: ReturnType<typeof analyzeInputs>,
   asOf: string,
+  scope?: Scope,
 ): ConditionalItem[] {
   const have = new Set(result.items.map((item) => item.id));
   // Only what is unknown: a detail the person gave is settled, so what it would change is not "conditional".
@@ -39,7 +43,7 @@ export function conditionalItems(
     for (const change of unknown.has(sensitivity.field) ? sensitivity.changes : []) {
       const added = new Set(change.added.filter((id) => !have.has(id)));
       if (added.size === 0) continue;
-      const alternative = evaluate({ ...profile, [sensitivity.field]: change.value }, { asOf });
+      const alternative = evaluate({ ...profile, [sensitivity.field]: change.value }, { asOf, scope });
       for (const item of alternative.items) {
         if (!added.has(item.id)) continue;
         const entry = found.get(item.id) ?? { item, when: [] };
@@ -58,14 +62,16 @@ export function analyze(profile: BusinessProfile, options: AnalyzeOptions = {}) 
   // Every view answers for the same business: a new one has not formed yet, so its annual reports and returns
   // are not on the calendar and "what if" starts from the unformed profile.
   const current = { ...profile, isFormed: !options.isNew };
-  const result = evaluate(current, { asOf });
-  const plan = planLaunch(profile, { startDate: asOf, openingDate: options.openingDate || undefined });
-  const calendar = buildCalendar(current, { from: asOf, to: addYears(asOf, 1) });
-  const analysis = analyzeInputs(current, { asOf });
+  const scope = options.federalOnly ? "federal" : undefined;
+  const result = evaluate(current, { asOf, scope });
+  const plan = planLaunch(profile, { startDate: asOf, openingDate: options.openingDate || undefined, scope });
+  const calendar = buildCalendar(current, { from: asOf, to: addYears(asOf, 1), scope });
+  const analysis = analyzeInputs(current, { asOf, scope });
   return {
+    federalOnly: Boolean(options.federalOnly),
     result,
     plan,
-    conditional: conditionalItems(current, result, analysis, asOf),
+    conditional: conditionalItems(current, result, analysis, asOf, scope),
     events: calendar.events,
     ics: toICS(calendar.events, { calendarName: "Compliance deadlines" }),
     costs: estimateCosts(result.items, { profile: result.profile, ownerCount: result.profile.ownerCount }),

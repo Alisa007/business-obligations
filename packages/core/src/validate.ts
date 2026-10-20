@@ -207,17 +207,18 @@ function checkValue(field: string, kind: Kind, value: unknown, issues: ProfileIs
  * means the profile is well formed). Useful in plain JavaScript, where nothing else catches `employes: 5` or
  * `entityType: "LLC"`. Unknown fields are reported with a suggestion when one is close.
  */
-export function validateProfile(input: unknown): ProfileIssue[] {
+export function validateProfile(input: unknown, options: { scope?: "federal" } = {}): ProfileIssue[] {
   if (typeof input !== "object" || input === null || Array.isArray(input))
     return [{ field: "", message: "A business profile must be an object" }];
   const issues: ProfileIssue[] = [];
   const profile = input as Record<string, unknown>;
-  for (const required of ["entityType", "city", "county"]) {
+  const federal = options.scope === "federal";
+  for (const required of federal ? ["entityType"] : ["entityType", "city", "county"]) {
     if (profile[required] === undefined || profile[required] === "")
       issues.push({ field: required, message: `\`${required}\` is required` });
   }
   const missing = (key: string) => profile[key] === undefined || profile[key] === "";
-  if (missing("zip") && missing("state"))
+  if (!federal && missing("zip") && missing("state"))
     issues.push({ field: "zip", message: "`zip` is required unless `state` is given" });
   for (const [key, value] of Object.entries(profile)) {
     if (value === undefined) continue;

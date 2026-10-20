@@ -1,4 +1,5 @@
-import { useEffect, useId, useState } from "react";
+import { useEffect, useId, useLayoutEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { Input, Text } from "tamagui";
 import { WithLocale, useI18n } from "../../i18n/context";
 import { useControlProps } from "../../shared/controls";
@@ -11,13 +12,10 @@ let naicsModule: Promise<NaicsModule> | undefined;
 /** Loads the NAICS code list on first use; it is a separate bundle. */
 const loadNaics = () => (naicsModule ??= import("business-obligations/naics"));
 
+/** Same surface as the shared Select's list. It is drawn in `document.body`, so no ancestor can clip or cover it. */
 const listbox = {
-  position: "absolute",
-  top: "100%",
-  left: 0,
-  right: 0,
+  position: "fixed",
   zIndex: 1000,
-  marginTop: 4,
   border: "1px solid var(--border-color)",
   borderRadius: 8,
   background: "var(--background)",
@@ -47,6 +45,23 @@ function IndustryControl({ id }: { id: string }) {
   // A six-digit code that the list, once loaded, does not have.
   const [unknown, setUnknown] = useState(false);
   const open = results !== undefined;
+  const anchorRef = useRef<HTMLDivElement>(null);
+  // Where the list goes: under the input, as wide as it, followed while the page scrolls or resizes.
+  const [anchor, setAnchor] = useState<{ top: number; left: number; width: number }>();
+  useLayoutEffect(() => {
+    if (!open) return;
+    const place = () => {
+      const box = anchorRef.current?.getBoundingClientRect();
+      if (box) setAnchor({ top: box.bottom + 4, left: box.left, width: box.width });
+    };
+    place();
+    window.addEventListener("scroll", place, true);
+    window.addEventListener("resize", place);
+    return () => {
+      window.removeEventListener("scroll", place, true);
+      window.removeEventListener("resize", place);
+    };
+  }, [open]);
   const error: FieldError | undefined =
     firstError(naicsTextSchema, text.trim()) ?? (unknown ? "naicsUnknown" : undefined);
   const errorId = `${id}-error`;
@@ -123,6 +138,7 @@ function IndustryControl({ id }: { id: string }) {
     <Labeled id={id} label={m.profile.industry} hint={m.profileForm.hints.industry}>
       {/* keydown bubbles up from the input, so the arrows, Enter and Escape work whichever element has the focus */}
       <div
+        ref={anchorRef}
         style={{ position: "relative", width: "100%" }}
         onKeyDown={onKeyDown}
         onBlur={() => setTimeout(close, 120)}
@@ -143,35 +159,38 @@ function IndustryControl({ id }: { id: string }) {
           {...comboboxProps}
         />
         {text ? <ClearButton label={m.profile.clear} onClear={clear} /> : null}
-        {open ? (
-          <div id={listId} role="listbox" style={listbox}>
-            {results.length === 0 ? (
-              <div style={{ ...optionStyle, color: "var(--placeholder-color)" }}>
-                {m.profile.industryNone}
-              </div>
-            ) : (
-              results.map((result, index) => (
-                <div
-                  key={result.code}
-                  id={`${listId}-${index}`}
-                  role="option"
-                  aria-selected={index === active}
-                  style={{
-                    ...optionStyle,
-                    background: index === active ? "var(--color4, rgba(127,127,127,.2))" : "transparent",
-                  }}
-                  onMouseEnter={() => setActive(index)}
-                  // pressing must not take the focus from the input, or the list would close before the click lands
-                  onMouseDown={(event) => event.preventDefault()}
-                  onClick={() => pick(result.code, result.title)}
-                >
-                  <strong style={{ minWidth: 56 }}>{result.code}</strong>
-                  <span style={{ flex: 1 }}>{result.title}</span>
-                </div>
-              ))
-            )}
-          </div>
-        ) : null}
+        {open && anchor
+          ? createPortal(
+              <div id={listId} role="listbox" style={{ ...listbox, ...anchor }}>
+                {results.length === 0 ? (
+                  <div style={{ ...optionStyle, color: "var(--placeholder-color)" }}>
+                    {m.profile.industryNone}
+                  </div>
+                ) : (
+                  results.map((result, index) => (
+                    <div
+                      key={result.code}
+                      id={`${listId}-${index}`}
+                      role="option"
+                      aria-selected={index === active}
+                      style={{
+                        ...optionStyle,
+                        background: index === active ? "var(--color4, rgba(127,127,127,.2))" : "transparent",
+                      }}
+                      onMouseEnter={() => setActive(index)}
+                      // pressing must not take the focus from the input, or the list would close before the click lands
+                      onMouseDown={(event) => event.preventDefault()}
+                      onClick={() => pick(result.code, result.title)}
+                    >
+                      <strong style={{ minWidth: 56 }}>{result.code}</strong>
+                      <span style={{ flex: 1 }}>{result.title}</span>
+                    </div>
+                  ))
+                )}
+              </div>,
+              document.body,
+            )
+          : null}
       </div>
       {error ? (
         <ErrorText id={errorId} error={error} />
