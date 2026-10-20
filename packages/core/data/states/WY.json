@@ -46,8 +46,15 @@
   "salesTax": {
     "statewide": true,
     "permit": "Wyoming sales tax license",
+    "permitFee": {
+      "basis": "unknown"
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "not_stated",
+      "note": "No late sales tax return penalty amount was found in the Department of Revenue's published sources."
+    }
   },
   "localSalesTax": "state_administered",
   "economicNexusUsd": 100000,
@@ -63,6 +70,26 @@
     "stateFund": true,
     "trigger": {
       "minEmployees": 1
+    }
+  },
+  "penalties": {
+    "unemployment": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late wage report was found in the state agency's published sources."
+    },
+    "newHire": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late new hire report was found; secondary sources conflict or give only the federal $25 and $500 ceilings."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "range",
+      "note": "Fine of up to $750 for a first conviction and up to $10,000 for later convictions, plus interest on unpaid balances.",
+      "min": 0,
+      "max": 10000
     }
   },
   "paidLeave": null,

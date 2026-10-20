@@ -165,6 +165,12 @@ export const localRules: Rule[] = [
         authority: `${s.local.authority}: ${p.city} / ${p.county} County${p.zip ? ` (ZIP ${p.zip})` : ""}`,
         description: s.local.description,
         rrule: "FREQ=YEARLY",
+        anchor: "license_issued",
+        cost: {
+          basis: "varies",
+          currency: "USD",
+          note: "The fee depends on the type of business and is set by the city or county.",
+        },
         ...(s.local.url
           ? {
               url: s.local.url,
@@ -195,6 +201,7 @@ export const localRules: Rule[] = [
         description:
           "Home-based businesses need a home occupation permit and must comply with zoning limits (signage, customers, employees).",
         frequency: "once",
+        cost: { basis: "varies", currency: "USD", note: "The permit fee is set in the city's fee schedule." },
         ...(url
           ? {
               url,
@@ -224,6 +231,11 @@ export const localRules: Rule[] = [
         authority: `${p.city} (${p.county} County) building department`,
         description: "The commercial space must be approved for its intended use before operating.",
         frequency: "once",
+        cost: {
+          basis: "varies",
+          currency: "USD",
+          note: "The fee is set in the city's fee schedule and depends on the space and its use.",
+        },
         ...(url
           ? {
               url,

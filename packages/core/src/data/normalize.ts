@@ -5,10 +5,7 @@ import { describeTrigger } from "../trigger";
 import type { CountyJurisdiction, LocalJurisdiction, StateInfo } from "./types";
 
 /** A state file as stored: the file name is the state code, and withholding is implied by the withholding page. */
-export type StoredState = Omit<
-  StateInfo,
-  "code" | "unemployment" | "workersComp" | "verification"
-> & {
+export type StoredState = Omit<StateInfo, "code" | "unemployment" | "workersComp" | "verification"> & {
   unemployment: Omit<StateInfo["unemployment"], "year">;
   workersComp: Omit<StateInfo["workersComp"], "threshold"> & { threshold?: string };
   verification: Omit<StateInfo["verification"], "scope" | "dba"> & { scope?: string };

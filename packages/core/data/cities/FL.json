@@ -16,7 +16,9 @@
           "basis": "unknown"
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -43,7 +45,9 @@
           "basis": "unknown"
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -67,10 +71,13 @@
         "url": ["https://www.coralsprings.gov/Business/Business-Tax-Office"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 250,
+          "note": "Penalty, along with possible civil action, when tax is unpaid after 150 days."
         }
       }
     ],
@@ -90,15 +97,17 @@
         "authority": "Town of Davie Business Tax Receipt Division",
         "description": "Davie issues local business tax receipts for commercial, home-based, and peddler/solicitor/seasonal businesses; the town provides a receipt application and renewal portal, but the official page reviewed does not state one universal renewal date.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://www.davie-fl.gov/194/Business-Tax-Receipt"],
         "appliesTo": ["all"],
         "feeDetail": {
           "basis": "unknown"
         },
         "penalty": {
-          "basis": "unknown"
-        },
-        "anchor": "license_issued"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
+        }
       },
       {
         "id": "davie.building-permit",
@@ -110,10 +119,12 @@
         "url": ["https://www.davie-fl.gov/1224/General-Information"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       },
       {
@@ -126,10 +137,12 @@
         "url": ["https://www.davie-fl.gov/DocumentCenter/View/14729/Private-Provider-Application"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for occupying without a certificate was found in the city's published building pages."
         }
       }
     ],
@@ -153,7 +166,9 @@
           "basis": "unknown"
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -178,7 +193,9 @@
           "basis": "unknown"
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -203,7 +220,9 @@
           "basis": "unknown"
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -228,7 +247,9 @@
           "basis": "unknown"
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -253,7 +274,9 @@
           "basis": "unknown"
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -280,7 +303,9 @@
           "basis": "unknown"
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -307,7 +332,9 @@
           "basis": "unknown"
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       },
       {
@@ -323,7 +350,9 @@
           "basis": "unknown"
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -352,7 +381,9 @@
           "basis": "unknown"
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -380,7 +411,9 @@
           "basis": "unknown"
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "10% in October, rising monthly to 25% in January."
         }
       }
     ],
@@ -407,7 +440,9 @@
           "basis": "unknown"
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -434,7 +469,9 @@
           "basis": "unknown"
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -459,7 +496,9 @@
           "basis": "unknown"
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -486,7 +525,9 @@
           "basis": "unknown"
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -508,10 +549,12 @@
         "url": ["https://www.talgov.com/growth/gm_permits_lues/Building_Inspection_Start_Here_5"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       },
       {
@@ -524,10 +567,12 @@
         "url": ["https://www.talgov.com/growth/gm_permits_lues/Building_Inspection_Start_Here_5"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for occupying without a certificate was found in the city's published building pages."
         }
       }
     ],
@@ -549,10 +594,13 @@
         "url": ["https://www.tampa.gov/service/business-tax-records-inquiries"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The city's page does not publish fee amounts; see its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -577,7 +625,9 @@
           "basis": "unknown"
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Penalties up to 25% on taxes delinquent from October 1."
         }
       }
     ],
@@ -599,10 +649,13 @@
         "appliesTo": ["all"],
         "rrule": "FREQ=YEARLY;BYMONTH=9;BYMONTHDAY=30",
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -627,10 +680,13 @@
         "appliesTo": ["all"],
         "rrule": "FREQ=YEARLY;BYMONTH=9;BYMONTHDAY=30",
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -653,10 +709,13 @@
         "appliesTo": ["all"],
         "rrule": "FREQ=YEARLY;BYMONTH=9;BYMONTHDAY=30",
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -679,10 +738,13 @@
         "appliesTo": ["all"],
         "rrule": "FREQ=YEARLY;BYMONTH=9;BYMONTHDAY=30",
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -705,10 +767,13 @@
         "appliesTo": ["all"],
         "rrule": "FREQ=YEARLY;BYMONTH=9;BYMONTHDAY=30",
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -731,10 +796,13 @@
         "appliesTo": ["all"],
         "rrule": "FREQ=YEARLY;BYMONTH=9;BYMONTHDAY=30",
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "25% penalty plus a $250 surcharge starting October 1."
         }
       }
     ],
@@ -759,10 +827,13 @@
         "appliesTo": ["all"],
         "rrule": "FREQ=YEARLY;BYMONTH=9;BYMONTHDAY=30",
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -787,10 +858,13 @@
         "appliesTo": ["all"],
         "rrule": "FREQ=YEARLY;BYMONTH=9;BYMONTHDAY=30",
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -814,10 +888,13 @@
         "url": ["https://developnorthportfl.gov/business-support/business-licensing/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -841,10 +918,13 @@
         "appliesTo": ["all"],
         "checkedOn": "2026-10-19",
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -867,10 +947,13 @@
         "url": ["https://www.daytonabeach.gov/345/Business-Licensing"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -895,10 +978,14 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 25,
+          "note": "Initial application fee; the tax varies by business type and employees."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -922,10 +1009,13 @@
         "url": ["https://www.homesteadfl.gov/96/Business-Services"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -949,10 +1039,13 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -976,10 +1069,13 @@
         "url": ["https://www.boynton-beach.org/269/BTR-Business-Tax-Receipts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -1001,10 +1097,13 @@
         "url": ["https://www.cityofdoral.com/Online-Services/Renew-Business-Tax-Receipt"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -1026,10 +1125,13 @@
         "url": ["https://www.miamibeachfl.gov/city-hall/finance/business-tax-receipts-btr/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -1051,10 +1153,13 @@
         "url": ["https://www.largo.com/services/business/business_tax_receipt/index.php"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -1076,10 +1181,14 @@
         "url": ["https://www.lauderhill-fl.gov/departments/finance-department/business-tax/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 55.13,
+          "note": "Certificate of Use application processing fee; the receipt tax is separate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Penalties begin September 30 and increase monthly to 25% by January 1."
         }
       }
     ],
@@ -1092,7 +1201,7 @@
     "status": "rules",
     "items": [
       {
-        "id": "st-cloud.local-licenses",
+        "id": "st-cloud-fl.local-licenses",
         "title": "Renew St. Cloud business tax receipt",
         "category": "license",
         "authority": "City of St. Cloud Community Development",
@@ -1101,10 +1210,13 @@
         "url": ["https://www.stcloudfl.gov/816/Frequently-Asked-Questions"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The tax depends on the type of business."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "10% in the first month, 5% for each additional month up to 25%, plus a $250 final penalty after January 1."
         }
       }
     ],
@@ -1126,10 +1238,13 @@
         "url": ["https://www.tamarac.gov/551/Business-Revenue-Receipt"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -1153,10 +1268,13 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -1182,10 +1300,14 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 190.3,
+          "note": "Business tax per type."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "10%, 15%, 20% and 25% from October through January."
         }
       }
     ],
@@ -1209,10 +1331,13 @@
         "url": ["https://www.westonfl.org/government/finance/local-business-tax-receipt"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "Fees vary by business type."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Up to 25% plus an additional $250 or annual-tax penalty after 150 days."
         }
       }
     ],
@@ -1234,10 +1359,13 @@
         "url": ["https://sanfordfl.gov/business/business-tax/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -1259,10 +1387,13 @@
         "url": ["https://www.port-orange.org/267/Business-Tax"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -1284,10 +1415,14 @@
         "url": ["https://www.apopka.gov/1092/Apply-or-Renew"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 10,
+          "note": "Non-refundable application fee, plus classification-based fees."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "10%, 15%, 20% and 25%, then an additional $250 plus legal fees after January 31."
         }
       }
     ],
@@ -1309,10 +1444,13 @@
         "url": ["https://www.pbgfl.gov/221/Business-Tax"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "Common application totals range from $100 for home-based businesses to $185 for a general office."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -1334,10 +1472,13 @@
         "url": ["https://www.wellingtonfl.gov/396/Business-Tax-Receipts-Licenses"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 250,
+          "note": "Penalty after 150 days delinquent."
         }
       }
     ],
@@ -1360,10 +1501,13 @@
         "appliesTo": ["all"],
         "checkedOn": "2026-10-18",
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -1385,10 +1529,13 @@
         "url": ["https://www.mywinterhaven.com/342/Building-Permits-Licenses"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -1410,10 +1557,13 @@
         "url": ["https://www.northmiamifl.gov/1398/Doing-Business"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -1435,10 +1585,13 @@
         "url": ["https://www.margatefl.com/205/Local-Business-Tax-Receipts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -1462,10 +1615,14 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 25,
+          "note": "Non-refundable fee on each new application."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -1491,10 +1648,14 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 50,
+          "note": "Zoning-review charge for new applicants; the receipt tax is separate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -1518,10 +1679,13 @@
         "url": ["https://cityofbradenton.com/localbiztax"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -1543,10 +1707,13 @@
         "url": ["https://www.cityofbonitaspringscd.org/forms/business_USE_permit_procedures.html"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -1568,10 +1735,13 @@
         "url": ["https://www.cityofpensacola.com/658/Business-Tax-Receipts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -1593,10 +1763,13 @@
         "url": ["https://clermontfl.gov/DocumentCenter/View/164/Starting-a-New-Business-PDF"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The city repealed its Business Tax Receipt; commercial businesses still pay a published minimum of $152, rising with unit square footage."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -1618,10 +1791,13 @@
         "url": ["https://pinellaspark.gov/656/Business-Tax-Receipt"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -1643,10 +1819,14 @@
         "url": ["https://fl-ocoee.civicplus.com/168/Local-Business-RegistrationTaxes"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "10% in October plus 5% per month, capped at 25%."
         }
       }
     ],
@@ -1668,10 +1848,13 @@
         "url": ["https://www.cityoffortpierce.com/141/Applications-and-Forms"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -1693,10 +1876,14 @@
         "url": ["https://titusville.com/207/Business-Tax-Receipts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 15,
+          "note": "Non-refundable application fee ($25 for a solicitors permit); the total tax varies by business type, seats, units and square footage."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -1720,10 +1907,14 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 120,
+          "note": "Certificate of Use fee; the local tax varies by classification."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -1747,7 +1938,8 @@
         "url": ["https://wgfl.gov/354/Business-Tax"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
           "basis": "percent",
@@ -1773,10 +1965,13 @@
         "url": ["https://www.altamonte.org/395/Business-Tax-Receipts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -1798,10 +1993,13 @@
         "url": ["https://deland.org/204/Business-Tax-Receipts-Food-Truck-Garage-"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -1823,10 +2021,13 @@
         "url": ["https://www.citynmb.com/186/Business-Tax-Receipts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -1848,10 +2049,13 @@
         "url": ["https://hainescityfl.gov/158/Business-Tax-Receipts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -1875,10 +2079,14 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 65,
+          "note": "Initial application fee; the renewal fee is $20 and the business-use inspection is $340."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "10%, 15%, 20% and 25%, followed after 150 days by a $250 penalty."
         }
       }
     ],
@@ -1902,10 +2110,13 @@
         "url": ["https://oaklandparkfl.gov/612/Business-Regulatory-Unit"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -1927,10 +2138,14 @@
         "url": ["https://www.cutlerbay-fl.gov/faqs"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 35,
+          "note": "Certificate of Use fee; local tax fees vary by business type."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -1952,10 +2167,13 @@
         "url": ["https://www.greenacresfl.gov/367/Business-Tax-Receipts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "New commercial businesses pay a $75 safety-inspection fee; the receipt tax depends on the business."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "10%, 15%, 20% and 25%, then a $25 collection fee plus a $100 delinquent fee after 150 days."
         }
       }
     ],
@@ -1977,10 +2195,14 @@
         "url": ["https://www.ormondbeach.org/330/Business-Tax-Receipts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 30,
+          "note": "Initial application fee for all business categories; commercial locations pay a $45 fire-inspection fee."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -2004,10 +2226,13 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -2031,10 +2256,13 @@
         "url": ["https://lakeworthbeachfl.gov/community-sustainability/business-license/faq"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -2056,10 +2284,13 @@
         "url": ["https://hallandalebeachfl.gov/1256/Starting-Your-New-Business"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],
@@ -2081,10 +2312,13 @@
         "url": ["https://www.royalpalmbeachfl.gov/245/Business-Tax-Receipts"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "note": "Delinquent after September 30: 10% in October, 15% in November, 20% in December and 25% from January, plus a possible $250 penalty (s. 205.053, F.S.)."
         }
       }
     ],

@@ -54,8 +54,17 @@
   "salesTax": {
     "statewide": true,
     "permit": "Missouri sales tax license",
+    "permitFee": {
+      "basis": "unknown"
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "percentPerMonth": 5,
+      "note": "5% of the tax for each month the return is late, up to 25%.",
+      "rate": 25
+    }
   },
   "localSalesTax": "state_administered",
   "economicNexusUsd": 100000,
@@ -71,6 +80,28 @@
     "trigger": {
       "minEmployees": 5,
       "constructionMinEmployees": 1
+    }
+  },
+  "penalties": {
+    "unemployment": {
+      "basis": "percent",
+      "note": "Greater of 10% or $100 on a late report, then the greater of 20% or $200 (state quarterly report form).",
+      "rate": 20,
+      "min": 200
+    },
+    "newHire": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late new hire report was found; secondary sources conflict or give only the federal $25 and $500 ceilings."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "range",
+      "note": "State penalty of up to three times the annual premium or $50,000, whichever is greater, for a knowing failure to insure.",
+      "min": 0,
+      "max": 50000
     }
   },
   "paidLeave": null,

@@ -46,8 +46,19 @@
   "salesTax": {
     "statewide": true,
     "permit": "South Dakota sales tax license",
+    "permitFee": {
+      "basis": "none",
+      "amount": 0,
+      "note": "South Dakota charges no fee for a sales tax license."
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "note": "10% of the tax owed when the return is not received within 30 days after the month it was due, with a $10 minimum even if no tax is due.",
+      "rate": 10,
+      "min": 10
+    }
   },
   "localSalesTax": "state_administered",
   "economicNexusUsd": 100000,
@@ -64,6 +75,26 @@
     "trigger": {
       "minEmployees": 1,
       "elective": true
+    }
+  },
+  "penalties": {
+    "unemployment": {
+      "basis": "range",
+      "note": "$25 for each month or part of a month a quarterly report is late, up to $150 a report, plus 1.5% monthly interest.",
+      "min": 25,
+      "max": 150
+    },
+    "newHire": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late new hire report was found; secondary sources conflict or give only the federal $25 and $500 ceilings."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for lacking required coverage was found; secondary sources conflict."
     }
   },
   "paidLeave": null,

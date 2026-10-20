@@ -43,6 +43,9 @@ export const reportKey = (p: ResolvedProfile, state: string): ReportKey => {
 const reportFor = (p: ResolvedProfile, state: string): ReportRule | null =>
   info(state)[reportKey(p, state)] ?? null;
 
+const FREE = (note: string) => ({ basis: "none" as const, amount: 0, currency: "USD" as const, note });
+const VARIES = (note: string) => ({ basis: "varies" as const, currency: "USD" as const, note });
+
 const registeredAgent = (state: string, reason: string): ItemDraft => {
   const s = info(state);
   return {
@@ -53,6 +56,9 @@ const registeredAgent = (state: string, reason: string): ItemDraft => {
     authority: s.filing.name,
     description: `A person or service with a physical ${s.name} address to receive legal notices and service of process; listed with ${s.filing.name}.`,
     frequency: "ongoing",
+    cost: VARIES(
+      "Commercial registered agents set their own annual price; acting as your own agent is free.",
+    ),
     reason,
     url: s.links.formation,
   };
@@ -70,6 +76,8 @@ function employerItems(x: Presence, p: ResolvedProfile): ItemDraft[] {
       state: x.state,
       authority: s.labor.name,
       description: "Employer account for state unemployment insurance contributions.",
+      cost: FREE("There is no fee to register; the tax is paid with the wage reports."),
+      ...penaltyOf({ penalty: s.penalties.unemployment }),
       frequency: "once",
       reason,
       url: s.links.uiRegistration,
@@ -85,7 +93,7 @@ function employerItems(x: Presence, p: ResolvedProfile): ItemDraft[] {
           ? "new employers pay the industry average rate"
           : `new employers pay ${s.unemployment.newEmployerRate}%`
       }, and experience-rated rates range from ${s.unemployment.minRate}% to ${s.unemployment.maxRate}%.${s.unemployment.note ? ` ${s.unemployment.note}` : ""}`,
-      rrule: "FREQ=MONTHLY;INTERVAL=3",
+      rrule: "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
       ...(s.unemployment.newEmployerRate !== null
         ? {
             cost: {
@@ -98,6 +106,7 @@ function employerItems(x: Presence, p: ResolvedProfile): ItemDraft[] {
             },
           }
         : {}),
+      ...penaltyOf({ penalty: s.penalties.unemployment }),
       reason,
       url: s.links.uiRegistration,
     },
@@ -110,6 +119,8 @@ function employerItems(x: Presence, p: ResolvedProfile): ItemDraft[] {
       description:
         "Federal law requires reporting each new hire within 20 days of hire (some states require sooner).",
       frequency: "per_event",
+      cost: FREE("There is no fee to report a new hire."),
+      ...penaltyOf({ penalty: s.penalties.newHire }),
       reason,
       url: ["https://www.acf.hhs.gov/css/employers"],
     },
@@ -124,6 +135,7 @@ function employerItems(x: Presence, p: ResolvedProfile): ItemDraft[] {
       description:
         "Withhold state income tax from wages and remit on the assigned deposit schedule; file annual reconciliation and W-2s.",
       frequency: "once",
+      cost: FREE("There is no fee to register; the tax withheld is remitted on the deposit schedule."),
       reason: `${s.name} levies income tax on wages; ${reason}`,
       url: s.links.withholding ?? s.revenue.url,
     });
@@ -157,6 +169,8 @@ function employerItems(x: Presence, p: ResolvedProfile): ItemDraft[] {
           ? `Coverage must be purchased from the exclusive state fund. Required at: ${s.workersComp.threshold}.`
           : `Required at: ${s.workersComp.threshold}.`,
       frequency: "ongoing",
+      cost: VARIES("The premium depends on payroll, job classifications and the insurer's rates."),
+      ...penaltyOf({ penalty: s.penalties.workersComp }),
       reason: `${reason} meets the ${s.name} threshold (${s.workersComp.threshold})`,
       url: s.links.laborPosters,
     });
@@ -170,7 +184,8 @@ function employerItems(x: Presence, p: ResolvedProfile): ItemDraft[] {
       state: x.state,
       authority: s.paidLeave.agency,
       description: s.paidLeave.description,
-      rrule: "FREQ=MONTHLY;INTERVAL=3",
+      rrule: "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
+      cost: VARIES("Contributions are a share of payroll at the program's rate."),
       reason: `${s.name} has a mandatory paid leave/disability program; ${reason}`,
       url: s.links.laborPosters,
     });
@@ -275,6 +290,9 @@ export const stateRules: Rule[] = [
       authority: info(p.formationState).filing.name,
       description: info(p.formationState).llcPublication!,
       frequency: "once",
+      cost: VARIES(
+        "The newspaper sets its price for the notice, plus any state filing fee for the proof of publication.",
+      ),
       reason: `LLC formed in ${p.formationState}`,
       url: info(p.formationState).links.formation,
     }),
@@ -327,6 +345,10 @@ export const stateRules: Rule[] = [
             ? `${s.entityTax}. ${s.entityTaxDetail.summary}. ${entityTaxStatus(p, s.entityTaxDetail)}`
             : `${s.entityTax}.`,
           rrule: "FREQ=YEARLY",
+          anchor: "announced",
+          cost: VARIES(
+            "The tax depends on the entity's income, receipts or capital; there is no separate filing fee.",
+          ),
           reason: `${p.entityType} with ${x.home ? "its principal place of business" : "employees or property"} in ${x.state}`,
           url: s.links.entityTax,
         };
@@ -356,7 +378,8 @@ export const stateRules: Rule[] = [
           description: isCorpLike(p)
             ? "Minimum $800 franchise tax; S corporations pay the greater of $800 or 1.5% of net income."
             : "Annual $800 minimum tax for LLCs (Form 3522), plus Form 568 / 100 / 100S return.",
-          rrule: "FREQ=YEARLY",
+          rrule: "FREQ=YEARLY;BYMONTHDAY=15;X-MONTHS=3",
+          anchor: "fiscal_year_start",
           deadline:
             "15th day of the 4th month of the tax year (estimated); return due 15th day of 3rd/4th month after year end",
           cost: { basis: "flat", amount: 800, currency: "USD" },
@@ -377,7 +400,8 @@ export const stateRules: Rule[] = [
           authority: "California Franchise Tax Board",
           description:
             "Tiered annual fee for LLCs with California-source gross receipts of $250,000 or more.",
-          rrule: "FREQ=YEARLY",
+          rrule: "FREQ=YEARLY;BYMONTHDAY=15;X-MONTHS=5",
+          anchor: "fiscal_year_start",
           deadline: "15th day of the 6th month of the tax year",
           cost: {
             basis: "flat",
@@ -457,7 +481,9 @@ export const stateRules: Rule[] = [
                   state: x.state,
                   authority: `${s.name} cities and counties that self-administer sales tax`,
                   description: `Many ${s.name} cities and counties administer and collect their own sales and use taxes separately from the state; sellers register and file with each jurisdiction where required.`,
-                  rrule: "FREQ=MONTHLY",
+                  rrule: "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12",
+                  anchor: "assigned",
+                  cost: VARIES("Each city or county sets its own registration fee, if any."),
                   reason,
                   url: s.links.salesTax ?? s.revenue.url,
                 },
@@ -472,6 +498,7 @@ export const stateRules: Rule[] = [
             authority: agency.name,
             description: "Required before making taxable sales; register with the state tax agency.",
             frequency: "once" as const,
+            ...feeCost({ feeDetail: s.salesTax.permitFee }),
             reason,
             url: s.links.salesTax ?? agency.url,
           },
@@ -486,7 +513,10 @@ export const stateRules: Rule[] = [
                 ? " Local sales taxes are collected and remitted on the same state return; the rate depends on the delivery location."
                 : ""
             }`,
-            rrule: "FREQ=MONTHLY",
+            rrule: "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12",
+            anchor: "assigned",
+            ...penaltyOf(s.salesTax),
+            cost: FREE("There is no fee to file; the tax is the amount the return reports."),
             deadline:
               "As assigned by the state (monthly, quarterly or yearly, by the amount of tax collected)",
             reason,
@@ -654,6 +684,7 @@ export const extraStateRules: Rule[] = [
           authority: info(x.state).labor.name,
           description: `${info(x.state).name} requires employers with ${info(x.state).paidSickLeave!.minEmployees}+ employees to provide paid sick leave, post notice and keep records.`,
           frequency: "ongoing" as const,
+          cost: FREE("There is no fee; the cost is the paid leave employees earn."),
           reason: `${x.employeeCount} employees in ${x.state}, at or above the state's ${info(x.state).paidSickLeave!.minEmployees}-employee threshold`,
           url: info(x.state).links.laborPosters,
         })),
@@ -675,6 +706,8 @@ export const extraStateRules: Rule[] = [
           description:
             "State minimum wage, unemployment insurance, workers' compensation and anti-discrimination notices must be posted where employees can see them.",
           frequency: "ongoing" as const,
+          cost: FREE("The state labor agency provides the notices free."),
+          ...penaltyOf({ penalty: info(x.state).penalties.laborPosters }),
           reason: `${x.employeeCount} employees in ${x.state}`,
           url: info(x.state).links.laborPosters,
         })),
@@ -722,6 +755,7 @@ export const extraStateRules: Rule[] = [
         description:
           "Professional entities must be owned by licensees and generally need a board-issued certificate of authorization, renewed periodically, in addition to the state filing.",
         rrule: "FREQ=YEARLY;INTERVAL=2",
+        anchor: "license_issued",
         reason: `Entity type ${p.entityType} is a professional entity`,
         url: board?.url ?? s.links.formation,
       };
@@ -740,7 +774,8 @@ export const extraStateRules: Rule[] = [
       authority: info(p.formationState).filing.name,
       description:
         "Benefit corporations deliver an annual report assessing their public benefit performance against a third-party standard to shareholders and, in many states, file it with the state.",
-      rrule: "FREQ=YEARLY",
+      rrule: "FREQ=YEARLY;BYMONTHDAY=-1;X-MONTHS=4",
+      anchor: "fiscal_year_end",
       reason: "Entity is a benefit corporation",
       url: info(p.formationState).links.formation,
     }),

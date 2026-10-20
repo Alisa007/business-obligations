@@ -3,7 +3,9 @@
     "city": "Anchorage",
     "status": "rules",
     "note": "Whether the Municipality requires a general business license was not confirmed; the state business license applies.",
-    "counties": ["Anchorage"],
+    "counties": [
+      "Anchorage"
+    ],
     "items": [
       {
         "id": "anchorage.local-licenses",
@@ -12,17 +14,25 @@
         "authority": "Anchorage local licensing authority",
         "description": "Review the cited local licensing source before operating; requirements may be activity-specific and can differ by business type or location.",
         "frequency": "once",
-        "url": ["https://www.muni.org/cityviewportal/"],
-        "appliesTo": ["all"],
+        "url": [
+          "https://www.muni.org/cityviewportal/"
+        ],
+        "appliesTo": [
+          "all"
+        ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for a late Anchorage business license was found; the Municipal Clerk's licensing page lists a $100 late renewal fee only for adult-oriented establishments."
         }
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": ["https://www.muni.org/cityviewportal/"]
+    "sourceUrl": [
+      "https://www.muni.org/cityviewportal/"
+    ]
   }
 ]

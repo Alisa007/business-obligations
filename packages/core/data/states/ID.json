@@ -42,8 +42,20 @@
   "salesTax": {
     "statewide": true,
     "permit": "Idaho seller's permit",
+    "permitFee": {
+      "basis": "none",
+      "amount": 0,
+      "note": "Applying for a seller's permit through the Idaho Business Registration process is free."
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "percentPerMonth": 5,
+      "note": "5% of the tax for each month or part of a month the return is late, up to 25%, with a $10 minimum; 0.5% a month on tax filed but unpaid.",
+      "rate": 25,
+      "min": 10
+    }
   },
   "localSalesTax": "state_administered",
   "economicNexusUsd": 100000,
@@ -58,6 +70,26 @@
     "stateFund": false,
     "trigger": {
       "minEmployees": 1
+    }
+  },
+  "penalties": {
+    "unemployment": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late wage report was found in the state agency's published sources."
+    },
+    "newHire": {
+      "basis": "none",
+      "note": "Idaho sets no penalty for late new hire reports; a 2012 bill to add one died."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "per_item",
+      "note": "Civil exposure of $2 per employee per day or $25 a day, whichever is greater (Idaho Code 72-319), alongside a misdemeanor.",
+      "perUnit": 2,
+      "min": 25
     }
   },
   "paidLeave": null,

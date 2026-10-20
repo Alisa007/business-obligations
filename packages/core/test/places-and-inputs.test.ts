@@ -188,7 +188,7 @@ describe("precedence authored in seed data", () => {
           category: "registration" as const,
           authority: "City of Austin",
           description: "d",
-          rrule: "FREQ=YEARLY",
+          rrule: "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1",
           url: ["https://www.austintexas.gov/"],
           appliesTo: ["all" as const],
           feeDetail: { basis: "unknown" as const },

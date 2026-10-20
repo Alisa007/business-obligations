@@ -68,8 +68,18 @@
   "salesTax": {
     "statewide": true,
     "permit": "North Dakota sales tax permit",
+    "permitFee": {
+      "basis": "unknown"
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "percentPerMonth": 5,
+      "note": "Greater of 5% or $5 the first month, plus 5% for each additional month, up to 25%.",
+      "rate": 25,
+      "min": 5
+    }
   },
   "localSalesTax": "state_administered",
   "economicNexusUsd": 100000,
@@ -85,6 +95,25 @@
     "stateFund": true,
     "trigger": {
       "minEmployees": 1
+    }
+  },
+  "penalties": {
+    "unemployment": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late wage report was found in the state agency's published sources."
+    },
+    "newHire": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late new hire report was found; secondary sources conflict or give only the federal $25 and $500 ceilings."
+    },
+    "laborPosters": {
+      "basis": "flat",
+      "amount": 250,
+      "note": "A $250 penalty may apply for failing to post the WSI Certificate of Premium Payment (N.D.C.C. 65-04-04)."
+    },
+    "workersComp": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for lacking required coverage was found; secondary sources conflict."
     }
   },
   "paidLeave": null,

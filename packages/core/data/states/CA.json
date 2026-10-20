@@ -29,6 +29,7 @@
   "corpReport": {
     "title": "File Statement of Information",
     "rrule": "FREQ=YEARLY;BYMONTHDAY=-1",
+    "anchor": "formation",
     "deadline": "Within the anniversary month and the 5 months before it",
     "feeDetail": {
       "basis": "flat",
@@ -38,8 +39,7 @@
       "basis": "flat",
       "amount": 250,
       "note": "Franchise Tax Board penalty for failing to file the required Statement of Information."
-    },
-    "anchor": "formation"
+    }
   },
   "lpReport": null,
   "llpReport": null,
@@ -51,11 +51,21 @@
   "salesTax": {
     "statewide": true,
     "permit": "Seller's permit",
+    "permitFee": {
+      "basis": "none",
+      "amount": 0,
+      "note": "There is no fee for a seller's permit; CDTFA may require a security deposit."
+    },
     "agency": {
       "name": "California Department of Tax and Fee Administration",
       "url": ["https://cdtfa.ca.gov/formspubs/pub107/applying-for-a-sellers-permit.htm"]
     },
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "note": "10% of the tax due for a late return or payment.",
+      "rate": 10
+    }
   },
   "localSalesTax": "state_administered",
   "economicNexusUsd": 500000,
@@ -70,6 +80,26 @@
     "stateFund": false,
     "trigger": {
       "minEmployees": 1
+    }
+  },
+  "penalties": {
+    "unemployment": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late wage report was found in the state agency's published sources."
+    },
+    "newHire": {
+      "basis": "flat",
+      "amount": 24,
+      "note": "$24 for each failure to report a hire or rehire on time, or $490 if the employer and employee conspire not to report."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "per_item",
+      "note": "Penalty assessment of $1,500 per employee when a stop order is issued (Labor Code 3722); repeat offenders face the greater of twice the unpaid premium or that amount.",
+      "perUnit": 1500
     }
   },
   "paidLeave": {

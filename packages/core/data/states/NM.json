@@ -16,6 +16,7 @@
   "corpReport": {
     "title": "File Biennial Report",
     "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=4;BYMONTHDAY=15",
+    "anchor": "year_after_formation",
     "deadline": "April 15, every 2 years (aligned with the federal corporate return)",
     "feeDetail": {
       "basis": "flat",
@@ -25,8 +26,7 @@
       "basis": "flat",
       "amount": 10,
       "note": "$10 late annual-report penalty; revoked entities also owe a $25 reinstatement fee."
-    },
-    "anchor": "formation"
+    }
   },
   "llpReport": {
     "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=1",
@@ -52,11 +52,21 @@
   "salesTax": {
     "statewide": true,
     "permit": "New Mexico CRS (Combined Reporting System) registration",
+    "permitFee": {
+      "basis": "unknown"
+    },
     "agency": {
       "name": "New Mexico Taxation and Revenue Department",
       "url": ["https://www.tax.newmexico.gov/businesses/gross-receipts-overview/"]
     },
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "percentPerMonth": 2,
+      "note": "2% of the tax for each month or part of a month the return is late, up to 20%, with a $5 minimum.",
+      "rate": 20,
+      "min": 5
+    }
   },
   "localSalesTax": "state_administered",
   "economicNexusUsd": 100000,
@@ -71,6 +81,27 @@
     "stateFund": false,
     "trigger": {
       "minEmployees": 3
+    }
+  },
+  "penalties": {
+    "unemployment": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late wage report was found in the state agency's published sources."
+    },
+    "newHire": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late new hire report was found; secondary sources conflict or give only the federal $25 and $500 ceilings."
+    },
+    "laborPosters": {
+      "basis": "range",
+      "note": "$25 to $1,000 for failing to display the workers' compensation notice (NMSA 52-3-53).",
+      "min": 25,
+      "max": 1000
+    },
+    "workersComp": {
+      "basis": "percent",
+      "note": "15% to 50% of the total award when benefits go unpaid because there is no valid policy.",
+      "rate": 50
     }
   },
   "paidLeave": null,

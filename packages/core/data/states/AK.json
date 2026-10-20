@@ -14,7 +14,7 @@
   },
   "llcReport": {
     "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=1;BYMONTHDAY=2",
-    "deadline": "January 2 of every second year after formation",
+    "anchor": "year_after_formation",
     "feeDetail": {
       "basis": "flat",
       "amount": 100
@@ -23,12 +23,11 @@
       "basis": "flat",
       "amount": 25,
       "note": "$25 for each year or part of a year delinquent; Alaska statutes also authorize an additional charge of 10% of the filing fee."
-    },
-    "anchor": "formation"
+    }
   },
   "corpReport": {
     "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=1;BYMONTHDAY=2",
-    "deadline": "January 2 of every second year after formation",
+    "anchor": "year_after_formation",
     "feeDetail": {
       "basis": "flat",
       "amount": 100
@@ -37,8 +36,7 @@
       "basis": "flat",
       "amount": 5,
       "note": "Penalty for failure to file a required biennial report."
-    },
-    "anchor": "formation"
+    }
   },
   "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
@@ -48,8 +46,17 @@
   "salesTax": {
     "statewide": false,
     "permit": "Local (borough/city) sales tax registration",
+    "permitFee": {
+      "basis": "none",
+      "amount": 0,
+      "note": "The state has no statewide sales tax, so there is no sales tax permit fee."
+    },
     "agency": null,
-    "alternative": "Alaska has no statewide sales tax; many boroughs and cities levy their own and sellers into Alaska register with the Alaska Remote Seller Sales Tax Commission (ARSSTC)."
+    "alternative": "Alaska has no statewide sales tax; many boroughs and cities levy their own and sellers into Alaska register with the Alaska Remote Seller Sales Tax Commission (ARSSTC).",
+    "penalty": {
+      "basis": "none",
+      "note": "The state has no statewide sales tax, so there is no late sales tax return penalty."
+    }
   },
   "localSalesTax": "locally_administered",
   "economicNexusUsd": 100000,
@@ -65,6 +72,28 @@
     "stateFund": false,
     "trigger": {
       "minEmployees": 1
+    }
+  },
+  "penalties": {
+    "unemployment": {
+      "basis": "percent",
+      "percentPerMonth": 5,
+      "note": "5% of the contributions due for each 30 days or fraction the report is late, with a $10 minimum and a 25% maximum.",
+      "rate": 25,
+      "min": 10
+    },
+    "newHire": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late new hire report was found; secondary sources conflict or give only the federal $25 and $500 ceilings."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "per_item",
+      "note": "Civil penalty of up to $1,000 per uninsured employee per day of employment.",
+      "perUnit": 1000
     }
   },
   "paidLeave": null,

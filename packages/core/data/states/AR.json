@@ -72,8 +72,19 @@
   "salesTax": {
     "statewide": true,
     "permit": "Arkansas sales tax permit",
+    "permitFee": {
+      "basis": "flat",
+      "amount": 50,
+      "note": "Sales tax permit fee, paid electronically with the application."
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "percentPerMonth": 5,
+      "note": "5% of the tax for each month or fraction the return is late, up to 35% (Ark. Rule 006.05.06 sec. 85).",
+      "rate": 35
+    }
   },
   "localSalesTax": "state_administered",
   "economicNexusUsd": 100000,
@@ -88,6 +99,26 @@
     "stateFund": false,
     "trigger": {
       "minEmployees": 3
+    }
+  },
+  "penalties": {
+    "unemployment": {
+      "basis": "percent",
+      "note": "Greater of $20 or 10% of the contributions due for a report filed more than 20 days late (Ark. Code 11-10-717).",
+      "rate": 10,
+      "min": 20
+    },
+    "newHire": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late new hire report was found; secondary sources conflict or give only the federal $25 and $500 ceilings."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for lacking required coverage was found; secondary sources conflict."
     }
   },
   "paidLeave": null,

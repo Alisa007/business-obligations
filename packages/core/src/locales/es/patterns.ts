@@ -8,6 +8,8 @@ export const patterns: NonNullable<Catalog["patterns"]> = [
   // ── Renewals: "Renew every year; due <deadline>". The deadline is translated on its own.
   ["Renew every year; due {1}", "Renovar cada año; vence: {1}"],
   ["Renew every two years; due {1}", "Renovar cada dos años; vence: {1}"],
+  ["Renew every three years; due {1}", "Renovar cada tres años; vence: {1}"],
+  ["Renew every five years; due {1}", "Renovar cada cinco años; vence: {1}"],
 
   // ── Reasons
   ["{1:w} entities need an EIN", "Las entidades del tipo {1} necesitan un EIN"],

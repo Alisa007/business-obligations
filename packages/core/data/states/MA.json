@@ -71,8 +71,17 @@
   "salesTax": {
     "statewide": true,
     "permit": "Massachusetts sales tax registration (MassTaxConnect)",
+    "permitFee": {
+      "basis": "unknown"
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "percentPerMonth": 1,
+      "note": "1% of the tax per month or part of a month the return is late, up to 25%.",
+      "rate": 25
+    }
   },
   "localSalesTax": "none",
   "economicNexusUsd": 100000,
@@ -87,6 +96,27 @@
     "stateFund": false,
     "trigger": {
       "minEmployees": 1
+    }
+  },
+  "penalties": {
+    "unemployment": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late wage report was found in the state agency's published sources."
+    },
+    "newHire": {
+      "basis": "flat",
+      "amount": 25,
+      "note": "Up to $25 for each employee not reported or inaccurately reported, or $500 for collusion."
+    },
+    "laborPosters": {
+      "basis": "flat",
+      "amount": 100,
+      "note": "Failing to post the workers' compensation notice may bring a $100 fine."
+    },
+    "workersComp": {
+      "basis": "per_item",
+      "note": "Minimum fines of $100 per day, including weekends and holidays, under a stop-work order.",
+      "perUnit": 100
     }
   },
   "paidLeave": {

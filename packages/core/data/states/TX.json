@@ -57,8 +57,18 @@
   "salesTax": {
     "statewide": true,
     "permit": "Texas Sales and Use Tax Permit",
+    "permitFee": {
+      "basis": "none",
+      "amount": 0,
+      "note": "There is no fee for a Texas sales and use tax permit, though a security bond may be required."
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "note": "$50 for each report filed late, plus 5% of the tax paid 1 to 30 days late and 10% if paid after that.",
+      "rate": 10
+    }
   },
   "localSalesTax": "state_administered",
   "economicNexusUsd": 500000,
@@ -75,6 +85,26 @@
     "trigger": {
       "minEmployees": 1,
       "elective": true
+    }
+  },
+  "penalties": {
+    "unemployment": {
+      "basis": "flat",
+      "amount": 15,
+      "note": "$15 if filed within 15 days after the due date; later reports pay 0.05% of taxable wages plus $30, rising the longer it is late."
+    },
+    "newHire": {
+      "basis": "flat",
+      "amount": 25,
+      "note": "$25 for each unreported hire, or $500 for conspiring with an employee not to report."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "none",
+      "note": "Coverage is elective; non-subscribers lose common-law defenses in injury suits."
     }
   },
   "paidLeave": null,

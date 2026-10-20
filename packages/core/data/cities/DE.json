@@ -14,10 +14,12 @@
         "url": ["https://firststeps.delaware.gov/local/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       }
     ],
@@ -66,10 +68,12 @@
         "url": ["https://ardentown.delaware.gov/bylaws-ordinances-permits/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       }
     ],
@@ -144,10 +148,12 @@
         "url": ["https://bethel.delaware.gov/building-permit-information/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       }
     ],
@@ -166,6 +172,7 @@
         "authority": "Town of Blades",
         "description": "The Town of Blades fee schedule effective August 12, 2024 charges $100.00 for a general services business license, $200.00 for a rental license on an apartment, cottage or house of one or two bedrooms, and $100.00 for an office or building rental.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://blades.delaware.gov/files/2024/11/2024-UPDATED-Town-Fee-Schedule-08.12.2024.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
@@ -174,8 +181,7 @@
         },
         "penalty": {
           "basis": "unknown"
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -219,6 +225,7 @@
         "authority": "Town of Bridgeville",
         "description": "Every business in Bridgeville fills in the town's yearly business license application, with a copy of its Delaware business license and a certificate of liability insurance. The annual fee is $100, but a business physically inside the town limits does not have to pay it. Payment is online at the town's site and the documents go to the town by email.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://bridgeville.delaware.gov/license/"],
         "appliesTo": ["all"],
         "feeDetail": {
@@ -226,8 +233,7 @@
         },
         "penalty": {
           "basis": "unknown"
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -270,6 +276,7 @@
         "authority": "Town of Cheswold",
         "description": "A business in Cheswold needs a town license renewed every year, with the initial fee paid with the application and renewals at the same rates. The town's schedule, revised February 3, 2025, charges $100 for a bar, restaurant, auto repair or day care of 1 to 5 children, $65 for a one-chair barber or beauty shop plus $15 per extra chair, $120 for retail and grocery up to 3,000 square feet, $150 for auto sales, $175 for accounting, $200 for a commercial contractor, $300 for each attorney and $500 for a bank or gas station, among other types. Mobile home parks of 35 or fewer homes are exempt, and some fees are not listed.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://cheswold.delaware.gov/businesslicense/"],
         "appliesTo": ["all"],
         "feeDetail": {
@@ -278,8 +285,7 @@
         },
         "penalty": {
           "basis": "unknown"
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -326,7 +332,8 @@
         "url": ["https://dagsboro.delaware.gov/events/deadline-for-2026-business-license-renewals/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The town's renewal notice gives no base fee; a late payment costs $45 for each license."
         },
         "penalty": {
           "basis": "unknown"
@@ -368,10 +375,12 @@
         "url": ["https://www.delawarecity.org/planning-and-zoning/pages/permits"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       }
     ],
@@ -419,7 +428,8 @@
         "url": ["https://www.townofdeweybeach.gov/businesslicenses2026"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "A one-day business license costs $27; the town's page does not list the annual fees."
         },
         "penalty": {
           "basis": "unknown"
@@ -454,7 +464,10 @@
           "min": 28
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10,
+          "percentPerMonth": 10,
+          "note": "10% of the fee for each month a renewal is unpaid after August 31."
         }
       }
     ],
@@ -575,10 +588,12 @@
         "url": ["https://felton.delaware.gov/building-permits/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       }
     ],
@@ -630,7 +645,9 @@
           "amount": 75
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 150,
+          "note": "Penalty for failing to get a license, plus a stop work order."
         }
       }
     ],
@@ -650,6 +667,7 @@
         "authority": "Town of Frederica",
         "description": "Frederica’s fee schedule lists an annual business license and the town provides a business-license application.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://frederica.delaware.gov/files/2025/06/24-04-Updated-Fees.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
@@ -658,8 +676,7 @@
         },
         "penalty": {
           "basis": "unknown"
-        },
-        "anchor": "license_issued"
+        }
       },
       {
         "id": "frederica-de.building-permit",
@@ -671,10 +688,12 @@
         "url": ["https://frederica.delaware.gov/forms-reports/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       }
     ],
@@ -693,6 +712,7 @@
         "authority": "Town of Georgetown Planning Department",
         "description": "A person or company doing business within Georgetown town limits needs a town business license under Chapter 130 of the town code. The cost varies with the type and location of the business, with fees set in Chapter 98, and the application is at the Planning Department on The Circle or on the town's website. A Delaware state business license from the Division of Revenue is also needed.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://www.georgetowndel.com/starting-a-business.htm"],
         "appliesTo": ["all"],
         "feeDetail": {
@@ -700,8 +720,7 @@
         },
         "penalty": {
           "basis": "unknown"
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -774,10 +793,12 @@
         "url": ["https://hartly.delaware.gov/files/2018/04/10-03-2016-001-Signed.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       }
     ],
@@ -842,10 +863,12 @@
         "url": ["https://houston.delaware.gov/forms"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       }
     ],
@@ -868,10 +891,12 @@
         "url": ["https://kenton.delaware.gov/forms/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       }
     ],
@@ -890,6 +915,7 @@
         "authority": "Town of Laurel Code Enforcement",
         "description": "A business opening in Laurel needs a town business license, obtained after the Delaware state business license, the pre-development meeting with the Code Enforcement Officer, and final inspection and approval. The town's guide gives no fee, and the application is on its website. Depending on the business, approvals from DelDOT, the State Fire Marshal, Sussex County, the Division of Public Health or DNREC may also be needed.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://www.townoflaurel.net/pdfs/How_to_start_a_business.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
@@ -897,8 +923,7 @@
         },
         "penalty": {
           "basis": "unknown"
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -958,6 +983,7 @@
         "authority": "City of Lewes Building Department",
         "description": "Each residential rental unit in Lewes, short-term or long-term, needs a city rental license, which costs $200 a year. A second violation notice costs $250 and a third $500 with the rental license suspended for 12 months.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://www.ci.lewes.de.us/DocumentCenter/View/4914/Fees-and-Charges-for-City-412025"],
         "naics": ["5311", "531110", "531311", "721199"],
         "appliesTo": ["all"],
@@ -967,8 +993,7 @@
         },
         "penalty": {
           "basis": "unknown"
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -994,7 +1019,8 @@
           "amount": 50
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       }
     ],
@@ -1023,7 +1049,8 @@
           "amount": 75
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       }
     ],
@@ -1049,7 +1076,10 @@
           "min": 50
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 1,
+          "percentPerMonth": 1,
+          "note": "1% a month on payments after February 15, plus a $100 failure-to-file fee."
         }
       }
     ],
@@ -1128,7 +1158,9 @@
           "amount": 100
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 50,
+          "note": "Late fee for an invoice not paid by June 1."
         }
       }
     ],
@@ -1169,10 +1201,12 @@
         "url": ["https://www.milton.delaware.gov/forms/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       }
     ],
@@ -1200,7 +1234,10 @@
           "min": 50
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10,
+          "percentPerMonth": 10,
+          "note": "10% a month on an application received after February 1."
         }
       }
     ],
@@ -1237,6 +1274,7 @@
         "authority": "City of Newark Planning and Development",
         "description": "A landlord renting in Newark needs a rental license for each unit. The 2026 fees are $234 per unit in a single-family or two-family home, $160 per townhouse or condominium unit, $86 per unit in buildings of three or more units, and $49 per occupant in fraternities, sororities and boarding houses. A bill paid late adds 5% and then 1.5% a month, and a $5 technology fee applies to every business and rental license.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://newarkde.gov/DocumentCenter/View/18740/2024-Fee-Schedule"],
         "naics": ["5311", "531110", "531311"],
         "appliesTo": ["all"],
@@ -1246,8 +1284,7 @@
         },
         "penalty": {
           "basis": "unknown"
-        },
-        "anchor": "license_issued"
+        }
       },
       {
         "id": "newark-de.contractor-fire-licenses",
@@ -1256,6 +1293,7 @@
         "authority": "City of Newark Planning and Development",
         "description": "The 2026 Newark fee schedule charges $100 for a contractor's license, $50 for an elevator license, and $100 a year for a fire license. Fire safety registration is $100 per registration and each fire alarm or suppression system report $25. Annual sign fees are $1.25 per square foot with a $55 minimum.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://newarkde.gov/DocumentCenter/View/18740/2024-Fee-Schedule"],
         "naics": ["236", "237", "238"],
         "appliesTo": ["all"],
@@ -1265,8 +1303,7 @@
         },
         "penalty": {
           "basis": "unknown"
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -1284,15 +1321,16 @@
         "authority": "Town of Newport",
         "description": "Every business located in Newport, and every outside contractor working in the town, needs a town business license on top of the state license, and owners who lease commercial or residential property need a renter's license. The town posts a 2026 application and fee schedule, which could not be read here. Structural, plumbing, mechanical and electrical permits cost $11 for the first $1,000 of job value and $6 for each additional $1,000, with a $50 minimum.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://newport.delaware.gov/business-licensespermits/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The town posts a yearly fee schedule; permits cost $11 for the first $1,000 of job value."
         },
         "penalty": {
           "basis": "unknown"
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -1340,10 +1378,12 @@
         "url": ["https://odessa.delaware.gov/building-permits/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       }
     ],
@@ -1362,15 +1402,16 @@
         "authority": "City of Rehoboth Beach Building & Licensing Department",
         "description": "Every business inside Rehoboth Beach city limits, and every contractor or company providing products or services within the city, must hold a current city business license from the Building & Licensing Department. Renewal needs a copy of the current Delaware business license and a certificate of liability insurance naming the city as certificate holder, and residential rentals, outdoor dining on public space and restaurants have their own licenses or permits. A Restaurant Permit of Compliance application costs $1,000. The city's pages show no business license fee table; call 302-227-6181.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://www.rehobothbeachde.gov/35/Businesses"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business."
         },
         "penalty": {
           "basis": "unknown"
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -1414,6 +1455,7 @@
         "authority": "Town of Selbyville",
         "description": "Under an ordinance passed May 1, 2023, anyone without an establishment in Selbyville who sells merchandise, provides services, rents units or serves food within town limits must hold a town business license, and businesses inside the town are licensed under the town code too. The town's page gives no fee or term, so ask Town Hall.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://selbyville.delaware.gov/?p=8367"],
         "appliesTo": ["all"],
         "feeDetail": {
@@ -1421,8 +1463,7 @@
         },
         "penalty": {
           "basis": "unknown"
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -1444,10 +1485,12 @@
         "url": ["https://slaughterbeach.delaware.gov/buildingconstruction-permitsforms/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       }
     ],
@@ -1483,6 +1526,7 @@
         "authority": "Town of Smyrna Code Enforcement",
         "description": "A landlord who rents out property in Smyrna needs a rental license, which costs $100 in 2026, plus a $75 rental inspection and $100 for any re-inspection.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://smyrna.delaware.gov/DocumentCenter/View/3314/2026-Town-of-Smyrna-Fee-Schedule"],
         "naics": ["5311", "531110", "531311"],
         "appliesTo": ["all"],
@@ -1492,8 +1536,7 @@
         },
         "penalty": {
           "basis": "unknown"
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -1546,7 +1589,10 @@
           "min": 130
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10,
+          "percentPerMonth": 10,
+          "note": "10% a month after February 15; each day is a separate violation."
         }
       }
     ],
@@ -1569,10 +1615,12 @@
         "url": ["https://viola.delaware.gov/building-permits/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       }
     ],
@@ -1624,10 +1672,12 @@
         "url": ["https://woodside.delaware.gov/building-permits/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       }
     ],
@@ -1646,6 +1696,7 @@
         "authority": "Town of Wyoming",
         "description": "A business with a physical address in Wyoming needs a town license each year, with the fee set by headcount: $108.75 for 1 to 6 employees, $181.25 for 7 to 12, $253.75 for 13 to 18, $326.25 for 19 to 24 and $398.75 for 25 or more. A non-resident contractor pays $145.00 a year, and a landlord pays $145.00 a year for the first rental unit plus $36.00 for each additional unit, with an $85.00 rental inspection before a rental certificate of occupancy. An unpaid balance accrues interest of 10% a month after the license expires.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://wyoming.delaware.gov/license-applications-permits/"],
         "appliesTo": ["all"],
         "feeDetail": {
@@ -1654,8 +1705,7 @@
         },
         "penalty": {
           "basis": "unknown"
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-18",

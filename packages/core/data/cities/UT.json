@@ -12,6 +12,7 @@
         "authority": "Provo City Administrative Services",
         "description": "Business licenses renew annually; under city code the renewal application should be submitted at least 90 days before the expiration date, and a late filing does not change the expiration.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "deadline": "90 days before the expiration date",
         "url": ["https://www.provo.gov/196/Commercial-Business-License"],
         "appliesTo": ["all"],
@@ -20,8 +21,7 @@
         },
         "penalty": {
           "basis": "unknown"
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "status": "rules"
@@ -38,6 +38,7 @@
         "authority": "Salt Lake City Finance, Business Licensing",
         "description": "Anyone who does business within the city limits, permanently or temporarily, and every residential rental property must keep a valid, unexpired business license for each location, renewed each year online. Commercial licenses are reviewed for zoning, building and fire safety, and food businesses also need the Salt Lake Valley Health Department. A business run from home needs no license unless it affects the neighborhood.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "deadline": "Before opening, then renew each year",
         "url": ["https://www.slc.gov/Finance/business-licensing/"],
         "appliesTo": ["all"],
@@ -46,8 +47,7 @@
         },
         "penalty": {
           "basis": "unknown"
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "sourceUrl": ["https://www.slc.gov/Finance/business-licensing/"],
@@ -67,6 +67,7 @@
         "authority": "City of West Jordan Business Licensing",
         "description": "Business licenses renew annually; the city emails the renewal invoice 45 days before the license expires.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "deadline": "License expiration date",
         "url": ["https://westjordan.utah.gov/business-licensing/"],
         "appliesTo": ["all"],
@@ -75,8 +76,7 @@
         },
         "penalty": {
           "basis": "unknown"
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "status": "rules"
@@ -94,6 +94,7 @@
         "authority": "West Valley City Business Licensing",
         "description": "A business with a place of business in the city limits needs a city business license, which can be renewed online. A home-based business needs a home business license unless it grosses less than $2,000 a year, and the owner of a rental dwelling unit must keep a license current too. Fees are in the city's consolidated fee schedule.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "deadline": "Before opening, then renew each year",
         "url": ["https://www.wvc-ut.gov/government/department_list/finance/business_licensing/index.php"],
         "appliesTo": ["all"],
@@ -112,12 +113,12 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "Fees are in the city's consolidated fee schedule."
         },
         "penalty": {
           "basis": "unknown"
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -129,7 +130,7 @@
     "reason": "city-license-unconfirmed",
     "items": [
       {
-        "id": "st-george.local-licenses",
+        "id": "st-george-ut.local-licenses",
         "title": "Review applicable local licenses and permits in St. George",
         "category": "license",
         "authority": "St. George local licensing authority",
@@ -138,10 +139,12 @@
         "url": ["https://commerce.utah.gov/corporations/business-entities/dba/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
@@ -164,10 +167,12 @@
         "url": ["https://commerce.utah.gov/corporations/business-entities/dba/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
@@ -190,10 +195,12 @@
         "url": ["https://commerce.utah.gov/corporations/business-entities/dba/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
@@ -216,10 +223,12 @@
         "url": ["https://commerce.utah.gov/corporations/business-entities/dba/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
@@ -242,10 +251,12 @@
         "url": ["https://commerce.utah.gov/corporations/business-entities/dba/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
@@ -268,10 +279,12 @@
         "url": ["https://commerce.utah.gov/corporations/business-entities/dba/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
@@ -294,10 +307,12 @@
         "url": ["https://commerce.utah.gov/corporations/business-entities/dba/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
@@ -320,10 +335,12 @@
         "url": ["https://commerce.utah.gov/corporations/business-entities/dba/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
@@ -346,10 +363,12 @@
         "url": ["https://commerce.utah.gov/corporations/business-entities/dba/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
@@ -372,10 +391,12 @@
         "url": ["https://commerce.utah.gov/corporations/business-entities/dba/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
@@ -398,10 +419,12 @@
         "url": ["https://commerce.utah.gov/corporations/business-entities/dba/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
@@ -424,10 +447,12 @@
         "url": ["https://commerce.utah.gov/corporations/business-entities/dba/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
@@ -450,10 +475,12 @@
         "url": ["https://commerce.utah.gov/corporations/business-entities/dba/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
@@ -476,10 +503,12 @@
         "url": ["https://commerce.utah.gov/corporations/business-entities/dba/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
@@ -502,10 +531,12 @@
         "url": ["https://commerce.utah.gov/corporations/business-entities/dba/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
@@ -528,10 +559,12 @@
         "url": ["https://commerce.utah.gov/corporations/business-entities/dba/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
@@ -554,10 +587,12 @@
         "url": ["https://commerce.utah.gov/corporations/business-entities/dba/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
@@ -580,10 +615,12 @@
         "url": ["https://commerce.utah.gov/corporations/business-entities/dba/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
@@ -606,10 +643,12 @@
         "url": ["https://commerce.utah.gov/corporations/business-entities/dba/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
@@ -632,10 +671,12 @@
         "url": ["https://commerce.utah.gov/corporations/business-entities/dba/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],

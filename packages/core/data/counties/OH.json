@@ -249,6 +249,7 @@
         "authority": "Belmont County Auditor",
         "description": "Businesses making taxable retail sales in Belmont County must obtain an Ohio vendor license; the current application fee is $50.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://belmontcountyauditor.org/vendor-s-license",
           "https://tax.ohio.gov/business/sales-and-use-tax"
@@ -271,8 +272,7 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "anchor": "license_issued"
+        }
       },
       {
         "id": "belmont-oh.food-license",
@@ -357,6 +357,7 @@
         "authority": "Butler County Auditor",
         "description": "Businesses selling taxable goods or services in Butler County must obtain an Ohio vendor license; the current one-time application fee is $50.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://cms3.revize.com/revize/butlercountyauditor/Documents/Licensing/Vendor%20License%20Fee%20Increase%20Apr%202025.pdf",
           "https://tax.ohio.gov/business/sales-and-use-tax"
@@ -379,8 +380,7 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "anchor": "license_issued"
+        }
       },
       {
         "id": "butler-oh.food-license",
@@ -765,10 +765,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10,
+          "note": "10% penalty plus 3% monthly interest."
         }
       }
     ],
@@ -1032,6 +1036,7 @@
         "authority": "Ohio Department of Taxation",
         "description": "Businesses making taxable retail sales in Franklin County must obtain an Ohio vendor license; the current state fee is $50 for each fixed place of business.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.franklincountyohio.gov/Business-Development/Development-Planning/Food-Action-Plan/Food-Business-Portal/Business-Location-Compliance",
           "https://tax.ohio.gov/business/sales-and-use-tax"
@@ -1054,8 +1059,7 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "anchor": "license_issued"
+        }
       },
       {
         "id": "franklin-oh.food-license",
@@ -1317,7 +1321,9 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
           "basis": "unknown"
@@ -1802,7 +1808,9 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
           "basis": "unknown"
@@ -1949,6 +1957,7 @@
         "authority": "Lorain County Auditor",
         "description": "Businesses making taxable retail sales or providing taxable services in Ohio must obtain the applicable vendor license; Lorain County's current notice states the new-license application fee is $50.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://loraincountyauditor.gov/Forms/GetFile?fileId=7489",
           "https://tax.ohio.gov/business/sales-and-use-tax"
@@ -1971,8 +1980,7 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "anchor": "license_issued"
+        }
       },
       {
         "id": "lorain-oh.food-license",
@@ -2030,7 +2038,9 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
           "basis": "unknown"
@@ -2054,7 +2064,9 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
           "basis": "unknown"
@@ -2399,7 +2411,9 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
           "basis": "unknown"
@@ -3174,6 +3188,7 @@
         "authority": "Summit County Fiscal Office, Lodging Excise Tax Department",
         "description": "The tax is 5.5%. Lodging establishments mail each month's return with payment to the Lodging Excise Tax Department in Akron; the page read does not state the day of the month. The lodging registration form is due by January 31 each year. Phone 330-643-2437.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12",
+        "anchor": "assigned",
         "url": ["https://fiscaloffice.summitoh.net/lodging-excise-tax"],
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -3185,12 +3200,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
           "basis": "unknown"
-        },
-        "anchor": "assigned"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -3208,6 +3224,7 @@
         "authority": "Trumbull County Auditor",
         "description": "Every Ohio retailer making taxable retail sales in Trumbull County must obtain a vendor license; the current application fee is $50.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.co.trumbull.oh.us/Auditor/Licenses/Vendor",
           "https://tax.ohio.gov/business/sales-and-use-tax"
@@ -3230,8 +3247,7 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "anchor": "license_issued"
+        }
       },
       {
         "id": "trumbull-oh.food-license",
@@ -3442,6 +3458,7 @@
         "authority": "Warren County Auditor",
         "description": "Businesses making taxable retail sales or providing taxable services in Warren County must obtain the applicable vendor license; a regular license has a $50 application fee.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://auditor.warrencountyohio.gov/Licensing/VendorGenInfo/Index",
           "https://auditor.warrencountyohio.gov/Licensing/VendorRegLic/Index"
@@ -3464,8 +3481,7 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "anchor": "license_issued"
+        }
       },
       {
         "id": "warren-oh.food-license",
@@ -3628,6 +3644,7 @@
         "authority": "Wood County Auditor",
         "description": "Businesses making taxable retail sales in Wood County must obtain an Ohio vendor license; the county auditor lists a $50 application fee and no annual renewal fee for a transient license.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://auditor.co.wood.oh.us/faq/", "https://tax.ohio.gov/business/sales-and-use-tax"],
         "feeDetail": {
           "basis": "flat",
@@ -3647,8 +3664,7 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "anchor": "license_issued"
+        }
       },
       {
         "id": "wood-oh.food-license",

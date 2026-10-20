@@ -19,10 +19,15 @@
     ],
     "exemptions": ["Employers that sponsor a qualified retirement plan (they still certify the exemption)"],
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "none",
+      "amount": 0,
+      "note": "There is no fee to file or register."
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "per_item",
+      "note": "$100 per eligible employee a year, enforced one year after the employer's due date.",
+      "perUnit": 100,
+      "max": 5000
     }
   }
 ]

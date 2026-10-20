@@ -45,8 +45,19 @@
   "salesTax": {
     "statewide": true,
     "permit": "Maine sales tax registration (Retailer's Registration)",
+    "permitFee": {
+      "basis": "none",
+      "amount": 0,
+      "note": "Maine charges no fee to register for a sales and use tax account."
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "note": "Greater of $25 or 10% of the tax due for a late return; 1% of the unpaid tax per month, up to 25%, for late payment.",
+      "rate": 10,
+      "min": 25
+    }
   },
   "localSalesTax": "none",
   "economicNexusUsd": 100000,
@@ -61,6 +72,24 @@
     "stateFund": false,
     "trigger": {
       "minEmployees": 1
+    }
+  },
+  "penalties": {
+    "unemployment": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late wage report was found in the state agency's published sources."
+    },
+    "newHire": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late new hire report was found; secondary sources conflict or give only the federal $25 and $500 ceilings."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for lacking required coverage was found; secondary sources conflict."
     }
   },
   "paidLeave": {

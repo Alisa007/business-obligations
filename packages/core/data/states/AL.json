@@ -23,8 +23,19 @@
   "salesTax": {
     "statewide": true,
     "permit": "Sales tax account (My Alabama Taxes)",
+    "permitFee": {
+      "basis": "none",
+      "amount": 0,
+      "note": "Online registration through My Alabama Taxes is free; a sales tax license is mailed later."
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "note": "Greater of 10% of the tax due or $50 for a late return.",
+      "rate": 10,
+      "min": 50
+    }
   },
   "localSalesTax": "locally_administered",
   "economicNexusUsd": 250000,
@@ -39,6 +50,28 @@
     "stateFund": false,
     "trigger": {
       "minEmployees": 5
+    }
+  },
+  "penalties": {
+    "unemployment": {
+      "basis": "percent",
+      "note": "10% penalty plus interest when contributions are not paid on time without good cause (Ala. Code 25-4-133).",
+      "rate": 10
+    },
+    "newHire": {
+      "basis": "flat",
+      "amount": 25,
+      "note": "$25 per occurrence for failing to report a new hire."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "range",
+      "note": "Misdemeanor fine of $100 to $1,000, double the compensation otherwise payable, and civil penalties up to $100 a day (Ala. Code 25-5-8).",
+      "min": 100,
+      "max": 1000
     }
   },
   "paidLeave": null,

@@ -207,6 +207,27 @@
         }
       }
     },
+    "dueRelative": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "from"],
+      "properties": {
+        "type": { "const": "relative" },
+        "from": {
+          "enum": [
+            "formation",
+            "license_issued",
+            "fiscal_year_start",
+            "fiscal_year_end",
+            "announced",
+            "assigned"
+          ]
+        },
+        "monthsAfter": { "type": "integer", "minimum": 1, "maximum": 11 },
+        "day": { "type": "integer", "minimum": -1, "maximum": 31 },
+        "daysAfter": { "type": "integer", "minimum": 1, "maximum": 90 }
+      }
+    },
     "dueMulti": {
       "type": "object",
       "additionalProperties": false,
@@ -248,8 +269,8 @@
       "required": ["basis"],
       "properties": {
         "basis": {
-          "enum": ["flat", "percent", "per_item", "range", "none", "unknown"],
-          "description": "flat = fixed charge; percent = percentage of a stated base; per_item = charge per filing or unit; range = a published minimum/maximum; none = no penalty; unknown = not yet researched."
+          "enum": ["flat", "percent", "per_item", "range", "none", "not_stated", "unknown"],
+          "description": "flat = fixed charge; percent = percentage of a stated base; per_item = charge per filing or unit; range = a published minimum/maximum; none = no penalty; not_stated = a penalty applies but the published sources give no amount; unknown = not yet researched."
         },
         "amount": { "type": "number", "minimum": 0 },
         "percentPerMonth": { "type": "number", "minimum": 0 },
@@ -294,7 +315,7 @@
           }
         },
         {
-          "if": { "properties": { "basis": { "enum": ["none", "unknown"] } } },
+          "if": { "properties": { "basis": { "enum": ["none", "not_stated", "unknown"] } } },
           "then": {
             "not": {
               "anyOf": [

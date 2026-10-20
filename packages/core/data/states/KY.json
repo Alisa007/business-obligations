@@ -44,8 +44,18 @@
   "salesTax": {
     "statewide": true,
     "permit": "Kentucky sales and use tax permit",
+    "permitFee": {
+      "basis": "unknown"
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "percentPerMonth": 2,
+      "note": "2% of the tax for each 30 days or part of 30 days the return is late, up to 20%, with a $10 minimum.",
+      "rate": 20,
+      "min": 10
+    }
   },
   "localSalesTax": "none",
   "economicNexusUsd": 100000,
@@ -60,6 +70,26 @@
     "stateFund": false,
     "trigger": {
       "minEmployees": 1
+    }
+  },
+  "penalties": {
+    "unemployment": {
+      "basis": "range",
+      "note": "$25 for a first late report filed within 30 days, $75 after 30 days, more for later late reports in the same year, up to $600 a calendar year.",
+      "min": 25,
+      "max": 600
+    },
+    "newHire": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late new hire report was found; secondary sources conflict or give only the federal $25 and $500 ceilings."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for lacking required coverage was found; secondary sources conflict."
     }
   },
   "paidLeave": null,

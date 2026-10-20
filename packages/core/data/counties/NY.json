@@ -21,10 +21,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -46,7 +49,9 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
           "basis": "unknown"
@@ -78,7 +83,9 @@
         "exemptions": ["Permanent residents occupying a room for at least 30 consecutive days"],
         "url": ["https://www.alleganyco.gov/wp-content/uploads/Local-Law-3-2003.pdf"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
           "basis": "unknown"
@@ -115,10 +122,15 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month or part of a month the return is late, up to 25%; a further 0.5% a month applies to tax paid late."
         }
       }
     ],
@@ -146,10 +158,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -171,10 +186,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% penalty plus interest of 1% of the tax per month."
         }
       }
     ],
@@ -203,10 +222,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -227,10 +249,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% penalty; interest of 1% a month starts after 30 days."
         }
       }
     ],
@@ -259,10 +285,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -284,7 +313,9 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
           "basis": "unknown"
@@ -317,7 +348,9 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
           "basis": "unknown"
@@ -348,10 +381,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -361,6 +397,7 @@
         "authority": "Chemung County Treasurer",
         "description": "Operators file the county's Occupancy Tax Return (PDF on the Treasurer's page) quarterly. The return's exact due dates could not be read.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10",
+        "anchor": "assigned",
         "exemptions": ["Permanent residents (stays of 30 or more consecutive days)"],
         "url": ["https://www.chemungcountyny.gov/180"],
         "appliesTo": ["all"],
@@ -373,12 +410,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
           "basis": "unknown"
-        },
-        "anchor": "assigned"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -407,10 +445,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -433,10 +474,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10,
+          "note": "10% penalty plus 1.5% interest for each additional month."
         }
       }
     ],
@@ -467,10 +512,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10,
+          "note": "10% penalty; interest of 1.5% after 30 days."
         }
       }
     ],
@@ -498,10 +547,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -522,7 +574,9 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
           "basis": "unknown"
@@ -554,10 +608,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -579,7 +636,9 @@
         ],
         "exemptions": ["Permanent residents (stays of at least 30 consecutive days)"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
           "basis": "unknown"
@@ -615,10 +674,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -639,7 +701,9 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
           "basis": "unknown"
@@ -670,10 +734,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -694,7 +761,9 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
           "basis": "unknown"
@@ -723,10 +792,15 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month or part of a month the return is late, up to 25%; a further 0.5% a month applies to tax paid late."
         }
       }
     ],
@@ -755,10 +829,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -780,7 +857,9 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
           "basis": "unknown"
@@ -813,10 +892,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -839,10 +921,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% penalty, and interest of 1% a month when payment is more than 30 days after the period."
         }
       }
     ],
@@ -873,10 +959,13 @@
           "https://cms8.revize.com/revize/franklincountyny/Document_Center/Administrative/Board%20Of%20Legislators/2021-2030/Proposed%20Changes%20to%20Franklin%20County%20Room%20Occupancy%20Tax%20Law.pdf"
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -900,7 +989,9 @@
           "https://cms8.revize.com/revize/franklincountyny/Document_Center/Administrative/Board%20Of%20Legislators/2021-2030/Proposed%20Changes%20to%20Franklin%20County%20Room%20Occupancy%20Tax%20Law.pdf"
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
           "basis": "unknown"
@@ -932,10 +1023,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -956,7 +1050,9 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
           "basis": "unknown"
@@ -987,10 +1083,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -1000,6 +1099,7 @@
         "authority": "Genesee County Treasurer",
         "description": "Operators file the county bed tax return with payment and remit 3% of taxable room rentals. A late return adds a 5% monthly penalty and 1% monthly interest. The forms read are the 2022 and 2023 versions, so confirm the current ones.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10",
+        "anchor": "assigned",
         "deadline": "Within 20 days after each return period ends",
         "exemptions": ["Permanent residents (stays of 30 or more consecutive days)"],
         "url": ["https://www.geneseeny.gov/Department-Content/Treasurer-and-Real-Property/Bed-Tax"],
@@ -1013,12 +1113,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
-        },
-        "anchor": "assigned"
+          "basis": "percent",
+          "rate": 5,
+          "percentPerMonth": 5,
+          "note": "5% monthly penalty plus 1% monthly interest."
+        }
       }
     ],
     "checkedOn": "2026-10-15",
@@ -1098,10 +1202,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -1123,7 +1230,9 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
           "basis": "unknown"
@@ -1158,10 +1267,15 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month or part of a month the return is late, up to 25%; a further 0.5% a month applies to tax paid late."
         }
       }
     ],
@@ -1190,10 +1304,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -1218,7 +1335,9 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
           "basis": "unknown"
@@ -1249,10 +1368,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -1274,7 +1396,9 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
           "basis": "unknown"
@@ -1295,6 +1419,7 @@
         "authority": "Madison County Treasurer",
         "description": "Hotel, motel and short-term-rental operators register with the Madison County Treasurer at least 10 days before starting business, receive a Certificate of Registration, display it, and re-register every two years. The current law imposes a 4% occupancy tax.",
         "rrule": "FREQ=YEARLY;INTERVAL=2",
+        "anchor": "license_issued",
         "url": [
           "https://www.madisoncounty.ny.gov/DocumentCenter/View/33126/Occupancy-Tax-Law-Effective-July-1-2026"
         ],
@@ -1308,12 +1433,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
-        },
-        "anchor": "license_issued"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
+        }
       },
       {
         "id": "madison-ny.occupancy-tax-return",
@@ -1336,7 +1463,9 @@
         ],
         "exemptions": ["Permanent residents", "Specified exempt organizations"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
           "basis": "unknown"
@@ -1349,6 +1478,7 @@
         "authority": "Madison County Public Health",
         "description": "Hotels, motels and campgrounds must obtain county public-health permits and undergo annual inspections; contact Public Health for the permit or renewal process and before enlarging, building or converting a facility.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://www.madisoncounty.ny.gov/458/Hotels-Motels-Campgrounds-Migrant-Housin"],
         "feeDetail": {
           "basis": "varies",
@@ -1367,8 +1497,7 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -1400,10 +1529,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -1426,10 +1558,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 9,
+          "note": "9% penalty on the tax due and interest of 1.5% a month after 30 days."
         }
       }
     ],
@@ -1457,10 +1593,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -1482,7 +1621,9 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
           "basis": "unknown"
@@ -1513,10 +1654,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's page gives no penalty amount."
         }
       },
       {
@@ -1542,10 +1686,15 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month or part of a month the return is late, up to 25%; a further 0.5% a month applies to tax paid late."
         }
       },
       {
@@ -1555,6 +1704,7 @@
         "authority": "Nassau County Department of Consumer Affairs",
         "description": "Home improvement businesses working in Nassau County need a county license, which lasts two years. The fee schedule lists $650 for a new license or a renewal, plus a separate $50 restitution fund payment, a one-time fingerprinting cost of about $90 and a $110 late fee on renewals filed more than 15 days after expiry; renewals are accepted up to three months after expiry, and outstanding judgments and open consumer complaints must be resolved first. A license from another county does not cover Nassau.",
         "rrule": "FREQ=YEARLY;INTERVAL=2",
+        "anchor": "license_issued",
         "url": ["https://www.nassaucountyny.gov/5384/Fees"],
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -1573,8 +1723,7 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-15",
@@ -1605,10 +1754,15 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month or part of a month the return is late, up to 25%; a further 0.5% a month applies to tax paid late."
         }
       }
     ],
@@ -1626,6 +1780,7 @@
         "authority": "Niagara County Department of Health",
         "description": "Hotels, motels and other temporary residences serving 10 or more overnight occupants require a Niagara County Department of Health permit and annual inspections. Apply at least 30 days before the first proposed day of operation.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "deadline": "Apply at least 30 days before the first proposed day of operation",
         "url": [
           "https://downloads.niagaracounty.gov/departments/a-f/environmental_health/residences%2C_temp_and_other/index.php"
@@ -1647,8 +1802,7 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "sourceUrl": [
@@ -1678,10 +1832,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -1703,10 +1860,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% penalty plus interest."
         }
       }
     ],
@@ -1735,10 +1896,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -1760,7 +1924,9 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
           "basis": "unknown"
@@ -1793,10 +1959,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% after the due date, with 1% monthly interest after 30 days."
         }
       }
     ],
@@ -1824,10 +1994,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -1848,7 +2021,9 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
           "basis": "unknown"
@@ -1877,10 +2052,15 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month or part of a month the return is late, up to 25%; a further 0.5% a month applies to tax paid late."
         }
       }
     ],
@@ -1911,7 +2091,9 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
           "basis": "unknown"
@@ -1944,10 +2126,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -1970,10 +2155,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 50,
+          "note": "Minimum late fee when a mailed payment is not postmarked by the due date."
         }
       }
     ],
@@ -2001,10 +2190,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -2026,7 +2218,9 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
           "basis": "unknown"
@@ -2062,10 +2256,15 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month or part of a month the return is late, up to 25%; a further 0.5% a month applies to tax paid late."
         }
       }
     ],
@@ -2097,10 +2296,15 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month or part of a month the return is late, up to 25%; a further 0.5% a month applies to tax paid late."
         }
       }
     ],
@@ -2128,7 +2332,9 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
           "basis": "unknown"
@@ -2164,10 +2370,15 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month or part of a month the return is late, up to 25%; a further 0.5% a month applies to tax paid late."
         }
       }
     ],
@@ -2200,10 +2411,15 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month or part of a month the return is late, up to 25%; a further 0.5% a month applies to tax paid late."
         }
       },
       {
@@ -2260,7 +2476,9 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
           "basis": "unknown"
@@ -2291,10 +2509,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -2315,7 +2536,9 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
           "basis": "unknown"
@@ -2346,10 +2569,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 50,
+          "note": "Penalty for a return postmarked after the due date."
         }
       }
     ],
@@ -2381,10 +2608,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -2411,7 +2641,9 @@
           "Specified exempt organizations"
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
           "basis": "unknown"
@@ -2447,10 +2679,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -2471,7 +2706,9 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
           "basis": "unknown"
@@ -2506,10 +2743,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -2531,7 +2771,9 @@
         ],
         "exemptions": ["Permanent residents (stays of at least 30 consecutive days)"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
           "basis": "unknown"
@@ -2567,10 +2809,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -2591,10 +2836,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% penalty plus 1% a month interest."
         }
       }
     ],
@@ -2623,10 +2872,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -2648,10 +2900,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10,
+          "note": "10% penalty plus 1% monthly interest starting 30 days after the deadline."
         }
       },
       {
@@ -2677,10 +2933,15 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month or part of a month the return is late, up to 25%; a further 0.5% a month applies to tax paid late."
         }
       },
       {
@@ -2690,6 +2951,7 @@
         "authority": "Suffolk County Department of Consumer Affairs",
         "description": "Home improvement contractors need a county license. Applicants pass a written exam on Suffolk Code chapter 563 and New York General Business Law, and the code sets a $200 application fee and a $200 per year license fee with a two-year term (confirm the amount owed with the office). A renewal must be applied for and paid before expiry or the license becomes void, and pool and spa contractors need six hours of continuing education to renew.",
         "rrule": "FREQ=YEARLY;INTERVAL=2",
+        "anchor": "license_issued",
         "url": [
           "https://suffolkcountyny.gov/Departments/Consumer-Affairs/Type-of-License/Home-Improvement-Contractors"
         ],
@@ -2710,8 +2972,7 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-15",
@@ -2737,10 +2998,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         },
         "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=12;BYMONTHDAY=31",
         "anchor": "2026-12-31"
@@ -2763,7 +3027,9 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
           "basis": "unknown"
@@ -2794,10 +3060,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -2807,6 +3076,7 @@
         "authority": "Tioga County Treasurer",
         "description": "Returns and payment go to the Treasurer quarterly. The return form and exact due dates were not found.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10",
+        "anchor": "assigned",
         "exemptions": ["Permanent residents (stays of 30 or more consecutive days)"],
         "url": ["https://www.tiogacountyny.com/departments/treasurer/"],
         "appliesTo": ["all"],
@@ -2819,12 +3089,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
           "basis": "unknown"
-        },
-        "anchor": "assigned"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -2853,10 +3124,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -2883,7 +3157,9 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
           "basis": "unknown"
@@ -2918,10 +3194,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -2945,7 +3224,9 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
           "basis": "unknown"
@@ -2978,10 +3259,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -3005,10 +3289,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% penalty and interest of 1% a month."
         }
       }
     ],
@@ -3038,10 +3326,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -3066,10 +3357,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% penalty and 1% a month interest after the first 30 days."
         }
       }
     ],
@@ -3106,10 +3401,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -3131,7 +3429,9 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
           "basis": "unknown"
@@ -3160,10 +3460,15 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month or part of a month the return is late, up to 25%; a further 0.5% a month applies to tax paid late."
         }
       },
       {
@@ -3173,6 +3478,7 @@
         "authority": "Westchester County Department of Consumer Protection, Licensing Division",
         "description": "Home improvement contractors need a county license, applied for with a notarized application sent to the Licensing Division in White Plains and requiring proof of insurance and workers' compensation coverage. Since January 1, 2026 the fee is $750 for a two-year license ($100 more for optional expedited review); a renewal received after expiry adds a $50 late fee and is not accepted after 60 days, and vehicle decals cost $10 each. Processing takes about 60 business days.",
         "rrule": "FREQ=YEARLY;INTERVAL=2",
+        "anchor": "license_issued",
         "url": [
           "https://consumer.westchestergov.com/home-contractors-and-trades/home-improvement-licensing-fees"
         ],
@@ -3193,8 +3499,7 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-15",
@@ -3221,10 +3526,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       }
     ],
@@ -3252,10 +3560,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -3277,10 +3588,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% penalty the day after the due date, with interest after 30 days."
         }
       }
     ],

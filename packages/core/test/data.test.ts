@@ -88,7 +88,10 @@ describe("state data files", () => {
     const common = read("schema/common.schema.json") as SchemaNode;
     const resolve = (n: SchemaNode): SchemaNode =>
       n.$ref
-        ? resolve((n.$ref.startsWith("common.") ? common : schema).$defs![n.$ref.split("/").pop()!]!)
+        ? resolve(
+            (n.$ref.startsWith("common.") ? common : schema).$defs![n.$ref.split("/").pop()!] ??
+              common.$defs![n.$ref.split("/").pop()!]!,
+          )
         : n;
     const pick = (n: SchemaNode, v: unknown): SchemaNode => {
       n = resolve(n);
@@ -894,7 +897,7 @@ describe("seed items with appliesWhen", () => {
           category: "filing" as const,
           authority: "Testland Finance",
           description: "Lodging operators remit the county occupancy tax.",
-          rrule: "FREQ=MONTHLY;INTERVAL=3",
+          rrule: "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=-1",
           appliesTo: ["all" as const],
           feeDetail: { basis: "unknown" as const },
           penalty: { basis: "unknown" as const },
@@ -1112,7 +1115,8 @@ describe("schedules in data files", () => {
     ];
     for (const [where, o] of nodes) {
       const { due } = parseRRule(o.rrule as string, o.anchor as string | undefined);
-      if (typeof o.deadline !== "string" || !due || due.type === "anniversary") continue;
+      if (typeof o.deadline !== "string" || !due || due.type === "anniversary" || due.type === "relative")
+        continue;
       // Text such as "15th day of the 4th month after fiscal year end" names no month.
       if (!months.some((m) => (o.deadline as string).includes(m))) continue;
       const dueMonths =
@@ -1134,21 +1138,22 @@ describe("schedules in data files", () => {
     }
   });
 
-  it("reads undated recurrences as a frequency with no due date", () => {
+  it("never reads a recurrence without a date", () => {
+    // A rule gives its exact due date, or the reference it is counted from.
+    for (const rule of ["FREQ=YEARLY", "FREQ=YEARLY;INTERVAL=2", "FREQ=YEARLY;INTERVAL=5", "FREQ=MONTHLY"])
+      expect(() => parseRRule(rule), rule).toThrow();
     for (const [rule, frequency] of [
       ["FREQ=YEARLY", "annual"],
       ["FREQ=YEARLY;INTERVAL=2", "biennial"],
       ["FREQ=YEARLY;INTERVAL=5", "every_five_years"],
-      ["FREQ=MONTHLY", "monthly"],
-      ["FREQ=MONTHLY;INTERVAL=3", "quarterly"],
     ] as const) {
-      const s = parseRRule(rule);
-      expect(s, rule).toEqual({ frequency });
-      expect(toRRule(s.due, s.frequency), rule).toEqual({ rrule: rule });
+      const s = parseRRule(rule, "license_issued");
+      expect(s, rule).toEqual({ due: { type: "relative", from: "license_issued" }, frequency });
+      expect(toRRule(s.due, s.frequency), rule).toEqual({ rrule: rule, anchor: "license_issued" });
     }
     // The anniversary of formation is named, so a bare rule cannot be mistaken for it.
     expect(parseRRule("FREQ=YEARLY", "formation").due).toEqual({ type: "anniversary", point: "date" });
-    expect(() => parseRRule("FREQ=YEARLY;BYMONTHDAY=1", "formation")).toThrow();
+    expect(() => parseRRule("FREQ=YEARLY;BYMONTHDAY=1", "formation_quarter")).toThrow();
     expect(() => parseRRule("FREQ=MONTHLY", "formation")).toThrow();
   });
 
@@ -1185,7 +1190,9 @@ describe("schedules in data files", () => {
       "FREQ=YEARLY;BYDAY=MO",
       "FREQ=YEARLY;BYMONTH=13;BYMONTHDAY=1",
       "FREQ=YEARLY;BYMONTH=5",
-      "FREQ=YEARLY;INTERVAL=3;BYMONTH=5;BYMONTHDAY=1",
+      "FREQ=YEARLY;INTERVAL=4;BYMONTH=5;BYMONTHDAY=1",
+      "FREQ=YEARLY",
+      "FREQ=YEARLY;BYMONTH=1,4,7,10",
       "FREQ=YEARLY;BYMONTH=5;BYMONTHDAY=15;BYMONTH=6",
     ])
       expect(() => parseRRule(bad), bad).toThrow();

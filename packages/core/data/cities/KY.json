@@ -11,18 +11,20 @@
         "authority": "Lexington-Fayette Urban County Government Division of Revenue",
         "description": "Every business entity, including sole proprietors unless the IRS has issued a tax-exempt determination letter, files a net profits license fee return (Form 228) each year and pays the occupational license fee of 2.25% of net profits. The $100 annual minimum is paid with the return, except that individuals and sole proprietors with gross receipts of $4,400 or less owe no minimum for that year and the next but must still file.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "deadline": "On the due date the city publishes each year for Form 228",
         "url": [
           "https://www.lexingtonky.gov/working/business-licensing-taxes/occupational-license-fee-minimum-license-filing-requirements"
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
           "basis": "unknown"
-        },
-        "anchor": "license_issued"
+        }
       },
       {
         "id": "lexington.employer-license-fee-withholding",
@@ -31,18 +33,20 @@
         "authority": "Lexington-Fayette Urban County Government Division of Revenue",
         "description": "Employers withhold the 2.25% occupational license fee from employees' compensation and file the Employer's Return of License Fee Withheld each quarter, or each month once the fee withheld in any quarter exceeds $300. An annual reconciliation of the fee withheld is also filed.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10",
+        "anchor": "assigned",
         "deadline": "Quarterly (monthly above $300 withheld in a quarter), plus an annual reconciliation",
         "url": [
           "https://www.lexingtonky.gov/working/business-licensing-taxes/occupational-license-fee-minimum-license-filing-requirements"
         ],
         "appliesTo": ["employees"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
           "basis": "unknown"
-        },
-        "anchor": "assigned"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -88,7 +92,9 @@
         "appliesTo": ["employees"],
         "checkedOn": "2026-10-19",
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
           "basis": "unknown"
@@ -112,10 +118,12 @@
         "url": ["https://web.sos.ky.gov/forms/corp/ASN-Certificate%20of%20Assumed%20Name.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
@@ -138,10 +146,12 @@
         "url": ["https://web.sos.ky.gov/forms/corp/ASN-Certificate%20of%20Assumed%20Name.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
@@ -164,10 +174,12 @@
         "url": ["https://web.sos.ky.gov/forms/corp/ASN-Certificate%20of%20Assumed%20Name.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
@@ -190,10 +202,12 @@
         "url": ["https://web.sos.ky.gov/forms/corp/ASN-Certificate%20of%20Assumed%20Name.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],

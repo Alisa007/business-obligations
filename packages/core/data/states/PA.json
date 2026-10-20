@@ -73,8 +73,19 @@
   "salesTax": {
     "statewide": true,
     "permit": "Pennsylvania sales tax license (PA-100)",
+    "permitFee": {
+      "basis": "none",
+      "amount": 0,
+      "note": "There is no fee to apply for a sales, use and hotel occupancy tax license through myPATH."
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "percentPerMonth": 5,
+      "note": "5% to 25% penalty for sales tax that is delinquent and not resolved after a notice.",
+      "rate": 25
+    }
   },
   "localSalesTax": "state_administered",
   "economicNexusUsd": 100000,
@@ -89,6 +100,27 @@
     "stateFund": false,
     "trigger": {
       "minEmployees": 1
+    }
+  },
+  "penalties": {
+    "unemployment": {
+      "basis": "percent",
+      "note": "15% of the quarter's total contributions payable, with a $125 minimum and a $450 maximum.",
+      "rate": 15,
+      "min": 125,
+      "max": 450
+    },
+    "newHire": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late new hire report was found; secondary sources conflict or give only the federal $25 and $500 ceilings."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for lacking required coverage was found; secondary sources conflict."
     }
   },
   "paidLeave": null,

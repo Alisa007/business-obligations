@@ -40,7 +40,8 @@
         "url": ["https://www.eugene-or.gov/820/Business-Licenses"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
           "basis": "unknown"
@@ -86,6 +87,7 @@
         "authority": "City of Hillsboro Finance Department",
         "description": "A general business license is required for any business operating in Hillsboro; it renews annually on its anniversary with a notice during the month it expires and a 30-day grace period. Renewals are not paid online.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "deadline": "Anniversary date (30-day grace period)",
         "url": ["https://hillsboro-oregon.gov/our-city/departments/finance/business-licenses"],
         "appliesTo": ["all"],
@@ -94,8 +96,7 @@
         },
         "penalty": {
           "basis": "unknown"
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "sourceUrl": ["https://hillsboro-oregon.gov/our-city/departments/finance/business-licenses"],
@@ -117,10 +118,12 @@
         "appliesTo": ["all"],
         "deadlineNote": "calendar-year filers; the extension to October 15 is to file only, not to pay",
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The state page this entry cites does not publish a fee for this local requirement; the local government sets it."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
@@ -170,10 +173,12 @@
         "url": ["https://sos.oregon.gov/business/Pages/obr-assumed-business-name-registration.aspx"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
@@ -187,7 +192,7 @@
     "reason": "city-license-unconfirmed",
     "items": [
       {
-        "id": "medford.local-licenses",
+        "id": "medford-or.local-licenses",
         "title": "Review applicable local licenses and permits in Medford",
         "category": "license",
         "authority": "Medford local licensing authority",
@@ -196,10 +201,12 @@
         "url": ["https://sos.oregon.gov/business/Pages/obr-assumed-business-name-registration.aspx"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
@@ -222,10 +229,12 @@
         "url": ["https://sos.oregon.gov/business/Pages/obr-assumed-business-name-registration.aspx"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
@@ -239,7 +248,7 @@
     "reason": "city-license-unconfirmed",
     "items": [
       {
-        "id": "springfield.local-licenses",
+        "id": "springfield-or.local-licenses",
         "title": "Review applicable local licenses and permits in Springfield",
         "category": "license",
         "authority": "Springfield local licensing authority",
@@ -248,10 +257,12 @@
         "url": ["https://sos.oregon.gov/business/Pages/obr-assumed-business-name-registration.aspx"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
@@ -274,10 +285,12 @@
         "url": ["https://sos.oregon.gov/business/Pages/obr-assumed-business-name-registration.aspx"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
@@ -291,7 +304,7 @@
     "reason": "city-license-unconfirmed",
     "items": [
       {
-        "id": "albany.local-licenses",
+        "id": "albany-or.local-licenses",
         "title": "Review applicable local licenses and permits in Albany",
         "category": "license",
         "authority": "Albany local licensing authority",
@@ -300,10 +313,12 @@
         "url": ["https://sos.oregon.gov/business/Pages/obr-assumed-business-name-registration.aspx"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],

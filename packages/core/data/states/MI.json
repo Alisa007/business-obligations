@@ -62,8 +62,19 @@
   "salesTax": {
     "statewide": true,
     "permit": "Michigan sales tax license",
+    "permitFee": {
+      "basis": "none",
+      "amount": 0,
+      "note": "Michigan charges no fee for a sales tax license."
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "percentPerMonth": 5,
+      "note": "5% of the unpaid tax for the first two months, then 5% more each month, up to 25%.",
+      "rate": 25
+    }
   },
   "localSalesTax": "none",
   "economicNexusUsd": 100000,
@@ -80,6 +91,28 @@
     "trigger": {
       "minEmployees": 3,
       "orFullTimeEmployees": 1
+    }
+  },
+  "penalties": {
+    "unemployment": {
+      "basis": "range",
+      "note": "$50 when a quarterly wage report is not filed within 30 days of its due date, and $250 when it is more than a quarter late.",
+      "min": 50,
+      "max": 250
+    },
+    "newHire": {
+      "basis": "flat",
+      "amount": 25,
+      "note": "Up to $25 for each late, incomplete or non-filed report, or up to $500 for a conspiracy (payroll-vendor summary; confirm with the New Hire Operations Center)."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "per_item",
+      "note": "Fine of up to $1,000 per day and up to six months in jail (2020 state comparison; confirm the current statute).",
+      "perUnit": 1000
     }
   },
   "paidLeave": null,

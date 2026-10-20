@@ -52,8 +52,18 @@
   "salesTax": {
     "statewide": true,
     "permit": "Rhode Island seller's permit",
+    "permitFee": {
+      "basis": "none",
+      "amount": 0,
+      "note": "Rhode Island eliminated the $10 sales permit fee for permit periods beginning on or after July 1, 2022; the permit must still be applied for and renewed."
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "note": "10% of the tax due for a late return or payment.",
+      "rate": 10
+    }
   },
   "localSalesTax": "none",
   "economicNexusUsd": 100000,
@@ -69,6 +79,29 @@
     "stateFund": false,
     "trigger": {
       "minEmployees": 1
+    }
+  },
+  "penalties": {
+    "unemployment": {
+      "basis": "range",
+      "note": "$25 for the failure plus $25 for each month the report stays delinquent, up to $200 a report (DLT FAQ; the TX-17 help page says $150).",
+      "min": 25,
+      "max": 200
+    },
+    "newHire": {
+      "basis": "flat",
+      "amount": 20,
+      "note": "Up to $20 per violation, or $500 if the employee conspired with the employer (Office of Child Support Services)."
+    },
+    "laborPosters": {
+      "basis": "flat",
+      "amount": 250,
+      "note": "$250 fine for failing to display the workers' compensation poster naming the insurer."
+    },
+    "workersComp": {
+      "basis": "per_item",
+      "note": "Civil penalty of up to $1,000 for each day of noncompliance, alongside a felony charge for a knowing failure (R.I. Gen. Laws 28-36-15).",
+      "perUnit": 1000
     }
   },
   "paidLeave": {

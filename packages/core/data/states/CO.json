@@ -15,6 +15,7 @@
   "llcReport": {
     "title": "File Periodic Report",
     "rrule": "FREQ=YEARLY;BYMONTHDAY=-1",
+    "anchor": "formation",
     "deadline": "From 2 months before to 2 months after the periodic report month",
     "feeDetail": {
       "basis": "flat",
@@ -23,12 +24,12 @@
     "penalty": {
       "basis": "flat",
       "amount": 50
-    },
-    "anchor": "formation"
+    }
   },
   "corpReport": {
     "title": "File Periodic Report",
     "rrule": "FREQ=YEARLY;BYMONTHDAY=-1",
+    "anchor": "formation",
     "deadline": "From 2 months before to 2 months after the periodic report month",
     "feeDetail": {
       "basis": "flat",
@@ -37,8 +38,7 @@
     "penalty": {
       "basis": "flat",
       "amount": 50
-    },
-    "anchor": "formation"
+    }
   },
   "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
@@ -48,8 +48,19 @@
   "salesTax": {
     "statewide": true,
     "permit": "Colorado sales tax license",
+    "permitFee": {
+      "basis": "varies",
+      "note": "$12 for a standard retail license issued July through December of even-numbered years and $16 for January through June, plus a $50 deposit for new retail accounts."
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "percentPerMonth": 0.5,
+      "note": "Greater of $15 or 10% of the unpaid tax plus 0.5% for each month it stays unpaid, up to 18%; the retailer's service fee is also lost.",
+      "rate": 18,
+      "min": 15
+    }
   },
   "localSalesTax": "locally_administered",
   "economicNexusUsd": 100000,
@@ -64,6 +75,26 @@
     "stateFund": false,
     "trigger": {
       "minEmployees": 1
+    }
+  },
+  "penalties": {
+    "unemployment": {
+      "basis": "percent",
+      "note": "Employers owing delinquent premiums on June 30 pay the lesser of the past-due amount or 1% of taxable payroll, plus 1.5% monthly interest.",
+      "rate": 1
+    },
+    "newHire": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late new hire report was found; secondary sources conflict or give only the federal $25 and $500 ceilings."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "percent",
+      "note": "An uninsured employer owes the uninsured employer fund 25% of the benefits due an injured employee (C.R.S. 8-43-408); the department also sets daily fines.",
+      "rate": 25
     }
   },
   "paidLeave": {

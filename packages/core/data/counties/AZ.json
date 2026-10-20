@@ -107,7 +107,7 @@
     "county": "Graham",
     "items": [
       {
-        "id": "graham.business-personal-property",
+        "id": "graham-az.business-personal-property",
         "title": "File Graham County business personal property return",
         "category": "filing",
         "authority": "Graham County Assessor",
@@ -210,6 +210,7 @@
         "authority": "Maricopa County Environmental Services Department",
         "description": "Food establishments need a county permit and plan review (minimum requirements document; Plan Review 602-506-6824). A fee increase was approved August 19, 2026: new applications pay the new fees immediately and renewals at their next renewal, so check the current schedule.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://www.maricopa.gov/4996/New-Application-Guidance"],
         "naics": ["722", "445"],
         "feeDetail": {
@@ -221,8 +222,7 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -388,7 +388,7 @@
     "county": "Yuma",
     "items": [
       {
-        "id": "yuma.business-personal-property",
+        "id": "yuma-az.business-personal-property",
         "title": "File Yuma County business personal property return",
         "category": "filing",
         "authority": "Yuma County Assessor",

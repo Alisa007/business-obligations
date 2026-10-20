@@ -23,10 +23,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
@@ -59,10 +63,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
@@ -95,10 +103,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
@@ -131,10 +143,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
@@ -167,10 +183,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
@@ -190,6 +210,7 @@
         "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in Benton County must obtain the applicable Iowa food license and comply with Black Hawk County Public Health inspection and enforcement requirements.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.bentoncountyia.gov/public_health/food_safety/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
@@ -216,8 +237,7 @@
           "amount": 0,
           "percentPerMonth": 100,
           "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -233,6 +253,7 @@
         "authority": "Black Hawk County Health Department",
         "description": "Food service and retail food establishments operating in Black Hawk County must obtain the applicable Iowa food establishment license before operating.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.blackhawkcounty.iowa.gov/food-safety",
           "https://assets-global.website-files.com/6026e5c73e800440fd7b119f/6037c8780cb484ed21faebb0_Application-for-Restaurant-Grocery-or-Mobile-Food-Unit-License.pdf",
@@ -258,8 +279,7 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -288,10 +308,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
@@ -311,6 +335,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing",
         "description": "Food establishments operating in Bremer County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions",
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"
@@ -336,8 +361,7 @@
           "amount": 0,
           "percentPerMonth": 10,
           "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration; operating without a license can incur a penalty equal to double the license fee."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -353,6 +377,7 @@
         "authority": "Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in Buchanan County must obtain the applicable Iowa food establishment license before operating and renew it annually.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
           "https://www.buchanancounty.iowa.gov/food-safety"
@@ -377,8 +402,7 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -394,6 +418,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing",
         "description": "Food establishments operating in Buena Vista County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://buenavistacounty.iowa.gov/departments/environmental-health/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
@@ -420,8 +445,7 @@
           "amount": 0,
           "percentPerMonth": 10,
           "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -437,6 +461,7 @@
         "authority": "Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in Butler County must obtain the applicable Iowa food establishment license before operating and renew it annually.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
           "https://butlercountyiowa.com/food-safety"
@@ -461,8 +486,7 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -491,10 +515,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
@@ -527,10 +555,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
@@ -550,6 +582,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing",
         "description": "Food establishments operating in Cass County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions",
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
@@ -576,8 +609,7 @@
           "amount": 0,
           "percentPerMonth": 10,
           "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration; operating without a license can incur a penalty equal to double the license fee."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -593,6 +625,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing",
         "description": "Food establishments operating in Cedar County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions",
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
@@ -619,8 +652,7 @@
           "amount": 0,
           "percentPerMonth": 10,
           "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration; operating without a license can incur a penalty equal to double the license fee."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -649,10 +681,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
@@ -685,10 +721,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
@@ -708,6 +748,7 @@
         "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.bentoncountyia.gov/public_health/food_safety/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
@@ -734,8 +775,7 @@
           "amount": 0,
           "percentPerMonth": 100,
           "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -751,6 +791,7 @@
         "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.bentoncountyia.gov/public_health/food_safety/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
@@ -777,8 +818,7 @@
           "amount": 0,
           "percentPerMonth": 100,
           "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -794,6 +834,7 @@
         "authority": "Clay County Food Program",
         "description": "Food establishments operating in Clay County must obtain the applicable food permit before operating and comply with local plan-review, inspection, and renewal requirements.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://healthdept.org/wp-content/uploads/2024/04/Plan-Review-Application.pdf",
           "https://dial.iowa.gov/licenses/food-establishments-hotels"
@@ -818,8 +859,7 @@
           "basis": "flat",
           "amount": 20,
           "note": "Published schedule lists a $20 late fee after December 17 and a $15 temporary-event late penalty."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -848,10 +888,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
@@ -884,10 +928,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
@@ -907,6 +955,7 @@
         "authority": "Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in Crawford County must obtain the applicable Iowa food establishment license before operating and renew it annually.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
           "https://www.crawfordcounty.iowa.gov/food-safety"
@@ -931,8 +980,7 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -948,6 +996,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing",
         "description": "Food establishments operating in Dallas County must obtain and renew the applicable Iowa food service license before operating.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
           "https://dial.iowa.gov/licenses/food-establishments-hotels"
@@ -972,8 +1021,7 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -989,6 +1037,7 @@
         "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.bentoncountyia.gov/public_health/food_safety/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
@@ -1015,8 +1064,7 @@
           "amount": 0,
           "percentPerMonth": 100,
           "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1045,10 +1093,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
@@ -1068,6 +1120,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing",
         "description": "Food establishments operating in Delaware County must obtain the applicable Iowa food license before operating and renew it annually; Delaware County is covered by the state food inspection jurisdiction.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions"
@@ -1090,8 +1143,7 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1107,6 +1159,7 @@
         "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.bentoncountyia.gov/public_health/food_safety/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
@@ -1133,8 +1186,7 @@
           "amount": 0,
           "percentPerMonth": 100,
           "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1163,10 +1215,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
@@ -1199,10 +1255,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
@@ -1222,6 +1282,7 @@
         "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.bentoncountyia.gov/public_health/food_safety/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
@@ -1248,8 +1309,7 @@
           "amount": 0,
           "percentPerMonth": 100,
           "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1278,10 +1338,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
@@ -1301,6 +1365,7 @@
         "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.bentoncountyia.gov/public_health/food_safety/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
@@ -1327,8 +1392,7 @@
           "amount": 0,
           "percentPerMonth": 100,
           "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1357,10 +1421,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
@@ -1393,10 +1461,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
@@ -1416,6 +1488,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing",
         "description": "Food establishments operating in Greene County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions",
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"
@@ -1441,8 +1514,7 @@
           "amount": 0,
           "percentPerMonth": 10,
           "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration; operating without a license can incur a penalty equal to double the license fee."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1458,6 +1530,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing",
         "description": "Food establishments operating in Grundy County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.grundycountyiowa.gov/departments/environmental-health",
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions",
@@ -1484,8 +1557,7 @@
           "amount": 0,
           "percentPerMonth": 10,
           "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1501,6 +1573,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing",
         "description": "Food establishments operating in Guthrie County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://guthriecounty.gov/environmental_health/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions",
@@ -1527,8 +1600,7 @@
           "amount": 0,
           "percentPerMonth": 10,
           "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1557,10 +1629,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
@@ -1634,10 +1710,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
@@ -1657,6 +1737,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing",
         "description": "Food establishments operating in Harrison County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions"
@@ -1681,8 +1762,7 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1698,6 +1778,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing",
         "description": "Food establishments operating in Henry County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://henrycounty.iowa.gov/environmental-health/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels"
@@ -1722,8 +1803,7 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1739,6 +1819,7 @@
         "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.bentoncountyia.gov/public_health/food_safety/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
@@ -1765,8 +1846,7 @@
           "amount": 0,
           "percentPerMonth": 100,
           "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1795,10 +1875,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
@@ -1818,6 +1902,7 @@
         "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.bentoncountyia.gov/public_health/food_safety/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
@@ -1844,8 +1929,7 @@
           "amount": 0,
           "percentPerMonth": 100,
           "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1874,10 +1958,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
@@ -1897,6 +1985,7 @@
         "authority": "Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in Jackson County must obtain the applicable Iowa food establishment license before operating and renew it annually.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
           "https://www.jacksoncountyiowa.com/food-safety"
@@ -1921,8 +2010,7 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1938,6 +2026,7 @@
         "authority": "Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in Jasper County must obtain the applicable Iowa food establishment license before operating and renew it annually.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
           "https://www.jasperia.org/food-safety"
@@ -1962,8 +2051,7 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -1979,6 +2067,7 @@
         "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.bentoncountyia.gov/public_health/food_safety/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
@@ -2005,8 +2094,7 @@
           "amount": 0,
           "percentPerMonth": 100,
           "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2022,6 +2110,7 @@
         "authority": "Johnson County Public Health",
         "description": "Food service and retail food establishments operating in Johnson County must obtain the applicable Iowa food establishment license before operating.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://johnsoncountyiowa.gov/public-health/restaurant-licenses",
           "https://johnsoncountyiowa.gov/public-health/faqs",
@@ -2047,8 +2136,7 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2077,10 +2165,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
@@ -2100,6 +2192,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing",
         "description": "Food establishments operating in Keokuk County must obtain and renew the applicable Iowa food service license before operating.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
           "https://dial.iowa.gov/licenses/food-establishments-hotels"
@@ -2124,8 +2217,7 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2141,6 +2233,7 @@
         "authority": "Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in Kossuth County must obtain the applicable Iowa food establishment license before operating and renew it annually.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
           "https://www.kossuthia.com/food-safety"
@@ -2165,8 +2258,7 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2195,10 +2287,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
@@ -2218,6 +2314,7 @@
         "authority": "Linn County Public Health",
         "description": "Food establishments operating in Linn County must obtain the applicable food establishment license; the county fee depends on the establishment type and sales category.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.linncountyiowa.gov/DocumentCenter/View/12615/Food-Establishment-License-Application-2019-New-Address"
         ],
@@ -2237,8 +2334,7 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "sourceUrl": [
@@ -2257,6 +2353,7 @@
         "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.bentoncountyia.gov/public_health/food_safety/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
@@ -2283,8 +2380,7 @@
           "amount": 0,
           "percentPerMonth": 100,
           "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2300,6 +2396,7 @@
         "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.bentoncountyia.gov/public_health/food_safety/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
@@ -2326,8 +2423,7 @@
           "amount": 0,
           "percentPerMonth": 100,
           "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2356,10 +2452,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
@@ -2392,10 +2492,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
@@ -2415,6 +2519,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing",
         "description": "Food establishments operating in Mahaska County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions",
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"
@@ -2440,8 +2545,7 @@
           "amount": 0,
           "percentPerMonth": 10,
           "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2457,6 +2561,7 @@
         "authority": "Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in Marion County must obtain the applicable Iowa food establishment license before operating and renew it annually.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
           "https://www.marioncountyiowa.gov/food-safety"
@@ -2481,8 +2586,7 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2498,6 +2602,7 @@
         "authority": "Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in Marshall County must obtain the applicable Iowa food establishment license before operating and renew it annually.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
           "https://www.marshallcountyia.gov/environmental_health/"
@@ -2522,8 +2627,7 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2552,10 +2656,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
@@ -2588,10 +2696,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
@@ -2611,6 +2723,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing",
         "description": "Food establishments operating in Monona County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions",
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
@@ -2637,8 +2750,7 @@
           "amount": 0,
           "percentPerMonth": 10,
           "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2654,6 +2766,7 @@
         "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.bentoncountyia.gov/public_health/food_safety/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
@@ -2680,8 +2793,7 @@
           "amount": 0,
           "percentPerMonth": 100,
           "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2697,6 +2809,7 @@
         "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.bentoncountyia.gov/public_health/food_safety/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
@@ -2723,8 +2836,7 @@
           "amount": 0,
           "percentPerMonth": 100,
           "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2753,10 +2865,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
@@ -2776,6 +2892,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing",
         "description": "Food establishments operating in O'Brien County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions",
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"
@@ -2801,8 +2918,7 @@
           "amount": 0,
           "percentPerMonth": 10,
           "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2831,10 +2947,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
@@ -2854,6 +2974,7 @@
         "authority": "Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in Page County must obtain the applicable Iowa food establishment license before operating and renew it annually.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
           "https://pagecounty.iowa.gov/food-safety"
@@ -2878,8 +2999,7 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2895,6 +3015,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing",
         "description": "Food establishments operating in Palo Alto County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions",
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"
@@ -2920,8 +3041,7 @@
           "amount": 0,
           "percentPerMonth": 10,
           "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2937,6 +3057,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing / Plymouth County Health Department",
         "description": "Food establishments operating in Plymouth County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://plymouthcountyiowa.gov/contact/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"
@@ -2962,8 +3083,7 @@
           "amount": 0,
           "percentPerMonth": 10,
           "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -2992,10 +3112,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
@@ -3028,10 +3152,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
@@ -3051,6 +3179,7 @@
         "authority": "Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food businesses operating in Pottawattamie County must obtain and renew the applicable Iowa food establishment license through the state licensing system.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
           "https://www.pottcounty-ia.gov/departments/"
@@ -3073,8 +3202,7 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -3103,10 +3231,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
@@ -3126,6 +3258,7 @@
         "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.bentoncountyia.gov/public_health/food_safety/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
@@ -3152,8 +3285,7 @@
           "amount": 0,
           "percentPerMonth": 100,
           "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -3169,6 +3301,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing",
         "description": "Food establishments operating in Sac County must obtain the applicable Iowa food license before operating; Sac County confirms that food-establishment licensing and inspections are completed by the state.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://saccountyhealthservices.com/services/environmental-health-zoning/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions",
@@ -3195,8 +3328,7 @@
           "amount": 0,
           "percentPerMonth": 10,
           "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -3212,6 +3344,7 @@
         "category": "license",
         "authority": "Scott County Health Department",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "appliesTo": ["all"],
         "appliesWhen": [
           {
@@ -3236,8 +3369,7 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -3266,10 +3398,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
@@ -3289,6 +3425,7 @@
         "authority": "Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in Sioux County must obtain the applicable Iowa food establishment license before operating and renew it annually.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
           "https://www.siouxlanddistricthealth.org/home/showpublisheddocument/1467/638918127575830000"
@@ -3313,8 +3450,7 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -3330,6 +3466,7 @@
         "authority": "Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food businesses operating in Story County must obtain the appropriate food license before operation; applications should be submitted at least 30 days before opening and renewals are due before expiration.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://storycountyiowa.gov/115/Code-of-Ordinances",
           "https://storycountyiowa.gov/Applications-and-Permits",
@@ -3355,8 +3492,7 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -3372,6 +3508,7 @@
         "authority": "Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in Tama County must obtain the applicable Iowa food establishment license before operating and renew it annually.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
           "https://www.tamacounty.iowa.gov/departments/"
@@ -3396,8 +3533,7 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -3413,6 +3549,7 @@
         "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.bentoncountyia.gov/public_health/food_safety/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
@@ -3439,8 +3576,7 @@
           "amount": 0,
           "percentPerMonth": 100,
           "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -3456,6 +3592,7 @@
         "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.bentoncountyia.gov/public_health/food_safety/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
@@ -3482,8 +3619,7 @@
           "amount": 0,
           "percentPerMonth": 100,
           "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -3499,6 +3635,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing",
         "description": "Food establishments operating in Van Buren County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions"
@@ -3523,8 +3660,7 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -3540,6 +3676,7 @@
         "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.bentoncountyia.gov/public_health/food_safety/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
@@ -3566,8 +3703,7 @@
           "amount": 0,
           "percentPerMonth": 100,
           "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -3583,6 +3719,7 @@
         "authority": "Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in Warren County must obtain the applicable Iowa food establishment license before operating and renew it annually.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
           "https://www.warrencountyia.gov/government/"
@@ -3607,8 +3744,7 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -3637,10 +3773,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
@@ -3660,6 +3800,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing",
         "description": "Food establishments operating in Wayne County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions",
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"
@@ -3685,8 +3826,7 @@
           "amount": 0,
           "percentPerMonth": 10,
           "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -3702,6 +3842,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing",
         "description": "Food establishments operating in Webster County must obtain and renew the applicable Iowa food service license before operating.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments",
           "https://dial.iowa.gov/licenses/food-establishments-hotels"
@@ -3726,8 +3867,7 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -3743,6 +3883,7 @@
         "authority": "Black Hawk County Public Health / Iowa Department of Inspections, Appeals, and Licensing",
         "description": "Food establishments operating in this jurisdiction must obtain the applicable state or local food license before operating and renew it as required.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.bentoncountyia.gov/public_health/food_safety/",
           "https://dial.iowa.gov/licenses/food-establishments-hotels",
@@ -3769,8 +3910,7 @@
           "amount": 0,
           "percentPerMonth": 100,
           "note": "Providing food without a license or permit is subject to a penalty equal to double the license fee."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -3786,6 +3926,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing",
         "description": "Food establishments operating in Winneshiek County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions",
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"
@@ -3811,8 +3952,7 @@
           "amount": 0,
           "percentPerMonth": 10,
           "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -3828,6 +3968,7 @@
         "authority": "Siouxland District Health Department",
         "description": "Food establishments operating in Woodbury County must obtain the applicable food establishment license through the local health authority; county payment records show recurring food-establishment licensing charges and the health department administers the program.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://www.woodburycountyiowa.gov/files/ap_claims_paid/2025-08-19.pdf",
           "https://www.woodburycountyiowa.gov/supervisors/ap_claims_paid/2026-05-26/"
@@ -3850,8 +3991,7 @@
           "basis": "flat",
           "amount": 0,
           "note": "Late penalties and enforcement fines vary by jurisdiction; confirm the current schedule before filing."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"
@@ -3880,10 +4020,14 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "note": "5% of the tax remaining unpaid at the due date (Iowa Code 421.27); the first late return in three years may be waived."
         }
       }
     ],
@@ -3903,6 +4047,7 @@
         "authority": "Iowa Department of Inspections, Appeals, & Licensing",
         "description": "Food establishments operating in Wright County must obtain the applicable Iowa food license before operating and renew it annually under the state food inspection program.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": [
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-inspection-jurisdictions",
           "https://dial.iowa.gov/licenses/food-establishments-hotels/food-service-establishments"
@@ -3928,8 +4073,7 @@
           "amount": 0,
           "percentPerMonth": 10,
           "note": "Iowa law imposes a 10% per-month penalty on licenses renewed after expiration."
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-19"

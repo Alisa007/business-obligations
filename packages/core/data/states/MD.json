@@ -49,8 +49,16 @@
   "salesTax": {
     "statewide": true,
     "permit": "Maryland sales and use tax license",
+    "permitFee": {
+      "basis": "unknown"
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "note": "10% of the tax due for a late return, plus interest; the collection discount is lost.",
+      "rate": 10
+    }
   },
   "localSalesTax": "none",
   "economicNexusUsd": 100000,
@@ -65,6 +73,28 @@
     "stateFund": false,
     "trigger": {
       "minEmployees": 1
+    }
+  },
+  "penalties": {
+    "unemployment": {
+      "basis": "flat",
+      "amount": 35,
+      "note": "$35 for each late report, plus 1.5% monthly interest on late payments."
+    },
+    "newHire": {
+      "basis": "flat",
+      "amount": 20,
+      "note": "$20 for failing to report newly hired or rehired employees after a warning notice (older state document; confirm with CSEA)."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "range",
+      "note": "Penalty of up to $25,000, paid to the Uninsured Employers' Fund (Labor & Employment 9-407, raised from $10,000 in 2024).",
+      "min": 0,
+      "max": 25000
     }
   },
   "paidLeave": null,

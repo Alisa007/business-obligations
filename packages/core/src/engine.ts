@@ -286,7 +286,10 @@ const FEEDBACK_URL =
   "https://github.com/Alisa007/business-obligations/issues/new?template=data-correction.yml&title=";
 
 type DraftBody = ItemDraft extends infer T ? (T extends unknown ? Omit<T, "key"> : never) : never;
-type SettledDraft = Omit<ComplianceItem, "id" | "ruleId" | "nextDue" | "recurrence" | "cost" | "url" | "provenance"> & {
+type SettledDraft = Omit<
+  ComplianceItem,
+  "id" | "ruleId" | "nextDue" | "recurrence" | "cost" | "url" | "provenance"
+> & {
   cost?: ComplianceItem["cost"];
   url?: string[];
   provenance?: ComplianceItem["provenance"];

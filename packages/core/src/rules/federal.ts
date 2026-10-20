@@ -253,7 +253,9 @@ const federalRuleDefinitions: Rule[] = [
           jurisdiction: "federal",
           authority: "IRS",
           description: "Withheld income tax, Social Security and Medicare, plus employer share, via EFTPS.",
-          ...(semiweekly ? { frequency: "per_event" as const } : { rrule: "FREQ=MONTHLY" }),
+          ...(semiweekly
+            ? { frequency: "per_event" as const }
+            : { rrule: "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=15" }),
           deadline:
             lookback !== undefined && lookback > 100_000
               ? "Next business day once accumulated liability reaches $100,000"
@@ -426,6 +428,7 @@ const federalRuleDefinitions: Rule[] = [
       description:
         "Private employers with 100 or more employees file annually through the EEOC's online system; federal contractors with 50 or more employees and certain contracts have also filed. The EEOC sets each year's filing window, so check its data collections page.",
       rrule: "FREQ=YEARLY",
+      anchor: "announced",
       deadline: "Set each year by the EEOC",
       reason: `${p.employeeCount} employees, at or above the 100 that require an EEO-1 report`,
       url: ["https://www.eeoc.gov/data/eeo-data-collections"],

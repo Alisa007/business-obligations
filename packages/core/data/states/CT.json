@@ -44,8 +44,19 @@
   "salesTax": {
     "statewide": true,
     "permit": "Sales and use tax permit",
+    "permitFee": {
+      "basis": "flat",
+      "amount": 100,
+      "note": "Sales and use tax permit fee, paid from a bank account; renewal every two years is free."
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "note": "Greater of 15% of the tax due or $50.",
+      "rate": 15,
+      "min": 50
+    }
   },
   "localSalesTax": "none",
   "economicNexusUsd": 100000,
@@ -60,6 +71,26 @@
     "stateFund": false,
     "trigger": {
       "minEmployees": 1
+    }
+  },
+  "penalties": {
+    "unemployment": {
+      "basis": "percent",
+      "note": "Greater of $50 or 10% of the unpaid balance, applied 30 days after the due date, plus 1% monthly interest.",
+      "rate": 10,
+      "min": 50
+    },
+    "newHire": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late new hire report was found; secondary sources conflict or give only the federal $25 and $500 ceilings."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for lacking required coverage was found; secondary sources conflict."
     }
   },
   "paidLeave": {

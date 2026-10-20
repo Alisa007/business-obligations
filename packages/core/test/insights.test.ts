@@ -175,7 +175,7 @@ describe("unemployment insurance data", () => {
     const profile = { ...llc, employeeCount: 4, annualPayroll: 200000 }; // TX: $9,000 base at 2.7%
     const r = evaluate(profile, { asOf });
     const est = estimateCosts(r.items, { profile: r.profile });
-    const line = est.lines.find((l) => l.title.includes("unemployment insurance"));
+    const line = est.lines.find((l) => l.title.includes("pay unemployment insurance"));
     expect(line?.perYear).toBeCloseTo(4 * 9000 * 0.027, 2);
     expect(line?.estimate).toBe(true);
   });

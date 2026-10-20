@@ -334,15 +334,7 @@ export interface ResolvedProfile extends BusinessProfile {
 /** A rule's output before the engine assigns an id and computes due dates. */
 export type ItemDraft = Omit<
   ComplianceItem,
-  | "id"
-  | "ruleId"
-  | "nextDue"
-  | "recurrence"
-  | "frequency"
-  | "due"
-  | "cost"
-  | "url"
-  | "provenance"
+  "id" | "ruleId" | "nextDue" | "recurrence" | "frequency" | "due" | "cost" | "url" | "provenance"
 > & {
   url?: string[];
   provenance?: Provenance;

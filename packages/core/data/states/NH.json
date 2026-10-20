@@ -45,8 +45,17 @@
   "salesTax": {
     "statewide": false,
     "permit": "Meals and Rentals Tax license",
+    "permitFee": {
+      "basis": "none",
+      "amount": 0,
+      "note": "The state has no statewide sales tax, so there is no sales tax permit fee."
+    },
     "agency": null,
-    "alternative": "New Hampshire has no general sales tax; restaurants and lodging register for the Meals and Rentals Tax with the DRA."
+    "alternative": "New Hampshire has no general sales tax; restaurants and lodging register for the Meals and Rentals Tax with the DRA.",
+    "penalty": {
+      "basis": "none",
+      "note": "The state has no statewide sales tax, so there is no late sales tax return penalty."
+    }
   },
   "localSalesTax": "none",
   "economicNexusUsd": null,
@@ -61,6 +70,24 @@
     "stateFund": false,
     "trigger": {
       "minEmployees": 1
+    }
+  },
+  "penalties": {
+    "unemployment": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late wage report was found in the state agency's published sources."
+    },
+    "newHire": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late new hire report was found; secondary sources conflict or give only the federal $25 and $500 ceilings."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for lacking required coverage was found; secondary sources conflict."
     }
   },
   "paidLeave": null,

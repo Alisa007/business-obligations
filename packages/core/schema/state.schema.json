@@ -21,6 +21,7 @@
     "economicNexusUsd",
     "unemployment",
     "workersComp",
+    "penalties",
     "paidLeave",
     "paidSickLeave",
     "businessLicense",
@@ -167,7 +168,7 @@
       "description": "Statewide sales and use tax regime.",
       "type": "object",
       "additionalProperties": false,
-      "required": ["statewide", "permit", "agency", "alternative"],
+      "required": ["statewide", "permit", "permitFee", "agency", "alternative", "penalty"],
       "properties": {
         "statewide": {
           "type": "boolean"
@@ -175,6 +176,10 @@
         "permit": {
           "type": "string",
           "minLength": 3
+        },
+        "permitFee": {
+          "$ref": "common.schema.json#/$defs/feeDetail",
+          "description": "The fee for the sales tax permit or registration; unknown until researched."
         },
         "agency": {
           "oneOf": [
@@ -188,6 +193,10 @@
         },
         "alternative": {
           "type": ["string", "null"]
+        },
+        "penalty": {
+          "$ref": "common.schema.json#/$defs/penalty",
+          "description": "The penalty for a late sales tax return; unknown until researched."
         }
       }
     },
@@ -294,6 +303,30 @@
               "description": "Coverage is elective for private employers."
             }
           }
+        }
+      }
+    },
+    "penalties": {
+      "description": "Penalties for missing common state employer duties; unknown until researched.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["unemployment", "newHire", "laborPosters", "workersComp"],
+      "properties": {
+        "unemployment": {
+          "$ref": "common.schema.json#/$defs/penalty",
+          "description": "Late unemployment insurance wage report or contribution payment."
+        },
+        "newHire": {
+          "$ref": "common.schema.json#/$defs/penalty",
+          "description": "Failing to report a new hire."
+        },
+        "laborPosters": {
+          "$ref": "common.schema.json#/$defs/penalty",
+          "description": "Failing to display required workplace notices."
+        },
+        "workersComp": {
+          "$ref": "common.schema.json#/$defs/penalty",
+          "description": "Failing to carry required workers' compensation coverage."
         }
       }
     },

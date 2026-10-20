@@ -170,18 +170,21 @@ interface PenaltyQualifiers {
 
 /**
  * The penalty for missing the obligation, written on every item. `none` means the government states no penalty;
- * `unknown` means it has not been researched yet (it is the only placeholder the data allows).
+ * `unknown` means it has not been researched yet; `not_stated` means the government says a penalty applies but its
+ * published sources give no amount (a `note` says where this was checked).
  */
 export type StatedPenalty =
   | ({ basis: "flat"; amount: number } & PenaltyQualifiers)
   | ({ basis: "percent"; rate: number; base?: number; min?: number; max?: number } & PenaltyQualifiers)
   | ({ basis: "per_item"; perUnit: number; min?: number; max?: number } & PenaltyQualifiers)
   | ({ basis: "range"; min: number; max?: number } & PenaltyQualifiers);
-export type Penalty = StatedPenalty | { basis: "none" | "unknown" };
+export type Penalty = StatedPenalty | { basis: "none" | "unknown" } | { basis: "not_stated"; note?: string };
 
 /** The `penalty` of an item from its data, when there is a stated amount. */
 export function statedPenalty(p: Penalty): StatedPenalty | undefined {
-  return p.basis === "none" || p.basis === "unknown" ? undefined : (p as StatedPenalty);
+  return p.basis === "none" || p.basis === "unknown" || p.basis === "not_stated"
+    ? undefined
+    : (p as StatedPenalty);
 }
 
 export interface ReportRule {
@@ -255,6 +258,17 @@ export interface StateInfo {
     stateFund: boolean;
     trigger: WcTrigger;
   };
+  /** Penalties for missing common state employer duties; `{ "basis": "unknown" }` until researched. */
+  penalties: {
+    /** Late unemployment insurance wage report or contribution payment. */
+    unemployment: Penalty;
+    /** Failing to report a new hire. */
+    newHire: Penalty;
+    /** Failing to display required workplace notices. */
+    laborPosters: Penalty;
+    /** Failing to carry required workers' compensation coverage. */
+    workersComp: Penalty;
+  };
   /** Periodic report required of LLCs formed in the state; null = none. */
   llcReport: ReportRule | null;
   /** Periodic report required of corporations and nonprofits formed in the state; null = none. */
@@ -273,9 +287,13 @@ export interface StateInfo {
     statewide: boolean;
     /** Name of the permit/registration (statewide) or of the nearest equivalent. */
     permit: string;
+    /** The fee for the permit or registration; `{ "basis": "unknown" }` until researched. */
+    permitFee: FeeDetail;
     agency: Required<Agency> | null;
     /** For states without a statewide sales tax: what applies instead. */
     alternative: string | null;
+    /** The penalty for a late sales tax return; `{ "basis": "unknown" }` until researched. */
+    penalty: Penalty;
   };
   /** General state-level business license, where one exists. */
   businessLicense:
@@ -346,7 +364,15 @@ export interface LocalItem {
   description: string;
   /** Derived from `rrule` when there is one. */
   frequency?:
-    "once" | "annual" | "biennial" | "every_three_years" | "every_five_years" | "quarterly" | "monthly" | "per_event" | "ongoing";
+    | "once"
+    | "annual"
+    | "biennial"
+    | "every_three_years"
+    | "every_five_years"
+    | "quarterly"
+    | "monthly"
+    | "per_event"
+    | "ongoing";
   /** The schedule as an iCalendar recurrence rule (see `ReportRule.rrule`). */
   rrule?: string;
   /** Start of a cycle longer than a year (see `ReportRule.anchor`). */

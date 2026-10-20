@@ -15,6 +15,7 @@
   "llcReport": null,
   "corpReport": {
     "rrule": "FREQ=YEARLY",
+    "anchor": "formation",
     "deadline": "On or before the anniversary of incorporation",
     "feeDetail": {
       "basis": "flat",
@@ -24,8 +25,7 @@
       "basis": "per_item",
       "note": "$9 per month for a for-profit corporation after the annual report deadline; nonprofits are not assessed this penalty.",
       "perUnit": 9
-    },
-    "anchor": "formation"
+    }
   },
   "llpReport": {
     "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=30",
@@ -48,11 +48,22 @@
   "salesTax": {
     "statewide": true,
     "permit": "Transaction Privilege Tax (TPT) license",
+    "permitFee": {
+      "basis": "flat",
+      "amount": 12,
+      "note": "State TPT license fee per location; there is no state renewal fee, and city license fees are separate."
+    },
     "agency": {
       "name": "Arizona Department of Revenue",
       "url": ["https://azdor.gov/transaction-privilege-tax/tpt-license/applying-tpt-license"]
     },
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "percentPerMonth": 4.5,
+      "note": "4.5% of the tax for each month or fraction of a month the return is late (A.R.S. 42-1125), plus 0.5% a month on unpaid tax.",
+      "rate": 4.5
+    }
   },
   "localSalesTax": "locally_administered",
   "economicNexusUsd": 100000,
@@ -67,6 +78,29 @@
     "stateFund": false,
     "trigger": {
       "minEmployees": 1
+    }
+  },
+  "penalties": {
+    "unemployment": {
+      "basis": "percent",
+      "note": "0.1% of the quarter's total wages for a late report, with a $35 minimum and a $200 maximum (A.R.S. 23-723).",
+      "rate": 0.1,
+      "min": 35,
+      "max": 200
+    },
+    "newHire": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late new hire report was found; secondary sources conflict or give only the federal $25 and $500 ceilings."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "range",
+      "note": "Civil penalty of $1,000 to $10,000 for an uninsured employer, rising on repeat violations.",
+      "min": 1000,
+      "max": 10000
     }
   },
   "paidLeave": null,

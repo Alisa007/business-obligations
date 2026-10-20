@@ -48,8 +48,18 @@
   "salesTax": {
     "statewide": true,
     "permit": "Mississippi sales tax permit",
+    "permitFee": {
+      "basis": "none",
+      "amount": 0,
+      "note": "Mississippi charges no fee for a sales tax permit."
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "note": "10% penalty on late payment, plus interest.",
+      "rate": 10
+    }
   },
   "localSalesTax": "none",
   "economicNexusUsd": 250000,
@@ -64,6 +74,28 @@
     "stateFund": false,
     "trigger": {
       "minEmployees": 5
+    }
+  },
+  "penalties": {
+    "unemployment": {
+      "basis": "percent",
+      "note": "10% of the tax due starting 30 days after the due date and a second 10% after 60 days, up to 20% a quarter, plus 1% monthly interest.",
+      "rate": 20
+    },
+    "newHire": {
+      "basis": "flat",
+      "amount": 25,
+      "note": "Up to $25 per newly hired employee, or up to $500 for a conspiracy."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "range",
+      "note": "Misdemeanor fine of up to $1,000, jail up to one year, or both (Miss. Code 71-3-83).",
+      "min": 0,
+      "max": 1000
     }
   },
   "paidLeave": null,

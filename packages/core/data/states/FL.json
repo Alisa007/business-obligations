@@ -90,8 +90,19 @@
   "salesTax": {
     "statewide": true,
     "permit": "Florida Certificate of Registration (sales and use tax)",
+    "permitFee": {
+      "basis": "none",
+      "amount": 0,
+      "note": "No registration fee was found for the Florida Business Tax Application for sales and use tax."
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "note": "10% of the tax with a $50 minimum for a late return; an additional 10% for each 30 days the payment is late, up to 50%.",
+      "rate": 10,
+      "min": 50
+    }
   },
   "localSalesTax": "state_administered",
   "economicNexusUsd": 100000,
@@ -107,6 +118,25 @@
     "trigger": {
       "minEmployees": 4,
       "constructionMinEmployees": 1
+    }
+  },
+  "penalties": {
+    "unemployment": {
+      "basis": "flat",
+      "amount": 25,
+      "note": "$25 for each 30 days or fraction a required report is delinquent (Fla. Stat. 443.141); erroneous reports cost the greater of $50 or 10% of the tax, up to $300."
+    },
+    "newHire": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late new hire report was found; secondary sources conflict or give only the federal $25 and $500 ceilings."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for lacking required coverage was found; secondary sources conflict."
     }
   },
   "paidLeave": null,

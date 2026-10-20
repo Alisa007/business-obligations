@@ -46,8 +46,17 @@
   "salesTax": {
     "statewide": true,
     "permit": "Utah sales tax license",
+    "permitFee": {
+      "basis": "unknown"
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "note": "Greater of $20 or 2% of the unpaid tax for a return 1 to 5 days late, 5% for 6 to 15 days and 10% for 16 or more days (Utah Code 59-1-401).",
+      "rate": 10,
+      "min": 20
+    }
   },
   "localSalesTax": "state_administered",
   "economicNexusUsd": 100000,
@@ -62,6 +71,25 @@
     "stateFund": false,
     "trigger": {
       "minEmployees": 1
+    }
+  },
+  "penalties": {
+    "unemployment": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late wage report was found in the state agency's published sources."
+    },
+    "newHire": {
+      "basis": "flat",
+      "amount": 25,
+      "note": "$25 per late report, or $500 if the employer intentionally conspires with the employee to withhold or falsify the report; the $25 may be waived for good cause."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for lacking required coverage was found; secondary sources conflict."
     }
   },
   "paidLeave": null,

@@ -17,7 +17,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -38,10 +41,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -51,6 +57,7 @@
         "authority": "Alachua County Tax Collector",
         "description": "Hosts file monthly returns through the Tax Collector's TouristExpress portal. The pages read do not state the day of the month.",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12",
+        "anchor": "assigned",
         "url": ["https://alachuacounty.us/News/Article/Pages/Short-Term-Vacation-Rental-Tax-Compliance.aspx"],
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -62,12 +69,17 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
-        },
-        "anchor": "assigned"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -91,7 +103,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
@@ -117,7 +132,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -138,10 +156,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -162,10 +183,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       }
     ],
@@ -190,7 +217,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
@@ -216,7 +246,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -237,10 +270,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -261,10 +297,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       },
       {
@@ -308,7 +350,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -329,10 +374,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -353,10 +401,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       },
       {
@@ -402,7 +456,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
@@ -428,7 +485,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -449,10 +509,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -473,10 +536,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       }
     ],
@@ -501,7 +570,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
@@ -527,7 +599,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -548,10 +623,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -572,10 +650,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       }
     ],
@@ -600,7 +684,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -645,7 +732,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
@@ -671,7 +761,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
@@ -697,7 +790,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
@@ -723,7 +819,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -746,10 +845,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -772,10 +874,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       },
       {
@@ -819,7 +927,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -840,10 +951,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -864,10 +978,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       },
       {
@@ -911,7 +1031,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -932,10 +1055,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -956,10 +1082,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       }
     ],
@@ -984,7 +1116,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
@@ -1010,7 +1145,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
@@ -1036,7 +1174,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
@@ -1062,7 +1203,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
@@ -1088,7 +1232,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -1109,10 +1256,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -1133,10 +1283,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       }
     ],
@@ -1161,7 +1317,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
@@ -1187,7 +1346,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
@@ -1213,7 +1375,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
@@ -1239,7 +1404,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -1260,10 +1428,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -1284,10 +1455,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       }
     ],
@@ -1312,7 +1489,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -1333,10 +1513,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -1357,10 +1540,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       }
     ],
@@ -1385,7 +1574,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -1406,10 +1598,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -1430,10 +1625,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       },
       {
@@ -1477,7 +1678,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
@@ -1504,7 +1708,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -1525,10 +1732,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -1549,10 +1759,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       }
     ],
@@ -1577,7 +1793,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
@@ -1657,7 +1876,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -1678,10 +1900,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -1702,10 +1927,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       }
     ],
@@ -1730,7 +1961,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
@@ -1756,7 +1990,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -1777,10 +2014,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -1790,6 +2030,7 @@
         "authority": "Leon County Tax Collector",
         "description": "Report and pay online through the Tourist Development login; electronic filing is needed to keep the collection allowance. The page does not give return due dates (call 850-606-4700).",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12",
+        "anchor": "assigned",
         "url": ["https://leontaxcollector.net/Services/Tourist-Development"],
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -1801,12 +2042,17 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
-        },
-        "anchor": "assigned"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
+        }
       }
     ],
     "checkedOn": "2026-10-16",
@@ -1832,7 +2078,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
@@ -1858,7 +2107,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
@@ -1884,7 +2136,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
@@ -1910,7 +2165,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -1933,10 +2191,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -1959,10 +2220,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       }
     ],
@@ -1987,7 +2254,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -2008,10 +2278,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -2032,10 +2305,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       }
     ],
@@ -2060,7 +2339,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
@@ -2086,7 +2368,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -2109,10 +2394,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -2135,10 +2423,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       },
       {
@@ -2182,7 +2476,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
@@ -2208,7 +2505,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -2229,10 +2529,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -2253,10 +2556,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       }
     ],
@@ -2281,7 +2590,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -2302,10 +2614,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -2326,10 +2641,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       }
     ],
@@ -2381,7 +2702,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -2402,10 +2726,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -2426,10 +2753,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       },
       {
@@ -2473,7 +2806,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -2496,10 +2832,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -2522,10 +2861,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       },
       {
@@ -2569,7 +2914,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -2590,10 +2938,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -2614,10 +2965,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       },
       {
@@ -2661,7 +3018,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -2682,10 +3042,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -2695,6 +3058,7 @@
         "authority": "Pasco County Tax Collector",
         "description": "Register and file online through Tourist Express (pasco.county-taxes.com/tourist). The page does not give return due dates (call 352-518-5097).",
         "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12",
+        "anchor": "assigned",
         "url": ["https://pascotaxes.com/taxes/tdt/"],
         "appliesTo": ["all"],
         "appliesWhen": [
@@ -2706,12 +3070,17 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
-        },
-        "anchor": "assigned"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
+        }
       },
       {
         "id": "pasco-fl.business-tax-receipt",
@@ -2756,7 +3125,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -2777,10 +3149,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -2801,10 +3176,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       }
     ],
@@ -2829,7 +3210,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -2850,10 +3234,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -2874,10 +3261,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       },
       {
@@ -2923,7 +3316,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
@@ -2949,7 +3345,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -2970,10 +3369,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -2994,10 +3396,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       }
     ],
@@ -3022,7 +3430,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -3043,10 +3454,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -3067,10 +3481,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       },
       {
@@ -3114,7 +3534,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -3135,10 +3558,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -3159,10 +3585,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       },
       {
@@ -3206,7 +3638,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -3227,10 +3662,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -3251,10 +3689,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       }
     ],
@@ -3279,7 +3723,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
@@ -3305,7 +3752,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
@@ -3331,7 +3781,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
@@ -3357,7 +3810,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -3378,10 +3834,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -3402,10 +3861,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       }
     ],
@@ -3430,7 +3895,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
@@ -3456,7 +3924,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -3479,10 +3950,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -3505,10 +3979,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       }
     ],
@@ -3534,7 +4014,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],
@@ -3560,7 +4043,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       },
       {
@@ -3581,10 +4067,13 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for late or missing registration was found; late returns carry their own penalty on the return item."
         }
       },
       {
@@ -3605,10 +4094,16 @@
           }
         ],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "percentPerMonth": 10,
+          "min": 50,
+          "note": "10% of the tax for each delinquent month or part of a month, up to 50%, with a $50 minimum; interest also applies."
         }
       }
     ],
@@ -3633,7 +4128,10 @@
           "note": "There is no fee to file the return; the personal property tax is billed on the assessed value at the local rate."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% of the tax for each month the return is late, up to 25%."
         }
       }
     ],

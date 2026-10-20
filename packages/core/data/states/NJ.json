@@ -44,8 +44,17 @@
   "salesTax": {
     "statewide": true,
     "permit": "New Jersey Certificate of Authority",
+    "permitFee": {
+      "basis": "unknown"
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "percentPerMonth": 5,
+      "note": "5% of the tax for each month or part of a month the return is late, up to 25%; a $100 charge for each month late may also apply.",
+      "rate": 25
+    }
   },
   "localSalesTax": "none",
   "economicNexusUsd": 100000,
@@ -60,6 +69,30 @@
     "stateFund": false,
     "trigger": {
       "minEmployees": 1
+    }
+  },
+  "penalties": {
+    "unemployment": {
+      "basis": "percent",
+      "note": "$10 a day for the first five days late on the NJ-927, then $10 a day or 25% of the contributions due, whichever is less; the WR-30 costs $5, $10 or $25 per employee on repeat failures.",
+      "rate": 25
+    },
+    "newHire": {
+      "basis": "flat",
+      "amount": 25,
+      "note": "A written warning for a first violation, then up to $25 per violation, or $500 for a conspiracy (N.J.S.A. 2A:17-56.61)."
+    },
+    "laborPosters": {
+      "basis": "range",
+      "note": "Failing to display the worker misclassification notice is a disorderly persons offense with fines of $100 to $1,000.",
+      "min": 100,
+      "max": 1000
+    },
+    "workersComp": {
+      "basis": "range",
+      "note": "After 10 consecutive days without coverage, up to $5,000, plus up to $5,000 for each additional 10-day period.",
+      "min": 0,
+      "max": 5000
     }
   },
   "paidLeave": {

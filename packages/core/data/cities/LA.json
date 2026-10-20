@@ -17,7 +17,10 @@
           "basis": "unknown"
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 25,
+          "percentPerMonth": 5,
+          "note": "5% per month up to 25%, plus interest of 15% a year."
         }
       }
     ],
@@ -32,7 +35,7 @@
     "counties": ["Lafayette"],
     "items": [
       {
-        "id": "lafayette.local-licenses",
+        "id": "lafayette-la.local-licenses",
         "title": "Review applicable local licenses and permits in Lafayette",
         "category": "license",
         "authority": "Lafayette local licensing authority",
@@ -41,7 +44,8 @@
         "url": ["https://www.lafayettela.gov/business-development/business-permits-and-licenses/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
           "basis": "unknown"
@@ -88,15 +92,16 @@
         "authority": "City of Shreveport Department of Finance, Revenue Division",
         "description": "All businesses within the Shreveport corporate limits must obtain an annual business license, paid before business begins. The tax varies with gross receipts, fees or commissions, with a $50 minimum for every business type. The page does not state a renewal due date.",
         "rrule": "FREQ=YEARLY",
+        "anchor": "license_issued",
         "url": ["https://shreveportla.gov/286/Occupational-License-Tax"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "Varies with gross receipts, fees or commissions, with a $50 minimum for every business type."
         },
         "penalty": {
           "basis": "unknown"
-        },
-        "anchor": "license_issued"
+        }
       }
     ],
     "checkedOn": "2026-10-18",
@@ -118,10 +123,12 @@
         "url": ["https://www.sos.la.gov/business-services/file-business-documents"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
@@ -135,7 +142,7 @@
     "reason": "city-license-unconfirmed",
     "items": [
       {
-        "id": "st-george.local-licenses",
+        "id": "st-george-la.local-licenses",
         "title": "Review applicable local licenses and permits in St. George",
         "category": "license",
         "authority": "St. George local licensing authority",
@@ -144,10 +151,12 @@
         "url": ["https://www.sos.la.gov/business-services/file-business-documents"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
@@ -170,10 +179,12 @@
         "url": ["https://www.sos.la.gov/business-services/file-business-documents"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
@@ -196,10 +207,12 @@
         "url": ["https://www.sos.la.gov/business-services/file-business-documents"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
@@ -213,7 +226,7 @@
     "reason": "city-license-unconfirmed",
     "items": [
       {
-        "id": "monroe.local-licenses",
+        "id": "monroe-la.local-licenses",
         "title": "Review applicable local licenses and permits in Monroe",
         "category": "license",
         "authority": "Monroe local licensing authority",
@@ -222,10 +235,12 @@
         "url": ["https://www.sos.la.gov/business-services/file-business-documents"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],
@@ -248,10 +263,12 @@
         "url": ["https://www.sos.la.gov/business-services/file-business-documents"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The state page this entry cites gives no penalty amount."
         }
       }
     ],

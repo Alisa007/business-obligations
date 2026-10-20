@@ -44,8 +44,19 @@
   "salesTax": {
     "statewide": true,
     "permit": "Washington business license with retail sales tax endorsement",
+    "permitFee": {
+      "basis": "flat",
+      "amount": 50,
+      "note": "State business license application fee to open a business, which carries the sales tax registration; city endorsement fees are separate."
+    },
     "agency": null,
-    "alternative": null
+    "alternative": null,
+    "penalty": {
+      "basis": "percent",
+      "note": "9% of the tax when not paid by the due date, 19% after the month following and 29% after the second month, with a $5 minimum.",
+      "rate": 29,
+      "min": 5
+    }
   },
   "localSalesTax": "state_administered",
   "economicNexusUsd": 100000,
@@ -62,6 +73,26 @@
       "minEmployees": 1
     }
   },
+  "penalties": {
+    "unemployment": {
+      "basis": "flat",
+      "amount": 25,
+      "note": "$25 per late tax or wage report."
+    },
+    "newHire": {
+      "basis": "not_stated",
+      "note": "No current official penalty amount for a late new hire report was found; secondary sources conflict or give only the federal $25 and $500 ceilings."
+    },
+    "laborPosters": {
+      "basis": "not_stated",
+      "note": "No penalty amount specific to the required workplace notices was found in the state's labor and workers' compensation sources."
+    },
+    "workersComp": {
+      "basis": "range",
+      "note": "Greater of $1,301 (from July 1, 2026) or twice the premiums due for failing to register, with a daily penalty for violating a stop-work order.",
+      "min": 1301
+    }
+  },
   "paidLeave": {
     "title": "Washington Paid Family and Medical Leave and WA Cares premiums",
     "agency": "Washington Employment Security Department",
@@ -76,6 +107,7 @@
     "authority": "Washington Department of Revenue, Business Licensing Service",
     "url": ["https://dor.wa.gov/taxes-rates/business-occupation-tax/open-business/apply-business-license"],
     "rrule": "FREQ=YEARLY",
+    "anchor": "license_issued",
     "feeDetail": {
       "basis": "varies",
       "note": "the application fee varies"
@@ -85,8 +117,7 @@
       "note": "Late renewal penalty is one-half of endorsement fees, capped at $150; the amount varies with the endorsements on the license.",
       "rate": 50,
       "max": 150
-    },
-    "anchor": "license_issued"
+    }
   },
   "local": {
     "url": ["https://dor.wa.gov/taxes-rates/business-occupation-tax/open-business"],
