@@ -23,16 +23,17 @@ export const needsProfession = (choices: Pick<ProfileChoices, "entityType" | "na
 
 /**
  * The `BusinessProfile` for these choices in `place`. Questions not answered are left out, so the engine treats them
- * as unknown. The engine needs a business type: none chosen is taken as an LLC, the most common one.
+ * as unknown. The engine needs a business type: none chosen is taken as an LLC, the most common one. Without a
+ * `place` the profile has none, which only the engine's federal scope accepts.
  */
-export function profileFromChoices(choices: ProfileChoices, place: Place): BusinessProfile {
+export function profileFromChoices(choices: ProfileChoices, place?: Place): BusinessProfile {
   const entityType = choices.entityType ?? "llc";
   const profile: Record<string, unknown> = {
     entityType,
     zip: choices.zip,
-    city: place.city,
-    county: place.county,
-    state: place.state,
+    city: place?.city,
+    county: place?.county,
+    state: place?.state,
     naics: choices.naics.length >= 2 ? choices.naics : undefined,
     profession: needsProfession({ entityType, naics: choices.naics })
       ? (choices.profession ?? "other")

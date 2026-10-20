@@ -54,37 +54,6 @@ function PlanSkeleton() {
   );
 }
 
-function EmptyPlanState() {
-  const steps = [
-    ["1", "Describe", "Your location and business"],
-    ["2", "Review", "The obligations that apply"],
-    ["3", "Act", "Deadlines in a simple plan"],
-  ];
-  return (
-    <YStack gap="4" justifyContent="center" flex={1} paddingVertical="3">
-      <YStack gap="1.5">
-        <Text fontSize="xl" fontWeight="700">
-          Build your plan
-        </Text>
-        <Muted>Start with your ZIP code. We’ll use it to find the state and local requirements.</Muted>
-      </YStack>
-      <XStack gap="3" flexWrap="wrap">
-        {steps.map(([number, title, description]) => (
-          <XStack key={number} gap="2.5" flex={1} flexBasis={150} alignItems="flex-start">
-            <Chip tone="info" outline>
-              {number}
-            </Chip>
-            <YStack gap="0.5" flex={1}>
-              <Text fontWeight="600">{title}</Text>
-              <Muted size="xs">{description}</Muted>
-            </YStack>
-          </XStack>
-        ))}
-      </XStack>
-    </YStack>
-  );
-}
-
 /** How long the details stay unchanged before the result is worked out again. */
 const RECALCULATE_DELAY_MS = 400;
 
@@ -124,19 +93,17 @@ export function Playground() {
   const firstRun = useRef(true);
   useEffect(() => {
     const state = choicesRef.current;
-    if (!/^\d{5}$/.test(state.zip)) {
-      setData(undefined);
-      setError(undefined);
-      return;
-    }
+    // Without a complete ZIP only the federal obligations are shown, which need no place.
+    const federalOnly = !/^\d{5}$/.test(state.zip);
     let current = true;
     const delay = firstRun.current ? 0 : RECALCULATE_DELAY_MS;
     const timer = setTimeout(async () => {
       firstRun.current = false;
       try {
-        const place = await lookupPlace(state.zip);
-        if (!place) throw new Error(`Unknown ZIP code "${state.zip}"`);
+        const place = federalOnly ? undefined : await lookupPlace(state.zip);
+        if (!federalOnly && !place) throw new Error(`Unknown ZIP code "${state.zip}"`);
         const result = analyze(profileFromChoices(state, place), {
+          federalOnly,
           asOf: state.asOf || undefined,
           openingDate: state.openingDate || undefined,
           isNew: !state.isFormed,
@@ -274,9 +241,10 @@ export function Playground() {
           <style>{`.bo-pending{visibility:visible !important}`}</style>
         </noscript>
         {/* A screen of room for the plan from the start (the address is not known until the page is running), so the
-              footer starts below the fold and does not jump into view's way when the plan arrives. */}
-        <YStack gap="4" minHeight="100vh" minWidth={0}>
-          {!data && !error && (/^\d{5}$/.test(choices.zip) ? <PlanSkeleton /> : <EmptyPlanState />)}
+              footer starts below the fold and does not jump into view's way when the plan arrives. Not on a phone: the form is
+              above the plan there, so a screen of room is a screen of blank space under a short plan. */}
+        <YStack gap="4" minHeight={{ default: 0, md: "100vh" }} minWidth={0}>
+          {!data && !error && <PlanSkeleton />}
           {error && (
             <Text color="amber-700" role="alert">
               {error}

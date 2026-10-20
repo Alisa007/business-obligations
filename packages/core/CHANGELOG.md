@@ -5,6 +5,10 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ## [Unreleased]
 
+### Added
+
+- **core:** `scope: "federal"` option for `evaluate`, `planLaunch`, `buildCalendar` and `analyzeInputs`: runs only the federal rules and needs no `zip`, `state`, `city` or `county`. `BusinessProfile.city` and `county` are now optional in the type (still required at runtime without the scope).
+
 ## [0.16.0] - 2026-10-20
 
 ### Added

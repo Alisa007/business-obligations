@@ -1,4 +1,4 @@
-import { evaluate, listRules, type EvaluateOptions } from "./engine";
+import { evaluate, listRules, scopedRules, type EvaluateOptions } from "./engine";
 import type { BusinessProfile, ResolvedProfile, Rule } from "./types";
 
 type Field = keyof BusinessProfile;
@@ -98,7 +98,7 @@ export function analyzeInputs(input: BusinessProfile, options: EvaluateOptions =
   const base = evaluate(input, options);
   const baseIds = new Set(base.items.map((i) => i.id));
   const resolved = base.profile as ResolvedProfile;
-  const rules = options.rules ?? listRules(resolved.country);
+  const rules = scopedRules(options.rules ?? listRules(resolved.country), options.scope);
   const defaultsUsed: DefaultedInput[] = [];
   const sensitivity: Sensitivity[] = [];
 

@@ -8,8 +8,8 @@ import { JURISDICTIONS } from "./filters";
 
 export interface ObligationsSummaryProps {
   items: ComplianceItem[];
-  /** Where the business is; the smallest place given is summarized (see `LocationSummary`). */
-  state: string;
+  /** Where the business is; the smallest place given is summarized (see `LocationSummary`). Left out for federal items only. */
+  state?: string;
   county?: string;
   city?: string;
   /** The nearest dated deadline, if any, and today's date to count from. */
@@ -60,7 +60,7 @@ function ObligationsSummaryBody({
       borderColor="border-color"
       borderRadius="lg"
     >
-      <LocationSummary state={state} county={county} city={city} compact bare />
+      {state ? <LocationSummary state={state} county={county} city={city} compact bare /> : null}
       <XStack columnGap="3" rowGap="1.5" alignItems="center" flexWrap="wrap">
         <Text fontSize="xl" fontWeight="700">
           {s.count(items.length)}

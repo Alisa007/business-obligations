@@ -66,6 +66,7 @@ export function buildCalendar(
     rules: options.rules,
     changes: options.changes,
     recentDays: options.recentDays,
+    scope: options.scope,
   };
   const first = evaluate(input, { ...evalOptions, asOf: from });
   const extra = options.changes ?? [];

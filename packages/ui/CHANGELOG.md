@@ -4,6 +4,14 @@ All notable changes to `business-obligations-ui` are documented here.
 
 ## [Unreleased]
 
+### Added
+
+- **ui:** `profileFromChoices` accepts no place (for the core `federal` scope); `ObligationsSummary` `state` is optional.
+
+### Fixed
+
+- **ui:** the industry search list is drawn in a portal, so a sidebar or sticky ancestor can no longer cover or clip it.
+
 ### Fixed
 
 - `LaunchList` without `onToggle`: a step's box now checks and unchecks when it is pressed (the list keeps the steps done itself). Before, it looked like a working box but did nothing. The progress figure no longer says "Saved in this browser" then, because nothing is saved; pass `onToggle` and `done` to keep the steps

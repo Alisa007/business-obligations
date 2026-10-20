@@ -201,6 +201,7 @@ export function planLaunch(input: BusinessProfile, options: LaunchOptions = {}):
     rules: options.rules,
     changes: options.changes,
     recentDays: options.recentDays,
+    scope: options.scope,
   };
   const unformed = evaluate(
     { ...input, isFormed: false, formationDate },

@@ -13,7 +13,7 @@ export {
   DISCLAIMER,
   InvalidProfileError,
 } from "./engine";
-export type { EvaluateOptions, ComplianceResult, Preview, ItemDiff } from "./engine";
+export type { EvaluateOptions, ComplianceResult, Preview, ItemDiff, Scope } from "./engine";
 export { RULESET_VERSION, BUNDLED_CHANGES, listChanges } from "./changes";
 export type { RuleChange, ChangeNotice, ChangeKind, ChangeFilter } from "./changes";
 export { stateFromZip } from "./zip";

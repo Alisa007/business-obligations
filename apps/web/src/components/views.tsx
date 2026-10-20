@@ -98,14 +98,16 @@ export function ResultSummary({
   const { result } = data;
   const s = summarize(result);
   const city = result.profile.city;
-  const place = [city, result.profile.state].filter(Boolean).join(", ");
+  const place = data.federalOnly
+    ? "Federal requirements"
+    : [city, result.profile.state].filter(Boolean).join(", ");
   // The launch plan has its own card (dates, fees, progress); every other tab starts from the obligations.
   if (tab === "plan") return <PlanSummary plan={data.plan} place={place} costs={data.costs} done={done} />;
   return (
     <YStack gap="3">
       <ObligationsSummary
         items={result.items}
-        state={result.profile.state}
+        state={data.federalOnly ? undefined : result.profile.state}
         county={result.profile.county}
         city={result.profile.city}
         next={s.next ? { title: s.next.title, date: s.next.nextDue } : undefined}
@@ -120,7 +122,12 @@ export function ResultSummary({
           link to report errors.
         </Muted>
       )}
-      {!s.hasCityData && (
+      {data.federalOnly && (
+        <Muted>
+          Only federal requirements are shown. Enter a ZIP code to add the state, county and city ones.
+        </Muted>
+      )}
+      {!data.federalOnly && !s.hasCityData && (
         <Muted>
           No city-specific requirements are on file for {city}. Local licenses and permits may still apply;
           check with the city.
