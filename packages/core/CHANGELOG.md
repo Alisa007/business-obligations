@@ -5,6 +5,16 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ## [Unreleased]
 
+## [0.15.0] - 2026-10-20
+
+### Breaking changes
+
+- **core:** require fee and penalty on every item
+
+### Fixed
+
+- add checked official sources to obligations
+
 ## [0.14.0] - 2026-10-19
 
 ### Added
