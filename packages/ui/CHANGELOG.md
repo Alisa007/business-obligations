@@ -4,6 +4,8 @@ All notable changes to `business-obligations-ui` are documented here.
 
 ## [Unreleased]
 
+## [0.8.0] - 2026-10-20
+
 ### Added
 
 - `SidebarLayout`: a rail at the left, as tall as the page and kept in view, with the content beside it; as much room is kept at the right as the rail takes at the left when the window can spare it
@@ -24,6 +26,22 @@ All notable changes to `business-obligations-ui` are documented here.
 ### Removed
 
 - **breaking:** the `findObligation`, `showing`, `planNote`, `plusPerMonth`, `confidence` and `profileForm.optional` messages, which no component read; a custom message table that has them must drop them
+
+### Breaking changes
+
+- **ui:** add SidebarLayout and summary cards, make the form compact and hydration-safe
+
+### Added
+
+- use shared calendar location and theme UI
+- **ui:** mark non-government links nofollow
+
+### Fixed
+
+- compact summary and fee empty state
+- link local location requirements
+- move planning note to footer
+- add checked official sources to obligations
 
 ## [0.7.0] - 2026-10-19
 
