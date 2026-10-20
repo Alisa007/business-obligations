@@ -87,18 +87,6 @@ const normalize = (name) =>
     .trim();
 
 // ---- local items (cities and counties) ------------------------------------------------------------------------------------------
-const FEE_BASES = new Set([
-  "flat",
-  "percent",
-  "tiered",
-  "per_unit",
-  "varies",
-  "none",
-  "unknown",
-  "formula",
-  "range",
-  "minimum",
-]);
 const allIds = new Map();
 let localItems = 0;
 const stateOfWhere = (where) => /^(?:city|county) ([A-Z]{2}):/.exec(where)?.[1];

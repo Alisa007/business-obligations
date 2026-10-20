@@ -122,7 +122,7 @@ describe("business-obligations-ui", () => {
   });
 
   it("shows conditionally applicable items in the launch list too, grouped by level, without a checkbox", () => {
-    const item = items.find((candidate) => candidate.cost.basis === "unknown");
+    const item = items[0];
     if (!item) throw new Error("expected launch fixture to contain an obligation");
     const maybe = { ...item, id: "maybe-2", title: "Only with a payroll" };
     const conditional = [{ item: maybe, when: [{ field: "employeeCount", values: [1, 2] }] }];
@@ -192,8 +192,9 @@ describe("business-obligations-ui", () => {
   });
 
   it("renders the obligation context, text deadlines, and category counts", () => {
-    const item = items.find((candidate) => candidate.cost.basis === "unknown");
-    if (!item) throw new Error("expected launch fixture to contain an obligation");
+    const first = items[0];
+    if (!first) throw new Error("expected launch fixture to contain an obligation");
+    const item = { ...first, penalty: undefined };
     const withTextDeadline = {
       ...item,
       id: `${item.id}-text-deadline`,
