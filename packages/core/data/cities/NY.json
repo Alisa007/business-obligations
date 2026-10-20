@@ -56,7 +56,8 @@
           "amount": 100
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
     ],
@@ -469,10 +470,12 @@
         "url": ["https://www.cityofelmira.net/216/Rental-Ordinances"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The city's published pages do not give the fee amount; it is set in the city's fee schedule or by resolution."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       },
       {
@@ -485,10 +488,12 @@
         "url": ["https://www.cityofelmira.net/DocumentCenter/View/132/Ordinance-95-73-on-Special-Events-PDF"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The city's published pages do not give the fee amount; it is set in the city's fee schedule or by resolution."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
     ],
@@ -529,10 +534,12 @@
         "url": ["https://fultonny.org/code-enforcement/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The city's published pages do not give the fee amount; it is set in the city's fee schedule or by resolution."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       },
       {
@@ -550,7 +557,8 @@
           "amount": 100
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       },
       {
@@ -563,10 +571,12 @@
         "url": ["https://fultonny.org/clerk-chamberlain/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The city's published pages do not give the fee amount; it is set in the city's fee schedule or by resolution."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       },
       {
@@ -579,10 +589,12 @@
         "url": ["https://fultonny.org/clerk-chamberlain/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The city's published pages do not give the fee amount; it is set in the city's fee schedule or by resolution."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
     ],
@@ -852,10 +864,12 @@
         "url": ["https://cityofithaca.org/142/Permit-Classifications"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The fee is set in the city's permit fee schedule and depends on the scope or valuation of the work."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "No penalty amount for work done without a permit was found in the city's published permit pages."
         }
       },
       {
@@ -868,10 +882,12 @@
         "url": ["https://cityofithaca.org/138/General-Permit"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The city's published pages do not give the fee amount; it is set in the city's fee schedule or by resolution."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
     ],
@@ -895,7 +911,10 @@
           "basis": "unknown"
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 15,
+          "percentPerMonth": 15,
+          "note": "The city code lists 15% of the fee for each month of delinquency, while another passage caps the penalty at $10 a year; confirm with the City Clerk."
         }
       }
     ],
@@ -943,7 +962,8 @@
           "amount": 100
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
     ],
@@ -1021,10 +1041,12 @@
         "checkedOn": "2026-10-18",
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The city says the fee varies with the category and size of the business."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
     ],
@@ -1079,7 +1101,8 @@
           "basis": "unknown"
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       },
       {
@@ -1132,7 +1155,9 @@
           "amount": 0
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 50,
+          "note": "Older city notices (2016-2018) list $50 a month for late registration, up to $350; confirm the current amount."
         }
       }
     ],
@@ -1165,10 +1190,16 @@
         ],
         "checkedOn": "2026-10-18",
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "percentPerMonth": 5,
+          "max": 25,
+          "note": "The city Department of Finance's filing page: 5% of the net tax for each month or part of a month, up to 5 months, plus 0.5% a month on underpayments; over 60 days late carries a $100 minimum or the tax due if lower."
         }
       },
       {
@@ -1197,10 +1228,16 @@
         ],
         "checkedOn": "2026-10-18",
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "percentPerMonth": 5,
+          "max": 25,
+          "note": "The city Department of Finance's filing page: 5% of the net tax for each month or part of a month, up to 5 months, plus 0.5% a month on underpayments; over 60 days late carries a $100 minimum or the tax due if lower."
         }
       },
       {
@@ -1215,10 +1252,16 @@
         "appliesTo": ["unincorporated"],
         "checkedOn": "2026-10-18",
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "percentPerMonth": 5,
+          "max": 25,
+          "note": "The city Department of Finance's filing page: 5% of the net tax for each month or part of a month, up to 5 months, plus 0.5% a month on underpayments; over 60 days late carries a $100 minimum or the tax due if lower."
         }
       },
       {
@@ -1237,7 +1280,9 @@
           "note": "There is no fee to provide safe and sick time; the cost is the leave itself."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 500,
+          "note": "Law-firm summaries of the 2024 amendment: a civil penalty up to $500 for a first violation, $750 for a second within two years and $1,000 for later ones, per employee and per instance."
         }
       }
     ],
@@ -1301,10 +1346,12 @@
         "url": ["https://www.cityofnewburgh-ny.gov/308/License-Permit-Fees"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The city's published pages do not give the fee amount; it is set in the city's fee schedule or by resolution."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       },
       {
@@ -1317,10 +1364,12 @@
         "url": ["https://www.cityofnewburgh-ny.gov/304/City-Clerk"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The city's published pages do not give the fee amount; it is set in the city's fee schedule or by resolution."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       },
       {
@@ -1339,7 +1388,8 @@
           "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
     ],
@@ -1368,7 +1418,8 @@
           "amount": 50
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
     ],
@@ -1439,10 +1490,12 @@
         "url": ["https://www.norwichnewyork.gov/pdfs/code/building-permit-appl.pdf"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The city's published pages do not give the fee amount; it is set in the city's fee schedule or by resolution."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
     ],
@@ -1699,10 +1752,12 @@
         "url": ["https://www.portjervisny.gov/buildingdepartment"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The city's published pages do not give the fee amount; it is set in the city's fee schedule or by resolution."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
     ],
@@ -1813,10 +1868,12 @@
         "url": ["https://rensselaerny.gov/City-Departments/planning-building-and-zoning/building-department"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The city's published pages do not give the fee amount; it is set in the city's fee schedule or by resolution."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
     ],
@@ -1874,7 +1931,8 @@
           "note": "higher in Center City, Marina and Harbortown"
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       },
       {
@@ -1895,7 +1953,8 @@
           "amount": 350
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
     ],
@@ -2018,10 +2077,12 @@
         "url": ["https://www.saratogaspringsny.gov/Archive/ViewFile/Item/410"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The city's published pages do not give the fee amount; it is set in the city's fee schedule or by resolution."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
     ],
@@ -2048,7 +2109,8 @@
           "amount": 200
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
     ],
@@ -2073,10 +2135,12 @@
         "url": ["https://www.sherrillny.gov/government/city-hall/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The city's published pages do not give the fee amount; it is set in the city's fee schedule or by resolution."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       },
       {
@@ -2142,7 +2206,8 @@
           "amount": 500
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
     ],
@@ -2280,10 +2345,12 @@
         "url": ["https://watervlietny.gov/permits-forms/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The city's published pages do not give the fee amount; it is set in the city's fee schedule or by resolution."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
     ],
@@ -2357,7 +2424,8 @@
           "basis": "unknown"
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
     ],
@@ -2383,7 +2451,8 @@
           "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "This entry covers the city's local licenses and taxes generally, each of which carries its own late charge in the municipal code; no single amount is stated."
         }
       }
     ],
@@ -2410,7 +2479,8 @@
           "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "This entry covers the city's local licenses and taxes generally, each of which carries its own late charge in the municipal code; no single amount is stated."
         }
       }
     ],
@@ -2437,7 +2507,8 @@
           "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "This entry covers the city's local licenses and taxes generally, each of which carries its own late charge in the municipal code; no single amount is stated."
         }
       }
     ],

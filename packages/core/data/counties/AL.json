@@ -72,7 +72,8 @@
           "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The county's published pages for this item give no late-penalty amount."
         }
       },
       {
@@ -90,7 +91,8 @@
           "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The county's published pages for this item give no late-penalty amount."
         }
       }
     ],
@@ -1063,7 +1065,8 @@
           "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The county's published pages for this item give no late-penalty amount."
         }
       },
       {
@@ -1081,7 +1084,10 @@
           "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10,
+          "min": 50,
+          "note": "The county's sales tax form: the greater of 10% of the tax or $50 for late filing, plus a separate 10% for late payment."
         }
       }
     ],
@@ -1432,7 +1438,9 @@
           "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 10,
+          "note": "The city's lodging tax form: a 10% penalty for failing to file on time plus 1% interest a month."
         }
       },
       {

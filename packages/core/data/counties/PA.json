@@ -272,7 +272,9 @@
           "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 100,
+          "note": "The county's hotel tax rules assess $100 on any return filed more than 5 days late, plus 1.5% interest for each month the tax stays unpaid."
         }
       },
       {
@@ -444,7 +446,8 @@
           "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The county's published pages for this return give no late-penalty amount."
         }
       },
       {
@@ -734,7 +737,8 @@
           "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The county's published pages for this return give no late-penalty amount."
         }
       },
       {
@@ -1123,7 +1127,9 @@
           "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 100,
+          "note": "The county Treasurer's notice states a $100 fine plus 9% annual interest on remittances and reports received after the due date."
         }
       },
       {
@@ -2595,7 +2601,8 @@
           "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       },
       {
@@ -2615,7 +2622,8 @@
           "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       },
       {
@@ -2634,7 +2642,8 @@
           "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       },
       {
@@ -2652,7 +2661,8 @@
           "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       },
       {
@@ -3286,7 +3296,11 @@
           "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 1,
+          "percentPerMonth": 1,
+          "min": 10,
+          "note": "The county return form adds a late fee of 1% per month with a $10 minimum per month."
         }
       },
       {

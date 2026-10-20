@@ -109,10 +109,13 @@
     "checkedOn": "2026-10-16",
     "frequency": "ongoing",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 50,
+      "note": "Vehicle dismantlers pay $50 a year under Vehicle and Traffic Law 415-a; scrap processor fees were not found."
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "not_stated",
+      "note": "Operating a dismantler without registration is a class E felony; no civil late-fee amount was found."
     }
   },
   {
@@ -155,7 +158,9 @@
     "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=2;BYMONTHDAY=28",
     "anchor": "2027-02-28",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 100,
+      "note": "The renewal fee is $100 on a two-year cycle; initial fees vary with the filing date."
     },
     "penalty": {
       "basis": "unknown"
@@ -184,7 +189,8 @@
     "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=7;BYMONTHDAY=31",
     "anchor": "2027-07-31",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "varies",
+      "note": "DCWP's two-year fee is staggered by filing window, from $85 to $340 (a $425 option also exists)."
     },
     "penalty": {
       "basis": "unknown"
@@ -239,7 +245,9 @@
     ],
     "rrule": "FREQ=YEARLY;BYMONTH=4;BYMONTHDAY=30",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 500,
+      "note": "The NYC Business portal lists a $500 renewal fee on a one-year cycle."
     },
     "penalty": {
       "basis": "unknown"
@@ -267,7 +275,8 @@
     "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=1;BYMONTHDAY=31",
     "anchor": "2027-01-31",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "varies",
+      "note": "The two-year fee depends on the filing window, from $38 to $188 on DCWP's checklist."
     },
     "penalty": {
       "basis": "unknown"
@@ -295,7 +304,8 @@
     "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=3;BYMONTHDAY=31",
     "anchor": "2027-03-31",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "varies",
+      "note": "DCWP says the fee depends on the filing window and the number of vehicles the business will accommodate."
     },
     "penalty": {
       "basis": "unknown"
@@ -323,7 +333,9 @@
     "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=10;BYMONTHDAY=31",
     "anchor": "2027-10-31",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 550,
+      "note": "DCWP lists a $550 renewal fee on a two-year cycle; new application fees vary."
     },
     "penalty": {
       "basis": "unknown"
@@ -351,7 +363,8 @@
     "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=4;BYMONTHDAY=30",
     "anchor": "2026-04-30",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "varies",
+      "note": "The fee is per truck and depends on the filing window ($150 to $600), plus a $200 trust fund enrollment fee and a $50 inspection fee per truck."
     },
     "penalty": {
       "basis": "unknown"
@@ -439,7 +452,8 @@
     "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=4;BYMONTHDAY=1",
     "anchor": "2026-04-01",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "varies",
+      "note": "DCWP's two-year fee depends on the filing window: $295, $443 or $590."
     },
     "penalty": {
       "basis": "unknown"
@@ -467,7 +481,8 @@
     "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=4;BYMONTHDAY=1",
     "anchor": "2027-04-01",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "varies",
+      "note": "DCWP's checklist and NYC Business page give different amounts, from $148 up to $738 depending on the term; confirm with DCWP."
     },
     "penalty": {
       "basis": "unknown"
@@ -552,7 +567,9 @@
     ],
     "rrule": "FREQ=YEARLY;BYMONTH=6;BYMONTHDAY=30",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 75,
+      "note": "DCWP's checklist lists $75 for a license filed July 1 to December 31, with $38 or $113 options in the other half of the year."
     },
     "penalty": {
       "basis": "unknown"
@@ -636,7 +653,8 @@
     "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=5;BYMONTHDAY=1",
     "anchor": "2026-05-01",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "varies",
+      "note": "New licenses cost $125 to $175 depending on placement staff; renewals are $500 to $700."
     },
     "penalty": {
       "basis": "unknown"
@@ -664,7 +682,8 @@
     "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=2;BYMONTHDAY=28",
     "anchor": "2026-02-28",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "varies",
+      "note": "DCWP lists $340 for the two-year license, with a $425 option for a longer term."
     },
     "penalty": {
       "basis": "unknown"
@@ -720,7 +739,8 @@
     "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=3;BYMONTHDAY=31",
     "anchor": "2026-03-31",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "varies",
+      "note": "DCWP lists $100 per bus for a two-year renewal, with lower initial fees ($25 to $100) by filing window, and $50 for each licensed guide."
     },
     "penalty": {
       "basis": "unknown"
@@ -750,7 +770,8 @@
     "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=3;BYMONTHDAY=15",
     "anchor": "2027-03-15",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "varies",
+      "note": "DCWP's two-year fee depends on the filing window, from $100 to $200."
     },
     "penalty": {
       "basis": "unknown"
@@ -777,7 +798,8 @@
     ],
     "rrule": "FREQ=YEARLY;BYMONTH=11;BYMONTHDAY=1",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "varies",
+      "note": "DCWP lists $110 for a 12-month license (or $55 to $165 in the other filing window) plus $60 for each additional pedicab."
     },
     "penalty": {
       "basis": "unknown"
@@ -804,7 +826,8 @@
     ],
     "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=28",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "varies",
+      "note": "DCWP lists $60 for March 1 to August 28 and $30 or $90 in the other window."
     },
     "penalty": {
       "basis": "unknown"
@@ -863,7 +886,8 @@
     "anchor": "license_issued",
     "renewal": "Every two years",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "varies",
+      "note": "DOHMH lists a two-year full-term permit at $200 where food is prepared on site and $75 for pre-packaged food; seasonal permits are $35 or $15."
     },
     "penalty": {
       "basis": "unknown"
@@ -892,7 +916,9 @@
     "anchor": "license_issued",
     "renewal": "Every two years",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 100,
+      "note": "The NYC Business portal lists $100 for two years, plus a separate $26 infection control course fee."
     },
     "penalty": {
       "basis": "unknown"
@@ -981,7 +1007,9 @@
       "amount": 275
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 25,
+      "note": "TLC charges a $25 late fee on a for-hire vehicle renewal filed within the 60 days after expiration."
     }
   },
   {
@@ -1108,7 +1136,8 @@
     "rrule": "FREQ=YEARLY;BYMONTH=12;BYMONTHDAY=31",
     "anchor": "2026-12-31",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "varies",
+      "note": "DEC says the freshwater bait fish dealer fee varies by gear type or activity; the marine bait permit is $50."
     },
     "penalty": {
       "basis": "unknown"
@@ -1282,7 +1311,9 @@
       "amount": 210
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 10,
+      "note": "Education Law section 6502 adds a late charge of $10 for each month a registration is delayed (third-party copy of the statute); lapsed non-practicing licensees are exempt."
     }
   },
   {
@@ -1409,7 +1440,9 @@
     "frequency": "ongoing",
     "renewal": "Every four years, online from 90 days before expiry",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 60,
+      "note": "The Department of State charges $60 for the initial application and for renewal."
     },
     "penalty": {
       "basis": "unknown"
@@ -1428,10 +1461,14 @@
     "rrule": "FREQ=YEARLY;INTERVAL=2;BYMONTH=6;BYMONTHDAY=30",
     "anchor": "2025-06-30",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 300,
+      "note": "Public Health Law section 3428 lists $400 for an initial registration and $300 for the biennial renewal."
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 10,
+      "note": "Late registration adds $10 for each 30-day delay (Public Health Law section 3428)."
     }
   },
   {
@@ -1448,10 +1485,14 @@
     "anchor": "license_issued",
     "renewal": "Every two years; renew online from 60 days before expiry",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 150,
+      "note": "An older DMV regulation lists $150 for two years per shop; confirm the current amount."
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 1000,
+      "note": "A repair shop operating without registration owes a $1,000 civil penalty, reducible to $500 if it registers within ten days."
     }
   },
   {
@@ -1534,7 +1575,8 @@
       "Incorporated humane societies, which register instead"
     ],
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "varies",
+      "note": "The Department's pet dealer page lists a $100 application fee above 25 animals a year and $25 for nine to 25."
     },
     "penalty": {
       "basis": "unknown"
@@ -1556,7 +1598,9 @@
       "basis": "unknown"
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 10,
+      "note": "Education Law section 6502 adds a late charge of $10 for each month a registration is delayed (third-party copy of the statute); lapsed non-practicing licensees are exempt."
     }
   },
   {
@@ -1572,10 +1616,12 @@
     "frequency": "ongoing",
     "renewal": "Renew on the Division's schedule, with the bond and insurance in force",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "varies",
+      "note": "The Department of State charges $300 for an individual and $400 for a firm, partnership or corporation, for a two-year license (2014 statute and the Department's page)."
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "not_stated",
+      "note": "The state agency's published pages for this item give no penalty amount."
     }
   },
   {
@@ -1616,7 +1662,9 @@
       "min": 400
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 100,
+      "note": "The Department of State's fee list shows a $100 late renewal penalty."
     }
   },
   {
@@ -1651,7 +1699,9 @@
     "frequency": "ongoing",
     "renewal": "Every three years, 45 days before expiry",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 900,
+      "note": "DEC's business registration form lists a $900 fee for each place of business."
     },
     "penalty": {
       "basis": "unknown"
@@ -1671,7 +1721,9 @@
     "checkedOn": "2026-10-16",
     "renewal": "Every three years",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 450,
+      "note": "DEC lists $450 every 3 years for the first certification category and $150 for each additional one."
     },
     "penalty": {
       "basis": "unknown"
@@ -1692,10 +1744,14 @@
     "anchor": "license_issued",
     "renewal": "Every two years, online from three months before expiry",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 185,
+      "note": "Sources list $185 for a two-year broker renewal ($155 plus a $30 surcharge); not read on the Department of State site."
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 200,
+      "note": "Sources list a $200 late renewal penalty, in addition to the renewal fee."
     }
   },
   {
@@ -2047,7 +2103,9 @@
       "basis": "unknown"
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 10,
+      "note": "Education Law section 6502 adds a late charge of $10 for each month a registration is delayed (third-party copy of the statute); lapsed non-practicing licensees are exempt."
     }
   },
   {
@@ -2136,7 +2194,9 @@
       "day": 1
     },
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 300,
+      "note": "The Tax Department charges $300 for each retail or online location, renewed by September 20."
     },
     "penalty": {
       "basis": "unknown"
@@ -2158,7 +2218,8 @@
     "anchor": "license_issued",
     "renewal": "Every five years, by check or money order",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "varies",
+      "note": "DEC's five-year fee depends on combined capacity, from no charge up to 1,100 gallons to $500 for 5,000 to under 400,000 gallons."
     },
     "penalty": {
       "basis": "unknown"
@@ -2553,7 +2614,8 @@
     "frequency": "ongoing",
     "renewal": "At least 30 days before the permit expires",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "varies",
+      "note": "The annual fee depends on the waste type and vehicles: $250 for the first vehicle and $100 for each more, or $500 and $200 for industrial-commercial or low-level radioactive waste (Environmental Conservation Law article 72)."
     },
     "penalty": {
       "basis": "unknown"
@@ -2787,7 +2849,8 @@
     ],
     "frequency": "ongoing",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "varies",
+      "note": "NYC Business lists $120 plus $200 for each UV unit, renewed every two years."
     },
     "penalty": {
       "basis": "unknown"
@@ -2814,7 +2877,9 @@
     ],
     "frequency": "ongoing",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 70,
+      "note": "NYC Business lists $70 to renew a one-year permit and $70 to $105 for new applications."
     },
     "penalty": {
       "basis": "unknown"
@@ -3474,7 +3539,9 @@
       "basis": "unknown"
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 10,
+      "note": "Education Law section 6502 adds a late charge of $10 for each month a registration is delayed (third-party copy of the statute); lapsed non-practicing licensees are exempt."
     }
   },
   {
@@ -3493,7 +3560,9 @@
       "basis": "unknown"
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 10,
+      "note": "Education Law section 6502 adds a late charge of $10 for each month a registration is delayed (third-party copy of the statute); lapsed non-practicing licensees are exempt."
     }
   },
   {
@@ -3836,10 +3905,15 @@
     "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
     "deadlineNote": "for the previous month",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "none",
+      "amount": 0,
+      "note": "There is no fee to file; the tax is the amount the return reports."
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "percent",
+      "percentPerMonth": 1,
+      "note": "Tax Law section 289-b as quoted in a Tax Tribunal decision: 10% of the tax for a late return or payment, plus 1% for each further month.",
+      "rate": 10
     }
   },
   {
@@ -4013,7 +4087,9 @@
       "amount": 240
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 50,
+      "note": "DOB's page lists a $50 late renewal fee."
     }
   },
   {
@@ -4044,7 +4120,10 @@
       "amount": 150
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "range",
+      "note": "DOB adds a $50 late fee for renewals 1 to 30 days late and $100 after that, up to one year.",
+      "min": 50,
+      "max": 100
     }
   },
   {
@@ -4101,7 +4180,9 @@
       "amount": 150
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 50,
+      "note": "DOB's rigger page lists a $50 late renewal fee."
     }
   },
   {
@@ -4130,7 +4211,9 @@
       "amount": 75
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 50,
+      "note": "DOB's licensing instructions lists a $50 late renewal fee."
     }
   },
   {
@@ -4159,7 +4242,9 @@
       "amount": 75
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 50,
+      "note": "DOB's page lists a $50 late renewal fee."
     }
   },
   {
@@ -4184,10 +4269,13 @@
     "frequency": "ongoing",
     "renewal": "Every three years",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "varies",
+      "note": "DOB's October 2024 fee schedule lists renewal at $150 for Class A and B and $75 for Class C."
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 50,
+      "note": "DOB's fee schedule lists a $50 late fee for every hoisting machine operator class."
     }
   },
   {
@@ -4216,7 +4304,9 @@
       "amount": 50
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 50,
+      "note": "DOB's fee chart lists a $50 late renewal fee."
     }
   },
   {
@@ -4333,7 +4423,9 @@
       "amount": 25
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 25,
+      "note": "A renewal filed 90 days to one year after expiration adds a $25 penalty."
     }
   },
   {
@@ -4384,7 +4476,9 @@
     ],
     "frequency": "ongoing",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 105,
+      "note": "FDNY lists $105 for the hot work operations permit; cylinder storage may add fees."
     },
     "penalty": {
       "basis": "unknown"
@@ -4809,7 +4903,9 @@
     "renewal": "Biennial registration period",
     "exemptions": ["Businesses without indoor tanning equipment"],
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 120,
+      "note": "The state regulation sets a $120 registration fee per two-year period, prorated at $5 a month, plus an inspection fee."
     },
     "penalty": {
       "basis": "unknown"
@@ -4887,7 +4983,9 @@
     "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=20",
     "exemptions": ["Businesses that are not registrants for the first sale of opioid units"],
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "none",
+      "amount": 0,
+      "note": "There is no fee to file; the tax is the amount the return reports."
     },
     "penalty": {
       "basis": "unknown"
@@ -4906,7 +5004,9 @@
     "rrule": "FREQ=YEARLY;BYMONTH=1,2,3,4,5,6,7,8,9,10,11,12;BYMONTHDAY=20",
     "exemptions": ["Approved annual filers file once a year by January 20"],
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "none",
+      "amount": 0,
+      "note": "There is no fee to file; the tax is the amount the return reports."
     },
     "penalty": {
       "basis": "unknown"
@@ -4925,7 +5025,9 @@
     "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=20",
     "anchor": "2027-03-20",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "none",
+      "amount": 0,
+      "note": "There is no fee to file; the tax is the amount the return reports."
     },
     "penalty": {
       "basis": "unknown"
@@ -4943,7 +5045,9 @@
     "checkedOn": "2026-10-16",
     "rrule": "FREQ=YEARLY;BYMONTH=1,4,7,10;BYMONTHDAY=30",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "none",
+      "amount": 0,
+      "note": "There is no fee to file; the tax is the amount the return reports."
     },
     "penalty": {
       "basis": "unknown"
@@ -5277,7 +5381,9 @@
       "amount": 108
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 10,
+      "note": "Education Law section 6502 adds a late charge of $10 for each month a registration is delayed (third-party copy of the statute); lapsed non-practicing licensees are exempt."
     }
   },
   {
@@ -5389,7 +5495,8 @@
     "frequency": "ongoing",
     "deadline": "FINRA: at year end through CRD; non-FINRA: four years after the effective date",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "varies",
+      "note": "The Attorney General's fee guide lists $1,200 every four years for FINRA members and $300 a year for others, paid to the Department of Law."
     },
     "penalty": {
       "basis": "unknown"
@@ -5567,7 +5674,9 @@
       "amount": 250
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 100,
+      "note": "The Department of State lists a $100 late renewal penalty."
     }
   },
   {
@@ -5650,7 +5759,9 @@
     "frequency": "ongoing",
     "deadline": "With each sales tax return",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "none",
+      "amount": 0,
+      "note": "There is no fee to file; the tax is the amount the return reports."
     },
     "penalty": {
       "basis": "unknown"
@@ -5694,7 +5805,9 @@
       "Work on land not owned or leased by the applicator, which needs commercial certification"
     ],
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 25,
+      "note": "Statute: $25 for the initial certified private applicator and $5 for later ones on the same farm."
     },
     "penalty": {
       "basis": "unknown"
@@ -5793,7 +5906,9 @@
     "frequency": "ongoing",
     "exemptions": ["Projects disturbing under one acre"],
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 110,
+      "note": "A January 2026 DEC authorization letter states an annual regulatory fee of $110 billed each late fall; whether the notice of intent itself has a fee was not confirmed."
     },
     "penalty": {
       "basis": "unknown"
@@ -6113,7 +6228,9 @@
     ],
     "frequency": "ongoing",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 70,
+      "note": "FDNY lists $70 to maintain or operate a commercial cooking system; acceptance test fees may apply."
     },
     "penalty": {
       "basis": "unknown"
@@ -6169,7 +6286,9 @@
     ],
     "frequency": "ongoing",
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 105,
+      "note": "FDNY lists $105 to maintain or operate a repair garage; other fees may apply."
     },
     "penalty": {
       "basis": "unknown"
@@ -6329,7 +6448,8 @@
       "Sellers of rifles and shotguns only, for the state licence"
     ],
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "varies",
+      "note": "Draft bills list $10 elsewhere in the state and $50 for dealers in New York City, Nassau and Westchester; the licensing officer sets the amount."
     },
     "penalty": {
       "basis": "unknown"
@@ -6907,7 +7027,9 @@
       "amount": 294
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 10,
+      "note": "Education Law section 6502 adds a late charge of $10 for each month a registration is delayed (third-party copy of the statute); lapsed non-practicing licensees are exempt."
     }
   },
   {
@@ -7134,7 +7256,9 @@
       "Individual investing, using virtual currency only to buy goods or services, mining, and purely technical software"
     ],
     "feeDetail": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 5000,
+      "note": "Sources put the BitLicense application fee at $5,000, not refunded if denied or withdrawn."
     },
     "penalty": {
       "basis": "unknown"
@@ -7309,7 +7433,9 @@
       "amount": 294
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 10,
+      "note": "Education Law section 6502 adds a late charge of $10 for each month a registration is delayed (third-party copy of the statute); lapsed non-practicing licensees are exempt."
     }
   },
   {
@@ -7328,7 +7454,9 @@
       "amount": 377
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 10,
+      "note": "Education Law section 6502 adds a late charge of $10 for each month a registration is delayed (third-party copy of the statute); lapsed non-practicing licensees are exempt."
     }
   },
   {
@@ -7347,7 +7475,9 @@
       "amount": 294
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 10,
+      "note": "Education Law section 6502 adds a late charge of $10 for each month a registration is delayed (third-party copy of the statute); lapsed non-practicing licensees are exempt."
     }
   },
   {
@@ -7366,7 +7496,9 @@
       "amount": 377
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "flat",
+      "amount": 10,
+      "note": "Education Law section 6502 adds a late charge of $10 for each month a registration is delayed (third-party copy of the statute); lapsed non-practicing licensees are exempt."
     }
   },
   {

@@ -2,12 +2,8 @@
   {
     "city": "Little Rock",
     "note": "The current fee schedule was not confirmed; the renewal date and penalties come from the city's guide to starting a business.",
-    "counties": [
-      "Pulaski"
-    ],
-    "sourceUrl": [
-      "https://www.littlerock.gov/treasury"
-    ],
+    "counties": ["Pulaski"],
+    "sourceUrl": ["https://www.littlerock.gov/treasury"],
     "items": [
       {
         "id": "littlerock.business-license",
@@ -17,12 +13,8 @@
         "description": "Businesses in Little Rock need a city business license, applied for after zoning approval, with a fee based on the number of employees or the amount of inventory. Licenses renew each year on January 1; an account not paid by February 1 is charged a 10% penalty, another 10% if not paid by March 1, and 30% if not paid by April 1. A business that closes before July 1 may ask in writing for a refund of half the fee.",
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=1",
         "deadlineNote": "to avoid the penalty; licenses renew January 1",
-        "url": [
-          "https://www.littlerock.gov/treasury"
-        ],
-        "appliesTo": [
-          "all"
-        ],
+        "url": ["https://www.littlerock.gov/treasury"],
+        "appliesTo": ["all"],
         "feeDetail": {
           "basis": "varies",
           "note": "The city's page does not publish fee amounts: a business license fee schedule is linked."
@@ -47,12 +39,8 @@
         "category": "license",
         "authority": "Fayetteville local licensing authority",
         "description": "Fayetteville requires businesses in the incorporated city limits to obtain a business license within 60 days of opening; licenses expire October 31 and renewals open September 1.",
-        "url": [
-          "https://www.fayetteville-ar.gov/297/Business-License"
-        ],
-        "appliesTo": [
-          "all"
-        ],
+        "url": ["https://www.fayetteville-ar.gov/297/Business-License"],
+        "appliesTo": ["all"],
         "rrule": "FREQ=YEARLY;BYMONTH=10;BYMONTHDAY=31",
         "feeDetail": {
           "basis": "varies",
@@ -65,13 +53,9 @@
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": [
-      "https://www.fayetteville-ar.gov/297/Business-License"
-    ],
+    "sourceUrl": ["https://www.fayetteville-ar.gov/297/Business-License"],
     "note": "Fayetteville city-specific licensing was confirmed from the cited official source.",
-    "counties": [
-      "Washington"
-    ]
+    "counties": ["Washington"]
   },
   {
     "city": "Fort Smith",
@@ -86,9 +70,7 @@
         "url": [
           "https://www.fortsmithar.gov/building-business/business-license-and-guidance/apply-for-a-business-license/-folder-393"
         ],
-        "appliesTo": [
-          "all"
-        ],
+        "appliesTo": ["all"],
         "rrule": "FREQ=YEARLY",
         "anchor": "license_issued",
         "penalty": {
@@ -106,9 +88,7 @@
       "https://www.fortsmithar.gov/building-business/business-license-and-guidance/apply-for-a-business-license/-folder-393"
     ],
     "note": "Fort Smith city-specific licensing was confirmed from the cited official source.",
-    "counties": [
-      "Sebastian"
-    ]
+    "counties": ["Sebastian"]
   },
   {
     "city": "Springdale",
@@ -122,12 +102,8 @@
         "authority": "Springdale local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": [
-          "https://www.sos.arkansas.gov/business-commercial-services-bcs/forms-fees/llc"
-        ],
-        "appliesTo": [
-          "all"
-        ],
+        "url": ["https://www.sos.arkansas.gov/business-commercial-services-bcs/forms-fees/llc"],
+        "appliesTo": ["all"],
         "feeDetail": {
           "basis": "varies",
           "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
@@ -139,12 +115,8 @@
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": [
-      "https://www.sos.arkansas.gov/business-commercial-services-bcs/forms-fees/llc"
-    ],
-    "counties": [
-      "Washington"
-    ]
+    "sourceUrl": ["https://www.sos.arkansas.gov/business-commercial-services-bcs/forms-fees/llc"],
+    "counties": ["Washington"]
   },
   {
     "city": "Jonesboro",
@@ -156,12 +128,8 @@
         "category": "license",
         "authority": "Jonesboro local licensing authority",
         "description": "Jonesboro requires a privilege license for businesses operating in the city; applicants must obtain planning approval and a certificate-of-occupancy inspection before paying the license fee, which varies by business type.",
-        "url": [
-          "https://www.jonesboro.org/DocumentCenter/View/9101/Home-Occupation-Permit-PDF"
-        ],
-        "appliesTo": [
-          "all"
-        ],
+        "url": ["https://www.jonesboro.org/DocumentCenter/View/9101/Home-Occupation-Permit-PDF"],
+        "appliesTo": ["all"],
         "rrule": "FREQ=YEARLY",
         "anchor": "license_issued",
         "feeDetail": {
@@ -176,13 +144,9 @@
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": [
-      "https://www.jonesboro.org/DocumentCenter/View/9101/Home-Occupation-Permit-PDF"
-    ],
+    "sourceUrl": ["https://www.jonesboro.org/DocumentCenter/View/9101/Home-Occupation-Permit-PDF"],
     "note": "Jonesboro city-specific licensing was confirmed from the cited official source.",
-    "counties": [
-      "Craighead"
-    ]
+    "counties": ["Craighead"]
   },
   {
     "city": "Rogers",
@@ -194,12 +158,8 @@
         "category": "license",
         "authority": "Rogers local licensing authority",
         "description": "Rogers requires a business license and certificate of occupancy process for businesses in city limits; the certificate of occupancy fee is $25, and business-license penalties are 10% on March 1, 20% on April 1, and 50% on May 1.",
-        "url": [
-          "https://www.rogersar.gov/1503/Permit-Fee-Schedules"
-        ],
-        "appliesTo": [
-          "all"
-        ],
+        "url": ["https://www.rogersar.gov/1503/Permit-Fee-Schedules"],
+        "appliesTo": ["all"],
         "rrule": "FREQ=YEARLY;BYMONTH=3;BYMONTHDAY=1",
         "feeDetail": {
           "basis": "varies",
@@ -213,13 +173,9 @@
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": [
-      "https://www.rogersar.gov/1503/Permit-Fee-Schedules"
-    ],
+    "sourceUrl": ["https://www.rogersar.gov/1503/Permit-Fee-Schedules"],
     "note": "Rogers city-specific licensing was confirmed from the cited official source.",
-    "counties": [
-      "Benton"
-    ]
+    "counties": ["Benton"]
   },
   {
     "city": "Conway",
@@ -231,12 +187,8 @@
         "category": "license",
         "authority": "Conway local licensing authority",
         "description": "Conway does not require a general business license, but prepared-food businesses need an A&P permit for each location with no permit fee; commercial and residential construction still requires city building-permit review.",
-        "url": [
-          "https://conwayarkansas.gov/business/"
-        ],
-        "appliesTo": [
-          "all"
-        ],
+        "url": ["https://conwayarkansas.gov/business/"],
+        "appliesTo": ["all"],
         "frequency": "once",
         "feeDetail": {
           "basis": "varies",
@@ -249,13 +201,9 @@
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": [
-      "https://conwayarkansas.gov/business/"
-    ],
+    "sourceUrl": ["https://conwayarkansas.gov/business/"],
     "note": "Conway city-specific licensing was confirmed from the cited official source.",
-    "counties": [
-      "Faulkner"
-    ]
+    "counties": ["Faulkner"]
   },
   {
     "city": "North Little Rock",
@@ -269,12 +217,8 @@
         "authority": "North Little Rock local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": [
-          "https://www.sos.arkansas.gov/business-commercial-services-bcs/forms-fees/llc"
-        ],
-        "appliesTo": [
-          "all"
-        ],
+        "url": ["https://www.sos.arkansas.gov/business-commercial-services-bcs/forms-fees/llc"],
+        "appliesTo": ["all"],
         "feeDetail": {
           "basis": "varies",
           "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
@@ -286,12 +230,8 @@
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": [
-      "https://www.sos.arkansas.gov/business-commercial-services-bcs/forms-fees/llc"
-    ],
-    "counties": [
-      "Pulaski"
-    ]
+    "sourceUrl": ["https://www.sos.arkansas.gov/business-commercial-services-bcs/forms-fees/llc"],
+    "counties": ["Pulaski"]
   },
   {
     "city": "Bentonville",
@@ -305,12 +245,8 @@
         "authority": "Bentonville local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": [
-          "https://www.sos.arkansas.gov/business-commercial-services-bcs/forms-fees/llc"
-        ],
-        "appliesTo": [
-          "all"
-        ],
+        "url": ["https://www.sos.arkansas.gov/business-commercial-services-bcs/forms-fees/llc"],
+        "appliesTo": ["all"],
         "feeDetail": {
           "basis": "varies",
           "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
@@ -322,11 +258,7 @@
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": [
-      "https://www.sos.arkansas.gov/business-commercial-services-bcs/forms-fees/llc"
-    ],
-    "counties": [
-      "Benton"
-    ]
+    "sourceUrl": ["https://www.sos.arkansas.gov/business-commercial-services-bcs/forms-fees/llc"],
+    "counties": ["Benton"]
   }
 ]

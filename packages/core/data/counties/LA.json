@@ -791,7 +791,11 @@
           "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "percentPerMonth": 5,
+          "max": 25,
+          "note": "The parish's East Bank occupancy tax return: 5% for each 30 days or fraction, up to 25%, plus 1% interest."
         }
       },
       {
@@ -1104,7 +1108,8 @@
           "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The parish's published pages for this item give no late-penalty amount."
         }
       },
       {

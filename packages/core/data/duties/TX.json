@@ -36,7 +36,10 @@
       "note": "There is no fee to file or register."
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "per_item",
+      "note": "The attorney general may seek up to $100 for each individual owed notice for each consecutive day of failure, capped at $250,000 per breach, in addition to a $2,000 to $50,000 penalty per violation (Business and Commerce Code 521.151).",
+      "perUnit": 100,
+      "max": 250000
     }
   }
 ]

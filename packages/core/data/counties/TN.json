@@ -552,7 +552,8 @@
           "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The county's published pages for this return give no late-penalty amount."
         }
       }
     ],
@@ -968,7 +969,10 @@
           "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 2,
+          "percentPerMonth": 2,
+          "note": "The county Trustee's blank return form lists a 2% penalty for each month or fraction the tax is late, plus 12% annual interest."
         }
       }
     ],
@@ -1384,7 +1388,10 @@
           "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 1,
+          "percentPerMonth": 1,
+          "note": "The county clerk's occupancy tax return form (2017) lists a 1% penalty for each 30-day period or part of one that the tax is delinquent, plus 8% annual interest."
         }
       }
     ],
@@ -2308,7 +2315,8 @@
           "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The county's published pages for this return give no late-penalty amount."
         }
       }
     ],

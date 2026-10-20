@@ -15,10 +15,16 @@
         "url": ["https://register.chattanooga.gov/business/license"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The tax depends on the business classification and gross receipts; the minimum for classifications 1 through 4 is $22 per license."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "percentPerMonth": 5,
+          "min": 15,
+          "max": 25,
+          "note": "A city renewal notice describes the state rule: 5% per month or part of a month, up to 25% of the tax, with a $15 minimum, plus interest."
         }
       }
     ],
@@ -45,7 +51,8 @@
           "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "This entry covers the city's local licenses and taxes generally, each of which carries its own late charge in the municipal code; no single amount is stated."
         }
       }
     ],
@@ -67,10 +74,12 @@
         "url": ["https://www.knoxvilletn.gov/470/Business-License-Tax-Office"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The business tax depends on the classification and gross receipts, so no single amount applies."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
     ],
@@ -93,10 +102,12 @@
         "url": ["https://memphistn.gov/licenses-and-permits/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The business tax depends on the classification and gross receipts, so no single amount applies."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
     ],
@@ -122,7 +133,8 @@
           "note": "An initial fee applies for each of the city and county licenses; the amounts depend on the business."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
     ],
@@ -152,7 +164,8 @@
           "min": 15
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
     ],

@@ -37,7 +37,10 @@
       "note": "There is no fee to file or register."
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "per_item",
+      "note": "The attorney general may impose a civil penalty up to the lesser of $10,000 per affected individual or their economic loss, capped at $500,000 per breach, for knowing and willful violations (Arizona Revised Statutes 18-552).",
+      "perUnit": 10000,
+      "max": 500000
     }
   }
 ]

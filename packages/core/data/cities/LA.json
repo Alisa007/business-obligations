@@ -14,7 +14,8 @@
         "url": ["https://www.brla.gov/1461/Occupational-License-Tax"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "New businesses pay a $50 registration fee if opening January to June or $25 if opening July to December; renewals follow the occupational license tax tables."
         },
         "penalty": {
           "basis": "percent",
@@ -48,7 +49,8 @@
           "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "This entry covers the city's local licenses and taxes generally, each of which carries its own late charge in the municipal code; no single amount is stated."
         }
       }
     ],
@@ -72,10 +74,15 @@
         "url": ["https://onestopapp.nola.gov/Apply.aspx"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The tax depends on the business's gross receipts and classification in the city's tax tables."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "percentPerMonth": 5,
+          "max": 25,
+          "note": "The city's electronic renewal instructions: 5% of the amount owed for each 30-day period after March 1, up to 25%, plus 1.25% interest per period."
         }
       }
     ],
@@ -100,7 +107,8 @@
           "note": "Varies with gross receipts, fees or commissions, with a $50 minimum for every business type."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
     ],

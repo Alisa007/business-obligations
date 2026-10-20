@@ -40,10 +40,13 @@
         "appliesTo": ["all"],
         "checkedOn": "2026-10-19",
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
     ],
@@ -68,10 +71,14 @@
         "url": ["https://www.phila.gov/services/business-self-employment/register-a-business/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "The city says it does not charge a fee for a Commercial Activity License."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 300,
+          "note": "City notices: a $300 fine for each day a business operates without a valid license, including after revocation for unpaid city taxes."
         }
       },
       {
@@ -85,10 +92,13 @@
         "url": ["https://www.phila.gov/services/payments-assistance-taxes/business-taxes/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       },
       {
@@ -110,7 +120,8 @@
           "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
     ],
@@ -141,7 +152,10 @@
           "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 1,
+          "percentPerMonth": 1,
+          "note": "The city's ET-1 forms list a penalty of 1% per month on late payments, plus interest of 0.5% per month."
         }
       }
     ],

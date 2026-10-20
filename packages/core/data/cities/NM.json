@@ -14,10 +14,14 @@
         "url": ["https://cabq.gov/dfa/business-licenses"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 35,
+          "note": "The city's announcement keeps the fee at $35; a proposed increase was reported but not confirmed."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 10,
+          "note": "The license ordinance allows a late fee of $10 for each calendar day on a delinquent license fee."
         }
       }
     ],
@@ -44,7 +48,8 @@
           "basis": "unknown"
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
     ],
@@ -67,10 +72,13 @@
         "url": ["https://www.rrnm.gov/409/Business-LicenseRegistration-Instruction"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 35,
+          "note": "The City Clerk's page lists a $35 annual registration fee."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city code imposes a late fee on delinquent registrations but does not state the amount."
         }
       }
     ],

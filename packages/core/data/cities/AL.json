@@ -1,10 +1,7 @@
 [
   {
     "city": "Birmingham",
-    "counties": [
-      "Jefferson",
-      "Shelby"
-    ],
+    "counties": ["Jefferson", "Shelby"],
     "checkedOn": "2026-10-19",
     "sourceUrl": [
       "https://www.birminghamal.gov/government/city-departments/finance/tax-license-division/information-regarding-business-licenses"
@@ -21,9 +18,7 @@
         "url": [
           "https://www.birminghamal.gov/government/city-departments/finance/tax-license-division/information-regarding-business-licenses"
         ],
-        "appliesTo": [
-          "all"
-        ],
+        "appliesTo": ["all"],
         "feeDetail": {
           "basis": "varies",
           "note": "based on gross receipts for many businesses"
@@ -39,10 +34,7 @@
   },
   {
     "city": "Huntsville",
-    "counties": [
-      "Madison",
-      "Limestone"
-    ],
+    "counties": ["Madison", "Limestone"],
     "items": [
       {
         "id": "huntsville.business-license",
@@ -51,12 +43,8 @@
         "authority": "City of Huntsville Finance Department",
         "description": "Licenses expire December 31; renewal is due January 31, a 15% penalty applies from February 1 and 30% from March 1 (insurance licenses are due the last day of February).",
         "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=31",
-        "url": [
-          "https://www.huntsvilleal.gov/?p=121"
-        ],
-        "appliesTo": [
-          "all"
-        ],
+        "url": ["https://www.huntsvilleal.gov/?p=121"],
+        "appliesTo": ["all"],
         "feeDetail": {
           "basis": "varies",
           "note": "The city's page does not publish fee amounts: a 2026 fee schedule by license type is linked."
@@ -69,16 +57,12 @@
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": [
-      "https://www.huntsvilleal.gov/business/licensing-permits/business-licenses/"
-    ],
+    "sourceUrl": ["https://www.huntsvilleal.gov/business/licensing-permits/business-licenses/"],
     "status": "rules"
   },
   {
     "city": "Mobile",
-    "counties": [
-      "Mobile"
-    ],
+    "counties": ["Mobile"],
     "items": [
       {
         "id": "mobile-al.business-license",
@@ -87,12 +71,8 @@
         "authority": "City of Mobile Revenue Department",
         "description": "Licenses expire December 31, are due January 1 and become delinquent after January 31; a 15% penalty applies in February and 30% from March 1.",
         "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=31",
-        "url": [
-          "https://www.cityofmobile.gov/business-license-overview/"
-        ],
-        "appliesTo": [
-          "all"
-        ],
+        "url": ["https://www.cityofmobile.gov/business-license-overview/"],
+        "appliesTo": ["all"],
         "feeDetail": {
           "basis": "varies",
           "note": "The city's page does not publish fee amounts; see its fee schedule."
@@ -105,16 +85,12 @@
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": [
-      "https://workwith.cityofmobile.org/taxes-and-business-licenses"
-    ],
+    "sourceUrl": ["https://workwith.cityofmobile.org/taxes-and-business-licenses"],
     "status": "rules"
   },
   {
     "city": "Montgomery",
-    "counties": [
-      "Montgomery"
-    ],
+    "counties": ["Montgomery"],
     "items": [
       {
         "id": "montgomery-al.business-license",
@@ -125,12 +101,8 @@
         "rrule": "FREQ=YEARLY",
         "anchor": "announced",
         "deadline": "Set by the city each year (late January or early February)",
-        "url": [
-          "https://www.montgomeryal.gov/home/showpublisheddocument/19226/638978622752270000"
-        ],
-        "appliesTo": [
-          "all"
-        ],
+        "url": ["https://www.montgomeryal.gov/home/showpublisheddocument/19226/638978622752270000"],
+        "appliesTo": ["all"],
         "feeDetail": {
           "basis": "varies",
           "note": "Fees depend on the nature of the business and estimated gross receipts, plus an issuance fee of up to $14 for each license category."
@@ -161,9 +133,7 @@
         "url": [
           "https://www.tuscaloosa.com/business/revenue-division/business-license/annual-business-license-"
         ],
-        "appliesTo": [
-          "all"
-        ],
+        "appliesTo": ["all"],
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=15",
         "feeDetail": {
           "basis": "varies",
@@ -180,9 +150,7 @@
       "https://www.tuscaloosa.com/business/revenue-division/business-license/annual-business-license-"
     ],
     "note": "Tuscaloosa city-specific licensing was confirmed from the cited official source.",
-    "counties": [
-      "Tuscaloosa"
-    ]
+    "counties": ["Tuscaloosa"]
   },
   {
     "city": "Hoover",
@@ -194,12 +162,8 @@
         "category": "license",
         "authority": "Hoover local licensing authority",
         "description": "Hoover requires a city business license and renews licenses on a calendar-year basis; applicable sales, use, rental, lodging and other tax filings may have separate deadlines.",
-        "url": [
-          "https://www.hooveralabama.gov/1085/Business-License-Tax-Information"
-        ],
-        "appliesTo": [
-          "all"
-        ],
+        "url": ["https://www.hooveralabama.gov/1085/Business-License-Tax-Information"],
+        "appliesTo": ["all"],
         "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=1",
         "feeDetail": {
           "basis": "varies",
@@ -212,13 +176,9 @@
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": [
-      "https://www.hooveralabama.gov/1085/Business-License-Tax-Information"
-    ],
+    "sourceUrl": ["https://www.hooveralabama.gov/1085/Business-License-Tax-Information"],
     "note": "Hoover city-specific licensing was confirmed from the cited official source.",
-    "counties": [
-      "Jefferson"
-    ]
+    "counties": ["Jefferson"]
   },
   {
     "city": "Auburn",
@@ -233,9 +193,7 @@
         "url": [
           "https://static.auburnalabama.org/media/apps/www/revenue/Business-License-%26-Tax-Info-Brochure.pdf"
         ],
-        "appliesTo": [
-          "all"
-        ],
+        "appliesTo": ["all"],
         "rrule": "FREQ=YEARLY;BYMONTH=2;BYMONTHDAY=15",
         "feeDetail": {
           "basis": "flat",
@@ -254,9 +212,7 @@
       "https://static.auburnalabama.org/media/apps/www/revenue/Business-License-%26-Tax-Info-Brochure.pdf"
     ],
     "note": "Auburn city-specific licensing was confirmed from the cited official source.",
-    "counties": [
-      "Lee"
-    ]
+    "counties": ["Lee"]
   },
   {
     "city": "Dothan",
@@ -268,12 +224,8 @@
         "category": "license",
         "authority": "Dothan local licensing authority",
         "description": "Dothan requires a city business license for businesses operating in the city and notes that businesses may also need food, alcohol, building or county approvals; licensing applies separately in each municipality or county where business is conducted.",
-        "url": [
-          "https://www.dothan.org/344/Business-License"
-        ],
-        "appliesTo": [
-          "all"
-        ],
+        "url": ["https://www.dothan.org/344/Business-License"],
+        "appliesTo": ["all"],
         "rrule": "FREQ=YEARLY",
         "anchor": "license_issued",
         "feeDetail": {
@@ -287,13 +239,9 @@
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": [
-      "https://www.dothan.org/344/Business-License"
-    ],
+    "sourceUrl": ["https://www.dothan.org/344/Business-License"],
     "note": "Dothan city-specific licensing was confirmed from the cited official source.",
-    "counties": [
-      "Houston"
-    ]
+    "counties": ["Houston"]
   },
   {
     "city": "Madison",
@@ -305,12 +253,8 @@
         "category": "license",
         "authority": "Madison local licensing authority",
         "description": "Madison requires commercial and residential-based businesses to renew city business licenses annually; licenses run January 1 through December 31 and the renewal deadline is January 31.",
-        "url": [
-          "https://www.madisonal.gov/CivicAlerts.aspx?AID=1508"
-        ],
-        "appliesTo": [
-          "all"
-        ],
+        "url": ["https://www.madisonal.gov/CivicAlerts.aspx?AID=1508"],
+        "appliesTo": ["all"],
         "rrule": "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=31",
         "feeDetail": {
           "basis": "varies",
@@ -323,13 +267,9 @@
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": [
-      "https://www.madisonal.gov/CivicAlerts.aspx?AID=1508"
-    ],
+    "sourceUrl": ["https://www.madisonal.gov/CivicAlerts.aspx?AID=1508"],
     "note": "Madison city-specific licensing was confirmed from the cited official source.",
-    "counties": [
-      "Madison"
-    ]
+    "counties": ["Madison"]
   },
   {
     "city": "Decatur",
@@ -343,12 +283,8 @@
         "authority": "Decatur local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": [
-          "https://www.sos.alabama.gov/business-entities/start-business"
-        ],
-        "appliesTo": [
-          "all"
-        ],
+        "url": ["https://www.sos.alabama.gov/business-entities/start-business"],
+        "appliesTo": ["all"],
         "feeDetail": {
           "basis": "varies",
           "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
@@ -360,12 +296,8 @@
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": [
-      "https://www.sos.alabama.gov/business-entities/start-business"
-    ],
-    "counties": [
-      "Morgan"
-    ]
+    "sourceUrl": ["https://www.sos.alabama.gov/business-entities/start-business"],
+    "counties": ["Morgan"]
   },
   {
     "city": "Florence",
@@ -379,12 +311,8 @@
         "authority": "Florence local licensing authority",
         "description": "Use the cited official state business resource as a starting point, then confirm city and county licensing requirements before operating.",
         "frequency": "once",
-        "url": [
-          "https://www.sos.alabama.gov/business-entities/start-business"
-        ],
-        "appliesTo": [
-          "all"
-        ],
+        "url": ["https://www.sos.alabama.gov/business-entities/start-business"],
+        "appliesTo": ["all"],
         "feeDetail": {
           "basis": "varies",
           "note": "The fee depends on the type of business and license; the city or county sets it in its fee schedule."
@@ -396,11 +324,7 @@
       }
     ],
     "checkedOn": "2026-10-18",
-    "sourceUrl": [
-      "https://www.sos.alabama.gov/business-entities/start-business"
-    ],
-    "counties": [
-      "Lauderdale"
-    ]
+    "sourceUrl": ["https://www.sos.alabama.gov/business-entities/start-business"],
+    "counties": ["Lauderdale"]
   }
 ]

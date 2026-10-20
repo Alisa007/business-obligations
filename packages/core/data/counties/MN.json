@@ -855,7 +855,11 @@
           "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "percentPerMonth": 5,
+          "max": 15,
+          "note": "The state Department of Revenue collects this tax; Minnesota's late-payment penalty is 5% of the unpaid tax, plus 5% for each further 30 days, up to 15% (a 2021 statute text was the source)."
         }
       },
       {
@@ -1037,7 +1041,11 @@
           "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "percentPerMonth": 5,
+          "max": 15,
+          "note": "The state Department of Revenue collects this tax; Minnesota's late-payment penalty is 5% of the unpaid tax, plus 5% for each further 30 days, up to 15% (a 2021 statute text was the source)."
         }
       }
     ],
@@ -1247,7 +1255,8 @@
           "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The county's published pages for this item give no late-penalty amount."
         }
       }
     ],
@@ -1283,7 +1292,8 @@
           "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The county's published pages for this item give no late-penalty amount."
         }
       }
     ],
@@ -1491,7 +1501,8 @@
           "note": "There is no fee to file or register; the tax is the amount the return reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The county's published pages for this item give no late-penalty amount."
         }
       }
     ],

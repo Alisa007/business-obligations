@@ -15,10 +15,16 @@
         "url": ["https://dev2-tax.hawaii.gov/geninfo/licensing/"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 20,
+          "note": "The state Department of Taxation charges a one-time $20 registration fee on the Basic Business Application."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 5,
+          "percentPerMonth": 5,
+          "max": 25,
+          "note": "The state Department of Taxation: 5% of the unpaid tax for each month or part of a month for late filing, up to 25%, plus interest of two-thirds of one percent a month."
         }
       },
       {

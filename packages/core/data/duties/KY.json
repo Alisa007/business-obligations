@@ -15,7 +15,10 @@
       "note": "There is no fee to file or register."
     },
     "penalty": {
-      "basis": "unknown"
+      "basis": "per_item",
+      "note": "Willful failures and evasion: $1,000 a day up to $25,000 plus 25% of the value not reported, in addition to interest (KRS chapter 393A, as amended by a 2026 law).",
+      "perUnit": 1000,
+      "max": 25000
     }
   }
 ]

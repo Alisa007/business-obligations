@@ -14,10 +14,17 @@
         "appliesTo": ["all"],
         "deadlineNote": "annual filers file once a year, in April",
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the tax is the amount it reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 9,
+          "percentPerMonth": 10,
+          "min": 5,
+          "max": 29,
+          "note": "The city code applies the state schedule (the RCW chapter on tax administration): 9% of the tax owed in the first month late, 19% in the second and 29% after that, with a $5 minimum, plus interest."
         }
       }
     ],
@@ -39,10 +46,13 @@
         "url": ["https://cob.org/services/business/business-registration"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "flat",
+          "amount": 40,
+          "note": "The city charges a one-time $40 registration fee plus a variable state handling fee."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "not_stated",
+          "note": "The city's published pages for this item give no late-penalty amount."
         }
       }
     ],
@@ -65,10 +75,17 @@
         "url": ["https://www.everettwa.gov/166"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "none",
+          "amount": 0,
+          "note": "There is no fee to file the return; the tax is the amount it reports."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 9,
+          "percentPerMonth": 10,
+          "min": 5,
+          "max": 29,
+          "note": "The city's tax page: 9% of the tax owed in the first month late, 19% in the second and 29% after that, with a $5 minimum, plus interest."
         }
       }
     ],
@@ -90,10 +107,14 @@
         "url": ["https://www.pasco-wa.gov/97/Business-Licenses"],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The state Business Licensing Service lists $80 plus $20 per full-time equivalent employee; versions of the page differ, so confirm with the city."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "max": 150,
+          "note": "The city code adds a delinquency fee of 50% of the renewal base, up to $150, to a license not renewed by its expiration date."
         }
       }
     ],
@@ -120,7 +141,12 @@
           "basis": "unknown"
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 9,
+          "percentPerMonth": 10,
+          "min": 5,
+          "max": 29,
+          "note": "The city's flyer applies the state schedule: 9% of the tax owed in the first month late, 19% in the second and 29% after that, with a $5 minimum, plus interest."
         }
       }
     ],
@@ -149,7 +175,12 @@
         },
         "checkedOn": "2026-10-19",
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 9,
+          "percentPerMonth": 10,
+          "min": 5,
+          "max": 29,
+          "note": "The city's annual tax form: 9% of the tax owed in the first month late, 19% in the second and 29% from the third month, with a $5 minimum, plus interest."
         }
       }
     ],
@@ -201,10 +232,14 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The annual fee is tiered by gross receipts, from $37 under $12,000 up to $2,000 over $5,000,000."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 20,
+          "min": 25,
+          "note": "The city's site: a 20% penalty on the license fee from the day after the due date, with a $25 minimum; licenses with only an administrative fee are exempt."
         }
       }
     ],
@@ -232,10 +267,14 @@
         ],
         "appliesTo": ["all"],
         "feeDetail": {
-          "basis": "unknown"
+          "basis": "varies",
+          "note": "The city fee is based on income and the number of employees; sources give different amounts."
         },
         "penalty": {
-          "basis": "unknown"
+          "basis": "percent",
+          "rate": 50,
+          "max": 150,
+          "note": "The state Business Licensing Service charges half the endorsement fee, up to $150, on renewals received after the expiration date."
         }
       }
     ],
