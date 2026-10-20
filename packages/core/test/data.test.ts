@@ -442,6 +442,7 @@ describe("local and profession data schemas", () => {
   it("rejects malformed local entries", () => {
     const ok = {
       city: "Austin",
+      counties: ["Travis"],
       checkedOn: "2026-10-13",
       status: "unverified",
       note: "No general license was confirmed.",
@@ -986,6 +987,7 @@ describe("bring-your-own city data", () => {
       {
         state: "TX",
         city: "Smallville",
+        counties: ["Testland"],
         status: "rules" as const,
         checkedOn: "2026-10-13",
         items: [

@@ -406,7 +406,7 @@ export interface LocalJurisdiction {
   state: string;
   city: string;
   /** Counties the city lies in (informational). */
-  counties?: string[];
+  counties: string[];
   /** Other names that resolve to this jurisdiction (e.g. NYC boroughs). */
   aliases?: string[];
   /**

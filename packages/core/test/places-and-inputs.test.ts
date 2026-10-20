@@ -179,6 +179,7 @@ describe("precedence authored in seed data", () => {
     const seed = {
       state: "TX",
       city: "Austin",
+      counties: ["Travis"],
       status: "rules" as const,
       items: [
         {
