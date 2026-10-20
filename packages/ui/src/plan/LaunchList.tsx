@@ -1,4 +1,5 @@
 import type { ComplianceItem, LaunchPlan } from "business-obligations";
+import { useState } from "react";
 import { Label, Paragraph, Text, XStack, YStack } from "tamagui";
 import { WithLocale, useI18n } from "../i18n/context";
 import type { Messages } from "../i18n/messages";
@@ -18,12 +19,17 @@ export interface LaunchListProps {
    * phases, grouped by level (city first), each with what would bring it in; they have no checkbox.
    */
   conditional?: ConditionalItem[];
+  /** Steps done (ids). Without `onToggle`, only the steps done at first: the list then keeps them itself. */
   done?: ReadonlySet<string>;
   /**
    * Show the dates, progress and fees above the phases (default). Pass `false` when a `PlanSummary` shows them, so
    * the same figures are not repeated.
    */
   summary?: boolean;
+  /**
+   * Called when a step's box is pressed; the host then updates `done` (and saves it). Without it the boxes still work,
+   * but the steps done are forgotten when the page is left.
+   */
   onToggle?: (id: string, checked: boolean) => void;
   /**
    * Called with the profile field when a condition of a conditional item is pressed. By default the page's
@@ -48,11 +54,11 @@ function CheckStep({
   id: string;
   item: ComplianceItem;
   checked: boolean;
-  onChange?: (checked: boolean) => void;
+  onChange: (checked: boolean) => void;
 }) {
   return (
     <XStack gap="3" alignItems="flex-start" paddingVertical="1" opacity={checked ? 0.6 : 1}>
-      <CheckBox id={id} checked={checked} onChange={() => onChange?.(!checked)} />
+      <CheckBox id={id} checked={checked} onChange={() => onChange(!checked)} />
       <Label htmlFor={id} flex={1} minWidth={0} cursor="pointer">
         <YStack gap="1" flexShrink={1} minWidth={0}>
           <Text fontWeight="600" textDecorationLine={checked ? "line-through" : "none"}>
@@ -79,12 +85,24 @@ function LaunchListBody({
   plan,
   costs,
   conditional = [],
-  done = new Set(),
+  done: doneProp,
   summary = true,
   onToggle,
   onEditField,
 }: LaunchListProps) {
   const { m, money, date, relativeDays } = useI18n();
+  // A box that looks pressable has to change when it is pressed, even if the host keeps nothing.
+  const [own, setOwn] = useState<ReadonlySet<string>>(() => doneProp ?? new Set());
+  const done = onToggle ? (doneProp ?? own) : own;
+  const toggle =
+    onToggle ??
+    ((id: string, checked: boolean) =>
+      setOwn((prev) => {
+        const next = new Set(prev);
+        if (checked) next.add(id);
+        else next.delete(id);
+        return next;
+      }));
   const completed = plan.steps.filter((step) => done.has(step.item.id)).length;
   const byId = new Map(plan.steps.map((step) => [step.item.id, step.item]));
   return (
@@ -116,7 +134,11 @@ function LaunchListBody({
               }
             />
           )}
-          <Stat label={m.progress} value={`${completed} / ${plan.steps.length}`} note={m.savedInBrowser} />
+          <Stat
+            label={m.progress}
+            value={`${completed} / ${plan.steps.length}`}
+            note={onToggle ? m.savedInBrowser : undefined}
+          />
           {costs && (
             <Stat
               label={m.knownFees}
@@ -194,7 +216,7 @@ function LaunchListBody({
                       id={`step-${step.item.id}`}
                       item={step.item}
                       checked={done.has(step.item.id)}
-                      onChange={onToggle ? (checked) => onToggle(step.item.id, checked) : undefined}
+                      onChange={(checked) => toggle(step.item.id, checked)}
                     />
                     <XStack flexWrap="wrap" gap="1.5" paddingLeft="8">
                       {statutory ? (
