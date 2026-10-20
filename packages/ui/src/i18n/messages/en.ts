@@ -23,15 +23,11 @@ export const en: Messages = {
   by: (date) => `Suggested planning date: ${date}`,
   triggeredBy: (reason, schedule) =>
     `Applies because: ${reason}.${schedule ? ` Schedule: ${schedule}.` : ""}`,
-  planNote:
-    "Suggested planning dates are allowances, not agency processing times. Statutory deadlines come from the rules and are labeled as such.",
   fee: (amount) => `fee ${amount}`,
   checked: (date) => `checked${date ? ` ${date}` : ""}`,
   partlyUnconfirmed: "partly unconfirmed",
   notIndividuallyChecked: "not individually checked",
   reviewOverdue: "review overdue",
-  findObligation: "Find an obligation",
-  showing: (shown, total) => `Showing ${shown} of ${total} obligations`,
   clearFilters: "Clear filters",
   searchObligations: "Search obligations",
   category: "Category",
@@ -59,7 +55,6 @@ export const en: Messages = {
   form: (id) => `Form ${id}`,
   renewal: "Renewal",
   ifLate: "If late",
-  plusPerMonth: (percent) => ` plus ${percent}% per month`,
   sources: "Sources",
   pdf: " (PDF)",
   archivedCopy: "archived copy",
@@ -124,7 +119,6 @@ export const en: Messages = {
     disturbedAcres: "acres disturbed",
     floorAreaSqFt: "floor area in square feet",
   },
-  confidence: { checked: "checked", compiled: "not individually checked", unconfirmed: "partly unconfirmed" },
   summary: {
     heading: (place) => `What is specific to ${place}`,
     status: {
@@ -139,6 +133,22 @@ export const en: Messages = {
     agencies: "State agencies",
     agencyRoles: { filing: "Registration and filings", revenue: "Taxes", labor: "Unemployment insurance" },
     sources: "Sources",
+    localRules: (titles, more) => `Local rules: ${titles}${more > 0 ? ` (+${more} more)` : ""}`,
+    plan: {
+      stepsDone: (done, total) => `${done} of ${total} steps done`,
+      opening: (date) => `Opening ${date}`,
+      openingNotSet: "No opening date set",
+    },
+    obligations: {
+      count: (total) => `${total} ${total === 1 ? "obligation" : "obligations"}`,
+      next: "Next deadline",
+      noneDated: "None dated yet. Add a formation date for anniversary filings.",
+      dueSoon: (count) => `${count} due in the next 30 days`,
+      checked: (checked, total) =>
+        checked === total
+          ? "All checked against official pages"
+          : `${checked} of ${total} checked against official pages`,
+    },
   },
   calendar: {
     download: "Download .ics",
@@ -175,7 +185,6 @@ export const en: Messages = {
     fullTime: "Full-time staff",
     fullTimePlaceholder: "Same as employees",
     money: "Money (USD)",
-    optional: "Optional",
     examples: {
       payroll: "e.g. 250,000",
       revenue: "e.g. 500,000",

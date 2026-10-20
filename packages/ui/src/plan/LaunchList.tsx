@@ -6,7 +6,7 @@ import { Collapse } from "../shared/Collapse";
 import { Chip, ExternalLink, Stat } from "../shared/primitives";
 import { Confidence, Fee } from "./chips";
 import { JURISDICTIONS } from "./filters";
-import { describeWhen } from "./ObligationCard";
+import { ConditionChip } from "./ConditionChip";
 import type { ConditionalItem } from "./ObligationsList";
 
 export interface LaunchListProps {
@@ -18,7 +18,17 @@ export interface LaunchListProps {
    */
   conditional?: ConditionalItem[];
   done?: ReadonlySet<string>;
+  /**
+   * Show the dates, progress and fees above the phases (default). Pass `false` when a `PlanSummary` shows them, so
+   * the same figures are not repeated.
+   */
+  summary?: boolean;
   onToggle?: (id: string, checked: boolean) => void;
+  /**
+   * Called with the profile field when a condition of a conditional item is pressed. By default the page's
+   * `ProfileForm` is opened at the input that answers it (see `focusProfileField`).
+   */
+  onEditField?: (field: string) => void;
   /**
    * Language of the interface text and of dates, numbers and relative times: "en" (default) or "es", or any other
    * locale tag together with `messages`. Text from the data is translated separately, with `localizePlan`.
@@ -74,53 +84,63 @@ export function LaunchList(props: LaunchListProps) {
   );
 }
 
-function LaunchListBody({ plan, costs, conditional = [], done = new Set(), onToggle }: LaunchListProps) {
+function LaunchListBody({
+  plan,
+  costs,
+  conditional = [],
+  done = new Set(),
+  summary = true,
+  onToggle,
+  onEditField,
+}: LaunchListProps) {
   const { m, money, date, relativeDays } = useI18n();
   const completed = plan.steps.filter((step) => done.has(step.item.id)).length;
   const byId = new Map(plan.steps.map((step) => [step.item.id, step.item]));
   return (
     <YStack gap="4">
-      <XStack flexWrap="wrap" gap="3">
-        <Stat
-          label={m.fileFormation}
-          value={date(plan.formationDate)}
-          note={relativeDays(plan.formationDate, plan.startDate)}
-        />
-        <Stat
-          label={m.readyToOperate}
-          value={date(plan.readyDate)}
-          note={relativeDays(plan.readyDate, plan.startDate)}
-        />
-        {plan.onTrack === undefined ? (
-          <Stat label={m.openingDate} value={m.notSet} note={m.addOpeningDate} />
-        ) : (
+      {summary && (
+        <XStack flexWrap="wrap" gap="3">
           <Stat
-            label={m.opening}
-            value={date(plan.openingDate)}
-            note={
-              plan.onTrack ? (
-                <Text color="green-600">{m.onTrack(plan.slackDays ?? 0)}</Text>
-              ) : (
-                <Text color="red-600">{m.tooSoon(-(plan.slackDays ?? 0))}</Text>
-              )
-            }
+            label={m.fileFormation}
+            value={date(plan.formationDate)}
+            note={relativeDays(plan.formationDate, plan.startDate)}
           />
-        )}
-        <Stat label={m.progress} value={`${completed} / ${plan.steps.length}`} note={m.savedInBrowser} />
-        {costs && (
           <Stat
-            label={m.knownFees}
-            value={
-              <>
-                {money(costs.oneTime)} <Text fontSize="sm">{m.oneTime}</Text>
-              </>
-            }
-            note={m.perYear(money(costs.annual))}
+            label={m.readyToOperate}
+            value={date(plan.readyDate)}
+            note={relativeDays(plan.readyDate, plan.startDate)}
           />
-        )}
-      </XStack>
+          {plan.onTrack === undefined ? (
+            <Stat label={m.openingDate} value={m.notSet} note={m.addOpeningDate} />
+          ) : (
+            <Stat
+              label={m.opening}
+              value={date(plan.openingDate)}
+              note={
+                plan.onTrack ? (
+                  <Text color="green-600">{m.onTrack(plan.slackDays ?? 0)}</Text>
+                ) : (
+                  <Text color="red-600">{m.tooSoon(-(plan.slackDays ?? 0))}</Text>
+                )
+              }
+            />
+          )}
+          <Stat label={m.progress} value={`${completed} / ${plan.steps.length}`} note={m.savedInBrowser} />
+          {costs && (
+            <Stat
+              label={m.knownFees}
+              value={
+                <>
+                  {money(costs.oneTime)} <Text fontSize="sm">{m.oneTime}</Text>
+                </>
+              }
+              note={m.perYear(money(costs.annual))}
+            />
+          )}
+        </XStack>
+      )}
       {/* Only once something is done: an empty track looks like a scrollbar, and the Progress figure above says 0 already. */}
-      {completed > 0 && (
+      {summary && completed > 0 && (
         <YStack
           role="progressbar"
           aria-label={m.progress}
@@ -251,9 +271,7 @@ function LaunchListBody({ plan, costs, conditional = [], done = new Set(), onTog
                         {item.authority}
                       </Text>
                       <XStack flexWrap="wrap" gap="1.5">
-                        <Chip tone="warn" outline>
-                          {m.appliesIf(when.map((condition) => describeWhen(m, condition)).join("; "))}
-                        </Chip>
+                        <ConditionChip when={when} onEditField={onEditField} />
                         <Fee item={item} />
                         <Chip>{m.frequencies[item.frequency] ?? item.frequency}</Chip>
                       </XStack>

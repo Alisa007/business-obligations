@@ -1,5 +1,5 @@
 import { useEffect, useId, useState } from "react";
-import { Input } from "tamagui";
+import { Input, Text, XStack } from "tamagui";
 import { WithLocale, useI18n } from "../../i18n/context";
 import { useControlProps } from "../../shared/controls";
 import { MAX_EMPLOYEES, type NumberField } from "../choices";
@@ -98,22 +98,19 @@ export function NumberControl({
           onBlur={() => error || setDraft(shown)}
         />
         {prefix ? (
-          <div
+          <XStack
+            position="absolute"
+            left={10}
+            top={0}
+            bottom={0}
+            alignItems="center"
+            pointerEvents="none"
             aria-hidden
-            style={{
-              position: "absolute",
-              left: 10,
-              top: 0,
-              height: controlProps.height,
-              display: "flex",
-              alignItems: "center",
-              fontSize: controlProps.fontSize,
-              color: "var(--placeholder-color)",
-              pointerEvents: "none",
-            }}
           >
-            {prefix}
-          </div>
+            <Text fontSize={controlProps.fontSize} color="placeholder-color">
+              {prefix}
+            </Text>
+          </XStack>
         ) : null}
         {draft !== "" ? (
           <ClearButton

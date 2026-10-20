@@ -3,24 +3,6 @@
 import type { ComponentProps, ReactNode } from "react";
 import { Paragraph, Separator, Text, XStack, YStack } from "tamagui";
 
-/** A bordered panel on the page background. */
-export function Panel({ children, ...rest }: ComponentProps<typeof YStack>) {
-  return (
-    <YStack
-      backgroundColor="background"
-      borderWidth={1}
-      borderColor="border-color"
-      borderRadius="lg"
-      boxSizing="border-box"
-      minWidth={0}
-      padding="4"
-      {...rest}
-    >
-      {children}
-    </YStack>
-  );
-}
-
 export function Muted({ children, size = "sm" }: { children: ReactNode; size?: "xs" | "sm" | "base" }) {
   return (
     <Paragraph fontSize={size} color="placeholder-color">

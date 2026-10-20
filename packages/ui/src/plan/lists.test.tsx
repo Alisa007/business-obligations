@@ -211,8 +211,10 @@ describe("business-obligations-ui", () => {
         />
       </TamaguiProvider>,
     );
-    expect(html).toContain("Find an obligation");
-    expect(html).toContain("Showing 1 of");
+    // the list is led by its filters; there is no heading or count above them
+    expect(html).not.toContain("Find an obligation");
+    expect(html).not.toContain("Showing 1 of");
+    expect(html).toContain("Search obligations");
     expect(html).toContain("Category");
     expect(html).toContain("Data confidence");
     expect(html).toContain("All");
@@ -265,8 +267,8 @@ describe("business-obligations-ui in Spanish", () => {
         locale="es"
       />,
     );
-    expect(html).toContain("Buscar una obligación");
-    expect(html).toContain("Mostrando");
+    expect(html).not.toContain("Buscar una obligación");
+    expect(html).not.toContain("Mostrando");
     expect(html).toContain("Categoría");
     expect(html).toContain("Estatal");
     expect(html).toContain("Anual");

@@ -1,7 +1,9 @@
-import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
-import { Button, TamaguiProvider, Theme } from "tamagui";
+import { createContext, useCallback, useContext, useMemo, useState, type ReactNode } from "react";
+import { Button, TamaguiProvider } from "tamagui";
 import { WithLocale, useI18n } from "../i18n/context";
+import { useBeforePaint } from "../shared/hooks";
 import type { Messages } from "../i18n/messages";
+import { applyTheme, themeScript } from "./script";
 
 export type ThemePreference = "system" | "light" | "dark";
 
@@ -11,6 +13,8 @@ export interface ThemeState {
   /** The theme in use. */
   theme: "light" | "dark";
   setPreference: (preference: ThemePreference) => void;
+  /** Whether the saved setting has been read (false on the server and while hydrating). */
+  ready: boolean;
 }
 
 const ORDER: ThemePreference[] = ["system", "light", "dark"];
@@ -19,6 +23,7 @@ const ThemeContext = /* @__PURE__ */ createContext<ThemeState>({
   preference: "system",
   theme: "light",
   setPreference: () => {},
+  ready: true,
 });
 
 /** The theme in use and a way to change it. Outside a `ThemeProvider` it is light and changing it does nothing. */
@@ -37,8 +42,10 @@ export interface ThemeProviderProps {
 }
 
 /**
- * `TamaguiProvider` with light, dark and "follow the device". The first render, on the server too, is light; the
- * remembered or device setting applies right after hydration, so the HTML and the first client render agree.
+ * `TamaguiProvider` with light, dark and "follow the device". The server's HTML has no theme class of its own, so a
+ * device that prefers dark gets dark from the stylesheet alone (Tamagui's `prefers-color-scheme` rules). The saved or
+ * device setting is applied before the first paint after hydration; to also have a saved light or dark in place
+ * before the page's script has loaded, put `<ThemeScript />` in the `<head>`.
  */
 export function ThemeProvider({
   config,
@@ -48,17 +55,19 @@ export function ThemeProvider({
 }: ThemeProviderProps) {
   const [preference, setPreferenceState] = useState<ThemePreference>(defaultPreference);
   const [dark, setDark] = useState(false);
+  const [ready, setReady] = useState(false);
 
-  useEffect(() => {
+  useBeforePaint(() => {
     try {
       const saved = storageKey ? localStorage.getItem(storageKey) : null;
       if (isPreference(saved)) setPreferenceState(saved);
     } catch {
       /* storage unavailable: keep the default */
     }
+    setReady(true);
   }, [storageKey]);
 
-  useEffect(() => {
+  useBeforePaint(() => {
     if (typeof matchMedia !== "function") return;
     const query = matchMedia(DARK_QUERY);
     const update = () => setDark(query.matches);
@@ -69,8 +78,8 @@ export function ThemeProvider({
 
   const theme = preference === "system" ? (dark ? "dark" : "light") : preference;
 
-  useEffect(() => {
-    document.documentElement.style.colorScheme = theme;
+  useBeforePaint(() => {
+    applyTheme(document.documentElement, theme);
   }, [theme]);
 
   const setPreference = useCallback(
@@ -85,11 +94,14 @@ export function ThemeProvider({
     [storageKey],
   );
 
-  const value = useMemo(() => ({ preference, theme, setPreference }), [preference, theme, setPreference]);
+  const value = useMemo(
+    () => ({ preference, theme, setPreference, ready }),
+    [preference, theme, setPreference, ready],
+  );
   return (
     <ThemeContext.Provider value={value}>
       <TamaguiProvider config={config} defaultTheme={theme}>
-        <Theme name={theme}>{children}</Theme>
+        {children}
       </TamaguiProvider>
     </ThemeContext.Provider>
   );
@@ -113,15 +125,23 @@ export function ThemeToggle(props: ThemeToggleProps) {
 
 function ThemeToggleBody() {
   const { m } = useI18n();
-  const { preference, setPreference } = useThemePreference();
+  const { preference, setPreference, ready } = useThemePreference();
   const current = m.theme.preferences[preference];
   return (
     <Button
       size="sm"
+      // Hidden, but still taking its space, until the saved setting is known: the label would otherwise show the
+      // default and then change.
+      style={ready ? undefined : { visibility: "hidden" }}
       aria-label={m.theme.toggle(current)}
       onPress={() => setPreference(ORDER[(ORDER.indexOf(preference) + 1) % ORDER.length]!)}
     >
       {current}
     </Button>
   );
+}
+
+/** `themeScript` as an element, for a client component or a page that is not a server component. */
+export function ThemeScript({ storageKey = "bo-theme" }: { storageKey?: string }) {
+  return <script dangerouslySetInnerHTML={{ __html: themeScript(storageKey) }} />;
 }

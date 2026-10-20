@@ -9,7 +9,6 @@ type Frequency = ComplianceItem["frequency"];
 type Jurisdiction = ComplianceItem["jurisdiction"];
 type FilingMethod = NonNullable<ComplianceItem["filingMethod"]>[number];
 type Operator = ">=" | ">" | "<=" | "<" | "==" | "!=" | "in";
-type Confidence = NonNullable<ComplianceItem["provenance"]>["confidence"];
 
 /**
  * Every piece of interface text the components show. Text that comes from the data (titles, descriptions, reasons,
@@ -38,7 +37,6 @@ export interface Messages {
   by: (date: string) => string;
   /** What makes a legal deadline apply: the reason it applies and, when the rule has one, its schedule. */
   triggeredBy: (reason: string, schedule?: string) => string;
-  planNote: string;
   // Chips
   fee: (amount: string) => string;
   checked: (date?: string) => string;
@@ -46,8 +44,6 @@ export interface Messages {
   notIndividuallyChecked: string;
   reviewOverdue: string;
   // Filters and list
-  findObligation: string;
-  showing: (shown: number, total: number) => string;
   clearFilters: string;
   searchObligations: string;
   category: string;
@@ -77,7 +73,6 @@ export interface Messages {
   form: (id: string) => string;
   renewal: string;
   ifLate: string;
-  plusPerMonth: (percent: number) => string;
   sources: string;
   pdf: string;
   archivedCopy: string;
@@ -96,7 +91,6 @@ export interface Messages {
   operators: Record<Operator, string>;
   /** Names of the profile fields that an "applies when" condition can read; unknown fields are shown as they are. */
   fields: Record<string, string>;
-  confidence: Record<Confidence, string>;
   // Location summary
   summary: {
     /** Heading of the summary of the smallest place chosen: `place` is its name. */
@@ -110,6 +104,23 @@ export interface Messages {
     agencies: string;
     agencyRoles: Record<"filing" | "revenue" | "labor", string>;
     sources: string;
+    /** One line for a place with its own items: the first few titles and how many more there are. */
+    localRules: (titles: string, more: number) => string;
+    /** The card above the launch plan. */
+    plan: {
+      stepsDone: (done: number, total: number) => string;
+      opening: (date: string) => string;
+      openingNotSet: string;
+    };
+    /** The card above the list of obligations. */
+    obligations: {
+      count: (total: number) => string;
+      next: string;
+      noneDated: string;
+      dueSoon: (count: number) => string;
+      /** How much of the data was checked against official pages: `total` obligations, `checked` of them. */
+      checked: (checked: number, total: number) => string;
+    };
   };
   // Calendar
   calendar: {
@@ -147,7 +158,6 @@ export interface Messages {
     fullTime: string;
     fullTimePlaceholder: string;
     money: string;
-    optional: string;
     /** Example amounts shown as the placeholder of each amount field. */
     examples: Record<"payroll" | "revenue" | "netIncome" | "contractor" | "priorTax", string>;
     payroll: string;

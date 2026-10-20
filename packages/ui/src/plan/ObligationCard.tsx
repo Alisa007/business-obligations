@@ -116,6 +116,8 @@ export function ObligationCard({
     <Collapse
       card
       level={3}
+      // the title is a link and the note can hold buttons, so only the chevron is the toggle
+      toggleLabel={item.title}
       summary={
         <YStack gap="1.5" alignItems="flex-start" width="100%">
           <Text fontWeight="600" textAlign="left" alignSelf="stretch">

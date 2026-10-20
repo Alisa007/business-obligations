@@ -11,16 +11,25 @@ export { Chip, ExternalLink, Stat } from "./shared/primitives";
 export { Collapse, type CollapseProps } from "./shared/Collapse";
 export { Select, type SelectOption, type SelectProps } from "./shared/Select";
 export { safeUrl } from "./shared/url";
+export { useBeforePaint, useHydrated } from "./shared/hooks";
 
 // Launch plan and obligations
 export { LaunchList } from "./plan/LaunchList";
 export type { LaunchListProps } from "./plan/LaunchList";
+export { PlanSummary } from "./plan/PlanSummary";
+export type { PlanSummaryProps } from "./plan/PlanSummary";
+export { ObligationsSummary } from "./plan/ObligationsSummary";
+export type { ObligationsSummaryProps } from "./plan/ObligationsSummary";
 export { ObligationsList } from "./plan/ObligationsList";
 export type { ConditionalItem, ObligationsListProps } from "./plan/ObligationsList";
 export { NO_OBLIGATION_FILTERS, filterObligations } from "./plan/filters";
 export type { ObligationFilters } from "./plan/filters";
 export { isVerified } from "./plan/items";
 export type { ComplianceItem, LaunchPlan } from "business-obligations";
+
+// Page layout
+export { SidebarLayout } from "./layout/SidebarLayout";
+export type { SidebarLayoutProps } from "./layout/SidebarLayout";
 
 // What is specific to the smallest place chosen
 export { LocationSummary } from "./summary/LocationSummary";
@@ -34,7 +43,7 @@ export type { CalendarDownloadProps } from "./calendar/CalendarDownload";
 export type { CalendarEvent } from "business-obligations";
 
 // Light, dark and follow-the-device
-export { ThemeProvider, ThemeToggle, useThemePreference } from "./theme/ThemeProvider";
+export { ThemeProvider, ThemeScript, ThemeToggle, useThemePreference } from "./theme/ThemeProvider";
 export type {
   ThemePreference,
   ThemeProviderProps,
@@ -62,6 +71,7 @@ export {
   useProfilePlace,
 } from "./profile/store";
 export type { ProfileValues } from "./profile/store";
+export { focusProfileField, hasProfileField } from "./profile/focus";
 export { lookupPlace, needsProfession, profileFromChoices } from "./profile/place";
 export type { Place } from "./profile/place";
 export { ProfileForm } from "./profile/ProfileForm";

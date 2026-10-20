@@ -23,15 +23,11 @@ export const es: Messages = {
   by: (date) => `Fecha de planificación sugerida: ${date}`,
   triggeredBy: (reason, schedule) =>
     `Se aplica porque: ${reason}.${schedule ? ` Calendario: ${schedule}.` : ""}`,
-  planNote:
-    "Las fechas de planificación sugeridas son márgenes, no plazos de trámite de las agencias. Los plazos legales provienen de las reglas y se indican como tales.",
   fee: (amount) => `tarifa ${amount}`,
   checked: (date) => `verificado${date ? ` ${date}` : ""}`,
   partlyUnconfirmed: "parcialmente sin confirmar",
   notIndividuallyChecked: "no verificado individualmente",
   reviewOverdue: "revisión vencida",
-  findObligation: "Buscar una obligación",
-  showing: (shown, total) => `Mostrando ${shown} de ${total} obligaciones`,
   clearFilters: "Borrar filtros",
   searchObligations: "Buscar obligaciones",
   category: "Categoría",
@@ -59,7 +55,6 @@ export const es: Messages = {
   form: (id) => `Formulario ${id}`,
   renewal: "Renovación",
   ifLate: "Si se atrasa",
-  plusPerMonth: (percent) => ` más ${percent}% por mes`,
   sources: "Fuentes",
   pdf: " (PDF)",
   archivedCopy: "copia archivada",
@@ -124,11 +119,6 @@ export const es: Messages = {
     disturbedAcres: "acres removidos",
     floorAreaSqFt: "superficie en pies cuadrados",
   },
-  confidence: {
-    checked: "verificado",
-    compiled: "no verificado individualmente",
-    unconfirmed: "parcialmente sin confirmar",
-  },
   summary: {
     heading: (place) => `Lo específico de ${place}`,
     status: {
@@ -143,6 +133,22 @@ export const es: Messages = {
     agencies: "Agencias estatales",
     agencyRoles: { filing: "Registro y presentaciones", revenue: "Impuestos", labor: "Seguro de desempleo" },
     sources: "Fuentes",
+    localRules: (titles, more) => `Reglas locales: ${titles}${more > 0 ? ` (+${more} más)` : ""}`,
+    plan: {
+      stepsDone: (done, total) => `${done} de ${total} pasos hechos`,
+      opening: (date) => `Apertura ${date}`,
+      openingNotSet: "Sin fecha de apertura",
+    },
+    obligations: {
+      count: (total) => `${total} ${total === 1 ? "obligación" : "obligaciones"}`,
+      next: "Próxima fecha límite",
+      noneDated: "Ninguna con fecha. Agrega una fecha de formación para las presentaciones por aniversario.",
+      dueSoon: (count) => `${count} vencen en los próximos 30 días`,
+      checked: (checked, total) =>
+        checked === total
+          ? "Todas revisadas en páginas oficiales"
+          : `${checked} de ${total} revisadas en páginas oficiales`,
+    },
   },
   calendar: {
     download: "Descargar .ics",
@@ -179,7 +185,6 @@ export const es: Messages = {
     fullTime: "Tiempo completo",
     fullTimePlaceholder: "Igual que los empleados",
     money: "Dinero (USD)",
-    optional: "Opcional",
     examples: {
       payroll: "p. ej. 250,000",
       revenue: "p. ej. 500,000",
