@@ -28,8 +28,10 @@
       "note": "Ohio states that failure to file cancels an LLP, but publishes no separate late monetary penalty."
     }
   },
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "Commercial Activity Tax (CAT) on gross receipts; no corporate income tax",
+  "wageWithholding": true,
   "entityTaxDetail": {
     "kind": "gross_receipts",
     "thresholdUsd": 6000000,
@@ -70,6 +72,7 @@
     "description": "Ohio municipalities levy net profits and payroll income taxes; register via the Ohio Business Gateway or the city."
   },
   "dbaFiling": "state",
+  "dbaEntitiesFileLocally": false,
   "industry": {
     "contractor": "Ohio Construction Industry Licensing Board (commercial trades)",
     "realEstate": "Ohio Division of Real Estate and Professional Licensing",

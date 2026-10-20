@@ -7,20 +7,20 @@ import type { CountyJurisdiction, LocalJurisdiction, StateInfo } from "./types";
 /** A state file as stored: the file name is the state code, and withholding is implied by the withholding page. */
 export type StoredState = Omit<
   StateInfo,
-  "code" | "wageWithholding" | "unemployment" | "workersComp" | "verification"
+  "code" | "unemployment" | "workersComp" | "verification"
 > & {
   unemployment: Omit<StateInfo["unemployment"], "year">;
   workersComp: Omit<StateInfo["workersComp"], "threshold"> & { threshold?: string };
   verification: Omit<StateInfo["verification"], "scope" | "dba"> & { scope?: string };
 };
 
-/** Completes a stored state file with the fields that follow from other fields. */
+/** Completes a stored state file with fields that are not duplicated in the source data. */
 export function state(code: string, raw: unknown): StateInfo {
   const s = raw as StoredState;
   return {
     code,
     ...s,
-    wageWithholding: !!s.links.withholding,
+    wageWithholding: s.wageWithholding,
     unemployment: { ...s.unemployment, year: uiSource.year },
     workersComp: {
       ...s.workersComp,

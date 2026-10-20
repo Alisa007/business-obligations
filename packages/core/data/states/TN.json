@@ -68,8 +68,11 @@
       "note": "Tennessee publishes administrative dissolution or revocation for missed annual reports, but no separate late monetary penalty."
     }
   },
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "Franchise and Excise taxes (apply to LLCs, corporations and limited partnerships)",
+  "wageWithholding": false,
+  "entityTaxDetail": null,
   "salesTax": {
     "statewide": true,
     "permit": "Tennessee sales and use tax registration",
@@ -102,6 +105,7 @@
     "description": "Tennessee businesses obtain a local business license and file state-local Business Tax returns."
   },
   "dbaFiling": "county",
+  "dbaEntitiesFileLocally": false,
   "dbaOffice": "County clerk",
   "industry": {
     "contractor": "Tennessee Board for Licensing Contractors",
@@ -118,6 +122,7 @@
     "formation": ["https://sos.tn.gov/businesses/services"],
     "annualReport": ["https://sos.tn.gov/products/business-services/how-file-annual-report-%E2%80%93-llc"],
     "uiRegistration": ["https://www.tn.gov/workforce/employers.html"],
+    "withholding": ["https://www.tn.gov/revenue"],
     "salesTax": ["https://www.tn.gov/revenue/taxes/sales-and-use-tax.html"],
     "entityTax": ["https://www.tn.gov/revenue/taxes/franchise---excise-tax.html"],
     "laborPosters": [

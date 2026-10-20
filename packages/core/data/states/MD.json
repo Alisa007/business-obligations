@@ -41,8 +41,11 @@
       "max": 500
     }
   },
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "Corporate income tax; optional pass-through entity tax",
+  "wageWithholding": true,
+  "entityTaxDetail": null,
   "salesTax": {
     "statewide": true,
     "permit": "Maryland sales and use tax license",
@@ -77,6 +80,7 @@
     "description": "Retailers and others selling goods need a trader's license from the county circuit court clerk; Baltimore and counties also require occupancy permits."
   },
   "dbaFiling": "state",
+  "dbaEntitiesFileLocally": false,
   "industry": {
     "contractor": "Maryland Home Improvement Commission",
     "realEstate": "Maryland Real Estate Commission",

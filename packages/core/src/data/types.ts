@@ -3,7 +3,7 @@ import type { Applicability, FilingMethod, Frequency, ItemCategory } from "../ty
 import type { ScheduleFields } from "../rrule";
 export interface Agency {
   name: string;
-  url?: string[];
+  url: string[];
 }
 
 export interface FixedDue {
@@ -59,15 +59,15 @@ export interface StateLinks {
   /** Employer registration for unemployment insurance. */
   uiRegistration: string[];
   /** Employer registration for state income tax withholding. */
-  withholding?: string[];
+  withholding: string[];
   /** Sales and use tax permit or license registration. */
-  salesTax?: string[];
+  salesTax: string[];
   /** Corporate income, franchise or gross-receipts tax. */
   entityTax: string[];
   /** The state's required workplace posters and notices. */
   laborPosters: string[];
   /** Trade name / DBA registration, where it is filed with the state (see `dbaFiling`). */
-  dba?: string[];
+  dba: string[];
 }
 
 export interface UnemploymentInfo {
@@ -241,7 +241,7 @@ export interface StateInfo {
   /** Report for limited liability partnerships when it differs from the LLC report; null = none, absent = same as LLC. */
   llpReport?: ReportRule | null;
   /** LLCs taxed as corporations must file the corporate report even though plain LLCs do not (SC). */
-  llcReportAppliesWhenTaxedAsCorp?: boolean;
+  llcReportAppliesWhenTaxedAsCorp: boolean;
   /** Entity-level income / franchise / gross-receipts taxes. */
   entityTax: string;
   /** State levies wage withholding (individual income tax on wages). */
@@ -286,7 +286,7 @@ export interface StateInfo {
    */
   links: StateLinks;
   /** Threshold and rate of the state's gross-receipts or margin tax, where it has one. */
-  entityTaxDetail?: EntityTaxDetail;
+  entityTaxDetail: EntityTaxDetail | null;
   /** State unemployment insurance (SUI) employer tax parameters. */
   unemployment: UnemploymentInfo;
   /** Who administers local (city/county) sales taxes. */
@@ -297,7 +297,7 @@ export interface StateInfo {
    * True when registered entities (LLCs, corporations) also file assumed names at the county or town level
    * (California, Connecticut, Georgia, Massachusetts, Nevada, North Carolina) instead of with the state.
    */
-  dbaEntitiesFileLocally?: boolean;
+  dbaEntitiesFileLocally: boolean;
   /** Name of the county/town office when `dbaFiling` is county or town. */
   dbaOffice?: string;
   /** State agency taking trade names when it is not the entity filing agency. */
@@ -390,11 +390,11 @@ export interface CountyJurisdiction {
    * `rules` (default), `none` (every kind of county-level obligation was checked and there is none) or `unverified`
    * (nothing confirmed, or only some kinds checked; the note says which).
    */
-  status?: "rules" | "none" | "unverified";
+  status: "rules" | "none" | "unverified";
   /** Date (YYYY-MM-DD) the entry was last checked against the county's official pages. */
   checkedOn?: string;
   /** Official page, or pages, backing a `none` status. */
-  sourceUrl?: string | string[];
+  sourceUrl?: string[];
   /** Code of a shared explanation in `data/local-notes.json`; resolved into `note` on load. Not together with `note`. */
   reason?: string;
   note?: string;
@@ -415,11 +415,11 @@ export interface LocalJurisdiction {
    * the state's regime and the generic local rules still apply.
    * `unverified`: researched, but no official city page confirmed either way (`items` is empty).
    */
-  status?: "rules" | "none" | "unverified";
+  status: "rules" | "none" | "unverified";
   /** Date (YYYY-MM-DD) the entry was last checked against the city's official pages. */
-  checkedOn?: string;
+  checkedOn: string;
   /** Official page, or pages, backing a `none` status. */
-  sourceUrl?: string | string[];
+  sourceUrl?: string[];
   /** Code of a shared explanation in `data/local-notes.json`; resolved into `note` on load. Not together with `note`. */
   reason?: string;
   /** Short explanation shown to maintainers (for example what the city does require instead). */

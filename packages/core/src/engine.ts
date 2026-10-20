@@ -285,8 +285,10 @@ const FEEDBACK_URL =
   "https://github.com/Alisa007/business-obligations/issues/new?template=data-correction.yml&title=";
 
 type DraftBody = ItemDraft extends infer T ? (T extends unknown ? Omit<T, "key"> : never) : never;
-type SettledDraft = Omit<ComplianceItem, "id" | "ruleId" | "nextDue" | "recurrence" | "cost"> & {
+type SettledDraft = Omit<ComplianceItem, "id" | "ruleId" | "nextDue" | "recurrence" | "cost" | "url" | "provenance"> & {
   cost?: ComplianceItem["cost"];
+  url?: string[];
+  provenance?: ComplianceItem["provenance"];
 };
 
 const RECURRING = new Set<string>([
@@ -332,9 +334,12 @@ export function evaluate(input: BusinessProfile, options: EvaluateOptions = {}):
         const n = seen.get(id) ?? 0;
         seen.set(id, n + 1);
         if (n > 0) id = `${id}#${n}`;
+        const draftUrl = d.url ?? [];
         const item: ComplianceItem = {
           ...d,
           cost: d.cost ?? { basis: "unknown", currency: "USD" },
+          url: draftUrl,
+          provenance: d.provenance ?? { confidence: "compiled", sources: draftUrl },
           id,
           ruleId: rule.id,
         };
@@ -350,10 +355,11 @@ export function evaluate(input: BusinessProfile, options: EvaluateOptions = {}):
           if (recurrence) item.recurrence = recurrence;
         }
         item.provenance = describeProvenance(
-          item.provenance ?? provenanceFor(item, profile),
+          d.provenance ?? provenanceFor(item, profile),
           asOf,
           DATA_VERSION,
         );
+        if (!item.url.length && item.provenance.sources.length) item.url = item.provenance.sources;
         item.jurisdictionId = jurisdictionId(item, profile);
         if (item.state && STATE_FIPS[item.state]) item.stateFips = STATE_FIPS[item.state];
         const interval = RENEWAL_INTERVAL[item.frequency];

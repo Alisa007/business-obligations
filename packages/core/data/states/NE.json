@@ -51,8 +51,11 @@
       "basis": "none"
     }
   },
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "Corporate income tax",
+  "wageWithholding": true,
+  "entityTaxDetail": null,
   "salesTax": {
     "statewide": true,
     "permit": "Nebraska sales tax permit",
@@ -84,6 +87,7 @@
     "description": "Omaha, Lincoln and others require occupation taxes or business licenses."
   },
   "dbaFiling": "none",
+  "dbaEntitiesFileLocally": false,
   "industry": {
     "contractor": "Nebraska Department of Labor (contractor registration)",
     "realEstate": "Nebraska Real Estate Commission",
@@ -110,7 +114,8 @@
     ],
     "laborPosters": [
       "https://dol.nebraska.gov/laborstandards/compliance/requiredposters/laborstandards/compliance/requiredposters"
-    ]
+    ],
+    "dba": ["https://sos.nebraska.gov/business-services/forms-and-fee-information"]
   },
   "verification": {
     "checkedOn": "2026-10-13",

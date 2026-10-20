@@ -38,8 +38,11 @@
       "note": "Penalty for failure to file a required biennial report."
     }
   },
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "Corporate income tax (no individual income tax)",
+  "wageWithholding": false,
+  "entityTaxDetail": null,
   "salesTax": {
     "statewide": false,
     "permit": "Local (borough/city) sales tax registration",
@@ -86,6 +89,7 @@
     "description": "Local licenses and sales tax registration where the municipality has them."
   },
   "dbaFiling": "state",
+  "dbaEntitiesFileLocally": false,
   "industry": {
     "contractor": "Alaska Division of Corporations, Business and Professional Licensing",
     "realEstate": "Alaska Real Estate Commission",
@@ -101,6 +105,7 @@
     "formation": ["https://www.commerce.alaska.gov/web/cbpl/Corporations/CreateFileNewEntity"],
     "annualReport": ["https://www.commerce.alaska.gov/web/cbpl/Corporations/BiennialReportsFAQs"],
     "uiRegistration": ["https://labor.alaska.gov/lss/posters.htm/estax/"],
+    "withholding": ["https://www.tax.alaska.gov/programs/programs/other/corporate/MEF.aspx"],
     "salesTax": ["https://arsstc.org/business-sellers/"],
     "entityTax": ["https://www.tax.alaska.gov/programs/programs/other/corporate/MEF.aspx"],
     "laborPosters": ["https://labor.alaska.gov/lss/posters.htm/lss/posters.htm"],

@@ -50,8 +50,11 @@
       "basis": "none"
     }
   },
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": "New York LLCs must publish their articles of organization or a notice of formation in two newspapers within 120 days, then file a Certificate of Publication with the Division of Corporations ($50) or lose authority to do business.",
   "entityTax": "Corporate franchise tax (fixed-dollar minimum, MTA surcharge); LLC filing fee; optional Pass-Through Entity Tax",
+  "wageWithholding": true,
+  "entityTaxDetail": null,
   "salesTax": {
     "statewide": true,
     "permit": "New York Certificate of Authority",
@@ -91,6 +94,7 @@
     "description": "New York has no general business license; NYC and other cities license specific industries."
   },
   "dbaFiling": "county",
+  "dbaEntitiesFileLocally": false,
   "dbaOffice": "County clerk",
   "industry": {
     "contractor": null,

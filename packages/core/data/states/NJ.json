@@ -36,8 +36,11 @@
       "note": "Reinstatement fee for a for-profit corporation, including $75 reinstatement and $20 tax-clearance filing fee; delinquent annual reports are additional."
     }
   },
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "Corporation Business Tax (minimum tax $500–$2,000); partnership filing fee per partner",
+  "wageWithholding": true,
+  "entityTaxDetail": null,
   "salesTax": {
     "statewide": true,
     "permit": "New Jersey Certificate of Authority",
@@ -76,6 +79,7 @@
     "description": "Municipalities require certificates of occupancy and, in many towns, business registration."
   },
   "dbaFiling": "county",
+  "dbaEntitiesFileLocally": false,
   "dbaOffice": "County clerk",
   "industry": {
     "contractor": "New Jersey Division of Consumer Affairs (home improvement contractor registration)",

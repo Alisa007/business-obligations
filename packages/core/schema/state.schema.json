@@ -9,24 +9,28 @@
     "filing",
     "revenue",
     "labor",
-    "workersComp",
     "llcReport",
     "corpReport",
+    "llcReportAppliesWhenTaxedAsCorp",
+    "llcPublication",
     "entityTax",
+    "wageWithholding",
+    "entityTaxDetail",
     "salesTax",
-    "businessLicense",
+    "localSalesTax",
+    "economicNexusUsd",
+    "unemployment",
+    "workersComp",
     "paidLeave",
     "paidSickLeave",
+    "businessLicense",
     "local",
-    "llcPublication",
-    "economicNexusUsd",
     "dbaFiling",
+    "dbaEntitiesFileLocally",
     "industry",
-    "verification",
     "cannabis",
-    "localSalesTax",
-    "unemployment",
-    "links"
+    "links",
+    "verification"
   ],
   "allOf": [
     {
@@ -117,37 +121,47 @@
       "type": "string",
       "minLength": 3
     },
+    "wageWithholding": {
+      "description": "Whether the state levies individual income tax withholding on wages.",
+      "type": "boolean"
+    },
     "entityTaxDetail": {
-      "description": "Threshold and rate of the state's gross-receipts or margin tax, where it is modelled.",
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["kind", "thresholdUsd", "summary", "source", "checkedOn"],
-      "properties": {
-        "kind": {
-          "enum": ["gross_receipts", "margin"]
+      "oneOf": [
+        {
+          "type": "null"
         },
-        "thresholdUsd": {
-          "type": "number",
-          "minimum": 0
-        },
-        "rate": {
-          "type": "number",
-          "minimum": 0
-        },
-        "baseUsd": {
-          "type": "number",
-          "minimum": 0
-        },
-        "summary": {
-          "type": "string"
-        },
-        "source": {
-          "$ref": "common.schema.json#/$defs/httpsUrl"
-        },
-        "checkedOn": {
-          "$ref": "common.schema.json#/$defs/isoDate"
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "thresholdUsd", "summary", "source", "checkedOn"],
+          "properties": {
+            "kind": {
+              "enum": ["gross_receipts", "margin"]
+            },
+            "thresholdUsd": {
+              "type": "number",
+              "minimum": 0
+            },
+            "rate": {
+              "type": "number",
+              "minimum": 0
+            },
+            "baseUsd": {
+              "type": "number",
+              "minimum": 0
+            },
+            "summary": {
+              "type": "string"
+            },
+            "source": {
+              "$ref": "common.schema.json#/$defs/httpsUrl"
+            },
+            "checkedOn": {
+              "$ref": "common.schema.json#/$defs/isoDate"
+            }
+          }
         }
-      }
+      ]
     },
     "salesTax": {
       "description": "Statewide sales and use tax regime.",
@@ -344,7 +358,14 @@
           "type": "object",
           "additionalProperties": false,
           "required": ["title", "authority", "url", "feeDetail", "penalty"],
-          "oneOf": [{ "required": ["rrule"] }, { "required": ["frequency"] }],
+          "oneOf": [
+            {
+              "required": ["rrule"]
+            },
+            {
+              "required": ["frequency"]
+            }
+          ],
           "properties": {
             "title": {
               "type": "string"
@@ -402,7 +423,6 @@
       "enum": ["state", "county", "town", "none"]
     },
     "dbaEntitiesFileLocally": {
-      "description": "Registered entities also file assumed names at the county or town level.",
       "type": "boolean"
     },
     "dbaOffice": {
@@ -461,7 +481,16 @@
       "description": "Specific agency pages (not home pages) for the obligations the rules cite.",
       "type": "object",
       "additionalProperties": false,
-      "required": ["formation", "annualReport", "uiRegistration", "entityTax", "laborPosters"],
+      "required": [
+        "formation",
+        "annualReport",
+        "uiRegistration",
+        "withholding",
+        "salesTax",
+        "entityTax",
+        "laborPosters",
+        "dba"
+      ],
       "properties": {
         "formation": {
           "$ref": "common.schema.json#/$defs/httpsUrlList"

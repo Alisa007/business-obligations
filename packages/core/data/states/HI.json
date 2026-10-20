@@ -41,8 +41,11 @@
       "note": "Per year delinquent"
     }
   },
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "Corporate income tax and General Excise Tax",
+  "wageWithholding": true,
+  "entityTaxDetail": null,
   "salesTax": {
     "statewide": true,
     "permit": "General Excise Tax (GET) license",
@@ -82,6 +85,7 @@
     "description": "Hawaii has no general local business license; counties issue zoning, building and industry permits."
   },
   "dbaFiling": "none",
+  "dbaEntitiesFileLocally": false,
   "industry": {
     "contractor": "Hawaii Contractors License Board",
     "realEstate": "Hawaii Real Estate Commission",
@@ -101,7 +105,8 @@
     "withholding": ["https://tax.hawaii.gov/get/FAQ//geninfo/a2_b2_4empl_whhold/"],
     "salesTax": ["https://tax.hawaii.gov/get/FAQ//get/FAQ/"],
     "entityTax": ["https://tax.hawaii.gov/get/FAQ//forms/a1_2taxforms/"],
-    "laborPosters": ["https://labor.hawaii.gov/labor-law-poster/"]
+    "laborPosters": ["https://labor.hawaii.gov/labor-law-poster/"],
+    "dba": ["https://cca.hawaii.gov/breg/registration/"]
   },
   "verification": {
     "checkedOn": "2026-10-13",

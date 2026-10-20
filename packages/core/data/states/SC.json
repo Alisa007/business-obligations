@@ -47,6 +47,8 @@
   "llcReportAppliesWhenTaxedAsCorp": true,
   "llcPublication": null,
   "entityTax": "Corporate income tax and corporate license fee",
+  "wageWithholding": true,
+  "entityTaxDetail": null,
   "salesTax": {
     "statewide": true,
     "permit": "South Carolina retail license",
@@ -80,6 +82,7 @@
     "description": "Every South Carolina business needs a local business license under the Business License Tax Standardization Act."
   },
   "dbaFiling": "none",
+  "dbaEntitiesFileLocally": false,
   "industry": {
     "contractor": "South Carolina Contractors' Licensing Board",
     "realEstate": "South Carolina Real Estate Commission",
@@ -102,7 +105,8 @@
     "entityTax": [
       "https://dor.sc.gov/business-income-taxes/corporate/c-corporation/business-income-taxes/corporate/c-corporation"
     ],
-    "laborPosters": ["https://llr.sc.gov/wage/posters.aspx"]
+    "laborPosters": ["https://llr.sc.gov/wage/posters.aspx"],
+    "dba": ["https://sos.sc.gov/faqs-about-business-entities"]
   },
   "verification": {
     "checkedOn": "2026-10-19",

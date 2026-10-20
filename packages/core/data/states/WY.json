@@ -38,8 +38,11 @@
       "note": "Wyoming marks entities delinquent and may administratively dissolve them after 60 days; no separate annual-report late fee is listed."
     }
   },
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "No corporate or individual income tax",
+  "wageWithholding": false,
+  "entityTaxDetail": null,
   "salesTax": {
     "statewide": true,
     "permit": "Wyoming sales tax license",
@@ -72,6 +75,7 @@
     "description": "Wyoming cities and towns issue local business licenses."
   },
   "dbaFiling": "none",
+  "dbaEntitiesFileLocally": false,
   "industry": {
     "contractor": null,
     "realEstate": "Wyoming Real Estate Commission",
@@ -89,11 +93,13 @@
     "uiRegistration": [
       "https://dws.wyo.gov/dws-division/labor-standards/forms-and-resources/labor-law-poster//dws-division/unemployment-insurance/"
     ],
+    "withholding": ["https://revenue.wyo.gov/divisions/"],
     "salesTax": ["https://revenue.wyo.gov/divisions//divisions/"],
     "entityTax": ["https://revenue.wyo.gov/divisions//divisions/"],
     "laborPosters": [
       "https://dws.wyo.gov/dws-division/labor-standards/forms-and-resources/labor-law-poster//dws-division/labor-standards/forms-and-resources/labor-law-poster/"
-    ]
+    ],
+    "dba": ["https://sos.wyo.gov/FAQS.aspx?root=BUS"]
   },
   "verification": {
     "checkedOn": "2026-10-13",

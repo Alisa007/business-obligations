@@ -37,8 +37,11 @@
     }
   },
   "lpReport": null,
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "Business Profits Tax and Business Enterprise Tax",
+  "wageWithholding": false,
+  "entityTaxDetail": null,
   "salesTax": {
     "statewide": false,
     "permit": "Meals and Rentals Tax license",
@@ -72,6 +75,7 @@
     "description": "New Hampshire has no general local business license; local zoning and health permits apply."
   },
   "dbaFiling": "state",
+  "dbaEntitiesFileLocally": false,
   "industry": {
     "contractor": null,
     "realEstate": "New Hampshire Real Estate Commission",
@@ -89,6 +93,7 @@
     "uiRegistration": [
       "https://www.dol.nh.gov/resource-center/mandatory-posters/employers/register-your-company-nh"
     ],
+    "withholding": ["https://www.revenue.nh.gov/taxes-glance/business-taxes"],
     "salesTax": [
       "https://www.revenue.nh.gov/taxes-glance/business-taxes/taxes-glance/meals-rooms-rentals-tax"
     ],

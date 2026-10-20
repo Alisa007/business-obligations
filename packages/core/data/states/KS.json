@@ -70,8 +70,11 @@
       "note": "Biennial report penalty."
     }
   },
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "Corporate income tax and privilege tax",
+  "wageWithholding": true,
+  "entityTaxDetail": null,
   "salesTax": {
     "statewide": true,
     "permit": "Kansas retailers' sales tax registration",
@@ -105,6 +108,7 @@
     "description": "Many Kansas cities require a local occupation or business license."
   },
   "dbaFiling": "none",
+  "dbaEntitiesFileLocally": false,
   "industry": {
     "contractor": null,
     "realEstate": "Kansas Real Estate Commission",
@@ -127,7 +131,8 @@
     "entityTax": ["https://www.ksrevenue.gov/bustaxtypescorp.html/bustaxtypescorp.html"],
     "laborPosters": [
       "https://www.dol.ks.gov/employers/workplace-laws/posters-in-the-workplace/employers/workplace-laws/posters-in-the-workplace"
-    ]
+    ],
+    "dba": ["https://www.sos.ks.gov/businesses/register-a-business.html"]
   },
   "verification": {
     "checkedOn": "2026-10-13",

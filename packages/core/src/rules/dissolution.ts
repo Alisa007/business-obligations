@@ -150,6 +150,7 @@ export const dissolutionRules: Rule[] = [
             "Notify the licensing authority that the business has closed and cancel licenses and permits so renewals and local tax filings stop.",
           frequency: "once",
           reason: `Business is being dissolved (${dissolving(p)})`,
+          url: s.local.url,
         },
       ];
       if (p.usesTradeName && s.dbaFiling !== "none") {
@@ -163,6 +164,7 @@ export const dissolutionRules: Rule[] = [
             "Withdraw or abandon the assumed name so it is available and no longer attached to the entity.",
           frequency: "once",
           reason: "Business operates under a trade name and is being dissolved",
+          url: s.links.dba,
         });
       }
       return items;

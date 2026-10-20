@@ -38,8 +38,10 @@
       "note": "$75 list penalty plus $100 business license penalty"
     }
   },
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "Commerce Tax (gross receipts over $4 million) and Modified Business Tax on payroll; no corporate income tax",
+  "wageWithholding": false,
   "entityTaxDetail": {
     "kind": "gross_receipts",
     "thresholdUsd": 4000000,
@@ -112,6 +114,7 @@
     "formation": ["https://www.nvsos.gov/sos/businesses"],
     "annualReport": ["https://www.nvsos.gov/sos/licensing/state-business-license"],
     "uiRegistration": ["https://labor.nv.gov/Employer/Employer_Posters//Page/UI_Information_for_Employers"],
+    "withholding": ["https://tax.nv.gov/tax-types/commerce-tax/"],
     "salesTax": ["https://tax.nv.gov/tax-types/commerce-tax//tax-types/sales-tax-use-tax/"],
     "entityTax": ["https://tax.nv.gov/tax-types/commerce-tax//tax-types/commerce-tax/"],
     "laborPosters": ["https://labor.nv.gov/Employer/Employer_Posters/"],

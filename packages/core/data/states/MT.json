@@ -68,8 +68,11 @@
       "note": "Fee after April 15 (fee is waived before then)"
     }
   },
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "Corporate income tax (C corporations file Form CIT; federal S corporations file Form PTE)",
+  "wageWithholding": true,
+  "entityTaxDetail": null,
   "salesTax": {
     "statewide": false,
     "permit": "Local option resort tax registration",
@@ -101,6 +104,7 @@
     "description": "Some Montana cities and counties require a local business license."
   },
   "dbaFiling": "state",
+  "dbaEntitiesFileLocally": false,
   "industry": {
     "contractor": "Montana Department of Labor & Industry (contractor registration)",
     "realEstate": "Montana Board of Realty Regulation",

@@ -38,8 +38,11 @@
       "amount": 55
     }
   },
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "No corporate or individual income tax (financial institution franchise tax only)",
+  "wageWithholding": false,
+  "entityTaxDetail": null,
   "salesTax": {
     "statewide": true,
     "permit": "South Dakota sales tax license",
@@ -73,6 +76,7 @@
     "description": "Some South Dakota cities require licenses for specific businesses."
   },
   "dbaFiling": "state",
+  "dbaEntitiesFileLocally": false,
   "industry": {
     "contractor": null,
     "realEstate": "South Dakota Real Estate Commission",
@@ -90,6 +94,7 @@
     "uiRegistration": [
       "https://dlr.sd.gov/employment_laws/posting_requirements.aspx/ra/businesses/registration.aspx"
     ],
+    "withholding": ["https://dor.sd.gov/businesses/taxes/"],
     "salesTax": ["https://dor.sd.gov/businesses/taxes//businesses/taxes/sales-use-tax/"],
     "entityTax": ["https://dor.sd.gov/businesses/taxes//businesses/taxes/"],
     "laborPosters": [

@@ -38,8 +38,11 @@
       "note": "Wisconsin DFI states there are no late fees or penalties; failure to file can lead to administrative dissolution."
     }
   },
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "Corporate income/franchise tax; pass-through entity tax (optional election)",
+  "wageWithholding": true,
+  "entityTaxDetail": null,
   "salesTax": {
     "statewide": true,
     "permit": "Wisconsin seller's permit",
@@ -73,6 +76,7 @@
     "description": "Wisconsin has no general business license; local permits and zoning approvals apply."
   },
   "dbaFiling": "county",
+  "dbaEntitiesFileLocally": false,
   "dbaOffice": "County register of deeds",
   "industry": {
     "contractor": "Wisconsin Department of Safety and Professional Services (dwelling contractor qualifier)",

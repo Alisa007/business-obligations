@@ -34,8 +34,10 @@
       "basis": "none"
     }
   },
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "Corporate excise tax and Corporate Activity Tax (CAT, gross receipts over $1 million); minimum excise tax by sales",
+  "wageWithholding": true,
   "entityTaxDetail": {
     "kind": "gross_receipts",
     "thresholdUsd": 1000000,
@@ -84,6 +86,7 @@
     "description": "Portland and Multnomah County levy business income taxes; many cities require business licenses."
   },
   "dbaFiling": "state",
+  "dbaEntitiesFileLocally": false,
   "industry": {
     "contractor": "Oregon Construction Contractors Board",
     "realEstate": "Oregon Real Estate Agency",
@@ -100,6 +103,7 @@
     "annualReport": ["https://sos.oregon.gov/business/Pages/default.aspx"],
     "uiRegistration": ["https://www.oregon.gov/employ/Businesses/Pages/default.aspx"],
     "withholding": ["https://www.oregon.gov/dor/programs/businesses/pages/withholding-and-payroll-tax.aspx"],
+    "salesTax": ["https://www.oregon.gov/dor/programs/businesses/Pages/Sales-tax.aspx"],
     "entityTax": ["https://www.oregon.gov/dor/programs/businesses/Pages/Corporate-Activity-Tax.aspx"],
     "laborPosters": ["https://www.oregon.gov/boli/employers/pages/required-worksite-postings.aspx"],
     "dba": ["https://sos.oregon.gov/business/Pages/obr-assumed-business-name-registration.aspx"]

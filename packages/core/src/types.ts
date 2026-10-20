@@ -250,13 +250,13 @@ export interface ComplianceItem {
   /** Late-filing or late-payment penalty, when known. */
   penalty?: StatedPenalty & { currency: "USD" };
   /** Where this item's data comes from and how well it was checked. */
-  provenance?: Provenance;
+  provenance: Provenance;
   /** Changes to the rules behind this item that take effect after the evaluation date. */
   upcomingChanges?: ChangeNotice[];
   /** Why the engine returned this item. */
   reason: string;
   /** Official sources for this obligation. */
-  url?: string[];
+  url: string[];
   /** Conditions under which the item applies (all must hold), when they can be expressed as profile checks. */
   appliesWhen?: Applicability[];
   /** Alternative conditions; at least one must hold when present. */
@@ -334,8 +334,18 @@ export interface ResolvedProfile extends BusinessProfile {
 /** A rule's output before the engine assigns an id and computes due dates. */
 export type ItemDraft = Omit<
   ComplianceItem,
-  "id" | "ruleId" | "nextDue" | "recurrence" | "frequency" | "due" | "cost"
+  | "id"
+  | "ruleId"
+  | "nextDue"
+  | "recurrence"
+  | "frequency"
+  | "due"
+  | "cost"
+  | "url"
+  | "provenance"
 > & {
+  url?: string[];
+  provenance?: Provenance;
   /** The engine supplies an unknown fee when a rule has no researched amount. */
   cost?: ComplianceItem["cost"];
   /** Distinguishes several items from one rule in the same state; becomes part of the id. */

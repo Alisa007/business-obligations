@@ -43,8 +43,11 @@
       "note": "$10 late annual-report penalty; revoked entities also owe a $25 reinstatement fee."
     }
   },
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "Corporate income tax and gross receipts tax",
+  "wageWithholding": true,
+  "entityTaxDetail": null,
   "salesTax": {
     "statewide": true,
     "permit": "New Mexico CRS (Combined Reporting System) registration",
@@ -81,6 +84,7 @@
     "description": "Albuquerque, Santa Fe and others require local business registration."
   },
   "dbaFiling": "none",
+  "dbaEntitiesFileLocally": false,
   "industry": {
     "contractor": "New Mexico Construction Industries Division",
     "realEstate": "New Mexico Real Estate Commission",
@@ -103,7 +107,8 @@
       "https://www.tax.newmexico.gov/businesses/gross-receipts-overview//businesses/gross-receipts-overview/"
     ],
     "entityTax": ["https://www.tax.newmexico.gov/businesses/gross-receipts-overview//businesses/"],
-    "laborPosters": ["https://www.dws.nm.gov/en-us/State-and-Federal-Posters"]
+    "laborPosters": ["https://www.dws.nm.gov/en-us/State-and-Federal-Posters"],
+    "dba": ["https://www.sos.nm.gov/business-services/"]
   },
   "verification": {
     "checkedOn": "2026-10-13",

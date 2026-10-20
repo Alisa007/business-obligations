@@ -42,8 +42,10 @@
       "max": 50
     }
   },
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "Franchise (margin) tax",
+  "wageWithholding": false,
   "entityTaxDetail": {
     "kind": "margin",
     "thresholdUsd": 2650000,
@@ -85,6 +87,7 @@
     "description": "Texas has no general state or city business license; occupancy, health, signage and industry permits are local, and DBAs go to the county clerk."
   },
   "dbaFiling": "county",
+  "dbaEntitiesFileLocally": false,
   "dbaOffice": "County clerk",
   "industry": {
     "contractor": null,
@@ -104,6 +107,7 @@
     "uiRegistration": [
       "https://www.twc.texas.gov/programs/unemployment-tax/posters-workplace/services/register-tax"
     ],
+    "withholding": ["https://comptroller.texas.gov/taxes/franchise/"],
     "salesTax": ["https://comptroller.texas.gov/taxes/franchise//taxes/sales/"],
     "entityTax": ["https://comptroller.texas.gov/taxes/franchise//taxes/franchise/"],
     "laborPosters": [

@@ -44,8 +44,11 @@
       "note": "Penalty when filed more than 30 days late"
     }
   },
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "Corporate income tax ($400 minimum)",
+  "wageWithholding": true,
+  "entityTaxDetail": null,
   "salesTax": {
     "statewide": true,
     "permit": "Rhode Island seller's permit",
@@ -85,6 +88,7 @@
     "description": "Local licensing councils issue specific business licenses; no general license."
   },
   "dbaFiling": "state",
+  "dbaEntitiesFileLocally": false,
   "industry": {
     "contractor": "Rhode Island Contractors' Registration and Licensing Board",
     "realEstate": "Rhode Island Department of Business Regulation",

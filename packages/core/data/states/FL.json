@@ -82,8 +82,11 @@
       "note": "Added to the annual report after May 1; no provision to waive"
     }
   },
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "Corporate income tax on corporations and entities taxed as corporations (S corporations file only if they owe federal tax on Form 1120S line 23c); no individual income tax",
+  "wageWithholding": false,
+  "entityTaxDetail": null,
   "salesTax": {
     "statewide": true,
     "permit": "Florida Certificate of Registration (sales and use tax)",
@@ -116,6 +119,7 @@
     "description": "Florida counties and cities each issue a Local Business Tax Receipt (renewed annually by September 30)."
   },
   "dbaFiling": "state",
+  "dbaEntitiesFileLocally": false,
   "industry": {
     "contractor": "Florida Construction Industry Licensing Board (DBPR)",
     "realEstate": "Florida Real Estate Commission",
@@ -133,6 +137,7 @@
     "uiRegistration": [
       "https://floridarevenue.com/taxes/taxesfees/Pages/corporate.aspx/taxes/taxesfees/Pages/reemployment.aspx"
     ],
+    "withholding": ["https://floridarevenue.com/taxes/taxesfees/Pages/corporate.aspx"],
     "salesTax": [
       "https://floridarevenue.com/taxes/taxesfees/Pages/corporate.aspx/taxes/taxesfees/Pages/sales_tax.aspx"
     ],

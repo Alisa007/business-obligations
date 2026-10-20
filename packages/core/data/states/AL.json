@@ -15,8 +15,11 @@
   "llcReport": null,
   "corpReport": null,
   "llpReport": null,
+  "llcReportAppliesWhenTaxedAsCorp": false,
   "llcPublication": null,
   "entityTax": "Corporate income tax and Business Privilege Tax (an entity that would owe only the minimum Business Privilege Tax is exempt from it for tax years from 2024; the Secretary of State corporate annual report is no longer required)",
+  "wageWithholding": true,
+  "entityTaxDetail": null,
   "salesTax": {
     "statewide": true,
     "permit": "Sales tax account (My Alabama Taxes)",
@@ -50,6 +53,7 @@
     "description": "Alabama cities and counties issue general business licenses and collect local sales/use taxes."
   },
   "dbaFiling": "none",
+  "dbaEntitiesFileLocally": false,
   "industry": {
     "contractor": "Alabama Licensing Board for General Contractors",
     "realEstate": "Alabama Real Estate Commission",
@@ -76,7 +80,8 @@
     "entityTax": [
       "https://www.revenue.alabama.gov/business-license/business-privilege-tax//business-license/business-privilege-tax/"
     ],
-    "laborPosters": ["https://workforce.alabama.gov/employers/posters/"]
+    "laborPosters": ["https://workforce.alabama.gov/employers/posters/"],
+    "dba": ["https://www.sos.alabama.gov/administrative-services/trademarks"]
   },
   "verification": {
     "checkedOn": "2026-10-13",

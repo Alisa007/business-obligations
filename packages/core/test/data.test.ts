@@ -49,7 +49,7 @@ describe("state data files", () => {
     expect(validate.errors ?? []).toEqual([]);
     expect(ok).toBe(true);
     expect(data.code, "the file name is the state code").toBeUndefined();
-    expect(data.wageWithholding, "withholding follows links.withholding").toBeUndefined();
+    expect(typeof data.wageWithholding, "withholding is explicit").toBe("boolean");
   });
 
   it("the loader adds the code and the fields that follow from other fields", () => {
@@ -59,7 +59,7 @@ describe("state data files", () => {
       expect(STATES[code]).toEqual({
         code,
         ...raw,
-        wageWithholding: !!raw.links.withholding,
+        wageWithholding: raw.wageWithholding,
         unemployment: { ...raw.unemployment, year: read("data/ui-source.json").year },
         workersComp: {
           ...raw.workersComp,
@@ -442,6 +442,7 @@ describe("local and profession data schemas", () => {
   it("rejects malformed local entries", () => {
     const ok = {
       city: "Austin",
+      checkedOn: "2026-10-13",
       status: "unverified",
       note: "No general license was confirmed.",
       items: [],
@@ -487,7 +488,7 @@ describe("local and profession data schemas", () => {
     for (const entry of bad) expect(cityFile([entry]), JSON.stringify(entry)).toBe(false);
     // An item names its page, and a county entry says when it was checked.
     expect(cityFile([{ ...ok, status: undefined, items: [item] }])).toBe(false);
-    expect(cityFile([{ ...ok, status: undefined, items: [{ ...item, url: "https://example.gov/x" }] }])).toBe(
+    expect(cityFile([{ ...ok, status: "rules", items: [{ ...item, url: "https://example.gov/x" }] }])).toBe(
       true,
     );
     expect(
@@ -604,7 +605,8 @@ describe("source links", () => {
         expect(value, `${code}.links.${key}`).toSatisfy(
           (urls) => Array.isArray(urls) && urls.every((url: string) => /^https:\/\//.test(url)),
         );
-        expect((value as string[]).every(isBare), `${code}.links.${key}`).toBe(false);
+        if ((value as string[]).length > 0)
+          expect((value as string[]).every(isBare), `${code}.links.${key}`).toBe(false);
       }
     }
   });
@@ -877,6 +879,7 @@ describe("seed items with appliesWhen", () => {
     {
       state: "NY",
       county: "Testland",
+      status: "rules" as const,
       items: [
         {
           id: "testland.occupancy-tax",
@@ -983,6 +986,8 @@ describe("bring-your-own city data", () => {
       {
         state: "TX",
         city: "Smallville",
+        status: "rules" as const,
+        checkedOn: "2026-10-13",
         items: [
           {
             id: "smallville.permit",
@@ -1195,7 +1200,7 @@ describe("schema reuse", () => {
 });
 
 describe("sourceUrl as a list", () => {
-  it("accepts one https URL or a non-empty list of them", () => {
+  it("accepts a non-empty list of https URLs", () => {
     const local = newAjv();
     local.addSchema(read("schema/local-item.schema.json"));
     const city = local.compile(read("schema/cities.schema.json"));
@@ -1210,7 +1215,7 @@ describe("sourceUrl as a list", () => {
         checkedOn: "2026-01-01",
       },
     ];
-    expect(city(none("https://a.example/page"))).toBe(true);
+    expect(city(none("https://a.example/page"))).toBe(false);
     expect(city(none(["https://a.example/page", "https://b.example/page"]))).toBe(true);
     expect(city(none("https://a.example"))).toBe(false);
     expect(city(none([]))).toBe(false);
