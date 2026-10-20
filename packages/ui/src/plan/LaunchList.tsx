@@ -1,7 +1,8 @@
 import type { ComplianceItem, LaunchPlan } from "business-obligations";
-import { Checkbox, Label, Paragraph, Text, XStack, YStack } from "tamagui";
+import { Label, Paragraph, Text, XStack, YStack } from "tamagui";
 import { WithLocale, useI18n } from "../i18n/context";
 import type { Messages } from "../i18n/messages";
+import { CheckBox } from "../shared/CheckBox";
 import { Collapse } from "../shared/Collapse";
 import { Chip, ExternalLink, Stat } from "../shared/primitives";
 import { Confidence, Fee } from "./chips";
@@ -51,17 +52,7 @@ function CheckStep({
 }) {
   return (
     <XStack gap="3" alignItems="flex-start" paddingVertical="1" opacity={checked ? 0.6 : 1}>
-      <Checkbox
-        id={id}
-        checked={checked}
-        onCheckedChange={(value) => onChange?.(value === true)}
-        size="md"
-        marginTop="0.5"
-      >
-        <Checkbox.Indicator>
-          <Text fontSize="xs">✓</Text>
-        </Checkbox.Indicator>
-      </Checkbox>
+      <CheckBox id={id} checked={checked} onChange={() => onChange?.(!checked)} />
       <Label htmlFor={id} flex={1} minWidth={0} cursor="pointer">
         <YStack gap="1" flexShrink={1} minWidth={0}>
           <Text fontWeight="600" textDecorationLine={checked ? "line-through" : "none"}>

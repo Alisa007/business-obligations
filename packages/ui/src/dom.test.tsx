@@ -8,6 +8,7 @@ import { TamaguiProvider, createTamagui } from "tamagui";
 import { evaluate, type BusinessProfile } from "business-obligations";
 import {
   Collapse,
+  DetailsField,
   NO_OBLIGATION_FILTERS,
   ObligationsList,
   ProfileForm,
@@ -153,6 +154,41 @@ describe("sections of the compact form", () => {
     )!;
     expect(size.textContent).toContain("(1)");
     expect(size.getAttribute("aria-expanded")).toBe("true");
+  });
+});
+
+describe("the yes/no details", () => {
+  const boxOf = (text: RegExp) => {
+    const label = [...host.querySelectorAll("label")].find((l) => text.test(l.textContent ?? ""))!;
+    return { label, box: document.getElementById(label.htmlFor)! };
+  };
+
+  it("go round not answered, yes, no, not answered, from the box or from its label", async () => {
+    await mount(<DetailsField />);
+    const { label, box } = boxOf(/home/i);
+    expect(box.getAttribute("role")).toBe("checkbox");
+    expect(box.getAttribute("aria-checked")).toBe("mixed");
+
+    await press(box);
+    expect(box.getAttribute("aria-checked")).toBe("true");
+    expect(window.location.search).toContain("home=1");
+
+    await press(label); // the label is the box's name and presses it too
+    expect(box.getAttribute("aria-checked")).toBe("false");
+    expect(window.location.search).toContain("home=0");
+
+    await press(box);
+    expect(box.getAttribute("aria-checked")).toBe("mixed");
+    expect(window.location.search).not.toContain("home=");
+  });
+
+  it("is not inside another button, and shows the mark that matches its answer", async () => {
+    window.history.replaceState(null, "", "/?sells=1&home=0");
+    await mount(<DetailsField />);
+    expect(host.querySelectorAll("button button").length).toBe(0);
+    expect(boxOf(/taxable goods/i).box.textContent).toBe("✓");
+    expect(boxOf(/home/i).box.textContent).toBe("✕");
+    expect(boxOf(/trade name/i).box.textContent).toBe("–");
   });
 });
 

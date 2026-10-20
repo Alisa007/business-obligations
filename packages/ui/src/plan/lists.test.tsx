@@ -175,7 +175,9 @@ describe("business-obligations-ui", () => {
     );
     expect(html).toContain("File formation");
     expect(html).toContain("Known fees");
-    expect(html).toContain('type="checkbox"');
+    // a button with the checkbox role, named by its label (`htmlFor`), that is not checked yet
+    expect(html).toMatch(/<button[^>]*role="checkbox"[^>]*aria-checked="false"/);
+    expect(html).toMatch(/<label[^>]*for="step-/);
   });
 
   it("opens external links in new tabs and nofollows non-government links", () => {
