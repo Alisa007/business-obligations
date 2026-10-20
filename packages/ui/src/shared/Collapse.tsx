@@ -2,7 +2,7 @@ import { useId, useState, type ReactNode } from "react";
 import { XStack, YStack } from "tamagui";
 
 /** Turns with its item: a quarter turn from pointing right on the left, a half turn from pointing down on the right. */
-function Chevron({ open, side }: { open: boolean; side: "left" | "right" }) {
+function Chevron({ open, side, nudge = true }: { open: boolean; side: "left" | "right"; nudge?: boolean }) {
   const turn = side === "left" ? (open ? 0 : -90) : open ? 180 : 0;
   return (
     // a plain element with an inline transition, so it turns whatever animation setup the host has
@@ -11,7 +11,7 @@ function Chevron({ open, side }: { open: boolean; side: "left" | "right" }) {
       style={{
         display: "flex",
         flexShrink: 0,
-        marginTop: side === "left" ? 2 : 0,
+        marginTop: side === "left" && nudge ? 2 : 0,
         color: side === "left" ? "var(--placeholder-color)" : "var(--color)",
         transform: `rotate(${turn}deg)`,
         transition: "transform 220ms ease-out",
@@ -41,6 +41,19 @@ export interface CollapseProps {
   defaultOpen?: boolean;
   /** Which side of the summary the chevron is on. On the left the content lines up under the summary. */
   icon?: "left" | "right";
+  /** Where the summary text sits: at the start (default) or centered in the row. */
+  align?: "start" | "center";
+  /**
+   * For a one-line summary with the icon on the left: the icon and text are centered on each other, and the content
+   * goes under the whole row instead of lining up under the summary.
+   */
+  flush?: boolean;
+  /**
+   * Set when the summary has links or buttons of its own: the whole row cannot then be one button (a button cannot
+   * hold another), so only the chevron is the button, named `toggleLabel`, and the summary beside it is ordinary
+   * content. Pressing the blank part of the row still opens and closes it. Icon on the left only.
+   */
+  toggleLabel?: string;
   /** Inside a bordered, rounded box (the lists) instead of a line above it. */
   card?: boolean;
   /** Heading level of the trigger's wrapper, so the page keeps a single h1. */
@@ -55,13 +68,17 @@ export function Collapse({
   children,
   defaultOpen = false,
   icon = "left",
+  align = "start",
+  flush = false,
   card = false,
+  toggleLabel,
   level,
   onOpenChange,
 }: CollapseProps) {
   const [open, setOpen] = useState(defaultOpen);
   const bodyId = useId();
   const left = icon === "left";
+  const centered = align === "center";
   const gutter = card ? "3" : left ? "0" : "4";
   const toggle = () => {
     setOpen(!open);
@@ -74,31 +91,71 @@ export function Collapse({
         : { borderTopWidth: 1, borderColor: "border-color" })}
     >
       <YStack render={`h${level}`} margin={0}>
-        <XStack
-          render="button"
-          // not a submit button when inside a form
-          {...({ type: "button" } as object)}
-          aria-expanded={open}
-          aria-controls={bodyId}
-          onPress={toggle}
-          alignItems={left ? "flex-start" : "center"}
-          justifyContent={left ? "flex-start" : "space-between"}
-          gap="2.5"
-          paddingVertical="3"
-          paddingHorizontal={gutter}
-          width="100%"
-          alignSelf="stretch"
-          textAlign="left"
-          backgroundColor="transparent"
-          borderWidth={0}
-          cursor="pointer"
-        >
-          {left && <Chevron open={open} side="left" />}
-          <YStack flex={1} minWidth={0} alignItems="flex-start" alignSelf="stretch" textAlign="left">
-            {summary}
-          </YStack>
-          {!left && <Chevron open={open} side="right" />}
-        </XStack>
+        {toggleLabel !== undefined ? (
+          <XStack
+            gap="2.5"
+            paddingVertical="3"
+            paddingHorizontal={gutter}
+            width="100%"
+            alignItems="flex-start"
+            cursor="pointer"
+            // a press on the links and buttons inside the summary is theirs; the rest of the row toggles
+            {...({
+              onClick: (event: { target: EventTarget }) => {
+                if (!(event.target as HTMLElement).closest("a, button")) toggle();
+              },
+            } as object)}
+          >
+            <button
+              type="button"
+              aria-expanded={open}
+              aria-controls={bodyId}
+              aria-label={toggleLabel}
+              onClick={toggle}
+              style={{ all: "unset", cursor: "pointer", display: "flex" }}
+            >
+              <Chevron open={open} side="left" />
+            </button>
+            <YStack flex={1} minWidth={0} alignItems="flex-start" alignSelf="stretch" textAlign="left">
+              {summary}
+            </YStack>
+          </XStack>
+        ) : (
+          <XStack
+            render="button"
+            // not a submit button when inside a form
+            {...({ type: "button" } as object)}
+            aria-expanded={open}
+            aria-controls={bodyId}
+            onPress={toggle}
+            alignItems={left && !flush ? "flex-start" : "center"}
+            justifyContent={left ? "flex-start" : "space-between"}
+            gap="2.5"
+            paddingVertical="3"
+            paddingHorizontal={gutter}
+            width="100%"
+            alignSelf="stretch"
+            textAlign="left"
+            backgroundColor="transparent"
+            borderWidth={0}
+            cursor="pointer"
+          >
+            {left && <Chevron open={open} side="left" nudge={!flush} />}
+            <YStack
+              flex={1}
+              minWidth={0}
+              alignItems={centered ? "center" : "flex-start"}
+              alignSelf="stretch"
+              justifyContent={flush ? "center" : "flex-start"}
+              textAlign={centered ? "center" : "left"}
+            >
+              {summary}
+            </YStack>
+            {/* as wide as the chevron, so a centered summary is centered in the row and not in what is left of it */}
+            {left && centered && <div aria-hidden style={{ width: 18, flexShrink: 0 }} />}
+            {!left && <Chevron open={open} side="right" />}
+          </XStack>
+        )}
       </YStack>
       {/* A grid row that goes from 0fr to 1fr animates to the content's own height, whatever it is. */}
       <div
@@ -115,7 +172,7 @@ export function Collapse({
       >
         <div style={{ overflow: "hidden", minHeight: 0 }}>
           <YStack paddingBottom="3" paddingHorizontal={gutter}>
-            <YStack paddingLeft={left ? "6" : 0}>{children}</YStack>
+            <YStack paddingLeft={left && !flush ? "6" : 0}>{children}</YStack>
           </YStack>
         </div>
       </div>

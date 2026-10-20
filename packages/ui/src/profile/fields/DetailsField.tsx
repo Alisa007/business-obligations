@@ -21,11 +21,14 @@ const S_ELECTION_TYPES: readonly EntityType[] = ["pc", "benefit_corp"];
  */
 function AnswerBox({
   id,
+  field,
   label,
   answer,
   onAnswer,
 }: {
   id: string;
+  /** The choice this row answers, for `focusProfileField`. */
+  field: string;
   label: string;
   answer: boolean | undefined;
   onAnswer: (answer: boolean | undefined) => void;
@@ -44,7 +47,7 @@ function AnswerBox({
         ? m.profile.answers.yes
         : m.profile.answers.no;
   return (
-    <XStack gap="3" alignItems="flex-start" paddingVertical="1">
+    <XStack gap="3" alignItems="flex-start" paddingVertical="1" data-bo-field={field}>
       <Checkbox
         id={id}
         size="md"
@@ -85,7 +88,7 @@ function NotFormedBox({ id }: { id: string }) {
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
   return (
-    <XStack gap="3" alignItems="flex-start" paddingVertical="1">
+    <XStack gap="3" alignItems="flex-start" paddingVertical="1" data-bo-field="isFormed">
       <Checkbox
         id={id}
         size="md"
@@ -142,6 +145,7 @@ function DetailChecks({ legend }: { legend: boolean }) {
           <AnswerBox
             key={field}
             id={`${prefix}-${field}`}
+            field={field}
             label={m.profile.detailLabels[field]}
             answer={choices[field]}
             onAnswer={(answer) => set({ [field]: answer })}

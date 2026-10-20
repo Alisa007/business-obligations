@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { Select as TamaguiSelect, Text, type TamaguiElement } from "tamagui";
 import { ClearButton } from "./ClearButton";
-import { useControlProps } from "./controls";
+import { useControlMetrics, useControlProps } from "./controls";
 
 export interface SelectOption {
   value: string;
@@ -61,6 +61,7 @@ export function Select({
   describedBy,
 }: SelectProps) {
   const controlProps = useControlProps();
+  const metrics = useControlMetrics();
   const touch = useCoarsePointer();
   // The list is as wide as the control at least: it would otherwise be only as wide as its longest option.
   const [controlWidth, setControlWidth] = useState(0);
@@ -69,7 +70,8 @@ export function Select({
   const clearable = Boolean(onClear && chosen);
   useEffect(() => {
     if (touch) return;
-    const trigger = triggerRef.current as HTMLElement | null;
+    // The button itself (by its id), not the element the ref points at: that one is a little wider than what is seen.
+    const trigger = document.getElementById(id) ?? (triggerRef.current as HTMLElement | null);
     if (!trigger) return;
     const update = () => setControlWidth(trigger.getBoundingClientRect().width);
     update();
@@ -80,10 +82,21 @@ export function Select({
     }
     window.addEventListener("resize", update);
     return () => window.removeEventListener("resize", update);
-  }, [touch]);
+  }, [touch, id]);
   if (touch) {
     return (
-      <div style={{ position: "relative", width: "100%" }}>
+      // WebKit (iOS) reports the width of the longest option as the select's minimum size to every ancestor, even with
+      // `width: 100%`, so a long option pushed the field past the screen. `contain: inline-size` makes this box ignore
+      // what is inside it when its ancestors work out their own width, and the box then takes the width it is given.
+      <div
+        style={{
+          position: "relative",
+          width: "100%",
+          minWidth: 120,
+          maxWidth: "100%",
+          contain: "inline-size",
+        }}
+      >
         <select
           id={id}
           value={value}
@@ -91,8 +104,15 @@ export function Select({
           aria-invalid={invalid || undefined}
           aria-describedby={describedBy}
           style={{
+            display: "block",
             width: "100%",
-            height: controlProps.height,
+            minWidth: 0,
+            maxWidth: "100%",
+            boxSizing: "border-box",
+            textOverflow: "ellipsis",
+            whiteSpace: "nowrap",
+            overflow: "hidden",
+            height: metrics.height,
             appearance: "none",
             WebkitAppearance: "none",
             borderRadius: 8,
@@ -100,7 +120,7 @@ export function Select({
             backgroundColor: "var(--background)",
             color: chosen ? "var(--color)" : "var(--placeholder-color)",
             // 16px stops iOS zooming on focus; the end padding leaves room for the chevron and the ✕
-            fontSize: Math.max(16, controlProps.fontSize),
+            fontSize: Math.max(16, metrics.fontSize),
             padding: `0 ${clearable ? 56 : 32}px 0 12px`,
           }}
         >
@@ -172,12 +192,23 @@ export function Select({
           </svg>
         </TamaguiSelect.Trigger>
         <TamaguiSelect.Content>
-          {/* At least as wide as the control (and 240px), never wider than the screen. */}
+          {/* As wide as the control (more only for a longer option), never wider than the screen. */}
+          {/* Tamagui sets this list's min-width inline to the control's plus 8px, which is why it came out wider. */}
+          <style
+            href="bo-select-list"
+            precedence="default"
+          >{`.bo-select-list{min-width:0 !important}`}</style>
           <TamaguiSelect.Viewport
+            // Until the toggle has been measured, Tamagui's own min-width (the toggle's, plus 8px) stays in force
+            className={controlWidth ? "bo-select-list" : undefined}
             borderWidth={1}
             borderColor="border-color"
             backgroundColor="background"
-            minWidth={Math.max(controlWidth, 240)}
+            padding={0}
+            // Tamagui places the list 4px to the left, for the padding this does not have
+            marginLeft={4}
+            minWidth={controlWidth || 240}
+            width={controlWidth || undefined}
             maxWidth="calc(100vw - 24px)"
           >
             <TamaguiSelect.Group>

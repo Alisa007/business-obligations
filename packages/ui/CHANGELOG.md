@@ -4,6 +4,27 @@ All notable changes to `business-obligations-ui` are documented here.
 
 ## [Unreleased]
 
+### Added
+
+- `SidebarLayout`: a rail at the left, as tall as the page and kept in view, with the content beside it; as much room is kept at the right as the rail takes at the left when the window can spare it
+- `PlanSummary` (dates, fees and progress of a launch plan) and `ObligationsSummary` (count by level, next deadline, what was checked, what is local), as two different cards; `LaunchList` takes `summary={false}` to leave out its own figures
+- `LocationSummary` (what is specific to the smallest place given: city, else county, else state), `CalendarList` and `CalendarDownload`
+- `ThemeProvider`, `ThemeToggle`, `useThemePreference` and `themeScript` (the latter at `business-obligations-ui/theme-script`, for a server component's `<head>`): light, dark and the device's, remembered in the browser, with the right theme on the first paint
+- `ProfileForm` takes `compact`: every section opens and closes, only the business starts open, and a section opens for an answer the visitor gave (not one the host fixed)
+- a condition on an item ("Applies if number of employees…") leads to the input that answers it; `focusProfileField`, `hasProfileField` and `onEditField`
+- `useHydrated` and `useBeforePaint`
+
+### Changed
+
+- the form and the theme button stay hidden (their room kept) until the page has read the address and the saved setting, so they appear already filled instead of changing; controls are sized by CSS media rules, so nothing resizes after hydration
+- a dropdown's list is as wide as its toggle and lines up with it; on iOS the native select no longer widens its field to its longest option
+- an item card's header holds links and buttons, so only its chevron is the toggle button (no button inside a button); pressing blank space in the header still toggles it
+- `ObligationsList` no longer shows the "Find an obligation / Showing N of M" heading; "Clear filters" sits beside the level buttons
+
+### Removed
+
+- **breaking:** the `findObligation`, `showing`, `planNote`, `plusPerMonth`, `confidence` and `profileForm.optional` messages, which no component read; a custom message table that has them must drop them
+
 ## [0.7.0] - 2026-10-19
 
 ### Changed

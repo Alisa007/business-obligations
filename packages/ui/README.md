@@ -51,6 +51,7 @@ src/index.ts            the public API: everything is exported by name from here
 src/i18n/               messages (en, es), the one set of formatters (money, dates, relative days), the locale context
 src/shared/             styles of the controls, the small pieces the lists are made of, URL checks
 src/plan/               LaunchList, ObligationsList, the item cards and filters
+src/layout/             SidebarLayout
 src/summary/            LocationSummary
 src/calendar/           CalendarList, CalendarDownload
 src/theme/              ThemeProvider, ThemeToggle
@@ -117,6 +118,21 @@ not in `items` now, but would be if a detail that was left blank turned out a ce
 (`conditionalItems` in `apps/web/src/lib/plan.ts`). `LaunchList` takes the same list as `conditional` and shows it after the phases, in a section grouped by level, each with
 what would bring it in and no checkbox. The list's filters apply to them too. Groups run from the most local level to the widest: city, county, state, federal.
 
+## Page layout: `SidebarLayout`
+
+```tsx
+<SidebarLayout rail={<ProfileForm compact />} railLabel="Your business">
+  {/* the page's content */}
+</SidebarLayout>
+```
+
+A rail at the left, as tall as the page, whose contents stay in view while it scrolls, and the content beside it. From
+the `md` breakpoint up, as much room is kept at the right as the rail takes at the left when the window can spare it
+(the content keeps at least `minContentWidth`), and the content is centered in what is left; below `md` the rail goes
+above the content. Pass `compact` to `ProfileForm` for a form short enough to fit the rail: its sections open and close,
+and only the business starts open (a section opens for an answer the visitor gave, not for one the host fixed).
+`fillScreen={false}` and `stickyTop` are for a page with a header above the layout.
+
 ## Summary, calendar and theme
 
 ```tsx
@@ -134,11 +150,11 @@ what would bring it in and no checkbox. The list's filters apply to them too. Gr
 </ThemeProvider>
 ```
 
-`LocationSummary` and `CalendarDownload` call the engine (`findCity`, `toICS`), so an app that imports them bundles
-that part of `business-obligations`; `LaunchList` and the other lists use only its types. The text of titles and agency
+`CalendarList` (the dated deadlines) and `CalendarDownload` (the button that saves the `.ics` file) are separate
+components: use either alone. `LocationSummary` and `ObligationsSummary` read the state, county and city data (about
+3.8 MB), so an app that imports them bundles it; `LaunchList`, `ObligationsList`, `PlanSummary`, `CalendarList` and
+`CalendarDownload` are tens of kilobytes. `src/treeshake.test.ts` keeps these numbers honest. The text of titles and agency
 names comes from the data, in English; translate events with `localizeText` before passing them to `CalendarDownload`.
-`ThemeProvider` renders light on the server and the first client pass, then applies the saved or device setting.
-`useThemePreference()` returns the setting, the theme in use and `setPreference`.
 
 ## Bundle size
 

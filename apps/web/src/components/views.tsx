@@ -1,16 +1,15 @@
 "use client";
 
-import { Paragraph, Text, XStack, YStack } from "tamagui";
+import { Paragraph, Text, YStack } from "tamagui";
 import {
   CalendarDownload,
   CalendarList,
   Collapse,
   ExternalLink,
-  LocationSummary,
-  Stat,
+  ObligationsSummary,
+  PlanSummary,
   formatDate,
   formatMoney,
-  relativeDays,
 } from "business-obligations-ui";
 import { summarize, type Analysis } from "../lib/plan";
 import { ListRow, Muted } from "./ui";
@@ -87,38 +86,32 @@ export function WhatIfView({ data }: { data: Analysis }) {
 
 // ---- Summary above the tabs ----
 
-export function ResultSummary({ data }: { data: Analysis }) {
+export function ResultSummary({
+  data,
+  tab,
+  done,
+}: {
+  data: Analysis;
+  tab: string;
+  done?: ReadonlySet<string>;
+}) {
   const { result } = data;
   const s = summarize(result);
   const city = result.profile.city;
+  const place = [city, result.profile.state].filter(Boolean).join(", ");
+  // The launch plan has its own card (dates, fees, progress); every other tab starts from the obligations.
+  if (tab === "plan") return <PlanSummary plan={data.plan} place={place} costs={data.costs} done={done} />;
   return (
     <YStack gap="3">
-      <XStack flexWrap="wrap" gap="3">
-        <Stat
-          label="Obligations"
-          value={String(s.total)}
-          note={s.dueSoon > 0 ? `${s.dueSoon} due in the next 30 days` : "None due in the next 30 days"}
-        />
-        <Stat
-          label="Next deadline"
-          value={s.next ? formatDate(s.next.nextDue) : "None dated"}
-          note={
-            s.next
-              ? `${s.next.title} · ${relativeDays(s.next.nextDue, result.asOf)}`
-              : "Add a formation date for anniversary filings"
-          }
-        />
-        <Stat
-          label="Checked against official pages"
-          value={`${s.verified} of ${s.total}`}
-          note={`Data compiled ${formatDate(result.dataVersion)}`}
-        />
-      </XStack>
-      <LocationSummary
+      <ObligationsSummary
+        items={result.items}
         state={result.profile.state}
         county={result.profile.county}
         city={result.profile.city}
-        compact
+        next={s.next ? { title: s.next.title, date: s.next.nextDue } : undefined}
+        asOf={result.asOf}
+        dueSoon={s.dueSoon}
+        checked={s.verified}
       />
       {s.verified < s.total && (
         <Muted>

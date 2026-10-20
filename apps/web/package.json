@@ -9,7 +9,8 @@
     "build": "tamagui generate-css && next build",
     "start": "npx serve out",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run"
+    "test": "vitest run",
+    "e2e": "playwright test"
   },
   "dependencies": {
     "@next/env": "^16.4.2",
@@ -24,6 +25,7 @@
     "tamagui": "^3.0.18"
   },
   "devDependencies": {
+    "@playwright/test": "^1.64.1",
     "@tamagui/cli": "^3.0.18",
     "@types/node": "^26.6.5",
     "@types/react": "^19.2.0",

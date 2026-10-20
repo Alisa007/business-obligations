@@ -1,10 +1,20 @@
-import { useEffect, useId, useRef, type CSSProperties, type ReactNode } from "react";
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useId,
+  useRef,
+  type CSSProperties,
+  type ReactNode,
+} from "react";
 import { LLC_TAX_CLASSIFICATIONS, PROFESSIONS } from "business-obligations";
 import { Text } from "tamagui";
 import { WithLocale, useI18n } from "../i18n/context";
 import { todayIso } from "../i18n/format";
 import type { Messages } from "../i18n/messages";
-import { DETAIL_FIELDS, type ProfileChoices } from "./choices";
+import { Collapse } from "../shared/Collapse";
+import { useHydrated } from "../shared/hooks";
+import { DETAIL_FIELDS, PROFILE_DEFAULTS, type ProfileChoices } from "./choices";
 import { ChoiceField } from "./fields/ChoiceField";
 import { DateField } from "./fields/DateField";
 import { DetailsField } from "./fields/DetailsField";
@@ -33,6 +43,63 @@ function SectionLabel({ children }: { children: ReactNode }) {
   );
 }
 
+/** Whether the form is the compact one, in which every section can be opened and closed. */
+const CompactContext = /* @__PURE__ */ createContext(false);
+
+/**
+ * A heading and the fields under it. In the compact form the heading is a row that opens and closes them: open from
+ * the start when `open` is set or when some of them are answered (`count`, which is also shown beside the heading).
+ */
+function Section({
+  title,
+  show = true,
+  open = false,
+  count = 0,
+  children,
+}: {
+  title: string;
+  show?: boolean;
+  open?: boolean;
+  count?: number;
+  children: ReactNode;
+}) {
+  const compact = useContext(CompactContext);
+  if (!show) return null;
+  if (!compact)
+    return (
+      <>
+        <SectionLabel>{title}</SectionLabel>
+        {children}
+      </>
+    );
+  return (
+    <Full>
+      <Collapse
+        level={3}
+        icon="left"
+        flush
+        defaultOpen={open || count > 0}
+        summary={
+          <Text
+            fontSize="xs"
+            fontWeight="700"
+            letterSpacing={1}
+            textTransform="uppercase"
+            color="placeholder-color"
+          >
+            {title}
+            {count > 0 ? ` (${count})` : ""}
+          </Text>
+        }
+      >
+        <div className="bo-grid" style={{ paddingTop: 8 }}>
+          {children}
+        </div>
+      </Collapse>
+    </Full>
+  );
+}
+
 /**
  * The layout follows the width of the form itself (container queries are not even needed): every group of fields is
  * a grid of as many equal columns as fit, each at least as wide as the group's `min`, so the two fields of a group
@@ -44,12 +111,18 @@ function SectionLabel({ children }: { children: ReactNode }) {
 const FORM_CSS = `
 /* container-type makes the width independent of the content, so the form takes the width it is given */
 .bo-form{container-type:inline-size;width:100%;min-width:0}
+/* Until the page is running the form does not know the address, so it would show empty fields and then fill them in.
+   The space is kept and the fields appear already filled. */
+.bo-form[data-ready="false"] .bo-grid{visibility:hidden}
 .bo-grid{display:flex;flex-direction:column;gap:14px}
 .bo-fluid{display:grid;grid-template-columns:repeat(auto-fit,minmax(var(--bo-min,140px),1fr));column-gap:12px;row-gap:14px;align-items:start}
 .bo-fluid>*{min-width:0}
 .bo-fluid.bo-end{align-items:end}
 .bo-section{display:flex;align-items:center;gap:10px;margin-top:10px}
 .bo-section:first-child{display:none}
+.bo-compact{gap:10px}
+.bo-compact .bo-fluid{row-gap:10px}
+.bo-compact .bo-section{margin-top:2px}
 .bo-rule{flex:1;height:1px;background:var(--border-color)}
 `;
 
@@ -88,11 +161,21 @@ export interface ProfileFormProps {
   values?: ProfileValues;
   /** Today's date as `YYYY-MM-DD`, for the "start" date and the limits of the calendars. Defaults to the local date. */
   today?: string;
+  /**
+   * A form short enough to sit beside the results without scrolling: every section can be opened and closed. Only
+   * the business starts open; the others start closed unless some of their questions are answered. Spacing is
+   * tighter too.
+   */
+  compact?: boolean;
   /** Called with the name of a choice (never its value) when the person changes it. */
   onFieldUsed?: (field: keyof ProfileChoices) => void;
 }
 
-function ProfileFormBody({ today, onFieldUsed }: Pick<ProfileFormProps, "today" | "onFieldUsed">) {
+function ProfileFormBody({
+  today,
+  onFieldUsed,
+  compact = false,
+}: Pick<ProfileFormProps, "today" | "onFieldUsed" | "compact">) {
   const { m, tag } = useI18n();
   const f = m.profileForm;
   const prefix = useId();
@@ -122,87 +205,18 @@ function ProfileFormBody({ today, onFieldUsed }: Pick<ProfileFormProps, "today" 
   const askLlcTax = shows("llcTaxClassification") && ["", "llc", "pllc"].includes(choices.entityType ?? "");
   const askDetails = shows("isFormed", ...DETAIL_FIELDS);
 
-  return (
-    <div className="bo-grid">
-      {(shows("zip", "entityType", "naics") || askProfession) && <SectionLabel>{f.business}</SectionLabel>}
-      {(shows("zip", "entityType", "naics") || askProfession) && (
-        <Group min={200}>
-          {shows("entityType") && (
-            <div>
-              <TypeField />
-            </div>
-          )}
-          {shows("naics") && (
-            <div>
-              <IndustryField />
-            </div>
-          )}
-          {shows("zip") && (
-            <div>
-              <ZipField id={`${prefix}-zip`} />
-            </div>
-          )}
-          {askProfession && (
-            <div>
-              <ChoiceField
-                id={`${prefix}-profession`}
-                label={f.profession}
-                value={choices.profession ?? ""}
-                blank={f.professionPlaceholder}
-                options={PROFESSIONS.map((profession) => [profession, f.professions[profession]])}
-                onChange={(value) =>
-                  set({ profession: (value || undefined) as ProfileChoices["profession"] })
-                }
-              />
-            </div>
-          )}
-        </Group>
-      )}
-
-      {shows("employeeCount", "ownerCount", "fullTimeEmployeeCount") && <SectionLabel>{f.size}</SectionLabel>}
-      {shows("employeeCount", "ownerCount", "fullTimeEmployeeCount") && (
-        <Group min={110}>
-          {shows("employeeCount") && (
-            <div>
-              <EmployeesField placeholder="0" />
-            </div>
-          )}
-          {shows("ownerCount") && (
-            <div>
-              <NumberControl
-                id={`${prefix}-owners`}
-                field="ownerCount"
-                label={f.owners}
-                hint={f.hints.owners}
-                placeholder={f.ownersPlaceholder}
-                kind="owners"
-              />
-            </div>
-          )}
-          {shows("fullTimeEmployeeCount") && (
-            <div>
-              <NumberControl
-                id={`${prefix}-fullTime`}
-                field="fullTimeEmployeeCount"
-                label={f.fullTime}
-                hint={f.hints.fullTime}
-                placeholder={f.fullTimePlaceholder}
-                kind="employees"
-              />
-            </div>
-          )}
-        </Group>
-      )}
-
-      {shows(
-        "annualPayroll",
-        "annualRevenue",
-        "annualNetIncome",
-        "largestContractorPaymentUsd",
-        "priorYearPayrollTaxLiability",
-      ) && <SectionLabel>{f.money}</SectionLabel>}
+  // Only what the visitor answered counts: what the host fixed (a page for a business that exists fixes "formed") is not
+  // theirs, and is not shown as a question.
+  const answered = (keys: readonly (keyof ProfileChoices)[]) =>
+    keys.filter((key) => !fixed.has(key) && choices[key] !== PROFILE_DEFAULTS[key]).length;
+  const more = (
+    <>
       {/* The amounts share one fluid row: as many as fit, so all five side by side when the form is wide. */}
-      {MONEY_FIELDS.some((field) => shows(field)) && (
+      <Section
+        title={f.money}
+        show={MONEY_FIELDS.some((field) => shows(field))}
+        count={answered(MONEY_FIELDS)}
+      >
         <Group min={130} end>
           {(
             [
@@ -215,7 +229,7 @@ function ProfileFormBody({ today, onFieldUsed }: Pick<ProfileFormProps, "today" 
           ).map(
             ([field, label, example]) =>
               shows(field) && (
-                <div key={field}>
+                <div key={field} data-bo-field={field}>
                   <NumberControl
                     id={`${prefix}-${field}`}
                     field={field}
@@ -228,13 +242,16 @@ function ProfileFormBody({ today, onFieldUsed }: Pick<ProfileFormProps, "today" 
               ),
           )}
         </Group>
-      )}
+      </Section>
 
-      {(shows("fiscalYearEndMonth") || askLlcTax) && <SectionLabel>{f.tax}</SectionLabel>}
-      {(shows("fiscalYearEndMonth") || askLlcTax) && (
+      <Section
+        title={f.tax}
+        show={shows("fiscalYearEndMonth") || askLlcTax}
+        count={answered(["fiscalYearEndMonth", "llcTaxClassification"])}
+      >
         <Group min={200}>
           {shows("fiscalYearEndMonth") && (
-            <div>
+            <div data-bo-field="fiscalYearEndMonth">
               <ChoiceField
                 id={`${prefix}-fiscalMonth`}
                 label={f.fiscalMonth}
@@ -247,7 +264,7 @@ function ProfileFormBody({ today, onFieldUsed }: Pick<ProfileFormProps, "today" 
             </div>
           )}
           {askLlcTax && (
-            <div>
+            <div data-bo-field="llcTaxClassification">
               <ChoiceField
                 id={`${prefix}-llcTax`}
                 label={f.llcTax}
@@ -264,20 +281,25 @@ function ProfileFormBody({ today, onFieldUsed }: Pick<ProfileFormProps, "today" 
             </div>
           )}
         </Group>
-      )}
+      </Section>
 
-      {askDetails && <SectionLabel>{m.profile.details}</SectionLabel>}
-      <Full>
-        <DetailsField legend={false} />
-      </Full>
-
-      {(shows("asOf", "openingDate") || (choices.isFormed && shows("formationDate"))) && (
-        <SectionLabel>{f.dates}</SectionLabel>
-      )}
-      {(shows("asOf", "openingDate") || (choices.isFormed && shows("formationDate"))) && (
+      <Section title={m.profile.details} show={askDetails} count={answered(["isFormed", ...DETAIL_FIELDS])}>
+        <Full>
+          <DetailsField legend={false} />
+        </Full>
+      </Section>
+    </>
+  );
+  const dates = (
+    <>
+      <Section
+        title={f.dates}
+        show={shows("asOf", "openingDate") || (choices.isFormed && shows("formationDate"))}
+        count={answered(["asOf", "openingDate", "formationDate"])}
+      >
         <Group min={190}>
           {choices.isFormed && shows("formationDate") && (
-            <div>
+            <div data-bo-field="formationDate">
               <DateField
                 id={`${prefix}-formationDate`}
                 label={f.formationDate}
@@ -289,7 +311,7 @@ function ProfileFormBody({ today, onFieldUsed }: Pick<ProfileFormProps, "today" 
             </div>
           )}
           {shows("asOf") && (
-            <div>
+            <div data-bo-field="asOf">
               <DateField
                 id={`${prefix}-asOf`}
                 label={f.startToday}
@@ -300,7 +322,7 @@ function ProfileFormBody({ today, onFieldUsed }: Pick<ProfileFormProps, "today" 
             </div>
           )}
           {shows("openingDate") && (
-            <div>
+            <div data-bo-field="openingDate">
               <DateField
                 id={`${prefix}-openingDate`}
                 label={f.targetOpening}
@@ -313,8 +335,89 @@ function ProfileFormBody({ today, onFieldUsed }: Pick<ProfileFormProps, "today" 
             </div>
           )}
         </Group>
-      )}
-    </div>
+      </Section>
+    </>
+  );
+
+  return (
+    <CompactContext.Provider value={compact}>
+      <div className={compact ? "bo-grid bo-compact" : "bo-grid"}>
+        <Section title={f.business} show={shows("zip", "entityType", "naics") || askProfession} open>
+          <Group min={200}>
+            {shows("entityType") && (
+              <div data-bo-field="entityType">
+                <TypeField />
+              </div>
+            )}
+            {shows("naics") && (
+              <div data-bo-field="naics">
+                <IndustryField />
+              </div>
+            )}
+            {shows("zip") && (
+              <div data-bo-field="zip">
+                <ZipField id={`${prefix}-zip`} />
+              </div>
+            )}
+            {askProfession && (
+              <div data-bo-field="profession">
+                <ChoiceField
+                  id={`${prefix}-profession`}
+                  label={f.profession}
+                  value={choices.profession ?? ""}
+                  blank={f.professionPlaceholder}
+                  options={PROFESSIONS.map((profession) => [profession, f.professions[profession]])}
+                  onChange={(value) =>
+                    set({ profession: (value || undefined) as ProfileChoices["profession"] })
+                  }
+                />
+              </div>
+            )}
+          </Group>
+        </Section>
+
+        <Section
+          title={f.size}
+          show={shows("employeeCount", "ownerCount", "fullTimeEmployeeCount")}
+          count={answered(["employeeCount", "ownerCount", "fullTimeEmployeeCount"])}
+        >
+          <Group min={110}>
+            {shows("employeeCount") && (
+              <div data-bo-field="employeeCount">
+                <EmployeesField placeholder="0" />
+              </div>
+            )}
+            {shows("ownerCount") && (
+              <div data-bo-field="ownerCount">
+                <NumberControl
+                  id={`${prefix}-owners`}
+                  field="ownerCount"
+                  label={f.owners}
+                  hint={f.hints.owners}
+                  placeholder={f.ownersPlaceholder}
+                  kind="owners"
+                />
+              </div>
+            )}
+            {shows("fullTimeEmployeeCount") && (
+              <div data-bo-field="fullTimeEmployeeCount">
+                <NumberControl
+                  id={`${prefix}-fullTime`}
+                  field="fullTimeEmployeeCount"
+                  label={f.fullTime}
+                  hint={f.hints.fullTime}
+                  placeholder={f.fullTimePlaceholder}
+                  kind="employees"
+                />
+              </div>
+            )}
+          </Group>
+        </Section>
+
+        {more}
+        {dates}
+      </div>
+    </CompactContext.Provider>
   );
 }
 
@@ -326,13 +429,18 @@ function ProfileFormBody({ today, onFieldUsed }: Pick<ProfileFormProps, "today" 
  *
  * Pass `values` for what the host already knows, and those fields are left out.
  */
-export function ProfileForm({ locale, messages, values, today, onFieldUsed }: ProfileFormProps) {
-  const body = <ProfileFormBody today={today} onFieldUsed={onFieldUsed} />;
+export function ProfileForm({ locale, messages, values, today, compact, onFieldUsed }: ProfileFormProps) {
+  const body = <ProfileFormBody today={today} onFieldUsed={onFieldUsed} compact={compact} />;
+  const ready = useHydrated();
   return (
     <WithLocale locale={locale} messages={messages}>
       {/* Nothing is submitted, but Enter in a field must not reload the page. */}
-      <form className="bo-form" onSubmit={(event) => event.preventDefault()}>
+      <form className="bo-form" data-ready={ready} onSubmit={(event) => event.preventDefault()}>
         <style>{FORM_CSS}</style>
+        {/* Without JavaScript the form is not going to become ready; show it as it is. */}
+        <noscript>
+          <style>{`.bo-form[data-ready="false"] .bo-grid{visibility:visible}`}</style>
+        </noscript>
         {values ? <ProfileQueryProvider values={values}>{body}</ProfileQueryProvider> : body}
       </form>
     </WithLocale>

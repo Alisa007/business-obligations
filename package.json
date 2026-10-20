@@ -22,7 +22,8 @@
     "size": "npm run size -w business-obligations",
     "coverage": "npm run coverage -w business-obligations",
     "check:links": "npm run check:links -w business-obligations",
-    "site": "npm run build && npm run build:web"
+    "site": "npm run build && npm run build:web",
+    "e2e": "npm run e2e -w @business-obligations/web"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

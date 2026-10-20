@@ -14,7 +14,10 @@ import {
   needsProfession,
   profileFromChoices,
   todayIso,
+  SidebarLayout,
   ThemeToggle,
+  useBeforePaint,
+  useHydrated,
   useProfileChoices,
   writeProfileQuery,
   type ObligationFilters,
@@ -24,7 +27,7 @@ import { analyze, type Analysis } from "../lib/plan";
 import { useAnalytics } from "../hooks/useAnalytics";
 import { useDoneSteps } from "../hooks/useDoneSteps";
 import { CalendarView, CostsView, ResultSummary, WhatIfView } from "./views";
-import { Muted, Panel } from "./ui";
+import { Muted } from "./ui";
 
 const TABS = [
   ["plan", "Launch plan"],
@@ -34,6 +37,22 @@ const TABS = [
   ["whatif", "What if"],
 ] as const;
 type TabId = (typeof TABS)[number][0];
+
+/**
+ * Stands in for the summary, tabs and list while a plan is being worked out (a ZIP code is in the address), at about
+ * their height, so the page does not jump when the plan arrives.
+ */
+function PlanSkeleton() {
+  return (
+    <YStack gap="4" aria-busy={true} aria-label="Working out your plan">
+      <YStack height={150} backgroundColor="color-2" borderRadius="lg" />
+      <YStack height={36} backgroundColor="color-2" borderRadius="md" />
+      {[0, 1, 2].map((block) => (
+        <YStack key={block} height={110} backgroundColor="color-2" borderRadius="lg" />
+      ))}
+    </YStack>
+  );
+}
 
 function EmptyPlanState() {
   const steps = [
@@ -67,9 +86,10 @@ function EmptyPlanState() {
 }
 
 /** How long the details stay unchanged before the result is worked out again. */
-/** Width of the form beside the results, in px; the form itself is as wide as this. */
-const SIDEBAR_WIDTH = 340;
 const RECALCULATE_DELAY_MS = 400;
+
+// The ZIP table is a separate download; start it now, because the first plan needs it.
+if (typeof window !== "undefined") void import("business-obligations/zip");
 
 export function Playground() {
   const analytics = useAnalytics();
@@ -82,7 +102,10 @@ export function Playground() {
   // The form is the package's `ProfileForm`; its answers live in the address, and this reads them.
   const [choices] = useProfileChoices();
 
-  useEffect(() => setNow(todayIso()), []);
+  // Today's date is set before the first paint, not after, so the form never shows the placeholder date.
+  useBeforePaint(() => setNow(todayIso()), []);
+  // False on the server and while hydrating: the address (and so the plan) is not known until the page is running.
+  const hydrated = useHydrated();
 
   // Report each field once per visit, by name only.
   const usedFields = useRef(new Set<string>());
@@ -97,6 +120,8 @@ export function Playground() {
   const key = writeProfileQuery("", choices);
   const choicesRef = useRef(choices);
   choicesRef.current = choices;
+  // The first plan, for an address that already has details, is worked out at once; only later changes wait.
+  const firstRun = useRef(true);
   useEffect(() => {
     const state = choicesRef.current;
     if (!/^\d{5}$/.test(state.zip)) {
@@ -105,7 +130,9 @@ export function Playground() {
       return;
     }
     let current = true;
+    const delay = firstRun.current ? 0 : RECALCULATE_DELAY_MS;
     const timer = setTimeout(async () => {
+      firstRun.current = false;
       try {
         const place = await lookupPlace(state.zip);
         if (!place) throw new Error(`Unknown ZIP code "${state.zip}"`);
@@ -148,7 +175,7 @@ export function Playground() {
         setData(undefined);
         setError(message);
       }
-    }, RECALCULATE_DELAY_MS);
+    }, delay);
     return () => {
       current = false;
       clearTimeout(timer);
@@ -171,6 +198,7 @@ export function Playground() {
             costs={data.costs}
             conditional={data.conditional}
             done={done}
+            summary={false}
             onToggle={toggle}
           />
         );
@@ -194,24 +222,24 @@ export function Playground() {
   };
 
   return (
-    <YStack
-      maxWidth={1180}
-      width="100%"
-      boxSizing="border-box"
-      marginHorizontal="auto"
-      paddingHorizontal="4"
-      paddingVertical="6"
-      gap="6"
+    <SidebarLayout
+      railLabel="Business details"
+      rail={
+        <>
+          <XStack justifyContent="space-between" alignItems="center" gap="3">
+            <Text fontWeight="700">Business obligations</Text>
+            <ThemeToggle />
+          </XStack>
+          <ProfileForm compact today={now} onFieldUsed={fieldUsed} />
+        </>
+      }
     >
       <YStack gap="2.5" alignItems="flex-start" width="100%" maxWidth={720}>
-        <XStack width="100%" justifyContent="space-between" alignItems="center" gap="3">
-          <Chip tone="info" outline>
-            Compliance planning, simplified
-          </Chip>
-          <ThemeToggle />
-        </XStack>
+        <Chip tone="info" outline>
+          Compliance planning, simplified
+        </Chip>
         <H1
-          fontSize={{ default: "2xl", md: "4xl" }}
+          fontSize={{ default: "2xl", md: "3xl" }}
           lineHeight={1.05}
           letterSpacing={-1}
           whiteSpace="normal"
@@ -234,84 +262,79 @@ export function Playground() {
         </Paragraph>
       </YStack>
 
+      {/* Hidden (its room kept) until the page has read the address, so no empty state shows first and is replaced. */}
       <YStack
-        gap="5"
-        flexDirection={{ default: "column", md: "row" }}
-        alignItems={{ default: "stretch", md: "flex-start" }}
+        className="bo-pending"
+        minWidth={0}
+        aria-live="polite"
+        style={hydrated ? undefined : { visibility: "hidden" }}
       >
-        <YStack
-          width={{ default: "100%", md: SIDEBAR_WIDTH }}
-          flexShrink={{ default: 1, md: 0 }}
-          position={{ default: "relative", md: "sticky" }}
-          top={16}
-        >
-          <Panel gap="2.5" padding="3.5">
-            <ProfileForm today={now} onFieldUsed={fieldUsed} />
-          </Panel>
-        </YStack>
-        <YStack flex={1} minWidth={0} aria-live="polite">
-          <Panel gap="4" padding="4" minHeight={220} minWidth={0}>
-            {!data && !error && <EmptyPlanState />}
-            {error && (
-              <Text color="amber-700" role="alert">
-                {error}
-              </Text>
-            )}
-            {data && (
-              <>
-                <ResultSummary data={data} />
-                <Tabs
-                  value={tab}
-                  onValueChange={(v) => {
-                    setTab(v as TabId);
-                    analytics.track("tab_viewed", { tab: v });
-                  }}
-                  orientation="horizontal"
-                  flexDirection="column"
-                  gap="3"
-                >
-                  <ScrollView horizontal showsHorizontalScrollIndicator={false} flexGrow={0}>
-                    <Tabs.List borderBottomWidth={1} borderColor="border-color" borderRadius={0} gap="1">
-                      {TABS.map(([id, label]) => {
-                        const active = id === tab;
-                        const count = { items: data.result.items.length, calendar: data.events.length }[
-                          id as "items" | "calendar"
-                        ];
-                        return (
-                          <Tabs.Tab
-                            key={id}
-                            value={id}
-                            flexShrink={0}
-                            backgroundColor="transparent"
-                            borderWidth={0}
-                            borderRadius={0}
-                            borderBottomWidth={2}
-                            borderBottomColor={active ? "accent-background" : "transparent"}
-                            marginBottom={-1}
-                            paddingHorizontal="3"
-                            gap="1.5"
+        {/* Without JavaScript there is no plan to wait for; show what is there. */}
+        <noscript>
+          <style>{`.bo-pending{visibility:visible !important}`}</style>
+        </noscript>
+        {/* A screen of room for the plan from the start (the address is not known until the page is running), so the
+              footer starts below the fold and does not jump into view's way when the plan arrives. */}
+        <YStack gap="4" minHeight="100vh" minWidth={0}>
+          {!data && !error && (/^\d{5}$/.test(choices.zip) ? <PlanSkeleton /> : <EmptyPlanState />)}
+          {error && (
+            <Text color="amber-700" role="alert">
+              {error}
+            </Text>
+          )}
+          {data && (
+            <>
+              <ResultSummary data={data} tab={tab} done={done} />
+              <Tabs
+                value={tab}
+                onValueChange={(v) => {
+                  setTab(v as TabId);
+                  analytics.track("tab_viewed", { tab: v });
+                }}
+                orientation="horizontal"
+                flexDirection="column"
+                gap="3"
+              >
+                <ScrollView horizontal showsHorizontalScrollIndicator={false} flexGrow={0}>
+                  <Tabs.List borderBottomWidth={1} borderColor="border-color" borderRadius={0} gap="1">
+                    {TABS.map(([id, label]) => {
+                      const active = id === tab;
+                      const count = { items: data.result.items.length, calendar: data.events.length }[
+                        id as "items" | "calendar"
+                      ];
+                      return (
+                        <Tabs.Tab
+                          key={id}
+                          value={id}
+                          flexShrink={0}
+                          backgroundColor="transparent"
+                          borderWidth={0}
+                          borderRadius={0}
+                          borderBottomWidth={2}
+                          borderBottomColor={active ? "accent-background" : "transparent"}
+                          marginBottom={-1}
+                          paddingHorizontal="3"
+                          gap="1.5"
+                        >
+                          <Text
+                            whiteSpace="nowrap"
+                            fontWeight={active ? "700" : "500"}
+                            color={active ? "color" : "placeholder-color"}
                           >
-                            <Text
-                              whiteSpace="nowrap"
-                              fontWeight={active ? "700" : "500"}
-                              color={active ? "color" : "placeholder-color"}
-                            >
-                              {label}
-                            </Text>
-                            {count !== undefined && <Chip>{count}</Chip>}
-                          </Tabs.Tab>
-                        );
-                      })}
-                    </Tabs.List>
-                  </ScrollView>
-                  <Tabs.Content value={tab}>{renderView()}</Tabs.Content>
-                </Tabs>
-              </>
-            )}
-          </Panel>
+                            {label}
+                          </Text>
+                          {count !== undefined && <Chip>{count}</Chip>}
+                        </Tabs.Tab>
+                      );
+                    })}
+                  </Tabs.List>
+                </ScrollView>
+                <Tabs.Content value={tab}>{renderView()}</Tabs.Content>
+              </Tabs>
+            </>
+          )}
         </YStack>
       </YStack>
-
       <YStack
         className="site-footer"
         role="contentinfo"
@@ -320,15 +343,6 @@ export function Playground() {
         borderColor="border-color"
         paddingTop="4"
       >
-        {analytics.enabled && (
-          <Muted>
-            This site records usage with PostHog: page views, which tabs and fields you use, and the details
-            you enter when you generate a plan (ZIP, entity type, industry, headcount, payroll, revenue and
-            dates). The plan itself is not sent. Your entries are also kept in this page's address so you can
-            bookmark or share a link; the address is not sent with page views. There are no cookies or session
-            recordings, and your browser&apos;s Do Not Track setting is respected.
-          </Muted>
-        )}
         <Muted>
           {DISCLAIMER} See each item&apos;s provenance and the{" "}
           <ExternalLink url={`${SITE_CONFIG.repoUrl}/blob/main/packages/core/COVERAGE.md`}>
@@ -340,7 +354,17 @@ export function Playground() {
           Suggested planning dates are allowances, not agency processing times. Statutory deadlines come from
           the rules and are labeled as such.
         </Muted>
+        {/* Last, so that it appearing (once analytics is known to be on) moves nothing above it. */}
+        {analytics.enabled && (
+          <Muted>
+            This site records usage with PostHog: page views, which tabs and fields you use, and the details
+            you enter when you generate a plan (ZIP, entity type, industry, headcount, payroll, revenue and
+            dates). The plan itself is not sent. Your entries are also kept in this page's address so you can
+            bookmark or share a link; the address is not sent with page views. There are no cookies or session
+            recordings, and your browser&apos;s Do Not Track setting is respected.
+          </Muted>
+        )}
       </YStack>
-    </YStack>
+    </SidebarLayout>
   );
 }

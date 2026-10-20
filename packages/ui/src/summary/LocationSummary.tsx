@@ -3,6 +3,7 @@ import { Paragraph, Text, XStack, YStack } from "tamagui";
 import { WithLocale, useI18n } from "../i18n/context";
 import type { Messages } from "../i18n/messages";
 import { ExternalLink } from "../shared/primitives";
+import { host } from "../shared/url";
 
 export interface LocationSummaryProps {
   /** Two-letter state code. The state is always needed: cities and counties are looked up within it. */
@@ -13,6 +14,8 @@ export interface LocationSummaryProps {
   city?: string;
   /** Use a compact summary when detailed local requirements are shown elsewhere. */
   compact?: boolean;
+  /** With `compact`: no frame of its own, for use inside another card. */
+  bare?: boolean;
   /** See `LaunchListProps.locale`. */
   locale?: string;
   /** See `LaunchListProps.messages`. */
@@ -45,7 +48,7 @@ export function LocationSummary(props: LocationSummaryProps) {
   );
 }
 
-function LocationSummaryBody({ state, county, city, compact = false }: LocationSummaryProps) {
+function LocationSummaryBody({ state, county, city, compact = false, bare = false }: LocationSummaryProps) {
   const { m, date } = useI18n();
   const stateData = STATES[state];
   const local = city ? findCity(state, city, county) : county ? findCounty(state, county) : undefined;
@@ -60,10 +63,36 @@ function LocationSummaryBody({ state, county, city, compact = false }: LocationS
       ] as const)
     : [];
 
+  if (compact && bare) {
+    // The name and one line of what is local, for a card that has the other figures around it.
+    const titles = local?.items.slice(0, 3).map((item) => item.title) ?? [];
+    return (
+      <YStack gap="1" width="100%">
+        <XStack columnGap="3" alignItems="baseline" flexWrap="wrap">
+          <Text fontSize="lg" fontWeight="700" role="heading" aria-level={2}>
+            {name}
+          </Text>
+          {status ? (
+            <Text fontSize="sm" color="placeholder-color">
+              {m.summary.status[status]}
+              {local?.checkedOn ? ` · ${m.summary.checkedOn(date(local.checkedOn))}` : ""}
+            </Text>
+          ) : null}
+        </XStack>
+        {titles.length ? (
+          <Text fontSize="sm">
+            {m.summary.localRules(titles.join("; "), (local?.items.length ?? 0) - titles.length)}
+          </Text>
+        ) : null}
+      </YStack>
+    );
+  }
+
   return (
     <YStack
       gap={compact ? "1.5" : "3"}
       render="section"
+      width="100%"
       padding={compact ? "3" : "4"}
       borderWidth={1}
       borderColor="border-color"
@@ -120,7 +149,7 @@ function LocationSummaryBody({ state, county, city, compact = false }: LocationS
           {sources.map((url, index) => (
             <span key={url}>
               {index ? ", " : ""}
-              <ExternalLink url={url}>{new URL(url).hostname}</ExternalLink>
+              <ExternalLink url={url}>{host(url)}</ExternalLink>
             </span>
           ))}
         </Paragraph>

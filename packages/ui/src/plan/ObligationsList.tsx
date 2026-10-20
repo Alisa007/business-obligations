@@ -4,7 +4,8 @@ import { WithLocale, useI18n } from "../i18n/context";
 import type { Messages } from "../i18n/messages";
 import { Select } from "../shared/Select";
 import { Chip } from "../shared/primitives";
-import { ObligationCard, describeWhen } from "./ObligationCard";
+import { ConditionChip } from "./ConditionChip";
+import { ObligationCard } from "./ObligationCard";
 import {
   JURISDICTIONS,
   NO_OBLIGATION_FILTERS,
@@ -29,6 +30,11 @@ export interface ObligationsListProps {
   asOf: string;
   filters: ObligationFilters;
   onFilters: (filters: ObligationFilters) => void;
+  /**
+   * Called with the profile field when a condition of a conditionally applicable item is pressed. By default the page's
+   * `ProfileForm` is opened at the input that answers it (see `focusProfileField`).
+   */
+  onEditField?: (field: string) => void;
   /** See `LaunchListProps.locale`. */
   locale?: string;
   /** See `LaunchListProps.messages`. */
@@ -43,7 +49,14 @@ export function ObligationsList(props: ObligationsListProps) {
   );
 }
 
-function ObligationsListBody({ items, conditional = [], asOf, filters, onFilters }: ObligationsListProps) {
+function ObligationsListBody({
+  items,
+  conditional = [],
+  asOf,
+  filters,
+  onFilters,
+  onEditField,
+}: ObligationsListProps) {
   const { m, tag } = useI18n();
   const categoryLabel = (category: ComplianceItem["category"]) => m.categories[category] ?? category;
   const categories = [...new Set(items.map((item) => item.category))].sort((a, b) =>
@@ -71,19 +84,6 @@ function ObligationsListBody({ items, conditional = [], asOf, filters, onFilters
   const clearFilters = () => onFilters({ ...NO_OBLIGATION_FILTERS });
   return (
     <YStack gap="3">
-      <XStack justifyContent="space-between" gap="3" flexWrap="wrap" alignItems="baseline">
-        <YStack gap="0.5">
-          <Text fontWeight="700">{m.findObligation}</Text>
-          <Text fontSize="sm" color="placeholder-color">
-            {m.showing(filtered.length, items.length)}
-          </Text>
-        </YStack>
-        {hasFilters && (
-          <Button size="sm" onPress={clearFilters}>
-            {m.clearFilters}
-          </Button>
-        )}
-      </XStack>
       <XStack gap="3" flexWrap="wrap" alignItems={"flex-end"}>
         <Input
           flex={1}
@@ -139,6 +139,11 @@ function ObligationsListBody({ items, conditional = [], asOf, filters, onFilters
             {key === "all" ? m.all : m.jurisdictions[key]} {key === "all" ? filtered.length : count(key)}
           </Button>
         ))}
+        {hasFilters && (
+          <Button size="sm" onPress={clearFilters} marginLeft="auto">
+            {m.clearFilters}
+          </Button>
+        )}
       </XStack>
       {shownConditional.length > 0 && (
         <Text fontSize="sm" color="placeholder-color">
@@ -182,9 +187,7 @@ function ObligationsListBody({ items, conditional = [], asOf, filters, onFilters
                       titleOf={(id) => titleById.get(id)}
                       note={
                         <XStack gap="1.5" flexWrap="wrap">
-                          <Chip tone="warn" outline>
-                            {m.appliesIf(when.map((condition) => describeWhen(m, condition)).join("; "))}
-                          </Chip>
+                          <ConditionChip when={when} onEditField={onEditField} />
                         </XStack>
                       }
                     />
