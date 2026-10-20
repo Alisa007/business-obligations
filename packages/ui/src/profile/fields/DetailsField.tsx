@@ -1,7 +1,8 @@
-import { useEffect, useId, useState } from "react";
+import { useId } from "react";
 import type { EntityType } from "business-obligations";
-import { Checkbox, Label, Text, XStack, YStack } from "tamagui";
+import { Label, Text, XStack, YStack } from "tamagui";
 import { WithLocale, useI18n } from "../../i18n/context";
+import { CheckBox } from "../../shared/CheckBox";
 import { visuallyHidden } from "../../shared/controls";
 import { DETAIL_FIELDS } from "../choices";
 import { useFixedChoices, useProfileChoices } from "../store";
@@ -34,11 +35,7 @@ function AnswerBox({
   onAnswer: (answer: boolean | undefined) => void;
 }) {
   const { m } = useI18n();
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
-  // Tamagui renders a box that starts checked differently on the server and the client, so a "yes" shows as
-  // not answered until the page is hydrated.
-  const shown = answer === true && !mounted ? undefined : answer;
+  const shown = answer;
   const next = answer === undefined ? true : answer ? false : undefined;
   const status =
     answer === undefined
@@ -48,22 +45,18 @@ function AnswerBox({
         : m.profile.answers.no;
   return (
     <XStack gap="3" alignItems="flex-start" paddingVertical="1" data-bo-field={field}>
-      <Checkbox
+      <CheckBox
         id={id}
-        size="md"
-        marginTop="0.5"
-        checked={shown === undefined ? "indeterminate" : shown}
-        onCheckedChange={() => onAnswer(next)}
-        borderStyle={shown === undefined ? "dashed" : "solid"}
-        borderColor={shown === undefined ? "placeholder-color" : "border-color"}
+        checked={shown === undefined ? "mixed" : shown}
+        onChange={() => onAnswer(next)}
+        dashed={shown === undefined}
+        // "no" is a box with a mark, not an answer to be won: only "yes" takes the accent color
+        mark={shown === undefined ? "–" : shown ? "✓" : "✕"}
+        markColor={
+          shown === undefined ? "var(--placeholder-color)" : shown ? "var(--accent-color)" : "var(--color)"
+        }
         aria-describedby={`${id}-answer`}
-      >
-        <Checkbox.Indicator forceMount>
-          <Text fontSize="xs" color={shown === undefined ? "placeholder-color" : "color"}>
-            {shown === undefined ? "–" : shown ? "✓" : "✕"}
-          </Text>
-        </Checkbox.Indicator>
-      </Checkbox>
+      />
       <Label htmlFor={id} flex={1} cursor="pointer" fontSize="base">
         {label}
       </Label>
@@ -85,22 +78,9 @@ function AnswerBox({
 function NotFormedBox({ id }: { id: string }) {
   const { m } = useI18n();
   const [choices, set] = useProfileChoices();
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
   return (
     <XStack gap="3" alignItems="flex-start" paddingVertical="1" data-bo-field="isFormed">
-      <Checkbox
-        id={id}
-        size="md"
-        marginTop="0.5"
-        // Tamagui renders a box that starts checked differently on the server and the client.
-        checked={mounted && !choices.isFormed}
-        onCheckedChange={(value) => set({ isFormed: value !== true })}
-      >
-        <Checkbox.Indicator>
-          <Text fontSize="xs">✓</Text>
-        </Checkbox.Indicator>
-      </Checkbox>
+      <CheckBox id={id} checked={!choices.isFormed} onChange={() => set({ isFormed: !choices.isFormed })} />
       <Label htmlFor={id} flex={1} cursor="pointer" fontSize="base">
         {m.profileForm.notFormed}
       </Label>

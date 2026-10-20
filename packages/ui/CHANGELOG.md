@@ -4,6 +4,10 @@ All notable changes to `business-obligations-ui` are documented here.
 
 ## [Unreleased]
 
+### Fixed
+
+- checkboxes (the plan's steps and the yes/no details) are drawn in the page's colors: the accent color when checked, like the inputs otherwise, in light and dark. Tamagui's `Checkbox` put them in an inverse sub-theme, so a checked box was dark on a light page (light on a dark one) with a mark that hardly showed
+
 ## [0.8.0] - 2026-10-20
 
 ### Added
