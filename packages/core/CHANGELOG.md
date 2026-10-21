@@ -5,6 +5,10 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ## [Unreleased]
 
+### Added
+
+- **data:** Naples, FL city entry marked unverified (city business tax receipt required per the Collier County Tax Collector; city pages were unreadable); Arlington, VA recorded as skipped (the county, already seeded).
+
 ## [0.17.0] - 2026-10-20
 
 ### Added

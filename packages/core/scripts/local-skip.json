@@ -1,6 +1,12 @@
 {
   "note": "Candidates the coverage bot or a maintainer decided are not separate jurisdictions (postal-only place names, neighbourhoods). Each entry: state, city or county, reason.",
-  "cities": [],
+  "cities": [
+    {
+      "state": "VA",
+      "city": "Arlington",
+      "reason": "Postal name for Arlington County, which by law has no cities or towns within it; the county's business license (BPOL) and business tangible personal property return are already seeded in data/counties/VA.json."
+    }
+  ],
   "counties": [
     {
       "state": "CT",
