@@ -2346,14 +2346,31 @@
   },
   {
     "city": "Naples",
-    "status": "unverified",
-    "note": "The Collier County Tax Collector's FAQ says a business in Naples needs a city business tax receipt, bought before the county receipt, renewed July 1 to September 30. The city's own pages (naplesgov.com, including the finance page, the 2012 Section 34-64 ordinance and the application form) returned HTTP 403 to every fetch, and Municode returned 403, so the fee and the late penalties were not confirmed on an official page.",
-    "items": [],
-    "checkedOn": "2026-10-21",
+    "counties": ["Collier"],
+    "items": [
+      {
+        "id": "naples.business-tax-receipt",
+        "title": "Renew City of Naples business tax receipt",
+        "category": "license",
+        "authority": "City of Naples Finance Department",
+        "description": "Renewals open July 1 and the current receipt expires September 30.",
+        "rrule": "FREQ=YEARLY;BYMONTH=9;BYMONTHDAY=30",
+        "url": ["https://www.naplesgov.com/finance/page/business-tax-receipts"],
+        "appliesTo": ["all"],
+        "feeDetail": {
+          "basis": "varies",
+          "note": "The fee is set by business category and employee count in the schedule in Section 34-79 of the city code; the schedule was not readable on an official page."
+        },
+        "penalty": {
+          "basis": "unknown"
+        }
+      }
+    ],
     "sourceUrl": [
       "https://www.naplesgov.com/finance/page/business-tax-receipts",
-      "https://colliertaxcollector.com/faq/business-tax-faq/"
+      "https://www.naplesgov.com/faqs/261"
     ],
-    "counties": ["Collier"]
+    "checkedOn": "2026-10-28",
+    "status": "rules"
   }
 ]
