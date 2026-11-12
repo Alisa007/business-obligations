@@ -7,7 +7,7 @@ project follows [Semantic Versioning](https://semver.org/) with the data-aware p
 
 ### Added
 
-- **data:** Naples, FL city entry marked unverified (city business tax receipt required per the Collier County Tax Collector; city pages were unreadable); Arlington, VA recorded as skipped (the county, already seeded).
+- **data:** Naples, FL city entry now records the city business tax receipt (renewal September 30, late charges from October 1; fee schedule not readable on an official page); Silver Spring, MD and Jamaica, NY recorded as skipped (not separate jurisdictions); Arlington, VA recorded as skipped (the county, already seeded).
 
 ## [0.17.0] - 2026-10-20
 
